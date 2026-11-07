@@ -51,6 +51,7 @@ from pdf_extract.factory.metrics.attempt_meta import account_plan
 from pdf_extract.factory.metrics.quota import MISSING, SETTLED, SHARED, Measure
 from pdf_extract.factory.spec import in_scope, load_stage
 from pdf_extract.factory.usage import (
+    RESET_GRACE,
     Poller,
     Standing,
     Usage,
@@ -664,6 +665,40 @@ def test_usage_limit_waits_then_resumes_the_same_session(env: Env) -> None:
     drive(d)
     assert env.ledger.job(survey["id"])["status"] == DONE
     assert env.worker.calls[1].session_id == f"stub-{survey['id']}"
+
+
+def test_a_resumed_attempt_counts_only_its_own_cost_and_tokens(env: Env) -> None:
+    """A resumed session's ResultMessage reports the whole session (newark 023-map's 4-turn
+    send-back recorded $2.00 and 32,681 output tokens; its own were $0.14 and 1,981)."""
+    def line(mid: str, out: int) -> str:
+        return json.dumps({"type": "assistant", "timestamp": env.now.isoformat(),
+                           "message": {"id": mid, "model": "claude-opus-5-5",
+                                       "usage": {"input_tokens": 1, "output_tokens": out}}})
+
+    def surveying(req: WorkerRequest, attempt: int) -> StubAction:
+        env.now += timedelta(minutes=1)
+        if attempt == 1:
+            return StubAction(outcome=USAGE, resets_at=env.now, cost_usd=1.5,
+                              usage={"output_tokens": 300}, transcript=[line("m1", 300)])
+        return StubAction(files=survey_files(), handoff=done(), cost_usd=1.75,
+                          usage={"output_tokens": 320}, transcript=[line("m2", 20)])
+
+    d = env.dispatcher(map_script(survey=surveying))
+    drive(d)
+    env.now += timedelta(minutes=5)
+    drive(d)
+    survey = env.ledger.jobs(map_run(env)["id"], "survey")[0]
+    assert survey["status"] == DONE
+    costs = [a["cost_usd"] for a in env.ledger.all(
+        "SELECT cost_usd FROM attempt WHERE job_id = ? ORDER BY n", survey["id"])]
+    assert costs == pytest.approx([1.5, 0.25])
+    assert env.ledger.job(survey["id"])["cost_usd"] == pytest.approx(1.75)
+    ids = [a["id"] for a in env.ledger.all(
+        "SELECT id FROM attempt WHERE job_id = ? ORDER BY n", survey["id"])]
+    first, second = (metrics.attempt_meta(env.ledger, i) for i in ids)
+    assert (first["source"], first["output_tokens"]) == ("live", 300)
+    assert (second["source"], second["output_tokens"]) == ("transcript", 20)
+    assert second["resumed_from"] == ids[0]
 
 
 def test_survey_review_send_back_resumes_the_survey(env: Env) -> None:
@@ -1560,10 +1595,10 @@ def test_usage_caps_and_weekly_pacing() -> None:
     s = standing(account, Usage(10, at + timedelta(hours=2), 11, resets), config, at)
     assert not s.eligible and s.eligible_at == resets - timedelta(days=6)  # tomorrow
     s = standing(account, Usage(80, at + timedelta(hours=2), 1, resets), config, at)
-    assert not s.eligible and s.eligible_at == at + timedelta(hours=2)
+    assert not s.eligible and s.eligible_at == at + timedelta(hours=2) + RESET_GRACE
     late = resets - timedelta(hours=1)  # day 6: the full cap
     s = standing(account, Usage(0, late, 71, resets), config, late)
-    assert not s.eligible and s.eligible_at == resets
+    assert not s.eligible and s.eligible_at == resets + RESET_GRACE
     rows = [standing(Account(n, Path("/x")), Usage(u, late, 10, resets), config, late)
             for n, u in (("a", 50), ("b", 20))]
     assert choose(rows).account.name == "b"
@@ -1605,7 +1640,9 @@ def test_full_weekly_budget_is_paced_across_all_seven_days(
 
     s = standing(account, Usage(0, at + timedelta(hours=5), allowed, resets), config, at)
     assert not s.eligible
-    assert s.eligible_at == start + timedelta(days=day)
+    # The last day waits for the reset itself, a little past it (RESET_GRACE).
+    assert s.eligible_at == start + timedelta(days=day) + (RESET_GRACE if day == 7
+                                                          else timedelta(0))
 
     if day > 1:
         # The new allowance becomes available exactly at the account's day boundary.
@@ -1638,13 +1675,13 @@ def test_a_job_needs_room_for_what_its_stage_is_expected_to_use() -> None:
 
     assert s(74, 1, mapping).eligible and not s(75, 1, mapping).eligible
     assert s(44, 1, survey).eligible
-    assert not s(50, 1, survey).eligible and s(50, 1, survey).eligible_at == five_resets
+    assert not s(50, 1, survey).eligible and s(50, 1, survey).eligible_at == five_resets + RESET_GRACE
     # The paced weekly cap counts the need too: room again tomorrow.
     assert not s(10, 7.5, survey).eligible
     assert s(10, 7.5, survey).eligible_at == resets - timedelta(days=6)
     # On the last day, a need that doesn't fit under the full cap waits for the reset.
     late = resets - timedelta(hours=1)
-    assert s(10, 68, survey, late).eligible_at == resets
+    assert s(10, 68, survey, late).eligible_at == resets + RESET_GRACE
     # A job needing the whole cap or more starts only from an unused window.
     assert s(0, 1, JobUsage(200, 0)).eligible and not s(1, 1, JobUsage(200, 0)).eligible
     # Jobs already running on an account count against it.
@@ -1673,7 +1710,7 @@ def test_a_survey_waits_for_more_room_than_a_map_job_would(env: Env) -> None:
         usage["five_hour"], env.now + timedelta(hours=1), 1, week))
     out = d.tick()
     assert out.action == "waiting" and "survey" in out.detail
-    assert out.wait_until == env.now + timedelta(hours=1)
+    assert out.wait_until == env.now + timedelta(hours=1) + RESET_GRACE
     usage["five_hour"] = 44.0
     env.now += timedelta(hours=2)
     assert d.tick().action == "ran"
@@ -1725,7 +1762,7 @@ def test_accounts_out_of_headroom_wait(env: Env) -> None:
     d = env.dispatcher(map_script(),
                        fetch_usage=lambda a: Usage(90, resets, 1, env.now + timedelta(days=3)))
     out = d.tick()
-    assert out.action == "waiting" and out.wait_until == resets
+    assert out.action == "waiting" and out.wait_until == resets + RESET_GRACE
     env.ledger.set("override_caps", True)
     assert d.tick().action == "ran"
 
@@ -2233,6 +2270,21 @@ def test_readings_within_the_interval_are_shared_and_requests_spaced(env: Env) -
     env.now += timedelta(seconds=61)
     usage.read(account)
     assert meter.calls == 3 and slept == [30]
+
+
+def test_a_reading_is_not_shared_once_a_window_has_reset(env: Env) -> None:
+    """2026-11-03 21:40: a reading taken a moment before the five-hour reset said 100%, and
+    was handed out again for the next minute, one more usage row a tick."""
+    meter, _ = metered(env)
+    account = env.config.accounts[0]
+    slept: list[float] = []
+    usage = Poller(env.ledger, env.config, meter, env.clock, sleep=slept.append)
+    env.now = FIVE_RESETS - timedelta(seconds=1)
+    first = usage.read(account)
+    env.now = FIVE_RESETS + RESET_GRACE
+    assert usage.read(account) is not first and meter.calls == 2
+    gap = (RESET_GRACE + timedelta(seconds=1)).total_seconds()
+    assert slept == [env.config.usage_min_interval_seconds - gap]  # requests stay spaced
 
 
 def test_a_tick_asks_each_account_at_most_once(env: Env) -> None:

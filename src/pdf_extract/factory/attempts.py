@@ -142,6 +142,7 @@ class Attempts:
         finished = stamp(self.clock)
         after = self.readings.after(account)
         transcript = copy_transcript(result, self.runs_dir / run["id"] / job["name"])
+        result.cost_usd = self._own_cost(result.cost_usd, session, attempt_id)
         self.ledger.finish_attempt(attempt_id, outcome=result.outcome, error=result.error,
                                    cost_usd=result.cost_usd, turns=result.turns,
                                    session_id=result.session_id, finished_at=finished,
@@ -184,6 +185,18 @@ class Attempts:
         if result.outcome in (PARTIAL, TIMEOUT):
             return Ended(job, result.outcome, f"the session ended early ({result.outcome})")
         return Ended(job, result.outcome)
+
+    def _own_cost(self, reported: float, session: str | None, attempt_id: int) -> float:
+        """What this attempt cost. A resumed session's ResultMessage reports the whole
+        session's cost so far, so what its earlier attempts already counted comes off. A
+        report below that (no ResultMessage, or a session that started its count again)
+        is this attempt's own."""
+        if not session:
+            return reported
+        row = self.ledger.one("SELECT COALESCE(SUM(cost_usd), 0) AS cost FROM attempt "
+                              "WHERE session_id = ? AND id < ?", session, attempt_id)
+        earlier = row["cost"] if row else 0.0
+        return reported - earlier if reported >= earlier else reported
 
     def _sandbox_failed(self, job: Any, key: str, error: str | None) -> Outcome | Ended:
         """No worker ran: the job waits as it was (same prompt, same session) and tries
