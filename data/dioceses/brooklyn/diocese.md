@@ -190,6 +190,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 
 - eCatholic archive links carry ?t=<ms epoch> upload stamps: when the newest issue is stale, decode them to tell a batch-uploading parish (many issues posted the same day) from one that stopped; and probe po <name>-church-<zip> or <name>-roman-catholic-church-<zip>, since a parish's LPi container can start beside a stale eCatholic or Tilma archive.
 - Tilma upload stamps: the resource token base64-decodes to the upload date ('2026/10/02/...'); a parish whose cards arrive in batches every 2-10 weeks can look stale between batches, so set the recheck after the usual gap instead of reading the gap as a stop.
+- Wix blog bulletins (a /sunday-bulletin blog index, one /post/<slug> per issue with a 'Download PDF' file widget): the PDF URL comes only from a click-time Wix API, so fetch finds no PDF links; record unsupported with fetch_gap kind wix-blog-file-download. tools/click-requests.py gives the ugd/<id>.pdf, readable at <site>/_files/ugd/<id>.pdf.
 
 ## Rules settled for this diocese
 
