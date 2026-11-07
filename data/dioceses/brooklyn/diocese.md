@@ -198,6 +198,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - LPi org slugs here are not always <name>-church-<zip>: Our Lady of Solace's is the directory's full name with no zip (shrine-church-of-our-lady-of-solace, 03/9994); when the zip forms miss, probe po the directory name slugged as-is before treating a stale self-hosted archive as a stop.
 - Google Sites bulletin pages that link each issue as drive.google.com/file/d/<id>/view (not /preview embeds) work as `other` with `page-pdfs <site>/bulletins`: fetch resolves the newest link to uc?export=download and downloads the PDF, though issue date stays `unknown`, so read the linked date yourself.
 - Diocesan-multisite issues named <mon><d>_<yyyy>_<parish>_compressed.pdf can also be The Church Bulletin Inc. issues (footer #NNN, no container): record other with page-pdfs on the /important-information/bulletin/ or /bulletin/ page and no publication id; fetch resolves it 'current' from the file name even when the masthead's text layer is a shifted font.
+- Old frameset parish sites (index.html with <frame src=links.htm>) hide the bulletin link from the resolver (fetch:check NoBulletin on the homepage): pin `page-pdfs <site>/<menu frame>.htm` to reach a fixed bulletin.pdf, then check its date yourself, since freshness stays unknown.
 
 ## Rules settled for this diocese
 
