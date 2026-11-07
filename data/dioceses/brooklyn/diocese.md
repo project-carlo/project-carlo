@@ -206,6 +206,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Wix sites showing the current bulletin in a certifiedcode.io pdf-viewer iframe (/bulletin) have no PDF link in the HTML; a Past Bulletins page linking `_files/ugd/<id>.pdf` works as `other` page-pdfs on that page (fetch:check picks the newest).
 - The survey's saved decrees page (scratch/brooklyn-map-1/001-survey/decrees.html) also links relegation decrees as scanned PDFs (wp-content/uploads/.../Decree-Relegation-*.pdf, Decree-of-Relegation-*.pdf; read with render.py): grep it for a church's name before leaving a fire-damaged or idle church in open/.
 - When DuckDuckGo returns its bot challenge, `probe get 'https://search.yahoo.com/search?p=<query>'` still answers; URL-decode the RU= parameters to list result links (it found a parish's new site after its directory domain lapsed).
+- Next.js parish sites whose /bulletins shows 'Loading bulletins...' can fill the list from a JSON `/api/bulletins` (`probe get` lists titles and createdOn dates); issues are `/api/bulletin-file?name=bulletins%2F<title>.pdf`, and `other` `page-pdfs <site>/bulletins` resolves them in headed fetch:check (first-listed). Read the date from the title: scanned issues come back freshness `unknown`.
+- GCatholic can list a merged-away church as a 'Chapel of <old name>' of the surviving parish but give it the surviving church's address, Plus Code, phone and founding year. Link it to the surviving church, and record the old building separately at the address the Mass finder or OSM gives.
 
 ## Rules settled for this diocese
 
