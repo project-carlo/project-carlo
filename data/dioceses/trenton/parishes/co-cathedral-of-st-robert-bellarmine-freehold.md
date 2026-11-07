@@ -52,7 +52,7 @@ publication_reviews:
   - url: https://files.ecatholic.com/11159/bulletins/20261025.pdf
     seen: 2026-10-30
     quote: 91 Stillhouse Road, Millstone Twp., N.J. 08510
-    note: 'Bulletin for St. Joseph Church (row st-joseph-millstone), read by its map batch: Cover (page
+    note: 'Bulletin for St. Joseph Church (row st-joseph-millstone-township), read by its map batch: Cover (page
       1) of the 25 October 2026 issue names St. Joseph alone with the Stillhouse Road address. Page 10
       lists Rev. Michael P. Lang, Pastor, and ''Saturday Evening – 5:00 PM; Sunday Morning – 9:00 AM &
       11:00 AM; Mon, Tues, Wed & Fri – 9:00AM''.'
