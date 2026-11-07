@@ -36,9 +36,10 @@ their *Sources*, *Bulletin publishers here* and *Rules settled*.
    cap, eCatholic sites behind Cloudflare, ...). Keep it to the lines a map job needs.
    Probe a handful of parish sites from different towns if that shows which publishers
    are common here.
-5. **Plan the batches.** Group the roster entries into batches of about four parishes that
+5. **Plan the batches.** Group the roster entries into batches of about eight parishes that
    belong together: one town, one family or cluster, or one shared pastor that a source
-   names explicitly. Entries that
+   names explicitly. Count parishes, not roster entries: a parish usually has several
+   entries, so eight parishes is often around 20 entries. Entries that
    might share a bulletin go in the same batch, so one map job settles them. Use fewer
    parishes for a family with many churches or a city centre full of closures, and give
    the Eastern Catholic or other-jurisdiction entries a batch of their own. Write

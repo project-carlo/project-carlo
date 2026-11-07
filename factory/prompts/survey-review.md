@@ -20,8 +20,9 @@ plans*, *Sources*) are the standard you judge by.
 3. **Grouping.** Entries that might share a bulletin belong in one batch: one family or
    cluster, one pastor a source names, one town. Use the rosters' `group` and town fields
    (`jq` over `data/dioceses/<d>/rosters/*.json`) and the *Sources* lists in `diocese.md`
-   to find pairs split across batches. Batches should hold about four parishes, fewer for a big family or a
-   city centre full of closures; Eastern Catholic and other-jurisdiction entries get their
+   to find pairs split across batches. Batches should hold about eight parishes (parishes, not roster
+   entries: a parish usually has several, so that is often around 20 entries), fewer for a
+   big family or a city centre full of closures; Eastern Catholic and other-jurisdiction entries get their
    own. `first_batch` should be typical, not the hardest.
 4. **Exclusions.** Each `excluded` entry needs a reason that holds: a duplicate names the
    entry it duplicates, and that entry is in a batch; "outside the diocese" names where it
