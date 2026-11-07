@@ -2,12 +2,12 @@
 
 Many bulletins are scanned images: `probe pdf` lists them under
 `pages_without_text`, and a masthead or Mass schedule on such a page is
-invisible to it. The sandbox has no pdftoppm, PIL or tesseract, so this renders
-the pages with pdf.js (from cdn.jsdelivr.net) in the installed Chrome. Look at
+invisible to it. This renders the pages with pdf.js (from cdn.jsdelivr.net) in
+the installed Chrome. Look at
 the images with the Read tool. What you read off an image is evidence like any
 quote: cite the PDF's URL and say in the `note` that the page is an image.
 
-Usage (from the repo root; run setup_browser.sh once first):
+Usage (from the repo root):
   uv run python .claude/skills/parish-site-access/scripts/render.py URL|FILE OUT_PREFIX \
       [--pages 1,3-5] [--scale 1.6] [--png]
 
@@ -87,12 +87,19 @@ def main() -> int:
     data = base64.b64encode(_pdf_bytes(args.pdf)).decode()
     from playwright.sync_api import sync_playwright
 
+    sys.path.insert(0, str(REPO / "src"))
+    from pdf_extract.browser import chromium_sandbox_enabled, proxy_from_env
+
     channel = "chrome" if shutil.which("google-chrome") else None
     args.out.parent.mkdir(parents=True, exist_ok=True)
     images = []
     with sync_playwright() as p:
         # Headless is fine here: the page is local and loads nothing behind Cloudflare.
-        browser = p.chromium.launch(channel=channel, headless=True)
+        # Through the proxy when there is one (a factory sandbox reaches pdf.js only so).
+        proxy = proxy_from_env()
+        browser = p.chromium.launch(channel=channel, headless=True,
+                                    chromium_sandbox=chromium_sandbox_enabled(),
+                                    **({"proxy": proxy} if proxy else {}))
         try:
             page = browser.new_page()
             page.set_content(PAGE)

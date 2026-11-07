@@ -422,6 +422,63 @@ def test_no_bulletin_parishes_stay_off_the_site(root: Path) -> None:
     assert records.promote("test")["churches"]["added"] == ["st-ann-town"]
 
 
+GAP = {"kind": "viewer-wrapped-pdf", "seen": "2026-11-03",
+       "note": "The page links viewer pages; the PDF is at /bulletins/file/<name>."}
+
+
+def test_unsupported_parishes_stay_off_the_site_until_a_provider_is_set(root: Path) -> None:
+    _parish()
+    _church()
+    _parish("gap", bulletin_provider="unsupported", publication=["url:https://gap.org/b"],
+            fetch_gap=GAP)
+    _church("gap-town", parish="gap")
+    records.promote("test")
+    assert [r["slug"] for r in _live("PARISHES_CSV_PATH")] == ["live-parish", "st-ann"]
+    assert [r["slug"] for r in _live("CHURCHES_CSV_PATH")] == ["st-live", "st-ann-town"]
+    d = records.load("test")
+    assert "promoted" not in d.of(records.PARISH)["gap"]
+    assert d.of(records.PARISH)["gap"]["fetch_gap"] == GAP  # its evidence stays
+    assert d.of(records.PARISH)["gap"]["publication"] == ["url:https://gap.org/b"]
+    # A live row turned unsupported goes off the site, with the provider named...
+    path = root / "parishes" / "st-ann.md"
+    records.write_record("test", "parish", "st-ann",
+                         {"bulletin_provider": "unsupported", "fetch_gap": GAP})
+    warnings = records.validate("test")["dioceses"]["test"]["warnings"]
+    assert "parish 'st-ann': unsupported, but still in data/parishes.csv; run `diocese " \
+        "promote` to take it off" in warnings
+    assert any(w.startswith("church 'st-ann-town': unsupported, but still") for w in warnings)
+    assert records.promote("test")["churches"]["removed"] == ["st-ann-town"]
+    # ...and comes back only when someone sets the provider a collector reads.
+    records.write_record("test", "parish", "st-ann",
+                         {"bulletin_provider": "ecatholic", "fetch_gap": None})
+    assert records.promote("test")["churches"]["added"] == ["st-ann-town"]
+    assert path.exists()
+
+
+def test_unsupported_needs_a_fetch_gap_and_other_gap_rows_are_warned(root: Path) -> None:
+    with pytest.raises(DioceseError, match="unsupported needs a fetch_gap"):
+        records.write_record("test", "parish", "gap", {
+            "name": "Gap", "website": "https://gap.org", "bulletin_provider": "unsupported",
+            "evidence": EVIDENCE}, create=True)
+    _parish("quiet", bulletin_provider="no_bulletin", fetch_gap=GAP)
+    _parish("goes-live", bulletin_provider="other", fetch_gap=GAP)
+    _parish("odd", bulletin_provider="unsupported", fetch_gap=GAP, bulletin_status="not-found")
+    warnings = records.validate("test")["dioceses"]["test"]["warnings"]
+    assert any(w.startswith("parish 'quiet': no_bulletin with a fetch_gap") for w in warnings)
+    assert any(w.startswith("parish 'goes-live': fetch_gap on a other row, which goes live")
+               for w in warnings)
+    assert any(w.startswith("parish 'odd': unsupported is for a bulletin that is published")
+               for w in warnings)
+    # unsupported keeps its identity: it is still asked for publication ids.
+    assert any(w.startswith("parish 'odd': no publication id recorded") for w in warnings)
+
+
+def test_fetch_check_explains_an_unsupported_parish(root: Path, capsys) -> None:
+    _parish("gap", bulletin_provider="unsupported", fetch_gap=GAP)
+    assert main(["fetch-check", "--diocese", "test", "--parish", "gap"]) == 1
+    assert "unsupported, so fetch has no collector for it: gap" in capsys.readouterr().err
+
+
 def test_live_parishes_have_a_bulletin_provider() -> None:
     live = Path(__file__).parents[1] / "data" / "parishes.csv"
     with live.open(encoding="utf-8") as fh:

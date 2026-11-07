@@ -49,6 +49,7 @@ from pdf_extract.detect import run_detection
 from pdf_extract.dioceses import DioceseError
 from pdf_extract.dioceses import records as diocese_records
 from pdf_extract.dioceses.cli import add_diocese_parser
+from pdf_extract.dotenv import read_dotenv
 from pdf_extract.evals.report import write_report as write_eval_report
 from pdf_extract.evals.run import DEFAULT_STATUSES as EVAL_DEFAULT_STATUSES
 from pdf_extract.evals.run import run as run_eval
@@ -67,7 +68,10 @@ from pdf_extract.labeling.server import serve as serve_labeler
 from pdf_extract.paths import DATA_DIR
 from pdf_extract.process import process_bulletins
 from pdf_extract.recurrence import apply_recurrence
+from pdf_extract.replay_gates import archived_run_ids, replay
+from pdf_extract.replay_gates import render as render_replay
 from pdf_extract.schedule.cli import ScheduleCommandError, add_schedule_parser
+from pdf_extract.schedule_diff import parish_changed
 from pdf_extract.schedule_extraction import DEFAULT_GEMINI_MODEL
 from pdf_extract.seeding.cli import add_seed_parser
 from pdf_extract.seeding.queries import SeedError
@@ -100,19 +104,14 @@ def _load_dotenv(path: Path = Path(".env")) -> None:
     """Read KEY=VALUE lines from .env into the environment, without overriding.
 
     So GEMINI_API_KEY and the R2_* credentials can live in one local file for
-    every command, however it is launched.
+    every command, however it is launched. Not for `factory`: the dispatcher
+    reads .env itself and hands each key only to what needs it. Nor when
+    CARLO_NO_DOTENV is set: the dispatcher sets it for its gates and workers,
+    which get their keys passed in, never from a .env a worker could write.
     """
-    if not path.is_file():
+    if os.environ.get("CARLO_NO_DOTENV"):
         return
-    for line in path.read_text(encoding="utf-8").splitlines():
-        line = line.strip()
-        if not line or line.startswith("#") or "=" not in line:
-            continue
-        key, value = line.split("=", 1)
-        key = key.removeprefix("export ").strip()
-        value = value.strip()
-        if len(value) >= 2 and value[0] == value[-1] and value[0] in "\"'":
-            value = value[1:-1]
+    for key, value in read_dotenv(path).items():
         os.environ.setdefault(key, value)
 
 
@@ -169,9 +168,15 @@ def _diocese_fetch_rows(diocese: str, slugs: Collection[str] | None) -> list[dic
     if d.unreadable:
         raise DioceseError("fix these files first; they do not parse:\n  "
                            + "\n  ".join(d.unreadable))
-    no_bulletin = sorted(set(slugs or ()) & diocese_records.unpublished(d)[0])
-    if no_bulletin:
-        raise DioceseError(f"no_bulletin, so there is nothing to fetch: {', '.join(no_bulletin)}")
+    off_site = sorted(set(slugs or ()) & diocese_records.unpublished(d)[0])
+    parishes = d.of(diocese_records.PARISH)
+    if none := [s for s in off_site
+                if parishes[s].get("bulletin_provider") == diocese_records.NO_BULLETIN]:
+        raise DioceseError(f"no_bulletin, so there is nothing to fetch: {', '.join(none)}")
+    if off_site:
+        raise DioceseError(
+            f"unsupported, so fetch has no collector for it: {', '.join(off_site)}. To check "
+            "one that may read it now, set its bulletin_provider (and provider_id) first")
     rows, _ = diocese_records.export_rows(d)
     return rows
 
@@ -381,8 +386,21 @@ def _cmd_extract_frontend_db(_args: argparse.Namespace) -> Result:
     return extract_frontend_db()
 
 
-def _cmd_verify_frontend_snapshot(_args: argparse.Namespace) -> Result:
-    return verify_frontend_snapshot()
+def _cmd_verify_frontend_snapshot(args: argparse.Namespace) -> Result:
+    result = verify_frontend_snapshot(as_of=args.as_of)
+    comparison = result.get("comparison")
+    if comparison:
+        # Every parish is compared; print the ones with something to say.
+        comparison["parishes"] = [
+            p for p in comparison["parishes"]
+            if parish_changed(p) or p["notes"] or p["diagnostics"] or p["availability"]["lost"]
+        ]
+    return result
+
+
+def _cmd_replay_gates(args: argparse.Namespace) -> Result:
+    run_ids = list(args.run or []) or archived_run_ids(args.last)
+    return replay(run_ids)
 
 
 # ── Parser ──────────────────────────────────────────────────────────────────
@@ -787,10 +805,31 @@ def _build_parser() -> argparse.ArgumentParser:
         "verify-frontend-snapshot",
         help="Verify frontend snapshot similarity against frontend.json.gz.previous",
     )
+    verify_frontend_snapshot_parser.add_argument(
+        "--as-of", type=date.fromisoformat, default=None, metavar="YYYY-MM-DD",
+        help="Read both snapshots as of this date (default: today)",
+    )
     verify_frontend_snapshot_parser.set_defaults(
         handler=_cmd_verify_frontend_snapshot, fail_on_verification_error=True,
     )
     _add_common_args(verify_frontend_snapshot_parser)
+
+    # -- replay gates --
+    replay_gates_parser = subparsers.add_parser(
+        "replay-gates",
+        help="Run today's snapshot gates over consecutive archived runs (needs R2 read access)",
+    )
+    replay_gates_parser.add_argument(
+        "--run", action="append", default=None, metavar="RUN_ID",
+        help="An archived run id, oldest first (repeatable; at least two)",
+    )
+    replay_gates_parser.add_argument(
+        "--last", type=int, default=8,
+        help="Without --run, replay the last N archived runs (default: 8)",
+    )
+    replay_gates_parser.add_argument("--json", action="store_true", help="Print the JSON result")
+    replay_gates_parser.set_defaults(handler=_cmd_replay_gates, render=render_replay)
+    _add_common_args(replay_gates_parser, default_level="WARNING")
 
     return parser
 
@@ -809,7 +848,8 @@ def main(argv: list[str] | None = None) -> int:
         return 1
 
     _configure_logging(args.log_level)
-    _load_dotenv()
+    if args.command != "factory":  # its workers mustn't inherit every key (factory/cli.py)
+        _load_dotenv()
 
     try:
         # Research commands are consumed by jq and agents. Incidental output from

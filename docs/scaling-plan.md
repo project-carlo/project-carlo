@@ -33,7 +33,7 @@ It is now column-oriented JSON; see [Phase 2](#phase-2--slim-the-payload-cheap-b
 - The weekly pipeline writes `frontend.json.gz`: every church and event, as
   gzipped column-oriented JSON, built by `src/pdf_extract/extract_frontend_db.py`
   (its docstring has the format).
-- `apps/web/src/api.ts` downloads and gunzips it, and `apps/web/src/lib/snapshot.ts`
+- `apps/web/src/api.ts` downloads and gunzips it, and `packages/core/src/snapshot.ts`
   decodes **every** church and event into JS objects once; filters run in JS on
   every filter change (`collectMapItems`).
 - `apps/web/src/components/ChurchMap.tsx` renders one Leaflet marker
@@ -156,7 +156,7 @@ These keep the one-file model while reducing cost per church:
   weekdays, dates, notes, cities) as indexes into a table of values, event ids
   as differences, and times as minutes. `extract_frontend_db.py` writes it,
   `verify-frontend-snapshot` reads it, and the app and the prerender decode it
-  with the same code (`apps/web/src/lib/snapshot.ts`); `api.ts` has no SQL.
+  with the same code (`packages/core/src/snapshot.ts`); `api.ts` has no SQL.
 - **Split map data from detail data.** The map and filters need id, name,
   coordinates and a compact event list. Notes, `page_number`, `bulletin_url`,
   `homepage_url` and addresses are only needed on the church page, and the

@@ -1,45 +1,59 @@
 <!-- The prompt for factory/stages/integrate.yaml. -->
 
-You fold what the map jobs have learned into the diocese's playbook, so the next batch
-reads a short, current guide instead of a growing log. The dispatcher appends each map
-job's lessons, as written, one bullet each, to the `## New lessons` section of
-`data/dioceses/<d>/diocese.md`; your job input says how many there are.
+You keep the diocese's playbook short and current. Every map job is given it in full in
+its first message: `diocese.md`'s `### Bulletin publishers here`, `## Rules settled for
+this diocese` and `## New lessons`. It is a guide to working in this diocese, not a log of
+what earlier batches found: a parish's own detail is in its records, and the playbook
+doesn't repeat it. The dispatcher appends each map job's lessons, as written, to *New
+lessons*; you fold them into the other two sections and keep those near the sizes your
+job input gives.
 
 ## Your job
 
-1. Read `diocese.md`'s `### Bulletin publishers here`, `## Rules settled for this
-   diocese` and `## New lessons`. Skim the README's *Traps* so you don't copy what every
-   diocese already knows.
-2. For each new lesson, decide where it belongs:
-   - **A publisher's method** (how to read its sites, where its issues are when a site
-     blocks the sandbox, an id pattern, a download cap): merge it into *Bulletin
-     publishers here*, into the existing bullet for that publisher when there is one.
+1. Read the three sections. Your read of the README's *Traps* is what every diocese
+   already knows; don't repeat it here.
+2. Sort each new lesson:
+   - **A publisher's method** (how to recognise its sites, read its issues and record
+     them; an id pattern; a download cap; where its issues are when a site blocks the
+     browser): into that publisher's bullet in *Bulletin publishers here*, or a new bullet
+     for a publisher not there yet.
    - **A decision for more than one record** (how this diocese's campus chapels, shrines
-     or family bulletins are treated): add it to *Rules settled*, saying who decided it
-     and when, as the section asks ("map batch `dover-north`, 2026-11-02").
-   - **One parish's detail** (its URL, its masthead, its closure): drop it. It is already
-     in that parish's records; check with `pnpm diocese search` or a grep if in doubt, and
-     if it isn't, keep its gist in your `summary` instead.
-   - **Already said**, in the playbook or the README: drop it, or sharpen the existing
-     line if the lesson adds something.
-3. Keep each section a guide, not a log: one bullet per publisher or rule, the method
-   first, an example parish only where it helps. Rewrite a bullet that two lessons now
-   contradict, keeping what the newer evidence supports; if you can't tell which is right,
-   keep both claims in that bullet and say they conflict.
-4. Empty *New lessons*: leave its heading and remove every bullet under it.
-5. `pnpm --silent diocese validate <d>` must still pass.
+     or worship sites are treated): a rule in *Rules settled*, saying who decided it and
+     when ("map batch `dover-north`, 2026-11-02").
+   - **One parish's detail** (its URL, masthead, address, closure, or which publisher
+     prints it): drop it. It is in that parish's records; check with `pnpm diocese
+     search` or a grep, and if it isn't, say so in your `summary`.
+   - **Already said**, here or in the README: drop it, or sharpen the line it repeats.
+3. **Bulletin publishers here** has one bullet per publisher or kind of site: how to
+   recognise it, how to read and record its issues, and its traps. Name an example parish
+   only where it shows what the method can't say in general; never list the parishes a
+   publisher prints for. When the section is over its target, cut what earlier
+   integrates left: parish lists, one-off cases, history.
+4. **Rules settled** you may condense: merge rules that decide the same thing, and tighten
+   wording. Each rule keeps what it decides and its attribution, and a merged rule keeps
+   every attribution it replaces. Examples inside a rule are parish detail: keep at most
+   one. Never change what a rule decides, and don't drop one: a rule that looks wrong, or
+   two that contradict, stay as they are, with an advisory flag. List every rule you
+   merged or reworded in your handoff's `rules_changed`; a rule you only added isn't one.
+5. When two lessons, or a lesson and the playbook, disagree about a publisher, keep what
+   the newer evidence supports; if you can't tell, keep both claims and say they conflict.
+6. Leave *New lessons*' heading and intro with no bullets under it.
+7. `pnpm --silent diocese validate <d>` must still pass.
 
-Don't change any other section of `diocese.md`, the records or the rosters. A
-*Rules settled* line already there stays unless a lesson shows it is wrong; then flag it
-rather than editing it.
+Don't change any other section of `diocese.md`, the records or the rosters.
 
 ## Handoff
 
-- `summary`: how many lessons you merged, how many you dropped as parish detail or
-  duplicates, and what the playbook gained ("8 lessons: 3 merged into ParishesOnline, 1 new
-  rule on campus Masses, 4 dropped").
+- `summary`: how many lessons you folded in and how many you dropped, what the playbook
+  gained, and the sections' sizes after ("15 lessons: 3 into ParishesOnline, 1 new rule
+  on campus Masses, 11 dropped as parish detail; publishers 9.4 → 7.8 KB, rules 5.1 →
+  4.6 KB, 2 rules merged").
+- `rules_changed`: for each rule you merged or reworded, `was` lists every rule it
+  replaces, copied word for word from *Rules settled* as it stood when you started, and
+  `now` is the rule as you wrote it. The dispatcher checks that every rule gone from the
+  section is listed, and the PR shows the list for the owner to check.
 - `flags`: advisory, scope `run`, when lessons conflict and the evidence doesn't settle
-  it, or a lesson contradicts a settled rule. Blocking only if the playbook can't be left
-  in a state a map job can follow.
+  it, or when a rule looks wrong or two contradict. Blocking only if the playbook can't
+  be left in a state a map job can follow.
 - `lessons` and `leads`: leave empty. A lesson that would help in any diocese stays in
   the playbook when it helps here too; `reconcile` lists those for the PR.

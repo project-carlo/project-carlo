@@ -2,6 +2,10 @@
 
 Each goes in as one bullet, as the worker wrote it, under its heading. Appending is
 idempotent by text, so a dispatcher restarted partway through doesn't add a line twice.
+
+The playbook is the part every map job is given: *Bulletin publishers here*, *Rules
+settled* and *New lessons*. `integrate` keeps the first two near `TARGETS`; the sizes are
+measured here, for its input and the PR.
 """
 
 from __future__ import annotations
@@ -22,31 +26,89 @@ _INTROS = {
                 "choice and the parishes. Later reviews in this diocese follow them; only the "
                 "owner turns one into a rule.",
 }
+# The size integrate keeps each section near, in bytes (1 KB = 1,000). A guide for now: a
+# gate waits for a full Run's sizes (docs/factory-refactor-plan.md, Phase 3).
+TARGETS = {PUBLISHERS: 8_000, RULES: 6_000}
 # A section missing from the file goes before the first of these that exists.
 _BEFORE = {NEW_LESSONS: (RULES, LOG), PRECEDENTS: (LOG,), RULES: (LOG,)}
 
 
-def _level(line: str) -> int:
-    m = re.match(r"(#+)\s", line)
-    return len(m.group(1)) if m else 0
+def headings(lines: list[str]) -> dict[int, tuple[int, str]]:
+    """Each Markdown heading's line: its level and title. A `#` line in a fenced code block
+    (an example record's `## Publisher`, a shell comment) isn't one."""
+    found, fence = {}, None
+    for i, line in enumerate(lines):
+        if m := re.match(r"\s*(`{3,}|~{3,})", line):
+            if fence is None:
+                fence = m.group(1)
+            elif m.group(1).startswith(fence):
+                fence = None
+        elif fence is None and (m := re.fullmatch(r"(#+)\s+(.*?)\s*", line)):
+            found[i] = (len(m.group(1)), m.group(2))
+    return found
 
 
 def _span(lines: list[str], heading: str) -> tuple[int, int] | None:
     """The section's lines after its heading, up to the next heading of its level or above."""
-    try:
-        start = next(i for i, line in enumerate(lines) if line.strip() == heading)
-    except StopIteration:
+    found = headings(lines)
+    level, title = len(heading) - len(heading.lstrip("#")), heading.lstrip("#").strip()
+    start = next((i for i, h in found.items() if h == (level, title)), None)
+    if start is None:
         return None
-    level = _level(heading)
-    end = next((i for i in range(start + 1, len(lines))
-                if 0 < _level(lines[i]) <= level), len(lines))
+    end = next((i for i, (lv, _) in found.items() if i > start and lv <= level), len(lines))
     return start + 1, end
 
 
 def section(path: Path, heading: str) -> str:
-    lines = path.read_text(encoding="utf-8").splitlines()
+    return section_of(path.read_text(encoding="utf-8"), heading)
+
+
+def section_of(text: str, heading: str) -> str:
+    lines = text.splitlines()
     span = _span(lines, heading)
     return "" if span is None else "\n".join(lines[span[0]:span[1]]).strip()
+
+
+def items(body: str) -> list[str]:
+    """A section's bullets, each whole and on one line: a bullet runs on through its
+    wrapped and indented lines, up to the next bullet, heading or unindented paragraph."""
+    out: list[str] = []
+    current: list[str] | None = None
+    blank = False
+    for line in body.splitlines():
+        if line.startswith("- "):
+            current = [line[2:]]
+            out.append("")
+        elif current is None or line.startswith("#") or (blank and not line[:1].isspace()
+                                                          and line.strip()):
+            current = None
+        elif line.strip():
+            current.append(line)
+        blank = not line.strip()
+        if current is not None:
+            out[-1] = " ".join(" ".join(current).split())
+    return out
+
+
+def rule_key(text: str) -> str:
+    """A rule as compared with its copy in a handoff: wrapping and emphasis don't count."""
+    return " ".join(text.replace("*", "").split())
+
+
+def size(text: str, heading: str) -> int:
+    return len(section_of(text, heading).encode("utf-8"))
+
+
+def sizes(text: str) -> dict[str, int]:
+    """The playbook in `text` (a `diocese.md`): its two kept sections' sizes in bytes, and
+    how many lessons wait in *New lessons*."""
+    return {"publishers": size(text, PUBLISHERS), "rules": size(text, RULES),
+            "lessons": len([b for b in section_of(text, NEW_LESSONS).splitlines()
+                            if b.startswith("- ")])}
+
+
+def kb(n: int) -> str:
+    return f"{n / 1000:.1f} KB"
 
 
 def bullets(path: Path, heading: str) -> list[str]:

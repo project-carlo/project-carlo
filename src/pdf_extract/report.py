@@ -1,10 +1,13 @@
 """The weekly change report: what a run changed, in terms a person can check.
 
-Compares the database before a run with the database after it, the way the
-website would see them (each parish's latest processed bulletin), and says
-which Masses, Confessions and Adorations appeared or disappeared at which
-church. It also collects each parish's fetch/process outcome for the run and
-applies the per-parish publishing gate.
+Compares the frontend snapshot of the database before a run with the one
+after it, read on the same date (`schedule_diff`, gated by
+`verify_frontend_snapshot`), so extract- and update-mode parishes get the same
+checks: which Masses, Confessions and Adorations changed, appeared or
+disappeared at which church, and which upcoming dates a visitor would lose.
+The databases add what a snapshot doesn't carry: parish slugs and modes,
+which parishes have a new bulletin, each parish's fetch/process outcome for
+the run, and the update-mode calls and proposals behind a change.
 
 Rendered as Markdown for the GitHub job summary and issues, and as JSON for
 anything that wants to read it programmatically.
@@ -13,7 +16,8 @@ anything that wants to read it programmatically.
 from __future__ import annotations
 
 import sqlite3
-from dataclasses import dataclass, field
+import tempfile
+from datetime import date
 from pathlib import Path
 from typing import Any
 
@@ -22,6 +26,7 @@ from pdf_extract.bulletin_week import (
     bulletin_reference_date,
     stale_parishes,
 )
+from pdf_extract.extract_frontend_db import extract as extract_snapshot
 from pdf_extract.parish_sites.resolve import OLD_PICK_MARK
 from pdf_extract.runs import (
     FAILED_STATUSES,
@@ -32,24 +37,14 @@ from pdf_extract.runs import (
     parish_results,
 )
 from pdf_extract.schedule.report import render_update_mode, update_mode_report
-from pdf_extract.schedule.store import update_mode_slugs
+from pdf_extract.schedule.store import table_exists, update_mode_slugs
+from pdf_extract.schedule_diff import parish_changed
 from pdf_extract.storage import (
     fetch_only_slugs,
     latest_bulletin_ids,
     load_bulletins,
-    load_events,
 )
-from pdf_extract.timeparse import time_to_minutes
-
-# A parish that showed at least this many events and now shows none holds the
-# run for review: far more often a wrong PDF or a failed extraction than a
-# parish that really stopped listing anything.
-PARISH_DROP_TO_ZERO_MIN_EVENTS = 3
-
-# A parish losing more than this share of its events is called out as a
-# warning, without holding the run.
-PARISH_DROP_WARN_FRACTION = 0.5
-PARISH_DROP_WARN_MIN_EVENTS = 6
+from pdf_extract.verify_frontend_snapshot import verify_frontend_snapshot
 
 # More than this share of attempted parishes failing to fetch holds the run:
 # the checks below compare against unchanged data and would otherwise pass a
@@ -61,58 +56,15 @@ _DAY_ABBREV = {
     "monday": "Mon", "tuesday": "Tue", "wednesday": "Wed", "thursday": "Thu",
     "friday": "Fri", "saturday": "Sat", "sunday": "Sun",
 }
+EXTRACT, UPDATE, SEEDED, NEW = "extract", "update", "extract→update", "new"
 
 EventKey = tuple[str, str, str, str | None, str | None, str, str | None, bool]
-
-
-@dataclass
-class ParishChange:
-    parish_slug: str
-    before_count: int
-    after_count: int
-    bulletin_changed: bool
-    added: list[EventKey] = field(default_factory=list)
-    removed: list[EventKey] = field(default_factory=list)
 
 
 def _open_ro(path: Path) -> sqlite3.Connection:
     conn = sqlite3.connect(f"file:{path}?mode=ro", uri=True)
     conn.row_factory = sqlite3.Row
     return conn
-
-
-def _event_key(row: dict[str, Any]) -> EventKey:
-    return (
-        row["church_slug"],
-        row["event_type"],
-        row["event_kind"],
-        row.get("day_of_week"),
-        row.get("date"),
-        row["start_time"],
-        row.get("end_time"),
-        bool(row.get("cancelled")),
-    )
-
-
-def _current_state(
-    conn: sqlite3.Connection, excluding: set[str] = frozenset(),
-) -> dict[str, tuple[int, set[EventKey], int]]:
-    """Parish slug -> (current bulletin id, its event keys, its event count).
-
-    Parishes in `excluding` (the update-mode ones) are left out.
-    """
-    latest = {
-        slug: bulletin_id for slug, bulletin_id in latest_bulletin_ids(conn).items()
-        if slug not in excluding
-    }
-    by_bulletin: dict[int, list[dict[str, Any]]] = {}
-    for row in load_events(conn, list(latest.values())):
-        by_bulletin.setdefault(row["bulletin_id"], []).append(row)
-    state = {}
-    for slug, bulletin_id in latest.items():
-        rows = by_bulletin.get(bulletin_id, [])
-        state[slug] = (bulletin_id, {_event_key(r) for r in rows}, len(rows))
-    return state
 
 
 def describe_event(key: EventKey) -> str:
@@ -128,41 +80,151 @@ def describe_event(key: EventKey) -> str:
     return f"{label} · {when} {time}" + (" (cancelled)" if cancelled else "")
 
 
-def diff_databases(before: Path, after: Path) -> list[ParishChange]:
-    """What changed for each extract-mode parish.
+def _parish_ids(conn: sqlite3.Connection) -> dict[int, str]:
+    return {row[0]: row[1] for row in conn.execute("SELECT id, slug FROM parish")}
 
-    A parish in update mode in either database is left out: its changes are
-    reported from its calls' proposals (`schedule.report`). So is a parish
-    that is fetch-only in a database, as the website leaves it out.
+
+def _seeds(conn: sqlite3.Connection) -> dict[int, str]:
+    """Parish id -> its latest seed's as_of, for every update-mode parish."""
+    if not table_exists(conn, "schedule_revision"):
+        return {}
+    rows = conn.execute(
+        """SELECT parish_id, MAX(as_of) FROM schedule_revision
+           WHERE source_kind = 'seed' GROUP BY parish_id"""
+    ).fetchall()
+    return {row[0]: row[1] for row in rows}
+
+
+def snapshot_context(before_db: Path, after_db: Path) -> dict[str, Any]:
+    """What the snapshot gates need from the databases, as `verify_frontend_snapshot` takes it.
+
+    `parish_slugs` names each parish (from the after database, else the
+    before one); `seeded_this_run` is parish id -> seed as_of for the parishes
+    that switched to update mode between the two.
     """
-    before_conn, after_conn = _open_ro(before), _open_ro(after)
+    before_conn, after_conn = _open_ro(before_db), _open_ro(after_db)
     try:
-        update_mode = update_mode_slugs(before_conn) | update_mode_slugs(after_conn)
-        before_state = _current_state(before_conn, update_mode | fetch_only_slugs(before_conn))
-        after_state = _current_state(after_conn, update_mode | fetch_only_slugs(after_conn))
+        slugs = {**_parish_ids(before_conn), **_parish_ids(after_conn)}
+        seeds_before, seeds_after = _seeds(before_conn), _seeds(after_conn)
     finally:
         before_conn.close()
         after_conn.close()
+    return {
+        "parish_slugs": slugs,
+        "seeded_this_run": {
+            parish_id: as_of for parish_id, as_of in seeds_after.items()
+            if parish_id not in seeds_before
+        },
+    }
 
-    changes = []
-    for slug in sorted(set(before_state) | set(after_state)):
-        b_id, b_keys, b_count = before_state.get(slug, (None, set(), 0))
-        a_id, a_keys, a_count = after_state.get(slug, (None, set(), 0))
-        changes.append(
-            ParishChange(
-                parish_slug=slug,
-                before_count=b_count,
-                after_count=a_count,
-                bulletin_changed=b_id != a_id,
-                added=sorted(a_keys - b_keys, key=_sort_key),
-                removed=sorted(b_keys - a_keys, key=_sort_key),
-            )
+
+def verify_databases(before_db: Path, after_db: Path, as_of: date) -> dict[str, Any]:
+    """Build both databases' snapshots as of `as_of` and run the snapshot gates on them."""
+    with tempfile.TemporaryDirectory() as tmp:
+        current, previous = Path(tmp) / "after.json.gz", Path(tmp) / "before.json.gz"
+        extract_snapshot(after_db, current, keep_previous=False, build_date=as_of)
+        extract_snapshot(before_db, previous, keep_previous=False, build_date=as_of)
+        result = verify_frontend_snapshot(
+            current, previous, as_of, **snapshot_context(before_db, after_db),
         )
-    return changes
+    result.pop("current_snapshot_path", None)
+    result.pop("previous_snapshot_path", None)
+    return result
 
 
-def _sort_key(key: EventKey) -> tuple:
-    return tuple("" if v is None else str(v) for v in key)
+def _modes(
+    before_db: Path, after_db: Path,
+) -> tuple[dict[int, str], dict[str, str], dict[str, bool]]:
+    """Parish id -> slug, slug -> its mode this run, and slug -> whether its bulletin changed."""
+    before_conn, after_conn = _open_ro(before_db), _open_ro(after_db)
+    try:
+        ids = {**_parish_ids(before_conn), **_parish_ids(after_conn)}
+        known_before = set(_parish_ids(before_conn).values())
+        update_before, update_after = update_mode_slugs(before_conn), update_mode_slugs(after_conn)
+        bulletins_before = latest_bulletin_ids(before_conn)
+        bulletins_after = latest_bulletin_ids(after_conn)
+        hidden = fetch_only_slugs(after_conn)
+        slugs = known_before | set(_parish_ids(after_conn).values())
+    finally:
+        before_conn.close()
+        after_conn.close()
+    modes = {}
+    for slug in slugs:
+        if slug not in known_before:
+            modes[slug] = NEW
+        elif slug in update_after:
+            modes[slug] = UPDATE if slug in update_before else SEEDED
+        else:
+            modes[slug] = EXTRACT
+    changed = {
+        slug: bulletins_before.get(slug) != bulletins_after.get(slug)
+        for slug in slugs if slug not in hidden
+    }
+    return ids, modes, changed
+
+
+def _parish_report(
+    section: dict[str, Any], slug: str, mode: str, bulletin_changed: bool,
+    losses: list[dict[str, Any]],
+) -> dict[str, Any]:
+    availability = section["availability"]
+    return {
+        "parish_slug": slug,
+        "parish_id": section["parish_id"],
+        "mode": mode,
+        "bulletin_changed": bulletin_changed,
+        "bulletin_url": section["bulletin_url"],
+        "bulletin_week": section["bulletin_week"],
+        "before_count": section["events_before"],
+        "after_count": section["events_after"],
+        "onboarding": section["events_before"] == 0 and section["events_after"] > 0,
+        "recurring": section["recurring"],
+        "dated": section["dated"],
+        "cancellations": section["cancellations"],
+        "availability": {
+            "before": availability["before"],
+            "after": availability["after"],
+            "lost": availability["lost"],
+            "gained": availability["gained"],
+            "moved": availability["moved"],
+            "groups": [g for g in availability["groups"] if g["lost"] or g["gained"]],
+        },
+        "local_losses": [loss for loss in losses if loss["parish_id"] == section["parish_id"]],
+        "notes": section["notes"],
+        "diagnostics": section["diagnostics"],
+    }
+
+
+def _blank_totals() -> dict[str, int]:
+    return {
+        "parishes": 0, "parishes_showing_events": 0, "events_before": 0, "events_after": 0,
+        "events_added": 0, "events_removed": 0, "parishes_changed": 0,
+    }
+
+
+def _totals(parishes: list[tuple[dict[str, Any], str]]) -> dict[str, Any]:
+    """Site-wide totals from the comparison, then the same per mode, then onboarding."""
+    totals = {**_blank_totals(), "cancellations_added": 0, "cancellations_removed": 0}
+    by_mode: dict[str, dict[str, int]] = {}
+    onboarding = {"parishes": 0, "events": 0}
+    for p, mode in parishes:
+        added = p["recurring_added"] + p["dated_added"]
+        removed = p["recurring_removed"] + p["dated_removed"]
+        for bucket in (totals, by_mode.setdefault(mode, _blank_totals())):
+            bucket["parishes"] += 1
+            bucket["parishes_showing_events"] += bool(p["events_after"])
+            bucket["events_before"] += p["events_before"]
+            bucket["events_after"] += p["events_after"]
+            bucket["events_added"] += added
+            bucket["events_removed"] += removed
+            bucket["parishes_changed"] += parish_changed(p)
+        totals["cancellations_added"] += p["cancellations_added"]
+        totals["cancellations_removed"] += p["cancellations_removed"]
+        if p["events_before"] == 0 and p["events_after"]:
+            onboarding["parishes"] += 1
+            onboarding["events"] += p["events_after"]
+    del totals["parishes"]
+    return {**totals, "by_mode": dict(sorted(by_mode.items())), "onboarding": onboarding}
 
 
 def _stale_parishes(
@@ -231,13 +293,21 @@ def build_report(
 ) -> dict[str, Any]:
     """Everything the run changed and every reason to hold it, as one dict.
 
+    The schedule changes and their gates come from `snapshot_verification`
+    (`verify_frontend_snapshot`, as the weekly run passes it); None builds it
+    from the two databases as of today (`verify_databases`).
+
     `seeded` is what re-seeding from the CSVs did at the start of the run.
     Its deletions happen before `before_db` is taken, so the before/after
     comparison cannot see them; they are reported and gated here instead.
     `seeds` is what loading the approved seed files did (`seeding.loader`),
     after `before_db` was taken, so their schedules are in the comparison.
     """
-    changes = diff_databases(before_db, after_db)
+    if snapshot_verification is None:
+        snapshot_verification = verify_databases(before_db, after_db, date.today())
+    verification = snapshot_verification
+    comparison = verification.get("comparison")
+    slugs, modes, bulletin_changed = _modes(before_db, after_db)
 
     conn = _open_ro(after_db)
     try:
@@ -277,47 +347,13 @@ def build_report(
     finally:
         conn.close()
 
-    dropped_to_zero = [
-        c.parish_slug for c in changes
-        if c.before_count >= PARISH_DROP_TO_ZERO_MIN_EVENTS and c.after_count == 0
-    ]
-    big_drops = [
-        c.parish_slug for c in changes
-        if c.before_count >= PARISH_DROP_WARN_MIN_EVENTS
-        and 0 < c.after_count < c.before_count * (1 - PARISH_DROP_WARN_FRACTION)
-    ]
-
-    gates = []
-    if snapshot_verification is not None:
-        gates.extend([
-            {
-                "name": "Church count unchanged",
-                "passed": snapshot_verification.get("churches", {}).get("passed", False),
-                "detail": _fmt_before_after(snapshot_verification.get("churches", {})),
-            },
-            {
-                "name": "Total events within "
-                f"±{snapshot_verification.get('thresholds', {}).get('event_delta_max_pct')}%",
-                "passed": snapshot_verification.get("events", {}).get("passed", False),
-                "detail": _fmt_before_after(snapshot_verification.get("events", {}))
-                + f" ({snapshot_verification.get('events', {}).get('delta_pct')}%)",
-            },
-            {
-                "name": "Weekly schedule at least "
-                f"{snapshot_verification.get('thresholds', {}).get('weekly_match_min_pct')}%"
-                " unchanged",
-                "passed": snapshot_verification.get("weekly_events", {}).get("passed", False),
-                "detail": f"{snapshot_verification.get('weekly_events', {}).get('match_pct')}%"
-                " of last week's weekly slots still present",
-            },
-        ])
-        for error in snapshot_verification.get("errors", []):
-            gates.append({"name": "Snapshot verification", "passed": False, "detail": error})
-    gates.append({
-        "name": "No parish dropped to zero events",
-        "passed": not dropped_to_zero,
-        "detail": ", ".join(dropped_to_zero) or "none",
-    })
+    gates: list[dict[str, Any]] = list(verification.get("gates") or [])
+    if not verification.get("passed", False) and all(g["passed"] for g in gates):
+        # A verification that failed without saying which gate: hold anyway.
+        gates.extend(
+            {"name": "Snapshot verification", "passed": False, "detail": error}
+            for error in verification.get("errors") or ["verification failed"]
+        )
     seeded = seeded or {}
     removed_parishes = seeded.get("parishes_deleted", 0)
     removed_churches = seeded.get("churches_deleted", 0)
@@ -335,23 +371,44 @@ def build_report(
         "name": f"At most {int(FETCH_FAILURE_HOLD_FRACTION * 100)}% of parishes failed to fetch",
         "passed": not attempted or fetch_failed <= len(attempted) * FETCH_FAILURE_HOLD_FRACTION,
         "detail": f"{fetch_failed} of {len(attempted)}",
+        "threshold": FETCH_FAILURE_HOLD_FRACTION,
+        "numerator": fetch_failed,
+        "denominator": len(attempted),
     })
 
+    losses = verification.get("local_losses") or []
+    sections = [
+        (p, slugs.get(p["parish_id"]) or f"parish #{p['parish_id']}")
+        for p in (comparison or {}).get("parishes", [])
+    ]
+    changes = [
+        _parish_report(
+            p, slug, modes.get(slug, EXTRACT), bulletin_changed.get(slug, False), losses,
+        )
+        for p, slug in sorted(sections, key=lambda item: item[1])
+        if parish_changed(p) or p["notes"] or p["diagnostics"] or p["availability"]["lost"]
+        or any(loss["parish_id"] == p["parish_id"] for loss in losses)
+    ]
     passed = all(g["passed"] for g in gates)
-    changed = [c for c in changes if c.added or c.removed]
+    totals = _totals([(p, modes.get(slug, EXTRACT)) for p, slug in sections])
     return {
         "run_id": run_id,
         "status": "passed" if passed else "held",
+        "as_of": verification.get("as_of"),
         "gates": gates,
         "stages": stages,
+        "comparison": None if comparison is None else {
+            "as_of": comparison["as_of"],
+            "window": comparison["window"],
+            "gate_policy_version": verification.get("gate_policy_version"),
+            "thresholds": verification.get("thresholds"),
+            "recurring": comparison["recurring"],
+            "availability": comparison["availability"],
+            "weekly_events": verification.get("weekly_events"),
+        },
         "totals": {
-            "parishes_showing_events": sum(1 for c in changes if c.after_count),
-            "events_before": sum(c.before_count for c in changes),
-            "events_after": sum(c.after_count for c in changes),
-            "events_added": sum(len(c.added) for c in changes),
-            "events_removed": sum(len(c.removed) for c in changes),
-            "parishes_changed": len(changed),
-            "parishes_with_new_bulletin": sum(1 for c in changes if c.bulletin_changed),
+            **totals,
+            "parishes_with_new_bulletin": sum(bulletin_changed.values()),
             "update_mode_parishes": len(update_mode["parishes"]),
             "update_changes_applied": update_mode["applied"],
             "update_proposals_rejected": update_mode["rejected"],
@@ -369,51 +426,13 @@ def build_report(
             "old_issues": old_issues,
             "old_picks": old_picks,
             "stale_parishes": stale,
-            "dropped_to_zero": dropped_to_zero,
-            "big_drops": big_drops,
+            "dropped_to_zero": verification.get("dropped_to_zero") or [],
+            "big_drops": verification.get("big_drops") or [],
+            "local_losses": [loss for loss in losses if loss["severe"]],
+            "onboarding": verification.get("onboarding") or [],
         },
-        "changes": [
-            {
-                "parish_slug": c.parish_slug,
-                "before_count": c.before_count,
-                "after_count": c.after_count,
-                "bulletin_changed": c.bulletin_changed,
-                "added": [_key_dict(k) for k in c.added],
-                "removed": [_key_dict(k) for k in c.removed],
-            }
-            for c in changed
-        ],
+        "changes": changes,
     }
-
-
-def _key_dict(key: EventKey) -> dict[str, Any]:
-    names = (
-        "church_slug", "event_type", "event_kind", "day_of_week", "date",
-        "start_time", "end_time", "cancelled",
-    )
-    return {**dict(zip(names, key)), "summary": describe_event(key)}
-
-
-def _fmt_before_after(section: dict[str, Any]) -> str:
-    return f"{section.get('previous', '?')} → {section.get('current', '?')}"
-
-
-_WEEKDAY_ORDER = {
-    day: index for index, day in enumerate(
-        ("monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday")
-    )
-}
-
-
-def _display_order(event: dict[str, Any]) -> tuple:
-    """Type, then weekday or date, then clock time (not the time's text)."""
-    day = event.get("day_of_week")
-    when = (
-        (0, _WEEKDAY_ORDER.get(day.lower(), 7), "")
-        if isinstance(day, str) and event.get("event_kind") == "weekly"
-        else (1, 0, event.get("date") or "")
-    )
-    return (event["event_type"], when, time_to_minutes(event["start_time"]) or 0)
 
 
 # ── Markdown ────────────────────────────────────────────────────────────────
@@ -472,6 +491,119 @@ def _render_fetch_only(section: dict[str, Any], *, max_notes: int = 60) -> list[
     return lines
 
 
+def _comparison_lines(report: dict[str, Any]) -> list[str]:
+    """When and how the schedules were compared, and the totals per mode."""
+    comparison = report.get("comparison")
+    totals = report["totals"]
+    lines: list[str] = []
+    if comparison:
+        window = comparison["window"]
+        last = date.fromisoformat(window["end"]).toordinal() - 1
+        lines.append(
+            f"Compared as of {comparison['as_of']}; upcoming dates "
+            f"{window['start']} to {date.fromordinal(last).isoformat()} ({window['days']} days); "
+            f"gate policy v{comparison.get('gate_policy_version')}."
+        )
+    modes = totals.get("by_mode") or {}
+    if len(modes) > 1 or set(modes) - {EXTRACT}:
+        lines.append("By mode: " + "; ".join(
+            f"{mode} {m['parishes']} parishes, {m['events_before']} → {m['events_after']} "
+            f"events (+{m['events_added']} / −{m['events_removed']})"
+            for mode, m in modes.items()
+        ) + ".")
+    onboarding = totals.get("onboarding") or {}
+    if onboarding.get("parishes"):
+        lines.append(
+            f"Onboarding: {onboarding['parishes']} parishes showing events for the first time "
+            f"({onboarding['events']} events), not counted as retained or lost."
+        )
+    return lines + [""] if lines else []
+
+
+def _describe_loss(loss: dict[str, Any]) -> str:
+    where = f"**{loss['parish_slug']}**"
+    if loss["level"] == "church":
+        label = _TYPE_LABELS.get(loss["event_type"], loss["event_type"])
+        where += f" `{loss['church_slug']}` {label}"
+    text = f"{where} loses {loss['missing']} of its {loss['before']} upcoming dates"
+    if loss["moved"]:
+        text += f" ({loss['moved']} more moved to another time)"
+    if loss["holds"]:
+        return text + " (holds the run)"
+    if loss["seeded_this_run"] and loss["severe"]:
+        return text + " (seeded this run from a current seed; does not hold)"
+    return text + " (reported only)" if loss["severe"] else text
+
+
+def _by_church(changes: list[dict[str, Any]], *, signs: bool = True) -> list[str]:
+    marks = {"added": "+ ", "removed": "− ", "modified": "changed: "}
+    by_church: dict[str, list[str]] = {}
+    for change in changes:
+        mark = marks.get(change.get("change"), "") if signs else ""
+        by_church.setdefault(change["church_slug"], []).append(f"{mark}{change['summary']}")
+    lines = []
+    for church, texts in sorted(by_church.items()):
+        lines.append(f"- `{church}`")
+        lines += [f"  - {text}" for text in texts]
+    return lines
+
+
+def _render_parish(change: dict[str, Any]) -> list[str]:
+    counts = [
+        f"{n} {label}" for n, label in (
+            (len(change["recurring"]), "recurring"),
+            (len(change["dated"]), "dated"),
+            (len(change["cancellations"]), "cancellations"),
+        ) if n
+    ]
+    bits = [change["mode"]] + (["new bulletin"] if change["bulletin_changed"] else [])
+    lines = [
+        f"<details><summary><b>{change['parish_slug']}</b> ({', '.join(bits)}): "
+        f"{', '.join(counts) or 'no schedule change'} "
+        f"({change['before_count']} → {change['after_count']} events)</summary>",
+        "",
+    ]
+    if change.get("bulletin_url"):
+        week = f" for the week of {change['bulletin_week']}" if change.get("bulletin_week") else ""
+        lines += [f"[Current bulletin]({change['bulletin_url']}){week}.", ""]
+    for key, title in (
+        ("recurring", "Recurring schedule"), ("dated", "Dated events"),
+        ("cancellations", "Cancellations"),
+    ):
+        if change[key]:
+            lines += [f"**{title}**", ""] + _by_church(change[key]) + [""]
+    availability = change["availability"]
+    if availability["lost"] or availability["gained"]:
+        lines.append(
+            f"**Upcoming dates**: {availability['before']} → {availability['after']} "
+            f"(−{availability['lost']} / +{availability['gained']})"
+        )
+        lines.append("")
+        for group in availability["groups"]:
+            label = _TYPE_LABELS.get(group["event_type"], group["event_type"])
+            text = (
+                f"- `{group['church_slug']}` {label}: lost {group['lost']} of {group['before']}"
+                f", gained {group['gained']}"
+                + (f" ({group['moved']} of them a time that moved)" if group["moved"] else "")
+            )
+            if group["lost_dates"]:
+                shown = ", ".join(group["lost_dates"][:6])
+                more = len(group["lost_dates"]) - 6
+                text += f" (lost {shown}{f', and {more} more' if more > 0 else ''})"
+            lines.append(text)
+        lines.append("")
+    if change["notes"]:
+        lines += ["**Notes** (not counted as schedule changes)", ""]
+        for note in change["notes"]:
+            before = "; ".join(note["before"]) or "no note"
+            after = "; ".join(note["after"]) or "no note"
+            lines.append(f"- `{note['church_slug']}` {note['summary']}: “{before}” → “{after}”")
+        lines.append("")
+    if change["diagnostics"]:
+        lines += ["**Data quality**", ""] + [f"- {d}" for d in change["diagnostics"]] + [""]
+    return lines + ["</details>"]
+
+
 def render_markdown(report: dict[str, Any], *, max_changed_parishes: int = 40) -> str:
     status = report["status"]
     icon = {"passed": "✅", "held": "⏸️", "failed": "❌"}.get(status, "")
@@ -489,8 +621,16 @@ def render_markdown(report: dict[str, Any], *, max_changed_parishes: int = 40) -
         f"(was {totals['events_before']}). "
         f"{totals['parishes_with_new_bulletin']} parishes have a new bulletin; "
         f"{totals['parishes_changed']} changed their schedule "
-        f"(+{totals['events_added']} / −{totals['events_removed']} events).",
+        f"(+{totals['events_added']} / −{totals['events_removed']} events"
+        + (
+            f", +{totals['cancellations_added']} / −{totals['cancellations_removed']} "
+            "cancellations" if totals.get("cancellations_added")
+            or totals.get("cancellations_removed") else ""
+        ) + ").",
         "",
+    ]
+    lines += _comparison_lines(report)
+    lines += [
         "### Publishing checks",
         "",
         "| Check | Result | Detail |",
@@ -543,6 +683,8 @@ def render_markdown(report: dict[str, Any], *, max_changed_parishes: int = 40) -
         notes.append(f"- **{slug}** now shows no events (holds the run)")
     for slug in attention["big_drops"]:
         notes.append(f"- **{slug}** lost more than half of its events")
+    for loss in attention.get("local_losses", []):
+        notes.append(f"- {_describe_loss(loss)}")
     for slug, newest in attention["stale_parishes"].items():
         notes.append(
             f"- **{slug}** has no bulletin from the last {STALE_BULLETIN_AGE_DAYS} days "
@@ -557,22 +699,7 @@ def render_markdown(report: dict[str, Any], *, max_changed_parishes: int = 40) -
     if not changes:
         lines.append("No parish's schedule changed.")
     for change in changes[:max_changed_parishes]:
-        lines.append(
-            f"<details><summary><b>{change['parish_slug']}</b>: "
-            f"+{len(change['added'])} / −{len(change['removed'])} "
-            f"({change['before_count']} → {change['after_count']} events)</summary>"
-        )
-        lines.append("")
-        by_church: dict[str, list[tuple[tuple, str]]] = {}
-        for sign, events in (("+", change["added"]), ("−", change["removed"])):
-            for event in events:
-                by_church.setdefault(event["church_slug"], []).append(
-                    (_display_order(event), f"{sign} {event['summary']}")
-                )
-        for church, entries in sorted(by_church.items()):
-            lines.append(f"- `{church}`")
-            lines += [f"  - {text}" for _, text in sorted(entries)]
-        lines += ["", "</details>"]
+        lines += _render_parish(change)
     if len(changes) > max_changed_parishes:
         lines.append(
             f"\n…and {len(changes) - max_changed_parishes} more parishes; see report.json."
