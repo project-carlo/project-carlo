@@ -16,7 +16,6 @@ evidence:
   seen: 2026-10-30
   note: probe url finds ecatholic:11159 and files.ecatholic.com/11159/bulletins/ PDFs dated weekly from
     2026-08-02 to 2026-10-25.
-replaces: [st-joseph-millstone]
 promoted: 2026-10-30
 bulletin_status: available
 publication_reviews:
@@ -26,10 +25,10 @@ publication_reviews:
   - url: https://files.ecatholic.com/11159/bulletins/20261025.pdf
     seen: 2026-10-30
     quote: 91 Stillhouse Road, Millstone Twp., N.J. 08510
-    note: 'Bulletin for St. Joseph Church (row st-joseph-millstone-township), read by its map batch: Cover (page
-      1) of the 25 October 2026 issue names St. Joseph alone with the Stillhouse Road address. Page 10
-      lists Rev. Michael P. Lang, Pastor, and ''Saturday Evening – 5:00 PM; Sunday Morning – 9:00 AM &
-      11:00 AM; Mon, Tues, Wed & Fri – 9:00AM''.'
+    note: 'Bulletin for St. Joseph Church (row st-joseph-millstone-township), read by its map batch: Cover
+      (page 1) of the 25 October 2026 issue names St. Joseph alone with the Stillhouse Road address. Page
+      10 lists Rev. Michael P. Lang, Pastor, and ''Saturday Evening – 5:00 PM; Sunday Morning – 9:00 AM
+      & 11:00 AM; Mon, Tues, Wed & Fri – 9:00AM''.'
   - url: https://container.parishesonline.com/bulletins/04/1243/20261025B.pdf
     seen: 2026-10-30
     quote: 16 McLean Street, Freehold, New Jersey 07728
@@ -44,10 +43,10 @@ publication_reviews:
   - url: https://files.ecatholic.com/11159/bulletins/20261025.pdf
     seen: 2026-10-30
     quote: 91 Stillhouse Road, Millstone Twp., N.J. 08510
-    note: 'Bulletin for St. Joseph Church (row st-joseph-millstone-township), read by its map batch: Cover (page
-      1) of the 25 October 2026 issue names St. Joseph alone with the Stillhouse Road address. Page 10
-      lists Rev. Michael P. Lang, Pastor, and ''Saturday Evening – 5:00 PM; Sunday Morning – 9:00 AM &
-      11:00 AM; Mon, Tues, Wed & Fri – 9:00AM''.'
+    note: 'Bulletin for St. Joseph Church (row st-joseph-millstone-township), read by its map batch: Cover
+      (page 1) of the 25 October 2026 issue names St. Joseph alone with the Stillhouse Road address. Page
+      10 lists Rev. Michael P. Lang, Pastor, and ''Saturday Evening – 5:00 PM; Sunday Morning – 9:00 AM
+      & 11:00 AM; Mon, Tues, Wed & Fri – 9:00AM''.'
   - url: https://drive.google.com/uc?export=download&id=1r48ueb1qlYBP9puwB1dEBllrtP7HNrVp
     seen: 2026-10-30
     quote: Our Lady of Mercy Church

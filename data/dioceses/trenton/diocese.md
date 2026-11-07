@@ -9,7 +9,7 @@ city_aliases:
   Princeton Jct: Princeton Junction
   Millstone Twp: Millstone Township
   Barnegat Township: Barnegat
-promoted: 2026-10-30
+promoted: 2026-11-07
 ---
 
 Four counties of central New Jersey: Mercer (Trenton, Hamilton and Yardville, Ewing and West

@@ -34,7 +34,6 @@ evidence:
     30 August ...). Its first dated link, https://files.constantcontact.com/6512d43c001/51c737bf-c2ec-4a44-b348-2e69ace27468.pdf,
     is labelled 25 October but its page-1 masthead reads ''Pastor: Reverend Fr. Jeffrey E. Lee ... November
     1, 2026 Solemnity of All Saints'' (a second copy of the 1 November issue).'
-promoted: 2026-10-30
 research:
 - method: fetch:check with page-pdfs on /bulletins-1 and on /past-bulletins
   url: https://www.stmaryscoltsneck.org/past-bulletins
