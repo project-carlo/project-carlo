@@ -18,7 +18,7 @@ import { ANALYTICS_ENTRY, CHURCH_INDEX_ENTRY, CITY_MAP_ENTRY } from "../src/lib/
 import { ANALYTICS_DASHBOARD_PATH } from "../src/lib/analyticsReports";
 import { HOME_LINK_ATTRIBUTE, HOME_SEARCH_KEY } from "../src/hooks/useHomeHref";
 import cityCentersJson from "../src/data/cityCenters.json";
-import { parseSnapshot, SNAPSHOT_FILE } from "../src/lib/snapshot";
+import { EVENT_TYPE_ORDER, parseSnapshot, SNAPSHOT_FILE } from "@carlo/core";
 import { StaticChurchPage } from "../src/prerender/StaticChurchPage";
 import { StaticChurchIndexPage } from "../src/prerender/StaticChurchIndexPage";
 import { StaticCityPage } from "../src/prerender/StaticCityPage";
@@ -33,7 +33,6 @@ import {
   type LastmodEntry,
   type LastmodManifest,
 } from "../src/lib/lastmod";
-import { EVENT_TYPE_ORDER } from "../src/constants/eventTypes";
 
 const WEB_DIR = resolve(import.meta.dirname, "..");
 // The Cloudflare Vite plugin puts the browser build in dist/client, beside

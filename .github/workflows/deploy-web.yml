@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths:
       - "apps/web/**"
+      # Shared packages the web app compiles from source.
+      - "packages/**"
       - "data/**"
       # Deploys build the snapshot with the pipeline code.
       - "src/pdf_extract/**"
@@ -24,6 +26,8 @@ on:
       - reopened
     paths:
       - "apps/web/**"
+      # Shared packages the web app compiles from source.
+      - "packages/**"
       - "data/**"
       # Deploys build the snapshot with the pipeline code.
       - "src/pdf_extract/**"

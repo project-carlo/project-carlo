@@ -1,7 +1,7 @@
 <!-- The prompt for factory/stages/seed.yaml. -->
 
 You draft one parish's seed, `data/seeds/<parish>.json`, following the draft-parish-seed
-skill. Your job input gives the parish and your scratch folder. `pnpm data:pull` has been
+skill. Your job input gives the parish. `pnpm data:pull` has been
 run. When it gives the owner's answer to a question you raised, resume the draft and
 follow the answer. `seed-review` reviews your draft next, decides its open questions and
 approves it, or sends it back to you with the problems to fix.

@@ -78,6 +78,13 @@ def test_writer_patches_fields_and_replaces_lists_without_losing_evidence(root):
     {"research": [_attempt(revisit_after=0)]},
     {"research": [_attempt(revisit_after="")]},
     {"bulletin_status": "absent"}, {"body": 7}, {"invented": "field"},
+    {"fetch_gap": "solutio"}, {"fetch_gap": {"kind": "Solutio 403", "seen": "2026-10-21",
+                                            "note": "403"}},
+    {"fetch_gap": {"kind": "solutio-file-403", "seen": "2026-10-21"}},
+    {"fetch_gap": {"kind": "solutio-file-403", "seen": "2026-10-21", "note": "403",
+                   "url": "ftp://example.org"}},
+    {"fetch_gap": {"kind": "solutio-file-403", "seen": "2026-10-21", "note": "403",
+                   "invented": 1}},
     {"publication_reviews": [{"parish": "missing", "decision": "separate",
                               "evidence": EVIDENCE}]},
 ])
@@ -221,3 +228,74 @@ def test_fetch_cli_bad_expectations_are_input_errors(option, value, capsys):
     assert main(["fetch-check", option, value]) == 1
     captured = capsys.readouterr()
     assert captured.out == "" and "Traceback" not in captured.err
+
+
+def _gap(kind="solutio-file-403", **changes):
+    return {"kind": kind, "seen": "2026-10-21", "url": "https://example.org/bulletin/7/file",
+            "note": "Solutio /file links answer 403 to the fetcher.", **changes}
+
+
+def test_fetch_gaps_are_written_listed_by_kind_and_cleared(root):
+    _write("anne", {**_payload("St. Anne"), "fetch_gap": _gap()}, create=True)
+    _write("bede", {**_payload("St. Bede"), "fetch_gap": _gap()}, create=True)
+    _write("clare", {**_payload("St. Clare"), "fetch_gap": _gap("joomla-weblink-redirect")},
+           create=True)
+    _write("dunstan", _payload("St. Dunstan"), create=True)
+    assert "fetch_gap" not in (root / "parishes/dunstan.md").read_text()
+
+    out = report.gaps()
+    assert out["total"] == 3
+    assert [(k["kind"], k["parishes"]) for k in out["kinds"]] == [
+        ("solutio-file-403", 2), ("joomla-weblink-redirect", 1)]
+    assert [e["parish"] for e in out["kinds"][0]["entries"]] == ["anne", "bede"]
+    assert report.gaps("test", "joomla-weblink-redirect")["total"] == 1
+    assert [g["parish"] for g in report.todo("test")["fetch_gaps"]] == ["anne", "bede", "clare"]
+
+    _write("anne", {"fetch_gap": None})
+    assert "fetch_gap" not in (root / "parishes/anne.md").read_text()
+    assert report.gaps("test", "solutio-file-403")["total"] == 1
+    with pytest.raises(DioceseError):
+        report.gaps("missing")
+
+    # new_record (scripts, bulk adds) keeps the object rather than turning it into text
+    records.new_record("test", "parish", {"name": "St. Edith", "fetch_gap": _gap(),
+                                          "website": "https://example.org/edith"})
+    assert records.load("test").of(records.PARISH)["st-edith"]["fetch_gap"] == _gap()
+
+
+def test_a_field_on_the_wrong_kind_says_where_it_goes(root):
+    payload = {**_payload(), "roster": ["directory:24513"], "city": "Town"}
+    with pytest.raises(DioceseError) as error:
+        _write(payload=payload, create=True)
+    message = str(error.value)
+    assert "parish has no writable fields: city, roster" in message
+    assert "roster links name places, so they go on the parish's churches" in message
+    assert "addresses and coordinates go on the parish's churches" in message
+    assert "parish fields: name, website," in message and "diocese write --help" in message
+    assert not (root / "parishes/anne.md").exists()
+    with pytest.raises(DioceseError, match="bulletin fields go on the parish record"):
+        records.write_record("test", "church", "anne-town", {"website": "https://x.org"},
+                             create=True)
+
+
+def test_write_help_lists_each_kinds_fields_and_a_copyable_example(capsys):
+    with pytest.raises(SystemExit):
+        main(["diocese", "write", "--help"])
+    out = capsys.readouterr().out
+    assert "  parish: name (text)" in out and "roster ([text])" in out
+    assert "never on a parish" in out
+    example = out[out.index("<<'JSON'") + len("<<'JSON'"):out.rindex("JSON")]
+    assert json.loads(example)["roster"] == ["directory:24527", "gcatholic:18685"]
+
+
+def test_new_takes_the_slug_as_an_argument_or_a_flag(root, capsys):
+    _write(create=True)
+    assert main(["diocese", "new", "church", "test", "anne-church", "--parish", "anne",
+                 "--name", "St. Anne Church"]) == 0
+    assert json.loads(capsys.readouterr().out)["created"] == "churches/anne-church.md"
+    assert main(["diocese", "new", "church", "test", "--slug", "anne-chapel", "--parish",
+                 "anne", "--name", "St. Anne Chapel"]) == 0
+    assert json.loads(capsys.readouterr().out)["created"] == "churches/anne-chapel.md"
+    assert main(["diocese", "new", "church", "test", "one", "--slug", "two", "--parish",
+                 "anne", "--name", "X"]) == 1
+    assert "two slugs given" in capsys.readouterr().err
