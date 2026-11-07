@@ -195,6 +195,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - The Tablet (thetablet.org) asks for a login after a few paragraphs; its WordPress API (wp-json/wp/v2/posts?search=<words>&_fields=link,date,title) lists dated articles for closures and sales, and probe get on an article still returns the opening paragraphs to quote.
 - The Church Bulletin Inc. ad-page footer number (#167, #117, #224) is per parish: different numbers plus different mastheads support a 'separate' review between neighbouring Church Bulletin Inc. rows, which have no publication id to compare.
 - Mass finder place pages for merged parishes list every worship site under 'All Worship Sites', but the roster line can pair one church's street with another's pin: link the massfinder entry to the church at its pin and give the other church its own record from the page's address.
+- LPi org slugs here are not always <name>-church-<zip>: Our Lady of Solace's is the directory's full name with no zip (shrine-church-of-our-lady-of-solace, 03/9994); when the zip forms miss, probe po the directory name slugged as-is before treating a stale self-hosted archive as a stop.
 
 ## Rules settled for this diocese
 
