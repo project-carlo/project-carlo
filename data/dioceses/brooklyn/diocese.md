@@ -201,6 +201,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Old frameset parish sites (index.html with <frame src=links.htm>) hide the bulletin link from the resolver (fetch:check NoBulletin on the homepage): pin `page-pdfs <site>/<menu frame>.htm` to reach a fixed bulletin.pdf, then check its date yourself, since freshness stays unknown.
 - John Patrick slug pages (church-bulletin.org/<id>) post each issue about a week before parish sites repost it, and list issues in date order where a Tilma page may group cards by month; a merged parish's former JPP job can survive as a slug page listing no PDFs, which is a dormant bulletin, not a publication id.
 - Diocesan-multisite bulletin pages (/weekly-bulletin/) can list a non-bulletin PDF (an event request form) above the issues; pin page-pdfs with filename=*compressed*.pdf so the first-listed pick is the newest issue.
+- Tilma bulletin issues can have no name masthead (St. Michael – St. Malachy's page 1 is intentions, readings and one Mass schedule): identify the issue by its hosting site and a schedule that matches the site's Mass Times page, and say so in the record, since fetch:check leaves publication identity unverified.
 
 ## Rules settled for this diocese
 
