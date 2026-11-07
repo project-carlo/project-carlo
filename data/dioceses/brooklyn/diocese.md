@@ -200,6 +200,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Diocesan-multisite issues named <mon><d>_<yyyy>_<parish>_compressed.pdf can also be The Church Bulletin Inc. issues (footer #NNN, no container): record other with page-pdfs on the /important-information/bulletin/ or /bulletin/ page and no publication id; fetch resolves it 'current' from the file name even when the masthead's text layer is a shifted font.
 - Old frameset parish sites (index.html with <frame src=links.htm>) hide the bulletin link from the resolver (fetch:check NoBulletin on the homepage): pin `page-pdfs <site>/<menu frame>.htm` to reach a fixed bulletin.pdf, then check its date yourself, since freshness stays unknown.
 - John Patrick slug pages (church-bulletin.org/<id>) post each issue about a week before parish sites repost it, and list issues in date order where a Tilma page may group cards by month; a merged parish's former JPP job can survive as a slug page listing no PDFs, which is a dormant bulletin, not a publication id.
+- Diocesan-multisite bulletin pages (/weekly-bulletin/) can list a non-bulletin PDF (an event request form) above the issues; pin page-pdfs with filename=*compressed*.pdf so the first-listed pick is the newest issue.
 
 ## Rules settled for this diocese
 
