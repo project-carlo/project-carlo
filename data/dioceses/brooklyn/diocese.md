@@ -189,6 +189,7 @@ touch it.
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
 - eCatholic archive links carry ?t=<ms epoch> upload stamps: when the newest issue is stale, decode them to tell a batch-uploading parish (many issues posted the same day) from one that stopped; and probe po <name>-church-<zip> or <name>-roman-catholic-church-<zip>, since a parish's LPi container can start beside a stale eCatholic or Tilma archive.
+- Tilma upload stamps: the resource token base64-decodes to the upload date ('2026/10/02/...'); a parish whose cards arrive in batches every 2-10 weeks can look stale between batches, so set the recheck after the usual gap instead of reading the gap as a stop.
 
 ## Rules settled for this diocese
 
