@@ -15,7 +15,7 @@ bulletin makes the model propose changing it, and a slot the seed misses is
 only added when a bulletin makes the model notice it is missing.
 
 Seeds are drafted by the onboarding factory's seed Runs
-([factory-spec.md](factory-spec.md)). A drafter reads the parish's bulletins
+([factory.md](factory.md)). A drafter reads the parish's bulletins
 itself against the extraction policy (`classifiers/schedule_policy.POLICY`).
 It writes down, for every slot, what each source said, what it decided and
 why. Where it can't decide, it writes a question. The factory's `seed-review`
@@ -54,7 +54,7 @@ seed Run ─► seed job per parish ─► data/seeds/<parish>.json ─► seed-
 ```
 
 1. A seed Run starts once a mapped diocese's parishes have enough bulletins
-   (factory-spec.md §3), and runs one seed job per parish, a batch at a time.
+   ([factory.md](factory.md#the-pipeline)), and runs one seed job per parish, a batch at a time.
 2. Each seed job drafts its parish and writes its seed file; the dispatcher
    checks it (`seed check`) and commits it.
 3. `seed-review` reviews the batch's seeds, answers every open question and
@@ -142,7 +142,7 @@ labels.
 
 ## Approval by seed-review
 
-The onboarding factory ([factory-spec.md](factory-spec.md), §8 and §11) has a
+The onboarding factory ([factory.md](factory.md#a-job)) has a
 `seed-review` agent review the seeds of a seed Run. When it approves one, the
 factory runs `pnpm seed approve <parish> --reviewer agent:seed-review@<commit>
 --answers <file>`. That does what Seeds mode does for a person: each answer

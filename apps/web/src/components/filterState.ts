@@ -1,6 +1,8 @@
-import { FILTER_DAY_LABELS } from "../constants/days";
-import { EVENT_TYPE_ORDER } from "../constants/eventTypes";
-import type { EventType } from "../types";
+import {
+  EVENT_TYPE_ORDER,
+  type EventType,
+  FILTER_DAY_LABELS,
+} from "@carlo/core";
 import type { ChurchFilters } from "../api";
 
 export interface FilterState {

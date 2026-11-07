@@ -7,7 +7,7 @@ import {
   fetchChurchIndex,
   fetchCityPage,
 } from "../api";
-import { EVENT_TYPE_ORDER } from "../constants/eventTypes";
+import { EVENT_TYPE_ORDER } from "@carlo/core";
 
 /** React Query's default; a failure that outlasts it shows the error and Retry. */
 const MAX_RETRIES = 3;

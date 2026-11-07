@@ -25,7 +25,7 @@ import { useMapSelection } from "@/hooks/useMapSelection";
 import { CITY_MAP_ZOOM_CORNER_CLASS } from "@/lib/cityMap";
 import type { MapStart } from "@/lib/mapStart";
 import type { MapView } from "@/lib/mapView";
-import type { ChurchMapItem } from "../types";
+import type { ChurchMapItem } from "@carlo/core";
 
 const loadOpenControls = () => import("./CityMapOpenControls");
 const CityMapOpenControls = lazy(loadOpenControls);

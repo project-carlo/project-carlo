@@ -360,3 +360,51 @@ def test_scope_explains_rows_without_valid_probe_sources(dataset, monkeypatch):
     assert result["scope"]["rows_considered"] == 2
     assert result["scope"]["site_probes"]["fetched"] == 0
     assert {p["parish"] for p in result["scope"]["site_probes"]["skipped"]} == {"a", "b"}
+
+
+BON_VENTURE = "http://sponsors.bonventure.net"
+
+
+def test_a_publishers_host_alone_pairs_no_rows(dataset):
+    """Metuchen: 14 rows on Bon Venture made 56 host-only pairs to review by hand."""
+    dataset({slug: {"bulletin_provider": "other", "provider_id": f"page-pdfs {BON_VENTURE}/"
+                                                                 f"?page={n}",
+                    "publication": [f"url:{BON_VENTURE}/?page={n}"]}
+             for slug, n in (("a", 2141), ("b", 2152), ("c", 2150))})
+    result = report.audit("test")
+    assert result["candidate_pairs"] == []
+    assert result["scope"]["publisher_hosts"] == {"sponsors.bonventure.net": ["a", "b", "c"]}
+    assert any("publisher's host" in line for line in result["scope"]["limitations"])
+
+
+def test_one_publisher_account_on_two_rows_is_still_a_candidate(dataset):
+    dataset({"a": {"publication": [f"url:{BON_VENTURE}/?page=2141"]},
+             "b": {"website": "https://b.org",
+                   "publication": [f"url:{BON_VENTURE}/pdfs/2141/2026-11-01.pdf"]}})
+    candidate = pair(report.audit("test"))
+    assert candidate["status"] == "unresolved"
+    assert "publisher account: bonventure:2141" in candidate["reasons"]
+
+
+@pytest.mark.parametrize("url, account", [
+    (f"{BON_VENTURE}/?page=2141", "bonventure:2141"),
+    (f"{BON_VENTURE}/pdfs/6555/2026-11-01.pdf", "bonventure:6555"),
+    ("https://www.jppc.net/onlinebulletins/913template.pdf", "jppc:913"),
+    ("https://church-bulletin.org/?id=4047", "church-bulletin:4047"),
+    ("https://church-bulletin.org/227", "church-bulletin:227"),
+    ("https://www.church-bulletin.org/st-ann-town-nj-08800", "church-bulletin:st-ann-town-nj-08800"),
+    ("https://www.church-bulletin.org/bulletin/st-ann-town-nj-08800/2026-11-01.pdf",
+     "church-bulletin:st-ann-town-nj-08800"),
+    ("https://church-bulletin.org/", ""),
+    ("https://church-bulletin.org/bulletin", ""),
+    ("https://example.org/?page=2141", ""),
+])
+def test_publisher_accounts(url, account):
+    assert audit.publisher_account(url) == account
+
+
+def test_separate_reviews_on_a_publishers_host_are_still_reported(dataset):
+    dataset({"a": {"publication": [f"url:{BON_VENTURE}/?page=1"],
+                   "publication_reviews": [review("b")]},
+             "b": {"publication": [f"url:{BON_VENTURE}/?page=2"]}})
+    assert pair(report.audit("test"))["status"] == "separate"

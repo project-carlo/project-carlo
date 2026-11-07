@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import type { ChurchDetail } from "../types";
+import type { ChurchDetail } from "@carlo/core";
 import {
   buildChurchTitle,
   buildCityDescription,

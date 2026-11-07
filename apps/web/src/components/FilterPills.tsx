@@ -1,5 +1,4 @@
-import { FILTER_DAY_LABELS } from "../constants/days";
-import { formatMinutesMissal } from "../utils";
+import { FILTER_DAY_LABELS, formatMinutesMissal } from "@carlo/core";
 import { MINUTES_PER_DAY, type FilterState } from "./filterState";
 
 interface FilterPillsProps {

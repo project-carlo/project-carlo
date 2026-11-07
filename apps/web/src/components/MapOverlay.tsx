@@ -11,7 +11,7 @@ import { useDocumentLinks } from "../lib/documentLinks";
 import { isAboutPageEnabled } from "../lib/featureFlags";
 import { CHURCH_INDEX_PATH } from "../lib/seo";
 import { CHURCH_LIST } from "../copy";
-import { EVENT_TYPE_LABELS } from "../constants/eventTypes";
+import { EVENT_TYPE_LABELS } from "@carlo/core";
 import type { PlaceSearchResult } from "../placeSearch";
 
 const aboutPageEnabled = isAboutPageEnabled();

@@ -1,4 +1,4 @@
-import type { ChurchBase } from "../types";
+import type { ChurchBase } from "@carlo/core";
 
 /**
  * City (and town) pages: one per city that has at least one church, listing
