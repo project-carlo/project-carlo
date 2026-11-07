@@ -1,26 +1,36 @@
 import {
-  useState,
-  useEffect,
   useCallback,
-  useMemo,
+  useEffect,
   useLayoutEffect,
-  type RefObject,
+  useMemo,
   useRef,
+  useState,
   type ReactNode,
+  type RefObject,
 } from "react";
 import { Command as CommandPrimitive, useCommandState } from "cmdk";
 import { useQuery } from "@tanstack/react-query";
-import type FuseType from "fuse.js";
 import type { ChurchSearchResult } from "../api";
-import { churchSearchIndexQuery } from "../lib/homeStartQueries";
+import {
+  approximateLocationQuery,
+  churchSearchIndexQuery,
+} from "../lib/homeStartQueries";
 import { formatAddress } from "@carlo/core";
+import type { LatLng } from "../lib/cities";
 import { wantsCurrentLocation } from "../lib/currentLocationQuery";
+import {
+  buildLocalSearchIndex,
+  chooseSearchCenter,
+  rankPlaces,
+  searchChurches,
+} from "../lib/localSearch";
 import { useBrowserLocation } from "../hooks/useBrowserLocation";
 import { track } from "../lib/analytics";
 import {
   canSearchPlaces,
   currentLocationPlace,
   PlaceSearchConfigurationError,
+  roundToBiasPrecision,
   searchPlaces,
   type PlaceSearchResult,
 } from "../placeSearch";
@@ -43,34 +53,46 @@ import {
   PopoverContent,
 } from "@/components/ui/popover";
 
-const DEBOUNCE_MS = 200;
-type SearchMode = "place" | "parish";
+/** Most people type slower than this between letters, so a shorter pause
+ *  would search on nearly every one of them. */
+const DEBOUNCE_MS = 300;
+const PLACE_RESULT_CACHE_MS = 10 * 60 * 1000;
+
+const RESULT_ITEM_CLASS =
+  "group relative cursor-pointer gap-0 rounded-none border-l-2 border-transparent px-3 py-2.5 font-serif text-base text-ink data-[selected=true]:border-rubric data-[selected=true]:bg-paper-deep/60 data-[selected=true]:text-ink";
+const RESULT_GROUP_CLASS =
+  "**:[[cmdk-group-heading]]:px-2 **:[[cmdk-group-heading]]:pt-0 **:[[cmdk-group-heading]]:pb-1 **:[[cmdk-group-heading]]:text-[0.8125rem] **:[[cmdk-group-heading]]:font-normal **:[[cmdk-group-heading]]:text-ink-soft";
+const STATUS_CLASS =
+  "px-3 py-4 text-center font-serif text-sm text-ink-soft";
 
 interface SearchTypeaheadProps {
   onChurchSelect: (church: ChurchSearchResult) => void;
   onPlaceSelect: (place: PlaceSearchResult) => void;
   filterButton: ReactNode;
-  /** Hide the inline place/parish mode toggle. Defaults to false. */
-  hideModeToggle?: boolean;
   /** Input/icon sizing variant. `md` (default) matches the map header; `lg` renders the hero size used on the landing page. */
   size?: "md" | "lg";
-  /** The place search's placeholder, where the default won't fit. */
-  placePlaceholder?: string;
+  /** The search's placeholder, where the default won't fit. */
+  placeholder?: string;
+  /**
+   * What the visitor is looking at, to rank results around: the middle of the
+   * map, when there's one. Without it, or if it's somewhere Carlo doesn't
+   * cover, results rank around their IP location.
+   */
+  getSearchCenter?: () => LatLng | null;
 }
 
 export function SearchTypeahead({
   onChurchSelect,
   onPlaceSelect,
   filterButton,
-  hideModeToggle = false,
   size = "md",
-  placePlaceholder = "Search for a city, ZIP, or address…",
+  placeholder = "Search for a city, ZIP, address, or church…",
+  getSearchCenter,
 }: SearchTypeaheadProps) {
   const [query, setQuery] = useState("");
   const [debouncedQuery, setDebouncedQuery] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
-  const [searchMode, setSearchMode] = useState<SearchMode>("place");
   const searchAnchorRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -81,97 +103,120 @@ export function SearchTypeahead({
   const { data: allChurches = [], isLoading: churchesLoading } = useQuery(
     churchSearchIndexQuery,
   );
+  const localIndex = useMemo(
+    () => buildLocalSearchIndex(allChurches),
+    [allChurches],
+  );
+  // Asked for once the box is opened: most page views never search.
+  const { data: approximateLocation } = useQuery({
+    ...approximateLocationQuery,
+    enabled: isOpen,
+  });
+  const searchCenter = chooseSearchCenter(
+    [getSearchCenter?.(), approximateLocation],
+    allChurches,
+  );
+  // Rounded, so a small move of the map neither reranks nor searches again.
+  const biasLat = searchCenter ? roundToBiasPrecision(searchCenter).lat : null;
+  const biasLng = searchCenter ? roundToBiasPrecision(searchCenter).lng : null;
+  const near = useMemo(
+    () =>
+      biasLat !== null && biasLng !== null
+        ? { lat: biasLat, lng: biasLng }
+        : null,
+    [biasLat, biasLng],
+  );
 
+  const trimmedQuery = query.trim();
   const trimmedDebouncedQuery = debouncedQuery.trim();
-  const shouldSearchPlaces =
-    searchMode === "place" && canSearchPlaces(trimmedDebouncedQuery);
+  const shouldSearchPlaces = canSearchPlaces(trimmedDebouncedQuery);
   const {
-    data: placeResults = [],
+    data: providerPlaces = [],
     isLoading: placesLoading,
+    isPlaceholderData: placesPending,
     error: placeError,
   } = useQuery({
-    queryKey: ["place-search", trimmedDebouncedQuery],
+    queryKey: ["place-search", trimmedDebouncedQuery, biasLat, biasLng],
     queryFn: ({ signal }) =>
-      searchPlaces(trimmedDebouncedQuery, {
-        signal,
-      }),
+      searchPlaces(trimmedDebouncedQuery, { near, signal }),
     enabled: shouldSearchPlaces,
-    staleTime: 10 * 60 * 1000,
+    staleTime: PLACE_RESULT_CACHE_MS,
+    gcTime: PLACE_RESULT_CACHE_MS,
     retry: false,
+    // Typing on keeps the list up while its next results load, rather than
+    // blanking it; a different search doesn't show the last one's.
+    placeholderData: (previous, previousQuery) => {
+      const previousText = previousQuery?.queryKey[1];
+      return typeof previousText === "string" &&
+        trimmedDebouncedQuery.startsWith(previousText)
+        ? previous
+        : undefined;
+    },
   });
 
-  const FuseRef = useRef<typeof FuseType | null>(null);
-  const [fuseReady, setFuseReady] = useState(false);
+  // What the debounce last let through still belongs in the list if the box
+  // only added to it or took from it, but not if it now holds something else.
+  const showsDebouncedSearch =
+    trimmedQuery !== "" &&
+    (trimmedQuery.startsWith(trimmedDebouncedQuery) ||
+      trimmedDebouncedQuery.startsWith(trimmedQuery));
 
-  useEffect(() => {
-    import("fuse.js").then((m) => {
-      FuseRef.current = m.default;
-      setFuseReady(true);
-    });
-  }, []);
+  // Cities answer on every keystroke. The rest waits for the pause in typing.
+  const placeResults = useMemo(
+    () =>
+      canSearchPlaces(trimmedQuery)
+        ? rankPlaces(
+            trimmedQuery,
+            localIndex,
+            shouldSearchPlaces && showsDebouncedSearch ? providerPlaces : [],
+            near,
+          )
+        : [],
+    [
+      trimmedQuery,
+      localIndex,
+      shouldSearchPlaces,
+      showsDebouncedSearch,
+      providerPlaces,
+      near,
+    ],
+  );
+  const churchResults = useMemo(
+    () =>
+      showsDebouncedSearch
+        ? searchChurches(trimmedDebouncedQuery, localIndex, near)
+        : [],
+    [showsDebouncedSearch, trimmedDebouncedQuery, localIndex, near],
+  );
 
-  const fuse = useMemo(() => {
-    if (!fuseReady || !FuseRef.current) return null;
-    return new FuseRef.current(
-      allChurches.filter((c) => c.name),
-      {
-        keys: [
-          { name: "name", weight: 0.62 },
-          { name: "city", weight: 0.13 },
-          { name: "state", weight: 0.08 },
-          { name: "postal_code", weight: 0.08 },
-          { name: "address_line1", weight: 0.07 },
-          { name: "address_line2", weight: 0.02 },
-        ],
-        threshold: 0.4,
-        includeScore: true,
-      },
-    );
-  }, [fuseReady, allChurches]);
-
-  const parishResults = useMemo(() => {
-    if (searchMode !== "parish") return [];
-    const trimmed = trimmedDebouncedQuery;
-    if (trimmed.length < 2 || !fuse) return [];
-    const matches = fuse.search(trimmed);
-    return matches.slice(0, 10).map((m) => m.item);
-  }, [fuse, searchMode, trimmedDebouncedQuery]);
-
-  const isPlaceMode = searchMode === "place";
-  const hasTypedQuery = query.trim().length > 0;
+  const hasTypedQuery = trimmedQuery.length > 0;
   // Offered on an empty field, and after that only when the query is asking
   // for it, so it doesn't top every list of place results.
-  const showCurrentLocationOption = isPlaceMode && wantsCurrentLocation(query);
-  // Place mode opens immediately so the current-location suggestion is the
-  // default; parish mode still waits for enough text to search.
+  const showCurrentLocationOption = wantsCurrentLocation(query);
+  // Opens immediately so the current-location suggestion is the default.
   const showDropdown =
-    isOpen && (showCurrentLocationOption || query.trim().length >= 2);
-  const showSearchStatus = !isPlaceMode || hasTypedQuery;
-  const activeResults = isPlaceMode ? placeResults : parishResults;
-  const hasResults = activeResults.length > 0;
-  const isLoading = isPlaceMode ? placesLoading : churchesLoading;
-  const heading = isPlaceMode ? "Places" : "Matching churches";
-  const placeholder = isPlaceMode ? placePlaceholder : "Search for a church…";
+    isOpen && (showCurrentLocationOption || trimmedQuery.length >= 2);
+  const hasResults = placeResults.length > 0 || churchResults.length > 0;
+  // Results kept up from the last search aren't an answer to this one, so
+  // while they're showing an empty list only means it hasn't come back yet.
+  const isLoading = placesLoading || placesPending || churchesLoading;
   // "No results" only once a search has run on what's in the box: not while
   // the debounce lags the typing, and not for a query too short to search,
   // which would otherwise read as a search that found nothing.
   const searchSettled = debouncedQuery === query;
-  const searchRan = isPlaceMode
-    ? shouldSearchPlaces
-    : trimmedDebouncedQuery.length >= 2 && fuse != null;
   // Echo what was searched, so a typo is easy to spot, and say what to try.
   const emptyMessage = !searchSettled
     ? null
-    : !searchRan
-      ? isPlaceMode
-        ? "Keep typing a town, ZIP code, or address."
-        : "Keep typing a church name."
-      : isPlaceMode
-        ? `No places match “${trimmedDebouncedQuery}”. Try a town name or ZIP code.`
-        : `No churches match “${trimmedDebouncedQuery}”. Try fewer words, or part of the name.`;
-  const modeButtonLabel = isPlaceMode ? "Search churches" : "Search places";
+    : !shouldSearchPlaces
+      ? "Keep typing a town, ZIP code, address, or church."
+      : `Nothing matches “${trimmedDebouncedQuery}”. Try a town name or ZIP code.`;
   const placeSearchNotConfigured =
-    isPlaceMode && placeError instanceof PlaceSearchConfigurationError;
+    placeError instanceof PlaceSearchConfigurationError;
+  // A church named outright comes first. A city Carlo serves still leads,
+  // since its name may only be part of a church's.
+  const churchesFirst =
+    churchResults.length > 0 &&
+    !placeResults.some((place) => place.isServedCity);
 
   const clearQuery = useCallback(() => {
     setQuery("");
@@ -191,7 +236,7 @@ export function SearchTypeahead({
   const handlePlaceSelect = useCallback(
     (place: PlaceSearchResult) => {
       // Never the place itself: it could be where the visitor lives.
-      track("search_select", { kind: "place" });
+      track("search_select", { kind: place.isServedCity ? "city" : "place" });
       onPlaceSelect(place);
       clearQuery();
     },
@@ -219,26 +264,69 @@ export function SearchTypeahead({
     return [church.city, stateZip].filter(Boolean).join(", ");
   }, []);
 
-  const handleModeToggle = useCallback(
-    () => {
-      setSearchMode((current) => (current === "place" ? "parish" : "place"));
-      setIsOpen(true);
-    },
-    [],
-  );
-
-  const inputLabel = isPlaceMode
-    ? "Search for a city, ZIP code, or address"
-    : "Search for a church by name";
-
   const inputRef = useRef<HTMLInputElement | null>(null);
+
+  const placeGroup =
+    placeResults.length > 0 ? (
+      <CommandGroup
+        heading={<span className="smallcaps">Places</span>}
+        className={RESULT_GROUP_CLASS}
+      >
+        {placeResults.map((place) => (
+          <CommandItem
+            key={place.id}
+            value={`${place.title} ${place.subtitle ?? ""}`}
+            onSelect={() => handlePlaceSelect(place)}
+            className={RESULT_ITEM_CLASS}
+          >
+            <div className="min-w-0">
+              <div className="truncate">{place.title}</div>
+              {place.subtitle ? (
+                <div className="mt-0.5 truncate text-sm text-ink-soft">
+                  {place.subtitle}
+                </div>
+              ) : null}
+            </div>
+          </CommandItem>
+        ))}
+      </CommandGroup>
+    ) : null;
+
+  const churchGroup =
+    churchResults.length > 0 ? (
+      <CommandGroup
+        heading={<span className="smallcaps">Churches</span>}
+        className={RESULT_GROUP_CLASS}
+      >
+        {churchResults.map((church) => {
+          const locationText = getChurchLocationText(church);
+          return (
+            <CommandItem
+              key={church.id}
+              value={`${church.name ?? `church-${church.id}`} ${locationText}`}
+              onSelect={() => handleChurchSelect(church)}
+              className={RESULT_ITEM_CLASS}
+            >
+              <div className="min-w-0">
+                <div className="truncate">{church.name ?? UNNAMED_CHURCH}</div>
+                {locationText ? (
+                  <div className="mt-0.5 truncate text-sm text-ink-soft">
+                    {locationText}
+                  </div>
+                ) : null}
+              </div>
+            </CommandItem>
+          );
+        })}
+      </CommandGroup>
+    ) : null;
 
   return (
     <Command
       shouldFilter={false}
       // cmdk names its input by a hidden label of its own (aria-labelledby),
       // which outranks aria-label, so the name has to go here.
-      label={inputLabel}
+      label="Search for a city, ZIP code, address, or church"
       className="overflow-visible bg-transparent p-0"
     >
       <ComboboxAriaSync inputRef={inputRef} open={showDropdown} />
@@ -296,26 +384,8 @@ export function SearchTypeahead({
                   <XIcon className="size-3.5" />
                 </button>
               ) : null}
-              {hideModeToggle ? null : (
-                <button
-                  type="button"
-                  onClick={handleModeToggle}
-                  className="rubric-link ml-1 hidden whitespace-nowrap font-serif text-[0.9375rem] sm:inline-flex"
-                >
-                  {modeButtonLabel}
-                </button>
-              )}
               <div className="shrink-0">{filterButton}</div>
             </div>
-            {hideModeToggle ? null : (
-              <button
-                type="button"
-                onClick={handleModeToggle}
-                className="rubric-link mt-2 font-serif text-[0.9375rem] sm:hidden"
-              >
-                {modeButtonLabel}
-              </button>
-            )}
           </div>
         </PopoverAnchor>
         <PopoverContent
@@ -338,11 +408,6 @@ export function SearchTypeahead({
             }
           }}
         >
-          <div className="border-b border-rule-strong px-4 pt-3 pb-2">
-            <span className="smallcaps text-[0.8125rem] text-ink-soft">
-              {heading}
-            </span>
-          </div>
           <CommandList className="max-h-80 px-2 py-2">
             {showCurrentLocationOption ? (
               <CommandGroup className="[&_[cmdk-group-heading]]:hidden">
@@ -350,7 +415,7 @@ export function SearchTypeahead({
                   value={USE_MY_LOCATION}
                   onSelect={handleCurrentLocationSelect}
                   disabled={locationStatus === "requesting"}
-                  className="group relative cursor-pointer gap-0 rounded-none border-l-2 border-transparent px-3 py-2.5 font-serif text-base text-ink data-[disabled=true]:pointer-events-none data-[selected=true]:border-rubric data-[selected=true]:bg-paper-deep/60 data-[selected=true]:text-ink"
+                  className={`${RESULT_ITEM_CLASS} data-[disabled=true]:pointer-events-none`}
                 >
                   <div className="min-w-0">
                     <div className="truncate">
@@ -367,78 +432,33 @@ export function SearchTypeahead({
                 </CommandItem>
               </CommandGroup>
             ) : null}
-            {showSearchStatus ? (
-              isLoading ? (
-                <div className="px-3 py-4 font-serif text-sm text-ink-soft">
-                  {isPlaceMode ? "Searching places…" : "Loading churches…"}
-                </div>
-              ) : placeSearchNotConfigured ? (
-                // A setup problem: name it for a developer; a visitor can
-                // only be told it won't work, since trying again won't help.
-                <CommandEmpty className="px-3 py-4 text-center font-serif text-sm text-ink-soft">
-                  {import.meta.env.DEV
-                    ? "Place search needs a Geoapify API key."
-                    : "Place search isn’t available right now."}
-                </CommandEmpty>
-              ) : isPlaceMode && placeError ? (
-                <CommandEmpty className="px-3 py-4 text-center font-serif text-sm text-ink-soft">
-                  Couldn’t search places just now. Try again in a moment.
-                </CommandEmpty>
-              ) : hasResults ? (
-                <CommandGroup className="[&_[cmdk-group-heading]]:hidden">
-                  {isPlaceMode
-                    ? placeResults.map((place) => (
-                        <CommandItem
-                          key={place.id}
-                          value={`${place.title} ${place.subtitle ?? ""}`}
-                          onSelect={() => handlePlaceSelect(place)}
-                          className="group relative cursor-pointer gap-0 rounded-none border-l-2 border-transparent px-3 py-2.5 font-serif text-base text-ink data-[selected=true]:border-rubric data-[selected=true]:bg-paper-deep/60 data-[selected=true]:text-ink"
-                        >
-                          <div className="min-w-0">
-                            <div className="truncate">{place.title}</div>
-                            {place.subtitle ? (
-                              <div className="mt-0.5 truncate text-sm text-ink-soft">
-                                {place.subtitle}
-                              </div>
-                            ) : null}
-                          </div>
-                        </CommandItem>
-                      ))
-                    : parishResults.map((church) => {
-                        const locationText = getChurchLocationText(church);
-                        return (
-                          <CommandItem
-                            key={church.id}
-                            value={`${church.name ?? `church-${church.id}`} ${locationText}`}
-                            onSelect={() => handleChurchSelect(church)}
-                            className="group relative cursor-pointer gap-0 rounded-none border-l-2 border-transparent px-3 py-2.5 font-serif text-base text-ink data-[selected=true]:border-rubric data-[selected=true]:bg-paper-deep/60 data-[selected=true]:text-ink"
-                          >
-                            <div className="min-w-0">
-                              <div className="truncate">
-                                {church.name ?? UNNAMED_CHURCH}
-                              </div>
-                              {locationText ? (
-                                <div className="mt-0.5 truncate text-sm text-ink-soft">
-                                  {locationText}
-                                </div>
-                              ) : null}
-                            </div>
-                          </CommandItem>
-                        );
-                      })}
-                </CommandGroup>
-              ) : emptyMessage ? (
-                <CommandEmpty className="px-3 py-4 text-center font-serif text-sm text-ink-soft">
-                  {emptyMessage}
-                </CommandEmpty>
-              ) : null
+            {churchesFirst ? churchGroup : placeGroup}
+            {churchesFirst ? placeGroup : churchGroup}
+            {!hasTypedQuery || hasResults ? null : isLoading ? (
+              <div className="px-3 py-4 font-serif text-sm text-ink-soft">
+                Searching places…
+              </div>
+            ) : placeSearchNotConfigured ? (
+              // A setup problem: name it for a developer; a visitor can
+              // only be told it won't work, since trying again won't help.
+              <CommandEmpty className={STATUS_CLASS}>
+                {import.meta.env.DEV
+                  ? "Place search needs a Geoapify API key."
+                  : "Place search isn’t available right now."}
+              </CommandEmpty>
+            ) : placeError ? (
+              <CommandEmpty className={STATUS_CLASS}>
+                Couldn’t search places just now. Try again in a moment.
+              </CommandEmpty>
+            ) : emptyMessage ? (
+              <CommandEmpty className={STATUS_CLASS}>
+                {emptyMessage}
+              </CommandEmpty>
             ) : null}
           </CommandList>
-          {isPlaceMode ? (
-            <div className="border-t border-rule-strong px-4 py-2 text-right font-serif text-xs text-ink-soft">
-              Powered by Geoapify
-            </div>
-          ) : null}
+          <div className="border-t border-rule-strong px-4 py-2 text-right font-serif text-xs text-ink-soft">
+            Powered by Geoapify
+          </div>
         </PopoverContent>
       </Popover>
     </Command>
