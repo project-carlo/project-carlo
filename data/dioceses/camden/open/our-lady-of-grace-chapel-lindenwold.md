@@ -31,6 +31,14 @@ research:
   outcome: not-found
   next_action: Look for the chapel in a later bulletin's Hispanic Ministry pages or ask the parish office
   retry_when: A bulletin, the parish site or a diocesan page prints the chapel's address
+- method: 'Hand refresh against main: read page 1 and grep the 8 November 2026 Guadalupe bulletin (Grace,
+    Spanish Office, White Horse, Warwick): the chapel''s Mass times and ''(Enter the Chapel through the
+    old Spanish Office)'', still no street address; the parish offices are now at 55A Warwick Rd., Stratford'
+  checked: '2026-11-07'
+  outcome: not-found
+  next_action: Ask the parish office (856-627-2222) where the chapel and the old Spanish Office are
+  retry_when: A bulletin, the parish site or a diocesan page prints the chapel's address
+  url: https://container.parishesonline.com/bulletins/03/4079/20261108B.pdf
 ---
 
 ## What is known

@@ -39,6 +39,16 @@ line1: 119 North Route 73
 city: Cedar Brook
 state: NJ
 postal_code: 08018
+research:
+- method: 'Hand refresh against main: grep of Christ the Redeemer''s 8 November 2026 bulletin (Sacred
+    Heart, Cedar Brook: no hit); Catholic Star Herald REST search ''Cedar Brook'' (only the 2010 decree
+    posts, the 2015 article already read and Igbo community posts)'
+  checked: '2026-11-07'
+  outcome: not-found
+  next_action: Ask the parish office (856-767-0719) whether Mass is ever celebrated here, or find a sale,
+    relegation or demolition notice
+  retry_when: A bulletin line, parish page or decree names Mass at, or the closing of, Sacred Heart
+  url: https://container.parishesonline.com/bulletins/03/1431/20261108B.pdf
 ---
 
 ## What is known

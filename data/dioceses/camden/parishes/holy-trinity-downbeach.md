@@ -1,8 +1,8 @@
 ---
 name: Holy Trinity Parish
 website: https://www.holytrinitydownbeach.org/news/bulletin
-bulletin_provider: other
-provider_id: page-pdfs https://www.holytrinitydownbeach.org/news/bulletin
+bulletin_provider: unsupported
+provider_id: ''
 publication: ['url:https://www.holytrinitydownbeach.org/news/bulletin#holy-trinity-downbeach']
 group: ''
 evidence:
@@ -59,7 +59,23 @@ research:
   next_action: Search again only with a changed query, such as the parish name and a ParishesOnline or
     Bon Venture host
   retry_when: A new publisher is suspected
+- method: 'Hand refresh against main: fetch:check --diocese camden (page-pdfs on the Bulletin page), probe
+    get on the page and the 1 November /file link (both 403), visit.py --links on the Bulletin page'
+  url: https://www.holytrinitydownbeach.org/news/bulletin
+  checked: '2026-11-07'
+  outcome: unsupported-format
+  next_action: Row set unsupported with fetch_gap joomla-file-endpoint; when a collector reads Joomla
+    /file links, set the provider and recipe, run fetch:check, read the masthead and clear the gap
+  retry_when: A collector for Joomla/Solutio /file links lands (pnpm diocese gaps --kind joomla-file-endpoint)
 bulletin_status: access-blocked
+fetch_gap:
+  kind: joomla-file-endpoint
+  seen: 2026-11-07
+  note: The Solutio (Joomla) Bulletin page lists one issue per Sunday, newest 'November 8, 2026' (/news/bulletin/198-november-8-2026/file),
+    read in the browser with visit.py on 2026-11-07. The /file links carry no .pdf name and the site answers
+    403 to probe get and fetch, so fetch:check (page-pdfs on the Bulletin page) reports 'No PDF links
+    found'. No issue has been read.
+  url: https://www.holytrinitydownbeach.org/news/bulletin
 ---
 
 ## Publisher
@@ -72,7 +88,7 @@ Three churches take Mass by the parish's home page (read 2026-10-29): St. James,
 
 ## Website and bulletin provider
 
-The directory and GCatholic give holytrinitydownbeach.org. `other`, with the Bulletin page as a `page-pdfs` recipe (`bulletin_status: access-blocked`). `fetch:check` (2026-10-29) with that recipe returns `resolve_failed NoBulletin: No PDF links found on bulletin page`: Solutio links each issue as `/news/bulletin/<n>-<date>/file` (no `.pdf`), and the plain fetch is refused. The recipe is therefore not confirmed to pick a bulletin, and no pick was checked for identity or freshness. The playbook's other route for blocked parishes, a John Patrick listing, has nothing: the old per-church listings (501 Ventnor, 504 Margate, 529 Longport) carry no editions. See `research` for the checks and their retry triggers.
+The directory and GCatholic give holytrinitydownbeach.org. **`unsupported`, with `fetch_gap` `joomla-file-endpoint`** (hand refresh against main, 2026-11-07), so `promote` keeps the row and its churches off the site until a collector reads the bulletin. The Bulletin page, read in the browser on 2026-11-07, lists the 8 November 2026 issue (`/news/bulletin/198-november-8-2026/file`), so the parish publishes weekly; but Solutio (Joomla) links each issue as `/news/bulletin/<n>-<date>/file` (no `.pdf`), and the plain fetch is refused (403). `fetch:check` (2026-10-29 and 2026-11-07, `page-pdfs` on the Bulletin page) returns `resolve_failed NoBulletin: No PDF links found on bulletin page`. The playbook's other route for blocked parishes, a John Patrick listing, has nothing: the old per-church listings (501 Ventnor, 504 Margate, 529 Longport) carry no editions. See `research` for the checks and their retry triggers. When a collector lands, set the provider and recipe, run `fetch:check`, read the masthead and clear the gap.
 
 ## Not yet confirmed
 

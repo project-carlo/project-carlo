@@ -48,6 +48,14 @@ research:
     at Mount Ephraim; check the camdendiocese.org decree PDFs by another path
   retry_when: A bulletin, Star Herald post or decree names Sacred Heart, Mount Ephraim, or web search
     is available again
+- method: 'Hand refresh against main: grep of St. Rose''s 8 November 2026 bulletin (Ephraim, Sacred Heart:
+    only an advertiser''s address); Catholic Star Herald REST search ''Mount Ephraim'''
+  checked: '2026-11-07'
+  outcome: not-found
+  next_action: Ask the parish office, or read a 2014-2016 St. Rose or Emmaus bulletin for the last Mass
+    at Mount Ephraim
+  retry_when: A bulletin, Star Herald post or decree names Sacred Heart, Mount Ephraim
+  url: https://www.church-bulletin.org/bulletin/saint-rose-of-lima-roman-catholic-church-haddon-heights-nj-08035/2026-11-08.pdf
 ---
 
 ## What is known

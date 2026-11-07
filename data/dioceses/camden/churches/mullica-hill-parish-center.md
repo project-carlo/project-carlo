@@ -32,6 +32,14 @@ evidence:
   seen: 2026-10-29
   quote: 17 Earlington Ave., Mullica Hill, New Jersey 08062
   note: GCatholic lists 'Holy Name of Jesus', group 'Holy Spirit Parish'; Plus Code 87F6PQRH+9M.
+- url: https://www.church-bulletin.org/bulletin/the-catholic-community-of-the-holy-spirit-mullica-hill-nj-08062/2026-11-08.pdf
+  seen: 2026-11-07
+  note: 'Page 1 of the 8 November 2026 issue is an image (rendered with render.py, so recheck can''t find
+    text): its ''Mass Schedule & Worship Sites'' column gives Saturday 4:00 PM and Sunday 10:30 AM at
+    ''Mullica Hill PC'' and daily Mass M, W, F at ''MHPC'', with the parish office ''Located in Mullica
+    Hill Parish Center''. The masthead address is 17 Earlington Avenue. The parish names the worship site
+    the Parish Center, not Holy Name of Jesus Church, so the row keeps that name (README: use what the
+    parish calls the building).'
 promoted: 2026-10-30
 ---
 

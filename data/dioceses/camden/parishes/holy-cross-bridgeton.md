@@ -1,8 +1,8 @@
 ---
 name: The Parish of the Holy Cross
 website: https://parishholycross.org/bulletin
-bulletin_provider: other
-provider_id: page-pdfs https://parishholycross.org/bulletin
+bulletin_provider: unsupported
+provider_id: ''
 publication: ['url:https://parishholycross.org/bulletin#holy-cross-bridgeton']
 group: ''
 evidence:
@@ -67,7 +67,23 @@ research:
     in those ranges and names (the one hit, 6018, is Holy Cross, Harrison)'
   retry_when: A search for the parish's bulletin on another host finds a listing (the DuckDuckGo search
     answered a bot challenge)
+- method: 'Hand refresh against main: fetch:check --diocese camden (page-pdfs on the Bulletin page), probe
+    get on the page and the 1 November /file link, visit.py --links on the Bulletin page'
+  url: https://parishholycross.org/bulletin
+  checked: '2026-11-07'
+  outcome: unsupported-format
+  next_action: Row set unsupported with fetch_gap joomla-file-endpoint; when a collector reads Joomla
+    /file links, set the provider and recipe, run fetch:check, read the masthead and clear the gap
+  retry_when: A collector for Joomla/Solutio /file links lands (pnpm diocese gaps --kind joomla-file-endpoint)
 bulletin_status: access-blocked
+fetch_gap:
+  kind: joomla-file-endpoint
+  seen: 2026-11-07
+  note: The Solutio (Joomla) Bulletin page lists one issue per Sunday, newest 'November 8, 2026' (/bulletin/214-november-8-2026/file),
+    read in the browser with visit.py on 2026-11-07. The /file links carry no .pdf name and the site answers
+    403 to probe get and fetch, so fetch:check (page-pdfs on the Bulletin page) reports 'No PDF links
+    found'. No issue has been read.
+  url: https://parishholycross.org/bulletin
 ---
 
 ## Publisher
@@ -82,7 +98,7 @@ All five churches in GCatholic's group 'Holy Cross Parish' still list Mass on th
 
 ## Website and bulletin provider
 
-The directory and GCatholic give parishholycross.org. `other`, with the Bulletin page as a `page-pdfs` recipe (`bulletin_status: access-blocked`). `fetch:check` (2026-10-29) returns `resolve_failed NoBulletin: No PDF links found on bulletin post page`: Solutio links each issue as `/bulletin/<n>-<date>/file` (no `.pdf`) and the site answers 403 to plain fetches. The recipe is therefore not confirmed to pick a bulletin, and no pick was checked for identity or freshness. No John Patrick listing or ParishesOnline organization was found; see `research`.
+The directory and GCatholic give parishholycross.org. **`unsupported`, with `fetch_gap` `joomla-file-endpoint`** (hand refresh against main, 2026-11-07), so `promote` keeps the row and its five churches off the site until a collector reads the bulletin. The Bulletin page, read in the browser on 2026-11-07, lists the 8 November 2026 issue (`/bulletin/214-november-8-2026/file`), so the parish publishes weekly; but Solutio (Joomla) links each issue as `/bulletin/<n>-<date>/file` with no `.pdf`, and the site answers 403 to plain fetches. `fetch:check` (2026-10-29 and 2026-11-07, `page-pdfs` on the Bulletin page) returns `resolve_failed NoBulletin: No PDF links found`. No John Patrick listing or ParishesOnline organization was found; see `research`. When a collector lands, set the provider and recipe, run `fetch:check`, read the masthead and clear the gap.
 
 ## Not yet confirmed
 

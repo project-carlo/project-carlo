@@ -41,6 +41,13 @@ research:
   retry_when: A site, bulletin or Mass schedule for the mission turns up, or the diocese's directory is
     refreshed
   revisit_after: 2027-04-29
+- method: 'Hand refresh against main: Catholic Star Herald REST searches ''Andrew Kim'', ''Korean Absecon''
+    and ''Korean Catholic mission'' (hits name only the St. Yi Yun Il mission)'
+  checked: '2026-11-07'
+  outcome: not-found
+  next_action: Ask the mission's phone listing (609-641-7208) in a later pass
+  retry_when: A site, bulletin or Mass schedule for the mission turns up, or the diocese's directory is
+    refreshed
 ---
 
 ## What is known

@@ -27,6 +27,14 @@ line1: 500 Erial Rd.
 city: Pine Hill
 state: NJ
 postal_code: 08021
+research:
+- method: 'Hand refresh against main: grep of St. Simon Stock''s 8 November 2026 bulletin (Edward, Pine
+    Hill, Erial: only the masthead''s founding line); Catholic Star Herald REST search ''Pine Hill'''
+  checked: '2026-11-07'
+  outcome: not-found
+  next_action: Ask the parish office (856-767-2563), or find a relegation or sale notice
+  retry_when: A bulletin, parish page or decree names Mass at, or the closing of, St. Edward
+  url: http://sponsors.bonventure.net/pdfs/2221/2026-11-08.pdf
 ---
 
 ## What is known

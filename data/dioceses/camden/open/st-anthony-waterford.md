@@ -39,6 +39,16 @@ line1: 436 Pennington Ave.
 city: Waterford
 state: NJ
 postal_code: 08084
+research:
+- method: 'Hand refresh against main: grep of Christ the Redeemer''s 8 November 2026 bulletin (Anthony,
+    Waterford: only Mass intentions, the ''St. Anthony''s Women''s Ministry'' and a Knights'' hall in
+    Waterford Works); Catholic Star Herald REST search ''Waterford'''
+  checked: '2026-11-07'
+  outcome: not-found
+  next_action: Ask the parish office (856-767-0719) whether Mass is ever celebrated here, or find a sale,
+    relegation or demolition notice
+  retry_when: A bulletin line, parish page or decree names Mass at, or the closing of, St. Anthony
+  url: https://container.parishesonline.com/bulletins/03/1431/20261108B.pdf
 ---
 
 ## What is known

@@ -41,6 +41,14 @@ research:
   next_action: Ask the parish office (856-845-0123), or grep older Holy Angels bulletins for 'Redeemer'
     and 'Westville Grove'
   retry_when: A bulletin, parish page or news post says what the building is used for now
+- method: 'Hand refresh against main: grep of the 8 November 2026 Holy Angels bulletin (Redeemer, Westville):
+    only ''All sacramental records for St. Patrick, St. Matthew and Most Holy Redeemer are kept at Holy
+    Angels Parish office''; Catholic Star Herald REST search ''Westville Grove'''
+  checked: '2026-11-07'
+  outcome: not-found
+  next_action: Ask the parish office (856-845-0123) what the building is used for
+  retry_when: A bulletin, parish page or news post says what the building is used for now
+  url: https://www.church-bulletin.org/bulletin/holy-angels-parish-woodbury-nj-08096/2026-11-08.pdf
 ---
 
 ## What is known

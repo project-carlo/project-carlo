@@ -23,11 +23,11 @@ evidence:
   note: The 1 November 2026 bulletin's Mass schedule lists Mullica Hill, Woodstown and St. Joseph only;
     searched for 'St. Ann' and 'Elmer' (the one hit is an advertiser's Elmer address).
 - url: https://www.nj.com/salem/2016/09/at_south_jersey_catholic_church_an_emotional_day_a.html
-  seen: 2026-10-29
-  note: 'Search-result snippet only (DuckDuckGo, 2026-10-29): ''Elsewhere in Salem County, St. Ann''s
-    Church in Elmer was permanently closed. Parishioners there are now part of the Catholic Community
-    of the Holy Spirit.'' From the nj.com story of September 2016 on Queen of the Apostles'' final Mass;
-    the article itself was unreadable (403, Wayback 429), so the closing date is unknown.'
+  seen: 2026-11-07
+  quote: St. Ann's Church in Elmer was permanently closed
+  note: 'nj.com, published 2016-09-04, in its story on Queen of the Apostles'' final Mass. Behind a 403
+    to probe get and a paywall: read in the browser (parish-site-access visit.py --text). It gives no
+    closing date.'
 parish: the-catholic-community-of-the-holy-spirit
 research:
 - method: probe get on the nj.com article (403), Wayback copy (429), diocese and Catholic Star Herald
@@ -38,12 +38,20 @@ research:
   next_action: Read the article and any 2010-2016 Catholic Star Herald notice for the final Mass date;
     set last_mass.
   retry_when: nj.com stops answering 403 to probe get, or a browser read of the page is permitted
+- method: 'Hand refresh against main: parish-site-access visit.py --text rendered the nj.com article (probe
+    get still 403); it says St. Ann''s ''was permanently closed'' and gives no date'
+  url: https://www.nj.com/salem/2016/09/at_south_jersey_catholic_church_an_emotional_day_a.html
+  checked: '2026-11-07'
+  outcome: not-found
+  next_action: Find a 2010-2016 Catholic Star Herald or Holy Spirit notice of St. Ann's final Mass; set
+    last_mass
+  retry_when: A notice of the final Mass at St. Ann, Elmer turns up
 ---
 
 ## Why it is excluded
 
-**St. Ann, 155 Broad St., Elmer — closed before September 2016, final Mass date not found.** GCatholic (18855) lists it under 'Holy Spirit Parish'. The 2010 decree uniting Holy Name of Jesus, St. Joseph and St. Ann named only Holy Name of Jesus Church (the location) and St. Joseph Church as worship sites, and the parish's 1 November 2026 bulletin and Worship page list Mass at the Mullica Hill and Woodstown Parish Centers and St. Joseph Church only, though the page says the parish 'serves Elmer'. A search snippet of the 2016 nj.com story says 'St. Ann's Church in Elmer was permanently closed'. The snippet is the only source that says it closed, so the date is not given.
+**St. Ann, 155 Broad St., Elmer — closed before September 2016, final Mass date not found.** GCatholic (18855) lists it under 'Holy Spirit Parish'. The 2010 decree uniting Holy Name of Jesus, St. Joseph and St. Ann named only Holy Name of Jesus Church (the location) and St. Joseph Church as worship sites, and the parish's 1 November 2026 bulletin and Worship page list Mass at the Mullica Hill and Woodstown Parish Centers and St. Joseph Church only, though the page says the parish 'serves Elmer'. The 2016 nj.com story on Queen of the Apostles' final Mass (published 2016-09-04; read in the browser with visit.py on 2026-11-07, as `probe get` gets 403) says: 'Elsewhere in Salem County, St. Ann's Church in Elmer was permanently closed. Parishioners there are now part of the Catholic Community of the Holy Spirit.' It gives no date, so `last_mass` is empty.
 
 ## What would change this
 
-A bulletin or page listing Mass in Elmer. The nj.com article read in full, or a Catholic Star Herald or parish notice of the final Mass, would give `last_mass`.
+A bulletin or page listing Mass in Elmer. A Catholic Star Herald or parish notice of the final Mass would give `last_mass`.

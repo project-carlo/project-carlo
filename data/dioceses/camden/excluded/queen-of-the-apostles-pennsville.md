@@ -20,15 +20,14 @@ evidence:
     mention (the one 'Pennsville' in the 4 October issue is 'Riverview Beach Park, Pennsville'). The parish's
     Mass Times page also lists only those two churches.
 - url: https://www.nj.com/salem/2016/09/at_south_jersey_catholic_church_an_emotional_day_a.html
-  seen: 2026-10-29
-  note: 'Search-result snippet only (DuckDuckGo, 2026-10-29): ''PENNSVILLE TWP.-- After decades of parishioners
-    coming together for Mass, the sanctuary at Queen of the Apostles Church was silent Sunday. As part
-    of the Diocese of Camden''s parish merger process ...''. nj.com, ''At South Jersey Catholic church,
-    an emotional day as final Mass is ...'', September 2016. The article itself answered 403 to probe
-    get and 429 through the Wayback Machine, and the sandbox denied reading it in the browser, so its
-    wording is not quoted and the exact date is not known.'
+  seen: 2026-11-07
+  quote: The final Sunday service on Aug. 28 saw the church full
+  note: 'nj.com, published 2016-09-04 (Bill Gallo Jr.). Behind a 403 to probe get and a paywall: read
+    in the browser (parish-site-access visit.py --text). Also: ''no more regular Masses will be held at
+    the Catholic church on South Broadway''; the church ''will be used as a worship site for funerals,
+    weddings and other special Masses and services''.'
 parish: st-gabriel-the-archangel-carneys-point
-last_mass: 2016-09
+last_mass: 2016-08-28
 research:
 - method: probe get on the nj.com article, then the Wayback Machine copy
   url: https://www.nj.com/salem/2016/09/at_south_jersey_catholic_church_an_emotional_day_a.html
@@ -37,12 +36,19 @@ research:
   next_action: Read the article text and take the day of the final Mass from it; set last_mass to that
     date.
   retry_when: nj.com stops answering 403 to probe get, or a browser read of the page is permitted
+- method: 'Hand refresh against main: probe get on the article (still 403), then parish-site-access visit.py
+    --text, which rendered the article (published 2016-09-04, by Bill Gallo Jr.)'
+  url: https://www.nj.com/salem/2016/09/at_south_jersey_catholic_church_an_emotional_day_a.html
+  checked: '2026-11-07'
+  outcome: found
 ---
 
 ## Why it is excluded
 
-**Queen of the Apostles, 391 S Broadway, Pennsville — closed, final Mass September 2016 (day not read).** GCatholic (37921) still lists it as a church with no parish group, and the diocese's 2010 decree made it a worship site of St. Gabriel the Archangel Parish. The parish's current bulletin (25 October 2026) and its Mass Times page list Mass at Corpus Christi and St. Mary's only. A 2016 nj.com article's search snippet says the sanctuary 'was silent Sunday' after parishioners had come together 'for decades', 'as part of the Diocese of Camden's parish merger process', in the same story as the closing of St. Ann, Elmer (see that record). Together the snippet and the 2026 schedule are enough to call it closed; the snippet is the only source that says a Mass was the last, and it is a search-engine excerpt, not the article, so `last_mass` is the month only.
+**Queen of the Apostles, 391 S Broadway, Pennsville — closed to regular Mass, final Sunday Mass 28 August 2016.** GCatholic (37921) still lists it as a church with no parish group, and the diocese's 2010 decree made it a worship site of St. Gabriel the Archangel Parish. The nj.com story 'At South Jersey Catholic church, an 'emotional' day as final Mass is held' (published 2016-09-04; read in the browser with visit.py on 2026-11-07, as `probe get` gets 403) says 'The final Sunday service on Aug. 28 saw the church full', that 'no more regular Masses will be held at the Catholic church on South Broadway', according to diocese spokesman Michael Walsh, and 'With the Queen of the Apostles closed'. The parish's current bulletin (25 October 2026) and its Mass Times page list Mass at Corpus Christi and St. Mary's only.
+
+The same article quotes the diocese that the church 'will be used as a worship site for funerals, weddings and other special Masses and services', with no plans to sell it. Those are occasional private or family services, not a public Mass schedule, so the row stays `closed` (no Mass any more on any schedule), not a church. Earlier, only a search snippet of this article had been read, and `last_mass` was given as the month of publication (2016-09); the article gives 28 August.
 
 ## What would change this
 
-A bulletin or parish page listing Mass in Pennsville, or a source that reads the building as in use. The nj.com article read in full would give the day. Discover Mass still lists 'St. Gabriel the Archangel Parish – Queen of the Apostles Church' with no times or bulletins and the COVID-19 notice; that is a stale listing, not evidence of Mass.
+A bulletin or parish page listing Mass in Pennsville, or a source that reads the building as in regular use again. Discover Mass still lists 'St. Gabriel the Archangel Parish – Queen of the Apostles Church' with no times or bulletins and the COVID-19 notice; that is a stale listing, not evidence of Mass.

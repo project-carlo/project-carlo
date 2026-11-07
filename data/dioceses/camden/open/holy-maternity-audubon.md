@@ -43,6 +43,14 @@ research:
     at Audubon
   retry_when: A bulletin, Star Herald post or decree names Holy Maternity, or web search is available
     again
+- method: 'Hand refresh against main: grep of St. Rose''s 8 November 2026 bulletin (Maternity, Audubon:
+    only advertisers); Catholic Star Herald REST search ''Audubon'''
+  checked: '2026-11-07'
+  outcome: not-found
+  next_action: Ask the parish office, or read a 2010-2016 Emmaus or St. Rose bulletin for the last Mass
+    at Audubon
+  retry_when: A bulletin, Star Herald post or decree names Holy Maternity
+  url: https://www.church-bulletin.org/bulletin/saint-rose-of-lima-roman-catholic-church-haddon-heights-nj-08035/2026-11-08.pdf
 ---
 
 ## What is known

@@ -1,8 +1,8 @@
 ---
 name: Parish of St. John Neumann
 website: https://www.parishofstjohnneumann.org/index.php/sunday-bulletins
-bulletin_provider: other
-provider_id: page-pdfs https://www.parishofstjohnneumann.org/index.php/sunday-bulletins filename=bulletin*.pdf
+bulletin_provider: unsupported
+provider_id: ''
 publication: ['url:https://www.parishofstjohnneumann.org/index.php/sunday-bulletins#st-john-neumann']
 group: St. John Neumann Parish
 evidence:
@@ -44,7 +44,25 @@ research:
     to /images/bulletin2026/bulletinMMDDYY.pdf and picks the newest; until then the pinned recipe filename=bulletin*.pdf
     fails loudly rather than fetching the Religious Education calendar the unpinned page-pdfs picks first.
   retry_when: A collector can follow Joomla weblink redirects, or the parish links its PDFs directly
+- method: 'Hand refresh against main: probe get on the Sunday Bulletins page (newest weblink 215, 8 November
+    2026), curl -sI on bulletin110826.pdf (200 application/pdf), fetch:check --diocese camden with the
+    pinned recipe'
+  url: https://www.parishofstjohnneumann.org/index.php/sunday-bulletins
+  checked: '2026-11-07'
+  outcome: unsupported-format
+  next_action: Row set unsupported with fetch_gap joomla-weblink-redirect; when a collector follows weblink.go
+    redirects, set provider other with page-pdfs on the page, run fetch:check and clear the gap
+  retry_when: A collector follows Joomla weblink redirects (pnpm diocese gaps --kind joomla-weblink-redirect),
+    or the parish links its PDFs directly
 bulletin_status: unsupported-format
+fetch_gap:
+  kind: joomla-weblink-redirect
+  seen: 2026-11-07
+  note: The Sunday Bulletins page links each issue only through a Joomla weblink.go redirect (newest weblink/215-november-8-2026-32nd-sunday-in-ordinary-time,
+    2026-11-07) to /images/bulletin2026/bulletinMMDDYY.pdf; bulletin110826.pdf answers 200 application/pdf.
+    page-pdfs sees no issue PDF on the page (unpinned it picks the Religious Education calendar), so fetch:check
+    fails.
+  url: https://www.parishofstjohnneumann.org/images/bulletin2026/bulletin110826.pdf
 ---
 
 ## Publisher
@@ -57,8 +75,8 @@ Two, each with its own church record: St. John of God (680 Town Bank Road, North
 
 ## Website and bulletin provider
 
-`other`, with the Sunday Bulletins page as website and recipe. Its links are Joomla weblink redirects rather than .pdf hrefs; the pipeline's collectors don't follow them (see research): the unpinned default picks the Religious Education calendar, so the recipe pins `filename=bulletin*.pdf` to fail loudly. The newest issues are reachable by hand: the weblink for 25 October 301s to /images/bulletin2026/bulletin102526.pdf, and bulletin110126.pdf already answered 200 on 2026-10-29, though the page didn't list it yet. The directory's website (parishofstjohnneumann.org) is current. GCatholic lists the same site on St. John of God.
+**`unsupported`, with `fetch_gap` `joomla-weblink-redirect`** (hand refresh against main, 2026-11-07), so `promote` keeps the row and its churches off the site until a collector reads the bulletin. The Sunday Bulletins page links each issue as a Joomla weblink redirect rather than a .pdf href, and the pipeline's collectors don't follow them (see research): an unpinned `page-pdfs` picks the Religious Education calendar, and the earlier recipe pinned `filename=bulletin*.pdf` only to fail loudly. The issues are real and current: on 2026-11-07 the page's newest weblink was 8 November 2026, and /images/bulletin2026/bulletin110826.pdf answered 200 (application/pdf). The directory's website (parishofstjohnneumann.org) is current. GCatholic lists the same site on St. John of God. When a collector follows the redirects, set provider `other` with `page-pdfs` on the page, run `fetch:check` and clear the gap.
 
 ## Not yet confirmed
 
-The bulletin is real, current and read, but `fetch:check` can't resolve it from the site (research). The parish row stays `other` until a collector can follow the redirects.
+Nothing about the bulletin itself: it is real, current and read. Only the pipeline's route to it is missing (`fetch_gap`).

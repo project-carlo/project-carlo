@@ -1,8 +1,10 @@
 ---
 name: Holy Trinity Chapel (Trinity Chapel)
-revisit: 'Read a Holy Trinity Parish bulletin''s Mass schedule (or its Mass & Liturgies schedule page,
-  404 on 2026-10-29) for Mass at Trinity Chapel, 12 N Jerome Ave. (GCatholic: 100 N Jerome Ave.), Margate'
-revisit_after: 2026-11-30
+revisit: 'Read a Holy Trinity Parish bulletin''s Mass schedule for Mass at Trinity Chapel, 12 N Jerome
+  Ave. (GCatholic: 100 N Jerome Ave.), Margate, once a collector or browser read gets past the parish''s
+  Solutio /file links (the parish row is unsupported, fetch_gap joomla-file-endpoint), or ask the parish
+  office (609-822-7105)'
+revisit_after: 2027-01-31
 roster: ['gcatholic:18904']
 evidence:
 - url: https://www.holytrinitydownbeach.org/about-us/our-churches
@@ -33,6 +35,15 @@ research:
   outcome: not-found
   next_action: Read a bulletin (blocked from the sandbox, see the parish record) for a Mass at the chapel;
     its Mass & Liturgies schedule page, linked from the Bulletin page, answered 404
+  retry_when: A Holy Trinity bulletin can be read, or the parish's schedule page is restored
+- method: 'Hand refresh against main: visit.py on the home page (Mass times for St. James, Blessed Sacrament
+    and Epiphany; Trinity Chapel listed with its address and no times) and on the Mass & Other Liturgies
+    Schedule page linked from the Bulletin page (still 404); Catholic Star Herald REST search ''Trinity
+    Chapel Margate'''
+  url: https://www.holytrinitydownbeach.org/
+  checked: '2026-11-07'
+  outcome: not-found
+  next_action: Read a bulletin once its /file links can be fetched, or ask the parish office
   retry_when: A Holy Trinity bulletin can be read, or the parish's schedule page is restored
 ---
 

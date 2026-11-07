@@ -38,6 +38,13 @@ research:
   next_action: Ask the parish office, or read an older St. Clare bulletin from 2010-2012 for the last
     Mass at Paulsboro
   retry_when: A bulletin, Star Herald post or the parish's site names St. John, Paulsboro
+- method: 'Hand refresh against main: grep of St. Clare''s 8 November 2026 bulletin (Paulsboro, St. John,
+    Beacon: only an advertiser); Catholic Star Herald REST search ''Paulsboro'''
+  checked: '2026-11-07'
+  outcome: not-found
+  next_action: Ask the parish office, or read a 2010-2012 St. Clare bulletin for the last Mass
+  retry_when: A bulletin, parish page or decree names Mass at, or the closing of, St. John
+  url: https://files.ecatholic.com/23165/bulletins/20261108.pdf
 ---
 
 ## What is known
