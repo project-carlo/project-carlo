@@ -56,7 +56,7 @@ class JobUsage:
 JOB_USAGE = {
     "survey": JobUsage(40, 3),
     "survey-review": JobUsage(8, 1),
-    "map": JobUsage(10, 1),
+    "map": JobUsage(25, 1),
     "integrate": JobUsage(5, 1),
     "reconcile": JobUsage(25, 2),
     "seed": JobUsage(10, 1),
