@@ -46,7 +46,11 @@ from pdf_extract.duplicates import (
 from pdf_extract.parish_sites import Recipe, resolve_parish_site
 from pdf_extract.parish_sites.dates import safe_date
 from pdf_extract.parish_sites.links import registrable_domain, url_host
-from pdf_extract.pdf_compact import as_bulletin_pdf, compact_bulletin_pdf
+from pdf_extract.pdf_compact import (
+    MAX_STORED_BULLETIN_BYTES,
+    as_bulletin_pdf,
+    compact_bulletin_pdf,
+)
 from pdf_extract.pdf_truncate import max_pages_for
 from pdf_extract.runs import (
     FETCH_CURRENT,
@@ -55,6 +59,7 @@ from pdf_extract.runs import (
     FETCH_RECHECK_FAILED,
     FETCH_RESOLVE_FAILED,
     FETCH_SAVE_FAILED,
+    FETCH_TOO_LARGE,
     FETCH_UNCHANGED,
     join_details,
     record_parish_result,
@@ -89,6 +94,9 @@ DISCOVER_MASS_BULLETIN_URL_TEMPLATE = "https://discovermass.com/church/{provider
 
 # Per-request timeout for direct PDF downloads over HTTP.
 HTTP_DOWNLOAD_TIMEOUT_SECONDS = 60
+# Only protects the runner's memory and disk, so it is far above what can be
+# stored: a 515 MB bulletin compacts to 5 MB.
+MAX_DOWNLOAD_BYTES = 1_000_000_000
 # eCatholic bulletin pages keep their PDF links in an archive panel that is
 # often attached but not visible, and sometimes only populated after the first
 # render. When a pass finds nothing, reload once after a short settle.
@@ -561,7 +569,28 @@ def _http_get(
     req = Request(request_url, headers=headers)
     LOGGER.info("Fetching URL: %s", request_url)
     with urlopen(req, timeout=timeout) as resp:
-        return _Response(resp.read(), resp.headers.get("ETag"), resp.headers.get("Last-Modified"))
+        body = _read_body(resp, request_url)
+        return _Response(body, resp.headers.get("ETag"), resp.headers.get("Last-Modified"))
+
+
+class DownloadTooLarge(OSError):
+    """A response over `MAX_DOWNLOAD_BYTES`."""
+
+
+def _read_body(resp, url: str) -> bytes:
+    """A response's body, unless it is over `MAX_DOWNLOAD_BYTES`."""
+    too_large = f"Over {MAX_DOWNLOAD_BYTES / 1e6:.0f} MB: {url}"
+    declared = resp.headers.get("Content-Length") or ""
+    # A chunked body can be any length, whatever Content-Length says.
+    if declared.isdigit() and not resp.headers.get("Transfer-Encoding"):
+        if int(declared) > MAX_DOWNLOAD_BYTES:
+            raise DownloadTooLarge(too_large)
+        # Not a sized read: only this one notices a connection cut off early.
+        return resp.read()
+    body = resp.read(MAX_DOWNLOAD_BYTES + 1)
+    if len(body) > MAX_DOWNLOAD_BYTES:
+        raise DownloadTooLarge(too_large)
+    return body
 
 
 def _normalize_url_for_request(url: str) -> str:
@@ -607,6 +636,8 @@ def _download_bulletin(
             LOGGER.warning("429 from %s; retrying in %ss", fetch_url, HTTP_429_RETRY_SECONDS)
             time.sleep(HTTP_429_RETRY_SECONDS)
             response = get()
+    except DownloadTooLarge:
+        raise
     except (OSError, HTTPException) as exc:
         # urllib raises a 304 like any other non-2xx answer.
         if conditional and isinstance(exc, HTTPError) and exc.code == HTTPStatus.NOT_MODIFIED:
@@ -623,6 +654,8 @@ def _download_bulletin(
         secure_url = "https://" + fetch_url.removeprefix("http://")
         try:
             secure = _http_get(secure_url, referer=source_url, extra_headers=conditional)
+        except DownloadTooLarge:
+            raise
         except (OSError, HTTPException) as exc:
             LOGGER.info("No better over https (%s): %s", exc, secure_url)
         else:
@@ -963,7 +996,8 @@ def fetch_bulletins(
         "unchanged_bulletins": tally[FETCH_UNCHANGED],
         "recheck_failed": tally[FETCH_RECHECK_FAILED],
         "failed_parishes": (
-            tally[FETCH_RESOLVE_FAILED] + tally[FETCH_DOWNLOAD_FAILED] + tally[FETCH_SAVE_FAILED]
+            tally[FETCH_RESOLVE_FAILED] + tally[FETCH_DOWNLOAD_FAILED]
+            + tally[FETCH_SAVE_FAILED] + tally[FETCH_TOO_LARGE]
         ),
         "stale_parishes": len(stale),
     }
@@ -1115,11 +1149,12 @@ def _fetch_one(
             # this address but could not trust the date of, is not a failure
             # to fetch. A bulletin from an earlier week at the same address is
             # no such thing: the site may have this week's issue there now.
-            status = (
-                FETCH_RECHECK_FAILED
-                if _rechecks_this_weeks_bulletin(job.stored, link.source_url, sunday)
-                else FETCH_DOWNLOAD_FAILED
-            )
+            if _rechecks_this_weeks_bulletin(job.stored, link.source_url, sunday):
+                status = FETCH_RECHECK_FAILED
+            elif isinstance(exc, DownloadTooLarge):
+                status = FETCH_TOO_LARGE
+            else:
+                status = FETCH_DOWNLOAD_FAILED
             return _Fetched(job, status, detail=f"{type(exc).__name__}: {exc}", link=link)
     finally:
         lanes.release()
@@ -1146,10 +1181,16 @@ def _fetch_one(
         # repeatable, so a PDF already stored (by a run whose database was not
         # published) is left as it is.
         if not store.exists(key):
-            store.put(
-                key, compact_bulletin_pdf(download.pdf, max_pages=max_pages_for(slug)),
-                content_type="application/pdf",
-            )
+            compacted = compact_bulletin_pdf(download.pdf, max_pages=max_pages_for(slug))
+            if len(compacted) > MAX_STORED_BULLETIN_BYTES:
+                detail = (
+                    f"Downloaded {len(download.pdf) / 1e6:.1f} MB, compacted to"
+                    f" {len(compacted) / 1e6:.1f} MB: over the"
+                    f" {MAX_STORED_BULLETIN_BYTES / 1e6:.0f} MB limit, so not stored"
+                )
+                LOGGER.warning("Parish %s: %s", slug, detail)
+                return _Fetched(job, FETCH_TOO_LARGE, detail=detail, link=link)
+            store.put(key, compacted, content_type="application/pdf")
     except Exception as exc:
         LOGGER.warning("Failed saving bulletin for parish %s: %s", slug, exc, exc_info=True)
         return _Fetched(

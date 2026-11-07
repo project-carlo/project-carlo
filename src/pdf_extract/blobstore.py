@@ -51,13 +51,16 @@ class BlobStore(Protocol):
 
     def list(self, prefix: str) -> Iterator[str]: ...
 
+    def list_sizes(self, prefix: str) -> Iterator[tuple[str, int]]: ...
+
 
 # ── Keys ────────────────────────────────────────────────────────────────────
 def bulletin_pdf_key(parish_slug: str, content_hash: str) -> str:
-    """Where a fetched bulletin lives. Never overwritten.
+    """Where a fetched bulletin lives.
 
     `content_hash` is the SHA-256 of the PDF as downloaded; the stored bytes
-    are a compacted copy of it (see `pdf_compact`).
+    are a compacted copy of it (see `pdf_compact`). So a key always names the
+    same bulletin, and only `data recompact` ever replaces its bytes.
     """
     return f"bulletins/{parish_slug}/{content_hash}.pdf"
 
@@ -109,6 +112,10 @@ class LocalBlobStore:
             key = path.relative_to(self.root).as_posix()
             if key.startswith(prefix):
                 yield key
+
+    def list_sizes(self, prefix: str) -> Iterator[tuple[str, int]]:
+        for key in self.list(prefix):
+            yield key, self.path(key).stat().st_size
 
 
 # ── S3-compatible (Cloudflare R2) ───────────────────────────────────────────
@@ -166,11 +173,14 @@ class S3BlobStore:
                 )
 
     def list(self, prefix: str) -> Iterator[str]:
+        return (key for key, _size in self.list_sizes(prefix))
+
+    def list_sizes(self, prefix: str) -> Iterator[tuple[str, int]]:
         paginator = self.client.get_paginator("list_objects_v2")
         try:
             for page in paginator.paginate(Bucket=self.bucket, Prefix=prefix):
                 for item in page.get("Contents", []):
-                    yield item["Key"]
+                    yield item["Key"], item["Size"]
         except Exception as exc:
             raise BlobStoreError(f"Listing {prefix} in bucket {self.bucket} failed: {exc}") from exc
 
@@ -180,7 +190,8 @@ class CachedBlobStore:
     """Local directory first, then the remote; writes go local and, if enabled, remote.
 
     Blobs are immutable once written (keys are content hashes or run ids), so
-    a local hit never needs revalidating against the remote.
+    a local hit never needs revalidating against the remote. `data recompact`
+    is the one exception, and an older copy of a bulletin is still that bulletin.
     """
 
     def __init__(
@@ -256,6 +267,11 @@ class CachedBlobStore:
         if self.remote is not None:
             return self.remote.list(prefix)
         return self.local.list(prefix)
+
+    def list_sizes(self, prefix: str) -> Iterator[tuple[str, int]]:
+        if self.remote is not None:
+            return self.remote.list_sizes(prefix)
+        return self.local.list_sizes(prefix)
 
 
 # ── Configuration ───────────────────────────────────────────────────────────

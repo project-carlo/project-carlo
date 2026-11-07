@@ -40,6 +40,15 @@ DENIED = [
     "Bash(git stash:*)",
 ]
 
+# Claude Code's context that is no use to a worker, turned off. A worker can't commit or
+# open a PR; `AGENTS.md` is for people's agents, not workers; and what a job learned goes
+# in its handoff, so no worker has ever written a memory.
+WORKER_SETTINGS = {
+    "attribution": {"commit": "", "pr": ""},
+    "autoMemoryEnabled": False,
+    "claudeMdExcludes": ["**/AGENTS.md"],
+}
+
 # The SDK refuses any one message over 1 MB by default. A scanned bulletin page that a
 # worker renders and reads is often more (1.4 MB as base64 in Wilmington), and crashed
 # 6 map attempts there.
@@ -191,6 +200,7 @@ def sdk_options(request: WorkerRequest, launch: Launch) -> Any:
         system_prompt={"type": "preset", "preset": "claude_code",
                        "append": request.system_append},
         setting_sources=["project"],
+        settings=json.dumps(WORKER_SETTINGS),
         skills=list(spec.skills) or None,
         max_turns=spec.max_turns,
         resume=request.session_id,

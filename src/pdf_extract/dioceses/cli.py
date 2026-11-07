@@ -372,6 +372,8 @@ def add_diocese_parser(
     p = leaf("import", "roster-import",
              "Save a list you built (JSON list or CSV) as a roster, e.g. a family list or "
              "Mass-times page", roster)
+    p.formatter_class = argparse.RawDescriptionHelpFormatter
+    p.epilog = rosters.import_help()
     p.add_argument("diocese")
     p.add_argument("name", help="roster name, e.g. 'families' or 'mass-times'")
     p.add_argument("file")

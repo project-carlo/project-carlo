@@ -27,6 +27,8 @@ FETCH_DOWNLOAD_FAILED = "download_failed"
 # the parish still has that bulletin.
 FETCH_RECHECK_FAILED = "recheck_failed"
 FETCH_SAVE_FAILED = "save_failed"
+# Too big to store, even compacted: the parish keeps its last bulletin.
+FETCH_TOO_LARGE = "too_large"
 
 # Process outcomes.
 PROCESS_EXTRACTED = "extracted"
@@ -60,6 +62,7 @@ FAILED_STATUSES = frozenset({
     FETCH_RESOLVE_FAILED,
     FETCH_DOWNLOAD_FAILED,
     FETCH_SAVE_FAILED,
+    FETCH_TOO_LARGE,
     PROCESS_FAILED,
     PROCESS_SKIPPED,
 })

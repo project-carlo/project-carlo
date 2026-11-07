@@ -30,6 +30,7 @@ from __future__ import annotations
 import html
 import json
 import re
+import textwrap
 from collections.abc import Callable, Mapping
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
@@ -193,6 +194,58 @@ def import_roster(diocese: str, name: str, source: Path, *, title: str = "", url
     return save_roster(diocese, name, entries, title=title or name, url=url,
                        command=f"pnpm diocese roster import {diocese} {name} {source}",
                        notes=notes)
+
+
+# `roster import --help`, one note per ENTRY_FIELDS name.
+_ENTRY_NOTES = {
+    "id": "unique in the roster and unchanged on re-import: records link to <roster>:<id>. "
+          "Leave the key or column out to get a slug of name and city; a blank id stays blank",
+    "name": "REQUIRED in every entry: the church or parish as the source names it",
+    "group": "the source's grouping (canonical parish, family, cluster), the same text for "
+             "each member: coverage also tries it as a name in the entry's city, and audit "
+             "checks the parishes one group spans",
+    "kind": "the source's word: Church, Mission, Chapel...",
+    "line1": "street address",
+    "city": "city or town",
+    "state": "two-letter code",
+    "postal_code": "ZIP code",
+    "latitude": "number; anything else is saved as null",
+    "longitude": "number; anything else is saved as null",
+    "website": "the church's or parish's own site",
+    "url": "this entry's page in the source",
+}
+_IMPORT_EXAMPLE = {
+    "id": "st-ann-town", "name": "St. Ann", "group": "Family 12", "kind": "Church",
+    "line1": "1 Main St", "city": "Town", "state": "NJ", "postal_code": "08800",
+    "latitude": 40.5, "longitude": -74.3, "website": "https://stann.org",
+    "url": "https://diocese.org/finder/st-ann",
+}
+
+
+def import_help() -> str:
+    """`roster import --help`'s epilog, built from ENTRY_FIELDS and the import aliases."""
+    width = max(map(len, ENTRY_FIELDS)) + 2
+    lines = ["entry fields (only name is required; leave out what the source doesn't give):"]
+    for field in ENTRY_FIELDS:
+        lines += textwrap.wrap(_ENTRY_NOTES[field], width=88,
+                               initial_indent=f"  {field:<{width}}",
+                               subsequent_indent=" " * (width + 2))
+    aliases = "; ".join(
+        f"{', '.join(a for a, f in _IMPORT_ALIASES.items() if f == field)} = {field}"
+        for field in ENTRY_FIELDS if field in _IMPORT_ALIASES.values())
+    lines += [
+        "",
+        "Keys ignore case, and any other key is kept, lower-cased. Also accepted:",
+        *textwrap.wrap(aliases, width=88, initial_indent="  ", subsequent_indent="  "),
+        "",
+        'JSON: a list of objects, or an object with an "entries" list:',
+        "  " + json.dumps([{k: _IMPORT_EXAMPLE[k] for k in ("name", "group", "city")}]),
+        "",
+        "CSV (a file ending in .csv): a header row of keys, then one entry per row:",
+        "  " + ",".join(ENTRY_FIELDS),
+        "  " + ",".join(str(_IMPORT_EXAMPLE[k]) for k in ENTRY_FIELDS),
+    ]
+    return "\n".join(lines)
 
 
 # ── Open Location Codes ─────────────────────────────────────────────────────
