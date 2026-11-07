@@ -9,6 +9,7 @@ import {
   PLACE_RESULT_LIMIT,
   rankPlaces,
   searchChurches,
+  spellOutState,
 } from "./localSearch";
 
 let nextId = 1;
@@ -98,6 +99,26 @@ describe("parsePlaceQuery", () => {
       name: "west virginia",
       state: null,
     });
+  });
+});
+
+describe("spellOutState", () => {
+  it("spells out a state code at the end", () => {
+    expect(spellOutState("boston ma")).toBe("boston Massachusetts");
+    expect(spellOutState("Erie, PA")).toBe("Erie, Pennsylvania");
+    expect(spellOutState("washington dc")).toBe("washington District of Columbia");
+    expect(spellOutState("100 Main St, Buffalo NY")).toBe(
+      "100 Main St, Buffalo New York",
+    );
+  });
+
+  it("leaves anything else as typed", () => {
+    expect(spellOutState("boston m")).toBe("boston m");
+    expect(spellOutState("boston mass")).toBe("boston mass");
+    expect(spellOutState("ma")).toBe("ma");
+    expect(spellOutState("Main St")).toBe("Main St");
+    expect(spellOutState("Buffalo NY 14202")).toBe("Buffalo NY 14202");
+    expect(spellOutState(" Erie ")).toBe("Erie");
   });
 });
 
