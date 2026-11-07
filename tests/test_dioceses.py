@@ -422,6 +422,63 @@ def test_no_bulletin_parishes_stay_off_the_site(root: Path) -> None:
     assert records.promote("test")["churches"]["added"] == ["st-ann-town"]
 
 
+GAP = {"kind": "viewer-wrapped-pdf", "seen": "2026-11-03",
+       "note": "The page links viewer pages; the PDF is at /bulletins/file/<name>."}
+
+
+def test_unsupported_parishes_stay_off_the_site_until_a_provider_is_set(root: Path) -> None:
+    _parish()
+    _church()
+    _parish("gap", bulletin_provider="unsupported", publication=["url:https://gap.org/b"],
+            fetch_gap=GAP)
+    _church("gap-town", parish="gap")
+    records.promote("test")
+    assert [r["slug"] for r in _live("PARISHES_CSV_PATH")] == ["live-parish", "st-ann"]
+    assert [r["slug"] for r in _live("CHURCHES_CSV_PATH")] == ["st-live", "st-ann-town"]
+    d = records.load("test")
+    assert "promoted" not in d.of(records.PARISH)["gap"]
+    assert d.of(records.PARISH)["gap"]["fetch_gap"] == GAP  # its evidence stays
+    assert d.of(records.PARISH)["gap"]["publication"] == ["url:https://gap.org/b"]
+    # A live row turned unsupported goes off the site, with the provider named...
+    path = root / "parishes" / "st-ann.md"
+    records.write_record("test", "parish", "st-ann",
+                         {"bulletin_provider": "unsupported", "fetch_gap": GAP})
+    warnings = records.validate("test")["dioceses"]["test"]["warnings"]
+    assert "parish 'st-ann': unsupported, but still in data/parishes.csv; run `diocese " \
+        "promote` to take it off" in warnings
+    assert any(w.startswith("church 'st-ann-town': unsupported, but still") for w in warnings)
+    assert records.promote("test")["churches"]["removed"] == ["st-ann-town"]
+    # ...and comes back only when someone sets the provider a collector reads.
+    records.write_record("test", "parish", "st-ann",
+                         {"bulletin_provider": "ecatholic", "fetch_gap": None})
+    assert records.promote("test")["churches"]["added"] == ["st-ann-town"]
+    assert path.exists()
+
+
+def test_unsupported_needs_a_fetch_gap_and_other_gap_rows_are_warned(root: Path) -> None:
+    with pytest.raises(DioceseError, match="unsupported needs a fetch_gap"):
+        records.write_record("test", "parish", "gap", {
+            "name": "Gap", "website": "https://gap.org", "bulletin_provider": "unsupported",
+            "evidence": EVIDENCE}, create=True)
+    _parish("quiet", bulletin_provider="no_bulletin", fetch_gap=GAP)
+    _parish("goes-live", bulletin_provider="other", fetch_gap=GAP)
+    _parish("odd", bulletin_provider="unsupported", fetch_gap=GAP, bulletin_status="not-found")
+    warnings = records.validate("test")["dioceses"]["test"]["warnings"]
+    assert any(w.startswith("parish 'quiet': no_bulletin with a fetch_gap") for w in warnings)
+    assert any(w.startswith("parish 'goes-live': fetch_gap on a other row, which goes live")
+               for w in warnings)
+    assert any(w.startswith("parish 'odd': unsupported is for a bulletin that is published")
+               for w in warnings)
+    # unsupported keeps its identity: it is still asked for publication ids.
+    assert any(w.startswith("parish 'odd': no publication id recorded") for w in warnings)
+
+
+def test_fetch_check_explains_an_unsupported_parish(root: Path, capsys) -> None:
+    _parish("gap", bulletin_provider="unsupported", fetch_gap=GAP)
+    assert main(["fetch-check", "--diocese", "test", "--parish", "gap"]) == 1
+    assert "unsupported, so fetch has no collector for it: gap" in capsys.readouterr().err
+
+
 def test_live_parishes_have_a_bulletin_provider() -> None:
     live = Path(__file__).parents[1] / "data" / "parishes.csv"
     with live.open(encoding="utf-8") as fh:
@@ -472,6 +529,14 @@ def test_gcatholic_pages_parse() -> None:
                             "index_city": "Forestport", "group": "Christ our Hope Parish",
                             "kind": "Mission"}
     assert rows[1]["rite"] == "Greek-Melkite"
+    # A diocese across two states (Wilmington: DE and MD) adds ", DE" after the town.
+    two_states = rosters.parse_gcatholic_index(
+        '<tr id="L1"><td><span class="znote">Bear</span><span class="znote">, </span>'
+        '<span class="zregion">DE</span></td><td>'
+        '<a href="../usa-04/19333" title="Church of St. Elizabeth Ann Seton"><img></a> '
+        '<a href="../usa-04/19333" class="chw">St. Elizabeth Ann Seton</a></td></tr>')
+    assert two_states[0]["index_city"] == "Bear" and two_states[0]["group"] == ""
+    assert two_states[0]["index_state"] == "DE"
     detail = rosters.parse_gcatholic_detail(
         "<div>Type: Church Rite: Roman (Latin) History: 1914 Location: 87J67GR9+RC "
         "Address: 34 S Main St., Bainbridge, New York 13733-1215 Country: USA "
@@ -525,6 +590,53 @@ def test_a_pdf_that_does_not_parse_is_an_error_not_a_crash(monkeypatch) -> None:
     broken = web.Response("u", 200, "u", "application/pdf", b"%PDF-1.7\n1 0 obj")
     monkeypatch.setattr(web, "fetch", lambda url, **kw: broken)
     assert web.pdf_text("https://example.org/x.pdf")["error"].startswith("could not read")
+
+
+def test_probe_get_prints_text_saves_files_and_names_blocks(monkeypatch, tmp_path) -> None:
+    bodies = {
+        "https://a.org/": web.Response("https://a.org/", 200, "https://a.org/", "text/html",
+                                       b"<title>St. Ann</title><p>Mass 9 am</p>"),
+        "https://a.org/b.pdf": web.Response("https://a.org/b.pdf", 200, "https://a.org/b.pdf",
+                                            "application/pdf", b"%PDF-1.7 bulletin"),
+        "https://cf.org/": web.Response("https://cf.org/", 403, "https://cf.org/",
+                                        error="HTTP 403"),
+        "https://bv.net/x.pdf": web.Response(
+            "https://bv.net/x.pdf", error="SSLCertVerificationError: [SSL: "
+            "CERTIFICATE_VERIFY_FAILED] unable to get local issuer certificate"),
+    }
+    monkeypatch.setattr(web, "fetch", lambda url, **kw: bodies[url])
+    assert "Mass 9 am" in web.get("https://a.org/")["text"]
+    # A PDF is read from the body already fetched, not fetched again by probe pdf.
+    assert web.get("https://a.org/b.pdf")["error"].startswith("could not read")
+    saved = web.get("https://a.org/b.pdf", out=tmp_path / "b.pdf")
+    assert (tmp_path / "b.pdf").read_bytes() == b"%PDF-1.7 bulletin" and saved["bytes"] == 17
+    assert "visit.py" in web.get("https://cf.org/")["note"]
+    assert "http://" in web.get("https://bv.net/x.pdf")["note"]
+
+
+def test_probe_get_saves_only_the_content_itself(monkeypatch, tmp_path) -> None:
+    challenge = b"<html><head><title>Just a moment...</title></head></html>"
+    bodies = {
+        "https://cf.org/b.pdf": web.Response("https://cf.org/b.pdf", 200, "https://cf.org/b.pdf",
+                                             "text/html", challenge),
+        "https://big.org/b.pdf": web.Response("https://big.org/b.pdf", 200, "", "application/pdf",
+                                              b"%PDF-1.7 part", truncated=True),
+        "https://a.org/x.jpg": web.Response("https://a.org/x.jpg", 200, "", "image/jpeg",
+                                            b"\xff\xd8\xff\xe0\x00JFIF"),
+        "https://busy.org/": web.Response("https://busy.org/", 429, error="HTTP 429"),
+    }
+    calls = []
+    monkeypatch.setattr(web, "fetch", lambda url, **kw: calls.append(url) or bodies[url])
+    monkeypatch.setattr(web, "BOT_CHECK_RETRY_SECONDS", 0)
+    challenged = web.get("https://cf.org/b.pdf", out=tmp_path / "c.pdf")
+    assert "visit.py" in challenged["note"] and "saved" not in challenged
+    assert calls.count("https://cf.org/b.pdf") == 2  # retried once, as recheck does
+    cut = web.get("https://big.org/b.pdf", out=tmp_path / "big.pdf")
+    assert cut["truncated"] and "saved" not in cut and "cut off" in cut["note"]
+    assert not (tmp_path / "c.pdf").exists() and not (tmp_path / "big.pdf").exists()
+    image = web.get("https://a.org/x.jpg")
+    assert "text" not in image and "--out" in image["note"]
+    assert "browser won't help" in web.get("https://busy.org/")["note"]
 
 
 def test_recheck_reports_a_bot_check_page_as_unreachable(monkeypatch: pytest.MonkeyPatch) -> None:
@@ -717,6 +829,16 @@ def test_reviewed_shared_site_survives_promotion_import_and_fetch(root, tmp_path
             )
             expected = "Anne" if row["slug"] == "st-ann" else "Bede"
             assert link.source_url == f"https://family.example/{expected}-Bulletin-20260927.pdf"
+
+
+def test_write_warns_about_a_review_audit_will_not_count(root):
+    _parish("st-ann")
+    weak = _separate_review(evidence=[{**EVIDENCE[0], "note": "Own masthead and Mass times."}])
+    result = _parish("st-bede", publication_reviews=[weak])
+    assert any("audit won't count this review (it doesn't say whose bulletin it is)" in w
+               for w in result["warnings"])
+    assert not any("audit won't count" in w for w in _parish(
+        "st-cecilia", publication_reviews=[_separate_review()])["warnings"])
 
 
 @pytest.mark.parametrize("filename,reviews", [

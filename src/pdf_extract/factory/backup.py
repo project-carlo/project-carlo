@@ -1,7 +1,8 @@
 """The nightly ledger backup: SQLite's online backup, uploaded to R2.
 
 Losing the ledger loses only history, costs and transcripts; the work is in git.
-Uploading needs R2 keys that can write (the ones `pnpm data:push` uses).
+Uploading needs R2 keys that can write (the ones `pnpm data:push` uses), from the
+dispatcher's `.env` (secrets.py).
 """
 
 from __future__ import annotations
@@ -27,12 +28,13 @@ def copy_database(source: Path, dest: Path) -> None:
         src.close()
 
 
-def backup_ledger(ledger_path: Path, prefix: str, out_dir: Path = DATA / "backups") -> str:
+def backup_ledger(ledger_path: Path, prefix: str, secrets: dict[str, str],
+                  out_dir: Path = DATA / "backups") -> str:
     out_dir.mkdir(parents=True, exist_ok=True)
     stamp = datetime.now(UTC).strftime("%Y-%m-%d")
     dest = out_dir / f"factory-{stamp}.db"
     copy_database(ledger_path, dest)
-    remote = remote_from_env()
+    remote = remote_from_env(secrets)
     if remote is None:
         return f"{dest} (no R2 keys: not uploaded)"
     key = f"{prefix.rstrip('/')}/factory-{stamp}.db"

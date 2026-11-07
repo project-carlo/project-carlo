@@ -3,7 +3,7 @@
  * and JSON-LD (schema.org) builders used by the prerendered church pages and
  * (in a later phase) the client-rendered routes.
  */
-import type { ChurchBase, ChurchDetail } from "../types";
+import type { ChurchBase, ChurchDetail } from "@carlo/core";
 import { cityPath, type City, type CityLink } from "./cities";
 import { CHURCH_LIST, SOURCE_PHRASE, UNNAMED_CHURCH } from "../copy";
 

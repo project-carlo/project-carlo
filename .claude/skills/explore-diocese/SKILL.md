@@ -7,9 +7,9 @@ description: The method for researching a diocese in data/dioceses/<diocese>/ wi
 
 Read `data/dioceses/README.md` before your first write. It has the rules, the file format,
 the explanation standard, which sources to trust, and the traps. This page is the short
-version.
+version. A factory job reads the README sections its header lists instead.
 
-A whole new diocese is mapped by the onboarding factory (`docs/factory-spec.md`): add it to
+A whole new diocese is mapped by the onboarding factory (`docs/factory.md`): add it to
 `factory/queue.json`. Its survey, map, reconcile and integrate jobs follow this page.
 
 ## The three rules
@@ -41,7 +41,7 @@ Then, cheapest first:
 1. **Structure before parishes.** Find the diocese's family/cluster list and its bulletins
    first. Settle "one bulletin or several" per group before creating rows.
 2. **Find each bulletin:** `probe url <site>` (alive? redirected? squatted? which ids does
-   it embed?), `probe po <org slug | LPi id>` (a ParishesOnline org's address, ids and
+   it embed, which publishers does it link, what is it built with?), `probe po <org slug | LPi id>` (a ParishesOnline org's address, ids and
    latest issues), `probe container <a/b> --pages 3` (latest masthead; `--all --step 4` for
    a monthly changelog), `probe pdf <url> --grep <name>` (any bulletin's text; date closures
    this way). When `probe url` says HTTP4XX or NO-PARISH-WORDS, or finds no ids, the
@@ -49,7 +49,9 @@ Then, cheapest first:
    Discover Mass issues the way `probe container` reads ParishesOnline ones.
 3. **Write records:** `uv run python -m pdf_extract diocese write <d> <kind> <slug>
    --file record.json` patches flat fields plus `body`; lists replace existing lists.
-   Add `--create` only for explicit new records; `--file -` reads stdin. It validates and
+   Add `--create` only for explicit new records; `--file -` reads stdin. Quote the heredoc
+   (`<<'JSON'`) and write URLs out in full: record bodies use backticks, and an unquoted
+   heredoc runs each one as a command. It validates and
    writes atomically, returning slug, path and validation counts. See the README's payload
    example. Existing `new` and `merge` remain supported; `new church --from gcatholic:<id>`
    can prefill address, coordinates and evidence before a structured update. Replace TODOs
@@ -68,18 +70,23 @@ Then, cheapest first:
 7. **Audit structure every session:** `pnpm diocese audit <d> [--fetch]`. Read its candidate
    scope and limitations; coverage and distinct URLs can't establish separate documents.
 8. **Check the fetch:** `pnpm fetch:check --diocese <d> --parish <slug>` resolves and
-   downloads a row's bulletin before it is promoted (headed: `PLAYWRIGHT_BROWSER_CHANNEL=chrome
-   xvfb-run -a` in the cloud sandbox). Review transport, document type, parish identity and
+   downloads a row's bulletin before it is promoted (run it headed:
+   `PLAYWRIGHT_BROWSER_CHANNEL=chrome xvfb-run -a pnpm fetch:check ...`). Review transport, document type, parish identity and
    freshness separately; successful transport alone isn't a verified current bulletin.
 9. **Finish:** `pnpm diocese validate <d>` (and `uv run pytest tests/test_dioceses.py`).
    A change to a mapped diocese also gets a dated line in `diocese.md`'s *Log*.
 
 A closure after the fact: `pnpm diocese exclude <d> <church> --reason closed --last-mass
 <date>`, then write why in the new `excluded/` file. Something you can't settle yet goes in
-`open/` (or in `revisit` / `revisit_after` on a record), with the next step and a date. A
+`open/` (or in `revisit` / `revisit_after` on a record), with the next step and a date; it
+needs no factory flag (README, *What to flag*), nor does a bulletin `fetch` can't collect
+(`fetch_gap`) or an address or name the sources disagree on (choose one, preferring the
+parish's and the diocese's own, and say why). A
 promoted church with no current Mass found and no source saying it closed: `pnpm diocese
 question <d> <church> --revisit "..."`, which takes it off the site until it is settled.
-A `no_bulletin` parish is kept in the records but left off the site. Optional
+A `no_bulletin` parish (no bulletin found) and an `unsupported` one (a bulletin `fetch`
+can't collect yet, with its `fetch_gap`) are kept in the records but left off the site;
+setting a real provider puts them back. Optional
 `bulletin_status` records availability independently; it doesn't control promotion.
 
 ## Bounded research
@@ -97,8 +104,15 @@ fixed request budget that sacrifices evidence or turn a blocked search into cert
 - Don't close, merge or delete anything on the strength of a plan, a decree, an old
   directory, an account name or an absence from a list. Read the current bulletin.
 - Don't set `name_verified` / `address_verified` true without two independent sources.
-- Don't quote from a summarizing fetch tool. Read the page itself (`probe pdf`, `curl`); the
-  quote has to be findable by `pnpm diocese recheck`.
+- Don't quote from a summarizing fetch tool. Read the page itself (`probe pdf`, `probe get`);
+  the quote has to be findable by `pnpm diocese recheck`.
+- Don't fetch with curl and a browser user agent (`-A "Mozilla/5.0 ..."`) or `-k`. Auto
+  mode's safety check refuses them, as bot-check circumvention and TLS weakening, though not
+  every time: in Wilmington it let about 70 through and stopped 4. Use `pnpm diocese
+  probe get <url>` (`--out <file>` to save a PDF or page): the probes' own client, which
+  verifies TLS. It handles pages, PDFs and JSON APIs such as WordPress's `/wp-json/`. When it
+  reports a bot check or a 403, open the page with parish-site-access's `visit.py`; when the
+  certificate doesn't verify, try `http://`. Don't retry with other headers.
 - Don't delete a promoted record: exclude or merge it, so `promote` removes its live row.
 - Don't infer shared-pastor associations from adjacent names or text. Preserve explicit
   parish/pastor links from the source; leave ambiguous associations unresolved.

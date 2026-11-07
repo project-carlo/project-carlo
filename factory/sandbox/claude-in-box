@@ -1,0 +1,69 @@
+#!/usr/bin/env -S python3 -I
+"""The Claude CLI the factory's Agent SDK starts for each worker (`cli_path`).
+
+The SDK starts it with the dispatcher's whole environment plus the worker's. The
+dispatcher says in CARLO_BOX what to run (the host CLI, or `podman run ... claude`) and
+which environment names to keep; everything else is dropped, so nothing the dispatcher
+holds reaches the worker. The SDK's arguments are passed on unchanged.
+
+On SIGTERM, SIGINT or SIGHUP (the SDK's timeout, a cancel) it stops the whole worker:
+the container (`podman rm -f`), or on the host every process in the worker's group.
+
+Standard library only: it runs outside the project's environment.
+See docs/factory-sandbox-plan.md §3.1.
+"""
+
+import json
+import os
+import shutil
+import signal
+import subprocess
+import sys
+
+
+def version() -> int:
+    """The SDK's `-v` probe comes without the worker's environment, so without CARLO_BOX.
+    The host CLI answers it; the SDK only uses the answer for a warning."""
+    claude = shutil.which("claude")
+    if claude:
+        env = {k: os.environ[k] for k in ("PATH", "HOME") if k in os.environ}
+        return subprocess.run([claude, "-v"], env=env).returncode
+    return 0
+
+
+def main(args: list[str]) -> int:
+    raw = os.environ.get("CARLO_BOX")
+    if raw is None:
+        if args[:1] in (["-v"], ["--version"]):
+            return version()
+        print("claude-in-box: no CARLO_BOX: start it from the factory dispatcher",
+              file=sys.stderr)
+        return 2
+    plan = json.loads(raw)
+    env = {k: os.environ[k] for k in plan["keep"] if k in os.environ}
+    container = plan.get("container")
+    proc = subprocess.Popen([*plan["argv"], *args], env=env, start_new_session=True)
+
+    def stop(signum: int, frame: object) -> None:
+        if container:
+            subprocess.run(["podman", "rm", "--force", "--time", "0", container], env=env,
+                           stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        # Then SIGKILL, even once the CLI has gone: a browser it started may not have.
+        for sig in (signal.SIGTERM, signal.SIGKILL):
+            try:
+                os.killpg(proc.pid, sig)
+            except ProcessLookupError:
+                break
+            try:
+                proc.wait(5)
+            except subprocess.TimeoutExpired:
+                pass
+        sys.exit(128 + signum)
+
+    for sig in (signal.SIGTERM, signal.SIGINT, signal.SIGHUP):
+        signal.signal(sig, stop)
+    return proc.wait()
+
+
+if __name__ == "__main__":
+    sys.exit(main(sys.argv[1:]))

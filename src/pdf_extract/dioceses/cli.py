@@ -100,7 +100,11 @@ def _cmd_new(kind_name: str) -> Handler:
         if not fields.get("name"):
             raise DioceseError("--name is required (or --from a roster entry)")
         body = Path(args.body_file).read_text(encoding="utf-8") if args.body_file else None
-        result = records.new_record(args.diocese, kind_name, fields, slug=args.slug, body=body)
+        if args.slug_arg and args.slug and args.slug_arg != args.slug:
+            raise DioceseError(f"two slugs given ({args.slug_arg!r} and --slug {args.slug!r}); "
+                               "give one")
+        slug = args.slug_arg or args.slug
+        result = records.new_record(args.diocese, kind_name, fields, slug=slug, body=body)
         result["next"] = (f"edit data/dioceses/{args.diocese}/{result['created']}: replace the "
                           "TODOs with the explanation and add evidence (see the README)")
         return result
@@ -123,8 +127,8 @@ def _probe_sites(args: argparse.Namespace) -> dict[str, Any]:
         results.append({"parish": slug, **probe,
                         "recorded_not_on_site": sorted(recorded - found),
                         "on_site_not_recorded": sorted(found - recorded)})
-    order = ["DEAD-DNS", "SPAM-SQUAT", "REDIRECT-OFFSITE", "UNREACHABLE", "HTTP5XX", "HTTP4XX",
-             "NO-PARISH-WORDS", "ok"]
+    order = ["DEAD-DNS", "SPAM-SQUAT", "REDIRECT-OFFSITE", "UNREACHABLE", "PROXY-REFUSED",
+             "HTTP5XX", "HTTP4XX", "NO-PARISH-WORDS", "ok"]
     results.sort(key=lambda r: order.index(r["verdict"]) if r["verdict"] in order else 0)
     if not args.all:
         results = [r for r in results if r["verdict"] != "ok" or r["on_site_not_recorded"]]
@@ -193,6 +197,7 @@ HANDLERS: dict[str, Handler] = {
                                            website=a.website or "", gcatholic=a.gcatholic or ""),
     "show": lambda a: records.show_diocese(a.diocese),
     "todo": lambda a: report.todo(a.diocese),
+    "gaps": lambda a: report.gaps(a.diocese, a.kind),
     "validate": lambda a: records.validate(a.diocese),
     "write": _write_record,
     "batches-validate": lambda a: batches.validate(a.diocese, Path(a.file) if a.file else None),
@@ -221,6 +226,7 @@ HANDLERS: dict[str, Handler] = {
         pages=a.pages, chars=a.chars),
     "probe-po": lambda a: {"results": [web.parishes_online_org(k, issues=a.issues)
                                        for k in a.keys]},
+    "probe-get": lambda a: web.get(a.url, out=Path(a.out) if a.out else None, chars=a.chars),
     "probe-pdf": lambda a: web.pdf_text(a.url, pages=a.pages, chars=a.chars, grep=a.grep or ()),
     "recheck": _recheck,
     "export": lambda a: records.export_csv(a.diocese, Path(a.out_dir)),
@@ -268,6 +274,11 @@ def add_diocese_parser(
     p = leaf("todo", "todo", "What is left: errors, revisits due, coverage gaps, incomplete records")
     p.add_argument("diocese")
 
+    p = leaf("gaps", "gaps", "Parishes whose bulletin fetch can't collect yet (fetch_gap), "
+             "grouped by kind: the work list for new collectors")
+    p.add_argument("--diocese", help="one diocese; every diocese when omitted")
+    p.add_argument("--kind", help="one kind, e.g. solutio-file-403")
+
     p = leaf("validate", "validate", "Check one diocese (or all); exits 1 on errors")
     p.add_argument("diocese", nargs="?")
     p.set_defaults(fail_on_verification_error=True)
@@ -280,6 +291,8 @@ def add_diocese_parser(
     p.set_defaults(fail_on_verification_error=True)
 
     p = leaf("write", "write", "Patch a record from JSON, validate, then atomically write it")
+    p.formatter_class = argparse.RawDescriptionHelpFormatter
+    p.epilog = records.write_help()
     p.add_argument("diocese")
     p.add_argument("kind", choices=list(KINDS))
     p.add_argument("slug")
@@ -301,7 +314,9 @@ def add_diocese_parser(
         p.set_defaults(handler=_cmd_new(kind_name))
         add_common_args(p)
         p.add_argument("diocese")
-        p.add_argument("--slug", help="file name; defaults to the name (and town, for places)")
+        p.add_argument("slug_arg", nargs="?", metavar="slug",
+                       help="file name; defaults to the name (and town, for places)")
+        p.add_argument("--slug", help="the same as the slug argument")
         for flag, help_text in flags.items():
             p.add_argument(f"--{flag}", help=help_text or None, type=str)
         if kind_name == "parish":
@@ -377,7 +392,7 @@ def add_diocese_parser(
     p.add_argument("--fetch", action="store_true",
                    help="also read each undecided row's website for the publication ids it embeds")
 
-    probe = group("probe", "Look things up on the web (nothing is written)")
+    probe = group("probe", "Look things up on the web (no records are written)")
     p = leaf("url", "probe-url",
              "Is a website alive, whose is it now, which bulletin does it embed?", probe)
     p.add_argument("urls", nargs="+")
@@ -399,6 +414,12 @@ def add_diocese_parser(
              "publication ids and latest bulletins", probe)
     p.add_argument("keys", nargs="+", help="org slug, LPi publicationWidget id, or org URL")
     p.add_argument("--issues", type=int, default=6, help="how many recent issues to list")
+    p = leaf("get", "probe-get",
+             "Fetch one URL (a page, PDF or JSON API) with the probes' own client; use it "
+             "instead of curl", probe)
+    p.add_argument("url")
+    p.add_argument("--out", help="save the body here as fetched, instead of printing its text")
+    p.add_argument("--chars", type=int, default=20000, help="text to print (without --out)")
     p = leaf("pdf", "probe-pdf", "Text of a bulletin PDF, and where given words occur", probe)
     p.add_argument("url")
     p.add_argument("--pages", type=int, default=3, help="readable pages to include")

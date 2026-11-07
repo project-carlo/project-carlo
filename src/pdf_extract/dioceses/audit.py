@@ -8,6 +8,7 @@ masthead or membership settles whether two rows share a bulletin.
 from __future__ import annotations
 
 import hashlib
+import re
 from collections.abc import Callable, Mapping
 from itertools import combinations
 from typing import Any
@@ -25,20 +26,35 @@ MAX_SITE_PROBES = 80
 MAX_DOCUMENT_PROBES = 20
 MAX_DOCUMENT_BYTES = 8_000_000
 
+# Bulletin publishers' hosts: every parish they print is on them, so a host alone pairs
+# every such row with every other. Their account ids (`publisher_account`) are the lead.
+PUBLISHER_HOSTS = frozenset({
+    "parishesonline.com", "container.parishesonline.com", "discovermass.com",
+    "files.ecatholic.com", "jppc.net", "church-bulletin.org", "liturgicalpublications.com",
+    "sponsors.bonventure.net", "bonventure.net", "e-churchbulletins.com",
+    "cdn.diocesanweb.org",
+})
 # These hosts serve unrelated publishers. Tenant subdomains (ann.wordpress.com)
 # remain useful; do not collapse them to their registrable domain.
-GENERIC_HOSTS = frozenset({
-    "parishesonline.com", "container.parishesonline.com", "discovermass.com",
-    "files.ecatholic.com", "ecatholic.com", "ecatholicchurches.com",
+GENERIC_HOSTS = PUBLISHER_HOSTS | frozenset({
+    "ecatholic.com", "ecatholicchurches.com",
     "drive.google.com", "docs.google.com", "google.com", "storage.googleapis.com",
     "facebook.com", "m.facebook.com", "youtube.com", "youtu.be", "instagram.com",
     "wordpress.com", "weebly.com", "wixsite.com", "squarespace.com",
-    "jppc.net", "church-bulletin.org", "thebostonpilot.com", "s3.amazonaws.com",
-    "nebula.wsimg.com", "uploads.weconnect.com", "liturgicalpublications.com",
+    "thebostonpilot.com", "s3.amazonaws.com", "nebula.wsimg.com", "uploads.weconnect.com",
 })
 _FAILED_SITES = frozenset({
-    "BAD-URL", "DEAD-DNS", "UNREACHABLE", "HTTP4XX", "HTTP5XX", "SPAM-SQUAT",
+    "BAD-URL", "DEAD-DNS", "UNREACHABLE", "PROXY-REFUSED", "HTTP4XX", "HTTP5XX", "SPAM-SQUAT",
 })
+# A publisher account in a URL on its host: Bon Venture's `?page=2141` and
+# `/pdfs/2141/<date>.pdf`, John Patrick's `/onlinebulletins/<n>template.pdf`,
+# church-bulletin.org's `?id=4047`, `/227`, `/<slug>` and `/bulletin/<slug>/<date>.pdf`.
+_ACCOUNT_PATTERNS = {
+    "bonventure.net": ("bonventure", r"(?:[?&]page=|^/pdfs/)(\d+)"),
+    "jppc.net": ("jppc", r"^/onlinebulletins/(\d+)template"),
+    "church-bulletin.org": ("church-bulletin",
+                            r"[?&]id=(\d+)|^/(?:bulletin/)?(?!bulletin/?$)([a-z0-9][\w-]*)"),
+}
 
 
 def _url(value: str) -> str:
@@ -59,6 +75,32 @@ def _host(url: str) -> str:
         return ""
     host = (urlsplit(normalized).hostname or "").rstrip(".").removeprefix("www.")
     return "" if host in GENERIC_HOSTS else host
+
+
+def publisher_account(url: str) -> str:
+    """The publisher account a URL on a bulletin publisher's host belongs to, or "".
+
+    The same account on two rows is a lead, like a shared page. Two different accounts
+    aren't a lead, but they don't prove separate bulletins either.
+    """
+    normalized = _url(url)
+    if not normalized:
+        return ""
+    parts = urlsplit(normalized)
+    host = (parts.hostname or "").rstrip(".").removeprefix("www.")
+    domain = next((d for d in _ACCOUNT_PATTERNS if host == d or host.endswith(f".{d}")), "")
+    if not domain:
+        return ""
+    name, pattern = _ACCOUNT_PATTERNS[domain]
+    where = parts.path + (f"?{parts.query}" if parts.query else "")
+    m = re.search(pattern, where, flags=re.IGNORECASE)
+    value = next((g for g in m.groups() if g), "") if m else ""
+    return f"{name}:{value.lower()}" if value else ""
+
+
+def _publisher_host(url: str) -> str:
+    host = (urlsplit(_url(url)).hostname or "").rstrip(".").removeprefix("www.")
+    return host if host in PUBLISHER_HOSTS else ""
 
 
 def _document(url: str) -> str:
@@ -89,6 +131,7 @@ def audit_rows(d: Diocese, groups: Mapping[str, set[str]], *, fetch: bool = Fals
     sources: dict[str, list[str]] = {}
     recipes: dict[str, Recipe] = {}
     reviews: dict[tuple[str, str], list[dict[str, Any]]] = {}
+    publisher_hosts: dict[str, set[str]] = {}
     row_output = {s: {"parish": s, "website": r.get("website", ""),
                       "publication": list(r.get("publication") or [])} for s, r in rows.items()}
     scope: dict[str, Any] = {
@@ -104,6 +147,9 @@ def audit_rows(d: Diocese, groups: Mapping[str, set[str]], *, fetch: bool = Fals
         "limitations": [
             "Candidates follow recorded or probed evidence; absence of a candidate is not "
             "proof of separate publications.",
+            "A bulletin publisher's host (publisher_hosts) serves many parishes, so rows on "
+            "it are paired only by a shared publisher account, page, document, id or group, "
+            "never by the host alone; different accounts don't prove separate bulletins.",
             "Matching URLs, accounts and document hashes are leads; differing values do not "
             "prove separate bulletins. Only content-supported recorded reviews settle pairs.",
             "Site probes read HTML, follow at most one bulletin page per row, and compare "
@@ -145,7 +191,10 @@ def audit_rows(d: Diocese, groups: Mapping[str, set[str]], *, fetch: bool = Fals
                 {"parish": slug, "reason": "no valid HTTP source recorded"})
         for url in sources[slug]:
             add("host", _host(url), slug)
+            add("publisher account", publisher_account(url), slug)
             add("document URL", _document(url), slug)
+            if (host := _publisher_host(url)):
+                publisher_hosts.setdefault(host, set()).add(slug)
         for review in row.get("publication_reviews") or []:
             if not isinstance(review, Mapping):
                 continue
@@ -209,6 +258,8 @@ def audit_rows(d: Diocese, groups: Mapping[str, set[str]], *, fetch: bool = Fals
             group["lead"] = shared
         out_groups.append(group)
     scope["candidate_pairs"] = len(pairs)
+    scope["publisher_hosts"] = {host: sorted(slugs) for host, slugs in sorted(
+        publisher_hosts.items()) if len(slugs) > 1}
     return {
         "diocese": d.slug, "scope": scope, "candidate_pairs": list(pairs.values()),
         "groups_spanning_rows": out_groups,
@@ -273,6 +324,7 @@ def _probe(rows: Mapping[str, Mapping[str, Any]], sources: Mapping[str, list[str
             return []
         if final := _url(result.get("final_url") or ""):
             add("host", _host(final), slug)
+            add("publisher account", publisher_account(final), slug)
             document(final, slug)
         for pub in result.get("publications", []):
             # Same bucket as recorded IDs, so recorded/probed evidence can meet.
@@ -281,6 +333,7 @@ def _probe(rows: Mapping[str, Mapping[str, Any]], sources: Mapping[str, list[str
         for link in result.get("bulletin_links", []):
             if not (link := _url(link)):
                 continue
+            add("publisher account", publisher_account(link), slug)
             if not document(link, slug):
                 pages.append(link)
         return pages

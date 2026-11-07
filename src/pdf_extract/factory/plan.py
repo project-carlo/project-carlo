@@ -1,7 +1,8 @@
-"""Which job a Run needs next. The stage order is here, in code (§3).
+"""Which job a Run needs next. The stage order is here, in code.
 
 Map Run:  survey, survey-review, map × each batch (integrate whenever *New lessons*
-          passes the threshold), reconcile, promote, pr.
+          passes the threshold, and once more after the last batch if any wait),
+          reconcile, promote, pr.
 Seed Run: for each batch, seed × each parish, then seed-review; then pr.
 Follow-up Runs (parked parishes answered after the PR opened) start with their jobs
 queued, then go map → promote → pr, or seed → seed-review → pr.
@@ -13,11 +14,12 @@ from __future__ import annotations
 
 import json
 import tempfile
+from collections.abc import Callable
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
-from pdf_extract.dioceses.records import NO_BULLETIN, parse_file
+from pdf_extract.dioceses.records import NO_BULLETIN, OFF_SITE_PROVIDERS, UNSUPPORTED, parse_file
 from pdf_extract.factory import git, playbook
 from pdf_extract.factory.handoff import APPROVE
 from pdf_extract.factory.ledger import DONE, MAP, Ledger
@@ -72,14 +74,28 @@ def parish_records(worktree: Path, diocese: str) -> dict[str, dict[str, Any]]:
     return out
 
 
+def _with_source(worktree: Path, diocese: str) -> dict[str, dict[str, Any]]:
+    return {slug: r for slug, r in parish_records(worktree, diocese).items()
+            if r.get("bulletin_provider") and r.get("bulletin_provider") != NO_BULLETIN}
+
+
 def seedable_parishes(worktree: Path, diocese: str) -> list[str]:
-    """Parishes the map Run promoted with a bulletin source; excluded and open ones never."""
-    return [slug for slug, r in parish_records(worktree, diocese).items()
-            if r.get("bulletin_provider") and r.get("bulletin_provider") != NO_BULLETIN]
+    """Parishes the map Run promoted with a bulletin source; excluded and open ones never,
+    nor one whose bulletin `fetch` can't collect yet (`unsupported`, or a `fetch_gap`): it
+    has no bulletins to seed from until its collector lands, its provider is set and the
+    gap is cleared."""
+    return [slug for slug, r in _with_source(worktree, diocese).items()
+            if not r.get("fetch_gap") and r.get("bulletin_provider") not in OFF_SITE_PROVIDERS]
 
 
-def seedable_on_main(repo: Path, ref: str, diocese: str) -> list[str]:
-    """`seedable_parishes` as main (`ref`) has them, since a merged Run's worktree is gone."""
+def fetch_gap_parishes(worktree: Path, diocese: str) -> list[str]:
+    """Parishes with a bulletin that wait on a collector (`unsupported` or `fetch_gap`)."""
+    return [slug for slug, r in _with_source(worktree, diocese).items()
+            if r.get("fetch_gap") or r.get("bulletin_provider") == UNSUPPORTED]
+
+
+def _on_main(repo: Path, ref: str, diocese: str,
+             read: Callable[[Path, str], list[str]]) -> list[str]:
     with tempfile.TemporaryDirectory() as tmp:
         folder = diocese_dir(Path(tmp), diocese) / "parishes"
         folder.mkdir(parents=True)
@@ -87,7 +103,17 @@ def seedable_on_main(repo: Path, ref: str, diocese: str) -> list[str]:
                 repo, ref, f"data/dioceses/{diocese}/parishes").items():
             if name.endswith(".md"):
                 (folder / name).write_text(text, encoding="utf-8")
-        return seedable_parishes(Path(tmp), diocese)
+        return read(Path(tmp), diocese)
+
+
+def seedable_on_main(repo: Path, ref: str, diocese: str) -> list[str]:
+    """`seedable_parishes` as main (`ref`) has them, since a merged Run's worktree is gone."""
+    return _on_main(repo, ref, diocese, seedable_parishes)
+
+
+def fetch_gaps_on_main(repo: Path, ref: str, diocese: str) -> list[str]:
+    """`fetch_gap_parishes` as main (`ref`) has them."""
+    return _on_main(repo, ref, diocese, fetch_gap_parishes)
 
 
 def seed_batches(worktree: Path, diocese: str, parishes: list[str]) -> list[tuple[str, list[str]]]:
@@ -153,15 +179,20 @@ def _next_map(ledger: Ledger, run: Any, threshold: int) -> Next | None:
                     if _handoff(j).get("verdict") == APPROVE]
         if not approved or approved[-1]["finished_at"] < surveys[-1]["finished_at"]:
             return Next("survey-review", {"survey_job": surveys[-1]["id"]})
-        meta = diocese_dir(worktree, diocese) / "diocese.md"
-        if (meta.exists() and len(playbook.bullets(meta, playbook.NEW_LESSONS)) > threshold
-                and (last is None or last["stage"] != "integrate")):
-            return Next("integrate", {})
         mapped = {json.loads(j["input"]).get("batch") for j in _done(ledger, run_id, "map")}
-        for batch in ordered_batches(worktree, diocese):
-            if batch["id"] not in mapped:
-                return Next("map", {"batch": batch["id"]})
-        if not _done(ledger, run_id, "reconcile"):
+        unmapped = [b["id"] for b in ordered_batches(worktree, diocese) if b["id"] not in mapped]
+        reconciled = bool(_done(ledger, run_id, "reconcile"))
+        meta = diocese_dir(worktree, diocese) / "diocese.md"
+        lessons = len(playbook.bullets(meta, playbook.NEW_LESSONS)) if meta.exists() else 0
+        # Past the threshold, and once more before reconcile, so the playbook the PR
+        # carries has every lesson folded in. Never twice in a row, so lessons an
+        # integrate left can't loop it.
+        due = lessons > threshold or (lessons > 0 and not unmapped and not reconciled)
+        if due and (last is None or last["stage"] != "integrate"):
+            return Next("integrate", {})
+        if unmapped:
+            return Next("map", {"batch": unmapped[0]})
+        if not reconciled:
             return Next("reconcile", {})
     if not _done(ledger, run_id, "promote"):
         return Next("promote", {})

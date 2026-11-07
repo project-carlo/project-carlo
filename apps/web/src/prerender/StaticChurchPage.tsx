@@ -1,5 +1,5 @@
 import { MemoryRouter } from "react-router-dom";
-import type { ChurchDetail, EventSummary } from "../types";
+import type { ChurchDetail, EventSummary } from "@carlo/core";
 import type { CityLink } from "../lib/cities";
 import type { CityMapData } from "../lib/cityMapLayout";
 import { ChurchPageContent } from "../components/ChurchPageContent";

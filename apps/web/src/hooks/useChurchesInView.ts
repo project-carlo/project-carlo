@@ -1,6 +1,6 @@
 import { useLayoutEffect, useMemo, useState } from "react";
 import type { LatLngBounds, Map as LeafletMap } from "leaflet";
-import type { ChurchMapItem } from "../types";
+import type { ChurchMapItem } from "@carlo/core";
 
 /**
  * How many of `churches` have a pin inside the map's visible bounds: the

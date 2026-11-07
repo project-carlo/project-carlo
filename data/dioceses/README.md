@@ -147,8 +147,14 @@ and retry triggers before making requests. Legacy records need no mass backfill.
   live CSV rows and other-diocese claims still block sharing. The exception survives
   promotion and import; the database identifies parishes by slug, not website.
 - `bulletin_provider`: `parishes_online`, `ecatholic`, `discover_mass`, `other`,
-  `google_drive` or `no_bulletin` (kept in the records, left off the site: Settled policy
-  4). `fetch` reads ParishesOnline and DiscoverMass by
+  `google_drive`, `no_bulletin` or `unsupported`. The last two are kept in the records and
+  left off the site with their churches (Settled policy 4: the site shows only places it
+  can give a schedule for): `no_bulletin` when no bulletin was found, `unsupported` when
+  the parish publishes one that no collector reads yet. An `unsupported` row needs a
+  `fetch_gap` (below) and keeps its `website`, `publication` ids, evidence and `research`,
+  so audit still compares it with other rows. When a collector lands, set the provider
+  (and `provider_id`) it uses, run `fetch:check`, and clear the gap once it picks this
+  week's issue; promote then puts the row live. Nothing flips it by itself. `fetch` reads ParishesOnline and DiscoverMass by
   `provider_id` (the org slug from `parishesonline.com/organization/<slug>`, the church slug
   from `discovermass.com/church/<slug>/`). It reads eCatholic, `other` and `google_drive`
   from `website`, so for eCatholic the website has to be the eCatholic-hosted site, and for
@@ -172,12 +178,31 @@ and retry triggers before making requests. Legacy records need no mass backfill.
   account/site evidence in `evidence`. Peer reviews never waive publication-id uniqueness.
 - `bulletin_status` (optional): `available`, `not-found`, `access-blocked`,
   `unsupported-format` or `not-published`. This describes research availability independently
-  of `bulletin_provider`; legacy `no_bulletin` still controls promotion (Settled policy 4).
+  of `bulletin_provider`; only `bulletin_provider` (`no_bulletin`, `unsupported`) controls
+  promotion (Settled policy 4).
+- `fetch_gap` (optional): the parish publishes a bulletin that `fetch` can't collect yet
+  (*What to flag*, below): `{kind, seen, note, url}`. `kind` is a slug naming the problem,
+  the same for every parish that has it (`solutio-file-403`, `joomla-weblink-redirect`);
+  reuse one that `pnpm diocese gaps` already lists. `seen` is the date you checked, `note`
+  says what fails and where the bulletin is, and the optional `url` is an example issue or
+  the bulletin page. It doesn't change promotion by itself: a row whose bulletin no
+  collector reads is `bulletin_provider: unsupported`, which keeps it off the site, and
+  `validate` warns about a gap on a row that would go live (or on a `no_bulletin` one).
+  Remove it (`"fetch_gap": null`) once `fetch:check` picks this week's issue.
 - `publication_reviews` (optional): supported peer decisions, independent of URL ids:
   `[{parish: peer-slug, decision: separate|shared, evidence: [{url, seen, quote?, note?}]}]`.
   Use dated content evidence; different URLs alone don't support `separate`. A `shared`
   review records the finding; use `merge` to change structure after reviewing its effects.
+  `audit` counts a review only if one evidence item has an http(s) `url`, a `seen` date and
+  a note saying whose bulletin it is, in these words: "serves …", "published by …",
+  "bulletin for …", or "masthead" with "names", "lists", "includes" or "shows". For
+  example: `note: The 25 October 2026 masthead names St. Ann alone, with its own Mass
+  times.` "Own masthead" or "different cover" alone don't count, nor does "not … read" or
+  "need to check" in the same sentence. `write` and `validate` warn about a review audit
+  won't count, and say why.
 - `group`: the diocese's grouping, e.g. `Family #31`.
+- No `roster` and no address: a parish row is a bulletin, not a place. Its roster
+  entries and addresses go on its churches (or its `excluded/` and `open/` records).
 - `replaces`: slugs of rows merged or renamed into this one. Maintained by `merge` and
   `rename`; `promote` deletes those live rows. A promoted successor retains ownership of
   its retired slugs while their CSV rows await deletion, so merging or renaming a shared-site
@@ -189,10 +214,20 @@ and retry triggers before making requests. Legacy records need no mass backfill.
   them after promotion).
 - `coordinates_from`: `gcatholic-plus-code` (building-precise), `osm-node`,
   `diocese-directory`, `parishes-online-org`, `nominatim`, `geocode-stage` or `manual`.
-- `name_verified` / `address_verified`: true only when two independent sources agree (the
-  parish's bulletin and its own site are one source; OSM, GCatholic and the diocese are
-  others). **When sources disagree, leave the flag false and write down the disagreement.**
-  Don't pick a favourite without saying so.
+- `name_verified` / `address_verified`: true only when two independent sources agree on
+  the value you recorded (the parish's bulletin and its own site are one source; OSM,
+  GCatholic and the diocese are others).
+- **When sources disagree on an address, choose; don't flag it.** Record the address most
+  likely to be right. Prefer the official sources, the parish's own (bulletin, site) and
+  the diocese's (directory, finder), over GCatholic, OSM and listings, unless there's a
+  concrete reason not to: the official address is an office, a rectory or a PO box rather
+  than the church, gives only cross streets, or is out of date (the church moved, the site
+  is an old domain). Most conflicts are a few doors apart, and either would find the
+  building. Say in *Name and address* what each source gives and why you chose. Set the
+  coordinates on the building at the address you chose: a GCatholic Plus Code or an OSM
+  building usually is, while a directory pin can be a geocode of the street. A name works
+  the same way: use what the parish calls the building (its masthead, its site), and keep
+  the roster's name in the roster link.
 - `roster`: the roster entries this place is, as `<roster>:<id>`. Written by
   `coverage --link` or by hand.
 
@@ -247,6 +282,29 @@ Exhausted checks need no repeat without a changed method, source or satisfied re
 Use a concrete next action and trigger to bound negative research, not a fixed network
 request budget that sacrifices evidence. Parish-specific attempts and decisions stay in
 the record; the shared publisher playbook keeps only reusable methods and new lessons.
+
+### What to flag
+
+A factory flag asks the owner for a decision. These need none, so record them instead:
+
+- **A church whose status no source settles.** Nothing shows Mass there now and nothing
+  says it closed: an `open/` record, with what would settle it in `revisit` and a date in
+  `revisit_after`. The factory's `reconcile` tries once more, and the PR lists every
+  `open/` record.
+- **A bulletin `fetch` can't collect.** The parish publishes a bulletin, but no recipe
+  reads it: the host refuses the fetcher, the links aren't PDFs (`opendoc.asp?b_id=`,
+  Joomla `weblink.go`, Squarespace `/file`), it is HTML only (an emailed newsletter, a
+  page of announcements), it sits in an embedded viewer (Drive `/preview`), or `fetch`
+  picks the right file and misreads it (a date taken from a file name). Set the parish's
+  `bulletin_provider` to `unsupported` and its `fetch_gap`, keeping its publication ids. `pnpm diocese gaps` lists them across every diocese by kind, which is the
+  work list for new collectors. A bulletin not found at all is `research`, not a gap.
+- **A check blocked for now.** A block a retry may clear (a daily download cap, a site
+  that is down) is `research` with a retry trigger, not a gap and not a flag.
+- **Sources that disagree on an address or a name.** Choose, as above.
+
+Flag what only the owner can decide: a question of policy no rule settles, a structural
+call the evidence leaves open (a merge, which row a church belongs to, whether a Mass is
+public), or a settled rule the evidence contradicts.
 
 ## Batch plans
 
@@ -430,7 +488,7 @@ command seeds the new rows into the database. New parish rows go in with `fetch_
 the weekly run fetches their bulletins but doesn't process them or show their churches until
 the flag is cleared (README, "Fetch-only parishes").
 Promotion appends new rows, updates promoted ones, and deletes live rows the diocese has
-retired (merged, renamed, excluded, moved to open/, or `no_bulletin`). Retiring a church deletes its events, and retiring a
+retired (merged, renamed, excluded, moved to open/, `no_bulletin` or `unsupported`). Retiring a church deletes its events, and retiring a
 parish deletes its bulletins and the events read from them, even for churches moved to another
 parish. The dry run lists the churches that would lose events (`removed_rows_with_events`).
 Removals don't go live on merge: deploys keep serving the published data, and the next weekly
@@ -471,7 +529,7 @@ Each of these produced a confident wrong answer in Buffalo at least once.
 - **Directory street numbers are sometimes PO boxes** ("1154 Lower College Dr" was
   "PO Box 1154"), and one building can have an address on two streets.
 - **A summarizing fetch tool is not a source.** For a quote, read the page itself (`probe
-  pdf`, `curl`, the recheck tool). One summary moved a 2020 merger to 2026. The article's
+  pdf`, `probe get`, the recheck tool). One summary moved a 2020 merger to 2026. The article's
   weekdays gave the real year.
 - **A hand-written `quote:` or `note:` containing ": " breaks the YAML.** Quote the value
   (`note: 'Page 1: the masthead'`). `validate` catches it, but only after the whole file is
@@ -488,14 +546,16 @@ stderr. For `jq`, use `pnpm --silent diocese ...` or direct
 
 ```bash
 pnpm diocese list | show <d> | todo <d> | validate [<d>]
+pnpm diocese gaps [--diocese d] [--kind k]   # bulletins fetch can't collect yet, by kind
 pnpm diocese init <d> --name "..." --state NY [--website URL] [--gcatholic key]
 pnpm diocese search <words> [--diocese d|live] [--kind parish|church|excluded|open]
 pnpm --silent diocese write <d> <kind> <slug> --file record.json [--create]  # --file -: stdin
+                                       # --help: every kind's fields, JSON types, an example
 
-pnpm diocese new parish   <d> --name ... --website ... [--bulletin-provider p --provider-id id --publication x:y --group g]
-pnpm diocese new church   <d> --parish <p> [--from roster:id ...] [--name ... --line1 ... --city ... ...]
-pnpm diocese new excluded <d> --reason <r> [--from roster:id] [--name ... --city ... --last-mass date]
-pnpm diocese new open     <d> --name ... --revisit "next step" [--revisit-after date] [--from roster:id]
+pnpm diocese new parish   <d> [slug] --name ... --website ... [--bulletin-provider p --provider-id id --publication x:y --group g]
+pnpm diocese new church   <d> [slug] --parish <p> [--from roster:id ...] [--name ... --line1 ... --city ... ...]
+pnpm diocese new excluded <d> [slug] --reason <r> [--from roster:id] [--name ... --city ... --last-mass date]
+pnpm diocese new open     <d> [slug] --name ... --revisit "next step" [--revisit-after date] [--from roster:id]
 pnpm diocese merge   <d> <parish>... --into <parish> [--note "why"]
 pnpm diocese rename  <d> <kind> <old> <new>
 pnpm diocese exclude <d> <church> --reason <r> [--last-mass date]
@@ -507,11 +567,12 @@ pnpm diocese roster list <d> | show <d> <roster:id>
 pnpm diocese coverage <d> [--roster name] [--link] [--show-matched]
 pnpm diocese audit <d> [--fetch]
 
-pnpm diocese probe url <url>...
+pnpm diocese probe url <url>...           # also: publishers its page links, its platform
 pnpm diocese probe sites <d> [--all]
 pnpm diocese probe po <org slug | LPi id>... [--issues N]
 pnpm diocese probe container <a/b> [--weeks N --from date --step N --all --pages N]
 pnpm diocese probe pdf <url> [--pages N] [--chars N] [--grep text] [--grep text2 ...]
+pnpm diocese probe get <url> [--out file] [--chars N]   # instead of curl: page, PDF or JSON
 pnpm diocese recheck <d> [slug ...] [--kind k] [--all]
 
 pnpm diocese export  <d> --out-dir DIR

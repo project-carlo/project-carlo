@@ -130,12 +130,52 @@ def test_content_supported_review_settles_offline_and_keeps_evidence(dataset, de
     "Different URL identifiers for each parish's bulletin; mastheads were not inspected.",
     "Both mastheads are unread, but each parish has its own bulletin URL.",
     "We need to inspect the mastheads to see which members each one lists.",
+    # A "." in a date, domain or "e.g." doesn't end the sentence the "not" is in.
+    "Did not, as of 25.10.2026, read St. Bede's bulletin; the masthead names St. Ann.",
+    "Not yet (see stbede.org) checked against Bede; masthead names St. Ann.",
+    "Have not, e.g. on the 25th, compared the mastheads that name St. Ann.",
 ])
 def test_url_and_native_id_differences_do_not_support_a_separate_review(dataset, text):
     dataset({"a": {"publication_reviews": [review(text=text)]}, "b": {}})
     candidate = pair(report.audit("test"))
     assert candidate["status"] == "unresolved"
     assert not candidate["reviews"][0]["content_supported"]
+
+
+@pytest.mark.parametrize("text", [
+    # Wilmington: a "not" in one sentence and "Checked" in the next were read as unobserved.
+    "Running head '310', not Holy Family's 308. Checked 2026-10-27: each masthead names its "
+    "own parish only.",
+    "Ann's masthead names St. Ann alone, not St. Bede; St. Bede's lists Bede alone.",
+    "We will publish this as Ann's. Checked 2026-10-27: the masthead names St. Ann alone.",
+    # The README's own wording, mentioning a url too.
+    "Bulletin for St. Ann only; its container URL differs from Bede's.",
+])
+def test_negation_in_another_sentence_does_not_unsay_an_observed_review(dataset, text):
+    dataset({"a": {"publication_reviews": [review(text=text)]}, "b": {}})
+    assert pair(report.audit("test"))["reviews"][0]["content_supported"]
+
+
+@pytest.mark.parametrize("text,gap", [
+    ("Different native publication IDs establish separate bulletins.", "only ids"),
+    ("Own masthead, Mass schedule and intentions.", "whose bulletin"),
+    ("The masthead names St. Ann but was not yet checked against St. Bede's.",
+     "not yet observed"),
+    ("Masthead names Ann.", "under 5 words"),
+])
+def test_review_gap_says_why_a_review_is_turned_down(text, gap):
+    from pdf_extract.dioceses.publications import review_gap
+
+    assert gap in review_gap(review(text=text))
+    assert review_gap(review()) is None
+
+
+def test_review_gap_names_the_item_that_came_closest():
+    from pdf_extract.dioceses.publications import review_gap
+
+    reviewed = review(text="Own masthead, Mass schedule and intentions.")
+    reviewed["evidence"].insert(0, {"url": "https://ann.org/bulletin", "quote": "St. Ann"})
+    assert "whose bulletin" in review_gap(reviewed)
 
 
 def test_conflicting_reviews_remain_unresolved(dataset):
@@ -320,3 +360,51 @@ def test_scope_explains_rows_without_valid_probe_sources(dataset, monkeypatch):
     assert result["scope"]["rows_considered"] == 2
     assert result["scope"]["site_probes"]["fetched"] == 0
     assert {p["parish"] for p in result["scope"]["site_probes"]["skipped"]} == {"a", "b"}
+
+
+BON_VENTURE = "http://sponsors.bonventure.net"
+
+
+def test_a_publishers_host_alone_pairs_no_rows(dataset):
+    """Metuchen: 14 rows on Bon Venture made 56 host-only pairs to review by hand."""
+    dataset({slug: {"bulletin_provider": "other", "provider_id": f"page-pdfs {BON_VENTURE}/"
+                                                                 f"?page={n}",
+                    "publication": [f"url:{BON_VENTURE}/?page={n}"]}
+             for slug, n in (("a", 2141), ("b", 2152), ("c", 2150))})
+    result = report.audit("test")
+    assert result["candidate_pairs"] == []
+    assert result["scope"]["publisher_hosts"] == {"sponsors.bonventure.net": ["a", "b", "c"]}
+    assert any("publisher's host" in line for line in result["scope"]["limitations"])
+
+
+def test_one_publisher_account_on_two_rows_is_still_a_candidate(dataset):
+    dataset({"a": {"publication": [f"url:{BON_VENTURE}/?page=2141"]},
+             "b": {"website": "https://b.org",
+                   "publication": [f"url:{BON_VENTURE}/pdfs/2141/2026-11-01.pdf"]}})
+    candidate = pair(report.audit("test"))
+    assert candidate["status"] == "unresolved"
+    assert "publisher account: bonventure:2141" in candidate["reasons"]
+
+
+@pytest.mark.parametrize("url, account", [
+    (f"{BON_VENTURE}/?page=2141", "bonventure:2141"),
+    (f"{BON_VENTURE}/pdfs/6555/2026-11-01.pdf", "bonventure:6555"),
+    ("https://www.jppc.net/onlinebulletins/913template.pdf", "jppc:913"),
+    ("https://church-bulletin.org/?id=4047", "church-bulletin:4047"),
+    ("https://church-bulletin.org/227", "church-bulletin:227"),
+    ("https://www.church-bulletin.org/st-ann-town-nj-08800", "church-bulletin:st-ann-town-nj-08800"),
+    ("https://www.church-bulletin.org/bulletin/st-ann-town-nj-08800/2026-11-01.pdf",
+     "church-bulletin:st-ann-town-nj-08800"),
+    ("https://church-bulletin.org/", ""),
+    ("https://church-bulletin.org/bulletin", ""),
+    ("https://example.org/?page=2141", ""),
+])
+def test_publisher_accounts(url, account):
+    assert audit.publisher_account(url) == account
+
+
+def test_separate_reviews_on_a_publishers_host_are_still_reported(dataset):
+    dataset({"a": {"publication": [f"url:{BON_VENTURE}/?page=1"],
+                   "publication_reviews": [review("b")]},
+             "b": {"publication": [f"url:{BON_VENTURE}/?page=2"]}})
+    assert pair(report.audit("test"))["status"] == "separate"

@@ -1,16 +1,20 @@
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
-import { DAY_ORDER } from "../constants/days";
-import { EVENT_TYPE_LABELS, EVENT_TYPE_ORDER } from "../constants/eventTypes";
-import type { ChurchDetail, EventSummary, EventType } from "../types";
 import {
+  type ChurchDetail,
+  DAY_ORDER,
+  EVENT_TYPE_LABELS,
+  EVENT_TYPE_ORDER,
+  type EventSummary,
+  type EventType,
   formatAddress,
   formatEventDate,
   formatLongMonthDay,
-  formatMonthDay,
   formatMinutesMissal,
+  formatMonthDay,
+  slotQualifier,
   titleCase,
-} from "../utils";
+} from "@carlo/core";
 import { CHURCH_LIST, DISCLAIMER, UNNAMED_CHURCH } from "../copy";
 import {
   ExternalLinkIcon,
@@ -26,7 +30,6 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { cityPath, type CityLink } from "@/lib/cities";
 import type { CityMapConfig } from "@/lib/cityMap";
 import type { CityMapData } from "@/lib/cityMapLayout";
-import { slotQualifier } from "@/lib/eventRollup";
 import { CHURCH_INDEX_PATH } from "@/lib/seo";
 import { LASTMOD_EXEMPT_ATTRIBUTE } from "@/lib/lastmod";
 
