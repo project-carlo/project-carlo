@@ -201,6 +201,9 @@ touch it.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- A parish CMS that links each issue as `/download/<epoch>-<hash>` (no .pdf; page-1 PNG under `/storage/Newspaper/`, card date 'data dodania: niedziela, DD.MM.YYYY', seen on Polish parish sites) serves real PDFs that page-pdfs skips: `unsupported`, fetch_gap kind `extensionless-download-link`.
+- DuckDuckGo's html endpoint returns a bot challenge after about six `probe get` queries in a row; use The Tablet's API and Nominatim (`nominatim.openstreetmap.org/search?q=<address>&format=jsonv2`) to check a building, and space out searches.
+
 ## Rules settled for this diocese
 
 Proposals are in `scratch/brooklyn-map-1/survey.json` for survey-review.
