@@ -203,6 +203,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Diocesan-multisite bulletin pages (/weekly-bulletin/) can list a non-bulletin PDF (an event request form) above the issues; pin page-pdfs with filename=*compressed*.pdf so the first-listed pick is the newest issue.
 - Tilma bulletin issues can have no name masthead (St. Michael – St. Malachy's page 1 is intentions, readings and one Mass schedule): identify the issue by its hosting site and a schedule that matches the site's Mass Times page, and say so in the record, since fetch:check leaves publication identity unverified.
 - Self-hosted bulletin pages served over http://www. can link PDFs as absolute https:// bare-domain URLs whose certificate fails (hostname mismatch); fetch has no http fallback, so record unsupported with fetch_gap kind https-pdf-link-cert-mismatch and keep the page-pdfs recipe in the research next_action.
+- A GCatholic church left over from a merger can be a reused building under a new name (Holy Family, Greenpoint is now San Damiano Mission run by a lay association): search its street address (probe get on html.duckduckgo.com/html/?q=...) and The Tablet API for the new name before treating it as closed or as part of the merged parish.
 
 ## Rules settled for this diocese
 
