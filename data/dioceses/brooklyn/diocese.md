@@ -188,6 +188,8 @@ touch it.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- eCatholic archive links carry ?t=<ms epoch> upload stamps: when the newest issue is stale, decode them to tell a batch-uploading parish (many issues posted the same day) from one that stopped; and probe po <name>-church-<zip> or <name>-roman-catholic-church-<zip>, since a parish's LPi container can start beside a stale eCatholic or Tilma archive.
+
 ## Rules settled for this diocese
 
 Proposals are in `scratch/brooklyn-map-1/survey.json` for survey-review.
