@@ -188,7 +188,8 @@ def _write_record(args: argparse.Namespace) -> dict[str, Any]:
         payload = json.loads(text, parse_constant=invalid_constant)
     except (OSError, ValueError) as exc:
         raise DioceseError(f"cannot read record JSON: {exc}") from None
-    return records.write_record(args.diocese, args.kind, args.slug, payload, create=args.create)
+    return records.write_record(args.diocese, args.kind, args.slug, payload, create=args.create,
+                                append=args.append)
 
 
 HANDLERS: dict[str, Handler] = {
@@ -298,6 +299,8 @@ def add_diocese_parser(
     p.add_argument("slug")
     p.add_argument("--file", required=True, help="JSON fields plus optional body; '-' reads stdin")
     p.add_argument("--create", action="store_true", help="create a new record; refuse overwrites")
+    p.add_argument("--append", action="store_true",
+                   help="add to stored lists and body sections instead of replacing them")
 
     p = leaf("search", "search",
              "Search every diocese and the live CSVs (diocese 'live'); run it before adding")

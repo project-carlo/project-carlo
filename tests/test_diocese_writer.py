@@ -68,6 +68,94 @@ def test_writer_patches_fields_and_replaces_lists_without_losing_evidence(root):
     assert result["written"] == ["parishes/anne.md"]
 
 
+def test_append_adds_new_list_items_and_keeps_stored_ones(root):
+    _write(create=True)
+    other = {"url": "https://example.org/two", "seen": "2026-10-20", "note": "Another page."}
+    _write(payload={"research": [_attempt()], "publication": ["url:https://example.org/one"]})
+    _write(append=True, payload={
+        "evidence": [other, other, EVIDENCE[0]],
+        "research": [_attempt()],
+        "publication": ["url:https://example.org/one", "url:https://example.org/two"],
+        "name": "St. Anne Renamed",
+    })
+    record = records.load("test").of(records.PARISH)["anne"]
+    assert record["evidence"] == [*EVIDENCE, other]
+    assert record["research"] == [_attempt()]
+    assert record["publication"] == ["url:https://example.org/one", "url:https://example.org/two"]
+    assert record["name"] == "St. Anne Renamed"
+
+
+BODY = """Intro.
+
+## Worship sites
+
+St. Anne, Main St.
+
+### Former sites
+
+St. Old, closed.
+
+## Not yet confirmed
+
+Nothing.
+"""
+
+
+def _body(sections, **kwargs):
+    _write(payload={"body_sections": sections}, **kwargs)
+    return records.load("test").of(records.PARISH)["anne"]["body"]
+
+
+def test_body_sections_replace_one_section_and_keep_the_rest(root):
+    _write(create=True)
+    _write(payload={"body": BODY})
+    assert _body({"Not yet confirmed": "Her Mass times."}) == BODY.strip().replace(
+        "Nothing.", "Her Mass times.")
+    _write(payload={"body": BODY})
+    assert _body({"Worship sites": "One church."}) == (
+        "Intro.\n\n## Worship sites\n\nOne church.\n\n## Not yet confirmed\n\nNothing.")
+
+
+def test_body_sections_append_to_a_section_or_add_a_missing_one(root):
+    _write(create=True)
+    _write(payload={"body": BODY})
+    body = _body({"Worship sites": "Also a chapel.", "Clergy": "Fr. Ann."}, append=True)
+    assert "St. Old, closed.\n\nAlso a chapel.\n\n## Not yet confirmed" in body
+    assert body.endswith("Nothing.\n\n## Clergy\n\nFr. Ann.")
+
+
+@pytest.mark.parametrize("payload,kwargs,message", [
+    ({"body": "New."}, {"append": True}, "body_sections"),
+    ({"body": "New.", "body_sections": {"A": "b"}}, {}, "body_sections"),
+    ({"body_sections": {"## A": "b"}}, {}, "without their #s"),
+    ({"body_sections": {"A": " "}}, {}, "non-empty"),
+    ({"body_sections": ["A"]}, {}, "must map"),
+    ({"name": "New"}, {"append": True, "create": True, "slug": "bede"}, "--append"),
+])
+def test_bad_body_patches_are_refused(root, payload, kwargs, message):
+    _write(create=True)
+    before = records.load("test").of(records.PARISH)["anne"]
+    with pytest.raises(DioceseError, match=message):
+        _write(payload=payload, **kwargs)
+    assert records.load("test").of(records.PARISH)["anne"] == before
+
+
+def test_a_heading_used_twice_is_refused(root):
+    _write(create=True)
+    _write(payload={"body": "## Notes\n\nOne.\n\n## Notes\n\nTwo."})
+    with pytest.raises(DioceseError, match="2 sections"):
+        _body({"Notes": "Three."})
+
+
+def test_cli_append_flag_reaches_the_writer(root, monkeypatch, capsys):
+    _write(create=True)
+    other = {"url": "https://example.org/two", "seen": "2026-10-20", "note": "Another page."}
+    monkeypatch.setattr("sys.stdin", io.StringIO(json.dumps({"evidence": [other]})))
+    assert main(["diocese", "write", "test", "parish", "anne", "--file", "-", "--append"]) == 0
+    capsys.readouterr()
+    assert records.load("test").of(records.PARISH)["anne"]["evidence"] == [*EVIDENCE, other]
+
+
 @pytest.mark.parametrize("patch", [
     {"website": "bad-url"}, {"publication": 123}, {"provider_id": {}},
     {"evidence": ["a quote"]}, {"evidence": [{"url": "bad", "seen": "2026-10-21"}]},

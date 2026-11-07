@@ -6,6 +6,8 @@ status: promoted
 gcatholic: phil0
 city_aliases:
   Buckingham: Doylestown
+audit_ignore_groups:
+- directory
 promoted: 2026-11-07
 ---
 

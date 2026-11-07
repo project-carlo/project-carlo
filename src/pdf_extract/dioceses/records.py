@@ -221,7 +221,8 @@ _FLOAT_FIELDS = {"latitude", "longitude"}
 _DATE_FIELDS = {"decided", "last_mass", "revisit_after", "promoted"}
 _EVIDENCE_FIELDS = ("url", "seen", "quote", "note")
 
-META_FIELDS = ("name", "state", "website", "status", "gcatholic", "city_aliases", "promoted")
+META_FIELDS = ("name", "state", "website", "status", "gcatholic", "city_aliases",
+               "audit_ignore_groups", "promoted")
 META_STATUSES = ("exploring", "promoted")
 META_TEMPLATE = """\
 ## Sources
@@ -1205,9 +1206,13 @@ def write_help() -> str:
                                subsequent_indent="    ")
     lines += [
         "",
-        "evidence items: {url, seen, quote?, note?}. Lists replace the stored list: read the",
-        "record first and send every item to keep. Roster links (<roster>:<id>) go on",
+        "evidence items: {url, seen, quote?, note?}. Lists replace the stored list; with",
+        "--append, their items are added to it instead. Roster links (<roster>:<id>) go on",
         "churches, exclusions and open records, never on a parish.",
+        "",
+        "body_sections: {\"<heading>\": \"<text>\"} changes one section of the body and keeps",
+        "the rest: replaces it, or adds to its end with --append. A heading the body lacks",
+        "becomes a new ## section at the end. Use it or body, never both.",
         "",
         "example: a new church, linked to two roster entries",
         "  pnpm --silent diocese write <d> church st-ann-town --create --file - <<'JSON'",
@@ -1221,13 +1226,47 @@ def write_help() -> str:
     return "\n".join(lines)
 
 
+_HEADING_RE = re.compile(r"^(#{1,6})[ \t]+(.+?)[ \t]*$", re.MULTILINE)
+
+
+def _valid_sections(value: Any) -> bool:
+    return isinstance(value, dict) and all(
+        isinstance(text, str) and text.strip() and heading.strip()
+        and "\n" not in heading and not heading.startswith("#")
+        for heading, text in value.items())
+
+
+def _patch_section(body: str, heading: str, text: str, *, append: bool) -> str:
+    """`body` with one section replaced, or added to with `append`.
+
+    A section runs to the next heading of its level or higher, so replacing one
+    replaces its subsections too. A heading the body lacks is added at the end.
+    """
+    text = text.strip("\n")
+    marks = list(_HEADING_RE.finditer(body))
+    found = [m for m in marks if m.group(2) == heading]
+    if len(found) > 1:
+        raise DioceseError(f"body has {len(found)} sections headed {heading!r}; "
+                           "send the whole body instead. Nothing was written.")
+    if not found:
+        return f"{body.rstrip()}\n\n## {heading}\n\n{text}\n"
+    mark = found[0]
+    end = next((m.start() for m in marks
+                if m.start() > mark.start() and len(m.group(1)) <= len(mark.group(1))), len(body))
+    current = body[mark.end():end].strip("\n")
+    content = f"{current}\n\n{text}" if append and current else text
+    rest = body[end:]
+    return f"{body[:mark.end()]}\n\n{content}\n" + (f"\n{rest}" if rest else "")
+
+
 def write_record(diocese: str, kind_name: str, slug: str, payload: Mapping[str, Any], *,
-                 create: bool = False) -> dict[str, Any]:
+                 create: bool = False, append: bool = False) -> dict[str, Any]:
     """Patch one record from typed JSON, validating before any file changes.
 
-    Lists replace their previous value; omitted fields remain unchanged. Creation
-    must be explicit so a mistyped slug cannot silently produce a second record.
-    Incomplete drafts are allowed and reported, just as with `new`.
+    Lists replace their previous value, or gain their new items with `append`;
+    omitted fields remain unchanged. `body_sections` patches the body section by
+    section. Creation must be explicit so a mistyped slug cannot silently produce
+    a second record. Incomplete drafts are allowed and reported, just as with `new`.
     """
     if kind_name not in KINDS:
         raise DioceseError(f"unknown record kind {kind_name!r}")
@@ -1236,15 +1275,25 @@ def write_record(diocese: str, kind_name: str, slug: str, payload: Mapping[str, 
     if not isinstance(payload, Mapping):
         raise DioceseError("record JSON must be an object of fields plus optional body")
     kind = KINDS[kind_name]
-    unknown = sorted(set(payload) - set(kind.fields) - {"body"})
+    if append and create:
+        raise DioceseError("--append adds to a stored record; a new record has none yet")
+    if "body" in payload and (append or "body_sections" in payload):
+        raise DioceseError("body replaces the whole explanation; to add to it or change one "
+                           "section, send body_sections. Nothing was written.")
+    unknown = sorted(set(payload) - set(kind.fields) - {"body", "body_sections"})
     if unknown:
         hints = list(dict.fromkeys(h for f in unknown if (h := _ELSEWHERE.get((kind_name, f)))))
         raise DioceseError(
             f"{kind_name} has no writable fields: {', '.join(unknown)}"
             + "".join(f"\n  {h}" for h in hints)
-            + f"\n  {kind_name} fields: {', '.join(kind.fields)}, body"
+            + f"\n  {kind_name} fields: {', '.join(kind.fields)}, body, body_sections"
             " (types and an example: `diocese write --help`). Nothing was written.")
     for key, value in payload.items():
+        if key == "body_sections":
+            if not _valid_sections(value):
+                raise DioceseError("body_sections must map headings, without their #s, to "
+                                   "non-empty text. Nothing was written.")
+            continue
         if key in _LIST_FIELDS:
             valid = isinstance(value, list) and all(isinstance(v, str) for v in value)
         elif key in _OBJECT_LIST_FIELDS:
@@ -1274,7 +1323,17 @@ def write_record(diocese: str, kind_name: str, slug: str, payload: Mapping[str, 
         if path.exists() and slug not in before.of(kind):
             raise DioceseError(f"{kind.dir}/{slug}.md does not parse; repair it before editing")
         record = _deep_copy(_get(before, kind, slug))
-    record.update(_deep_copy(dict(payload)))
+    changes = _deep_copy(dict(payload))
+    sections = changes.pop("body_sections", {})
+    if append:
+        for key in changes.keys() & (_LIST_FIELDS | _OBJECT_LIST_FIELDS):
+            merged = list(record.get(key) or [])
+            merged += [item for i, item in enumerate(changes[key])
+                       if item not in merged and item not in changes[key][:i]]
+            changes[key] = merged
+    record.update(changes)
+    for heading, text in sections.items():
+        record["body"] = _patch_section(record.get("body") or "", heading, text, append=append)
     # JSON uses the stored types, never flag-style coercion. Reject invalid data
     # rather than silently dropping an evidence item during serialization.
     target_problems = Problems()

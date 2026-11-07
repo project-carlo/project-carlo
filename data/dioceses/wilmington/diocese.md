@@ -10,6 +10,8 @@ city_aliases:
   Ocean Pines: Berlin
   Oak Orchard: Millsboro
   Golden Hill: Church Creek
+audit_ignore_groups:
+- parishes
 promoted: 2026-11-07
 ---
 

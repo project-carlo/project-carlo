@@ -20,7 +20,9 @@ their *Sources*, *Bulletin publishers here* and *Rules settled*.
 2. **Get the rosters.** `pnpm diocese roster fetch <d> gcatholic`, then the diocese's own
    directory: `roster fetch <d> wpsl <URL>` if it runs WP Store Locator, otherwise scrape it
    into `roster import <d> directory <file>`. Import the family or cluster list and the
-   Mass-times pages the same way, with `group` set to the family. When a site blocks
+   Mass-times pages the same way, with `group` set to the family. Leave `group` empty for
+   a deanery, vicariate, county or planning region: `audit` pairs every member of a group,
+   so `group` holds only what might share a bulletin. When a site blocks
    `probe url` or the finder is an eCatholic map, open
    `.claude/skills/parish-site-access/SKILL.md`; it has a reader for those maps. Keep each
    scraper in the tools folder with a line in its `README.md`, so the roster can be
