@@ -114,9 +114,8 @@ page links, not the printer.
     one): compare the `?t=` upload stamps on each site's `/bulletins` links to see which is
     posting now, record every site id carrying issues in publication, and set a revisit.
   - **Documents-folder bulletins:** use a page-pdfs recipe on the listing page. It dates links
-    only by their label, not the URL-encoded file name (`Month%20D%20YYYY.pdf`), so an
-    undated label makes it pick an older issue (fetch_gap `undated-link-label`): check the
-    pick's date. On a monthly newsletter listing ("November 2026") the first-listed pick is
+    by their label or their URL-encoded file name (`Month%20D%20YYYY.pdf`), so a link with
+    neither can lose to an older issue: check the pick's date. On a monthly newsletter listing ("November 2026") the first-listed pick is
     right but fetch:check reports date and freshness unknown: check by hand.
   - **No usable text layer:** some issues are scanned images (no extractable text), some
     shifted by 29 code points (`0$66(6` for MASSES, digits dropped), some broken font
@@ -185,6 +184,11 @@ Decisions that apply to more than one record, and who made them.
 ## Log
 
 Newest first: date, what was done, and the `pnpm diocese coverage` numbers after it.
+
+- 2026-11-07: The date parser now reads URL-encoded file names, which closed
+  `undated-link-label`: Notre Dame of Mt. Carmel, Cedar Knolls is `other` with `page-pdfs`, and
+  promoted (`fetch_only`). Coverage: directory 117/117 accounted for (107/114 modelled),
+  gcatholic 122/122 (102/109). 0 `unsupported` rows.
 
 - 2026-11-05: Reconcile (factory run paterson-map-1, 30 map batches of 6-12 roster entries,
   usually 8). Coverage: directory 117/117 accounted for (106/114 modelled), gcatholic 122/122

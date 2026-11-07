@@ -175,8 +175,9 @@ From the survey's probes of the finder websites (2026-10-30) and the map batches
   `irp.cdn-website.com/<site>/files/uploaded/<MM.DD.YYYY><suffix>.pdf`; `page-pdfs` on `/bulletin`
   picks the newest.
 - **GoDaddy site builder** (PDFs at `storage.googleapis.com/production-sitebuilder-v1-0-9/…/<hash>?fileName=<name>`):
-  a `filename=` glob matches the hash, not `fileName`, and a name like `Nov 7.21.pdf` parses as
-  the coming 7 November; record `fetch_gap` `filename-date-misread`, not a recipe.
+  a `filename=` glob matches the hash, not `fileName`, so it can't filter these. `page-pdfs` on
+  the Bulletins page picks the newest, dating each link from its name. `fetch:check` can't read
+  that name for its issue-date check, so confirm the issue from the PDF.
 - **Immaculate Motherhood LLC sites** link only HTML viewers (`bulletin-view?f=<name>`) around
   `/bulletins/file/<name>`; no recipe reads them. Confirm the bulletin from the viewer's HTML and
   record `unsupported-format` and `fetch_gap` kind `viewer-wrapped-pdf`.
@@ -225,6 +226,11 @@ Decisions that apply to more than one record, and who made them.
 ## Log
 
 Newest first: date, what was done, and the `pnpm diocese coverage` numbers after it.
+
+- 2026-11-07: The date parser now reads a two-digit year after a period, which closed
+  `filename-date-misread`: St. Theodore, Port Murray is `other` with `page-pdfs` again, and
+  promoted (`fetch_only`). Coverage: directory 91/91 accounted for (85/91 modelled), gcatholic
+  123/123 (94/100), worship-sites 25/25 (23/23).
 
 - 2026-11-03: Owner review: the five parishes with a `fetch_gap` are now `bulletin_provider:
   unsupported` (a published bulletin no collector reads yet), which keeps them and their

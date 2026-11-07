@@ -127,11 +127,14 @@ def _parse_date(
             if month_num is None:
                 continue
             day = int(match.group("day"))
-            raw_year = match.groupdict().get("lead_year") or match.group("year")
-            # After a period, the next day is a weekend ("Oct 11.12.pdf") and a
-            # year still to come is no issue's: read those as no year at all.
-            if match.groupdict().get("dotted") and (
-                int(raw_year) == day + 1 or 2000 + int(raw_year) > reference_date.year
+            lead_year = match.groupdict().get("lead_year")
+            raw_year = lead_year or match.group("year")
+            # After a period, the next day is a weekend ("Oct 11.12.pdf", "Oct 31.01.pdf")
+            # and a year still to come is no issue's: read those as no year at all.
+            if match.groupdict().get("dotted") and not lead_year and (
+                int(raw_year) == day + 1
+                or (int(raw_year) == 1 and day >= 28)
+                or 2000 + int(raw_year) > reference_date.year
             ):
                 raw_year = None
             # A named month still identifies the day when the year is mangled.

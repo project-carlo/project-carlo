@@ -220,6 +220,13 @@ def test_ignoring_a_source_that_does_not_exist_is_an_error(dataset, monkeypatch)
         report.audit("test")
 
 
+def test_ignored_sources_must_be_a_list(dataset, monkeypatch):
+    dataset({"a": {}})
+    monkeypatch.setattr(records, "load_meta", lambda _: {"audit_ignore_groups": "directory"})
+    with pytest.raises(records.DioceseError, match="must be a list"):
+        report.audit("test")
+
+
 def test_one_review_does_not_settle_other_members_of_a_group(dataset):
     dataset({"a": {"group": "Family", "publication_reviews": [review()]},
              "b": {"group": "Family"}, "c": {"group": "Family"}})

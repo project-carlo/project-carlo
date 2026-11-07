@@ -264,7 +264,10 @@ def _ignored_groups(diocese: str) -> set[str]:
     """The `group` sources `audit` skips: rosters, or parish records, that hold no bulletin
     grouping, such as deaneries. Every member of a group is paired, so those are only noise.
     """
-    ignored = set(records.load_meta(diocese).get("audit_ignore_groups") or [])
+    names = records.load_meta(diocese).get("audit_ignore_groups") or []
+    if not isinstance(names, list) or not all(isinstance(name, str) for name in names):
+        raise records.DioceseError("audit_ignore_groups must be a list of roster names")
+    ignored = set(names)
     if unknown := ignored - {PARISH_GROUPS, *roster_names(diocese)}:
         raise records.DioceseError(
             f"audit_ignore_groups names no roster: {', '.join(sorted(unknown))}"

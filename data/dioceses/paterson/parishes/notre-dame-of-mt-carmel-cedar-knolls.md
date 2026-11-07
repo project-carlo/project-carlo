@@ -42,7 +42,7 @@ research:
     fetch_gap
   retry_when: The parish posts an issue with a dated label, or the page-pdfs resolver learns to date links
     from URL-encoded file names
-- method: fetch:check with recipe page-pdfs https://ndcarmel.com/parish-updates (with and without filename=Parish*Update*.pdf)
+- method: fetch:check with recipe page-pdfs https://ndcarmel.com/parish-updates
   url: https://ndcarmel.com/parish-updates
   checked: '2026-11-07'
   outcome: found

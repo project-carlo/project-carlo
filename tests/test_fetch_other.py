@@ -1270,6 +1270,9 @@ def test_document_base_url_honours_base_href():
     ("Oct 11.12.pdf", date(2026, 10, 11)),  # a weekend, not 2012
     ("Oct 11.27.pdf", date(2026, 10, 11)),  # next year's isn't an issue yet
     ("Oct 11.10am.pdf", date(2026, 10, 11)),
+    ("Oct 31.01.pdf", date(2026, 10, 31)),  # a weekend across the month's end, not 2001
+    ("bulletin-2022-october-23.24.pdf", date(2022, 10, 23)),  # the year came first
+    ("2024 Oct 11.21.pdf", date(2024, 10, 11)),
     ("Parish%20Update%20October%2021%202026-1.pdf", date(2026, 10, 21)),
     ("Bulletin%20October%2025%2C%202026.pdf", date(2026, 10, 25)),
     ("Bulletin%2010-18-26.pdf", date(2026, 10, 18)),
