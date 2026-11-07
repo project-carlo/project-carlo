@@ -43,8 +43,15 @@ research:
   next_action: Rerun pnpm fetch:check --diocese wilmington --parish st-ann-our-lady-of-guadalupe-bethany-beach
     and confirm it picks the newest St. Ann issue (the map job's check the same day picked the 3,459,373-byte
     25 October 2026 issue)
-  retry_when: Discover Mass's per-IP daily download cap resets (from 2026-10-28)
-  revisit_after: 2026-10-28
+  retry_when: 'Discover Mass''s per-IP daily download cap resets (from 2026-10-28). Retried 2026-11-07
+    after the reset: found (next item).'
+- method: fetch:check --diocese wilmington (hand refresh); issues.py discovermass st-ann-bethany-beach-de
+  url: https://discovermass.com/church/st-ann-bethany-beach-de/
+  checked: '2026-11-07'
+  outcome: found
+  next_action: 'None: the cap had reset; fetch:check picked the 8 November 2026 issue (3,814,526 bytes;
+    page 5 footer ''November 8, 2026 ● Thirty-Second Sunday in Ordinary Time''; page 1 ''St. Ann Catholic
+    Church'')'
 ---
 
 ## Publisher
@@ -61,4 +68,4 @@ stannbb.org links the Discover Mass downloads directly, so the row reads them th
 
 ## Not yet confirmed
 
-Nothing open for structure. Guadalupe's coordinates: see its church record.
+Nothing open for structure. Guadalupe's coordinates: see its church record. The reconcile's fetch:check (2026-10-27) hit the Discover Mass daily cap; the hand refresh's (2026-11-07) picked the 8 November 2026 issue, which Discover Mass lists as the newest.

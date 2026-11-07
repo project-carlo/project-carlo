@@ -305,6 +305,25 @@ Decisions that apply to more than one record, and who made them.
 
 Newest first: date, what was done, and the `pnpm diocese coverage` numbers after it.
 
+- 2026-11-07: Hand refresh of Run wilmington-map-1 (PR #170) against main: merged main and
+  reran reconcile and integrate by hand under main's current rules. Records: 50 parish rows
+  (48 with a bulletin `fetch` collects; St. Thomas More Oratory `no_bulletin`; Holy Name of
+  Jesus, Pocomoke now `unsupported`, `fetch_gap` `html-only-bulletin`: its "Bulletin" is a
+  weekly HTML page), 77 churches, 6 excluded, 1 open. Our Lady of the Highways, Childs went
+  from open/ to excluded (`other`): the Oblates' pages show it is a roadside statue on I-95.
+  Coverage: directory 79/79 accounted for (72/76 modelled), GCatholic 80/80 (70/74),
+  summer guide 34/34 (34/34); one church in no roster (St. John the Baptist, Newark). No
+  merges or moves. Audit with today's pairing: 116 candidate pairs, 16 with content-supported
+  `separate` reviews; the other 100 come only from the deanery `group`s (no publisher-account
+  or host pairs), which share programmes here, not bulletins, so no reviews were written for
+  them. `fetch:check` on all 48 rows (`scratch/wilmington-map-1/refresh/`): 39 picked the 8
+  November issue (St. Joseph, Wilmington current again) and St. Luke the 15 November one;
+  Holy Cross/Marydel, Our Lady of Lourdes, St. Elizabeth and Good Shepherd the 1 November
+  one; St. Ann, Bethany Beach the 8 November one now that Discover Mass's cap reset; St.
+  Paul, Delaware City failed once and picked the 8 November issue on a rerun. Not current: St. Paul, Wilmington (2 August, 97 days; no other channel
+  found) and Holy Child (18 October; the container has posted nothing since), each with a
+  dated `research` retry.
+
 - 2026-10-27: Reconciled (job 028, Run wilmington-map-1) after 19 map batches (6 to 18
   roster entries each, usually 8 to 10). Records: 50 parish rows (48 with a bulletin; St.
   Thomas More Oratory and Holy Name of Jesus, Pocomoke `no_bulletin`), 77 churches, 5

@@ -24,6 +24,11 @@ evidence:
     The Wayback Machine copy of 2026-06-05 (web.archive.org/web/20260605215919/https://stjosephfrenchst.org/)
     shows the same eCatholic site, files.ecatholic.com/14048. The live site is www.sjfschurch.org, the
     address the bulletin prints.'
+- url: https://files.ecatholic.com/14048/bulletins/20261108.pdf
+  seen: 2026-11-07
+  quote: 'Pastor:         Vy. Rev. Glenn M. Evers, V.C.'
+  note: 'The 8 November 2026 issue (4 pages), the hand refresh''s fetch:check pick: page 1 dated ''November
+    8, 2026'', page 2 staff list with the same pastor as the 11 October issue. Still this parish alone.'
 promoted: 2026-10-27
 research:
 - method: probe url and the Chrome browser on stjosephfrenchst.org and www.stjosephfrenchst.org (http
@@ -40,8 +45,13 @@ research:
   outcome: not-found
   next_action: Rerun fetch:check after the weekend of 2026-11-01 and confirm a 2026-10-18 or newer issue
     appears
-  retry_when: A newer file than 20261011 is posted
-  revisit_after: 2026-11-10
+  retry_when: 'A newer file than 20261011 is posted. Retried 2026-11-07: the 8 November issue is posted
+    (next item).'
+- method: fetch:check --diocese wilmington (hand refresh) and issues.py ecatholic 14048
+  url: https://files.ecatholic.com/14048/bulletins/20261108.pdf
+  checked: '2026-11-07'
+  outcome: found
+  next_action: 'None: the 8 November 2026 issue is posted and fetch:check picks it'
 ---
 
 ## Publisher
@@ -58,8 +68,8 @@ One church, St. Joseph, 1012 N. French Street. The diocese map and GCatholic lis
 
 ## Fetch check
 
-`pnpm fetch:check --diocese wilmington --parish st-joseph-wilmington` (2026-10-27): picked files.ecatholic.com/14048/bulletins/20261011.pdf; transport ok, document type PDF, freshness **stale** (16 days; the limit is 14). Identity unverified to the tool; the masthead read above settles it. The pick is the newest file the parish has posted, so stale reflects a late upload, not a wrong pick.
+`pnpm fetch:check --diocese wilmington` (hand refresh, 2026-11-07; `scratch/wilmington-map-1/refresh/fetch_check.out`): picked files.ecatholic.com/14048/bulletins/20261108.pdf, the 8 November 2026 issue; transport ok, document type PDF, freshness `future` (posted the day before its Sunday). Page 2 names this parish's pastor. The first check (2026-10-27) picked the 11 October issue, 16 days old: the parish had posted late, not moved.
 
 ## Not yet confirmed
 
-The 18 and 25 October issues were not posted on 2026-10-27; the 11 October issue is the newest (16 days old). If the next check shows nothing newer, the parish may be posting late or the bulletin may have moved.
+Nothing for the bulletin: it is current again. The diocese map's website (stjosephfrenchst.org) still needs the diocese to change it; see `research`.

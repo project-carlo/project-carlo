@@ -20,6 +20,13 @@ evidence:
     The heading says ''Please click on a date below to see a past bulletin:''. No PDF link is on the listing
     page itself.'
 promoted: 2026-10-27
+research:
+- method: fetch:check --diocese wilmington (hand refresh), then fetch:check --parish st-paul-delaware-city
+  url: https://stpauldc.org/bulletins/
+  checked: '2026-11-07'
+  outcome: found
+  next_action: 'None: the single-parish rerun picked B110826.pdf (8 November 2026); the full run''s NoBulletin
+    a few minutes earlier did not repeat'
 publication_reviews:
 - parish: holy-spirit-st-peter-the-apostle-new-castle
   decision: separate
@@ -73,3 +80,5 @@ The bulletin is signed 'Fr. Dave' and Our Lady of Fatima's pastor is Rev. David 
 ## Fetch check
 
 `pnpm fetch:check --diocese wilmington --parish st-paul-delaware-city` (2026-10-27) with the pinned `dated-post https://stpauldc.org/bulletins/` recipe: resolved `dated-post ... first-listed` to B102526.pdf, transport ok, document type PDF. The tool leaves identity 'unverified' (no expected identity supplied); the page-1 read above settles it. The pick is the newest listed issue, which the page lists first.
+
+Hand refresh (2026-11-07): the diocese-wide run reported `resolve_failed` (`NoBulletin: No PDF links found on bulletin page`) while the listing was gaining its 8 November post; a rerun for this parish minutes later resolved `dated-post ... first-listed` to https://stpauldc.org/wp-content/uploads/2026/11/B110826.pdf (626,086 bytes, freshness `future`, issue date observed). Each post embeds its PDF in an `<iframe>` rather than a link, which the collector reads. Outputs in `scratch/wilmington-map-1/refresh/`.

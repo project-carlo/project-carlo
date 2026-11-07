@@ -26,6 +26,15 @@ evidence:
     North Chapel Street is at 39.6859, -75.7461, so the building is at the East Main and North Chapel
     corner the bulletin names.'
 promoted: 2026-10-27
+research:
+- method: Browser read (visit.py) of stjohn-holyangels.com home and /mass-times for a street number for
+    St. John Church (the /contact page answers 404)
+  url: https://stjohn-holyangels.com/
+  checked: '2026-11-07'
+  outcome: not-found
+  next_action: 'None needed: the address is chosen (OSM''s 200 East Main Street, at the bulletin''s corner);
+    set address_verified only if the diocese or the parish prints a number'
+  retry_when: The parish site or a diocesan list gives St. John Church's street number
 ---
 
 ## Holds Mass

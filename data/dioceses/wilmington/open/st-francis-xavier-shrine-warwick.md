@@ -36,6 +36,12 @@ evidence:
   seen: 2026-10-27
   note: Find A Parish map lists 'St. Francis Xavier', 1704 Bohemia Church Road, Warwick, MD 21912, with
     St. Joseph's website and no Mass times.
+- url: https://www.church-bulletin.org/bulletin/saint-joseph-parish-middletown-de-19709/2026-11-08.pdf
+  seen: 2026-11-07
+  quote: The Church is currently closed for repairs.
+  note: 'Page 1 of the 8 November 2026 issue (this issue has a text layer): ''St. Francis Xavier Shrine:
+    1704 Bohemia Church Road, Warwick, MD, 21912 The Church is currently closed for repairs.'' Still no
+    Mass times; no reopening notice in the issue.'
 parish: st-joseph-middletown
 line1: 1704 Bohemia Church Road
 city: Warwick
@@ -49,6 +55,13 @@ research:
   outcome: found
   next_action: After 6 December 2026, check whether the bulletin lists the shrine's Mass times and promote
     it to a church row
+  revisit_after: 2026-12-06
+- method: probe pdf --grep of St. Joseph, Middletown's 8 November 2026 issue (the newest) for Bohemia,
+    Xavier and December 6
+  url: https://www.church-bulletin.org/bulletin/saint-joseph-parish-middletown-de-19709/2026-11-08.pdf
+  checked: '2026-11-07'
+  outcome: found
+  next_action: 'Unchanged: after 6 December 2026 read the next bulletin for the shrine''s Mass times'
   revisit_after: 2026-12-06
 ---
 

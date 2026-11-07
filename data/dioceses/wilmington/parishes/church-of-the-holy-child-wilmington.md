@@ -24,7 +24,22 @@ evidence:
   seen: 2026-10-27
   note: 'probe po: org ''Church of the Holy Child'', 2500 Naamans Rd, latest issue 2026-10-18 (container
     03/1109), weekly issues back to at least 20 Sept.'
+revisit: Check that container 03/1109 has posted an issue after 18 October 2026 (none for 25 October to
+  8 November on 2026-11-07).
+revisit_after: 2026-11-21
 promoted: 2026-10-27
+research:
+- method: fetch:check --diocese wilmington (hand refresh); probe po church-of-the-holy-child; probe container
+    03/1109 --weeks 4; browser read of chcparish.org (visit.py --bulletin)
+  url: https://parishesonline.com/organization/church-of-the-holy-child
+  checked: '2026-11-07'
+  outcome: not-found
+  next_action: Rerun fetch:check --parish church-of-the-holy-child-wilmington and probe container 03/1109;
+    if still nothing after 18 October, read the parish site and St. Helena's bulletin (same pastor) for
+    a notice about the bulletin
+  retry_when: Container 03/1109 posts an issue after 18 October 2026, or the parish site links another
+    bulletin
+  revisit_after: 2026-11-21
 publication_reviews:
 - parish: st-helena-wilmington
   decision: separate
@@ -65,6 +80,8 @@ chcparish.org is a Duda site that embeds the LPi widget, so the ParishesOnline o
 
 `pnpm fetch:check --diocese wilmington --parish church-of-the-holy-child-wilmington` (2026-10-27): Resolved through the LPi widget to container 03/1109; picked `20261018B.pdf` (8 pages), fresh. The tool reports identity 'unverified' (no expected identity supplied); identity rests on the masthead read above.
 
+Hand refresh (2026-11-07, `scratch/wilmington-map-1/refresh/fetch_check.out`): the same pick, `20261018B.pdf`, now **stale** (20 days). The container answers 403 for 25 October, 1 November and 8 November; `probe po` lists 18 October as the newest issue, and chcparish.org's bulletin widget still shows it. The pick is the newest issue there is, so the staleness is the source's.
+
 ## Not yet confirmed
 
-The 25 October issue was not in the container on 2026-10-27 (403), so freshness rests on the 18 October issue; no sign of a lapse.
+No issue has been posted since 18 October 2026 (checked 2026-11-07). Nothing says the bulletin moved: the parish site still embeds the same widget, and St. Helena's 8 November issue (same pastor) names Holy Child only in the deanery's joint notices ('parishes of: The Church of the Holy Child, Holy Rosary, ...') and for an event held there. The row stays live; see `research` for the next check.
