@@ -102,6 +102,8 @@ def _resolve(
         ("/wp-content/uploads/Sept.-27th-26th-Sun-in-OT.pdf", date(2026, 9, 27)),
         ("/wp-content/uploads/Sept.-20th-25th-Sun-in-OT.pdf", date(2026, 9, 20)),
         ("September 27th, 2026", date(2026, 9, 27)),
+        # Nor is a bare Sunday number after the day a year: the 32nd Sunday, not 2032.
+        ("/wp-content/uploads/November-8th-32-Sun-in-OT.pdf", date(2025, 11, 8)),
         # A run of digits that is no month-day-year gives a later yearless
         # date no year.
         ("scan 13-45-19 bulletin 9-27", date(2026, 9, 27)),
