@@ -1,7 +1,7 @@
 # Project Carlo: believed schedules updated by proposed changes
 
-Status: implemented, with every parish still in extract mode until it is
-seeded. Where the implementation had to decide something this plan left open,
+Status: implemented. Every live parish is seeded and extract mode is gone: a
+parish without an approved seed is fetched but not processed or shown. Where the implementation had to decide something this plan left open,
 or departs from it, see [Implementation decisions](#implementation-decisions).
 
 Today every bulletin is extracted from scratch, and the site shows whatever the
@@ -533,7 +533,7 @@ when the model read no date or an implausible one.
 - **Older than the mark:** the call is rejected as `stale_bulletin`.
 - **Same week as the mark:** applied. The 2nd bulletin for a week is noted in
   the report as a correction, and a 3rd or later is flagged, as today
-  (`bulletin_week.place_bulletin`).
+  (`schedule.history.place_call`).
 - **Undated:** applied, flagged in the report, and it doesn't move the mark:
   its week would only be a guess from the fetch date, and a wrong guess would
   make the next dated bulletin look stale. The cost is that an old issue with

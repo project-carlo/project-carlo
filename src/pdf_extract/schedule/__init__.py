@@ -4,7 +4,7 @@ The design is docs/schedule-state-plan.md. A parish with a `seed` revision is
 in update mode: each of its new bulletins is shown to the model together with
 the schedule we believe (the view), the model answers with the changes it
 thinks the bulletin calls for, and code decides each one. A parish without a
-seed stays in extract mode (`pdf_extract.process`), unchanged.
+seed is only fetched: it isn't processed or shown (`pdf_extract.process`).
 
 - `qualifiers`: weeks of the month and seasons, between the labels' forms and
   the database columns.

@@ -15,7 +15,6 @@ from pdf_extract.schedule_diff import ComparisonError, canonicalize, compare
 from pdf_extract.verify_frontend_snapshot import (
     GATE_POLICY_VERSION,
     check_snapshots,
-    seed_is_current,
     verify_frontend_snapshot,
 )
 
@@ -255,28 +254,18 @@ def test_a_snapshot_saved_yesterday_compares_as_of_today() -> None:
 def test_built_on_two_dates_the_snapshots_compare_equal(pipeline_dir: Path) -> None:
     from pdf_extract.db import create_db
     from pdf_extract.extract_frontend_db import extract
-    from pdf_extract.storage import (
-        DEFAULT_DB_PATH,
-        connect_db,
-        insert_bulletin,
-        save_processed_bulletin,
-        utc_now_iso,
-    )
+    from pdf_extract.storage import DEFAULT_DB_PATH, connect_db
+    from tests.conftest import seed_parish
 
     create_db()
     conn = connect_db()
     try:
-        parish_id = conn.execute("SELECT id FROM parish WHERE slug = 'test-parish'").fetchone()[0]
-        bulletin_id = insert_bulletin(
-            conn, parish_id=parish_id, source_url="https://x/1.pdf", content_hash="1",
-            fetched_at=utc_now_iso(),
-        )
-        save_processed_bulletin(conn, bulletin_id, [
+        seed_parish(conn, "test-parish", [
             {"church_slug": "test-church", "event_type": "mass", "event_kind": "weekly",
              "day_of_week": "Sunday", "start_time": "9:00 AM", "cancelled": False},
             {"church_slug": "test-church", "event_type": "mass", "event_kind": "specific_date",
              "date": "2026-11-01", "start_time": "7:00 PM", "cancelled": False},
-        ], processed_at=utc_now_iso(), published_date="2026-11-01")
+        ])
     finally:
         conn.close()
     # Built either side of midnight, read on the later date.
@@ -496,44 +485,6 @@ def test_a_zero_baseline_is_not_measured_and_onboarding_is_reported() -> None:
     assert result["weekly_events"]["match_pct"] is None
     assert [o["parish_id"] for o in result["onboarding"]] == [10, 20]
     assert _gate(result, "No severe local loss")["passed"]
-
-
-@pytest.mark.parametrize(("seed_as_of", "holds"), [
-    ("2026-11-01T00:00:00Z", False),  # drafted from the current bulletin's week
-    ("2026-10-02T00:00:00Z", True),  # older than the current bulletin
-])
-def test_a_parish_seeded_this_run_holds_only_on_an_out_of_date_seed(
-    seed_as_of: str, holds: bool,
-) -> None:
-    before = _tables([_adoration(1)])
-    after = _tables([_adoration(1, weeks_of_month=["first"])])
-
-    result = check_snapshots(after, before, AS_OF, seeded_this_run={10: seed_as_of})
-
-    gate = _gate(result, "No severe local loss")
-    assert gate["passed"] is not holds
-    severe = [loss for loss in result["local_losses"] if loss["severe"]]
-    assert severe and all(loss["seeded_this_run"] for loss in severe)
-    assert all(loss["holds"] is (holds and loss["level"] == "parish") for loss in severe)
-    # Never exempt from the site-wide retention check.
-    assert not _gate(result, "Weekly schedule")["passed"]
-
-
-def test_a_parish_seeded_this_run_still_cannot_drop_to_zero() -> None:
-    before = _tables(_masses(4))
-    after = _tables([])
-
-    result = check_snapshots(after, before, AS_OF,
-                             seeded_this_run={10: "2026-11-01T00:00:00Z"})
-
-    assert not _gate(result, "No parish dropped to zero")["passed"]
-
-
-def test_seed_is_current_compares_bulletin_weeks() -> None:
-    assert seed_is_current("2026-10-30T00:00:00Z", "2026-11-01")  # Friday rounds forward
-    assert not seed_is_current("2026-10-28T00:00:00Z", "2026-11-01")
-    assert seed_is_current("2026-10-28", None)
-    assert not seed_is_current(None, "2026-11-01")
 
 
 def test_gates_carry_their_numbers() -> None:

@@ -778,47 +778,35 @@ def test_committed_dioceses_have_no_errors() -> None:
         {d: r["errors"] for d, r in result["dioceses"].items()}, indent=2)
 
 
-def test_rows_losing_events_come_from_the_database(root: Path, tmp_path: Path) -> None:
+def test_rows_losing_schedule_entries_come_from_the_database(root: Path, tmp_path: Path) -> None:
     import sqlite3
 
     conn = sqlite3.connect(tmp_path / "parish_events.db")
     conn.executescript(
         "CREATE TABLE parish (id INTEGER PRIMARY KEY, slug TEXT);"
-        "CREATE TABLE bulletin (id INTEGER PRIMARY KEY, parish_id INTEGER);"
         "CREATE TABLE church (id INTEGER PRIMARY KEY, slug TEXT);"
-        "CREATE TABLE event (id INTEGER PRIMARY KEY, church_id INTEGER, bulletin_id INTEGER);"
+        "CREATE TABLE schedule_entry (id INTEGER PRIMARY KEY, church_id INTEGER);"
+        "CREATE TABLE current_schedule (parish_id INTEGER, entry_id INTEGER);"
         "INSERT INTO parish VALUES (1, 'kept'), (2, 'retired');"
-        "INSERT INTO bulletin VALUES (10, 1), (20, 2);"
         "INSERT INTO church VALUES (1, 'st-live'), (2, 'st-quiet'), (3, 'st-moved');"
-        # st-moved's events come from the retired parish's bulletin: they go with it.
-        "INSERT INTO event VALUES (1, 1, 10), (2, 3, 20);"
+        # st-moved's entry is in the retired parish's schedule: it goes with it.
+        "INSERT INTO schedule_entry VALUES (1, 1), (2, 3);"
+        "INSERT INTO current_schedule VALUES (1, 1), (2, 2);"
     )
     conn.close()
 
-    assert records._referenced_by_events(["st-live", "st-quiet", "st-gone"]) == ["st-live"]
-    assert records._referenced_by_events([], ["retired"]) == ["st-moved"]
-    assert records._referenced_by_events([], []) == []
+    assert records._referenced_by_schedules(["st-live", "st-quiet", "st-gone"]) == ["st-live"]
+    assert records._referenced_by_schedules([], ["retired"]) == ["st-moved"]
+    assert records._referenced_by_schedules([], []) == []
 
 
-def test_promote_adds_parishes_as_fetch_only(root: Path) -> None:
+def test_promote_says_new_parishes_wait_for_a_seed(root: Path) -> None:
     _parish()
     _church()
     report_ = records.promote("test")
-    assert "1 new parishes are fetch-only" in report_["next"]
-    rows = {r["slug"]: r for r in _live("PARISHES_CSV_PATH")}
-    assert rows["live-parish"]["fetch_only"] == ""
-    assert rows["st-ann"]["fetch_only"] == "true"
-
-    # Switched on by hand, the row stays on when the diocese is promoted again.
-    text = storage.PARISHES_CSV_PATH.read_text(encoding="utf-8")
-    storage.PARISHES_CSV_PATH.write_text(text.replace(",true\n", ",\n"), encoding="utf-8")
-    _parish("st-bede")
-    _church("st-bede-town", parish="st-bede")
-    records.promote("test")
-    rows = {r["slug"]: r for r in _live("PARISHES_CSV_PATH")}
-    assert [rows[s]["fetch_only"] for s in ("live-parish", "st-ann", "st-bede")] == [
-        "", "", "true",
-    ]
+    assert "1 new parishes are fetched but not processed or shown" in report_["next"]
+    with open(storage.PARISHES_CSV_PATH, encoding="utf-8") as f:
+        assert next(csv.reader(f)) == records.PARISH_CSV_FIELDS
 
 
 SHARED_SITE = "https://family.example/bulletins"

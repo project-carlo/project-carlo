@@ -2,11 +2,10 @@
 
 Compares the frontend snapshot of the database before a run with the one
 after it, read on the same date (`schedule_diff`, gated by
-`verify_frontend_snapshot`), so extract- and update-mode parishes get the same
-checks: which Masses, Confessions and Adorations changed, appeared or
+`verify_frontend_snapshot`): which Masses, Confessions and Adorations changed, appeared or
 disappeared at which church, and which upcoming dates a visitor would lose.
-The databases add what a snapshot doesn't carry: parish slugs and modes,
-which parishes have a new bulletin, each parish's fetch/process outcome for
+The databases add what a snapshot doesn't carry: parish slugs, which parishes
+were seeded this run, which have a new bulletin, each parish's fetch/process outcome for
 the run, and the update-mode calls and proposals behind a change.
 
 Rendered as Markdown for the GitHub job summary and issues, and as JSON for
@@ -31,19 +30,14 @@ from pdf_extract.parish_sites.resolve import OLD_PICK_MARK
 from pdf_extract.runs import (
     FAILED_STATUSES,
     FETCH_NEW,
-    PROCESS_OLD_ISSUE,
     PROCESS_REPEATED_WEEK,
     consecutive_failures,
     parish_results,
 )
 from pdf_extract.schedule.report import render_update_mode, update_mode_report
-from pdf_extract.schedule.store import table_exists, update_mode_slugs
+from pdf_extract.schedule.store import unseeded_slugs, update_mode_slugs
 from pdf_extract.schedule_diff import parish_changed
-from pdf_extract.storage import (
-    fetch_only_slugs,
-    latest_bulletin_ids,
-    load_bulletins,
-)
+from pdf_extract.storage import latest_bulletin_ids, load_bulletins
 from pdf_extract.verify_frontend_snapshot import verify_frontend_snapshot
 
 # More than this share of attempted parishes failing to fetch holds the run:
@@ -56,7 +50,9 @@ _DAY_ABBREV = {
     "monday": "Mon", "tuesday": "Tue", "wednesday": "Wed", "thursday": "Thu",
     "friday": "Fri", "saturday": "Sat", "sunday": "Sun",
 }
-EXTRACT, UPDATE, SEEDED, NEW = "extract", "update", "extract→update", "new"
+# A parish's mode this run: seeded before it, seeded by it (its first run on
+# the site), new to the parish table, or without a seed (not on the site).
+UPDATE, SEEDED, NEW, UNSEEDED = "update", "new seed", "new", "unseeded"
 
 EventKey = tuple[str, str, str, str | None, str | None, str, str | None, bool]
 
@@ -84,38 +80,18 @@ def _parish_ids(conn: sqlite3.Connection) -> dict[int, str]:
     return {row[0]: row[1] for row in conn.execute("SELECT id, slug FROM parish")}
 
 
-def _seeds(conn: sqlite3.Connection) -> dict[int, str]:
-    """Parish id -> its latest seed's as_of, for every update-mode parish."""
-    if not table_exists(conn, "schedule_revision"):
-        return {}
-    rows = conn.execute(
-        """SELECT parish_id, MAX(as_of) FROM schedule_revision
-           WHERE source_kind = 'seed' GROUP BY parish_id"""
-    ).fetchall()
-    return {row[0]: row[1] for row in rows}
-
-
 def snapshot_context(before_db: Path, after_db: Path) -> dict[str, Any]:
     """What the snapshot gates need from the databases, as `verify_frontend_snapshot` takes it.
 
-    `parish_slugs` names each parish (from the after database, else the
-    before one); `seeded_this_run` is parish id -> seed as_of for the parishes
-    that switched to update mode between the two.
+    `parish_slugs` names each parish (from the after database, else the before one).
     """
     before_conn, after_conn = _open_ro(before_db), _open_ro(after_db)
     try:
         slugs = {**_parish_ids(before_conn), **_parish_ids(after_conn)}
-        seeds_before, seeds_after = _seeds(before_conn), _seeds(after_conn)
     finally:
         before_conn.close()
         after_conn.close()
-    return {
-        "parish_slugs": slugs,
-        "seeded_this_run": {
-            parish_id: as_of for parish_id, as_of in seeds_after.items()
-            if parish_id not in seeds_before
-        },
-    }
+    return {"parish_slugs": slugs}
 
 
 def verify_databases(before_db: Path, after_db: Path, as_of: date) -> dict[str, Any]:
@@ -143,7 +119,7 @@ def _modes(
         update_before, update_after = update_mode_slugs(before_conn), update_mode_slugs(after_conn)
         bulletins_before = latest_bulletin_ids(before_conn)
         bulletins_after = latest_bulletin_ids(after_conn)
-        hidden = fetch_only_slugs(after_conn)
+        hidden = unseeded_slugs(after_conn)
         slugs = known_before | set(_parish_ids(after_conn).values())
     finally:
         before_conn.close()
@@ -155,7 +131,7 @@ def _modes(
         elif slug in update_after:
             modes[slug] = UPDATE if slug in update_before else SEEDED
         else:
-            modes[slug] = EXTRACT
+            modes[slug] = UNSEEDED
     changed = {
         slug: bulletins_before.get(slug) != bulletins_after.get(slug)
         for slug in slugs if slug not in hidden
@@ -251,19 +227,19 @@ def _stale_parishes(
     return out
 
 
-def _fetch_only_report(
-    conn: sqlite3.Connection, fetch_only: set[str], results: list[dict[str, Any]],
+def _unseeded_report(
+    conn: sqlite3.Connection, unseeded: set[str], results: list[dict[str, Any]],
 ) -> dict[str, Any]:
-    """How the fetch-only parishes' bulletins came in this run.
+    """How the bulletins of the parishes without an approved seed came in this run.
 
     These parishes are fetched but not processed, so this is the place to see
-    whether a new diocese's bulletins are being found before switching it on.
+    whether a new diocese's bulletins are being found before its seeds are drafted.
     """
     counts: dict[str, int] = {}
     for r in results:
         counts[r["status"]] = counts.get(r["status"], 0) + 1
     return {
-        "parishes": len(fetch_only),
+        "parishes": len(unseeded),
         "attempted": len({r["parish_slug"] for r in results}),
         "fetch": dict(sorted(counts.items())),
         "failures": [
@@ -311,13 +287,13 @@ def build_report(
 
     conn = _open_ro(after_db)
     try:
-        # Fetch-only parishes are reported on their own, below, and don't
-        # count toward the checks: they aren't on the site yet.
-        fetch_only = fetch_only_slugs(conn)
+        # Parishes without an approved seed are reported on their own, below,
+        # and don't count toward the checks: they aren't on the site yet.
+        unseeded = unseeded_slugs(conn)
         all_results = parish_results(conn, run_id)
-        results = [r for r in all_results if r["parish_slug"] not in fetch_only]
-        fetch_only_results = [
-            r for r in all_results if r["parish_slug"] in fetch_only and r["stage"] == "fetch"
+        results = [r for r in all_results if r["parish_slug"] not in unseeded]
+        unseeded_results = [
+            r for r in all_results if r["parish_slug"] in unseeded and r["stage"] == "fetch"
         ]
         attempted = {r["parish_slug"] for r in results if r["stage"] == "fetch"}
         failures = [
@@ -328,13 +304,11 @@ def build_report(
             for r in results
             if r["status"] in FAILED_STATUSES
         ]
-        fetch_only_report = _fetch_only_report(conn, fetch_only, fetch_only_results)
+        unseeded_report = _unseeded_report(conn, unseeded, unseeded_results)
         wrong_bulletins = [r for r in results if r["status"] == "wrong_bulletin"]
         # A third bulletin for one week: the site keeps changing it, or the
         # duplicate check is missing a server's rebuilds.
         repeated_weeks = [r for r in results if r["status"] == PROCESS_REPEATED_WEEK]
-        # The site went back to an older issue than one we already had.
-        old_issues = [r for r in results if r["status"] == PROCESS_OLD_ISSUE]
         # A new bulletin the site dated, but not this week: a parish running
         # behind, or the resolver reading an archive.
         old_picks = [
@@ -383,14 +357,14 @@ def build_report(
     ]
     changes = [
         _parish_report(
-            p, slug, modes.get(slug, EXTRACT), bulletin_changed.get(slug, False), losses,
+            p, slug, modes.get(slug, UPDATE), bulletin_changed.get(slug, False), losses,
         )
         for p, slug in sorted(sections, key=lambda item: item[1])
         if parish_changed(p) or p["notes"] or p["diagnostics"] or p["availability"]["lost"]
         or any(loss["parish_id"] == p["parish_id"] for loss in losses)
     ]
     passed = all(g["passed"] for g in gates)
-    totals = _totals([(p, modes.get(slug, EXTRACT)) for p, slug in sections])
+    totals = _totals([(p, modes.get(slug, UPDATE)) for p, slug in sections])
     return {
         "run_id": run_id,
         "status": "passed" if passed else "held",
@@ -414,7 +388,7 @@ def build_report(
             "update_proposals_rejected": update_mode["rejected"],
         },
         "update_mode": update_mode,
-        "fetch_only": fetch_only_report,
+        "unseeded": unseeded_report,
         "seeds": {
             "loaded": (seeds or {}).get("loaded", []),
             "skipped": (seeds or {}).get("skipped", []),
@@ -423,7 +397,6 @@ def build_report(
             "failures": failures,
             "wrong_bulletins": wrong_bulletins,
             "repeated_weeks": repeated_weeks,
-            "old_issues": old_issues,
             "old_picks": old_picks,
             "stale_parishes": stale,
             "dropped_to_zero": verification.get("dropped_to_zero") or [],
@@ -449,8 +422,8 @@ def _describe_newest(newest: dict[str, str | None] | None) -> str:
     return text
 
 
-def _render_fetch_only(section: dict[str, Any], *, max_notes: int = 60) -> list[str]:
-    """The fetch-only parishes' fetch results, or nothing when there are none.
+def _render_unseeded(section: dict[str, Any], *, max_notes: int = 60) -> list[str]:
+    """The fetch results of the parishes without an approved seed, or nothing when there are none.
 
     The notes stop at `max_notes`: a newly promoted diocese can have dozens of
     parishes not found yet, and the report also goes into a GitHub issue.
@@ -459,9 +432,9 @@ def _render_fetch_only(section: dict[str, Any], *, max_notes: int = 60) -> list[
         return []
     counts = ", ".join(f"{status} {n}" for status, n in section.get("fetch", {}).items())
     lines = [
-        "", "### Fetch-only parishes", "",
+        "", "### Parishes without an approved seed", "",
         f"{section['parishes']} parishes are fetched but not processed or shown "
-        f"(`fetch_only` in data/parishes.csv). This run fetched {section['attempted']}"
+        f"until their seed (data/seeds/) is approved. This run fetched {section['attempted']}"
         + (f": {counts}." if counts else "."),
     ]
     notes: list[str] = []
@@ -505,7 +478,7 @@ def _comparison_lines(report: dict[str, Any]) -> list[str]:
             f"gate policy v{comparison.get('gate_policy_version')}."
         )
     modes = totals.get("by_mode") or {}
-    if len(modes) > 1 or set(modes) - {EXTRACT}:
+    if len(modes) > 1:
         lines.append("By mode: " + "; ".join(
             f"{mode} {m['parishes']} parishes, {m['events_before']} → {m['events_after']} "
             f"events (+{m['events_added']} / −{m['events_removed']})"
@@ -530,8 +503,6 @@ def _describe_loss(loss: dict[str, Any]) -> str:
         text += f" ({loss['moved']} more moved to another time)"
     if loss["holds"]:
         return text + " (holds the run)"
-    if loss["seeded_this_run"] and loss["severe"]:
-        return text + " (seeded this run from a current seed; does not hold)"
     return text + " (reported only)" if loss["severe"] else text
 
 
@@ -556,9 +527,11 @@ def _render_parish(change: dict[str, Any]) -> list[str]:
             (len(change["cancellations"]), "cancellations"),
         ) if n
     ]
-    bits = [change["mode"]] + (["new bulletin"] if change["bulletin_changed"] else [])
+    bits = [change["mode"]] if change["mode"] != UPDATE else []
+    bits += ["new bulletin"] if change["bulletin_changed"] else []
+    tags = f" ({', '.join(bits)})" if bits else ""
     lines = [
-        f"<details><summary><b>{change['parish_slug']}</b> ({', '.join(bits)}): "
+        f"<details><summary><b>{change['parish_slug']}</b>{tags}: "
         f"{', '.join(counts) or 'no schedule change'} "
         f"({change['before_count']} → {change['after_count']} events)</summary>",
         "",
@@ -669,11 +642,6 @@ def render_markdown(report: dict[str, Any], *, max_changed_parishes: int = 40) -
             f"- **{result['parish_slug']}**: another bulletin for a week we already had "
             f"two of; check it ({result['detail']}; {result.get('source_url')})"
         )
-    for result in attention.get("old_issues", []):
-        notes.append(
-            f"- **{result['parish_slug']}**: the site served an older issue than the one "
-            f"shown ({result['detail']}; {result.get('source_url')})"
-        )
     for result in attention.get("old_picks", []):
         notes.append(
             f"- **{result['parish_slug']}**: took a bulletin not dated this week "
@@ -692,7 +660,7 @@ def render_markdown(report: dict[str, Any], *, max_changed_parishes: int = 40) -
         )
     lines += ["", "### Needs attention", ""]
     lines += notes or ["Nothing."]
-    lines += _render_fetch_only(report.get("fetch_only") or {})
+    lines += _render_unseeded(report.get("unseeded") or {})
 
     changes = report["changes"]
     lines += ["", "### Schedule changes", ""]
@@ -720,7 +688,7 @@ def render_seeds(seeds: dict[str, Any]) -> list[str]:
         lines.append(
             f"- **{item['parish']}** seeded (revision {item['revision']}, "
             f"{item['entries']} entries, as of {item['as_of']}, approved by "
-            f"{item.get('reviewer') or 'unknown'}): in update mode from now on"
+            f"{item.get('reviewer') or 'unknown'}): on the site from this run"
         )
     for item in skipped:
         lines.append(f"- **{item['parish']}** seed file not loaded: {item['reason']}")

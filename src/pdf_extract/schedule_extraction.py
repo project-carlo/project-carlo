@@ -1,4 +1,9 @@
-"""Extract structured schedule data from bulletin PDFs using Gemini."""
+"""Extract structured schedule data from bulletin PDFs using Gemini.
+
+No longer part of the weekly run (every live parish is read by gpt-6-luna,
+`classifiers/schedule_update.py`). Kept for the labeler, evals and seeding,
+which still compare against Gemini.
+"""
 
 import json
 import logging
@@ -17,8 +22,8 @@ from pdf_extract.bulletin_week import parse_iso_date
 
 LOGGER = logging.getLogger(__name__)
 
-# The Gemini model every stage defaults to. Bumping it here moves the whole
-# pipeline: process, verify, and the registered "gemini-flash" classifier.
+# The Gemini model the registered "gemini-flash" classifiers and seeding's
+# Gemini extraction default to.
 DEFAULT_GEMINI_MODEL = "gemini-3-flash-preview"
 
 _RETRYABLE_STATUS_CODES = {429, 500, 502, 503, 504}
@@ -330,45 +335,6 @@ def _generate_content_with_backoff(
             _extend_gate(delay)
 
 
-# ── Verification models ──────────────────────────────────────────────────────
-
-
-class Address(BaseModel):
-    model_config = ConfigDict(extra="forbid")
-
-    line1: str | None = None
-    line2: str | None = None
-    city: str | None = None
-    state: str | None = None
-    postal_code: str | None = None
-
-
-class ChurchVerification(BaseModel):
-    model_config = ConfigDict(extra="forbid")
-
-    church_slug: str = Field(min_length=1)
-    name_status: Literal["verified", "incorrect", "unverifiable"]
-    address_status: Literal["verified", "incorrect", "unverifiable"]
-    corrected_name: str | None = None
-    corrected_address: Address | None = None
-    slug_needs_review: bool = False
-
-
-class NewChurch(BaseModel):
-    model_config = ConfigDict(extra="forbid")
-
-    name: str
-    slug: str | None = None
-    address: Address | None = None
-
-
-class VerificationPayload(BaseModel):
-    model_config = ConfigDict(extra="forbid")
-
-    existing_churches: list[ChurchVerification]
-    new_churches: list[NewChurch]
-
-
 # ── Event extraction ─────────────────────────────────────────────────────────
 
 
@@ -502,137 +468,3 @@ def _token_usage(response: Any) -> dict[str, int]:
         "thinking_tokens": getattr(usage, "thoughts_token_count", None) or 0,
     }
     return {k: v for k, v in counts.items() if isinstance(v, int)}
-
-
-# ── Verification extraction ──────────────────────────────────────────────────
-
-
-VERIFY_SYSTEM_PROMPT = """\
-You are a precise assistant that verifies church information against a Catholic parish bulletin PDF.
-
-You are given:
-1) A parish bulletin PDF
-2) A list of known churches for this parish: {churches_json}
-
-Each church in the list has a "slug" (stable URL identifier), "name", and "address".
-
-For each church in the provided list:
-- Echo back the church_slug exactly as provided (this is the only church identifier needed).
-- Check if the church name can be verified from the bulletin. Report name_status as:
-  - "verified" if the name matches what's in the bulletin
-  - "incorrect" if the bulletin shows a different name — provide corrected_name
-  - "unverifiable" if the bulletin doesn't mention this church
-- Check if the church address can be verified from the bulletin. Report address_status as:
-  - "verified" if the address matches what's in the bulletin
-  - "incorrect" if the bulletin shows a different address — provide corrected_address as a structured object with fields: line1, line2 (or null), city, state, postal_code
-  - "unverifiable" if the bulletin doesn't show an address for this church
-- Set slug_needs_review to true ONLY if the slug is clearly a poor match for this church (e.g. slug says one city but the church is obviously in a different city, or slug refers to a completely different saint). Otherwise false.
-
-For any churches that are clearly part of this parish (not guest/visiting churches) and are NOT in the provided list, add them to new_churches with name, slug (a short URL-friendly identifier based on the church name and city, like "st-marys-corning"), and address (as a structured object with line1, line2, city, state, postal_code).
-
-Return output that matches the provided JSON schema exactly."""
-
-
-def extract_verification(
-    pdf_bytes: bytes,
-    *,
-    churches: list[dict],
-    model: str = DEFAULT_GEMINI_MODEL,
-) -> dict[str, Any]:
-    """Use Gemini to verify church data against a bulletin PDF.
-
-    Args:
-        pdf_bytes: Raw PDF bytes to analyze.
-        churches: List of known churches [{name, address}, ...].
-        model: Gemini model to use.
-
-    Returns:
-        Dict with existing_churches and new_churches.
-    """
-    if not pdf_bytes:
-        return {"existing_churches": [], "new_churches": []}
-
-    churches_json = json.dumps(churches, ensure_ascii=False)
-    prompt = VERIFY_SYSTEM_PROMPT.format(churches_json=churches_json)
-
-    client = gemini_client()
-    response = _generate_content_with_backoff(
-        client,
-        model=model,
-        contents=[
-            prompt,
-            types.Part.from_bytes(data=pdf_bytes, mime_type="application/pdf"),
-        ],
-        config=types.GenerateContentConfig(
-            response_mime_type="application/json",
-            response_json_schema=VerificationPayload.model_json_schema(),
-        ),
-    )
-    content = response.text or "{}"
-    try:
-        payload = VerificationPayload.model_validate_json(content)
-    except ValidationError as exc:
-        LOGGER.warning(
-            "extract_verification: Pydantic validation failed (%s); using lenient fallback",
-            exc,
-        )
-        return _normalize_verification_lenient(
-            _parse_llm_json(content, context="extract_verification")
-        )
-    return payload.model_dump(mode="json")
-
-
-def _normalize_verification_lenient(data: dict[str, Any]) -> dict[str, Any]:
-    """Lenient fallback when VerificationPayload.model_validate_json fails."""
-    existing: list[dict[str, Any]] = []
-    new_churches: list[dict[str, Any]] = []
-
-    for c in data.get("existing_churches", []):
-        if not isinstance(c, dict):
-            continue
-        church_slug = c.get("church_slug")
-        if not isinstance(church_slug, str) or not church_slug.strip():
-            continue
-        name_status = c.get("name_status")
-        if name_status not in {"verified", "incorrect", "unverifiable"}:
-            name_status = "unverifiable"
-        address_status = c.get("address_status")
-        if address_status not in {"verified", "incorrect", "unverifiable"}:
-            address_status = "unverifiable"
-        entry: dict[str, Any] = {
-            "church_slug": church_slug,
-            "name_status": name_status,
-            "address_status": address_status,
-            "slug_needs_review": bool(c.get("slug_needs_review", False)),
-        }
-        if name_status == "incorrect":
-            corrected = c.get("corrected_name")
-            entry["corrected_name"] = corrected if isinstance(corrected, str) else None
-        else:
-            entry["corrected_name"] = None
-        if address_status == "incorrect":
-            corrected = c.get("corrected_address")
-            entry["corrected_address"] = corrected if isinstance(corrected, dict) else None
-        else:
-            entry["corrected_address"] = None
-        existing.append(entry)
-
-    for c in data.get("new_churches", []):
-        if not isinstance(c, dict):
-            continue
-        name = c.get("name")
-        if not isinstance(name, str) or not name.strip():
-            continue
-        slug = c.get("slug")
-        new_churches.append({
-            "name": name,
-            "slug": slug if isinstance(slug, str) else None,
-            "address": c.get("address") if isinstance(c.get("address"), dict) else None,
-        })
-
-    # Round-trip through the model so this path returns the exact same shape
-    # as the strict model_validate_json path.
-    payload = VerificationPayload.model_validate(
-        {"existing_churches": existing, "new_churches": new_churches}
-    )
-    return payload.model_dump(mode="json")

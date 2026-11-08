@@ -25,6 +25,7 @@ from pdf_extract.storage import (
     utc_now_iso,
 )
 from pdf_extract.verify_frontend_snapshot import verify_frontend_snapshot
+from tests.conftest import seed_parish
 
 BUILD_DATE = date(2026, 10, 1)
 EVENTS = [
@@ -67,7 +68,8 @@ EVENT_ROWS = [
 EVENT_ROWS = [(*row, None, None) for row in EVENT_ROWS]
 
 
-def _add_bulletin(url: str, published_date: str, events: list[dict]) -> None:
+def _add_bulletin(url: str, published_date: str) -> None:
+    """A bulletin test-parish's schedule has been read against."""
     conn = connect_db()
     try:
         parish_id = conn.execute("SELECT id FROM parish WHERE slug = 'test-parish'").fetchone()[0]
@@ -75,8 +77,16 @@ def _add_bulletin(url: str, published_date: str, events: list[dict]) -> None:
             conn, parish_id=parish_id, source_url=url, content_hash=url, fetched_at=utc_now_iso(),
         )
         save_processed_bulletin(
-            conn, bulletin_id, events, processed_at=utc_now_iso(), published_date=published_date,
+            conn, bulletin_id, [], processed_at=utc_now_iso(), published_date=published_date,
         )
+    finally:
+        conn.close()
+
+
+def _seed(events: list[dict]) -> None:
+    conn = connect_db()
+    try:
+        seed_parish(conn, "test-parish", events)
     finally:
         conn.close()
 
@@ -84,8 +94,9 @@ def _add_bulletin(url: str, published_date: str, events: list[dict]) -> None:
 @pytest.fixture
 def db(pipeline_dir: Path) -> Path:
     create_db()
-    _add_bulletin("https://example.org/old.pdf", "2026-09-13", EVENTS[:1])
-    _add_bulletin("https://example.org/new.pdf", "2026-09-20", EVENTS)
+    _add_bulletin("https://example.org/old.pdf", "2026-09-13")
+    _add_bulletin("https://example.org/new.pdf", "2026-09-20")
+    _seed(EVENTS)
     return DEFAULT_DB_PATH
 
 
@@ -104,8 +115,13 @@ def test_snapshot_has_the_latest_bulletins_churches_and_events(db: Path, tmp_pat
     assert church["bulletin_url"] == "https://example.org/new.pdf"
     assert church["bulletin_week"] == "2026-09-20"
     assert church["homepage_url"] == "https://example.org"
-    mass, weekly_confession, confession = tables["events"]
-    assert mass["id"] < confession["id"]
+    events = tables["events"]
+    assert [e["id"] for e in events] == sorted(e["id"] for e in events)
+    assert all(e["id"] < 0 for e in events)
+    by_kind = {(e["event_type"], e["event_kind"]): e for e in events}
+    mass = by_kind["mass", "weekly"]
+    weekly_confession = by_kind["confession", "weekly"]
+    confession = by_kind["confession", "specific_date"]
     assert mass["church_id"] == church["id"]
     assert (mass["event_kind"], mass["day_of_week"], mass["start_time"]) == ("weekly", "Sunday", 600)
     assert mass["end_time"] is None
@@ -132,7 +148,7 @@ def test_a_cancellation_matching_no_weekly_row_is_left_out(
     pipeline_dir: Path, tmp_path: Path,
 ) -> None:
     create_db()
-    _add_bulletin("https://example.org/new.pdf", "2026-09-20", [EVENTS[0], EVENTS[2]])
+    _seed([EVENTS[0], EVENTS[2]])
     dest = tmp_path / "frontend.json.gz"
 
     extract(DEFAULT_DB_PATH, dest, build_date=BUILD_DATE)
@@ -225,7 +241,7 @@ def test_out_of_pattern_cancellations_are_left_out(pattern, day):
     assert finish_events([weekly, _cancellation_row(-2, day)], BUILD_DATE) == [weekly]
 
 
-def test_duplicate_extract_mode_weekly_rows_still_target_the_lowest_id():
+def test_duplicate_weekly_rows_still_target_the_lowest_id():
     rows = [_event_row(20), _cancellation_row(30, "2026-10-02"), _event_row(10)]
 
     events = finish_events(rows, BUILD_DATE)
@@ -290,6 +306,7 @@ def test_a_parish_with_no_processed_bulletin_has_no_bulletin(
     pipeline_dir: Path, tmp_path: Path,
 ) -> None:
     create_db()
+    _seed(EVENTS[:1])
     dest = tmp_path / "frontend.json.gz"
 
     extract(DEFAULT_DB_PATH, dest)

@@ -33,7 +33,8 @@ from pdf_extract.datasync import (
 )
 from pdf_extract.db import create_db
 from pdf_extract.extract_frontend_db import SNAPSHOT_NAME, encode_snapshot, read_snapshot
-from pdf_extract.storage import DEFAULT_DB_PATH
+from pdf_extract.storage import DEFAULT_DB_PATH, connect_db
+from tests.conftest import seed_parish
 
 BUCKET = "carlo-test"
 
@@ -82,9 +83,14 @@ def _bucket_keys(client: Any) -> list[str]:
 def _prepare_run(
     run_id: str, *, run_status: str = "passed", snapshot: bytes = SNAPSHOT_BYTES,
 ) -> Path:
-    """A database plus the files `weekly` leaves in data/out/<run_id>/."""
+    """A database (test-parish seeded, so it is on the site) and a run's data/out/ files."""
     if not DEFAULT_DB_PATH.exists():
         create_db()
+        conn = connect_db()
+        try:
+            seed_parish(conn, "test-parish", [])
+        finally:
+            conn.close()
     out = run_out_dir(run_id)
     out.mkdir(parents=True, exist_ok=True)
     (out / SNAPSHOT_NAME).write_bytes(snapshot)

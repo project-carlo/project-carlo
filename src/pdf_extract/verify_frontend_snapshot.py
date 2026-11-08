@@ -1,7 +1,6 @@
 """Verify that frontend snapshots stay similar enough between updates.
 
-The gates compare the two snapshots read on one date (`schedule_diff`), for
-every parish whatever its mode:
+The gates compare the two snapshots read on one date (`schedule_diff`):
 
 - the church count is unchanged, and the raw event count within ±10%;
 - at least 90% of last time's recurring slots are still there, compared by
@@ -10,10 +9,6 @@ every parish whatever its mode:
 - no parish that showed at least 3 events shows none;
 - no parish, and no church's Masses, Confessions or Adorations, lost at
   least 3 of its dates in the coming weeks and more than half of them.
-
-A parish seeded this run is checked like any other, except that its local
-losses don't hold the run when the seed is at least as recent as its current
-bulletin's week: those are a reviewed schedule replacing an extracted one.
 
 Bump GATE_POLICY_VERSION when a gate or threshold changes, so reports from
 different policies aren't read as comparable.
@@ -26,7 +21,6 @@ from datetime import date
 from pathlib import Path
 from typing import Any
 
-from pdf_extract.bulletin_week import nearest_sunday, parse_iso_date
 from pdf_extract.extract_frontend_db import DEST_SNAPSHOT, SnapshotFormatError, read_snapshot
 from pdf_extract.schedule_diff import WINDOW_DAYS, ComparisonError, compare, current_rows
 
@@ -85,36 +79,19 @@ def _gate(
     }
 
 
-def seed_is_current(seed_as_of: str | None, bulletin_week: str | None) -> bool:
-    """Whether a seed is at least as recent as the parish's current bulletin's week.
-
-    Weeks are compared as `bulletin_week` names them (the nearest Sunday), so a
-    seed drafted from this week's bulletin counts as current.
-    """
-    seeded = parse_iso_date((seed_as_of or "")[:10])
-    week = parse_iso_date(bulletin_week)
-    if seeded is None:
-        return False
-    return week is None or nearest_sunday(seeded) >= week
-
-
 def check_snapshots(
     current: Tables,
     previous: Tables,
     as_of: date,
     *,
     parish_slugs: dict[int, str] | None = None,
-    seeded_this_run: dict[int, str] | None = None,
     window_days: int = WINDOW_DAYS,
 ) -> dict[str, Any]:
     """Every snapshot gate for two decoded snapshots, read on `as_of`.
 
     `parish_slugs` names parishes in the details (parish id otherwise).
-    `seeded_this_run` is parish id -> its seed's as_of, for parishes that
-    switched to update mode in this run.
     """
     slugs = parish_slugs or {}
-    seeded = seeded_this_run or {}
 
     def name(parish_id: int | None) -> str:
         return slugs.get(parish_id) or f"parish #{parish_id}"
@@ -182,7 +159,7 @@ def check_snapshots(
             "local_losses": [], "onboarding": [],
         })
     else:
-        result.update(_comparison_gates(comparison, gates, name, seeded))
+        result.update(_comparison_gates(comparison, gates, name))
     gates.extend(
         _gate("Snapshot verification", False, error) for error in errors
     )
@@ -198,7 +175,7 @@ def check_snapshots(
 
 
 def _comparison_gates(
-    comparison: dict[str, Any], gates: list[dict[str, Any]], name, seeded: dict[int, str],
+    comparison: dict[str, Any], gates: list[dict[str, Any]], name,
 ) -> dict[str, Any]:
     recurring = comparison["recurring"]
     before, matched = recurring["before"], recurring["matched"]
@@ -249,8 +226,6 @@ def _comparison_gates(
     onboarding: list[dict[str, Any]] = []
     for p in parishes:
         parish_id = p["parish_id"]
-        seed_as_of = seeded.get(parish_id)
-        exempt = seed_as_of is not None and seed_is_current(seed_as_of, p["bulletin_week"])
         availability = p["availability"]
         levels = [("parish", None, None, availability)] + [
             ("church", g["church_slug"], g["event_type"], g) for g in availability["groups"]
@@ -281,8 +256,7 @@ def _comparison_gates(
                 "fraction": round(fraction, 3),
                 "lost_dates": counts.get("lost_dates", []),
                 "severe": severe,
-                "seeded_this_run": seed_as_of is not None,
-                "holds": severe and not exempt and level in LOCAL_LOSS_HOLD_LEVELS,
+                "holds": severe and level in LOCAL_LOSS_HOLD_LEVELS,
             })
     holding = [loss for loss in losses if loss["holds"]]
     gates.append(_gate(
@@ -323,7 +297,6 @@ def verify_frontend_snapshot(
     as_of: date | None = None,
     *,
     parish_slugs: dict[int, str] | None = None,
-    seeded_this_run: dict[int, str] | None = None,
 ) -> dict[str, Any]:
     """`check_snapshots` on two snapshot files, read on `as_of` (default today)."""
     as_of = as_of or date.today()
@@ -340,6 +313,6 @@ def verify_frontend_snapshot(
         }
     result = check_snapshots(
         current_tables, previous_tables, as_of,
-        parish_slugs=parish_slugs, seeded_this_run=seeded_this_run,
+        parish_slugs=parish_slugs,
     )
     return {**result, **paths}

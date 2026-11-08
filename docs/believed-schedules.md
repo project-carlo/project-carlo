@@ -1,12 +1,12 @@
 # Believed schedules (update mode)
 
-Most parishes are extracted from scratch each week (extract mode). A parish can
-instead keep a **believed schedule**, changed only through recorded changes: each
-new bulletin is shown to the model together with the schedule we believe, the
-model proposes changes, and a code policy applies or rejects each one. A parish
-is in this mode once it has a seed revision (see
-[seeding-plan.md](seeding-plan.md)), and a weekly run handles both kinds. The
-design is [schedule-state-plan.md](schedule-state-plan.md); this page describes
+Every live parish keeps a **believed schedule**, changed only through recorded
+changes: each new bulletin is shown to the model together with the schedule we
+believe, the model proposes changes, and a code policy applies or rejects each
+one. A parish goes live once its approved seed is loaded (see
+[seeding-plan.md](seeding-plan.md)); until then its bulletins are fetched but
+not processed or shown. (Parishes used to be extracted from scratch each week by
+Gemini, "extract mode"; that path is gone.) The design is [schedule-state-plan.md](schedule-state-plan.md); this page describes
 how update mode behaves now.
 
 Update calls run on `gpt-6-luna` (OpenAI Responses API, high reasoning, the PDF
@@ -14,8 +14,7 @@ at low detail, strict decoding), set up like the eval module's `gpt-6-luna`
 classifier, and need `OPENAI_API_KEY`. Their prompt
 (`classifiers/schedule_update.py`) carries every rule of the eval policy
 (`classifiers/schedule_policy.py`), worded for changes to the believed
-schedule. `--model` on `pnpm process` only picks the Gemini model for
-extract-mode parishes.
+schedule.
 
 The update view also carries `reviewed_seed_context` from the parish's latest
 imported, approved seed: excluded slots, answered questions, and monthly or

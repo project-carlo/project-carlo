@@ -500,16 +500,17 @@ Work in this order and only fall through when a step can't answer. Commit as you
 
 **Promotion:** when `todo` shows no errors or incomplete records, run `pnpm diocese promote
 <d> --dry-run`, read it, then `pnpm diocese promote <d>` and `pnpm test`. The next pipeline
-command seeds the new rows into the database. New parish rows go in with `fetch_only` set:
-the weekly run fetches their bulletins but doesn't process them or show their churches until
-the flag is cleared (README, "Fetch-only parishes").
+command seeds the new rows into the database. New parishes have no approved seed yet: the
+weekly run fetches their bulletins but doesn't process them or show their churches until each
+one's seed is approved (docs/weekly-pipeline.md, "Parishes without an approved seed").
 Promotion appends new rows, updates promoted ones, and deletes live rows the diocese has
-retired (merged, renamed, excluded, moved to open/, `no_bulletin` or `unsupported`). Retiring a church deletes its events, and retiring a
-parish deletes its bulletins and the events read from them, even for churches moved to another
-parish. The dry run lists the churches that would lose events (`removed_rows_with_events`).
+retired (merged, renamed, excluded, moved to open/, `no_bulletin` or `unsupported`). Retiring a church takes its believed-schedule entries off the
+site, and retiring a parish takes its whole schedule and its bulletins with it, even for churches
+moved to another parish. The dry run lists the churches that have schedule entries
+(`removed_rows_with_events`).
 Removals don't go live on merge: deploys keep serving the published data, and the next weekly
-run is held for review. Publishing that run is what applies them. It also keeps coordinates and flags that `geocode` and
-`verify` filled in. Keep editing the records after promotion and promote again. Don't delete
+run is held for review. Publishing that run is what applies them. It also keeps coordinates and the verified flags already on
+the live rows. Keep editing the records after promotion and promote again. Don't delete
 a promoted record: exclude it or merge it, or its live row will be orphaned.
 
 `pnpm diocese recheck <d>` re-fetches every quoted source. Run it when auditing, or before
