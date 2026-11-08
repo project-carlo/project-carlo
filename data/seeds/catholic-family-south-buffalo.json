@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "catholic-family-south-buffalo",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-25T13:15:00Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-26T17:19:42Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Claude)",
+  "approved_at": "2026-11-08T20:43:50Z",
   "summary": "Five churches: St. Ambrose, Holy Family, St. Martin of Tours, St. Teresa and Our Lady of Perpetual Help. The bulletins print no schedule box, so weekly Masses come from the Mass intentions (R35) and the parish website, Confessions from the Confessions box, and the 24/7 chapel at St. Martin from the bulletin. The newest PDF (Oct 25) is 514 MB and the pipeline cannot open it; I read its text with pdftotext. St. Ambrose closes after its final Mass on Nov 1; its slots stay for now (R20). The Oct 25 notice about moving St. Ambrose intentions mentions a Holy Family 8:00 AM Mass that no other source shows, and its times look garbled; left out. Open: whether Tuesday 6:00 PM Adoration at Our Lady of Perpetual Help starts at that time.",
   "blocked_reason": null,
   "bulletins": [
@@ -2193,9 +2193,22 @@
     },
     {
       "id": "s30",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-perpetual-help-buffalo",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After novena and Rosary"
+      },
       "page": null,
       "sources": [
         {
@@ -2235,7 +2248,11 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:38Z"
+      }
     },
     {
       "id": "s31",

@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "liverpool-catholic-community",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-25T13:11:56Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-25T19:07:13Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Claude)",
+  "approved_at": "2026-11-08T20:43:50Z",
   "summary": "Three churches (Christ the King, Epiphany, Pope John XXIII). Masses are in the daily calendar of all five bulletins and match the site; Epiphany weekday Masses are in its chapel on the parish grounds. Confession and Adoration use the page 1 boxes, with monthly ones cited from older bulletins (R12). Open: Monday Adoration end time (4:00 or 4:30), the Monday 4:30 Novena (the site calls it a Mass), and whether Nov 7 First Saturday adoration is monthly.",
   "blocked_reason": null,
   "bulletins": [
@@ -2157,9 +2157,22 @@
     },
     {
       "id": "s31",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-st-joseph-the-worker-liverpool",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
       "page": 1,
       "sources": [
         {
@@ -2253,13 +2266,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:38Z"
+      }
     },
     {
       "id": "s32",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-st-joseph-the-worker-liverpool",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Novena Mass, in the chapel"
+      },
       "page": 2,
       "sources": [
         {
@@ -2300,13 +2330,30 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:38Z"
+      }
     },
     {
       "id": "s33",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-st-joseph-the-worker-liverpool",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-07",
+        "start_time": "14:30",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "First Saturday Rosary devotions, upstairs chapel"
+      },
       "page": 3,
       "sources": [
         {
@@ -2379,7 +2426,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:38Z"
+      }
     }
   ],
   "church_list_issues": []

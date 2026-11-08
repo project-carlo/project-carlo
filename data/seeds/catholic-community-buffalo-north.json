@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "catholic-community-buffalo-north",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-25T13:14:25Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-26T01:59:05Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Claude)",
+  "approved_at": "2026-11-08T20:44:36Z",
   "summary": "Five churches in the CCBN family. The weekend, weekday, Confession and Friday Adoration schedule is clear and agrees in the newest bulletins; a new weekday schedule began Oct 12 and replaced the older St. Rose 7 AM and Central Office Chapel (part of Assumption's parcel) Masses. Saturday Confession moved from St. Rose to St. Mark in the Oct 18 issue (R40). Open: whether the 15-minute Adoration opening the CCBN Moms meetings (Nov 4 and Dec 2, Central Office chapel at Assumption) counts, since the audience is a moms' group; leaning out.",
   "blocked_reason": null,
   "bulletins": [
@@ -2053,9 +2053,22 @@
     },
     {
       "id": "s29",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-buffalo",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-04",
+        "start_time": "18:30",
+        "end_time": "18:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "CCBN Moms, chapel at Central Office"
+      },
       "page": 5,
       "sources": [
         {
@@ -2103,14 +2116,31 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:44:36Z"
+      },
       "group": "ccbn-moms-adoration"
     },
     {
       "id": "s30",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-buffalo",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-02",
+        "start_time": "18:30",
+        "end_time": "18:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "CCBN Moms, chapel at Central Office"
+      },
       "page": 5,
       "sources": [
         {
@@ -2152,7 +2182,11 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:44:36Z"
+      },
       "group": "ccbn-moms-adoration"
     },
     {

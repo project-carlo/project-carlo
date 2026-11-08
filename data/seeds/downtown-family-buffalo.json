@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "downtown-family-buffalo",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-25T13:15:45Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-25T19:02:07Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Claude)",
+  "approved_at": "2026-11-08T20:43:50Z",
   "summary": "Three churches (St. Louis, Blessed Sacrament, St. Michael's) in the Downtown Family; the front-page Mass box, confession list and Adoration hours are identical in all five bulletins. St. Joseph's Cathedral and the Oratory of St. Anthony share the box but are other parishes' churches (left out). St. Michael's morning Confession is worked out at 7:15-8:30 AM after the 6:45 Mass. One grouped question: whether the blanket 'confession on request after any Mass' line should become Confession slots after each Mass (leaning include, per C5).",
   "blocked_reason": null,
   "bulletins": [
@@ -2101,9 +2101,22 @@
     },
     {
       "id": "s29",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-louis-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "On request after the 4:00 PM Mass"
+      },
       "page": 1,
       "sources": [
         {
@@ -2163,14 +2176,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:38Z"
+      },
       "group": "after-mass-request"
     },
     {
       "id": "s30",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-louis-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "On request after the 9:00 AM Mass"
+      },
       "page": 1,
       "sources": [
         {
@@ -2230,14 +2260,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:38Z"
+      },
       "group": "after-mass-request"
     },
     {
       "id": "s31",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-louis-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "On request after the 11:00 AM Mass"
+      },
       "page": 1,
       "sources": [
         {
@@ -2297,14 +2344,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:38Z"
+      },
       "group": "after-mass-request"
     },
     {
       "id": "s32",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-louis-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:35",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "On request after the 12:05 PM Mass"
+      },
       "page": 1,
       "sources": [
         {
@@ -2370,14 +2434,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:38Z"
+      },
       "group": "after-mass-request"
     },
     {
       "id": "s33",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-louis-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:35",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "On request after the 12:05 PM Mass"
+      },
       "page": 1,
       "sources": [
         {
@@ -2437,14 +2518,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:38Z"
+      },
       "group": "after-mass-request"
     },
     {
       "id": "s34",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-louis-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:35",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "On request after the 12:05 PM Mass"
+      },
       "page": 1,
       "sources": [
         {
@@ -2504,14 +2602,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:38Z"
+      },
       "group": "after-mass-request"
     },
     {
       "id": "s35",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-louis-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:35",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "On request after the 12:05 PM Mass"
+      },
       "page": 1,
       "sources": [
         {
@@ -2571,14 +2686,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:38Z"
+      },
       "group": "after-mass-request"
     },
     {
       "id": "s36",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "On request after the 4:30 PM Mass"
+      },
       "page": 1,
       "sources": [
         {
@@ -2638,14 +2770,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:38Z"
+      },
       "group": "after-mass-request"
     },
     {
       "id": "s37",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "On request after the 10:30 AM Mass"
+      },
       "page": 1,
       "sources": [
         {
@@ -2705,14 +2854,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:38Z"
+      },
       "group": "after-mass-request"
     },
     {
       "id": "s38",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "On request after the 5:30 PM Mass"
+      },
       "page": 1,
       "sources": [
         {
@@ -2772,14 +2938,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:38Z"
+      },
       "group": "after-mass-request"
     },
     {
       "id": "s39",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "On request after the 12:00 PM Mass"
+      },
       "page": 1,
       "sources": [
         {
@@ -2839,7 +3022,11 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:38Z"
+      },
       "group": "after-mass-request"
     },
     {

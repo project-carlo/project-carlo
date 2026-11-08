@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "holy-spirit-sacred-heart-east-greenbush",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-25T13:22:32Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-27T00:58:38Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Claude)",
+  "approved_at": "2026-11-08T20:49:39Z",
   "summary": "Three churches: Holy Spirit (Sat 4 PM, Sun 11 AM, Tue 6:30 PM Mass, Tuesday 7 PM Adoration and Confession) and Sacred Heart (Sun 9 AM Mass, Sunday Confession), all printed alike in five bulletins. The Sisters of the Resurrection chapel (Sacred Heart's weekday Mass site) is now on the church list: Tue/Wed/Fri 8 AM and the Nov 2 8 AM Mass are included. Open: whether Monday and Thursday 8 AM also exist (bulletin says M-F, Sacred Heart's website says Tue/Wed/Fri), the Wednesday rectory chapel Mass location, the Nov 2 school Mass and the Nov 7 Confirmation Mass.",
   "blocked_reason": null,
   "bulletins": [
@@ -741,9 +741,22 @@
     },
     {
       "id": "s10",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sisters-of-the-resurrection-castleton-on-hudson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Sisters of the Resurrection chapel"
+      },
       "page": 3,
       "sources": [
         {
@@ -826,7 +839,11 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:38Z"
+      },
       "group": "sisters-mon-thu"
     },
     {
@@ -989,9 +1006,22 @@
     },
     {
       "id": "s13",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sisters-of-the-resurrection-castleton-on-hudson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Sisters of the Resurrection chapel"
+      },
       "page": 3,
       "sources": [
         {
@@ -1074,7 +1104,11 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:38Z"
+      },
       "group": "sisters-mon-thu"
     },
     {
@@ -1190,9 +1224,22 @@
     },
     {
       "id": "s16",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-east-greenbush",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Rectory chapel"
+      },
       "page": 4,
       "sources": [
         {
@@ -1282,13 +1329,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:49:39Z"
+      }
     },
     {
       "id": "s17",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-east-greenbush",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls Day School Mass"
+      },
       "page": 5,
       "sources": [
         {
@@ -1330,13 +1394,30 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": "dropped",
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:49:39Z"
+      }
     },
     {
       "id": "s18",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-east-greenbush",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-07",
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Confirmation Mass"
+      },
       "page": 3,
       "sources": [
         {
@@ -1384,7 +1465,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": "dropped",
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:49:39Z"
+      }
     },
     {
       "id": "s19",

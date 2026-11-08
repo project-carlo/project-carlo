@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "holy-spirit-holy-trinity-gloversville",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-25T13:11:34Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-25T18:59:28Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Claude)",
+  "approved_at": "2026-11-08T20:49:39Z",
   "summary": "Two linked churches, Holy Spirit (Gloversville) and Holy Trinity (Johnstown). The weekly Mass schedule is clear. Holy Trinity's Sunday 9:00 AM Mass is at Holy Spirit during painting, and its Tuesday and Wednesday Masses are in the parish hall. The first-Thursday Confession and first-Saturday Mass alternate by month and are left out (R33). Open: whether to keep the Holy Trinity Sunday slot while it is moved.",
   "blocked_reason": null,
   "bulletins": [
@@ -1505,9 +1505,22 @@
     },
     {
       "id": "s21",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-johnstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -1573,7 +1586,11 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:49:39Z"
+      }
     },
     {
       "id": "s22",

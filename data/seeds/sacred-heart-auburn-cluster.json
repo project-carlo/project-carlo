@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "sacred-heart-auburn-cluster",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-25T13:19:20Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-26T02:01:59Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Claude)",
+  "approved_at": "2026-11-08T20:43:50Z",
   "summary": "Three listed churches (Sacred Heart, St. Alphonsus, St. Ann); Holy Family is named in the masthead but has no times and is not on the church list. Mass times come from the weekly Liturgy Schedule, which repeats in all four bulletins read; Saturday Reconciliation is in the p1 sidebar. New since Sept 25: Friday Adoration at Sacred Heart after the 8:30 Mass; the St. Alphonsus Friday 7:30 Mass was discontinued. One open question: the Friday Adoration end time.",
   "blocked_reason": null,
   "bulletins": [
@@ -1470,9 +1470,22 @@
     },
     {
       "id": "s20",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vespers 4:30 PM; Benediction 5:00 PM"
+      },
       "page": 2,
       "sources": [
         {
@@ -1561,7 +1574,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:39Z"
+      }
     }
   ],
   "church_list_issues": []

@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "our-lady-of-the-lakes",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-25T13:12:28Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-26T17:17:18Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Claude)",
+  "approved_at": "2026-11-08T20:43:50Z",
   "summary": "Three churches (St. Michael's Penn Yan, St. Januarius Naples, St. Patrick's Prattsburgh) with weekend and weekday Masses, a Thursday Holy Hour, and Saturday confession at St. Michael's, all consistent across five bulletins. First-Saturday confession at St. Patrick's and St. Januarius is weekly; the matching Sunday confession is recorded only for November 8. Open: whether to add the website's 'sometimes' Wednesday 11:30 Adoration.",
   "blocked_reason": null,
   "bulletins": [
@@ -1625,9 +1625,22 @@
     },
     {
       "id": "s22",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michaels-penn-yan",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Sometimes before the noon Mass"
+      },
       "page": null,
       "sources": [
         {
@@ -1662,7 +1675,11 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:39Z"
+      }
     },
     {
       "id": "s23",
