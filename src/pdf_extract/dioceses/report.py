@@ -207,7 +207,8 @@ def coverage(diocese: str, roster: str | None = None, *, link: bool = False,
         rep["counts"] = counts
         rep["accounted_for"] = f"{accounted}/{unique}" + (
             f" ({accounted / unique:.0%})" if unique else "")
-        # Churches of a `no_bulletin` parish are accounted for, but not on the site.
+        # Churches of a `no_bulletin` or `unsupported` parish are accounted for, but not
+        # on the site.
         live, shown = unique - counts["excluded"], counts["church"] - counts["off_site"]
         rep["modelled"] = f"{shown}/{live}" + (
             f" ({shown / live:.0%}) of the entries not excluded, as churches on the site"
@@ -256,6 +257,24 @@ def _save_links(d: Diocese, to_link: Mapping[str, set[str]]) -> dict[str, Any]:
 
 
 # ── Structure audit ─────────────────────────────────────────────────────────
+PARISH_GROUPS = "parishes"  # `audit_ignore_groups`' name for the parish records' own `group`
+
+
+def _ignored_groups(diocese: str) -> set[str]:
+    """The `group` sources `audit` skips: rosters, or parish records, that hold no bulletin
+    grouping, such as deaneries. Every member of a group is paired, so those are only noise.
+    """
+    names = records.load_meta(diocese).get("audit_ignore_groups") or []
+    if not isinstance(names, list) or not all(isinstance(name, str) for name in names):
+        raise records.DioceseError("audit_ignore_groups must be a list of roster names")
+    ignored = set(names)
+    if unknown := ignored - {PARISH_GROUPS, *roster_names(diocese)}:
+        raise records.DioceseError(
+            f"audit_ignore_groups names no roster: {', '.join(sorted(unknown))}"
+            f" (use a roster's name, or {PARISH_GROUPS!r})")
+    return ignored
+
+
 def audit(diocese: str, *, fetch: bool = False) -> dict[str, Any]:
     """Find duplicate-bulletin candidates; only content-supported reviews settle them.
 
@@ -266,14 +285,17 @@ def audit(diocese: str, *, fetch: bool = False) -> dict[str, Any]:
     """
     d = records.load(diocese)
     parishes, churches = d.of(PARISH), d.of(CHURCH)
+    ignored = _ignored_groups(diocese)
     groups: dict[str, set[str]] = {}
     for slug, r in parishes.items():
-        if r.get("group"):
+        if r.get("group") and PARISH_GROUPS not in ignored:
             groups.setdefault(f"group: {r['group']}", set()).add(slug)
     aliases = _aliases(diocese)
     idx = _index(d, aliases)
     explicit = _links(d)
     for name in roster_names(diocese):
+        if name in ignored:
+            continue
         for entry in load_roster(diocese, name)["entries"]:
             if not entry.get("group"):
                 continue
@@ -285,7 +307,7 @@ def audit(diocese: str, *, fetch: bool = False) -> dict[str, Any]:
                     groups.setdefault(f"{name}: {entry['group']}", set()).add(
                         churches[slug].get("parish", ""))
 
-    return audit_rows(d, groups, fetch=fetch)
+    return {**audit_rows(d, groups, fetch=fetch), "ignored_group_sources": sorted(ignored)}
 
 
 # ── Todo ────────────────────────────────────────────────────────────────────
@@ -328,8 +350,35 @@ def todo(diocese: str, *, limit: int = 40) -> dict[str, Any]:
         out["churches_in_no_roster"] = cov.get("churches_in_no_roster", [])
     else:
         out["coverage"] = "no rosters yet: fetch or import the diocese's own list first"
+    out["fetch_gaps"] = [{"parish": e["parish"], "kind": k["kind"],
+                          "bulletin_provider": e["bulletin_provider"], "note": e["note"]}
+                         for k in gaps(diocese)["kinds"] for e in k["entries"]]
     out["incomplete"] = p.incomplete[:limit]
     out["warnings"] = len(p.warnings)
     out["counts"] = {"errors": len(p.errors), "incomplete": len(p.incomplete),
                      "warnings": len(p.warnings)}
     return out
+
+
+def gaps(diocese: str | None = None, kind: str | None = None) -> dict[str, Any]:
+    """Parishes whose bulletin `fetch` can't collect yet (`fetch_gap`), every diocese or
+    one, grouped by kind, the largest group first: the work list for new collectors."""
+    groups: dict[str, list[dict[str, Any]]] = {}
+    for slug in [diocese] if diocese else records.diocese_slugs():
+        for parish, r in records.load(slug).of(PARISH).items():
+            gap = r.get("fetch_gap")
+            if not isinstance(gap, Mapping) or (kind and gap.get("kind") != kind):
+                continue
+            groups.setdefault(str(gap.get("kind") or "?"), []).append({
+                "diocese": slug, "parish": parish, "name": r.get("name", ""),
+                "website": r.get("website", ""),
+                "bulletin_provider": r.get("bulletin_provider", ""),
+                "on_site": r.get("bulletin_provider") not in records.OFF_SITE_PROVIDERS,
+                "bulletin_status": r.get("bulletin_status", ""),
+                "url": gap.get("url", ""), "seen": gap.get("seen", ""),
+                "note": gap.get("note", ""),
+            })
+    kinds = [{"kind": k, "parishes": len(v), "dioceses": sorted({e["diocese"] for e in v}),
+              "entries": v}
+             for k, v in sorted(groups.items(), key=lambda kv: (-len(kv[1]), kv[0]))]
+    return {"total": sum(k["parishes"] for k in kinds), "kinds": kinds}

@@ -1,4 +1,4 @@
-"""The Run's branch and worktree. Only the dispatcher commits, pushes and merges."""
+"""The Run's branch and checkout. Only the dispatcher commits, pushes and merges."""
 
 from __future__ import annotations
 
@@ -14,8 +14,17 @@ from pdf_extract.factory.config import FactoryError
 REGENERATED = ("data/parishes.csv", "data/churches.csv")
 
 
+# Git config a worker might have written (hooks, an fsmonitor command) never runs in the
+# dispatcher's git calls, which hold the GitHub login. As `-c` options for git, and as
+# environment for `gh`, which runs git itself.
+SAFE = ("-c", "core.hooksPath=/dev/null", "-c", "core.fsmonitor=false")
+SAFE_ENV = {"GIT_CONFIG_COUNT": "2",
+            "GIT_CONFIG_KEY_0": "core.hooksPath", "GIT_CONFIG_VALUE_0": "/dev/null",
+            "GIT_CONFIG_KEY_1": "core.fsmonitor", "GIT_CONFIG_VALUE_1": "false"}
+
+
 def git(cwd: Path, *args: str, check: bool = True) -> str:
-    proc = subprocess.run(["git", *args], cwd=cwd, capture_output=True, text=True,
+    proc = subprocess.run(["git", *SAFE, *args], cwd=cwd, capture_output=True, text=True,
                           env={**os.environ, "GIT_TERMINAL_PROMPT": "0"})
     if check and proc.returncode != 0:
         raise FactoryError(f"git {' '.join(args)}: {(proc.stderr or proc.stdout).strip()}")
@@ -23,7 +32,7 @@ def git(cwd: Path, *args: str, check: bool = True) -> str:
 
 
 def ok(cwd: Path, *args: str) -> bool:
-    return subprocess.run(["git", *args], cwd=cwd, capture_output=True).returncode == 0
+    return subprocess.run(["git", *SAFE, *args], cwd=cwd, capture_output=True).returncode == 0
 
 
 def head(cwd: Path) -> str:
@@ -35,21 +44,79 @@ def fetch(cwd: Path, remote: str) -> None:
 
 
 def ensure_worktree(repo: Path, path: Path, branch: str, *, remote: str, base: str) -> bool:
-    """The Run's worktree on its branch; True when it was just created.
+    """The Run's checkout on its branch; True when it was just created.
 
-    A branch already pushed (a worktree lost with the machine) is checked out again.
+    A standalone clone of `remote`, not a linked worktree of `repo`: nothing a Run does
+    reaches the git metadata of the dispatcher's checkout, or the one it was made from
+    (docs/factory-sandbox-plan.md §3.8). `repo`'s objects are copied, not shared, to
+    save fetching them all. A branch already pushed (a checkout lost with the machine)
+    is checked out again. A Run worktree from before the clones keeps working.
     """
     if (path / ".git").exists():
         return False
+    path = path.resolve()  # worktrees_dir is relative to the dispatcher's checkout
     path.parent.mkdir(parents=True, exist_ok=True)
-    git(repo, "worktree", "prune")
-    if ok(repo, "rev-parse", "--verify", "--quiet", f"refs/heads/{branch}"):
-        git(repo, "worktree", "add", str(path), branch)
-    elif ok(repo, "rev-parse", "--verify", "--quiet", f"refs/remotes/{remote}/{branch}"):
-        git(repo, "worktree", "add", "-b", branch, str(path), f"{remote}/{branch}")
+    url = git(repo, "remote", "get-url", remote).strip()
+    git(path.parent, "clone", "--quiet", "--no-checkout", "--origin", remote,
+        "--reference-if-able", str(common_dir(repo)), "--dissociate", url, str(path))
+    if ok(path, "rev-parse", "--verify", "--quiet", f"refs/remotes/{remote}/{branch}"):
+        git(path, "checkout", "--quiet", "-b", branch, f"{remote}/{branch}")
     else:
-        git(repo, "worktree", "add", "--no-track", "-b", branch, str(path), base)
+        git(path, "checkout", "--quiet", "--no-track", "-b", branch, base)
     return True
+
+
+def common_dir(path: Path) -> Path:
+    """The repository's own git folder, also from a linked worktree (which clone's
+    --reference can't take)."""
+    return Path(git(path, "rev-parse", "--path-format=absolute", "--git-common-dir").strip())
+
+
+def is_linked(path: Path) -> bool:
+    """A linked worktree (`.git` is a file pointing into another repository)."""
+    return (path / ".git").is_file()
+
+
+def make_standalone(path: Path, remote: str) -> None:
+    """Turn a linked worktree into a standalone clone of `remote`, in place: same
+    branch, same commits (local ones too), same files, gitignored ones included.
+
+    For the move to clones (`pnpm factory clones`). Run it with the dispatcher stopped.
+    """
+    if not is_linked(path):
+        return
+    path = path.resolve()
+    common = common_dir(path)
+    url = git(path, "remote", "get-url", remote).strip()
+    branch = git(path, "branch", "--show-current").strip()
+    sha = head(path)
+    fresh = path.parent / f".{path.name}.clone"
+    if fresh.exists():
+        shutil.rmtree(fresh)
+    git(path.parent, "clone", "--quiet", "--no-checkout", "--origin", remote,
+        "--reference-if-able", str(common), "--dissociate", url, str(fresh))
+    # Commits only the old repository has (not pushed yet), then its branch.
+    git(fresh, "fetch", "--quiet", str(common), sha)
+    if branch:
+        git(fresh, "branch", "--force", "--no-track", branch, sha)
+        git(fresh, "symbolic-ref", "HEAD", f"refs/heads/{branch}")
+        if ok(fresh, "rev-parse", "--verify", "--quiet", f"refs/remotes/{remote}/{branch}"):
+            git(fresh, "branch", "--set-upstream-to", f"{remote}/{branch}", branch)
+    else:
+        git(fresh, "update-ref", "--no-deref", "HEAD", sha)
+    linked = (path / ".git").read_text(encoding="utf-8")
+    (path / ".git").unlink()
+    try:
+        (fresh / ".git").rename(path / ".git")
+    except OSError:
+        (path / ".git").write_text(linked, encoding="utf-8")
+        raise
+    shutil.rmtree(fresh)
+    git(path, "reset", "--quiet")  # the index for HEAD; the files stay as they are
+    # The old repository's record of it (prune keeps it: the path still has a .git).
+    admin = (path / linked.removeprefix("gitdir:").strip()).resolve()
+    if admin.parent == common.resolve() / "worktrees":
+        shutil.rmtree(admin, ignore_errors=True)
 
 
 def changed_paths(cwd: Path) -> list[str]:
@@ -123,11 +190,13 @@ def merge_upstream(cwd: Path, upstream: str) -> Merge:
 
 
 def remove_worktree(repo: Path, path: Path, branch: str) -> None:
-    """Delete a merged Run's worktree and its local branch (the pushed branch stays)."""
-    if path.exists():
+    """Delete a merged Run's checkout (the pushed branch stays)."""
+    if is_linked(path):  # from before the clones: its branch is in `repo`
         git(repo, "worktree", "remove", "--force", str(path))
-    git(repo, "worktree", "prune")
-    git(repo, "branch", "-D", branch, check=False)
+        git(repo, "worktree", "prune")
+        git(repo, "branch", "-D", branch, check=False)
+    elif path.exists():
+        shutil.rmtree(path)
 
 
 def read_folder(repo: Path, ref: str, folder: str) -> dict[str, str]:

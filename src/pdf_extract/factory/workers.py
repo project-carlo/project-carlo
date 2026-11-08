@@ -1,8 +1,11 @@
 """Workers: a fresh Agent SDK session per job, or a stub that writes canned handoffs.
 
-A worker runs in the Run's worktree in auto mode, on one account's Claude login, without
-GitHub or git credentials, and can't start other agents. It ends with a handoff file;
-everything else about the attempt (steps, cost, how it ended) comes back here.
+A host worker runs in auto mode; container workers bypass permission checks inside
+their sandbox. Each uses one account's Claude login, without
+GitHub or git credentials, and can't start other agents. Its CLI starts through
+`factory/sandbox/claude-in-box` with only the environment named here (sandbox.py). It
+ends with a handoff file; everything else about the attempt (steps, cost, how it ended)
+comes back here.
 """
 
 from __future__ import annotations
@@ -11,6 +14,7 @@ import asyncio
 import importlib.metadata
 import json
 import os
+import re
 import shutil
 import tempfile
 from collections.abc import Callable
@@ -20,10 +24,13 @@ from pathlib import Path
 from typing import Any, Protocol
 
 from pdf_extract.factory.config import Account
-from pdf_extract.factory.stages import StageSpec, fill
+from pdf_extract.factory.sandbox import Backend, HostBackend, Launch, SandboxError
+from pdf_extract.factory.secrets import NO_DOTENV
+from pdf_extract.factory.spec import StageSpec, fill
 
-# How an attempt ended.
+# How an attempt ended. SANDBOX: the sandbox couldn't start it, so no worker ran.
 OK, CRASH, USAGE, TIMEOUT, PARTIAL = "ok", "crash", "usage", "timeout", "partial"
+SANDBOX = "sandbox"
 
 # Workers never commit, push, use gh or move HEAD; the dispatcher does.
 DENIED = [
@@ -32,6 +39,15 @@ DENIED = [
     "Bash(git checkout:*)", "Bash(git switch:*)", "Bash(git rebase:*)", "Bash(git merge:*)",
     "Bash(git stash:*)",
 ]
+
+# Claude Code's context that is no use to a worker, turned off. A worker can't commit or
+# open a PR; `AGENTS.md` is for people's agents, not workers; and what a job learned goes
+# in its handoff, so no worker has ever written a memory.
+WORKER_SETTINGS = {
+    "attribution": {"commit": "", "pr": ""},
+    "autoMemoryEnabled": False,
+    "claudeMdExcludes": ["**/AGENTS.md"],
+}
 
 # The SDK refuses any one message over 1 MB by default. A scanned bulletin page that a
 # worker renders and reads is often more (1.4 MB as base64 in Wilmington), and crashed
@@ -55,6 +71,9 @@ class WorkerRequest:
     system_append: str
     values: dict[str, str]
     session_id: str | None = None  # resume this session
+    attempt_id: int | None = None
+    # The `.env` entries the stage's `secrets:` names.
+    secrets: dict[str, str] = field(default_factory=dict)
     on_step: OnStep = field(default=lambda kind, name, detail: None)
     # Every SDK rate-limit event in full: type, status, utilization, resets_at, overage, raw.
     on_rate_limit: OnRateLimit = field(default=lambda info: None)
@@ -75,6 +94,8 @@ class WorkerResult:
     # From the session: cli_version, model (init), models (each message's), messages and
     # duplicates (records repeating a message id), entrypoint.
     info: dict[str, Any] = field(default_factory=dict)
+    # A sandboxed attempt's changes that weren't brought back, with why (workspace.py).
+    refused: list[str] = field(default_factory=list)
 
 
 def sdk_version() -> str | None:
@@ -105,7 +126,10 @@ def prompt_body(worktree: Path, path: str | None) -> str:
     """A stage's prompt file without its frontmatter (an agent file's model, tools...)."""
     if not path:
         return ""
-    text = (worktree / path).read_text(encoding="utf-8")
+    return strip_frontmatter((worktree / path).read_text(encoding="utf-8"))
+
+
+def strip_frontmatter(text: str) -> str:
     if text.startswith("---\n"):
         end = text.find("\n---\n", 4)
         if end != -1:
@@ -113,33 +137,83 @@ def prompt_body(worktree: Path, path: str | None) -> str:
     return text.strip()
 
 
-def worker_env(account: Account | None) -> dict[str, str]:
-    """No GitHub token, no git credentials, the account's Claude login, not an API key."""
+# A `deny:` rule only stops a command that starts with its prefix: `pnpm --silent seed
+# approve` gets past `Bash(pnpm seed approve:*)`. So the seed CLI also refuses the seed
+# commands a stage denies, named in this variable (read by `pdf_extract.seeding.cli`).
+SEED_REFUSE_ENV = "CARLO_SEED_REFUSE"
+_SEED_RULE = re.compile(r"Bash\((?:pnpm|uv run python -m pdf_extract) seed ([\w-]+):\*\)")
+
+
+def seed_refusals(deny: list[str]) -> list[str]:
+    """The seed commands a stage's `deny:` rules name (`Bash(pnpm seed approve:*)`)."""
+    return sorted({m.group(1) for rule in deny if (m := _SEED_RULE.fullmatch(rule))})
+
+
+def worker_env(account: Account | None, secrets: dict[str, str] | None = None,
+               deny: list[str] | None = None) -> dict[str, str]:
+    """No GitHub token, no git credentials, the account's Claude login, not an API key,
+    the stage's secrets, and the seed commands the stage denies refused by the CLI too.
+    All a worker gets, with the launcher's HOST_PASS."""
     empty = Path(tempfile.gettempdir()) / "carlo-factory-empty-gh"
     empty.mkdir(exist_ok=True)
     env = {
         "GH_TOKEN": "", "GITHUB_TOKEN": "", "GH_CONFIG_DIR": str(empty),
         "GIT_TERMINAL_PROMPT": "0", "GIT_ASKPASS": "", "SSH_ASKPASS": "",
         "GIT_CONFIG_COUNT": "1", "GIT_CONFIG_KEY_0": "credential.helper", "GIT_CONFIG_VALUE_0": "",
-        "ANTHROPIC_API_KEY": "", "CARLO_FACTORY_WORKER": "1",
+        "ANTHROPIC_API_KEY": "", "CARLO_FACTORY_WORKER": "1", **NO_DOTENV,
     }
     if account is not None:
         env["CLAUDE_CONFIG_DIR"] = str(account.config_dir)
-    return env
+    if refused := seed_refusals(deny or []):
+        env[SEED_REFUSE_ENV] = " ".join(refused)
+    return (secrets or {}) | env
 
 
-def find_transcript(account: Account | None, session_id: str | None) -> Path | None:
+def find_transcript(account: Account | None, session_id: str | None,
+                    projects: Path | None = None) -> Path | None:
+    """The session's transcript: in `projects` (a sandboxed attempt's session folder), or
+    the account's own."""
     if not session_id:
         return None
-    base = account.config_dir if account else Path(os.environ.get(
-        "CLAUDE_CONFIG_DIR", Path.home() / ".claude"))
-    return next(iter((base / "projects").glob(f"*/{session_id}.jsonl")), None)
+    if projects is None:
+        base = account.config_dir if account else Path(os.environ.get(
+            "CLAUDE_CONFIG_DIR", Path.home() / ".claude"))
+        projects = base / "projects"
+    return next(iter(projects.glob(f"*/{session_id}.jsonl")), None)
+
+
+def sdk_options(request: WorkerRequest, launch: Launch) -> Any:
+    """The session's options. Never `hooks`, `can_use_tool` or in-process MCP servers:
+    those would run tools here, in the dispatcher, outside the worker's sandbox."""
+    from claude_agent_sdk import ClaudeAgentOptions
+
+    spec = request.spec
+    tools = list(spec.tools) + (["Skill"] if spec.skills else [])
+    return ClaudeAgentOptions(
+        cwd=str(launch.work or request.worktree),
+        cli_path=launch.cli_path,
+        model=spec.model,
+        effort=spec.effort,
+        permission_mode="bypassPermissions" if launch.container else "auto",
+        tools=tools,
+        disallowed_tools=DENIED + list(spec.deny),
+        system_prompt={"type": "preset", "preset": "claude_code",
+                       "append": request.system_append},
+        setting_sources=["project"],
+        settings=json.dumps(WORKER_SETTINGS),
+        skills=list(spec.skills) or None,
+        max_turns=spec.max_turns,
+        resume=request.session_id,
+        env=launch.env,
+        max_buffer_size=MAX_MESSAGE_BYTES,
+    )
 
 
 class SdkWorker:
     """A Claude Agent SDK session (`claude_agent_sdk.query`) running the stage spec."""
 
-    def __init__(self) -> None:
+    def __init__(self, backend: Backend | None = None) -> None:
+        self.backend = backend or HostBackend()
         self._start(None)
 
     def _start(self, session: str | None) -> None:
@@ -151,17 +225,33 @@ class SdkWorker:
 
     def run(self, request: WorkerRequest) -> WorkerResult:
         self._start(request.session_id)
+        launch: Launch | None = None
         try:
+            launch = self.backend.launch(request, worker_env(request.account, request.secrets,
+                                                             request.spec.deny))
             result = asyncio.run(asyncio.wait_for(
-                self._run(request), timeout=request.spec.max_minutes * 60))
+                self._run(request, launch), timeout=request.spec.max_minutes * 60))
+        except SandboxError as exc:  # nothing started; never run it on the host instead
+            result = WorkerResult(SANDBOX, session_id=self._session, error=str(exc)[:2000])
         except TimeoutError:
             result = WorkerResult(TIMEOUT, session_id=self._session, error="over max_minutes",
                                   cost_usd=self._cost, turns=self._turns)
         except Exception as exc:  # the SDK or the CLI died: resume the session
             result = WorkerResult(CRASH, session_id=self._session, error=repr(exc)[:2000],
                                   cost_usd=self._cost, turns=self._turns)
+        except BaseException:  # the dispatcher is stopping: its container goes too
+            if launch is not None:
+                self.backend.finish(launch)
+            raise
+        if launch is not None:
+            try:
+                result.refused = self.backend.finish(launch)
+            except SandboxError as exc:  # it ran, but its changes couldn't come back
+                result = WorkerResult(SANDBOX, session_id=self._session, error=str(exc)[:2000],
+                                      cost_usd=self._cost, turns=self._turns)
         result.info = self._summary()
-        result.transcript = find_transcript(request.account, self._session)
+        result.transcript = find_transcript(request.account, self._session,
+                                            launch.sessions if launch else None)
         return result
 
     def _summary(self) -> dict[str, Any]:
@@ -169,10 +259,9 @@ class SdkWorker:
                 "duplicates": self._records - len(self._ids), "entrypoint": "sdk-py",
                 "sdk_version": sdk_version()}
 
-    async def _run(self, request: WorkerRequest) -> WorkerResult:
+    async def _run(self, request: WorkerRequest, launch: Launch) -> WorkerResult:
         from claude_agent_sdk import (
             AssistantMessage,
-            ClaudeAgentOptions,
             RateLimitEvent,
             ResultMessage,
             SystemMessage,
@@ -181,24 +270,7 @@ class SdkWorker:
             query,
         )
 
-        spec = request.spec
-        tools = list(spec.tools) + (["Skill"] if spec.skills else [])
-        options = ClaudeAgentOptions(
-            cwd=str(request.worktree),
-            model=spec.model,
-            effort=spec.effort,
-            permission_mode="auto",
-            tools=tools,
-            disallowed_tools=DENIED,
-            system_prompt={"type": "preset", "preset": "claude_code",
-                           "append": request.system_append},
-            setting_sources=["project"],
-            skills=list(spec.skills) or None,
-            max_turns=spec.max_turns,
-            resume=request.session_id,
-            env=worker_env(request.account),
-            max_buffer_size=MAX_MESSAGE_BYTES,
-        )
+        options = sdk_options(request, launch)
         result = WorkerResult(CRASH, session_id=request.session_id, error="no result")
         usage: dict[str, Any] | None = None
         model_usage: dict[str, Any] | None = None
@@ -263,6 +335,11 @@ class StubAction:
     rate_limits: list[dict[str, Any]] = field(default_factory=list)
     usage: dict[str, Any] | None = None
     model_usage: dict[str, Any] | None = None
+    cost_usd: float = 0.0  # total_cost_usd: in a resumed session, the session's so far
+    # Lines added to the session's transcript, one file per stub session.
+    transcript: list[str] = field(default_factory=list)
+    # What a sandbox would have refused to bring back (workspace.py).
+    refused: list[str] = field(default_factory=list)
 
 
 Script = Callable[[WorkerRequest, int], StubAction]
@@ -298,9 +375,16 @@ class StubWorker:
             path = request.worktree / "scratch" / request.run_id / request.job_name / "handoff.json"
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text(json.dumps(action.handoff), encoding="utf-8")
-        return WorkerResult(action.outcome, session_id=f"stub-{request.job_id}",
+        session, transcript = f"stub-{request.job_id}", None
+        if action.transcript:
+            transcript = request.worktree.parent / "stub-sessions" / f"{session}.jsonl"
+            transcript.parent.mkdir(parents=True, exist_ok=True)
+            with transcript.open("a", encoding="utf-8") as f:
+                f.writelines(line + "\n" for line in action.transcript)
+        return WorkerResult(action.outcome, session_id=session, cost_usd=action.cost_usd,
                             resets_at=action.resets_at, usage=action.usage,
-                            model_usage=action.model_usage)
+                            model_usage=action.model_usage, transcript=transcript,
+                            refused=list(action.refused))
 
 
 def scenario_script(path: Path) -> Script:

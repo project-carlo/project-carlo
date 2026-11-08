@@ -19,10 +19,11 @@ import {
   type FilterState,
 } from "../components/filterState";
 import {
+  EVENT_TYPE_OPTIONS,
+  type EventType,
   FILTER_DAY_DISPLAY_ORDER,
   FILTER_DAY_LABELS,
-} from "../constants/days";
-import { EVENT_TYPE_OPTIONS } from "../constants/eventTypes";
+} from "@carlo/core";
 import { DESKTOP_MIN_WIDTH, useMinWidth } from "../hooks/useMinWidth";
 import { useDocumentMeta } from "../hooks/useDocumentMeta";
 import { useBrowserLocation } from "../hooks/useBrowserLocation";
@@ -33,7 +34,6 @@ import {
   type PlaceSearchResult,
 } from "../placeSearch";
 import type { HomeMapCenter } from "./HomePage";
-import type { EventType } from "../types";
 import {
   ANY_DAY,
   FILTER_DAY_HEADING,
@@ -184,8 +184,8 @@ export function LandingPage() {
           )}
         >
           <SearchTypeahead
-            hideModeToggle
             size="lg"
+            placeholder={isDesktop ? undefined : "City, ZIP, or church…"}
             filterButton={null}
             onChurchSelect={handleChurchSelect}
             onPlaceSelect={handlePlaceSelect}

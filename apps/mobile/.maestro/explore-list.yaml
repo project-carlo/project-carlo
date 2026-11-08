@@ -1,0 +1,12 @@
+# The shell lists the churches in the shared snapshot fixture.
+appId: com.projectcarlo.app
+---
+- runFlow: subflows/launch.yaml
+- assertVisible:
+    id: church-count
+    text: "2 churches, .*"
+- assertVisible:
+    id: church-row-a
+- assertVisible:
+    id: church-row-b
+- takeScreenshot: explore-list

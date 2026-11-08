@@ -1,0 +1,25 @@
+# Start the app fresh on Explore.
+#
+# With METRO_URL set (`pnpm e2e:mobile -e METRO_URL=http://127.0.0.1:8081`), open
+# the development build at that Metro server; disableAutoLaunch skips the
+# development client's onboarding and its menu at launch. Without METRO_URL,
+# launch the app as installed, which suits builds with the JavaScript bundled in.
+appId: com.projectcarlo.app
+env:
+  METRO_URL: ${METRO_URL || ''}
+---
+- stopApp
+- runFlow:
+    when:
+      true: ${METRO_URL != ''}
+    commands:
+      - openLink: exp+project-carlo://expo-development-client/?url=${encodeURIComponent(METRO_URL)}&disableAutoLaunch=1
+- runFlow:
+    when:
+      true: ${METRO_URL == ''}
+    commands:
+      - launchApp
+- extendedWaitUntil:
+    visible:
+      id: church-list
+    timeout: 60000

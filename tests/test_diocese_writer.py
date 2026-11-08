@@ -68,6 +68,106 @@ def test_writer_patches_fields_and_replaces_lists_without_losing_evidence(root):
     assert result["written"] == ["parishes/anne.md"]
 
 
+def test_append_adds_new_list_items_and_keeps_stored_ones(root):
+    _write(create=True)
+    other = {"url": "https://example.org/two", "seen": "2026-10-20", "note": "Another page."}
+    _write(payload={"research": [_attempt()], "publication": ["url:https://example.org/one"]})
+    _write(append=True, payload={
+        "evidence": [other, other, EVIDENCE[0]],
+        "research": [_attempt()],
+        "publication": ["url:https://example.org/one", "url:https://example.org/two"],
+        "name": "St. Anne Renamed",
+    })
+    record = records.load("test").of(records.PARISH)["anne"]
+    assert record["evidence"] == [*EVIDENCE, other]
+    assert record["research"] == [_attempt()]
+    assert record["publication"] == ["url:https://example.org/one", "url:https://example.org/two"]
+    assert record["name"] == "St. Anne Renamed"
+
+
+BODY = """Intro.
+
+## Worship sites
+
+St. Anne, Main St.
+
+### Former sites
+
+St. Old, closed.
+
+## Not yet confirmed
+
+Nothing.
+"""
+
+
+def _body(sections, key="body_sections", **kwargs):
+    _write(payload={key: sections}, **kwargs)
+    return records.load("test").of(records.PARISH)["anne"]["body"]
+
+
+def test_body_sections_replace_one_section_and_keep_the_rest(root):
+    _write(create=True)
+    _write(payload={"body": BODY})
+    assert _body({"Not yet confirmed": "Her Mass times."}) == BODY.strip().replace(
+        "Nothing.", "Her Mass times.")
+    _write(payload={"body": BODY})
+    assert _body({"Worship sites": "One church."}) == (
+        "Intro.\n\n## Worship sites\n\nOne church.\n\n## Not yet confirmed\n\nNothing.")
+
+
+def test_body_sections_append_to_a_section_or_add_a_missing_one(root):
+    _write(create=True)
+    _write(payload={"body": BODY})
+    body = _body({"Worship sites": "Also a chapel.", "Clergy": "Fr. Ann."}, key="body_append")
+    assert "St. Old, closed.\n\nAlso a chapel.\n\n## Not yet confirmed" in body
+    assert body.endswith("Nothing.\n\n## Clergy\n\nFr. Ann.")
+
+
+def test_append_extends_lists_while_body_sections_still_replace(root):
+    _write(create=True)
+    _write(payload={"body": BODY})
+    other = {"url": "https://example.org/two", "seen": "2026-10-20", "note": "Another page."}
+    _write(append=True, payload={"evidence": [other],
+                                 "body_sections": {"Not yet confirmed": "Her Mass times."}})
+    record = records.load("test").of(records.PARISH)["anne"]
+    assert record["evidence"] == [*EVIDENCE, other]
+    assert record["body"] == BODY.strip().replace("Nothing.", "Her Mass times.")
+
+
+@pytest.mark.parametrize("payload,kwargs,message", [
+    ({"body": "New.", "body_sections": {"A": "b"}}, {}, "body_sections"),
+    ({"body": "New.", "body_append": {"A": "b"}}, {}, "body_append"),
+    ({"body_sections": {"## A": "b"}}, {}, "without their #s"),
+    ({"body_append": {"## A": "b"}}, {}, "without their #s"),
+    ({"body_sections": {"A": " "}}, {}, "non-empty"),
+    ({"body_sections": ["A"]}, {}, "must map"),
+    ({"name": "New"}, {"append": True, "create": True, "slug": "bede"}, "--append"),
+])
+def test_bad_body_patches_are_refused(root, payload, kwargs, message):
+    _write(create=True)
+    before = records.load("test").of(records.PARISH)["anne"]
+    with pytest.raises(DioceseError, match=message):
+        _write(payload=payload, **kwargs)
+    assert records.load("test").of(records.PARISH)["anne"] == before
+
+
+def test_a_heading_used_twice_is_refused(root):
+    _write(create=True)
+    _write(payload={"body": "## Notes\n\nOne.\n\n## Notes\n\nTwo."})
+    with pytest.raises(DioceseError, match="2 sections"):
+        _body({"Notes": "Three."})
+
+
+def test_cli_append_flag_reaches_the_writer(root, monkeypatch, capsys):
+    _write(create=True)
+    other = {"url": "https://example.org/two", "seen": "2026-10-20", "note": "Another page."}
+    monkeypatch.setattr("sys.stdin", io.StringIO(json.dumps({"evidence": [other]})))
+    assert main(["diocese", "write", "test", "parish", "anne", "--file", "-", "--append"]) == 0
+    capsys.readouterr()
+    assert records.load("test").of(records.PARISH)["anne"]["evidence"] == [*EVIDENCE, other]
+
+
 @pytest.mark.parametrize("patch", [
     {"website": "bad-url"}, {"publication": 123}, {"provider_id": {}},
     {"evidence": ["a quote"]}, {"evidence": [{"url": "bad", "seen": "2026-10-21"}]},
@@ -78,6 +178,13 @@ def test_writer_patches_fields_and_replaces_lists_without_losing_evidence(root):
     {"research": [_attempt(revisit_after=0)]},
     {"research": [_attempt(revisit_after="")]},
     {"bulletin_status": "absent"}, {"body": 7}, {"invented": "field"},
+    {"fetch_gap": "solutio"}, {"fetch_gap": {"kind": "Solutio 403", "seen": "2026-10-21",
+                                            "note": "403"}},
+    {"fetch_gap": {"kind": "solutio-file-403", "seen": "2026-10-21"}},
+    {"fetch_gap": {"kind": "solutio-file-403", "seen": "2026-10-21", "note": "403",
+                   "url": "ftp://example.org"}},
+    {"fetch_gap": {"kind": "solutio-file-403", "seen": "2026-10-21", "note": "403",
+                   "invented": 1}},
     {"publication_reviews": [{"parish": "missing", "decision": "separate",
                               "evidence": EVIDENCE}]},
 ])
@@ -221,3 +328,74 @@ def test_fetch_cli_bad_expectations_are_input_errors(option, value, capsys):
     assert main(["fetch-check", option, value]) == 1
     captured = capsys.readouterr()
     assert captured.out == "" and "Traceback" not in captured.err
+
+
+def _gap(kind="solutio-file-403", **changes):
+    return {"kind": kind, "seen": "2026-10-21", "url": "https://example.org/bulletin/7/file",
+            "note": "Solutio /file links answer 403 to the fetcher.", **changes}
+
+
+def test_fetch_gaps_are_written_listed_by_kind_and_cleared(root):
+    _write("anne", {**_payload("St. Anne"), "fetch_gap": _gap()}, create=True)
+    _write("bede", {**_payload("St. Bede"), "fetch_gap": _gap()}, create=True)
+    _write("clare", {**_payload("St. Clare"), "fetch_gap": _gap("joomla-weblink-redirect")},
+           create=True)
+    _write("dunstan", _payload("St. Dunstan"), create=True)
+    assert "fetch_gap" not in (root / "parishes/dunstan.md").read_text()
+
+    out = report.gaps()
+    assert out["total"] == 3
+    assert [(k["kind"], k["parishes"]) for k in out["kinds"]] == [
+        ("solutio-file-403", 2), ("joomla-weblink-redirect", 1)]
+    assert [e["parish"] for e in out["kinds"][0]["entries"]] == ["anne", "bede"]
+    assert report.gaps("test", "joomla-weblink-redirect")["total"] == 1
+    assert [g["parish"] for g in report.todo("test")["fetch_gaps"]] == ["anne", "bede", "clare"]
+
+    _write("anne", {"fetch_gap": None})
+    assert "fetch_gap" not in (root / "parishes/anne.md").read_text()
+    assert report.gaps("test", "solutio-file-403")["total"] == 1
+    with pytest.raises(DioceseError):
+        report.gaps("missing")
+
+    # new_record (scripts, bulk adds) keeps the object rather than turning it into text
+    records.new_record("test", "parish", {"name": "St. Edith", "fetch_gap": _gap(),
+                                          "website": "https://example.org/edith"})
+    assert records.load("test").of(records.PARISH)["st-edith"]["fetch_gap"] == _gap()
+
+
+def test_a_field_on_the_wrong_kind_says_where_it_goes(root):
+    payload = {**_payload(), "roster": ["directory:24513"], "city": "Town"}
+    with pytest.raises(DioceseError) as error:
+        _write(payload=payload, create=True)
+    message = str(error.value)
+    assert "parish has no writable fields: city, roster" in message
+    assert "roster links name places, so they go on the parish's churches" in message
+    assert "addresses and coordinates go on the parish's churches" in message
+    assert "parish fields: name, website," in message and "diocese write --help" in message
+    assert not (root / "parishes/anne.md").exists()
+    with pytest.raises(DioceseError, match="bulletin fields go on the parish record"):
+        records.write_record("test", "church", "anne-town", {"website": "https://x.org"},
+                             create=True)
+
+
+def test_write_help_lists_each_kinds_fields_and_a_copyable_example(capsys):
+    with pytest.raises(SystemExit):
+        main(["diocese", "write", "--help"])
+    out = capsys.readouterr().out
+    assert "  parish: name (text)" in out and "roster ([text])" in out
+    assert "never on a parish" in out
+    example = out[out.index("<<'JSON'") + len("<<'JSON'"):out.rindex("JSON")]
+    assert json.loads(example)["roster"] == ["directory:24527", "gcatholic:18685"]
+
+
+def test_new_takes_the_slug_as_an_argument_or_a_flag(root, capsys):
+    _write(create=True)
+    assert main(["diocese", "new", "church", "test", "anne-church", "--parish", "anne",
+                 "--name", "St. Anne Church"]) == 0
+    assert json.loads(capsys.readouterr().out)["created"] == "churches/anne-church.md"
+    assert main(["diocese", "new", "church", "test", "--slug", "anne-chapel", "--parish",
+                 "anne", "--name", "St. Anne Chapel"]) == 0
+    assert json.loads(capsys.readouterr().out)["created"] == "churches/anne-chapel.md"
+    assert main(["diocese", "new", "church", "test", "one", "--slug", "two", "--parish",
+                 "anne", "--name", "X"]) == 1
+    assert "two slugs given" in capsys.readouterr().err

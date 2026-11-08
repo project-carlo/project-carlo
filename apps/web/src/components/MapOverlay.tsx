@@ -11,7 +11,8 @@ import { useDocumentLinks } from "../lib/documentLinks";
 import { isAboutPageEnabled } from "../lib/featureFlags";
 import { CHURCH_INDEX_PATH } from "../lib/seo";
 import { CHURCH_LIST } from "../copy";
-import { EVENT_TYPE_LABELS } from "../constants/eventTypes";
+import { EVENT_TYPE_LABELS } from "@carlo/core";
+import type { LatLng } from "../lib/cities";
 import type { PlaceSearchResult } from "../placeSearch";
 
 const aboutPageEnabled = isAboutPageEnabled();
@@ -28,6 +29,8 @@ interface MapOverlayProps {
   onFilterPanelOpenChange: (open: boolean) => void;
   onChurchSelect: (church: ChurchSearchResult) => void;
   onPlaceSelect: (place: PlaceSearchResult) => void;
+  /** The middle of the map, for ranking search results around. */
+  getSearchCenter?: () => LatLng | null;
   pinnedPlaceTitle?: string;
   onClearPlace: () => void;
   /** Lines under the search box, above a pinned place's. */
@@ -56,6 +59,7 @@ export function MapOverlay({
   onFilterPanelOpenChange,
   onChurchSelect,
   onPlaceSelect,
+  getSearchCenter,
   pinnedPlaceTitle,
   onClearPlace,
   children,
@@ -98,12 +102,10 @@ export function MapOverlay({
           />
           <div className="mt-3 md:mt-5">
             <SearchTypeahead
-              hideModeToggle
-              placePlaceholder={
-                isDesktop ? undefined : "City, ZIP, or address…"
-              }
+              placeholder={isDesktop ? undefined : "City, ZIP, or church…"}
               onChurchSelect={onChurchSelect}
               onPlaceSelect={onPlaceSelect}
+              getSearchCenter={getSearchCenter}
               filterButton={
                 // A button, not a link, and named for what the map shows, so
                 // it's plain both that it's a control and what it controls.

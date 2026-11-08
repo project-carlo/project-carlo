@@ -12,7 +12,7 @@ import type { useMapSelection } from "@/hooks/useMapSelection";
 import { CITY_MAP_CHIP_CLASS } from "@/lib/cityMap";
 import { cn } from "@/lib/utils";
 import { currentLocationPlace } from "../placeSearch";
-import type { ChurchMapItem } from "../types";
+import type { ChurchMapItem } from "@carlo/core";
 
 const noop = () => {};
 
@@ -52,6 +52,11 @@ export default function CityMapOpenControls({
     filterPanelOpen && !isDesktop,
   );
   const { selectChurch, selectPlace, clearPlace, centerOn } = selection;
+  const getSearchCenter = useCallback(() => {
+    if (!map) return null;
+    const { lat, lng } = map.getCenter();
+    return { lat, lng };
+  }, [map]);
   const {
     status: locateStatus,
     error: locateError,
@@ -98,6 +103,7 @@ export default function CityMapOpenControls({
           onFilterPanelOpenChange={noop}
           onChurchSelect={selectChurch}
           onPlaceSelect={selectPlace}
+          getSearchCenter={getSearchCenter}
           pinnedPlaceTitle={centerOn?.placeTitle}
           onClearPlace={clearPlace}
         />

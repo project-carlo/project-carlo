@@ -1108,6 +1108,118 @@ def test_a_page_whose_cards_render_late_is_read_again() -> None:
     assert source_url == f"{HOME}/_files/ugd/23b1db_bb.pdf"
 
 
+class _SizedResponse:
+    """A response with `body`, declaring `content_length` if given."""
+
+    def __init__(self, body, content_length=None):
+        self.body = body
+        self.headers = {} if content_length is None else {"Content-Length": content_length}
+        self.sized_reads = []
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *exc):
+        return False
+
+    def read(self, size=None):
+        self.sized_reads.append(size)
+        return self.body if size is None else self.body[:size]
+
+
+def test_http_get_refuses_a_declared_size_over_the_limit_without_reading_it(monkeypatch):
+    from pdf_extract import fetch
+
+    response = _SizedResponse(b"", content_length="1000000001")
+    monkeypatch.setattr(fetch, "urlopen", lambda req, timeout: response)
+
+    with pytest.raises(fetch.DownloadTooLarge):
+        fetch._http_get("https://example.org/b.pdf")
+
+    assert response.sized_reads == []
+
+
+def test_http_get_stops_reading_a_body_of_unknown_size_at_the_limit(monkeypatch):
+    from pdf_extract import fetch
+
+    monkeypatch.setattr(fetch, "MAX_DOWNLOAD_BYTES", 4)
+    monkeypatch.setattr(fetch, "urlopen", lambda req, timeout: _SizedResponse(b"%PDF-big"))
+
+    with pytest.raises(fetch.DownloadTooLarge):
+        fetch._http_get("https://example.org/b.pdf")
+
+
+def test_http_get_keeps_a_body_at_the_limit(monkeypatch):
+    from pdf_extract import fetch
+
+    monkeypatch.setattr(fetch, "MAX_DOWNLOAD_BYTES", 4)
+    monkeypatch.setattr(fetch, "urlopen", lambda req, timeout: _SizedResponse(b"%PDF"))
+
+    assert fetch._http_get("https://example.org/b.pdf").body == b"%PDF"
+
+
+def test_http_get_reads_a_declared_body_unsized_so_a_cut_off_read_raises(monkeypatch):
+    # http.client only raises IncompleteRead from an unsized read: a sized one
+    # would quietly return, and store, a truncated PDF.
+    from pdf_extract import fetch
+
+    response = _SizedResponse(b"%PDF", content_length="4")
+    monkeypatch.setattr(fetch, "urlopen", lambda req, timeout: response)
+
+    fetch._http_get("https://example.org/b.pdf")
+
+    assert response.sized_reads == [None]
+
+
+def test_http_get_caps_a_chunked_body_whatever_its_content_length_says(monkeypatch):
+    # http.client ignores Content-Length on a chunked body, so it limits nothing.
+    from pdf_extract import fetch
+
+    monkeypatch.setattr(fetch, "MAX_DOWNLOAD_BYTES", 4)
+    response = _SizedResponse(b"%PDF-big", content_length="4")
+    response.headers["Transfer-Encoding"] = "chunked"
+    monkeypatch.setattr(fetch, "urlopen", lambda req, timeout: response)
+
+    with pytest.raises(fetch.DownloadTooLarge):
+        fetch._http_get("https://example.org/b.pdf")
+
+
+def test_an_oversized_download_over_https_is_not_swallowed(monkeypatch):
+    # The bot check's page must not be taken for the bulletin it stands in front of.
+    from pdf_extract import fetch
+
+    def get(url, **_):
+        if url.startswith("http://"):
+            return fetch._Response(b"<html>sgcaptcha</html>")
+        raise fetch.DownloadTooLarge("Over 1000 MB")
+
+    monkeypatch.setattr(fetch, "_http_get", get)
+
+    with pytest.raises(fetch.DownloadTooLarge):
+        fetch._download_bulletin(
+            fetch_url="http://example.org/b.pdf", source_url="http://example.org/page",
+        )
+
+
+def test_an_oversized_download_is_not_retried_from_the_source_address(monkeypatch):
+    from pdf_extract import fetch
+
+    calls = []
+
+    def get(url, **_):
+        calls.append(url)
+        raise fetch.DownloadTooLarge("Over 1000 MB")
+
+    monkeypatch.setattr(fetch, "_http_get", get)
+
+    with pytest.raises(fetch.DownloadTooLarge):
+        fetch._download_bulletin(
+            fetch_url="https://example.org/b.pdf", source_url="https://example.org/page",
+        )
+
+    assert calls == ["https://example.org/b.pdf"]
+
+
 def test_http_get_percent_encodes_a_non_ascii_referer(monkeypatch):
     # A WordPress file name with an en dash used to raise UnicodeEncodeError
     # when it was sent as the Referer of the next request.
@@ -1124,7 +1236,7 @@ def test_http_get_percent_encodes_a_non_ascii_referer(monkeypatch):
         def __exit__(self, *exc):
             return False
 
-        def read(self):
+        def read(self, _size=-1):
             return b"%PDF"
 
     def fake_urlopen(req, timeout):
@@ -1145,6 +1257,30 @@ def test_document_base_url_honours_base_href():
     assert document_base_url(html, page) == "http://stjohneverettpa.org/"
     assert document_base_url("<html><body></body></html>", page) == page
     assert document_base_url("<base target='_blank'>", page) == page
+
+
+@pytest.mark.parametrize("text,expected", [
+    ("046a_2026_11_01-1.pdf", date(2026, 11, 1)),
+    ("046a_2026_11_01.pdf", date(2026, 11, 1)),
+    ("046a_2026_08_09-6f3z.pdf", date(2026, 8, 9)),
+    ("CSJ-2026_9_27-bulletin-combined.pdf", date(2026, 9, 27)),
+    ("6400_12_25_Bulletin_2026-11-01.pdf", date(2026, 11, 1)),
+    ("Nov 7.21.pdf", date(2021, 11, 7)),
+    ("Nov 7.26.pdf", date(2026, 11, 7)),
+    ("Oct 11.12.pdf", date(2026, 10, 11)),  # a weekend, not 2012
+    ("Oct 11.27.pdf", date(2026, 10, 11)),  # next year's isn't an issue yet
+    ("Oct 11.10am.pdf", date(2026, 10, 11)),
+    ("Oct 31.01.pdf", date(2026, 10, 31)),  # a weekend across the month's end, not 2001
+    ("bulletin-2022-october-23.24.pdf", date(2022, 10, 23)),  # the year came first
+    ("2024 Oct 11.21.pdf", date(2024, 10, 11)),
+    ("Parish%20Update%20October%2021%202026-1.pdf", date(2026, 10, 21)),
+    ("Bulletin%20October%2025%2C%202026.pdf", date(2026, 10, 25)),
+    ("Bulletin%2010-18-26.pdf", date(2026, 10, 18)),
+    ("Nov%207.21.pdf", date(2021, 11, 7)),
+    ("Sig=DlUk8bsZExGj1HJ%2B6bGSZd%2FGq2ZVLx%3D", None),
+])
+def test_parse_date_reads_joined_and_encoded_file_names(text, expected):
+    assert parse_date_from_texts([text], date(2026, 11, 7)) == expected
 
 
 def test_parse_date_reads_an_unseparated_month_day_year_near_the_reference():

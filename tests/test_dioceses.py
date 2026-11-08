@@ -326,6 +326,46 @@ def test_import_roster_accepts_loose_keys(root: Path, tmp_path: Path) -> None:
         "St. Mary", "Pavilion", "#14", "st-mary-pavilion")
 
 
+def _import_help(capsys: pytest.CaptureFixture[str]) -> str:
+    with pytest.raises(SystemExit):
+        main(["diocese", "roster", "import", "--help"])
+    return capsys.readouterr().out
+
+
+def test_roster_import_help_documents_every_entry_field(capsys) -> None:
+    assert set(rosters._ENTRY_NOTES) == set(rosters.ENTRY_FIELDS)
+    assert set(rosters._IMPORT_EXAMPLE) == set(rosters.ENTRY_FIELDS)
+    assert set(rosters._IMPORT_ALIASES.values()) <= set(rosters.ENTRY_FIELDS)
+    out = _import_help(capsys)
+    for field in rosters.ENTRY_FIELDS:
+        assert f"  {field} " in out
+
+
+def test_roster_import_help_examples_import_as_shown(root: Path, tmp_path: Path, capsys) -> None:
+    out = _import_help(capsys)
+    lines = [line.strip() for line in out.splitlines()]
+    header = lines.index(",".join(rosters.ENTRY_FIELDS))
+    src = tmp_path / "list.csv"
+    src.write_text("\n".join(lines[header:header + 2]) + "\n", encoding="utf-8")
+    rosters.import_roster("test", "from-csv", src)
+    entry = rosters.load_roster("test", "from-csv")["entries"][0]
+    expected = {k: str(v) for k, v in rosters._IMPORT_EXAMPLE.items()}
+    assert entry == expected | {"latitude": 40.5, "longitude": -74.3}
+
+    src = tmp_path / "list.json"
+    src.write_text(next(line for line in lines if line.startswith("[{")), encoding="utf-8")
+    rosters.import_roster("test", "from-json", src)
+    entry = rosters.load_roster("test", "from-json")["entries"][0]
+    assert (entry["id"], entry["group"], entry["line1"]) == ("st-ann-town", "Family 12", "")
+
+
+def test_import_roster_keeps_a_blank_id_as_the_help_warns(root: Path, tmp_path: Path) -> None:
+    src = tmp_path / "list.csv"
+    src.write_text("id,name\n,St. Ann\n", encoding="utf-8")
+    rosters.import_roster("test", "blank", src)
+    assert rosters.load_roster("test", "blank")["entries"][0]["id"] == ""
+
+
 def test_audit_sorts_groups_by_what_is_recorded(root: Path) -> None:
     _parish("a", group="Family #1", publication=["po-container:1/1"])
     _parish("b", group="Family #1", publication=["po-container:1/2"])
@@ -420,6 +460,63 @@ def test_no_bulletin_parishes_stay_off_the_site(root: Path) -> None:
     _write(path, path.read_text(encoding="utf-8").replace(
         "bulletin_provider: no_bulletin", "bulletin_provider: ecatholic"))
     assert records.promote("test")["churches"]["added"] == ["st-ann-town"]
+
+
+GAP = {"kind": "viewer-wrapped-pdf", "seen": "2026-11-03",
+       "note": "The page links viewer pages; the PDF is at /bulletins/file/<name>."}
+
+
+def test_unsupported_parishes_stay_off_the_site_until_a_provider_is_set(root: Path) -> None:
+    _parish()
+    _church()
+    _parish("gap", bulletin_provider="unsupported", publication=["url:https://gap.org/b"],
+            fetch_gap=GAP)
+    _church("gap-town", parish="gap")
+    records.promote("test")
+    assert [r["slug"] for r in _live("PARISHES_CSV_PATH")] == ["live-parish", "st-ann"]
+    assert [r["slug"] for r in _live("CHURCHES_CSV_PATH")] == ["st-live", "st-ann-town"]
+    d = records.load("test")
+    assert "promoted" not in d.of(records.PARISH)["gap"]
+    assert d.of(records.PARISH)["gap"]["fetch_gap"] == GAP  # its evidence stays
+    assert d.of(records.PARISH)["gap"]["publication"] == ["url:https://gap.org/b"]
+    # A live row turned unsupported goes off the site, with the provider named...
+    path = root / "parishes" / "st-ann.md"
+    records.write_record("test", "parish", "st-ann",
+                         {"bulletin_provider": "unsupported", "fetch_gap": GAP})
+    warnings = records.validate("test")["dioceses"]["test"]["warnings"]
+    assert "parish 'st-ann': unsupported, but still in data/parishes.csv; run `diocese " \
+        "promote` to take it off" in warnings
+    assert any(w.startswith("church 'st-ann-town': unsupported, but still") for w in warnings)
+    assert records.promote("test")["churches"]["removed"] == ["st-ann-town"]
+    # ...and comes back only when someone sets the provider a collector reads.
+    records.write_record("test", "parish", "st-ann",
+                         {"bulletin_provider": "ecatholic", "fetch_gap": None})
+    assert records.promote("test")["churches"]["added"] == ["st-ann-town"]
+    assert path.exists()
+
+
+def test_unsupported_needs_a_fetch_gap_and_other_gap_rows_are_warned(root: Path) -> None:
+    with pytest.raises(DioceseError, match="unsupported needs a fetch_gap"):
+        records.write_record("test", "parish", "gap", {
+            "name": "Gap", "website": "https://gap.org", "bulletin_provider": "unsupported",
+            "evidence": EVIDENCE}, create=True)
+    _parish("quiet", bulletin_provider="no_bulletin", fetch_gap=GAP)
+    _parish("goes-live", bulletin_provider="other", fetch_gap=GAP)
+    _parish("odd", bulletin_provider="unsupported", fetch_gap=GAP, bulletin_status="not-found")
+    warnings = records.validate("test")["dioceses"]["test"]["warnings"]
+    assert any(w.startswith("parish 'quiet': no_bulletin with a fetch_gap") for w in warnings)
+    assert any(w.startswith("parish 'goes-live': fetch_gap on a other row, which goes live")
+               for w in warnings)
+    assert any(w.startswith("parish 'odd': unsupported is for a bulletin that is published")
+               for w in warnings)
+    # unsupported keeps its identity: it is still asked for publication ids.
+    assert any(w.startswith("parish 'odd': no publication id recorded") for w in warnings)
+
+
+def test_fetch_check_explains_an_unsupported_parish(root: Path, capsys) -> None:
+    _parish("gap", bulletin_provider="unsupported", fetch_gap=GAP)
+    assert main(["fetch-check", "--diocese", "test", "--parish", "gap"]) == 1
+    assert "unsupported, so fetch has no collector for it: gap" in capsys.readouterr().err
 
 
 def test_live_parishes_have_a_bulletin_provider() -> None:

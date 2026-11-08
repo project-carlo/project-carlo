@@ -17,7 +17,13 @@ import type {
 import L from "leaflet";
 import { MapContainer, Marker, Polygon, Popup, TileLayer } from "./Leaflet";
 import { useMap, useMapEvents } from "../lib/leafletMap";
-import type { ChurchMapItem, EventSummary } from "../types";
+import {
+  type ChurchMapItem,
+  EVENT_TYPE_LABELS,
+  type EventSummary,
+  formatAddress,
+  rollUpEventsByDay,
+} from "@carlo/core";
 import type { MapView } from "../lib/mapView";
 import type { MapStart } from "../lib/mapStart";
 import {
@@ -40,9 +46,6 @@ import {
 } from "../lib/churchPin";
 import { useDocumentLinks } from "../lib/documentLinks";
 import { OSM_TILE_URL } from "../lib/staticMap";
-import { rollUpEventsByDay } from "../lib/eventRollup";
-import { formatAddress } from "../utils";
-import { EVENT_TYPE_LABELS } from "../constants/eventTypes";
 import { UNNAMED_CHURCH } from "../copy";
 import { Fleuron } from "@/components/Fleuron";
 
@@ -1018,7 +1021,6 @@ export const ChurchMap = memo(function ChurchMap({
       zoomControl={false}
       whenReady={handleReady}
     >
-      {centerOn && <ChangeView center={centerOn} minZoom={selectedSoloZoom} />}
       {onViewChange && <ViewReporter onViewChange={onViewChange} />}
       <PopupPaneElevator />
       <TileLayer
@@ -1033,6 +1035,10 @@ export const ChurchMap = memo(function ChurchMap({
         onPopupRequestHandled={setHandledRequestId}
         compactPopups={compactPopups}
       />
+      {/* After the layers that listen for the map's moves: a long jump moves
+       *  it at once, firing moveend inside this effect, and on the map's first
+       *  render their listeners are only added by their own effects. */}
+      {centerOn && <ChangeView center={centerOn} minZoom={selectedSoloZoom} />}
       {centerOn?.placeTitle ? (
         <SearchPlaceMarker
           place={{

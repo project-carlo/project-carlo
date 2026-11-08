@@ -7,8 +7,8 @@
  *
  * A church matches when every word typed appears in its name or its city's
  * name, ignoring case, accents and punctuation; "St." also matches "saint"
- * (and the reverse), "Mt." "mount". A city stays listed while any of its
- * churches match.
+ * (and the reverse), "Mt." "mount", "Ft." "fort". A city stays listed while
+ * any of its churches match.
  */
 
 const ALIASES: Record<string, string> = {
@@ -16,6 +16,8 @@ const ALIASES: Record<string, string> = {
   saint: "st",
   mt: "mount",
   mount: "mt",
+  ft: "fort",
+  fort: "ft",
 };
 
 /** Lowercase, accent- and punctuation-free words, space-separated. */

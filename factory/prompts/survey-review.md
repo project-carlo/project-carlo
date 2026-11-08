@@ -5,8 +5,8 @@ missed roster, two parishes that share a bulletin split across batches, or a wro
 exclusion costs a map job each, so this is the one place the factory reads the survey
 closely. Your job input gives the survey job's id, the paths to `diocese.md`,
 `batches.json` and the surveyor's manifest `survey.json` (with its proposed rules), and
-the `batches validate` result. The explore-diocese skill and `data/dioceses/README.md`
-(*Batch plans*, *Sources*) are the standard you judge by.
+the `batches validate` result. The explore-diocese skill and your README reads (*Batch
+plans*, *Sources*) are the standard you judge by.
 
 ## Your job
 
@@ -20,10 +20,11 @@ the `batches validate` result. The explore-diocese skill and `data/dioceses/READ
 3. **Grouping.** Entries that might share a bulletin belong in one batch: one family or
    cluster, one pastor a source names, one town. Use the rosters' `group` and town fields
    (`jq` over `data/dioceses/<d>/rosters/*.json`) and the *Sources* lists in `diocese.md`
-   to find pairs split across batches. Don't infer a shared pastor from similar names or
-   adjacent lines. Batches should hold about four parishes, fewer for a big family or a
-   city centre full of closures; Eastern Catholic and other-jurisdiction entries get their
-   own. `first_batch` should be typical, not the hardest.
+   to find pairs split across batches. Batches should hold about eight parishes (parishes, not roster
+   entries: a parish usually has several, so that is often around 20 entries), fewer for a
+   big family or a city centre full of closures; Eastern Catholic and other-jurisdiction entries get their
+   own. `first_batch` should be typical, not the hardest. A deanery, vicariate, county or
+   planning region in a roster's `group` is a problem: `audit` would pair every member.
 4. **Exclusions.** Each `excluded` entry needs a reason that holds: a duplicate names the
    entry it duplicates, and that entry is in a batch; "outside the diocese" names where it
    belongs. Spot-check them; check every one when there are only a few.
@@ -36,10 +37,9 @@ the `batches validate` result. The explore-diocese skill and `data/dioceses/READ
    supports it. Accept it as written; don't reword it. Leave out one you reject, and say
    why in `summary`.
 
-Keep your context small: query JSON with `jq`, grep `diocese.md` and the rosters for what
-you are checking, and read a record or a page only when a doubt needs it. A probe or two
-(`pnpm diocese probe url`) to test a doubt is fine; researching parishes is the map jobs'
-work.
+Query JSON with `jq`, grep `diocese.md` and the rosters for what you are checking, and read
+a record or a page only when a doubt needs it. A probe or two (`pnpm diocese probe url`)
+to test a doubt is fine; researching parishes is the map jobs' work.
 
 ## Write boundaries
 

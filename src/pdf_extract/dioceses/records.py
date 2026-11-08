@@ -27,6 +27,7 @@ import datetime as dt
 import math
 import re
 import tempfile
+import textwrap
 from collections.abc import Iterable, Mapping
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -35,7 +36,7 @@ from typing import Any
 import yaml
 
 from pdf_extract import storage
-from pdf_extract.dioceses import research
+from pdf_extract.dioceses import gaps, research
 from pdf_extract.dioceses.publications import (
     REVIEW_WORDING,
     review_gap,
@@ -49,11 +50,17 @@ META_FILE = "diocese.md"
 ROSTERS_DIR = "rosters"
 LIVE = "live"  # how `search` labels rows of data/parishes.csv and data/churches.csv
 
-# Every value a parish record may use. `fetch` reads the first four; `no_bulletin`
-# rows stay out of data/parishes.csv (see `unpublished`).
+# Every value a parish record may use. `fetch` reads the first five. The last two keep a
+# parish and its churches in the records but out of data/parishes.csv (see `unpublished`):
+# `no_bulletin`, no bulletin was found; `unsupported`, a bulletin is published but no
+# collector reads it yet (its `fetch_gap` says what fails). Setting a real provider puts
+# the row back; nothing does that by itself when a collector lands.
 NO_BULLETIN = "no_bulletin"
+UNSUPPORTED = "unsupported"
+OFF_SITE_PROVIDERS = frozenset({NO_BULLETIN, UNSUPPORTED})
 KNOWN_BULLETIN_PROVIDERS = frozenset(
-    {"parishes_online", "ecatholic", "discover_mass", "other", "google_drive", NO_BULLETIN}
+    {"parishes_online", "ecatholic", "discover_mass", "other", "google_drive",
+     *OFF_SITE_PROVIDERS}
 )
 # Providers `fetch` looks up by account id rather than by the parish website.
 PROVIDERS_NEEDING_ID = frozenset({"parishes_online", "discover_mass"})
@@ -126,7 +133,7 @@ PARISH = Kind(
         "name", "website", "bulletin_provider", "provider_id", "publication", "group", "evidence",
     ),
     optional=("replaces", *_REVISIT, "promoted", "research", "bulletin_status",
-              "publication_reviews"),
+              "fetch_gap", "publication_reviews"),
     template="""\
 ## Publisher
 
@@ -208,12 +215,14 @@ KINDS: dict[str, Kind] = {k.name: k for k in (PARISH, CHURCH, EXCLUDED, OPEN)}
 
 _LIST_FIELDS = {"publication", "replaces", "roster"}
 _OBJECT_LIST_FIELDS = {"evidence", "research", "publication_reviews"}
+_OBJECT_FIELDS = {"fetch_gap"}  # one object, or null to remove it
 _BOOL_FIELDS = {"name_verified", "address_verified"}
 _FLOAT_FIELDS = {"latitude", "longitude"}
 _DATE_FIELDS = {"decided", "last_mass", "revisit_after", "promoted"}
 _EVIDENCE_FIELDS = ("url", "seen", "quote", "note")
 
-META_FIELDS = ("name", "state", "website", "status", "gcatholic", "city_aliases", "promoted")
+META_FIELDS = ("name", "state", "website", "status", "gcatholic", "city_aliases",
+               "audit_ignore_groups", "promoted")
 META_STATUSES = ("exploring", "promoted")
 META_TEMPLATE = """\
 ## Sources
@@ -231,7 +240,7 @@ Fill this in as you find them (see data/dioceses/README.md, "Sources").
 ### Bulletin publishers here
 
 Which publishers print this diocese's bulletins, how to read each, and which sites block the
-sandbox and where their bulletins are instead. Agents researching parishes start here, so
+browser and where their bulletins are instead. Agents researching parishes start here, so
 keep it current rather than a log.
 
 ## Rules settled for this diocese
@@ -249,7 +258,7 @@ def _empty(fname: str) -> Any:
         return []
     if fname in _BOOL_FIELDS:
         return False
-    if fname in _FLOAT_FIELDS or fname in _DATE_FIELDS:
+    if fname in _FLOAT_FIELDS or fname in _DATE_FIELDS or fname in _OBJECT_FIELDS:
         return None
     return ""
 
@@ -591,7 +600,8 @@ def _check_record(kind: Kind, r: Mapping[str, Any], rosters: Mapping[str, set[st
             p.errors.append(f"{label}: {fname} must be a finite number or null")
         elif fname in _DATE_FIELDS:
             _check_date(label, fname, value, p)
-        elif (fname not in _LIST_FIELDS | _BOOL_FIELDS | _FLOAT_FIELDS | _OBJECT_LIST_FIELDS
+        elif (fname not in (_LIST_FIELDS | _BOOL_FIELDS | _FLOAT_FIELDS | _OBJECT_LIST_FIELDS
+                            | _OBJECT_FIELDS)
               and not isinstance(value, str)):
             hint = " (quote it: postal_code: \"01234\")" if fname == "postal_code" else ""
             p.errors.append(f"{label}: {fname} must be text, got {value!r}{hint}")
@@ -650,6 +660,8 @@ def _check_parish(label: str, r: Mapping[str, Any], p: Problems) -> None:
     if status and (not isinstance(status, str) or status not in research.BULLETIN_STATUSES):
         p.errors.append(f"{label}: bulletin_status must be one of "
                         f"{', '.join(sorted(research.BULLETIN_STATUSES))}")
+    if r.get("fetch_gap") is not None:
+        p.errors.extend(f"{label}: {e}" for e in gaps.errors(r["fetch_gap"]))
     reviews = r.get("publication_reviews", [])
     if not isinstance(reviews, list):
         p.errors.append(f"{label}: publication_reviews must be a list")
@@ -689,6 +701,23 @@ def _check_parish(label: str, r: Mapping[str, Any], p: Problems) -> None:
         )
     if not provider:
         p.incomplete.append(f"{label}: bulletin_provider not identified yet")
+    gap = r.get("fetch_gap")
+    if provider == UNSUPPORTED:
+        if gap is None:
+            p.errors.append(f"{label}: bulletin_provider unsupported needs a fetch_gap: what "
+                            "fails and where the bulletin is (README, fetch_gap)")
+        if r.get("bulletin_status") in ("not-found", "not-published"):
+            p.warnings.append(f"{label}: unsupported is for a bulletin that is published; "
+                              f"bulletin_status {r['bulletin_status']} says none was found, "
+                              "which is no_bulletin")
+    elif provider == NO_BULLETIN and gap is not None:
+        p.warnings.append(f"{label}: no_bulletin with a fetch_gap: a published bulletin that "
+                          "fetch can't collect is bulletin_provider unsupported (off the site "
+                          "the same way, and listed as waiting on a collector)")
+    elif provider and gap is not None:
+        p.warnings.append(f"{label}: fetch_gap on a {provider} row, which goes live although "
+                          "fetch can't collect its bulletin; bulletin_provider unsupported "
+                          "keeps it off the site until a collector reads it")
     if provider in PROVIDERS_NEEDING_ID and not r.get("provider_id"):
         p.incomplete.append(f"{label}: {provider} needs a provider_id for fetch to find it")
     if provider in PROVIDERS_TAKING_RECIPE and r.get("provider_id"):
@@ -700,7 +729,7 @@ def _check_parish(label: str, r: Mapping[str, Any], p: Problems) -> None:
         problem = publication_problem(str(pub))
         if problem:
             p.errors.append(f"{label}: publication {pub!r}: {problem}")
-    if not r.get("publication") and provider != NO_BULLETIN:
+    if not r.get("publication") and provider != NO_BULLETIN:  # unsupported keeps its ids
         p.warnings.append(
             f"{label}: no publication id recorded, so nothing can check that no other "
             "row publishes the same bulletin"
@@ -940,12 +969,14 @@ def problems(d: Diocese, *, owners: _Owners | None = None,
 def unpublished(d: Diocese) -> tuple[set[str], set[str]]:
     """Parishes and churches kept in the records but left off the site.
 
-    A `no_bulletin` parish publishes nothing the pipeline can read, so its
-    churches would only ever show an empty schedule. Its records stay, with
-    their evidence and revisit date, and go live when a bulletin turns up.
+    A `no_bulletin` parish publishes nothing the pipeline can read, and an
+    `unsupported` one publishes a bulletin no collector reads yet, so their
+    churches would only ever show an empty schedule. Their records stay, with
+    their evidence, fetch gap and revisit date, and go live when the parish is
+    set to a provider `fetch` reads.
     """
     parishes = {slug for slug, r in d.of(PARISH).items()
-                if r.get("bulletin_provider") == NO_BULLETIN}
+                if r.get("bulletin_provider") in OFF_SITE_PROVIDERS}
     churches = {slug for slug, r in d.of(CHURCH).items() if r.get("parish") in parishes}
     return parishes, churches
 
@@ -996,9 +1027,12 @@ def _check_drift(d: Diocese, owners: _Owners, p: Problems) -> None:
     for kind, off_site, live in zip((PARISH, CHURCH), unpublished(d),
                                     (owners.live_parish, owners.live_church), strict=True):
         for slug in sorted(off_site & live.keys()):
-            if d.of(kind)[slug].get("promoted"):
-                p.warnings.append(f"{_label(kind, slug)}: no_bulletin, but still in "
-                                  f"data/{kind.dir}.csv; run `diocese promote` to take it off")
+            record = d.of(kind)[slug]
+            if record.get("promoted"):
+                parish = record if kind is PARISH else d.of(PARISH).get(record.get("parish"), {})
+                p.warnings.append(f"{_label(kind, slug)}: {parish.get('bulletin_provider')}, "
+                                  f"but still in data/{kind.dir}.csv; run `diocese promote` to "
+                                  "take it off")
     parishes, churches = export_rows(d)
     for kind, rows, live in ((PARISH, parishes, owners.live_parish),
                              (CHURCH, churches, owners.live_church)):
@@ -1129,13 +1163,112 @@ def new_record(diocese: str, kind_name: str, fields: Mapping[str, Any], *,
     return {"created": f"{kind.dir}/{slug}.md", "diocese": diocese, "slug": slug, **result}
 
 
+_PLACE_FIELDS = ("line1", "line2", *_ADDRESS[1:], "latitude", "longitude", "coordinates_from",
+                 "name_verified", "address_verified")
+_BULLETIN_FIELDS = ("website", "bulletin_provider", "provider_id", "publication", "group",
+                    "bulletin_status", "fetch_gap", "publication_reviews")
+# Where a field that a kind doesn't have belongs instead: the usual mix-ups.
+_ELSEWHERE: dict[tuple[str, str], str] = {
+    ("parish", "roster"): "roster links name places, so they go on the parish's churches (or "
+                          "its excluded/ and open/ records): `write <d> church <slug>` with "
+                          "{\"roster\": [\"directory:123\"]}. A parish row is a bulletin",
+    **{("parish", f): "addresses and coordinates go on the parish's churches"
+       for f in _PLACE_FIELDS},
+    **{(k, f): "bulletin fields go on the parish record that the church's `parish` names"
+       for k in ("church", "excluded", "open") for f in _BULLETIN_FIELDS},
+    **{(k, "slug"): "the slug is the command's argument; `diocese rename` changes it"
+       for k in ("parish", "church", "excluded", "open")},
+}
+
+
+def _field_type(fname: str) -> str:
+    if fname in _LIST_FIELDS:
+        return "[text]"
+    if fname in _OBJECT_LIST_FIELDS:
+        return "[object]"
+    if fname in _OBJECT_FIELDS:
+        return "object|null"
+    if fname in _BOOL_FIELDS:
+        return "true|false"
+    if fname in _FLOAT_FIELDS:
+        return "number|null"
+    if fname in _DATE_FIELDS:
+        return "YYYY-MM-DD"
+    return "text"
+
+
+def write_help() -> str:
+    """`diocese write --help`'s epilog: each kind's fields and JSON types, and an example."""
+    lines = ["fields by kind (JSON type), plus \"body\" (the Markdown explanation):"]
+    for kind in KINDS.values():
+        lines += textwrap.wrap(", ".join(f"{f} ({_field_type(f)})" for f in kind.fields),
+                               width=88, initial_indent=f"  {kind.name}: ",
+                               subsequent_indent="    ")
+    lines += [
+        "",
+        "evidence items: {url, seen, quote?, note?}. Lists replace the stored list; with",
+        "--append, their items are added to it. Roster links (<roster>:<id>) go on",
+        "churches, exclusions and open records, never on a parish.",
+        "",
+        "body_sections: {\"<heading>\": \"<text>\"} replaces one section of the body and keeps",
+        "the rest; body_append, the same shape, adds to the end of a section. A heading the",
+        "body lacks becomes a new ## section at the end. Use them or body, never both.",
+        "",
+        "example: a new church, linked to two roster entries",
+        "  pnpm --silent diocese write <d> church st-ann-town --create --file - <<'JSON'",
+        '  {"parish": "st-ann-town", "name": "St. Ann Church", "line1": "1 Main St",',
+        '   "city": "Town", "state": "NJ", "postal_code": "08800",',
+        '   "roster": ["directory:24527", "gcatholic:18685"],',
+        '   "evidence": [{"url": "https://stann.org/mass", "seen": "2026-11-03",',
+        '                 "quote": "Sunday 9:00 AM", "note": "The parish Mass page."}]}',
+        "  JSON",
+    ]
+    return "\n".join(lines)
+
+
+_HEADING_RE = re.compile(r"^(#{1,6})[ \t]+(.+?)[ \t]*$", re.MULTILINE)
+_BODY_PATCHES = {"body_sections": False, "body_append": True}  # does it keep the section's text?
+
+
+def _valid_sections(value: Any) -> bool:
+    return isinstance(value, dict) and all(
+        isinstance(text, str) and text.strip() and heading.strip()
+        and "\n" not in heading and not heading.startswith("#")
+        for heading, text in value.items())
+
+
+def _patch_section(body: str, heading: str, text: str, *, append: bool) -> str:
+    """`body` with one section replaced, or added to with `append`.
+
+    A section runs to the next heading of its level or higher, so replacing one
+    replaces its subsections too. A heading the body lacks is added at the end.
+    """
+    text = text.strip("\n")
+    marks = list(_HEADING_RE.finditer(body))
+    found = [m for m in marks if m.group(2) == heading]
+    if len(found) > 1:
+        raise DioceseError(f"body has {len(found)} sections headed {heading!r}; "
+                           "send the whole body instead. Nothing was written.")
+    if not found:
+        return f"{body.rstrip()}\n\n## {heading}\n\n{text}\n"
+    mark = found[0]
+    end = next((m.start() for m in marks
+                if m.start() > mark.start() and len(m.group(1)) <= len(mark.group(1))), len(body))
+    current = body[mark.end():end].strip("\n")
+    content = f"{current}\n\n{text}" if append and current else text
+    rest = body[end:]
+    return f"{body[:mark.end()]}\n\n{content}\n" + (f"\n{rest}" if rest else "")
+
+
 def write_record(diocese: str, kind_name: str, slug: str, payload: Mapping[str, Any], *,
-                 create: bool = False) -> dict[str, Any]:
+                 create: bool = False, append: bool = False) -> dict[str, Any]:
     """Patch one record from typed JSON, validating before any file changes.
 
-    Lists replace their previous value; omitted fields remain unchanged. Creation
-    must be explicit so a mistyped slug cannot silently produce a second record.
-    Incomplete drafts are allowed and reported, just as with `new`.
+    Lists replace their previous value, or gain their new items with `append`;
+    omitted fields remain unchanged. `body_sections` and `body_append` patch the
+    body section by section. Creation must be explicit so a mistyped slug cannot
+    silently produce a second record. Incomplete drafts are allowed and reported,
+    just as with `new`.
     """
     if kind_name not in KINDS:
         raise DioceseError(f"unknown record kind {kind_name!r}")
@@ -1144,14 +1277,32 @@ def write_record(diocese: str, kind_name: str, slug: str, payload: Mapping[str, 
     if not isinstance(payload, Mapping):
         raise DioceseError("record JSON must be an object of fields plus optional body")
     kind = KINDS[kind_name]
-    unknown = set(payload) - set(kind.fields) - {"body"}
+    if append and create:
+        raise DioceseError("--append adds to a stored record; a new record has none yet")
+    if "body" in payload and _BODY_PATCHES.keys() & payload.keys():
+        raise DioceseError("body replaces the whole explanation, so it can't go with "
+                           "body_sections or body_append. Nothing was written.")
+    unknown = sorted(set(payload) - set(kind.fields) - {"body", *_BODY_PATCHES})
     if unknown:
-        raise DioceseError(f"{kind_name} has no writable fields: {', '.join(sorted(unknown))}")
+        hints = list(dict.fromkeys(h for f in unknown if (h := _ELSEWHERE.get((kind_name, f)))))
+        raise DioceseError(
+            f"{kind_name} has no writable fields: {', '.join(unknown)}"
+            + "".join(f"\n  {h}" for h in hints)
+            + f"\n  {kind_name} fields: {', '.join(kind.fields)}, body, "
+            + ", ".join(_BODY_PATCHES) +
+            " (types and an example: `diocese write --help`). Nothing was written.")
     for key, value in payload.items():
+        if key in _BODY_PATCHES:
+            if not _valid_sections(value):
+                raise DioceseError(f"{key} must map headings, without their #s, to "
+                                   "non-empty text. Nothing was written.")
+            continue
         if key in _LIST_FIELDS:
             valid = isinstance(value, list) and all(isinstance(v, str) for v in value)
         elif key in _OBJECT_LIST_FIELDS:
             valid = isinstance(value, list) and all(isinstance(v, dict) for v in value)
+        elif key in _OBJECT_FIELDS:
+            valid = value is None or isinstance(value, dict)
         elif key in _BOOL_FIELDS:
             valid = isinstance(value, bool)
         elif key in _FLOAT_FIELDS:
@@ -1175,7 +1326,18 @@ def write_record(diocese: str, kind_name: str, slug: str, payload: Mapping[str, 
         if path.exists() and slug not in before.of(kind):
             raise DioceseError(f"{kind.dir}/{slug}.md does not parse; repair it before editing")
         record = _deep_copy(_get(before, kind, slug))
-    record.update(_deep_copy(dict(payload)))
+    changes = _deep_copy(dict(payload))
+    patches = {key: changes.pop(key, {}) for key in _BODY_PATCHES}
+    if append:
+        for key in changes.keys() & (_LIST_FIELDS | _OBJECT_LIST_FIELDS):
+            merged = list(record.get(key) or [])
+            merged += [item for i, item in enumerate(changes[key])
+                       if item not in merged and item not in changes[key][:i]]
+            changes[key] = merged
+    record.update(changes)
+    for key, keep in _BODY_PATCHES.items():
+        for heading, text in patches[key].items():
+            record["body"] = _patch_section(record.get("body") or "", heading, text, append=keep)
     # JSON uses the stored types, never flag-style coercion. Reject invalid data
     # rather than silently dropping an evidence item during serialization.
     target_problems = Problems()
@@ -1198,6 +1360,8 @@ def _coerce(fname: str, value: Any) -> Any:
         return [str(v).strip() for v in value if str(v).strip()]
     if fname in _OBJECT_LIST_FIELDS:
         return list(value)
+    if fname in _OBJECT_FIELDS:
+        return value
     if fname in _BOOL_FIELDS:
         if isinstance(value, bool):
             return value
@@ -1478,7 +1642,7 @@ def promote(diocese: str, *, dry_run: bool = False) -> dict[str, Any]:
     New rows are appended and promoted rows updated in place. Live rows the
     diocese has retired are deleted: slugs in a record's `replaces` (merged or
     renamed away), promoted churches that are now in excluded/ or open/, and `no_bulletin`
-    parishes with their churches (see `unpublished`). A record
+    and `unsupported` parishes with their churches (see `unpublished`). A record
     that is blank where the live row has a value (coordinates from `geocode`,
     flags from `verify`) takes the live value instead of erasing it. Every
     promoted record is stamped `promoted: <date>`, which is what lets it share
