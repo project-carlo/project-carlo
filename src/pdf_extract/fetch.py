@@ -50,6 +50,7 @@ from pdf_extract.pdf_compact import (
     MAX_STORED_BULLETIN_BYTES,
     as_bulletin_pdf,
     compact_bulletin_pdf,
+    looks_like_pdf,
 )
 from pdf_extract.pdf_truncate import max_pages_for
 from pdf_extract.runs import (
@@ -577,6 +578,36 @@ class DownloadTooLarge(OSError):
     """A response over `MAX_DOWNLOAD_BYTES`."""
 
 
+class NotABulletin(OSError):
+    """A download that is neither a PDF nor an image.
+
+    Usually a page answered with 200 in the file's place: Discover Mass's
+    "Maximum number of files downloaded today" once its daily cap is hit, or a
+    bot check. Stored, it would match itself by hash every week after and the
+    parish would look unchanged while it was failing.
+    """
+
+    def __init__(self, body: bytes, *, what: str = "Not a PDF") -> None:
+        super().__init__(f"{what}: {_describe_body(body)}")
+        self.body = body
+
+
+# How much of a body that is not a bulletin the run report quotes.
+_BODY_SNIPPET_CHARS = 120
+
+
+def _describe_body(body: bytes) -> str:
+    """The size of a body and its opening text, tags and control characters removed."""
+    if not body:
+        return "an empty response"
+    text = body[:4000].decode("utf-8", errors="replace")
+    text = re.sub(r"<[^>]*>?", " ", text)
+    text = " ".join("".join(ch if ch.isprintable() else " " for ch in text).split())
+    if len(text) > _BODY_SNIPPET_CHARS:
+        text = text[: _BODY_SNIPPET_CHARS - 1] + "…"
+    return f"{len(body)} bytes" + (f" starting {text!r}" if text else "")
+
+
 def _read_body(resp, url: str) -> bytes:
     """A response's body, unless it is over `MAX_DOWNLOAD_BYTES`."""
     too_large = f"Over {MAX_DOWNLOAD_BYTES / 1e6:.0f} MB: {url}"
@@ -619,7 +650,11 @@ class Download:
 def _download_bulletin(
     *, fetch_url: str, source_url: str, validators: Validators | None = None,
 ) -> Download:
-    """Download a bulletin, asking first whether `validators` still name it."""
+    """Download a bulletin, asking first whether `validators` still name it.
+
+    Raises `NotABulletin` when what came back, from either address, is
+    neither a PDF nor an image.
+    """
     conditional = validators.request_headers() if validators else {}
 
     def get() -> _Response:
@@ -645,9 +680,14 @@ def _download_bulletin(
             return Download(pdf=None)
         LOGGER.warning("Primary fetch failed (%s), falling back to source URL: %s", exc, source_url)
         # The validators belong to the fetch URL, so none are kept from here.
-        return Download(pdf=as_bulletin_pdf(_http_get(source_url, referer=source_url).body))
+        pdf = as_bulletin_pdf(_http_get(source_url, referer=source_url).body)
+        if not looks_like_pdf(pdf):
+            raise NotABulletin(
+                pdf, what=f"{type(exc).__name__}: {exc}, and the source URL is not a PDF",
+            ) from exc
+        return Download(pdf=pdf)
     pdf = as_bulletin_pdf(response.body)
-    if not pdf.startswith(b"%PDF") and fetch_url.startswith("http://"):
+    if not looks_like_pdf(pdf) and fetch_url.startswith("http://"):
         # Some hosts answer a bot check over http and the file over https:
         # the Basilica of the Sacred Heart, Hanover links its PDFs over http,
         # where SiteGround returns its sgcaptcha page.
@@ -659,9 +699,12 @@ def _download_bulletin(
         except (OSError, HTTPException) as exc:
             LOGGER.info("No better over https (%s): %s", exc, secure_url)
         else:
-            if as_bulletin_pdf(secure.body).startswith(b"%PDF"):
+            secure_pdf = as_bulletin_pdf(secure.body)
+            if looks_like_pdf(secure_pdf):
                 LOGGER.info("Not a PDF over http; took %s", secure_url)
-                response, pdf = secure, as_bulletin_pdf(secure.body)
+                response, pdf = secure, secure_pdf
+    if not looks_like_pdf(pdf):
+        raise NotABulletin(pdf)
     # A bulletin posted as an image is kept as a PDF, like every other.
     return Download(pdf=pdf, etag=response.etag, last_modified=response.last_modified)
 

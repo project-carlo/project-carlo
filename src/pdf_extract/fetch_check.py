@@ -596,13 +596,18 @@ def _check_one(
         return finish()
     try:
         pdf = fetch._download_pdf(fetch_url=link.fetch_url, source_url=link.source_url)
+    except fetch.NotABulletin as exc:
+        # The server answered, with a page rather than the file.
+        transport, pdf = "ok", exc.body
+        result.update(bytes=len(pdf), status=NOT_PDF, detail=str(exc))
+        return finish()
     except (HTTPError, URLError, OSError) as exc:
         transport = "failed"
         result.update(status=DOWNLOAD_FAILED, detail=f"{type(exc).__name__}: {exc}")
         return finish()
     transport = "ok"
     result["bytes"] = len(pdf)
-    result["status"] = OK if pdf[:5] == b"%PDF-" else NOT_PDF
+    result["status"] = OK
     return finish()
 
 

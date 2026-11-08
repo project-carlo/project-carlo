@@ -19,13 +19,14 @@ from pdf_extract.fetch import (
     Download,
     DownloadTooLarge,
     FetchSource,
+    _Response,
     _site_for_source,
     _site_for_url,
     fetch_bulletins,
 )
 from pdf_extract.process import process_bulletins
 from pdf_extract.recurrence import load_history_from_db, save_history_to_db
-from pdf_extract.runs import parish_results, start_run
+from pdf_extract.runs import consecutive_failures, parish_results, start_run
 from pdf_extract.storage import (
     connect_db,
     latest_bulletin_ids,
@@ -481,6 +482,46 @@ def test_fetch_reports_a_download_over_the_limit_as_too_large(monkeypatch, db: P
     assert result["failed_parishes"] == 1
     assert _bulletins(db) == []
     assert _results(db, "run-1")["test-parish"]["status"] == "too_large"
+
+
+DISCOVER_MASS_CAP_PAGE = (
+    b"Maximum number of files downloaded today. Please contact "
+    b"<a href='https://discovermass.com/contact-us/'>Discover Mass</a> for support."
+)
+
+
+def test_fetch_fails_a_parish_served_a_page_instead_of_its_bulletin(monkeypatch, db: Path) -> None:
+    # The 2026-10-25 run stored Discover Mass's cap page as the bulletin, and
+    # every run after matched it by hash and called the parish unchanged.
+    download = "https://bulletins.discovermass.com/download.php?bulletin=abc%3D"
+    cap_hash = hashlib.sha256(DISCOVER_MASS_CAP_PAGE).hexdigest()
+    _add_bulletin(
+        db, source_url=download, content_hash=cap_hash, pdf_bytes=DISCOVER_MASS_CAP_PAGE,
+        fetched_at="2026-10-25T13:16:38Z",
+    )
+    _link_to(monkeypatch, download)
+    monkeypatch.setattr(
+        "pdf_extract.fetch._http_get", lambda url, **_: _Response(DISCOVER_MASS_CAP_PAGE),
+    )
+    _fake_browser(monkeypatch)
+
+    for run_id in ("run-1", "run-2"):
+        _start_run(db, run_id)
+        result = fetch_bulletins(parish_name="Test Parish", run_id=run_id)
+        assert result["failed_parishes"] == 1
+        assert result["unchanged_bulletins"] == 0
+
+    outcome = _results(db, "run-2")["test-parish"]
+    assert outcome["status"] == "download_failed"
+    assert "Maximum number of files downloaded today" in outcome["detail"]
+    assert "<a " not in outcome["detail"]
+    assert outcome["source_url"] == download
+    assert [b["content_hash"] for b in _bulletins(db)] == [cap_hash]
+    conn = connect_db(db)
+    try:
+        assert consecutive_failures(conn, "test-parish", "fetch") == 2
+    finally:
+        conn.close()
 
 
 def test_fetch_does_not_count_an_oversized_recheck_as_a_failure(monkeypatch, db: Path) -> None:
