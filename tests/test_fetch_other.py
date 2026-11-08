@@ -801,12 +801,82 @@ def test_a_downloaded_image_is_kept_as_a_pdf(monkeypatch) -> None:
     assert fetch._download_pdf(fetch_url=url, source_url=url) == pdf
 
 
-def test_a_download_that_is_neither_pdf_nor_image_is_left_as_it_is(monkeypatch) -> None:
+# What bulletins.discovermass.com/download.php answers, with HTTP 200, once its
+# daily download cap is hit. The 2026-10-25 run stored it as 66 parishes' bulletin.
+DISCOVER_MASS_CAP_PAGE = (
+    b"Maximum number of files downloaded today. Please contact "
+    b"<a href='https://discovermass.com/contact-us/'>Discover Mass</a> for support."
+)
+DISCOVER_MASS_DOWNLOAD = "https://bulletins.discovermass.com/download.php?bulletin=abc%3D"
+
+
+def test_the_discover_mass_cap_page_is_not_a_bulletin(monkeypatch) -> None:
+    from pdf_extract import fetch
+    from pdf_extract.duplicates import bulletin_hash
+
+    assert len(DISCOVER_MASS_CAP_PAGE) == 134
+    assert bulletin_hash(DISCOVER_MASS_CAP_PAGE) == (
+        "df175220b1d967b5204b2dea47961626b06f0e346a6a4e54094544af84ae0117"
+    )
+    monkeypatch.setattr(
+        fetch, "_http_get", lambda url, **_: fetch._Response(DISCOVER_MASS_CAP_PAGE, etag='"x"'),
+    )
+    with pytest.raises(fetch.NotABulletin) as raised:
+        fetch._download_bulletin(
+            fetch_url=DISCOVER_MASS_DOWNLOAD, source_url="https://discovermass.com/church/x/",
+        )
+    assert raised.value.body == DISCOVER_MASS_CAP_PAGE
+    # The size and the page's text, without its markup, for the run report.
+    assert str(raised.value) == (
+        "Not a PDF: 134 bytes starting 'Maximum number of files downloaded today."
+        " Please contact Discover Mass for support.'"
+    )
+
+
+def test_a_page_from_the_source_address_is_not_a_bulletin_either(monkeypatch) -> None:
+    from urllib.error import HTTPError
+
     from pdf_extract import fetch
 
-    monkeypatch.setattr(fetch, "_http_get", lambda url, **_: fetch._Response(b"<html>"))
+    def get(url: str, **_: object) -> fetch._Response:
+        if url == DISCOVER_MASS_DOWNLOAD:
+            raise HTTPError(url, 503, "Service Unavailable", {}, None)  # type: ignore[arg-type]
+        return fetch._Response(b"<!DOCTYPE html><html><title>Bulletins</title>" + b"x" * 500)
+
+    monkeypatch.setattr(fetch, "_http_get", get)
+    with pytest.raises(fetch.NotABulletin, match=(
+        r"^HTTPError: HTTP Error 503: Service Unavailable, and the source URL is not a PDF:"
+        r" 545 bytes starting 'Bulletins xxx"
+    )):
+        fetch._download_pdf(fetch_url=DISCOVER_MASS_DOWNLOAD, source_url=f"{HOME}/bulletins")
+
+
+def test_a_bot_check_over_http_and_https_is_not_a_bulletin(monkeypatch) -> None:
+    from pdf_extract import fetch
+
+    monkeypatch.setattr(
+        fetch, "_http_get", lambda url, **_: fetch._Response(b"<html>sgcaptcha</html>"),
+    )
+    with pytest.raises(fetch.NotABulletin, match="'sgcaptcha'"):
+        fetch._download_pdf(fetch_url="http://example.org/b.pdf", source_url="http://example.org/")
+
+
+def test_an_empty_download_is_not_a_bulletin(monkeypatch) -> None:
+    from pdf_extract import fetch
+
+    monkeypatch.setattr(fetch, "_http_get", lambda url, **_: fetch._Response(b""))
     url = f"{HOME}/bulletin.pdf"
-    assert fetch._download_pdf(fetch_url=url, source_url=url) == b"<html>"
+    with pytest.raises(fetch.NotABulletin, match="^Not a PDF: an empty response$"):
+        fetch._download_pdf(fetch_url=url, source_url=url)
+
+
+def test_a_pdf_after_a_stray_newline_is_still_a_bulletin(monkeypatch) -> None:
+    # PDF readers find the header anywhere in the first kilobyte.
+    from pdf_extract import fetch
+
+    monkeypatch.setattr(fetch, "_http_get", lambda url, **_: fetch._Response(b"\r\n%PDF-1.4"))
+    url = f"{HOME}/download.php?file=bulletin"
+    assert fetch._download_pdf(fetch_url=url, source_url=url) == b"\r\n%PDF-1.4"
 
 
 def test_a_download_answered_429_is_retried_once(monkeypatch) -> None:

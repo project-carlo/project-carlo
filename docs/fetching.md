@@ -30,6 +30,16 @@ The address is never taken to mean the bulletin is unchanged: Discover Mass
 serves the same PDF from a new address each time, and some sites put each
 week's bulletin at the same one.
 
+**A download that is neither a PDF nor an image is not stored.** A server can
+answer 200 with a page in place of the file: Discover Mass sends a 134-byte
+"Maximum number of files downloaded today" page once its daily cap is hit, and
+some hosts send a bot check. The parish is reported as `download_failed`, with
+the page's size and opening text in the detail, and counts as a failure like
+any other; its last bulletin stays its last. Before this check, the October 25,
+2026 run stored the Discover Mass page as 66 parishes' bulletin, and every run
+after matched it by hash and reported them `unchanged`. Migration 13 deleted
+those rows.
+
 ## Compacted copies
 
 `fetch` stores a compacted copy of each bulletin: the first 10 pages, which is
