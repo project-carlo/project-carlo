@@ -137,6 +137,10 @@ def _parse_date(
                 or 2000 + int(raw_year) > reference_date.year
             ):
                 raw_year = None
+            # Two digits more than a year ahead are the Sunday's number, not a
+            # year: "November-8th-32-Sun-in-OT" is the 32nd Sunday, not 2032.
+            if raw_year and len(raw_year) == 2 and 2000 + int(raw_year) > reference_date.year + 1:
+                raw_year = None
             # A named month still identifies the day when the year is mangled.
             if raw_year and len(raw_year) != 3:
                 parsed = safe_date(_normalize_year(raw_year, reference_date), month_num, day)
