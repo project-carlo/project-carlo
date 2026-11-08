@@ -10,8 +10,8 @@ import {
   formatAddress,
   formatEventDate,
   formatLongMonthDay,
-  formatMinutesMissal,
   formatMonthDay,
+  formatTimeRange,
   slotQualifier,
   titleCase,
 } from "@carlo/core";
@@ -86,11 +86,7 @@ function partitionEventsByType(
 }
 
 function formatTimeValue(event: EventSummary): string {
-  const main = formatMinutesMissal(event.start_time);
-  if (event.end_time != null) {
-    return `${main} – ${formatMinutesMissal(event.end_time)}`;
-  }
-  return main;
+  return formatTimeRange(event.start_time, event.end_time);
 }
 
 function collectSectionEvents(section: EventsByType): EventSummary[] {
@@ -420,10 +416,7 @@ export function ChurchPageContent({
                               </dt>
                               <dd className="font-serif text-[1.05rem] leading-snug text-ink">
                                 <span className="tabular-nums">
-                                  {formatMinutesMissal(event.start_time)}
-                                  {event.end_time != null
-                                    ? ` – ${formatMinutesMissal(event.end_time)}`
-                                    : ""}
+                                  {formatTimeValue(event)}
                                 </span>
                                 <EventNote note={eventQualifier(event)} />
                                 {event.page_number !== sectionPage ? (

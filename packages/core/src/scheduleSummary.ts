@@ -1,17 +1,25 @@
 import { DAY_ORDER, jsDayFor } from "./constants/days";
 import type { EventSummary } from "./types";
-import { formatMinutesMissal, titleCase } from "./utils";
+import { titleCase } from "./utils";
 import type { ScheduleRollupRow } from "./eventRollup";
 import {
   describeSchedulePattern,
   patternKey,
   type SchedulePattern,
 } from "./schedulePattern";
+import {
+  addSlot,
+  formatSlots,
+  slotsSignature,
+  sortSlots,
+  type TimeSlot,
+} from "./timeSlots";
 
 /**
  * A compact weekly schedule for listing many churches on one page (a city
  * page): one row per day, with runs of days that share the same times folded
- * into one row ("Mon – Fri  8 a.m."). A slot that isn't every week of the
+ * into one row ("Mon – Fri  8 a.m."). Days only merge when their slots end
+ * at the same times too. A slot that isn't every week of the
  * year gets a row of its own with its qualifier as the row's note, as in the
  * map popup. Pure formatting logic.
  */
@@ -30,13 +38,13 @@ function runLabel(days: string[]): string {
 
 interface PatternDays {
   pattern: SchedulePattern;
-  timesByDay: Map<string, number[]>;
+  timesByDay: Map<string, TimeSlot[]>;
 }
 
 interface Run {
   key: string;
   days: string[];
-  times: number[];
+  times: TimeSlot[];
   note: string | null;
   /** Where the run starts in DAY_ORDER, for ordering the rows. */
   firstDay: number;
@@ -63,7 +71,7 @@ export function weeklyScheduleRows(events: EventSummary[]): ScheduleRollupRow[] 
       byPattern.set(key, group);
     }
     const times = group.timesByDay.get(day) ?? [];
-    if (!times.includes(event.start_time)) times.push(event.start_time);
+    addSlot(times, event);
     group.timesByDay.set(day, times);
   }
 
@@ -77,8 +85,8 @@ export function weeklyScheduleRows(events: EventSummary[]): ScheduleRollupRow[] 
         previous = null;
         continue;
       }
-      const sorted = [...times].sort((a, b) => a - b);
-      const signature = sorted.join(",");
+      const sorted = sortSlots(times);
+      const signature = slotsSignature(sorted);
       if (mergeDays && previous && previous.signature === signature) {
         previous.days.push(day);
         continue;
@@ -100,7 +108,7 @@ export function weeklyScheduleRows(events: EventSummary[]): ScheduleRollupRow[] 
   return runs.map((run) => ({
     key: `weekly:${run.days.join("-")}:${run.key}`,
     label: runLabel(run.days),
-    times: run.times.map(formatMinutesMissal),
+    times: formatSlots(run.times),
     note: run.note,
   }));
 }

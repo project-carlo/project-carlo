@@ -160,6 +160,62 @@ describe("eventMatchesFilters", () => {
         eventMatchesFilters(rawEvent({ start_time: 12 * 60 }), filters),
       ).toBe(true);
     });
+
+    // 3–4 p.m. and 3:30–5 p.m., the searches from the issue.
+    const window = (from: number, to: number): ChurchFilters => ({
+      types: [],
+      timeFrom: from,
+      timeTo: to,
+    });
+    const slot = (start: number, end: number | null) =>
+      rawEvent({ event_type: "adoration", start_time: start, end_time: end });
+
+    it("matches a service already in progress when the search begins", () => {
+      // Adoration 9 a.m. – 7 p.m. answers a 3–4 p.m. search.
+      expect(
+        eventMatchesFilters(slot(9 * 60, 19 * 60), window(15 * 60, 16 * 60)),
+      ).toBe(true);
+      // Confession 3–4 p.m. answers a 3:30–5 p.m. search.
+      expect(
+        eventMatchesFilters(slot(15 * 60, 16 * 60), window(15 * 60 + 30, 17 * 60)),
+      ).toBe(true);
+    });
+
+    it("does not match a service that ends exactly when the search begins", () => {
+      expect(
+        eventMatchesFilters(slot(13 * 60, 15 * 60), window(15 * 60, 16 * 60)),
+      ).toBe(false);
+    });
+
+    it("matches a service that starts exactly when the search ends", () => {
+      expect(
+        eventMatchesFilters(slot(16 * 60, 17 * 60), window(15 * 60, 16 * 60)),
+      ).toBe(true);
+      expect(
+        eventMatchesFilters(slot(16 * 60 + 1, 17 * 60), window(15 * 60, 16 * 60)),
+      ).toBe(false);
+    });
+
+    it("still needs a service with no end to start inside the search", () => {
+      expect(
+        eventMatchesFilters(slot(9 * 60, null), window(15 * 60, 16 * 60)),
+      ).toBe(false);
+      expect(
+        eventMatchesFilters(slot(15 * 60 + 30, null), window(15 * 60, 16 * 60)),
+      ).toBe(true);
+    });
+
+    it("runs a window past midnight to the end of its own day", () => {
+      // 10 p.m. – 1 a.m. is going at 11 p.m.
+      expect(
+        eventMatchesFilters(slot(22 * 60, 60), window(23 * 60, 24 * 60 - 1)),
+      ).toBe(true);
+      // Its after-midnight hour belongs to the next weekday, so an early
+      // search on the same day does not find it.
+      expect(
+        eventMatchesFilters(slot(22 * 60, 60), window(0, 2 * 60)),
+      ).toBe(false);
+    });
   });
 });
 
@@ -231,6 +287,22 @@ describe("collectMapItems", () => {
     const [item] = collectMapItems(churches, events, allTypes);
 
     expect(item.upcoming_events.map((e) => e.id)).toEqual([-1502, -1501]);
+  });
+
+  it("keeps two windows on one day that start together but end apart", () => {
+    const churches = [church(161)];
+    const events = [
+      rawEvent({ id: 1601, church_id: 161, start_time: 9 * 60, end_time: 12 * 60 }),
+      rawEvent({ id: 1602, church_id: 161, start_time: 9 * 60, end_time: 19 * 60 }),
+      rawEvent({ id: 1603, church_id: 161, start_time: 9 * 60, end_time: 19 * 60 }),
+    ];
+
+    const [item] = collectMapItems(churches, events, allTypes);
+
+    expect(item.upcoming_events.map((e) => e.end_time)).toEqual([
+      12 * 60,
+      19 * 60,
+    ]);
   });
 
   it("returns the identical item when a church's matching events are unchanged", () => {

@@ -1,6 +1,7 @@
 import type { EventSummary } from "./types";
-import { formatMinutesMissal, titleCase } from "./utils";
+import { titleCase } from "./utils";
 import { describeSchedulePattern, patternKey } from "./schedulePattern";
+import { addSlot, formatSlots, sortSlots, type TimeSlot } from "./timeSlots";
 
 /**
  * Rolls a church's upcoming events up into one row per day, so a church with
@@ -17,9 +18,11 @@ export interface ScheduleRollupRow {
   /** Day heading, e.g. "Sunday" or "Tue, Mar 17". */
   label: string;
   /**
-   * Distinct start times for the day, earliest first, each formatted with its
-   * own meridiem so no time in the popup can be read as the wrong half of the
-   * day.
+   * Distinct times for the day, earliest first, each formatted with its own
+   * meridiem so no time in the popup can be read as the wrong half of the
+   * day. A slot with an end reads as a range ("9 a.m. – 7 p.m."), so a
+   * service that matched the time filter because it is still going shows
+   * when it runs, not only when it began.
    */
   times: string[];
   /**
@@ -89,7 +92,7 @@ export function rollUpEventsByDay(
 ): ScheduleRollupRow[] {
   const rows = new Map<
     string,
-    { label: string; startTimes: number[]; note: string | null }
+    { label: string; slots: TimeSlot[]; note: string | null }
   >();
 
   for (const event of events) {
@@ -98,22 +101,18 @@ export function rollUpEventsByDay(
     if (!row) {
       row = {
         label: rollupLabel(event),
-        startTimes: [],
+        slots: [],
         note: slotQualifier(event),
       };
       rows.set(key, row);
     }
-    // Two events can share a slot (e.g. a Mass and a Confession at 4 p.m.);
-    // the preview only shows the time, so list it once.
-    if (!row.startTimes.includes(event.start_time)) {
-      row.startTimes.push(event.start_time);
-    }
+    addSlot(row.slots, event);
   }
 
   return [...rows.entries()].map(([key, row]) => ({
     key,
     label: row.label,
-    times: [...row.startTimes].sort((a, b) => a - b).map(formatMinutesMissal),
+    times: formatSlots(sortSlots(row.slots)),
     note: row.note,
   }));
 }
