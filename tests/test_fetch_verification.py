@@ -191,6 +191,12 @@ def test_transport_success_is_separate_from_pdf_validity(
     assert row["verification"]["overall"] == "failed"
 
 
+def test_a_pdf_after_a_stray_newline_passes_as_the_fetch_stage_passes_it(monkeypatch):
+    row = _check(monkeypatch, b"\r\n" + _pdf(IDENTITY))
+    assert row["status"] == "ok"
+    assert row["verification"]["document_type"]["status"] == "pdf"
+
+
 def test_download_failure_keeps_independent_url_evidence(monkeypatch):
     _check(monkeypatch, b"", url=f"{HOME}/20261018.pdf")
 
