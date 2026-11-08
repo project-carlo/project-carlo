@@ -7,6 +7,8 @@ from dataclasses import dataclass
 from datetime import date
 from urllib.parse import unquote, urlsplit
 
+from pdf_extract.parish_sites.dates import YEARLESS_MAX_DAYS_AHEAD
+
 # A bulletin dated within this many days of today is taken as the current one.
 CURRENT_WINDOW_DAYS = 7
 # A bulletin dated further than this from today is an archive's, not the
@@ -85,6 +87,11 @@ def choose(
 ) -> Choice:
     """The newest bulletin dated within a week of today, else a fallback.
 
+    One dated past the coming Sunday only when none is dated up to it:
+    Immaculate Conception, Rochester lists the rest of the year's Sundays ahead
+    of time ("11-15-2026" on Sunday, November 8), each linking last year's issue
+    until its week comes.
+
     With none that current, the first one listed, except:
     - if it is plainly old (dated over FALLBACK_MAX_AGE_DAYS ago), the newest
       dated within that, when one is listed: a listing oldest first (St.
@@ -117,6 +124,9 @@ def choose(
         ]
     current = [c for c in candidates if is_current(c.parsed_date, reference_date)]
     if current:
+        current = [
+            c for c in current if _age_days(c, reference_date) >= -YEARLESS_MAX_DAYS_AHEAD
+        ] or current
         return Choice(max(current, key=lambda c: c.parsed_date or date.min), CURRENT)
 
     first = candidates[0]

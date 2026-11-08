@@ -533,6 +533,62 @@ def test_this_years_post_wins_over_last_years_with_the_same_day() -> None:
     }) == f"{HOME}/s/Bulletin-for-9-2627FINAL.pdf"
 
 
+def _all_saints_listing(*, this_week: bool) -> str:
+    # All Saints, Syracuse: newest first, no years, last year's below this year's.
+    titles = [
+        *(["november-7-amp-8"] if this_week else []),
+        "october-31-amp-november-1", "october-24-amp-25", "september-26-amp-27",
+        "july-25-amp-26", "january-3-amp-4",
+        # Last year's, which read as the nearest such days.
+        "december-27-amp-28", "november-15-amp-16", "november-1-amp-2-and-8-amp-9",
+    ]
+    return "".join(f'<a href="/b/bulletin-{t}">Bulletin {t}</a>' for t in titles)
+
+
+@pytest.mark.parametrize(("this_week", "post"), [
+    (True, "november-7-amp-8"),
+    # Before this week's is posted, last week's, not last November's.
+    (False, "october-31-amp-november-1"),
+])
+def test_last_years_posts_below_this_years_are_not_this_weeks(this_week, post) -> None:
+    pdf = f"{HOME}/s/{post}.pdf"
+    assert _resolve({
+        HOME: '<a href="/newsletters">Bulletins</a>',
+        f"{HOME}/newsletters": _all_saints_listing(this_week=this_week),
+        f"{HOME}/b/bulletin-{post}": f'<a href="/s/{post}.pdf">Bulletin</a>',
+    }, today=date(2026, 11, 8)) == pdf
+
+
+def test_a_post_pinned_above_the_listing_does_not_hide_it() -> None:
+    post = f"{HOME}/b/bulletin-november-7-amp-8"
+    assert _resolve({
+        HOME: '<a href="/newsletters">Bulletins</a>',
+        f"{HOME}/newsletters": (
+            '<a href="/b/christmas-bulletin-december-24">Christmas Bulletin December 24</a>'
+            f'<a href="{post}">Bulletin November 7 &amp; 8</a>'
+            '<a href="/b/bulletin-october-31">Bulletin October 31</a>'
+        ),
+        post: '<a href="/s/november-7.pdf">Bulletin</a>',
+    }, today=date(2026, 11, 8)) == f"{HOME}/s/november-7.pdf"
+
+
+@pytest.mark.parametrize(("today", "issue"), [
+    (date(2026, 11, 8), "11-08-2026"),  # a Sunday: today's
+    (date(2026, 11, 7), "11-08-2026"),  # a Saturday: tomorrow's
+    (date(2026, 11, 11), "11-15-2026"),  # midweek: the coming Sunday's
+])
+def test_sundays_listed_ahead_of_time_are_not_current_before_their_week(today, issue) -> None:
+    # Immaculate Conception, Rochester lists the year's Sundays ahead of time,
+    # each linking last year's issue until its week comes.
+    days = ["11-01-2026", "11-08-2026", "11-15-2026", "11-22-2026"]
+    assert _resolve({
+        HOME: '<a href="/bulletin-news">Bulletin</a>',
+        f"{HOME}/bulletin-news": "".join(
+            f'<a href="/_files/ugd/{d}.pdf">{d}</a>' for d in days
+        ),
+    }, today=today) == f"{HOME}/_files/ugd/{issue}.pdf"
+
+
 def test_last_years_issue_in_a_year_folder_is_not_this_weeks() -> None:
     # parishes.rcda.org (St. Joseph, Worcester) names files by the day alone.
     assert _resolve({
