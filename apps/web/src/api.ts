@@ -41,6 +41,7 @@ import { buildClusterIndex, type ClusterIndex } from "./lib/mapClusters";
 import {
   churchFiltersFor,
   DEFAULT_FILTER_STATE,
+  MINUTES_PER_DAY,
 } from "./components/filterState";
 import { reloadForNewVersion } from "./lib/staleDeploy";
 
@@ -167,11 +168,33 @@ export function eventMatchesFilters(
   if (
     filters.timeFrom != null &&
     filters.timeTo != null &&
-    (ev.start_time < filters.timeFrom || ev.start_time > filters.timeTo)
+    !overlapsTimeWindow(ev, filters.timeFrom, filters.timeTo)
   ) {
     return false;
   }
   return true;
+}
+
+/**
+ * Whether a slot runs at any point in the searched hours (both bounds
+ * inclusive). A slot with an end matches while it is still going, so Adoration
+ * from 9 a.m. to 7 p.m. answers a 3 p.m. search; one that ends exactly when the
+ * search begins does not. A slot with no end must start inside the hours.
+ *
+ * A window past midnight (ends before it starts) counts as running to midnight:
+ * its early-morning hours belong to the next weekday, which the day filter does
+ * not know about. So does one that ends when it starts, which bulletins use
+ * for 24-hour Adoration ("9 a.m. Friday to 9 a.m. Saturday").
+ */
+function overlapsTimeWindow(
+  ev: Pick<RawEvent, "start_time" | "end_time">,
+  from: number,
+  to: number,
+): boolean {
+  const start = ev.start_time;
+  if (ev.end_time == null) return start >= from && start <= to;
+  const end = ev.end_time <= start ? MINUTES_PER_DAY : ev.end_time;
+  return start <= to && end > from;
 }
 
 function buildMapItem(
@@ -181,7 +204,7 @@ function buildMapItem(
   const weeklyEvents = churchEvents.filter(
     (e) => e.event_kind === "weekly" && e.day_of_week && !e.cancelled,
   );
-  // Dedup repeated weekly slots (same weekday, start time, weeks and season)
+  // Dedup repeated weekly slots (same weekday, times, weeks and season)
   // that occasionally appear across bulletins. Prefer weekly events for the
   // popup; if the church has only specific-date events, fall back to the five
   // soonest occurrences.
@@ -190,9 +213,11 @@ function buildMapItem(
     .map(toEventSummary)
     .filter((e) => {
       // Two slots on the same weekday and time are only the same slot when
-      // they keep the same schedule: a first-Friday devotion is not a
-      // duplicate of a Friday one that runs every week.
-      const key = `${e.day_of_week!.toLowerCase()}-${e.start_time}-${patternKey(e)}`;
+      // they end together and keep the same schedule: a first-Friday devotion
+      // is not a duplicate of a Friday one that runs every week, and two
+      // Adoration windows that start at 9 a.m. but end at different times
+      // are both kept.
+      const key = `${e.day_of_week!.toLowerCase()}-${e.start_time}-${e.end_time ?? ""}-${patternKey(e)}`;
       if (seen.has(key)) return false;
       seen.add(key);
       return true;

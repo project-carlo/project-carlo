@@ -26,7 +26,36 @@ function dated(date: string, start: number): EventSummary {
   return { ...weekly("", start), kind: "specific_date", day_of_week: null, date };
 }
 
+function windowOn(day: string, start: number, end: number): EventSummary {
+  return { ...weekly(day, start), end_time: end };
+}
+
 describe("weeklyScheduleRows", () => {
+  it("shows ranges, and only folds days whose windows also end together", () => {
+    const rows = weeklyScheduleRows([
+      windowOn("monday", 9 * 60, 19 * 60),
+      windowOn("tuesday", 9 * 60, 19 * 60),
+      windowOn("wednesday", 9 * 60, 12 * 60),
+      weekly("thursday", 9 * 60),
+    ]);
+    expect(rows.map((r) => [r.label, r.times])).toEqual([
+      ["Mon & Tue", ["9 a.m. – 7 p.m."]],
+      ["Wednesday", ["9 a.m. – 12 p.m."]],
+      ["Thursday", ["9 a.m."]],
+    ]);
+  });
+
+  it("keeps two windows on one day that start together but end apart", () => {
+    const rows = weeklyScheduleRows([
+      windowOn("friday", 9 * 60, 19 * 60),
+      windowOn("friday", 9 * 60, 12 * 60),
+      windowOn("friday", 9 * 60, 19 * 60),
+    ]);
+    expect(rows.map((r) => r.times)).toEqual([
+      ["9 a.m. – 12 p.m.", "9 a.m. – 7 p.m."],
+    ]);
+  });
+
   it("folds runs of adjacent days with the same times into one row", () => {
     const rows = weeklyScheduleRows([
       weekly("Saturday", 16 * 60),
