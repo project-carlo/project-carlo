@@ -39,6 +39,7 @@ from pdf_extract.browser import PageLike, launch_stealth_browser
 from pdf_extract.parish_sites import Recipe
 from pdf_extract.parish_sites.dates import parse_date
 from pdf_extract.parish_sites.links import decoded_base64_json
+from pdf_extract.pdf_compact import looks_like_pdf
 from pdf_extract.storage import PARISHES_CSV_PATH
 
 LOGGER = logging.getLogger(__name__)
@@ -408,7 +409,8 @@ _DATE_LINE = re.compile(
 
 def _masthead(pdf: bytes) -> tuple[str, str, str]:
     """PDF type, bounded first-page text, and any inspection limitation."""
-    if not pdf.startswith(b"%PDF-"):
+    # The same test the fetch stage applies, so a PDF it stores is not called not_pdf here.
+    if not looks_like_pdf(pdf):
         return "not_pdf", "", "Response does not have a PDF signature"
     if len(pdf) > _VERIFY_MAX_BYTES:
         return "pdf_signature", "", f"PDF exceeds the {_VERIFY_MAX_BYTES:,} byte inspection limit"
@@ -596,13 +598,18 @@ def _check_one(
         return finish()
     try:
         pdf = fetch._download_pdf(fetch_url=link.fetch_url, source_url=link.source_url)
+    except fetch.NotABulletin as exc:
+        # The server answered, with a page rather than the file.
+        transport, pdf = "ok", exc.body
+        result.update(bytes=len(pdf), status=NOT_PDF, detail=str(exc))
+        return finish()
     except (HTTPError, URLError, OSError) as exc:
         transport = "failed"
         result.update(status=DOWNLOAD_FAILED, detail=f"{type(exc).__name__}: {exc}")
         return finish()
     transport = "ok"
     result["bytes"] = len(pdf)
-    result["status"] = OK if pdf[:5] == b"%PDF-" else NOT_PDF
+    result["status"] = OK
     return finish()
 
 

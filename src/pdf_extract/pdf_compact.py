@@ -135,6 +135,14 @@ def _ghostscript(
 # (a 2100-pixel-wide spread becomes a 14-inch page).
 IMAGE_PDF_DPI = 150.0
 PDF_MAGIC = b"%PDF-"
+# PDF readers look for the header anywhere in the first kilobyte, so a PDF a
+# download script sent after a stray newline is still a PDF.
+PDF_HEADER_WINDOW = 1024
+
+
+def looks_like_pdf(data: bytes) -> bool:
+    """Whether `data` has a PDF header where a reader would find one."""
+    return PDF_MAGIC in data[:PDF_HEADER_WINDOW]
 
 
 def image_as_pdf(data: bytes) -> bytes | None:
@@ -158,8 +166,11 @@ def image_as_pdf(data: bytes) -> bytes | None:
 
 
 def as_bulletin_pdf(data: bytes) -> bytes:
-    """`data` as a PDF: a PDF as it is, an image wrapped in one, else unchanged."""
-    if data.startswith(PDF_MAGIC):
+    """`data` as a PDF: a PDF as it is, an image wrapped in one, else unchanged.
+
+    Unchanged is not a bulletin: check the result with `looks_like_pdf`.
+    """
+    if looks_like_pdf(data):
         return data
     return image_as_pdf(data) or data
 
