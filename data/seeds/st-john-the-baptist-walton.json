@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-john-the-baptist-walton",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-25T13:26:54Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-26T17:23:25Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Claude)",
+  "approved_at": "2026-11-08T20:43:50Z",
   "summary": "Three churches: St. John the Baptist (Walton), St. Peter's (Delhi) and Holy Family (Downsville). The Mass Schedule box and Mass intentions agree in all three bulletins. First-Friday Masses and Holy Hour, first-Saturday Reconciliation and Tuesday Adoration are in the calendar. Open: the hours of Thursday Adoration in the St. John the Baptist chapel, which the bulletins and the website print differently.",
   "blocked_reason": null,
   "bulletins": [
@@ -957,9 +957,22 @@
     },
     {
       "id": "s17",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-walton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Eucharistic Chapel"
+      },
       "page": 1,
       "sources": [
         {
@@ -1069,7 +1082,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:39Z"
+      }
     }
   ]
 }

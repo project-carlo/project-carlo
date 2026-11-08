@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "wheat-family-east-aurora",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-25T13:18:13Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-26T02:01:18Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Claude)",
+  "approved_at": "2026-11-08T20:43:50Z",
   "summary": "Four listed churches in one family bulletin: Annunciation, Immaculate Conception, St. Vincent de Paul and the Memorare Chapel. There is no schedule box; weekly times come from the Mass calendar and the Adoration and Confession lists on page 2, repeated in all five bulletins read. Open: the First Friday overnight Adoration at Annunciation.",
   "blocked_reason": null,
   "bulletins": [
@@ -3429,9 +3429,24 @@
     },
     {
       "id": "s43",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "church-of-the-annunciation-elma",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "20:00",
+        "end_time": "06:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Nocturnal Adoration"
+      },
       "page": 2,
       "sources": [
         {
@@ -3487,7 +3502,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:39Z"
+      }
     }
   ]
 }

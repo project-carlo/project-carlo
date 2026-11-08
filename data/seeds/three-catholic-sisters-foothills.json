@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "three-catholic-sisters-foothills",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-25T13:15:49Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-27T00:55:11Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Claude)",
+  "approved_at": "2026-11-08T20:49:39Z",
   "summary": "Three churches (St. Pacificus Oratory is on the list but has no times). The cover prints only weekend Masses and Saturday Reconciliation; weekday Masses are weekly under R35 from the intentions lists of all five bulletins. First-Friday Adoration and the first-Saturday Mass are cited from older issues (R12). Open: the church for first-Saturday Confession, and whether SP's Tuesday Holy Face devotion is Adoration.",
   "blocked_reason": null,
   "bulletins": [
@@ -1589,9 +1589,24 @@
     },
     {
       "id": "s20",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philomena-franklinville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 3,
       "sources": [
         {
@@ -1659,13 +1674,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:49:39Z"
+      }
     },
     {
       "id": "s21",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philomena-franklinville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Devotion to Holy Face; followed by 9:00 AM Mass"
+      },
       "page": 3,
       "sources": [
         {
@@ -1737,7 +1769,11 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:39Z"
+      }
     },
     {
       "id": "s22",

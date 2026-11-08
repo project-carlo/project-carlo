@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "twelve-apostles-catholic",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-25T13:17:41Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-26T01:53:53Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Claude)",
+  "approved_at": "2026-11-08T20:43:50Z",
   "summary": "Six churches in a family of parishes around LeRoy and Batavia. The p1 Mass and Confession boxes agree in all five bulletins read, and the weekday intentions match them. Included: Thursday Adoration at Our Lady of Mercy, a First Friday 10 AM Mass at Holy Name of Mary, a Nov 9 Brigid Mass and one-off Oct 25 7:30 AM Masses at Holy Name and St. Cecilia. Open: Tuesday Confession at Holy Name, given only as before and after Mass.",
   "blocked_reason": null,
   "bulletins": [
@@ -3168,9 +3168,22 @@
     },
     {
       "id": "s42",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-name-of-mary-east-pembroke",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:30 AM Mass"
+      },
       "page": 1,
       "sources": [
         {
@@ -3265,7 +3278,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:39Z"
+      }
     }
   ]
 }

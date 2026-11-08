@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-michael-st-peter-our-lady-of-hope-syracuse",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-25T13:25:00Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-26T17:20:29Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Claude)",
+  "approved_at": "2026-11-08T20:43:50Z",
   "summary": "Two churches share one Mass table (OLOH and SMSP). The newest listed file (Oct 25) is a Haiti fundraiser flyer with no schedule, so the schedule rests on the Oct 11, Oct 4 and Sep 27 bulletins and the parish website, which agree. Open: whether the Tuesday Adoration chapel on Velasko Rd is at the church.",
   "blocked_reason": null,
   "bulletins": [
@@ -892,9 +892,22 @@
     },
     {
       "id": "s13",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-st-peter-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel (Velasko Rd)"
+      },
       "page": null,
       "sources": [
         {
@@ -972,7 +985,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:39Z"
+      }
     }
   ]
 }

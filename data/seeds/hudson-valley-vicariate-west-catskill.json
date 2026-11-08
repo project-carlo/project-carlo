@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "hudson-valley-vicariate-west-catskill",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-25T13:26:03Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-27T01:02:47Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Claude)",
+  "approved_at": "2026-11-08T20:49:39Z",
   "summary": "The newest bulletin (Oct 24) is a four-church bulletin (Catskill, Athens, Coxsackie, Ravena) with new weekend, weekday, Reconciliation and Adoration schedules; St. Patrick's Ravena belongs to another parish and is excluded. The old 1st and 3rd Thursday Coxsackie confession and the older Saturday confession times are superseded by the new list. The Mass Times box gives Catskill as 66 Williams Street while the church list says 157 Bridge St.; it is attached to the only Catskill church. Open: whether the older bulletins' Sunday Masses at Haines Falls and Palenville, absent from the newest bulletin, still belong here.",
   "blocked_reason": null,
   "bulletins": [
@@ -1697,9 +1697,22 @@
     },
     {
       "id": "s39",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-haines-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -1753,14 +1766,31 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:49:39Z"
+      },
       "group": "haines-palenville"
     },
     {
       "id": "s40",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-palenville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -1814,7 +1844,11 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:49:39Z"
+      },
       "group": "haines-palenville"
     }
   ]

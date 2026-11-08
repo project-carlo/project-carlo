@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "bread-of-life-catholic-community",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-25T13:14:20Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-26T01:57:36Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Claude)",
+  "approved_at": "2026-11-08T20:43:50Z",
   "summary": "Six churches in the Bread of Life family. The bulletins print no Mass schedule box, so Mass times come from each church's weekly Mass intentions (same in all five issues) and agree with the parish websites. Confessions and Adoration come from the p3 lists, including the Christ the King chapel, St. Aloysius hours and the Infant of Prague first Friday. Open: a Thursday 8 AM school-related Mass at St. Benedict, and the end time of Infant of Prague's Saturday Confession.",
   "blocked_reason": null,
   "bulletins": [
@@ -5971,9 +5971,22 @@
     },
     {
       "id": "s71",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-benedict-amherst",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 7,
       "sources": [
         {
@@ -6074,13 +6087,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:38Z"
+      }
     },
     {
       "id": "s72",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "infant-of-prague-cheektowaga",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 3,
       "sources": [
         {
@@ -6192,7 +6222,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:38Z"
+      }
     }
   ]
 }

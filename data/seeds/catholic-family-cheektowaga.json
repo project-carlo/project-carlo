@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "catholic-family-cheektowaga",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-25T13:14:30Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-26T01:49:20Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Claude)",
+  "approved_at": "2026-11-08T20:43:50Z",
   "summary": "Four churches (OLHC with its chapel, Queen of Martyrs, Resurrection, St. Josaphat). Weekend and daily Masses, Confession times and Monday Adoration agree across the bulletins read and the parish website; first-Saturday Mass, first-Tuesday Adoration, Thanksgiving, and the Dec 7-8 holy-day Masses are dated or monthly. The OLHC 4:00 PM Saturday Mass ends Jan 1, 2027 and is still included. Open: weekend chapel adoration hours, and a website-only St. Josaphat Saturday Confession.",
   "blocked_reason": null,
   "bulletins": [
@@ -2441,9 +2441,22 @@
     },
     {
       "id": "s34",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-cheektowaga",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "14:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "OLHC Chapel, private adoration"
+      },
       "page": 2,
       "sources": [
         {
@@ -2491,14 +2504,31 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:38Z"
+      },
       "group": "chapel-weekend"
     },
     {
       "id": "s35",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-cheektowaga",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "14:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "OLHC Chapel, private adoration"
+      },
       "page": 2,
       "sources": [
         {
@@ -2540,7 +2570,11 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:38Z"
+      },
       "group": "chapel-weekend"
     },
     {
@@ -3019,9 +3053,26 @@
     },
     {
       "id": "s48",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-josaphat-cheektowaga",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "17:20",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first",
+          "third",
+          "fifth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 5:30 PM Mass"
+      },
       "page": null,
       "sources": [
         {
@@ -3066,7 +3117,11 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:38Z"
+      }
     },
     {
       "id": "s49",
