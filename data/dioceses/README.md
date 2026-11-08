@@ -500,9 +500,9 @@ Work in this order and only fall through when a step can't answer. Commit as you
 
 **Promotion:** when `todo` shows no errors or incomplete records, run `pnpm diocese promote
 <d> --dry-run`, read it, then `pnpm diocese promote <d>` and `pnpm test`. The next pipeline
-command seeds the new rows into the database. New parish rows go in with `fetch_only` set:
-the weekly run fetches their bulletins but doesn't process them or show their churches until
-the flag is cleared (README, "Fetch-only parishes").
+command seeds the new rows into the database. New parishes have no approved seed yet: the
+weekly run fetches their bulletins but doesn't process them or show their churches until each
+one's seed is approved (docs/weekly-pipeline.md, "Parishes without an approved seed").
 Promotion appends new rows, updates promoted ones, and deletes live rows the diocese has
 retired (merged, renamed, excluded, moved to open/, `no_bulletin` or `unsupported`). Retiring a church deletes its events, and retiring a
 parish deletes its bulletins and the events read from them, even for churches moved to another

@@ -37,7 +37,6 @@ from pdf_extract.fetch import fetch_bulletins
 from pdf_extract.process import process_bulletins
 from pdf_extract.report import build_report, render_markdown, snapshot_context
 from pdf_extract.runs import finish_run, start_run
-from pdf_extract.schedule_extraction import DEFAULT_GEMINI_MODEL
 from pdf_extract.storage import DEFAULT_DB_PATH, connect_db, list_parishes
 from pdf_extract.verify_frontend_snapshot import verify_frontend_snapshot
 
@@ -176,7 +175,6 @@ def resolve_run_scope(
 def run_weekly(
     *,
     run_id: str,
-    model: str = DEFAULT_GEMINI_MODEL,
     concurrency: int = 5,
     git_sha: str | None = None,
     trigger: str | None = None,
@@ -216,7 +214,7 @@ def run_weekly(
         seeds = load_seeds(db_path, run_id=run_id)
         stages["fetch"] = fetch_bulletins(run_id=run_id, slugs=slugs)
         stages["process"] = process_bulletins(
-            model=model, concurrency=concurrency, run_id=run_id, slugs=slugs,
+            concurrency=concurrency, run_id=run_id, slugs=slugs,
         )
 
         # One date for both snapshots and the comparison, so a run that
@@ -302,7 +300,6 @@ def _failed_report(run_id: str, stages: dict[str, Any]) -> dict[str, Any]:
             "failures": [],
             "wrong_bulletins": [],
             "repeated_weeks": [],
-            "old_issues": [],
             "stale_parishes": {},
             "dropped_to_zero": [],
             "big_drops": [],

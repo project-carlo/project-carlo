@@ -76,3 +76,22 @@ def pipeline_dir(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Path:
         }],
     )
     return work
+
+
+def seed_parish(
+    conn, slug: str, entries: list[dict], *, as_of: str = "2026-01-01T00:00:00Z",
+) -> int:
+    """Give `slug` an approved seed of `entries` (label form), putting it on the site.
+
+    Returns the seed's revision id.
+    """
+    from pdf_extract.schedule.entries import parse_entry
+    from pdf_extract.schedule.store import parish_churches, write_seed
+
+    parish_id = conn.execute("SELECT id FROM parish WHERE slug = ?", (slug,)).fetchone()[0]
+    churches = parish_churches(conn, parish_id)
+    with conn:
+        return write_seed(
+            conn, parish_id, [parse_entry(entry, churches) for entry in entries],
+            as_of=as_of, actor="test",
+        )

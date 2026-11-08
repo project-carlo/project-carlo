@@ -25,7 +25,6 @@ MIGRATIONS_DIR = ROOT / "data" / "migrations"
 PARISHES_CSV_PATH = DATA_DIR / "parishes.csv"
 CHURCHES_CSV_PATH = DATA_DIR / "churches.csv"
 DETECT_RESULTS_PATH = DATA_DIR / "detect_results.json"
-VERIFY_RESULTS_PATH = DATA_DIR / "verify_results.json"
 GEOCODE_RESULTS_PATH = DATA_DIR / "geocode_results.json"
 # Dioceses still being explored; see pdf_extract.dioceses.
 DIOCESES_DIR = DATA_DIR / "dioceses"
@@ -101,18 +100,6 @@ def get_parish_by_name(conn: sqlite3.Connection, name: str) -> sqlite3.Row | Non
     ).fetchone()
 
 
-def fetch_only_slugs(conn: sqlite3.Connection) -> set[str]:
-    """Slugs of the fetch-only parishes: fetched, but not processed or shown.
-
-    Empty for a database from before migration 7, which has no such parishes.
-    """
-    columns = {row[1] for row in conn.execute("PRAGMA table_info(parish)").fetchall()}
-    if "fetch_only" not in columns:
-        return set()
-    rows = conn.execute("SELECT slug FROM parish WHERE fetch_only = 1").fetchall()
-    return {row[0] for row in rows}
-
-
 def list_churches(conn: sqlite3.Connection, parish_id: int) -> list[sqlite3.Row]:
     """The parish's churches, retired ones (no longer in churches.csv) left out."""
     return conn.execute(
@@ -134,10 +121,9 @@ def latest_bulletin_order(alias: str = "") -> str:
     issue a site falls back to never displaces a newer one. Then the most
     recently processed, with the highest id as a deterministic tie-break.
     `bulletin_week.newest_bulletin` is the same ordering in Python. The
-    frontend snapshot, the change report and `recurrence apply` all rank by
-    it, so they agree on which bulletin a parish is currently showing; they
-    rank processed bulletins only, since one that was fetched but never
-    extracted has no events, and ranking it first would blank the parish.
+    frontend snapshot and the change report both rank by it, so they agree on
+    which bulletin a parish is currently showing; they rank processed
+    bulletins only, since one that was fetched but never read says nothing yet.
     """
     col = f"{alias}." if alias else ""
     return (
@@ -294,14 +280,6 @@ def _insert_events(
     return stored, skipped
 
 
-def replace_bulletin_events(
-    conn: sqlite3.Connection, bulletin_id: int, rows: list[dict[str, Any]],
-) -> tuple[int, int]:
-    """Replace a bulletin's events. Returns (events stored, events skipped as unstorable)."""
-    with conn:
-        return _insert_events(conn, bulletin_id, rows)
-
-
 def save_processed_bulletin(
     conn: sqlite3.Connection,
     bulletin_id: int,
@@ -330,7 +308,7 @@ def save_processed_bulletin(
 def load_events(
     conn: sqlite3.Connection, bulletin_ids: list[int] | None = None,
 ) -> list[dict[str, Any]]:
-    """Events in the extracted-row shape the recurrence detector works on.
+    """Events in the extracted-row shape the classifiers produce.
 
     Times come back as "h:MM AM" strings, the form the extractor produces, so
     rows read from the database and rows fresh from the classifier are

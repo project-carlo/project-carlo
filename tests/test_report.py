@@ -17,6 +17,7 @@ from pdf_extract.report import (
 from pdf_extract.runs import FETCH_TOO_LARGE, record_parish_result, start_run
 from pdf_extract.storage import connect_db, insert_bulletin, save_processed_bulletin, utc_now_iso
 from pdf_extract.verify_frontend_snapshot import GATE_POLICY_VERSION
+from tests.conftest import seed_parish
 
 MASS_9 = {
     "church_slug": "test-church", "event_type": "mass", "event_kind": "weekly",
@@ -38,12 +39,16 @@ def _masses(count: int) -> list[dict[str, Any]]:
 
 def _add_bulletin(
     db_path: Path,
-    rows: list[dict[str, Any]],
+    rows: list[dict[str, Any]] | None,
     *,
     published_date: str,
     fetched_at: str | None = None,
     processed: bool = True,
 ) -> int:
+    """A bulletin for test-parish; once processed, the parish's schedule is `rows`.
+
+    The schedule is written as a seed as of the bulletin's date. None leaves it as it was.
+    """
     conn = connect_db(db_path)
     try:
         parish_id = conn.execute(
@@ -56,9 +61,11 @@ def _add_bulletin(
         )
         if processed:
             save_processed_bulletin(
-                conn, bulletin_id, rows,
+                conn, bulletin_id, [],
                 processed_at=utc_now_iso(), published_date=published_date,
             )
+            if rows is not None:
+                seed_parish(conn, "test-parish", rows, as_of=f"{published_date}T00:00:00Z")
         return bulletin_id
     finally:
         conn.close()
@@ -140,7 +147,7 @@ def test_report_lists_added_and_removed_events(pipeline_dir: Path) -> None:
 
     [change] = _report(before, after)["changes"]
 
-    assert (change["parish_slug"], change["mode"]) == ("test-parish", "extract")
+    assert (change["parish_slug"], change["mode"]) == ("test-parish", "update")
     assert change["bulletin_changed"]
     assert change["bulletin_url"] == "https://example.org/2026-09-20.pdf"
     assert (change["before_count"], change["after_count"]) == (2, 2)
@@ -176,8 +183,8 @@ def test_a_new_bulletin_with_the_same_events_is_not_a_schedule_change(pipeline_d
 
 def test_report_ignores_unprocessed_and_older_bulletins(pipeline_dir: Path) -> None:
     before, after = _before_and_after(pipeline_dir, [MASS_9])
-    _add_bulletin(after, [], published_date="2026-09-20", processed=False)
-    _add_bulletin(after, [MASS_11], published_date="2026-09-06")
+    _add_bulletin(after, None, published_date="2026-09-20", processed=False)
+    _add_bulletin(after, None, published_date="2026-09-06")
 
     report = _report(before, after)
 
@@ -267,7 +274,7 @@ def test_report_summarises_changes(pipeline_dir: Path) -> None:
     assert report["comparison"]["window"] == {
         "start": "2026-09-21", "end": "2026-11-02", "days": 42,
     }
-    extract_totals = {
+    update_totals = {
         "parishes": 1, "parishes_showing_events": 1, "events_before": 3, "events_after": 3,
         "events_added": 1, "events_removed": 1, "parishes_changed": 1,
     }
@@ -280,7 +287,7 @@ def test_report_summarises_changes(pipeline_dir: Path) -> None:
         "parishes_changed": 1,
         "cancellations_added": 0,
         "cancellations_removed": 0,
-        "by_mode": {"extract": extract_totals},
+        "by_mode": {"update": update_totals},
         "onboarding": {"parishes": 0, "events": 0},
         "parishes_with_new_bulletin": 1,
         "update_mode_parishes": 0,
@@ -514,7 +521,7 @@ def test_report_calls_a_parish_whose_site_serves_an_old_issue_stale(pipeline_dir
     assert report["attention"]["stale_parishes"]["test-parish"]["bulletin_date"] == "2026-01-04"
 
 
-def test_report_lists_repeated_weeks_and_old_issues(pipeline_dir: Path) -> None:
+def test_report_lists_repeated_weeks(pipeline_dir: Path) -> None:
     before, after = _before_and_after(pipeline_dir, [MASS_9])
     conn = connect_db(after)
     try:
@@ -522,10 +529,6 @@ def test_report_lists_repeated_weeks_and_old_issues(pipeline_dir: Path) -> None:
         record_parish_result(
             conn, "r", "test-parish", "process", "repeated_week",
             detail="bulletin 3 for 2026-09-13 (after #1, #2)", source_url="https://x/3.pdf",
-        )
-        record_parish_result(
-            conn, "r", "other-parish", "process", "old_issue",
-            detail="for 2026-08-30, older than #4 for 2026-09-13", source_url="https://x/o.pdf",
         )
     finally:
         conn.close()
@@ -535,11 +538,9 @@ def test_report_lists_repeated_weeks_and_old_issues(pipeline_dir: Path) -> None:
     )
 
     assert [r["parish_slug"] for r in report["attention"]["repeated_weeks"]] == ["test-parish"]
-    assert [r["parish_slug"] for r in report["attention"]["old_issues"]] == ["other-parish"]
     assert report["attention"]["failures"] == []
     markdown = render_markdown(report)
     assert "**test-parish**: another bulletin for a week we already had two of" in markdown
-    assert "**other-parish**: the site served an older issue than the one shown" in markdown
 
 
 def test_report_opens_databases_read_only(pipeline_dir: Path) -> None:
@@ -574,7 +575,7 @@ def test_render_markdown_includes_status_gates_and_changes(pipeline_dir: Path) -
     assert "| Weekly schedule at least 90.0% unchanged | ✅ | 10 of 10 recurring slots " \
         "unchanged (100.0%); 0 removed or changed, 1 added |" in markdown
     assert "| fetch | new 1 |" in markdown
-    assert "<b>test-parish</b> (extract, new bulletin): 1 recurring (10 → 11 events)" in markdown
+    assert "<b>test-parish</b> (new bulletin): 1 recurring (10 → 11 events)" in markdown
     assert "- `test-church`\n  - + Mass · Sun 11:00 AM, every Sunday\n" in markdown
     assert "[Current bulletin](https://example.org/2026-09-20.pdf) for the week of " \
         "2026-09-20." in markdown
@@ -684,7 +685,7 @@ def test_render_markdown_truncates_long_change_lists() -> None:
     markdown = render_markdown(report, max_changed_parishes=2)
 
     assert markdown.count("<details>") == 2
-    assert "<b>p</b> (update): no schedule change (0 → 0 events)" in markdown
+    assert "<b>p</b>: no schedule change (0 → 0 events)" in markdown
     assert "…and 1 more parishes; see report.json." in markdown
 
 

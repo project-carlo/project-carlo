@@ -955,28 +955,20 @@ def test_a_view_that_no_longer_matches_fails_the_parish(
     assert "no longer renders" in result["detail"]
 
 
-def test_the_process_stage_splits_parishes_by_mode(
+def test_the_process_stage_calls_only_the_seeded_parishes(
     conn: sqlite3.Connection, monkeypatch: pytest.MonkeyPatch,
 ) -> None:
     _seed(conn, [SUN_9])
     _bulletin(conn, "update-1", "2026-10-10T12:00:00Z")
-    _bulletin(conn, "extract-1", "2026-10-10T12:00:00Z", slug="other-parish")
-    extracted: list[str] = []
-
-    def fake_extract(self, pdf_bytes, *, churches, today):
-        extracted.append(churches[0]["slug"])
-        return {"events": [], "published_date": None, "wrong_bulletin": False}
-
-    monkeypatch.setattr(process.GeminiClassifier, "extract", fake_extract)
-    monkeypatch.setattr("pdf_extract.storage.read_bulletin_pdf", lambda *a: b"%PDF")
+    _bulletin(conn, "unseeded-1", "2026-10-10T12:00:00Z", slug="other-parish")
     updater = FakeUpdater(_reply())
     monkeypatch.setattr(process, "OpenAIScheduleUpdater", lambda: updater)
 
     result = process.process_bulletins(concurrency=1)
 
-    assert extracted == ["other-church"]
-    assert result["processed_bulletins"] == 1
     assert result["update_calls"] == 1
+    assert result["unseeded_parishes"] == 1
+    assert len(updater.contexts) == 1
 
 
 # ── Snapshot ────────────────────────────────────────────────────────────────
@@ -1446,97 +1438,6 @@ def test_the_report_has_a_section_for_update_mode_parishes(
     markdown = render_markdown(report)
     assert "### Update-mode parishes" in markdown
     assert "replaced: Mass · Sat 5:00 PM → Mass · Sat 4:30 PM" in markdown
-
-
-def _extracted(
-    conn: sqlite3.Connection, name: str, events: list[dict], *, slug: str = "test-parish",
-    published_date: str = "2026-10-11",
-) -> None:
-    """An extract-mode bulletin for `slug`, processed into `events`."""
-    bulletin_id = _bulletin(conn, name, f"{published_date}T12:00:00Z", slug=slug)
-    with conn:
-        save_processed_bulletin(
-            conn, bulletin_id, [{"cancelled": False, **e} for e in events],
-            processed_at=f"{published_date}T12:00:00Z", published_date=published_date,
-        )
-
-
-def _snapshot_report(conn: sqlite3.Connection, before: Path) -> dict:
-    return build_report(
-        run_id="run-1", before_db=before, after_db=DEFAULT_DB_PATH, stages={},
-        snapshot_verification=verify_databases(before, DEFAULT_DB_PATH, date(2026, 10, 12)),
-    )
-
-
-def _copy(conn: sqlite3.Connection, tmp_path: Path) -> Path:
-    before = tmp_path / "before.db"
-    conn.execute(f"VACUUM INTO '{before}'")
-    return before
-
-
-def test_both_modes_get_the_same_checks_and_totals(
-    conn: sqlite3.Connection, tmp_path: Path,
-) -> None:
-    other = {**SUN_9, "church_slug": "other-church"}
-    _seed(conn, [SUN_9, SUN_11, SAT_5])
-    _extracted(conn, "o1", [other, {**other, "start_time": "11:00 AM"},
-                            {**other, "day_of_week": "Saturday", "start_time": "5:00 PM"}],
-               slug="other-parish", published_date="2026-10-04")
-    before = _copy(conn, tmp_path)
-    # Both parishes' schedules empty out, one by a re-seed, one by its bulletin.
-    _seed(conn, [], as_of="2026-10-11T00:00:00Z")
-    _extracted(conn, "o2", [], slug="other-parish")
-
-    report = _snapshot_report(conn, before)
-
-    assert report["status"] == "held"
-    assert sorted(report["attention"]["dropped_to_zero"]) == ["other-parish", "test-parish"]
-    modes = {c["parish_slug"]: c["mode"] for c in report["changes"]}
-    assert modes == {"other-parish": "extract", "test-parish": "update"}
-    totals = report["totals"]
-    assert (totals["events_before"], totals["events_after"], totals["events_removed"]) == (6, 0, 6)
-    assert {mode: (t["events_before"], t["events_removed"])
-            for mode, t in totals["by_mode"].items()} == {"extract": (3, 3), "update": (3, 3)}
-    losses = {(loss["parish_slug"], loss["level"]) for loss in report["attention"]["local_losses"]}
-    assert {("other-parish", "parish"), ("test-parish", "parish")} <= losses
-    assert "By mode: extract 1 parishes, 3 → 0 events" in render_markdown(report)
-
-
-@pytest.mark.parametrize(("seed_as_of", "holds"), [
-    ("2026-10-11T00:00:00Z", False),  # drafted from the parish's current bulletin
-    ("2026-09-01T00:00:00Z", True),  # older than it
-])
-def test_a_parish_seeded_this_run_is_compared_with_its_extracted_schedule(
-    conn: sqlite3.Connection, tmp_path: Path, seed_as_of: str, holds: bool,
-) -> None:
-    sat_4 = {**SAT_5, "start_time": "4:00 PM"}
-    _extracted(conn, "b1", [SUN_9, SUN_11, sat_4, {**sat_4, "church_slug": "second-church"}])
-    before = _copy(conn, tmp_path)
-    _seed(conn, [SAT_5], as_of=seed_as_of)
-
-    report = _snapshot_report(conn, before)
-
-    [change] = report["changes"]
-    assert change["mode"] == "extract→update"
-    assert sorted(c["change"] for c in change["recurring"]) == [
-        "modified", "removed", "removed", "removed",
-    ]
-    [local] = [g for g in report["gates"] if g["name"].startswith("No severe local loss")]
-    assert local["passed"] is not holds
-    severe = [loss for loss in change["local_losses"] if loss["severe"]]
-    # Both Sundays and second-church's Saturday are gone, 18 of the parish's 24
-    # dates; test-church's Saturday moved to 5:00, which loses none.
-    assert {(loss["level"], loss["church_slug"], loss["missing"]) for loss in severe} == {
-        ("parish", None, 18), ("church", "test-church", 12), ("church", "second-church", 6),
-    }
-    assert all(loss["seeded_this_run"] for loss in severe)
-    assert all(loss["holds"] is (holds and loss["level"] == "parish") for loss in severe)
-    # The seed's changes still count against the site-wide retention check.
-    [weekly] = [g for g in report["gates"] if g["name"].startswith("Weekly schedule")]
-    assert (weekly["passed"], weekly["numerator"], weekly["denominator"]) == (False, 0, 4)
-    assert report["totals"]["by_mode"]["extract→update"]["events_removed"] == 4
-    if not holds:
-        assert "(seeded this run from a current seed; does not hold)" in render_markdown(report)
 
 
 def test_the_report_lists_a_stale_call_in_full_and_flags_unprinted_entries(

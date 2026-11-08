@@ -25,7 +25,6 @@ from __future__ import annotations
 
 import re
 from collections.abc import Iterable
-from dataclasses import dataclass
 from datetime import date, timedelta
 from typing import Any
 
@@ -165,53 +164,6 @@ def has_bulletin_for(entry: dict[str, Any] | None, sunday: date) -> bool:
     if abs((fetched - published).days) > TRUSTED_DATE_DAYS:
         return False
     return nearest_sunday(published) == sunday
-
-
-@dataclass(frozen=True)
-class Placement:
-    """Where a newly processed bulletin's week falls among the parish's others."""
-
-    kind: str
-    """NEWER, CORRECTION, REPEATED_WEEK or OLDER."""
-
-    week: date
-    others: tuple[dict[str, Any], ...] = ()
-    """For a repeated week, the week's earlier bulletins; for an older one,
-    the newest bulletin it falls behind."""
-
-
-NEWER = "newer"
-CORRECTION = "correction"
-REPEATED_WEEK = "repeated_week"
-OLDER = "older"
-
-
-def place_bulletin(
-    entry: dict[str, Any], parish_bulletins: Iterable[dict[str, Any]],
-) -> Placement | None:
-    """How `entry`'s issue date compares with the parish's other processed bulletins.
-
-    None when the extractor read no date, so there is nothing to compare.
-    Bulletins the extractor rejected as the wrong PDF are left out: their dates
-    say nothing about this parish.
-    """
-    if parse_iso_date(entry.get("published_date")) is None:
-        return None
-    week = bulletin_week(entry)
-    if week is None:
-        return None
-    others = [
-        other for other in parish_bulletins
-        if other.get("id") != entry.get("id") and other.get("processed_at")
-        and not other.get("wrong_bulletin") and bulletin_week(other) is not None
-    ]
-    newest = newest_bulletin(others)
-    if newest is None or week > bulletin_week(newest):
-        return Placement(NEWER, week)
-    if week < bulletin_week(newest):
-        return Placement(OLDER, week, (newest,))
-    same_week = tuple(other for other in others if bulletin_week(other) == week)
-    return Placement(CORRECTION if len(same_week) == 1 else REPEATED_WEEK, week, same_week)
 
 
 def stale_parishes(
