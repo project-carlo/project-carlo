@@ -319,6 +319,8 @@ def _plain(value: Any) -> Any:
 
 # ── Frontmatter files ───────────────────────────────────────────────────────
 _FRONT_RE = re.compile(r"\A---[ \t]*\n(.*?)\n---[ \t]*(?:\n|\Z)(.*)\Z", re.S)
+# libyaml's parser reads the same records about ten times faster.
+_Loader = getattr(yaml, "CSafeLoader", yaml.SafeLoader)
 
 
 def parse_file(path: Path) -> tuple[dict[str, Any], str]:
@@ -327,7 +329,7 @@ def parse_file(path: Path) -> tuple[dict[str, Any], str]:
     if not m:
         raise DioceseError(f"{path}: must start with a '---' YAML frontmatter block")
     try:
-        front = yaml.safe_load(m.group(1)) or {}
+        front = yaml.load(m.group(1), Loader=_Loader) or {}
     except yaml.YAMLError as e:
         raise DioceseError(f"{path}: frontmatter is not valid YAML: {e}") from None
     if not isinstance(front, dict):
@@ -781,7 +783,9 @@ class _Owners:
     live_church: dict[str, dict[str, str]] = field(default_factory=dict)
 
 
-def _owners(diocese: str) -> _Owners:
+def _owners(diocese: str, loaded: Mapping[str, Diocese] | None = None) -> _Owners:
+    """What the live CSVs and every other diocese already claim. `loaded` holds
+    dioceses the caller has already read, so they are not parsed again."""
     o = _Owners()
     for row in read_live_csv(storage.PARISHES_CSV_PATH):
         o.live_parish[row.get("slug", "")] = row
@@ -791,7 +795,7 @@ def _owners(diocese: str) -> _Owners:
         if other == diocese:
             continue
         where = f"diocese {other!r}"
-        d = load(other)
+        d = loaded[other] if loaded and other in loaded else load(other)
         for slug, r in d.of(PARISH).items():
             o.parish.setdefault(slug, where)
             o.website.setdefault(url_key(r.get("website", "")), where)
@@ -1590,8 +1594,12 @@ def show_diocese(diocese: str) -> dict[str, Any]:
 def validate(diocese: str | None = None) -> dict[str, Any]:
     """Check one diocese, or all; `passed` is false if any has errors."""
     report = {}
+    # Each diocese's check reads every other diocese, so read them all once.
+    loaded = None if diocese else {slug: load(slug) for slug in diocese_slugs()}
     for slug in [diocese] if diocese else diocese_slugs():
-        report[slug] = problems(load(slug), rosters=roster_ids(slug)).as_dict()
+        d = loaded[slug] if loaded else load(slug)
+        report[slug] = problems(d, owners=_owners(slug, loaded),
+                                rosters=roster_ids(slug)).as_dict()
         report[slug]["counts"] = {k: len(v) for k, v in report[slug].items()}
     return {"passed": not any(r["errors"] for r in report.values()), "dioceses": report}
 
