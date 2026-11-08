@@ -216,6 +216,28 @@ describe("eventMatchesFilters", () => {
         eventMatchesFilters(slot(22 * 60, 60), window(0, 2 * 60)),
       ).toBe(false);
     });
+
+    it("runs a window that ends at midnight to the end of its day", () => {
+      // 8:45 p.m. – 12 a.m., stored with an end of 0.
+      expect(
+        eventMatchesFilters(slot(20 * 60 + 45, 0), window(22 * 60, 23 * 60)),
+      ).toBe(true);
+    });
+
+    it("treats a window that ends when it starts as 24 hours", () => {
+      // "Open 24/7" stored as 12 a.m. – 12 a.m.
+      expect(
+        eventMatchesFilters(slot(0, 0), window(15 * 60, 16 * 60)),
+      ).toBe(true);
+      // First Friday 9 a.m. – 9 a.m. Saturday is going that afternoon, but
+      // not before it starts.
+      expect(
+        eventMatchesFilters(slot(9 * 60, 9 * 60), window(15 * 60, 16 * 60)),
+      ).toBe(true);
+      expect(
+        eventMatchesFilters(slot(9 * 60, 9 * 60), window(7 * 60, 8 * 60)),
+      ).toBe(false);
+    });
   });
 });
 
@@ -303,6 +325,23 @@ describe("collectMapItems", () => {
       12 * 60,
       19 * 60,
     ]);
+  });
+
+  it("lists a window already in progress when the time filter is on", () => {
+    const churches = [church(171), church(172)];
+    const events = [
+      rawEvent({ id: 1701, church_id: 171, start_time: 9 * 60, end_time: 19 * 60 }),
+      rawEvent({ id: 1702, church_id: 172, start_time: 9 * 60 }),
+    ];
+
+    const items = collectMapItems(churches, events, {
+      types: [],
+      timeFrom: 15 * 60,
+      timeTo: 16 * 60,
+    });
+
+    expect(items.map((item) => item.id)).toEqual([171]);
+    expect(items[0].upcoming_events.map((e) => e.id)).toEqual([1701]);
   });
 
   it("returns the identical item when a church's matching events are unchanged", () => {

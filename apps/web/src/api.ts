@@ -183,7 +183,8 @@ export function eventMatchesFilters(
  *
  * A window past midnight (ends before it starts) counts as running to midnight:
  * its early-morning hours belong to the next weekday, which the day filter does
- * not know about.
+ * not know about. So does one that ends when it starts, which bulletins use
+ * for 24-hour Adoration ("9 a.m. Friday to 9 a.m. Saturday").
  */
 function overlapsTimeWindow(
   ev: Pick<RawEvent, "start_time" | "end_time">,
@@ -191,10 +192,8 @@ function overlapsTimeWindow(
   to: number,
 ): boolean {
   const start = ev.start_time;
-  if (ev.end_time == null || ev.end_time === start) {
-    return start >= from && start <= to;
-  }
-  const end = ev.end_time < start ? MINUTES_PER_DAY : ev.end_time;
+  if (ev.end_time == null) return start >= from && start <= to;
+  const end = ev.end_time <= start ? MINUTES_PER_DAY : ev.end_time;
   return start <= to && end > from;
 }
 
