@@ -5,7 +5,7 @@ merge PRs and answer GitHub issues. Each piece of work is a **job**, small enoug
 agent and run by a fresh worker. Code decides what runs next.
 
 Each diocese goes through two Runs. A **map Run** finds every parish's bulletin and
-promotes the diocese, so its parishes go live in extract mode. A **seed Run** starts once
+promotes the diocese, so its parishes' bulletins are fetched (not yet shown). A **seed Run** starts once
 those parishes have bulletins in the database, and seeds them. An agent reviewer answers
 every open seed question and approves the seeds; the PR lists each decision so you can
 change any before merging.

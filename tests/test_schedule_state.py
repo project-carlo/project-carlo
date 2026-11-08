@@ -1604,5 +1604,5 @@ def test_a_call_can_only_change_entries_it_was_shown(conn: sqlite3.Connection) -
 
 
 def test_hand_edits_need_an_update_mode_parish(conn: sqlite3.Connection) -> None:
-    with pytest.raises(EditError, match="extract mode"):
+    with pytest.raises(EditError, match="no seed revision"):
         edit_entry(conn, _parish_id(conn), "add", entry=SUN_9, actor="luke")

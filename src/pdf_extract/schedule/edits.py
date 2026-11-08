@@ -52,10 +52,10 @@ class EditResult:
 
 
 def _require_update_mode(conn: sqlite3.Connection, parish_id: int) -> None:
-    """Hand edits are for believed schedules: an extract-mode parish has none to edit."""
+    """Hand edits are for believed schedules: a parish without a seed has none to edit."""
     if not is_update_mode(conn, parish_id):
         raise EditError(
-            "the parish is in extract mode (it has no seed revision); seed it first"
+            "the parish has no seed revision, so no schedule to edit; seed it first"
         )
 
 
