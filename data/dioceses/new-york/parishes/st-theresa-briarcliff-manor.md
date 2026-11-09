@@ -2,7 +2,7 @@
 name: St. Theresa, Briarcliff Manor
 website: https://sainttheresa.org/
 bulletin_provider: other
-provider_id: page-pdfs https://sponsors.bonventure.net/?page=1433
+provider_id: page-pdfs http://sponsors.bonventure.net/?page=1433
 publication: ['url:https://sponsors.bonventure.net/?page=1433']
 group: ''
 evidence:

@@ -11,11 +11,14 @@ evidence:
   quote: SACRED HEART OF JESUS OCTOBER 4, 2026
   note: Actual bulletin text, page 1, read October 7, 2026. If a future Sunday is printed, it was already
     publicly posted; no future event is inferred as completed.
-revisit: Read the next available issue from https://sacredheart-highlandfalls.org/bulletins and verify
-  the masthead and building-specific schedule for Sacred Heart of Jesus. Run fetch:check separately to
-  confirm ingestion; no fresh fetch is recorded by this edit.
-revisit_after: 2026-10-14
 promoted: 2026-10-08
+research:
+- method: fetch:check --diocese new-york (full run, reconcile)
+  url: https://files.ecatholic.com/6794/bulletins/20261101.pdf?t=1793296634000
+  checked: '2026-11-09'
+  outcome: found
+  next_action: None; the recipe picked the current issue (2026-11-01). The October revisit to read the
+    next issue is done.
 ---
 
 ## Publisher
@@ -24,7 +27,8 @@ Sacred Heart of Jesus is represented by the actual issue at https://files.ecatho
 
 ## Worship sites
 
-Linked worship-site records for Sacred Heart of Jesus: [Sacred Heart of Jesus](../churches/sacred-heart-of-jesus-highland-falls.md). Each church record retains its building-specific Mass evidence.
+- [Sacred Heart of Jesus](../churches/sacred-heart-of-jesus-highland-falls.md), Highland Falls.
+- [Blessed Sacrament Chapel](../churches/blessed-sacrament-chapel-fort-montgomery.md), 794 US Route 9W, Fort Montgomery: the parish's mission church, Sunday 8 am (parish Mass Times page, read 2026-11-08; the bulletin doesn't name it).
 
 ## Website and bulletin provider
 

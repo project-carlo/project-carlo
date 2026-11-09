@@ -22,12 +22,14 @@ evidence:
     \ Tuesday at 7pm /Spanish—every 3rd Tuesd"
   note: Actual bulletin text, page 1, read October 7, 2026. If a future Sunday is printed, it was already
     publicly posted; no future event is inferred as completed.
-revisit: Read the next available issue from https://parishesonline.com/organization/st-peter-and-st-mary-church
-  and verify the masthead and building-specific schedule for St. Peter. Follow the linked open/excluded
-  records for unresolved building status or member-channel checks. Run fetch:check separately to confirm
-  ingestion; no fresh fetch is recorded by this edit.
-revisit_after: 2026-10-14
 promoted: 2026-10-08
+research:
+- method: fetch:check --diocese new-york (full run, reconcile)
+  url: https://parishesonline.com/publication-page/st-peter-and-st-mary-church?selectedPublication=https://container.parishesonline.com/bulletins/03/1414/20261108B.pdf
+  checked: '2026-11-09'
+  outcome: found
+  next_action: None; the recipe picked the current issue (2026-11-08). The October revisit to read the
+    next issue is done.
 ---
 
 ## Publisher

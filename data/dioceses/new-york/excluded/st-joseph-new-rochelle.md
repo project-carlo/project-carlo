@@ -11,20 +11,34 @@ evidence:
 - url: https://www.dropbox.com/scl/fi/1dcmuegyjmahonhx3o0oh/Decree-on-the-Relegation-of-Saint-Joseph-Church-New-Rochelle.pdf?rlkey=zjhtowni5q39ebiufmxwec1y2&dl=1
   seen: 2026-10-08
   quote: is hereby reduced to profane but not sordid use
-  note: 'October 18, 2024 archdiocesan decree, page 4, operative paragraph 1, names St. Joseph in St. Gabriel-Saint Joseph, New Rochelle. All four cached image-only pages visually read. Building-specific corroboration; no final-Mass date.'
+  note: October 18, 2024 archdiocesan decree, page 4, operative paragraph 1, names St. Joseph in St. Gabriel-Saint
+    Joseph, New Rochelle. All four cached image-only pages visually read. Building-specific corroboration;
+    no final-Mass date.
 - url: https://www.stgabrielstjoseph.org/
   seen: 2026-10-08
   quote: (Location Currently Closed)
-  note: 'Independently re-read rendered homepage footer beside St. Joseph Church, 280 Washington Ave, New Rochelle. Current events run into October 2026; no final-Mass date appears.'
+  note: Independently re-read rendered homepage footer beside St. Joseph Church, 280 Washington Ave, New
+    Rochelle. Current events run into October 2026; no final-Mass date appears.
 - url: https://www.stgabrielstjoseph.org/
   seen: 2026-10-07
   quote: (Location Currently Closed)
   note: 'Direct rendered homepage observation: St. Joseph Church, 280 Washington Ave, New Rochelle, NY
-    10801, followed by Location Currently Closed. No last-Mass date is supplied; the footer alone does not establish a temporary closure.'
+    10801, followed by Location Currently Closed. No last-Mass date is supplied; the footer alone does
+    not establish a temporary closure.'
+- url: https://www.stgabrielstjoseph.org/
+  seen: 2026-11-09
+  quote: (Location Currently Closed)
+  note: 'Homepage footer read in headed Chrome (visit.py) on 2026-11-09: St. Joseph Church, 280 Washington
+    Ave, New Rochelle, NY 10801, still marked Location Currently Closed.'
 parish: st-gabriel-and-st-joseph-new-rochelle
-revisit: Check the parish homepage for reopening of the St. Joseph Washington Avenue location and obtain
-  a site-specific public Mass schedule if it reopens.
-revisit_after: 2026-11-07
+research:
+- method: 'Parish homepage in headed Chrome (visit.py --text): the footer still labels St. Joseph Church,
+    280 Washington Ave, Location Currently Closed; nothing on the page announces a reopening'
+  url: https://www.stgabrielstjoseph.org/
+  checked: '2026-11-09'
+  outcome: found
+  next_action: 'None: the October 18, 2024 decree relegated the building to profane use, so the closure
+    is permanent; the reopening revisit is cleared'
 ---
 
 ## Decision
@@ -33,7 +47,7 @@ The parish homepage explicitly labels St. Joseph Church, 280 Washington Ave, New
 
 ## Recheck
 
-Obtain an explicit current physical-site reopening statement if later sources differ. The continued use of a saint's name in a combined parish is not evidence that this building reopened.
+Checked 2026-11-09: the homepage footer still says "(Location Currently Closed)" for 280 Washington Ave. Because the October 18, 2024 decree reduced the church to profane use, the reopening revisit is cleared rather than renewed: a return to worship would need a new decree, which would surface in the parish's own schedule and on archny.org. The continued use of a saint's name in a combined parish is not evidence that this building reopened.
 
 ## October 8, 2026 last-Mass audit
 

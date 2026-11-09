@@ -36,9 +36,9 @@ The October 4, 2026 linked issue identifies Holy Rosary - Nativity of Our Blesse
 
 Linked worship-site records for Holy Rosary - Nativity of Our Blessed Lady, Bronx: [Holy Rosary](../churches/holy-rosary-bronx-16192.md). Each church record retains its building-specific Mass evidence.
 
-[Nativity of Our Blessed Lady](../open/nativity-of-our-blessed-lady-bronx-16196.md) remains an open question. Ask Holy Rosary rectory about public Mass at 1531 East 233rd Street; obtain a current building schedule or explicit cessation/relegation notice.
+Nativity of Our Blessed Lady, 1531 East 233rd Street, publishes its own weekly bulletin and is its own row, [Nativity of Our Blessed Lady](nativity-of-our-blessed-lady-bronx.md) (Bronx follow-up, 2026-11-09; the two are separate publications in `publication_reviews`).
 
-The linked worship site [Holy Rosary](../churches/holy-rosary-bronx-16192.md) at 1510 Adee Ave. has affirmative public Mass evidence. Nativity remains in the joined title, but its separate building is open/unresolved rather than assumed closed. 
+The linked worship site [Holy Rosary](../churches/holy-rosary-bronx-16192.md) at 1510 Adee Ave. has affirmative public Mass evidence. Nativity remains in the joined title but publishes separately (above).
 
 ## Website and bulletin provider
 

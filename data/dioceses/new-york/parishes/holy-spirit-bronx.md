@@ -25,10 +25,13 @@ evidence:
     \ \n  Saturday • Sábado:  \n5:30pm: English  \n \nSunday • Domingo: \n9:00am: English / Inglés \n\
     11:00am: Spanish / Español \n1:00pm"
   note: Public Mass schedule/dated intentions in this issue.
-revisit: Run fetch:check for the home-page page-pdfs recipe; select the current S3 PDF rather than stale
-  archive material.
-revisit_after: 2026-10-14
 promoted: 2026-10-08
+research:
+- method: fetch:check --diocese new-york (full run); the picked PDF read for its date
+  url: https://holy-spirit-bronx.s3.amazonaws.com/asset/photos/rgno4/39a1ab2992497cc87bade2b111ce404eada7ae9eba25aa9516c8a19dcdc23961.pdf
+  checked: '2026-11-08'
+  outcome: found
+  next_action: None; the pinned recipe picked the November 8, 2026 issue.
 ---
 
 ## Publisher

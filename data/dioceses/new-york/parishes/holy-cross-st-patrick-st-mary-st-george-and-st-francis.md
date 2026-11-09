@@ -22,13 +22,11 @@ promoted: 2026-10-08
 
 ## Publisher and worship sites
 
-The October 4 masthead names all five churches and their individual addresses. It explicitly assigns Sunday 9 AM to St. Francis in Youngsville, 11:30 AM to St. George in Jeffersonville, and Saturday 4 PM and Wednesday 9 AM to St. Mary in Obernburg. GCatholic indexes St. Francis under Jeffersonville; the bulletin calls the physical site Youngsville. Holy Cross in Callicoon and St. Patrick in Long Eddy appear in this publisher masthead but remain open records pending building-specific schedules and member-channel checks.
+The October 4 masthead names all five churches and their individual addresses. It explicitly assigns Sunday 9 AM to St. Francis in Youngsville, 11:30 AM to St. George in Jeffersonville, and Saturday 4 PM and Wednesday 9 AM to St. Mary in Obernburg. GCatholic indexes St. Francis under Jeffersonville; the bulletin calls the physical site Youngsville. Holy Cross in Callicoon and St. Patrick in Long Eddy are its churches too (below).
 
-Linked worship-site records for Holy Cross, St. Patrick, St. Mary, St. George and St. Francis: [St. Francis of Assisi](../churches/st-francis-of-assisi-youngsville.md), [St. George](../churches/st-george-jeffersonville.md), [St. Mary](../churches/st-mary-obernburg.md). Each church record retains its building-specific Mass evidence.
+Linked worship-site records: [Holy Cross](../churches/holy-cross-callicoon.md), [St. Patrick](../churches/st-patrick-long-eddy.md), [St. Francis of Assisi](../churches/st-francis-of-assisi-youngsville.md), [St. George](../churches/st-george-jeffersonville.md), [St. Mary](../churches/st-mary-obernburg.md). Each church record retains its building-specific Mass evidence.
 
-[Holy Cross](../open/holy-cross-callicoon.md) has an explicit current Sunday 10 AM schedule at its Callicoon building. Its own archive at https://holycrosscallicoon.org/bulletins ends June 14, 2026. The June issue and this October issue name five churches, but that does not settle whether Callicoon currently distributes this issue or a separate channel. Ask the Holy Cross office at 845-887-5450 to confirm present bulletin membership before attaching the building to this publisher.
-
-[St. Patrick Church](../open/st-patrick-long-eddy.md) has an explicit current Sunday 8 AM schedule at 20 Church Street, Long Eddy. The Holy Cross archive captured October 8 still stops in June. Ask the same office for its current shared or independent bulletin; public worship is established, while present publication membership remains unconfirmed. Do not infer closure from a stale archive.
+[Holy Cross](../churches/holy-cross-callicoon.md) (Sunday 10 AM) and [St. Patrick](../churches/st-patrick-long-eddy.md), Long Eddy (Sunday 8 AM) are churches of this parish: the 8 November 2026 issue (eCatholic 10462), which Holy Cross's own Bulletins page now links, prints their schedules. Holy Cross's old archive at holycrosscallicoon.org ends June 14, 2026. (Upstate follow-up, 2026-11-08.)
 
 ## Website and publication
 

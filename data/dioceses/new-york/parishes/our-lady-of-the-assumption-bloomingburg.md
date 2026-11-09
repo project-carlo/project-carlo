@@ -42,11 +42,14 @@ evidence:
     Proudly Hosted by John Patrick Publ
   note: Current parish site, read in headed Chrome during October 7 research; exact public schedule, not
     canonical directory name.
-revisit: Read the next available issue from https://ourladyoftheassumptionchurch.org/bulletins/ and verify
-  the masthead and building-specific schedule for Our Lady of the Assumption. Run fetch:check separately
-  to confirm ingestion; no fresh fetch is recorded by this edit.
-revisit_after: 2026-10-14
 promoted: 2026-10-08
+research:
+- method: fetch:check --diocese new-york (full run, reconcile)
+  url: https://ourladyoftheassumptionchurch.org/wp-content/uploads/2026/11/Bulletin-November-8th-32nd-Sunday-in-Ordinary-Time-1.pdf
+  checked: '2026-11-09'
+  outcome: found
+  next_action: None; the recipe picked the current issue (2026-11-08). The October revisit to read the
+    next issue is done.
 ---
 
 ## Publisher

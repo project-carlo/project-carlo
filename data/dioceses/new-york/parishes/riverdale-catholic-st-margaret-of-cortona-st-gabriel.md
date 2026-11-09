@@ -3,14 +3,15 @@ name: 'Riverdale Catholic: St. Margaret of Cortona - St. Gabriel'
 website: https://www.riverdalecatholic.org/about-5
 bulletin_provider: other
 provider_id: page-pdfs https://www.riverdalecatholic.org/about-5
-revisit: Recheck archive freshness; September 20 remains the latest listed issue on October 8. A later access failure does not overturn the successful collector and production PDF check.
 publication: ['url:https://www.riverdalecatholic.org/about-5']
 group: 'Riverdale Catholic: St. Margaret of Cortona - St. Gabriel'
 evidence:
 - url: https://www.riverdalecatholic.org/about-5
   seen: 2026-10-08
   quote: September 20th, 2026
-  note: 'Direct verified HTTP archive read: September 20 is first and latest listed, then September 13 and September 6. The pinned page-pdfs recipe selects the actual latest visible September 20 issue; archive lag is explicit and does not imply ceased publication.'
+  note: 'Direct verified HTTP archive read: September 20 is first and latest listed, then September 13
+    and September 6. The pinned page-pdfs recipe selects the actual latest visible September 20 issue;
+    archive lag is explicit and does not imply ceased publication.'
 - url: https://www.riverdalecatholic.org/_files/ugd/580908_2e42b0bfeb07457ea73e4f009347814d.pdf
   seen: 2026-10-07
   quote: "Twenty-Fifth Sunday in Ordinary Time 20th September 2026\nHoly Masses \nWeekday \nSt. Margaret’s:\
@@ -37,6 +38,12 @@ evidence:
     \ \n 6000 Riverdale Avenue, Bronx,NY10471 \n718-549-8053"
   note: Issue masthead and Mass schedule; saved primary text inspected on 2026-10-07.
 promoted: 2026-10-08
+research:
+- method: fetch:check --diocese new-york (full run); the picked PDF read for its date
+  url: https://www.riverdalecatholic.org/_files/ugd/02f205_d9e67b7d37c54a8bacc0d59cf546cfd7.pdf
+  checked: '2026-11-08'
+  outcome: found
+  next_action: None; the pinned recipe picked the November 8, 2026 issue.
 ---
 
 ## Publisher

@@ -16,9 +16,13 @@ evidence:
   quote: All Masses celebrated in the Main Church
   note: 'Page 1: Saturday Vigil 5:00pm, Sunday 7:30am, 9:00am, 10:30am, 11:45am, 1:00pm & 5:00pm. The
     lower church is for Friday adoration, not a separate Mass site.'
-revisit: Run fetch:check for the self-hosted collector; use browser access if HTTP 403 recurs.
-revisit_after: 2026-10-14
 promoted: 2026-10-08
+research:
+- method: fetch:check --diocese new-york (full run); the picked PDF read for its date
+  url: https://www.stbarnabasbronx.org/images/bulletins/bulletin110826.pdf
+  checked: '2026-11-08'
+  outcome: found
+  next_action: None; the pinned recipe picked the November 8, 2026 issue.
 ---
 
 ## Publisher

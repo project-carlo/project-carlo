@@ -1,8 +1,8 @@
 ---
 name: St. Martin de Porres Poughkeepsie
 website: https://stmartindeporres.org/
-bulletin_provider: ecatholic
-provider_id: ''
+bulletin_provider: other
+provider_id: page-pdfs https://stmartindeporres.org/bulletin-inserts
 publication: ['ecatholic:6633']
 group: ''
 evidence:
@@ -14,6 +14,11 @@ evidence:
   seen: 2026-10-07
   quote: 'SUNDAY: 7:30, 9:30, 11:30 AM, 5:00 PM'
   note: Issue identity and current site-specific Mass schedule; see explanation.
+- url: https://files.ecatholic.com/6633/documents/2026/11/Bulletin%20110826.pdf?t=1793906616000
+  seen: 2026-11-08
+  quote: November 8, 2026 ~ Thirty-Second Sunday in Ordinary Time
+  note: Listed first ('11/08/26') on https://stmartindeporres.org/bulletin-inserts on November 8, 2026;
+    the issue names St. Martin de Porres Parish.
 promoted: 2026-10-08
 ---
 
@@ -27,7 +32,7 @@ Linked worship-site records for St. Martin de Porres Poughkeepsie: [St. Martin d
 
 ## Website and bulletin provider
 
-The official index links this issue. The source URL is retained so its masthead and schedule can be rechecked.
+The homepage's 'Bulletin & Inserts' link opens /bulletin-inserts, which lists each issue newest first as an eCatholic document (files.ecatholic.com/6633/documents/<yyyy>/<m>/Bulletin MMDDYY.pdf, once 'Bulletin-2026-11-01.pdf'). The eCatholic /bulletins date path the ecatholic collector reads stops at December 21, 2014, so fetch:check picked that file on November 8, 2026. The row is `other` with the recipe `page-pdfs https://stmartindeporres.org/bulletin-inserts`, which picked the November 8, 2026 issue that day (`current`).
 
 ## Not yet confirmed
 

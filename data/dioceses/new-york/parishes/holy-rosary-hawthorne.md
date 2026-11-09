@@ -64,10 +64,14 @@ evidence:
     Login powered by eCatholic®
   note: Current parish site, read in headed Chrome during October 7 research; exact public schedule, not
     canonical directory name.
-revisit: Check the next posted issue and compare any independent member channels; do not infer closure
-  from archive lag.
-revisit_after: 2026-10-14
 promoted: 2026-10-08
+research:
+- method: fetch:check --diocese new-york (full run, reconcile)
+  url: https://files.ecatholic.com/15556/bulletins/20261108.pdf?t=1793997392000
+  checked: '2026-11-09'
+  outcome: found
+  next_action: None; the recipe picked the current issue (2026-11-08). The October revisit to read the
+    next issue is done.
 ---
 
 ## Publisher

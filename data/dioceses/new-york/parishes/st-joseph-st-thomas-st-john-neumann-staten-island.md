@@ -18,7 +18,7 @@ promoted: 2026-10-08
 
 St. Joseph - St. Thomas - St. John Neumann Parish publishes the issue linked above. Its dated bulletin, rather than a canonical merger or account name, determines this publisher row. The current archive was read on October 7, 2026.
 
-The latest posted issue is October 11. Its Mass schedule names St. Joseph and St. Thomas only. St. John Neumann is part of the parish name, not proof that the Arthur Kill Road building currently celebrates public Mass. That building remains open for investigation. GCatholic leaves the St. Joseph address blank and gives St. Thomas as 6097 Amboy Road; the official directory gives 16 Poplar Avenue and 6123 Amboy Road respectively.
+The latest posted issue is October 11. Its Mass schedule names St. Joseph and St. Thomas only. St. John Neumann is part of the parish name; its Arthur Kill Road building gets no Mass in any 2026 issue, not even its feast, and is excluded in [St. John Neumann](../excluded/st-john-neumann-staten-island.md). GCatholic leaves the St. Joseph address blank and gives St. Thomas as 6097 Amboy Road; the official directory gives 16 Poplar Avenue and 6123 Amboy Road respectively.
 
 ## Worship sites
 
@@ -33,4 +33,4 @@ On October 8, 2026, the pipeline resolver was replayed against the actual parish
 
 ## Not yet confirmed
 
-The latest posted issue is October 11. Its Mass schedule names St. Joseph and St. Thomas only. St. John Neumann is part of the parish name, not proof that the Arthur Kill Road building currently celebrates public Mass. That building remains open for investigation. GCatholic leaves the St. Joseph address blank and gives St. Thomas as 6097 Amboy Road; the official directory gives 16 Poplar Avenue and 6123 Amboy Road respectively.
+The latest posted issue is October 11. Its Mass schedule names St. Joseph and St. Thomas only. St. John Neumann is part of the parish name; its Arthur Kill Road building gets no Mass in any 2026 issue, not even its feast, and is excluded in [St. John Neumann](../excluded/st-john-neumann-staten-island.md). GCatholic leaves the St. Joseph address blank and gives St. Thomas as 6097 Amboy Road; the official directory gives 16 Poplar Avenue and 6123 Amboy Road respectively.

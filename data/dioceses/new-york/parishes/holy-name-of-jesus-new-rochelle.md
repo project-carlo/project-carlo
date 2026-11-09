@@ -27,10 +27,14 @@ evidence:
     The selected PDF downloaded with HTTP 200 and its publisher masthead and date were read. This is an
     already-public issue dated October 11, 2026, later than the October 8 check date; its future issue
     date is not a claim that October 11 has occurred. '
-revisit: Recheck the current archive after October 14; the custom recipe resolved to this publisher and
-  the selected PDF was independently downloaded and read.
-revisit_after: 2026-10-14
 promoted: 2026-10-08
+research:
+- method: fetch:check --diocese new-york (full run, reconcile)
+  url: http://sponsors.bonventure.net/pdfs/1512/2026-11-08.pdf
+  checked: '2026-11-09'
+  outcome: found
+  next_action: None; the recipe picked the current issue (2026-11-08). The October revisit to read the
+    next issue is done.
 ---
 
 ## Publisher

@@ -16,11 +16,14 @@ promoted: 2026-10-08
 
 ## Publisher
 
-The October 4, 2026 PDF identifies St. Peter's Parish in Poughkeepsie. Its current archive was checked October 8 and already links the October 11 issue. One publisher serves the Rosary Chapel and parish auditorium. The roster's St. Peter entry at 6 Father Cody Plaza remains a physical-identity question: October 11 issue page 2 explicitly calls that a mailing address, not proof of a distinct active or closed historical church.
+The October 4, 2026 PDF identifies St. Peter's Parish in Poughkeepsie. Its current archive was checked October 8 and already links the October 11 issue. One publisher serves the Rosary Chapel and the parish auditorium (the school gym at 6 Father Cody Plaza, which is also GCatholic's 'St. Peter' entry).
 
 ## Worship sites
 
-Our Lady of the Rosary Chapel has an explicit Sunday/weekday schedule. Saturday 4 PM is instead in the parish auditorium; its precise building/address is an open question, not a second point guessed from an office address. Other historically named chapels are not made active by a contact-list heading.
+- [Our Lady of the Rosary Chapel](../churches/our-lady-of-the-rosary-chapel-poughkeepsie.md), 185 Hudson View Drive: Sunday 9, 10:30 and noon, and weekdays.
+- [St. Peter's School Gym (Parish Auditorium)](../churches/st-peter-school-gym-poughkeepsie.md), 6 Father Cody Plaza: Saturday Vigil 4 pm (bulletin of November 8, 2026, page 2).
+
+Other historically named chapels are not made active by a contact-list heading.
 
 ## Website and bulletin provider
 

@@ -72,12 +72,26 @@ evidence:
   quote: October 04.2026
   note: Listing text and actual PDF hrefs preserved in saved headed-browser research. Current October
     4 PDF uses eCatholic file account 15087.
-revisit: Compare the next OLGC and St. Thomas More PDFs from both member listings; check whether their
-  joint masthead, worship schedules and parish material still match or have become independently edited
-  publications. Run live fetch:check on the pinned OLGC listing separately; no new fetch is recorded by
-  this edit.
-revisit_after: 2026-10-14
+- url: https://files.ecatholic.com/15087/documents/2026/11/OLGC%20-%20Bulletin%20November%2008%202026.pdf
+  seen: 2026-11-09
+  quote: OLGC - 230 East 90th Street - STM - 65 East 89th Street
+  note: 'November 8, 2026 OLGC copy (the one fetch:check picks): the joint masthead names Our Lady of
+    Good Counsel and St. Thomas More, with both Sunday Mass schedules.'
+- url: https://files.ecatholic.com/15087/documents/2026/11/STM%20-%20Bulletin%20November%2008%202026.pdf
+  seen: 2026-11-09
+  quote: OLGC - 230 East 90th Street - STM - 65 East 89th Street
+  note: 'November 8, 2026 STM copy, listed first on https://olgcstm.org/bulletin-st-thomas-more: 6 pages
+    whose extracted text is identical to the OLGC copy, uploaded with the same timestamp. One publication
+    with two copies.'
 promoted: 2026-10-08
+research:
+- method: 'Listed the St. Thomas More listing in headed Chrome (newest November 8, 2026) and diffed the
+    probe pdf text of the November 8 OLGC and STM copies: identical, 6 pages each, joint masthead, both
+    schedules'
+  url: https://olgcstm.org/bulletin-st-thomas-more
+  checked: '2026-11-09'
+  outcome: found
+  next_action: 'None: one publisher with two copies; fetch:check picks the November 8 OLGC copy'
 ---
 
 ## Publisher
@@ -94,9 +108,7 @@ The other provider uses the pinned page-pdfs recipe above, selecting the actual 
 
 ## Recheck
 
-Refresh the current archive and run live fetch:check before promotion. Cloudflare HTTP blocks do not demonstrate broken recipes.
-
-The later Current copies compared section records the OLGC/STM comparison and supersedes the earlier provisional grouping question. On the next issue review, compare both member copies for independently edited material before retaining one publisher.
+Settled 2026-11-09: fetch:check picks the November 8, 2026 OLGC copy from the pinned listing. The STM listing's November 8 copy has identical extracted text (6 pages, same upload time) under the joint masthead naming both churches, so one publisher is kept. A member copy with independently edited content would reopen the question.
 
 ## Current copies compared
 

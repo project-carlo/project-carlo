@@ -22,10 +22,14 @@ evidence:
     \ AM | 5PM \nM-F:     7:45 AM"
   note: 'SnapshotPage/_check_one returned lowercase ok using the actual saved HTTP HTML in scratch\nyc2-resolver-st-francis-xavier-new-york-city.html.
     The selected PDF downloaded with HTTP 200 and its publisher masthead and date were read. '
-revisit: Recheck the current archive after October 14; the custom recipe resolved to this publisher and
-  the selected PDF was independently downloaded and read.
-revisit_after: 2026-10-14
 promoted: 2026-10-08
+research:
+- method: fetch:check --diocese new-york (full run, reconcile)
+  url: https://sfxavier.org/wp-content/uploads/2026/11/Nov-8-bulletin.pdf
+  checked: '2026-11-09'
+  outcome: found
+  next_action: None; the recipe picked the current issue (2026-11-08). The October revisit to read the
+    next issue is done.
 ---
 
 ## Publisher and worship sites

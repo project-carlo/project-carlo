@@ -22,10 +22,13 @@ evidence:
     \ this column as I am hunkered down"
   note: 'SnapshotPage/_check_one returned lowercase ok using the actual saved HTTP HTML in scratch\nyc2-resolver-st-jean-baptiste-new-york-city.html.
     The selected PDF downloaded with HTTP 200 and its publisher masthead and date were read. '
-revisit: Recheck the current archive after October 14; the custom recipe resolved to this publisher and
-  the selected PDF was independently downloaded and read.
-revisit_after: 2026-10-14
 promoted: 2026-10-08
+research:
+- method: fetch:check --diocese new-york (full run); the picked PDF read for its date
+  url: https://www.sjbny.org/wp-content/pdf/110826.pdf
+  checked: '2026-11-08'
+  outcome: found
+  next_action: None; the pinned recipe picked the November 8, 2026 issue.
 ---
 
 ## Publisher and worship sites

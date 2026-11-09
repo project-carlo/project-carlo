@@ -1,9 +1,9 @@
 ---
 name: St. Mary - St. Joseph - Our Lady of Mount Carmel Poughkeepsie
 website: https://smsj-olmc.org/
-bulletin_provider: ecatholic
-provider_id: ''
-publication: ['ecatholic:6769']
+bulletin_provider: other
+provider_id: page-pdfs https://www.church-bulletin.org/church-of-saint-mary-and-saint-joseph-our-lady-of-mount-carmel-poughkeepsie-ny-12601
+publication: ['ecatholic:6769', 'url:https://www.church-bulletin.org/church-of-saint-mary-and-saint-joseph-our-lady-of-mount-carmel-poughkeepsie-ny-12601']
 group: ''
 evidence:
 - url: https://files.ecatholic.com/6769/bulletins/20260920.pdf
@@ -14,6 +14,13 @@ evidence:
   seen: 2026-10-07
   quote: 10:45 a.m. (English)
   note: Current public Mass schedule or dated intentions; see explanation for site-specific details.
+- url: https://www.church-bulletin.org/bulletin/church-of-saint-mary-and-saint-joseph-our-lady-of-mount-carmel-poughkeepsie-ny-12601/2026-11-08.pdf
+  seen: 2026-11-08
+  note: 'Image-only page 1, read visually: masthead ''The Roman Catholic Parish of St. Mary-St. Joseph
+    and Our Lady of Mt. Carmel, The City of Poughkeepsie''; Saturday 4:00 p.m. (OLMC); Sunday 7:30 and
+    9:30 a.m., 12:00 p.m. Spanish (St. Mary''s), 10:45 a.m. and 9:30 a.m. Polish 3rd Sunday (OLMC). The
+    church-bulletin.org listing captions it November 8, 2026; the site''s eCatholic 6769 archive ended
+    at September 20.'
 promoted: 2026-10-08
 ---
 
@@ -29,7 +36,7 @@ Linked worship-site records for St. Mary - St. Joseph - Our Lady of Mount Carmel
 
 ## Website and bulletin provider
 
-The official site and its current eCatholic PDF identify site 6769.
+The official site (smsj-olmc.org) links its bulletin on John Patrick Publishing's church-bulletin.org, which carried the November 8, 2026 issue on November 8 (image-only; masthead and Mass schedule read visually). The site's eCatholic archive (site 6769) stopped at September 20, 2026, so the fetch recipe reads the church-bulletin.org listing (`page-pdfs`); the eCatholic id is kept as a publication id of the same bulletin.
 
 ## Not yet confirmed
 

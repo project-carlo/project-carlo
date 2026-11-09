@@ -18,11 +18,12 @@ promoted: 2026-10-08
 
 St. Teresa of the Infant Jesus - St. Nicholas Parish publishes the issue linked above. Its dated bulletin, rather than a canonical merger or account name, determines this publisher row. The current archive was read on October 7, 2026.
 
-The contact/schedule page carries a recycled June 13, 2021 heading, while its footer and the next page identify October 4, 2026. Record that template-date conflict rather than silently treating June 2021 as the issue date. The current archive links this issue; its schedule explicitly distinguishes St. Teresa church from St. Nicholas Chapel. The chapel's street number has not been established and is an open question, not a duplicate geocoded point.
+The contact/schedule page carries a recycled June 13, 2021 heading, while its footer and the next page identify October 4, 2026. Record that template-date conflict rather than silently treating June 2021 as the issue date. The current archive links this issue; its schedule explicitly distinguishes St. Teresa church from St. Nicholas Chapel. The chapel is its own church record, [St. Nicholas Chapel](../churches/st-nicholas-chapel-staten-island.md), placed from its OpenStreetMap entry.
 
 ## Worship sites
 
 - St. Teresa of the Infant Jesus Church (`churches/st-teresa-of-the-infant-jesus-staten-island.md`): 10:30AM, 12:30PM, 5:00PM.
+- St. Nicholas Chapel (`churches/st-nicholas-chapel-staten-island.md`).
 
 ## Website and bulletin provider
 
@@ -32,4 +33,4 @@ On October 8, 2026, the pipeline resolver was replayed against the actual parish
 
 ## Not yet confirmed
 
-The contact/schedule page carries a recycled June 13, 2021 heading, while its footer and the next page identify October 4, 2026. Record that template-date conflict rather than silently treating June 2021 as the issue date. The current archive links this issue; its schedule explicitly distinguishes St. Teresa church from St. Nicholas Chapel. The chapel's street number has not been established and is an open question, not a duplicate geocoded point.
+The contact/schedule page carries a recycled June 13, 2021 heading, while its footer and the next page identify October 4, 2026. Record that template-date conflict rather than silently treating June 2021 as the issue date. The current archive links this issue; its schedule explicitly distinguishes St. Teresa church from St. Nicholas Chapel. The chapel is its own church record, [St. Nicholas Chapel](../churches/st-nicholas-chapel-staten-island.md), placed from its OpenStreetMap entry.

@@ -29,7 +29,6 @@ evidence:
   seen: 2026-10-08
   quote: ST. PAUL’S ROMAN CATHOLIC CHURCH 2800 Route 17K Bullville, NY 10915
   note: Official homepage contact/address panel, read October 8.
-promoted: 2026-10-11
 ---
 
 ## Holds public Mass

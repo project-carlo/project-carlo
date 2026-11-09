@@ -28,6 +28,19 @@ evidence:
   quote: 'Nedelja/Sunday: 10:30AM/dopoldne'
   note: Primary public Sunday schedule read October 8; weekdays and Saturday 8 AM.
 promoted: 2026-10-11
+research:
+- method: fetch:check 2026-11-08 and 2026-11-09 (page-pdfs on /oznanila.html, first-listed); the picked
+    PDF read
+  url: https://www.slovenskacerkev-ny.si/uploads/1/5/0/8/15080858/september_28_-_november_8__2026.pdf
+  checked: '2026-11-09'
+  outcome: found
+  next_action: 'None for this period: the parish publishes one Slovenian/English announcements issue per
+    several weeks, and the picked one covers September 28 to November 8, 2026 (Mass intentions by day,
+    ''November masses''). fetch:check reports it stale because it dates the file by its first day; judge
+    it by its end date. Re-run fetch:check after November 15 to confirm the next multi-week issue replaces
+    it.'
+  retry_when: A new issue is posted on /oznanila.html after November 8, 2026
+  revisit_after: 2026-11-22
 ---
 
 ## Publisher

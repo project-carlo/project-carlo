@@ -54,4 +54,4 @@ Holy Rosary Sunday 7 am/8:15 am/11:30 am/1:15 pm. The cited source was read Octo
 
 ## Name and address
 
-GCatholic identifies Holy Rosary at 1510 Adee Ave.. The independent directory match is Holy Rosary - Nativity of the Blessed Lady Church at 1510 Adee Avenue. Nativity remains in the joined title, but its separate building is open/unresolved rather than assumed closed.  Coordinates retain the GCatholic Plus Code church location. Verification flags are deliberately false: a complete independent name/address audit has not been asserted, and numbering or parish-title discrepancies remain explicit.
+GCatholic identifies Holy Rosary at 1510 Adee Ave.. The independent directory match is Holy Rosary - Nativity of the Blessed Lady Church at 1510 Adee Avenue. Nativity, in the joined title, is its own parish row with its own bulletin.  Coordinates retain the GCatholic Plus Code church location. Verification flags are deliberately false: a complete independent name/address audit has not been asserted, and numbering or parish-title discrepancies remain explicit.

@@ -1,9 +1,9 @@
 ---
 name: Our Lady of Refuge, Bronx
 website: https://ourladyofrefuge.com/
-bulletin_provider: ecatholic
-provider_id: ''
-publication: ['ecatholic:10764']
+bulletin_provider: other
+provider_id: page-pdfs https://www.church-bulletin.org/our-lady-of-refuge-church-parroquia-de-nuestra-senora-del-refugio-bronx-ny-10458
+publication: ['ecatholic:10764', 'url:https://www.church-bulletin.org/our-lady-of-refuge-church-parroquia-de-nuestra-senora-del-refugio-bronx-ny-10458']
 group: Our Lady of Refuge, Bronx
 evidence:
 - url: https://files.ecatholic.com/10764/bulletins/20260925.pdf?t=1790273084000
@@ -26,6 +26,12 @@ evidence:
     \ Jueves: 10:00 am-4:00 pm and 6:30 pm- 7:30 pm \n1st Friday of the Month following the 6:30 pm Mass\
     \ \n1er viernes del mes siguiendo"
   note: Public Mass schedule/dated intentions in this issue.
+- url: https://www.church-bulletin.org/bulletin/our-lady-of-refuge-church-parroquia-de-nuestra-senora-del-refugio-bronx-ny-10458/2026-11-08.pdf
+  seen: 2026-11-09
+  quote: OUR LADY OF REFUGE CHURCH PARROQUIA DE NUESTRA SEÑORA DEL REFUGIO
+  note: Newest issue on John Patrick Publishing's church-bulletin.org listing (id 4045) on November 9,
+    2026, dated 'November 8th, 2026' inside; masthead 290 East 196th Street, Bronx. The parish's eCatholic
+    10764 archive ended at September 25, 2026.
 promoted: 2026-10-08
 ---
 
@@ -39,7 +45,7 @@ The linked worship site [Our Lady of Refuge](../churches/our-lady-of-refuge-bron
 
 ## Website and bulletin provider
 
-The parish bulletin page was inspected October 7, 2026. Publication identifiers come from the actual linked bulletin channel, not unrelated links or a historical parish merger. The cited issue establishes this publisher.
+The parish's eCatholic archive (site 10764, ourladyofrefuge.com/bulletins) stopped at a September 25, 2026 file. The same bulletin is published weekly on John Patrick Publishing's church-bulletin.org (listing 4045, found by web search), which had the November 8, 2026 issue on November 9. The recipe reads that listing (`page-pdfs`) and picked the November 8 issue; the eCatholic id is kept as a publication id of the same bulletin.
 
 ## Not yet confirmed
 

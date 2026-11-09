@@ -2,7 +2,7 @@
 name: Immaculate Conception, Stony Point
 website: https://immaculatesp.org/
 bulletin_provider: other
-provider_id: page-pdfs https://sponsors.bonventure.net/?page=1787
+provider_id: page-pdfs http://sponsors.bonventure.net/?page=1787
 publication: ['url:https://sponsors.bonventure.net/?page=1787']
 group: ''
 evidence:

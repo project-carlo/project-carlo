@@ -74,11 +74,13 @@ evidence:
     Broadcasted 10/3/26 11:57am - 1
   note: Current parish site, read in headed Chrome during October 7 research; exact public schedule, not
     canonical directory name.
-revisit: Read the next available issue from https://discovermass.com/church/immaculate-conception-new-york-ny/
-  and verify the masthead and building-specific schedule for Immaculate Conception. Run fetch:check separately
-  to confirm ingestion; no fresh fetch is recorded by this edit.
-revisit_after: 2026-10-14
 promoted: 2026-10-08
+research:
+- method: fetch:check --diocese new-york (full run); the picked PDF read for its date
+  url: https://bulletins.discovermass.com/download.php?bulletin=L%2FT2HVmd0NLlZEuaYbaTo9POBH7SjU5aCwWirYZbUY0RgBisZIFzyI0OM1yio6qgH%2BDGb6wskxMibx%2BUpTslxLUSOZJI9kZg9zZVQ1qoy%2Bg%3D
+  checked: '2026-11-08'
+  outcome: found
+  next_action: None; the pinned recipe picked the November 8, 2026 issue.
 ---
 
 ## Publisher

@@ -1,10 +1,9 @@
 ---
 name: St. Paul and St. Ann - Rockland
 website: https://www.spasaparish.org
-bulletin_provider: ecatholic
-provider_id: ''
-publication:
-- ecatholic:6469
+bulletin_provider: other
+provider_id: page-pdfs https://www.church-bulletin.org/the-parish-of-saint-paul-saint-ann-congers-ny-10920
+publication: ['ecatholic:6469', 'url:https://www.church-bulletin.org/the-parish-of-saint-paul-saint-ann-congers-ny-10920']
 group: ''
 evidence:
 - url: https://files.ecatholic.com/6469/documents/2026/10/2026-10-04.pdf?t=1790999860000
@@ -15,14 +14,20 @@ evidence:
     AM, 10:10 AM and 11:30 AM. St. Paul in Congers shares this publisher and has its own schedule column.
     Quote visually transcribed from rendered image-only page 1; vertical bars separate printed lines.'
 - url: https://files.ecatholic.com/6469/documents/2026/10/2026-10-04.pdf?t=1790999860000
-  seen: '2026-10-08'
+  seen: 2026-10-08
   quote: Church of Saint Paul
   note: 'October 4, 2026 scanned issue, physical page 2 visually read: 82 Lake Road West, Congers.'
 - url: https://files.ecatholic.com/6469/documents/2026/10/2026-10-04.pdf?t=1790999860000
-  seen: '2026-10-08'
+  seen: 2026-10-08
   quote: Sunday 7:30 am, 10 am, 12 pm, 6 pm
   note: Page 2 St. Paul column, Saturday 5 PM; Monday-Friday 6:30/8:30 AM, Saturday 8:30 AM. St. Ann has
     a distinct column.
+- url: https://www.church-bulletin.org/bulletin/the-parish-of-saint-paul-saint-ann-congers-ny-10920/2026-11-08.pdf
+  seen: 2026-11-08
+  note: 'Image-only cover, read visually: ''Welcome to the Parish of St. Paul and St. Ann'', Thirty Second
+    Sunday in Ordinary Time, November 8, 2026. The parish''s /church-bulletins page links it as ''CLICK
+    ME for CURRENT BULLETIN'' (jppc.net/onlinebulletins/438template.pdf, which leads to this church-bulletin.org
+    listing).'
 promoted: 2026-10-08
 ---
 
@@ -36,7 +41,7 @@ Linked worship-site records for St. Paul and St. Ann - Rockland: [St. Ann](../ch
 
 ## Website and publication
 
-The saved parish page links the issue cited in evidence. Publication identifiers were read from its HTML or the dated PDF path. 
+The parish's /church-bulletins page links its current bulletin through John Patrick Publishing ('[^^^ CLICK ME ^^^] for CURRENT BULLETIN', jppc.net/onlinebulletins/438template.pdf, which is church-bulletin.org listing 438), above an eCatholic 6469 document archive with prose file names (newest November 1, 2026 on November 8). The eCatholic `/bulletins` path the ecatholic collector reads holds only issues up to 2015, so it picked an October 18, 2015 file. The fetch recipe reads the church-bulletin.org listing (`page-pdfs`), which carried the November 8, 2026 issue on November 8; the eCatholic id is kept as a publication id of the same bulletin.
 
 ## Recheck
 

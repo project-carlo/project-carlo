@@ -1,8 +1,8 @@
 ---
 name: Blessed Sacrament
 website: https://blessedsacramentnyc.org/
-bulletin_provider: ecatholic
-provider_id: ''
+bulletin_provider: other
+provider_id: page-pdfs https://blessedsacramentnyc.org/bulletin
 publication: ['ecatholic:6501', 'url:https://blessedsacramentnyc.org/bulletin']
 group: ''
 evidence:
@@ -18,6 +18,12 @@ evidence:
   seen: 2026-10-08
   quote: 'Sunday: 8:30AM, 10:00AM (Family Mass)'
   note: Page 1, image-only Mass schedule; additional Sunday Masses are 11:00AM Spanish, 12:30PM and 5:30PM.
+- url: https://files.ecatholic.com/6501/documents/2026/11/November%208th%20%202026-3.pdf?t=1793989950000
+  seen: 2026-11-08
+  note: 'Image-only issue read visually: page 1 masthead ''Church of the Blessed Sacrament'', 152 West
+    71st Street; page 2 ''Thirty-Second Sunday in Ordinary Time, November 8th, 2026''. Listed first on
+    https://blessedsacramentnyc.org/bulletin on November 8; the eCatholic /bulletins date path the ecatholic
+    collector reads stops at June 25, 2023.'
 promoted: 2026-10-11
 ---
 
@@ -31,7 +37,7 @@ Page 1 identifies the church at 152 West 71st Street, NYC 10023 and publishes Sa
 
 ## Website and bulletin provider
 
-The rendered /bulletin archive links this actual PDF on files.ecatholic.com/6501/documents/2026/10, not the standardized /bulletins date path. Keep the archive as the discovery channel. The entire bulletin is scanned: text-only probes return empty pages, but the PDF is readable visually and by the image extraction pipeline. The archive's latest linked issue on October 8 was October 4; the October 11 standardized file did not yield an issue.
+The rendered /bulletin archive links each issue as an eCatholic document (files.ecatholic.com/6501/documents/<yyyy>/<m>/<Month Dth  yyyy>.pdf), newest first, not the standardized /bulletins date path, which stops at June 25, 2023. The ecatholic collector reads that date path, so fetch:check picked the 2023 file on November 8, 2026. The row is `other` with the recipe `page-pdfs https://blessedsacramentnyc.org/bulletin`, which picked the November 8, 2026 issue that day (`current`). The entire bulletin is scanned: text-only probes return empty pages, but the PDF is readable visually and by the image extraction pipeline.
 
 ## Not yet confirmed
 

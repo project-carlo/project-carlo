@@ -1,47 +1,54 @@
 ---
 name: St. Francis de Sales
 website: https://stfrancis96.org/
-bulletin_provider: no_bulletin
-provider_id: ''
-publication:
-- url:https://stfrancis96.org/bulletin
+bulletin_provider: other
+provider_id: page-pdfs https://stfrancis96.org/bulletin
+publication: ['url:https://stfrancis96.org/bulletin']
+group: ''
 evidence:
-- url: https://tithely-5e3b3d31cd9bd-316835.elvanto.net/file/e2cb9771-e08a-49bc-a829-d5c29c4d9efe/
-  seen: '2026-10-08'
-  quote: Francis de Sales
-  note: October 4, 2026 issue page 1 masthead Saint Francis de Sales Catholic Church and issue date.
-- url: https://tithely-5e3b3d31cd9bd-316835.elvanto.net/file/e2cb9771-e08a-49bc-a829-d5c29c4d9efe/
-  seen: '2026-10-08'
-  quote: 135 East 96th Street
-  note: Page 18 church address.
-- url: https://tithely-5e3b3d31cd9bd-316835.elvanto.net/file/e2cb9771-e08a-49bc-a829-d5c29c4d9efe/
-  seen: '2026-10-08'
-  quote: 9:00am, 11:00am,
-  note: Page 2 Sunday schedule adds 12:30 PM Spanish; weekday 8:30 AM Monday/Tuesday/Thursday/Friday.
-revisit: On October 8, 2026 the production resolver against the actual archive HTML returned https://stfrancis96.org/s/_Bulletin-2-August-2026.pdf
-  under page-pdfs (first-listed, dated August 2), not the verified October 4 issue. dated-post and linked-issue-page
-  both returned NoBulletin. Current parish-linked Elvanto /file/<UUID>/ addresses have no .pdf suffix
-  and are not among document URL forms accepted by the current collector. A recipe pinned to the October
-  file alone would not follow future issues. A supported Elvanto collector or readable current PDF mirror
-  is required, followed by a successful current-issue resolver/download check.
-revisit_after: '2026-10-15'
+- url: https://stfrancis96.org/s/Bulletin-8-November-2026.pdf
+  seen: 2026-11-08
+  quote: November 8, 2026
+  note: Page 1 of the 11-page 8 November 2026 issue; masthead names St. Francis de Sales; page 2 intentions
+    'For the parish of St. Francis de Sales'; page 11 gives 135 East 96th Street.
+- url: https://stfrancis96.org/bulletin
+  seen: 2026-11-08
+  quote: NOVEMBER 8, 2026
+  note: First link on the bulletin page, to /s/Bulletin-8-November-2026.pdf; the next ones (November 1
+    back to August 9) link Elvanto /file/<UUID>/ addresses, then June-August Squarespace /s/ PDFs.
+- url: https://tithely-5e3b3d31cd9bd-316835.elvanto.net/file/dfcfb05e-a1c4-4015-a703-3a25c87cc5bb
+  seen: 2026-10-31
+  quote: November 1, 2026
+  note: Page 1 of the 17-page 1 November 2026 issue, an Elvanto file with no .pdf in its address.
+revisit: 'Check that the November 15 and 22 issues are again Squarespace /s/Bulletin-<d>-<Month>-2026.pdf
+  links at the top of https://stfrancis96.org/bulletin. If the parish goes back to Elvanto /file/<UUID>/
+  links, the recipe will keep picking the last Squarespace PDF: set bulletin_provider unsupported with
+  fetch_gap kind extensionless-download-link.'
+revisit_after: 2026-11-23
+promoted: 2026-11-09
+research:
+- method: check_fetch on a hypothetical row, provider other, no recipe (then fetch:check on the written
+    row)
+  url: https://stfrancis96.org/s/Bulletin-8-November-2026.pdf
+  checked: '2026-11-08'
+  outcome: found
+bulletin_status: available
 ---
 
 ## Publisher
 
-The October 4, 2026 actual 18-page PDF was downloaded from the parish-linked Elvanto file and read October 8. Page 1 names Saint Francis de Sales Catholic Church and the issue date; page 2 gives Sunday Masses. This supersedes the older July 26 issue.
+St. Francis de Sales (135 East 96th Street) publishes its own weekly bulletin, listed newest first on https://stfrancis96.org/bulletin. Issues read: October 4, 2026 (Elvanto file, read October 8: page 1 masthead Saint Francis de Sales Catholic Church), November 1, 2026 (Elvanto file, 17 pages, read October 31) and November 8, 2026 (https://stfrancis96.org/s/Bulletin-8-November-2026.pdf, 11 pages, read November 8: page 1 "November 8, 2026", page 2 Masses "For the parish of St. Francis de Sales", page 11 "135 East 96th Street"). No other church is in the schedule.
 
 ## Worship sites
 
-The issue identifies 135 East 96th Street, Sunday 9 AM/11 AM/12:30 PM Spanish and weekday 8:30 AM Monday/Tuesday/Thursday/Friday. Only this church is attached.
+One: St. Francis de Sales, 135 East 96th Street (`churches/st-francis-de-sales-new-york-city.md`). The issues give Sunday 9:00 am, 11:00 am and 12:30 pm Spanish, and weekdays 8:30 am Monday, Tuesday, Thursday and Friday.
 
 ## Website and bulletin provider
 
-The real /bulletin (singular) lists October 4 and weekly September issues; /bulletins is not found. Current parish-linked Elvanto PDF file URLs have no .pdf suffix. Publication and active church are settled; no tested connector or suffix-only discovery is claimed.
+The bulletin page has carried issues in two forms. June to early August 2026 and again November 8 are Squarespace PDFs (`/s/Bulletin-8-November-2026.pdf`, `/s/_Bulletin-2-August-2026.pdf`); August 9 to November 1 are Elvanto files (`tithely-...elvanto.net/file/<UUID>/`) with no .pdf in the address, which page-pdfs skips. On October 8 and October 31 the unpinned resolver therefore took the August 2 Squarespace PDF, and linked-issue-page, dated-post and redirected-pdf found no PDF (October 31). On November 8 the newest link is a Squarespace PDF again, and page-pdfs picked it ("current"), so the row is `other` with the recipe `page-pdfs https://stfrancis96.org/bulletin` pinned.
 
+The risk is a return to Elvanto: page-pdfs would then keep picking the November 8 file, a stale issue rather than a failure. `revisit_after` checks the next two weeks; if Elvanto links come back, the row becomes `unsupported` with `fetch_gap` kind `extensionless-download-link`.
 
-## Connector hold ? October 8, 2026
+## Not yet confirmed
 
-On October 8, 2026 the production resolver against the actual archive HTML returned https://stfrancis96.org/s/_Bulletin-2-August-2026.pdf under page-pdfs (first-listed, dated August 2), not the verified October 4 issue. dated-post and linked-issue-page both returned NoBulletin. Current parish-linked Elvanto /file/<UUID>/ addresses have no .pdf suffix and are not among document URL forms accepted by the current collector. A recipe pinned to the October file alone would not follow future issues. A supported Elvanto collector or readable current PDF mirror is required, followed by a successful current-issue resolver/download check.
-
-no_bulletin is an ingestion hold only, not an assertion that the parish publishes nothing. Actual dated issues and active public worship are proven above. The church records remain, but this publisher and its venues must be withheld from promotion until the production connector works.
+Whether the parish keeps posting Squarespace PDFs after November 8 (see revisit).

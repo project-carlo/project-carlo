@@ -28,7 +28,6 @@ evidence:
   quote: Our Lady of Sorrows Parish
   note: Official home page links this six-page bulletin naming Our Lady of Sorrows and giving its public
     Mass schedule; Wix-hosted media PDF.
-promoted: 2026-10-08
 ---
 
 ## Public worship now

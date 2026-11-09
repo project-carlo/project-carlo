@@ -2,7 +2,7 @@
 name: St. Patrick, Yorktown Heights
 website: https://stpatricks-yorktown.org/
 bulletin_provider: other
-provider_id: page-pdfs https://sponsors.bonventure.net/?page=3205
+provider_id: page-pdfs http://sponsors.bonventure.net/?page=3205
 publication: ['ecatholic:6774', 'url:https://sponsors.bonventure.net/?page=3205']
 group: ''
 evidence:

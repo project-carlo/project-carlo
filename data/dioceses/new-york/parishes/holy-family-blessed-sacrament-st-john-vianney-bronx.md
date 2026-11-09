@@ -33,6 +33,21 @@ evidence:
     \ pm (in Church) \nFirst Friday of Month (Spanish): 7:00 pm (in Church) \n \n \nEucharistic / Adoration\
     \ \nLast Wednesday of the month at 7:30 pm (in Church) \nEvery Thursday 4"
 promoted: 2026-10-08
+publication_reviews:
+- parish: immaculate-conception-gun-hill-road-bronx
+  decision: separate
+  evidence:
+  - url: https://files.ecatholic.com/6810/bulletins/20261025.pdf
+    seen: 2026-10-31
+    quote: PARISH OF HOL Y FAMIL Y, BLESSED SACRAMENT & ST. JOHN VIANNEY
+    note: The 25 October 2026 masthead names the Parish of Holy Family, Blessed Sacrament & St. John Vianney,
+      2158 Watson Avenue, alone, with Sunday Masses at Holy Family 9:00 and 11:00 am.
+  - url: https://files.ecatholic.com/14517/documents/2026/10/080E_2026_10_25.pdf
+    seen: 2026-10-31
+    quote: 8:00 am - Claud Henry
+    note: Immaculate Conception, Gun Hill Road's own 25 October 2026 issue (eCatholic 14517) is a different
+      document with its own Sunday Masses at 8, 10 and 12. audit found 14517 only as a link on Holy Family's
+      homepage.
 ---
 
 ## Publisher

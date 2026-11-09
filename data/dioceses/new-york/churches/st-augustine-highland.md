@@ -44,15 +44,30 @@ evidence:
     \ to spreading the Gospel of Jesus Christ, and welcoming others to our Parish Family..  Be sure to\
     \ check our site for Mass and Liturgy schedules, Food Pantry, Thrift Shop, Bazaar "
   note: Current parish public Mass schedule read in headed Chrome; browser snapshots retained in scratch.
-revisit: Read the actual August 13, 2026 St. Cecilia-St. Augustine merger decree PDFs and the newest merged
-  bulletin; merger alone is not physical closure. User-provided archny posts URL redirected to 404 on
-  October 7.
-revisit_after: 2026-10-14
+- url: https://files.ecatholic.com/11044/bulletins/20261108.pdf
+  seen: 2026-11-08
+  note: 'November 8, 2026 St. Augustine Parish bulletin, image-only, page 1 read from a rendering: 55
+    Main Street, Highland; Saturday Vigil 5 pm; Sunday 7:30 am, 9:00 am, 11:15 am, 1:00 pm (Spanish);
+    daily 8:00 am.'
+promoted: 2026-11-09
+research:
+- method: 'Looked for the reported August 13, 2026 St. Cecilia / St. Augustine decree: the archny.org
+    decree index (Decrees section of /parish-planning, read in headed Chrome) lists nothing after the
+    July 2, 2026 Yonkers decree, and its only St. Cecilia entries are Saint Cecilia-Holy Agony (Manhattan);
+    /posts/decisions-of-the-office-of-the-archbishop-of-new-york-2026-8-13 answers 404; web searches found
+    no such decree'
+  url: https://www.archny.org/parish-planning
+  checked: '2026-11-09'
+  outcome: not-found
+  next_action: Read the decree when it is posted; meanwhile the November 8, 2026 St. Augustine bulletin
+    shows public Mass here and names no other church
+  retry_when: The archny.org decree index lists a decree dated after July 2, 2026 naming St. Augustine,
+    Highland, or a St. Augustine issue names St. Cecilia
 ---
 
 ## Holds public Mass
 
-The actual bulletin and/or current parish schedule quoted above provides public Mass evidence for this assigned worship site. The saved full PDF text must be read alongside the current schedule for multi-church publishers; it is not inferred from a canonical merger. The bulletin publisher is st-augustine-highland.
+The St. Augustine Parish bulletin of November 8, 2026 (image-only; page 1 read from a rendering on 2026-11-08) gives Saturday Vigil 5 pm, Sunday 7:30, 9:00, 11:15 am and 1:00 pm (Spanish), and daily Mass at 8:00 am. Its masthead gives 55 Main Street, Highland.
 
 ## Name and address
 
@@ -63,3 +78,5 @@ GCatholic supplies the building identity, address and Plus Code coordinates (87H
 This record represents this physical worship building only. Other sites covered by the same bulletin require their own building-specific records and public-Mass evidence; a shared canonical parish name alone is not sufficient.
 
 An August 13, 2026 canonical merger with St. Cecilia was reported by the parent. The actual decree is not yet read because the supplied URL redirected to a 404. Existing public Mass evidence is not overridden by that reported merger; update publisher grouping only after the new masthead is read.
+
+Checked 2026-11-09: no August 13, 2026 decree is on the archny.org decree index (newest entry July 2, 2026) and the old post URL is 404, so the question is kept as a research item with a retry trigger rather than a revisit. The November 8 issue already settles that this building holds public Mass.

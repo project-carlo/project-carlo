@@ -21,9 +21,19 @@ evidence:
 
     1:00 pm  Spanish
   note: Printed recurring Sunday timetable in the saved actual issue text; it has no closure meaning.
-revisit: Run fetch:check for the page-pdfs collector and look for a newer October bulletin.
-revisit_after: 2026-10-14
 promoted: 2026-10-08
+research:
+- method: fetch:check on 2026-11-08 and 2026-11-09; the parish homepage read in Chrome (visit.py --links)
+    for another bulletin link; web search of discovermass.com, parishesonline.com, church-bulletin.org
+    and bonventure.net for the parish; ParishesOnline org our-lady-of-mercy-church-10458 has no issues
+  url: https://ourladyofmercyny.org/bulletin/
+  checked: '2026-11-09'
+  outcome: not-found
+  next_action: Re-run fetch:check; the parish's own archive lags (newest September 27, 2026 on 2026-11-09)
+    and no other current channel was found. If it stays over two weeks behind, look again for a publisher
+    listing (church-bulletin.org, ParishesOnline).
+  retry_when: The archive posts an issue dated after September 27, 2026
+  revisit_after: 2026-11-16
 ---
 
 ## Publisher

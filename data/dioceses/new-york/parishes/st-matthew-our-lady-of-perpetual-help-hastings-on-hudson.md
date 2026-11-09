@@ -46,10 +46,14 @@ evidence:
     \n535 Ashford Avenue\r\nArdsley, NY 10502\r\nwww.stmolph.com\r\nClergy\r\nRev. Douglas Crawford…..….……………..…..…...……...…….."
   note: Actual bulletin text, page 1, read October 7, 2026. If a future Sunday is printed, it was already
     publicly posted; no future event is inferred as completed.
-revisit: Check the next posted issue and compare any independent member channels; do not infer closure
-  from archive lag.
-revisit_after: 2026-10-14
 promoted: 2026-10-08
+research:
+- method: fetch:check --diocese new-york (full run, reconcile)
+  url: https://www.church-bulletin.org/bulletin/saint-matthew-our-lady-of-perpetual-help-hastings-on-hudson-ny-10706/2026-11-08.pdf
+  checked: '2026-11-09'
+  outcome: found
+  next_action: None; the recipe picked the current issue (2026-11-08). The October revisit to read the
+    next issue is done.
 ---
 
 ## Publisher

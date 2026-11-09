@@ -1,8 +1,8 @@
 ---
 name: Our Lady of Lourdes
 website: https://www.lourdesnyc.org/
-bulletin_provider: ecatholic
-provider_id: ''
+bulletin_provider: other
+provider_id: page-pdfs https://www.lourdesnyc.org/
 publication: ['ecatholic:25363', 'url:https://www.lourdesnyc.org/old-bulletins']
 group: ''
 evidence:
@@ -18,6 +18,11 @@ evidence:
   seen: 2026-10-08
   quote: 'Sunday: 10:30 a.m.'
   note: Page 1, English Sunday Mass; Spanish Sunday 7:30 AM/noon/2 PM, Saturday 6:30 PM.
+- url: https://www.lourdesnyc.org/documents/2026/11/XXXII%20SUNDAY%20IN%20ORDINARY%20TIME%2011-8-2026-1.pdf
+  seen: 2026-11-08
+  quote: NOVEMBER 8, 2026
+  note: Linked by the homepage's 'BULLETIN / BOLETIN' button on November 8, 2026; text names Church of
+    Our Lady of Lourdes. The homepage's 'Old bulletins' button links the November 1 issue.
 promoted: 2026-10-11
 ---
 
@@ -31,4 +36,4 @@ Page 1 lists Sunday 10:30 AM English, 7:30 AM/noon/2 PM Spanish and Saturday 6:3
 
 ## Website and bulletin provider
 
-The homepage's latest-bulletin link and /old-bulletins carry current documents. The obsolete /bulletins widget stops at October 9, 2022. The verified current PDF is on files.ecatholic.com/25363/documents/2026/10, not /bulletins/YYYYMMDD.pdf. A 403 on the parish-domain document was bypassed with the verified eCatholic document host. Current publication is settled; automated discovery of the homepage document link is not claimed as tested.
+The homepage's 'BULLETIN / BOLETIN' button links the current issue as an eCatholic document on the parish domain (/documents/<yyyy>/<m>/...<M-D-YYYY>.pdf), and its 'Old bulletins' button the previous one. The /bulletins widget the ecatholic collector reads stops at October 9, 2022, so fetch:check picked that file on November 8, 2026. The row is `other` with the recipe `page-pdfs https://www.lourdesnyc.org/`, which picked the November 8, 2026 issue that day (`current`).

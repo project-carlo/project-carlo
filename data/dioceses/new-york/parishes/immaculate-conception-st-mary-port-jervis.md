@@ -18,6 +18,18 @@ evidence:
   note: Both pages of the actual saved September 27 PDF read October 10; page 2 announces the 175th anniversary
     and gives the September 26 through October 4 intentions. Apostrophe normalized from the PDF font.
 promoted: 2026-10-11
+research:
+- method: fetch:check on 2026-11-08 and 2026-11-09; the parish homepage read in Chrome (visit.py --links)
+    for another bulletin link; web search of discovermass.com, parishesonline.com, church-bulletin.org
+    and bonventure.net for the parish; Discover Mass immaculate-conception-port-jervis-ny lists no bulletins
+  url: https://stmarysportjervis.com/bulletins
+  checked: '2026-11-09'
+  outcome: not-found
+  next_action: Re-run fetch:check; the parish's own archive lags (newest October 11, 2026 on 2026-11-09)
+    and no other current channel was found. If it stays over two weeks behind, look again for a publisher
+    listing (church-bulletin.org, ParishesOnline).
+  retry_when: The archive posts an issue dated after October 11, 2026
+  revisit_after: 2026-11-16
 ---
 
 ## Publisher and physical site

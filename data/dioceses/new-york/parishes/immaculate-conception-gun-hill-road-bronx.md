@@ -18,10 +18,22 @@ evidence:
 
     5:30 pm
   note: Dated vigil Mass intention in the saved actual issue text, not a recurring timetable heading.
-revisit: Confirm live PDF downloading for the page-pdfs collector; direct parish-domain PDF answered HTTP
-  403, while the identical eCatholic files-host document was read successfully.
-revisit_after: 2026-10-14
+- url: https://iccbronx.org/documents/2026/11/080E_2026_11_08.pdf
+  seen: 2026-11-09
+  quote: Sunday, November 8, 2026
+  note: 'November 8, 2026 issue picked by fetch:check (page-pdfs on https://iccbronx.org/bulletin), 8
+    pages. Page 1 is an image, read from a rendering: masthead Immaculate Conception Catholic Church,
+    754 East Gun Hill Road, Bronx, New York 10467, 32nd Sunday in Ordinary Time, November 08, 2026, with
+    the Mass schedule. The quote is from the page 2 Mass intentions.'
 promoted: 2026-10-08
+research:
+- method: fetch:check (scratch/nyc/fetch-check-1109.json) downloaded the parish-domain PDF (3.05 MB, status
+    ok); probe pdf read pages 2-8 and render.py page 1
+  url: https://iccbronx.org/documents/2026/11/080E_2026_11_08.pdf
+  checked: '2026-11-09'
+  outcome: found
+  next_action: 'None: the page-pdfs recipe downloads the current issue from the parish domain; the October
+    HTTP 403 did not recur'
 ---
 
 ## Publisher
@@ -38,4 +50,4 @@ The parish bulletin page was inspected October 7, 2026 in saved local Chrome and
 
 ## Not yet confirmed
 
-The collector selects the correct document, but direct download from the parish domain was blocked with HTTP 403 during research. Verify live downloading or a supported stable files-host rewrite before promotion; never call the bulletin absent because that download is blocked.
+Settled 2026-11-09: fetch:check's page-pdfs recipe on https://iccbronx.org/bulletin downloaded the November 8, 2026 issue from the parish domain (iccbronx.org/documents/2026/11/080E_2026_11_08.pdf). Its image-only cover, read from a rendering, carries the Immaculate Conception, 754 East Gun Hill Road masthead. The October 403 on the parish-domain PDF did not recur.

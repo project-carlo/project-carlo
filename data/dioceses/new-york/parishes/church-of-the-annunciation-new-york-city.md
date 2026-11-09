@@ -47,11 +47,20 @@ evidence:
     Men of the Annunciation is open to all men who are interested in journeying with other men an helping lead each other closer to Christ. We meet at the Calasanz Room from 7:15-9 am every Tuesday morning. When we meet, we share what is happening in our lives, prayer intentions, and discuss the lectionary
   note: Current parish site, read in headed Chrome during October 7 research; exact public schedule, not
     canonical directory name.
-revisit: Read the next available issue from https://theannunciation.net/bulletins and verify the masthead
-  and building-specific schedule for Annunciation. Run fetch:check separately to confirm ingestion; no
-  fresh fetch is recorded by this edit.
-revisit_after: 2026-10-14
 promoted: 2026-10-08
+research:
+- method: fetch:check on 2026-11-08 and 2026-11-09; the parish homepage read in Chrome (visit.py --links)
+    for another bulletin link; web search of discovermass.com, parishesonline.com, church-bulletin.org
+    and bonventure.net for the parish; Discover Mass lists no bulletins and ParishesOnline org church-of-the-annunciation-10027
+    has no issues
+  url: https://theannunciation.net/bulletins
+  checked: '2026-11-09'
+  outcome: not-found
+  next_action: Re-run fetch:check; the parish's own archive lags (newest October 18, 2026 on 2026-11-09)
+    and no other current channel was found. If it stays over two weeks behind, look again for a publisher
+    listing (church-bulletin.org, ParishesOnline).
+  retry_when: The archive posts an issue dated after October 18, 2026
+  revisit_after: 2026-11-16
 ---
 
 ## Publisher

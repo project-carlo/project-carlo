@@ -1,9 +1,9 @@
 ---
 name: St. Anthony, Commonwealth Avenue, Bronx
 website: https://stanthonybronx.org/
-bulletin_provider: ecatholic
-provider_id: ''
-publication: ['ecatholic:17010']
+bulletin_provider: other
+provider_id: page-pdfs https://www.church-bulletin.org/saint-anthony-church-bronx-ny-10460
+publication: ['ecatholic:17010', 'url:https://www.church-bulletin.org/saint-anthony-church-bronx-ny-10460']
 group: St. Anthony, Commonwealth Avenue, Bronx
 evidence:
 - url: https://files.ecatholic.com/17010/bulletins/20261011.pdf?t=1791211326000
@@ -26,6 +26,13 @@ evidence:
     Friday / viernes\n \nHoly Hour \n-\n \nHora Santa \n \n          \n5:30 p.m. \n-\n \n7:00 p.m.\n \n\
     \ \n \nConfessions\n \nAfter the 12 PM Mass on Sunday \nor by appointment."
   note: Public Mass schedule/dated intentions in this issue.
+- url: https://www.church-bulletin.org/bulletin/saint-anthony-church-bronx-ny-10460/2026-11-08.pdf
+  seen: 2026-11-09
+  quote: SUNDAY, NOVEMBER 8, 2026
+  note: Newest issue on John Patrick Publishing's church-bulletin.org listing (id 4034, Saint Anthony
+    Church, Bronx 10460) on November 9, 2026; page 1 'ST. ANTHONY CHURCH Welcome to our Parish!' with
+    Sunday 10:30 a.m. English and 12:00 p.m. Spanish. The parish's eCatholic 17010 archive ended at October
+    11, 2026.
 promoted: 2026-10-08
 ---
 
@@ -39,7 +46,7 @@ The linked worship site [St. Anthony](../churches/st-anthony-bronx-16146.md) at 
 
 ## Website and bulletin provider
 
-The parish bulletin page was inspected October 7, 2026. Publication identifiers come from the actual linked bulletin channel, not unrelated links or a historical parish merger. The cited issue establishes this publisher.
+The parish's eCatholic archive (site 17010, stanthonybronx.org/bulletins) stopped at October 11, 2026. The same bulletin is published weekly on John Patrick Publishing's church-bulletin.org (listing 4034, found by web search), which had the November 8, 2026 issue on November 9. The recipe reads that listing (`page-pdfs`) and picked the November 8 issue; the eCatholic id is kept as a publication id of the same bulletin.
 
 ## Not yet confirmed
 

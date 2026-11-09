@@ -47,11 +47,30 @@ evidence:
     Login powered by eCatholic®
   note: Current parish site, read in headed Chrome during October 7 research; exact public schedule, not
     canonical directory name.
-revisit: Read the next available issue from https://scbgardiner.org/bulletins and verify the masthead
-  and building-specific schedule for St. Charles Borromeo. Run fetch:check separately to confirm ingestion;
-  no fresh fetch is recorded by this edit.
-revisit_after: 2026-10-14
+revisit: Read https://scbgardiner.org/bulletins for the November issues; the archive had uploaded weekly
+  through October 25 (posted October 23) and then skipped November 1 and 8.
+revisit_after: 2026-11-23
 promoted: 2026-10-08
+research:
+- method: 'Parish Bulletins page in headed Chrome (visit.py): newest listed October 25, 2026, uploaded
+    October 23 after weekly uploads since July; eCatholic dated paths files.ecatholic.com/14207/bulletins/20261101.pdf
+    and 20261108.pdf answer 403'
+  url: https://scbgardiner.org/bulletins
+  checked: '2026-11-09'
+  outcome: not-found
+  next_action: Re-read the Bulletins page and the dated paths; keep the eCatholic provider, the gap is
+    two weeks after a regular weekly run
+  retry_when: An issue dated November 1, 2026 or later appears on the Bulletins page or at a dated eCatholic
+    path
+- method: 'Other channels: ParishesOnline coordinates search API and probe po st-charles-borromeo-church-12525
+    (directory-only, no publications); Discover Mass st-charles-borromeo-gardiner-ny says no bulletins
+    available; web search for a church-bulletin.org or Bon Venture listing found none'
+  url: https://parishesonline.com/organization/st-charles-borromeo-church-12525
+  checked: '2026-11-09'
+  outcome: not-found
+  next_action: None unless the eCatholic archive stops for good; then search ParishesOnline and church-bulletin.org
+    again
+  retry_when: The eCatholic archive has no issue newer than October 25 by 2026-11-23
 ---
 
 ## Publisher
@@ -68,4 +87,4 @@ The saved parish-site links lead to this issue. Provider: ecatholic; publication
 
 ## Recheck
 
-Read the next available issue from https://scbgardiner.org/bulletins and verify the masthead and building-specific schedule for St. Charles Borromeo. Run fetch:check separately to confirm ingestion; no fresh fetch is recorded by this edit.
+On 2026-11-09 the eCatholic archive's newest issue was October 25, 2026 (fetch:check: stale, 15 days) after weekly uploads through the summer and autumn; no other channel carries the bulletin (see research). Re-read https://scbgardiner.org/bulletins after 2026-11-23 and verify the masthead and the St. Charles Borromeo schedule on the next issue.

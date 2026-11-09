@@ -3,14 +3,16 @@ name: St. John - Visitation
 website: https://stjohnvisitationparish.org/english/important-information/bulletin/
 bulletin_provider: other
 provider_id: page-pdfs https://stjohnvisitationparish.org/english/important-information/bulletin/
-revisit: Re-test complete rendered archive if its route changes; the important-information route already passed actual HTML collection and production PDF download on October 8.
 publication: ['url:https://stjohnvisitationparish.org/english/important-information/bulletin/']
 group: St. John - Visitation
 evidence:
 - url: https://stjohnvisitationparish.org/english/information/bulletin/
   seen: 2026-10-08
   quote: 403 - Forbidden
-  note: 'Resumed verified HTTP request returned access-forbidden document, as did the important-information route. Earlier actual HTML collection and production PDF download at important-information succeeded for October 4. The later incomplete href-only reconstruction picked 2023 but is not a full-page test; neither lower-fidelity result overrides the successful check.'
+  note: Resumed verified HTTP request returned access-forbidden document, as did the important-information
+    route. Earlier actual HTML collection and production PDF download at important-information succeeded
+    for October 4. The later incomplete href-only reconstruction picked 2023 but is not a full-page test;
+    neither lower-fidelity result overrides the successful check.
 - url: https://stjohnvisitationparish.org/english/wp-content/uploads/sites/4/2026/10/oct4_2026_stjohnvisit_compressed.pdf
   seen: 2026-10-07
   quote: "Twenty-Seventh Sunday in  \nOrdinary Time  \n        OCTOBER 4, 2026 \n \n \n \n       SUNDAY,\
@@ -118,7 +120,19 @@ evidence:
     (718) 548-1221
     St. John Visitation English
     © 2026
+- url: https://stjohnvisitationparish.org/english/wp-content/uploads/sites/4/2026/11/nov8_2026_stjohnvisit2_compressed.pdf
+  seen: 2026-11-09
+  quote: NOVEMBER 8, 2026
+  note: November 8, 2026 St. John-Visitation issue picked by fetch:check from the page-pdfs recipe on
+    the important-information bulletin route; the date is observed in the document text.
 promoted: 2026-10-08
+research:
+- method: 'fetch:check (scratch/nyc/fetch-check-1109.json): page-pdfs on https://stjohnvisitationparish.org/english/important-information/bulletin/
+    picked nov8_2026_stjohnvisit2_compressed.pdf, issue date observed in the text'
+  url: https://stjohnvisitationparish.org/english/important-information/bulletin/
+  checked: '2026-11-09'
+  outcome: found
+  next_action: 'None: the recipe collects the current issue; re-test only if the bulletin route moves'
 ---
 
 ## Publisher
@@ -140,3 +154,5 @@ The saved parish bulletin index links the issue quoted above. Publication identi
 The earlier October 8 actual-HTTP-HTML replay plus production PDF download succeeded at https://stjohnvisitationparish.org/english/important-information/bulletin/. The page-pdfs collector selected https://stjohnvisitationparish.org/english/wp-content/uploads/sites/4/2026/10/oct4_2026_stjohnvisit_compressed.pdf with reason current and downloaded 277,344 bytes. The actual October 4 issue was read and supplies this publisher's evidence. Pin the verified important-information route; do not replace it with the similarly named information route solely from a reconstruction.
 
 Later verified HTTP requests returned 403, and a href-only reconstruction without original anchor dates/DFlip markup selected a 2023 file. Those lower-fidelity or blocked attempts do not overturn the earlier full-HTML success. The 2023 result is not pinned, a 403 is not evidence of ceased publication, and this supported publisher is not placed on an operational hold. If the maintained archive route changes, capture complete rendered HTML and re-test current-issue selection. The active Kingsbridge church and the excluded former Visitation building remain separate.
+
+Settled 2026-11-09: the full fetch:check picked the November 8, 2026 issue from the important-information route, so the route revisit is cleared.

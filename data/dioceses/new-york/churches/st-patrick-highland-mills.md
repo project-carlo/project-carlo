@@ -10,7 +10,7 @@ latitude: 41.3428125
 longitude: -74.1268125
 coordinates_from: gcatholic-plus-code
 name_verified: false
-address_verified: false
+address_verified: true
 roster: ['gcatholic:16331', 'directory:2368']
 evidence:
 - url: https://files.ecatholic.com/34907/bulletins/20260920.pdf
@@ -83,10 +83,24 @@ evidence:
     Sacred Heart Church | 26 Still Road, Monroe, NY 10950
     St. Patrick Church | 448 NY-32 Highlan
   note: Current parish public Mass schedule read in headed Chrome; browser snapshots retained in scratch.
-revisit: Official directory lists 26 Hunter Street while parish site lists 448 Route 32; verify entrance/postal
-  address. Retain GCatholic building coordinates, not a geocode of the conflicting street label.
-revisit_after: 2026-10-14
+- url: https://www.openstreetmap.org/way/1526897045
+  seen: 2026-11-09
+  note: OSM church building (amenity=place_of_worship, building=church) named Saint Patrick Catholic Church,
+    tagged addr:housenumber 448, addr:street State Route 32, Highland Mills 10930, website shspparish.org;
+    read through the OSM API. Its centroid (41.34276, -74.12658) is about 20 m from the GCatholic Plus
+    Code kept here.
+- url: https://www.archny.org/places/sh-sp-stpc
+  seen: 2026-11-09
+  quote: 26 Hunter Street
+  note: Archdiocesan directory address for St. Patrick's Church; GCatholic gives the same 26 Hunter St.
 promoted: 2026-10-08
+research:
+- method: 'Compared addresses: parish site and bulletin (448 Route 32 / 448 Rte. 32), OSM church building
+    via the OSM API (448 State Route 32), archny.org directory and GCatholic (26 Hunter Street)'
+  url: https://www.openstreetmap.org/way/1526897045
+  checked: '2026-11-09'
+  outcome: found
+  next_action: 'None: 448 Route 32 chosen (parish and OSM agree); revisit cleared'
 ---
 
 ## Holds public Mass
@@ -95,7 +109,7 @@ The actual bulletin and/or current parish schedule quoted above provides public 
 
 ## Name and address
 
-GCatholic supplies the building identity, address and Plus Code coordinates (87H78VVF+47). Official-directory matches are attached only for this same physical site. Verification flags remain false: abbreviations, parish compound labels and address variations have not been normalized into an unsupported two-source agreement.
+Sources disagree on the street address, and 448 Route 32 is chosen. The parish's own site and its bulletin give 448 Route 32 ("448 Rte. 32"), and OpenStreetMap tags the church building itself (way 1526897045, building=church) 448 State Route 32: two independent sources agree, so `address_verified` is true. The archdiocesan directory (archny.org/places/sh-sp-stpc) and GCatholic give 26 Hunter Street; GCatholic likely follows the directory, and nothing shows whether Hunter Street is a side entrance or an older address, so the parish's own address wins. Coordinates stay on GCatholic's Plus Code (87H78VVF+47), about 20 m from the OSM building centroid, both on the church. The name stays as the parish writes it; `name_verified` stays false.
 
 ## Boundaries
 

@@ -36,7 +36,7 @@ evidence:
 
 The current primary Chicago eparchial directory identifies this continuing Syro-Malabar mission, corroborating the jurisdiction rather than relying only on GCatholic. The mission's own September 28, 2026 public invitation places its October 11, 2026 4 PM feast at 466 Tompkins Avenue. The listed address here is that sourced event venue; the directory and Facebook introduction give 463 Tompkins as contact address. It is excluded only from the Latin jurisdiction survey, never declared closed or non-Catholic.
 
-GCatholic's roster address 1101 Bay Street is retained in the historical evidence, not assumed to be the current mission venue. The former Latin Saint Mary church has a January 4, 2020 relegation decree, but possible present Eastern use of that building is separately retained in `open/st-mary-staten-island.md`. The continuing community and current feast elsewhere do not establish that every Bay Street use ceased. No additional church row is created from an Eastern feast at an already modeled Latin Saint Joseph venue.
+GCatholic's roster address 1101 Bay Street is retained in the historical evidence, not assumed to be the current mission venue. The former Latin Saint Mary church has a January 4, 2020 relegation decree, and the building is excluded `closed` in [St. Mary](st-mary-staten-island.md) (Staten Island follow-up, 2026-11-09). No additional church row is created from an Eastern feast at an already modeled Latin Saint Joseph venue.
 
 ## What would change the decision
 

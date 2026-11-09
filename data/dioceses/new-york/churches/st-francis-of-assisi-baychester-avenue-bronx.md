@@ -1,16 +1,16 @@
 ---
 parish: st-frances-of-rome-st-francis-of-assisi-st-anthony-and-our-lady-of-grace
 name: St. Francis of Assisi Chapel
-line1: 4300 Baychester Avenue
+line1: 4330 Baychester Avenue
 line2: ''
 city: Bronx
 state: NY
 postal_code: '10466'
-latitude: 40.8973125
-longitude: -73.8451875
-coordinates_from: gcatholic-plus-code
+latitude: 40.897698
+longitude: -73.8451061
+coordinates_from: osm-node
 name_verified: false
-address_verified: false
+address_verified: true
 roster: ['gcatholic:16160', 'directory:4730']
 evidence:
 - url: https://sfrbronx.org
@@ -204,10 +204,32 @@ evidence:
     10:00AM
   note: Visual transcription of page 1 schedule. The printed ZIP is 1066; current parish website gives
     the complete ZIP 10466. Saved rendered PNG inspected October 7, 2026.
-revisit: Confirm the 4300/4330/4343 Baychester Avenue parcel and public chapel entrance with the parish
-  at 718-324-5340, then verify coordinates against the actual building.
-revisit_after: 2026-11-07
+- url: https://www.archny.org/places/sfr-sfa-saolog-francis-of-assisi
+  seen: 2026-11-09
+  quote: 4330 Baychester Avenue
+  note: Archdiocesan directory entry for St. Francis of Assisi Chapel of St. Frances of Rome - St. Francis
+    of Assisi - St. Anthony and Our Lady of Grace.
+- url: https://www.openstreetmap.org/way/277125930
+  seen: 2026-11-09
+  note: 'OSM church building (amenity=place_of_worship, building=church, denomination roman_catholic,
+    NYC BIN 2111831, phone +1 718-324-5340, website sfrbronx.org) tagged addr:housenumber 4330, addr:street
+    Baychester Avenue, 10466; centroid 40.897698, -73.8451061. OSM names it Saint Frances of Rome Catholic
+    Church, a mislabel: St. Frances of Rome is the parish church on East 236th Street, and this phone
+    is the one GCatholic gives for St. Francis of Assisi.'
+- url: https://www.openstreetmap.org/node/357612669
+  seen: 2026-11-09
+  note: OSM places 4300 Baychester Avenue on Saint Francis of Assisi School (amenity=school), a separate
+    building on the same campus.
 promoted: 2026-10-08
+research:
+- method: 'Compared addresses: parish site and bulletin (4300 Baychester Avenue), archny.org directory
+    (4330), GCatholic (4343), OSM via Nominatim and the OSM API (church building 4330, school 4300; 4343
+    is a plain building about 60 m west)'
+  url: https://www.openstreetmap.org/way/277125930
+  checked: '2026-11-09'
+  outcome: found
+  next_action: 'None: 4330 Baychester Avenue chosen, coordinates moved onto the OSM church building; revisit
+    cleared'
 ---
 
 ## Holds Mass
@@ -216,4 +238,4 @@ The current bulletin or parish schedule quoted in evidence lists public Mass at 
 
 ## Name and address
 
-GCatholic identifies this building as St. Francis of Assisi at 4343 Baychester Ave.; coordinates are the roster's decoded GCatholic Plus Code. The official directory identifies St. Frances of Rome - St. Francis of Assisi - St. Anthony and Our Lady of Grace: St. Francis of Assisi Chapel at 4330 Baychester Avenue (directory:4730). The current parish website and visual bulletin agree on Mass Center/Chapel at 4300 Baychester Avenue. GCatholic says 4343; directory says 4330. These are conflicting street numbers, not asserted alternate frontages. The name and Baychester Avenue identity are the basis for the roster association; exact parcel/entrance and coordinates need independent rechecking. This is not the Shakespeare Avenue St. Francis of Assisi. Verification booleans remain false where precise independent corroboration has not been established.
+Sources give three numbers on Baychester Avenue, and 4330 is chosen. The archdiocesan directory (directory:4730) gives 4330, and OpenStreetMap tags the church building itself (way 277125930, building=church, with the chapel's phone 718-324-5340) 4330 Baychester Avenue: two independent sources agree, so `address_verified` is true. The parish's own site and bulletin give 4300, but OSM puts 4300 on St. Francis of Assisi School, a separate building on the same campus, so the parish is using the campus or school number; that is the concrete reason to prefer the diocese's address here. GCatholic's 4343 is, in OSM, a plain building (way 277132980) about 60 m west of the church, and its Plus Code pin reverse-geocodes to a parking lot, so coordinates moved to the OSM church building centroid (40.897698, -73.8451061). OSM's name for the building (Saint Frances of Rome Catholic Church) is a mislabel; the name used is the parish's, St. Francis of Assisi Chapel. This is not the Shakespeare Avenue St. Francis of Assisi. `name_verified` stays false.

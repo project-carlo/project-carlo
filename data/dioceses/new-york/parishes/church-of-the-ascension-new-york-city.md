@@ -1,6 +1,6 @@
 ---
 name: Church of the Ascension
-website: https://ascensionchurchnyc.org/bulletins
+website: https://ascension107.org/bulletins
 bulletin_provider: ecatholic
 provider_id: ''
 publication: ['ecatholic:11257']
@@ -44,10 +44,11 @@ evidence:
     Login powered by eCatholic®
   note: Current parish site, read in headed Chrome during October 7 research; exact public schedule, not
     canonical directory name.
-revisit: Read the next available issue from https://ascensionchurchnyc.org/bulletins and verify the masthead
-  and building-specific schedule for Ascension. Run fetch:check separately to confirm ingestion; no fresh
-  fetch is recorded by this edit.
-revisit_after: 2026-10-14
+- url: https://files.ecatholic.com/11257/bulletins/20261108.pdf?t=1794070518000
+  seen: 2026-11-09
+  quote: THE CHURCH OF THE ASCENSION in the City of New York
+  note: Newest issue (dated November 8, 2026 by its eCatholic file name and fetch:check's document-text
+    date) on https://ascension107.org/bulletins on November 9, 2026.
 promoted: 2026-10-08
 ---
 
@@ -61,7 +62,7 @@ Linked worship-site records for Church of the Ascension: [Ascension](../churches
 
 ## Website and bulletin provider
 
-The saved parish-site links lead to this issue. Provider: ecatholic; publication identity: ecatholic:11257. The reader URL is https://ascensionchurchnyc.org/bulletins. The provider and publication metadata identify the saved bulletin channel; they do not by themselves assert a successful live fetch:check.
+The parish moved to ascension107.org (the same eCatholic site, 11257). On November 8, 2026 https://ascensionchurchnyc.org timed out and http://ascensionchurchnyc.org redirected to https://ascension107.org/, so the ecatholic collector timed out on the old /bulletins. The website is now https://ascension107.org/bulletins; fetch:check on November 9 picked the November 8, 2026 issue there. Publication identity: ecatholic:11257.
 
 ## Recheck
 
