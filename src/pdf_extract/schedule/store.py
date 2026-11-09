@@ -10,15 +10,14 @@ None of these functions commits: callers group them into one transaction.
 
 from __future__ import annotations
 
-import json
 import sqlite3
 from collections.abc import Iterable
 from dataclasses import dataclass
-from datetime import UTC, date, datetime, time
-from hashlib import sha256
+from datetime import date
 from typing import Any
 
-from pdf_extract.labeling.labels import DAYS
+from pdf_extract.model import DAYS, canonical_json, normalize_as_of, sha256_text
+from pdf_extract.schedule.context import reviewed_seed_context
 from pdf_extract.schedule.entries import ENTRY_COLUMNS, Entry, entry_from_row
 from pdf_extract.storage import utc_now_iso
 
@@ -30,15 +29,6 @@ REFERENCE = "reference"
 ADD = "add"
 MODIFY = "modify"
 DELETE = "delete"
-
-
-def sha256_text(text: str) -> str:
-    return sha256(text.encode("utf-8")).hexdigest()
-
-
-def canonical_json(value: Any) -> str:
-    """Sorted keys, no whitespace: the same value always hashes the same."""
-    return json.dumps(value, sort_keys=True, separators=(",", ":"), ensure_ascii=False)
 
 
 # ── Entries ─────────────────────────────────────────────────────────────────
@@ -194,9 +184,6 @@ def render_view(
     church (every non-retired church is listed, even with no entries), then
     ordered weekly before dated, by weekday or date, then time.
     """
-    # Imported here because seed-file helpers share this module's JSON/hash helpers.
-    from pdf_extract.schedule.context import reviewed_seed_context
-
     live = live_entries(conn, parish_id)
     churches = parish_churches(conn, parish_id)
     slugs = church_slugs(conn, [e.church_id for e in live.values()])
@@ -245,25 +232,6 @@ class Change:
     before_entry_id: int | None = None
     after_entry_id: int | None = None
     proposed_change_id: int | None = None
-
-
-def normalize_as_of(value: str) -> str:
-    """A seed's `as_of` in the form `fetched_at` is stored in, so the two compare as text.
-
-    Takes an ISO time (`Z` or an offset; none means UTC) or a date, which
-    means the end of that day: everything fetched that day is in the seed.
-    """
-    text = value.strip()
-    try:
-        if len(text) == 10:
-            moment = datetime.combine(date.fromisoformat(text), time(23, 59, 59), UTC)
-        else:
-            moment = datetime.fromisoformat(text.replace("Z", "+00:00"))
-            if moment.tzinfo is None:
-                moment = moment.replace(tzinfo=UTC)
-    except ValueError as exc:
-        raise ValueError(f"as_of must be an ISO date or time, not {value!r}") from exc
-    return moment.astimezone(UTC).replace(microsecond=0).isoformat().replace("+00:00", "Z")
 
 
 def append_revision(

@@ -38,6 +38,7 @@ from pdf_extract.schedule.store import (
     render_view,
     write_seed,
 )
+from pdf_extract.seeding.loader import load_seeds
 from pdf_extract.storage import DEFAULT_DB_PATH, connect_db
 
 Result = dict[str, Any]
@@ -49,6 +50,7 @@ class ScheduleCommandError(ValueError):
 
 def _connect():
     ensure_db(DEFAULT_DB_PATH)
+    load_seeds(DEFAULT_DB_PATH)
     return connect_db(DEFAULT_DB_PATH)
 
 

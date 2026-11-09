@@ -33,8 +33,7 @@ from __future__ import annotations
 from datetime import date
 from typing import Any
 
-from pdf_extract.labeling.labels import DAYS
-from pdf_extract.schedule.store import normalize_as_of
+from pdf_extract.model import DAYS, normalize_as_of
 from pdf_extract.seeding.files import (
     EXCLUDE,
     HISTORY,

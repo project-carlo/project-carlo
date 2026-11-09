@@ -7,7 +7,7 @@ list such as `["first", "third"]`, and a season as
 An exclusion is the list plus `exclude_weeks` true (`["last"]` excluded:
 every week except the last). `schedule_entry` stores the weeks as one mask
 (bit 0 first ... bit 5 last, 0 = every week; bit 6 set when the listed weeks
-are the ones left out), always in `labels.canonical_weeks`' form, and the
+are the ones left out), always in `model.canonical_weeks`' form, and the
 season as four integer columns. These are the only functions that translate
 between the two.
 
@@ -23,7 +23,7 @@ from datetime import date
 from functools import lru_cache
 from typing import Any
 
-from pdf_extract.labeling.labels import (
+from pdf_extract.model import (
     DAYS_IN_MONTH,
     SEASON_KEYS,
     WEEKS_OF_MONTH,
@@ -162,7 +162,7 @@ def season_to_columns(season: Any) -> tuple[int | None, int | None, int | None, 
     """A season object as (start_month, start_day, end_month, end_day); all None for none.
 
     Months may be numbers or English month names. Each day must be null or a
-    day of its month (`labels.DAYS_IN_MONTH`, so February 29 is allowed).
+    day of its month (`model.DAYS_IN_MONTH`, so February 29 is allowed).
     """
     if season is None:
         return (None, None, None, None)

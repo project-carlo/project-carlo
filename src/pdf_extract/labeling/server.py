@@ -49,13 +49,8 @@ from pdf_extract.labeling.bulletins import (
     parish_bulletins,
     progress,
 )
-from pdf_extract.labeling.labels import (
-    LabelError,
-    is_valid_hash,
-    is_valid_slug,
-    read_label,
-    write_label,
-)
+from pdf_extract.labeling.labels import LabelError, read_label, write_label
+from pdf_extract.model import is_valid_hash, is_valid_slug
 from pdf_extract.paths import ROOT
 from pdf_extract.seeding.files import SEEDS_DIR, SeedFileError
 from pdf_extract.seeding.review import (

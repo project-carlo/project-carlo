@@ -12,7 +12,7 @@ every provider, and can be served from a prompt cache, while `CONTEXT_TEMPLATE`
 
 `flatten_events` turns a payload into the pipeline's flat event dicts, with the
 qualifiers in the flat form PR 22 uses (`weeks_of_month`, `season_start_month`,
-...) plus `exclude_weeks`; `labeling.bulletins.gemini_rows` reads that form into
+...) plus `exclude_weeks`; `model.gemini_rows` reads that form into
 label rows.
 """
 
@@ -25,7 +25,7 @@ from typing import Any, Literal
 from pydantic import BaseModel, ConfigDict, Field
 
 from pdf_extract.classifiers.schedule_policy import POLICY
-from pdf_extract.labeling.labels import DAYS_IN_MONTH, WEEKS_OF_MONTH, canonical_weeks
+from pdf_extract.model import DAYS_IN_MONTH, WEEKS_OF_MONTH, canonical_weeks
 from pdf_extract.schedule_extraction import _normalize_published_date, _valid_str
 
 MONTHS = (

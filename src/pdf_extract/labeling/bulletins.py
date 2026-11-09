@@ -26,15 +26,8 @@ from typing import Any
 
 from pdf_extract.blobstore import get_store
 from pdf_extract.classifiers.gemini import GeminiClassifier
-from pdf_extract.labeling.labels import (
-    DAYS,
-    EVENT_KINDS,
-    EVENT_TYPES,
-    WEEKS_OF_MONTH,
-    canonical_weeks,
-    is_valid_hash,
-    label_statuses,
-)
+from pdf_extract.labeling.labels import label_statuses
+from pdf_extract.model import gemini_rows, is_valid_hash
 from pdf_extract.runner import _cache_version_component, cache_key
 from pdf_extract.schedule.store import church_slugs, load_entries, table_exists
 from pdf_extract.storage import (
@@ -42,7 +35,6 @@ from pdf_extract.storage import (
     latest_bulletin_order,
     load_events,
 )
-from pdf_extract.timeparse import normalize_event_date, time_to_minutes
 
 LOGGER = logging.getLogger(__name__)
 
@@ -175,95 +167,6 @@ def parish_bulletins(queue: list[dict[str, Any]], parish_slug: str) -> list[dict
 
 
 # ── Gemini's output ─────────────────────────────────────────────────────────
-def _hhmm(raw: Any) -> str | None:
-    minutes = time_to_minutes(raw) if isinstance(raw, str) else None
-    return None if minutes is None else f"{minutes // 60:02d}:{minutes % 60:02d}"
-
-
-def _day(raw: Any) -> str | None:
-    if not isinstance(raw, str) or len(raw.strip()) < 2:
-        return None
-    prefix = raw.strip().lower()[:3]
-    return next((d for d in DAYS if d.lower().startswith(prefix)), None)
-
-
-def _weeks(raw: Any) -> list[str]:
-    if not isinstance(raw, list):
-        return []
-    weeks = {str(w).strip().lower() for w in raw}
-    return [w for w in WEEKS_OF_MONTH if w in weeks]
-
-
-def _season(ev: dict[str, Any]) -> dict[str, int | None] | None:
-    """A season from the flat `season_*` fields the pipeline adds in schema v2, if any."""
-    start, end = ev.get("season_start_month"), ev.get("season_end_month")
-    if not (isinstance(start, int) and isinstance(end, int)):
-        return None
-    if not (1 <= start <= 12 and 1 <= end <= 12):
-        return None
-    start_day, end_day = ev.get("season_start_day"), ev.get("season_end_day")
-    return {
-        "start_month": start,
-        "start_day": start_day if isinstance(start_day, int) else None,
-        "end_month": end,
-        "end_day": end_day if isinstance(end_day, int) else None,
-    }
-
-
-def gemini_rows(events: list[Any]) -> list[dict[str, Any]]:
-    """Gemini's flat events in the label's row shape, keeping the raw strings.
-
-    `problems` lists what could not be read (an unparseable time, say), so the
-    labeler sees it instead of the row silently vanishing.
-    """
-    out = []
-    for i, ev in enumerate(events):
-        if not isinstance(ev, dict):
-            continue
-        event_type = ev.get("type", ev.get("event_type"))
-        kind = ev.get("kind", ev.get("event_kind"))
-        weekly = kind == "weekly"
-        weeks, exclude_weeks = canonical_weeks(
-            _weeks(ev.get("weeks_of_month")), ev.get("exclude_weeks") is True,
-        ) if weekly else ([], False)
-        row = {
-            "id": f"g{i}",
-            "church_slug": ev.get("church_slug") if isinstance(ev.get("church_slug"), str) else "",
-            "event_type": event_type if event_type in EVENT_TYPES else None,
-            "event_kind": kind if kind in EVENT_KINDS else None,
-            "day_of_week": _day(ev.get("day_of_week")) if weekly else None,
-            "date": None if weekly else normalize_event_date(ev.get("date")),
-            "start_time": _hhmm(ev.get("start_time")),
-            "end_time": _hhmm(ev.get("end_time")),
-            "cancelled": bool(ev.get("cancelled", False)),
-            "weeks_of_month": weeks,
-            "exclude_weeks": exclude_weeks,
-            "season": _season(ev) if weekly else None,
-            "page_number": ev.get("page_number") if isinstance(ev.get("page_number"), int) else None,
-            "note": ev.get("note") if isinstance(ev.get("note"), str) and ev["note"].strip() else None,
-            "raw": {
-                k: ev.get(k) for k in ("day_of_week", "date", "start_time", "end_time")
-                if ev.get(k) is not None
-            },
-        }
-        problems = []
-        if row["event_type"] is None:
-            problems.append(f"unknown type {event_type!r}")
-        if row["event_kind"] is None:
-            problems.append(f"unknown kind {kind!r}")
-        elif weekly and row["day_of_week"] is None:
-            problems.append(f"unreadable day {ev.get('day_of_week')!r}")
-        elif not weekly and row["date"] is None:
-            problems.append(f"unreadable date {ev.get('date')!r}")
-        if row["start_time"] is None:
-            problems.append(f"unreadable start time {ev.get('start_time')!r}")
-        if ev.get("end_time") and row["end_time"] is None:
-            problems.append(f"unreadable end time {ev.get('end_time')!r}")
-        row["problems"] = problems
-        out.append(row)
-    return out
-
-
 def _describe_version_dir(version_dir: str) -> dict[str, str | None]:
     m = _VERSION_DIR_RE.match(version_dir)
     if not m:

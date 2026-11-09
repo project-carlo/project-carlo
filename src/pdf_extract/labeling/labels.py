@@ -1,12 +1,9 @@
 """Ground-truth label files: one JSON file per bulletin, committed to git.
 
 A label records what a person read off one bulletin PDF: every Mass,
-Confession and Adoration it lists, in the shape of the pipeline's event rows
-plus the recurrence qualifiers `weeks_of_month` and `season` (the same tokens
-and ranges `schedule_pattern` uses), so ground truth can be scored against any
-classifier later. `weeks_of_month` lists the weeks an event happens on, or,
-with `exclude_weeks` true, the weeks it doesn't: "every Sunday except the
-last" is `["last"]` excluded, which no list of the weeks that remain can say.
+Confession and Adoration it lists, each a schedule entry (`pdf_extract.model`,
+which holds the vocabulary) plus the page it was read on and where it came
+from, so ground truth can be scored against any classifier later.
 
 An event can be marked optional when it is a judgment call whether it belongs
 in the schedule at all: `optional` is null for a required event, or the
@@ -22,12 +19,19 @@ from __future__ import annotations
 
 import json
 import os
-import re
 import threading
-from datetime import date
 from pathlib import Path
 from typing import Any
 
+from pdf_extract.model import (
+    ENTRY_KEYS_ADDED_LATER,
+    check_keys,
+    entry_value_errors,
+    is_int,
+    is_iso_date,
+    is_valid_hash,
+    is_valid_slug,
+)
 from pdf_extract.paths import DATA_DIR
 from pdf_extract.storage import utc_now_iso
 
@@ -36,17 +40,8 @@ LABELS_DIR = DATA_DIR / "labels"
 
 STATUSES = ("in_progress", "done", "skipped")
 FLAGS = ("wrong_bulletin", "unreadable", "no_schedule", "church_missing", "conflicting_info")
-EVENT_TYPES = ("mass", "confession", "adoration")
-EVENT_KINDS = ("weekly", "specific_date")
-DAYS = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
-WEEKS_OF_MONTH = ("first", "second", "third", "fourth", "fifth", "last")
-# The ordinals a month can have of a weekday; "last" is the fourth or the fifth.
-ORDINAL_WEEKS = WEEKS_OF_MONTH[:5]
 ORIGINS = ("human", "gemini", "gemini-edited")
 OPTIONAL_PREFERENCES = ("include", "exclude")
-
-# February has 29: a season boundary recurs every year, leap years included.
-DAYS_IN_MONTH = (31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)
 
 LABEL_KEYS = (
     "schema_version", "parish_slug", "content_hash", "source_url", "status", "flags",
@@ -59,53 +54,13 @@ EVENT_KEYS = (
 )
 # Keys a label written before they existed may lack; a missing one reads as
 # null (`exclude_weeks`: false).
-EVENT_KEYS_ADDED_LATER = ("exclude_weeks", "optional")
-SEASON_KEYS = ("start_month", "start_day", "end_month", "end_day")
-
-_SLUG_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
-_HASH_RE = re.compile(r"^[0-9a-f]{64}$")
-_TIME_RE = re.compile(r"^([01]\d|2[0-3]):[0-5]\d$")
-_DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+EVENT_KEYS_ADDED_LATER = (*ENTRY_KEYS_ADDED_LATER, "optional")
 
 _write_lock = threading.Lock()
 
 
-def canonical_weeks(weeks: Any, exclude: Any) -> tuple[list[str], bool]:
-    """The one way to write a weeks-of-the-month selection, in the labels' order.
-
-    An exclusion that leaves out no "last" is the list of the weeks that
-    remain ("every week except the first" is second to fifth). One that leaves
-    out "last" stays an exclusion, without "fifth" (a fifth weekday is always
-    the last). Excluding nothing is every week, and a selection that leaves no
-    week (`weeks_never_happen`) is kept as given. Unknown tokens are dropped.
-    """
-    listed = set(weeks) if isinstance(weeks, list) else set()
-    ordered = [w for w in WEEKS_OF_MONTH if w in listed]
-    if exclude is not True or not ordered:
-        return ordered, False
-    if weeks_never_happen(ordered, True):
-        return ordered, True
-    if "last" not in listed:
-        return [w for w in ORDINAL_WEEKS if w not in listed], False
-    return [w for w in ordered if w != "fifth"], True
-
-
-def weeks_never_happen(weeks: Any, exclude: Any) -> bool:
-    """Whether a selection leaves no week at all: every ordinal, or the first four and the last, excluded."""
-    listed = set(weeks) if isinstance(weeks, list) else set()
-    return exclude is True and set(ORDINAL_WEEKS[:4]) <= listed and bool({"fifth", "last"} & listed)
-
-
 class LabelError(ValueError):
     """A label, slug or hash that must not be written."""
-
-
-def is_valid_slug(value: Any) -> bool:
-    return isinstance(value, str) and len(value) <= 120 and bool(_SLUG_RE.match(value))
-
-
-def is_valid_hash(value: Any) -> bool:
-    return isinstance(value, str) and bool(_HASH_RE.match(value))
 
 
 def label_path(parish_slug: str, content_hash: str, labels_dir: Path = LABELS_DIR) -> Path:
@@ -122,108 +77,16 @@ def label_path(parish_slug: str, content_hash: str, labels_dir: Path = LABELS_DI
 
 
 # ── Validation ──────────────────────────────────────────────────────────────
-def _is_iso_date(value: Any) -> bool:
-    if not isinstance(value, str) or not _DATE_RE.match(value):
-        return False
-    try:
-        date.fromisoformat(value)
-    except ValueError:
-        return False
-    return True
-
-
-def _is_int(value: Any) -> bool:
-    return isinstance(value, int) and not isinstance(value, bool)
-
-
-def _check_keys(
-    obj: dict[str, Any], expected: tuple[str, ...], where: str, *, may_lack: tuple[str, ...] = (),
-) -> list[str]:
-    errors = []
-    missing = [k for k in expected if k not in obj and k not in may_lack]
-    extra = sorted(k for k in obj if k not in expected)
-    if missing:
-        errors.append(f"{where}: missing {', '.join(missing)}")
-    if extra:
-        errors.append(f"{where}: unknown {', '.join(extra)}")
-    return errors
-
-
-def _validate_season(season: Any, where: str) -> list[str]:
-    if season is None:
-        return []
-    if not isinstance(season, dict):
-        return [f"{where}.season must be null or an object"]
-    errors = _check_keys(season, SEASON_KEYS, f"{where}.season")
-    if errors:
-        return errors
-    for edge in ("start", "end"):
-        month = season[f"{edge}_month"]
-        day = season[f"{edge}_day"]
-        if not _is_int(month) or not 1 <= month <= 12:
-            errors.append(f"{where}.season.{edge}_month must be 1-12")
-            continue
-        if day is not None and (not _is_int(day) or not 1 <= day <= DAYS_IN_MONTH[month - 1]):
-            errors.append(f"{where}.season.{edge}_day must be null or a day of month {month}")
-    return errors
-
-
 def _validate_event(event: Any, where: str) -> list[str]:
     if not isinstance(event, dict):
         return [f"{where} must be an object"]
-    errors = _check_keys(event, EVENT_KEYS, where, may_lack=EVENT_KEYS_ADDED_LATER)
+    errors = check_keys(event, EVENT_KEYS, where, may_lack=EVENT_KEYS_ADDED_LATER)
     if errors:
         return errors
-
-    if not is_valid_slug(event["church_slug"]):
-        errors.append(f"{where}.church_slug must be a church slug")
-    if event["event_type"] not in EVENT_TYPES:
-        errors.append(f"{where}.event_type must be one of {', '.join(EVENT_TYPES)}")
-    kind = event["event_kind"]
-    if kind not in EVENT_KINDS:
-        errors.append(f"{where}.event_kind must be one of {', '.join(EVENT_KINDS)}")
-    elif kind == "weekly":
-        if event["day_of_week"] not in DAYS:
-            errors.append(f"{where}.day_of_week must be a weekday name for a weekly event")
-        if event["date"] is not None:
-            errors.append(f"{where}.date must be null for a weekly event")
-    else:
-        if event["day_of_week"] is not None:
-            errors.append(f"{where}.day_of_week must be null for a dated event")
-        if not _is_iso_date(event["date"]):
-            errors.append(f"{where}.date must be YYYY-MM-DD for a dated event")
-
-    if not isinstance(event["start_time"], str) or not _TIME_RE.match(event["start_time"]):
-        errors.append(f"{where}.start_time must be HH:MM (24-hour)")
-    end = event["end_time"]
-    if end is not None and (not isinstance(end, str) or not _TIME_RE.match(end)):
-        errors.append(f"{where}.end_time must be null or HH:MM (24-hour)")
-    if not isinstance(event["cancelled"], bool):
-        errors.append(f"{where}.cancelled must be true or false")
-
-    weeks = event["weeks_of_month"]
-    if not isinstance(weeks, list) or any(w not in WEEKS_OF_MONTH for w in weeks):
-        errors.append(f"{where}.weeks_of_month must be a list of {', '.join(WEEKS_OF_MONTH)}")
-    elif len(set(weeks)) != len(weeks):
-        errors.append(f"{where}.weeks_of_month has duplicates")
-    elif weeks and kind == "specific_date":
-        errors.append(f"{where}.weeks_of_month applies to weekly events only")
-    exclude = event.get("exclude_weeks", False)
-    if not isinstance(exclude, bool):
-        errors.append(f"{where}.exclude_weeks must be true or false")
-    elif exclude and not weeks:
-        errors.append(f"{where}.exclude_weeks needs the weeks it leaves out in weeks_of_month")
-    elif exclude and weeks_never_happen(weeks, exclude):
-        errors.append(f"{where}.exclude_weeks leaves out every week")
-    errors.extend(_validate_season(event["season"], where))
-    if event["season"] is not None and kind == "specific_date":
-        errors.append(f"{where}.season applies to weekly events only")
-
+    errors = entry_value_errors(event, where)
     page = event["page_number"]
-    if page is not None and (not _is_int(page) or page < 1):
+    if page is not None and (not is_int(page) or page < 1):
         errors.append(f"{where}.page_number must be null or a positive integer")
-    if event["note"] is not None and not isinstance(event["note"], str):
-        errors.append(f"{where}.note must be null or a string")
     if event["origin"] not in ORIGINS:
         errors.append(f"{where}.origin must be one of {', '.join(ORIGINS)}")
     if event.get("optional") not in (None, *OPTIONAL_PREFERENCES):
@@ -231,26 +94,11 @@ def _validate_event(event: Any, where: str) -> list[str]:
     return errors
 
 
-# A schedule entry is a label event without the keys that describe one reading
-# of one bulletin: a seed (`pdf_extract.seeding`) holds entries in this shape.
-ENTRY_KEYS = tuple(k for k in EVENT_KEYS if k not in ("page_number", "origin", "optional"))
-
-
-def validate_entry(entry: Any, where: str) -> list[str]:
-    """Every reason `entry` is not a label event minus page, origin and optional."""
-    if not isinstance(entry, dict):
-        return [f"{where} must be an object"]
-    errors = _check_keys(entry, ENTRY_KEYS, where, may_lack=EVENT_KEYS_ADDED_LATER)
-    if errors:
-        return errors
-    return _validate_event({**entry, "page_number": None, "origin": "human"}, where)
-
-
 def validate_label(label: Any) -> list[str]:
     """Every reason `label` is not a valid schema-version-1 label (empty when valid)."""
     if not isinstance(label, dict):
         return ["label must be a JSON object"]
-    errors = _check_keys(label, LABEL_KEYS, "label")
+    errors = check_keys(label, LABEL_KEYS, "label")
     if errors:
         return errors
     if label["schema_version"] != SCHEMA_VERSION:
@@ -268,18 +116,18 @@ def validate_label(label: Any) -> list[str]:
     if not isinstance(flags, dict):
         errors.append("flags must be an object")
     else:
-        errors.extend(_check_keys(flags, FLAGS, "flags"))
+        errors.extend(check_keys(flags, FLAGS, "flags"))
         errors.extend(
             f"flags.{k} must be true or false"
             for k in FLAGS if k in flags and not isinstance(flags[k], bool)
         )
 
-    if label["published_date"] is not None and not _is_iso_date(label["published_date"]):
+    if label["published_date"] is not None and not is_iso_date(label["published_date"]):
         errors.append("published_date must be null or YYYY-MM-DD")
     for key in ("note", "labeler", "updated_at"):
         if not isinstance(label[key], str):
             errors.append(f"{key} must be a string")
-    if not _is_int(label["seconds_spent"]) or label["seconds_spent"] < 0:
+    if not is_int(label["seconds_spent"]) or label["seconds_spent"] < 0:
         errors.append("seconds_spent must be a non-negative integer")
 
     events = label["events"]

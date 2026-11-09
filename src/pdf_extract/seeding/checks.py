@@ -28,9 +28,9 @@ from datetime import date, timedelta
 from typing import Any
 
 from pdf_extract.bulletin_week import bulletin_reference_date, bulletin_week, parse_iso_date
-from pdf_extract.labeling.labels import DAYS, WEEKS_OF_MONTH
+from pdf_extract.model import DAYS, WEEKS_OF_MONTH, normalize_as_of
 from pdf_extract.schedule.entries import UNKNOWN_CHURCH, Entry, EntryError, parse_entry
-from pdf_extract.schedule.store import normalize_as_of, parish_churches
+from pdf_extract.schedule.store import parish_churches
 from pdf_extract.seeding.files import (
     AGENT,
     BLOCKED,

@@ -85,7 +85,7 @@ from pdf_extract.seeding.files import (
     write_seed_file,
 )
 from pdf_extract.seeding.finalize import finalize_seed
-from pdf_extract.seeding.loader import is_loaded
+from pdf_extract.seeding.loader import is_loaded, load_seeds
 from pdf_extract.seeding.queries import SeedContext, SeedError
 from pdf_extract.seeding.review import SeedReviewError, approve_seed, is_agent
 from pdf_extract.seeding.site import read_site, resolve_url
@@ -96,6 +96,7 @@ Result = dict[str, Any]
 
 def _connect():
     ensure_db(DEFAULT_DB_PATH)
+    load_seeds(DEFAULT_DB_PATH)
     return connect_db(DEFAULT_DB_PATH)
 
 
