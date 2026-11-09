@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "enchanted-mountains-catholic",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-25T13:11:44Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-25T18:57:02Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Claude)",
+  "approved_at": "2026-11-08T20:49:39Z",
   "summary": "Three churches in Olean and Allegany. The newest bulletin prints no Mass-time box, so the weekly Masses come from the dated Mass intentions repeated across five weekly issues, plus the Sacraments box and the Week at a Glance for Confession and Adoration. Open: the November 1 family Holy Hour.",
   "blocked_reason": null,
   "bulletins": [
@@ -2124,9 +2124,22 @@
     },
     {
       "id": "s28",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-angels-olean",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-01",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour, followed by potluck (family faith formation event)"
+      },
       "page": 7,
       "sources": [
         {
@@ -2174,7 +2187,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": "dropped",
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:49:39Z"
+      }
     },
     {
       "id": "s29",

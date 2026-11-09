@@ -102,6 +102,8 @@ def _resolve(
         ("/wp-content/uploads/Sept.-27th-26th-Sun-in-OT.pdf", date(2026, 9, 27)),
         ("/wp-content/uploads/Sept.-20th-25th-Sun-in-OT.pdf", date(2026, 9, 20)),
         ("September 27th, 2026", date(2026, 9, 27)),
+        # Nor is a bare Sunday number after the day a year: the 32nd Sunday, not 2032.
+        ("/wp-content/uploads/November-8th-32-Sun-in-OT.pdf", date(2025, 11, 8)),
         # A run of digits that is no month-day-year gives a later yearless
         # date no year.
         ("scan 13-45-19 bulletin 9-27", date(2026, 9, 27)),
@@ -531,6 +533,62 @@ def test_this_years_post_wins_over_last_years_with_the_same_day() -> None:
     }) == f"{HOME}/s/Bulletin-for-9-2627FINAL.pdf"
 
 
+def _all_saints_listing(*, this_week: bool) -> str:
+    # All Saints, Syracuse: newest first, no years, last year's below this year's.
+    titles = [
+        *(["november-7-amp-8"] if this_week else []),
+        "october-31-amp-november-1", "october-24-amp-25", "september-26-amp-27",
+        "july-25-amp-26", "january-3-amp-4",
+        # Last year's, which read as the nearest such days.
+        "december-27-amp-28", "november-15-amp-16", "november-1-amp-2-and-8-amp-9",
+    ]
+    return "".join(f'<a href="/b/bulletin-{t}">Bulletin {t}</a>' for t in titles)
+
+
+@pytest.mark.parametrize(("this_week", "post"), [
+    (True, "november-7-amp-8"),
+    # Before this week's is posted, last week's, not last November's.
+    (False, "october-31-amp-november-1"),
+])
+def test_last_years_posts_below_this_years_are_not_this_weeks(this_week, post) -> None:
+    pdf = f"{HOME}/s/{post}.pdf"
+    assert _resolve({
+        HOME: '<a href="/newsletters">Bulletins</a>',
+        f"{HOME}/newsletters": _all_saints_listing(this_week=this_week),
+        f"{HOME}/b/bulletin-{post}": f'<a href="/s/{post}.pdf">Bulletin</a>',
+    }, today=date(2026, 11, 8)) == pdf
+
+
+def test_a_post_pinned_above_the_listing_does_not_hide_it() -> None:
+    post = f"{HOME}/b/bulletin-november-7-amp-8"
+    assert _resolve({
+        HOME: '<a href="/newsletters">Bulletins</a>',
+        f"{HOME}/newsletters": (
+            '<a href="/b/christmas-bulletin-december-24">Christmas Bulletin December 24</a>'
+            f'<a href="{post}">Bulletin November 7 &amp; 8</a>'
+            '<a href="/b/bulletin-october-31">Bulletin October 31</a>'
+        ),
+        post: '<a href="/s/november-7.pdf">Bulletin</a>',
+    }, today=date(2026, 11, 8)) == f"{HOME}/s/november-7.pdf"
+
+
+@pytest.mark.parametrize(("today", "issue"), [
+    (date(2026, 11, 8), "11-08-2026"),  # a Sunday: today's
+    (date(2026, 11, 7), "11-08-2026"),  # a Saturday: tomorrow's
+    (date(2026, 11, 11), "11-15-2026"),  # midweek: the coming Sunday's
+])
+def test_sundays_listed_ahead_of_time_are_not_current_before_their_week(today, issue) -> None:
+    # Immaculate Conception, Rochester lists the year's Sundays ahead of time,
+    # each linking last year's issue until its week comes.
+    days = ["11-01-2026", "11-08-2026", "11-15-2026", "11-22-2026"]
+    assert _resolve({
+        HOME: '<a href="/bulletin-news">Bulletin</a>',
+        f"{HOME}/bulletin-news": "".join(
+            f'<a href="/_files/ugd/{d}.pdf">{d}</a>' for d in days
+        ),
+    }, today=today) == f"{HOME}/_files/ugd/{issue}.pdf"
+
+
 def test_last_years_issue_in_a_year_folder_is_not_this_weeks() -> None:
     # parishes.rcda.org (St. Joseph, Worcester) names files by the day alone.
     assert _resolve({
@@ -799,12 +857,82 @@ def test_a_downloaded_image_is_kept_as_a_pdf(monkeypatch) -> None:
     assert fetch._download_pdf(fetch_url=url, source_url=url) == pdf
 
 
-def test_a_download_that_is_neither_pdf_nor_image_is_left_as_it_is(monkeypatch) -> None:
+# What bulletins.discovermass.com/download.php answers, with HTTP 200, once its
+# daily download cap is hit. The 2026-10-25 run stored it as 66 parishes' bulletin.
+DISCOVER_MASS_CAP_PAGE = (
+    b"Maximum number of files downloaded today. Please contact "
+    b"<a href='https://discovermass.com/contact-us/'>Discover Mass</a> for support."
+)
+DISCOVER_MASS_DOWNLOAD = "https://bulletins.discovermass.com/download.php?bulletin=abc%3D"
+
+
+def test_the_discover_mass_cap_page_is_not_a_bulletin(monkeypatch) -> None:
+    from pdf_extract import fetch
+    from pdf_extract.duplicates import bulletin_hash
+
+    assert len(DISCOVER_MASS_CAP_PAGE) == 134
+    assert bulletin_hash(DISCOVER_MASS_CAP_PAGE) == (
+        "df175220b1d967b5204b2dea47961626b06f0e346a6a4e54094544af84ae0117"
+    )
+    monkeypatch.setattr(
+        fetch, "_http_get", lambda url, **_: fetch._Response(DISCOVER_MASS_CAP_PAGE, etag='"x"'),
+    )
+    with pytest.raises(fetch.NotABulletin) as raised:
+        fetch._download_bulletin(
+            fetch_url=DISCOVER_MASS_DOWNLOAD, source_url="https://discovermass.com/church/x/",
+        )
+    assert raised.value.body == DISCOVER_MASS_CAP_PAGE
+    # The size and the page's text, without its markup, for the run report.
+    assert str(raised.value) == (
+        "Not a PDF: 134 bytes starting 'Maximum number of files downloaded today."
+        " Please contact Discover Mass for support.'"
+    )
+
+
+def test_a_page_from_the_source_address_is_not_a_bulletin_either(monkeypatch) -> None:
+    from urllib.error import HTTPError
+
     from pdf_extract import fetch
 
-    monkeypatch.setattr(fetch, "_http_get", lambda url, **_: fetch._Response(b"<html>"))
+    def get(url: str, **_: object) -> fetch._Response:
+        if url == DISCOVER_MASS_DOWNLOAD:
+            raise HTTPError(url, 503, "Service Unavailable", {}, None)  # type: ignore[arg-type]
+        return fetch._Response(b"<!DOCTYPE html><html><title>Bulletins</title>" + b"x" * 500)
+
+    monkeypatch.setattr(fetch, "_http_get", get)
+    with pytest.raises(fetch.NotABulletin, match=(
+        r"^HTTPError: HTTP Error 503: Service Unavailable, and the source URL is not a PDF:"
+        r" 545 bytes starting 'Bulletins xxx"
+    )):
+        fetch._download_pdf(fetch_url=DISCOVER_MASS_DOWNLOAD, source_url=f"{HOME}/bulletins")
+
+
+def test_a_bot_check_over_http_and_https_is_not_a_bulletin(monkeypatch) -> None:
+    from pdf_extract import fetch
+
+    monkeypatch.setattr(
+        fetch, "_http_get", lambda url, **_: fetch._Response(b"<html>sgcaptcha</html>"),
+    )
+    with pytest.raises(fetch.NotABulletin, match="'sgcaptcha'"):
+        fetch._download_pdf(fetch_url="http://example.org/b.pdf", source_url="http://example.org/")
+
+
+def test_an_empty_download_is_not_a_bulletin(monkeypatch) -> None:
+    from pdf_extract import fetch
+
+    monkeypatch.setattr(fetch, "_http_get", lambda url, **_: fetch._Response(b""))
     url = f"{HOME}/bulletin.pdf"
-    assert fetch._download_pdf(fetch_url=url, source_url=url) == b"<html>"
+    with pytest.raises(fetch.NotABulletin, match="^Not a PDF: an empty response$"):
+        fetch._download_pdf(fetch_url=url, source_url=url)
+
+
+def test_a_pdf_after_a_stray_newline_is_still_a_bulletin(monkeypatch) -> None:
+    # PDF readers find the header anywhere in the first kilobyte.
+    from pdf_extract import fetch
+
+    monkeypatch.setattr(fetch, "_http_get", lambda url, **_: fetch._Response(b"\r\n%PDF-1.4"))
+    url = f"{HOME}/download.php?file=bulletin"
+    assert fetch._download_pdf(fetch_url=url, source_url=url) == b"\r\n%PDF-1.4"
 
 
 def test_a_download_answered_429_is_retried_once(monkeypatch) -> None:

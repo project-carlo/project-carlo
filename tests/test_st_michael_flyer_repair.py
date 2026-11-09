@@ -1,10 +1,8 @@
 import shutil
-from datetime import date
 
 import pytest
 
 from pdf_extract.db import _migration_files, migrate
-from pdf_extract.extract_frontend_db import extract, read_snapshot
 from pdf_extract.storage import connect_db, insert_bulletin, latest_bulletin_ids
 
 PARISH = "st-michael-st-peter-our-lady-of-hope-syracuse"
@@ -54,23 +52,17 @@ def add_bulletin(conn, content_hash, published=None, *, events=False, processed=
 
 
 @pytest.mark.parametrize("newer_issue", [False, True])
-def test_repair_restores_real_schedule_and_preserves_newer_issue(before_repair, newer_issue):
-    conn, db = before_repair
+def test_repair_restores_real_bulletin_and_preserves_newer_issue(before_repair, newer_issue):
+    conn, _ = before_repair
     real = add_bulletin(conn, "real", "2026-10-11", events=True)
     flyer = add_bulletin(conn, FLYER_HASH)
     assert latest_bulletin_ids(conn)[PARISH] == flyer
-    before = extract(db, db.with_suffix(".before.gz"), build_date=date(2026, 10, 25))
-    assert before["events"] == 0
     if newer_issue:
         real = add_bulletin(conn, "newer", "2026-11-01", events=True)
 
     assert migrate(conn) == len(_migration_files()) - 9
     assert latest_bulletin_ids(conn)[PARISH] == real
     assert conn.execute("SELECT count(*) FROM bulletin").fetchone()[0] == 2 + newer_issue
-    dest = db.with_suffix(".after.gz")
-    assert extract(db, dest, build_date=date(2026, 10, 25))["events"] == 1
-    [church] = read_snapshot(dest.read_bytes())["churches"]
-    assert church["bulletin_url"].endswith("/newer.pdf" if newer_issue else "/real.pdf")
     assert migrate(conn) == 0
 
 

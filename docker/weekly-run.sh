@@ -7,8 +7,8 @@ set -euo pipefail
 
 RUN_ID="${RUN_ID:-local-$(date -u +%Y%m%dT%H%M%SZ)}"
 
-if [[ -z "${GEMINI_API_KEY:-}" ]]; then
-  echo "Missing credentials: GEMINI_API_KEY is not set." >&2
+if [[ -z "${OPENAI_API_KEY:-}" ]]; then
+  echo "Missing credentials: OPENAI_API_KEY is not set." >&2
   exit 1
 fi
 

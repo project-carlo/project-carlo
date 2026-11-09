@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "spirit-of-hope-oneida",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-25T13:20:11Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-27T00:55:18Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Claude)",
+  "approved_at": "2026-11-08T20:43:50Z",
   "summary": "Five listed churches (Oneida, Canastota, Vernon, Verona Beach, Irish Ridge). Weekend and weekday Masses and Confessions agree in all three bulletins; the St. Mary of the Lake summer-only slots are excluded because their season floats and ends Columbus Day weekend. The Nov 2 6 PM All Souls' Mass at St. Mary Irish Ridge is included. Open: whether the St. Agatha and St. Joseph perpetual Adoration chapels count (both lean out: location and hours unclear).",
   "blocked_reason": null,
   "bulletins": [
@@ -1376,9 +1376,22 @@
     },
     {
       "id": "s21",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agatha-canastota",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Adoration Chapel"
+      },
       "page": 8,
       "sources": [
         {
@@ -1450,14 +1463,31 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:39Z"
+      },
       "group": "st-agatha-chapel"
     },
     {
       "id": "s22",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agatha-canastota",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Adoration Chapel"
+      },
       "page": 8,
       "sources": [
         {
@@ -1529,14 +1559,31 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:39Z"
+      },
       "group": "st-agatha-chapel"
     },
     {
       "id": "s23",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agatha-canastota",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Adoration Chapel"
+      },
       "page": 8,
       "sources": [
         {
@@ -1608,14 +1655,31 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:39Z"
+      },
       "group": "st-agatha-chapel"
     },
     {
       "id": "s24",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agatha-canastota",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Adoration Chapel"
+      },
       "page": 8,
       "sources": [
         {
@@ -1687,14 +1751,31 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:39Z"
+      },
       "group": "st-agatha-chapel"
     },
     {
       "id": "s25",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agatha-canastota",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Adoration Chapel"
+      },
       "page": 8,
       "sources": [
         {
@@ -1766,14 +1847,31 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:39Z"
+      },
       "group": "st-agatha-chapel"
     },
     {
       "id": "s26",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agatha-canastota",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Adoration Chapel"
+      },
       "page": 8,
       "sources": [
         {
@@ -1845,14 +1943,31 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:39Z"
+      },
       "group": "st-agatha-chapel"
     },
     {
       "id": "s27",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agatha-canastota",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Adoration Chapel"
+      },
       "page": 8,
       "sources": [
         {
@@ -1930,14 +2045,31 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:39Z"
+      },
       "group": "st-agatha-chapel"
     },
     {
       "id": "s28",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-oneida",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual 24/7 Adoration Chapel"
+      },
       "page": 8,
       "sources": [
         {
@@ -2003,14 +2135,31 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:39Z"
+      },
       "group": "st-joseph-chapel"
     },
     {
       "id": "s29",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-oneida",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual 24/7 Adoration Chapel"
+      },
       "page": 8,
       "sources": [
         {
@@ -2094,14 +2243,31 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:39Z"
+      },
       "group": "st-joseph-chapel"
     },
     {
       "id": "s30",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-oneida",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual 24/7 Adoration Chapel"
+      },
       "page": 8,
       "sources": [
         {
@@ -2167,14 +2333,31 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:39Z"
+      },
       "group": "st-joseph-chapel"
     },
     {
       "id": "s31",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-oneida",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual 24/7 Adoration Chapel"
+      },
       "page": 8,
       "sources": [
         {
@@ -2246,14 +2429,31 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:39Z"
+      },
       "group": "st-joseph-chapel"
     },
     {
       "id": "s32",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-oneida",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual 24/7 Adoration Chapel"
+      },
       "page": 8,
       "sources": [
         {
@@ -2325,14 +2525,31 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:39Z"
+      },
       "group": "st-joseph-chapel"
     },
     {
       "id": "s33",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-oneida",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual 24/7 Adoration Chapel"
+      },
       "page": 8,
       "sources": [
         {
@@ -2398,14 +2615,31 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:39Z"
+      },
       "group": "st-joseph-chapel"
     },
     {
       "id": "s34",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-oneida",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual 24/7 Adoration Chapel"
+      },
       "page": 8,
       "sources": [
         {
@@ -2477,7 +2711,11 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:39Z"
+      },
       "group": "st-joseph-chapel"
     }
   ],

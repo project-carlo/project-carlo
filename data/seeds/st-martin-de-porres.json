@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-martin-de-porres",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-25T13:13:48Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-26T01:48:02Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Claude)",
+  "approved_at": "2026-11-08T20:43:50Z",
   "summary": "One parish, three churches (St. Columba, St. Mary of the Assumption, St. Vincent de Paul). The weekend Masses are on the masthead; the weekday Masses come only from the weekly Mass intentions but repeat every week and match the parish website. Confessions give start times only. Open: whether St. Vincent's Sunday Confession is after the 11:00 AM Mass (bulletin) or 10:15-10:30 AM (website).",
   "blocked_reason": null,
   "bulletins": [
@@ -890,9 +890,22 @@
     },
     {
       "id": "s10",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 11:00 AM Mass"
+      },
       "page": 4,
       "sources": [
         {
@@ -986,7 +999,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:39Z"
+      }
     }
   ]
 }

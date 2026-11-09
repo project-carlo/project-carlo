@@ -30,21 +30,14 @@ FETCH_SAVE_FAILED = "save_failed"
 # Too big to store, even compacted: the parish keeps its last bulletin.
 FETCH_TOO_LARGE = "too_large"
 
-# Process outcomes.
-PROCESS_EXTRACTED = "extracted"
-PROCESS_CACHED = "cached"
+# Process outcomes (docs/schedule-state-plan.md).
 PROCESS_WRONG_BULLETIN = "wrong_bulletin"
 # A second bulletin for a week we had: it replaces the first.
 PROCESS_CORRECTION = "correction"
 # A third or later bulletin for one week: flagged for a person to look at.
 PROCESS_REPEATED_WEEK = "repeated_week"
-# Dated before the parish's newest bulletin: stored, but not shown.
-PROCESS_OLD_ISSUE = "old_issue"
 PROCESS_FAILED = "failed"
 PROCESS_SKIPPED = "skipped"
-
-# Update-mode outcomes (docs/schedule-state-plan.md). Wrong bulletins,
-# corrections, repeated weeks, failures and skips use the statuses above.
 # The bulletin's changes were applied.
 PROCESS_UPDATED = "updated"
 # The call succeeded and applied nothing.

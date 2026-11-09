@@ -13,6 +13,7 @@ from pdf_extract import __main__ as cli
 from pdf_extract.db import create_db
 from pdf_extract.replay_gates import render, replay, run_date
 from pdf_extract.storage import connect_db, insert_bulletin, save_processed_bulletin, utc_now_iso
+from tests.conftest import seed_parish
 
 MASS = {
     "church_slug": "test-church", "event_type": "mass", "event_kind": "weekly",
@@ -32,8 +33,9 @@ def _database(path: Path, events: list[dict[str, Any]], week: str) -> Path:
             content_hash=week, fetched_at=utc_now_iso(),
         )
         save_processed_bulletin(
-            conn, bulletin_id, events, processed_at=utc_now_iso(), published_date=week,
+            conn, bulletin_id, [], processed_at=utc_now_iso(), published_date=week,
         )
+        seed_parish(conn, "test-parish", events, as_of=f"{week}T00:00:00Z")
     finally:
         conn.close()
     return path

@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "chautauqua-family-catholic",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-25T13:15:24Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-26T12:11:17Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Claude)",
+  "approved_at": "2026-11-08T20:49:39Z",
   "summary": "Four churches in one family (BP = Our Lady of Lourdes Bemus Point, M = St. Mary Mayville, FC = Christ Our Hope = St. Matthias Clymer, W = St. Dominic = St. James Major Westfield). Weekend, weekday, Saturday/Sunday confession and Friday Adoration times agree in all five bulletins; the holiday schedule on p7 is recorded as dated Masses. Open: whether the Westfield Saturday 4 PM Mass runs on first Saturdays (First Saturday Masses discontinued) and whether a Friday Adoration at Bemus Point that disappeared from the last two bulletins continues.",
   "blocked_reason": null,
   "bulletins": [
@@ -1522,9 +1522,24 @@
     },
     {
       "id": "s19",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-major-westfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": true,
+        "season": null,
+        "note": null
+      },
       "page": 2,
       "sources": [
         {
@@ -1623,13 +1638,30 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:49:39Z"
+      }
     },
     {
       "id": "s20",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-bemus-point",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "10:45",
+        "end_time": "11:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 3,
       "sources": [
         {
@@ -1695,7 +1727,11 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:38Z"
+      }
     },
     {
       "id": "s21",

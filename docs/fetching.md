@@ -30,6 +30,16 @@ The address is never taken to mean the bulletin is unchanged: Discover Mass
 serves the same PDF from a new address each time, and some sites put each
 week's bulletin at the same one.
 
+**A download that is neither a PDF nor an image is not stored.** A server can
+answer 200 with a page in place of the file: Discover Mass sends a 134-byte
+"Maximum number of files downloaded today" page once its daily cap is hit, and
+some hosts send a bot check. The parish is reported as `download_failed`, with
+the page's size and opening text in the detail, and counts as a failure like
+any other; its last bulletin stays its last. Before this check, the October 25,
+2026 run stored the Discover Mass page as 66 parishes' bulletin, and every run
+after matched it by hash and reported them `unchanged`. Migration 13 deleted
+those rows.
+
 ## Compacted copies
 
 `fetch` stores a compacted copy of each bulletin: the first 10 pages, which is
@@ -119,10 +129,14 @@ exit code ignore verification, so read the two separately.
    `page-images`, for a parish that posts each issue as an image (a JPEG per
    weekend); `fetch` stores the image as a one-page PDF.
 3. **Choose** this week's issue among them (`choose.py`), and say why:
-   `current` (dated this week), or a fallback (`newest-recent`, `titled`,
+   `current` (the newest dated within a week of today, and no later than the
+   coming Sunday when one is), or a fallback (`newest-recent`, `titled`,
    `first-listed`). `newest-recent` is the newest issue dated in the last 45
    days, taken when the first listed is plainly old, or when it is neither
-   dated nor labelled "bulletin" and the page lists a dated series.
+   dated nor labelled "bulletin" and the page lists a dated series. A listing
+   of dated posts is read from its newest end, and stops where it runs back
+   into an earlier year, since titles without a year ("November 1 & 2") read
+   as this year's.
 
 Each fetch result records how its bulletin was found ("page-pdfs on
 https://…/bulletins: current"), and the run report lists any new bulletin the

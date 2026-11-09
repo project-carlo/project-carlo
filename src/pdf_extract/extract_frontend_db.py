@@ -28,16 +28,13 @@ church's `bulletin_url` and `bulletin_week` describe its parish's current
 bulletin, the one its events come from: `bulletin_week` is the ISO date of
 the Sunday of the week that bulletin is for (`bulletin_week.bulletin_week`),
 or null when the bulletin has no date at all. Churches retired from
-churches.csv are left out, and so are the churches (and events) of fetch-only
-parishes, which are fetched but not yet processed.
+churches.csv are left out, and so are the churches of parishes without an
+approved seed: their bulletins are fetched, but they aren't on the site yet.
 
-Each parish's events come from its own mode (docs/schedule-state-plan.md):
-
-- extract mode: the `event` rows of its current bulletin, every week, no season;
-- update mode: its believed schedule (`current_schedule`), each entry's id
-  negated so it can't collide with an event id, and its `page_number` the
-  entry's sighting in the parish's current bulletin (null when that bulletin
-  doesn't print it).
+A parish's events are its believed schedule (`current_schedule`,
+docs/schedule-state-plan.md), each entry's id negated (ids from before update
+mode were the old `event` table's), and its `page_number` the entry's sighting
+in the parish's current bulletin (null when that bulletin doesn't print it).
 
 Version 2 added, after `note`: `weeks_of_month` (a list of "first" ...
 "last"; [] for every week), the season as four integer columns (months 1-12,
@@ -233,28 +230,8 @@ _LATEST_BULLETIN = f"""
 """
 
 
-def _extract_mode_events(conn: sqlite3.Connection, update_mode: set[int]) -> list[tuple]:
-    """Each extract-mode parish's current bulletin's events, as every week, no season."""
-    rows = conn.execute(
-        f"""
-        SELECT e.id, e.church_id, e.event_type, e.event_kind,
-               e.day_of_week, e.date, e.start_time, e.end_time, e.cancelled,
-               e.page_number, e.note, b.parish_id
-        FROM event e
-        INNER JOIN bulletin b ON e.bulletin_id = b.id
-        INNER JOIN ({_LATEST_BULLETIN}) latest
-            ON b.parish_id = latest.parish_id AND b.id = latest.id AND latest.rn = 1
-        ORDER BY e.id
-        """
-    ).fetchall()
-    return [
-        (*row[:11], [], None, None, None, None, None, False, None, None)
-        for row in rows if row[11] not in update_mode
-    ]
-
-
-def _update_mode_events(conn: sqlite3.Connection) -> list[tuple]:
-    """Each update-mode parish's believed schedule, entry ids negated.
+def _schedule_events(conn: sqlite3.Connection) -> list[tuple]:
+    """Each seeded parish's believed schedule, entry ids negated.
 
     The page is the entry's sighting in its parish's current bulletin, the one
     the church's `bulletin_url` opens.
@@ -288,14 +265,6 @@ def _update_mode_events(conn: sqlite3.Connection) -> list[tuple]:
     ]
 
 
-def _fetch_only_parish_ids(conn: sqlite3.Connection) -> set[int]:
-    """Parishes the site leaves out until their bulletins are processed (none before migration 7)."""
-    columns = {row[1] for row in conn.execute("PRAGMA table_info(parish)").fetchall()}
-    if "fetch_only" not in columns:
-        return set()
-    return {row[0] for row in conn.execute("SELECT id FROM parish WHERE fetch_only = 1")}
-
-
 _ID, _CHURCH, _TYPE, _KIND, _DAY, _DATE, _START = range(7)
 _CANCELLED = EVENT_COLUMNS.index("cancelled")
 _CANCELS = EVENT_COLUMNS.index("cancels_event_id")
@@ -312,9 +281,8 @@ def finish_events(rows: list[tuple], build_date: date) -> list[tuple]:
     A cancelled dated row cancels the weekly row with the same church, event
     type and start time on its date's weekday, whose weeks of the month and
     season include that date. One that matches nothing is left out (cancelled
-    rows are hidden anyway). In update mode the identity rules allow at most
-    one matching recurrence; an extract-mode bulletin can repeat a slot, and
-    then the lowest id is named.
+    rows are hidden anyway). The identity rules allow at most one matching
+    recurrence; should two match, the lowest id is named.
     """
     today = build_date.isoformat()
     rows = [r for r in rows if (
@@ -382,20 +350,18 @@ def extract(
             ORDER BY c.name, c.id
             """
         ).fetchall()
-        update_mode = {
+        seeded = {
             row[0] for row in src.execute(
                 "SELECT DISTINCT parish_id FROM schedule_revision WHERE source_kind = 'seed'"
             ).fetchall()
         }
-        events = finish_events(
-            _extract_mode_events(src, update_mode) + _update_mode_events(src),
-            build_date or date.today(),
-        )
-        hidden = _fetch_only_parish_ids(src)
-        if hidden:
-            churches = [row for row in churches if row[1] not in hidden]
-            shown = {row[0] for row in churches}
-            events = [row for row in events if row[_CHURCH] in shown]
+        # Only parishes with an approved seed are on the site.
+        churches = [row for row in churches if row[1] in seeded]
+        shown = {row[0] for row in churches}
+        events = [
+            row for row in finish_events(_schedule_events(src), build_date or date.today())
+            if row[_CHURCH] in shown
+        ]
     finally:
         src.close()
 

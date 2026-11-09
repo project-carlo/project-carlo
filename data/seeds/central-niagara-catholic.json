@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "central-niagara-catholic",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-25T13:15:12Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-26T12:11:19Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Claude)",
+  "approved_at": "2026-11-08T20:49:39Z",
   "summary": "Central Niagara Catholic Family has six listed churches. The schedule box and the weekly intentions agree across the three recent issues read, so weekend, weekday, Adoration and confession slots are settled; All Saints (Jan-Jun) and St. John (Jul-Dec) alternate the Saturday vigil and its confession. The All Souls Masses at All Saints and Newfane on Nov 2 are dated. Open: the third-Sunday Spanish Mass time (12:30 in three places, 12:00 in one notice). The Olcott summer Mass is excluded because Memorial Day to Labor Day cannot be written as a season.",
   "blocked_reason": null,
   "bulletins": [
@@ -925,9 +925,24 @@
     },
     {
       "id": "s14",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-lockport",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish Mass"
+      },
       "page": 1,
       "sources": [
         {
@@ -1032,7 +1047,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:49:39Z"
+      }
     },
     {
       "id": "s15",

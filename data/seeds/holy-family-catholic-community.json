@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "holy-family-catholic-community",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-25T13:12:06Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-26T17:19:05Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Claude)",
+  "approved_at": "2026-11-08T20:49:39Z",
   "summary": "Four churches, each with a weekend Mass, plus weekday Masses at St. Joseph (Mon, Wed) and St. Mary (Tue, Thu, Fri) that agree in all five readable bulletins. Added the dated Thanksgiving Mass on Nov 26. Open: whether the Sept-only Saturday 3:00-3:45 PM Confession at St. Mary still holds.",
   "blocked_reason": null,
   "bulletins": [
@@ -1297,9 +1297,22 @@
     },
     {
       "id": "s19",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-dansville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -1345,7 +1358,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:49:39Z"
+      }
     },
     {
       "id": "s20",

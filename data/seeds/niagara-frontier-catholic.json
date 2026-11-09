@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "niagara-frontier-catholic",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-25T13:16:26Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-26T01:59:08Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Claude)",
+  "approved_at": "2026-11-08T20:43:50Z",
   "summary": "Three worship sites in one community. Cover-page Mass and Confession times agree across the five bulletins read; Confession times follow the cover (the page 10 Sacraments box disagrees and looks stale; the website supports the cover). Included: Immaculate Conception Wed and Fri Adoration, a first-Friday St. Peter Adoration (R12), three monthly midnight holy hours, an Oct 30 Adoration evening, Nov 2 All Souls Mass and Nov 6 Latin Requiem Mass. Open: whether the Friday 9:00 AM (School) Mass is a public Mass at St. Peter.",
   "blocked_reason": null,
   "bulletins": [
@@ -1980,9 +1980,22 @@
     },
     {
       "id": "s30",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-lewiston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 2,
       "sources": [
         {
@@ -2054,7 +2067,11 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:38Z"
+      }
     }
   ]
 }

@@ -154,6 +154,30 @@ describe("rollUpEventsByDay", () => {
     expect(new Set(rows.map((r) => r.key)).size).toBe(3);
   });
 
+  it("shows a slot with an end as a range", () => {
+    const rows = rollUpEventsByDay([
+      event({ day_of_week: "friday", start_time: 9 * 60, end_time: 19 * 60 }),
+      weekly("friday", 7 * 60),
+    ]);
+
+    expect(rows[0].times).toEqual(["7 a.m.", "9 a.m. – 7 p.m."]);
+  });
+
+  it("keeps windows with one start and different ends, and folds true repeats", () => {
+    const rows = rollUpEventsByDay([
+      event({ day_of_week: "friday", start_time: 9 * 60, end_time: 19 * 60 }),
+      event({ day_of_week: "friday", start_time: 9 * 60, end_time: 12 * 60 }),
+      event({ day_of_week: "friday", start_time: 9 * 60, end_time: 19 * 60 }),
+      weekly("friday", 9 * 60),
+    ]);
+
+    expect(rows[0].times).toEqual([
+      "9 a.m.",
+      "9 a.m. – 12 p.m.",
+      "9 a.m. – 7 p.m.",
+    ]);
+  });
+
   it("returns no rows for an empty schedule", () => {
     expect(rollUpEventsByDay([])).toEqual([]);
   });

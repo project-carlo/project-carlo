@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "the-lords-vineyard",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-25T13:17:24Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-26T01:55:43Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Claude)",
+  "approved_at": "2026-11-08T20:49:39Z",
   "summary": "Four churches in Dunkirk and Silver Creek, one family of parishes. The p1 schedule box (weekend Masses, Confessions, Adoration) and the weekday Masses in the Mass intentions agree in all five bulletins; Friday Adoration at St. Elizabeth Ann Seton is 8:45-noon (an old box line said 7:30). All Souls Mass is Monday November 2 at 6 PM at St. Hyacinth. Open: the Thanksgiving Mass at Holy Trinity (9 AM; the bulletin does not print the date).",
   "blocked_reason": null,
   "bulletins": [
@@ -2521,9 +2521,22 @@
     },
     {
       "id": "s31",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-dunkirk",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Mass"
+      },
       "page": 5,
       "sources": [
         {
@@ -2565,7 +2578,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:49:39Z"
+      }
     },
     {
       "id": "s32",

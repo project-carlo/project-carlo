@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-kateri-tekakwitha",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-25T13:13:12Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-26T17:19:04Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Claude)",
+  "approved_at": "2026-11-08T20:49:39Z",
   "summary": "Three churches: Christ the King (Saturday 4 PM, weekday noon Mass, Saturday and Friday Confession, Friday Adoration), St. Cecilia (Sunday 8 AM) and St. Margaret Mary (Sunday 9:30 AM). The schedule is the same in all five bulletins read. The Mass of Remembrance on October 31 is dated. Open: the end time of Saturday Confession (printed '3:4pm') and whether the October 31 Nocturnal Adoration still happens.",
   "blocked_reason": null,
   "bulletins": [
@@ -1233,9 +1233,22 @@
     },
     {
       "id": "s16",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-king",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:40",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -1369,13 +1382,30 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:39Z"
+      }
     },
     {
       "id": "s17",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-king",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-31",
+        "start_time": "20:00",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Nocturnal Adoration"
+      },
       "page": 3,
       "sources": [
         {
@@ -1429,7 +1459,11 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": "dropped",
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:49:39Z"
+      }
     },
     {
       "id": "s14",

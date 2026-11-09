@@ -27,7 +27,12 @@ from pdf_extract.browser import (
     goto_with_retry,
     wait_for_selector_quietly,
 )
-from pdf_extract.parish_sites.choose import Candidate, is_convincing, is_current
+from pdf_extract.parish_sites.choose import (
+    FALLBACK_MAX_AGE_DAYS,
+    Candidate,
+    is_convincing,
+    is_current,
+)
 from pdf_extract.parish_sites.dates import parse_date, parse_date_from_texts
 from pdf_extract.parish_sites.links import (
     FLIPBOOK_HOSTS,
@@ -478,16 +483,33 @@ def latest_bulletin_post(site: BulletinPage) -> tuple[date, str] | None:
     posts = dated or unlabelled
     if not posts:
         return None
-    # A listing keeps its newest post at one end. Of this week's posts, take the
-    # one nearest that end: an archive of past years has its own "September 27
-    # & 28", read without a year as this week's too.
+    # A listing keeps its newest post at one end.
+    steps = list(zip(posts, posts[1:]))
+    newer_later = sum(later[0] > earlier[0] for earlier, later in steps)
+    older_later = sum(later[0] < earlier[0] for earlier, later in steps)
+    newest_first = posts[::-1] if newer_later > older_later else posts
+    posts = _before_last_years(newest_first)
+    # Of this week's posts, the one nearest the newest end.
     current = [post for post in posts if is_current(post[0], reference_date)]
     if current:
-        steps = list(zip(posts, posts[1:]))
-        newer_later = sum(later[0] > earlier[0] for earlier, later in steps)
-        older_later = sum(later[0] < earlier[0] for earlier, later in steps)
-        return current[-1] if newer_later > older_later else current[0]
+        return current[0]
     return max(posts, key=lambda pair: pair[0])
+
+
+def _before_last_years(newest_first: list[tuple[date, str]]) -> list[tuple[date, str]]:
+    """The posts listed before the listing runs back into an earlier year.
+
+    Titles without a year make an archive read as this year's: last year's
+    "September 27 & 28" as this week's. Past the first two posts, one dated
+    weeks after the post listed before it starts another year: All Saints,
+    Syracuse lists last November's "November 1 & 2 (AND 8 & 9)" below this
+    year's January. The first two are spared, as a post pinned above the
+    listing can be dated anywhere.
+    """
+    for i in range(2, len(newest_first)):
+        if (newest_first[i][0] - newest_first[i - 1][0]).days > FALLBACK_MAX_AGE_DAYS:
+            return newest_first[:i]
+    return newest_first
 
 
 # Where an <img> keeps its picture: Squarespace galleries load the full-size

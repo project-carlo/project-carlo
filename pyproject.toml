@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "pdf-extract"
 version = "0.1.0"
-description = "Fetch parish bulletins and process schedules with Gemini."
+description = "Fetch parish bulletins and keep parish schedules up to date from them."
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
