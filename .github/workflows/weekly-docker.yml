@@ -46,7 +46,10 @@ env:
 jobs:
   weekly:
     runs-on: ubuntu-24.04
-    timeout-minutes: 120
+    # The pipeline step took 82 minutes on 2026-11-08 and grows with every
+    # diocese onboarded. A run cut off here never uploads its database, so the
+    # limit sits well above the expected run time and only stops a hung run.
+    timeout-minutes: 240
     permissions:
       actions: write
       contents: read
