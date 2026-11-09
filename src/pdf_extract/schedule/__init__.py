@@ -15,4 +15,6 @@ seed is only fetched: it isn't processed or shown (`pdf_extract.process`).
 - `history`: which week each of a parish's calls is for, and its high-water mark.
 - `update`: the update-mode process stage.
 - `edits`: hand edits (`human` revisions).
+- `corrections`: hand edits committed as files in `data/corrections/`, so they
+  reach the published database.
 """
