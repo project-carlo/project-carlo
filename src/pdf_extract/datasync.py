@@ -34,6 +34,7 @@ from pathlib import Path
 from typing import Any
 
 from pdf_extract.blobstore import BlobStoreError, CachedBlobStore, get_store
+from pdf_extract.db import ensure_db, migrate
 from pdf_extract.extract_frontend_db import (
     DEST_SNAPSHOT,
     SNAPSHOT_NAME,
@@ -475,9 +476,6 @@ def build_deploy_snapshot(
     parishes.csv/churches.csv edits (seeded by `ensure_db`) show up in a
     preview and on merge without waiting for the next weekly run.
     """
-    # Imported here: db imports this module's neighbours.
-    from pdf_extract.db import ensure_db, migrate
-
     pulled = pull(db=True, snapshot=False, db_path=db_path)
     conn = connect_db(db_path)
     try:
@@ -488,7 +486,7 @@ def build_deploy_snapshot(
     published = extract(db_path, snapshot_path, keep_previous=False)
     # Seed files wait for the weekly run, whose checks compare a newly seeded
     # parish with its last extracted schedule; a deploy would skip them.
-    seeded = {**ensure_db(db_path, load_seeds=False), "migrations_applied": migrations}
+    seeded = {**ensure_db(db_path), "migrations_applied": migrations}
     removed_churches = seeded["churches_deleted"] + seeded.get("churches_retired", 0)
     if seeded["parishes_deleted"] or removed_churches:
         # Removing a parish or church deletes its events (or, for a church

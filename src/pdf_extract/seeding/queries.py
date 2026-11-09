@@ -19,12 +19,7 @@ from pypdf import PdfReader
 
 from pdf_extract.blobstore import CachedBlobStore, bulletin_pdf_key, get_store
 from pdf_extract.bulletin_week import bulletin_week
-from pdf_extract.labeling.labels import (
-    DAYS,
-    WEEKS_OF_MONTH,
-    is_valid_hash,
-)
-from pdf_extract.schedule.store import normalize_as_of
+from pdf_extract.model import DAYS, WEEKS_OF_MONTH, is_valid_hash, normalize_as_of
 from pdf_extract.seeding.checks import COVERED_DAYS, covered_weeks
 from pdf_extract.seeding.files import (
     SEEDS_DIR,

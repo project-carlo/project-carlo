@@ -7,7 +7,7 @@ checks the file's shape; `checks` checks it against the database, and
 `loader` turns an approved one into a `seed` revision.
 
 Entries are in the labels' event shape without `page_number`, `origin` and
-`optional` (`labels.ENTRY_KEYS`), with 24-hour `HH:MM` times, so they are what
+`optional` (`model.ENTRY_KEYS`), with 24-hour `HH:MM` times, so they are what
 `pnpm schedule seed` reads and can be scored against the labels as they are.
 """
 
@@ -21,9 +21,15 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
-from pdf_extract.labeling.labels import is_valid_hash, is_valid_slug, validate_entry
+from pdf_extract.model import (
+    canonical_json,
+    is_valid_hash,
+    is_valid_slug,
+    normalize_as_of,
+    sha256_text,
+    validate_entry,
+)
 from pdf_extract.paths import DATA_DIR
-from pdf_extract.schedule.store import canonical_json, normalize_as_of, sha256_text
 from pdf_extract.storage import utc_now_iso
 
 SCHEMA_VERSION = 1

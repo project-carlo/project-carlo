@@ -34,7 +34,7 @@ from pdf_extract.runs import (
     consecutive_failures,
     parish_results,
 )
-from pdf_extract.schedule.report import render_update_mode, update_mode_report
+from pdf_extract.schedule.report import EVENT_TYPE_LABELS, render_update_mode, update_mode_report
 from pdf_extract.schedule.store import unseeded_slugs, update_mode_slugs
 from pdf_extract.schedule_diff import parish_changed
 from pdf_extract.storage import latest_bulletin_ids, load_bulletins
@@ -45,35 +45,15 @@ from pdf_extract.verify_frontend_snapshot import verify_frontend_snapshot
 # week in which almost nothing was refreshed.
 FETCH_FAILURE_HOLD_FRACTION = 0.5
 
-_TYPE_LABELS = {"mass": "Mass", "confession": "Confession", "adoration": "Adoration"}
-_DAY_ABBREV = {
-    "monday": "Mon", "tuesday": "Tue", "wednesday": "Wed", "thursday": "Thu",
-    "friday": "Fri", "saturday": "Sat", "sunday": "Sun",
-}
 # A parish's mode this run: seeded before it, seeded by it (its first run on
 # the site), new to the parish table, or without a seed (not on the site).
 UPDATE, SEEDED, NEW, UNSEEDED = "update", "new seed", "new", "unseeded"
-
-EventKey = tuple[str, str, str, str | None, str | None, str, str | None, bool]
 
 
 def _open_ro(path: Path) -> sqlite3.Connection:
     conn = sqlite3.connect(f"file:{path}?mode=ro", uri=True)
     conn.row_factory = sqlite3.Row
     return conn
-
-
-def describe_event(key: EventKey) -> str:
-    """"Confession · Sat 3:00 PM–4:00 PM" or "Mass · 2026-10-04 9:00 AM (cancelled)"."""
-    _church, event_type, kind, day_of_week, date, start, end, cancelled = key
-    label = _TYPE_LABELS.get(event_type, event_type or "Event")
-    when = (
-        _DAY_ABBREV.get((day_of_week or "").lower(), day_of_week or "?")
-        if kind == "weekly"
-        else (date or "?")
-    )
-    time = f"{start}–{end}" if end else start
-    return f"{label} · {when} {time}" + (" (cancelled)" if cancelled else "")
 
 
 def _parish_ids(conn: sqlite3.Connection) -> dict[int, str]:
@@ -496,7 +476,7 @@ def _comparison_lines(report: dict[str, Any]) -> list[str]:
 def _describe_loss(loss: dict[str, Any]) -> str:
     where = f"**{loss['parish_slug']}**"
     if loss["level"] == "church":
-        label = _TYPE_LABELS.get(loss["event_type"], loss["event_type"])
+        label = EVENT_TYPE_LABELS.get(loss["event_type"], loss["event_type"])
         where += f" `{loss['church_slug']}` {label}"
     text = f"{where} loses {loss['missing']} of its {loss['before']} upcoming dates"
     if loss["moved"]:
@@ -553,7 +533,7 @@ def _render_parish(change: dict[str, Any]) -> list[str]:
         )
         lines.append("")
         for group in availability["groups"]:
-            label = _TYPE_LABELS.get(group["event_type"], group["event_type"])
+            label = EVENT_TYPE_LABELS.get(group["event_type"], group["event_type"])
             text = (
                 f"- `{group['church_slug']}` {label}: lost {group['lost']} of {group['before']}"
                 f", gained {group['gained']}"

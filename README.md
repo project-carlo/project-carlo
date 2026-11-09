@@ -337,6 +337,9 @@ CSV edits show up in previews and go live on merge.
 
 - `src/pdf_extract/` - the pipeline's Python package
   - `__main__.py` - the CLI
+  - `model.py` - the schedule vocabulary (event types, days, weeks of the month, seasons)
+    and the shape of a schedule entry, at the bottom of the package; `tests/test_import_graph.py`
+    keeps the pipeline from importing `labeling/`, `evals/` or `factory/`
   - `weekly.py` - the weekly run; `report.py` its change report; `runs.py` run records
   - `fetch.py` - bulletin fetching; `parish_sites/` reading parishes' own websites;
     `fetch_check.py` checking and recording what fetch picks; `browser.py` the shared
@@ -345,17 +348,19 @@ CSV edits show up in previews and go live on merge.
   - `duplicates.py`, `bulletin_week.py` - is a bulletin new, and which one is current
   - `process.py` - the process stage (the update itself is in `schedule/update.py`)
   - `schedule_extraction.py` - the Gemini extraction the labeler, evals and seeding compare against
-  - `classifiers/` - pluggable bulletin → events classifiers (Gemini, OpenAI) and their registry
+  - `classifiers/` - pluggable bulletin → events classifiers (Gemini, OpenAI), their registry
+    and the price table (`pricing.py`)
   - `schedule/` - believed schedules: the change log, decision policy, update stage and hand edits
   - `seeding/` - seed files: format and checks, the agent's tools, loading approved ones
   - `extract_frontend_db.py` - builds the website snapshot (the format is in its docstring)
-  - `db.py`, `storage.py` - migrations, CSV seeding and SQLite helpers
+  - `db.py`, `storage.py` - migrations, CSV seeding and SQLite helpers (`seeding/loader.py`
+    loads the approved seed files)
   - `blobstore.py`, `datasync.py` - local/R2 storage; pulling, uploading and publishing runs
   - `detect.py`, `geocode.py`, `apply.py` - finding providers and geocoding, and
     writing the results back to the CSVs
   - `dioceses/` - diocese research and the `diocese` command
   - `factory/` - the onboarding factory's dispatcher
-  - `labeling/` - the labeler's API
+  - `labeling/` - the labeler's API and label files
   - `evals/`, `extract_run.py`, `compare.py`, `replay_gates.py` - scoring and comparing classifiers, replaying checks
 - `apps/web/` - the website (React, TypeScript, Vite, Cloudflare Workers)
 - `apps/labeler/` - the local labeling UI (never deployed)

@@ -27,7 +27,7 @@ from hashlib import sha256
 from typing import Any
 
 from pdf_extract.bulletin_week import parse_iso_date
-from pdf_extract.labeling.labels import DAYS, EVENT_KINDS, EVENT_TYPES
+from pdf_extract.model import DAYS, EVENT_KINDS, EVENT_TYPES
 from pdf_extract.schedule.qualifiers import (
     QualifierError,
     columns_to_season,

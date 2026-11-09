@@ -38,7 +38,8 @@ committed to git. Each file (`schema_version` 1) holds:
   - `origin`: `human`, `gemini` or `gemini-edited`
   - `optional`: `null` for a required event; `include` or `exclude` for one where it is a judgment call whether it belongs at all, naming the preferred answer (press `o` on a row to cycle). Files saved before this field existed lack it, which reads as `null`.
 
-The API validates every file (`src/pdf_extract/labeling/labels.py`) and
+The API validates every file (`src/pdf_extract/labeling/labels.py`, with the
+vocabulary and entry checks in `src/pdf_extract/model.py`) and
 rejects any slug or hash that would put it outside `data/labels`.
 
 ## Run a classifier over the labeled bulletins
@@ -150,7 +151,7 @@ pairs found at the loose level (a covering weekly prediction is one pair); per-b
 agreement and event-count error; token usage, its cost at standard-tier list
 prices and timing; and every bulletin's differences, worst bulletin first.
 Prices are kept for `gpt-6-luna` and `gemini-3-flash-preview` only
-(`src/pdf_extract/evals/pricing.py`); other models' runs are reported unpriced.
+(`src/pdf_extract/classifiers/pricing.py`); other models' runs are reported unpriced.
 Gemini predictions made before thinking tokens were recorded are flagged, as
 their cost leaves out that billed output.
 

@@ -21,9 +21,8 @@ import shlex
 from dataclasses import dataclass, field
 from typing import Any
 
-from pdf_extract.labeling.labels import DAYS, WEEKS_OF_MONTH
+from pdf_extract.model import DAYS, WEEKS_OF_MONTH, normalize_as_of
 from pdf_extract.schedule.entries import Entry, parse_entry
-from pdf_extract.schedule.store import normalize_as_of
 from pdf_extract.seeding.checks import entry_problem
 from pdf_extract.seeding.files import (
     AGENT,

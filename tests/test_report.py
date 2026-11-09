@@ -8,13 +8,9 @@ import pytest
 
 from pdf_extract import runs
 from pdf_extract.db import create_db
-from pdf_extract.report import (
-    build_report,
-    describe_event,
-    render_markdown,
-    verify_databases,
-)
+from pdf_extract.report import build_report, render_markdown, verify_databases
 from pdf_extract.runs import FETCH_TOO_LARGE, record_parish_result, start_run
+from pdf_extract.schedule.report import describe_event
 from pdf_extract.storage import connect_db, insert_bulletin, save_processed_bulletin, utc_now_iso
 from pdf_extract.verify_frontend_snapshot import GATE_POLICY_VERSION
 from tests.conftest import seed_parish
