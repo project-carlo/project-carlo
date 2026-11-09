@@ -209,6 +209,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Next.js parish sites whose /bulletins shows 'Loading bulletins...' can fill the list from a JSON `/api/bulletins` (`probe get` lists titles and createdOn dates); issues are `/api/bulletin-file?name=bulletins%2F<title>.pdf`, and `other` `page-pdfs <site>/bulletins` resolves them in headed fetch:check (first-listed). Read the date from the title: scanned issues come back freshness `unknown`.
 - GCatholic can list a merged-away church as a 'Chapel of <old name>' of the surviving parish but give it the surviving church's address, Plus Code, phone and founding year. Link it to the surviving church, and record the old building separately at the address the Mass finder or OSM gives.
 - Mass finder place pages can fold two same-named churches into one: St. Teresa joins Classon Ave and Woodside, and St. Martin de Porres's 'Our Lady of Victory' got a Floral Park address. Check the pin and the times. A pin outside the diocese goes on an other-jurisdiction exclusion that carries the finder entry, citing GCatholic's 'Jurisdiction:' line.
+- An LPi file name's 03-NNNN (e.g. '03-0417 ... .pub' in search results) can differ from the container path (03/9992): take the container from the PDF URL or `probe po`, not the file name; a Yahoo search for the parish name plus 'bulletin' surfaces the container.parishesonline.com URL when the parish site is down.
 
 ## Rules settled for this diocese
 
