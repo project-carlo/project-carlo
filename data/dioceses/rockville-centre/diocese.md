@@ -1,0 +1,157 @@
+---
+name: Roman Catholic Diocese of Rockville Centre
+state: NY
+website: https://www.drvc.org
+status: exploring
+gcatholic: rock2
+---
+
+The whole of Long Island east of New York City: Nassau County (Hempstead, Garden City,
+Freeport, Long Beach, Glen Cove, Hicksville, Massapequa, Great Neck, Port Washington) and Suffolk
+County (Huntington, Babylon, Islip, Brentwood, Smithtown, Patchogue, Port Jefferson, Riverhead,
+the North and South Forks, Shelter Island and the Fire Island communities). The chancery is in
+Rockville Centre; the cathedral is St. Agnes. GCatholic (read 2026-11-12) names its neighbours as
+Brooklyn (Queens, to the west), New York (across Long Island Sound) and Norwich (Connecticut,
+across the Sound). Only New York is mapped, for one parish. GCatholic counts 132 parishes (2022).
+The diocese's deanery list (2025-10-20) names 133.
+
+**How it is organised.** There are two vicariates (Western, Eastern) and seven deaneries (South
+Nassau, East Nassau, North Nassau, 110 Corridor, South Central Suffolk, North Central Suffolk,
+East End). No diocesan family, cluster or pastorate list was found, and the diocese's site has no
+merger or closure announcements. Almost every parish has one church and its own pastor and
+website. Shared bulletins are most likely where the clergy appointments or a shared website put
+parishes together:
+
+- **Five Towns:** St. Joseph (Hewlett), St. Joachim (Cedarhurst) and Our Lady of Good Counsel
+  (Inwood) have one pastor and one site (5townsparishesny.com). The pastor's booklet says they
+  "are still three separate Canonical and Corporate entities".
+- **Long Beach ("Beach Catholic"):** St. Ignatius Martyr, St. Mary of the Isle and Our Lady of
+  the Miraculous Medal (Point Lookout) share beachcatholic.com and their parochial vicars.
+- **Glen Cove:** St. Patrick, St. Rocco and St. Hyacinth (Glen Head) have one pastor from the
+  Canonry of Saint Leopold (June 2025) and share glencovecatholic.org. Until June 2026 one
+  parochial vicar also served St. Boniface Martyr, Sea Cliff.
+- **New Hyde Park:** Holy Spirit and Notre Dame (newhydeparkcatholic.com, shared vicar).
+- **North Fork:** one pastor for Sacred Heart and Our Lady of Ostrabrama (Cutchogue), St. Agnes
+  (Greenport) and St. Patrick (Southold) since June 2025, and one parochial vicar from June
+  2026. Sacred Heart has a mission in Mattituck.
+- **Centerport and Northport:** Our Lady Queen of Martyrs and St. Philip Neri have one pastor
+  (June 2025).
+- **Patchogue:** one administrator for Our Lady of Mount Carmel and St. Francis de Sales (June
+  2025). Their parochial vicar also served St. Joseph the Worker, East Patchogue.
+- **Farmingville and Medford:** Resurrection and St. Sylvester have one pastor (June 2025).
+- **Roosevelt and Uniondale:** Fr. Rony Fabien is pastor of both Queen of the Most Holy Rosary
+  and St. Martha (second terms named in 2026 and 2025).
+- **Shared parochial vicars only:** St. Hedwig (Floral Park) with St. Ladislaus (Hempstead), St.
+  Mary (East Islip) with St. Peter (Islip Terrace), and St. Anthony (East Northport) with St.
+  Francis (Greenlawn), all in June 2025.
+- **East Hampton and Montauk:** from 2026-09-23 Most Holy Trinity's pastor is also pastor of
+  St. Therese of Lisieux. Most Holy Trinity has a mission, St. Peter, Amagansett.
+
+Missions and chapels: St. Peter (Amagansett), Our Lady of Good Counsel (Mattituck), Lakeview
+Mission (West Hempstead), St. Joseph's Oak Beach mission (Babylon), and three summer churches on
+Fire Island (Ocean Beach, Saltaire, Davis Park). Eastern Catholic churches in the territory
+(Ukrainian, Ruthenian, Syro-Malabar, Syro-Malankara) belong to their own eparchies.
+
+## Sources
+
+- **Parish locator (the `directory` roster):** https://www.drvc.org/maps/, a WP Google Map Gold
+  map. Its places are JSON embedded in the page; `probe get` reads it. Read 2026-11-12: 139
+  places, one per church, with address, coordinates, county, town and website. It has no
+  grouping and no clergy. Good for the church list and coordinates. Its websites are often old
+  domains that now redirect (ollmp.org → ourladyoflourdesmp.org, pothc.org → holycrossrc.org,
+  stpatrickchurchhunt.org → stpathuntington.org, resurrectionrcchurch.org → coresrcc.com), and
+  three no longer resolve (cureofarschurch.net, sscyrilandmethodius.org, stpetersnyit.org).
+  Slips: Blessed Sacrament (id 4) has town "Suffolk" though it is in Valley Stream, Nassau (the
+  scraper uses the map's municipality instead); Sacred Heart, Cutchogue (id 104) links
+  sacredheartnm.org, the North Merrick parish's site (its own is sacredheartolgc.org). Entry 68
+  is the Syro-Malankara St. Vincent de Paul Cathedral, Elmont, which the Latin St. Vincent de Paul
+  parish also uses. Scraper: `scratch/rockville-centre-map-1/tools/locator.py`.
+- **GCatholic (the `gcatholic` roster):** key `rock2`, fetched 2026-11-12: 142 entries. 133 of
+  them match the directory one to one. GCatholic does **not** list St. Agnes Cathedral, Our Lady of
+  Poland and the Basilica of the Sacred Hearts of Jesus and Mary (both Southampton), Our Lady of
+  Good Counsel (Mattituck), Our Lady Star of the Sea (Saltaire) or Lakeview Mission. It adds nine
+  entries the directory lacks: seven Eastern Catholic churches (rite given: Ukrainian St. Vladimir,
+  Hempstead; Holy Family, Lindenhurst; St. John the Baptist, Riverhead; the St. Josaphat
+  monastery, Glen Cove; Ruthenian Resurrection, Smithtown, and St. Andrew the Apostle, Westbury;
+  Syro-Malabar St. Mary, West Hempstead, "Using the building: Church of St. Thomas the Apostle"),
+  the Shrine of Our Lady of the Island (Eastport) and the Immaculate Conception Seminary
+  (Huntington). Its St. Vincent de Paul, Elmont (16839) is the Latin parish, "Using the building:
+  St. Vincent de Paul Malankara Cathedral".
+- **Mass times (the `mass-times` roster):** https://www.drvc.org/mass-times/ (WordPress page
+  15718, modified 2026-10-21), "Mass Schedules by Parish", alphabetical by town: 139 church
+  headings with schedules. A hand-edited page, and older than its date suggests: many links are
+  to dead or superseded domains, several link another parish's site (it is safer to match on the
+  town), and 14 link only the old drvc.org parish listing. It lists Sacred Heart, North Merrick
+  twice (under Merrick and North Merrick) and St. Isidore, Riverhead twice (the second for its
+  3:30 pm Sunday Latin Mass), and it is the only list with St. Joseph's Oak Beach mission. It
+  omits Lakeview Mission and two of the Fire Island churches. For St. Vincent de Paul, Elmont it
+  gives only "Sunday: 8:45 AM". A trailing list of Traditional Latin Mass parishes (St. Isidore,
+  St. Matthew Dix Hills) was not imported. Scraper:
+  `scratch/rockville-centre-map-1/tools/masstimes.py`.
+- **Deaneries:** https://www.drvc.org/vicariates-deaneries/ (modified 2025-10-20) lists the 133
+  parishes by deanery. It is the closest thing to a current parish list and still names St.
+  Vincent de Paul, Elmont. Deaneries are not bulletin groupings, so they are not in `group`.
+- **Clergy appointments:** the bishop's lists at
+  https://www.drvc.org/the-following-official-appointments-and-announcements-have-been-made-by-the-most-reverend-john-o-barres-bishop-o-f-rockville-centre-unless-otherwise-noted-all-are-effective-june-24-2026/
+  (a 5-page image-only PDF served at that URL, dated June 24, 2026; read by rendering the pages)
+  and the June 24, 2025 list (same form, 8 pages); the June 2023 list was not read. Between them
+  they name the shared pastors and vicars above. It is the best evidence here of which parishes work as one. It is evidence
+  of shared clergy, not of a shared bulletin.
+- **Five Towns booklet:**
+  https://www.5townsparishesny.com/uploads/1/5/4/3/154337448/the_status_progress_and_development_of_the_parishes_of_the_five_townss_english.pdf
+  (undated, read 2026-11-12). The pastor's three-year plan for the three Five Towns parishes;
+  they remain separate canonical parishes.
+- **Clusters / families of parishes:** none published. drvc.org's search finds no cluster,
+  merger, pastorate or closure pages (searched 2026-11-12).
+- **Closed parishes and where their records went:** not found on drvc.org.
+- **Pastoral plan / closure announcements:** none found. The diocese's news is dominated by its
+  Chapter 11 reorganisation, which has no parish closures in it that the site states.
+
+### Bulletin publishers here
+
+From the survey's probes of 130 parish websites (2026-11-12). Fill in as the batches settle.
+
+- **Reaching sites:** `probe url` returned 403 for 46 sites and could not connect to 25
+  ("egress proxy: EOF"). In `visit.py` 17 of 18 such sites loaded normally. Use `visit.py
+  --bulletin` before concluding anything about a site.
+- **Solutio (Joomla) sites** are common. They post issues at `/news/bulletin/<n>-<date>` or
+  `/news-events/bulletin` (seen: St. Martin of Tours Bethpage, St. Joseph Babylon, St. Hugh,
+  St. Lawrence Sayville, St. Patrick Southold, St. Agnes Greenport, Sacred Heart Cutchogue, St.
+  Philip Neri, St. Boniface Elmont; St. Anthony East Northport is on `*.solutiosoftware.com`).
+  Their `/file` PDFs answer 403 to `probe get` (checked on St. Hugh's and Sacred Heart's). Camden
+  and Trenton found the same: look for the parish's printer listing first (ParishesOnline, John
+  Patrick) and read the site with `visit.py`. If there is none, the row is `unsupported` with
+  `fetch_gap` `joomla-file-endpoint`. Sacred Heart Cutchogue's issue names start
+  `lpi-bulletin-…`, so LPi prints it; its container slug isn't
+  `sacred-heart-church-11935`.
+- **ParishesOnline / LPi** is reachable (`probe po`): St. James, Setauket
+  (`lpi:0018000000Qc1NlAAJ`, container 03/0634) and St. Francis of Assisi, Greenlawn
+  (`st-francis-of-assisi-church-11740`, container 03/4100) return current issues. St. Pius X
+  Plainview embeds `lpi:0018000000Qc2PBAAZ`; Glen Cove and St. Sylvester Medford link 4lpi.com.
+  Slugs like `<name>-church-<zip>` often miss here. Use the LPi id from the site.
+- **eCatholic** sites sit behind Cloudflare (403 to `probe url`, fine in `visit.py`): St. Mary
+  Manhasset (`ecatholic:25346`), St. Kilian Farmingdale (`ecatholic:11377`, issues at
+  `files.ecatholic.com/11377/bulletins/<YYYYMMDD>.pdf`), St. Anthony Oceanside
+  (`ecatholic:21516`).
+- **John Patrick Publishing:** St. Aloysius, Great Neck links jppc.net. Metuchen's note applies:
+  record provider `other` with `page-pdfs https://church-bulletin.org/<id>`.
+- **Self-hosted** PDFs on WordPress, Wix, Squarespace and Weebly sites are the most common
+  case (St. Patrick Bay Shore, St. Patrick Smithtown, St. Christopher Baldwin, New Hyde Park,
+  Our Holy Redeemer Freeport, Corpus Christi Mineola, Holy Cross Nesconset, Our Lady of Lourdes
+  West Islip, the Five Towns). Wix sites list issues on `/current-bulletin` or yearly
+  `/2026-bulletins` pages.
+- **LPi WeConnect:** `stjosephtheworker.weconnect.com` (East Patchogue) rendered without parish
+  words. In Allentown every `*.weconnect.com` site answered "Temporarily Unavailable".
+- **Fire Island:** oceanbeachcatholic.org posts one "2026 Seasonal Bulletin" PDF for Our Lady of
+  the Magnificat (a summer parish). Its Saltaire and Davis Park pages answer 404.
+
+## Rules settled for this diocese
+
+Decisions that apply to more than one record, and who made them.
+
+## Log
+
+Newest first: date, what was done, and the `pnpm diocese coverage` numbers after it.
+
+- 2026-11-12: Survey (factory run rockville-centre-map-1). Rosters: gcatholic 142, directory 139,
+  mass-times 139. 20 batches in `batches.json`. No records yet.
