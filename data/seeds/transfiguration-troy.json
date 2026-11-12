@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "transfiguration-troy",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-25T13:25:21Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-27T01:00:06Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Claude)",
+  "approved_at": "2026-11-08T20:49:39Z",
   "summary": "Two linked churches, one Sunday Mass at Schaghticoke (9:00) and one Saturday vigil at Speigletown (4:00), printed in the Liturgical Schedule box of all bulletins read; Tuesday and Thursday weekday services are Communion Services, left out. No Confession is printed. Open: whether the Nov. 2 Mass of Remembrance is public.",
   "blocked_reason": null,
   "bulletins": [
@@ -391,9 +391,22 @@
     },
     {
       "id": "s6",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-speigletown-troy",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass of Remembrance (All Souls)"
+      },
       "page": 2,
       "sources": [
         {
@@ -477,7 +490,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": "dropped",
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:49:39Z"
+      }
     },
     {
       "id": "s7",

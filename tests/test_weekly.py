@@ -24,6 +24,7 @@ from pdf_extract.storage import (
 )
 from pdf_extract.verify_frontend_snapshot import GATE_POLICY_VERSION
 from pdf_extract.weekly import RunScopeError, resolve_run_scope, run_weekly
+from tests.conftest import seed_parish
 
 EVENTS = [
     {
@@ -42,7 +43,7 @@ def _parish_id(conn: sqlite3.Connection) -> int:
 
 @pytest.fixture
 def published_db(pipeline_dir: Path) -> Path:
-    """The database as last week's run left it: one processed bulletin with EVENTS."""
+    """The database as last week's run left it: test-parish seeded with EVENTS, one bulletin read."""
     create_db()
     conn = connect_db()
     try:
@@ -51,8 +52,9 @@ def published_db(pipeline_dir: Path) -> Path:
             content_hash="old", fetched_at=utc_now_iso(),
         )
         save_processed_bulletin(
-            conn, bulletin_id, EVENTS, processed_at=utc_now_iso(), published_date="2026-09-13",
+            conn, bulletin_id, [], processed_at=utc_now_iso(), published_date="2026-09-13",
         )
+        seed_parish(conn, "test-parish", EVENTS, as_of="2026-09-13T00:00:00Z")
     finally:
         conn.close()
     return DEFAULT_DB_PATH
@@ -61,7 +63,7 @@ def published_db(pipeline_dir: Path) -> Path:
 def _install_stages(
     monkeypatch: pytest.MonkeyPatch, events: list[dict[str, Any]],
 ) -> list[dict[str, Any]]:
-    """Fake fetch/process: a new bulletin for test-parish, extracted to `events`."""
+    """Fake fetch/process: a new bulletin for test-parish, which changes its schedule to `events`."""
     calls: list[dict[str, Any]] = []
 
     def fake_fetch(**kwargs: Any) -> dict[str, Any]:
@@ -87,14 +89,11 @@ def _install_stages(
             bulletin_id = conn.execute(
                 "SELECT id FROM bulletin WHERE source_url = ?", (NEW_URL,)
             ).fetchone()["id"]
-            stored, _ = save_processed_bulletin(
-                conn, bulletin_id, events, processed_at=utc_now_iso(),
-                published_date="2026-09-20",
+            save_processed_bulletin(
+                conn, bulletin_id, [], processed_at=utc_now_iso(), published_date="2026-09-20",
             )
-            record_parish_result(
-                conn, kwargs["run_id"], "test-parish", "process", "extracted",
-                event_count=stored,
-            )
+            seed_parish(conn, "test-parish", events, as_of="2026-09-20T00:00:00Z")
+            record_parish_result(conn, kwargs["run_id"], "test-parish", "process", "updated")
         finally:
             conn.close()
         return {"extracted": 1, "events": len(events)}
@@ -138,18 +137,20 @@ def test_weekly_run_loads_approved_seeds_after_its_before_copy(
     }
     write_seed_file(seed, Path("data") / "seeds")
 
-    result = run_weekly(run_id="run-seeds", model="m")
+    result = run_weekly(run_id="run-seeds")
 
     assert [s["parish"] for s in result["seeds"]["loaded"]] == ["test-parish"]
     assert "test-parish** seeded" in (run_out_dir("run-seeds") / "report.md").read_text(encoding="utf-8")
     before = sqlite3.connect(run_out_dir("run-seeds") / "before.db")
     try:
-        assert before.execute("SELECT count(*) FROM schedule_revision").fetchone()[0] == 0
+        assert before.execute("SELECT count(*) FROM schedule_revision").fetchone()[0] == 1
     finally:
         before.close()
     conn = connect_db()
     try:
-        row = conn.execute("SELECT run_id, actor FROM schedule_revision").fetchone()
+        row = conn.execute(
+            "SELECT run_id, actor FROM schedule_revision WHERE revision = 2"
+        ).fetchone()
         assert (row["run_id"], row["actor"]) == ("run-seeds", "R")
     finally:
         conn.close()
@@ -160,7 +161,7 @@ def test_weekly_run_passes_and_writes_outputs(
 ) -> None:
     calls = _install_stages(monkeypatch, EVENTS)
 
-    result = run_weekly(run_id="run-1", model="m", concurrency=2, git_sha="abc", trigger="cron")
+    result = run_weekly(run_id="run-1", concurrency=2, git_sha="abc", trigger="cron")
 
     out = run_out_dir("run-1")
     assert result["status"] == "passed"
@@ -172,7 +173,7 @@ def test_weekly_run_passes_and_writes_outputs(
     assert result["totals"]["parishes_with_new_bulletin"] == 1
     assert calls == [
         {"stage": "fetch", "run_id": "run-1", "slugs": None},
-        {"stage": "process", "model": "m", "concurrency": 2, "run_id": "run-1", "slugs": None},
+        {"stage": "process", "concurrency": 2, "run_id": "run-1", "slugs": None},
     ]
     assert result["scope"] is None
 
@@ -495,10 +496,7 @@ def test_weekly_run_refreshes_only_the_named_parishes(
     assert result["scope"]["summary"] == "Refreshed 1 parish: `test-parish`."
     assert calls == [
         {"stage": "fetch", "run_id": "run-1", "slugs": ["test-parish"]},
-        {
-            "stage": "process", "model": "gemini-3-flash-preview", "concurrency": 5,
-            "run_id": "run-1", "slugs": ["test-parish"],
-        },
+        {"stage": "process", "concurrency": 5, "run_id": "run-1", "slugs": ["test-parish"]},
     ]
     report_path = run_out_dir("run-1")
     report = json.loads((report_path / "report.json").read_text(encoding="utf-8"))

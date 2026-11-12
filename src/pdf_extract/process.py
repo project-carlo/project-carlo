@@ -1,363 +1,75 @@
-"""Bulletin process pipeline: extract schedules from PDFs with Gemini AI.
+"""Bulletin process stage: read each live parish's new bulletins against its schedule.
 
-Each parish is processed in its own mode. A parish with a seed revision is in
-update mode (`pdf_extract.schedule.update`): its bulletins are read against
-its believed schedule. Every other parish is in extract mode, below.
-
-Extract mode runs the production Gemini classifier over each parish's latest fetched
-bulletin. `bulletin.processed_at` is the gate that keeps a bulletin from being
-re-extracted; the shared result cache in the blob store (keyed by classifier
-version + bulletin content hash) is a second layer that lets a re-run skip the
-API call.
-
-Each bulletin's events are stored against that bulletin; superseded
-bulletins keep theirs, and the frontend reads only each parish's latest (see
-`storage.latest_bulletin_order`). Every occurrence is also recorded in the
-`event_occurrence` table before weekly promotion can rewrite it; that history
-is what lets `pdf_extract.recurrence` recognise a "one-off" the bulletins have
-in fact been printing every week.
+A parish is live once its approved seed file is loaded (`pdf_extract.seeding.loader`).
+From then on gpt-6-luna reads each of its new bulletins against the schedule
+the parish is believed to keep, and the changes it proposes are checked and
+applied (`pdf_extract.schedule.update`). A parish without an approved seed has
+its bulletins fetched and stored, but no model call is made for it and the
+site doesn't show it yet.
 """
 
 from __future__ import annotations
 
 import logging
 from collections.abc import Collection
-from typing import Any
 
-from pdf_extract.bulletin_week import (
-    CORRECTION,
-    OLDER,
-    REPEATED_WEEK,
-    bulletin_reference_date,
-    bulletin_week,
-    place_bulletin,
-)
-from pdf_extract.classifiers.gemini import GeminiClassifier
 from pdf_extract.classifiers.schedule_update import OpenAIScheduleUpdater
-from pdf_extract.recurrence import (
-    History,
-    load_history_from_db,
-    promote_recurring_events,
-    prune_history,
-    record_observations,
-    save_history_to_db,
-)
-from pdf_extract.runner import (
-    flatten_extracted_events,
-    iter_extraction_outcomes,
-    latest_per_parish,
-    load_cached_result,
-    store_cached_result,
-)
-from pdf_extract.runs import (
-    PROCESS_CACHED,
-    PROCESS_CORRECTION,
-    PROCESS_EXTRACTED,
-    PROCESS_FAILED,
-    PROCESS_OLD_ISSUE,
-    PROCESS_REPEATED_WEEK,
-    PROCESS_SKIPPED,
-    PROCESS_WRONG_BULLETIN,
-    join_details,
-    record_parish_result,
-)
-from pdf_extract.schedule.store import update_mode_slugs
+from pdf_extract.schedule.store import unseeded_slugs
 from pdf_extract.schedule.update import process_update_mode
-from pdf_extract.schedule_extraction import DEFAULT_GEMINI_MODEL
-from pdf_extract.storage import (
-    churches_for_parish,
-    connect_db,
-    fetch_only_slugs,
-    get_parish_by_name,
-    list_parishes,
-    load_bulletins,
-    save_processed_bulletin,
-    utc_now_iso,
-)
+from pdf_extract.storage import connect_db, get_parish_by_name, list_parishes
 
 LOGGER = logging.getLogger(__name__)
-
-
-def _prepare_rows(
-    entry: dict[str, Any],
-    extracted: dict[str, Any],
-    history: History,
-) -> tuple[list[dict[str, Any]], int]:
-    """Turn one extracted result into the rows to store for its bulletin.
-
-    Occurrences are recorded in `history` (in place) before promotion, so the
-    raw sighting survives even when the row itself is rewritten as weekly.
-
-    Returns the rows and the number promoted to weekly.
-    """
-    parish_slug = entry["parish_slug"]
-    if extracted.get("wrong_bulletin"):
-        LOGGER.warning(
-            "Bulletin flagged as wrong PDF for parish %s (source=%s); skipping events",
-            parish_slug, entry.get("source_url"),
-        )
-    published_date = extracted.get("published_date")
-    if isinstance(published_date, str) and published_date.strip():
-        entry["published_date"] = published_date
-
-    rows = flatten_extracted_events(entry, extracted)
-    # Recorded before promotion: a promoted row loses its date, and the raw
-    # sighting is what keeps next week's chain going.
-    record_observations(history, rows, bulletin_date=bulletin_reference_date(entry))
-    rows, promoted = promote_recurring_events(rows, history)
-
-    if extracted.get("church_list_needs_review"):
-        LOGGER.warning(
-            "Church list may need review for parish %s — run 'pnpm verify --parish \"%s\"'",
-            parish_slug, parish_slug,
-        )
-    return rows, promoted
-
-
-def _placement_outcome(
-    entry: dict[str, Any], parish_bulletins: list[dict[str, Any]],
-) -> tuple[str | None, str | None]:
-    """The run status and detail for where a bulletin's date puts it, if notable.
-
-    Nothing needs doing here to keep an old issue or a correction in its
-    place: the current bulletin is chosen by week (`latest_bulletin_order`).
-    This only says what happened, so the report can.
-    """
-    placement = place_bulletin(entry, parish_bulletins)
-    if placement is None:
-        return None, None
-    week = placement.week.isoformat()
-    others = ", ".join(f"#{other['id']}" for other in placement.others)
-    if placement.kind == CORRECTION:
-        return PROCESS_CORRECTION, f"replaces {others} as the bulletin for {week}"
-    if placement.kind == REPEATED_WEEK:
-        return PROCESS_REPEATED_WEEK, (
-            f"bulletin {len(placement.others) + 1} for {week} (after {others}); "
-            "shown, but the site keeps changing that week's bulletin"
-        )
-    if placement.kind == OLDER:
-        [newest] = placement.others
-        return PROCESS_OLD_ISSUE, (
-            f"for {week}, older than #{newest['id']} for {bulletin_week(newest)}; "
-            "kept, not shown"
-        )
-    return None, None
 
 
 def process_bulletins(
     *,
     parish_name: str | None = None,
     slugs: Collection[str] | None = None,
-    model: str = DEFAULT_GEMINI_MODEL,
     concurrency: int = 5,
     run_id: str | None = None,
-    include_fetch_only: bool = False,
 ) -> dict[str, int]:
-    """Extract (or update) the schedules of the parishes with unprocessed bulletins.
+    """Update the schedules of the live parishes (all, or `parish_name` or `slugs`) with new bulletins.
 
-    Fetch-only parishes (`fetch_only` in parishes.csv) are left out: their
-    bulletins stay unprocessed and no model call is made for them, unless
-    `include_fetch_only`. Once the flag is cleared, the next run processes
-    each one's latest bulletin.
+    Parishes without an approved seed are left out: their bulletins stay
+    unprocessed until the seed is approved, and then the parish's bulletins
+    from after the seed are read.
     """
     LOGGER.info(
-        "Starting process stage (parish_name=%s, slugs=%s, model=%s, concurrency=%s)",
+        "Starting process stage (parish_name=%s, slugs=%s, concurrency=%s)",
         parish_name or "*all*",
         "*all*" if slugs is None else len(slugs),
-        model, concurrency,
+        concurrency,
     )
-    classifier = GeminiClassifier(model=model)
-
-    processed_count = 0
-    inserted_events = 0
-    skipped_events = 0
-    cache_hits = 0
-    promoted_events = 0
-    failed = 0
-    # Tokens spent on this run's API calls (cache hits cost nothing).
-    tokens = {"prompt_tokens": 0, "output_tokens": 0}
-
     conn = connect_db()
     try:
-        bulletins = load_bulletins(conn)
-        by_slug: dict[str, list[dict[str, Any]]] = {}
-        for bulletin in bulletins:
-            by_slug.setdefault(bulletin["parish_slug"], []).append(bulletin)
-        # Keep only the latest fetched bulletin per parish, then process those still pending.
-        latest = latest_per_parish(bulletins)
-        # Update-mode parishes are processed by their own stage, below.
-        update_mode = update_mode_slugs(conn)
-        pending = [
-            m for m in latest
-            if m.get("processed_at") is None and m["parish_slug"] not in update_mode
-        ]
-        update_scope: Collection[str] | None = slugs
-
+        scope: Collection[str] | None = slugs
         if parish_name:
             parish_row = get_parish_by_name(conn, parish_name)
             if not parish_row:
                 LOGGER.warning("Parish not found: %s", parish_name)
-                return {
-                    "processed_bulletins": 0,
-                    "inserted_events": 0,
-                    "skipped_events": 0,
-                    "cache_hits": 0,
-                    "weekly_promotions": 0,
-                    "failed_bulletins": 0,
-                    "fetch_only_parishes": 0,
-                }
-            target_slug = parish_row["slug"]
-            pending = [m for m in pending if m["parish_slug"] == target_slug]
-            update_scope = [target_slug]
+                return {"unseeded_parishes": 0}
+            scope = [parish_row["slug"]]
         elif slugs is not None:
             known = {row["slug"] for row in list_parishes(conn)}
             missing = sorted(set(slugs) - known)
             if missing:
                 raise ValueError(f"Parish not found: {', '.join(missing)}")
-            wanted = set(slugs)
-            pending = [m for m in pending if m["parish_slug"] in wanted]
 
-        # Fetch-only parishes make no model call, in either mode.
-        held = set() if include_fetch_only else fetch_only_slugs(conn)
-        if update_scope is not None:
-            held &= set(update_scope)
-        if held:
-            if parish_name:
-                LOGGER.warning(
-                    "Parish %s is fetch-only; pass --include-fetch-only to process it anyway",
-                    parish_name,
-                )
-            else:
-                LOGGER.info("Leaving %d fetch-only parishes unprocessed", len(held))
-            pending = [m for m in pending if m["parish_slug"] not in held]
-            if update_scope is None:
-                update_scope = [row["slug"] for row in list_parishes(conn)]
-            update_scope = [slug for slug in update_scope if slug not in held]
+        unseeded = unseeded_slugs(conn)
+        if scope is not None:
+            unseeded &= set(scope)
+        if unseeded and parish_name:
+            LOGGER.warning("Parish %s has no approved seed yet; nothing to process", parish_name)
+        elif unseeded:
+            LOGGER.info("Leaving %d parishes without an approved seed unprocessed", len(unseeded))
 
-        history = load_history_from_db(conn)
-        pruned = prune_history(history)
-        if pruned:
-            LOGGER.info("Pruned %d expired occurrences from event history", pruned)
-            save_history_to_db(conn, history)
-
-        def commit(entry: dict[str, Any], extracted: dict[str, Any], status: str) -> None:
-            """Store one result: history first, then the bulletin's events.
-
-            In that order a crash in between leaves the bulletin unprocessed,
-            so it is simply re-run (from the cache) and its sightings, already
-            on file, are not double-counted.
-            """
-            nonlocal inserted_events, skipped_events, processed_count, promoted_events
-            rows, promoted = _prepare_rows(entry, extracted, history)
-            save_history_to_db(conn, history)
-            undated_empty = not entry.get("published_date") and not rows
-            wrong_bulletin = bool(extracted.get("wrong_bulletin")) or undated_empty
-            processed_at = utc_now_iso()
-            stored, skipped = save_processed_bulletin(
-                conn,
-                entry["id"],
-                rows,
-                processed_at=processed_at,
-                published_date=entry.get("published_date"),
-                wrong_bulletin=wrong_bulletin,
-            )
-            entry["processed_at"] = processed_at
-            entry["wrong_bulletin"] = int(wrong_bulletin)
-            inserted_events += stored
-            skipped_events += skipped
-            promoted_events += promoted
-            processed_count += 1
-
-            placed, placement_detail = (
-                (None, None) if wrong_bulletin
-                else _placement_outcome(entry, by_slug[entry["parish_slug"]])
-            )
-            if wrong_bulletin:
-                outcome = PROCESS_WRONG_BULLETIN
-            elif placed is not None:
-                outcome = placed
-                placement_detail = join_details(
-                    placement_detail, "from the cache" if status == PROCESS_CACHED else None,
-                )
-            else:
-                outcome = status
-            record_parish_result(
-                conn, run_id, entry["parish_slug"], "process", outcome,
-                source_url=entry.get("source_url"),
-                content_hash=entry.get("content_hash"),
-                event_count=stored,
-                detail=join_details(
-                    placement_detail,
-                    "Undated PDF extracted zero events" if undated_empty else None,
-                    f"{skipped} events could not be stored" if skipped else None,
-                ),
-            )
-
-        # Serve bulletins whose extraction is already cached without an API call.
-        uncached: list[dict[str, Any]] = []
-        for entry in pending:
-            content_hash = entry.get("content_hash")
-            cached = (
-                load_cached_result(
-                    classifier.name, classifier.version, content_hash,
-                    churches_for_parish(conn, entry["parish_slug"]),
-                )
-                if isinstance(content_hash, str) and content_hash
-                else None
-            )
-            if cached is None:
-                uncached.append(entry)
-                continue
-            cache_hits += 1
-            commit(entry, cached, PROCESS_CACHED)
-
-        for outcome in iter_extraction_outcomes(
-            uncached, conn, classifier.extract, concurrency=concurrency,
-        ):
-            entry = outcome.entry
-            if outcome.skipped or outcome.extracted is None:
-                failed += 1
-                record_parish_result(
-                    conn, run_id, entry["parish_slug"], "process",
-                    PROCESS_SKIPPED if outcome.skipped else PROCESS_FAILED,
-                    source_url=entry.get("source_url"),
-                    content_hash=entry.get("content_hash"),
-                    detail=(
-                        "PDF could not be loaded"
-                        if outcome.skipped
-                        else f"{type(outcome.error).__name__}: {outcome.error}"
-                    ),
-                )
-                continue
-            usage = outcome.extracted.get("usage")
-            if isinstance(usage, dict):
-                for key in tokens:
-                    tokens[key] += int(usage.get(key) or 0)
-            content_hash = entry.get("content_hash")
-            if isinstance(content_hash, str) and content_hash:
-                store_cached_result(
-                    classifier.name, classifier.version, content_hash,
-                    churches_for_parish(conn, entry["parish_slug"]), outcome.extracted,
-                )
-            commit(entry, outcome.extracted, PROCESS_EXTRACTED)
-
-        update_stats = process_update_mode(
-            conn, slugs=update_scope, run_id=run_id,
+        stats = process_update_mode(
+            conn, slugs=scope, run_id=run_id,
             updater=OpenAIScheduleUpdater(), concurrency=concurrency,
         )
     finally:
         conn.close()
 
-    result = {
-        "processed_bulletins": processed_count,
-        "inserted_events": inserted_events,
-        "skipped_events": skipped_events,
-        "cache_hits": cache_hits,
-        "weekly_promotions": promoted_events,
-        "failed_bulletins": failed,
-        "fetch_only_parishes": len(held),
-        **tokens,
-        **update_stats,
-    }
+    result = {"unseeded_parishes": len(unseeded), **stats}
     LOGGER.info("Process stage finished: %s", result)
     return result

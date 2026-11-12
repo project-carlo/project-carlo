@@ -79,6 +79,9 @@ def _parse_date(
         return _resolve_yearless_date(month=month, day=day, reference_date=reference_date)
 
     normalized = _HEX_ID_RE.sub(" ", text.lower())
+    # A link's address can name the file URL-encoded ("October%2025%2C%202026.pdf").
+    # Only these two: a signed URL's other escapes decode into what reads as a date.
+    normalized = normalized.replace("%20", " ").replace("%2c", ",")
     for upload_folder in (_WORDPRESS_UPLOAD_FOLDER_RE, _WEEBLY_UPLOAD_FOLDER_RE):
         normalized = upload_folder.sub("/", normalized)
     # A file name's spaces can come URL-encoded as "+" ("10+18+26.pdf",
@@ -104,9 +107,11 @@ def _parse_date(
         rf"(?:(?<!\d)(?P<lead_year>20\d{{2}})\s+)?"
         rf"(?P<month>{month_name})\s+(?P<day>\d{{1,2}})(?!\d){_ORDINAL}?"
         rf"(?:\s*(?:&|and|-|\s)\s*\d{{1,2}}{_ORDINAL}?(?=\s+\d{{2,4}}(?!\d)))?"
-        # "Bulletin_October 12_2025": an underscore can join the year on. A
-        # longer number is no year (a mistyped "20026").
-        rf"(?:[\s_]+(?P<year>\d{{2,4}})(?![\d{_ORDINAL}]))?",
+        # "Bulletin_October 12_2025": an underscore can join the year on, and a
+        # period can join a two-digit one ("Nov 7.21.pdf"). A longer number is
+        # no year (a mistyped "20026").
+        rf"(?:(?:[\s_]+|(?P<dotted>\.)(?=\d{{2}}(?![\da-z])))"
+        rf"(?P<year>\d{{2,4}})(?![\d{_ORDINAL}]))?",
         flags=re.IGNORECASE,
     )
     day_month_pattern = re.compile(
@@ -122,7 +127,20 @@ def _parse_date(
             if month_num is None:
                 continue
             day = int(match.group("day"))
-            raw_year = match.groupdict().get("lead_year") or match.group("year")
+            lead_year = match.groupdict().get("lead_year")
+            raw_year = lead_year or match.group("year")
+            # After a period, the next day is a weekend ("Oct 11.12.pdf", "Oct 31.01.pdf")
+            # and a year still to come is no issue's: read those as no year at all.
+            if match.groupdict().get("dotted") and not lead_year and (
+                int(raw_year) == day + 1
+                or (int(raw_year) == 1 and day >= 28)
+                or 2000 + int(raw_year) > reference_date.year
+            ):
+                raw_year = None
+            # Two digits more than a year ahead are the Sunday's number, not a
+            # year: "November-8th-32-Sun-in-OT" is the 32nd Sunday, not 2032.
+            if raw_year and len(raw_year) == 2 and 2000 + int(raw_year) > reference_date.year + 1:
+                raw_year = None
             # A named month still identifies the day when the year is mangled.
             if raw_year and len(raw_year) != 3:
                 parsed = safe_date(_normalize_year(raw_year, reference_date), month_num, day)
@@ -132,12 +150,19 @@ def _parse_date(
                 return parsed
 
     # Not the tail of a longer number: Weebly's "/38133239/02-12-2017" is no year 3239.
-    for match in re.finditer(
-        r"(?<!\d)(?P<year>\d{4})[-/.](?P<month>\d{1,2})[-/.](?P<day>\d{1,2})(?!\d)", normalized,
+    # Underscores can join the parts too ("046a_2026_11_01-1.pdf", whose "01-1"
+    # would otherwise read as 1 January), but only for this century's years,
+    # since a file name's other numbers are often joined the same way.
+    for pattern in (
+        r"(?<!\d)(?P<year>\d{4})[-/.](?P<month>\d{1,2})[-/.](?P<day>\d{1,2})(?!\d)",
+        r"(?<!\d)(?P<year>20\d{2})_(?P<month>\d{1,2})_(?P<day>\d{1,2})(?!\d)",
     ):
-        parsed = safe_date(int(match.group("year")), int(match.group("month")), int(match.group("day")))
-        if parsed is not None:
-            return parsed
+        for match in re.finditer(pattern, normalized):
+            parsed = safe_date(
+                int(match.group("year")), int(match.group("month")), int(match.group("day")),
+            )
+            if parsed is not None:
+                return parsed
 
     for match in re.finditer(
         # "10/4-27th Sunday" is 4 October, the 27th Sunday: not 2027.

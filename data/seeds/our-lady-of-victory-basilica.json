@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "our-lady-of-victory-basilica",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-25T13:16:46Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-26T12:15:25Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Claude)",
+  "approved_at": "2026-11-08T20:43:50Z",
   "summary": "Two listed churches. Weekend and weekday Mass times and Saturday confessions are the same in every issue read, and the Friday afternoon Adoration takes its 1:30 PM start from the parish's events page. Bistrica Masses are dated (Nov 3, Nov 17, Dec 1, Dec 8). Open: whether to keep the Friday 8:15 AM Mass 'when school is in session'. Left out: eve-of-first-Friday and eve-of-holy-day confessions (cannot be written as weekly), weddings and the Nov 21 family event.",
   "blocked_reason": null,
   "bulletins": [
@@ -1416,9 +1416,22 @@
     },
     {
       "id": "s18",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-lackawanna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "When school is in session"
+      },
       "page": 1,
       "sources": [
         {
@@ -1502,7 +1515,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:39Z"
+      }
     },
     {
       "id": "s19",

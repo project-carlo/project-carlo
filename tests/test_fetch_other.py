@@ -102,6 +102,8 @@ def _resolve(
         ("/wp-content/uploads/Sept.-27th-26th-Sun-in-OT.pdf", date(2026, 9, 27)),
         ("/wp-content/uploads/Sept.-20th-25th-Sun-in-OT.pdf", date(2026, 9, 20)),
         ("September 27th, 2026", date(2026, 9, 27)),
+        # Nor is a bare Sunday number after the day a year: the 32nd Sunday, not 2032.
+        ("/wp-content/uploads/November-8th-32-Sun-in-OT.pdf", date(2025, 11, 8)),
         # A run of digits that is no month-day-year gives a later yearless
         # date no year.
         ("scan 13-45-19 bulletin 9-27", date(2026, 9, 27)),
@@ -531,6 +533,62 @@ def test_this_years_post_wins_over_last_years_with_the_same_day() -> None:
     }) == f"{HOME}/s/Bulletin-for-9-2627FINAL.pdf"
 
 
+def _all_saints_listing(*, this_week: bool) -> str:
+    # All Saints, Syracuse: newest first, no years, last year's below this year's.
+    titles = [
+        *(["november-7-amp-8"] if this_week else []),
+        "october-31-amp-november-1", "october-24-amp-25", "september-26-amp-27",
+        "july-25-amp-26", "january-3-amp-4",
+        # Last year's, which read as the nearest such days.
+        "december-27-amp-28", "november-15-amp-16", "november-1-amp-2-and-8-amp-9",
+    ]
+    return "".join(f'<a href="/b/bulletin-{t}">Bulletin {t}</a>' for t in titles)
+
+
+@pytest.mark.parametrize(("this_week", "post"), [
+    (True, "november-7-amp-8"),
+    # Before this week's is posted, last week's, not last November's.
+    (False, "october-31-amp-november-1"),
+])
+def test_last_years_posts_below_this_years_are_not_this_weeks(this_week, post) -> None:
+    pdf = f"{HOME}/s/{post}.pdf"
+    assert _resolve({
+        HOME: '<a href="/newsletters">Bulletins</a>',
+        f"{HOME}/newsletters": _all_saints_listing(this_week=this_week),
+        f"{HOME}/b/bulletin-{post}": f'<a href="/s/{post}.pdf">Bulletin</a>',
+    }, today=date(2026, 11, 8)) == pdf
+
+
+def test_a_post_pinned_above_the_listing_does_not_hide_it() -> None:
+    post = f"{HOME}/b/bulletin-november-7-amp-8"
+    assert _resolve({
+        HOME: '<a href="/newsletters">Bulletins</a>',
+        f"{HOME}/newsletters": (
+            '<a href="/b/christmas-bulletin-december-24">Christmas Bulletin December 24</a>'
+            f'<a href="{post}">Bulletin November 7 &amp; 8</a>'
+            '<a href="/b/bulletin-october-31">Bulletin October 31</a>'
+        ),
+        post: '<a href="/s/november-7.pdf">Bulletin</a>',
+    }, today=date(2026, 11, 8)) == f"{HOME}/s/november-7.pdf"
+
+
+@pytest.mark.parametrize(("today", "issue"), [
+    (date(2026, 11, 8), "11-08-2026"),  # a Sunday: today's
+    (date(2026, 11, 7), "11-08-2026"),  # a Saturday: tomorrow's
+    (date(2026, 11, 11), "11-15-2026"),  # midweek: the coming Sunday's
+])
+def test_sundays_listed_ahead_of_time_are_not_current_before_their_week(today, issue) -> None:
+    # Immaculate Conception, Rochester lists the year's Sundays ahead of time,
+    # each linking last year's issue until its week comes.
+    days = ["11-01-2026", "11-08-2026", "11-15-2026", "11-22-2026"]
+    assert _resolve({
+        HOME: '<a href="/bulletin-news">Bulletin</a>',
+        f"{HOME}/bulletin-news": "".join(
+            f'<a href="/_files/ugd/{d}.pdf">{d}</a>' for d in days
+        ),
+    }, today=today) == f"{HOME}/_files/ugd/{issue}.pdf"
+
+
 def test_last_years_issue_in_a_year_folder_is_not_this_weeks() -> None:
     # parishes.rcda.org (St. Joseph, Worcester) names files by the day alone.
     assert _resolve({
@@ -799,12 +857,82 @@ def test_a_downloaded_image_is_kept_as_a_pdf(monkeypatch) -> None:
     assert fetch._download_pdf(fetch_url=url, source_url=url) == pdf
 
 
-def test_a_download_that_is_neither_pdf_nor_image_is_left_as_it_is(monkeypatch) -> None:
+# What bulletins.discovermass.com/download.php answers, with HTTP 200, once its
+# daily download cap is hit. The 2026-10-25 run stored it as 66 parishes' bulletin.
+DISCOVER_MASS_CAP_PAGE = (
+    b"Maximum number of files downloaded today. Please contact "
+    b"<a href='https://discovermass.com/contact-us/'>Discover Mass</a> for support."
+)
+DISCOVER_MASS_DOWNLOAD = "https://bulletins.discovermass.com/download.php?bulletin=abc%3D"
+
+
+def test_the_discover_mass_cap_page_is_not_a_bulletin(monkeypatch) -> None:
+    from pdf_extract import fetch
+    from pdf_extract.duplicates import bulletin_hash
+
+    assert len(DISCOVER_MASS_CAP_PAGE) == 134
+    assert bulletin_hash(DISCOVER_MASS_CAP_PAGE) == (
+        "df175220b1d967b5204b2dea47961626b06f0e346a6a4e54094544af84ae0117"
+    )
+    monkeypatch.setattr(
+        fetch, "_http_get", lambda url, **_: fetch._Response(DISCOVER_MASS_CAP_PAGE, etag='"x"'),
+    )
+    with pytest.raises(fetch.NotABulletin) as raised:
+        fetch._download_bulletin(
+            fetch_url=DISCOVER_MASS_DOWNLOAD, source_url="https://discovermass.com/church/x/",
+        )
+    assert raised.value.body == DISCOVER_MASS_CAP_PAGE
+    # The size and the page's text, without its markup, for the run report.
+    assert str(raised.value) == (
+        "Not a PDF: 134 bytes starting 'Maximum number of files downloaded today."
+        " Please contact Discover Mass for support.'"
+    )
+
+
+def test_a_page_from_the_source_address_is_not_a_bulletin_either(monkeypatch) -> None:
+    from urllib.error import HTTPError
+
     from pdf_extract import fetch
 
-    monkeypatch.setattr(fetch, "_http_get", lambda url, **_: fetch._Response(b"<html>"))
+    def get(url: str, **_: object) -> fetch._Response:
+        if url == DISCOVER_MASS_DOWNLOAD:
+            raise HTTPError(url, 503, "Service Unavailable", {}, None)  # type: ignore[arg-type]
+        return fetch._Response(b"<!DOCTYPE html><html><title>Bulletins</title>" + b"x" * 500)
+
+    monkeypatch.setattr(fetch, "_http_get", get)
+    with pytest.raises(fetch.NotABulletin, match=(
+        r"^HTTPError: HTTP Error 503: Service Unavailable, and the source URL is not a PDF:"
+        r" 545 bytes starting 'Bulletins xxx"
+    )):
+        fetch._download_pdf(fetch_url=DISCOVER_MASS_DOWNLOAD, source_url=f"{HOME}/bulletins")
+
+
+def test_a_bot_check_over_http_and_https_is_not_a_bulletin(monkeypatch) -> None:
+    from pdf_extract import fetch
+
+    monkeypatch.setattr(
+        fetch, "_http_get", lambda url, **_: fetch._Response(b"<html>sgcaptcha</html>"),
+    )
+    with pytest.raises(fetch.NotABulletin, match="'sgcaptcha'"):
+        fetch._download_pdf(fetch_url="http://example.org/b.pdf", source_url="http://example.org/")
+
+
+def test_an_empty_download_is_not_a_bulletin(monkeypatch) -> None:
+    from pdf_extract import fetch
+
+    monkeypatch.setattr(fetch, "_http_get", lambda url, **_: fetch._Response(b""))
     url = f"{HOME}/bulletin.pdf"
-    assert fetch._download_pdf(fetch_url=url, source_url=url) == b"<html>"
+    with pytest.raises(fetch.NotABulletin, match="^Not a PDF: an empty response$"):
+        fetch._download_pdf(fetch_url=url, source_url=url)
+
+
+def test_a_pdf_after_a_stray_newline_is_still_a_bulletin(monkeypatch) -> None:
+    # PDF readers find the header anywhere in the first kilobyte.
+    from pdf_extract import fetch
+
+    monkeypatch.setattr(fetch, "_http_get", lambda url, **_: fetch._Response(b"\r\n%PDF-1.4"))
+    url = f"{HOME}/download.php?file=bulletin"
+    assert fetch._download_pdf(fetch_url=url, source_url=url) == b"\r\n%PDF-1.4"
 
 
 def test_a_download_answered_429_is_retried_once(monkeypatch) -> None:
@@ -1108,6 +1236,118 @@ def test_a_page_whose_cards_render_late_is_read_again() -> None:
     assert source_url == f"{HOME}/_files/ugd/23b1db_bb.pdf"
 
 
+class _SizedResponse:
+    """A response with `body`, declaring `content_length` if given."""
+
+    def __init__(self, body, content_length=None):
+        self.body = body
+        self.headers = {} if content_length is None else {"Content-Length": content_length}
+        self.sized_reads = []
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *exc):
+        return False
+
+    def read(self, size=None):
+        self.sized_reads.append(size)
+        return self.body if size is None else self.body[:size]
+
+
+def test_http_get_refuses_a_declared_size_over_the_limit_without_reading_it(monkeypatch):
+    from pdf_extract import fetch
+
+    response = _SizedResponse(b"", content_length="1000000001")
+    monkeypatch.setattr(fetch, "urlopen", lambda req, timeout: response)
+
+    with pytest.raises(fetch.DownloadTooLarge):
+        fetch._http_get("https://example.org/b.pdf")
+
+    assert response.sized_reads == []
+
+
+def test_http_get_stops_reading_a_body_of_unknown_size_at_the_limit(monkeypatch):
+    from pdf_extract import fetch
+
+    monkeypatch.setattr(fetch, "MAX_DOWNLOAD_BYTES", 4)
+    monkeypatch.setattr(fetch, "urlopen", lambda req, timeout: _SizedResponse(b"%PDF-big"))
+
+    with pytest.raises(fetch.DownloadTooLarge):
+        fetch._http_get("https://example.org/b.pdf")
+
+
+def test_http_get_keeps_a_body_at_the_limit(monkeypatch):
+    from pdf_extract import fetch
+
+    monkeypatch.setattr(fetch, "MAX_DOWNLOAD_BYTES", 4)
+    monkeypatch.setattr(fetch, "urlopen", lambda req, timeout: _SizedResponse(b"%PDF"))
+
+    assert fetch._http_get("https://example.org/b.pdf").body == b"%PDF"
+
+
+def test_http_get_reads_a_declared_body_unsized_so_a_cut_off_read_raises(monkeypatch):
+    # http.client only raises IncompleteRead from an unsized read: a sized one
+    # would quietly return, and store, a truncated PDF.
+    from pdf_extract import fetch
+
+    response = _SizedResponse(b"%PDF", content_length="4")
+    monkeypatch.setattr(fetch, "urlopen", lambda req, timeout: response)
+
+    fetch._http_get("https://example.org/b.pdf")
+
+    assert response.sized_reads == [None]
+
+
+def test_http_get_caps_a_chunked_body_whatever_its_content_length_says(monkeypatch):
+    # http.client ignores Content-Length on a chunked body, so it limits nothing.
+    from pdf_extract import fetch
+
+    monkeypatch.setattr(fetch, "MAX_DOWNLOAD_BYTES", 4)
+    response = _SizedResponse(b"%PDF-big", content_length="4")
+    response.headers["Transfer-Encoding"] = "chunked"
+    monkeypatch.setattr(fetch, "urlopen", lambda req, timeout: response)
+
+    with pytest.raises(fetch.DownloadTooLarge):
+        fetch._http_get("https://example.org/b.pdf")
+
+
+def test_an_oversized_download_over_https_is_not_swallowed(monkeypatch):
+    # The bot check's page must not be taken for the bulletin it stands in front of.
+    from pdf_extract import fetch
+
+    def get(url, **_):
+        if url.startswith("http://"):
+            return fetch._Response(b"<html>sgcaptcha</html>")
+        raise fetch.DownloadTooLarge("Over 1000 MB")
+
+    monkeypatch.setattr(fetch, "_http_get", get)
+
+    with pytest.raises(fetch.DownloadTooLarge):
+        fetch._download_bulletin(
+            fetch_url="http://example.org/b.pdf", source_url="http://example.org/page",
+        )
+
+
+def test_an_oversized_download_is_not_retried_from_the_source_address(monkeypatch):
+    from pdf_extract import fetch
+
+    calls = []
+
+    def get(url, **_):
+        calls.append(url)
+        raise fetch.DownloadTooLarge("Over 1000 MB")
+
+    monkeypatch.setattr(fetch, "_http_get", get)
+
+    with pytest.raises(fetch.DownloadTooLarge):
+        fetch._download_bulletin(
+            fetch_url="https://example.org/b.pdf", source_url="https://example.org/page",
+        )
+
+    assert calls == ["https://example.org/b.pdf"]
+
+
 def test_http_get_percent_encodes_a_non_ascii_referer(monkeypatch):
     # A WordPress file name with an en dash used to raise UnicodeEncodeError
     # when it was sent as the Referer of the next request.
@@ -1124,7 +1364,7 @@ def test_http_get_percent_encodes_a_non_ascii_referer(monkeypatch):
         def __exit__(self, *exc):
             return False
 
-        def read(self):
+        def read(self, _size=-1):
             return b"%PDF"
 
     def fake_urlopen(req, timeout):
@@ -1145,6 +1385,30 @@ def test_document_base_url_honours_base_href():
     assert document_base_url(html, page) == "http://stjohneverettpa.org/"
     assert document_base_url("<html><body></body></html>", page) == page
     assert document_base_url("<base target='_blank'>", page) == page
+
+
+@pytest.mark.parametrize("text,expected", [
+    ("046a_2026_11_01-1.pdf", date(2026, 11, 1)),
+    ("046a_2026_11_01.pdf", date(2026, 11, 1)),
+    ("046a_2026_08_09-6f3z.pdf", date(2026, 8, 9)),
+    ("CSJ-2026_9_27-bulletin-combined.pdf", date(2026, 9, 27)),
+    ("6400_12_25_Bulletin_2026-11-01.pdf", date(2026, 11, 1)),
+    ("Nov 7.21.pdf", date(2021, 11, 7)),
+    ("Nov 7.26.pdf", date(2026, 11, 7)),
+    ("Oct 11.12.pdf", date(2026, 10, 11)),  # a weekend, not 2012
+    ("Oct 11.27.pdf", date(2026, 10, 11)),  # next year's isn't an issue yet
+    ("Oct 11.10am.pdf", date(2026, 10, 11)),
+    ("Oct 31.01.pdf", date(2026, 10, 31)),  # a weekend across the month's end, not 2001
+    ("bulletin-2022-october-23.24.pdf", date(2022, 10, 23)),  # the year came first
+    ("2024 Oct 11.21.pdf", date(2024, 10, 11)),
+    ("Parish%20Update%20October%2021%202026-1.pdf", date(2026, 10, 21)),
+    ("Bulletin%20October%2025%2C%202026.pdf", date(2026, 10, 25)),
+    ("Bulletin%2010-18-26.pdf", date(2026, 10, 18)),
+    ("Nov%207.21.pdf", date(2021, 11, 7)),
+    ("Sig=DlUk8bsZExGj1HJ%2B6bGSZd%2FGq2ZVLx%3D", None),
+])
+def test_parse_date_reads_joined_and_encoded_file_names(text, expected):
+    assert parse_date_from_texts([text], date(2026, 11, 7)) == expected
 
 
 def test_parse_date_reads_an_unseparated_month_day_year_near_the_reference():

@@ -340,6 +340,18 @@ def test_only_container_workers_bypass_permission_checks(tmp_path: Path) -> None
     assert sdk_options(req, Launch("claude", {}, work=wt)).permission_mode == "auto"
 
 
+def test_workers_are_not_given_context_that_is_no_use_to_them(tmp_path: Path) -> None:
+    pytest.importorskip("claude_agent_sdk")
+    wt = tmp_path / "wt"
+    wt.mkdir()
+    req = boxed_request(tmp_path, wt)
+    launch = podman_backend(tmp_path, FakePodman()).launch(req, worker_env(req.account))
+    settings = json.loads(sdk_options(req, launch).settings)
+    assert settings["attribution"] == {"commit": "", "pr": ""}
+    assert settings["autoMemoryEnabled"] is False
+    assert settings["claudeMdExcludes"] == ["**/AGENTS.md"]
+
+
 def test_the_sandbox_launcher_gives_podman_only_what_it_names(tmp_path: Path) -> None:
     fake_podman = tmp_path / "podman"
     fake_podman.write_text("#!/usr/bin/env python3\nimport json, os, sys\n"

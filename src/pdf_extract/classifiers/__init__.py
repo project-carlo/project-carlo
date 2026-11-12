@@ -15,12 +15,10 @@ from typing import Any
 from pdf_extract.classifiers.base import Classifier, ClassifierOptionError
 from pdf_extract.classifiers.gemini import GeminiClassifier
 from pdf_extract.classifiers.gemini_qualified import gemini_qualified_classifier
-from pdf_extract.classifiers.openai_gpt import OpenAIClassifier
 from pdf_extract.classifiers.openai_responses import responses_classifier
 
 REGISTRY: dict[str, Callable[..., Classifier]] = {
     "gemini-flash": lambda: GeminiClassifier(),
-    "gpt-5.4-mini": lambda: OpenAIClassifier(model="gpt-5.4-mini"),
     # Qualified schema (weeks of the month, seasons) and the shared policy prompt
     # (schedule_policy.POLICY), for scoring against labels.
     "gemini-flash-qualified": gemini_qualified_classifier,

@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-joseph-st-francis-broadalbin",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-25T13:12:15Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-25T19:00:08Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Claude)",
+  "approved_at": "2026-11-08T20:49:39Z",
   "summary": "Two churches in one linked parish, both on the church list. Weekday, weekend and confession times print in the same schedule box in every bulletin read. The newest issue cancels the Mass on Oct 26, 27, 29 and 30; the summer-only St. Francis Saturday vigil is left out. One open question: the Nov 13 'Memoria Mass'.",
   "blocked_reason": null,
   "bulletins": [
@@ -936,9 +936,22 @@
     },
     {
       "id": "s16",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-broadalbin",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-13",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Memoria Mass"
+      },
       "page": 3,
       "sources": [
         {
@@ -996,7 +1009,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:49:39Z"
+      }
     }
   ]
 }

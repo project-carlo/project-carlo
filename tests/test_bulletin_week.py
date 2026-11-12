@@ -8,15 +8,10 @@ from datetime import date, timedelta
 import pytest
 
 from pdf_extract.bulletin_week import (
-    CORRECTION,
-    NEWER,
-    OLDER,
-    REPEATED_WEEK,
     bulletin_week,
     has_bulletin_for,
     nearest_sunday,
     newest_bulletin,
-    place_bulletin,
     stale_parishes,
     week_order_sql,
 )
@@ -127,36 +122,6 @@ def test_has_bulletin_for_trusts_only_a_plausible_extracted_date() -> None:
         _bulletin(1, published="2026-10-04", fetched="2026-10-03", wrong_bulletin=1), SUNDAY,
     )
     assert not has_bulletin_for(None, SUNDAY)
-
-
-def test_place_bulletin() -> None:
-    week_before = _bulletin(1, published="2026-09-27", fetched="2026-09-26")
-    this_week = _bulletin(2, published="2026-10-04", fetched="2026-10-03")
-    correction = _bulletin(3, published="2026-10-04", fetched="2026-10-04")
-
-    new = _bulletin(9, published="2026-10-04", fetched="2026-10-03")
-    assert place_bulletin(new, [week_before, new]).kind == NEWER
-
-    placement = place_bulletin(new, [week_before, this_week, new])
-    assert placement.kind == CORRECTION
-    assert placement.others == (this_week,)
-
-    placement = place_bulletin(new, [week_before, this_week, correction, new])
-    assert placement.kind == REPEATED_WEEK
-    assert placement.others == (this_week, correction)
-
-    old = _bulletin(9, published="2026-09-20", fetched="2026-10-05")
-    placement = place_bulletin(old, [week_before, this_week, old])
-    assert (placement.kind, placement.others) == (OLDER, (this_week,))
-
-    assert place_bulletin(_bulletin(9, published=None, fetched="2026-10-03"), [this_week]) is None
-
-
-def test_place_bulletin_ignores_unprocessed_and_wrong_bulletins() -> None:
-    unprocessed = _bulletin(1, published=None, fetched="2026-10-03", processed=False)
-    wrong = _bulletin(2, published="2026-10-11", fetched="2026-10-03", wrong_bulletin=1)
-    new = _bulletin(9, published="2026-10-04", fetched="2026-10-03")
-    assert place_bulletin(new, [unprocessed, wrong, new]).kind == NEWER
 
 
 def test_stale_parishes_judges_by_the_bulletins_week() -> None:

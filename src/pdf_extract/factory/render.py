@@ -69,7 +69,7 @@ def header(run: Any, job: Any, spec: StageSpec, values: dict[str, str]) -> str:
 You are a worker in the onboarding factory: one fresh session that runs one job and ends.
 Code scheduled you, and no person is watching.
 
-- Diocese: `{run['diocese']}`. This directory is the Run's worktree, on branch `{run['branch']}`.
+- Diocese: `{run['diocese']}`. This directory holds the Run's files, from branch `{run['branch']}`.
 - Your scratch folder is `{scratch_rel(run['id'], job['name'])}`; the Run's shared tools
   folder is `scratch/{run['id']}/tools/` (read its README.md before writing a script).
 - You may change only {writes}. Any other change is reverted and the job sent back.

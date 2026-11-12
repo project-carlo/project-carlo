@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-benedicts-st-marys-lake",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-25T13:12:54Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-25T19:00:37Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Claude)",
+  "approved_at": "2026-11-08T20:49:39Z",
   "summary": "Two churches: St. Mary's of the Lake (Sunday 8 and 10, Monday-Thursday 8) and St. Benedict's (Saturday 5:00 PM Mass, Confession 3:30-4:30). Times come from the weekly calendar and agree in all five bulletins; the weekday church comes from the website. Open: the church of the Nov 2 Mass of Remembrance, whether a Friday 8 AM Mass exists, and a website-only third-Wednesday Confession.",
   "blocked_reason": null,
   "bulletins": [
@@ -929,9 +929,22 @@
     },
     {
       "id": "s9",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-marys-of-lake-watkins-glen",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass of Remembrance"
+      },
       "page": 5,
       "sources": [
         {
@@ -990,13 +1003,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": "dropped",
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:49:39Z"
+      }
     },
     {
       "id": "s10",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-marys-of-lake-watkins-glen",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -1067,13 +1097,32 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:49:39Z"
+      }
     },
     {
       "id": "s11",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-marys-of-lake-watkins-glen",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -1116,7 +1165,11 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:39Z"
+      }
     },
     {
       "id": "s12",

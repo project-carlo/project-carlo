@@ -20,7 +20,9 @@ their *Sources*, *Bulletin publishers here* and *Rules settled*.
 2. **Get the rosters.** `pnpm diocese roster fetch <d> gcatholic`, then the diocese's own
    directory: `roster fetch <d> wpsl <URL>` if it runs WP Store Locator, otherwise scrape it
    into `roster import <d> directory <file>`. Import the family or cluster list and the
-   Mass-times pages the same way, with `group` set to the family. When a site blocks
+   Mass-times pages the same way, with `group` set to the family. Leave `group` empty for
+   a deanery, vicariate, county or planning region: `audit` pairs every member of a group,
+   so `group` holds only what might share a bulletin. When a site blocks
    `probe url` or the finder is an eCatholic map, open
    `.claude/skills/parish-site-access/SKILL.md`; it has a reader for those maps. Keep each
    scraper in the tools folder with a line in its `README.md`, so the roster can be
@@ -36,9 +38,10 @@ their *Sources*, *Bulletin publishers here* and *Rules settled*.
    cap, eCatholic sites behind Cloudflare, ...). Keep it to the lines a map job needs.
    Probe a handful of parish sites from different towns if that shows which publishers
    are common here.
-5. **Plan the batches.** Group the roster entries into batches of about four parishes that
+5. **Plan the batches.** Group the roster entries into batches of about eight parishes that
    belong together: one town, one family or cluster, or one shared pastor that a source
-   names explicitly. Entries that
+   names explicitly. Count parishes, not roster entries: a parish usually has several
+   entries, so eight parishes is often around 20 entries. Entries that
    might share a bulletin go in the same batch, so one map job settles them. Use fewer
    parishes for a family with many churches or a city centre full of closures, and give
    the Eastern Catholic or other-jurisdiction entries a batch of their own. Write

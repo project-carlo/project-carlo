@@ -22,8 +22,8 @@ export const MAX_BATCH_BYTES = 16_384;
  * can't start a series of its own.
  *
  * - pageview: a page was shown (`referrer`, `campaign` and `entry` set only here)
- * - search_select: a search result was picked (`kind` church or place;
- *   `target` the church's slug)
+ * - search_select: a search result was picked (`kind` church, city (one Carlo
+ *   serves) or place; `target` the church's slug)
  * - locate: "Use my location" (`kind` located, denied, unavailable or unsupported)
  * - filter: the map's filters changed (`kind` event_type, days or clear;
  *   `detail` the event type)

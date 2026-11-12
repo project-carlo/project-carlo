@@ -221,7 +221,8 @@ _FLOAT_FIELDS = {"latitude", "longitude"}
 _DATE_FIELDS = {"decided", "last_mass", "revisit_after", "promoted"}
 _EVIDENCE_FIELDS = ("url", "seen", "quote", "note")
 
-META_FIELDS = ("name", "state", "website", "status", "gcatholic", "city_aliases", "promoted")
+META_FIELDS = ("name", "state", "website", "status", "gcatholic", "city_aliases",
+               "audit_ignore_groups", "promoted")
 META_STATUSES = ("exploring", "promoted")
 META_TEMPLATE = """\
 ## Sources
@@ -318,6 +319,8 @@ def _plain(value: Any) -> Any:
 
 # ── Frontmatter files ───────────────────────────────────────────────────────
 _FRONT_RE = re.compile(r"\A---[ \t]*\n(.*?)\n---[ \t]*(?:\n|\Z)(.*)\Z", re.S)
+# libyaml's parser reads the same records about ten times faster.
+_Loader = getattr(yaml, "CSafeLoader", yaml.SafeLoader)
 
 
 def parse_file(path: Path) -> tuple[dict[str, Any], str]:
@@ -326,7 +329,7 @@ def parse_file(path: Path) -> tuple[dict[str, Any], str]:
     if not m:
         raise DioceseError(f"{path}: must start with a '---' YAML frontmatter block")
     try:
-        front = yaml.safe_load(m.group(1)) or {}
+        front = yaml.load(m.group(1), Loader=_Loader) or {}
     except yaml.YAMLError as e:
         raise DioceseError(f"{path}: frontmatter is not valid YAML: {e}") from None
     if not isinstance(front, dict):
@@ -780,7 +783,9 @@ class _Owners:
     live_church: dict[str, dict[str, str]] = field(default_factory=dict)
 
 
-def _owners(diocese: str) -> _Owners:
+def _owners(diocese: str, loaded: Mapping[str, Diocese] | None = None) -> _Owners:
+    """What the live CSVs and every other diocese already claim. `loaded` holds
+    dioceses the caller has already read, so they are not parsed again."""
     o = _Owners()
     for row in read_live_csv(storage.PARISHES_CSV_PATH):
         o.live_parish[row.get("slug", "")] = row
@@ -790,7 +795,7 @@ def _owners(diocese: str) -> _Owners:
         if other == diocese:
             continue
         where = f"diocese {other!r}"
-        d = load(other)
+        d = loaded[other] if loaded and other in loaded else load(other)
         for slug, r in d.of(PARISH).items():
             o.parish.setdefault(slug, where)
             o.website.setdefault(url_key(r.get("website", "")), where)
@@ -1004,8 +1009,6 @@ def export_rows(d: Diocese) -> tuple[list[dict[str, str]], list[dict[str, str]]]
 
 
 PARISH_CSV_FIELDS = ["slug", "name", "website", "bulletin_provider", "provider_id"]
-# Set on the parish rows `promote` adds; kept as it is on rows already live.
-FETCH_ONLY_COLUMN = "fetch_only"
 CHURCH_CSV_FIELDS = [
     "parish_id", "slug", "name", "line1", "line2", "city", "state", "postal_code",
     "name_verified", "address_verified", "latitude", "longitude",
@@ -1205,9 +1208,13 @@ def write_help() -> str:
                                subsequent_indent="    ")
     lines += [
         "",
-        "evidence items: {url, seen, quote?, note?}. Lists replace the stored list: read the",
-        "record first and send every item to keep. Roster links (<roster>:<id>) go on",
+        "evidence items: {url, seen, quote?, note?}. Lists replace the stored list; with",
+        "--append, their items are added to it. Roster links (<roster>:<id>) go on",
         "churches, exclusions and open records, never on a parish.",
+        "",
+        "body_sections: {\"<heading>\": \"<text>\"} replaces one section of the body and keeps",
+        "the rest; body_append, the same shape, adds to the end of a section. A heading the",
+        "body lacks becomes a new ## section at the end. Use them or body, never both.",
         "",
         "example: a new church, linked to two roster entries",
         "  pnpm --silent diocese write <d> church st-ann-town --create --file - <<'JSON'",
@@ -1221,13 +1228,49 @@ def write_help() -> str:
     return "\n".join(lines)
 
 
+_HEADING_RE = re.compile(r"^(#{1,6})[ \t]+(.+?)[ \t]*$", re.MULTILINE)
+_BODY_PATCHES = {"body_sections": False, "body_append": True}  # does it keep the section's text?
+
+
+def _valid_sections(value: Any) -> bool:
+    return isinstance(value, dict) and all(
+        isinstance(text, str) and text.strip() and heading.strip()
+        and "\n" not in heading and not heading.startswith("#")
+        for heading, text in value.items())
+
+
+def _patch_section(body: str, heading: str, text: str, *, append: bool) -> str:
+    """`body` with one section replaced, or added to with `append`.
+
+    A section runs to the next heading of its level or higher, so replacing one
+    replaces its subsections too. A heading the body lacks is added at the end.
+    """
+    text = text.strip("\n")
+    marks = list(_HEADING_RE.finditer(body))
+    found = [m for m in marks if m.group(2) == heading]
+    if len(found) > 1:
+        raise DioceseError(f"body has {len(found)} sections headed {heading!r}; "
+                           "send the whole body instead. Nothing was written.")
+    if not found:
+        return f"{body.rstrip()}\n\n## {heading}\n\n{text}\n"
+    mark = found[0]
+    end = next((m.start() for m in marks
+                if m.start() > mark.start() and len(m.group(1)) <= len(mark.group(1))), len(body))
+    current = body[mark.end():end].strip("\n")
+    content = f"{current}\n\n{text}" if append and current else text
+    rest = body[end:]
+    return f"{body[:mark.end()]}\n\n{content}\n" + (f"\n{rest}" if rest else "")
+
+
 def write_record(diocese: str, kind_name: str, slug: str, payload: Mapping[str, Any], *,
-                 create: bool = False) -> dict[str, Any]:
+                 create: bool = False, append: bool = False) -> dict[str, Any]:
     """Patch one record from typed JSON, validating before any file changes.
 
-    Lists replace their previous value; omitted fields remain unchanged. Creation
-    must be explicit so a mistyped slug cannot silently produce a second record.
-    Incomplete drafts are allowed and reported, just as with `new`.
+    Lists replace their previous value, or gain their new items with `append`;
+    omitted fields remain unchanged. `body_sections` and `body_append` patch the
+    body section by section. Creation must be explicit so a mistyped slug cannot
+    silently produce a second record. Incomplete drafts are allowed and reported,
+    just as with `new`.
     """
     if kind_name not in KINDS:
         raise DioceseError(f"unknown record kind {kind_name!r}")
@@ -1236,15 +1279,26 @@ def write_record(diocese: str, kind_name: str, slug: str, payload: Mapping[str, 
     if not isinstance(payload, Mapping):
         raise DioceseError("record JSON must be an object of fields plus optional body")
     kind = KINDS[kind_name]
-    unknown = sorted(set(payload) - set(kind.fields) - {"body"})
+    if append and create:
+        raise DioceseError("--append adds to a stored record; a new record has none yet")
+    if "body" in payload and _BODY_PATCHES.keys() & payload.keys():
+        raise DioceseError("body replaces the whole explanation, so it can't go with "
+                           "body_sections or body_append. Nothing was written.")
+    unknown = sorted(set(payload) - set(kind.fields) - {"body", *_BODY_PATCHES})
     if unknown:
         hints = list(dict.fromkeys(h for f in unknown if (h := _ELSEWHERE.get((kind_name, f)))))
         raise DioceseError(
             f"{kind_name} has no writable fields: {', '.join(unknown)}"
             + "".join(f"\n  {h}" for h in hints)
-            + f"\n  {kind_name} fields: {', '.join(kind.fields)}, body"
+            + f"\n  {kind_name} fields: {', '.join(kind.fields)}, body, "
+            + ", ".join(_BODY_PATCHES) +
             " (types and an example: `diocese write --help`). Nothing was written.")
     for key, value in payload.items():
+        if key in _BODY_PATCHES:
+            if not _valid_sections(value):
+                raise DioceseError(f"{key} must map headings, without their #s, to "
+                                   "non-empty text. Nothing was written.")
+            continue
         if key in _LIST_FIELDS:
             valid = isinstance(value, list) and all(isinstance(v, str) for v in value)
         elif key in _OBJECT_LIST_FIELDS:
@@ -1274,7 +1328,18 @@ def write_record(diocese: str, kind_name: str, slug: str, payload: Mapping[str, 
         if path.exists() and slug not in before.of(kind):
             raise DioceseError(f"{kind.dir}/{slug}.md does not parse; repair it before editing")
         record = _deep_copy(_get(before, kind, slug))
-    record.update(_deep_copy(dict(payload)))
+    changes = _deep_copy(dict(payload))
+    patches = {key: changes.pop(key, {}) for key in _BODY_PATCHES}
+    if append:
+        for key in changes.keys() & (_LIST_FIELDS | _OBJECT_LIST_FIELDS):
+            merged = list(record.get(key) or [])
+            merged += [item for i, item in enumerate(changes[key])
+                       if item not in merged and item not in changes[key][:i]]
+            changes[key] = merged
+    record.update(changes)
+    for key, keep in _BODY_PATCHES.items():
+        for heading, text in patches[key].items():
+            record["body"] = _patch_section(record.get("body") or "", heading, text, append=keep)
     # JSON uses the stored types, never flag-style coercion. Reject invalid data
     # rather than silently dropping an evidence item during serialization.
     target_problems = Problems()
@@ -1527,8 +1592,12 @@ def show_diocese(diocese: str) -> dict[str, Any]:
 def validate(diocese: str | None = None) -> dict[str, Any]:
     """Check one diocese, or all; `passed` is false if any has errors."""
     report = {}
+    # Each diocese's check reads every other diocese, so read them all once.
+    loaded = None if diocese else {slug: load(slug) for slug in diocese_slugs()}
     for slug in [diocese] if diocese else diocese_slugs():
-        report[slug] = problems(load(slug), rosters=roster_ids(slug)).as_dict()
+        d = loaded[slug] if loaded else load(slug)
+        report[slug] = problems(d, owners=_owners(slug, loaded),
+                                rosters=roster_ids(slug)).as_dict()
         report[slug]["counts"] = {k: len(v) for k, v in report[slug].items()}
     return {"passed": not any(r["errors"] for r in report.values()), "dioceses": report}
 
@@ -1581,13 +1650,13 @@ def promote(diocese: str, *, dry_run: bool = False) -> dict[str, Any]:
     renamed away), promoted churches that are now in excluded/ or open/, and `no_bulletin`
     and `unsupported` parishes with their churches (see `unpublished`). A record
     that is blank where the live row has a value (coordinates from `geocode`,
-    flags from `verify`) takes the live value instead of erasing it. Every
+    the verified flags) takes the live value instead of erasing it. Every
     promoted record is stamped `promoted: <date>`, which is what lets it share
     its slug with a live row from then on; an `unpublished` one loses its stamp.
 
-    A parish row added here is marked `fetch_only`: the weekly run fetches its
+    A parish added here has no approved seed yet: the weekly run fetches its
     bulletins but makes no model call for it and leaves it off the website
-    until the flag is cleared. Rows already live keep their flag.
+    until its seed (data/seeds/) is approved.
     """
     d = _ready(diocese)
     after = d.copy()
@@ -1639,16 +1708,13 @@ def promote(diocese: str, *, dry_run: bool = False) -> dict[str, Any]:
 
     new_p, report["parishes"] = apply(PARISH, live_p, parish_rows, retired_p)
     added_p = set(report["parishes"]["added"])
-    for row in new_p:
-        if row.get("slug") in added_p:
-            row[FETCH_ONLY_COLUMN] = "true"
     new_c, report["churches"] = apply(CHURCH, live_c, church_rows, retired_c)
 
     live_church_parents = {row.get("parish_id") for row in new_c}
     orphans = sorted(live_church_parents - {row.get("slug") for row in new_p} - {None, ""})
     if orphans:
         raise DioceseError(f"refused: churches.csv would reference missing parishes {orphans}")
-    report["removed_rows_with_events"] = _referenced_by_events(
+    report["removed_rows_with_events"] = _referenced_by_schedules(
         report["churches"]["removed"], report["parishes"]["removed"],
     )
 
@@ -1660,9 +1726,7 @@ def promote(diocese: str, *, dry_run: bool = False) -> dict[str, Any]:
                     r.pop("promoted", None)
                 else:
                     r["promoted"] = r.get("promoted") or stamp
-        _write_live_csv(
-            storage.PARISHES_CSV_PATH, [*PARISH_CSV_FIELDS, FETCH_ONLY_COLUMN], new_p,
-        )
+        _write_live_csv(storage.PARISHES_CSV_PATH, PARISH_CSV_FIELDS, new_p)
         _write_live_csv(storage.CHURCHES_CSV_PATH, CHURCH_CSV_FIELDS, new_c)
         _save(d, after)
         meta_path = diocese_dir(diocese) / META_FILE
@@ -1672,22 +1736,24 @@ def promote(diocese: str, *, dry_run: bool = False) -> dict[str, Any]:
         report["next"] = (
             "run `pnpm test`; the next pipeline command seeds the new rows into the database"
             + (
-                f". The {len(added_p)} new parishes are fetch-only: clear `fetch_only` in"
-                " data/parishes.csv to process them and show them on the site"
+                f". The {len(added_p)} new parishes are fetched but not processed or shown"
+                " until each has an approved seed (data/seeds/)"
                 if added_p else ""
             )
         )
     return report
 
 
-def _referenced_by_events(church_slugs: list[str], parish_slugs: list[str] = ()) -> list[str]:
-    """Churches that would lose events in the local pipeline database.
+def _referenced_by_schedules(
+    church_slugs: list[str], parish_slugs: list[str] = (),
+) -> list[str]:
+    """Churches with entries in the believed schedules of the local pipeline database.
 
     Worth knowing before promoting: the next pipeline command re-seeds the
-    database from the CSVs. A removed church loses its events, and a removed
-    parish takes its bulletins, and every event read from them, with it, even
-    for churches that move to another parish. The weekly run holds for review
-    when that happens.
+    database from the CSVs. A removed church leaves the site with its entries,
+    and a removed parish takes its whole schedule with it, even for churches
+    that move to another parish. The weekly run holds for review when that
+    happens.
     """
     import sqlite3
 
@@ -1698,10 +1764,10 @@ def _referenced_by_events(church_slugs: list[str], parish_slugs: list[str] = ())
         conn = sqlite3.connect(f"file:{storage.DEFAULT_DB_PATH}?mode=ro", uri=True)
         try:
             rows = conn.execute(
-                f"""SELECT DISTINCT c.slug FROM church c
-                    JOIN event e ON e.church_id = c.id
-                    JOIN bulletin b ON b.id = e.bulletin_id
-                    JOIN parish p ON p.id = b.parish_id
+                f"""SELECT DISTINCT c.slug FROM current_schedule s
+                    JOIN schedule_entry e ON e.id = s.entry_id
+                    JOIN church c ON c.id = e.church_id
+                    JOIN parish p ON p.id = s.parish_id
                     WHERE c.slug IN ({", ".join("?" * len(churches))})
                        OR p.slug IN ({", ".join("?" * len(parishes))})""",
                 [*churches, *parishes],

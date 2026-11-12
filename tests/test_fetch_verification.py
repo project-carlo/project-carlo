@@ -47,7 +47,8 @@ def _check(monkeypatch, pdf: bytes, *, url: str = FIXED, fetch_url: str | None =
     monkeypatch.setattr(
         fetch_check, "_resolve", lambda *a, **k: fetch.BulletinLink(url, fetch_url or url),
     )
-    monkeypatch.setattr(fetch, "_download_pdf", lambda **k: pdf)
+    # Served over HTTP, so a body that is not a PDF is refused as the fetch stage refuses it.
+    monkeypatch.setattr(fetch, "_http_get", lambda *a, **k: fetch._Response(pdf))
     return _check_one(
         "renovo", fetch.FetchSource("other", HOME), SnapshotPage([]),
         reference_date=TODAY, download=kwargs.pop("download", True), **kwargs,
@@ -182,9 +183,18 @@ def test_transport_success_is_separate_from_pdf_validity(
 ):
     row = _check(monkeypatch, content)
     assert row["status"] == legacy
+    if legacy == "not_pdf":
+        assert row["bytes"] == len(content)
+        assert "Not a bulletin" in row["detail"]
     assert row["verification"]["transport"]["status"] == "ok"
     assert row["verification"]["document_type"]["status"] == document_type
     assert row["verification"]["overall"] == "failed"
+
+
+def test_a_pdf_after_a_stray_newline_passes_as_the_fetch_stage_passes_it(monkeypatch):
+    row = _check(monkeypatch, b"\r\n" + _pdf(IDENTITY))
+    assert row["status"] == "ok"
+    assert row["verification"]["document_type"]["status"] == "pdf"
 
 
 def test_download_failure_keeps_independent_url_evidence(monkeypatch):

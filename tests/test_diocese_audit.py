@@ -19,6 +19,7 @@ def dataset(monkeypatch):
         monkeypatch.setattr(records, "load", lambda _: d)
         monkeypatch.setattr(report, "_aliases", lambda _: {})
         monkeypatch.setattr(report, "roster_names", lambda _: [])
+        monkeypatch.setattr(records, "load_meta", lambda _: {})
         return d
 
     return load
@@ -191,6 +192,39 @@ def test_review_can_explain_publication_membership_without_masthead_keyword(data
     dataset({"a": {"publication_reviews": [review(decision="shared", text=(
         "The publisher's membership list includes both Ann and Bede."))]}, "b": {}})
     assert pair(report.audit("test"))["status"] == "shared"
+
+
+def test_a_source_marked_as_no_bulletin_grouping_makes_no_pairs(dataset, monkeypatch):
+    rosters = {"directory": [{"id": "ann", "group": "Deanery 1"},
+                             {"id": "bede", "group": "Deanery 1"}],
+               "families": [{"id": "ann", "group": "Family 1"},
+                            {"id": "bede", "group": "Family 1"}]}
+    churches = {"ann": {"parish": "a", "roster": ["directory:ann", "families:ann"]},
+                "bede": {"parish": "b", "roster": ["directory:bede", "families:bede"]}}
+    dataset({"a": {"group": "Deanery 2"}, "b": {"group": "Deanery 2"}}, churches=churches)
+    monkeypatch.setattr(report, "roster_names", lambda _: list(rosters))
+    monkeypatch.setattr(report, "load_roster", lambda _, name: {"entries": rosters[name]})
+    monkeypatch.setattr(records, "load_meta",
+                        lambda _: {"audit_ignore_groups": ["directory", "parishes"]})
+
+    result = report.audit("test")
+
+    assert [g["group"] for g in result["groups_spanning_rows"]] == ["families: Family 1"]
+    assert result["ignored_group_sources"] == ["directory", "parishes"]
+
+
+def test_ignoring_a_source_that_does_not_exist_is_an_error(dataset, monkeypatch):
+    dataset({"a": {}})
+    monkeypatch.setattr(records, "load_meta", lambda _: {"audit_ignore_groups": ["directry"]})
+    with pytest.raises(records.DioceseError, match="directry"):
+        report.audit("test")
+
+
+def test_ignored_sources_must_be_a_list(dataset, monkeypatch):
+    dataset({"a": {}})
+    monkeypatch.setattr(records, "load_meta", lambda _: {"audit_ignore_groups": "directory"})
+    with pytest.raises(records.DioceseError, match="must be a list"):
+        report.audit("test")
 
 
 def test_one_review_does_not_settle_other_members_of_a_group(dataset):

@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-paul-whitesboro",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-25T13:21:47Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-25T18:59:00Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Claude)",
+  "approved_at": "2026-11-08T20:49:39Z",
   "summary": "Two churches: St. Paul's, Whitesboro and St. Leo & St. Ann's, Holland Patent. The newest bulletin has no front-page schedule box, so its times come from the Mass intentions and weekly listings and the older bulletins' front-page boxes; all agree. One open question: whether the Nov 3 Deacon Speakin evening (talk plus Eucharistic Adoration, 6-7 PM) should be recorded as Adoration.",
   "blocked_reason": null,
   "bulletins": [
@@ -1053,9 +1053,22 @@
     },
     {
       "id": "s13",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-whitesboro",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-03",
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Deacon Speakin: presentation on Adoration"
+      },
       "page": 4,
       "sources": [
         {
@@ -1115,7 +1128,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": "dropped",
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:49:39Z"
+      }
     },
     {
       "id": "s14",

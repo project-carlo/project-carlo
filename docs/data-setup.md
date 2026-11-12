@@ -16,11 +16,11 @@ Cloudflare dashboard → **R2 Object Storage** → **Create bucket**.
 If R2 hasn't been enabled on the account yet, Cloudflare asks you to turn it
 on first. The free tier covers 10 GB. Nearly all of the bucket is bulletin
 PDFs, one per parish per week: `fetch` stores only the pages the pipeline
-reads, with images downsampled to 150 dpi, and old runs are pruned after each
-publish (see [Day to day](#day-to-day)). To cap the PDFs too, add a lifecycle
-rule on the `bulletins/` prefix (bucket → **Settings** → **Object lifecycle
-rules**): an old bulletin is only needed to re-extract it with a new
-classifier, and a missing one is skipped with a warning.
+reads, with images downsampled to 150 dpi and nothing over 20 MB, and old runs
+are pruned after each publish (see [Day to day](#day-to-day)). To cap the PDFs
+too, add a lifecycle rule on the `bulletins/` prefix (bucket → **Settings** →
+**Object lifecycle rules**): an old bulletin is only needed to re-extract it
+with a new classifier, and a missing one is skipped with a warning.
 
 If you chose a **jurisdiction** (e.g. EU) instead of automatic, the bucket's
 S3 endpoint looks like `https://<ACCOUNT_ID>.eu.r2.cloudflarestorage.com`.
@@ -59,8 +59,7 @@ secrets; use the website in a mobile browser.)
 | `R2_WRITE_SECRET_ACCESS_KEY` | Secret Access Key of `project-carlo-write` |
 | `R2_READ_ACCESS_KEY_ID` | Access Key ID of `project-carlo-read` |
 | `R2_READ_SECRET_ACCESS_KEY` | Secret Access Key of `project-carlo-read` |
-| `GEMINI_API_KEY` | the Gemini API key |
-| `OPENAI_API_KEY` | the OpenAI API key, for update-mode (seeded) parishes, which run on `gpt-6-luna` |
+| `OPENAI_API_KEY` | the OpenAI API key: every parish's bulletins are read by `gpt-6-luna` |
 
 Optional: `HEALTHCHECK_URL`, a ping URL from a service such as
 [healthchecks.io](https://healthchecks.io) (free). Set its schedule to weekly

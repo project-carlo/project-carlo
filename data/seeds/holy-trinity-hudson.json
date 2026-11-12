@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "holy-trinity-hudson",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-25T13:22:43Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-25T19:04:03Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Claude)",
+  "approved_at": "2026-11-08T20:43:50Z",
   "summary": "Three churches: St. Mary (Hudson), Church of the Resurrection (Germantown), Nativity Chapel (Linlithgo, seasonal). Weekday, weekend and Saturday confession times are printed in all five bulletins and agree with the parish site. Germantown confession is before and after Masses with no clock time; before uses the site's 15 minutes, after uses POLICY. Open: how to record the Linlithgo Mass season (site says last Mass Nov 21, resumes Apr 3).",
   "blocked_reason": null,
   "bulletins": [
@@ -845,9 +845,27 @@
     },
     {
       "id": "s11",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-linlithgo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 4,
+          "start_day": 3,
+          "end_month": 11,
+          "end_day": 21
+        },
+        "note": null
+      },
       "page": 3,
       "sources": [
         {
@@ -964,7 +982,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:38Z"
+      }
     },
     {
       "id": "s12",

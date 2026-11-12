@@ -61,7 +61,7 @@ test("the search box only claims a list while its dropdown is open", async ({
   const input = page.getByRole("combobox");
   await expect(input).toBeVisible({ timeout: 15_000 });
   await expect(input).toHaveAccessibleName(
-    "Search for a city, ZIP code, or address",
+    "Search for a city, ZIP code, address, or church",
   );
 
   // Closed: not expanded, and no pointers at a list or item that isn't there.
@@ -69,7 +69,7 @@ test("the search box only claims a list while its dropdown is open", async ({
   await expect(input).not.toHaveAttribute("aria-controls");
   await expect(input).not.toHaveAttribute("aria-activedescendant");
 
-  // Open (place mode offers "Use my location" straight away): every pointer
+  // Open (it offers "Use my location" straight away): every pointer
   // names an element on the page. cmdk only sets the active item once there
   // is a selection to move, so that one may be absent.
   await input.focus();

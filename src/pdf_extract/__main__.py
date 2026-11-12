@@ -25,11 +25,7 @@ from datetime import date
 from pathlib import Path
 from typing import Any
 
-from pdf_extract.apply import (
-    apply_detect_results,
-    apply_geocode_results,
-    apply_verify_results,
-)
+from pdf_extract.apply import apply_detect_results, apply_geocode_results
 from pdf_extract.blobstore import CachedBlobStore, LocalBlobStore, remote_from_env, set_store
 from pdf_extract.classifiers import ClassifierOptionError, available_classifiers
 from pdf_extract.classifiers.openai_responses import IMAGE_DETAILS, REASONING_EFFORTS
@@ -37,12 +33,14 @@ from pdf_extract.compare import compare
 from pdf_extract.datasync import (
     DEFAULT_KEEP_MONTHLY,
     DEFAULT_KEEP_RECENT,
+    DEFAULT_RECOMPACT_MIN_BYTES,
     build_deploy_snapshot,
     promote,
     pull,
     push_candidate,
 )
 from pdf_extract.datasync import prune as data_prune
+from pdf_extract.datasync import recompact as data_recompact
 from pdf_extract.datasync import status as data_status
 from pdf_extract.db import create_db, ensure_db
 from pdf_extract.detect import run_detection
@@ -67,16 +65,13 @@ from pdf_extract.labeling.server import LabelerApp
 from pdf_extract.labeling.server import serve as serve_labeler
 from pdf_extract.paths import DATA_DIR
 from pdf_extract.process import process_bulletins
-from pdf_extract.recurrence import apply_recurrence
 from pdf_extract.replay_gates import archived_run_ids, replay
 from pdf_extract.replay_gates import render as render_replay
 from pdf_extract.schedule.cli import ScheduleCommandError, add_schedule_parser
 from pdf_extract.schedule_diff import parish_changed
-from pdf_extract.schedule_extraction import DEFAULT_GEMINI_MODEL
 from pdf_extract.seeding.cli import add_seed_parser
 from pdf_extract.seeding.queries import SeedError
-from pdf_extract.storage import DEFAULT_DB_PATH, connect_db, delete_db, utc_now_iso
-from pdf_extract.verify import verify_churches
+from pdf_extract.storage import DEFAULT_DB_PATH, delete_db, utc_now_iso
 from pdf_extract.verify_frontend_snapshot import verify_frontend_snapshot
 from pdf_extract.weekly import RunScopeError, run_weekly
 
@@ -213,8 +208,7 @@ def _split_csv(values: list[str] | None) -> set[str] | None:
 def _cmd_process(args: argparse.Namespace) -> Result:
     _ensure_db()
     return process_bulletins(
-        parish_name=args.parish, model=args.model, concurrency=args.concurrency,
-        include_fetch_only=args.include_fetch_only,
+        parish_name=args.parish, concurrency=args.concurrency,
     )
 
 
@@ -277,15 +271,6 @@ def _cmd_detect_apply(_args: argparse.Namespace) -> Result:
     return apply_detect_results()
 
 
-def _cmd_verify_run(args: argparse.Namespace) -> Result:
-    _ensure_db()
-    return verify_churches(parish_name=args.parish, model=args.model)
-
-
-def _cmd_verify_apply(_args: argparse.Namespace) -> Result:
-    return apply_verify_results()
-
-
 def _cmd_geocode_run(args: argparse.Namespace) -> Result:
     _ensure_db()
     return run_backfill(
@@ -300,20 +285,10 @@ def _cmd_geocode_apply(_args: argparse.Namespace) -> Result:
     return apply_geocode_results()
 
 
-def _cmd_recurrence_apply(_args: argparse.Namespace) -> Result:
-    _ensure_db()
-    conn = connect_db()
-    try:
-        return apply_recurrence(conn)
-    finally:
-        conn.close()
-
-
 def _cmd_weekly(args: argparse.Namespace) -> Result:
     run_id = args.run_id or "local-" + utc_now_iso().replace(":", "").replace("-", "")
     return run_weekly(
         run_id=run_id,
-        model=args.model,
         concurrency=args.concurrency,
         git_sha=args.git_sha,
         trigger=args.trigger,
@@ -351,6 +326,10 @@ def _cmd_data_prune(args: argparse.Namespace) -> Result:
     return data_prune(
         keep_recent=args.keep_recent, keep_monthly=args.keep_monthly, apply=args.apply,
     )
+
+
+def _cmd_data_recompact(args: argparse.Namespace) -> Result:
+    return data_recompact(min_bytes=int(args.min_mb * 1e6), apply=args.apply)
 
 
 def _cmd_db_create(args: argparse.Namespace) -> Result:
@@ -464,22 +443,13 @@ def _build_parser() -> argparse.ArgumentParser:
     _add_common_args(fetch_check_parser)
 
     # -- process --
-    process_parser = subparsers.add_parser("process", help="Process fetched PDFs with Gemini")
-    process_parser.add_argument("--parish", help="Parish name (omit to run for all)")
-    process_parser.add_argument(
-        "--model", default=DEFAULT_GEMINI_MODEL,
-        help=(
-            f"Gemini model for extract-mode parishes (default: {DEFAULT_GEMINI_MODEL}); "
-            "update-mode parishes always run on gpt-6-luna"
-        ),
+    process_parser = subparsers.add_parser(
+        "process", help="Update the seeded parishes' schedules from their new bulletins",
     )
+    process_parser.add_argument("--parish", help="Parish name (omit to run for all)")
     process_parser.add_argument(
         "--concurrency", type=int, default=5,
         help="Number of parallel model calls (default: 5)",
-    )
-    process_parser.add_argument(
-        "--include-fetch-only", action="store_true",
-        help="Also process fetch-only parishes (fetch_only in parishes.csv), e.g. to try a few",
     )
     process_parser.set_defaults(handler=_cmd_process)
     _add_common_args(process_parser)
@@ -587,24 +557,6 @@ def _build_parser() -> argparse.ArgumentParser:
     detect_apply_parser.set_defaults(handler=_cmd_detect_apply)
     _add_common_args(detect_apply_parser)
 
-    # -- verify --
-    verify_parser = subparsers.add_parser("verify", help="Verify church data against latest bulletin")
-    verify_parser.set_defaults(help_parser=verify_parser)
-    verify_subparsers = verify_parser.add_subparsers(dest="verify_command")
-
-    verify_run_parser = verify_subparsers.add_parser("run", help="Run church verification")
-    verify_run_parser.add_argument("--parish", help="Parish name (omit for all)")
-    verify_run_parser.add_argument(
-        "--model", default=DEFAULT_GEMINI_MODEL,
-        help=f"Gemini model (default: {DEFAULT_GEMINI_MODEL})",
-    )
-    verify_run_parser.set_defaults(handler=_cmd_verify_run)
-    _add_common_args(verify_run_parser)
-
-    verify_apply_parser = verify_subparsers.add_parser("apply", help="Write verify results into churches.csv")
-    verify_apply_parser.set_defaults(handler=_cmd_verify_apply)
-    _add_common_args(verify_apply_parser)
-
     # -- geocode --
     geocode_parser = subparsers.add_parser("geocode", help="Backfill church lat/lng from address")
     geocode_parser.set_defaults(help_parser=geocode_parser)
@@ -622,31 +574,12 @@ def _build_parser() -> argparse.ArgumentParser:
     geocode_apply_parser.set_defaults(handler=_cmd_geocode_apply)
     _add_common_args(geocode_apply_parser)
 
-    # -- recurrence --
-    recurrence_parser = subparsers.add_parser(
-        "recurrence",
-        help="Detect dated events that repeat weekly and promote them",
-    )
-    recurrence_parser.set_defaults(help_parser=recurrence_parser)
-    recurrence_subparsers = recurrence_parser.add_subparsers(dest="recurrence_command")
-
-    recurrence_apply_parser = recurrence_subparsers.add_parser(
-        "apply",
-        help="Re-run weekly promotion over each parish's current events",
-    )
-    recurrence_apply_parser.set_defaults(handler=_cmd_recurrence_apply)
-    _add_common_args(recurrence_apply_parser)
-
     # -- weekly --
     weekly_parser = subparsers.add_parser(
         "weekly",
         help="Run the weekly pipeline (fetch, process, snapshot, checks, report)",
     )
     weekly_parser.add_argument("--run-id", help="Run id (default: local-<timestamp>)")
-    weekly_parser.add_argument(
-        "--model", default=DEFAULT_GEMINI_MODEL,
-        help=f"Gemini model (default: {DEFAULT_GEMINI_MODEL})",
-    )
     weekly_parser.add_argument("--concurrency", type=int, default=5)
     weekly_parser.add_argument("--git-sha", default=None)
     weekly_parser.add_argument("--trigger", default=None)
@@ -741,6 +674,22 @@ def _build_parser() -> argparse.ArgumentParser:
     )
     data_prune_parser.set_defaults(handler=_cmd_data_prune)
     _add_common_args(data_prune_parser)
+
+    data_recompact_parser = data_subparsers.add_parser(
+        "recompact",
+        help="Compact stored bulletins over a size again, keeping their keys",
+    )
+    data_recompact_parser.add_argument(
+        "--min-mb", type=float, default=DEFAULT_RECOMPACT_MIN_BYTES / 1e6,
+        help="Stored size to start from "
+        f"(default {DEFAULT_RECOMPACT_MIN_BYTES / 1e6:.0f} MB)",
+    )
+    data_recompact_parser.add_argument(
+        "--apply", action="store_true",
+        help="Replace them; without it, only report what would change",
+    )
+    data_recompact_parser.set_defaults(handler=_cmd_data_recompact)
+    _add_common_args(data_recompact_parser)
 
     # -- diocese (exploring new dioceses; quiet by default, the JSON is the output) --
     add_diocese_parser(

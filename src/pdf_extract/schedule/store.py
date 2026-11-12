@@ -104,6 +104,15 @@ def update_mode_slugs(conn: sqlite3.Connection) -> set[str]:
     return {row[0] for row in rows}
 
 
+def unseeded_slugs(conn: sqlite3.Connection) -> set[str]:
+    """Slugs of the parishes without an approved seed: fetched, but not processed or shown.
+
+    A parish goes live when its approved seed file is loaded (`seeding.loader`).
+    """
+    rows = conn.execute("SELECT slug FROM parish").fetchall()
+    return {row[0] for row in rows} - update_mode_slugs(conn)
+
+
 def is_update_mode(conn: sqlite3.Connection, parish_id: int) -> bool:
     return conn.execute(
         "SELECT 1 FROM schedule_revision WHERE parish_id = ? AND source_kind = 'seed' LIMIT 1",

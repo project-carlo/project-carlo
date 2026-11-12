@@ -9,6 +9,13 @@ export function formatMinutesMissal(minutes: number): string {
   return `${displayH}:${m.toString().padStart(2, "0")} ${meridiem}`;
 }
 
+/** A slot's time for display: `9 a.m. – 7 p.m.` when it has an end, else
+ *  just its start. */
+export function formatTimeRange(start: number, end: number | null): string {
+  const main = formatMinutesMissal(start);
+  return end != null ? `${main} – ${formatMinutesMissal(end)}` : main;
+}
+
 /** Capitalize the first letter of a string. */
 export function titleCase(value: string): string {
   return value.charAt(0).toUpperCase() + value.slice(1);

@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "family-of-the-holy-cross-herkimer",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-25T13:19:11Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-27T00:55:01Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Claude)",
+  "approved_at": "2026-11-08T20:43:50Z",
   "summary": "Four churches (Blessed Sacrament Mohawk, St. Francis de Sales Herkimer, St. John the Baptist Newport, Sts. Anthony & Joseph Herkimer). The newest (Nov 1, 3-page) bulletin prints no Mass schedule: only Saturday 3:00 Reconciliation and a Thursday Noon Mass reference at Sts. Anthony & Joseph. Weekend Masses are settled from the Oct 11 intentions plus the parish's current Mass Times page (R6), as are the Tuesday and Friday weekday Masses. Open: Thursday 12:00 vs 12:05, a Friday Holy Hour at Newport, and the Wednesday Mass pattern.",
   "blocked_reason": null,
   "bulletins": [
@@ -402,9 +402,22 @@
     },
     {
       "id": "s8",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-anthony-joseph-herkimer",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 3,
       "sources": [
         {
@@ -485,13 +498,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:38Z"
+      }
     },
     {
       "id": "s9",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-newport",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour after the 8:30 AM Mass"
+      },
       "page": null,
       "sources": [
         {
@@ -531,13 +561,32 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:38Z"
+      }
     },
     {
       "id": "s10",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-herkimer",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": true,
+        "season": null,
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -591,13 +640,32 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:38Z"
+      }
     },
     {
       "id": "s11",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-herkimer",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Children's Mass"
+      },
       "page": null,
       "sources": [
         {
@@ -634,7 +702,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:38Z"
+      }
     }
   ]
 }

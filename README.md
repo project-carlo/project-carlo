@@ -24,10 +24,10 @@ Each Sunday a GitHub Actions workflow runs the weekly pass:
 
 1. **Fetch** finds each parish's current bulletin, through its publisher
    (ParishesOnline, eCatholic, Discover Mass) or its own website, and stores the PDF.
-2. **Process** reads each new bulletin. Most parishes are extracted from scratch by
-   Gemini. A parish with a reviewed **believed schedule** (update mode) instead
-   has an OpenAI model propose changes to that schedule, which code accepts or
-   rejects.
+2. **Process** reads each new bulletin against the parish's reviewed **believed
+   schedule**: an OpenAI model (`gpt-6-luna`) proposes changes to that schedule,
+   which code accepts or rejects. A parish is processed and shown on the site
+   once its seed (its first reviewed schedule, in `data/seeds/`) is approved.
 3. **Snapshot** builds the JSON file the website serves.
 4. **Publishing checks** compare the run with the last one. If nothing moved too
    far, the run is published and the site deployed. If something did, the run is
@@ -123,19 +123,18 @@ prints its result as JSON on success.
 | **Weekly pipeline** | |
 | `pnpm weekly:run [--parish SLUG] [--diocese SLUG]` | The whole weekly pass, locally (never publishes) |
 | `pnpm run fetch [--parish NAME] [--workers N]` | Fetch new bulletins |
-| `pnpm process [--parish NAME] [--model M] [--include-fetch-only]` | Extract or update schedules from new bulletins |
-| `pnpm recurrence:apply` | Re-run weekly-recurrence promotion over current events |
+| `pnpm process [--parish NAME]` | Update the seeded parishes' schedules from their new bulletins |
 | `pnpm extract:web` | Rebuild the web app's snapshot from the local database |
 | `pnpm verify:frontend-snapshot` | Check a new snapshot hasn't drifted too far from the previous one |
 | **Data** | |
 | `pnpm data:pull [--run-id ID] [--snapshot-only] [--no-snapshot]` | Replace the local database (and snapshot) with a published run |
 | `pnpm data:status` | Which run is published, and recent runs |
 | `pnpm data:prune [--apply]` | Which old runs pruning would delete |
+| `pnpm data:recompact [--min-mb N] [--apply]` | Which large stored bulletins compacting again would shrink |
 | `pnpm db:create` / `pnpm db:drop` | An empty database (schema and CSVs, no bulletins) / delete it |
 | **Fetching and parish data** | |
 | `pnpm fetch:check [--parish SLUG] [--provider P] [--record DIR]` | Dry-run the bulletin resolvers ([docs/fetching.md](docs/fetching.md)) |
 | `pnpm detect` / `pnpm detect:apply` | Detect each parish's bulletin provider / write it to the CSV |
-| `pnpm verify` / `pnpm verify:apply` | Check church data against the latest bulletins / write fixes to the CSV |
 | `pnpm geocode` / `pnpm geocode:apply` | Look up church coordinates from addresses / write them to the CSV |
 | `pnpm diocese <subcommand>` | Research a new diocese ([data/dioceses/README.md](data/dioceses/README.md)) |
 | **Schedules and seeding** | |
@@ -183,12 +182,10 @@ On GitHub, a passed run is published and deployed. A held run opens a
 `data-refresh` issue and can be published by hand with the **Publish Data Run**
 workflow, which also rolls back.
 
-Parishes marked `fetch_only` in `data/parishes.csv` have their bulletins fetched
-but not extracted or shown, so a new diocese can be checked before money is spent
-on it.
+Parishes without an approved seed have their bulletins fetched but not processed
+or shown, so a new diocese's bulletins can be checked while its seeds are drafted.
 
-Details, including the publishing checks, fetch-only parishes, recurrence
-detection, the workflows, deploys and a local Docker run, are in
+Details, including the publishing checks, parishes without a seed, the workflows, deploys and a local Docker run, are in
 [docs/weekly-pipeline.md](docs/weekly-pipeline.md). How fetching works, and how to
 change it safely, is in [docs/fetching.md](docs/fetching.md).
 
@@ -203,7 +200,7 @@ Everything the pipeline observes lives in Cloudflare R2 and is pulled on demand:
 | Database schema | `data/migrations/*.sql` in git | people, in pull requests |
 | Bulletin PDFs | R2 `bulletins/<parish>/<sha256>.pdf` | `fetch` |
 | Extraction results | R2 `runs/<classifier>/cache/<version>/<sha256>.json` | `process`, `extract` |
-| Bulletins, events, recurrence history, run records | the SQLite database, published per run to R2 `pipeline/runs/<run_id>/` | the pipeline |
+| Bulletins, believed schedules, run records | the SQLite database, published per run to R2 `pipeline/runs/<run_id>/` | the pipeline |
 | Website snapshot (gzipped JSON) | R2 `pipeline/runs/<run_id>/frontend.json.gz` | `weekly` |
 | Which run is live | R2 `pipeline/latest.json` | the weekly and Publish Data Run workflows |
 
@@ -293,10 +290,11 @@ classifiers and how scoring works are in
 Commands read a `.env` file in the repo root if there is one (without overriding
 variables already set).
 
-- `GEMINI_API_KEY`: for extract-mode `pnpm process` and the Gemini classifiers.
-- `OPENAI_API_KEY`: for the OpenAI classifiers (`pnpm eval`, `pnpm extract`),
-  the update-mode calls of `pnpm process` and `pnpm weekly:run`, and
-  `pnpm seed ask|extract`.
+- `OPENAI_API_KEY`: for `pnpm process` and `pnpm weekly:run`, the OpenAI
+  classifiers (`pnpm eval`, `pnpm extract`), and `pnpm seed ask|extract`.
+- `GEMINI_API_KEY`: for the Gemini classifiers (`pnpm eval`, `pnpm extract`,
+  the labeler) and `pnpm seed ask|extract` with a Gemini model. The weekly
+  pipeline doesn't use it.
 - `CARLO_SEED_CALL_LIMIT`: external calls `pnpm seed ask|extract` may make per
   parish (default 4).
 - `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`: Cloudflare R2
@@ -345,17 +343,16 @@ CSV edits show up in previews and go live on merge.
     Playwright launcher
   - `pdf_compact.py`, `pdf_truncate.py` - shrinking bulletins before they are stored
   - `duplicates.py`, `bulletin_week.py` - is a bulletin new, and which one is current
-  - `process.py` - the process stage, in extract mode or update mode
-  - `schedule_extraction.py` - the production Gemini extraction
+  - `process.py` - the process stage (the update itself is in `schedule/update.py`)
+  - `schedule_extraction.py` - the Gemini extraction the labeler, evals and seeding compare against
   - `classifiers/` - pluggable bulletin → events classifiers (Gemini, OpenAI) and their registry
   - `schedule/` - believed schedules: the change log, decision policy, update stage and hand edits
   - `seeding/` - seed files: format and checks, the agent's tools, loading approved ones
-  - `recurrence.py` - promotes repeatedly-dated events to weekly ones
   - `extract_frontend_db.py` - builds the website snapshot (the format is in its docstring)
   - `db.py`, `storage.py` - migrations, CSV seeding and SQLite helpers
   - `blobstore.py`, `datasync.py` - local/R2 storage; pulling, uploading and publishing runs
-  - `detect.py`, `verify.py`, `geocode.py`, `apply.py` - finding providers, checking
-    church data and geocoding, and writing the results back to the CSVs
+  - `detect.py`, `geocode.py`, `apply.py` - finding providers and geocoding, and
+    writing the results back to the CSVs
   - `dioceses/` - diocese research and the `diocese` command
   - `factory/` - the onboarding factory's dispatcher
   - `labeling/` - the labeler's API

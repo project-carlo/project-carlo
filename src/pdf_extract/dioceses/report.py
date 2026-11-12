@@ -257,6 +257,24 @@ def _save_links(d: Diocese, to_link: Mapping[str, set[str]]) -> dict[str, Any]:
 
 
 # ── Structure audit ─────────────────────────────────────────────────────────
+PARISH_GROUPS = "parishes"  # `audit_ignore_groups`' name for the parish records' own `group`
+
+
+def _ignored_groups(diocese: str) -> set[str]:
+    """The `group` sources `audit` skips: rosters, or parish records, that hold no bulletin
+    grouping, such as deaneries. Every member of a group is paired, so those are only noise.
+    """
+    names = records.load_meta(diocese).get("audit_ignore_groups") or []
+    if not isinstance(names, list) or not all(isinstance(name, str) for name in names):
+        raise records.DioceseError("audit_ignore_groups must be a list of roster names")
+    ignored = set(names)
+    if unknown := ignored - {PARISH_GROUPS, *roster_names(diocese)}:
+        raise records.DioceseError(
+            f"audit_ignore_groups names no roster: {', '.join(sorted(unknown))}"
+            f" (use a roster's name, or {PARISH_GROUPS!r})")
+    return ignored
+
+
 def audit(diocese: str, *, fetch: bool = False) -> dict[str, Any]:
     """Find duplicate-bulletin candidates; only content-supported reviews settle them.
 
@@ -267,14 +285,17 @@ def audit(diocese: str, *, fetch: bool = False) -> dict[str, Any]:
     """
     d = records.load(diocese)
     parishes, churches = d.of(PARISH), d.of(CHURCH)
+    ignored = _ignored_groups(diocese)
     groups: dict[str, set[str]] = {}
     for slug, r in parishes.items():
-        if r.get("group"):
+        if r.get("group") and PARISH_GROUPS not in ignored:
             groups.setdefault(f"group: {r['group']}", set()).add(slug)
     aliases = _aliases(diocese)
     idx = _index(d, aliases)
     explicit = _links(d)
     for name in roster_names(diocese):
+        if name in ignored:
+            continue
         for entry in load_roster(diocese, name)["entries"]:
             if not entry.get("group"):
                 continue
@@ -286,7 +307,7 @@ def audit(diocese: str, *, fetch: bool = False) -> dict[str, Any]:
                     groups.setdefault(f"{name}: {entry['group']}", set()).add(
                         churches[slug].get("parish", ""))
 
-    return audit_rows(d, groups, fetch=fetch)
+    return {**audit_rows(d, groups, fetch=fetch), "ignored_group_sources": sorted(ignored)}
 
 
 # ── Todo ────────────────────────────────────────────────────────────────────

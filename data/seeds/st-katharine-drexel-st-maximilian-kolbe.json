@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-katharine-drexel-st-maximilian-kolbe",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-25T13:13:18Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-26T12:15:20Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Claude)",
+  "approved_at": "2026-11-08T20:43:50Z",
   "summary": "Four churches, two parishes (St. Katharine Drexel: St. Patrick's, St. Anne's; St. Maximilian Kolbe: St. Mary's of the Lake, Epiphany). Weekend Masses, Monday/Wednesday adoration with confession, Saturday confession and the first-Friday adoration agree in the bulletins read. The newest bulletin has several dated NO MASS lines this week, recorded as cancellations over the weekly weekday Masses the website still lists. Open: whether St. Patrick's has a weekly Tuesday 8:30 Mass (bulletins print it; the website omits it).",
   "blocked_reason": null,
   "bulletins": [
@@ -1752,9 +1752,22 @@
     },
     {
       "id": "s21",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patricks-macedon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 3,
       "sources": [
         {
@@ -1849,7 +1862,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:39Z"
+      }
     },
     {
       "id": "s22",

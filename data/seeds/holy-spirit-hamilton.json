@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "holy-spirit-hamilton",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-25T13:16:21Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-26T17:25:11Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Claude)",
+  "approved_at": "2026-11-08T20:43:50Z",
   "summary": "Five churches. Weekend and weekday Masses, and the first-Friday Adoration at St. Bernard's, are in the newest schedule box. Tuesday 5:30 PM Holy Hour with Confession rotates between three churches by week of the month, taken from the parish website and matched against four bulletin calendars. Oct 27-29 Masses are replaced by Communion Services (cancellations recorded). Open: whether the stale-looking Colgate page's Sunday confession counts.",
   "blocked_reason": null,
   "bulletins": [
@@ -1570,9 +1570,22 @@
     },
     {
       "id": "s25",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "colgate-memorial-chapel-hamilton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "20:00",
+        "end_time": "20:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 8:30 PM Mass"
+      },
       "page": null,
       "sources": [
         {
@@ -1607,7 +1620,11 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:38Z"
+      }
     }
   ]
 }

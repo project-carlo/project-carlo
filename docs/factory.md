@@ -5,7 +5,7 @@ merge PRs and answer GitHub issues. Each piece of work is a **job**, small enoug
 agent and run by a fresh worker. Code decides what runs next.
 
 Each diocese goes through two Runs. A **map Run** finds every parish's bulletin and
-promotes the diocese, so its parishes go live in extract mode. A **seed Run** starts once
+promotes the diocese, so its parishes' bulletins are fetched (not yet shown). A **seed Run** starts once
 those parishes have bulletins in the database, and seeds them. An agent reviewer answers
 every open seed question and approves the seeds; the PR lists each decision so you can
 change any before merging.
@@ -76,7 +76,8 @@ seed Run  for each batch: seed × each parish ─▶ seed-review ─▶ pr ─�
 3. **Start the worker** on the Run's checkout, on the host or in a sandbox (below). The stage prompt is appended to Claude
    Code's system prompt; the first message is built in code (`render.py`): the folders,
    write boundaries, gates, the files in `reads:`, the handoff path and schema, then the
-   stage's input. `pnpm factory prompt <stage>` previews it with sizes.
+   stage's input. `pnpm factory prompt <stage>` previews it with sizes. Claude Code's
+   memory, commit attribution and `AGENTS.md` are off for workers (`WORKER_SETTINGS`).
 4. **Gate it**: the handoff exists and parses; every changed path matches the spec's
    `writes` (out-of-scope changes are reverted, and a sandboxed worker's changes that
    weren't brought back fail it the same way); HEAD didn't move; then the spec's gates.

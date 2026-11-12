@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "ss-cyril-methodius-holy-trinity-binghamton",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-10-25T13:20:16Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-27T00:53:42Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "lyonsl2 (via Claude)",
+  "approved_at": "2026-11-08T20:43:50Z",
   "summary": "Two linked parishes with two listed churches. Weekend and weekday Mass times and the Saturday confession are identical in the three bulletins read (schedule box on page 1). Open: whether to record the weekday 'after Mass by request' confessions (five slots, one question). The First Friday Devotion is excluded as a devotion.",
   "blocked_reason": null,
   "bulletins": [
@@ -711,9 +711,22 @@
     },
     {
       "id": "s10",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-binghamton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass, by request"
+      },
       "page": 1,
       "sources": [
         {
@@ -785,14 +798,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:39Z"
+      },
       "group": "weekday-confession-by-request"
     },
     {
       "id": "s11",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-binghamton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass, by request"
+      },
       "page": 1,
       "sources": [
         {
@@ -864,14 +894,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:39Z"
+      },
       "group": "weekday-confession-by-request"
     },
     {
       "id": "s12",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-binghamton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass, by request"
+      },
       "page": 1,
       "sources": [
         {
@@ -943,14 +990,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:39Z"
+      },
       "group": "weekday-confession-by-request"
     },
     {
       "id": "s13",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-cyril-methodius-binghamton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:35",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 12:05 PM Mass, by request"
+      },
       "page": 1,
       "sources": [
         {
@@ -1022,14 +1086,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:39Z"
+      },
       "group": "weekday-confession-by-request"
     },
     {
       "id": "s14",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-cyril-methodius-binghamton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:35",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 12:05 PM Mass, by request"
+      },
       "page": 1,
       "sources": [
         {
@@ -1101,7 +1182,11 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Claude)",
+        "at": "2026-11-08T20:43:39Z"
+      },
       "group": "weekday-confession-by-request"
     },
     {

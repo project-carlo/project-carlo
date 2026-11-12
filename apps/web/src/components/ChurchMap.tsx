@@ -1021,7 +1021,6 @@ export const ChurchMap = memo(function ChurchMap({
       zoomControl={false}
       whenReady={handleReady}
     >
-      {centerOn && <ChangeView center={centerOn} minZoom={selectedSoloZoom} />}
       {onViewChange && <ViewReporter onViewChange={onViewChange} />}
       <PopupPaneElevator />
       <TileLayer
@@ -1036,6 +1035,10 @@ export const ChurchMap = memo(function ChurchMap({
         onPopupRequestHandled={setHandledRequestId}
         compactPopups={compactPopups}
       />
+      {/* After the layers that listen for the map's moves: a long jump moves
+       *  it at once, firing moveend inside this effect, and on the map's first
+       *  render their listeners are only added by their own effects. */}
+      {centerOn && <ChangeView center={centerOn} minZoom={selectedSoloZoom} />}
       {centerOn?.placeTitle ? (
         <SearchPlaceMarker
           place={{

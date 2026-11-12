@@ -43,6 +43,11 @@ decide this:
   bulletins over four parishes, some with every member separate.
 
 Record the grouping in `group` anyway: `audit` uses it to find rows that may be one bulletin.
+It pairs every member, so only a grouping that might share a bulletin belongs there: a family,
+cluster or pastorate. A deanery, vicariate, county or planning region doesn't. Leave `group`
+empty for those (Philadelphia's deaneries gave 1,397 pairs no bulletin suggested). If a roster
+or the records already hold one, list the source in `diocese.md`'s `audit_ignore_groups`: a
+roster's name, or `parishes` for the records' own `group`.
 For shared-pastor directories, preserve explicit pastor-to-parish associations and their
 source. Adjacency in extracted text isn't an association; leave ambiguous links unresolved.
 
@@ -200,7 +205,8 @@ and retry triggers before making requests. Legacy records need no mass backfill.
   times.` "Own masthead" or "different cover" alone don't count, nor does "not … read" or
   "need to check" in the same sentence. `write` and `validate` warn about a review audit
   won't count, and say why.
-- `group`: the diocese's grouping, e.g. `Family #31`.
+- `group`: a grouping that might share a bulletin, e.g. `Family #31`, never an administrative
+  region (see above).
 - No `roster` and no address: a parish row is a bulletin, not a place. Its roster
   entries and addresses go on its churches (or its `excluded/` and `open/` records).
 - `replaces`: slugs of rows merged or renamed into this one. Maintained by `merge` and
@@ -243,12 +249,22 @@ fetches each URL and checks the quote is still there, so write quotes that can b
 ### Structured writes and bounded research
 
 `write <d> <kind> <slug> --file record.json` accepts flat record fields plus a `body`
-string, patches existing fields and replaces each supplied list in full. Preserve prior
-items when extending `evidence`, `research` or `publication_reviews`; omitted fields stay
-unchanged. It validates and writes atomically, returning slug, path and validation counts.
-`--file -` reads stdin. Use `--create` only when explicitly creating a new record; `new`
-and `merge` remain supported. Supplying `body` replaces the explanation, so include the
-complete intended body. For example, a patch to an existing parish (illustrative only):
+string, patches existing fields and replaces each supplied list in full; omitted fields
+stay unchanged. It validates and writes atomically, returning slug, path and validation
+counts. `--file -` reads stdin. Use `--create` only when explicitly creating a new record;
+`new` and `merge` remain supported.
+
+To extend a record, add `--append`: each supplied list, such as `evidence`, `research` or
+`publication_reviews`, gains its new items instead of being replaced, and items already
+stored aren't repeated. It changes nothing else: other fields and the body patch as usual.
+
+Supplying `body` replaces the explanation, so include the complete intended body. To change
+one section and leave the rest alone, send `body_sections`, `{"Worship sites": "..."}`, with
+the heading as the body writes it, without its `#`s. It replaces that section's text, or
+`body_append`, the same shape, adds to the end of it. A heading the body doesn't have
+becomes a new `##` section at the end, so copy headings exactly.
+
+For example, a patch to an existing parish (illustrative only):
 
 ```bash
 uv run python -m pdf_extract diocese write example parish st-example --file - <<'JSON'
@@ -484,16 +500,17 @@ Work in this order and only fall through when a step can't answer. Commit as you
 
 **Promotion:** when `todo` shows no errors or incomplete records, run `pnpm diocese promote
 <d> --dry-run`, read it, then `pnpm diocese promote <d>` and `pnpm test`. The next pipeline
-command seeds the new rows into the database. New parish rows go in with `fetch_only` set:
-the weekly run fetches their bulletins but doesn't process them or show their churches until
-the flag is cleared (README, "Fetch-only parishes").
+command seeds the new rows into the database. New parishes have no approved seed yet: the
+weekly run fetches their bulletins but doesn't process them or show their churches until each
+one's seed is approved (docs/weekly-pipeline.md, "Parishes without an approved seed").
 Promotion appends new rows, updates promoted ones, and deletes live rows the diocese has
-retired (merged, renamed, excluded, moved to open/, `no_bulletin` or `unsupported`). Retiring a church deletes its events, and retiring a
-parish deletes its bulletins and the events read from them, even for churches moved to another
-parish. The dry run lists the churches that would lose events (`removed_rows_with_events`).
+retired (merged, renamed, excluded, moved to open/, `no_bulletin` or `unsupported`). Retiring a church takes its believed-schedule entries off the
+site, and retiring a parish takes its whole schedule and its bulletins with it, even for churches
+moved to another parish. The dry run lists the churches that have schedule entries
+(`removed_rows_with_events`).
 Removals don't go live on merge: deploys keep serving the published data, and the next weekly
-run is held for review. Publishing that run is what applies them. It also keeps coordinates and flags that `geocode` and
-`verify` filled in. Keep editing the records after promotion and promote again. Don't delete
+run is held for review. Publishing that run is what applies them. It also keeps coordinates and the verified flags already on
+the live rows. Keep editing the records after promotion and promote again. Don't delete
 a promoted record: exclude it or merge it, or its live row will be orphaned.
 
 `pnpm diocese recheck <d>` re-fetches every quoted source. Run it when auditing, or before
@@ -549,7 +566,7 @@ pnpm diocese list | show <d> | todo <d> | validate [<d>]
 pnpm diocese gaps [--diocese d] [--kind k]   # bulletins fetch can't collect yet, by kind
 pnpm diocese init <d> --name "..." --state NY [--website URL] [--gcatholic key]
 pnpm diocese search <words> [--diocese d|live] [--kind parish|church|excluded|open]
-pnpm --silent diocese write <d> <kind> <slug> --file record.json [--create]  # --file -: stdin
+pnpm --silent diocese write <d> <kind> <slug> --file record.json [--create|--append]  # --file -: stdin
                                        # --help: every kind's fields, JSON types, an example
 
 pnpm diocese new parish   <d> [slug] --name ... --website ... [--bulletin-provider p --provider-id id --publication x:y --group g]
