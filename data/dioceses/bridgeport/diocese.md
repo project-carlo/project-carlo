@@ -94,6 +94,14 @@ publisher notes; the lines below borrow Paterson's where the same publishers app
   Mass page. Discover Mass caps daily downloads (Scranton, Allentown).
 - 39 sites returned 200 with no publisher found; read their bulletin pages.
 
+## New lessons
+
+Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
+
+- LPi bulletins here can be image-only apart from the ad pages (St. Mark 04/0152, Our Lady of Peace 04/0327: probe pdf reads only pages 7-8); render page 1 with parish-site-access render.py to read the masthead and Mass schedule, and note image-only in the record.
+- Bon Venture and John Patrick Publishing issues here are posted on the parish's own site rather than read from the printer: Bon Venture PDFs on a Duda /bulletin page (footer 'NNNA (PK) - <parish>'), which fetch:check reads with recipe page-pdfs; JPPC issues on the eCatholic site (the jppc.net/onlinebulletins/<n>template.pdf link is the printer's template, not an issue).
+
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
