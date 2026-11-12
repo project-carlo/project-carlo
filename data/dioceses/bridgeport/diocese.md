@@ -98,6 +98,10 @@ publisher notes; the lines below borrow Paterson's where the same publishers app
 
 Decisions that apply to more than one record, and who made them.
 
+- Eastern Catholic churches in Fairfield County (Ukrainian Eparchy of Stamford incl. St. Vladimir Cathedral and St. Basil Seminary; Melkite Eparchy of Our Lady of the Annunciation in Boston; Maronite Eparchy of St. Maron of Brooklyn; Ruthenian Eparchy of Passaic) are excluded as other-jurisdiction. (accepted by survey-review, 003-survey-review, 2026-11-12)
+- A merged parish's second church or 'campus' that its schedule still lists with Mass (St. George, St. Patrick Bridgeport, St. Benedict, Sacred Heart Danbury, St. Gabriel, St. Ladislaus, St. Agnes/St. Catherine, Sacred Heart & St. Patrick Redding) is a church of that one parish row unless it publishes its own bulletin. (accepted by survey-review, 003-survey-review, 2026-11-12)
+- A community housed at a parish's church with its own rector or moderator (Georgetown Oratory at Sacred Heart, Redding; Haitian quasi-parish at St. Cecilia, Stamford) is a separate parish row only if it publishes its own bulletin; otherwise its Masses are on the host parish's row. (accepted by survey-review, 003-survey-review, 2026-11-12)
+
 ## Log
 
 Newest first: date, what was done, and the `pnpm diocese coverage` numbers after it.
