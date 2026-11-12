@@ -102,6 +102,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Bon Venture and John Patrick Publishing issues here are posted on the parish's own site rather than read from the printer: Bon Venture PDFs on a Duda /bulletin page (footer 'NNNA (PK) - <parish>'), which fetch:check reads with recipe page-pdfs; JPPC issues on the eCatholic site (the jppc.net/onlinebulletins/<n>template.pdf link is the printer's template, not an issue).
 - A parish site that names LPi but embeds no widget (a Wix cover gallery, St. Charles) can still have a live ParishesOnline org: try `probe po <name>-church-<zip>` before calling it no_bulletin.
 - WordPress 'TNC FlipBook' (pdf-viewer-for-wordpress) bulletin pages link /pdfviewer/<slug>/ viewer pages that carry the PDF URL base64-encoded; decode it to read the issue. fetch can't collect these yet, so record the row as unsupported with fetch_gap kind viewer-wrapped-pdf.
+- Some eCatholic parishes here post bulletins as site documents (ec-prod-site-cache.s3.amazonaws.com/static1/<site>/documents/...) rather than files.ecatholic.com/<id>/bulletins, so the ecatholic resolver fails; use provider other with a pinned page-pdfs recipe on the page listing them, plus a filename filter when inserts are listed alongside (Our Lady of Fatima: filename=*Year*.pdf).
 
 
 ## Rules settled for this diocese
