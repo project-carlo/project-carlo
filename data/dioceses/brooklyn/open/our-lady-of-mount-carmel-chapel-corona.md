@@ -32,6 +32,16 @@ line1: 103-56 52nd Avenue
 city: Corona
 state: NY
 postal_code: '11368'
+research:
+- method: 'Reconcile: read the newest St. Leo bulletin (15 November 2026, page 1): the chapel at 103-56
+    52nd Avenue is listed only for ''Every Thursday/ 5:00 - 7:00 PM ... Chapel / Capilla'' exposition;
+    the Mass times name no place'
+  url: https://files.tilmaplatform.com/system/resources/W1siZiIsIjIwMjYvMTEvMTEvNnJtOHFiOHZjNF9Ob3ZlbWJlcl8xNF8xNV8yMDI2X1BhcmlzaF9CdWxsZXRpbl9TdC5fTGVvX3RoZV9HcmVhdF9SLkMuX0NodXJjaC5wZGYiXV0/November%2014-15%2C%202026%20Parish%20Bulletin%20%7C%20St.%20Leo%20the%20Great%20R.C.%20Church.pdf
+  checked: '2026-11-12'
+  outcome: not-found
+  next_action: Read the St. Leo bulletin of the July 2027 Mount Carmel feast week, or ask the rectory
+    ((718) 592-7569) whether Mass is ever said at the chapel
+  retry_when: The July 2027 feast-week bulletin is posted, or the parish answers
 ---
 
 ## What is known

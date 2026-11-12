@@ -37,6 +37,13 @@ research:
     not-found, keeping this recipe in next_action.
   retry_when: After the weekend of 14-15 November 2026
   revisit_after: 2026-11-20
+- method: 'Reconcile: headed fetch:check of every Brooklyn row still picked the issue dated 4 October
+    2026 (27th Sunday OT); nothing newer is posted'
+  url: https://stpaulstagnes-brooklyn.org/system/resources/W1siZiIsIjIwMjYvMTAvMDUvMWZlaTF3emNoM18yN3RoX1N1bmRheV9PVF8yMDI2LnBkZiJdXQ/27th%20Sunday%20OT%202026.pdf
+  checked: '2026-11-12'
+  outcome: not-found
+  next_action: 'As the earlier research item: look for a newer issue or another channel at the revisit'
+  retry_when: At this record's revisit_after, or when a newer issue is posted
 bulletin_status: available
 ---
 

@@ -23,6 +23,17 @@ evidence:
   seen: 2026-11-06
   note: 'Tilma bulletins page, newest first: FrCabBklyn11-1.pdf (uploaded 2026-10-30), FranCabBk10-25.pdf,
     FranCabBklyn10-18.pdf, FranCabBklyn10-11.pdf.'
+revisit: Rerun fetch:check and confirm it picks the 15 November 2026 issue or later (the newest posted
+  on 2026-11-12 was older than 8 November).
+revisit_after: 2026-11-17
+research:
+- method: 'Reconcile: headed fetch:check of every Brooklyn row picked the issue dated 2026-11-01; the
+    bulletin page lists no newer issue than the one picked'
+  url: https://files.tilmaplatform.com/system/resources/W1siZiIsIjIwMjYvMTAvMzAvNWg3Zjk0bDl5NV9GckNhYkJrbHluMTFfMS5wZGYiXV0/FrCabBklyn11-1.pdf
+  checked: '2026-11-12'
+  outcome: not-found
+  next_action: Rerun fetch:check and confirm it picks the 15 November 2026 issue or later
+  retry_when: After the weekend of 14-15 November 2026
 bulletin_status: available
 publication_reviews:
 - parish: shrine-of-st-bernadette-dyker-heights

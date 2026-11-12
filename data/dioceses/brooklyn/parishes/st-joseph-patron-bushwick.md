@@ -44,6 +44,13 @@ research:
     this recipe here
   retry_when: /api/bulletins lists an issue after OCT 11 2026
   revisit_after: 2026-11-21
+- method: 'Reconcile: headed fetch:check of every Brooklyn row still picked the issue dated 4 October
+    2026 (27th Sunday OT); nothing newer is posted'
+  url: https://www.stjosephpatronchurch.org/api/bulletin-file?name=bulletins%2FBULLETIN%20OCT%2011%202026.pdf
+  checked: '2026-11-12'
+  outcome: not-found
+  next_action: 'As the earlier research item: look for a newer issue or another channel at the revisit'
+  retry_when: At this record's revisit_after, or when a newer issue is posted
 bulletin_status: available
 ---
 

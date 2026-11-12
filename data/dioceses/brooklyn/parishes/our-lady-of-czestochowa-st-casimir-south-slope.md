@@ -25,6 +25,15 @@ research:
   url: http://olcbrooklyn.org/
   checked: '2026-11-06'
   outcome: found
+- method: 'Reconcile: headed fetch:check (PLAYWRIGHT_BROWSER_CHANNEL=chrome under xvfb) failed twice with
+    ''net::ERR_BLOCKED_BY_CLIENT at http://olcbrooklyn.org/''; the same check without the Chrome channel
+    picked http://olcbrooklyn.org/p.pdf, whose text has ''November 8, 2026'''
+  url: http://olcbrooklyn.org/p.pdf
+  checked: '2026-11-12'
+  outcome: found
+  next_action: If the production fetch runs headed Chrome, check that it reaches this plain-http site;
+    https://olcbrooklyn.org/ gave no answer
+  retry_when: A weekly fetch reports resolve_failed for this parish
 bulletin_status: available
 ---
 

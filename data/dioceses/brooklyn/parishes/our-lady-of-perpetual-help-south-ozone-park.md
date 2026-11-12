@@ -23,9 +23,6 @@ evidence:
   seen: 2026-11-06
   note: 'probe po: ParishesOnline org ''Our Lady of Perpetual Help Church'' (lpi 0018000000QxB9wAAF, 11150
     115th St) has no publications, so it is not a publication id for this row.'
-revisit: Rerun fetch:check after the weekend and confirm it picks the 8 November 2026 issue (freshness
-  is reported unknown for these image-only files).
-revisit_after: 2026-11-10
 research:
 - method: fetch:check (headed Chrome) on recipe page-pdfs https://olphchurch.net/bulletin/
   url: https://olphchurch.net/bulletin/
@@ -35,6 +32,12 @@ research:
     because the issue is images and the file name (nov1_2026_...) is not a date fetch reads
   retry_when: The 8 November issue is posted
   revisit_after: 2026-11-10
+- method: 'Reconcile: headed fetch:check of every Brooklyn row'
+  url: https://olphchurch.net/wp-content/uploads/sites/96/2026/11/nov8_2026_olphqns_compressed_compressed.pdf
+  checked: '2026-11-12'
+  outcome: found
+  next_action: 'None: the pick is the 8 November 2026 issue (nov8_2026_olphqns_compressed_compressed.pdf;
+    freshness unknown, the date read from the file name).'
 bulletin_status: available
 publication_reviews:
 - parish: st-mary-gate-of-heaven-ozone-park

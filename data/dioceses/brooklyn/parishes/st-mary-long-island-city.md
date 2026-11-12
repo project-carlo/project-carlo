@@ -17,6 +17,9 @@ evidence:
   seen: 2026-11-06
   note: 'Tilma bulletins page (custom domain, files under /system/resources/), newest first: Bulletin
     11-1-2026, 10-25-2026, 10-18-2026, 10-11-2026 ... weekly.'
+revisit: Rerun fetch:check and confirm it picks the 15 November 2026 issue or later (the newest posted
+  on 2026-11-12 was older than 8 November).
+revisit_after: 2026-11-17
 research:
 - method: fetch:check (headed Chrome) on recipe page-pdfs https://stmary-lic.org/bulletins
   url: https://stmary-lic.org/bulletins
@@ -25,6 +28,13 @@ research:
   next_action: Rerun fetch:check after 8 November and confirm it picks that issue
   retry_when: The 8 November 2026 issue is posted
   revisit_after: 2026-11-09
+- method: 'Reconcile: headed fetch:check of every Brooklyn row picked the issue dated 2026-11-01; the
+    bulletin page lists no newer issue than the one picked'
+  url: https://stmary-lic.org/system/resources/W1siZiIsIjIwMjYvMTAvMjkvNG00MjVkM2Y2bF9CdWxsZXRpbl8xMV8xXzIwMjZfVGhpcnR5X0ZpcnN0X1N1bmRheV9pbl9PcmRpbmFyeV9USW1lLnBkZiJdXQ/Bulletin%2011-1-2026-Thirty-First%20Sunday%20in%20Ordinary%20TIme.pdf
+  checked: '2026-11-12'
+  outcome: not-found
+  next_action: Rerun fetch:check and confirm it picks the 15 November 2026 issue or later
+  retry_when: After the weekend of 14-15 November 2026
 bulletin_status: available
 ---
 

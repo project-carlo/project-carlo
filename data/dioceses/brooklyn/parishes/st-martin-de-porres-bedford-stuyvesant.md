@@ -27,6 +27,21 @@ research:
   checked: '2026-11-07'
   outcome: found
 bulletin_status: available
+publication_reviews:
+- parish: st-martin-of-tours-bushwick
+  decision: separate
+  evidence:
+  - url: https://stmartindeporresparish.org/wp-content/uploads/sites/14/2026/11/nov8_2026_stmartin_compressed.pdf
+    seen: 2026-11-07
+    note: The 8 November 2026 masthead (page 1, rendered) names Saint Martin de Porres Parish, 583 Throop
+      Ave, Rev. Alonzo Q. Cox, Pastor, with its own Mass times at Holy Rosary, Our Lady of Victory and
+      St. Peter Claver.
+  - url: https://stmartinoftours-brooklyn.org/system/resources/W1siZiIsIjIwMjYvMTEvMTIvNXN2MHFhdGdyXzExXzE1XzIwMjYucGRmIl1d/11-15-2026.pdf
+    seen: 2026-11-12
+    quote: SAINT MARTIN OF TOURS PARISH - R.C.C.
+    note: The 15 November 2026 masthead names Saint Martin of Tours Parish, rectory 1288 Hancock Street,
+      Rev. Juan D. Ruiz, Pastor, with its own Mass times (Saturday 6:30 PM, Sunday 9:00 AM, 10:30 AM,
+      12:00 PM).
 ---
 
 ## Publisher

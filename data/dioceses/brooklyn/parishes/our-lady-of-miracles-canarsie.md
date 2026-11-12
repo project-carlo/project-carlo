@@ -22,14 +22,16 @@ evidence:
   seen: 2026-11-06
   note: 'Tilma bulletins page, server-rendered, newest first: ''OLM Bulletin November 1st 2026'', October
     25th, October 18th, October 11th, then ''Bulletin for Sunday, Oct 04, 2026'' and older cards.'
-revisit: Rerun fetch:check after the weekend and confirm it picks the 8 November 2026 issue (not yet posted
-  on 2026-11-06).
-revisit_after: 2026-11-10
 research:
 - method: fetch:check (headed Chrome) on recipe page-pdfs https://olmrcchurch.org/bulletins
   url: https://olmrcchurch.org/bulletins
   checked: '2026-11-06'
   outcome: found
+- method: 'Reconcile: headed fetch:check of every Brooklyn row'
+  url: https://files.tilmaplatform.com/system/resources/W1siZiIsIjIwMjYvMTEvMDMvOTNnOTU3azN4dl9PTE1fMTFfOF8yNi5wZGYiXV0/OLM%2011-8-26.pdf
+  checked: '2026-11-12'
+  outcome: found
+  next_action: 'None: the pick is the 8 November 2026 issue (OLM 11-8-26.pdf).'
 bulletin_status: available
 publication_reviews:
 - parish: holy-family-st-laurence-canarsie

@@ -18,9 +18,13 @@ evidence:
   note: 'probe url: WordPress site ''Saint Anastasia Church'', bulletin link https://sta.nyc/bulletin,
     which redirects to the fixed file https://sta.nyc/files/bulletin.pdf (overwritten each week). No ParishesOnline,
     eCatholic or Discover Mass ids embedded.'
-revisit: Confirm sta.nyc/files/bulletin.pdf has moved on to the 8 November 2026 issue (fixed file name,
-  so fetch:check reports freshness unknown)
-revisit_after: 2026-11-10
+research:
+- method: 'Reconcile: headed fetch:check of every Brooklyn row'
+  url: https://sta.nyc/files/bulletin.pdf
+  checked: '2026-11-12'
+  outcome: found
+  next_action: 'None: the pick is the fixed file /files/bulletin.pdf, now the 8 November 2026 issue (its
+    text has ''November 8, 2026''; freshness unknown for the undated name).'
 ---
 
 ## Publisher

@@ -18,8 +18,9 @@ evidence:
   quote: Bulletin for Sunday Nov 1, 2026
   note: 'Tilma bulletins page, server-rendered, newest first: Nov 1, October 25, October 18, October 11,
     Oct 04 2026 and weekly back to Apr 12, 2026.'
-revisit: Rerun fetch:check and confirm it picks the 8 November 2026 issue (not yet posted on 2026-11-07).
-revisit_after: 2026-11-10
+revisit: Rerun fetch:check and confirm it picks the 15 November 2026 issue or later (the newest posted
+  on 2026-11-12 was older than 8 November).
+revisit_after: 2026-11-17
 research:
 - method: fetch:check (headed Chrome) on recipe page-pdfs https://stfortunata-brooklyn.org/bulletins
   url: https://stfortunata-brooklyn.org/bulletins
@@ -27,6 +28,13 @@ research:
   outcome: found
   next_action: Rerun fetch:check after the weekend and confirm it picks the 8 November 2026 issue
   retry_when: After 2026-11-09
+- method: 'Reconcile: headed fetch:check of every Brooklyn row picked the issue dated 2026-11-01; the
+    bulletin page lists no newer issue than the one picked'
+  url: https://files.tilmaplatform.com/system/resources/W1siZiIsIjIwMjYvMTAvMjkvOWJybGFwdjBlZF9TdC5fRm9ydHVuYXRhX0J1bGxldGluXzExXzAxXzIwMjYucGRmIl1d/St.%20Fortunata%20Bulletin%2011-01-2026.pdf
+  checked: '2026-11-12'
+  outcome: not-found
+  next_action: Rerun fetch:check and confirm it picks the 15 November 2026 issue or later
+  retry_when: After the weekend of 14-15 November 2026
 bulletin_status: available
 ---
 

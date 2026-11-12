@@ -20,6 +20,17 @@ evidence:
     Mass Times: Saturday 4:00 PM St. Genevieve, 5:00 PM St. Thomas More; Sunday 8:00 AM St. Thomas More,
     9:15 AM St. Genevieve, 10:30 AM St. Edmund, 11:45 AM and 7:00 PM St. Thomas More; Mon-Sat 8:30 AM
     St. Thomas More.'
+revisit: Rerun fetch:check and confirm it picks the 15 November 2026 issue or later (the newest posted
+  on 2026-11-12 was older than 8 November).
+revisit_after: 2026-11-17
+research:
+- method: 'Reconcile: headed fetch:check of every Brooklyn row picked the issue dated 2026-11-01; files.ecatholic.com/23044
+    answers 403 for 20261108 and 20261115 (issues.py ecatholic); the newest issue is 20261101'
+  url: https://files.ecatholic.com/23044/bulletins/20261101.pdf?t=1793389365000
+  checked: '2026-11-12'
+  outcome: not-found
+  next_action: Rerun fetch:check and confirm it picks the 15 November 2026 issue or later
+  retry_when: After the weekend of 14-15 November 2026
 bulletin_status: available
 ---
 

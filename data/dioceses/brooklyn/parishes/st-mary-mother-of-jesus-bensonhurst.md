@@ -21,11 +21,21 @@ evidence:
   seen: 2026-11-06
   note: 'Tilma bulletins page, server-rendered, newest first: November 01, 2026 (Bulletin 11-01-2026.pdf),
     October 25, October 18, October 11, October 04, 2026 ... weekly.'
+revisit: Rerun fetch:check and confirm it picks the 15 November 2026 issue or later (the newest posted
+  on 2026-11-12 was older than 8 November).
+revisit_after: 2026-11-17
 research:
 - method: fetch:check (headed Chrome) on recipe page-pdfs https://stmarymotherofjesus-brooklyn.org/bulletins
   url: https://stmarymotherofjesus-brooklyn.org/bulletins
   checked: '2026-11-06'
   outcome: found
+- method: 'Reconcile: headed fetch:check of every Brooklyn row picked the issue dated 2026-11-01; the
+    bulletin page lists no newer issue than the one picked'
+  url: https://stmarymotherofjesus-brooklyn.org/system/resources/W1siZiIsIjIwMjYvMTEvMDMvMXZsNjc3ZWh2aV9CdWxsZXRpbl8xMV8wMV8yMDI2LnBkZiJdXQ/Bulletin%2011-01-2026.pdf
+  checked: '2026-11-12'
+  outcome: not-found
+  next_action: Rerun fetch:check and confirm it picks the 15 November 2026 issue or later
+  retry_when: After the weekend of 14-15 November 2026
 bulletin_status: available
 ---
 

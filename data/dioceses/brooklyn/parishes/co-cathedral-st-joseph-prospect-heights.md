@@ -26,11 +26,21 @@ evidence:
   note: 'Tilma bulletins page, newest first: November 01, 2026 (token decodes to upload 2026/10/30), October
     25 (10/23), October 18 (10/16), October 11 (10/09), October 04 (10/05), weekly back to July 19; a
     gap from 31 May to 19 July. No 8 November card yet on 2026-11-07 (a Saturday).'
+revisit: Rerun fetch:check and confirm it picks the 15 November 2026 issue or later (the newest posted
+  on 2026-11-12 was older than 8 November).
+revisit_after: 2026-11-17
 research:
 - method: fetch:check (headed Chrome) on recipe page-pdfs https://brooklyncocathedral.org/bulletins
   url: https://brooklyncocathedral.org/bulletins
   checked: '2026-11-07'
   outcome: found
+- method: 'Reconcile: headed fetch:check of every Brooklyn row picked the issue dated 2026-11-01; the
+    bulletin page lists no newer issue than the one picked'
+  url: https://brooklyncocathedral.org/system/resources/W1siZiIsIjIwMjYvMTAvMzAvNGVhd3R3bnpmbl9Ob3ZlbWJlcl8xXzIwMjZfQnVsbGV0aW4ucGRmIl1d/November%201%2C%202026%20Bulletin.pdf
+  checked: '2026-11-12'
+  outcome: not-found
+  next_action: Rerun fetch:check and confirm it picks the 15 November 2026 issue or later
+  retry_when: After the weekend of 14-15 November 2026
 bulletin_status: available
 ---
 

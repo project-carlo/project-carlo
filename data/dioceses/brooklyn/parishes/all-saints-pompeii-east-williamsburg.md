@@ -31,8 +31,9 @@ evidence:
     Vincenzo Cardilicchia .
   note: The Tablet, 8 April 2024, on the Easter 2024 fire at Our Lady of the Rosary of Pompeii; its Sunday
     Mass was moved to All Saints.
-revisit: Rerun fetch:check and confirm it picks a November 2026 issue (25 October was the newest on 2026-11-07).
-revisit_after: 2026-11-12
+revisit: Rerun fetch:check and confirm it picks the 15 November 2026 issue or later (the newest posted
+  on 2026-11-12 was older than 8 November).
+revisit_after: 2026-11-17
 research:
 - method: fetch:check (headed Chrome) on recipe page-pdfs https://allsaints-brooklyn.org/bulletins
   url: https://allsaints-brooklyn.org/bulletins
@@ -42,6 +43,13 @@ research:
     was 13 days old
   retry_when: A November card appears on /bulletins
   revisit_after: 2026-11-12
+- method: 'Reconcile: headed fetch:check of every Brooklyn row picked the issue dated 2026-10-25; the
+    bulletin page lists no newer issue than the one picked'
+  url: https://allsaints-brooklyn.org/system/resources/W1siZiIsIjIwMjYvMTAvMjAvMmprZmg0dmZhYl9PY3RvYmVyXzI1XzIwMjZfQnVsbGV0aW4ucGRmIl1d/October-25-2026%20Bulletin.pdf
+  checked: '2026-11-12'
+  outcome: not-found
+  next_action: Rerun fetch:check and confirm it picks the 15 November 2026 issue or later
+  retry_when: After the weekend of 14-15 November 2026
 bulletin_status: available
 publication_reviews:
 - parish: mary-of-nazareth-fort-greene

@@ -39,6 +39,13 @@ research:
     if eCatholic is still months behind and the LPi org has issues, switch to parishes_online
   retry_when: After 2026-12-01, or when the archive posts an issue after 4 October 2026
   revisit_after: 2026-12-01
+- method: 'Reconcile: headed fetch:check of every Brooklyn row still picked the issue dated 2026-10-04;
+    nothing newer is posted'
+  url: https://files.ecatholic.com/19776/bulletins/20261004.pdf?t=1791228758000
+  checked: '2026-11-12'
+  outcome: not-found
+  next_action: 'As the earlier research item: look for a newer issue or another channel at the revisit'
+  retry_when: At this record's revisit_after, or when a newer issue is posted
 bulletin_status: available
 publication_reviews:
 - parish: st-agatha-sunset-park

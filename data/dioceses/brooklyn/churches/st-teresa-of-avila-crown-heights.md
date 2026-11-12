@@ -53,4 +53,6 @@ The parish calls it St. Teresa of Avila, as GCatholic 16783 does (name verified)
 
 I recorded the parish's own church address, 777 Classon Avenue, which the Mass finder also gives (address verified). The coordinates are GCatholic's Plus Code 87G8M2FQ+MV, on the building.
 
-Mass finder place 1165 joins this church to St. Teresa, Woodside: it lists both addresses, is pinned at Woodside, and gives Woodside's Spanish Masses. Under the settled rule (link a finder entry to the church at its pin), massfinder:1165 belongs to `st-teresa-woodside` (another batch), so it is not linked here. That is left to reconcile.
+Mass finder place 1165 joins this church to St. Teresa, Woodside: it lists both addresses, is pinned at Woodside, and gives Woodside's Spanish Masses. Under the settled rule (link a finder entry to the church at its pin), massfinder:1165 belongs to `st-teresa-woodside` (another batch), so it is not linked here.
+
+Reconcile (2026-11-12) linked `massfinder:1165` to `st-teresa-woodside`. `coverage --link` auto-matches it here by its roster street (777 Classon Avenue); if it reappears in this record's roster, remove it again.

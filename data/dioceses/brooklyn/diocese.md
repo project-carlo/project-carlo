@@ -4,6 +4,9 @@ state: NY
 website: https://dioceseofbrooklyn.org
 status: exploring
 gcatholic: broo0
+audit_ignore_groups:
+- deaneries
+- parishes
 ---
 
 The Diocese of Brooklyn is the boroughs of Brooklyn (Kings County) and Queens (Queens County),
@@ -197,6 +200,10 @@ touch it.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- Diocesan multisite bulletin pages list about 200 issues back to the previous year, and a link text can drop the year ("November 16," for `nov16_2025_...pdf` on stthomasaquinasbrooklyn.com): fetch dates it this year and picks it as current. Pin `filename=*_202[6-9]_*.pdf` when the page has a yearless link. (reconcile, 2026-11-12)
+- Headed fetch:check (Chrome channel) can fail on a plain-http site with `net::ERR_BLOCKED_BY_CLIENT` (olcbrooklyn.org); the headless check reads it. (reconcile, 2026-11-12)
+- `coverage --link` auto-matches a Mass finder entry by its roster street even when the pin rule put it on another church (massfinder:1165 went back to St. Teresa of Avila, Crown Heights): check `linked.written` after every `--link`. (reconcile, 2026-11-12)
+
 ## Rules settled for this diocese
 
 Proposals are in `scratch/brooklyn-map-1/survey.json` for survey-review.
@@ -216,6 +223,15 @@ Proposals are in `scratch/brooklyn-map-1/survey.json` for survey-review.
 
 ## Log
 
+- 2026-11-12: Reconcile. Coverage: directory 172/172, deaneries 175/175, massfinder 173/173,
+  gcatholic 218/218 accounted for (modelled 82-84%); 168 parish rows (18 no_bulletin, 9 unsupported),
+  205 churches, 23 exclusions, 5 open. 53 map batches ran, usually 12-17 roster entries (2-4 directory
+  parishes) each. No merges or church moves; massfinder:1165 relinked from St. Teresa of Avila (Crown
+  Heights) to St. Teresa, Woodside (pin rule); the diocesan offices' deanery entry excluded. Added
+  `audit_ignore_groups` (deaneries, parishes: every row's group is its deanery); St. Martin de Porres /
+  St. Martin of Tours (GCatholic's 'St. Martin of Tours Parish' group) reviewed separate. Headed fetch:check
+  of 141 rows: 123 on an 8 or 15 November issue (after pinning St. Thomas Aquinas, Flatlands), 13 with
+  nothing posted after 1 November, 5 weeks behind.
 - 2026-11-05: Survey. Rosters: directory 172, deaneries 175, massfinder 173, gcatholic 218
   (738 entries). Plan: 53 batches in `batches.json` (52 of 2-4 directory parishes, one
   eastern-catholic), first `q11-ridgewood`; one deanery entry excluded (the diocesan

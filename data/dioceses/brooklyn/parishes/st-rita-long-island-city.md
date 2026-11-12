@@ -25,6 +25,9 @@ evidence:
   note: 'Tilma bulletins page (files on files.tilmaplatform.com), newest first: 11.01.26 Bulletin, 10.25.26,
     10.18.26, 10.11.26, 10.04.26 ... weekly. www.stritalic.org (the directory''s link) does not resolve;
     stritalic.org does.'
+revisit: Rerun fetch:check and confirm it picks the 15 November 2026 issue or later (the newest posted
+  on 2026-11-12 was older than 8 November).
+revisit_after: 2026-11-17
 research:
 - method: fetch:check (headed Chrome) on recipe page-pdfs https://stritalic.org/bulletins
   url: https://stritalic.org/bulletins
@@ -33,6 +36,13 @@ research:
   next_action: Rerun fetch:check after 8 November and confirm it picks that issue
   retry_when: The 8 November 2026 issue is posted
   revisit_after: 2026-11-09
+- method: 'Reconcile: headed fetch:check of every Brooklyn row picked the issue dated 2026-11-01; the
+    bulletin page lists no newer issue than the one picked'
+  url: https://files.tilmaplatform.com/system/resources/W1siZiIsIjIwMjYvMTEvMDIvM3RnYjdxMDduZV8xMS4wMS4yNl9CdWxsZXRpbi5wZGYiXV0/11.01.26%20Bulletin.pdf
+  checked: '2026-11-12'
+  outcome: not-found
+  next_action: Rerun fetch:check and confirm it picks the 15 November 2026 issue or later
+  retry_when: After the weekend of 14-15 November 2026
 bulletin_status: available
 publication_reviews:
 - parish: st-patrick-long-island-city

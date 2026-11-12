@@ -22,9 +22,6 @@ evidence:
   seen: 2026-11-06
   note: 'Tilma bulletins page, server-rendered, newest first: a card linking /bulletins/null (next issue
     not yet posted), then ''Bulletin for Sunday, Nov 1, 2026'' (26-11-1.pdf), Oct 25, Oct 18, Oct 11.'
-revisit: Rerun fetch:check after the weekend and confirm it picks the 8 November 2026 issue (the card
-  was posted as /bulletins/null on 2026-11-06).
-revisit_after: 2026-11-09
 research:
 - method: fetch:check (headed Chrome) on recipe page-pdfs https://ascensionparishelmhurst.org/bulletins
   url: https://ascensionparishelmhurst.org/bulletins
@@ -33,6 +30,11 @@ research:
   next_action: Rerun fetch:check after 8 November and confirm it picks that issue
   retry_when: The 8 November card links a PDF instead of /bulletins/null
   revisit_after: 2026-11-09
+- method: 'Reconcile: headed fetch:check of every Brooklyn row'
+  url: https://files.tilmaplatform.com/system/resources/W1siZiIsIjIwMjYvMTEvMDYvNG14aWlvY3ZsXzI2XzExXzgucGRmIl1d/26-11-8.pdf
+  checked: '2026-11-12'
+  outcome: found
+  next_action: 'None: the pick is the 8 November 2026 issue (26-11-8.pdf, uploaded 2026-11-06).'
 bulletin_status: available
 ---
 

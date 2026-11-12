@@ -18,6 +18,9 @@ evidence:
   quote: November 01, 2026
   note: 'Tilma /bulletins cards newest first: November 01, 2026, October 25, 2026 (both uploaded 2026/11/05
     per the resource tokens), then September 06, 2026, June 07, 2026, May 24, 2026.'
+revisit: Rerun fetch:check and confirm it picks the 15 November 2026 issue or later (the newest posted
+  on 2026-11-12 was older than 8 November).
+revisit_after: 2026-11-17
 research:
 - method: pnpm fetch:check with page-pdfs https://transfiguration-brooklyn.org/bulletins
   url: https://transfiguration-brooklyn.org/bulletins
@@ -27,6 +30,13 @@ research:
     uploaded together on 5 Nov); if fetch finds nothing newer, recheck after the usual gap before calling
     it stopped.
   revisit_after: 2026-12-15
+- method: 'Reconcile: headed fetch:check of every Brooklyn row picked the issue dated 2026-11-01; the
+    bulletin page lists no newer issue than the one picked'
+  url: https://transfiguration-brooklyn.org/system/resources/W1siZiIsIjIwMjYvMTEvMDUvZ3BwaGFscmpjX05ld3NsZXR0ZXJfVHJhbnNmaWd1cmF0aW9uX1BhcmlzaF9Ob3ZlbWJlcl8xXzIwMjYucGRmIl1d/Newsletter%20Transfiguration%20Parish%20November%201%202026.pdf
+  checked: '2026-11-12'
+  outcome: not-found
+  next_action: Rerun fetch:check and confirm it picks the 15 November 2026 issue or later
+  retry_when: After the weekend of 14-15 November 2026
 bulletin_status: available
 ---
 

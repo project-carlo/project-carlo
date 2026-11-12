@@ -24,11 +24,21 @@ evidence:
   note: 'probe po: LPi org ''St. Anthony / St. Alphonsus Church'' (lpi 0018000000QxB7gAAF), 862 Manhattan
     Ave, website stanthony-stalphonsus-brooklyn.org, with no publications. Not a publication id: the bulletin
     is printed by The Church Bulletin Inc.'
+revisit: Rerun fetch:check and confirm it picks the 15 November 2026 issue or later (the newest posted
+  on 2026-11-12 was older than 8 November).
+revisit_after: 2026-11-17
 research:
 - method: fetch:check other page-pdfs on the Tilma /bulletins page
   url: https://stanthony-stalphonsus-brooklyn.org/bulletins
   checked: '2026-11-07'
   outcome: found
+- method: 'Reconcile: headed fetch:check of every Brooklyn row picked the issue dated 2026-11-01; the
+    bulletin page lists no newer issue than the one picked'
+  url: https://files.tilmaplatform.com/system/resources/W1siZiIsIjIwMjYvMTAvMzAvOTVhNnNsdHV6N19BbnRob255QWxwam9uc3VzMTFfMS5wZGYiXV0/AnthonyAlpjonsus11-1.pdf
+  checked: '2026-11-12'
+  outcome: not-found
+  next_action: Rerun fetch:check and confirm it picks the 15 November 2026 issue or later
+  retry_when: After the weekend of 14-15 November 2026
 bulletin_status: available
 ---
 

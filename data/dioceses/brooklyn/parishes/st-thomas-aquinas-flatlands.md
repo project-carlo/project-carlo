@@ -2,7 +2,7 @@
 name: St. Thomas Aquinas (Flatlands)
 website: https://stthomasaquinasbrooklyn.com/important-information/bulletin/
 bulletin_provider: other
-provider_id: page-pdfs https://stthomasaquinasbrooklyn.com/important-information/bulletin/
+provider_id: page-pdfs https://stthomasaquinasbrooklyn.com/important-information/bulletin/ filename=*_202[6-9]_*.pdf
 publication: []
 group: Deanery B11 (Brooklyn East)
 evidence:
@@ -22,6 +22,16 @@ evidence:
   note: 'Diocesan WordPress multisite (sites/16) bulletin page, read with parish-site-access visit.py
     (probe url gets RemoteDisconnected): links nov8_2026_stthomas_compressed.pdf, nov1, oct25, oct18,
     oct11 and oct4 2026 issues.'
+research:
+- method: 'Reconcile: headed fetch:check of every Brooklyn row with recipe ''page-pdfs https://stthomasaquinasbrooklyn.com/important-information/bulletin/''
+    picked nov16_2025_stthomas_compressed.pdf (''current''): the page links last year''s issue with the
+    text ''November 16,'' (no year), which the resolver dates 16 November 2026. Pinned ''filename=*_202[6-9]_*.pdf'';
+    the rerun picked nov8_2026_stthomas_compressed.pdf'
+  url: http://stthomasaquinasbrooklyn.com/wp-content/uploads/sites/16/2026/11/nov8_2026_stthomas_compressed.pdf
+  checked: '2026-11-12'
+  outcome: found
+  next_action: Widen the filename filter before the parish's first 2030 issue
+  retry_when: December 2029
 bulletin_status: available
 publication_reviews:
 - parish: our-lady-help-of-christians-midwood
@@ -52,6 +62,8 @@ One. The page 1 Mass schedule lists Monday-Friday 12 Noon, Saturday 8:30am Mass 
 ## Website and bulletin provider
 
 `other`, recipe `page-pdfs https://stthomasaquinasbrooklyn.com/important-information/bulletin/`. The site is on the diocesan multisite, which drops `probe url` connections; `visit.py` and fetch read it. There is no publication id: The Church Bulletin Inc. has no online container.
+
+Reconcile (2026-11-12): the bulletin page links about 200 issues back to 2025, and labels some last-year links without a year ("November 16," for nov16_2025_stthomas_compressed.pdf). The unpinned recipe picked that 2025 file as "current" on 12 November 2026. The recipe is now `page-pdfs https://stthomasaquinasbrooklyn.com/important-information/bulletin/ filename=*_202[6-9]_*.pdf` (the parish's names carry the year: `nov8_2026_stthomas_compressed.pdf`), and fetch:check then picked the 8 November 2026 issue. The filter needs widening before 2030.
 
 ## Not yet confirmed
 

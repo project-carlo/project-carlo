@@ -49,6 +49,15 @@ research:
     (DuckDuckGo returned a bot challenge after a few queries on 2026-11-07).
   retry_when: A web search works again, the parish answers, or the site or bulletin names Epiphany
   revisit_after: 2027-02-01
+- method: 'Reconcile: The Tablet API post search (''Epiphany Williamsburg'', ''South 9th Street'', ''Epiphany
+    Church Brooklyn'') and the survey''s saved decrees page (relegation decree links: only Holy Family-St.
+    Thomas Aquinas, St. Rocco, OL Pompei)'
+  url: https://thetablet.org/wp-json/wp/v2/posts?search=Epiphany%20Williamsburg&_fields=link,date&per_page=10
+  checked: '2026-11-12'
+  outcome: not-found
+  next_action: Ask the Ss. Peter and Paul - Epiphany rectory whether Mass is still said at 96 South 9th
+    Street, or find a sale or relegation record
+  retry_when: The parish office answers, or a relegation decree or sale notice for Epiphany is published
 ---
 
 ## What is known

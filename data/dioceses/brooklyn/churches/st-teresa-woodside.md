@@ -11,7 +11,7 @@ longitude: -73.9215625
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster: ['directory:st-teresa', 'deaneries:q2-church-of-saint-teresa', 'gcatholic:16784']
+roster: ['directory:st-teresa', 'deaneries:q2-church-of-saint-teresa', 'gcatholic:16784', 'massfinder:1165']
 evidence:
 - url: https://container.parishesonline.com/bulletins/03/1425/20261108B.pdf
   seen: 2026-11-06
@@ -30,7 +30,13 @@ evidence:
 - url: https://dioceseofbrooklyn.org/directories/parishes/
   seen: 2026-11-05
   note: 'Diocese parish directory: St. Teresa, 50-20 45th Street, Woodside, NY 11377; deanery directory
-    (Q2) ''Church of Saint Teresa'', same address. Not in the Mass finder roster.'
+    (Q2) ''Church of Saint Teresa'', same address.'
+- url: https://mass.dioceseofbrooklyn.org/places/1165
+  seen: 2026-11-07
+  note: Mass finder place 1165 'St. Teresa' lists two worship sites, 777 Classon Avenue (Brooklyn) and
+    '50-20 45th St., Woodside, NY 11377', is pinned at 40.737011, -73.921116 (this church) and gives this
+    church's Saturday 5:00pm and Sunday Spanish Masses (read by batch 057-map; linked here by reconcile
+    2026-11-12).
 ---
 
 ## Holds Mass
@@ -39,4 +45,4 @@ Yes, current. The 8 November 2026 bulletin (container 03/1425, read 2026-11-06) 
 
 ## Name and address
 
-The bulletin, the parish site, the diocese's parish and deanery directories and GCatholic 16784 all give 50-20 45th Street, Woodside 11377. The church is not in the Mass finder roster (mass.dioceseofbrooklyn.org), so there is no finder pin. Coordinates are GCatholic's Plus Code 87G8P3PH+W9; ParishesOnline's org gives 40.744828, -73.9042547, about 1.7 km east, which I take for a geocoding error.
+The bulletin, the parish site, the diocese's parish and deanery directories and GCatholic 16784 all give 50-20 45th Street, Woodside 11377. Mass finder place 1165 'St. Teresa' (read 2026-11-07) joins this church with St. Teresa of Avila, 777 Classon Avenue, Crown Heights: its roster line carries the Classon Avenue street, but it is pinned here (40.737011, -73.921116) and lists this church's Saturday 5:00pm and Sunday Spanish Masses, so under the settled pin rule `massfinder:1165` is linked to this church (reconcile, 2026-11-12) and not to `st-teresa-of-avila-crown-heights`. Coordinates are GCatholic's Plus Code 87G8P3PH+W9, about 50 m from the finder pin; ParishesOnline's org gives 40.744828, -73.9042547, about 1.7 km east, which I take for a geocoding error.

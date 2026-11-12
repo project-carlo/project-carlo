@@ -27,13 +27,16 @@ evidence:
   seen: 2026-11-07
   note: 'Tilma bulletins page, newest first: November 01, 2026 (MaryNaz11-1color.pdf, token decodes to
     upload 2026/10/29), October 25, October 18, October 11, October 04, ... weekly.'
-revisit: Rerun fetch:check after 8 November and confirm it picks the 8 November 2026 issue.
-revisit_after: 2026-11-10
 research:
 - method: fetch:check (headed Chrome) on recipe page-pdfs https://marynazarethfg.org/bulletins
   url: https://marynazarethfg.org/bulletins
   checked: '2026-11-07'
   outcome: found
+- method: 'Reconcile: headed fetch:check of every Brooklyn row'
+  url: https://marynazarethfg.org/system/resources/W1siZiIsIjIwMjYvMTEvMDcvN3FsMWZ3ZTZrZ19NYXJ5TmF6MTFfOGNvbG9yLnBkZiJdXQ/MaryNaz11-8color.pdf
+  checked: '2026-11-12'
+  outcome: found
+  next_action: 'None: the pick is the 8 November 2026 issue (MaryNaz11-8color.pdf).'
 bulletin_status: available
 publication_reviews:
 - parish: all-saints-pompeii-east-williamsburg

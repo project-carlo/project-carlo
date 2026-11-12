@@ -23,13 +23,21 @@ evidence:
   note: 'The directory''s website, an old Weebly site; its Bulletin page has a heading and no issues.
     The parish''s current site is olhcbrooklyn.org (named in the bulletin: Web Address: www.olhcbrooklyn.org,
     and by GCatholic 16626).'
-revisit: Rerun fetch:check and confirm it picks the 8 November 2026 issue (not posted on 2026-11-06).
-revisit_after: 2026-11-10
+revisit: Rerun fetch:check and confirm it picks the 15 November 2026 issue or later (the newest posted
+  on 2026-11-12 was older than 8 November).
+revisit_after: 2026-11-17
 research:
 - method: fetch:check (headed Chrome) on recipe page-pdfs https://olhcbrooklyn.org/bulletins
   url: https://olhcbrooklyn.org/bulletins
   checked: '2026-11-06'
   outcome: found
+- method: 'Reconcile: headed fetch:check of every Brooklyn row picked the issue dated 2026-11-01; the
+    bulletin page lists no newer issue than the one picked'
+  url: https://olhcbrooklyn.org/system/resources/W1siZiIsIjIwMjYvMTAvMjgvN2NhMHFtY2JjMl9PTEhDX0J1bGxldGluX05vdmVtYmVyXzFfMjAyNi5wZGYiXV0/OLHC%20Bulletin%20November%201%2C2026.pdf
+  checked: '2026-11-12'
+  outcome: not-found
+  next_action: Rerun fetch:check and confirm it picks the 15 November 2026 issue or later
+  retry_when: After the weekend of 14-15 November 2026
 bulletin_status: available
 publication_reviews:
 - parish: st-thomas-aquinas-flatlands

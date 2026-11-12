@@ -39,6 +39,15 @@ research:
     for the chapel's current Mass schedule
   retry_when: A contact answers, or a new site, bulletin or Mass finder entry for the chapel appears
   revisit_after: 2027-02-01
+- method: 'Reconcile: WordPress search ''Our Lady of China'' on thetablet.org and dioceseofbrooklyn.org;
+    read the hits (Tablet 24 May 2024 China prayer article, religious orders page, July feasts page):
+    none names the chapel or a Mass there'
+  url: https://dioceseofbrooklyn.org/wp-json/wp/v2/search?search=Our%20Lady%20of%20China&per_page=10
+  checked: '2026-11-12'
+  outcome: not-found
+  next_action: Call (718) 699-1929 or visit 54-09 92nd Street for a posted schedule
+  retry_when: A Chinese apostolate or Mass finder listing for the chapel appears, or someone can call
+    the chapel
 ---
 
 ## What is known

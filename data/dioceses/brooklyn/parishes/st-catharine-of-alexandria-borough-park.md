@@ -24,9 +24,9 @@ evidence:
   note: 'Tilma bulletins page, server-rendered, newest first: October 25, October 18, October 11 (all
     three files uploaded 2026-10-28 per their resource tokens), then October 4 (uploaded 2026-10-02).
     The 1 November issue was not yet posted on 2026-11-06.'
-revisit: Rerun fetch:check and confirm it picks a November 2026 issue (the parish posts issues in batches;
-  three October issues were uploaded on 2026-10-28).
-revisit_after: 2026-11-16
+revisit: Rerun fetch:check and confirm it picks the 15 November 2026 issue or later (the newest posted
+  on 2026-11-12 was older than 8 November).
+revisit_after: 2026-11-17
 research:
 - method: probe po on st-catharine-of-alexandria-church-11218, st-catharine-church-11218, st-catharine-of-alexandria-roman-catholic-church-11218
   checked: '2026-11-06'
@@ -42,6 +42,13 @@ research:
     in batches (three on 2026-10-28)
   retry_when: A November 2026 card appears
   revisit_after: 2026-11-16
+- method: 'Reconcile: headed fetch:check of every Brooklyn row picked the issue dated 2026-10-25; the
+    bulletin page lists no newer issue than the one picked'
+  url: https://files.tilmaplatform.com/system/resources/W1siZiIsIjIwMjYvMTAvMjgvMnB3eWNkeTJmdF9DYXRoQWxleDEwXzI1LnBkZiJdXQ/CathAlex10-25.pdf
+  checked: '2026-11-12'
+  outcome: not-found
+  next_action: Rerun fetch:check and confirm it picks the 15 November 2026 issue or later
+  retry_when: After the weekend of 14-15 November 2026
 bulletin_status: available
 ---
 

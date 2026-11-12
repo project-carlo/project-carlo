@@ -34,9 +34,6 @@ evidence:
   seen: 2026-11-06
   note: 'Resurrection-Ascension Parish site (403 to probe url; read with parish-site-access visit.py):
     eCatholic site 24728, bulletins at /bulletins.'
-revisit: Rerun fetch:check after the weekend and confirm it picks the 8 November 2026 issue (files.ecatholic.com/24728/bulletins/20261108.pdf
-  answered 403 on 2026-11-06, not yet posted).
-revisit_after: 2026-11-09
 research:
 - method: fetch:check (headed Chrome), ecatholic from https://www.rachurch.net/
   url: https://www.rachurch.net/bulletins
@@ -45,6 +42,11 @@ research:
   next_action: Rerun fetch:check after 8 November and confirm it picks that issue
   retry_when: files.ecatholic.com/24728/bulletins/20261108.pdf is posted
   revisit_after: 2026-11-09
+- method: 'Reconcile: headed fetch:check of every Brooklyn row'
+  url: https://files.ecatholic.com/24728/bulletins/20261108.pdf?t=1793983192000
+  checked: '2026-11-12'
+  outcome: found
+  next_action: 'None: the pick is the 8 November 2026 issue (files.ecatholic.com/24728/bulletins/20261108.pdf).'
 bulletin_status: available
 ---
 

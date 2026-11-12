@@ -27,6 +27,17 @@ evidence:
   note: 'Tilma bulletins page, server-rendered, newest first: ''November 01, 2026 / Download Bulletin''
     (November 1, 2026.pdf, uploaded 2026-10-31), October 25, October 18, October 04, September 27 ...
     Files Aug-Oct were named ''561070  MM-DD-YYYY.pdf'', later ones by date or ''Finbar10-25.pdf''.'
+revisit: Rerun fetch:check and confirm it picks the 15 November 2026 issue or later (the newest posted
+  on 2026-11-12 was older than 8 November).
+revisit_after: 2026-11-17
+research:
+- method: 'Reconcile: headed fetch:check of every Brooklyn row picked the issue dated 2026-11-01; the
+    bulletin page lists no newer issue than the one picked'
+  url: https://stfinbarbrooklyn.org/system/resources/W1siZiIsIjIwMjYvMTAvMzEveHlxNm93cWEwX05vdmVtYmVyXzFfMjAyNi5wZGYiXV0/November%201%2C%202026.pdf
+  checked: '2026-11-12'
+  outcome: not-found
+  next_action: Rerun fetch:check and confirm it picks the 15 November 2026 issue or later
+  retry_when: After the weekend of 14-15 November 2026
 bulletin_status: available
 publication_reviews:
 - parish: st-frances-cabrini-dyker-heights

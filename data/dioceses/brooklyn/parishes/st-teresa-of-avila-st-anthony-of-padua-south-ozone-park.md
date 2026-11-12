@@ -31,9 +31,9 @@ evidence:
   note: 'WordPress bulletin page: a 3D FlipBook (data-id 1903) showing the current issue, and a link to
     the parish''s Google Drive folder 1lL0eKSJMh8w-fX9xDFIsO5Ep5EAm6NRZ, which holds every issue from
     2020-11-22 to ''2026-11-03- Bulletin'' (326 entries, listed with embeddedfolderview).'
-revisit: Rerun fetch:check after the weekend and confirm it picks the 8 November 2026 issue; the issue
-  is scanned images, so its date comes from the file name (upload date).
-revisit_after: 2026-11-10
+revisit: Rerun fetch:check and confirm it picks the 15 November 2026 issue or later (the newest posted
+  on 2026-11-12 was older than 8 November).
+revisit_after: 2026-11-17
 research:
 - method: fetch:check (headed Chrome) on recipe page-pdfs https://www.stasap.org/parish-news/bulletin/
   url: https://www.stasap.org/parish-news/bulletin/
@@ -43,6 +43,14 @@ research:
     the upload date, not the Sunday)
   retry_when: The 8 November issue is posted
   revisit_after: 2026-11-10
+- method: 'Reconcile: headed fetch:check of every Brooklyn row picked the issue dated 2026-11-01 (file
+    named 2026-11-03-Bulletin-1.pdf; the rendered masthead reads ''November 1, 2026''); the bulletin page
+    lists no newer issue than the one picked'
+  url: https://www.stasap.org/wp-content/uploads/2026/10/2026-11-03-Bulletin-1.pdf
+  checked: '2026-11-12'
+  outcome: not-found
+  next_action: Rerun fetch:check and confirm it picks the 15 November 2026 issue or later
+  retry_when: After the weekend of 14-15 November 2026
 bulletin_status: available
 publication_reviews:
 - parish: st-mary-gate-of-heaven-ozone-park

@@ -51,6 +51,17 @@ research:
   retry_when: A St. Martin of Tours bulletin, its site, The Tablet or a decree names the Our Lady of Lourdes
     church
   revisit_after: 2026-12-07
+- method: 'Reconcile: read the newest St. Martin of Tours bulletin (15 November 2026, 3 pages); its Sunday
+    schedule is Saturday 6:30 PM, Sunday 9:00 AM and 10:30 AM onward with no 11:00 Mass, and ''Lourdes'',
+    ''Furman'', ''OLOL'' and ''Chapel'' do not occur. WordPress search ''Furman Avenue'' and ''Lourdes
+    Bushwick'' on thetablet.org and dioceseofbrooklyn.org found nothing on the building'
+  url: https://stmartinoftours-brooklyn.org/system/resources/W1siZiIsIjIwMjYvMTEvMTIvNXN2MHFhdGdyXzExXzE1XzIwMjYucGRmIl1d/11-15-2026.pdf
+  checked: '2026-11-12'
+  outcome: not-found
+  next_action: Ask the St. Martin of Tours rectory whether the 89 Furman Avenue church still has Mass,
+    or find a relegation or sale record
+  retry_when: A St. Martin of Tours bulletin or the parish names the Furman Avenue church, or a decree
+    on it is posted
 ---
 
 ## What is known

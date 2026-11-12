@@ -34,6 +34,17 @@ evidence:
   seen: 2026-11-05
   note: 'probe po: org ''Blessed Sacrament Church'', 34-43 93 Street (lpi 0018000000QbyvkAAB), website
     blessedsacrament.nyc, lists no publications; not this parish''s bulletin channel.'
+revisit: Rerun fetch:check and confirm it picks the 15 November 2026 issue or later (the newest posted
+  on 2026-11-12 was older than 8 November).
+revisit_after: 2026-11-17
+research:
+- method: 'Reconcile: headed fetch:check of every Brooklyn row picked the issue dated 2026-11-01; the
+    bulletin page lists no newer issue than the one picked'
+  url: https://bsjh.org/system/resources/W1siZiIsIjIwMjYvMTAvMzAvM3N2NzhmZWp0Nl9CbFNjSkh0czExXzFSLnBkZiJdXQ/BlScJHts11-1R.pdf
+  checked: '2026-11-12'
+  outcome: not-found
+  next_action: Rerun fetch:check and confirm it picks the 15 November 2026 issue or later
+  retry_when: After the weekend of 14-15 November 2026
 bulletin_status: available
 ---
 

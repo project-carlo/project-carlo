@@ -38,8 +38,6 @@ evidence:
   note: 'Priests'' directory as read by the survey (2026-11-05): Very Rev. Francis T. Shannon, ''Pastor,
     St. Mary Star of the Sea and St. Gertrude, Far Rockaway''; Rev. David P. Bertolotti, Parochial Vicar
     of the same.'
-revisit: Re-run fetch:check after the weekend; confirm the pick is the current week's issue
-revisit_after: 2026-11-10
 research:
 - method: fetch:check with page-pdfs https://saintsmaryandgertrude.org/bulletins
   url: https://saintsmaryandgertrude.org/bulletins
@@ -49,6 +47,12 @@ research:
     issue was not posted by 6 November
   retry_when: After the weekend of 7-8 November 2026
   revisit_after: 2026-11-10
+- method: 'Reconcile: headed fetch:check of every Brooklyn row'
+  url: https://files.tilmaplatform.com/system/resources/W1siZiIsIjIwMjYvMTEvMDcvNHY1aXVoamRpNF9CdWxsZXRpbi4yMDI2LjExLjA4LnBkZiJdXQ/Bulletin.2026.11.08.pdf
+  checked: '2026-11-12'
+  outcome: found
+  next_action: 'None: the pick is the 8 November 2026 issue (Bulletin.2026.11.08.pdf; issue date ''conflict''
+    in fetch:check, the file name is dated).'
 bulletin_status: available
 ---
 
