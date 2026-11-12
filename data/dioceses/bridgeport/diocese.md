@@ -45,14 +45,17 @@ programme (The One), not a regrouping.
   saying only "In chapel", "Lower Church" or "Upper Church" are rooms of the main church and
   are left out. A per-parish JSON is at `/wp-json/custom/v1/mass-times?parish_id=<post id>`.
 - **GCatholic:** key `brid0`, https://gcatholic.org/churches/local/brid0, roster `gcatholic`
-  (89 entries, 2026-11-12). Lists churches still on it after mergers (St. George and St.
+  (92 entries, 2026-11-12: 84 diocesan and 8 "Other Churches Within the Diocesan Territory").
+  `roster fetch` returned 89: it skips churches GCatholic files under
+  `/churches/northamerica/<id>` (St. Augustine Cathedral 2046, Basilica of St. John the
+  Evangelist 4950, St. Vladimir Cathedral 2416), which were added from their own pages by
+  scratch/bridgeport-map-1/tools/gcatholic_add_northamerica.py. Re-run it after any refetch. Lists churches still on it after mergers (St. George and St.
   Patrick, Bridgeport; Holy Family and St. Emery, Fairfield; St. Benedict, Stamford; Sacred
   Heart, Danbury; St. Ladislaus, Norwalk; St. Agnes, Greenwich), and Holy Trinity, Sherman,
-  which the directory doesn't list. It omits St. Augustine Cathedral, the Basilica of St.
-  John the Evangelist (Stamford), St. Francis of Assisi (Weston), Our Lady of Aparecida
-  (Bethel), Sacred Heart (Georgetown) and St. Catherine of Siena (Riverside). Seven entries
-  are Eastern Catholic, in other jurisdictions: Ukrainian Eparchy of Stamford (Protection of
-  the BVM, Bridgeport; St. Basil Seminary), Melkite Eparchy of Our Lady of the Annunciation
+  which the directory doesn't list. It omits St. Francis of Assisi (Weston), Our Lady of Aparecida
+  (Bethel), Sacred Heart (Georgetown) and St. Catherine of Siena (Riverside). Eight entries
+  are Eastern Catholic, in other jurisdictions: Ukrainian Eparchy of Stamford (St. Vladimir
+  Cathedral and St. Basil Seminary, Stamford; Protection of the BVM, Bridgeport), Melkite Eparchy of Our Lady of the Annunciation
   in Boston (St. Ann and Mother of God of Tenderness, Danbury), Maronite Eparchy of St. Maron
   of Brooklyn (St. Anthony, Danbury), Ruthenian Eparchy of Passaic (St. Nicholas, Danbury;
   St. John the Baptist, Trumbull). St. John Fisher Seminary is the diocese's own.
@@ -99,6 +102,7 @@ Decisions that apply to more than one record, and who made them.
 
 Newest first: date, what was done, and the `pnpm diocese coverage` numbers after it.
 
-- 2026-11-12: Survey (bridgeport-map-1): created the diocese; rosters gcatholic 89,
-  directory 77, mass-times 14; 12 batches in batches.json, all 180 entries assigned. No
+- 2026-11-12: Survey (bridgeport-map-1): created the diocese; rosters gcatholic 92
+  (89 fetched + 3 added from /churches/northamerica/ pages), directory 77, mass-times 14;
+  12 batches in batches.json, all 183 entries assigned. No
   records yet, so no coverage.

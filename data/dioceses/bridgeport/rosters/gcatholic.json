@@ -3,8 +3,8 @@
  "title": "GCatholic: churches of the Roman Catholic Diocese of Bridgeport",
  "url": "https://gcatholic.org/churches/local/brid0",
  "fetched": "2026-11-12",
- "command": "pnpm diocese roster fetch bridgeport gcatholic brid0",
- "notes": "group is GCatholic's canonical parish when it differs from the church; coordinates are decoded from GCatholic's Plus Code (gcatholic-plus-code).",
+ "command": "pnpm diocese roster import bridgeport gcatholic scratch/bridgeport-map-1/001-survey/dl/gc-full.json",
+ "notes": "group is GCatholic's canonical parish when it differs from the church; coordinates are decoded from GCatholic's Plus Code (gcatholic-plus-code). Fetched 2026-11-12 by 'pnpm diocese roster fetch bridgeport gcatholic brid0' (89 entries), which skipped the three churches GCatholic files under /churches/northamerica/<id> (St. Augustine Cathedral 2046, Basilica of St. John the Evangelist 4950, St. Vladimir Ukrainian Cathedral 2416); they were added from their own GCatholic pages by scratch/bridgeport-map-1/tools/gcatholic_add_northamerica.py, giving the page's 92.",
  "entries": [
   {
    "id": "22021",
@@ -19,7 +19,6 @@
    "longitude": -73.3883125,
    "website": "http://www.stmarybethel.org",
    "url": "https://gcatholic.org/churches/usa-01/22021",
-   "address": "26 Dodgingtown Rd., Bethel, Connecticut 06801-2423",
    "plus_code": "87H89JF6+WM",
    "type": "Church",
    "phone": "+1 (203) 744-5777"
@@ -37,7 +36,6 @@
    "longitude": -73.1639375,
    "website": "http://www.blessedsacramentbpt.org",
    "url": "https://gcatholic.org/churches/usa-01/21990",
-   "address": "275 Union Ave., Bridgeport, Connecticut 06607-1895",
    "plus_code": "87H85RGP+7C",
    "type": "Church",
    "phone": "+1 (203) 333-1202"
@@ -55,7 +53,6 @@
    "longitude": -73.1825625,
    "website": "",
    "url": "https://gcatholic.org/churches/usa-01/21991",
-   "address": "429 Huntington Rd., Bridgeport, Connecticut 06608-1106",
    "plus_code": "87H85RX8+HX",
    "type": "Church",
    "phone": "+1 (203) 333-7575"
@@ -73,7 +70,6 @@
    "longitude": -73.1898125,
    "website": "http://www.standrewbptparishesonline.com",
    "url": "https://gcatholic.org/churches/usa-01/21993",
-   "address": "163 Ortega Ave., Bridgeport, Connecticut 06606-3053",
    "plus_code": "87H86R86+G3",
    "type": "Church"
   },
@@ -90,7 +86,6 @@
    "longitude": -73.2240625,
    "website": "http://www.standrewbptparishesonline.com",
    "url": "https://gcatholic.org/churches/usa-01/21992",
-   "address": "435 Anton St., Bridgeport, Connecticut 06606-2198",
    "plus_code": "87H86Q9G+49",
    "type": "Church",
    "phone": "+1 (203) 374-6171"
@@ -108,7 +103,6 @@
    "longitude": -73.2250625,
    "website": "http://www.stannblackrock.com",
    "url": "https://gcatholic.org/churches/usa-01/21994",
-   "address": "481 Brewster St., Bridgeport, Connecticut 06605-3498",
    "plus_code": "87H85Q4F+CX",
    "type": "Church",
    "phone": "+1 (203) 368-1607"
@@ -126,7 +120,6 @@
    "longitude": -73.1806875,
    "website": "",
    "url": "https://gcatholic.org/churches/usa-01/21997",
-   "address": "391 Ogden St., Bridgeport, Connecticut 06608-1646",
    "plus_code": "87H85RR9+PP",
    "type": "Church",
    "phone": "+1 (203) 333-2147"
@@ -144,7 +137,6 @@
    "longitude": -73.1773125,
    "website": "",
    "url": "https://gcatholic.org/churches/usa-01/21998",
-   "address": "79 Church St., Bridgeport, Connecticut 06608-2524",
    "plus_code": "87H85RPF+73",
    "type": "Church",
    "phone": "+1 (203) 333-7003"
@@ -162,7 +154,6 @@
    "longitude": -73.1939375,
    "website": "",
    "url": "https://gcatholic.org/churches/usa-01/21999",
-   "address": "443 Park Ave., Bridgeport, Connecticut 06604-5493",
    "plus_code": "87H85R94+9C",
    "type": "Church",
    "phone": "+1 (203) 335-1797"
@@ -181,7 +172,6 @@
    "website": "",
    "url": "https://gcatholic.org/churches/usa-01/22003",
    "qualifier": "Shrine",
-   "address": "2523 Park Ave., Bridgeport, Connecticut 06604-1402",
    "plus_code": "87H85QRM+RP",
    "type": "Shrine",
    "phone": "+1 (203) 333-9627",
@@ -200,7 +190,6 @@
    "longitude": -73.1784375,
    "website": "http://www.stmarychurchbridgeport.com",
    "url": "https://gcatholic.org/churches/usa-01/22000",
-   "address": "25 Sherman St., Bridgeport, Connecticut 06608-2632",
    "plus_code": "87H85RJC+GJ",
    "type": "Church",
    "phone": "+1 (203) 334-8811"
@@ -218,7 +207,6 @@
    "longitude": -73.1816875,
    "website": "",
    "url": "https://gcatholic.org/churches/usa-01/22001",
-   "address": "310 Pulaski St., Bridgeport, Connecticut 06608-2322",
    "plus_code": "87H85RM9+G8",
    "type": "Church",
    "phone": "+1 (203) 334-1822"
@@ -236,7 +224,6 @@
    "longitude": -73.1960625,
    "website": "",
    "url": "https://gcatholic.org/churches/usa-01/21996",
-   "address": "851 North Ave., Bridgeport, Connecticut 06606-5707",
    "plus_code": "87H85RV3+2H",
    "type": "Church"
   },
@@ -253,7 +240,6 @@
    "longitude": -73.2145625,
    "website": "",
    "url": "https://gcatholic.org/churches/usa-01/22002",
-   "address": "695 Colorado Ave., Bridgeport, Connecticut 06605-1699",
    "plus_code": "87H85QGP+J5",
    "type": "Church",
    "phone": "+1 (203) 366-5611"
@@ -271,7 +257,6 @@
    "longitude": -73.3865625,
    "website": "http://www.stjosephbrookfield.com",
    "url": "https://gcatholic.org/churches/usa-01/22028",
-   "address": "163 Whisconier Rd., Brookfield, Connecticut 06804-5072",
    "plus_code": "87H8FJ87+79",
    "type": "Church",
    "phone": "+1 (203) 775-1035"
@@ -289,7 +274,6 @@
    "longitude": -73.4199375,
    "website": "http://www.stmarguerite.org",
    "url": "https://gcatholic.org/churches/usa-01/22029",
-   "address": "138 Candlewood Lake Rd., Brookfield, Connecticut 06804-2100",
    "plus_code": "87H8FH4J+22",
    "type": "Church",
    "phone": "+1 (203) 775-5117"
@@ -307,7 +291,6 @@
    "longitude": -73.4531875,
    "website": "",
    "url": "https://gcatholic.org/churches/usa-01/22022",
-   "address": "149 Deer Hill Ave., Danbury, Connecticut 06810-7797",
    "plus_code": "87H89GRW+9P",
    "type": "Church",
    "phone": "+1 (203) 797-1821"
@@ -325,7 +308,6 @@
    "longitude": -73.4625625,
    "website": "",
    "url": "https://gcatholic.org/churches/usa-01/22023",
-   "address": "29 Golden Hill Rd., Danbury, Connecticut 06811-4629",
    "plus_code": "87H8CG5P+RX",
    "type": "Church",
    "phone": "+1 (203) 743-1021"
@@ -343,7 +325,6 @@
    "longitude": -73.4429375,
    "website": "http://www.sacredhrtchurch.org",
    "url": "https://gcatholic.org/churches/usa-01/22024",
-   "address": "46 Stone St., Danbury, Connecticut 06810",
    "plus_code": "87H89HR4+XR",
    "type": "Church",
    "phone": "+1 (203) 748-9029"
@@ -361,7 +342,6 @@
    "longitude": -73.4390625,
    "website": "http://www.danbury.org/stgreg",
    "url": "https://gcatholic.org/churches/usa-01/22025",
-   "address": "85 Great Plain Rd., Danbury, Connecticut 06811-3926",
    "plus_code": "87H8CHG6+V9",
    "type": "Church",
    "phone": "+1 (203) 797-0222"
@@ -379,7 +359,6 @@
    "longitude": -73.4588125,
    "website": "http://www.stjosephchurchdanbury.org",
    "url": "https://gcatholic.org/churches/usa-01/22026",
-   "address": "8 Robinson Ave., Danbury, Connecticut 06810-5517",
    "plus_code": "87H8CG2R+9F",
    "type": "Church",
    "phone": "+1 (203) 748-8177"
@@ -397,7 +376,6 @@
    "longitude": -73.4491875,
    "website": "http://www.stpeterdanb.org",
    "url": "https://gcatholic.org/churches/usa-01/22027",
-   "address": "104 Main St., Danbury, Connecticut 06810-7891",
    "plus_code": "87H89HR2+Q8",
    "type": "Church",
    "phone": "+1 (203) 743-2707"
@@ -415,7 +393,6 @@
    "longitude": -73.4866875,
    "website": "http://www.stjohndarien.com",
    "url": "https://gcatholic.org/churches/usa-01/21969",
-   "address": "1986 Post Rd., Darien, Connecticut 06820-5805",
    "plus_code": "87H83G67+48",
    "type": "Church",
    "phone": "+1 (203) 655-1145"
@@ -433,7 +410,6 @@
    "longitude": -73.4836875,
    "website": "http://www.stmdarienct.org",
    "url": "https://gcatholic.org/churches/usa-01/21970",
-   "address": "374 Middlesex Rd., Darien, Connecticut 06820-2517",
    "plus_code": "87H83GP8+MG",
    "type": "Church",
    "phone": "+1 (203) 655-3303"
@@ -451,7 +427,6 @@
    "longitude": -73.2951875,
    "website": "http://www.notredameofeaston.org",
    "url": "https://gcatholic.org/churches/usa-01/21989",
-   "address": "655 Morehouse Rd., Easton, Connecticut 06612-0008",
    "plus_code": "87H86PX3+WW",
    "type": "Church",
    "phone": "+1 (203) 268-5838"
@@ -469,7 +444,6 @@
    "longitude": -73.2536875,
    "website": "",
    "url": "https://gcatholic.org/churches/usa-01/21983",
-   "address": "750 Tahmore Dr., Fairfield, Connecticut 06825-2599",
    "plus_code": "87H86P2W+6G",
    "type": "Church",
    "phone": "+1 (203) 372-4595"
@@ -487,7 +461,6 @@
    "longitude": -73.2339375,
    "website": "http://www.holyfamilyfairfield.com",
    "url": "https://gcatholic.org/churches/usa-01/21984",
-   "address": "700 Old Stratfield Rd., Fairfield, Connecticut 06825-7424",
    "plus_code": "87H85QF8+JC",
    "type": "Church",
    "phone": "+1 (203) 336-1835"
@@ -505,7 +478,6 @@
    "longitude": -73.2264375,
    "website": "http://www.assumption-fairfield.org",
    "url": "https://gcatholic.org/churches/usa-01/21982",
-   "address": "545 Stratfield Rd., Fairfield, Connecticut 06825-1898",
    "plus_code": "87H85QVF+9C",
    "type": "Church",
    "phone": "+1 (203) 333-9065"
@@ -523,7 +495,6 @@
    "longitude": -73.2680625,
    "website": "http://www.stanthonyffld.org",
    "url": "https://gcatholic.org/churches/usa-01/21985",
-   "address": "149 S Pine Creek Rd., Fairfield, Connecticut 06824",
    "plus_code": "87H84PQJ+FQ",
    "type": "Church",
    "phone": "+1 (203) 259-0358"
@@ -541,7 +512,6 @@
    "longitude": -73.2323125,
    "website": "http://www.stemerys.com",
    "url": "https://gcatholic.org/churches/usa-01/21986",
-   "address": "838 Kings Hwy. E, Fairfield, Connecticut 06825-5418",
    "plus_code": "87H85Q99+73",
    "type": "Church",
    "phone": "+1 (203) 334-0312"
@@ -559,7 +529,6 @@
    "longitude": -73.2673125,
    "website": "http://www.st-pius.org",
    "url": "https://gcatholic.org/churches/usa-01/21987",
-   "address": "834 Brookside Dr., Fairfield, Connecticut 06824-2420",
    "plus_code": "87H85PGM+P3",
    "type": "Church",
    "phone": "+1 (203) 255-6134"
@@ -577,7 +546,6 @@
    "longitude": -73.2616875,
    "website": "http://stthomasaquinasfairfield.myownparish.com",
    "url": "https://gcatholic.org/churches/usa-01/21988",
-   "address": "1719 Post Rd., Fairfield, Connecticut 06430-5715",
    "plus_code": "87H84PRQ+88",
    "type": "Church",
    "phone": "+1 (203) 255-1097"
@@ -595,7 +563,6 @@
    "longitude": -73.6553125,
    "website": "",
    "url": "https://gcatholic.org/churches/usa-01/21949",
-   "address": "95 Henry St., Greenwich, Connecticut 06830-5810",
    "plus_code": "87H8284V+HV",
    "type": "Church",
    "phone": "+1 (203) 531-8730"
@@ -613,7 +580,6 @@
    "longitude": -73.6029375,
    "website": "http://www.stagnesrc.org",
    "url": "https://gcatholic.org/churches/usa-01/21950",
-   "address": "247 Stanwich Rd., Greenwich, Connecticut 06830-3599",
    "plus_code": "87H8399W+XR",
    "type": "Church",
    "phone": "+1 (203) 869-5396"
@@ -631,7 +597,6 @@
    "longitude": -73.6264375,
    "website": "",
    "url": "https://gcatholic.org/churches/usa-01/21951",
-   "address": "178 Greenwich Ave., Greenwich, Connecticut 06830-6563",
    "plus_code": "87H829HF+4C",
    "type": "Church",
    "phone": "+1 (203) 869-9393"
@@ -649,7 +614,6 @@
    "longitude": -73.6236875,
    "website": "http://www.stmichaelgreenwich.com",
    "url": "https://gcatholic.org/churches/usa-01/21952",
-   "address": "469 North St., Greenwich, Connecticut 06830-3998",
    "plus_code": "87H839CG+4G",
    "type": "Church",
    "phone": "+1 (203) 869-5421"
@@ -667,7 +631,6 @@
    "longitude": -73.6885625,
    "website": "http://www.stpaulgreenwich.org",
    "url": "https://gcatholic.org/churches/usa-01/21954",
-   "address": "84 Sherwood Ave., Greenwich, Connecticut 06831-3250",
    "plus_code": "87H83836+9H",
    "type": "Church",
    "phone": "+1 (203) 531-8741"
@@ -685,7 +648,6 @@
    "longitude": -73.6410625,
    "website": "",
    "url": "https://gcatholic.org/churches/usa-01/21955",
-   "address": "10 St. Roch Ave., Greenwich, Connecticut 06830-6234",
    "plus_code": "87H82995+2H",
    "type": "Church",
    "phone": "+1 (203) 869-4176"
@@ -703,7 +665,6 @@
    "longitude": -73.6385625,
    "website": "http://www.stmichaelgreenwich.com",
    "url": "https://gcatholic.org/churches/usa-01/21953",
-   "address": "1034 North St., Greenwich, Connecticut 06830-3998",
    "plus_code": "87H849R6+5H",
    "type": "Church"
   },
@@ -720,7 +681,6 @@
    "longitude": -73.2085625,
    "website": "http://www.saintjudechurch.net",
    "url": "https://gcatholic.org/churches/usa-01/22016",
-   "address": "707 Monroe Tpke., Monroe, Connecticut 06468-2361",
    "plus_code": "87H88QHR+PH",
    "type": "Church",
    "phone": "+1 (203) 261-6404"
@@ -738,7 +698,6 @@
    "longitude": -73.4941875,
    "website": "http://www.starcc.com",
    "url": "https://gcatholic.org/churches/usa-01/21971",
-   "address": "21 Cherry St., New Canaan, Connecticut 06840",
    "plus_code": "87H84GW4+58",
    "type": "Church",
    "phone": "+1 (203) 966-0020"
@@ -756,7 +715,6 @@
    "longitude": -73.4914375,
    "website": "http://www.saintedwardchurch.org",
    "url": "https://gcatholic.org/churches/usa-01/22030",
-   "address": "21 Brush Hill Rd., New Fairfield, Connecticut 06812-2661",
    "plus_code": "87H8FG75+5C",
    "type": "Church",
    "phone": "+1 (203) 746-2200"
@@ -774,7 +732,6 @@
    "longitude": -73.2979375,
    "website": "http://www.strosechurch.com",
    "url": "https://gcatholic.org/churches/usa-01/22020",
-   "address": "46 Church Hill Rd., Newtown, Connecticut 06470-1648",
    "plus_code": "87H8CP82+8R",
    "type": "Church",
    "phone": "+1 (203) 426-1014"
@@ -792,7 +749,6 @@
    "longitude": -73.4123125,
    "website": "http://www.stjeromenorwalk.org",
    "url": "https://gcatholic.org/churches/usa-01/21972",
-   "address": "23 Half Mile Rd., Norwalk, Connecticut 06851-1299",
    "plus_code": "87H85H3Q+63",
    "type": "Church",
    "phone": "+1 (203) 847-5349"
@@ -810,7 +766,6 @@
    "longitude": -73.4191875,
    "website": "http://www.stjosephsono.org",
    "url": "https://gcatholic.org/churches/usa-01/21973",
-   "address": "85 S Main St., Norwalk, Connecticut 06854-3187",
    "plus_code": "87H83HWJ+38",
    "type": "Church",
    "phone": "+1 (203) 838-4171"
@@ -828,7 +783,6 @@
    "longitude": -73.4279375,
    "website": "",
    "url": "https://gcatholic.org/churches/usa-01/21974",
-   "address": "25 Cliff St., Norwalk, Connecticut 06854-3538",
    "plus_code": "87H83HVC+3R",
    "type": "Church",
    "phone": "+1 (203) 866-1867"
@@ -846,7 +800,6 @@
    "longitude": -73.4149375,
    "website": "http://www.stmarynorwalk.net",
    "url": "https://gcatholic.org/churches/usa-01/21975",
-   "address": "669 West Ave., Norwalk, Connecticut 06850-4092",
    "plus_code": "87H84H7P+V2",
    "type": "Church",
    "phone": "+1 (203) 866-5546"
@@ -864,7 +817,6 @@
    "longitude": -73.4485625,
    "website": "http://www.stmatthewnorwalk.com",
    "url": "https://gcatholic.org/churches/usa-01/21976",
-   "address": "216 Scribner Ave., Norwalk, Connecticut 06854-1326",
    "plus_code": "87H84H62+4H",
    "type": "Church",
    "phone": "+1 (203) 838-3788"
@@ -882,7 +834,6 @@
    "longitude": -73.4099375,
    "website": "http://www.stphilipnorwalk.org",
    "url": "https://gcatholic.org/churches/usa-01/21977",
-   "address": "1 Father Conlon Pl., Norwalk, Connecticut 06851-3897",
    "plus_code": "87H84HCR+V2",
    "type": "Church",
    "phone": "+1 (203) 847-4549"
@@ -900,7 +851,6 @@
    "longitude": -73.4046875,
    "website": "http://www.stthomasnorwalk.com",
    "url": "https://gcatholic.org/churches/usa-01/21978",
-   "address": "203 East Ave., Norwalk, Connecticut 06855-1299",
    "plus_code": "87H84H4W+54",
    "type": "Church",
    "phone": "+1 (203) 866-3141"
@@ -918,7 +868,6 @@
    "longitude": -73.3475625,
    "website": "",
    "url": "https://gcatholic.org/churches/usa-01/22019",
-   "address": "169 Black Rock Tpke., Redding Ridge, Connecticut 06876-0119",
    "plus_code": "87H88M42+WX",
    "type": "Church",
    "phone": "+1 (203) 938-2253"
@@ -936,7 +885,6 @@
    "longitude": -73.5231875,
    "website": "http://www.sesparish.org",
    "url": "https://gcatholic.org/churches/usa-01/22017",
-   "address": "520 Ridgebury Rd., Ridgefield, Connecticut 06877-1116",
    "plus_code": "87H89F4G+9P",
    "type": "Church",
    "phone": "+1 (203) 438-7292"
@@ -954,7 +902,6 @@
    "longitude": -73.5036875,
    "website": "http://www.smcr.org",
    "url": "https://gcatholic.org/churches/usa-01/22018",
-   "address": "55 Catoonah St., Ridgefield, Connecticut 06877-4496",
    "plus_code": "87H87FJW+HG",
    "type": "Church",
    "phone": "+1 (203) 438-6538"
@@ -972,7 +919,6 @@
    "longitude": -73.0966875,
    "website": "http://www.sjcshelton.org",
    "url": "https://gcatholic.org/churches/usa-01/22013",
-   "address": "424 Coram Ave., Shelton, Connecticut 06484-3044",
    "plus_code": "87H88W93+78",
    "type": "Church",
    "phone": "+1 (203) 924-8611"
@@ -990,7 +936,6 @@
    "longitude": -73.1461875,
    "website": "http://www.diobptstlawrenceparish.net",
    "url": "https://gcatholic.org/churches/usa-01/22014",
-   "address": "505 Shelton Ave., Shelton, Connecticut 06484-2899",
    "plus_code": "87H87VX3+6G",
    "type": "Church",
    "phone": "+1 (203) 929-5355"
@@ -1008,7 +953,6 @@
    "longitude": -73.0995625,
    "website": "",
    "url": "https://gcatholic.org/churches/usa-01/22015",
-   "address": "50 Donovan Ln., Shelton, Connecticut 06484-5598",
    "plus_code": "87H88W22+35",
    "type": "Church",
    "phone": "+1 (203) 924-4929"
@@ -1026,7 +970,6 @@
    "longitude": -73.4976875,
    "website": "http://www.htrccsherman.org",
    "url": "https://gcatholic.org/churches/usa-01/22031",
-   "address": "Rts. 37 & 39, Sherman, Connecticut 06784-0097",
    "plus_code": "87H8HGG2+5W",
    "type": "Church",
    "phone": "+1 (860) 354-1414"
@@ -1044,7 +987,6 @@
    "longitude": -73.5426875,
    "website": "",
    "url": "https://gcatholic.org/churches/usa-01/21956",
-   "address": "4 Pulaski St., Stamford, Connecticut 06902-6822",
    "plus_code": "87H82FV4+PW",
    "type": "Church",
    "phone": "+1 (203) 323-4967"
@@ -1062,7 +1004,6 @@
    "longitude": -73.5559375,
    "website": "",
    "url": "https://gcatholic.org/churches/usa-01/21957",
-   "address": "403 Scofieldtown Rd., Stamford, Connecticut 06903-4009",
    "plus_code": "87H84CHV+XJ",
    "type": "Church",
    "phone": "+1 (203) 322-3722"
@@ -1080,7 +1021,6 @@
    "longitude": -73.5250625,
    "website": "http://www.ourladystaroftheseastamford.org",
    "url": "https://gcatholic.org/churches/usa-01/21958",
-   "address": "1200 Shippan Ave., Stamford, Connecticut 06902-7425",
    "plus_code": "87H82FPF+JX",
    "type": "Church",
    "phone": "+1 (203) 324-4634"
@@ -1098,7 +1038,6 @@
    "longitude": -73.5474375,
    "website": "",
    "url": "https://gcatholic.org/churches/usa-01/21959",
-   "address": "37 Schuyler Ave., Stamford, Connecticut 06902-3760",
    "plus_code": "87H83F33+M2",
    "type": "Church",
    "phone": "+1 (203) 324-954"
@@ -1116,7 +1055,6 @@
    "longitude": -73.5205625,
    "website": "",
    "url": "https://gcatholic.org/churches/usa-01/21960",
-   "address": "21 St. Benedict Cir., Stamford, Connecticut 06902-5214",
    "plus_code": "87H82FXH+CQ",
    "type": "Church",
    "phone": "+1 (203) 327-7250"
@@ -1134,7 +1072,6 @@
    "longitude": -73.5350625,
    "website": "http://www.stbridgetofireland.org",
    "url": "https://gcatholic.org/churches/usa-01/21961",
-   "address": "278 Strawberry Hill Ave., Stamford, Connecticut 06902-2590",
    "plus_code": "87H83FC7+4X",
    "type": "Church",
    "phone": "+1 (203) 324-2910"
@@ -1152,7 +1089,6 @@
    "longitude": -73.5311875,
    "website": "",
    "url": "https://gcatholic.org/churches/usa-01/21962",
-   "address": "1184 Newfield Ave., Stamford, Connecticut 06905-1496",
    "plus_code": "87H84F29+5G",
    "type": "Church",
    "phone": "+1 (203) 322-1562"
@@ -1170,7 +1106,6 @@
    "longitude": -73.5526875,
    "website": "",
    "url": "https://gcatholic.org/churches/usa-01/21963",
-   "address": "535 Fairfield Ave., Stamford, Connecticut 06902-7589",
    "plus_code": "87H82CMW+PW",
    "type": "Church",
    "phone": "+1 (203) 348-4206"
@@ -1188,7 +1123,6 @@
    "longitude": -73.5341875,
    "website": "",
    "url": "https://gcatholic.org/churches/usa-01/21964",
-   "address": "914 Newfield Ave., Stamford, Connecticut 06905-2519",
    "plus_code": "87H83FR8+J8",
    "type": "Church",
    "phone": "+1 (203) 322-7426"
@@ -1207,7 +1141,6 @@
    "website": "http://www.bridgeportvocations.org/fisher-seminary/",
    "url": "https://gcatholic.org/churches/usa-01/40356",
    "qualifier": "Seminary",
-   "address": "894 Newfield Ave., Stamford, Connecticut 06905",
    "plus_code": "87H83FR8+93",
    "type": "Seminary"
   },
@@ -1224,7 +1157,6 @@
    "longitude": -73.5611875,
    "website": "",
    "url": "https://gcatholic.org/churches/usa-01/21966",
-   "address": "24 Roxbury Rd., Stamford, Connecticut 06902-1287",
    "plus_code": "87H83CQQ+2G",
    "type": "Church",
    "phone": "+1 (203) 322-1669"
@@ -1242,7 +1174,6 @@
    "longitude": -73.5248125,
    "website": "",
    "url": "https://gcatholic.org/churches/usa-01/21967",
-   "address": "566 Elm St., Stamford, Connecticut 06902-5196",
    "plus_code": "87H82FXG+Q3",
    "type": "Church",
    "phone": "+1 (203) 324-7321"
@@ -1260,7 +1191,6 @@
    "longitude": -73.5224375,
    "website": "",
    "url": "https://gcatholic.org/churches/usa-01/21968",
-   "address": "358 Glenbrook Rd., Stamford, Connecticut 06906-2198",
    "plus_code": "87H83F8H+F2",
    "type": "Church",
    "phone": "+1 (203) 324-3434"
@@ -1278,7 +1208,6 @@
    "longitude": -73.1474375,
    "website": "",
    "url": "https://gcatholic.org/churches/usa-01/22008",
-   "address": "1950 Barnum Ave., Stratford, Connecticut 06614",
    "plus_code": "87H85VV3+62",
    "type": "Church",
    "phone": "+1 (203) 375-5815"
@@ -1296,7 +1225,6 @@
    "longitude": -73.1545625,
    "website": "http://www.olgstratford.com",
    "url": "https://gcatholic.org/churches/usa-01/22009",
-   "address": "497 Second Hill Ln., Stratford, Connecticut 06614-2595",
    "plus_code": "87H86R8W+V5",
    "type": "Church",
    "phone": "+1 (203) 377-0928"
@@ -1314,7 +1242,6 @@
    "longitude": -73.1199375,
    "website": "http://www.ourladyofpeacestratfordct.4lpi.com",
    "url": "https://gcatholic.org/churches/usa-01/22010",
-   "address": "230 Park Blvd., Stratford, Connecticut 06615-7894",
    "plus_code": "87H85V3J+P2",
    "type": "Church",
    "phone": "+1 (203) 377-4863"
@@ -1332,7 +1259,6 @@
    "longitude": -73.1301875,
    "website": "http://www.stjamesstratford.com",
    "url": "https://gcatholic.org/churches/usa-01/22011",
-   "address": "2110 Main St., Stratford, Connecticut 06615-6342",
    "plus_code": "87H85VQ9+9W",
    "type": "Church",
    "phone": "+1 (203) 375-5887"
@@ -1350,7 +1276,6 @@
    "longitude": -73.1300625,
    "website": "http://www.stmarkstratford.org",
    "url": "https://gcatholic.org/churches/usa-01/22012",
-   "address": "500 Wigwam Ln., Stratford, Connecticut 06614-2441",
    "plus_code": "87H86VH9+8X",
    "type": "Church",
    "phone": "+1 (203) 377-0444"
@@ -1368,7 +1293,6 @@
    "longitude": -73.2456875,
    "website": "http://www.christthekingtrumbull.org",
    "url": "https://gcatholic.org/churches/usa-01/22004",
-   "address": "4700 Madison Ave., Trumbull, Connecticut 06611-1799",
    "plus_code": "87H87Q53+8P",
    "type": "Church",
    "phone": "+1 (203) 268-8695"
@@ -1386,7 +1310,6 @@
    "longitude": -73.1569375,
    "website": "http://www.stcatherinetrumbull.com",
    "url": "https://gcatholic.org/churches/usa-01/22005",
-   "address": "200 Shelton Rd., Trumbull, Connecticut 06611-5136",
    "plus_code": "87H86RWV+F6",
    "type": "Church",
    "phone": "+1 (203) 377-3133 x10"
@@ -1404,7 +1327,6 @@
    "longitude": -73.2398125,
    "website": "http://www.ststephentc.org",
    "url": "https://gcatholic.org/churches/usa-01/22006",
-   "address": "6948 Main St., Trumbull, Connecticut 06611-1369",
    "plus_code": "87H87QQ6+P3",
    "type": "Church",
    "phone": "+1 (203) 268-6217"
@@ -1422,7 +1344,6 @@
    "longitude": -73.2206875,
    "website": "http://www.sttheresatrumbull.org",
    "url": "https://gcatholic.org/churches/usa-01/22007",
-   "address": "5301 Main St., Trumbull, Connecticut 06611-4195",
    "plus_code": "87H86QQH+5P",
    "type": "Church",
    "phone": "+1 (203) 261-3676"
@@ -1440,7 +1361,6 @@
    "longitude": -73.3650625,
    "website": "http://www.assumption-westport.org",
    "url": "https://gcatholic.org/churches/usa-01/21980",
-   "address": "98 Riverside Ave., Westport, Connecticut 06880-4284",
    "plus_code": "87H84JPM+FX",
    "type": "Church",
    "phone": "+1 (203) 227-5161"
@@ -1458,7 +1378,6 @@
    "longitude": -73.3234375,
    "website": "http://www.stlukewestport.com",
    "url": "https://gcatholic.org/churches/usa-01/21981",
-   "address": "84 Long Lots Rd., Westport, Connecticut 06880-3997",
    "plus_code": "87H84MVG+MJ",
    "type": "Church",
    "phone": "+1 (203) 227-7245"
@@ -1476,7 +1395,6 @@
    "longitude": -73.4263125,
    "website": "http://www.olfwilton.org",
    "url": "https://gcatholic.org/churches/usa-01/21979",
-   "address": "229 Danbury Rd., Wilton, Connecticut 06897-4088",
    "plus_code": "87H85HQF+9F",
    "type": "Church",
    "phone": "+1 (203) 762-3928"
@@ -1495,7 +1413,6 @@
    "website": "http://pokrovact.com",
    "url": "https://gcatholic.org/churches/usa-01/17100",
    "rite": "Ukrainian",
-   "address": "255 Barnum Ave., Bridgeport, Connecticut 06608",
    "type": "Church",
    "phone": "+1 (203) 367-5054"
   },
@@ -1514,7 +1431,6 @@
    "url": "https://gcatholic.org/churches/usa-01/16533",
    "qualifier": "Chapel",
    "rite": "Greek-Melkite",
-   "address": "79 Golden Hill Rd., Danbury, Connecticut 06811",
    "type": "Chapel",
    "phone": "+1 (203) 794-1486"
   },
@@ -1532,7 +1448,6 @@
    "website": "http://www.stanndanbury.org",
    "url": "https://gcatholic.org/churches/usa-01/16543",
    "rite": "Greek-Melkite",
-   "address": "181 Clapboard Ridge Rd., Danbury, Connecticut 06811-3635",
    "type": "Church",
    "phone": "+1 (203) 743-5119"
   },
@@ -1550,7 +1465,6 @@
    "website": "http://www.stanthonydanbury.com",
    "url": "https://gcatholic.org/churches/usa-01/17014",
    "rite": "Maronite",
-   "address": "17 Granville Ave., Danbury, Connecticut 06810-5913",
    "type": "Church",
    "phone": "+1 (203) 744-3372"
   },
@@ -1568,7 +1482,6 @@
    "website": "",
    "url": "https://gcatholic.org/churches/usa-01/17152",
    "rite": "Ruthenian",
-   "address": "13 Pembroke Rd., Danbury, Connecticut 06811",
    "type": "Church",
    "phone": "+1 (203) 743-1106"
   },
@@ -1587,7 +1500,6 @@
    "url": "https://gcatholic.org/churches/usa-01/40355",
    "qualifier": "Seminary",
    "rite": "Ukrainian",
-   "address": "195 Glenbrook Rd., Stamford, Connecticut 06902 ‎",
    "type": "Seminary"
   },
   {
@@ -1604,9 +1516,59 @@
    "website": "",
    "url": "https://gcatholic.org/churches/usa-01/17155",
    "rite": "Ruthenian",
-   "address": "100 St John Dr., Trumbull, Connecticut 06611",
    "type": "Church",
    "phone": "+1 (203) 377-5967"
+  },
+  {
+   "id": "2046",
+   "name": "St. Augustine",
+   "group": "",
+   "kind": "Cathedral",
+   "line1": "359 Washington Ave.",
+   "city": "Bridgeport",
+   "state": "CT",
+   "postal_code": "06604",
+   "latitude": 41.1801875,
+   "longitude": -73.1954375,
+   "website": "",
+   "url": "https://gcatholic.org/churches/northamerica/2046",
+   "plus_code": "87H85RJ3+3R",
+   "type": "St. Augustine Cathedral",
+   "phone": "+1 (203) 368-6777"
+  },
+  {
+   "id": "4950",
+   "name": "St. John the Evangelist",
+   "group": "",
+   "kind": "Basilica",
+   "line1": "279 Atlantic St.",
+   "city": "Stamford",
+   "state": "CT",
+   "postal_code": "06901",
+   "latitude": 41.0516875,
+   "longitude": -73.5396875,
+   "website": "http://www.stjohnsstamford.com",
+   "url": "https://gcatholic.org/churches/northamerica/4950",
+   "plus_code": "87H83F26+M4",
+   "type": "Basilica of St. John the Evangelist",
+   "phone": "+1 (203) 324-1553"
+  },
+  {
+   "id": "2416",
+   "name": "St. Vladimir",
+   "group": "",
+   "kind": "Cathedral",
+   "line1": "24 Wenzel Terr.",
+   "city": "Stamford",
+   "state": "CT",
+   "postal_code": "06902",
+   "latitude": 41.0618125,
+   "longitude": -73.5276875,
+   "website": "",
+   "url": "https://gcatholic.org/churches/northamerica/2416",
+   "plus_code": "87H83F6C+PW",
+   "type": "St. Vladimir Cathedral",
+   "phone": "+1 (203) 342-0242"
   }
  ]
 }
