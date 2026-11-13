@@ -26,6 +26,15 @@ research:
     Center's address
   retry_when: A web search is available, or IHM publishes a bulletin or website
   revisit_after: 2027-02-01
+- method: Diocese's news search (wp-json posts, 'portuguese danbury', 'immaculate heart of mary danbury',
+    'santo cristo') for the chapel or IHM's Portuguese Masses
+  url: https://www.bridgeportdiocese.org/wp-json/wp/v2/posts?search=santo+cristo
+  checked: '2026-11-12'
+  outcome: not-found
+  next_action: Find the Portuguese Community Center's own site or page (address, chapel Mass) or a current
+    IHM schedule naming the chapel
+  retry_when: A web search is available, or IHM publishes a bulletin or website
+  revisit_after: 2027-02-01
 ---
 
 ## What is known

@@ -32,7 +32,7 @@ Our Lady of Fatima, Bridgeport (the Portuguese parish in the North End) posts a 
 
 ## Worship sites
 
-One church, `our-lady-of-fatima-bridgeport`. The bulletin doesn't name the Our Lady of Good Counsel chapel on Ortega Avenue (grep), which GCatholic places under St. Andrew.
+One church, `our-lady-of-fatima-bridgeport`. The bulletin doesn't name the Our Lady of Good Counsel chapel on Ortega Avenue (grep), which GCatholic places under St. Andrew; it is its own row, `our-lady-of-good-counsel-bridgeport`.
 
 ## Website and bulletin provider
 

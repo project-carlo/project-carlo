@@ -32,7 +32,7 @@ Sacred Heart & St. Patrick, Redding publishes a weekly LPi bulletin (ParishesOnl
 
 ## Worship sites
 
-One church on this row, `st-patrick-redding-ridge`. The bulletin also schedules Masses at Sacred Heart Church (SH), 30 Church Street, Georgetown, but that building is carried on the Georgetown Oratory's row (`georgetown-oratory-redding`, church `sacred-heart-georgetown`): the oratory publishes its own bulletin, says it "is responsible for sacred heart church" (its homepage, read 2026-11-12), and its 8 November 2026 bulletin lists every Mass at the church, including the parish's Saturday 4:00 PM vigil, Sunday 9 AM and 10:30 AM, and Tuesday/Thursday 8:30 AM, plus the Latin (1962) Masses this bulletin omits. Under the survey's settled rule a community with its own rector that publishes its own bulletin is its own row. This choice of row for the shared building is flagged (advisory) for the owner.
+One church on this row, `st-patrick-redding-ridge`. The bulletin also schedules Masses at Sacred Heart Church (SH), 30 Church Street, Georgetown, but that building is carried on the Georgetown Oratory's row (`georgetown-oratory-redding`, church `sacred-heart-georgetown`): the oratory publishes its own bulletin, says it "is responsible for sacred heart church" (its homepage, read 2026-11-12), and its 8 November 2026 bulletin lists every Mass at the church, including the parish's Saturday 4:00 PM vigil, Sunday 9 AM and 10:30 AM, and Tuesday/Thursday 8:30 AM, plus the Latin (1962) Masses this bulletin omits. Under the survey's settled rule a community with its own rector that publishes its own bulletin is its own row. Reconcile (2026-11-12) confirmed this choice of row for the shared building.
 
 The diocese directory gives the parish as one entry (1380) with both addresses; its mass-times cards name Sacred Heart Church and St. Patrick Church (`mass-times:1380-sacred-heart-church` on the Sacred Heart church record, `mass-times:1380-st-patrick-church` on St. Patrick's).
 
@@ -44,4 +44,4 @@ Provider `parishes_online`, read by org slug. The ParishesOnline org's map pin i
 
 ## Not yet confirmed
 
-Whether the owner prefers Sacred Heart Church on this row instead of the oratory's (advisory flag in the 008-map handoff).
+Nothing open. Reconcile (2026-11-12) kept Sacred Heart Church on the oratory's row (its bulletin carries the church's complete schedule); if the oratory stops publishing, the church moves back to this row.

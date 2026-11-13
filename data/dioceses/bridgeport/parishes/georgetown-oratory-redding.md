@@ -48,7 +48,7 @@ The parish's 15 November 2026 LPi bulletin (container 04/0116) has a different m
 
 ## Worship sites
 
-One church, `sacred-heart-georgetown` (Sacred Heart Church, 30 Church Street). The oratory's homepage says the community "is responsible for sacred heart church", and its bulletin gives the church's full schedule, so the building is on this row rather than the parish's. That choice is flagged (advisory) for the owner; the parish's own Masses there are the same times as the oratory's 4 PM, 9 AM, 10:30 AM and weekday 8:30 AM.
+One church, `sacred-heart-georgetown` (Sacred Heart Church, 30 Church Street). The oratory's homepage says the community "is responsible for sacred heart church", and its bulletin gives the church's full schedule, so the building is on this row rather than the parish's. The parish's own Masses there are the same times as the oratory's 4 PM, 9 AM, 10:30 AM and weekday 8:30 AM, so this row's bulletin covers every Mass at the church, including the 1962 Masses the parish's bulletin omits. Reconcile (2026-11-12) settled the 008-map flag this way: one church row belongs to one parish row, and this row's schedule is the complete one.
 
 ## Website and bulletin provider
 
@@ -56,4 +56,4 @@ Provider `other`, pinned with `page-pdfs` to the Bulletin page. The page lists i
 
 ## Not yet confirmed
 
-Whether the owner prefers Sacred Heart Church on the parish's row (advisory flag in the 008-map handoff).
+The oratory does not post every week (gaps July-September and October 2026); if it stops publishing while the parish's bulletin keeps listing Sacred Heart, move the church to `sacred-heart-st-patrick-redding`.

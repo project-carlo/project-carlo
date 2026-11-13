@@ -70,6 +70,9 @@ programme (The One), not a regrouping.
   2025-11-03); "St. Emery to be Erected as an Oratory"
   (https://www.bridgeportdiocese.org/st-emery-to-be-erected-as-an-oratory/, 2025-10-01; body
   not readable with `probe get`).
+- **News search:** `https://www.bridgeportdiocese.org/wp-json/wp/v2/posts?search=<words>&_fields=date,link`
+  finds Fairfield County Catholic articles on places the directory omits (Our Lady of Good
+  Counsel's Koinonia community; the two Carmelite monasteries, 1 July 2026).
 - **Pastoral plan / closure announcements:** none found by the site search (wp-json search
   for "cluster", "pastoral plan", "merger", "consolidat", 2026-11-12) beyond the above.
 
@@ -156,6 +159,17 @@ Decisions that apply to more than one record, and who made them.
 
 Newest first: date, what was done, and the `pnpm diocese coverage` numbers after it.
 
+- 2026-11-12: Reconcile (bridgeport-map-1/018): all 12 map batches ran (11-19 roster entries
+  each, usually about 16). Coverage: directory 77/77 (69 modelled on the site), gcatholic
+  92/92 (73/82 modelled; 10 excluded, 1 open), mass-times 14/14. No merges or moves: Sacred
+  Heart, Georgetown stays on the Georgetown Oratory's row (its bulletin has the church's
+  full schedule). Open records settled from the diocese's news search: Our Lady of Good
+  Counsel, Bridgeport is a Koinonia-run parish with English and Spanish Mass, now its own
+  `no_bulletin` row; the Oratory of St. Emery has a public daily 7 AM Mass (Carmelites of
+  Mary Ever Virgin's site) and no bulletin, excluded no-bulletin; the Discalced Carmel in
+  Danbury (no public chapel) excluded no-public-mass. Santo Cristo chapel and St. John
+  Fisher Seminary stay open. fetch:check: 67 rows download (the 3 Bon Venture rows only
+  without the Chrome channel); 76 rows: 67 checked, 5 no_bulletin, 4 unsupported.
 - 2026-11-12: Survey (bridgeport-map-1): created the diocese; rosters gcatholic 92
   (89 fetched + 3 added from /churches/northamerica/ pages), directory 77, mass-times 14;
   12 batches in batches.json, all 183 entries assigned. No

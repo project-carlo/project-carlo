@@ -43,6 +43,15 @@ research:
     its chapel; ask whether the diocese's Mass-times finder lists it
   retry_when: A seminary website or a diocesan page describing the seminary turns up
   revisit_after: 2027-01-15
+- method: 'Diocese''s news search (wp-json posts, ''john fisher'', ''fisher seminary'', ''seminary stamford''):
+    no article on the seminary or a Mass there since 2019 apart from unrelated hits'
+  url: https://www.bridgeportdiocese.org/wp-json/wp/v2/posts?search=john+fisher
+  checked: '2026-11-12'
+  outcome: not-found
+  next_action: Look for a current St. John Fisher Seminary page or a news item naming a public Mass in
+    its chapel
+  retry_when: A seminary website or a diocesan page describing the seminary turns up
+  revisit_after: 2027-01-15
 ---
 
 ## What is known

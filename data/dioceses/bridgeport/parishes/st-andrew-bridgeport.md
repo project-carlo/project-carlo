@@ -36,7 +36,7 @@ St. Andrew, Bridgeport (North End) posts its weekly bulletin on its eCatholic si
 
 ## Worship sites
 
-One church, `st-andrew-bridgeport`. GCatholic lists a Chapel of Our Lady of Good Counsel, 163 Ortega Ave., as a mission of St. Andrew and gives it the dead `standrewbptparishesonline.com` website; neither the 25 or 18 October 2026 bulletins (grep 'Good Counsel', 'Ortega') nor the parish's Mass Times page name it, and the diocese's directory has no entry. Nothing read says it closed either, so it is an `open/` record (`our-lady-of-good-counsel-bridgeport`).
+One church, `st-andrew-bridgeport`. GCatholic lists a Chapel of Our Lady of Good Counsel, 163 Ortega Ave., as a mission of St. Andrew and gives it the dead `standrewbptparishesonline.com` website; neither the 25 or 18 October 2026 bulletins (grep 'Good Counsel', 'Ortega') nor the parish's Mass Times page name it, and the diocese's directory has no entry. The diocese's 2026 news (8 June, 22 July, 18 August) shows the chapel as Our Lady of Good Counsel Parish, run by Koinonia John the Baptist with its own administrator (Fr. Adriano Biccheri) and English and Spanish Masses, so it is its own row, `our-lady-of-good-counsel-bridgeport` (reconcile, 2026-11-12).
 
 ## Website and bulletin provider
 
