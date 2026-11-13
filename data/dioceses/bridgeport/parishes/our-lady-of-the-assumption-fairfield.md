@@ -26,6 +26,7 @@ evidence:
 - url: https://olaffld.org/bulletins/
   seen: 2026-11-12
   note: The parish's WordPress Bulletins page embeds the ParishesOnline publication widget with id 0018000000QxB0GAAV.
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

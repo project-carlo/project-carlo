@@ -20,6 +20,7 @@ evidence:
   seen: 2026-11-12
   note: 'probe po: ''Church of the Holy Spirit'', 403 Scofieldtown Rd, Stamford, CT, 06903; LPi 0018000000QxB07AAF,
     container 03/1409; latest issue 2026-11-15.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

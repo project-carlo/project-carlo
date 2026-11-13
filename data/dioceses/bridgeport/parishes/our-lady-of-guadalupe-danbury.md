@@ -19,6 +19,7 @@ evidence:
   seen: 2026-11-12
   note: Wix site; its bulletin button links http://sponsors.bonventure.net/?page=5008, which lists pdfs/5008/2026-11-01.pdf,
     2026-11-08.pdf and 2026-11-15.pdf among its issues.
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

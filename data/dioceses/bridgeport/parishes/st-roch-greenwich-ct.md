@@ -25,6 +25,7 @@ evidence:
   note: 'probe po st-roch-church: ''St. Roch Church'', 10 Saint Roch Ave, Greenwich 06830, website strochchurch.com;
     LPi id 0018000000Qc2RkAAJ; container 04/0262; latest issue 2026-11-15. The parish home page links
     https://www.parishesonline.com/find/st-roch-church.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

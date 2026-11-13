@@ -30,6 +30,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/21997
   seen: 2026-11-12
   note: 'GCatholic: ''St. Charles Borromeo'', Church, 391 Ogden St., Bridgeport 06608; Plus Code 87H85RR9+PP.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

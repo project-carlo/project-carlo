@@ -24,6 +24,7 @@ evidence:
   quote: 37 Schuyler Avenue, Stamford, Connecticut 06902
   note: 8 November 2026 bulletin masthead; Masses Monday-Friday 7:00 AM, Saturday 8:00 AM, 4:00 PM, 6:00
     PM, Sunday 8:30, 10:00, 11:30 AM, 1:00 PM.
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

@@ -17,6 +17,7 @@ evidence:
   seen: 2026-11-12
   note: The Institute's Bridgeport bulletins page lists weekly PDFs newest first under /images/ (b11.8.2026_Resumed_Epiphany_V.pdf,
     b11.1.2026_All_Saints.pdf, b10.25.2026_Christ_the_King.pdf ...), with occasional flyers (/images/Holy_Week_2026_flyer.pdf).
+promoted: 2026-11-12
 bulletin_status: available
 publication_reviews:
 - parish: st-mary-bridgeport

@@ -19,6 +19,7 @@ evidence:
   note: John Patrick Publishing's church-bulletin.org page for the parish; links dated issues bulletin/saint-elizabeth-seton-parish-ridgefield-ct-06877/<YYYY-MM-DD>.pdf
     to 2026-11-15. The parish home page's bulletin image links https://www.jppc.net/onlinebulletins/9011template.pdf,
     which redirects here (as does church-bulletin.org/9011).
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

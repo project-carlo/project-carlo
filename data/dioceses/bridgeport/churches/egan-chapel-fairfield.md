@@ -31,6 +31,7 @@ evidence:
 - url: https://www.bridgeportdiocese.org/parishes/st-anthony-of-padua-church-fairfield/
   seen: 2026-11-12
   note: 'Diocese directory Mass-time note on St. Anthony of Padua: ''At Fairfield University''s Egan Chapel''.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

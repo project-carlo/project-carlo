@@ -21,6 +21,7 @@ evidence:
     redirects to https://www.church-bulletin.org/saint-paul-roman-catholic-church-greenwich-ct-06831 (lists
     bulletin/<slug>/2026-11-15.pdf, 2026-11-08.pdf ...). The same page also still links the parish''s
     own 2025 uploads (2025-05-11.pdf, bulletin_4.26.25.pdf ...), now stale.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

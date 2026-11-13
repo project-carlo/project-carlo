@@ -24,6 +24,7 @@ evidence:
 - url: https://www.bridgeportdiocese.org/parishes/church-of-the-holy-spirit-stamford/
   seen: 2026-11-12
   note: 'Diocese''s directory: ''Church of the Holy Spirit'', 403 Scofieldtown Road, Stamford, CT 06903.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

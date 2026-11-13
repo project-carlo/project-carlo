@@ -24,6 +24,7 @@ evidence:
   seen: 2026-11-12
   note: 'probe po: org our-lady-of-peace-church-06615, ''Our Lady of Peace Church'', 10 Ivy St., Stratford
     06615, container 04/0327, latest issue 2026-11-15.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

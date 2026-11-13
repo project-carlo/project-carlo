@@ -26,6 +26,7 @@ evidence:
   quote: SUNDAY–7:30, 9:30 , 11:00 AM AND 5:00PM
   note: 'Page 1 of the 15 November 2026 St. Joseph bulletin: 8 Robinson Avenue, Danbury; Saturday anticipatory
     4:00 PM, Sunday 7:30, 9:30, 11:00 AM and 5:00 PM, weekdays 12:05 PM, Saturday 8:00 AM.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

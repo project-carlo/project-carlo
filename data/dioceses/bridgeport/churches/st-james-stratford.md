@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-12
   note: 'Home page footer, read with visit.py --text (Cloudflare; recheck may not load it): ''St. James
     Catholic Church 2110 Main St. Stratford, CT 06615''.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

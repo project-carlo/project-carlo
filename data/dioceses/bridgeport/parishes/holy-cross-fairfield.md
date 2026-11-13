@@ -15,6 +15,7 @@ evidence:
 - url: https://holycrosschurchfairfield.com/bulletins
   seen: 2026-11-12
   note: 'probe url on the home page: platform ecatholic, publication ecatholic:25237, bulletin page /bulletins.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

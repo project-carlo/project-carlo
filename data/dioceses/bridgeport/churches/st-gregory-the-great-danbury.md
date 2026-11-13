@@ -26,6 +26,7 @@ evidence:
   quote: 'Sunday: 8:00 am, 10:00 am, 12 noon'
   note: 'Page 1 of the 15 November 2026 St. Gregory the Great bulletin: Saturday 4:30 pm, Sunday 8:00,
     10:00 am, 12 noon, daily weekday 8:00 am; 85 Great Plain Road, Danbury.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

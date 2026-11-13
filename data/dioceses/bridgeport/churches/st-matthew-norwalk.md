@@ -24,6 +24,7 @@ evidence:
   seen: 2026-11-12
   note: '15 November 2026 bulletin page 2: ''Address: 216 Scribner Ave. Norwalk, CT 06854''; Masses Monday-Friday
     12:10pm, Saturday 9:00am and 4:00pm Vigil, Sunday 7:30am, 9:00am, 10:30am, 12:00pm, 5:00pm.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

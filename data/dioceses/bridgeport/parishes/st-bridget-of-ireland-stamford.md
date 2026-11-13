@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-12
   note: 'probe po: org st-bridget-of-ireland-church, ''St. Bridget of Ireland Church'', 278 Strawberry
     Hill Ave, Stamford; container 03/0114; issues 2026-11-01, 11-08, 11-15.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

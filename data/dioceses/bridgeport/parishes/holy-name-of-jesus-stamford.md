@@ -23,6 +23,7 @@ evidence:
   seen: 2026-11-12
   note: 'issues.py ecatholic: the 15 November 2026 issue answered 403 (not yet posted on Thursday 12 November);
     8 November was the newest.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

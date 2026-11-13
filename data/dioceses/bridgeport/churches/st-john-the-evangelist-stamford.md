@@ -26,6 +26,7 @@ evidence:
   quote: 279 Atlantic Street, Stamford, CT | (203) 324-1553
   note: 15 November 2026 bulletin masthead; Masses Saturday 4 PM, Sunday 7:30 AM, 10 AM, 12 PM and 5 PM,
     Monday-Friday 8 AM and 12:10 PM, Saturday 12:10 PM.
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

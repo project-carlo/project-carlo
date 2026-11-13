@@ -30,6 +30,7 @@ evidence:
   note: '15 November 2026 bulletin, page 1 (image): ''566 Elm Street, Stamford, CT 06902''; Sunday Masses
     at St. Mary Church 8:00 AM, 10:00 AM, 12:00 PM, 5:00 PM, 7:00 PM; ''St. Joseph''s Chapel (St. Mary)''
     Monday-Friday 9:00 AM.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

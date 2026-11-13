@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-12
   note: ParishesOnline org address 50 Fairmont Pl, Shelton 06484, pin 41.31808, -73.09651 (about 20 m
     from the GCatholic Plus Code).
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

@@ -26,6 +26,7 @@ evidence:
   quote: Saturday | 4:00pm
   note: 'Page 1 of the 15 November 2026 issue: ''OUR LADY OF GRACE PARISH'', ''497 SECOND HILL LANE, STRATFORD
     CT 06614''; Saturday 4:00pm, Sunday 9:00am & 11:30am, weekday 9:00am (not Wednesday).'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

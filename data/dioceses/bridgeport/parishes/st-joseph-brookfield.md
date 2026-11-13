@@ -16,6 +16,7 @@ evidence:
   seen: 2026-11-12
   note: Duda bulletin page (probe get) links 59 PDFs on irp.cdn-website.com/4bf118d6, named 'Bulletin
     <MMDDYYYY> SJC.pdf', from 21 September 2025 to 8 November 2026; the newest is Bulletin+11082026+SJC.pdf.
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

@@ -17,6 +17,7 @@ evidence:
   seen: 2026-11-12
   note: Bon Venture sponsor page linked from the parish site's 'Bulletin' menu item; lists dated issues
     pdfs/5041/<YYYY-MM-DD>.pdf, newest 2026-11-08 on 2026-11-12.
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

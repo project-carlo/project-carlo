@@ -2,8 +2,9 @@
 name: Roman Catholic Diocese of Bridgeport
 state: CT
 website: https://www.bridgeportdiocese.org
-status: exploring
+status: promoted
 gcatholic: brid0
+promoted: 2026-11-12
 ---
 
 Fairfield County, Connecticut, the whole county and nothing else: Bridgeport, Stamford,

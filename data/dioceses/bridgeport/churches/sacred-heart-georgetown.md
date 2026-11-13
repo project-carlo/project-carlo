@@ -35,6 +35,7 @@ evidence:
   note: OSM address node 8358384947, 30 Church Street, Georgetown, Redding 06896, at 41.2585578, -73.4317653;
     OSM has no church feature for Sacred Heart here (the place_of_worship node on Church Street is Georgetown
     United Methodist).
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

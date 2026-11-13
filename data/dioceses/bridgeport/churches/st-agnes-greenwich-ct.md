@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-12
   note: 'GCatholic: ''St. Agnes'', 247 Stanwich Rd., Greenwich, CT 06830; Plus Code 87H8399W+XR; website
     stagnesrc.org (old parish domain, not checked).'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

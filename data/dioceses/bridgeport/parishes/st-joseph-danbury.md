@@ -18,6 +18,7 @@ evidence:
   note: 'Duda ''Bulletin'' page (probe get) lists the parish''s own uploads on irp.cdn-website.com/3c72fa2f,
     newest first: 20261115B.pdf, ''November 8- 2026 Bulletin.pdf'', ''November 1- 2026.pdf'', ''October
     25 2026 Bulletin.pdf'', ''October 18- 2026 Bulletin.pdf''.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

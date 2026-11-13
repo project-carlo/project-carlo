@@ -20,6 +20,7 @@ evidence:
   seen: 2026-11-12
   note: 'probe po: org ''St. Rose of Lima Church'', 46 Church Hill Rd, Newtown 06470, container 03/0165,
     latest issue 2026-11-15.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

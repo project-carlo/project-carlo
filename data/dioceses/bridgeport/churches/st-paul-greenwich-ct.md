@@ -25,6 +25,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/21954
   seen: 2026-11-12
   note: 'GCatholic: ''St. Paul'', 84 Sherwood Ave., Greenwich, CT 06831; Plus Code 87H83836+9H.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-12
   note: The parish's Weebly bulletin page links 47 PDFs, oldest first, from /uploads/1/0/6/1/106187663/bulletin01-04-2026.pdf
     to bulletin11-08-2026.pdf (one misnamed 'bulleting10-11-2026.pdf').
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

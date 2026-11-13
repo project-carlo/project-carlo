@@ -27,6 +27,7 @@ evidence:
 - url: https://parishesonline.com/organization/st-anthony-of-padua-church-06824
   seen: 2026-11-12
   note: 'ParishesOnline org: 149 S Pine Creek Rd, Fairfield, Connecticut, 06824.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

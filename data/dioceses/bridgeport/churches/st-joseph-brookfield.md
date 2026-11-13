@@ -27,6 +27,7 @@ evidence:
   note: 'Page 1 of the 8 November 2026 bulletin: 163 Whisconier Road, Brookfield; Masses Saturday 8:00am
     and 5:00pm, Sunday 7:30, 9:00, 11:00am, Monday-Friday 7:45am. Page 2 lists intentions for 9-15 November
     2026.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

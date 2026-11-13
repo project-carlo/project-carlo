@@ -24,6 +24,7 @@ evidence:
   seen: 2026-11-12
   note: 'probe po: org st-mark-church-06614, ''St. Mark Church'', 500 Wigwam Ln, Stratford 06614, container
     04/0152, latest issue 2026-11-15, weekly issues back through October.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

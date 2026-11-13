@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-12
   note: The parish's Squarespace Bulletins page links its own copies of the issues (/s/20260104B.pdf ...
     /s/July-19-2026-Bulletin-4.pdf), named either by LPi date or by Sunday.
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

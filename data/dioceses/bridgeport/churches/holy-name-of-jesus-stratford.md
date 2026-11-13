@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-12
   note: OSM 209061686 'Holy Name of Jesus Church', College Street, Stratford 06615, 41.19320, -73.14747,
     about 10 m from the GCatholic Plus Code.
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

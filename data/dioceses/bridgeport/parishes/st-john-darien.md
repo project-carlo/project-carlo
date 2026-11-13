@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-12
   note: 'probe po: org st-john-church-06820, ''Saint John Church'', 1986 Post Rd, Darien 06820; LPi id
     0018000000Qc1PAAAZ; container 03/0822; latest issue 2026-11-15.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

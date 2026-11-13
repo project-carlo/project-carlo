@@ -22,6 +22,7 @@ evidence:
   note: The parish's Squarespace homepage links https://parishesonline.com/find/st-anthony-of-padua-church-06824;
     probe po gives org st-anthony-of-padua-church-06824, LPi id 0018000000Qc0CAAAZ, container 04/1048,
     address 149 S Pine Creek Rd, latest issue 2026-11-15.
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

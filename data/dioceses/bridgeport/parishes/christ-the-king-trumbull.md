@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-12
   note: 'probe po: org ''Christ the King Church'', 4700 Madison Ave, Trumbull 06611, container 03/0446,
     weekly issues through 2026-11-15.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

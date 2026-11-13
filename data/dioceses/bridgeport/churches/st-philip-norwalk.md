@@ -23,6 +23,7 @@ evidence:
   seen: 2026-11-12
   note: '15 November 2026 bulletin: masthead ''ST. PHILIP CHURCH'', 1 Father Conlon Place, Norwalk; Masses
     Saturday 5:00 pm, Sunday 8:00, 10:00 am, 12:00 pm, weekdays 7:30 am / 12:15 pm.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

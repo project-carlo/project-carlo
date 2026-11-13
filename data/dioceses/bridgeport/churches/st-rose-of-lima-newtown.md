@@ -25,6 +25,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22020
   seen: 2026-11-12
   note: 'GCatholic: ''St. Rose of Lima'', 46 Church Hill Rd., Newtown 06470, Plus Code 87H8CP82+8R.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

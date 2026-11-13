@@ -20,6 +20,7 @@ evidence:
   seen: 2026-11-12
   note: 'probe po: org st-lawrence-church-06484, ''St. Lawrence Church'', 505 Shelton Ave, Shelton 06484-2899,
     LPi id 0018000000Qc1W2AAJ, container 03/0029, latest issue 2026-11-15.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

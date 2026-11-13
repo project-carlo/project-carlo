@@ -24,6 +24,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/21987
   seen: 2026-11-12
   note: 'GCatholic: ''St. Pius X'', 834 Brookside Dr., Fairfield 06824; Plus Code 87H85PGM+P3.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

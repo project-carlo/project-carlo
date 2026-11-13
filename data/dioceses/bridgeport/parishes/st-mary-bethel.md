@@ -21,6 +21,7 @@ evidence:
 revisit: In January 2027 change the provider_id filter from filename=*2026.pdf to the new year's (*2027.pdf)
   and rerun fetch:check
 revisit_after: 2027-01-04
+promoted: 2026-11-12
 research:
 - method: probe get on the Duda bulletin page
   url: https://www.stmarybethel.org/bulletina2119c88

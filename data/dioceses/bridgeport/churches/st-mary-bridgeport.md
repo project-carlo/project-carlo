@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-12
   note: '8 November 2026 bulletin (rendered): Mass intentions Mon, Thu, Fri 6:30pm, Sat 4:00pm, Sun 8:30,
     10:00, 11:30am.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

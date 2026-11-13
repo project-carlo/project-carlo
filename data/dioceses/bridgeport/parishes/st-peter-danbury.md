@@ -26,6 +26,7 @@ evidence:
   note: Read with parish-site-access visit.py (probe url gets 403, Cloudflare). eCatholic site 24336;
     lists files.ecatholic.com/24336/bulletins/ issues weekly from 20260802 to 20261101 (the newest on
     2026-11-12; 20261108 and 20261115 answered 403).
+promoted: 2026-11-12
 research:
 - method: issues.py ecatholic ecatholic:24336 --weeks 4
   url: https://files.ecatholic.com/24336/bulletins/20261108.pdf

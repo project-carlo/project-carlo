@@ -24,6 +24,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/21983
   seen: 2026-11-12
   note: 'GCatholic: ''Holy Cross'', Church, 750 Tahmore Dr., Fairfield 06825; Plus Code 87H86P2W+6G.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

@@ -26,6 +26,7 @@ evidence:
   quote: Saturday | 4:30 PM (Vigil)
   note: 'Page 1 of the 15 November 2026 issue: ''St. Margaret Mary Parish'', ''50 Donovan Lane Shelton,
     CT 06484''; Monday-Thursday 8 AM, Saturday 4:30 PM (Vigil), Sunday 8:30, 10, 11:30 AM.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

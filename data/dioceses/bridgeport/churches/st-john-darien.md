@@ -24,6 +24,7 @@ evidence:
   quote: 1986 POST ROAD•DARIEN, CONNECTICUT•06820
   note: 15 November 2026 bulletin masthead 'Saint John Church'; Masses Sat 4:30 PM, Sun 8:00, 10:00, 11:30
     AM, 5:00 PM; Mon-Fri 8:00 AM, Sat 8:30 AM.
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

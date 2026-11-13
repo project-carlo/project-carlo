@@ -17,6 +17,7 @@ evidence:
   seen: 2026-11-12
   note: WordPress bulletin page listing self-uploaded PDFs newest first (wp-content/uploads/2026/11/...08-de-Noviembre-2026...
     at the top), back to September 2022.
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

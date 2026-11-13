@@ -31,6 +31,7 @@ evidence:
     flyer (image only, rendered): ''Haitian Quasi-Parish'', ''948 Newfield Ave. Stamford, Ct 06905'',
     ''Rev. Father Guy Dormevil, Moderator'', ''Office: 894 Newfield Ave.'', Mass Saturday 6:00 PM and
     Sunday 8:00 AM; its announcements are dated June-October 2022. Not a bulletin series.'
+promoted: 2026-11-12
 research:
 - method: 'Looked for a bulletin of Notre Dame du Perpétuel Secours''s own: the directory''s website link
     (a 2022 flyer), the diocese''s directory page and mass-times API for parish_id 1435, and the host

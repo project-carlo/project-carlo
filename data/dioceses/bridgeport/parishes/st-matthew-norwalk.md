@@ -29,6 +29,7 @@ evidence:
   seen: 2026-11-12
   note: 'probe po: org st-matthew-church-06854, ''St. Matthew Church'', 216 Scribner Ave, Norwalk 06854;
     LPi id 0018000000QxAzuAAF; container 03/4050; latest issue 2026-11-15.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

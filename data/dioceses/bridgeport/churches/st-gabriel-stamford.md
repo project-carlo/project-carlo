@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-12
   note: 'Diocese''s mass-times API: Saturday 08:00 and 16:00 ''St. Gabriel Church'' (it also gives a Saturday
     17:30 marked St. Gabriel, which the bulletin places at St. Cecilia).'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

@@ -43,6 +43,7 @@ evidence:
   seen: 2026-11-12
   note: OSM way 1284506752 'Holy Trinity Chapel', amenity place_of_worship, road 'Route 37 Center', Sherman
     06784, at 41.5752363, -73.4983811.
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

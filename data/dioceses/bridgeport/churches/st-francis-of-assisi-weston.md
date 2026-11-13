@@ -24,6 +24,7 @@ evidence:
   seen: 2026-11-12
   note: OSM place_of_worship node 359268580 'Saint Francis of Assisi Church', Norfield Road, Weston 06883,
     at 41.1995405, -73.3817859; OSM's address point for 35 Norfield Road is 50 m south.
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

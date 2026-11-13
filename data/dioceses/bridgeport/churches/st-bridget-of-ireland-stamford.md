@@ -26,6 +26,7 @@ evidence:
   quote: 278 Strawberry Hill Avenue     Stamford, Connecticut 06902
   note: 15 November 2026 bulletin masthead; Masses weekdays 7:00/8:00 AM, Saturday 4:00 PM, Sunday 8:30
     and 11:00 AM.
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

@@ -27,6 +27,7 @@ evidence:
   note: 'Page 1 of the 15 November 2026 Our Lady of Guadalupe bulletin, read from a render (garbled text
     layer): 29 Golden Hill Road Danbury, CT 06811; Monday-Friday 7:00 PM, Saturday Vigil 7:00 PM, Sunday
     7:30 AM, 10:00 AM, 12:30 PM, 3:00 PM, all in Spanish.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

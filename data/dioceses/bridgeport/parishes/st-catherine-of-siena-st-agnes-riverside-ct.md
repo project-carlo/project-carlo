@@ -36,6 +36,7 @@ evidence:
   quote: On July 1, 2019, St. Catherine of Siena church merged with St. Agnes parish.
   note: 'Same page: ''St. Agnes Parish, located at 247 Stanwich Road in Greenwich'' ... the Dommerich
     estate garage ''is currently St. Agnes Church''.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

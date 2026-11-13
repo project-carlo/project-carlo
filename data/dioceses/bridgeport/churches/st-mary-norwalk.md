@@ -23,6 +23,7 @@ evidence:
   seen: 2026-11-12
   note: '15 November 2026 bulletin: ''SAINT MARY CATHOLIC CHURCH'', 669 West Avenue, Norwalk, CT 06850;
     Masses Saturday 4:00PM, 7:00PM; Sunday 8:00AM, 10:00AM, 12:00PM; Tuesday-Friday 12:10.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

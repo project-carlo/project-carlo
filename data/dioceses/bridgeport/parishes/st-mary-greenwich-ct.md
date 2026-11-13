@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-12
   note: 'probe get: the parish''s Duda home page links the Bon Venture sponsor page http://sponsors.bonventure.net/?page=4392
     (no /bulletin page on the site); that page links pdfs/4392/2026-11-15.pdf.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

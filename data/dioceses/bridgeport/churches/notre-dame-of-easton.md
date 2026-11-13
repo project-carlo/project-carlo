@@ -24,6 +24,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/21989
   seen: 2026-11-12
   note: 'GCatholic: ''Notre Dame'', 655 Morehouse Rd., Easton 06612; Plus Code 87H86PX3+WW.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

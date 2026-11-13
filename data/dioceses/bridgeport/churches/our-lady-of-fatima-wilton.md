@@ -24,6 +24,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/21979
   seen: 2026-11-12
   note: 'GCatholic: ''Our Lady of Fatima'', 229 Danbury Rd., Wilton 06897; Plus Code 87H85HQF+9F.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

@@ -24,6 +24,7 @@ evidence:
   seen: 2026-11-12
   note: 'probe po: org st-maurice-church, ''St. Maurice Church'', 358 Glenbrook Rd, Stamford, CT 06906;
     container 03/0552; issues 2026-11-01, 11-08, 11-15.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

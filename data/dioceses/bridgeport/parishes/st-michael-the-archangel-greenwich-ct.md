@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-12
   note: 'probe get: the Duda Bulletin page links irp.cdn-website.com/9111fbb1/files/uploaded/Bulletin+<MMDDYYYY>+SMC.pdf,
     newest first: ''Bulletin+11152026+SMC.pdf'', 11082026, 11012026, 10252026 ...'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

@@ -25,6 +25,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/21955
   seen: 2026-11-12
   note: 'GCatholic: ''St. Roch'', 10 St. Roch Ave., Greenwich, CT 06830; Plus Code 87H82995+2H.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

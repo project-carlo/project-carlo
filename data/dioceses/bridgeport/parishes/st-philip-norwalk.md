@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-12
   note: 'probe po: org st-philip-church-06851, ''St. Philip Church'', 1 Father Conlon Place, Norwalk 06851;
     container 03/1386; weekly issues 2026-10-11 to 2026-11-15.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

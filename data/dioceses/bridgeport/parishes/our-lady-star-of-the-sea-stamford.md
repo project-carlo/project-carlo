@@ -19,6 +19,7 @@ evidence:
     .../11-8-26_print-canva.pdf, .../11-1-26_print-canva.pdf (under /media/pages/bulletins/page-<id>/<hash>/).
     Mass Times section: Weekday Mass Monday-Friday 8:00 AM; Saturday Vigil 4:30 PM; Sunday 9:00 AM & 11:00
     AM; Holy Days 8:00 AM & 12:00 PM.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

@@ -21,6 +21,7 @@ evidence:
     statements) from its menu.'
 revisit: Rerun fetch:check and confirm it still picks the newest E-News (it cannot date the file)
 revisit_after: 2027-02-01
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

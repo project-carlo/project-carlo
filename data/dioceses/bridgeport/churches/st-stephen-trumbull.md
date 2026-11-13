@@ -24,6 +24,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22006
   seen: 2026-11-12
   note: 'GCatholic: ''St. Stephen'', 6948 Main St., Trumbull 06611, Plus Code 87H87QQ6+P3.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

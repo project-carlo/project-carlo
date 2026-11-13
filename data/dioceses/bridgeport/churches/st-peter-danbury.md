@@ -38,6 +38,7 @@ evidence:
   note: Our Lady of Aparecida's own site gives its whole Mass schedule at 42 Vail Road, Bethel, and says
     it was a quasi-parish under St. Peter's before 2020. The directory's 'At St. Peter Parish, Danbury'
     note (mass-times:1167-st-peter-church-aparecida-masses) names this building.
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

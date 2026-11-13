@@ -24,6 +24,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/21994
   seen: 2026-11-12
   note: 'GCatholic: ''St. Ann'', Church, 481 Brewster St., Bridgeport 06605; Plus Code 87H85Q4F+CX.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

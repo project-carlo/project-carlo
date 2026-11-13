@@ -18,6 +18,7 @@ evidence:
   note: The parish's Duda 'Bulletin' page links http://church-bulletin.org/9000, which redirects to https://www.church-bulletin.org/saint-gregory-the-great-parish-danbury-ct-06811
     (John Patrick Publishing archive), listing weekly issues bulletin/saint-gregory-the-great-parish-danbury-ct-06811/<YYYY-MM-DD>.pdf
     from 2026-09-20 to 2026-11-15.
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

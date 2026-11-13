@@ -27,6 +27,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22004
   seen: 2026-11-12
   note: 'GCatholic: ''Christ the King'', 4700 Madison Ave., Trumbull 06611, Plus Code 87H87Q53+8P.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

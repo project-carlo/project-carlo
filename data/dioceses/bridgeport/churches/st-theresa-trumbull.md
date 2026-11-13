@@ -24,6 +24,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22007
   seen: 2026-11-12
   note: 'GCatholic: ''St. Theresa'', 5301 Main St., Trumbull 06611, Plus Code 87H86QQH+5P.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

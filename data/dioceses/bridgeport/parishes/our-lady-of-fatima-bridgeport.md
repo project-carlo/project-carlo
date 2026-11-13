@@ -23,6 +23,7 @@ evidence:
 revisit: Check fetch:check still picks the current bulletin after the Christmas 2026 issues (filename
   filter *Year*.pdf).
 revisit_after: 2027-01-05
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

@@ -24,6 +24,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/21991
   seen: 2026-11-12
   note: 'GCatholic: ''Our Lady of Fatima'', Church, 429 Huntington Rd., Bridgeport 06608; Plus Code 87H85RX8+HX.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

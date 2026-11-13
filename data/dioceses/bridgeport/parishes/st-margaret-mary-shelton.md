@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-12
   note: 'probe po: org st-margaret-mary-church-06484, ''St. Margaret Mary Parish'', 50 Donovan Lane, Shelton
     06484, LPi id 0018000000Qc27oAAB, container 03/0136, latest issue 2026-11-15.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

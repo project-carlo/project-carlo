@@ -16,6 +16,7 @@ evidence:
   seen: 2026-11-12
   note: 'WordPress Bulletin page lists self-hosted PDFs newest first (after two 2023 links): Bulletin-11-08-2026-final.pdf,
     11-01-2026-Bulletin.pdf, 10-25-2026-Bulletin.pdf ... on stleo.wpenginepowered.com/wp-content/uploads/.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

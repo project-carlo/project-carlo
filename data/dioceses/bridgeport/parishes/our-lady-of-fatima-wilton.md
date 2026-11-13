@@ -18,6 +18,7 @@ evidence:
   note: Duda Bulletin page lists one PDF per Sunday, newest first, labelled 'Sunday, November 8, 2026'
     (Bulletin+11082026+OLF.pdf), 'Sunday, November 1, 2026', ... back to June 2025; file names are mostly
     Bulletin+MMDDYYYY+OLF.pdf with occasional misspellings (Bulltetin+06282026, Bulltin+04122026, 0964+Bulletin+02152026+website).
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

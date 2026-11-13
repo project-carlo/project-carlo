@@ -24,6 +24,7 @@ evidence:
   seen: 2026-11-12
   note: '15 November 2026 bulletin page 1 (image): parish office 1200 Shippan Avenue, Stamford, CT 06902;
     Masses Saturday 4:30pm, Sunday 9:00 and 11:00am, Monday-Friday 8:00am.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

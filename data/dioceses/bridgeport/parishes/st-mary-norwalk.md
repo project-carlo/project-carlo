@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-12
   note: 'probe po: org st-mary-church-06850, ''St. Mary Church'', 669 West Ave, Norwalk 06850; LPi id
     0018000000Qc2DfAAJ; container 03/0426; latest issue 2026-11-15.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

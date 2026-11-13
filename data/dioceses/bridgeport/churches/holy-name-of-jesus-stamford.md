@@ -28,6 +28,7 @@ evidence:
   quote: 4 Pulaski Street • Stamford, CT 06902
   note: 8 November 2026 bulletin gives 4 Pulaski Street as the 'Mailing Address'; Masses weekdays, Saturday
     8:00 AM and 5:00 PM, Sunday 8:30, 10:00 and 11:30 AM.
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

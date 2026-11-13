@@ -25,6 +25,7 @@ evidence:
 - url: https://www.bridgeportdiocese.org/parishes/st-aloysius-parish-new-canaan/
   seen: 2026-11-12
   note: 'Diocese''s directory: ''St. Aloysius Parish'', 21 Cherry Street, New Canaan, CT 06840.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

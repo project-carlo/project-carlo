@@ -25,6 +25,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22005
   seen: 2026-11-12
   note: 'GCatholic: ''St. Catherine of Siena'', 200 Shelton Rd., Trumbull 06611, Plus Code 87H86RWV+F6.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

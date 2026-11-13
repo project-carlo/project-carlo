@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-12
   note: 'probe po: org st-thomas-more-church-06820, ''St. Thomas More Church''; LPi id 0018000000Qc2WLAAZ;
     container 04/0498; issues 2026-11-08 and 2026-11-15.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

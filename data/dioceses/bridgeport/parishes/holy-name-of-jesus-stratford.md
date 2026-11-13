@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-12
   note: 'probe get: the parish''s Duda bulletin page links weekly PDFs on irp.cdn-website.com/280d9b6c,
     newest first: ''Nov+14+15+2026+33rd+Sun+OT.pdf'', ''Nov+7+8+2026+32+Sun+OT.pdf'', ''Oct+31+Nov+1+2026+All+Saints+.pdf''.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

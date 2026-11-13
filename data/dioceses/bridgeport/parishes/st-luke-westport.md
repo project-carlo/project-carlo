@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-12
   note: 'probe url: the parish''s Wix site embeds ParishesOnline org st-luke-church-6880 and links its
     Weekly Bulletin page; probe po gives LPi id 0018000000Qc27GAAR, container 03/0910, latest issue 2026-11-15.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

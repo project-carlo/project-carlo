@@ -20,6 +20,7 @@ evidence:
   note: 'visit.py: the eCatholic site (id 19875) links ''Bulletins'' to https://www.church-bulletin.org/st-francis-of-assisi-parish-weston-ct-06883,
     which serves only church-bulletin.org''s generic welcome page (no issues); the /bulletins page''s
     own files.ecatholic.com/19875/bulletins archive ends July 13, 2025.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

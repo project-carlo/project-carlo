@@ -19,6 +19,7 @@ evidence:
   quote: 25 Sherman St, Bridgeport, CT 06608
   note: Header of the parish's Boletín/Bulletin page (WordPress), which links weekly PDFs under /wp-content/uploads/<yyyy>/<mm>/<mm.dd.yyyy>-<title>.pdf
     from 2021 to 11.08.2026; the page is not in date order (June 2026 issues are listed first).
+promoted: 2026-11-12
 bulletin_status: available
 publication_reviews:
 - parish: sts-cyril-methodius-bridgeport

@@ -23,6 +23,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/21988
   seen: 2026-11-12
   note: 'GCatholic: ''St. Thomas Aquinas'', 1719 Post Rd., Fairfield 06430; Plus Code 87H84PRQ+88.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

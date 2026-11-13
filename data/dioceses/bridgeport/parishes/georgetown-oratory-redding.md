@@ -25,6 +25,7 @@ evidence:
   note: 'Homepage: ''The Georgetown Oratory of the most sacred heart of Jesus was established by bishop
     caggiano following the creation of sacred heart - st. Patrick parish. the oratory community regularly
     gathers and is responsible for sacred heart church''.'
+promoted: 2026-11-12
 bulletin_status: available
 publication_reviews:
 - parish: sacred-heart-st-patrick-redding

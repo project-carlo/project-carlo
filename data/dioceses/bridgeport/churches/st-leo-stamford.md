@@ -24,6 +24,7 @@ evidence:
 - url: https://www.bridgeportdiocese.org/parishes/st-leo-parish-stamford/
   seen: 2026-11-12
   note: 'Diocese''s directory: ''St. Leo Parish'', 24 Roxbury Road, Stamford, CT 06902.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

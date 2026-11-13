@@ -34,6 +34,7 @@ evidence:
   note: 'The site''s Mass page, headed ''Saint Charles & Saint George catholic church'', lists Saint Charles
     weekly and weekend Masses (Upper Church, Lower Church) and Saint George: Monday, Tuesday, Friday 7:00
     pm; Saturday 6:30 pm Spanish vigil; Sunday 8:30 am English, 10:30 am Spanish.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

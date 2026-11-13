@@ -24,6 +24,7 @@ evidence:
   quote: St. Thomas More Church 374 Middlesex Road • Darien, Connecticut • 06820
   note: 15 November 2026 bulletin masthead; Masses Saturday 4:30PM, Sunday 7:30, 8:45, 10:00, 11:30AM
     & 5:15PM, Monday-Saturday 9:00AM.
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

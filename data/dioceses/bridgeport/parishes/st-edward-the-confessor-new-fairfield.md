@@ -28,6 +28,7 @@ evidence:
   quote: As of July 1st, the parish of Holy Trinity was merged into St. Edward the Confessor
   note: 'Fr. Wolfe''s letter of 10 September 2022, linked from the parish''s Holy Trinity page: two campuses,
     St. Edward the Confessor Campus (New Fairfield) and Holy Trinity Campus (Sherman).'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

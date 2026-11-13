@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-12
   note: 'probe po: org st-joseph-church-06484, ''St. Joseph Church'', 50 Fairmont Pl, Shelton 06484, LPi
     id 0018000000Qc1TKAAZ, container 03/0274, latest issue 2026-11-15.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

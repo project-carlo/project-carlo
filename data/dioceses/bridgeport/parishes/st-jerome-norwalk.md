@@ -19,6 +19,7 @@ evidence:
   note: Duda bulletin page; links, newest first, irp.cdn-website.com/dfc42116 uploads 'November 8- 2026
     St Jerome Update.pdf', 'November 1- 2026 St Jerome Update.pdf', 'October 25- 2026 St Jerome .pdf',
     then two 'Copy of Copy of staff.pdf - 2026-10-..' files.
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

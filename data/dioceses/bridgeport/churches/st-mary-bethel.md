@@ -27,6 +27,7 @@ evidence:
   note: 'Page 3 of the 1 November 2026 St. Mary bulletin (''St. Mary Catholic Church''): Masses Saturday
     4:30, Sunday 7:00, 8:30 and 11:00, Monday-Saturday 9:00 for 31 October-8 November 2026. Page 1: 26
     Dodgingtown Road, Bethel.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

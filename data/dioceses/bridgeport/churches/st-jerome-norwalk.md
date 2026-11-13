@@ -24,6 +24,7 @@ evidence:
   seen: 2026-11-12
   note: '8 November 2026 St Jerome Update: Saturday 4:00 pm; Sunday 8:00 am & 10:00 am; Monday - Friday
     9:00 am Mass. Gives no street address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

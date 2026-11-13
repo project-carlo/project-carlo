@@ -26,6 +26,7 @@ revisit: 'Rerun fetch:check: the pinned recipe depends on the home page linking 
   directly; if it stops, the Weekly Bulletins page''s Download Monitor links (/download/<id>/) are not
   read by page-pdfs and the row needs a fetch_gap'
 revisit_after: 2027-01-15
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

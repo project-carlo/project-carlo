@@ -32,6 +32,7 @@ evidence:
   seen: 2026-11-12
   note: 'Diocese''s schedule for St. Mary Parish: Monday-Friday 19:00 Spanish and Saturday 16:00 English,
     18:00 Spanish, notes ''St. Benedict campus'' (no street address given).'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

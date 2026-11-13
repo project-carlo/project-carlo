@@ -28,6 +28,7 @@ evidence:
   note: OSM address node 8618755845 '2, Mary Avenue, Stratford, CT 06614' at 41.19357, -73.14639, about
     90 m north-east of the Holy Name of Jesus church building (OSM 209061686). The node carries no chapel
     name.
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

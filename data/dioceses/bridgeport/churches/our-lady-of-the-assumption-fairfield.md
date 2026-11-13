@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-12
   note: 'GCatholic: ''Our Lady of the Assumption'', Church, 545 Stratfield Rd., Fairfield 06825; Plus
     Code 87H85QVF+9C.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

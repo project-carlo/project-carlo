@@ -26,6 +26,7 @@ evidence:
   quote: 'Sunday Masses: 7:30, 9:30, 11:30 am, 5:00 pm'
   note: Page 9 of the 15 November 2026 issue; page 1 masthead 'St. Lawrence Parish, 505 Shelton Avenue,
     Shelton, Connecticut 06484'.
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

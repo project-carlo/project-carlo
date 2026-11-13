@@ -23,6 +23,7 @@ evidence:
   note: 'probe po: org ''Sacred Heart ~ Saint Patrick Parish'', 169 Black Rock Turnpike, Redding Ridge
     06876-0119, container 04/0116, latest issue 2026-11-15. The org''s map pin (61.07, -107.99) is in
     northern Canada, a bad geocode.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

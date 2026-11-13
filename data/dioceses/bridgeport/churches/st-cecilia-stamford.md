@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-12
   note: 'Diocese''s directory: ''Parish of St. Cecilia – St. Gabriel'', 1184 Newfield Avenue, Stamford,
     CT 06905; Mass notes ''St. Cecilia Church; St. Gabriel Church''.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

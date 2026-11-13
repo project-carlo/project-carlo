@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-12
   quote: ST. LADISLAUS MASS TIMES
   note: Saturday 4:00 PM (English); Sunday 8:00 AM and 11:00 AM (Spanish); Monday-Friday 7:00 PM (Spanish).
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

@@ -26,6 +26,7 @@ evidence:
   quote: 138 Candlewood Lake Rd, Brookfield, CT 06804
   note: 'Page 1 of the 15 November 2026 E-News: Masses Saturday 4:30pm Vigil, Sunday 8:30am, 11am, 5pm,
     Monday-Friday 8:30am; intentions for 16-22 November 2026.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

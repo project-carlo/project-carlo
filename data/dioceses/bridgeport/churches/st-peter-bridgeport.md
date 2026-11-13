@@ -24,6 +24,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22002
   seen: 2026-11-12
   note: 'GCatholic: ''St. Peter'', Church, 695 Colorado Ave., Bridgeport 06605; Plus Code 87H85QGP+J5.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

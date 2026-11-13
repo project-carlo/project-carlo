@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-12
   quote: 'Daily Mass: Monday through Thursday: 7:30am'
   note: 'Homepage Mass Times: Saturday Vigil 5:00pm; Sunday 8:00am & 11:00am; daily Monday-Thursday 7:30am.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

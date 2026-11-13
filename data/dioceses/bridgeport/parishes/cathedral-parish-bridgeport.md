@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-12
   note: 'probe url: the parish site embeds the ParishesOnline widget for LPi id 0018000000Qc2KYAAZ and
     links /bulletin.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

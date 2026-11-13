@@ -19,6 +19,7 @@ evidence:
   seen: 2026-11-12
   note: 'probe po: org ''St. Theresa'', 5301 Main St, Trumbull 06611, container 03/0090, latest issue
     2026-11-15.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

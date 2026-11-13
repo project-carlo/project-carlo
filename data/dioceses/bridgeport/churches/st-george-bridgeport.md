@@ -30,6 +30,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/21999
   seen: 2026-11-12
   note: 'GCatholic: ''St. George'', Church, 443 Park Ave., Bridgeport 06604; Plus Code 87H85R94+9C.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

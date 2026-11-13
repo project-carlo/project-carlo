@@ -27,6 +27,7 @@ evidence:
   note: Page 1 of the 15 November 2026 bulletin; page 2 lists Masses Mon.-Fri. 9 AM, Saturday 4 PM Vigil,
     Sunday 7:30, 9, 11 AM, 5:15 PM (the 10 AM is at Holy Trinity Chapel); page 3 lists intentions for
     16-22 November 2026.
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

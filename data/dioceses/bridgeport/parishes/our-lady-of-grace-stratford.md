@@ -20,6 +20,7 @@ evidence:
   seen: 2026-11-12
   note: 'probe po: org our-lady-of-grace-church-06614, ''Our Lady of Grace Church'', 497 2nd Hill Ln,
     Stratford 06614, container 03/1196, latest issue 2026-11-15.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

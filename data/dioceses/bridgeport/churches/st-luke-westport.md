@@ -28,6 +28,7 @@ evidence:
   seen: 2026-11-12
   note: OSM place_of_worship node 359286987 'Saint Luke Church', North Turkey Hill Road, Westport, at
     41.1439855, -73.3237278 (about 30 m from GCatholic's Plus Code).
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

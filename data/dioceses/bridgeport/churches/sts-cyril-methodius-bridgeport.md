@@ -25,6 +25,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/21998
   seen: 2026-11-12
   note: 'GCatholic: ''Sts. Cyril and Methodius'', Church, 79 Church St., Bridgeport 06608; Plus Code 87H85RPF+73.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

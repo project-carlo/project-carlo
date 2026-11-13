@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-12
   note: ParishesOnline org address 500 Wigwam Ln, Stratford, Connecticut 06614, pin 41.22884, -73.12966
     (about 65 m from the Plus Code).
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

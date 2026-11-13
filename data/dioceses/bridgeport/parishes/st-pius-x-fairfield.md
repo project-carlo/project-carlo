@@ -22,6 +22,7 @@ evidence:
   note: 'visit.py (Cloudflare blocks probe url with 403): the parish''s eCatholic site (site id 40477)
     links https://www.church-bulletin.org/saint-pius-x-parish-fairfield-ct-06824 as its bulletin. The
     church-bulletin.org page lists weekly PDFs through 2026-11-15.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

@@ -25,6 +25,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/21951
   seen: 2026-11-12
   note: 'GCatholic: ''St. Mary'', 178 Greenwich Ave., Greenwich, CT 06830; Plus Code 87H829HF+4C.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

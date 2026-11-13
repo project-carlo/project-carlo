@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-12
   note: 'probe po: org st-thomas-the-apostle-church-06855, ''St. Thomas the Apostle Church''; LPi id 0018000000QxAzvAAF;
     container 03/4048; latest issue 2026-11-15.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

@@ -24,6 +24,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/21992
   seen: 2026-11-12
   note: 'GCatholic: ''St. Andrew'', Church, 435 Anton St., Bridgeport 06606; Plus Code 87H86Q9G+49.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

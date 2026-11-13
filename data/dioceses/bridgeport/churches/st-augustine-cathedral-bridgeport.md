@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-12
   note: 'Wikipedia infobox: location 399 Washington Avenue; coordinates 41°10''48.72"N 73°11''44.52"W
     (about 20 m from the Plus Code).'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

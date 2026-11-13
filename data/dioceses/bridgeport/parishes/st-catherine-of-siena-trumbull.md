@@ -20,6 +20,7 @@ evidence:
   seen: 2026-11-12
   note: 'probe po: org ''St. Catherine of Siena Church'', 220 Shelton Rd, Trumbull 06611-5161, container
     03/1130, latest issue 2026-11-15.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

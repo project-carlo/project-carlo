@@ -23,6 +23,7 @@ evidence:
     https://parishesonline.com/organization/st-thomas-aquinas-church-06824 first, then an older archive
     of files.ecatholic.com/5093/bulletins/ PDFs ending with July 26, 2026. issues.py found no files.ecatholic.com/5093
     issue for 1, 8 or 15 November 2026 (403).'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

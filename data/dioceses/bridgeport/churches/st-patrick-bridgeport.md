@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-12
   note: 'Diocese mass-times notes for The Cathedral Parish: ''Saint Patrick Church'', ''Saint Patrick
     Church, 4th Sunday only'' (Sunday 8:30 am, 4:00 pm Igbo/Nigerian, weekdays 7:00 am); no address given.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

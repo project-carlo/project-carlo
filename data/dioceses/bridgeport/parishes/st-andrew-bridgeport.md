@@ -20,6 +20,7 @@ evidence:
   seen: 2026-11-12
   note: 'Mass Times page: Saturday 4:00 PM; Sunday 9:00, 10:30 AM, 12:00 PM Spanish; Monday-Friday 9:00
     AM. One church; no chapel or mission listed.'
+promoted: 2026-11-12
 research:
 - method: issues.py ecatholic ecatholic:30688 --weeks 4 and the Bulletins page in visit.py
   url: https://standrewchurchbpt.org/bulletins

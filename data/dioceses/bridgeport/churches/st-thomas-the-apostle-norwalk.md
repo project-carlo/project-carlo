@@ -23,6 +23,7 @@ evidence:
   seen: 2026-11-12
   note: '15 November 2026 bulletin: ''203 East Avenue Norwalk, CT 06855''; Masses Saturday Vigil 5:15
     PM, Sunday 7:30, 9:00, 11:30 AM, 5:00 PM, and weekday 7:00 AM / 5:30 PM.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

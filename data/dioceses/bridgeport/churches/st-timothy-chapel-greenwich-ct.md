@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-12
   note: 'GCatholic: chapel ''St. Timothy'', 1034 North St., Greenwich, CT 06830; Plus Code 87H849R6+5H;
     website stmichaelgreenwich.com.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

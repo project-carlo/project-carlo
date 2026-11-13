@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-12
   note: OSM address node 8079009511, 169 Black Rock Turnpike, Redding Ridge, at 41.30726, -73.34777 (about
     20 m from the GCatholic Plus Code).
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

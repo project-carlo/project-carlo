@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-12
   note: OSM way 929346349 'Our Lady of Peace Church', Maple Street, Lordship, Stratford 06615, centre
     41.15406, -73.11971, about 30 m from the GCatholic Plus Code.
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

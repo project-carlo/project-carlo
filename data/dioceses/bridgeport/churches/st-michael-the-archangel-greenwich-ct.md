@@ -25,6 +25,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/21952
   seen: 2026-11-12
   note: 'GCatholic: ''St. Michael the Archangel'', 469 North St., Greenwich, CT 06830; Plus Code 87H839CG+4G.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

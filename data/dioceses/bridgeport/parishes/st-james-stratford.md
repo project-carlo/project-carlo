@@ -24,6 +24,7 @@ evidence:
   note: Read with parish-site-access visit.py (probe url gets 403). eCatholic site 19032; lists files.ecatholic.com/19032/bulletins/
     issues 'November 8, 2026' (20261108.pdf), 'November 1, 2026', 'October 25, 2026', weekly back through
     2026.
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

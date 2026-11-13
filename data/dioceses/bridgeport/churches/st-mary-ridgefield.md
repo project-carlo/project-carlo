@@ -26,6 +26,7 @@ evidence:
   note: '15 November 2026 Good News bulletin (image-only, page 1 rendered): Masses Sunday 7:30 AM, 9 AM,
     12 PM, 5 PM, 10:30 AM (HALL); Saturday 8:00 AM, 4:30 PM Vigil; Monday-Friday 7:00 AM & noon; footer
     ''St. Mary Parish, 55 Catoonah Street, Ridgefield, CT 06877''.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

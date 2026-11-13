@@ -34,6 +34,7 @@ evidence:
   note: 'Diocese''s schedule for St. Mary Parish: Sunday 8:00, 10:00, 12:00, 17:00, 19:00 ''St. Mary'';
     Monday-Friday 09:00 ''St. Mary, in St. Joseph Chapel''; Monday-Friday 19:00 and Saturday 16:00, 18:00
     ''St. Benedict campus''.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

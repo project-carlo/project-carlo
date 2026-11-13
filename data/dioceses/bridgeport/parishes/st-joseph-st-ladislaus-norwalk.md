@@ -30,6 +30,7 @@ evidence:
     and 11:00 AM (Spanish), Monday-Friday 7:00 PM (Spanish); St. Joseph Saturday 8:00 AM (Spanish, SJ
     Chapel) and 7:00 PM (Spanish), Sunday 9:30 AM (English), 12:30 PM (Spanish), 5:15 PM (French Creole),
     weekdays 7:30 AM (English, SJ Chapel), Wednesday 7:00 PM (French Creole, SJ Chapel).'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

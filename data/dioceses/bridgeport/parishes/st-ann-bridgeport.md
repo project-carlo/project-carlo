@@ -20,6 +20,7 @@ evidence:
   seen: 2026-11-12
   note: 'probe po: org ''St. Ann Church'', 481 Brewster St, Bridgeport 06605, LPi id 0018000000Qc0AXAAZ,
     container 03/0286, latest issue 2026-11-15. The parish site (Duda) links this org.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

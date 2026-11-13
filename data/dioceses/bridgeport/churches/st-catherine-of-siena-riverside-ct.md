@@ -30,6 +30,7 @@ evidence:
 - url: https://nominatim.openstreetmap.org/search?q=St.+Catherine+of+Siena,+Riverside,+CT&format=json&limit=3
   seen: 2026-11-12
   note: OSM node 566258954 'St. Catherine of Siena RC Church', East Putnam Avenue, 41.0409512, -73.5870499.
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

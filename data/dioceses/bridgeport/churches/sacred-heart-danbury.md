@@ -29,6 +29,7 @@ evidence:
   note: 'Page 1 of St. Peter''s 1 November 2026 bulletin: Sacred Heart Church, Saturday Vigil 5:00 p.m.,
     Sunday 7:30, 9:00 a.m. and 12:00 noon (Spanish). Page 2: office at 12 Cottage Street, ''Mail to: 46
     Stone Street, Danbury, CT 06810''.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

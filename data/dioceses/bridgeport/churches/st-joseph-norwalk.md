@@ -31,6 +31,7 @@ evidence:
   quote: ST. JOSEPH MASS TIMES
   note: Saturday 8:00 AM (SJ Chapel) and 7:00 PM; Sunday 9:30 AM, 12:30 PM, 5:15 PM; weekdays 7:30 AM
     (SJ Chapel); Wednesday 7:00 PM French Creole (SJ Chapel).
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

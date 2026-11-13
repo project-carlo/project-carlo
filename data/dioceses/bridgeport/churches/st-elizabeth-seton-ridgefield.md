@@ -26,6 +26,7 @@ evidence:
   note: '15 November 2026 bulletin (image-only, rendered): page 1 masthead ''Saint Elizabeth Seton Parish,
     520 Ridgebury Road, Ridgefield, CT 06877''; Masses Monday-Friday 8:30 a.m., Saturday Vigil 5:00 p.m.,
     Sunday 8:00, 9:30, 11:30 a.m.; page 2 intentions 14-22 November 2026.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

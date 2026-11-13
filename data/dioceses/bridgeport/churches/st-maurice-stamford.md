@@ -24,6 +24,7 @@ evidence:
   quote: 358 GLENBROOK RD, STAMFORD, CT 06906
   note: 15 November 2026 bulletin masthead; Masses Saturday 4:00 PM, Sunday 8:00, 10:00 AM and 12:00 PM,
     Monday-Thursday 12:10 PM.
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

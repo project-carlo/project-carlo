@@ -24,6 +24,7 @@ evidence:
     & Newsletters'' page: ''our weekly bulletin, Good News''; ''Click image above to view this week''s
     bulletin and our archive of bulletins'' links https://church-bulletin.org/?id=936, which redirects
     to the church-bulletin.org page above.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

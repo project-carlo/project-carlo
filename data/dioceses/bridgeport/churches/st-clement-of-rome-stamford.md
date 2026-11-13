@@ -25,6 +25,7 @@ evidence:
   quote: St. Clement of Rome Church 535 Fairfield Avenue
   note: 8 November 2026 bulletin; Saturday Vigil 5:00 p.m., Sunday 8:00 and 10:30 a.m.; weekday and Saturday
     morning Masses in the chapel at the rear of the rectory.
+promoted: 2026-11-12
 ---
 
 ## Holds Mass
