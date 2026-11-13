@@ -153,6 +153,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A server sending an incomplete TLS chain (probe get: 'unable to get local issuer certificate'; http redirects to https) fails fetch too: unsupported with fetch_gap kind tls-incomplete-chain.
 - John Patrick (church-bulletin.org): a parish's listing is church-bulletin.org/<name-town-st-zip>, issues /bulletin/<id>/<YYYY-MM-DD>.pdf; page-pdfs on the listing picks the current issue. Some issues are image-only scans (no text for probe pdf): read them with render.py.
 - Wix sites that link only the current bulletin (a hashed /_files/ugd/*.pdf) from the home page: unpinned fetch can pick another page's PDF; pin page-pdfs on the page that links the bulletin.
+- Sites that probe url/probe pdf cannot connect to (egress proxy EOF, RemoteDisconnected) can still be read by fetch:check: download their PDFs with tools/browser_get.py, and do not treat the probe failure as a fetch gap.
+- Self-hosted bulletin PDFs made in Canva (pdfinfo Creator: Canva) can be image-only or carry the Mass schedule as an image. When probe pdf --grep finds no Mass, render pages 1-2 before concluding.
 
 
 ## Rules settled for this diocese
