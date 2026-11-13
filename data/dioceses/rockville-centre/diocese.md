@@ -185,6 +185,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - An LPi footer '<Org> | 03-NNNN' on a Solutio parish's own copy gives a live container (probe container 03/NNNN) even when no ParishesOnline org slug answers probe po; fetch reads ParishesOnline only by org slug, so keep po-container in publication and leave the row unsupported joomla-file-endpoint with research for the slug (St. John of God, Central Islip).
 - When a listed parish domain is DEAD-DNS, `probe get https://html.duckduckgo.com/html/?q=<parish>+<town>+bulletin` (decode the uddg= links) finds the moved site.
 - render.py fetches by URL and fails on hosts that drop non-browser connections (RemoteDisconnected); download with tools/browser_get.py and render pages locally with `pdftoppm -r 80 -jpeg -f 1 -l 2`.
+- WordPress bulletin pages whose issue links are canva.link short links open Canva design viewers (visit.py final_url canva.com/design/<id>/.../view, title names the issue); unpinned fetch then picks some other PDF on the page, so record unsupported with fetch_gap canva-design-viewer.
+- Divi WordPress sites listing one post per issue ('OPEN BULLETIN') are read by unpinned fetch, which follows the newest post to its PDF; the recipe fetch:check prints pins that week's post, so leave provider_id empty.
 
 ## Rules settled for this diocese
 
