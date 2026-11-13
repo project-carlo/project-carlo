@@ -162,6 +162,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Solutio bulletin lists whose items show a 'default' icon instead of 'pdf' may redirect /file to a Canva design viewer (canva.com/design/<id>/view): open one with visit.py to see final_url, read pages as screenshots (view#N), and record fetch_gap canva-design-viewer.
 - A WordPress site with no bulletin archive page still lists its weekly uploads through /wp-json/wp/v2/media?search=<word>&_fields=source_url (read with visit.py when probe get is blocked); use it to choose a filename glob for page-pdfs on the home page.
 - A site Cloudflare-challenges on every visit.py run and in fetch:check ('blocked NoBulletin'), with no copy on another host: unsupported with fetch_gap kind cloudflare-challenge plus access-blocked research and a revisit date.
+- fetch's filename date parser reads month names inside words: '11-8-26-martintours.pdf' dates as 2026-03-26 ('mar'). Check url_date in fetch:check; if the right file gets a wrong date, the row is unsupported with fetch_gap kind filename-date-misread.
+- The Church Bulletin Inc., West Babylon (back page '#<n> FOR ADVERTISING: THE CHURCH BULLETIN INC.') prints several parish bulletins here but posts none online (thechurchbulletininc.com has no listing), so it gives no printer listing to collect from.
 
 
 ## Rules settled for this diocese
