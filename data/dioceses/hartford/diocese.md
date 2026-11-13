@@ -112,6 +112,15 @@ From `probe url` of all 98 sites the finder links (2026-11-13):
   five), and one bulletin printed into two LPi containers with only the ad page differing.
   Wix and Weebly file hosts answer 429 to rapid `probe pdf`; space the requests.
 
+## New lessons
+
+Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
+
+- 'Branches on the Vine' PDFs (Branches*.pdf) on diocesanweb parish sites are the archdiocese's weekly news, not a parish bulletin; when a bulletins page mixes them in, pin page-pdfs with a filename glob for the parish's own files (e.g. filename=Bulletin-*.pdf).
+- diocesanweb 'current-bulletin' and yearly-archive pages also link forms (cemetery rules, sponsor certificates); unfiltered page-pdfs can pick one as first-listed, so check the pick and pin the page plus a filename glob.
+- For churches the 2017 pastoral plan closed with no decree, html.duckduckgo.com/html/?q=... via probe get finds local reports (Hartford Courant June 2017 'final regular Mass' articles, the Suffield Observer) that date the last Mass.
+
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
