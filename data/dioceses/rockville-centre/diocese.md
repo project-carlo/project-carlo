@@ -189,6 +189,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Divi WordPress sites listing one post per issue ('OPEN BULLETIN') are read by unpinned fetch, which follows the newest post to its PDF; the recipe fetch:check prints pins that week's post, so leave provider_id empty.
 - ParishesOnline 'user' publications (probe po issues of type user at customer-data-prod-bucket.s3.amazonaws.com/organization-uploads/<lpi>/publications/...; site widget publicationWidget?type=publication) are not read by the parishes_online collector ('No matching anchor link'), and unpinned other on the site picks another PDF: record unsupported with fetch_gap po-user-upload, keeping po-org and lpi ids (St. Sylvester, Medford).
 - A WeConnect site answering 'Temporarily Unavailable' can still have a live LPi org: probe po <name>-church-<zip> found it, and its bulletin masthead named the parish's new site (St. Joseph the Worker).
+- Wix bulletin pages can list hash-named /_files/ugd PDFs out of date order with no link text (Ss. Philip and James); check page-pdfs' 'first-listed' pick against each PDF's page-1 date, and if it is wrong record unsupported with fetch_gap first-pdf-not-current.
 
 ## Rules settled for this diocese
 
