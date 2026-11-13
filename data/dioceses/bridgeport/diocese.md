@@ -108,6 +108,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Duda 'Bulletin' pages can list issues oldest first with irregular gaps (Georgetown Oratory); fetch:check's page-pdfs still picked the newest by its file-name date.
 - Bon Venture sponsor pages (http://sponsors.bonventure.net/?page=<n>): fetch:check run with PLAYWRIGHT_BROWSER_CHANNEL=chrome fetched the picked PDF over https and failed TLS verification; run without the Chrome channel it fetched over http fine (Our Lady of Guadalupe Danbury, page 5008).
 - A Duda bulletin page that lists an older year's block first can make page-pdfs pick last year's issue; pin a year filter (filename=*2026.pdf) and set a January revisit to update it.
+- JPPC: a parish site's https://www.jppc.net/onlinebulletins/<n>template.pdf link, church-bulletin.org/<n> and church-bulletin.org/?id=<n> can all redirect to the parish's church-bulletin.org/<saint-...> page listing dated issues (St. Elizabeth Seton 9011, St. Mary Ridgefield 936); probe get the link to follow it, pin page-pdfs on the final page. These JPPC issues are image-only: render page 1 for the masthead.
+- fetch:check can't date WordPress uploads named '<YYYY>.<MonD>-...pdf' (e.g. 2026.Nov15-E-News-2.pdf) and reports date/freshness unknown; the pick then relies on the page listing newest first, so set a revisit to recheck it.
 
 
 ## Rules settled for this diocese
