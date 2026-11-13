@@ -106,6 +106,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - church-bulletin.org (JPPC): a parish site's Bulletins link can point at a slug that serves only JPPC's generic welcome page (St. Francis Weston's 'st-...'); try the 'saint-...' variant of the slug, and check by saving the HTML with probe get --out and grepping for bulletin/<slug>/<date>.pdf (probe get's text output drops links).
 - Joomla /bulletins/<n>-<date>/file links behind Cloudflare answer 403 even to the browser context's request client; tools/browser_download.py fetch()es the file from inside the page to read an issue (render it with pdftoppm). fetch can't collect these: record unsupported, fetch_gap joomla-file-endpoint.
 - Duda 'Bulletin' pages can list issues oldest first with irregular gaps (Georgetown Oratory); fetch:check's page-pdfs still picked the newest by its file-name date.
+- Bon Venture sponsor pages (http://sponsors.bonventure.net/?page=<n>): fetch:check run with PLAYWRIGHT_BROWSER_CHANNEL=chrome fetched the picked PDF over https and failed TLS verification; run without the Chrome channel it fetched over http fine (Our Lady of Guadalupe Danbury, page 5008).
+- A Duda bulletin page that lists an older year's block first can make page-pdfs pick last year's issue; pin a year filter (filename=*2026.pdf) and set a January revisit to update it.
 
 
 ## Rules settled for this diocese
