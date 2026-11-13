@@ -155,6 +155,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Wix sites that link only the current bulletin (a hashed /_files/ugd/*.pdf) from the home page: unpinned fetch can pick another page's PDF; pin page-pdfs on the page that links the bulletin.
 - Sites that probe url/probe pdf cannot connect to (egress proxy EOF, RemoteDisconnected) can still be read by fetch:check: download their PDFs with tools/browser_get.py, and do not treat the probe failure as a fetch gap.
 - Self-hosted bulletin PDFs made in Canva (pdfinfo Creator: Canva) can be image-only or carry the Mass schedule as an image. When probe pdf --grep finds no Mass, render pages 1-2 before concluding.
+- Some self-hosted WordPress sites (olvfpny.org) list issues fine to fetch:check's page-pdfs but answer HTTP 403 to the PDF download itself (and to probe get); Chrome gets it with tools/browser_get.py. Record the recipe in provider_id and make the row unsupported with fetch_gap kind pdf-download-403.
+- When a parish domain is dead and probe get gets 429 from web.archive.org, visit.py still reads the Wayback CDX list (web.archive.org/cdx/search/cdx?url=<domain>/*&collapse=timestamp:6) and snapshots; use them to date when the site lapsed and its last Mass schedule.
 
 
 ## Rules settled for this diocese
