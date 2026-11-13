@@ -151,6 +151,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 
 - Solutio /file PDFs (403 to probe get) download in Chrome with tools/browser_get.py <url> <out>; read the file with pdftotext or render.py. Check its PDF metadata (pdfinfo Creator: Word/Publisher vs a printer) before looking for a printer listing.
 - A server sending an incomplete TLS chain (probe get: 'unable to get local issuer certificate'; http redirects to https) fails fetch too: unsupported with fetch_gap kind tls-incomplete-chain.
+- John Patrick (church-bulletin.org): a parish's listing is church-bulletin.org/<name-town-st-zip>, issues /bulletin/<id>/<YYYY-MM-DD>.pdf; page-pdfs on the listing picks the current issue. Some issues are image-only scans (no text for probe pdf): read them with render.py.
+- Wix sites that link only the current bulletin (a hashed /_files/ugd/*.pdf) from the home page: unpinned fetch can pick another page's PDF; pin page-pdfs on the page that links the bulletin.
 
 
 ## Rules settled for this diocese
