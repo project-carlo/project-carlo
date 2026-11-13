@@ -111,6 +111,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - JPPC: a parish site's https://www.jppc.net/onlinebulletins/<n>template.pdf link, church-bulletin.org/<n> and church-bulletin.org/?id=<n> can all redirect to the parish's church-bulletin.org/<saint-...> page listing dated issues (St. Elizabeth Seton 9011, St. Mary Ridgefield 936); probe get the link to follow it, pin page-pdfs on the final page. These JPPC issues are image-only: render page 1 for the masthead.
 - fetch:check can't date WordPress uploads named '<YYYY>.<MonD>-...pdf' (e.g. 2026.Nov15-E-News-2.pdf) and reports date/freshness unknown; the pick then relies on the page listing newest first, so set a revisit to recheck it.
 - A parish site that posts its own copies of an LPi bulletin (Google Drive file links, FaithConnector /e/bulletin redirecting to faithconnector.s3.amazonaws.com/<site>/files/<sunday>.pdf) still has a live ParishesOnline org: read the ad-page footer's NN-NNNN container and `probe po <name>-church-<zip>`, and use parishes_online (St. Thomas the Apostle Norwalk, St. Thomas More Darien).
+- Slugs are global: `pnpm diocese search` also lists other dioceses' live rows, and Connecticut towns that share a name with a New York town collide (Albany's live sacred-heart-stamford is Stamford NY); add -ct to the slug (sacred-heart-stamford-ct).
+- A chapel the bulletin places inside or behind the parish church (St. Joseph's Chapel '(St. Mary)', a chapel 'in the rear of the rectory') goes on that church's row, with its mass-times roster entry linked there, not on a church row of its own.
 
 
 ## Rules settled for this diocese
