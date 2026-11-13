@@ -179,6 +179,9 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - flipbook.so: some Solutio bulletin /file links redirect to flipbook.so/flip/<id> viewers (title gives the issue date) serving only .webp page images on storage.googleapis.com, no PDF; visit.py --text reads the text layer; fetch:check answers resolve_failed, so record unsupported with fetch_gap flipbook-so-viewer.
 - LPi-printed parishes on eCatholic sites with 'No bulletin found' (e.g. a Drive archive instead) are usually on ParishesOnline as <name>-<zip> with 'st' (church-of-st-mary-11030), even when the bulletin says 'Saint'; try probe po on those slug forms.
 - GoDaddy Website Builder sites list bulletin PDFs on img1.wsimg.com/blobby/go/<site>/downloads/<uuid>/<name>.pdf, often oldest first; page-pdfs on the bulletin page still picks the newest by the filename date (St. Edward, Syosset).
+- LPi copies posted on Solutio sites can carry Creator Canva (St. Hugh): grep the PDF for '4lpi.com' or the footer '<Org name> | 03-NNNN' before treating the issue as parish-made; the footer gives the container.
+- When <name>-church-<zip> misses on ParishesOnline, try the LPi footer's org name slugified with no zip (St. Hugh of Lincoln Roman Catholic Church -> st-hugh-of-lincoln-roman-catholic-church).
+- fetch:check refuses unsupported rows; tools/fc_unsupported.sh sets provider other for the check and restores unsupported.
 
 ## Rules settled for this diocese
 
