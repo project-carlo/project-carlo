@@ -164,6 +164,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A site Cloudflare-challenges on every visit.py run and in fetch:check ('blocked NoBulletin'), with no copy on another host: unsupported with fetch_gap kind cloudflare-challenge plus access-blocked research and a revisit date.
 - fetch's filename date parser reads month names inside words: '11-8-26-martintours.pdf' dates as 2026-03-26 ('mar'). Check url_date in fetch:check; if the right file gets a wrong date, the row is unsupported with fetch_gap kind filename-date-misread.
 - The Church Bulletin Inc., West Babylon (back page '#<n> FOR ADVERTISING: THE CHURCH BULLETIN INC.') prints several parish bulletins here but posts none online (thechurchbulletininc.com has no listing), so it gives no printer listing to collect from.
+- Edlio parish sites (*.files.edl.io PDFs, /apps/pages/index.jsp?uREC_ID=...): the home page may link a stale issue; pin page-pdfs on the Bulletin page, which lists issues newest first with the date only in link text (paths carry the upload date), so fetch:check picks the first link but reports issue date unknown — confirm the pick by the link text.
 
 
 ## Rules settled for this diocese
