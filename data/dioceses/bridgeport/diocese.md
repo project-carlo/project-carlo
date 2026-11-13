@@ -113,6 +113,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A parish site that posts its own copies of an LPi bulletin (Google Drive file links, FaithConnector /e/bulletin redirecting to faithconnector.s3.amazonaws.com/<site>/files/<sunday>.pdf) still has a live ParishesOnline org: read the ad-page footer's NN-NNNN container and `probe po <name>-church-<zip>`, and use parishes_online (St. Thomas the Apostle Norwalk, St. Thomas More Darien).
 - Slugs are global: `pnpm diocese search` also lists other dioceses' live rows, and Connecticut towns that share a name with a New York town collide (Albany's live sacred-heart-stamford is Stamford NY); add -ct to the slug (sacred-heart-stamford-ct).
 - A chapel the bulletin places inside or behind the parish church (St. Joseph's Chapel '(St. Mary)', a chapel 'in the rear of the rectory') goes on that church's row, with its mass-times roster entry linked there, not on a church row of its own.
+- WordPress Download Monitor bulletin lists (/download/<id>/ links redirecting to wp-content/uploads/dlm_uploads/...pdf) are not read by page-pdfs; if the home page links the newest PDF directly, pin page-pdfs on the home page and set a revisit (St. Aloysius New Canaan).
 
 
 ## Rules settled for this diocese
