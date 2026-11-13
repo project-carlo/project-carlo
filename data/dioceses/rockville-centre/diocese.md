@@ -182,6 +182,9 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - LPi copies posted on Solutio sites can carry Creator Canva (St. Hugh): grep the PDF for '4lpi.com' or the footer '<Org name> | 03-NNNN' before treating the issue as parish-made; the footer gives the container.
 - When <name>-church-<zip> misses on ParishesOnline, try the LPi footer's org name slugified with no zip (St. Hugh of Lincoln Roman Catholic Church -> st-hugh-of-lincoln-roman-catholic-church).
 - fetch:check refuses unsupported rows; tools/fc_unsupported.sh sets provider other for the check and restores unsupported.
+- An LPi footer '<Org> | 03-NNNN' on a Solutio parish's own copy gives a live container (probe container 03/NNNN) even when no ParishesOnline org slug answers probe po; fetch reads ParishesOnline only by org slug, so keep po-container in publication and leave the row unsupported joomla-file-endpoint with research for the slug (St. John of God, Central Islip).
+- When a listed parish domain is DEAD-DNS, `probe get https://html.duckduckgo.com/html/?q=<parish>+<town>+bulletin` (decode the uddg= links) finds the moved site.
+- render.py fetches by URL and fails on hosts that drop non-browser connections (RemoteDisconnected); download with tools/browser_get.py and render pages locally with `pdftoppm -r 80 -jpeg -f 1 -l 2`.
 
 ## Rules settled for this diocese
 
