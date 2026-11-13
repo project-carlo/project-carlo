@@ -138,6 +138,9 @@ neighbour, has no publisher notes; Paterson's notes cover the same publishers.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- WordPress sites using LiteSpeed Cache guest mode (page source POSTs to litespeed-cache/guest.vary.php then window.location.reload) break fetch:check's page-pdfs with 'Cannot find context with specified id'; record unsupported, fetch_gap litespeed-guest-reload, keeping the pinned page-pdfs recipe.
+- A parish bulletin page can still list stale self-hosted PDFs next to a church-bulletin.org/?id=<n> button for its JPPC issues: pin page-pdfs on the resolved church-bulletin.org/<saint-...> page, not the parish page.
+
 
 ## Rules settled for this diocese
 
