@@ -149,6 +149,9 @@ From the survey's probes of 130 parish websites (2026-11-12). Fill in as the bat
 
 Decisions that apply to more than one record, and who made them.
 
+- Where an Eastern Catholic community uses a Latin parish's church (Syro-Malankara St. Vincent de Paul Cathedral / Latin St. Vincent de Paul, Elmont; Syro-Malabar St. Mary / St. Thomas the Apostle, West Hempstead), the church row belongs to the Latin parish if the Latin parish still has public Mass there. The Eastern community's roster entry goes in excluded/ as other-jurisdiction and names the shared building. If the Latin parish no longer has Mass in the building, the building goes in excluded/ as other-jurisdiction. (accepted by survey-review, 002-survey-review, 2026-11-13)
+- A Solutio (Joomla) parish site whose /news/bulletin/<n>-<date>/file PDFs answer 403 is not on its own a reason for no_bulletin. First look for the printer's listing (LPi id or ParishesOnline org, John Patrick). If there is none, record the site and make the row unsupported with fetch_gap joomla-file-endpoint, as Camden and Trenton do. (accepted by survey-review, 002-survey-review, 2026-11-13)
+
 ## Log
 
 Newest first: date, what was done, and the `pnpm diocese coverage` numbers after it.
