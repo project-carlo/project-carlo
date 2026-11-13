@@ -114,58 +114,91 @@ From the survey's probes of 130 parish websites (2026-11-12) and the map batches
 - **Reaching sites:** `probe url` returned 403 for 46 sites and could not connect to 25
   ("egress proxy: EOF", RemoteDisconnected); in `visit.py` 17 of 18 such sites loaded
   normally, and `fetch:check` reads them too. A probe failure alone is not a fetch gap: use
-  `visit.py --bulletin` and download PDFs with `tools/browser_get.py <url> <out>`.
-- **Fetch gaps seen here** (row `unsupported`, recipe kept in `provider_id`): an incomplete TLS
-  chain (`probe get`: "unable to get local issuer certificate"; http redirects to https) is
+  `visit.py --bulletin` and download PDFs with `tools/browser_get.py <url> <out>`. When a
+  listed domain is DEAD-DNS, `probe get https://html.duckduckgo.com/html/?q=<parish>+<town>+bulletin`
+  (decode the `uddg=` links) finds the moved site.
+- **Fetch gaps seen here** (row `unsupported`, recipe kept in `provider_id`; `fetch:check`
+  refuses such rows, so check them with `tools/fc_unsupported.sh`): an incomplete TLS chain
+  (`probe get`: "unable to get local issuer certificate"; http redirects to https) is
   `tls-incomplete-chain`; a page `fetch:check` lists but whose PDFs answer 403 to it and to
-  `probe get` (self-hosted WordPress, e.g. olvfpny.org; Chrome gets them) is
-  `pdf-download-403`; a Cloudflare challenge on every `visit.py` run and in `fetch:check`
-  ("blocked NoBulletin"), with no copy on another host, is `cloudflare-challenge` plus
-  access-blocked research and a revisit date.
-- **Filename dates:** fetch's parser reads month names inside words (`11-8-26-martintours.pdf`
-  dates as 2026-03-26, "mar"). Check `url_date` in `fetch:check`; if the right file gets a
-  wrong date, the row is `unsupported` with `filename-date-misread`.
+  `probe get` (self-hosted WordPress; Chrome gets them) is `pdf-download-403`; a Cloudflare
+  challenge on every `visit.py` run and in `fetch:check` ("blocked NoBulletin"), with no copy
+  on another host, is `cloudflare-challenge` plus access-blocked research and a revisit date.
+  Viewers and date misreads below have their own gaps.
+- **Issue dates:** check `url_date` and the pick in `fetch:check` against the issue's page 1.
+  Fetch's parser reads month names inside words (`11-8-26-martintours.pdf` dates as
+  2026-03-26, "mar"): `filename-date-misread`. Link text beats the filename, so a WordPress
+  page keeping years of issues with yearless link text ("November 19") yields a past year's
+  issue; a `filename=<prefix>_<year>*.pdf` glob works only until January, so keep it in
+  `provider_id` and record `link-text-date-misread`. Wix pages can list hash-named
+  `/_files/ugd` PDFs out of date order with no link text; if page-pdfs' first-listed pick
+  isn't the newest, record `first-pdf-not-current`.
 - **Reading PDFs:** check `pdfinfo` Creator first. Canva PDFs can be image-only or carry the
   Mass schedule as an image; PScript5/Acrobat Distiller issues (common on Solutio) can have a
   subset-font text layer that `pdftotext` turns to symbol soup. When `probe pdf --grep` finds
-  no Mass or the text is garbled, render pages 1-2 with `render.py`.
+  no Mass or the text is garbled, render pages 1-2 with `render.py`; where its host drops
+  non-browser connections, download with `browser_get.py` and run
+  `pdftoppm -r 80 -jpeg -f 1 -l 2` locally.
 - **Solutio (Joomla) sites** are common. They post issues at `/news/bulletin/<n>-<date>` or
   `/news-events/bulletin` (some on `*.solutiosoftware.com`). Their `/file` PDFs answer 403 to
-  `probe get` but download with `browser_get.py`; read the Creator (Word/Publisher means
-  self-made; a printer's means look for its listing) before looking for a ParishesOnline or
-  John Patrick listing, then follow the rule below. Issue names starting `lpi-bulletin-…` mean
-  LPi prints it (Sacred Heart Cutchogue; its container is not `sacred-heart-church-11935`).
-  List items with a "default" icon instead of "pdf" may redirect `/file` to a Canva design
-  viewer (`canva.com/design/<id>/view`): open one in `visit.py` to see `final_url`, read pages
-  as screenshots (`view#N`), and record `fetch_gap` `canva-design-viewer`.
+  `probe get` but download with `browser_get.py`. Before treating an issue as parish-made,
+  grep it for `4lpi.com` or an LPi footer `<Org name> | 03-NNNN` (the Creator can say Canva
+  or Word on an LPi copy) and read the Creator for another printer, then follow the rule
+  below. Issue names starting `lpi-bulletin-…` also mean LPi. List items with a "default"
+  icon instead of "pdf" may redirect `/file` to a viewer: open one in `visit.py` to see
+  `final_url`. A Canva design viewer is read as screenshots (`view#N`), gap
+  `canva-design-viewer`; a `flipbook.so/flip/<id>` viewer (title gives the date) serves only
+  .webp page images, no PDF, and `visit.py --text` reads its text layer; `fetch:check`
+  answers resolve_failed: gap `flipbook-so-viewer`.
 - **ParishesOnline / LPi** is reachable (`probe po`): e.g. `lpi:0018000000Qc1NlAAJ`
   (container 03/0634). Slugs like `<name>-church-<zip>` often miss here; use the LPi id the
-  site embeds or the 4lpi.com link.
+  site embeds or the 4lpi.com link, then try `<name>-<zip>` with "st" even when the bulletin
+  says "Saint" (`church-of-st-mary-11030`) and the footer's org name slugified with no zip
+  (`st-hugh-of-lincoln-roman-catholic-church`). A footer's `03-NNNN` gives a live container
+  (`probe container 03/NNNN`) even when no slug answers, but fetch reads ParishesOnline only by
+  org slug: keep `po-container` in publication, leave the row `unsupported` (on Solutio,
+  `joomla-file-endpoint`) with research for the slug. ParishesOnline "user" publications
+  (`probe po` issues of type user under
+  `customer-data-prod-bucket.s3.amazonaws.com/organization-uploads/<lpi>/publications/`; site
+  widget `publicationWidget?type=publication`) aren't read by the collector ("No matching
+  anchor link"), and unpinned `other` picks another PDF: record `po-user-upload`, keeping the
+  po-org and lpi ids.
+- **LPi WeConnect:** `*.weconnect.com` sites often render without parish words ("Temporarily
+  Unavailable", as all of Allentown's did), but the LPi org can still be live: try `probe po`
+  slugs, and read the masthead, which may name the parish's new site.
 - **eCatholic** sites sit behind Cloudflare (403 to `probe url`, fine in `visit.py`); issues
-  at `files.ecatholic.com/<id>/bulletins/<YYYYMMDD>.pdf`.
+  at `files.ecatholic.com/<id>/bulletins/<YYYYMMDD>.pdf`. One that says "No bulletin found"
+  (e.g. links a Drive archive instead) is usually LPi-printed: look for it on ParishesOnline.
 - **John Patrick Publishing** (jppc.net, church-bulletin.org): the listing is
   `church-bulletin.org/<name-town-st-zip>`, issues `/bulletin/<id>/<YYYY-MM-DD>.pdf`. Record
   provider `other` with `page-pdfs` on the listing, which picks the current issue. Some issues
   are image-only scans: read them with `render.py`.
 - **The Church Bulletin Inc., West Babylon** (back page "#<n> FOR ADVERTISING: THE CHURCH
   BULLETIN INC.") prints several bulletins here but posts none online
-  (thechurchbulletininc.com has no listing): there is no printer listing to collect from; use
-  the parish's own copy.
+  (thechurchbulletininc.com has no listing): use the parish's own copy. The job number differs
+  for each bulletin it prints: quote it with the masthead in separate reviews between parishes
+  that share a pastor.
 - **Discover Mass:** `download.php?bulletin=<token>` URLs change token on every visit. Identify
   the issue `fetch:check` picked by the date on its page 1 (`probe pdf --pages 1`), not the URL.
 - **Edlio** (`*.files.edl.io` PDFs, `/apps/pages/index.jsp?uREC_ID=…`): the home page may link
   a stale issue. Pin `page-pdfs` on the Bulletin page, which lists issues newest first with the
   date only in link text (paths carry the upload date); `fetch:check` reports issue date
   unknown, so confirm its pick by the link text.
+- **GoDaddy Website Builder** lists PDFs at
+  `img1.wsimg.com/blobby/go/<site>/downloads/<uuid>/<name>.pdf`, often oldest first;
+  `page-pdfs` on the bulletin page still picks the newest by the filename date.
 - **Self-hosted** PDFs on WordPress, Wix, Squarespace and Weebly are the most common case.
   Wix lists issues on `/current-bulletin` or yearly `/2026-bulletins` pages; where only the
   home page links the current issue (a hashed `/_files/ugd/*.pdf`), unpinned fetch can pick
   another page's PDF, so pin `page-pdfs` on the page that links the bulletin. A WordPress site
   with no archive page still lists its uploads at
   `/wp-json/wp/v2/media?search=<word>&_fields=source_url` (via `visit.py` if `probe get` is
-  blocked); use it to choose a filename glob for `page-pdfs` on the home page.
-- **LPi WeConnect:** `*.weconnect.com` sites rendered without parish words here (in Allentown
-  every one answered "Temporarily Unavailable").
+  blocked); use it to choose a filename glob for `page-pdfs` on the home page. Divi WordPress
+  sites with one post per issue ("OPEN BULLETIN") are read by unpinned fetch, which follows
+  the newest post; the recipe `fetch:check` prints pins that week's post, so leave
+  `provider_id` empty. WordPress issue links that are `canva.link` short links open Canva
+  design viewers (title names the issue) and unpinned fetch picks another PDF:
+  `canva-design-viewer`.
 - **Dead parish domains:** when `probe get` gets 429 from web.archive.org, `visit.py` still
   reads the Wayback CDX list (`web.archive.org/cdx/search/cdx?url=<domain>/*&collapse=timestamp:6`)
   and snapshots; use them to date the lapse and the last Mass schedule.
@@ -175,23 +208,6 @@ From the survey's probes of 130 parish websites (2026-11-12) and the map batches
 ## New lessons
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
-
-- flipbook.so: some Solutio bulletin /file links redirect to flipbook.so/flip/<id> viewers (title gives the issue date) serving only .webp page images on storage.googleapis.com, no PDF; visit.py --text reads the text layer; fetch:check answers resolve_failed, so record unsupported with fetch_gap flipbook-so-viewer.
-- LPi-printed parishes on eCatholic sites with 'No bulletin found' (e.g. a Drive archive instead) are usually on ParishesOnline as <name>-<zip> with 'st' (church-of-st-mary-11030), even when the bulletin says 'Saint'; try probe po on those slug forms.
-- GoDaddy Website Builder sites list bulletin PDFs on img1.wsimg.com/blobby/go/<site>/downloads/<uuid>/<name>.pdf, often oldest first; page-pdfs on the bulletin page still picks the newest by the filename date (St. Edward, Syosset).
-- LPi copies posted on Solutio sites can carry Creator Canva (St. Hugh): grep the PDF for '4lpi.com' or the footer '<Org name> | 03-NNNN' before treating the issue as parish-made; the footer gives the container.
-- When <name>-church-<zip> misses on ParishesOnline, try the LPi footer's org name slugified with no zip (St. Hugh of Lincoln Roman Catholic Church -> st-hugh-of-lincoln-roman-catholic-church).
-- fetch:check refuses unsupported rows; tools/fc_unsupported.sh sets provider other for the check and restores unsupported.
-- An LPi footer '<Org> | 03-NNNN' on a Solutio parish's own copy gives a live container (probe container 03/NNNN) even when no ParishesOnline org slug answers probe po; fetch reads ParishesOnline only by org slug, so keep po-container in publication and leave the row unsupported joomla-file-endpoint with research for the slug (St. John of God, Central Islip).
-- When a listed parish domain is DEAD-DNS, `probe get https://html.duckduckgo.com/html/?q=<parish>+<town>+bulletin` (decode the uddg= links) finds the moved site.
-- render.py fetches by URL and fails on hosts that drop non-browser connections (RemoteDisconnected); download with tools/browser_get.py and render pages locally with `pdftoppm -r 80 -jpeg -f 1 -l 2`.
-- WordPress bulletin pages whose issue links are canva.link short links open Canva design viewers (visit.py final_url canva.com/design/<id>/.../view, title names the issue); unpinned fetch then picks some other PDF on the page, so record unsupported with fetch_gap canva-design-viewer.
-- Divi WordPress sites listing one post per issue ('OPEN BULLETIN') are read by unpinned fetch, which follows the newest post to its PDF; the recipe fetch:check prints pins that week's post, so leave provider_id empty.
-- ParishesOnline 'user' publications (probe po issues of type user at customer-data-prod-bucket.s3.amazonaws.com/organization-uploads/<lpi>/publications/...; site widget publicationWidget?type=publication) are not read by the parishes_online collector ('No matching anchor link'), and unpinned other on the site picks another PDF: record unsupported with fetch_gap po-user-upload, keeping po-org and lpi ids (St. Sylvester, Medford).
-- A WeConnect site answering 'Temporarily Unavailable' can still have a live LPi org: probe po <name>-church-<zip> found it, and its bulletin masthead named the parish's new site (St. Joseph the Worker).
-- Wix bulletin pages can list hash-named /_files/ugd PDFs out of date order with no link text (Ss. Philip and James); check page-pdfs' 'first-listed' pick against each PDF's page-1 date, and if it is wrong record unsupported with fetch_gap first-pdf-not-current.
-- WordPress bulletin pages that keep years of issues with yearless link text ('November 19') make page-pdfs pick a past year's issue as current, because the link text beats the filename's full date (St. Frances Cabrini, Coram). A filename=<prefix>_<year>*.pdf glob fixes it only until January, so record unsupported with fetch_gap link-text-date-misread and keep the glob recipe in provider_id.
-- The Church Bulletin Inc. back-page job number ('#NNN FOR ADVERTISING') differs for each bulletin it prints. Quote it with the masthead in separate reviews between parishes that share a pastor.
 
 ## Rules settled for this diocese
 
