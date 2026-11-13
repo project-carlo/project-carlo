@@ -110,7 +110,8 @@ neighbour, has no publisher notes; Paterson's notes cover the same publishers.
   the printer's template, not an issue. That link, `church-bulletin.org/<n>` and
   `church-bulletin.org/?id=<n>` can each redirect to the parish's
   `church-bulletin.org/<saint-...>` page listing dated issues: `probe get` the link to
-  follow it and pin `page-pdfs` on the final page. A slug that serves only JPPC's generic
+  follow it and pin `page-pdfs` on the final page, not the parish's bulletin page, which
+  may still list stale self-hosted PDFs beside the JPPC button. A slug that serves only JPPC's generic
   welcome page (`st-...`) usually has a `saint-...` variant. `probe get`'s text output drops
   links, so check with `probe get --out` and grep the HTML for
   `bulletin/<slug>/<date>.pdf`. Some parishes instead post JPPC issues on their eCatholic
@@ -126,6 +127,10 @@ neighbour, has no publisher notes; Paterson's notes cover the same publishers.
   - Uploads named `<YYYY>.<MonD>-...pdf` (`2026.Nov15-E-News-2.pdf`) are undatable to
     fetch:check (date/freshness unknown), so the pick relies on the page listing newest
     first: set a revisit to recheck it.
+  - *LiteSpeed Cache guest mode* (page source POSTs to `litespeed-cache/guest.vary.php`,
+    then `window.location.reload`) breaks fetch:check's `page-pdfs` with "Cannot find
+    context with specified id": keep the pinned recipe, record unsupported, fetch_gap
+    `litespeed-guest-reload`.
 - **Joomla** `/bulletins/<n>-<date>/file` links behind Cloudflare answer 403 even to the
   browser context's request client; `tools/browser_download.py` fetch()es the file from
   inside the page (render with `pdftoppm`). fetch can't collect these: record unsupported,
@@ -138,17 +143,13 @@ neighbour, has no publisher notes; Paterson's notes cover the same publishers.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
-- WordPress sites using LiteSpeed Cache guest mode (page source POSTs to litespeed-cache/guest.vary.php then window.location.reload) break fetch:check's page-pdfs with 'Cannot find context with specified id'; record unsupported, fetch_gap litespeed-guest-reload, keeping the pinned page-pdfs recipe.
-- A parish bulletin page can still list stale self-hosted PDFs next to a church-bulletin.org/?id=<n> button for its JPPC issues: pin page-pdfs on the resolved church-bulletin.org/<saint-...> page, not the parish page.
-
-
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
 
 - Eastern Catholic churches in Fairfield County (Ukrainian Eparchy of Stamford incl. St. Vladimir Cathedral and St. Basil Seminary; Melkite Eparchy of Our Lady of the Annunciation in Boston; Maronite Eparchy of St. Maron of Brooklyn; Ruthenian Eparchy of Passaic) are excluded as other-jurisdiction. (accepted by survey-review, 003-survey-review, 2026-11-12)
-- A merged parish's second church or 'campus' that its schedule still lists with Mass (St. George, St. Patrick Bridgeport, St. Benedict, Sacred Heart Danbury, St. Gabriel, St. Ladislaus, St. Agnes/St. Catherine, Sacred Heart & St. Patrick Redding) is a church of that one parish row unless it publishes its own bulletin. (accepted by survey-review, 003-survey-review, 2026-11-12)
-- A community housed at a parish's church with its own rector or moderator (Georgetown Oratory at Sacred Heart, Redding; Haitian quasi-parish at St. Cecilia, Stamford) is a separate parish row only if it publishes its own bulletin; otherwise its Masses are on the host parish's row. (accepted by survey-review, 003-survey-review, 2026-11-12)
+- A merged parish's second church or 'campus' that its schedule still lists with Mass (e.g. St. Agnes/St. Catherine) is a church of that one parish row unless it publishes its own bulletin. (accepted by survey-review, 003-survey-review, 2026-11-12)
+- A community housed at a parish's church with its own rector or moderator (e.g. the Georgetown Oratory at Sacred Heart, Redding) is a separate parish row only if it publishes its own bulletin; otherwise its Masses are on the host parish's row. (accepted by survey-review, 003-survey-review, 2026-11-12)
 - A chapel the bulletin places inside or behind a parish church (in the church, or 'in the rear of the rectory') goes on that church's row, with its mass-times roster entry linked there, not on a church row of its own. (map batch `stamford-central`, 2026-11-12)
 
 ## Log
