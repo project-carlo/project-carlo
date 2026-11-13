@@ -209,6 +209,9 @@ From the survey's probes of 130 parish websites (2026-11-12) and the map batches
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- A parish site served only over plain http (https gives a certificate hostname mismatch) can't be read by fetch: its browser fails 'Page.goto: net::ERR_BLOCKED_BY_CLIENT at http://…' whether pinned or not, while probe get reads the page and PDFs. Record unsupported with fetch_gap http-only-site.
+- On Solutio sites, unpinned fetch:check can follow an older /file link rather than the newest (St. Mark, Shoreham picked a May 2026 post), so a future Solutio collector must choose the newest dated post.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
