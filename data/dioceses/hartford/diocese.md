@@ -116,6 +116,10 @@ From `probe url` of all 98 sites the finder links (2026-11-13):
 
 Decisions that apply to more than one record, and who made them.
 
+- A church relegated to profane use by a published archdiocesan decree is excluded as closed, dated to the decree unless a bulletin gives the last Mass, even if the parish finder or GCatholic still lists it; check the parish's current bulletin first for a continuing Mass there. (accepted by survey-review, 002-survey-review, 2026-11-13)
+- A shared pastor named in the clergy directory puts the two parishes in one batch and in a shared audit group, but makes one row only if a current bulletin covers both (as Albany settled). (accepted by survey-review, 002-survey-review, 2026-11-13)
+- The eleven Eastern Catholic churches GCatholic lists (rite set) are other-jurisdiction exclusions (Stamford Ukrainian, Passaic Ruthenian, St. Maron of Brooklyn, St. Thomas Syro-Malabar of Chicago). (accepted by survey-review, 002-survey-review, 2026-11-13)
+
 ## Log
 
 Newest first: date, what was done, and the `pnpm diocese coverage` numbers after it.
