@@ -19,6 +19,7 @@ evidence:
   seen: 2026-11-13
   note: The WordPress Bulletins page lists Discover Mass download links newest first (November 15th, 2026;
     November 8, 2026; November 1, 2026 ...) and links discovermass.com/church/our-lady-of-loretto-hempstead-ny/.
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

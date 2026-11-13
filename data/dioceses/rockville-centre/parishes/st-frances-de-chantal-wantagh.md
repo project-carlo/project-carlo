@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-13
   note: 'WordPress media list (visit.py): weekly uploads named <month><day>_2026_<saintjan|saintjane|stjane|SAINTJAN>_compressed.pdf,
     e.g. nov1_2026_saintjan_compressed.pdf, oct25_2026_saintjane_compressed_compressed.pdf, oct18_2026_stjane_compressed.pdf.'
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

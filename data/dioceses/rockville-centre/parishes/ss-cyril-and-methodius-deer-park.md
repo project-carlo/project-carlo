@@ -22,6 +22,7 @@ evidence:
   note: The domain the diocesan locator, GCatholic and the Mass-times page give does not resolve (probe
     url DEAD-DNS, with and without www.). The current site sscmdp.org was found by a web search for the
     parish's bulletin; its footer gives the same address and phone, 631-667-4044.
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

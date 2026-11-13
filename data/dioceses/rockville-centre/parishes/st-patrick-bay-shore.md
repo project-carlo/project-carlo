@@ -26,6 +26,7 @@ evidence:
     Msgr. Purick Hall; Sunday 7:30, 9:30, 11:00 a.m., 12:30 p.m. Spanish, 5:30 p.m. Church); it has no
     Our Lady Star of the Sea Mission, Saltaire, Masses, though the mission's own summer 2026 schedule
     had Saturday 5:00 p.m. and Sunday 9:00 and 11:00 a.m. Masses that month.
+promoted: 2026-11-13
 research:
 - method: Tried John Patrick listings church-bulletin.org/st-patrick-bay-shore-ny-11706, /st-patrick-church-bay-shore-ny-11706
     and /saint-patrick-bay-shore-ny-11706

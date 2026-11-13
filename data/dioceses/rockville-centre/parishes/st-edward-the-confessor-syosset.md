@@ -19,6 +19,7 @@ evidence:
   seen: 2026-11-13
   note: 'GoDaddy site ''Our Bulletin'' page links 15 issues hosted on img1.wsimg.com, oldest first: Edward8-2.pdf
     ... Edwards-0920.pdf ... Edward11-1.pdf, Edward11-8.pdf.'
+promoted: 2026-11-13
 bulletin_status: available
 publication_reviews:
 - parish: holy-name-of-jesus-woodbury

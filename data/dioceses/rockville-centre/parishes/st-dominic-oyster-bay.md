@@ -18,6 +18,7 @@ evidence:
   seen: 2026-11-13
   note: 'Edlio ''Bulletin'' page lists issues newest first by link text: ''Bulletin 11-8-26'' (4.files.edl.io/40d4/11/04/26/...pdf),
     ''Bulletin 11-1-26'', ''Bulletin 10-25-26'' ... The home page still links ''Bulletin 9-27-26''.'
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

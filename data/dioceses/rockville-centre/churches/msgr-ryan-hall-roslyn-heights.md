@@ -25,6 +25,7 @@ evidence:
   quote: 4:00 PM to 4:45 PM In Msgr. Ryan Hall
   note: 'Parish home page Mass Times (read with visit.py): Saturday 5:00 PM (Hall), 7:00 PM (Hall) (Spanish);
     Sunday 12:30 PM (Hall).'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

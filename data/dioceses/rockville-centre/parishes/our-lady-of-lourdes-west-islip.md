@@ -16,6 +16,7 @@ evidence:
   seen: 2026-11-13
   note: 'Wix page read with visit.py: one link, ''NOVEMBER 8'', to the hashed /_files/ugd/ PDF; yearly
     pages /2026-bulletins etc. list earlier issues.'
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

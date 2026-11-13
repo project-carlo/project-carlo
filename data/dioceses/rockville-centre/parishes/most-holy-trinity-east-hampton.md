@@ -24,6 +24,7 @@ evidence:
   note: 'DRVC Mass-times page: ''Church of Most Holy Trinity'', East Hampton, linking mht-eh.org (redirects
     to mostholytrinityeh.com), and ''Church of St. Peter (Mission Church)'', Amangansett, ''Sunday Mass:
     2:00 PM (2nd & 5th Sundays)''.'
+promoted: 2026-11-13
 bulletin_status: available
 publication_reviews:
 - parish: st-therese-of-lisieux-montauk

@@ -21,6 +21,7 @@ evidence:
 - url: https://www.stjamessetauket.org/bulletin9ab2b387
   seen: 2026-11-13
   note: The parish site's bulletin page embeds parishesonline.com/publicationWidget?type=bulletin&id=0018000000Qc1NlAAJ.
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

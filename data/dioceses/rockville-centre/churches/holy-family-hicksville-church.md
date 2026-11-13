@@ -29,6 +29,7 @@ evidence:
   seen: 2026-11-12
   note: 'Page 1 (image only) of the 1 November 2026 Holy Family bulletin: "17 Fordham Ave Hicksville,
     New York 11801"; weekend Masses Saturday 5:00pm Vigil, Sunday 7:30am, 9:00am, 10:30am, 12:00pm, 5:00pm.'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

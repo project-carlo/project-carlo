@@ -26,6 +26,7 @@ evidence:
   quote: 168 Hill Street, Southampton
   note: '15 November 2026 bulletin, page 2: ''Weekend Masses Saturday: 5 PM Sunday: 8 AM, 9:30 AM, 11
     AM, 12:30 PM (in Spanish)''; ''Parish Office 168 Hill Street, Southampton, NY 11968''.'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

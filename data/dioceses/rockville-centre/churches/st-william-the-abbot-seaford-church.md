@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-13
   note: 'DRVC Mass Schedules: ''Church of St. William the Abbot'', Seaford: Saturday 5:00 PM, 7:30 PM;
     Sunday 7:45 AM, 9:15 AM, 10:45 AM, 12:15 PM, 5:00 PM (older than the bulletin).'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

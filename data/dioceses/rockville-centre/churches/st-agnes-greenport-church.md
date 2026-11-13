@@ -30,6 +30,7 @@ evidence:
   quote: Church of Saint Agnes
   note: November 15, 2026 bulletin, page 1 masthead with 523 Front Street, Greenport, NY 11944; page 2
     Saturday (All Year) 4:00 PM, 7:30 PM (Spanish).
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

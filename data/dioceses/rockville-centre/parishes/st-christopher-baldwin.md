@@ -18,6 +18,7 @@ evidence:
   seen: 2026-11-13
   note: 'The WordPress Bulletin page lists one PDF per Sunday, newest first: St.-Christopher-Bulletin-11-8-26.pdf,
     -11-1-26, -10-25-26 ... after a parish registration form (read with parish-site-access visit.py).'
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

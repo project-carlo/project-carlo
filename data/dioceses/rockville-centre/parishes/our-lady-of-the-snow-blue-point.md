@@ -18,6 +18,7 @@ evidence:
   note: WordPress bulletins page (visit.py) links nov8_2026_olsnowb_compressed.pdf, nov1_2026_olsnowbp_compressed.pdf,
     oct25_2026_olsnowbp_compressed.pdf ... under /wp-content/uploads/sites/6/, plus program PDFs (Remind-Codes-2026-27-Program-Year.pdf,
     2026SafetyLetterParents.docx.pdf).
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

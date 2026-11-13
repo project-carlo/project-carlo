@@ -29,6 +29,7 @@ evidence:
   seen: 2026-11-13
   note: 'DRVC Mass Schedules: ''Church of St. Jude'', Mastic Beach; Saturday Vigil 4:00 PM, Sunday 8:00
     AM, 10:00 AM, 12:00 PM, 5:00 PM, 6:30 PM (Spanish) (roster mass-times:church-of-st-jude-mastic-beach).'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

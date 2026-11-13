@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-13
   quote: The Very Rev’d Dom Gabriel Rach, Can.Reg.
   note: Page 4 lists one pastor and the Canonry of Saint Leopold clergy for all three churches.
+promoted: 2026-11-13
 bulletin_status: available
 publication_reviews:
 - parish: st-boniface-martyr-sea-cliff

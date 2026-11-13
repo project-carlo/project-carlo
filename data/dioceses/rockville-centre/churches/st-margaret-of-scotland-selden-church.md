@@ -30,6 +30,7 @@ evidence:
   quote: 'Sunday: 8:00AM, 10:00AM and 12:00NOON'
   note: Page 1 of the 8 November 2026 bulletin; 'St. Margaret of Scotland Parish Center, 81 College Road,
     Selden, NY 11784'.
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

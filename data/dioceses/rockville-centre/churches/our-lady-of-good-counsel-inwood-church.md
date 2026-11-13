@@ -31,6 +31,7 @@ evidence:
   quote: 68 Wanser Ave
   note: Page 3 "Mass Times & Parish Directory" of the 8 November 2026 Five Towns bulletin lists "Our Lady
     of Good Counsel, 68 Wanser Ave, Inwood, NY 11096" and Sunday Mass at OLGC "9am (Español) 11am (English)".
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

@@ -29,6 +29,7 @@ evidence:
   note: Bulletin for November 8, 2026, read as images (garbled text layer). Page 1 masthead 'St. Edward
     the Confessor / 205 Jackson Avenue, Syosset, New York 11791'; page 3 presider schedule Saturday 5:00
     PM, Sunday 7:30, 9:30, 11:30 AM, 6:00 PM.
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

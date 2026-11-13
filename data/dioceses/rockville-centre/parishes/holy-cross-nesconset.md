@@ -18,6 +18,7 @@ evidence:
   note: GoDaddy Website Builder 'Current Bulletin' page (read with visit.py) links one PDF, 'HC Bulletin
     2026 NOV 14-NOV 15 C.pdf' on img1.wsimg.com; yearly pages /2026-bulletins ... /2018-bulletins hold
     the archive. pothc.org (the locator's link) redirects here.
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

@@ -31,6 +31,7 @@ evidence:
   note: 'Masthead of the November 08, 2026 bulletin: St. Hedwig''s Church, One Depan Avenue, Floral Park,
     NY 11001; Sunday Masses 7:00 AM, 8:00 AM (Polish), 9:30 AM, 11:00 AM (Polish), 6:30 PM; Saturday 5:00
     PM; daily 7:00 AM, 8:00 AM (Polish).'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

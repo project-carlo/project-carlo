@@ -38,6 +38,7 @@ revisit: Confirm the East Quogue church's street number (511 Montauk Highway com
   with OSM or the diocese, add coordinates, and check that the 9 a.m. Sunday Mass resumes on Palm Sunday
   2027 after the January 1 pause.
 revisit_after: 2027-03-21
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

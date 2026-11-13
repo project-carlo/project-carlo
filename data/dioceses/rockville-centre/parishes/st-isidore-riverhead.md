@@ -17,6 +17,7 @@ evidence:
   seen: 2026-11-13
   note: 'Wix page (visit.py): ''WEEKLY BULLETIN'' links ''NOVEMBER 15, 2026'' (hashed /_files/ugd PDF),
     then ''ARCHIVES'' out of date order (July 6, 2025; January 4, 2026; July 13, 2025 ...).'
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

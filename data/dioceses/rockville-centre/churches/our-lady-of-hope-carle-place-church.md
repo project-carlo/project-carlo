@@ -29,6 +29,7 @@ evidence:
   quote: 534 Broadway • Carle Place, NY 11514-1712
   note: 'Bulletin for November 15, 2026, page 1: Saturday 4:00 pm; Sundays 8:30, 10:00 & 11:30 am; Mon
     to Fri 9:00 am.'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-13
   note: '15 November 2026 bulletin (image-only, rendered): masthead ''280 East Main Street, Smithtown,
     New York 11787''; page 3 ''Masses for the Week'' Sun 7:30, 9:00, 10:30 AM, 12:00, 5:00 PM.'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

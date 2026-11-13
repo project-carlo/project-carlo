@@ -29,6 +29,7 @@ evidence:
   note: 'Page 1 of the November 8, 2026 bulletin: 1140 Locust Avenue, Bohemia, New York 11716; Saturday
     Evening 5:00 pm, Sunday 8:00 am, 10:00 am, 12 noon, Monday through Saturday 9:00 am, Mass in Spanish
     Saturday at 7:00 pm.'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

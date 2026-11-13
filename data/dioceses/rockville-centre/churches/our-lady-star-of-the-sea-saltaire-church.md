@@ -40,6 +40,7 @@ revisit: Read St. Patrick, Bay Shore's Star of the Sea page (stpatrickbayshore.o
   Sunday 11:00 a.m. from May 24, with Saturday 5:00 p.m. and Sunday 9:00 a.m. added in high summer, to
   Saturday, September 19.
 revisit_after: 2027-06-01
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

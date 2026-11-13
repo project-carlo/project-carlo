@@ -22,6 +22,7 @@ evidence:
 revisit: Run fetch:check after the first January 2027 issue to confirm the yearless filenames still date
   correctly
 revisit_after: 2027-01-10
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

@@ -29,6 +29,7 @@ evidence:
   quote: 690 Woodbury Road
   note: 'Bulletin for November 8, 2026, page 1: Saturday 5:15 p.m.; Sunday 10:15 a.m., Korean Mass 9:15
     a.m. and 12:00 p.m.; Monday-Friday 9:00 a.m.'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

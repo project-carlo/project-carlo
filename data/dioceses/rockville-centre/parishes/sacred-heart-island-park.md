@@ -17,6 +17,7 @@ evidence:
   seen: 2026-11-13
   note: 'The WordPress Bulletins page lists one PDF per Sunday, newest first: 2026_11_08_sacred_heart_ip-WS.pdf,
     2026_11_01_..., 2026_10_25_... (read with parish-site-access visit.py).'
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

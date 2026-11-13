@@ -21,6 +21,7 @@ evidence:
   note: John Patrick Publishing listing (church-bulletin.org/?id=4037 redirects here) links weekly issues
     /bulletin/our-lady-of-ostrabrama-roman-catholic-church-cutchogue-ny-11935/<YYYY-MM-DD>.pdf from 2026-09-20
     to 2026-11-15.
+promoted: 2026-11-13
 bulletin_status: available
 publication_reviews:
 - parish: sacred-heart-cutchogue

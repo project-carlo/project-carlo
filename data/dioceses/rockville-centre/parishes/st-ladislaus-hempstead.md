@@ -17,6 +17,7 @@ evidence:
   seen: 2026-11-13
   note: WordPress bulletin page (read with parish-site-access visit.py) links issues from September 2026
     to St.-Ladislaus-November-15-2026.pdf, the newest.
+promoted: 2026-11-13
 bulletin_status: available
 publication_reviews:
 - parish: st-hedwig-floral-park

@@ -20,6 +20,7 @@ evidence:
 revisit: 'The recipe pins the yearly 2026-bulletins.html page: once the first 2027 issue is posted, rerun
   fetch:check and record the 2027 page''s recipe'
 revisit_after: 2027-01-04
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

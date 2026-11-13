@@ -30,6 +30,7 @@ evidence:
 revisit: Read the 2027 seasonal booklet on oceanbeachcatholic.org (or its home page) for the 2027 summer
   Mass schedule; the 2026 season ran Saturdays 5pm from May 23 and Sundays 9am June 28 to September 6.
 revisit_after: 2027-06-01
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

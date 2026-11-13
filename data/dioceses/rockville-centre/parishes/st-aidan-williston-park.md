@@ -16,6 +16,7 @@ evidence:
   seen: 2026-11-13
   note: WordPress bulletin page (read with parish-site-access visit.py; probe url could not connect) lists
     issues newest first, NOVEMBER-08-BULLETIN.pdf first, back to August 2026.
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-13
   note: 'DRVC Mass Schedules: ''Church of St. Joseph the Worker'', East Patchogue; Saturday 5:30 PM, 7:00
     PM (Spanish), Sunday 8:00, 9:30, 11:00 AM, 5:00 PM (Youth) (roster mass-times:church-of-st-joseph-the-worker-east-patchogue).'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

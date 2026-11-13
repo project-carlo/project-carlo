@@ -32,6 +32,7 @@ evidence:
   note: Page 3 "Mass Times & Parish Directory" of the 8 November 2026 Five Towns bulletin lists "St. Joseph,
     1346 Broadway, Hewlett, NY 11557" with Sunday Mass "SATURDAY 5PM SUNDAY 10:30AM", and Wednesday adoration
     and Saturday confession here.
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

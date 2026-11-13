@@ -23,6 +23,7 @@ evidence:
   note: 'probe po: ''St. Hugh of Lincoln Roman Catholic Church'', 21 E 9th St, Huntington Station, New
     York, 11746-1782; LPi id 0018000000Qx83jAAB; container 03/4094; latest issue 2026-11-15. The slug
     is the LPi footer name without a zip; the <name>-church-11746 forms answered ''no such organization''.'
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

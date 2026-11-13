@@ -20,6 +20,7 @@ evidence:
   note: 'eCatholic home page (read with visit.py; probe url got 403) Mass Times: Saturday 5:00 PM (Hall),
     7:00 PM (Hall) (Spanish); Sunday 7:30 AM, 9:00 AM, 11:00 AM (Church), 12:30 PM (Hall); Mon-Fri 9:00
     a.m. (Church). It embeds ecatholic:36927.'
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

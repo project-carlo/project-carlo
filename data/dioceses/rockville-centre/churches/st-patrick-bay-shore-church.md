@@ -29,6 +29,7 @@ evidence:
   note: 'Page 2 of the November 8, 2026 bulletin (image-only, read as a render): 9 North Clinton Avenue,
     Bay Shore, NY 11706; Sunday Masses 7:30, 9:30, 11:00 a.m., 12:30 p.m. (Spanish) and 5:30 p.m. in the
     Church.'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

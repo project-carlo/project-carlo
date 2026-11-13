@@ -16,6 +16,7 @@ evidence:
   seen: 2026-11-13
   note: eCatholic site (Cloudflare; read with visit.py) linking files.ecatholic.com/11377/bulletins/20261108.pdf
     from its home page and a /bulletins page.
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

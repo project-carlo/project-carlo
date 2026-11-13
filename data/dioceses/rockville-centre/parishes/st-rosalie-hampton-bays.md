@@ -26,6 +26,7 @@ evidence:
   note: 'Solutio site (403 to probe url; read with parish-site-access visit.py): the Bulletin page links
     each issue through a pdf.js viewer on container.parishesonline.com/bulletins/03/4111/<yyyymmdd>B.pdf,
     newest 20261115B.'
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

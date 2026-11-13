@@ -32,6 +32,7 @@ evidence:
   note: '15 November 2026 bulletin, page 1 (schedule read by rendering): ''31 E. Montauk Highway Hampton
     Bays''; ''ST. ROSALIE''S IN HAMPTON BAYS'' weekday 8 a.m. and 12 noon, Saturday 8 a.m. and 5 p.m.,
     Sunday 8 a.m., 9:30 a.m. and 11 a.m., Spanish Mass Sunday 4 p.m.'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

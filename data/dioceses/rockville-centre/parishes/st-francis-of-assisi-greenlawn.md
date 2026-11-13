@@ -20,6 +20,7 @@ evidence:
 - url: https://www.stfrancisgreenlawn.org/
   seen: 2026-11-13
   note: 'probe url: WordPress site embedding po-org:st-francis-of-assisi-church-11740 and linking /bulletin-archives/.'
+promoted: 2026-11-13
 bulletin_status: available
 publication_reviews:
 - parish: st-anthony-of-padua-east-northport

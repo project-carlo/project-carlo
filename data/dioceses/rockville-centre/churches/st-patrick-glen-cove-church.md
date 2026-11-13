@@ -31,6 +31,7 @@ evidence:
   note: Page 1 of the 8 November 2026 Glen Cove Catholic bulletin, under 'St Patrick Parish'; its Mass
     Times table gives St Patrick Monday-Friday 9:00 AM, Saturday 4:30 PM, Sunday 7:45 AM, 8:30 AM (Spanish),
     11:00 AM and 5:00 PM.
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

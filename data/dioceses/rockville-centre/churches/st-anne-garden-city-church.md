@@ -29,6 +29,7 @@ evidence:
   quote: 35 Dartmouth Street, Garden City, NY 11530
   note: 'Bulletin for November 8, 2026, page 6: Saturday 8:30AM and 5:00PM; Sunday 7:00, 8:30, 9:00 (SFMC),
     10:00, 11:45, 5:30PM.'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

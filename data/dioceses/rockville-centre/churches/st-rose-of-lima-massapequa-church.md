@@ -30,6 +30,7 @@ evidence:
   quote: 2 BAYVIEW AVENUE MASSAPEQUA NY 11758
   note: Page 1 masthead of the 8 November 2026 bulletin, with Saturday Vigil 5:15 pm and Sunday 8:00,
     10:00, 12:00 and 5:15 pm Masses.
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

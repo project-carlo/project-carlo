@@ -29,6 +29,7 @@ evidence:
   quote: 266 WICKS ROAD BRENTWOOD, N.Y. 11717-1129
   note: Page 1 of the November 15, 2026 bulletin, with Saturday Vigil 5:00pm and Sunday Masses at 7:30am
     and 11:00am (English), 9:15am, 12:30pm and 6:30pm (Spanish).
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

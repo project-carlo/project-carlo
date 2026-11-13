@@ -23,6 +23,7 @@ evidence:
   seen: 2026-11-12
   note: 'DRVC Mass-times page: ''Church of St. Andrew'', Sag Harbor: Saturday Vigil 5:15 PM; Sunday 8:00
     AM, 10:45 AM.'
+promoted: 2026-11-13
 bulletin_status: available
 publication_reviews:
 - parish: queen-of-the-most-holy-rosary-bridgehampton

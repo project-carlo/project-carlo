@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-13
   note: 'probe po: ''St. Agnes Church'', 523 Front St, Greenport, NY 11944, LPi id 0018000000Qx83OAAR,
     container 03/4114, latest issue 2026-11-15.'
+promoted: 2026-11-13
 bulletin_status: available
 publication_reviews:
 - parish: our-lady-of-ostrabrama-cutchogue

@@ -17,6 +17,7 @@ evidence:
   note: 'WordPress (Divi) bulletins page (read with visit.py; probe url could not connect): a slider of
     posts, ''32nd Sunday in Ordinary Time, Sunday, November 8, 2026, OPEN BULLETIN'' linking the post
     /32nd-sunday-in-ordinary-time/, which links the PDF.'
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

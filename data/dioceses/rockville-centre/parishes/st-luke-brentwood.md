@@ -18,6 +18,7 @@ evidence:
   seen: 2026-11-13
   note: WordPress bulletin page (read with visit.py; probe url could not connect) lists Bulletin November
     15, 08 and 01, 2026 ..., newest first, at /wp-content/uploads/<yyyy>/<mm>/<YYYYMMDD>__-web-The-Roman-Catholic-Church-of-Saint-Luke.pdf.
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

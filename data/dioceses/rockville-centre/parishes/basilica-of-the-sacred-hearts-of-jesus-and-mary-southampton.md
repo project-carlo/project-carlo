@@ -24,6 +24,7 @@ evidence:
   note: 'DRVC Mass-times page: ''Basilica Parish of the Sacred Hearts of Jesus and Mary'', Southampton:
     Monday, Wednesday, Friday 9 AM; Saturday 5:00 PM; Sunday 8:00, 9:30, 11:00 AM, 12:30 PM (Spanish);
     no website linked.'
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

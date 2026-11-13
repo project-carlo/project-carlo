@@ -17,6 +17,7 @@ evidence:
   seen: 2026-11-13
   note: 'WordPress Bulletin page read with visit.py, newest first: nov8_2026_olacopia_compressed.pdf,
     nov1_2026_olacopa_compressed.pdf, oct25_2026_olacopia_compressed.pdf, under /wp-content/uploads/sites/81/.'
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

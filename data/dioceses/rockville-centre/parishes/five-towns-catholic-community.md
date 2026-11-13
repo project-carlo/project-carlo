@@ -23,6 +23,7 @@ evidence:
   quote: are still three separate Canonical and Corporate entities
   note: 'The pastor''s undated booklet on the three Five Towns parishes: canonically separate, but one
     bulletin serves all three (above).'
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

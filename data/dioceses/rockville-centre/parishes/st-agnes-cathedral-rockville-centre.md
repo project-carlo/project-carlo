@@ -18,6 +18,7 @@ evidence:
   seen: 2026-11-13
   note: The WordPress Bulletins page lists one PDF per Sunday, newest first (Agnes11-8R.pdf, Agnes11-1R.pdf,
     Agnes10-25R.pdf ...), after an Adult Faith Formation flier (probe url ok; visit.py).
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

@@ -31,6 +31,7 @@ evidence:
   quote: 18 Richardson Place
   note: 'Masthead of the November 15, 2026 bulletin: St. Ladislaus Church, 18 Richardson Place, Hempstead,
     NY 11550; daily Mass 9:00 AM; Saturday 5:00 PM; Sunday 8:00 AM, 9:30 AM (Polish), 4:00 PM (Spanish).'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

@@ -31,6 +31,7 @@ evidence:
   quote: 145 Glen Avenue
   note: 'Page 1 of the 8 November 2026 bulletin, ''Parish Information'': 145 Glen Avenue, Sea Cliff, NY
     11579; Mass Schedule Saturday 9am, 4pm; Sunday 8am, 10:30am; Mondays - Fridays 8am.'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

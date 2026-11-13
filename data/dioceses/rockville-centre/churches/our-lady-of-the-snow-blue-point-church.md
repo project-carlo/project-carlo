@@ -29,6 +29,7 @@ evidence:
   note: 'Page 1 of the November 8, 2026 bulletin: 175 Blue Point Avenue, Blue Point, New York 11715; ''Daily
     Masses: Mother Church M-F 8:30AM''; ''Weekend Masses:Large Church Satuday 5:00 PM Sunday 7:30 AM and
     10:30 AM''.'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

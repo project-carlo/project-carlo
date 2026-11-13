@@ -30,6 +30,7 @@ evidence:
   quote: 7:00AM, 8:00AM, 9:30AM Family Mass
   note: 'Page 1 of the 8 November 2026 Parish of St. Kilian bulletin: Sunday Masses, with Saturday 5:00PM
     and 7PM Misa en Espanol.'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

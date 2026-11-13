@@ -30,6 +30,7 @@ evidence:
   quote: 210 South Wellwood Avenue, Lindenhurst, New York 11757
   note: Page 1 masthead of the 8 November 2026 bulletin, with Saturday 5:00 p.m. and Sunday 8:00, 10:00
     a.m. and 12:00 p.m. Masses.
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

@@ -19,6 +19,7 @@ evidence:
   note: 'WordPress bulletin page read with parish-site-access visit.py (probe url could not connect: egress
     proxy EOF). Lists St.-Patrick-Smithtown-Bulletin-for-11-15-26.pdf, ...-for-11-8-26.pdf, 11-1-26-St.-Patrick-Smithtown-Bulletin.pdf
     under /wp-content/uploads/.'
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

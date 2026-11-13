@@ -29,6 +29,7 @@ evidence:
   note: 'Page 2 of the November 8, 2026 bulletin (image render; the text layer is garbled): ''455 Hunter
     Avenue West Islip, NY 11795''; Liturgical Schedule, daily 8:30am, Saturday 5:00pm, Sunday 8:00am,
     9:30am, 11:00am, 12:30pm and 6:00pm.'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

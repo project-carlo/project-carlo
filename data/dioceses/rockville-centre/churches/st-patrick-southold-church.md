@@ -28,6 +28,7 @@ evidence:
   seen: 2026-11-13
   quote: 52125 Main Road, PO Box 1117, Southold, NY 11971
   note: '1 November 2026 bulletin: Saturday Vigil 5 pm; Sunday 8am and 10 am; Monday-Thursday 8 am.'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

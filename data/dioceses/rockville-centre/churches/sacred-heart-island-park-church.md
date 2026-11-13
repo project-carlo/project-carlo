@@ -31,6 +31,7 @@ evidence:
   quote: 282 Long Beach Road, Island Park, NY 11558
   note: Page 1 masthead of the 8 November 2026 bulletin, 'Sacred Heart Church', with Masses Sat. Eve.
     5:00 p.m., Sunday 8:00 a.m., 10:00 a.m., & 12:15 p.m.
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

@@ -23,6 +23,7 @@ evidence:
   note: eCatholic site (read with visit.py) links 'Subscribe to Bulletin' to the ParishesOnline org and
     lists the same issues as files.ecatholic.com/36677/bulletins/20261115.pdf, 20261108.pdf, 20261101.pdf
     ...
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

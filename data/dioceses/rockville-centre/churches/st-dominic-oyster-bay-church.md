@@ -31,6 +31,7 @@ evidence:
   note: '8 November 2026 St. Dominic bulletin, page 1 Parish Directory: 93 Anstice Street, Oyster Bay,
     NY 11771. Masses 7:30 am Monday - Friday (Chapel), 8:00 am Saturday (Chapel), Vigil 5:00 pm (Church),
     Sunday 7:30 am and 9:30 am (Chapel), 9:30 am Family Mass and 11:30 am (Church), 5:00 pm Spanish (Chapel).'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

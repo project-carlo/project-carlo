@@ -31,6 +31,7 @@ evidence:
   quote: 614 Central Ave
   note: Page 3 "Mass Times & Parish Directory" of the 8 November 2026 Five Towns bulletin lists "St. Joachim,
     614 Central Ave, Cedarhurst, NY 11516" with Sunday Mass "St. Joachim 9:45am" and Friday 9:30am confession.
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

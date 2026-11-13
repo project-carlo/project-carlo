@@ -17,6 +17,7 @@ evidence:
   seen: 2026-11-13
   note: 'eCatholic site (probe url answers 403; read with visit.py): ''Maria Regina Parish | Seaford,
     NY'', embeds ecatholic:30499 and links /bulletins.'
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

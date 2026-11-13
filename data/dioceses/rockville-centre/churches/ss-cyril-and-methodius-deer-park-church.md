@@ -29,6 +29,7 @@ evidence:
   quote: 'Sunday: 8:00 AM, 9:30 AM (Family Mass),'
   note: Page 2 of the November 15, 2026 bulletin, with Saturday 5:00 PM Vigil and weekdays 8:30 AM, 12:15
     PM; address 125 Half Hollow Road, Deer Park, New York 11729.
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

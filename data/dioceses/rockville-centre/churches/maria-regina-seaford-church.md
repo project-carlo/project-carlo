@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-13
   note: 'DRVC Mass Schedules: ''Church of Maria Regina'', Seaford: Mon-Sat 8:30 AM; Saturday Vigil 5:00
     PM; Sunday 7:30 AM, 9:00 AM, 10:30 AM, Noon (older than the bulletin).'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

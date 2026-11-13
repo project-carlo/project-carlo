@@ -28,6 +28,7 @@ evidence:
   note: eCatholic site (ecatholic:25346, read with visit.py) whose bulletin widget lists no issue; it
     links the Drive archive. files.ecatholic.com/25346/bulletins/ answered 403 for November 1, 8 and 15,
     so the bulletin is not posted on eCatholic.
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

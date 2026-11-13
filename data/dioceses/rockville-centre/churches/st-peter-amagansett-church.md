@@ -33,6 +33,7 @@ evidence:
   quote: 4pm Confessions, 5pm Mass in St. Peter
   note: '15 November 2026 bulletin of Most Holy Trinity, East Hampton with St. Peter, Amagansett: Saturday
     Mass Schedule ''4pm Confessions, 5pm Mass in St. Peter''s''.'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

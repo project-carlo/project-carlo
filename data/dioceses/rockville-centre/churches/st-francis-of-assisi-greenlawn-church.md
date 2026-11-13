@@ -29,6 +29,7 @@ evidence:
   note: 'Bulletin for November 15, 2026, page 1: ''Masses: SATURDAY 4:30pm • SUNDAY 8am, 10am, 12pm •
     MON - FRI 8:30am'', ''29 Northgate Dr., GREENLAWN, NY''; page 2 ''HAITIAN MASS - Every 3rd Saturday
     at 6:30pm''.'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

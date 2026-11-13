@@ -28,6 +28,7 @@ evidence:
   seen: 2026-11-13
   quote: CHURCH of  SAINT MARY
   note: 'Masthead of the November 15, 2026 bulletin: 1300 Northern Boulevard, Manhasset, New York 11030.'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

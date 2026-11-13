@@ -33,6 +33,7 @@ evidence:
   note: '8 November 2026 bulletin (read from renders; garbled text layer): cover ''1488 NORTH COUNTRY
     RD, WADING RIVER''; page 11 Mass intentions Saturday 5:15 pm, Sunday 8:00 and 10:30 am, Monday-Thursday
     8:30 am.'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

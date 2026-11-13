@@ -30,6 +30,7 @@ evidence:
   quote: 'Sunday: 7:00am  8:30am  10:30am  12:00pm'
   note: Page 1 of the 15 November 2026 St. Pius X bulletin, under "Mass Schedule", after "1 Saint Pius
     Court, Plainview, NY 11803".
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

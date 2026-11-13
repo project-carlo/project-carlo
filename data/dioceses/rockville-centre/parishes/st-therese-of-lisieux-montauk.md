@@ -27,6 +27,7 @@ evidence:
 revisit: Compare the mastheads of St. Therese (LPi 03-4096) and Most Holy Trinity, East Hampton (mostholytrinityeh.com/bulletin-homily)
   for a joint bulletin under their shared pastor, Fr. Ryan Creamer.
 revisit_after: 2027-03-01
+promoted: 2026-11-13
 bulletin_status: available
 publication_reviews:
 - parish: most-holy-trinity-east-hampton

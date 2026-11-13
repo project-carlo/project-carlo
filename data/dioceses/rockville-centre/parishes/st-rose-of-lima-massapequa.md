@@ -16,6 +16,7 @@ evidence:
   seen: 2026-11-13
   note: 'WordPress bulletin archive read with visit.py: self-hosted PDFs under /wp-content/uploads/, e.g.
     RoseMass11-8R.pdf, 11-1-26SRpdf.pdf, 10-18-26SRpdf.pdf. No printer id on the page.'
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

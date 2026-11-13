@@ -31,6 +31,7 @@ evidence:
   note: '15 November 2026 bulletin: Monday-Thursday 8am; Sunday 9:30am and 11:30am in MHT Church; Spanish
     Mass Wednesday 7:30pm and Sunday 7pm ''en el Parish Hall''; ''Parish Office 79 Buell Lane, East Hampton,
     NY 11937-3298 to the right of the Church''.'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

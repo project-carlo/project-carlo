@@ -29,6 +29,7 @@ evidence:
   quote: 'SUNDAY: 8:00am, 10:45am (Family Mass)'
   note: '15 November 2026 bulletin, page 1: ''St. Andrew Church 122 Division Street Sag Harbor, New York
     11963''; Saturday 5:15pm, Sunday 8:00am and 10:45am, Monday-Friday 9:00 am.'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

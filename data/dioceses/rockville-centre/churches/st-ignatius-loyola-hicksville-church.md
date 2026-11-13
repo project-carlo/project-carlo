@@ -31,6 +31,7 @@ evidence:
   quote: 129 Broadway (Rt. 107)
   note: Page 1 of the 15 November 2026 St. Ignatius Loyola bulletin, with the weekend schedule Saturday
     5:00 PM and Sunday 7:30, 9:30, 11 AM, 12:30, 5:00 PM (Spanish), 8:00 PM (Vietnamese).
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

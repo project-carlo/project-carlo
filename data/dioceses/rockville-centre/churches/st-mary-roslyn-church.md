@@ -29,6 +29,7 @@ evidence:
   quote: 110 Bryant Avenue
   note: 'Bulletin for November 15, 2026: ''St Mary''s Church, 110 Bryant Avenue, Roslyn, NY 11576''; Sunday
     Church 7:30am, 9:00am, 11:00am; weekdays Monday - Friday 9:00am; First Saturday Church 9:00am.'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

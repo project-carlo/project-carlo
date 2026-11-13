@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-13
   note: 'fetch:check 2026-11-13: ok, ''page-pdfs on https://saintmargaret.com/bulletin/: current'' picked
     /wp-content/uploads/2026/11/Bulletin-11-8.pdf (url_date 2026-11-08), the newest issue posted.'
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

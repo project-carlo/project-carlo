@@ -33,6 +33,7 @@ evidence:
   seen: 2026-11-13
   note: 'DRVC Mass Schedules: ''Church of Mary Immaculate'', Bellport; Saturday Vigil 5:00 PM, Sunday
     9:00 AM, 11:00 AM (roster mass-times:church-of-mary-immaculate-bellport).'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

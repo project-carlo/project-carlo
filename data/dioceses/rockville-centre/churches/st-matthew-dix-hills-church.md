@@ -29,6 +29,7 @@ evidence:
   note: 'Bulletin for November 15, 2026: page 2 SCHEDULE OF MASSES Saturday 4:00pm; Sunday 7:30am, 9:30am,
     11:00am, 12:30pm (Traditional Latin Mass 1st & 3rd Sundays); Monday-Saturday 9:00am ''in the Church'';
     page 4 ''35 N Service Rd''.'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

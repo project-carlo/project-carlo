@@ -32,6 +32,7 @@ evidence:
   quote: 104Greenwich Street
   note: 'Page 1 of the November 15th 2026 bulletin: masthead address and the Mass Schedule (Saturday 5:00
     and 7:00 p.m.; Sunday 7:00, 9:00, 11:00 a.m., 1:00 and 6:30 p.m.; weekday Masses).'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

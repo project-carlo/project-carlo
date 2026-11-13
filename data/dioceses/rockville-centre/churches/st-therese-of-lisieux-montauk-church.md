@@ -30,6 +30,7 @@ evidence:
   note: '15 November 2026 bulletin, page 1 (an image, read by rendering): ''67 South Essex Street, Montauk,
     NY 11954''; ''Saturday Vigil | 5pm, 7pm (Espanol)'', ''Sunday | 8:30am, 10:30am'', ''Daily Mass Tuesday
     - Friday | 8:30am''.'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

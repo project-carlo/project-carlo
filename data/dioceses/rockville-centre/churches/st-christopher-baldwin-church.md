@@ -31,6 +31,7 @@ evidence:
   note: 'Page 2 (image) of the 8 November 2026 bulletin: MASS TIMES Saturday 5:00 PM; Sunday 7:30 AM,
     9:30 AM, 11:30 AM, 5:00 PM, 7:00 PM (Spanish); Weekdays 7:00 AM & 9:00 AM (M-F); the parish office
     is at 15 Pershing Blvd.'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

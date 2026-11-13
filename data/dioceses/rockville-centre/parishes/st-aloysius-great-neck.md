@@ -22,6 +22,7 @@ evidence:
 - url: http://www.stalsgn.com
   seen: 2026-11-13
   note: Parish site (probe url) links the bulletin as http://www.jppc.net/onlinebulletins/421template.pdf.
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

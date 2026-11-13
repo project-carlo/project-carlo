@@ -25,6 +25,7 @@ evidence:
   note: 'DRVC Mass-times page: ''Church of the Immaculate Conception'', Westhampton Beach: Mon-Sat 8:00
     AM; Saturday 5:00 PM; Sunday 8:00, 9:30, 11:00 AM, 5:00 PM (Spanish); links immaculateconceptionchurchwhb.org/landing,
     which no longer resolves (DEAD-DNS 2026-11-13).'
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

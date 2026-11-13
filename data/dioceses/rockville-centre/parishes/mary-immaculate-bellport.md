@@ -26,6 +26,7 @@ evidence:
   quote: through Friday at 9:00 am in the Little Church. Weekend Masses take place in the Large Church
   note: 'Home page Mass times: weekday Masses in the Little Church, weekend Masses in the Large Church
     (Saturdays 5:00 pm, Sundays 9 and 11 am).'
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

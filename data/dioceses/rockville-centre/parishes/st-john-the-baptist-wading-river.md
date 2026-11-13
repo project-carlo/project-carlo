@@ -19,6 +19,7 @@ evidence:
     the 'General Information' page /archived-bulletins/ holds only 1978-1993 issues. WordPress media search
     for 'stjohnbaptwr' lists uploads named <mon><day>_<year>_stjohnbaptwr*.pdf (nov8, nov1, oct11, sept6
     2026 ...).
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

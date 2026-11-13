@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-13
   note: 'DRVC Mass Schedules: ''Church of St. Barnabas the Apostle'', Bellmore: Mon-Fri 6:30 AM, 9:00
     AM, Sat 8:00 AM; Saturday Vigil 4:30 PM; Sunday 7:00 AM, 9:00 AM, 10:30 AM, 12:00 PM, 5:00 PM.'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

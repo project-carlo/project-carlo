@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-12
   note: 'DRVC Mass-times page: ''Our Lady of Poland'', Southampton: Saturday 5PM (English); Sunday 9AM
     (Polish), 10:30AM (English), 12 Noon (English); daily Mass 7:30AM; links olpchurch.org.'
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

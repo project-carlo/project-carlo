@@ -36,6 +36,7 @@ evidence:
   quote: VIGIL MASS 5:00 PM
   note: 'Page 1 of the 15 November 2026 bulletin: weekdays 7:00 AM; Saturdays 8:00 AM; Sundays 8:00 &
     9:15 AM, 10:30 (Polish), 12:00 Noon; ''622 PULASKI STREET, RIVERHEAD''.'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

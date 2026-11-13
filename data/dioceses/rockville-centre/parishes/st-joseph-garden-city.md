@@ -18,6 +18,7 @@ evidence:
   note: 'WordPress Bulletin page (read with parish-site-access visit.py; probe url could not connect)
     links the 2026 issues newest first: 20261115O.pdf, 32nd-Sunday-in-Ordinary-Time-Nov-8th.pdf, 20261101O-1-1.pdf,
     20261025B.pdf ...'
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

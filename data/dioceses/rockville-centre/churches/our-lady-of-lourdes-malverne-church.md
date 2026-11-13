@@ -30,6 +30,7 @@ evidence:
   quote: 65 Wright Avenue, Malverne, NY
   note: 'Page 3 of the November 8, 2026 bulletin: Mass Schedule Monday through Saturday 9:00 am; Saturday
     5:00 pm; Sunday 7:30 am, 9:00 am, 10:30 am, 12:00 pm, 5:00 pm.'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

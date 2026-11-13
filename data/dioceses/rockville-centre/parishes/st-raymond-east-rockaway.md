@@ -16,6 +16,7 @@ evidence:
   seen: 2026-11-12
   note: The Wix home page links the current bulletin PDF (above) as its only PDF; its "copy-of-bulletin"
     page is titled HISTORY and lists no issues (probe url and visit.py, 2026-11-12).
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

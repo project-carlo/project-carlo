@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-13
   note: The old site (the locator's and Mass-times page's link) lists issues only up to September 13,
     2026 (bulletin/files/346), which itself names the new site sthedwig.church.
+promoted: 2026-11-13
 bulletin_status: available
 publication_reviews:
 - parish: st-ladislaus-hempstead

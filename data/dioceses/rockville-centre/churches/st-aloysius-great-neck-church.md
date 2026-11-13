@@ -30,6 +30,7 @@ evidence:
   note: 'Bulletin for November 15, 2026: The Parish of St. Aloysius, 592 Middle Neck Road, Great Neck,
     NY 11023-1217; Saturday 5:00 PM, 7:30 PM (Spanish); Sunday 8:00 AM, 9:15 AM (Korean), 11:00 AM; weekdays
     8:00 AM.'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

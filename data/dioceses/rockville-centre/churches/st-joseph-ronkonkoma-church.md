@@ -29,6 +29,7 @@ evidence:
   seen: 2026-11-13
   note: 'DRVC Mass Schedules: ''Church of St. Joseph'', Ronkonkoma; Saturday Vigil 5:00 PM, Sundays 7:00
     AM, 10:00 AM, Noon, 6:30 PM (Spanish) (roster mass-times:church-of-st-joseph-ronkonkoma).'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

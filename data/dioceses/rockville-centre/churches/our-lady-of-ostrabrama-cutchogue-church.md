@@ -30,6 +30,7 @@ evidence:
   note: 'November 8, 2026 bulletin (image-only; read by rendering). Page 1 masthead ''3000 Depot Lane,
     Cutchogue, NY 11935''; page 2: Saturday Vigil Mass 5:30 pm, Sundays 8:00 am, 9:30 am (Polish), 11:00
     am; Masses listed for 8-15 November.'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

@@ -32,6 +32,7 @@ evidence:
   note: Page 1 masthead of the 8 November 2026 Glen Cove Catholic bulletin; its Mass Times table (page
     1, rendered) gives St Hyacinth Saturday 9:00 AM Mass, Saturday 5:00 PM, Sunday 9:00 AM and 10:15 AM
     (Polish).
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

@@ -22,6 +22,7 @@ evidence:
 revisit: Check that issues after 1 November 2026 appear on the Bulletin Archives page and that fetch:check
   picks the newest.
 revisit_after: 2026-12-01
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

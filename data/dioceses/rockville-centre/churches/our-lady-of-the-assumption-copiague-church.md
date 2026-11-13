@@ -38,6 +38,7 @@ evidence:
 revisit: Confirm the New Church (groundbreaking September 2021) is on the 1 Molloy Street grounds; if
   it has its own address, give it its own church row
 revisit_after: 2027-05-01
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

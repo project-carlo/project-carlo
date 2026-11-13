@@ -31,6 +31,7 @@ evidence:
   note: 'Bulletin for November 15, 2026, page 1: ''21 East 9th Street, Huntington Station, NY 11746'';
     Saturday 5:00pm; Sunday 7:00am & 10:30am (English), 8:30am, 12:00pm & 1:30pm (Spanish); weekdays Monday-Friday
     8:00am, Tuesday 7:30pm (Spanish), Saturday 8:30am.'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

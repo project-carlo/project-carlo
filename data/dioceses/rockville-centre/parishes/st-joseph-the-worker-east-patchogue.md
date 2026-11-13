@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-13
   note: The LPi WeConnect site the diocesan locator links answers 'Temporarily Unavailable' (probe url
     and visit.py).
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

@@ -18,6 +18,7 @@ evidence:
   note: Bulletins page (read with visit.py; probe url also reads it) lists issues newest first with link
     text 'Nov. 8, 2026', 'Nov. 1, 2026', ... at stmli.org/bulletins/<YYYYMMDD>.pdf. stmli.org/bulletins/20261115.pdf
     answered 404 on 2026-11-13 (not yet posted).
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

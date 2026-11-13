@@ -31,6 +31,7 @@ evidence:
   quote: 263 Atlantic Avenue, East Rockaway, NY  11518
   note: Page 1 masthead of the St. Raymond bulletin dated "Sunday, November 15, 2026", with Masses Saturday
     Eve 5:00PM, Sunday 7:30, 9:00, 10:30AM, 12 Noon and 4:30PM.
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

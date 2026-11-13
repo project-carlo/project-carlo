@@ -17,6 +17,7 @@ evidence:
   note: 'probe po on lpi:0018000000Qc2PBAAZ (the id embedded on stpiusxrc.com): org st-pius-x-rc-church,
     "1 St. Pius Ct, Plainview, New York, 11803", container 04/0979, weekly issues 11 October to 15 November
     2026.'
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

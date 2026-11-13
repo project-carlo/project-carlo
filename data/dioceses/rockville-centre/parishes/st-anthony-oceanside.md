@@ -19,6 +19,7 @@ evidence:
     visit.py); its /bulletins page links the files.ecatholic.com issues. Home page schedule: Saturday
     Vigil 5:00 PM Church; Sunday 8:00, 9:30, 11:00 AM, 5:00 PM Church; ''12:30 PM Spanish Church during
     Summer Months''.'
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

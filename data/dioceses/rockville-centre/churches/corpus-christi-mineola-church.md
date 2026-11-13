@@ -33,6 +33,7 @@ evidence:
   seen: 2026-11-13
   quote: 155 Garfield Avenue Mineola
   note: Parish site title.
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

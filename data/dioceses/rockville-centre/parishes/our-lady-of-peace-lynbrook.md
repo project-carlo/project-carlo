@@ -17,6 +17,7 @@ evidence:
   note: The home page (visit.py --bulletin; probe url could not connect) links the bulletin listing at
     church-bulletin.org/our-lady-of-peace-catholic-community-lynbrook-ny-11563, which lists weekly PDFs
     from 2026-11-15 back through 2026-09-20.
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

@@ -30,6 +30,7 @@ evidence:
   note: 'Bulletin for November 8, 2026: 505 Willis Ave.; Mass intentions for November 9-15 at 6:30 AM,
     9:00 AM, 5:30 PM weekdays, Saturday 5:00 PM and 7:30 PM, Sunday 7:30, 9:00, 10:30 AM, 12:00 PM, 5:00
     PM.'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

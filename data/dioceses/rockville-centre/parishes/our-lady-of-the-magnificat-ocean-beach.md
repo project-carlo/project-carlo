@@ -20,6 +20,7 @@ evidence:
   seen: 2026-11-13
   note: Weebly home page 'OUR LADY OF THE MAGNIFICAT CATHOLIC CHURCH - Home' (probe url ok) links bulletin_2026_final.pdf
     and instructions_for_consecration_to_mary_mother_of_god_and_our_blessed_mother.pdf.
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

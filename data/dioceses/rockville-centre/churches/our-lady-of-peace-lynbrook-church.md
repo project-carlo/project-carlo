@@ -28,7 +28,10 @@ evidence:
     kind: Church'
 - url: https://www.church-bulletin.org/bulletin/our-lady-of-peace-catholic-community-lynbrook-ny-11563/2026-11-15.pdf
   seen: 2026-11-12
-  note: 'Page 1 of the 15 November 2026 Our Lady of Peace bulletin (an image, read rendered; recheck cannot find text): Sunday Mass Saturday 5:00 PM, Sunday 8:00 AM, 10:00 AM, 12:00 PM; footer "25 Fowler Avenue • Lynbrook, NY 11563".'
+  note: 'Page 1 of the 15 November 2026 Our Lady of Peace bulletin (an image, read rendered; recheck cannot
+    find text): Sunday Mass Saturday 5:00 PM, Sunday 8:00 AM, 10:00 AM, 12:00 PM; footer "25 Fowler Avenue
+    • Lynbrook, NY 11563".'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

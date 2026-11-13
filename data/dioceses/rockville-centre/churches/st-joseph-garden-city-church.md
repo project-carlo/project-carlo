@@ -29,6 +29,7 @@ evidence:
   quote: 130 Fifth Street Garden City, NY 11530
   note: 'Bulletin for November 15, 2026, page 1 Mass times: Sunday 7:30am, 9:00am, 10:30am, 12:30pm, 5:30pm;
     Auditorium 10:00am (mid-September to June); Monday-Friday 8:30am, 12:15pm; Saturday 8:30am, 5:00pm.'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

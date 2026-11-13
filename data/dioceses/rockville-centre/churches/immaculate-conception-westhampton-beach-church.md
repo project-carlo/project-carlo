@@ -30,6 +30,7 @@ evidence:
   quote: 8:00am, 9:30am, 11:00am
   note: '15 November 2026 bulletin: page 1 ''580 Main Street Westhampton Beach, NY 11978''; page 2 Saturday
     5:00pm Vigil, Sunday 8:00am, 9:30am, 11:00am, 6:00pm (Spanish Mass), daily 8:00am Monday-Friday.'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

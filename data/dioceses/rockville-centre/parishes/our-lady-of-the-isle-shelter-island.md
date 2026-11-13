@@ -17,6 +17,7 @@ evidence:
   note: 'Squarespace Bulletin page, read with visit.py: an LPi widget (lpi:0018000000Qx83SAAR, container
     03/4117) lists ''SUN, NOV 22 / SUN, NOV 15 / SUN, NOV 8 / SUN, NOV 1''. probe po on the id: org ''our-lady-of-the-isle-parish'',
     5 Prospect Ave, Shelter Island Heights, NY 11965, latest issue 2026-11-22.'
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

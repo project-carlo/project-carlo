@@ -16,6 +16,7 @@ evidence:
   seen: 2026-11-13
   note: 'WordPress Bulletins page lists issues newest first, named <mmddyyyy>.pdf: 11152026.pdf, 11082026.pdf,
     11012026.pdf, 10252026.pdf ...'
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

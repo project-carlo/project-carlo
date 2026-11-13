@@ -31,6 +31,7 @@ evidence:
   note: 'Page 3 (image) of the November 15, 2026 New Hyde Park Catholic bulletin: Holy Spirit Mass Times,
     Sunday 8:00am, 11:30am; Saturday 4:00pm (Vigil); Monday-Thursday 8:00am; Syro-Malabar Sunday 5:00pm,
     Tuesday 6:00pm, Friday 9:30am. Page 2 gives ''Holy Spirit Church, 16 South 6th Street''.'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

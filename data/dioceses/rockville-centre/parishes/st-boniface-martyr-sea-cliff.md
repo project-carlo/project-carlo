@@ -16,6 +16,7 @@ evidence:
   seen: 2026-11-13
   note: The 'Our Parish Bulletin' post links the weekly issues newest first (November-8-2026-Bulletin.pdf,
     November-1-2026-Bulletin.pdf, October-11-2026-Bulletin.pdf ...) under wp-content/uploads/2024/08/.
+promoted: 2026-11-13
 bulletin_status: available
 publication_reviews:
 - parish: glen-cove-catholic

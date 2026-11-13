@@ -29,6 +29,7 @@ evidence:
   quote: 10:30 AM - For Parishioners
   note: '15 November 2026 bulletin, page 3 ''Masses for the Week'': Saturday 5:00 PM, Sunday 9:00 AM (Polish),
     10:30 AM, 12:00 PM, weekdays 7:30AM.'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

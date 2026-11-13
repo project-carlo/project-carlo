@@ -21,6 +21,7 @@ evidence:
   note: 'Bulletins page, read with parish-site-access visit.py: CURRENT ISSUE November 15, 2026 (Bulletin-1115.pdf),
     then past issues newest first; links to Past Notre Dame Bulletins and Past Holy Spirit Bulletins (the
     older separate archives).'
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

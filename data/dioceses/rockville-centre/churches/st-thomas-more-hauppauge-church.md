@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-13
   quote: 115 Kings Highway, Hauppauge NY 11788
   note: 8 November 2026 bulletin masthead; This Week's Masses Sun 8:00am, 9:30am, 11:30am.
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

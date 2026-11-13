@@ -33,6 +33,7 @@ evidence:
   note: 'Page 1 of the November 8, 2026 bulletin: masthead address and Mass schedule (Saturday 9:00 AM,
     5:00 PM, 7:00 PM Sp.; Sunday 7:00, 8:00 Sp., 9:30, 11:30 AM, 1:30 PM Sp., 5:00 PM; weekdays 7:30 AM,
     12:10 PM).'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

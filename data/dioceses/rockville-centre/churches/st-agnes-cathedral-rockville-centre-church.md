@@ -26,6 +26,7 @@ evidence:
   note: 'Image-only issue for 11.8.26: cover ''The Cathedral of St. Agnes''; page 2 ''HOLY MASS'' Sunday
     7:00 AM, 8:00 AM, 9:30 AM, 10:30 AM (Lower Hall), 11:00 AM, 12:30 PM, 5:00 PM and ''OUR PARISH | 29
     Quealy Place Rockville Centre, NY 11570''.'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

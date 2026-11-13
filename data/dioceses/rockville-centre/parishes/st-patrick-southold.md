@@ -24,6 +24,7 @@ evidence:
   seen: 2026-11-13
   note: 'probe po: ''St. Patrick Church'', 52125 Route 25, Southold, New York 11971, website stpatricksouthold.org,
     LPi id 0018000000Qx83VAAR, container 03/4110, latest issue 2026-11-15.'
+promoted: 2026-11-13
 bulletin_status: available
 publication_reviews:
 - parish: our-lady-of-ostrabrama-cutchogue

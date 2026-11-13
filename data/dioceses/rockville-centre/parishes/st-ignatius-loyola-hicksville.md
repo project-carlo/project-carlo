@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-12
   note: The parish's Weebly Bulletin page lists one PDF per Sunday, newest first, under uploads/9/7/9/7/97974144/
     (st._ign._11-15-26.pdf, 11-8-26, 11-1-26, st.ign._10.25.26.pdf ...); no publisher id.
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

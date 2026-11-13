@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-13
   note: '15 November 2026 bulletin page 1 (rendered): footer ''95 Nichols Road + Nesconset, NY 11767'';
     Sunday 8:00 AM, 9:30 AM & 11:30 AM.'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

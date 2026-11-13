@@ -18,6 +18,7 @@ evidence:
   note: 'GoDaddy Website Builder page (read with visit.py) listing the issues newest first as PDFs on
     img1.wsimg.com: ''Nov 8, 2026 (2)_compressed.pdf'', ''Nov 1, 2026_compressed.pdf'', ''Oct 25, 2026
     (1)_compressed (1).pdf'', ''Oct 18 2026_compressed.pdf''.'
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

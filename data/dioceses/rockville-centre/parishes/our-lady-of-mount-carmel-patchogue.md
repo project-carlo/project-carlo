@@ -19,6 +19,7 @@ evidence:
   note: 'WordPress Bulletin page read with visit.py (probe url: RemoteDisconnected): ''Current Bulletin
     November 8, 2026'', then Past Bulletins November 1, 2026 back to January 4, 2026, each a wp-content/uploads
     OLMC-Bulletin-<m>-<d>-<yy>.pdf.'
+promoted: 2026-11-13
 bulletin_status: available
 publication_reviews:
 - parish: st-francis-de-sales-patchogue

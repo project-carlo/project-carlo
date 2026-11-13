@@ -20,6 +20,7 @@ evidence:
   seen: 2026-11-13
   note: The locator's link is an old Weebly page giving the parish address and pastor, with no bulletin;
     its logo links https://stpaulbrookville.org/.
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

@@ -31,6 +31,7 @@ evidence:
   note: Page 1 of the 8 November 2026 Glen Cove Catholic bulletin, under 'St Rocco Church'; its Mass Times
     table gives St Rocco Monday-Friday 7:30 AM, Saturday 4:00 PM, Sunday 7:30 AM, 8:45 AM (Italian), 10:15
     AM and 11:30 am (Extraordinary Form, Latin).
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

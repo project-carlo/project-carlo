@@ -23,6 +23,7 @@ evidence:
   quote: 155 Garfield Avenue Mineola
   note: Home page title 'Corpus Christi Parish – 155 Garfield Avenue Mineola, New York, 11501-2583'; it
     links the current issue CC_11-08-26.pdf.
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

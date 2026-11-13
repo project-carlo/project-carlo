@@ -16,6 +16,7 @@ evidence:
   seen: 2026-11-12
   note: The parish's eCatholic site (read with visit.py). Its Bulletin page lists weekly issues files.ecatholic.com/36423/bulletins/20260726.pdf
     through 20261101.pdf; the 8 November issue was not yet there (homepage showed a PNG of it).
+promoted: 2026-11-13
 research:
 - method: Reconcile fetch:check of the whole diocese; probe get on files.ecatholic.com/36423/bulletins/20261108.pdf
     and 20261115.pdf; visit.py on the home page

@@ -28,6 +28,7 @@ evidence:
   seen: 2026-11-13
   quote: 'Sunday: 7:30am (English), 9:00am (Spanish),'
   note: Page 1 of the November 15th, 2026 bulletin; masthead '88Second Ave. Brentwood,NewYork 11717'.
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

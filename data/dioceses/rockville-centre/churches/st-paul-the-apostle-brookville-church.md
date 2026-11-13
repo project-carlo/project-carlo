@@ -31,6 +31,7 @@ evidence:
   note: 'Page 1 masthead of the 8 November 2026 bulletin: ''Church of St. Paul the Apostle'', 2534 Cedar
     Swamp Road, Brookville, New York 11545; MASS SCHEDULE Saturday 5:00pm; Sunday 8:30 and 10:30am; Weekday
     Monday-Friday, 9am in the Church.'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

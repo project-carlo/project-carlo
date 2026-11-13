@@ -17,6 +17,7 @@ evidence:
   seen: 2026-11-13
   note: The Wix Bulletins page lists one hashed /_files/ugd/562bb0_*.pdf per Sunday, newest first, named
     'November 8, 2026.pdf', 'November 1, 2026.pdf', 'October 25, 2026.pdf' ... (probe get).
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

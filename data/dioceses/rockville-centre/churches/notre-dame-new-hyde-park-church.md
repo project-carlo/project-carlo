@@ -31,6 +31,7 @@ evidence:
   note: 'Page 3 (image) of the November 15, 2026 New Hyde Park Catholic bulletin: Notre Dame Mass Times,
     Sunday 7:00am, 9:00am, 10:30am, 12:00pm, 7:00pm (Spanish); Saturday 8:30am, 5:00pm (Vigil); Monday-Friday
     8:30am, 12:05pm. Page 2 gives ''Notre Dame Church, 5 Mayfair Road''.'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

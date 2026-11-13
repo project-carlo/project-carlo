@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-13
   note: 'DRVC Mass Schedules: ''Church of Our Lady of Mount Carmel'', Patchogue, olmcpatchogue.org; Saturday
     Vigil 5:00 PM, Sunday 8:00 AM, 9:45 AM, 11:15 AM (Spanish) (roster mass-times:church-of-our-lady-of-mount-carmel-patchogue).'
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

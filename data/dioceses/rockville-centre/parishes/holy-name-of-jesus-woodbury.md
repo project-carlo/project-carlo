@@ -19,6 +19,7 @@ evidence:
   note: WordPress Church Bulletin page (probe url could not connect; read with parish-site-access visit.py)
     links the 2026 issues, newest nov8_2026_hnj2_compressed.pdf, then nov1_2026_hnjwoodbury_compressed.pdf,
     oct25_2026_hnjwoodbury_compressed.pdf ...
+promoted: 2026-11-13
 bulletin_status: available
 publication_reviews:
 - parish: st-edward-the-confessor-syosset

@@ -17,6 +17,7 @@ evidence:
   seen: 2026-11-13
   note: 'eCatholic site (probe url answers 403; read with visit.py): embeds ecatholic:39137 and links
     /bulletins.'
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

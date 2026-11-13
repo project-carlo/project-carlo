@@ -32,6 +32,7 @@ evidence:
   note: Page 2 masthead of the 8 November 2026 bulletin, "Saint Anthony's Oceanside ... Oceanside, NY
     11572"; page 1 Masses Saturday (Anticipated) 5:00 PM, Sunday 8:00 AM, 9:30 AM, 11:00 AM, 12:30 PM
     (Chapel-in Spanish), 5:00 PM.
+promoted: 2026-11-13
 ---
 
 ## Holds Mass

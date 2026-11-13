@@ -18,6 +18,7 @@ evidence:
   seen: 2026-11-13
   note: 'The WordPress Bulletins page lists one PDF per Sunday, newest first: OHR-Bulletin-110826.pdf,
     -110126, -102526, -101826 ... (probe get).'
+promoted: 2026-11-13
 bulletin_status: available
 ---
 

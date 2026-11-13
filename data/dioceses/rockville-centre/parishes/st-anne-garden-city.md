@@ -18,6 +18,7 @@ evidence:
   note: Sunday Bulletin page links about 250 issues newest first, the 2026 ones under /userAssets/file/bulletins/2026/
     (AnneGC11-8LR.pdf, AnneGC11-1R.pdf, AnneGC10-25R.pdf ...; two are named 'September 27, 2026 BULLETIN.pdf'
     style).
+promoted: 2026-11-13
 bulletin_status: available
 ---
 
