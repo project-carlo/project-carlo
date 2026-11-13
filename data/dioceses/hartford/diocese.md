@@ -122,6 +122,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - bonventure.net (sponsors.bonventure.net/?page=<id>, PDFs at pdfs/<id>/<YYYY-MM-DD>.pdf): page-pdfs resolves the current issue but the https download fails certificate verification (incomplete chain); probe get works over http. Record bulletin_provider unsupported with fetch_gap kind tls-certificate-unverified.
 - diocesanweb sites linking church-bulletin.org/?id=<n>: unpinned fetch:check prints recipe linked-issue-page and picks church-bulletin.org/bulletin/<slug>/<date>.pdf, which can be scanned while the parish's own diocesanweb upload of the same issue has text; compare before pinning.
 - render.py's browser closes on very large scanned LPi PDFs (~90 MB); download with probe get --out into an empty folder and render with pdftoppm -f 1 -l 1 -r 80 -jpeg instead.
+- A diocesanweb bulletins page can be stale or empty while the parish's ParishesOnline org is live and unlinked: try probe po with guessed org slugs (<name>-parish, <name>-<zip>) before calling a bulletin not found.
+- Hartford Courant 7 May 2017 'list-of-parish-closures-and-mergers-by-town' gives the 2017 plan for every town. It is a plan, not proof, so pair it with a dated report found by searching html.duckduckgo.com for 'courant.com <church> final Mass'.
 
 
 ## Rules settled for this diocese
