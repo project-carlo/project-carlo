@@ -103,6 +103,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A parish site that names LPi but embeds no widget (a Wix cover gallery, St. Charles) can still have a live ParishesOnline org: try `probe po <name>-church-<zip>` before calling it no_bulletin.
 - WordPress 'TNC FlipBook' (pdf-viewer-for-wordpress) bulletin pages link /pdfviewer/<slug>/ viewer pages that carry the PDF URL base64-encoded; decode it to read the issue. fetch can't collect these yet, so record the row as unsupported with fetch_gap kind viewer-wrapped-pdf.
 - Some eCatholic parishes here post bulletins as site documents (ec-prod-site-cache.s3.amazonaws.com/static1/<site>/documents/...) rather than files.ecatholic.com/<id>/bulletins, so the ecatholic resolver fails; use provider other with a pinned page-pdfs recipe on the page listing them, plus a filename filter when inserts are listed alongside (Our Lady of Fatima: filename=*Year*.pdf).
+- church-bulletin.org (JPPC): a parish site's Bulletins link can point at a slug that serves only JPPC's generic welcome page (St. Francis Weston's 'st-...'); try the 'saint-...' variant of the slug, and check by saving the HTML with probe get --out and grepping for bulletin/<slug>/<date>.pdf (probe get's text output drops links).
+- Joomla /bulletins/<n>-<date>/file links behind Cloudflare answer 403 even to the browser context's request client; tools/browser_download.py fetch()es the file from inside the page to read an issue (render it with pdftoppm). fetch can't collect these: record unsupported, fetch_gap joomla-file-endpoint.
 
 
 ## Rules settled for this diocese
