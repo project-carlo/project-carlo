@@ -187,6 +187,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - render.py fetches by URL and fails on hosts that drop non-browser connections (RemoteDisconnected); download with tools/browser_get.py and render pages locally with `pdftoppm -r 80 -jpeg -f 1 -l 2`.
 - WordPress bulletin pages whose issue links are canva.link short links open Canva design viewers (visit.py final_url canva.com/design/<id>/.../view, title names the issue); unpinned fetch then picks some other PDF on the page, so record unsupported with fetch_gap canva-design-viewer.
 - Divi WordPress sites listing one post per issue ('OPEN BULLETIN') are read by unpinned fetch, which follows the newest post to its PDF; the recipe fetch:check prints pins that week's post, so leave provider_id empty.
+- ParishesOnline 'user' publications (probe po issues of type user at customer-data-prod-bucket.s3.amazonaws.com/organization-uploads/<lpi>/publications/...; site widget publicationWidget?type=publication) are not read by the parishes_online collector ('No matching anchor link'), and unpinned other on the site picks another PDF: record unsupported with fetch_gap po-user-upload, keeping po-org and lpi ids (St. Sylvester, Medford).
+- A WeConnect site answering 'Temporarily Unavailable' can still have a live LPi org: probe po <name>-church-<zip> found it, and its bulletin masthead named the parish's new site (St. Joseph the Worker).
 
 ## Rules settled for this diocese
 
