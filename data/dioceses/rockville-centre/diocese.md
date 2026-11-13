@@ -145,6 +145,14 @@ From the survey's probes of 130 parish websites (2026-11-12). Fill in as the bat
 - **Fire Island:** oceanbeachcatholic.org posts one "2026 Seasonal Bulletin" PDF for Our Lady of
   the Magnificat (a summer parish). Its Saltaire and Davis Park pages answer 404.
 
+## New lessons
+
+Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
+
+- Solutio /file PDFs (403 to probe get) download in Chrome with tools/browser_get.py <url> <out>; read the file with pdftotext or render.py. Check its PDF metadata (pdfinfo Creator: Word/Publisher vs a printer) before looking for a printer listing.
+- A server sending an incomplete TLS chain (probe get: 'unable to get local issuer certificate'; http redirects to https) fails fetch too: unsupported with fetch_gap kind tls-incomplete-chain.
+
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
