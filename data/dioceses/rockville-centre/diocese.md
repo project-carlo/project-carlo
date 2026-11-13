@@ -190,6 +190,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - ParishesOnline 'user' publications (probe po issues of type user at customer-data-prod-bucket.s3.amazonaws.com/organization-uploads/<lpi>/publications/...; site widget publicationWidget?type=publication) are not read by the parishes_online collector ('No matching anchor link'), and unpinned other on the site picks another PDF: record unsupported with fetch_gap po-user-upload, keeping po-org and lpi ids (St. Sylvester, Medford).
 - A WeConnect site answering 'Temporarily Unavailable' can still have a live LPi org: probe po <name>-church-<zip> found it, and its bulletin masthead named the parish's new site (St. Joseph the Worker).
 - Wix bulletin pages can list hash-named /_files/ugd PDFs out of date order with no link text (Ss. Philip and James); check page-pdfs' 'first-listed' pick against each PDF's page-1 date, and if it is wrong record unsupported with fetch_gap first-pdf-not-current.
+- WordPress bulletin pages that keep years of issues with yearless link text ('November 19') make page-pdfs pick a past year's issue as current, because the link text beats the filename's full date (St. Frances Cabrini, Coram). A filename=<prefix>_<year>*.pdf glob fixes it only until January, so record unsupported with fetch_gap link-text-date-misread and keep the glob recipe in provider_id.
+- The Church Bulletin Inc. back-page job number ('#NNN FOR ADVERTISING') differs for each bulletin it prints. Quote it with the masthead in separate reviews between parishes that share a pastor.
 
 ## Rules settled for this diocese
 
