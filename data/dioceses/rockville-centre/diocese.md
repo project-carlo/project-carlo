@@ -176,6 +176,9 @@ From the survey's probes of 130 parish websites (2026-11-12) and the map batches
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- flipbook.so: some Solutio bulletin /file links redirect to flipbook.so/flip/<id> viewers (title gives the issue date) serving only .webp page images on storage.googleapis.com, no PDF; visit.py --text reads the text layer; fetch:check answers resolve_failed, so record unsupported with fetch_gap flipbook-so-viewer.
+- LPi-printed parishes on eCatholic sites with 'No bulletin found' (e.g. a Drive archive instead) are usually on ParishesOnline as <name>-<zip> with 'st' (church-of-st-mary-11030), even when the bulletin says 'Saint'; try probe po on those slug forms.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
