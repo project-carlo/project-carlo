@@ -212,6 +212,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A parish site served only over plain http (https gives a certificate hostname mismatch) can't be read by fetch: its browser fails 'Page.goto: net::ERR_BLOCKED_BY_CLIENT at http://…' whether pinned or not, while probe get reads the page and PDFs. Record unsupported with fetch_gap http-only-site.
 - On Solutio sites, unpinned fetch:check can follow an older /file link rather than the newest (St. Mark, Shoreham picked a May 2026 post), so a future Solutio collector must choose the newest dated post.
 - A Solutio site's own copy can be the parish's layout file without LPi's ad page or footer (St. Agnes Greenport: Affinity, 7 pages) while ParishesOnline carries the LPi issue; try `probe po st-<name>-church-<zip>` even when the site copy shows no 4lpi.com footer (this slug form matched both st-agnes-church-11944 and st-patrick-church-11971).
+- Weebly sites can embed the bulletin as one document at /uploads/<a>/<b>/<c>/<site-id>/<n>.<mmddyy> with no .pdf extension (served as application/pdf); fetch:check, pinned or not, finds 'No PDF links': record unsupported with fetch_gap extensionless-download-link, keeping the page-pdfs recipe in provider_id.
 
 ## Rules settled for this diocese
 
