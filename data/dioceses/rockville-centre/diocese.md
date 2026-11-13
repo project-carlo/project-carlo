@@ -159,6 +159,9 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - When a parish domain is dead and probe get gets 429 from web.archive.org, visit.py still reads the Wayback CDX list (web.archive.org/cdx/search/cdx?url=<domain>/*&collapse=timestamp:6) and snapshots; use them to date when the site lapsed and its last Mass schedule.
 - Discover Mass download.php?bulletin=<token> URLs change token on every visit: identify the issue fetch:check picked by the date on its page 1 (probe pdf --pages 1), not by matching the URL.
 - Some Solutio issues (PDF Creator PScript5/Acrobat Distiller) have a garbled text layer from subset fonts: pdftotext gives symbol soup, so render page 1 with render.py to read the masthead and schedule.
+- Solutio bulletin lists whose items show a 'default' icon instead of 'pdf' may redirect /file to a Canva design viewer (canva.com/design/<id>/view): open one with visit.py to see final_url, read pages as screenshots (view#N), and record fetch_gap canva-design-viewer.
+- A WordPress site with no bulletin archive page still lists its weekly uploads through /wp-json/wp/v2/media?search=<word>&_fields=source_url (read with visit.py when probe get is blocked); use it to choose a filename glob for page-pdfs on the home page.
+- A site Cloudflare-challenges on every visit.py run and in fetch:check ('blocked NoBulletin'), with no copy on another host: unsupported with fetch_gap kind cloudflare-challenge plus access-blocked research and a revisit date.
 
 
 ## Rules settled for this diocese
