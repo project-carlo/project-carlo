@@ -157,6 +157,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Self-hosted bulletin PDFs made in Canva (pdfinfo Creator: Canva) can be image-only or carry the Mass schedule as an image. When probe pdf --grep finds no Mass, render pages 1-2 before concluding.
 - Some self-hosted WordPress sites (olvfpny.org) list issues fine to fetch:check's page-pdfs but answer HTTP 403 to the PDF download itself (and to probe get); Chrome gets it with tools/browser_get.py. Record the recipe in provider_id and make the row unsupported with fetch_gap kind pdf-download-403.
 - When a parish domain is dead and probe get gets 429 from web.archive.org, visit.py still reads the Wayback CDX list (web.archive.org/cdx/search/cdx?url=<domain>/*&collapse=timestamp:6) and snapshots; use them to date when the site lapsed and its last Mass schedule.
+- Discover Mass download.php?bulletin=<token> URLs change token on every visit: identify the issue fetch:check picked by the date on its page 1 (probe pdf --pages 1), not by matching the URL.
+- Some Solutio issues (PDF Creator PScript5/Acrobat Distiller) have a garbled text layer from subset fonts: pdftotext gives symbol soup, so render page 1 with render.py to read the masthead and schedule.
 
 
 ## Rules settled for this diocese
