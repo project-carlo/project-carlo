@@ -79,6 +79,9 @@ class Config:
     max_continues: int = 1
     max_failures: int = 3
     failure_retry_minutes: int = 5
+    # GitHub out of reach (an outage, the network, a locked keyring): never blocks; the
+    # wait doubles from failure_retry_minutes up to this.
+    unreachable_retry_max_minutes: int = 30
     # The sandbox failing to start a worker (no image, Podman or proxy): the job tries
     # again this often, and the Run blocks after this many in a row. Never a crash.
     max_sandbox_failures: int = 3
