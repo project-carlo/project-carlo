@@ -105,6 +105,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Some eCatholic parishes here post bulletins as site documents (ec-prod-site-cache.s3.amazonaws.com/static1/<site>/documents/...) rather than files.ecatholic.com/<id>/bulletins, so the ecatholic resolver fails; use provider other with a pinned page-pdfs recipe on the page listing them, plus a filename filter when inserts are listed alongside (Our Lady of Fatima: filename=*Year*.pdf).
 - church-bulletin.org (JPPC): a parish site's Bulletins link can point at a slug that serves only JPPC's generic welcome page (St. Francis Weston's 'st-...'); try the 'saint-...' variant of the slug, and check by saving the HTML with probe get --out and grepping for bulletin/<slug>/<date>.pdf (probe get's text output drops links).
 - Joomla /bulletins/<n>-<date>/file links behind Cloudflare answer 403 even to the browser context's request client; tools/browser_download.py fetch()es the file from inside the page to read an issue (render it with pdftoppm). fetch can't collect these: record unsupported, fetch_gap joomla-file-endpoint.
+- Duda 'Bulletin' pages can list issues oldest first with irregular gaps (Georgetown Oratory); fetch:check's page-pdfs still picked the newest by its file-name date.
 
 
 ## Rules settled for this diocese
