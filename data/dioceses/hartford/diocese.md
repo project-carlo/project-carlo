@@ -119,6 +119,9 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - 'Branches on the Vine' PDFs (Branches*.pdf) on diocesanweb parish sites are the archdiocese's weekly news, not a parish bulletin; when a bulletins page mixes them in, pin page-pdfs with a filename glob for the parish's own files (e.g. filename=Bulletin-*.pdf).
 - diocesanweb 'current-bulletin' and yearly-archive pages also link forms (cemetery rules, sponsor certificates); unfiltered page-pdfs can pick one as first-listed, so check the pick and pin the page plus a filename glob.
 - For churches the 2017 pastoral plan closed with no decree, html.duckduckgo.com/html/?q=... via probe get finds local reports (Hartford Courant June 2017 'final regular Mass' articles, the Suffield Observer) that date the last Mass.
+- bonventure.net (sponsors.bonventure.net/?page=<id>, PDFs at pdfs/<id>/<YYYY-MM-DD>.pdf): page-pdfs resolves the current issue but the https download fails certificate verification (incomplete chain); probe get works over http. Record bulletin_provider unsupported with fetch_gap kind tls-certificate-unverified.
+- diocesanweb sites linking church-bulletin.org/?id=<n>: unpinned fetch:check prints recipe linked-issue-page and picks church-bulletin.org/bulletin/<slug>/<date>.pdf, which can be scanned while the parish's own diocesanweb upload of the same issue has text; compare before pinning.
+- render.py's browser closes on very large scanned LPi PDFs (~90 MB); download with probe get --out into an empty folder and render with pdftoppm -f 1 -l 1 -r 80 -jpeg instead.
 
 
 ## Rules settled for this diocese
