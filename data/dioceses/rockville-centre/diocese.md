@@ -220,5 +220,17 @@ Decisions that apply to more than one record, and who made them.
 
 Newest first: date, what was done, and the `pnpm diocese coverage` numbers after it.
 
+- 2026-11-13: Reconcile (factory run rockville-centre-map-1, 20 map batches of usually 18-25
+  roster entries; eastern-catholic 7). Coverage: directory 139/139 accounted for, 79/137 modelled;
+  gcatholic 142/142, 75/132; mass-times 139/139, 79/138. 126 parish rows (72 live: 50 other, 14
+  parishes_online, 7 ecatholic, 1 discover_mass; 52 unsupported with fetch gaps, 38 of them
+  joomla-file-endpoint; 2 no_bulletin), 142 churches, 12 excluded, 2 open. No merges or moves:
+  audit's 18 candidate pairs all carry content-supported `separate` reviews. St. Patrick, Bay
+  Shore's *Worship sites* now includes its Saltaire summer mission (the bulletin itself does not
+  print the mission's Masses). fetch:check on the 72 live rows: all transport ok; all this
+  week's issue (8 or 15 November, or the posted-early 22 November LPi issue) except Holy Family,
+  Hicksville (eCatholic PDF archive a week behind; research recorded) and the Ocean Beach
+  seasonal booklet.
+
 - 2026-11-12: Survey (factory run rockville-centre-map-1). Rosters: gcatholic 142, directory 139,
   mass-times 139. 20 batches in `batches.json`. No records yet.

@@ -36,6 +36,17 @@ research:
   next_action: Read the June-August 2027 bulletins for an Oak Beach Mass, or ask the parish office
   retry_when: St. Joseph posts its June 2027 bulletins
   revisit_after: 2027-06-15
+- method: 'Reconcile: web search (DuckDuckGo html) for Oak Beach / Gilgo chapel Catholic Mass, and drvc.org
+    WordPress search for ''oak beach'''
+  url: https://html.duckduckgo.com/html/?q=Oak+Beach+chapel+Catholic+Mass
+  checked: '2026-11-13'
+  outcome: not-found
+  next_action: drvc.org search finds only the Mass Times page. The only other hit is an undated, unread
+    post in the 'You know you are from Oak Beach when...' Facebook group asking 'when Catholic Mass starts
+    at West Gilgo' (facebook.com/groups/263654057081905/permalink/26764680559885894/), which hints at
+    a summer Mass in a chapel at West Gilgo/Oak Beach. Read St. Joseph's June-August 2027 bulletins, or
+    ask the parish office (631-669-0068) which chapel that is and whether St. Joseph still serves it.
+  retry_when: St. Joseph posts its June 2027 bulletins
 ---
 
 ## What is known
@@ -45,3 +56,5 @@ Only the diocese's Mass-times page (read 2026-11-12) lists a "Mission Church (St
 ## Why it is not decided
 
 Nothing shows Mass there now, and nothing says the mission closed. A beach chapel would hold summer Mass only, and the summer 2026 bulletins read show none, which is absence, not a closure notice. The June-August 2027 bulletins, or the parish office, would settle it.
+
+Reconcile (2026-11-13) searched once more: drvc.org's site search for "oak beach" finds only the Mass-times page, and a web search found only an undated Facebook group post (not readable without login) asking "when Catholic Mass starts at West Gilgo". That suggests a summer chapel Mass on the barrier beach, but says nothing about who serves it or whether it continues.

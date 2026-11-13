@@ -48,7 +48,7 @@ Yes, in summer. St. Patrick, Bay Shore's "Mass Schedule and Intentions - Summer 
 
 ## Parish
 
-The mission belongs to St. Patrick, Bay Shore (`st-patrick-bay-shore`, mapped in batch `babylon-bay-shore`): St. Patrick's site has the mission's page, takes its Mass intentions, baptisms and weddings, and publishes its schedule. Our Lady of the Magnificat's 2026 booklet does not mention it, and the locator's link to oceanbeachcatholic.org/saltaire-parish.html answers 404. St. Patrick's 8 November 2026 bulletin (an image-only scan) was not read for the mission; its parish record still lists one church, which `reconcile` should update.
+The mission belongs to St. Patrick, Bay Shore (`st-patrick-bay-shore`, mapped in batch `babylon-bay-shore`): St. Patrick's site has the mission's page, takes its Mass intentions, baptisms and weddings, and publishes its schedule. Our Lady of the Magnificat's 2026 booklet does not mention it, and the locator's link to oceanbeachcatholic.org/saltaire-parish.html answers 404. St. Patrick's bulletin does not print the mission's Masses: the Sunday, July 19, 2026 issue (`https://stpatrickbayshore.org/wp-content/uploads/2026/07/St.-Patrick-Bulletin-7-19-26.pdf`, image-only, page 2 read as a render on 2026-11-13) lists only the Bay Shore church and Msgr. Purick Hall. The mission's schedule is in the parish site's summer document only. St. Patrick's *Worship sites* lists the mission (reconcile, 2026-11-13).
 
 ## Name and address
 

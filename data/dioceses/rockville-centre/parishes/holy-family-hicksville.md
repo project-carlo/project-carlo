@@ -16,6 +16,18 @@ evidence:
   seen: 2026-11-12
   note: The parish's eCatholic site (read with visit.py). Its Bulletin page lists weekly issues files.ecatholic.com/36423/bulletins/20260726.pdf
     through 20261101.pdf; the 8 November issue was not yet there (homepage showed a PNG of it).
+research:
+- method: Reconcile fetch:check of the whole diocese; probe get on files.ecatholic.com/36423/bulletins/20261108.pdf
+    and 20261115.pdf; visit.py on the home page
+  url: https://holyfamilyparishny.org/
+  checked: '2026-11-13'
+  outcome: not-found
+  next_action: fetch:check picked the 1 November issue (20261101.pdf, HTTP 200, 12 days old); 20261108.pdf
+    and 20261115.pdf answer 403 (not posted), while the home page shows the 8 November issue only as an
+    image (documents/2026/11/November%208%20Holy%20Family%20Bulletin.png). Rerun fetch:check; if the PDF
+    archive stays two or more weeks behind, consider an unsupported row with a gap for image-only current
+    issues.
+  retry_when: After Sunday 15 November 2026, once the parish posts 20261108.pdf or a later PDF
 bulletin_status: available
 ---
 

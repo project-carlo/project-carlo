@@ -1,8 +1,8 @@
 ---
 name: St. Vincent de Paul (Latin parish)
 revisit: Ask the parish office (516-352-2127) or the diocese whether the Latin parish still has a public
-  Mass (Sunday 8:45 AM) in the cathedral; read the June 2025 appointment list (scratch/rockville-centre-map-1/001-survey/img/a25-*.jpg)
-  for St. Vincent de Paul, Elmont.
+  Mass (Sunday 8:45 AM) in the cathedral; read the June 2027 appointments list for St. Vincent de Paul,
+  Elmont.
 revisit_after: 2027-01-15
 roster: ['gcatholic:16839', 'mass-times:church-of-st-vincent-de-paul-elmont']
 evidence:
@@ -60,6 +60,16 @@ research:
   outcome: not-found
   next_action: Read the June 2025 list; phone the parish office
   retry_when: A later appointments list or diocesan notice names the parish
+- method: 'Reconcile: read the June 24, 2025 appointments list (8 image pages rendered by the survey,
+    scratch/rockville-centre-map-1/001-survey/img/a25-*.jpg) for St. Vincent de Paul, Elmont'
+  url: https://www.drvc.org/
+  checked: '2026-11-13'
+  outcome: not-found
+  next_action: The list never names St. Vincent de Paul, Elmont. It retires Msgr. Richard M. Figliozzi
+    (the Latin parish's administrator on its 2019 site) 'from Pastor of the Church of Saint Joseph, Babylon',
+    so he no longer served Elmont by 2025. Phone the parish office or ask the diocese whether the Latin
+    Mass continues.
+  retry_when: A later appointments list or diocesan notice names the parish, or the parish office answers
 ---
 
 ## What is known
@@ -73,3 +83,5 @@ That 8:45 AM is the Sunday Mass on the parish's own site in December 2019 (Wayba
 Nothing current shows a Latin Mass here, but nothing says the parish closed or was suppressed: the diocesan Mass-times line matches the 2019 schedule and may simply be stale. Under the diocese's rule for shared buildings, the building gets a church row for the Latin parish only if it still has public Mass there. If a source shows a current Latin Mass, make a parish row (its bulletin, if any) and a church for the building with directory:68's address; if a source says the parish no longer has Mass, move this to `excluded/` (closed, with `last_mass` if given) and the cathedral record already covers the building. The steps are in `revisit`.
 
 The June 24, 2026 appointments list (read 2026-11-13) names no priest for St. Vincent de Paul, Elmont; its only Elmont entry moves a priest's residence to St. Boniface. The June 2025 list was not read for this.
+
+Reconcile (2026-11-13) read the June 24, 2025 list too: it does not name St. Vincent de Paul, Elmont, and it retires Msgr. Richard M. Figliozzi, the Latin parish's administrator on its 2019 site, "from Pastor of the Church of Saint Joseph, Babylon". Neither list names a priest for the Latin parish; that is absence, not a suppression notice.
