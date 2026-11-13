@@ -34,6 +34,7 @@ evidence:
   seen: 2026-11-06
   note: 'probe po: org The Basilica of Regina Pacis, 1230 65th St, Brooklyn, New York, 11219, lpi 0018000000QxB7XAAV,
     weekly issues 2026-10-04 through 2026-11-08.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

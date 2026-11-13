@@ -20,6 +20,7 @@ evidence:
   note: 'Parish homepage (one page, hand-built HTML): ''Bulletin'' links p.pdf; Masses: Sunday POL 8:00am,
     11:00am, 6:30pm, ENG 9:30am; Saturday POL 7:00am, ENG 5:00pm - Vigil Mass; contact 183 25th Street,
     Brooklyn, NY 11232.'
+promoted: 2026-11-12
 research:
 - method: fetch:check other on the homepage
   url: http://olcbrooklyn.org/

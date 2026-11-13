@@ -33,6 +33,7 @@ evidence:
   note: 'Diocese parish directory: St. Michael – St. Malachy, 225 Jerome Street, 11207, (718) 647-1818;
     deanery directory lists it under both B6 and B8 at the same address; Mass finder 1076 (225 Jerome
     Street, 40.67638, -73.88734).'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

@@ -24,6 +24,7 @@ evidence:
   note: Mass finder place 291 Divine Mercy Parish lists All Worship Sites St. Francis of Paola (219 Conselyea
     Street), St. Nicholas (26 Olive Street), St. Cecilia (84 Herbert Street); used only as a lead for
     places.
+promoted: 2026-11-12
 research:
 - method: pnpm fetch:check with page-pdfs https://divinemercy-brooklyn.org/bulletins
   url: https://divinemercy-brooklyn.org/bulletins

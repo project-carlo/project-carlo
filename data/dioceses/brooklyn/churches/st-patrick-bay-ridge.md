@@ -27,6 +27,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-02/16762
   seen: 2026-11-05
   note: 'GCatholic: St. Patrick, 9511 4th Ave, Brooklyn 11209, Plus Code 87G7JX89+5G (40.6154375, -74.0311875).'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

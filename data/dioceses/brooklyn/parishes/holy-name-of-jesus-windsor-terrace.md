@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-06
   note: 'Parish WordPress-multisite page (probe url: RemoteDisconnected; read with parish-site-access
     visit.py): date links November 8, 2026 back to May 2026, each to a repost such as /wp-content/uploads/sites/43/2026/11/Bulletin-November-8-2026-Account-03-1373.pdf.'
+promoted: 2026-11-12
 research:
 - method: fetch:check parishes_online org holy-name-church-11215
   url: https://parishesonline.com/organization/holy-name-church-11215

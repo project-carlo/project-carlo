@@ -29,6 +29,7 @@ evidence:
   note: 'Mass finder place 1166 (the parish): lists St. Teresa of Avila at 109-26 130th Street and St.
     Anthony of Padua at 127-17 135th Avenue; its pin (40.683873, -73.813385) is at St. Teresa. The diocese
     directory and deanery list give the parish at 109-26 130th Street.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

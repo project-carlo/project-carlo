@@ -23,6 +23,7 @@ evidence:
   seen: 2026-11-06
   note: 'probe url answers 403; visit.py renders ''Our Lady of Perpetual Help | Brooklyn, NY'' with publication
     ecatholic:2968 and a /bulletins link. issues.py ecatholic: 20261108.pdf answers 200.'
+promoted: 2026-11-12
 ---
 
 ## Publisher

@@ -21,6 +21,7 @@ evidence:
   note: 'Bulletins page on the diocesan WordPress multisite (uploads/sites/14), read with visit.py (probe
     url gets RemoteDisconnected). Newest first: nov8_2026_stmartin_compressed.pdf (uploaded 2026/11),
     nov1_2026, oct25_2026, oct18_2026, oct11_2026, oct4_2026, sept27_2026 ..., weekly.'
+promoted: 2026-11-12
 research:
 - method: fetch:check (headed Chrome) on recipe page-pdfs https://stmartindeporresparish.org/resources/bulletins/
   url: https://stmartindeporresparish.org/resources/bulletins/

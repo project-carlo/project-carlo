@@ -23,6 +23,7 @@ evidence:
   seen: 2026-11-06
   note: 'probe po: Holy Child Jesus Church, lpi 0018000000Qbz02AAB, container 04/0244, website hcj-sbjl.org,
     111-11 86th Ave, Richmond Hill; weekly issues 4 October to 8 November 2026 (20261108B.pdf).'
+promoted: 2026-11-12
 research:
 - method: fetch:check (headed Chrome) on parishes_online holy-child-jesus-church
   url: https://parishesonline.com/organization/holy-child-jesus-church

@@ -28,6 +28,7 @@ evidence:
   seen: 2026-11-05
   note: 'Diocese parish directory: St. Frances de Chantal, 1273 58th Street, Brooklyn, NY 11219, (718)
     436-6407; the deanery directory (B8) lists St. Frances de Chantal R.C. Church at the same address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

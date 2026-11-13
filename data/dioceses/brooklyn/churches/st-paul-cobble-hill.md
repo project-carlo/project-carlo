@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-05
   note: 'Diocese parish directory: St. Paul & St. Agnes, 234 Congress Street, Brooklyn 11201, (718) 625-1717,
     stpaulstagnes-brooklyn.org; the deanery directory (B3) gives the same address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

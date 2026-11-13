@@ -28,6 +28,7 @@ evidence:
   note: Diocesan WordPress multisite page (read with visit.py; probe url got RemoteDisconnected) listing
     nov8_2026_stmark2_compressed.pdf, nov1_2026_stmark_compressed.pdf, oct25_2026_stmark_compressed.pdf
     ... weekly; the 8 November file carries the same LPi footer 'St. Mark Roman Catholic Church | 03-4066'.
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-06
   note: 'GCatholic''s website for the parish now redirects to soh.church, ''Sound of Heaven Church | Long
     Island Church | Deer Park NY'': a lapsed domain, not the parish.'
+promoted: 2026-11-12
 research:
 - method: fetch:check parishes_online org st-saviour-church
   url: https://parishesonline.com/organization/st-saviour-church

@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-06
   note: 'probe po: org exists (lpi 0018000000QxB7VAAV, 2805 Fort Hamilton Pkwy) but has no publications,
     so it is not a publication id for this bulletin.'
+promoted: 2026-11-12
 research:
 - method: fetch:check other page-pdfs on the Tilma /bulletins page
   url: https://ihm-brooklyn.org/bulletins

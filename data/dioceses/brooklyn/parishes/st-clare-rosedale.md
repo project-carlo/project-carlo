@@ -19,6 +19,7 @@ evidence:
   note: 'Tilma bulletins page (server-rendered), cards newest first: ''November 1st,, 2026 --stclare.pdf'',
     October 25th, 18th, 11th, 4th, September 27th... weekly back to July 2026, each a files.tilmaplatform.com
     PDF.'
+promoted: 2026-11-12
 research:
 - method: fetch:check page-pdfs on the Tilma bulletins page
   url: https://stclare-queens.org/bulletins

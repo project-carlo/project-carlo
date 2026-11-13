@@ -49,6 +49,7 @@ evidence:
   seen: 2026-11-05
   note: 'Diocese parish directory: S.s. Peter and Paul - Epiphany, 71 S. 3rd Street, Brooklyn 11249, (718)
     388-9576, no website; deanery list: Ss. Peter and Paul Parish, 71 S. 3rd Street (Deanery B1).'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-05
   note: 'Diocese parish directory: St. Matthias, 58-15 Catalpa Avenue, Ridgewood, NY 11385; the deanery
     directory gives the same in Deanery Q11.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

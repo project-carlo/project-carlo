@@ -29,6 +29,7 @@ evidence:
   note: 'Diocese parish directory: Holy Family - St. Laurence, 9719 Flatlands Avenue, Brooklyn, NY 11236,
     (718) 257-4423, website holyfamilystlaurence-brooklyn.org. The deanery list (B7) and Mass finder 251
     (''Holy Family - St. Laurence (Holy Family)'') give the same address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

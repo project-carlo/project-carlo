@@ -39,6 +39,7 @@ evidence:
   seen: 2026-11-07
   quote: Sundays / Domingos-10:00 A.M. (Spanish) 12:30 P.M (English)
   note: 1 November 2026 bulletin, page 1; the image masthead gives 32 Clermont Avenue Brooklyn, N.Y. 11205.
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

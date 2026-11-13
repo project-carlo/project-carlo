@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-05
   note: 'Diocese parish directory: St. Kevin, 45-21 194th Street, Flushing, NY 11358; the deanery directory
     (Q5) lists St. Kevin RC Church at the same address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

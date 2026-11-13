@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-05
   note: 'Diocese parish directory: Our Lady of Mercy, 70-01 Kessel Street, Forest Hills, NY 11375, website
     mercyhills.org; the deanery directory (Q6) lists it at the same address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

@@ -22,6 +22,7 @@ evidence:
   quote: Bulletin for Sunday Nov 01, 2026
   note: 'Tilma bulletins page, newest first: Nov 01, Oct 25, Oct 18, Oct 11 2026, each linking a NickT<M>-<D>.pdf
     on files.tilmaplatform.com.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

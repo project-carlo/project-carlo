@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-06
   note: 'Mass finder place 1153: St. Mary Gate of Heaven, 103-12 101st Ave., Ozone Park, pin 40.685968,
     -73.839286. The diocese''s parish directory and deanery list give 103-12 101st Avenue too.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

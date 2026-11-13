@@ -29,6 +29,7 @@ evidence:
 - url: https://dioceseofbrooklyn.org/directories/deaneries/
   seen: 2026-11-05
   note: 'Deanery directory, Deanery B5: ''St. Matthew Parish'', 1123 Eastern Pkwy., 11213.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

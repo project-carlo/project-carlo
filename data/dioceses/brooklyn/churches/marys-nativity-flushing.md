@@ -30,6 +30,7 @@ evidence:
   note: Mass finder place 1095 'Mary's Nativity - St. Ann' lists two worship sites, this church and St.
     Ann Church at 58-02 146th St.; the diocese parish and deanery directories give 46-02 Parsons Blvd.
     for the parish.
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

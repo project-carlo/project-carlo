@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-05
   note: 'Diocese parish directory: St. Edmund, 2460 Ocean Avenue, Brooklyn 11229, (718) 743-0102, stedmund-brooklyn.org;
     the deanery directory (B11) lists St. Edmund Parish at the same address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

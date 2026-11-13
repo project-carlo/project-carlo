@@ -28,6 +28,7 @@ evidence:
   seen: 2026-11-06
   note: 'Diocese parish directory: St. Rita (Queens), 36-25 11th Street, Long Island City, NY 11106, (718)
     361-1884. The deanery directory (Q1) lists St. Rita Roman Catholic Church (Queens) at the same address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

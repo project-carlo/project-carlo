@@ -32,6 +32,7 @@ evidence:
   note: 'Diocese parish directory: ''St. Sebastian – Corpus Christi'', 39-63 57th Street, Woodside 11377,
     (718) 429-4442; deanery directory (Q2) ''St. Sebastian Roman Catholic Church'', same address; Mass
     finder place 1163 ''St. Sebastian'', 39-63 57th St. (from the rosters).'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

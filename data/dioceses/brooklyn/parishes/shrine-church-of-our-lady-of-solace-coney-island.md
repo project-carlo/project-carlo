@@ -24,6 +24,7 @@ evidence:
   note: Parish site's calendar-table archive of Bulletins/2026/MMDDYY.pdf, weekly 010426 to 101126 (11
     October 2026) and nothing later; 101826 to 110826 answer HTTP 404. The 11 October file has the same
     masthead as the LPi issues, so the site copy lags the container.
+promoted: 2026-11-12
 research:
 - method: fetch:check parishes_online shrine-church-of-our-lady-of-solace
   url: https://parishesonline.com/organization/shrine-church-of-our-lady-of-solace

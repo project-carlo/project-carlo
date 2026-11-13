@@ -27,6 +27,7 @@ evidence:
   note: 'Diocese parish directory: St. Mark-St. Margaret Mary, 2609 East 19th Street, Brooklyn 11235,
     (718) 891-3100, stmarkbrooklyn.org; the deanery directory (B11) lists the Parish of St. Mark-St. Margaret
     Mary at the same address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

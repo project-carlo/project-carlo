@@ -24,6 +24,7 @@ evidence:
   note: 'Diocesan Mass finder place 421: ''St. Bonaventure – St. Benedict the Moor (St. Benedict the Moor
     Catholic Church)'', 171-17 110th Avenue, Jamaica, NY 11434, pin 40.69672, -73.78206 (used for coordinates
     and the address only, not the schedule).'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

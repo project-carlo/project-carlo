@@ -27,6 +27,7 @@ evidence:
   note: 'Page 2 Mass intentions for Sunday November 8 mark each Mass Church, Iglesia, Chapel or Capilla:
     8:30 AM English, 10:00 AM Spanish, 11:30 AM English and 1:30 PM Chinese in the chapel; the others
     in the church.'
+promoted: 2026-11-12
 ---
 
 ## Publisher

@@ -26,6 +26,7 @@ evidence:
   note: 'Tilma bulletins page, newest first: November 01, 2026 (November 1, 2026 MPB-SSJ Bulletin (1)
     (1) (1).pdf, uploaded 2026-10-29), October 25 (Copy of MPB-SSJ Bulletin (2).pdf), October 18, October
     11, 2026 ... File names vary from issue to issue.'
+promoted: 2026-11-12
 research:
 - method: fetch:check (headed Chrome) on recipe page-pdfs https://mpb-ssj.org/bulletins
   url: https://mpb-ssj.org/bulletins

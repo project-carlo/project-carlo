@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-06
   note: 'Tilma bulletins page, server-rendered, newest first: ''OLM Bulletin November 1st 2026'', October
     25th, October 18th, October 11th, then ''Bulletin for Sunday, Oct 04, 2026'' and older cards.'
+promoted: 2026-11-12
 research:
 - method: fetch:check (headed Chrome) on recipe page-pdfs https://olmrcchurch.org/bulletins
   url: https://olmrcchurch.org/bulletins

@@ -29,6 +29,7 @@ evidence:
 - url: https://mass.dioceseofbrooklyn.org/places/1150
   seen: 2026-11-05
   note: 'Mass finder place 1150: St. Margaret, 66-05 79th Pl., pin 40.715702, -73.872904.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

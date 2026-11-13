@@ -30,6 +30,7 @@ evidence:
   note: 'probe po: org ''St. Michael/ St. Malachy'', 225 Jerome St, has no issues; st-malachy-church-11207
     (''St. Malachy Church'', 129 Van Siclen Ave, Brooklyn 11207) has none either. Empty orgs, not publication
     ids.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

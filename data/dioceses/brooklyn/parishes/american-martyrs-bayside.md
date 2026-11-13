@@ -29,6 +29,7 @@ evidence:
     org, not this bulletin''s publication id.'
 revisit: Check whether American Martyrs and Holy Family have moved to one bulletin (masthead naming both)
 revisit_after: 2027-02-01
+promoted: 2026-11-12
 publication_reviews:
 - parish: holy-family-fresh-meadows
   decision: separate

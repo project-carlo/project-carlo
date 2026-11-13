@@ -18,6 +18,7 @@ evidence:
   note: 'Tilma bulletins page, server-rendered, newest first: ''Bulletin for Sunday, November 8, 2026''
     (A11-08-26.pdf), then November 1, October 25 (posted twice). Files named A<MM>-<DD>-<YY>.pdf; no LPi
     or Church Bulletin Inc. footer: the parish lays out its own 3-page issue.'
+promoted: 2026-11-12
 research:
 - method: fetch:check (headed Chrome) on recipe page-pdfs https://stelizabeth-queens.org/bulletins
   url: https://stelizabeth-queens.org/bulletins

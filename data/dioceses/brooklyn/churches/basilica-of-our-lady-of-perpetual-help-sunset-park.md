@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-06
   note: 'Mass finder 939: Basilica of Our Lady of Perpetual Help, 526-59 St, 11220, pin 40.639444, -74.015219
     (coordinates only; schedules come from the bulletin).'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

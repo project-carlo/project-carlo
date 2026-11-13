@@ -27,6 +27,7 @@ evidence:
   note: 'Diocese parish directory: St. Mary, 10-08 49th Avenue, Long Island City, NY 11101, (718) 786-0705,
     website stmary-lic.org. The deanery directory (Q1) lists St. Mary''s Roman Catholic Church at the
     same address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

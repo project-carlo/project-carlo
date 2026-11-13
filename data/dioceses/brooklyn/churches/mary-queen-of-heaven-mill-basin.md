@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-06
   note: 'Mass finder place 752: Mary Queen of Heaven, 1395 East 56th Street, pin 40.621359, -73.92089.
     Deanery directory: Mary Queen of Heaven, 1395 East 56th Street, Deanery B11.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

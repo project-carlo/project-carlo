@@ -19,6 +19,7 @@ evidence:
   quote: Bulletin for Sunday, Nov 01, 2026
   note: Tilma bulletins page, newest first; cards link files.tilmaplatform.com PDFs named Mel<M>-<D>.pdf
     (Mel11-1.pdf, Mel10-25.pdf). The 8 November card was not yet posted on Thursday 5 November.
+promoted: 2026-11-12
 research:
 - method: fetch:check with recipe 'page-pdfs https://stmels-queens.org/bulletins'; picked Mel11-1.pdf
     (1 November 2026, freshness fresh) on Thursday 5 November, before the 8 November card was posted

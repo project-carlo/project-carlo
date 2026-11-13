@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-05
   note: 'Diocese directory: St. Mary Mother of Jesus, 2326 84th Street, Brooklyn, NY 11214, (718) 372-4000,
     website stmarymotherofjesus-brooklyn.org.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

@@ -29,6 +29,7 @@ evidence:
   note: 'Diocese directory: Our Lady of Mount Carmel, 23-25 Newtown Avenue, Astoria, NY 11102, (718) 278-1834,
     mountcarmelastoria.org. The deanery list (Q1) gives the same; Mass finder 1135 gives ''2325 Newtown
     Ave. (27th Ave.)''.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

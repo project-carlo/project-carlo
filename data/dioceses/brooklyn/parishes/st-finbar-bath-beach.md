@@ -30,6 +30,7 @@ evidence:
 revisit: Rerun fetch:check and confirm it picks the 15 November 2026 issue or later (the newest posted
   on 2026-11-12 was older than 8 November).
 revisit_after: 2026-11-17
+promoted: 2026-11-12
 research:
 - method: 'Reconcile: headed fetch:check of every Brooklyn row picked the issue dated 2026-11-01; the
     bulletin page lists no newer issue than the one picked'

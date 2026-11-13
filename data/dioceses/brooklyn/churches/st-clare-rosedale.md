@@ -28,6 +28,7 @@ evidence:
   note: 'Diocese parish directory: St. Clare, 137-35 Brookville Blvd., Rosedale, NY 11422, website stclare-queens.org;
     the deanery directory (Q9, ''St. Clare Roman Catholic Church'') and Mass finder 628 give the same
     address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

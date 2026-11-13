@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-06
   note: 'probe url: the directory''s churchssja.org redirects to ssjachurch.org, ''Ss. Joachim & Anne
     Parish - Queens Village, New York'', which links church-bulletin.org/405 as its bulletin.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

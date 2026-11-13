@@ -23,6 +23,7 @@ evidence:
   note: 'Tilma bulletins page, server-rendered, linking files.tilmaplatform.com PDFs newest first: ''NOVEMBER
     1, 2026 PDF PRINT.pdf'', ''October 25, 2026 PRINT.pdf'', ''October 18, 2026 PRINT.pdf'', ''October
     11,BULLETIN PRINT.pdf''.'
+promoted: 2026-11-12
 ---
 
 ## Publisher

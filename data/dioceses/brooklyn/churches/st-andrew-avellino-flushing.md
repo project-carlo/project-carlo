@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-05
   note: 'Diocese parish directory: St. Andrew Avellino, 35-60 158th Street, Flushing, NY 11358; the deanery
     directory (Q4) lists St. Andrew Avellino Roman Catholic Church at the same address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

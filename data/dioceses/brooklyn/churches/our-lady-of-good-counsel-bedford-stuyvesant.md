@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-07
   note: OSM node 357624194, 'Our Lady of Good Counsel Roman Catholic Church, Putnam Avenue', place_of_worship,
     40.6870995, -73.9251443.
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

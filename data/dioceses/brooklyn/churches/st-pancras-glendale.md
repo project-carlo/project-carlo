@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-05
   note: 'Diocese parish directory: St. Pancras, 72-22 68th Street, Glendale, NY 11385; the deanery directory
     lists St. Pancras Parish at the same address in Deanery Q11.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

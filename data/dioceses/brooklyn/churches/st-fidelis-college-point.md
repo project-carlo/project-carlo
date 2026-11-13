@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-05
   note: 'Diocese parish directory: St. Fidelis, 123-06 14th Avenue, College Point, NY 11356; the deanery
     directory gives the same in Deanery Q4.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

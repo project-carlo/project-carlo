@@ -30,6 +30,7 @@ evidence:
     8:00 AM, 11:00 AM (English) 9:30 AM (Bilingual) 12:30 PM (Spanish) 3:00 PM (Vietnamese) Chapel: 9:00
     AM (Italian-2nd & 4th Sundays) 10:30 AM (Czech-Slovak)'': the chapel is listed under the church''s
     one address.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

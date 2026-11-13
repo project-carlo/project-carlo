@@ -28,6 +28,7 @@ evidence:
   seen: 2026-11-05
   note: Tilma bulletins page, newest first. The top card, Bulletin for November 8, 2026 (posted 5 Nov),
     has no file yet (its link is /bulletins/null); the next card links the October 30 - November 1 PDF.
+promoted: 2026-11-12
 research:
 - method: fetch:check against the Tilma bulletins page
   url: https://stleo-queens.org/bulletins

@@ -30,6 +30,7 @@ evidence:
   quote: Merged with St. Ignatius, 2011
   note: 'Archives List of Parishes: ''St. Francis of Assisi, Crown Heights (1898). Renamed St. Francis
     of Assisi-St. Blaise in 1980. Merged with St. Ignatius, 2011.'''
+promoted: 2026-11-12
 research:
 - method: probe url and probe get on the directory website
   url: https://www.sfa-stb.org/

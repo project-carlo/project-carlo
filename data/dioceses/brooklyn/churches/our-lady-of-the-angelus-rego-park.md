@@ -34,6 +34,7 @@ evidence:
   seen: 2026-11-05
   note: 'Diocese parish directory: Our Lady of the Angelus, 63- 63 98th Street, Rego Park, NY 11374, 718-897-4444.
     The deanery list and Mass finder 1140 give the same address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

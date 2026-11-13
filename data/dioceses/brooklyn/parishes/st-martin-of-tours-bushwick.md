@@ -31,6 +31,7 @@ evidence:
   quote: Merged with Our Lady of Lourdes and renamed St. Martin of Tours, 2007.
   note: Diocesan archives List of Parishes, St. Martin of Tours, Bushwick (1906) entry; Our Lady of Lourdes,
     Bushwick (1872) 'Merged with St. Martin of Tours, 2007.'
+promoted: 2026-11-12
 research:
 - method: fetch:check (headed Chrome) on recipe page-pdfs https://stmartinoftours-brooklyn.org/bulletins
   url: https://stmartinoftours-brooklyn.org/bulletins

@@ -21,6 +21,7 @@ evidence:
   quote: November 1 | November 8 | November 15 | November 22 | November 29
   note: Google Sites page listing 2026 issues by month, each date linking a drive.google.com/file/d/<id>/view
     file; November 1 and 8 are linked, later dates are plain text until posted.
+promoted: 2026-11-12
 bulletin_status: available
 publication_reviews:
 - parish: st-edmund-homecrest

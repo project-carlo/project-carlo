@@ -18,6 +18,7 @@ evidence:
   note: 'probe url: WordPress site ''Saint Anastasia Church'', bulletin link https://sta.nyc/bulletin,
     which redirects to the fixed file https://sta.nyc/files/bulletin.pdf (overwritten each week). No ParishesOnline,
     eCatholic or Discover Mass ids embedded.'
+promoted: 2026-11-12
 research:
 - method: 'Reconcile: headed fetch:check of every Brooklyn row'
   url: https://sta.nyc/files/bulletin.pdf

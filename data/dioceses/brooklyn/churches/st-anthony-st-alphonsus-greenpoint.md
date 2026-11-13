@@ -32,6 +32,7 @@ evidence:
   seen: 2026-11-05
   note: 'Diocese parish directory: St. Anthony – St. Alphonsus, 862 Manhattan Avenue, Brooklyn 11222,
     (718) 383-3339; the deanery directory (B1) and Mass finder 783 give the same address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

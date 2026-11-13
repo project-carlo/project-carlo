@@ -30,6 +30,7 @@ evidence:
   quote: St. Patrick Church / Iglesia San Patricio
   note: 'Homepage (visit.py; probe url gets RemoteDisconnected): schedules for St. Patrick and St. Rita,
     matching the bulletin.'
+promoted: 2026-11-12
 research:
 - method: fetch:check (headed Chrome) on recipe page-pdfs https://stpatlic.org/important-information/bulletin/
   url: https://stpatlic.org/important-information/bulletin/

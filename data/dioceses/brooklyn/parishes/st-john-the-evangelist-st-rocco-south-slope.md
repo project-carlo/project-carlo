@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-06
   quote: On May 20, 2011, Bishop Nicholas DiMarzio issued a decree uniting the parishes of Saint John
     the Evangelist and Saint Rocco. The parishes merged on June 30, 2011.
+promoted: 2026-11-12
 research:
 - method: fetch:check other page-pdfs on the Tilma /bulletins page
   url: https://stjohnstrocco-brooklyn.org/bulletins

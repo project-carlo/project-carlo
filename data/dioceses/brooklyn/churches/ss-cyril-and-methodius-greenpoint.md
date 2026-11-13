@@ -29,6 +29,7 @@ evidence:
   seen: 2026-11-05
   note: 'Diocese parish directory: Ss. Cyril and Methodius Parish, 150 Dupont Street, Brooklyn 11222,
     (718) 389-4424; the deanery directory (B1) and Mass finder 1177 give the same address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

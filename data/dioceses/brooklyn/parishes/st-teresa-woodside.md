@@ -29,6 +29,7 @@ evidence:
   quote: Saturday / Sábado 5:00 p.m. English
   note: 'MASS SCHEDULE /HORARIO DE MISAS: Saturday 5:00 p.m. English; Sunday 08:30 a.m. Español, 10:00
     a.m. English, 11:30 a.m. en español; weekdays 8:00 a.m. English; Wednesdays 7:00 p.m. en español.'
+promoted: 2026-11-12
 research:
 - method: fetch:check parishes_online org st-teresa-church-11377
   url: https://parishesonline.com/organization/st-teresa-church-11377

@@ -23,6 +23,7 @@ evidence:
   note: 'The parish''s Tilma bulletin page (rendered in visit.py; the cards are JavaScript) links ParishesOnline
     issues of container 03/0921: ''NEW! SUN, NOV 8'' and SUN, NOV 1, and ''View Past Bulletins'' to the
     org page.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

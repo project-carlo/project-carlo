@@ -18,6 +18,7 @@ evidence:
   note: 'Tilma bulletins page, newest first, serving files from stjosaphat-queens.org/system/resources/<token>/:
     ''Bulletin 2026-11-08.pdf'', ''Bulletin 2026-11-01.pdf'', ''Bulletin 2026-10-25.pdf'', ... earlier
     ''2026.10.11 - 20th Sunday after Pentecost.pdf''. The homepage links the 8 November issue too.'
+promoted: 2026-11-12
 ---
 
 ## Publisher

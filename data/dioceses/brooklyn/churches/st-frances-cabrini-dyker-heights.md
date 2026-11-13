@@ -30,6 +30,7 @@ evidence:
   note: 'Diocese parish directory: St. Frances Cabrini, 1562 86th Street, Brooklyn, NY 11228, (718) 236-9165,
     website stfrancescabrini-brooklyn.org. The deanery directory (Deanery B10) lists St. Frances Cabrini,
     1562 86th Street.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

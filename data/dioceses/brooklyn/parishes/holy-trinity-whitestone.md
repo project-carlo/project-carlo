@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-05
   note: probe url answers 403; visit.py renders 'Holy Trinity Roman Catholic Church - Whitestone, NY',
     an eCatholic site (ecatholic:5313) linking /bulletins.
+promoted: 2026-11-12
 publication_reviews:
 - parish: st-fidelis-college-point
   decision: separate

@@ -23,6 +23,7 @@ evidence:
   note: 'Diocesan WordPress-multisite parish site (uploads/sites/22/), read with visit.py (probe url:
     UNREACHABLE, RemoteDisconnected). The bulletin page lists nov8_2026_stmarystar_compressed.pdf, nov1_2026...,
     oct25_2026..., weekly, after an AdPage-June2025.pdf.'
+promoted: 2026-11-12
 bulletin_status: available
 publication_reviews:
 - parish: sacred-hearts-st-stephen-carroll-gardens

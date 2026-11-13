@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-05
   note: 'Mass finder place 261: Ss. Joachim & Anne, 218-26 105th Avenue, Queens Village 11429, pin 40.711755,-73.738562
     (from the roster).'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

@@ -21,6 +21,7 @@ evidence:
 - url: https://parishesonline.com/organization/guardian-angel-church-11235
   seen: 2026-11-06
   note: 'probe po guardian-angel-church-11235: no such organization.'
+promoted: 2026-11-12
 research:
 - method: fetch:check other page-pdfs on the Tilma /bulletins page
   url: https://guardianangel-brooklyn.org/bulletins

@@ -28,6 +28,7 @@ evidence:
   seen: 2026-11-06
   note: 'Diocese parish directory: Our Lady of the Snows, 258-15 80th Avenue, Floral Park, NY 11004, (718)
     347-6070; the deanery directory gives the same in Deanery Q5.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

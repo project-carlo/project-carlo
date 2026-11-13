@@ -26,6 +26,7 @@ evidence:
 - url: https://parishesonline.com/organization/holy-family-st-thomas-aquinas
   seen: 2026-11-06
   note: 'ParishesOnline org: 249 9th Street, Brooklyn, New York, 11215; coordinates 40.67054, -73.988125.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

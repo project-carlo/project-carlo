@@ -29,6 +29,7 @@ evidence:
   note: 'Diocese parish directory: Nativity of the Blessed Virgin Mary – St. Stanislaus Bishop and Martyr,
     101-41 91st Street, Ozone Park, NY 11416, (718) 845-3691, website nativitybvm-ststanislaus.org. The
     deanery list (Q8) gives the same address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

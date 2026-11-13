@@ -22,6 +22,7 @@ evidence:
   note: 'probe po: ''Immaculate Conception Church'', 21-47 29th Street, Astoria, NY 11105, lpi 0018000000QxB6aAAF,
     container 03/4057, weekly issues 4 Oct - 8 Nov 2026; the org''s website field gives www.immacastoria.org
     (the directory and the live site use immacastoria.net).'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

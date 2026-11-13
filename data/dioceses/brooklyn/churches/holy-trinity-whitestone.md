@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-05
   note: 'Diocese parish directory: Holy Trinity, ''14-51 143th Street'', Whitestone, NY 11357; the deanery
     directory gives the same in Deanery Q4.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

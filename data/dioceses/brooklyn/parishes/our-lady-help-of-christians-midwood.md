@@ -26,6 +26,7 @@ evidence:
 revisit: Rerun fetch:check and confirm it picks the 15 November 2026 issue or later (the newest posted
   on 2026-11-12 was older than 8 November).
 revisit_after: 2026-11-17
+promoted: 2026-11-12
 research:
 - method: fetch:check (headed Chrome) on recipe page-pdfs https://olhcbrooklyn.org/bulletins
   url: https://olhcbrooklyn.org/bulletins

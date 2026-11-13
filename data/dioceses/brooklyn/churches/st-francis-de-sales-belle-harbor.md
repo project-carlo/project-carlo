@@ -30,6 +30,7 @@ evidence:
     (deanery list Q10 the same); Mass finder place 6 at 129-16 Rockaway Beach Boulevard, Rockaway Park,
     40.575963,-73.848709. OSM way 285078196 ''Saint Francis De Sales Church'', 129-16 Rockaway Beach Boulevard,
     Belle Harbor.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

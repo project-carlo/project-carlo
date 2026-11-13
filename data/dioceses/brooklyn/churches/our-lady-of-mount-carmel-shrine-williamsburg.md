@@ -33,6 +33,7 @@ evidence:
   note: Mass finder place 451 lists worship sites Annunciation of the Blessed Virgin Mary (North 5th &
     Havemeyer St.) and Our Lady of Mount Carmel - Annunciation of the Blessed Virgin Mary (275 North 8th
     Street).
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

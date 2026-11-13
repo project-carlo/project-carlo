@@ -35,6 +35,7 @@ evidence:
 revisit: Confirm the main church's street number on Whitney Avenue (the parish site's contact page, a
   Mass card or the NYC building record for the corner of Whitney Ave and Ithaca St)
 revisit_after: 2027-02-01
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

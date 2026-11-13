@@ -29,6 +29,7 @@ evidence:
   note: 'Diocese parish directory: Our Lady Queen of Martyrs, 110-06 Queens Blvd., Forest Hills, NY 11375,
     (718) 268-6251, no website; the deanery directory (Q6) lists Our Lady Queen of Martyrs Roman Catholic
     Church at the same address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

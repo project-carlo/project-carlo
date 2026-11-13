@@ -28,6 +28,7 @@ evidence:
   seen: 2026-11-06
   note: 'Diocese parish directory: St. Anastasia, 45-14 245th Street, Douglaston, NY 11362, (718) 631-4454;
     the deanery directory gives the same address in Deanery Q5.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

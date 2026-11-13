@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-05
   note: Mass finder 905 'St. John the Evangelist - St. Rocco' gives the address 216 27th Street but its
     pin (40.660678, -73.992919) is at 250 21st Street.
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

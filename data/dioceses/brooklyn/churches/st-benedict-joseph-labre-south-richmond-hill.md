@@ -24,6 +24,7 @@ evidence:
   seen: 2026-11-05
   quote: 9440 118th St., South Richmond Hill, New York 11419
   note: 'GCatholic: St. Benedict Joseph Labre, Church, 1892, Plus Code 87G8M5VC+4H, phone (718) 849-4048.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

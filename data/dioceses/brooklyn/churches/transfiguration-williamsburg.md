@@ -31,6 +31,7 @@ evidence:
 - url: https://mass.dioceseofbrooklyn.org/places/1091
   seen: 2026-11-05
   note: Mass finder place 1091, Transfiguration Parish, 263 Marcy Avenue, 11211, pin 40.705299, -73.955801.
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

@@ -38,6 +38,7 @@ evidence:
   note: 'Priests'' directory as read by the survey (2026-11-05): Very Rev. Francis T. Shannon, ''Pastor,
     St. Mary Star of the Sea and St. Gertrude, Far Rockaway''; Rev. David P. Bertolotti, Parochial Vicar
     of the same.'
+promoted: 2026-11-12
 research:
 - method: fetch:check with page-pdfs https://saintsmaryandgertrude.org/bulletins
   url: https://saintsmaryandgertrude.org/bulletins

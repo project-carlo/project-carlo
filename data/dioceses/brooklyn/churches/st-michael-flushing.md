@@ -29,6 +29,7 @@ evidence:
   note: 'Diocese parish directory: St. Michael (Queens), 138-65 Barclay Avenue, Flushing, NY 11355; the
     deanery directory gives the same address in Deanery Q4; Mass finder place 1107 gives 138-65 Barclay
     Ave. at 40.758765, -73.82614.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

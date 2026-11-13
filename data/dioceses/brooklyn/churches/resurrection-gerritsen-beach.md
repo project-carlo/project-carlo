@@ -36,6 +36,7 @@ evidence:
   note: 'Diocese parish directory lists Resurrection separately: 2331 Gerritsen Ave., 11229, (718) 743-7234,
     website resurrection-brooklyn.org, which probe url (2026-11-06) finds redirected to a slots spam store
     (SPAM-SQUAT).'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

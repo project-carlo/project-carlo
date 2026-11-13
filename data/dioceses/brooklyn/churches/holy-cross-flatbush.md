@@ -28,6 +28,7 @@ evidence:
   note: 'Diocese parish directory (roster): Holy Cross (Brooklyn), 2530 Church Avenue, Brooklyn NY 11226,
     (718) 469-5900, website holycrossrcchurch.org. Deanery list B7 and Mass finder place 1118 give the
     same address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

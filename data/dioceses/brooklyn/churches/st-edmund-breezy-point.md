@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-06
   note: 'GCatholic 16805: St. Edmund, Clinton Walk, Breezy Point, New York 11697, Plus Code 87G8H35G+MH,
     Blessed Trinity Parish.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

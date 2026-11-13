@@ -29,6 +29,7 @@ evidence:
 - url: https://dioceseofbrooklyn.org/directories/deaneries/
   seen: 2026-11-05
   note: 'Deanery directory (B4): St. Augustine – St. Francis Xavier, 116 Sixth Avenue, Brooklyn 11217.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

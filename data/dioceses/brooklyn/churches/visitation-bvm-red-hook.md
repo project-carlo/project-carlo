@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-05
   note: 'Diocese parish directory: Visitation of the Blessed Virgin Mary, 98 Richards Street, Brooklyn
     11231, (718) 624-1572; the deanery directory (B3) and Mass finder place 903 give the same address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

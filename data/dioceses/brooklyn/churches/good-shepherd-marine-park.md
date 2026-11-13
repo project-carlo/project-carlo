@@ -31,6 +31,7 @@ evidence:
   note: 'Diocese parish directory: Good Shepherd-Resurrection, 1950 Batchelder Street, 11229; deanery
     directory the same in Deanery B11. Mass finder place 1117 (Good Shepherd - Resurrection (Good Shepherd)):
     1950 Batchelder St., pin 40.604715, -73.940027.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

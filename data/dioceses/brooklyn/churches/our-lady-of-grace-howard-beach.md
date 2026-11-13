@@ -34,6 +34,7 @@ evidence:
   seen: 2026-11-05
   note: 'Diocese parish directory: Our Lady of Grace (Queens), 100-05 159th Avenue, Howard Beach, NY 11414,
     website olghb.org; the deanery directory (Q8) and Mass finder 1129 give the same address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

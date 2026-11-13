@@ -24,6 +24,7 @@ evidence:
   quote: November 8, 2026
   note: Tilma /bulletins cards newest first (November 8, November 1, October 25, 2026 ...), each linking
     an LPi repost named YYYYMMDDB.pdf on files.tilmaplatform.com (20261108B.pdf uploaded 2026/11/03).
+promoted: 2026-11-12
 research:
 - method: pnpm fetch:check (parishes_online our-lady-of-mount-carmel-church-11211)
   url: https://parishesonline.com/organization/our-lady-of-mount-carmel-church-11211

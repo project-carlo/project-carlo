@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-06
   note: Tilma bulletins page reposts the LPi issues as BULLETIN.03-4064.MMDDYY.pdf (newest BULLETIN.03-4064.102526.pdf
     on 2026-11-06), a week or more behind the ParishesOnline container.
+promoted: 2026-11-12
 research:
 - method: fetch:check (headed Chrome), parishes_online provider id st-athanasius-church-11204
   url: https://parishesonline.com/organization/st-athanasius-church-11204

@@ -27,6 +27,7 @@ evidence:
   note: 'The parish site''s /bulletin/ page shows the 1 November 2026 issue in a dFlip viewer: the same
     LPi bulletin (same page 1 masthead and schedule) reposted without the LPi footer page (7 pages). Page
     6 lists ''Partnership Events'' held at St. Anselm, which publishes its own bulletin.'
+promoted: 2026-11-12
 bulletin_status: available
 publication_reviews:
 - parish: st-anselm-bay-ridge

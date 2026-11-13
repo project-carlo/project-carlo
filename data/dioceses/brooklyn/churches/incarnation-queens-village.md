@@ -34,6 +34,7 @@ evidence:
   seen: 2026-11-05
   note: 'Mass finder place 1202: ''Incarnation - St. Gerard Majella (Incarnation)'', 89-43 Francis Lewis
     Boulevard, Hollis 11427, pin 40.718751,-73.757409 (from the roster).'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

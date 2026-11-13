@@ -28,6 +28,7 @@ evidence:
   seen: 2026-11-05
   note: 'Diocese parish directory: Ascension, 86-13 55th Ave., Elmhurst, NY 11373, (718) 335-2626, website
     ascensionparishelmhurst.org. The deanery directory lists Church of the Ascension, 86-13 55th Avenue.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

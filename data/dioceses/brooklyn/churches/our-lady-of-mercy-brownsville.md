@@ -33,6 +33,7 @@ evidence:
   note: Mass finder place 795, 'Our Lady of The Presentation - Our Lady of Mercy Parish (Our Lady of Mercy
     Parish)', 680 Mother Gaston Blvd., pin 40.662045, -73.905152 (coordinates and address only, per the
     diocese's rule).
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

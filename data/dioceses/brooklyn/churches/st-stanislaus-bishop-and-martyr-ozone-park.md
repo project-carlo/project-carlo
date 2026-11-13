@@ -31,6 +31,7 @@ evidence:
     - St. Stanislaus Bishop and Martyr), gives this address and labels some times St. Stanislaus Bishop
     & Martyr RC Church; it also shows the parish office at 101-41 91st Street. Used for the address only,
     not the schedule.
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

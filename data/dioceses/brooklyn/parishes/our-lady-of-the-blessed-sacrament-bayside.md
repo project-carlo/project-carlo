@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-06
   note: The parish's Tilma site reposts the LPi files (20261101B.pdf, 20261025B.pdf ... newest first)
     under /system/resources/<token>/; the homepage itself links no bulletin.
+promoted: 2026-11-12
 ---
 
 ## Publisher

@@ -32,6 +32,7 @@ evidence:
   seen: 2026-11-05
   note: Mass finder 381 'Our Lady of Light Parish (St. Catherine of Siena)' gives the street 112-43 198th
     St. (St. Pascal's office) but its pin 40.689992,-73.763308 is on Riverton Street at St. Catherine.
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

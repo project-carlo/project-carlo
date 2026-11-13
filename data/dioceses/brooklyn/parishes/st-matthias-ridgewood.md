@@ -26,6 +26,7 @@ evidence:
 - url: https://saintmatthiaschurch.com/
   seen: 2026-11-05
   note: 'probe url: the parish site embeds ParishesOnline (po-org:st-matthias-church-11385).'
+promoted: 2026-11-12
 ---
 
 ## Publisher

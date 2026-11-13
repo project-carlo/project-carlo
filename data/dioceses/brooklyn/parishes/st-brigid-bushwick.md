@@ -19,6 +19,7 @@ evidence:
   seen: 2026-11-07
   note: 'Tilma bulletins page, newest first: 11.08.2026 (token decodes to upload 2026/11/05), 11.01.2026
     (10/29), 10.25.2026 (10/22), 10.18.2026 (10/20): weekly.'
+promoted: 2026-11-12
 research:
 - method: fetch:check (headed Chrome) on recipe page-pdfs https://stbrigidrcc.org/bulletins
   url: https://stbrigidrcc.org/bulletins

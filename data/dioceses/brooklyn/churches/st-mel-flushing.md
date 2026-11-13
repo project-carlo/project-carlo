@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-05
   note: 'Diocese parish directory: St. Mel, 26-15 154 Street, Flushing, NY 11354; the deanery directory
     lists ''Church of St. Mel'' at the same address in Deanery Q4.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

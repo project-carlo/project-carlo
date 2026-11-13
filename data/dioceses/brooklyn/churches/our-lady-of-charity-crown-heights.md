@@ -32,6 +32,7 @@ evidence:
   quote: Merged with St. Matthew, Crown Heights in 2011
   note: 'Archives List of Parishes: ''Our Lady of Charity, Weeksville (1908). Started as an Italian parish.
     Merged with St. Matthew, Crown Heights in 2011.'''
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

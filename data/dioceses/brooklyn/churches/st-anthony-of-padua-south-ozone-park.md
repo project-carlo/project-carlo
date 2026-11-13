@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-06
   note: 'GCatholic 16679: St. Anthony of Padua, 133-25 128th St., South Ozone Park, New York 11420, Plus
     Code 87G8M59Q+J6, built 1937, languages English and Spanish.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

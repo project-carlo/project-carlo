@@ -22,6 +22,7 @@ evidence:
   note: Tilma bulletins page, cards newest first (Nov. 1, Oct. 25, Oct. 18, Oct. 11 2026), each a files.tilmaplatform.com
     PDF named 'Parish of Incarnation St. Gerard Majella_Bulletin_MM.DD.YY.pdf'; one card links /bulletins/null
     (an issue not yet uploaded).
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

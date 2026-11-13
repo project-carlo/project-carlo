@@ -40,6 +40,7 @@ evidence:
   seen: 2026-11-07
   note: OSM way 250317333, 'Church of Saint John the Baptist, 333, Hart Street', place_of_worship, centroid
     40.6950288, -73.9361832.
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

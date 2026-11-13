@@ -23,6 +23,7 @@ evidence:
   seen: 2026-11-06
   note: 'probe po: ParishesOnline org ''Our Lady of Perpetual Help Church'' (lpi 0018000000QxB9wAAF, 11150
     115th St) has no publications, so it is not a publication id for this row.'
+promoted: 2026-11-12
 research:
 - method: fetch:check (headed Chrome) on recipe page-pdfs https://olphchurch.net/bulletin/
   url: https://olphchurch.net/bulletin/

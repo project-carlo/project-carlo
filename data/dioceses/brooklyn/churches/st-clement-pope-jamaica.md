@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-06
   note: 'Diocese parish directory: St. Clement Pope, 141-11 123rd Avenue, Jamaica, NY 11436; the deanery
     directory gives the same in Deanery Q9, and Mass finder place 4 the same address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

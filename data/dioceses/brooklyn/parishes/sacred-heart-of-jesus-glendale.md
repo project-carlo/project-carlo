@@ -29,6 +29,7 @@ evidence:
   seen: 2026-11-06
   quote: Weekly Bulletin November 1, 2026
   note: WordPress page with dFlip flipbooks, newest first, each sourcing an LPi-named file such as wp-content/uploads/2026/10/20261101B.pdf.
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

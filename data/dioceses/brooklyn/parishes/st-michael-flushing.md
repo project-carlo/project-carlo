@@ -18,6 +18,7 @@ evidence:
   note: Tilma bulletins page on the parish's own domain, newest first (November 01, 2026; October 25,
     2026; ...), one card a week, each linking /system/resources/<token>/<YYYY-MM-DD>.pdf. One trilingual
     issue a week; no separate language editions are listed.
+promoted: 2026-11-12
 research:
 - method: fetch:check with recipe 'page-pdfs https://stmichaelsflushing.org/bulletins'; picked 2026-11-01.pdf
     (1 November 2026, freshness fresh) on Thursday 5 November, before the 8 November card was posted

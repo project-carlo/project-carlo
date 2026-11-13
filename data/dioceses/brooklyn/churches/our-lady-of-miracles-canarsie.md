@@ -33,6 +33,7 @@ evidence:
   note: 'Diocese parish directory: Our Lady of Miracles, 757 East 86th Street, Brooklyn, NY 11236, (718)
     531-5490, website olmrcchurch.org. The deanery list (B7) and Mass finder 796 give the same street
     address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

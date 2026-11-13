@@ -25,6 +25,7 @@ evidence:
     October 25th, 18th, 11th … August 30th. The same site answers at sanandresavelino.org (the diocese
     directory''s URL). The 1 November file, downloaded through the browser, is the same masthead and Mass
     schedule as the LPi issue.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

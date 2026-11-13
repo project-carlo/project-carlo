@@ -27,6 +27,7 @@ evidence:
 - url: http://stgerardshrine.org
   seen: 2026-11-06
   note: 'probe url: DEAD-DNS (domain does not resolve, with or without www.).'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

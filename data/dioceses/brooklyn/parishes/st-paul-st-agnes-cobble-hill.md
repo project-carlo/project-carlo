@@ -27,6 +27,7 @@ evidence:
 revisit: Check /bulletins for an issue after 4 October 2026; if none is posted by mid-December, consider
   no_bulletin per the playbook's stale-Tilma rule.
 revisit_after: 2026-11-20
+promoted: 2026-11-12
 research:
 - method: fetch:check page-pdfs on the Tilma /bulletins page
   url: https://stpaulstagnes-brooklyn.org/bulletins

@@ -28,6 +28,7 @@ evidence:
   note: 'Diocese parish directory: Holy Spirit, 1712 45th Street, Brooklyn, NY 11204, (718) 436-5565,
     website holyspiritbrooklyn.org. The deanery directory (B8) lists Holy Spirit R.C Church, 1712 45th
     Street.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

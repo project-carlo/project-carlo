@@ -37,6 +37,7 @@ evidence:
     St., Woodside, NY 11377'', and is pinned at 40.737011, -73.921116 (St. Teresa, Woodside). Its times
     (Saturday 5:00pm, Sunday Spanish Masses) are not this church''s. massfinder:1165 is not linked here:
     under the settled pin rule it belongs to the Woodside church.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

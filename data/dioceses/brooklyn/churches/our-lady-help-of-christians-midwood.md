@@ -28,6 +28,7 @@ evidence:
   seen: 2026-11-05
   note: 'Diocese parish directory: Our Lady Help of Christians, 1315 East 28th Street, Brooklyn, NY 11210,
     (718) 338-5242. The deanery directory (B11) and Mass finder place 927 give the same address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

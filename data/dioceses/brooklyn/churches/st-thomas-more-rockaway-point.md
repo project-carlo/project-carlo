@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-06
   note: 'Diocese directory: Blessed Trinity, 204-25 Rockaway Point Blvd., Rockaway Point, NY 11697 (deanery
     list Q10 the same); Mass finder place 1113 ''Blessed Trinity'' at this address, 40.560545,-73.914246.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

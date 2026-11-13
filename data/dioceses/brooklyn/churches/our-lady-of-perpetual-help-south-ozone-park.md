@@ -28,6 +28,7 @@ evidence:
   note: The diocese's parish directory (read 2026-11-05) gives Our Lady of Perpetual Help, 111-50 115th
     Street, South Ozone Park 11420. The deanery list gives the same address twice, under Deanery Q8 and
     Deanery B8; the B8 entry is a duplicate of the same parish.
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

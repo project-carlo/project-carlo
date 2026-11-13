@@ -28,6 +28,7 @@ evidence:
     0018000000Qbz17AAB, container 04/0458, latest issue 2026-11-08.'
 revisit: Check whether Holy Family and American Martyrs have moved to one bulletin (masthead naming both)
 revisit_after: 2027-02-01
+promoted: 2026-11-12
 publication_reviews:
 - parish: american-martyrs-bayside
   decision: separate

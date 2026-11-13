@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-06
   note: 'Diocese parish directory: Our Lady of the Blessed Sacrament, 34-24 203rd Street, Bayside, NY
     11361; the deanery directory gives the same in Deanery Q5.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

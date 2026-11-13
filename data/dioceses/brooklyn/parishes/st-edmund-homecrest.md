@@ -22,6 +22,7 @@ evidence:
   note: Tilma parish site; cards November 08, 2026, November 01, 2026, October 18, 2026, October 11, 2026
     ... linking /system/resources/<token>/2026-11-08.pdf etc. (the 25 October issue is missing here but
     on the JPP listing).
+promoted: 2026-11-12
 bulletin_status: available
 publication_reviews:
 - parish: st-brendan-midwood

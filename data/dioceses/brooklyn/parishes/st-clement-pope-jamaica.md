@@ -19,6 +19,7 @@ evidence:
   note: Homepage (read with visit.py; probe url gets RemoteDisconnected) links the bulletin PDFs from
     /wp-content/uploads/, newest BulletinCover-and-insertNov12026.pdf, then Bulletin10252026.pdf, Bulletin-10112026.pdf,
     Bulletin-07052026.pdf; file names vary week to week.
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

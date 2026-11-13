@@ -24,6 +24,7 @@ evidence:
   note: Squarespace bulletin page (linked from the homepage) with year pages /bulletin-2020 to /bulletin-2026;
     it reposts the LPi issues as /s/03-04068MMDDYY.pdf (newest posted 03-04068102526.pdf, the 25 October
     issue).
+promoted: 2026-11-12
 research:
 - method: fetch:check on provider parishes_online, org st-mary-gate-of-heaven-church
   url: https://parishesonline.com/organization/st-mary-gate-of-heaven-church

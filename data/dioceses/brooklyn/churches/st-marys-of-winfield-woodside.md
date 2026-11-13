@@ -29,6 +29,7 @@ evidence:
   note: 'Diocese parish directory and deanery directory (Q2): ''St. Mary’s of Winfield (Blessed Virgin
     Mary, Help of Christians)'', 70-31 48th Avenue, Woodside 11377; Mass finder place 1114, same name
     and address (from the rosters).'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

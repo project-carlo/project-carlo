@@ -23,6 +23,7 @@ evidence:
   note: 'Tilma bulletins page, server-rendered, newest first: November 08, 2026 (November 8, 2026.pdf
     under /system/resources/), November 01, October 25, October 18, October 11, October 04, weekly back
     to August.'
+promoted: 2026-11-12
 research:
 - method: fetch:check (headed Chrome) on recipe page-pdfs https://stephremparish-brooklyn.org/bulletins
   url: https://stephremparish-brooklyn.org/bulletins

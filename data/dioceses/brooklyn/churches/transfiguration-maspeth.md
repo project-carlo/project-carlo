@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-05
   quote: 64-14 Clinton Ave, Maspeth, New York 11378
   note: 'GCatholic: Transfiguration, Church, 1908, Plus Code 87G8P3FX+HF, website transtans.org.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

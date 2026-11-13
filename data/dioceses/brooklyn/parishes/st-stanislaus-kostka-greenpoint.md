@@ -22,6 +22,7 @@ evidence:
   note: 'Diocesan WordPress multisite (uploads/sites/18; probe url gets RemoteDisconnected, read with
     visit.py). The page links about 200 PDFs named <mon><d>_<yyyy>_ststan_compressed.pdf, newest nov82026_ststan_compressed-1.pdf:
     reposts of the LPi issues.'
+promoted: 2026-11-12
 research:
 - method: fetch:check parishes_online org st-stanislaus-kostka-church-11222
   url: https://parishesonline.com/organization/st-stanislaus-kostka-church-11222

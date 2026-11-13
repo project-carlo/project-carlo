@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-05
   note: 'Diocese parish directory: St. Fortunata, 2609 Linden Blvd., Brooklyn, NY 11208, (718) 647-2632,
     website stfortunata-brooklyn.org. The B6 deanery list and Mass finder 786 give the same street.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-06
   note: 'Diocese parish directory: St. Gregory the Great, 242-20 88th Avenue, Bellerose, NY 11426, (718)
     347-3707; the deanery directory gives the same in Deanery Q5.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

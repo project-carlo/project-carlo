@@ -33,6 +33,7 @@ evidence:
   note: 'Diocese parish directory: Sacred Hearts & St. Stephen, 108 Carroll Street, Brooklyn 11231, (718)
     596-7750, sacredhearts-ststephen.com; the deanery directory (B3) gives the same address; Mass finder
     place 1178 gives 108 Carroll St.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

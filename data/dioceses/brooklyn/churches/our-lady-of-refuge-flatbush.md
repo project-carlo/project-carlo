@@ -32,6 +32,7 @@ evidence:
   seen: 2026-11-06
   note: Mass finder place 1137 'Our Lady of Refuge', 2020 Foster Ave., pin 40.636462, -73.957648; the
     deanery list (B7) gives 2020 Foster Avenue too.
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

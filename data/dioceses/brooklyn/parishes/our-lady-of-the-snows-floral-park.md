@@ -23,6 +23,7 @@ revisit: Check fetch still picks the weekly bulletin and not a dated flyer (e.g.
   the mixed /bulletin/ page; bulletin file names vary (11-1-26-1.pdf vs October-25-2026.pdf), so no filename
   filter is pinned
 revisit_after: 2026-12-01
+promoted: 2026-11-12
 ---
 
 ## Publisher

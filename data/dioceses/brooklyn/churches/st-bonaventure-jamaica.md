@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-06
   note: 'Diocese parish directory: St. Bonaventure – St. Benedict the Moor, 114-58 170th Street, Jamaica,
     NY 11434; the deanery directory gives the same address in Deanery Q9.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

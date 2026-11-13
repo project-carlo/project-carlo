@@ -22,6 +22,7 @@ evidence:
   note: 'Tilma bulletins page, server-rendered, newest first: ''English - November 8, 2026'' (HolyFam11-8.pdf),
     November 1 (''Bulletin 11-1-2026.pdf'', the same two-church masthead), October 25, ''Bulletin October
     18, 2026''. Spanish editions were posted beside the English ones until 30 August 2026.'
+promoted: 2026-11-12
 research:
 - method: fetch:check (headed Chrome) on recipe page-pdfs https://holyfamilystlaurence-brooklyn.org/bulletins
   url: https://holyfamilystlaurence-brooklyn.org/bulletins

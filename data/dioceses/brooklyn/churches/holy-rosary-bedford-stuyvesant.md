@@ -29,6 +29,7 @@ evidence:
   note: GCatholic 16743, Plus Code 87G8M3JC+52, grouped under 'St. Martin of Tours Parish' (GCatholic's
     grouping; the bulletin names St. Martin de Porres). Phone +1 (718) 493-8001, founded 1889, website
     http://stmartindeporresparish.org.
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

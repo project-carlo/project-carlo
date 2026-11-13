@@ -35,6 +35,7 @@ evidence:
     2 Floral Parkway, Floral Park NY 11001'', ''St. Peter Claver, 21 Claver Pl., Brooklyn, NY 11238''
     and ''St. Martin de Porres, 583 Throop Ave. Brooklyn, NY 11216''; pinned 40.72305, -73.70243 (Floral
     Park). Not used for Mass times (settled rule).'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

@@ -24,6 +24,7 @@ evidence:
   note: 'Mass Times page: Saint Francis Xavier Church Saturday Vigil 5:00pm, Sunday 9:30am at ''225 6th
     Avenue - 6th Avenue and Carroll Street''; St. Augustine Church Sunday 12:00pm at ''116 6th Avenue
     - 6th Avenue and Sterling Place''; weekdays Monday-Thursday 9:00am at St. Francis Xavier.'
+promoted: 2026-11-12
 research:
 - method: fetch:check page-pdfs https://sasfx.org/bulletins
   url: https://sasfx.org/bulletins

@@ -29,6 +29,7 @@ evidence:
   seen: 2026-11-06
   note: 'probe po: ''St. Francis of Assisi Church'', 2117 45th St, lpi 0018000000QxB9AAAV, no issues (''this
     organization does not publish a bulletin here now''): an empty org, not a publication id.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

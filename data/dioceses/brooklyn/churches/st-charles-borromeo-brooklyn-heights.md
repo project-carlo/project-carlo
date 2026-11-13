@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-05
   note: 'Diocese parish directory and deanery list (B3): St. Charles Borromeo, 31 Sidney Pl., Brooklyn
     11201, (718) 625-1177. Mass finder 1190 gives 31 Sidney Pl. at 40.69199, -73.994321.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

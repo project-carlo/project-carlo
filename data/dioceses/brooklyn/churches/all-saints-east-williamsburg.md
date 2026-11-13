@@ -39,6 +39,7 @@ evidence:
   note: '25 October 2026 bulletin, page 1: Sunday 9:00 am English Mass, 11:30 am Misa en Español; weekday
     Masses in the chapel (Mon, Wed, Thu) and in the church (Fri, Tue 7:30 pm); Saturday 8:00 pm (Neocatechumenal
     Way).'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

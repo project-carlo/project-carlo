@@ -22,6 +22,7 @@ evidence:
   note: 'Diocesan WordPress multisite (sites/16) bulletin page, read with parish-site-access visit.py
     (probe url gets RemoteDisconnected): links nov8_2026_stthomas_compressed.pdf, nov1, oct25, oct18,
     oct11 and oct4 2026 issues.'
+promoted: 2026-11-12
 research:
 - method: 'Reconcile: headed fetch:check of every Brooklyn row with recipe ''page-pdfs https://stthomasaquinasbrooklyn.com/important-information/bulletin/''
     picked nov16_2025_stthomas_compressed.pdf (''current''): the page links last year''s issue with the

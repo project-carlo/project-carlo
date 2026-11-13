@@ -23,6 +23,7 @@ evidence:
   seen: 2026-11-06
   note: 'WordPress bulletins page lists the PDFs newest first: HOLYSPIRIT.11-08-26-year_A_DB.pdf, 11-01-26,
     10-25-26, 10-18-26 ... back through June 2026, all under wp-content/uploads/.'
+promoted: 2026-11-12
 research:
 - method: fetch:check (headed Chrome) on recipe page-pdfs https://www.holyspiritbrooklyn.org/bulletins/
   url: https://www.holyspiritbrooklyn.org/bulletins/

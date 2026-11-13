@@ -26,6 +26,7 @@ evidence:
 - url: https://stfidelischurch.org/
   seen: 2026-11-05
   note: 'probe url: the parish site (the diocese directory''s link) embeds ParishesOnline (po-org:st-fidelis-church).'
+promoted: 2026-11-12
 publication_reviews:
 - parish: holy-trinity-whitestone
   decision: separate

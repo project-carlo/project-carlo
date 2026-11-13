@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-06
   note: Tilma bulletins page reposts the LPi issues as '03-00439.0011-008-2026 November 8th .pdf' and
     so on, newest first (November 08, 2026 card at the top).
+promoted: 2026-11-12
 research:
 - method: fetch:check (headed Chrome) on parishes_online shrine-church-of-st-jude
   url: https://parishesonline.com/organization/shrine-church-of-st-jude

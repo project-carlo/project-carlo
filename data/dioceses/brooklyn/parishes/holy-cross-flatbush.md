@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-06
   note: Parish site's Weekly Bulletin page links the church-bulletin.org/bulletin/holy-cross-roman-catholic-church-brooklyn-ny-11226/YYYY-MM-DD.pdf
     issues, 2026-01-04 to 2026-11-01 when read.
+promoted: 2026-11-12
 research:
 - method: fetch:check (headed Chrome) on recipe page-pdfs https://church-bulletin.org/487
   url: https://church-bulletin.org/487

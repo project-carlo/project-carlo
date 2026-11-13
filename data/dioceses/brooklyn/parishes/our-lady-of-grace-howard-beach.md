@@ -29,6 +29,7 @@ evidence:
   quote: 'Sunday: 8:30 AM, 10:30 AM & 12:00 PM'
   note: 'Parish site Mass page: ''Saturday: 4:00 PM (Vigil Mass)''; weekdays Monday, Tuesday & Friday
     8:30 AM, Wednesday & Thursday 12:00 PM, Saturday Morning 8:30 AM; one church.'
+promoted: 2026-11-12
 research:
 - method: probe po on the org slug; probe pdf and render.py on the 8 November 2026 issue
   url: https://parishesonline.com/organization/our-lady-of-grace-church-11414

@@ -25,6 +25,7 @@ evidence:
     newest 20261025.pdf; that file is the 25 Oct LPi issue with the LPi ad page cut (3 pages; same page-1
     text as container 03/4074/20261025B.pdf, which has 4 pages and the 03-4074 footer). The directory's
     old domain cyrilandmethodius.org redirects here.
+promoted: 2026-11-12
 research:
 - method: fetch:check parishes_online org ss-cyril-and-methodius-church-11222
   url: https://parishesonline.com/organization/ss-cyril-and-methodius-church-11222

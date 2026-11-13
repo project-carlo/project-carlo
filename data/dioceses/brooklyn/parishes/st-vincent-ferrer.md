@@ -23,6 +23,7 @@ evidence:
   note: 'Diocesan WordPress multisite (sites/94) bulletin page, read with parish-site-access visit.py
     (probe url gets RemoteDisconnected): links nov8_2026_stvincent_compressed.pdf, then nov1, oct25, oct18,
     oct11, oct4, sept27, sept20 2026 issues.'
+promoted: 2026-11-12
 research:
 - method: fetch:check (headed Chrome) on recipe page-pdfs https://saintvincentferrer.org/bulletin/
   url: https://saintvincentferrer.org/bulletin/

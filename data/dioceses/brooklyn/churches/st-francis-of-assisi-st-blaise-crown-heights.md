@@ -32,6 +32,7 @@ evidence:
   seen: 2026-11-05
   note: 'Mass finder: ''St. Francis of Assisi - St. Blaise'', 319 Maple Street, 11225 (pin 40.661047,
     -73.950045).'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

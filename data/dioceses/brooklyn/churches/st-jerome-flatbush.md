@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-06
   note: 'Diocese parish directory (roster): St. Jerome, 2900 Newkirk Avenue, Brooklyn NY 11226, (718)
     462-0223, website stjeromercchurch.org. Deanery list B7 and Mass finder place 1142 give the same address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

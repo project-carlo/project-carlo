@@ -29,6 +29,7 @@ evidence:
   quote: Merged with St. Matthew, Crown Heights in 2011
   note: 'Archives List of Parishes: Our Lady of Charity, Weeksville (1908) merged with St. Matthew 2011;
     St. Gregory the Great, Crown Heights (1906) ''Merged with St. Matthew, 2011''.'
+promoted: 2026-11-12
 research:
 - method: fetch:check (headed) with page-pdfs https://stmatthew-brooklyn.org/bulletins
   url: https://stmatthew-brooklyn.org/bulletins

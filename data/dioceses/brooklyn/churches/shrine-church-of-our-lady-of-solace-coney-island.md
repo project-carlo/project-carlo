@@ -28,6 +28,7 @@ evidence:
   seen: 2026-11-05
   note: 'GCatholic: Our Lady of Solace (Shrine), 2866 W 17th St., Brooklyn 11224, Plus Code 87G8H2G8+P2;
     Mass finder 1138 gives 2866 W. 17 St. (40.577254, -73.985073).'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-06
   note: WordPress bulletin page with a dFlip flipbook whose inline script source is the fixed file wp-content/uploads/2022/04/ollQnsVil11-1.pdf,
     replaced each week (it held the 1 November 2026 issue on 2026-11-06).
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

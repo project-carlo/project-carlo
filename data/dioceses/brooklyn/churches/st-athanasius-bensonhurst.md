@@ -29,6 +29,7 @@ evidence:
   note: 'Mass finder place 759 ''St. Athanasius - St. Dominic'' lists two worship sites: St. Dominic Church,
     2001 Bay Ridge Parkway, and St. Athanasius - St. Dominic, 2154 61st Street; its pin (40.616472, -73.97998)
     is at St. Athanasius, so the roster entry is linked here.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

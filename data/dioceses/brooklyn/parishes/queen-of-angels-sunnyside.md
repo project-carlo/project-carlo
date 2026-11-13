@@ -28,6 +28,7 @@ evidence:
   seen: 2026-11-06
   quote: 'Sunday: 9am, 10:30am (Spanish), 12pm'
   note: Saturday Vigil 5pm; Sunday 9am, 10:30am (Spanish), 12pm; Monday-Friday 9am.
+promoted: 2026-11-12
 research:
 - method: fetch:check page-pdfs https://queenofangelsnyc.org/bulletins
   url: https://queenofangelsnyc.org/bulletins

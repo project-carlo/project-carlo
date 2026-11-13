@@ -30,6 +30,7 @@ evidence:
 - url: https://mass.dioceseofbrooklyn.org/places/1131
   seen: 2026-11-05
   note: 'Mass finder place 1131: Our Lady of Hope, 61-27 71st St., pin 40.720602, -73.886413.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

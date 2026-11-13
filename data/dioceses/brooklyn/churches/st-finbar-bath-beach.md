@@ -30,6 +30,7 @@ evidence:
   note: 'Diocese parish directory: St. Finbar, 138 Bay 20th Street, Brooklyn, NY 11214, (718) 236-3312,
     website stfinbarbrooklyn.org. The deanery directory (Deanery B10) lists St. Finbar Roman Catholic
     Church, 138 Bay 20th Street.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

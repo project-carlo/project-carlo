@@ -27,6 +27,7 @@ evidence:
   note: Tilma bulletins page; cards Nov 01, Oct 25, Oct 18, Oct 11, Oct 04 2026, each linking the JPPC
     issue as 4043-Visitation BVM <MM-DD-YYYY>.pdf.pdf. On 2026-11-06 it did not yet have the 8 November
     issue that church-bulletin.org had.
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

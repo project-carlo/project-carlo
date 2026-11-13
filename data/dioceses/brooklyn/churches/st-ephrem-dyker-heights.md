@@ -27,6 +27,7 @@ evidence:
   note: 'Diocese parish directory: St. Ephrem, 929 Bay Ridge Pkwy., Brooklyn, NY 11228, (718) 833-1010,
     website stephremparish-brooklyn.org. The deanery directory (B9) lists St. Ephrem Parish, 929 Bay Ridge
     Pkwy.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

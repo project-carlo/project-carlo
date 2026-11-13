@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-05
   note: 'Diocese parish directory: St. Augustine – St. Francis Xavier, 225 6th Avenue, Brooklyn 11215
     (the parish address); Mass finder 181 ''(Saint Francis Xavier Parish)'', 225 6th Ave. (40.67462, -73.978243).'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

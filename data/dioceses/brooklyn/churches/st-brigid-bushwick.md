@@ -37,6 +37,7 @@ evidence:
   note: '8 November 2026 bulletin, page 1: Saturday 5:00pm and 7:00pm, Sunday 7:30am, 9:00am (and 9:00am
     Español in the lower church), 11:00am and 1:00pm, daily 8:45am, under the masthead address 409 Linden
     Street.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

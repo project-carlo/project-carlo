@@ -34,6 +34,7 @@ evidence:
   seen: 2026-11-06
   note: 'Resurrection-Ascension Parish site (403 to probe url; read with parish-site-access visit.py):
     eCatholic site 24728, bulletins at /bulletins.'
+promoted: 2026-11-12
 research:
 - method: fetch:check (headed Chrome), ecatholic from https://www.rachurch.net/
   url: https://www.rachurch.net/bulletins

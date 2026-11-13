@@ -27,6 +27,7 @@ evidence:
   note: Mass finder place 932 'St. Mary - Star of the Sea - St. Gertrude (St. Gertrude's Church)', 336
     Beach 38th St., Far Rockaway, NY 11691, pinned 40.595374,-73.770269 (used for coordinates only, per
     the diocese's rule).
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

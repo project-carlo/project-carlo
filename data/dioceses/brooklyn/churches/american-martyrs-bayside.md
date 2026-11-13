@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-05
   note: 'Diocese parish directory: American Martyrs, 79-43 Bell Blvd., Bayside, NY 11364; the deanery
     directory gives the same in Deanery Q5.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

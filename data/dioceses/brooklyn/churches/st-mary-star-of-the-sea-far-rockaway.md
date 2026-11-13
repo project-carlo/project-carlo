@@ -32,6 +32,7 @@ evidence:
   seen: 2026-11-06
   note: 'Diocese directory: St. Mary Star of the Sea and St. Gertrude, 1920 New Haven Avenue, Far Rockaway,
     NY 11691, (718) 327-1133; deanery list Q10 the same address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

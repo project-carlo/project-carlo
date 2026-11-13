@@ -28,6 +28,7 @@ evidence:
   note: 'Diocese parish directory: St. Catharine of Alexandria, 1119 41st Street, Brooklyn, NY 11218,
     (718) 436-5917, website stcatharineofalexandria-brooklyn.org. The deanery directory (B8) lists St.
     Catharine of Alexandria Church, 1119 41st Street.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

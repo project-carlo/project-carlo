@@ -23,6 +23,7 @@ evidence:
   seen: 2026-11-06
   note: 'Tilma bulletins page, ''<Month DD, YYYY> / Download Bulletin'' cards newest first: November 08,
     2026, November 01, October 25, 18, 11, 04, September 27 ... PDFs under holycross-queens.org/system/resources/<token>/.'
+promoted: 2026-11-12
 research:
 - method: fetch:check (headed Chrome) on recipe page-pdfs https://holycross-queens.org/bulletins
   url: https://holycross-queens.org/bulletins

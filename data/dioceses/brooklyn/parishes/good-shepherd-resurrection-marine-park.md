@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-06
   note: 'probe po: org Good Shepherd Church, 1950 Batchelder St, Brooklyn, New York, 11229-3710, website
     goodshepherd-resurrection.org, lpi 0018000000QxB9JAAV, container 03/4056, weekly issues through 2026-11-08.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

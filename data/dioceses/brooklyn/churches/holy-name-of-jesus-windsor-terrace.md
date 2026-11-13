@@ -26,6 +26,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-02/16612
   seen: 2026-11-05
   note: 'GCatholic: Holy Name of Jesus, 245 Prospect Park W, Brooklyn 11215, Plus Code 87G8M259+HC.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

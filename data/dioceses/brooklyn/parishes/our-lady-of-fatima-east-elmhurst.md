@@ -16,6 +16,7 @@ evidence:
   seen: 2026-11-05
   note: 'Tilma bulletins page, newest first: olFatimaEElm11-1-2026.pdf, olFatimaEElm10-25-26.pdf, olFatimaEElm10-18-26.pdf,
     a weekly series.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

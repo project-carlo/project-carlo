@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-06
   note: WordPress parish site; probe url lists bulletin links https://www.jppc.net/onlinebulletins/407template.pdf
     and /bulletin-archives/.
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

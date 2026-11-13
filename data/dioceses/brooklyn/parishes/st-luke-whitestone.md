@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-05
   note: 'Bulletin Archive: weekly PDFs named MMDDYY.pdf under resources/<year>-bulletins/, laid out by
     year in a table that is not newest first (2024-2026).'
+promoted: 2026-11-12
 research:
 - method: fetch:check with recipe 'page-pdfs https://www.stlukewhitestone.org/ filename=[0-9][0-9][0-9][0-9][0-9][0-9].pdf';
     picked 110126.pdf (1 November 2026) on Thursday 5 November, before the 8 November issue was posted;

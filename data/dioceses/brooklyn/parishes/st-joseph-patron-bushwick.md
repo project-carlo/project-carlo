@@ -34,6 +34,7 @@ evidence:
     The parish site stjosephpatronchurch.org was found by a Yahoo search.
 revisit: Recheck /api/bulletins for an issue after 11 October 2026 and rerun fetch:check.
 revisit_after: 2026-11-21
+promoted: 2026-11-12
 research:
 - method: fetch:check (headed Chrome) on recipe page-pdfs https://www.stjosephpatronchurch.org/bulletins
   url: https://www.stjosephpatronchurch.org/bulletins

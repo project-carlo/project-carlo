@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-05
   note: 'Diocese parish directory: St. Luke, 16-34 Clintonville Street, Whitestone, NY 11357; the deanery
     directory gives the same in Deanery Q4.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

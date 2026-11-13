@@ -28,6 +28,7 @@ evidence:
   note: 'Diocese parish directory: Sacred Heart of Jesus (Cambria Heights), 115-58 222nd Street, Cambria
     Heights, NY 11411, (718) 528-0577. The deanery list (Q9) and Mass finder 1175 give the same street
     address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

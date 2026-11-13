@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-06
   note: 'probe po on lpi 0018000000Qc08OAAR (embedded on www.adalbertchurch.org): org st-adalbert-roman-catholic-church,
     container 03/0924, 52-29 83rd St, Elmhurst; weekly issues 2026-10-04 through 2026-11-08.'
+promoted: 2026-11-12
 research:
 - method: fetch:check (headed Chrome) by org slug st-adalbert-roman-catholic-church
   url: https://parishesonline.com/organization/st-adalbert-roman-catholic-church

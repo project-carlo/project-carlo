@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-06
   note: 'Tilma bulletins page, server-rendered, newest first: a card linking /bulletins/null (next issue
     not yet posted), then ''Bulletin for Sunday, Nov 1, 2026'' (26-11-1.pdf), Oct 25, Oct 18, Oct 11.'
+promoted: 2026-11-12
 research:
 - method: fetch:check (headed Chrome) on recipe page-pdfs https://ascensionparishelmhurst.org/bulletins
   url: https://ascensionparishelmhurst.org/bulletins

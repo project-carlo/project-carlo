@@ -26,6 +26,7 @@ evidence:
   note: 'Parish site''s bulletin page (WordPress, dFlip flipbook, titled ''Parish Bulletin – November
     1st, 2026'') shows the LPi file ss-20261101B_s.pdf, whose footer reads ''St. Sebastian Church | 03-4071'':
     a repost of the container issue.'
+promoted: 2026-11-12
 research:
 - method: probe po st-sebastian-church-11377; probe container 03/4071
   url: https://parishesonline.com/organization/st-sebastian-church-11377

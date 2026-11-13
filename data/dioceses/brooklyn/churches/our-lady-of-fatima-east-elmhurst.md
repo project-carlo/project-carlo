@@ -28,6 +28,7 @@ evidence:
   seen: 2026-11-05
   note: 'Diocese parish directory: Our Lady of Fatima, 25-02 80th Street, East Elmhurst, NY 11370; the
     deanery directory lists Our Lady of Fatima Church at the same address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

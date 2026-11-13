@@ -18,6 +18,7 @@ evidence:
   note: Tilma site (links tilmaplatform.com, saintgregorythegreat.tilmaplatform.com). The bulletins page
     lists PDFs newest first under /system/resources/<token>/, Greg11-1.pdf first, then Greg10-25.pdf,
     Greg10-18.pdf ... (weekly).
+promoted: 2026-11-12
 ---
 
 ## Publisher

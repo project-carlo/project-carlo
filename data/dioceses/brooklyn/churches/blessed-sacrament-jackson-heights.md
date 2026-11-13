@@ -29,6 +29,7 @@ evidence:
   seen: 2026-11-05
   note: 'Diocese parish directory: Blessed Sacrament, 34-43 93rd Street, Jackson Heights, NY 11372; the
     deanery directory lists Blessed Sacrament Church at the same address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

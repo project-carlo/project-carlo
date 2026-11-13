@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-05
   note: 'probe url: Tilma-hosted parish site (verdict ok); links /bulletins and the 8 Nov, 1 Nov and 25
     Oct 2026 bulletin PDFs on files.tilmaplatform.com.'
+promoted: 2026-11-12
 ---
 
 ## Publisher

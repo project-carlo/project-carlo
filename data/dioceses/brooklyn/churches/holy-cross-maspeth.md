@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-05
   note: 'Diocese parish directory: Holy Cross (Queens), 61-21 56th Road, Maspeth, NY 11378, (718) 894-1387,
     website holycross-queens.org. The deanery list (Q11) and Mass finder place 754 give the same address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

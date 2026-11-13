@@ -30,6 +30,7 @@ evidence:
   note: 'Diocese parish directory: Mary Queen of Heaven – Saint Bernard Clairvaux, 2055 East 69th Street,
     11234, (718) 763-5533. Deanery directory: St. Bernard Clairvaux Church, same address. Mass finder
     place 1187: St. Bernard Clairvaux, 2055 E. 69 St., pin 40.619717, -73.909281.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

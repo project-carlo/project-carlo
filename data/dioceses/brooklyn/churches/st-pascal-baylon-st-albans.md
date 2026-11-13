@@ -24,6 +24,7 @@ evidence:
   quote: 112-43 198th St., St. Albans, New York 11412
   note: GCatholic 16637 St. Pascal Baylon, Church, group Our Lady of Light Parish, Plus Code 87G8P62V+F9,
     founded 1930.
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

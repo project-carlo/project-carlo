@@ -32,6 +32,7 @@ evidence:
   seen: 2026-11-05
   note: 'GCatholic 16677: St. Ann, 142-30 58th Ave, Flushing, New York 11355, Plus Code 87G8P5VH+P5 (40.7443,
     -73.8221), the same building as the OSM way.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

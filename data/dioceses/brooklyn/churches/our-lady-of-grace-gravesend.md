@@ -32,6 +32,7 @@ evidence:
   seen: 2026-11-05
   note: 'GCatholic: Our Lady of Grace, 430 Avenue W, Brooklyn 11223, Plus Code 87G8H2VM+73; Mass finder
     751 gives 430 Avenue W (40.59285, -73.967077).'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

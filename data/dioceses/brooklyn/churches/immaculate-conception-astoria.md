@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-06
   note: Mass finder 1121 'Immaculate Conception (Astoria)', 21-47 29th St., Astoria 11105, pin 40.777588,
     -73.910599. The diocese directory gives 21-47 29th Street, Astoria, NY 11105, (718) 728-1613, immacastoria.net.
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

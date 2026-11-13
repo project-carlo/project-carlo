@@ -28,6 +28,7 @@ evidence:
   note: 'Deanery directory (Q2): ''Corpus Christi Church'', 31-30 61st Street, Woodside 11377; Mass finder
     place 1116 ''Corpus Christi'', 31-30 61st St., pin 40.756478, -73.901895 (from the rosters). The parish
     directory lists only the merged ''St. Sebastian – Corpus Christi'' at St. Sebastian''s address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

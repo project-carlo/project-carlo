@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-06
   note: 'probe po: ''Our Lady of the Cenacle'', 136-06 87th Ave, Richmond Hill, website ourladyofthecenacle-queens.org,
     lpi 0018000000Qc00BAAR, container 03/0412, latest issue 2026-11-08.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

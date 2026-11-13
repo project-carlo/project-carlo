@@ -21,6 +21,7 @@ evidence:
 revisit: Rerun fetch:check and confirm it picks the 15 November 2026 issue or later (the newest posted
   on 2026-11-12 was older than 8 November).
 revisit_after: 2026-11-17
+promoted: 2026-11-12
 research:
 - method: pnpm fetch:check with page-pdfs https://transfiguration-brooklyn.org/bulletins
   url: https://transfiguration-brooklyn.org/bulletins

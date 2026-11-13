@@ -23,6 +23,7 @@ evidence:
   seen: 2026-11-06
   note: 'probe url: the parish site links the ParishesOnline org st-joseph-roman-catholic-church-11103
     (4 parishesonline.com links).'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

@@ -28,6 +28,7 @@ evidence:
   note: 'Diocese parish directory: St. Jude Shrine RC Church, 1677 Canarsie Road, Brooklyn, NY 11236,
     (347) 763-6300, website shrinechurchofsaintjude.org. The deanery list (B7) and Mass finder 1148 give
     the same address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

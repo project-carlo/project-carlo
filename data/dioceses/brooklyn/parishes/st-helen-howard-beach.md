@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-06
   note: 'probe po: ParishesOnline org ''St. Helen Church'' (lpi 0018000000QxB9tAAF) has no publications;
     an empty org, not this bulletin''s id.'
+promoted: 2026-11-12
 research:
 - method: fetch:check page-pdfs on the bulletin page
   url: https://sthelen.org/important-information/bulletin/

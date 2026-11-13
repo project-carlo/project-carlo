@@ -28,6 +28,7 @@ evidence:
   quote: St. Dominic Church 2001 Bay Ridge Parkway, Brooklyn, NY 11204
   note: Diocesan Mass finder lists St. Dominic Church as a worship site of St. Athanasius - St. Dominic
     (used for the address only).
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

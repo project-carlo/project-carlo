@@ -22,6 +22,7 @@ evidence:
 - url: https://shssparish.com
   seen: 2026-11-06
   note: The domain the bulletin prints (Web:shssparish.com) redirects to https://sacredhearts-ststephen.com/.
+promoted: 2026-11-12
 bulletin_status: available
 publication_reviews:
 - parish: st-mary-star-of-the-sea-carroll-gardens

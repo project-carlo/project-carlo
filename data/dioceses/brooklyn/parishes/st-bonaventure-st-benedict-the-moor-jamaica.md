@@ -19,6 +19,7 @@ evidence:
   quote: Bulletin for Sunday, Nov 1, 2026
   note: 'Tilma bulletins page, newest first: Nov 1, Oct 25, Oct 18, Oct 11, Oct 04, 2026, each a PDF on
     files.tilmaplatform.com. The Nov 8 card was not yet posted on Friday 6 November.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

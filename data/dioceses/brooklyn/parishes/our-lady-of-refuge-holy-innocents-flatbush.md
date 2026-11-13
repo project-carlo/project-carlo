@@ -41,6 +41,7 @@ evidence:
     ''Olr Bulletin'' and ''Holy Innocents Bulletin'' PDFs for each Sunday through February 1, 2026, ''Refuge
     Innocents'' bulletins February 15 and 22, then one ''Olr Bulletin <Month D> 2026'' per Sunday to November
     1st. Cards are grouped by month, not strictly newest first.'
+promoted: 2026-11-12
 research:
 - method: fetch:check (headed Chrome) on recipe page-pdfs https://church-bulletin.org/404
   url: https://church-bulletin.org/404

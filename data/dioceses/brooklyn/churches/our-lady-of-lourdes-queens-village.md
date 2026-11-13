@@ -32,6 +32,7 @@ evidence:
   seen: 2026-11-05
   note: 'Mass finder place 1133: Our Lady of Lourdes, 92-96 220th St., Queens Village 11428, pin 40.722955,-73.736379
     (from the roster).'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

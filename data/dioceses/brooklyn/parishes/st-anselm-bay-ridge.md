@@ -26,6 +26,7 @@ evidence:
   note: 'The parish site (diocesan WordPress multisite, sites/18; probe url gets RemoteDisconnected, visit.py
     reads it) links the same 8 November 2026 issue, read with tools/fetch-pdf.py: same masthead and schedule,
     with the ''St. Anselm Church | 03-4053'' footer.'
+promoted: 2026-11-12
 bulletin_status: available
 publication_reviews:
 - parish: our-lady-of-angels-bay-ridge

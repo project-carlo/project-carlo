@@ -34,6 +34,7 @@ evidence:
   seen: 2026-11-05
   note: 'Diocese parish directory: Resurrection – Ascension, 61-11 85th Street, Rego Park, NY 11374, (718)
     424-5212, www.rachurch.net. The deanery list and Mass finder 1174 give the same street address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

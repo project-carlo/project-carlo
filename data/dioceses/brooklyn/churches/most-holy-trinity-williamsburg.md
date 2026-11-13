@@ -32,6 +32,7 @@ evidence:
   seen: 2026-11-07
   note: Mass finder place 321, Most Holy Trinity - St. Mary, 138 Montrose Avenue, 11206, pin 40.707052,
     -73.943987.
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

@@ -28,6 +28,7 @@ evidence:
   note: 'GCatholic: Our Lady of Czestochowa–St. Casimir, 183 25th St., Brooklyn 11232, Plus Code 87G8M262+GP.
     The diocese''s parish and deanery directories (''Our Lady of Czestochowa – St. Casmir'', 183 25th
     Street) and Mass finder 1128 (40.660939, -73.998529) give the same address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

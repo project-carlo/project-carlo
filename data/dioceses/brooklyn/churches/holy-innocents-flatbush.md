@@ -30,6 +30,7 @@ evidence:
     Brooklyn NY 11226, (718) 469-9500 (the merged parish, at this church). The deanery list (''Holy Innocents
     Parish'') and Mass finder place 391 (''Holy Innocents'', 279 East 17th St., pin 40.644184, -73.962616)
     give the same address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

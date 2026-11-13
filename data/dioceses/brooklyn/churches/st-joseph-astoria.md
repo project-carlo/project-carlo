@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-06
   note: 'Diocese directory: St. Joseph, 43-19 30th Avenue, Astoria, NY 11103, 718-278-1611, stjosephastoria.org.
     The deanery list (Q1) and Mass finder 931 ''St. Joseph (LIC)'' give the same address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

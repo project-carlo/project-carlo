@@ -28,6 +28,7 @@ evidence:
   seen: 2026-11-05
   note: 'Diocese parish directory: St. Adalbert, 52-29 83rd Street, Elmhurst, NY 11373, (718) 639-0212.
     The deanery directory lists St. Adalbert Roman Catholic Church at the same address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

@@ -38,6 +38,7 @@ evidence:
   seen: 2026-11-06
   note: 'OSM has building way 247443364 at 12265 Flatlands Avenue (40.65518, -73.88165) beside building
     way 247443328 at 1020 Van Siclen Avenue (40.65519, -73.88209): one corner lot.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

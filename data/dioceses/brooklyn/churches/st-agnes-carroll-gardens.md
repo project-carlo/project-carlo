@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-05
   note: 'Mass finder place 792: ''St. Paul & St. Agnes (St. Agnes)'', 433 Sackett Street, Brooklyn 11231,
     pin 40.681301, -73.990678 (used for location only, per this diocese''s rule).'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

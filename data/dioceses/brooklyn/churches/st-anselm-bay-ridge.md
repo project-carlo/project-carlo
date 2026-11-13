@@ -25,6 +25,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-02/16678
   seen: 2026-11-05
   note: 'GCatholic: St. Anselm, 356 82nd St., Brooklyn 11209, Plus Code 87G7JXGF+63 (40.6255625, -74.0273125).'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

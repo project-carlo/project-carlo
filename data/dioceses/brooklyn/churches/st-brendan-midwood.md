@@ -28,6 +28,7 @@ evidence:
   note: 'Diocese parish directory: St. Brendan, 1525 East 12th Street, Brooklyn 11230, (718) 339-2828,
     www.stbrendanbklyn.org; the deanery directory (B11) lists St. Brendan''s RC Church at the same address;
     Mass finder 793 gives 1525 E. 12th St.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

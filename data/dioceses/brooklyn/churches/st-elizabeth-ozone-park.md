@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-05
   note: 'Diocese parish directory: St. Elizabeth, 94-20 85th Street, Ozone Park, NY 11416, (718) 296-4900,
     website stelizabeth-queens.org. The deanery list (Q8) gives the same address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

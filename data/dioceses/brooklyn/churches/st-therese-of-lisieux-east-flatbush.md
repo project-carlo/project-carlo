@@ -34,6 +34,7 @@ evidence:
   note: 'Diocese parish directory: St. Therese of Lisieux, 1281 Troy Avenue, Brooklyn, NY 11203, (718)
     451-1500, website stthereseoflisieuxchurch.org. The deanery list (B7, ''St. Therese of Lisieux R.C.
     Church'') and Mass finder 1167 give 1281 Troy Ave. too.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

@@ -27,6 +27,7 @@ evidence:
   note: 'Diocese parish directory: St. Helen, 157-10 83rd Street, Howard Beach, NY 11414, website sthelen.org;
     the deanery directory (Q8, ''St. Helen Roman Catholic Church'') and Mass finder 1154 give the same
     address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

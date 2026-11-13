@@ -19,6 +19,7 @@ evidence:
 - url: https://www.stcharlesbklyn.org/
   seen: 2026-11-06
   note: 'probe url: WordPress site linking po-org:st-charles-borromeo-church-11201 and /category/bulletin/.'
+promoted: 2026-11-12
 publication_reviews:
 - parish: cathedral-basilica-of-st-james-brooklyn
   decision: separate

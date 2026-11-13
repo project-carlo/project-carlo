@@ -19,6 +19,7 @@ evidence:
   seen: 2026-11-06
   note: 'Tilma bulletins page (custom domain, files under /system/resources/), newest first: November
     1st, 2026, then Bulletin October 25, 18, 11, 4, September 27 ... No 8 November issue posted on 2026-11-06.'
+promoted: 2026-11-12
 research:
 - method: fetch:check (headed Chrome) on recipe page-pdfs https://nativitybvm-ststanislaus.org/bulletins
   url: https://nativitybvm-ststanislaus.org/bulletins

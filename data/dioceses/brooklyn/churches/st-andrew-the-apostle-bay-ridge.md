@@ -28,6 +28,7 @@ evidence:
   seen: 2026-11-05
   note: 'GCatholic: St. Andrew the Apostle, 6713 Ridge Blvd., Brooklyn 11220, Plus Code 87G7JXQC+7V (40.6381875,
     -74.0278125).'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

@@ -21,6 +21,7 @@ evidence:
     first, November 08, 2026 back to May 2026, PDFs at brooklyncathedral.org/system/resources/<token>/.
     Files are the parish''s own (named ''st james 11-8-2026 - 32th Sunday in Ordinary Time.pdf''), no
     LPi naming.'
+promoted: 2026-11-12
 publication_reviews:
 - parish: st-charles-borromeo-brooklyn-heights
   decision: separate

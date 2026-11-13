@@ -32,6 +32,7 @@ evidence:
   seen: 2026-11-05
   note: Diocese parish directory and B6 deanery list give the merged parish at 1677 St. Marks Avenue,
     Brooklyn, NY 11233, (718) 345-2604.
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

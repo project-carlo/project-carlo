@@ -32,6 +32,7 @@ evidence:
   seen: 2026-11-05
   note: 'Diocese parish directory: ''St. Raphel'', 35-20 Greenpoint Avenue, Long Island City, NY 11101;
     the deanery directory (Q2) and Mass finder 797 give the same address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

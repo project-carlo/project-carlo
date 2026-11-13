@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-06
   note: 'Diocese parish directory: Our Lady of the Cenacle, 136-06 87th Avenue, Richmond Hill, NY 11418;
     the deanery directory gives the same in Deanery Q7.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

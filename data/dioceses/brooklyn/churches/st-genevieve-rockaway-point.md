@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-06
   note: 'OSM node 8424644115: St. Genevieve''s Church, 26 Church Avenue, Roxbury, Queens 11697, at 40.5661539,-73.8892231
     (25 m from the GCatholic Plus Code).'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

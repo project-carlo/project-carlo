@@ -24,6 +24,7 @@ evidence:
   note: 'Tilma bulletins page, newest first: November 08, 2026 (token decodes to upload 2026/11/05), November
     01 (10/29), October 25 (10/23), October 04 (10/01), September 27 (09/25), weekly back to July; no
     cards for 11 or 18 October.'
+promoted: 2026-11-12
 research:
 - method: fetch:check (headed Chrome) on recipe page-pdfs https://qasrcc.org/bulletins
   url: https://qasrcc.org/bulletins

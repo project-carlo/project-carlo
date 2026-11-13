@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-06
   note: 'Diocese parish directory: St. Agatha, 702 48th Street, Brooklyn, NY 11220, (718) 436-1080; the
     deanery directory lists St. Agatha''s Parish at the same address in Deanery B8.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

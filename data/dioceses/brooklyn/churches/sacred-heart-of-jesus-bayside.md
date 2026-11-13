@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-06
   note: 'Diocese parish directory: Sacred Heart of Jesus (Bayside), 215-35 38th Avenue, Bayside, NY 11361;
     the deanery directory gives the same in Deanery Q5.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

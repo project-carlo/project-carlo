@@ -28,6 +28,7 @@ evidence:
   quote: Ss. Simon and Jude 185 Van Sicklen St, Brooklyn, NY 11223
   note: Diocesan Mass finder lists it as a worship site of Most Precious Blood - Ss. Simon and Jude (address
     only).
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

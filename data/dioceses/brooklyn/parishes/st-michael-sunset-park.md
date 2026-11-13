@@ -30,6 +30,7 @@ evidence:
 revisit: Check that the eCatholic archive has issues after 4 October 2026, and whether the LPi org st-michael-roman-catholic-church-11232
   has started publishing
 revisit_after: 2026-12-01
+promoted: 2026-11-12
 research:
 - method: issues.py ecatholic ecatholic:19776 --weeks 6 and the /bulletins archive via visit.py
   url: https://www.stmichaelssunsetpark.com/bulletins

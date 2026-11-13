@@ -24,6 +24,7 @@ evidence:
     10, February 15 … November 02, 2025, PDFs at sfdsparish.org/system/resources/<token>/SFDS_Bulletin_M_D_YY.pdf.
     The 23 August file has the same masthead and schedule as the LPi issues; the page has had no new issue
     since then.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

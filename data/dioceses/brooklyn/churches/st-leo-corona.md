@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-05
   note: 'Diocese parish directory: St. Leo, 104-05 49th Avenue, Corona 11368; the deanery directory lists
     St. Leo R.C. Church at the same address in Q3.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

@@ -32,6 +32,7 @@ evidence:
   note: 'Diocese parish directory and deanery directory (Q9): St. Mary Magdalene, 218-12 136th Avenue,
     Springfield Gardens, NY 11413. Mass finder 906: 136-20 219th St., Springfield Gardens, pin 40.663098,
     -73.719618.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

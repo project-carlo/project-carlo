@@ -26,6 +26,7 @@ evidence:
   note: The parish site (diocesan WordPress multisite; probe url gets RemoteDisconnected, visit.py reads
     it) embeds lpi:0018000000Qc0ADAAZ / po-container:03/0335 and links the ParishesOnline publication
     page for the 8 November 2026 issue.
+promoted: 2026-11-12
 bulletin_status: available
 publication_reviews:
 - parish: our-lady-of-angels-bay-ridge

@@ -33,6 +33,7 @@ evidence:
 revisit: 'Find the Leonard Center''s address (parish site, a later bulletin, OSM): if it is off the Holy
   Child Jesus grounds, its weekday Masses need their own church row.'
 revisit_after: 2027-01-15
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

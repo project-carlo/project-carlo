@@ -28,6 +28,7 @@ evidence:
   seen: 2026-11-05
   note: 'Diocese parish directory: St. Mary Star of the Sea, 467 Court Street, Brooklyn 11231, (718) 625-2270;
     the deanery directory (B3) and Mass finder place 1156 give the same address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

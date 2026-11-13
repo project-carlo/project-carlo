@@ -29,6 +29,7 @@ evidence:
     Church Sites: Transfiguration Church, 64-25 Perry Avenue; Saint Stanislaus Kostka Church, 57-15 61st
     Street. Its vigil line (4:00pm at St. Stanislaus, July 4 - Sept 5) is the summer schedule; the bulletin
     gives the current vigil at Transfiguration.'
+promoted: 2026-11-12
 research:
 - method: fetch:check (headed Chrome) on recipe page-pdfs https://church-bulletin.org/425
   url: https://church-bulletin.org/425

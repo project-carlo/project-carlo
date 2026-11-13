@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-05
   note: 'Diocese parish directory: Queen of Angels, 44-04 Skillman Avenue, Sunnyside, NY 11104; the deanery
     directory (Q2, ''Queen of Angels Church'') and Mass finder 1060 give the same.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

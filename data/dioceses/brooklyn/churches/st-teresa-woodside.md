@@ -37,6 +37,7 @@ evidence:
     '50-20 45th St., Woodside, NY 11377', is pinned at 40.737011, -73.921116 (this church) and gives this
     church's Saturday 5:00pm and Sunday Spanish Masses (read by batch 057-map; linked here by reconcile
     2026-11-12).
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

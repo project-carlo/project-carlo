@@ -40,6 +40,7 @@ evidence:
   seen: 2026-11-07
   quote: 'Sunday Midday (English): 11:30 AM'
   note: Parish Mass Times page, same schedule; the site footer gives 185 Suydam St, Brooklyn, NY 11221.
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

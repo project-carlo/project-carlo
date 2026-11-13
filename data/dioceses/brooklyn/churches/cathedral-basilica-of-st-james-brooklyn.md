@@ -25,6 +25,7 @@ evidence:
 - url: https://mass.dioceseofbrooklyn.org/places/648
   seen: 2026-11-05
   note: 'Mass finder 648: 250 Cathedral Place, pin 40.696859, -73.985718.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

@@ -18,6 +18,7 @@ evidence:
   seen: 2026-11-06
   note: 'Tilma bulletins page (server-rendered, newest first): cards ''November 08, 2026'', ''November
     01, 2026'', ''October 25, 2026'' ... back to ''September 06, 2026'', each a PDF under /system/resources/.'
+promoted: 2026-11-12
 research:
 - method: probe po st-patrick-church-11209, st-patricks-church-11209, st-patrick-roman-catholic-church-11209,
     st-patrick-parish-11209

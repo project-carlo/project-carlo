@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-07
   note: Mass finder place 291 (Divine Mercy Parish) lists this church under All Worship Sites; a lead
     for places only.
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

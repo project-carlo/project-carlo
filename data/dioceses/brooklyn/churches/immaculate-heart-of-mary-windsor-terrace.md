@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-05
   note: 'GCatholic: Immaculate Heart of Mary, 2805 Fort Hamilton Pkwy, Brooklyn 11218, Plus Code 87G8J2XF+J4;
     Mass finder 140 gives the same street address (40.649307, -73.976918).'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

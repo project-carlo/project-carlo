@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-05
   note: 'GCatholic: Guardian Angel, 2978 Ocean Pkwy, Brooklyn 11235, Plus Code 87G8H2HJ+CJ; Mass finder
     904 gives 2978 Ocean Parkway (40.578464, -73.968596).'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

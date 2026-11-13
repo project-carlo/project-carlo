@@ -30,6 +30,7 @@ evidence:
   quote: Most Precious Blood 70 Bay 47 St. Brooklyn, NY 11214
   note: Mass finder place 1126 lists both worship sites; its roster line carries Sts. Simon and Jude's
     street but its pin (40.590152, -73.985962) is at this church, so it is linked here.
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

@@ -29,6 +29,7 @@ evidence:
   quote: 'Korean: 9:30 a.m.'
   note: 'Mass Times page: Saturday English 4:00pm; Sunday Korean 9:30 a.m., English 11:30 a.m., Español
     1:00 p.m.; weekdays Monday-Friday 9:00 am.'
+promoted: 2026-11-12
 research:
 - method: fetch:check parishes_online org st-raphael-church-11101
   url: https://parishesonline.com/organization/st-raphael-church-11101

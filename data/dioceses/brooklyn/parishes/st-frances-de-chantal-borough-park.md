@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-06
   note: 'probe po: a ParishesOnline org ''St. Frances de Chantal Church'', 1273 58th St (lpi 0018000000QxB7WAAV),
     with no issues: not this bulletin''s publication id.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

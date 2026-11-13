@@ -26,6 +26,7 @@ evidence:
 - url: https://parishesonline.com/organization/the-basilica-of-regina-pacis
   seen: 2026-11-06
   note: 'ParishesOnline org: 1230 65th St, Brooklyn, New York, 11219, at 40.626627, -74.003154.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

@@ -38,6 +38,7 @@ evidence:
   seen: 2026-11-07
   quote: Saint Martin of Tours Roman Catholic Church, Knickerbocker Avenue
   note: OSM way 249917474 at 40.6934334, -73.9094542, about 25 m from the GCatholic Plus Code.
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

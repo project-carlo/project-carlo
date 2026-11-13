@@ -37,6 +37,7 @@ evidence:
 revisit: Check whether the St. Agatha and St. Michael bulletins have become one (a masthead naming both
   churches)
 revisit_after: 2027-02-01
+promoted: 2026-11-12
 publication_reviews:
 - parish: st-michael-sunset-park
   decision: separate

@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-06
   note: 'Diocese directory: St. Francis of Assisi, 21-17 45th Street, Astoria, NY 11105, (718) 728-7801,
     stfrancisofassisiastoria.org. The deanery list (Q1) and Mass finder 1194 give the same address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-05
   note: 'Diocese parish directory: Our Lady of Sorrows, 104-11 37th Avenue, Corona 11368; the deanery
     directory lists it at the same address in Q3.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

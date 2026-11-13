@@ -24,6 +24,7 @@ evidence:
   seen: 2026-11-06
   note: probe url answers HTTP 403 (bot blocking); a parish-site-access visit.py load did not finish.
     The site was not read; the bulletin was read from ParishesOnline.
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

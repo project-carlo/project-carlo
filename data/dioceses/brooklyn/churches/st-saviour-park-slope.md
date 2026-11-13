@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-05
   note: 'Diocese parish directory: St. Saviour, 611 8th Avenue, Brooklyn 11215; deanery directory (B4,
     ''St. Saviour Roman Catholic Church'') and Mass finder 1162 (40.66727, -73.977649) the same.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-05
   note: 'Diocese parish directory: Christ the King, 145-39 Farmers Blvd., Springfield Gardens, NY 11434;
     deanery directory (Q9, ''Christ the King Church'') and Mass finder 1115 give the same.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

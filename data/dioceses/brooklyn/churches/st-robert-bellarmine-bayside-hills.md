@@ -28,6 +28,7 @@ evidence:
   seen: 2026-11-05
   note: 'Diocese parish directory: St. Robert Bellarmine, 56-15 213th Street, Bayside Hills, NY 11364;
     the deanery directory gives the same in Deanery Q5.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

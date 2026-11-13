@@ -30,6 +30,7 @@ evidence:
   note: 'Diocese parish directory: St. Thomas Aquinas (Flatlands), 1550 Hendrickson St., Brooklyn, NY
     11234, (718) 253-4404. The deanery directory (B11) and Mass finder place 1168 give the same street
     address and zip.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-05
   quote: 8:30am - Chapel -Ithaca Street
   note: Discover Mass lists Sunday Masses at the Chapel - Ithaca Street.
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

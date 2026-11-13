@@ -30,6 +30,7 @@ evidence:
   note: 'Diocese parish directory: The Shrine of St. Bernadette, 8201 13th Avenue, Brooklyn, NY 11228,
     (718) 837-3400, website stbernadettebrooklyn.com. The deanery directory (Deanery B9) lists The Shrine
     of St. Bernadette, 8201 13th Avenue.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

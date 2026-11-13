@@ -18,6 +18,7 @@ evidence:
   seen: 2026-11-05
   note: 'Tilma parish site (PDFs on files.tilmaplatform.com). probe url lists /bulletins and issues Kevin11-8.pdf,
     Kevin11-1 (1).pdf, Kevin10-25 (1).pdf, Kevin10-18.pdf newest first: weekly.'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

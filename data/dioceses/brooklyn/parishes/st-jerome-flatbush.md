@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-06
   note: 'Redirects to https://www.church-bulletin.org/saint-jerome-s-roman-catholic-church-brooklyn-ny-11226,
     listing issue PDFs up to 2026-11-08.pdf, a week ahead of the parish site (newest there: November 1).'
+promoted: 2026-11-12
 research:
 - method: fetch:check (headed Chrome) on recipe page-pdfs https://church-bulletin.org/417
   url: https://church-bulletin.org/417

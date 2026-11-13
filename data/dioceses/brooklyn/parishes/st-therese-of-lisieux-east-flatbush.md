@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-06
   note: 'probe po: an LPi org ''St. Therese of Lisieux Church'', 4402 Avenue D, Brooklyn, LPi id 0018000000QxB6kAAF,
     with no container and no issues; not this bulletin''s publication id.'
+promoted: 2026-11-12
 research:
 - method: fetch:check (headed Chrome) on recipe page-pdfs https://stthereseoflisieuxchurch.org/weekly-bulletin/
     filename=*compressed*.pdf

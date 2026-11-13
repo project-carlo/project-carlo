@@ -27,6 +27,7 @@ evidence:
   note: 'Parish Joomla DOCman list (403 to probes; read with visit.py): ''508-511199-11-8-2026'', ''507-511199-11-1-2026'',
     ... The 11-8-2026 file (downloaded with browser-pdf.py) is the same LPi issue, footer ''St. Bernadette
     Church | 03-4063''.'
+promoted: 2026-11-12
 bulletin_status: available
 publication_reviews:
 - parish: st-frances-cabrini-dyker-heights

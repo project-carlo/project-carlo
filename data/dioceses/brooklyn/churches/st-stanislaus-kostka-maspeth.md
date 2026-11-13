@@ -37,6 +37,7 @@ evidence:
   note: Mass finder place 1171, 'Transfiguration - St. Stanislaus Kostka (St. Stanislaus Kostka)', address
     64-25 Perry Ave. (Transfiguration's address), pin 40.722525, -73.904337 (beside this church). Linked
     here by its name and pin.
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

@@ -28,6 +28,7 @@ evidence:
   seen: 2026-11-05
   note: 'GCatholic: Our Lady of Angels, 7320 4th Ave, Brooklyn 11209, Plus Code 87G7JXJG+R3 (40.6320625,
     -74.0248125).'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

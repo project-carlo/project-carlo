@@ -33,6 +33,7 @@ evidence:
     maryqueenofheaven-brooklyn.org, lpi 0018000000QxB9LAAV, container 03/4054, latest issue 2026-11-08.
     No separate St. Bernard org found (st-bernard-clairvaux-church-11234, st-bernard-of-clairvaux-church-11234,
     st-bernard-church-11234, saint-bernard-clairvaux-church-11234: none).'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

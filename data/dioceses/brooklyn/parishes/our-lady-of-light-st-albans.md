@@ -23,6 +23,7 @@ evidence:
   note: 'Tilma bulletins page, server-rendered, newest first, cards ''<Month DD, YYYY>'' linking /system/resources/<token>/
     PDFs on the parish domain: November 01, 2026; October 18, 2026; October 11, 2026; September 27, 2026;
     September 20, 2026; ... (no card for 25 October).'
+promoted: 2026-11-12
 research:
 - method: fetch:check (headed Chrome) on recipe page-pdfs https://ourladyoflightqueens.org/bulletins
   url: https://ourladyoflightqueens.org/bulletins

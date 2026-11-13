@@ -23,6 +23,7 @@ evidence:
   note: Parish site (diocesan WordPress multisite, uploads under /sites/69/; probe url UNREACHABLE, read
     with visit.py) lists weekly PDFs newest first, nov8_2026_ccwoodside.pdf2_compressed.pdf back to aug2_2026;
     the 8 Nov file has the same masthead and schedule as the container issue.
+promoted: 2026-11-12
 research:
 - method: probe po corpus-christi-church-11377; probe container 03/9001
   url: https://parishesonline.com/organization/corpus-christi-church-11377

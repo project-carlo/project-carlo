@@ -29,6 +29,7 @@ evidence:
   seen: 2026-11-06
   note: Pre-merger ParishesOnline org 'St. Margaret Mary Church', 215 Exeter St, Brooklyn 11235, pin 40.576918,
     -73.947862; no issues.
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

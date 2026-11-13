@@ -40,6 +40,7 @@ evidence:
   note: 'Listed in Deanery Directory: Diocese of Brooklyn (read 2026-11-05) as ''The Co-Cathedral of Saint
     Joseph – St. Teresa of Avila'', 856 Pacific Street, Brooklyn, NY, 11238; group: Deanery B5 (Brooklyn
     East)'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

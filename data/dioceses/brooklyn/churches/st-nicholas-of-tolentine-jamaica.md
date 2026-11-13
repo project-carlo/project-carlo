@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-06
   note: 'Diocese parish directory: St. Nicholas of Tolentine, 150-75 Goethals Avenue, Jamaica, NY 11432;
     the deanery directory gives the same in Deanery Q7.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

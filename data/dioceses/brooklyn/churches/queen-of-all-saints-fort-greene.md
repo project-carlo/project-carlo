@@ -41,6 +41,7 @@ evidence:
   seen: 2026-11-05
   note: Mass finder place 1173 'Queen of All Saints', 300 Vanderbilt Ave., pinned 40.68832, -73.969172
     (lead for coordinates only).
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

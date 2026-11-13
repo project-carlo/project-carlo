@@ -29,6 +29,7 @@ evidence:
   quote: Merged with St. Matthew, 2011
   note: 'Archives List of Parishes: ''St. Gregory the Great, Crown Heights (1906). Merged with St. Matthew,
     2011.'''
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

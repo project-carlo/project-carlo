@@ -30,6 +30,7 @@ evidence:
 - url: https://mass.dioceseofbrooklyn.org/places/1176
   seen: 2026-11-05
   note: 'Mass finder place 1176: Sacred Heart of Jesus (Glendale), 83-17 78th Ave., pin 40.70586, -73.865316.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

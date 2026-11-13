@@ -22,6 +22,7 @@ evidence:
   note: 'Wix Past Bulletins page lists weekly issues newest first: November 8, November 1, October 25,
     October 18, October 11, October 4, 2026, and back through August. The /bulletin page shows the current
     issue in a certifiedcode.io PDF viewer iframe whose pdfUrl is the same ugd file.'
+promoted: 2026-11-12
 research:
 - method: pnpm fetch:check with page-pdfs https://www.trinity-stmary.org/past-bulletins
   url: https://www.trinity-stmary.org/past-bulletins

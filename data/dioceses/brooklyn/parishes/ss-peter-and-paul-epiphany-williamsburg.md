@@ -35,6 +35,7 @@ evidence:
   quote: packed their new 550-seat church in a historic building to witness the consecration of its altar
   note: 'The Tablet, 30 June 2021: the new church in the renovated McCaddin Hall ''at Berry and 3rd streets''
     was dedicated on 29 June 2021; ''In 2007, Saints Peter and Paul Parish merged with Epiphany Church.'''
+promoted: 2026-11-12
 research:
 - method: pnpm fetch:check with page-pdfs https://peterandpaul-brooklyn.org/bulletins
   url: https://peterandpaul-brooklyn.org/bulletins

@@ -28,6 +28,7 @@ evidence:
   seen: 2026-11-05
   note: 'probe po: ParishesOnline org our-lady-of-sorrows-church-11368 (lpi 0018000000QbzztAAB), 104-11
     37th Ave, Corona, has no issues; the bulletin is self-published, so these are not publication ids.'
+promoted: 2026-11-12
 ---
 
 ## Publisher

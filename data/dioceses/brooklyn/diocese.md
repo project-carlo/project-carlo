@@ -2,11 +2,12 @@
 name: Roman Catholic Diocese of Brooklyn
 state: NY
 website: https://dioceseofbrooklyn.org
-status: exploring
+status: promoted
 gcatholic: broo0
 audit_ignore_groups:
 - deaneries
 - parishes
+promoted: 2026-11-12
 ---
 
 The Diocese of Brooklyn is the boroughs of Brooklyn (Kings County) and Queens (Queens County),

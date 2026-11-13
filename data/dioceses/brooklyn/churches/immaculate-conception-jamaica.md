@@ -28,6 +28,7 @@ evidence:
   seen: 2026-11-06
   note: 'Diocese parish directory: Immaculate Conception Church (Jamaica), 86-45 Edgerton Blvd., Jamaica,
     NY 11432; the deanery directory gives the same under both Deanery Q1 and Deanery Q7.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

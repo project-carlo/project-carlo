@@ -20,6 +20,7 @@ evidence:
   seen: 2026-11-06
   note: 'probe url: Tilma site ''Our Lady of Grace Church — Gravesend, Brooklyn, NY''; its bulletin links
     are LPi files reposted on files.tilmaplatform.com (20261108B.pdf, 20261101B.pdf, 20261025B.pdf).'
+promoted: 2026-11-12
 research:
 - method: fetch:check parishes_online our-lady-of-grace-church-11223
   url: https://parishesonline.com/organization/our-lady-of-grace-church-11223

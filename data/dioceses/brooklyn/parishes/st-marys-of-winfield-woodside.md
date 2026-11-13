@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-06
   note: Parish site (diocesan WordPress multisite, uploads under /sites/91/; probe url UNREACHABLE, read
     with visit.py) lists weekly PDFs newest first, nov8_2026_stmarywin_compressed.pdf back to july26_2026_stmarywin.pdf.
+promoted: 2026-11-12
 research:
 - method: probe po on slugs blessed-virgin-mary-help-of-christians-11377, -church-11377, st-marys-of-winfield-11377,
     st-mary-s-of-winfield-11377, st-mary-church-11377, st-marys-church-11377, bvm-help-of-christians-11377

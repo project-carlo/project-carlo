@@ -31,6 +31,7 @@ evidence:
   note: Mass finder place 1170 St. Vincent Ferrer, 925 E. 37th St., pin 40.634199, -73.940856 (used for
     coordinates). The diocese directory and the deanery list give 925 East 37th Street, Brooklyn, NY 11210,
     (718) 859-9009.
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

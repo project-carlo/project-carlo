@@ -28,6 +28,7 @@ evidence:
   note: 'Diocese parish directory: St. Patrick (Queens), 39-38 29th Street, Long Island City, NY 11101,
     (718) 729-6060, website stpatlic.org. The deanery directory (Q1) lists St. Patrick Church (Queens)
     at the same address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-05
   note: 'Diocese parish directory: St. Stanislaus Kostka, 607 Humboldt Street, Brooklyn 11222, (718) 388-0170;
     the deanery directory (B1) and Mass finder 1164 give the same address.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

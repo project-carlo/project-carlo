@@ -28,6 +28,7 @@ evidence:
   seen: 2026-11-06
   note: 'probe po: org ''St. Mary Magdalene Church'' (lpi 0018000000QxB9sAAF) has no issues; an empty
     org, not a publication id.'
+promoted: 2026-11-12
 research:
 - method: fetch:check parishes_online org christ-the-king-church-11413
   url: https://parishesonline.com/organization/christ-the-king-church-11413

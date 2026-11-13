@@ -28,6 +28,7 @@ evidence:
   seen: 2026-11-07
   note: 'probe po: the ParishesOnline org (lpi 0018000000QxB6yAAF, 75 Lewis Ave, website stjohnsbrooklyn.org)
     has no issues, so it is not a publication id.'
+promoted: 2026-11-12
 research:
 - method: fetch:check (headed Chrome) on recipe page-pdfs https://church-bulletin.org/4050
   url: https://church-bulletin.org/4050

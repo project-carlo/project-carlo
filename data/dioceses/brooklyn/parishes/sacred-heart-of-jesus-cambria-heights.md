@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-06
   note: Squarespace blog page linking /s/Nov_01_2026.pdf, /s/Oct_18_2026.pdf and /s/Oct_11_2026.pdf; posted
     later than the publisher's listing.
+promoted: 2026-11-12
 research:
 - method: fetch:check (headed Chrome) on recipe page-pdfs https://church-bulletin.org/4041
   url: https://church-bulletin.org/4041

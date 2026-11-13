@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-07
   note: Mass finder place 451, Annunciation of the Blessed Virgin Mary, North 5th & Havemeyer St., Brooklyn
     11211; its pin 40.657515, -73.983124 is in Windsor Terrace, about 7 km south, so it is not used.
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

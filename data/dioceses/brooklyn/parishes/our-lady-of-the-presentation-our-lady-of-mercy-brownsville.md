@@ -29,6 +29,7 @@ evidence:
 revisit: Read the schedule in a later issue or the Mass Times page to settle whether the 12:00 PM Mass
   at Presentation is regular.
 revisit_after: 2026-12-01
+promoted: 2026-11-12
 research:
 - method: fetch:check (headed Chrome) on recipe page-pdfs https://presentation-mercy-brooklyn.org/bulletins;
     picked the 8 November 2026 issue (first-listed, freshness unknown; date read by hand)

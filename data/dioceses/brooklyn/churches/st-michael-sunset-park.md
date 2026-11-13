@@ -32,6 +32,7 @@ evidence:
   seen: 2026-11-06
   note: 'Diocese parish directory: St. Michael (Brooklyn), 352 42nd Street, Brooklyn, NY 11232, (718)
     768-6065, www.stmichaelssunsetpark.com.'
+promoted: 2026-11-12
 ---
 
 ## Holds Mass

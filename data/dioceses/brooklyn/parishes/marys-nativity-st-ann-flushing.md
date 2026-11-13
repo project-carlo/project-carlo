@@ -23,6 +23,7 @@ evidence:
   seen: 2026-11-05
   note: 'The parish''s Tilma site''s Bulletins link redirects to https://parishesonline.com/organization/marys-nativity-st-ann-parish
     (probe url: REDIRECT-OFFSITE to that org).'
+promoted: 2026-11-12
 bulletin_status: available
 ---
 

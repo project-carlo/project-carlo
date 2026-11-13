@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-05
   note: 'probe po: ''St. Robert Bellarmine Church'', 56-15 213th St, Bayside 11364, website strobertsbayside.org,
     lpi 0018000000QxB8NAAV, container 03/4070; issues 2026-11-08, 11-01, 10-25.'
+promoted: 2026-11-12
 ---
 
 ## Publisher

@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-06
   note: 'Rendered Mass Times page: ''Saturday Vigil, 5:30pm'', ''Sunday, 10am (Spanish) and 12pm (English)'',
     ''Monday-Saturday, 12:15pm''; one location, footer address 249 9th St.'
+promoted: 2026-11-12
 research:
 - method: fetch:check parishes_online org holy-family-st-thomas-aquinas
   url: https://parishesonline.com/organization/holy-family-st-thomas-aquinas

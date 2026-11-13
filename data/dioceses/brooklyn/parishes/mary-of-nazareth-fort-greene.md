@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-07
   note: 'Tilma bulletins page, newest first: November 01, 2026 (MaryNaz11-1color.pdf, token decodes to
     upload 2026/10/29), October 25, October 18, October 11, October 04, ... weekly.'
+promoted: 2026-11-12
 research:
 - method: fetch:check (headed Chrome) on recipe page-pdfs https://marynazarethfg.org/bulletins
   url: https://marynazarethfg.org/bulletins
