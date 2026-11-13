@@ -75,45 +75,68 @@ programme (The One), not a regrouping.
 
 ### Bulletin publishers here
 
-From the survey's sample (2026-11-12: `probe url` on all 76 directory websites, `visit.py
---bulletin` on 4 of the 12 that answered 403). New York, the only mapped neighbour, has no
-publisher notes; the lines below borrow Paterson's where the same publishers appear.
+From the survey's sample (2026-11-12) and the map batches since. New York, the only mapped
+neighbour, has no publisher notes; Paterson's notes cover the same publishers.
 
-- **LPi / ParishesOnline is the commonest embed** (14 sites link parishesonline.com, one
-  4lpi.com): use `probe po` for the org, LPi id and container.
-- **Duda sites** (bulletin links on `irp.cdn-website.com/<site>/files/uploaded/...`, 19
-  sites): the parish uploads its own PDFs; the file names, not a publisher, date them.
-- **eCatholic behind Cloudflare:** 12 sites answer `probe url` with 403 (St. Edward, Holy
-  Name of Jesus Stamford, St. Peter Danbury, St. James Stratford gave `ecatholic` ids in
-  `visit.py`). Use `visit.py` on the `/bulletins` page; Paterson's notes on stale
-  `files.ecatholic.com` archives apply.
-- **Bon Venture** (3: Our Lady of Guadalupe Danbury, Sacred Heart Stamford, St. Mary Greenwich)
-  and **John Patrick Publishing** (`jppc.net`, 2: St. Elizabeth Seton, St. Joseph–St.
-  Ladislaus; `church-bulletin.org` on St. Mary Stamford): see Paterson's notes.
-- **Discover Mass:** Immaculate Heart of Mary, Danbury's directory website is its Discover
-  Mass page. Discover Mass caps daily downloads (Scranton, Allentown).
-- 39 sites returned 200 with no publisher found; read their bulletin pages.
+- **LPi / ParishesOnline** is the commonest publisher (parishesonline.com or 4lpi.com
+  links): use `probe po` for the org, LPi id and container. A parish site that names LPi
+  without a widget (a Wix cover gallery), or posts its own copies of the LPi bulletin
+  (Google Drive links; FaithConnector `/e/bulletin` redirecting to
+  `faithconnector.s3.amazonaws.com/<site>/files/<sunday>.pdf`), still has a live org: read
+  the ad-page footer's `NN-NNNN` container, try `probe po <name>-church-<zip>`, and record
+  `parishes_online` rather than no_bulletin or the copy. Issues here are often image-only
+  apart from the ad pages (`probe pdf` reads only pages 7-8): render page 1 with
+  parish-site-access `render.py` for the masthead and schedule, and note image-only in the
+  record.
+- **Duda sites** (`irp.cdn-website.com/<site>/files/uploaded/...`): the parish uploads its
+  own PDFs; file names, not a publisher, date them. Use fetch:check with recipe
+  `page-pdfs` on the `/bulletin` page; it picks the newest by file-name date even when the
+  list runs oldest first with gaps. A page that lists an older year's block first can make
+  it pick last year's issue: pin a year filter (`filename=*2026.pdf`) and set a January
+  revisit to update it.
+- **eCatholic behind Cloudflare** (403 to `probe url`): use `visit.py` on the `/bulletins`
+  page; Paterson's notes on stale `files.ecatholic.com` archives apply. Some sites post
+  bulletins as site documents
+  (`ec-prod-site-cache.s3.amazonaws.com/static1/<site>/documents/...`) rather than
+  `files.ecatholic.com/<id>/bulletins`, and the ecatholic resolver fails on them: use
+  provider other with a pinned `page-pdfs` recipe on the page listing them, plus a filename
+  filter when inserts are listed alongside (`filename=*Year*.pdf`).
+- **Bon Venture:** issues are read from the parish's own site, typically PDFs on a Duda
+  `/bulletin` page (footer `NNNA (PK) - <parish>`), which `page-pdfs` reads. Bon Venture
+  sponsor pages (`http://sponsors.bonventure.net/?page=<n>`) work too, but run fetch:check
+  there without `PLAYWRIGHT_BROWSER_CHANNEL=chrome`: with the Chrome channel it fetched the
+  PDF over https and failed TLS verification; without it, http worked.
+- **John Patrick Publishing (JPPC):** a `jppc.net/onlinebulletins/<n>template.pdf` link is
+  the printer's template, not an issue. That link, `church-bulletin.org/<n>` and
+  `church-bulletin.org/?id=<n>` can each redirect to the parish's
+  `church-bulletin.org/<saint-...>` page listing dated issues: `probe get` the link to
+  follow it and pin `page-pdfs` on the final page. A slug that serves only JPPC's generic
+  welcome page (`st-...`) usually has a `saint-...` variant. `probe get`'s text output drops
+  links, so check with `probe get --out` and grep the HTML for
+  `bulletin/<slug>/<date>.pdf`. Some parishes instead post JPPC issues on their eCatholic
+  site. JPPC issues are image-only: render page 1 for the masthead.
+- **Discover Mass** caps daily downloads (Scranton, Allentown).
+- **WordPress sites:**
+  - *TNC FlipBook* (pdf-viewer-for-wordpress) pages link `/pdfviewer/<slug>/` viewers that
+    carry the PDF URL base64-encoded; decode it to read the issue. fetch can't collect
+    these: record unsupported, fetch_gap `viewer-wrapped-pdf`.
+  - *Download Monitor* lists (`/download/<id>/` redirecting to
+    `wp-content/uploads/dlm_uploads/...pdf`) aren't read by `page-pdfs`; if the home page
+    links the newest PDF directly, pin `page-pdfs` there and set a revisit.
+  - Uploads named `<YYYY>.<MonD>-...pdf` (`2026.Nov15-E-News-2.pdf`) are undatable to
+    fetch:check (date/freshness unknown), so the pick relies on the page listing newest
+    first: set a revisit to recheck it.
+- **Joomla** `/bulletins/<n>-<date>/file` links behind Cloudflare answer 403 even to the
+  browser context's request client; `tools/browser_download.py` fetch()es the file from
+  inside the page (render with `pdftoppm`). fetch can't collect these: record unsupported,
+  fetch_gap `joomla-file-endpoint`.
+- **Slugs are global:** `pnpm diocese search` lists other dioceses' rows too, and
+  Connecticut towns that share a New York town's name collide (Albany has
+  `sacred-heart-stamford`, Stamford NY). Add `-ct` to the slug.
 
 ## New lessons
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
-
-- LPi bulletins here can be image-only apart from the ad pages (St. Mark 04/0152, Our Lady of Peace 04/0327: probe pdf reads only pages 7-8); render page 1 with parish-site-access render.py to read the masthead and Mass schedule, and note image-only in the record.
-- Bon Venture and John Patrick Publishing issues here are posted on the parish's own site rather than read from the printer: Bon Venture PDFs on a Duda /bulletin page (footer 'NNNA (PK) - <parish>'), which fetch:check reads with recipe page-pdfs; JPPC issues on the eCatholic site (the jppc.net/onlinebulletins/<n>template.pdf link is the printer's template, not an issue).
-- A parish site that names LPi but embeds no widget (a Wix cover gallery, St. Charles) can still have a live ParishesOnline org: try `probe po <name>-church-<zip>` before calling it no_bulletin.
-- WordPress 'TNC FlipBook' (pdf-viewer-for-wordpress) bulletin pages link /pdfviewer/<slug>/ viewer pages that carry the PDF URL base64-encoded; decode it to read the issue. fetch can't collect these yet, so record the row as unsupported with fetch_gap kind viewer-wrapped-pdf.
-- Some eCatholic parishes here post bulletins as site documents (ec-prod-site-cache.s3.amazonaws.com/static1/<site>/documents/...) rather than files.ecatholic.com/<id>/bulletins, so the ecatholic resolver fails; use provider other with a pinned page-pdfs recipe on the page listing them, plus a filename filter when inserts are listed alongside (Our Lady of Fatima: filename=*Year*.pdf).
-- church-bulletin.org (JPPC): a parish site's Bulletins link can point at a slug that serves only JPPC's generic welcome page (St. Francis Weston's 'st-...'); try the 'saint-...' variant of the slug, and check by saving the HTML with probe get --out and grepping for bulletin/<slug>/<date>.pdf (probe get's text output drops links).
-- Joomla /bulletins/<n>-<date>/file links behind Cloudflare answer 403 even to the browser context's request client; tools/browser_download.py fetch()es the file from inside the page to read an issue (render it with pdftoppm). fetch can't collect these: record unsupported, fetch_gap joomla-file-endpoint.
-- Duda 'Bulletin' pages can list issues oldest first with irregular gaps (Georgetown Oratory); fetch:check's page-pdfs still picked the newest by its file-name date.
-- Bon Venture sponsor pages (http://sponsors.bonventure.net/?page=<n>): fetch:check run with PLAYWRIGHT_BROWSER_CHANNEL=chrome fetched the picked PDF over https and failed TLS verification; run without the Chrome channel it fetched over http fine (Our Lady of Guadalupe Danbury, page 5008).
-- A Duda bulletin page that lists an older year's block first can make page-pdfs pick last year's issue; pin a year filter (filename=*2026.pdf) and set a January revisit to update it.
-- JPPC: a parish site's https://www.jppc.net/onlinebulletins/<n>template.pdf link, church-bulletin.org/<n> and church-bulletin.org/?id=<n> can all redirect to the parish's church-bulletin.org/<saint-...> page listing dated issues (St. Elizabeth Seton 9011, St. Mary Ridgefield 936); probe get the link to follow it, pin page-pdfs on the final page. These JPPC issues are image-only: render page 1 for the masthead.
-- fetch:check can't date WordPress uploads named '<YYYY>.<MonD>-...pdf' (e.g. 2026.Nov15-E-News-2.pdf) and reports date/freshness unknown; the pick then relies on the page listing newest first, so set a revisit to recheck it.
-- A parish site that posts its own copies of an LPi bulletin (Google Drive file links, FaithConnector /e/bulletin redirecting to faithconnector.s3.amazonaws.com/<site>/files/<sunday>.pdf) still has a live ParishesOnline org: read the ad-page footer's NN-NNNN container and `probe po <name>-church-<zip>`, and use parishes_online (St. Thomas the Apostle Norwalk, St. Thomas More Darien).
-- Slugs are global: `pnpm diocese search` also lists other dioceses' live rows, and Connecticut towns that share a name with a New York town collide (Albany's live sacred-heart-stamford is Stamford NY); add -ct to the slug (sacred-heart-stamford-ct).
-- A chapel the bulletin places inside or behind the parish church (St. Joseph's Chapel '(St. Mary)', a chapel 'in the rear of the rectory') goes on that church's row, with its mass-times roster entry linked there, not on a church row of its own.
-- WordPress Download Monitor bulletin lists (/download/<id>/ links redirecting to wp-content/uploads/dlm_uploads/...pdf) are not read by page-pdfs; if the home page links the newest PDF directly, pin page-pdfs on the home page and set a revisit (St. Aloysius New Canaan).
 
 
 ## Rules settled for this diocese
@@ -123,6 +146,7 @@ Decisions that apply to more than one record, and who made them.
 - Eastern Catholic churches in Fairfield County (Ukrainian Eparchy of Stamford incl. St. Vladimir Cathedral and St. Basil Seminary; Melkite Eparchy of Our Lady of the Annunciation in Boston; Maronite Eparchy of St. Maron of Brooklyn; Ruthenian Eparchy of Passaic) are excluded as other-jurisdiction. (accepted by survey-review, 003-survey-review, 2026-11-12)
 - A merged parish's second church or 'campus' that its schedule still lists with Mass (St. George, St. Patrick Bridgeport, St. Benedict, Sacred Heart Danbury, St. Gabriel, St. Ladislaus, St. Agnes/St. Catherine, Sacred Heart & St. Patrick Redding) is a church of that one parish row unless it publishes its own bulletin. (accepted by survey-review, 003-survey-review, 2026-11-12)
 - A community housed at a parish's church with its own rector or moderator (Georgetown Oratory at Sacred Heart, Redding; Haitian quasi-parish at St. Cecilia, Stamford) is a separate parish row only if it publishes its own bulletin; otherwise its Masses are on the host parish's row. (accepted by survey-review, 003-survey-review, 2026-11-12)
+- A chapel the bulletin places inside or behind a parish church (in the church, or 'in the rear of the rectory') goes on that church's row, with its mass-times roster entry linked there, not on a church row of its own. (map batch `stamford-central`, 2026-11-12)
 
 ## Log
 
