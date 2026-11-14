@@ -553,6 +553,21 @@ def test_decode_plus_code_matches_the_reference() -> None:
     assert rosters.decode_plus_code("CWC8+R9") is None
 
 
+def test_paths_are_read_from_where_pnpm_diocese_ran(tmp_path: Path, monkeypatch) -> None:
+    from pdf_extract.dioceses.cli import _user_path
+
+    scratch = tmp_path / "scratch" / "job"
+    monkeypatch.setenv("INIT_CWD", str(scratch))
+    monkeypatch.setenv("npm_lifecycle_event", "diocese")
+    assert _user_path("olp.pdf") == scratch / "olp.pdf"
+    assert _user_path("/tmp/x.pdf") == Path("/tmp/x.pdf")
+    # Another script's INIT_CWD (the dispatcher's `pnpm factory run`) is not ours.
+    monkeypatch.setenv("npm_lifecycle_event", "factory")
+    assert _user_path("olp.pdf") == Path("olp.pdf")
+    monkeypatch.delenv("npm_lifecycle_event")
+    assert _user_path("olp.pdf") == Path("olp.pdf")
+
+
 def test_gcatholic_pages_parse() -> None:
     index = (
         '<tr id="L1"><td><span class="znote">Forestport</span></td><td>'
@@ -577,6 +592,23 @@ def test_gcatholic_pages_parse() -> None:
         '<a href="../usa-04/19333" class="chw">St. Elizabeth Ann Seton</a></td></tr>')
     assert two_states[0]["index_city"] == "Bear" and two_states[0]["group"] == ""
     assert two_states[0]["index_state"] == "DE"
+    # Cathedrals and basilicas come first, in rows whose id has no "L" (Bridgeport).
+    head = rosters.parse_gcatholic_index(
+        '<tr id="2046"><td><span class="znote">Bridgeport</span></td><td>'
+        '<a href="../northamerica/2046" title="St. Augustine Cathedral"><img></a> '
+        '<a href="../northamerica/2046" class="chc">St. Augustine</a>'
+        '<span class="znote"> (Cathedral)</span></td></tr>'
+        '<tr id="4950"><td><span class="znote">Stamford</span></td><td>'
+        '<a href="../northamerica/4950" title="Basilica of St. John the Evangelist"><img></a> '
+        '<a href="../northamerica/4950" class="chb">St. John the Evangelist</a>'
+        '<span class="znote"> (Minor Basilica, Parish)</span></td></tr>'
+        '<tr id="L11990"><td><span class="znote">Bridgeport</span></td><td>'
+        '<a href="../usa-01/21990" title="Church of the Blessed Sacrament"><img></a> '
+        '<a href="../usa-01/21990" class="chw">Blessed Sacrament</a></td></tr>')
+    assert [(r["id"], r["path"], r["kind"], r.get("qualifier")) for r in head] == [
+        ("2046", "northamerica/2046", "Cathedral", "Cathedral"),
+        ("4950", "northamerica/4950", "Basilica", "Minor Basilica, Parish"),
+        ("21990", "usa-01/21990", "Church", None)]
     detail = rosters.parse_gcatholic_detail(
         "<div>Type: Church Rite: Roman (Latin) History: 1914 Location: 87J67GR9+RC "
         "Address: 34 S Main St., Bainbridge, New York 13733-1215 Country: USA "
