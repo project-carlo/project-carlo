@@ -172,6 +172,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A church missing from a bulletin's page-1 Mass schedule can still have a weekly Mass in the intentions (a school-year Tuesday Mass at Blessed Sacrament, Waterbury): read every church section of the intentions before excluding.
 - A finder/GCatholic parish domain can be squatted (saintvincentferrerchurch.org serves a math site): the ParishesOnline org's website field gives the current domain. Org slugs here can also be '<name>-roman-catholic-church' with no ZIP.
 - probe pdf reads only the first 3 pages by default; the LPi ad page carrying the container line is near the end, so pass --pages <page_count>.
+- church-bulletin.org parishes may also link each issue as parish.jppc.net/wp-content/churchuploads/<id>-BULL-<MM-DD-YYYY>.pdf; those uploads have text while church-bulletin.org's copy can be a scan: pin 'page-pdfs <parish bulletins page> filename=*-BULL-*.pdf' (names vary in case and digits; the resolver orders by the file-name date, not page order).
 
 
 ## Rules settled for this diocese
