@@ -103,7 +103,11 @@ From `probe url` of all 98 sites the finder links (2026-11-13), and the map batc
   - Uploads named `<YYYYMMDD>B.pdf` are LPi bulletins re-hosted: grep the ad pages for
     `4lpi.com` to get the container line ("St. Paul, Kensington, CT 03-0062"), find the org
     with `probe po` and a guessed slug (`<name>-church-<zip>`), and record
-    `parishes_online` rather than `page-pdfs`.
+    `parishes_online` rather than `page-pdfs`. Uploads named
+    `<NN>-<NNNN>-<Month>-<D>-<YYYY>.pdf` are LPi too: the prefix is the container
+    (`03-0025` = 03/0025), so `probe container` finds the org directly. `probe pdf` reads 3
+    pages by default and the container line is on an ad page near the end: pass
+    `--pages <page_count>`.
   - A stale or empty bulletins page doesn't mean no bulletin: the parish's ParishesOnline
     org may be live and unlinked. Try `probe po` with guessed slugs (`<name>-parish`,
     `<name>-<zip>`) before calling it not found.
@@ -123,10 +127,26 @@ From `probe url` of all 98 sites the finder links (2026-11-13), and the map batc
   org address `probe po` gives before using it. `render.py`'s browser closes on very large
   scanned issues (~90 MB): `probe get --out` into an empty folder and render with
   `pdftoppm -f 1 -l 1 -r 80 -jpeg`.
+  - Slugs also come as `<name>-roman-catholic-church` with no ZIP. A parish the finder
+    lists with no website can still publish here: search DuckDuckGo for `<church> <town> CT
+    bulletin` to surface its container PDFs, find the org with `probe po`, and record the
+    org page as the website. When a finder or GCatholic domain is squatted, the org's
+    website field gives the current domain.
+  - A merged parish can keep publishing under an older member's org with a new container:
+    follow the new parish site's org link and probe the org, not the old container; the
+    predecessor sites keep stale bulletin pages.
+  - Two orgs can serve one container: when `probe po` shows the same container under two
+    orgs, make one row and record both orgs' po-org and lpi ids.
 - **church-bulletin.org / jppc.net:** linked from diocesanweb pages as
   `church-bulletin.org/?id=<n>`. Unpinned `fetch:check` prints recipe `linked-issue-page`
   and picks `church-bulletin.org/bulletin/<slug>/<date>.pdf`, which can be a scan while the
   parish's own diocesanweb upload of the same issue has text: compare before pinning.
+  Unpinned, it can also reach the issue through an unrelated site page (`/kids-bulletin/`).
+  Pin `page-pdfs https://www.church-bulletin.org/<slug>` (the `?id=<n>` redirect target,
+  newest first), or, where the parish page also links
+  `parish.jppc.net/wp-content/churchuploads/<id>-BULL-<MM-DD-YYYY>.pdf` uploads (these
+  have text), `page-pdfs <parish bulletins page> filename=*-BULL-*.pdf`: names vary in
+  case and digits, and the resolver orders by the file-name date, not page order.
 - **bonventure.net** (`sponsors.bonventure.net/?page=<id>`, PDFs at
   `pdfs/<id>/<YYYY-MM-DD>.pdf`): `page-pdfs` resolves the current issue, but the https
   download fails certificate verification (incomplete chain); `probe get` works over http.
@@ -136,10 +156,11 @@ From `probe url` of all 98 sites the finder links (2026-11-13), and the map batc
   enough for the masthead. Record them `unsupported` with gap `joomla-file-endpoint`.
 - **Others seen once or twice:** Discover Mass, Wix or similar (nbcatholics.org,
   stelizabethofthetrinity.org). Wix and Weebly file hosts answer 429 to rapid `probe pdf`;
-  space the requests.
+  space the requests. A parish posting its bulletin only as photos in a public Facebook
+  group is `unsupported` with gap `facebook-group-images` (`visit.py` reads the post text;
+  the images sit behind the login overlay).
 - **Needs a real browser** (`probe url` said NO-PARISH-WORDS or 4xx at survey):
-  stmatthewrcc.com, saintvincentferrerchurch.org, ourlady-stpatrick.org,
-  olsparishchurch.org.
+  stmatthewrcc.com, ourlady-stpatrick.org, olsparishchurch.org.
 - **Parish finder links for quasi-parishes and ethnic communities** can point into another
   parish's site, sometimes to an old history page. Search `html.duckduckgo.com` for the
   community's own domain before treating it as covered by that parish's bulletin.
@@ -150,29 +171,14 @@ From `probe url` of all 98 sites the finder links (2026-11-13), and the map batc
   regular Mass" articles, the Suffield Observer). For a later end, run `probe container
   <a/b> --from <date> --weeks 160 --step 8 --all --pages 1`, see where the church leaves
   the schedule, then narrow with `--weeks 8 --all --pages 3` to find the announcement.
+  A relegation decree recites the parish's merger decree and earlier relegations of its
+  sibling churches: read decree page 1 when dating a merged parish's other churches.
 - From the neighbours: Albany found image-only ParishesOnline bulletins common (about one in
   five), and one bulletin printed into two LPi containers with only the ad page differing.
 
 ## New lessons
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
-
-- church-bulletin.org: an unpinned fetch:check can reach the issue through an unrelated site page (e.g. /kids-bulletin/); pin `page-pdfs https://www.church-bulletin.org/<slug>` (the ?id=<n> redirect target, listed newest first) instead.
-- Archdiocesan relegation decrees recite the parish's merger decree and earlier relegations of sibling churches (the Immaculate Conception, Southington decree dates Mary Our Queen's relegation to 5 June 2025): read decree page 1 when dating a merged parish's other churches.
-- A merged parish can still list a church among its buildings with no weekly Mass yet hold a feast-day public Mass there: grep two years of issues for '<name> Church' before excluding it.
-- LPi bulletins re-hosted on diocesanweb can also be named '<NN>-<NNNN>-<Month>-<D>-<YYYY>.pdf': the prefix is the container (03-0025 = 03/0025), so 'probe container' finds the ParishesOnline org directly.
-- A merger decree posted on the parish site lists the new parish's 'sacred edifices'; a church missing from it is no longer the parish's, but that is not a closure statement: record it as open unless a source dates the closure.
-- A merged parish can keep publishing under an older member's ParishesOnline org, with a new container (St. Pier Giorgio Frassati under st-elizabeth-of-the-trinity-parish, 03/0003 then 03/1511): follow the new parish site's org link, probe the org rather than the old container, and expect the predecessor sites to keep stale bulletin pages.
-- Mastheads here can keep listing a church closed years earlier (St. Paul VI still lists Ascension, closed Oct 2023): decide churches from the Mass schedule and the Mass intentions, not the masthead's church list.
-- A church the 2017 plan closed can hold Mass again (St. John Vianney, West Haven, reused from 2020 when Our Lady of Victory sold its campus): check the current schedule before applying a 2017 closure report.
-- A parish the finder lists with no website can still publish on ParishesOnline: a DuckDuckGo search for '<church> <town> CT bulletin' surfaces its container PDFs, and probe po '<name>-church-<zip>' finds the org; record the org page as the website.
-- GCatholic Plus Codes here are sometimes ~500 m off the building (Good Shepherd, Seymour): when the finder pin and the ParishesOnline org point agree with each other, prefer them.
-- Two ParishesOnline orgs can serve one container (st-basil-the-great-mary-mother-of-the-church-st-leo and mary-mother-of-the-church-parish-st-leo both read 03/0349): when probe po shows the same container under two orgs, make one row and record both orgs' po-org and lpi ids.
-- A parish that posts its bulletin only as photos in a public Facebook group is bulletin_provider unsupported with fetch_gap kind facebook-group-images (visit.py reads the post text; the images sit behind the login overlay).
-- A church missing from a bulletin's page-1 Mass schedule can still have a weekly Mass in the intentions (a school-year Tuesday Mass at Blessed Sacrament, Waterbury): read every church section of the intentions before excluding.
-- A finder/GCatholic parish domain can be squatted (saintvincentferrerchurch.org serves a math site): the ParishesOnline org's website field gives the current domain. Org slugs here can also be '<name>-roman-catholic-church' with no ZIP.
-- probe pdf reads only the first 3 pages by default; the LPi ad page carrying the container line is near the end, so pass --pages <page_count>.
-- church-bulletin.org parishes may also link each issue as parish.jppc.net/wp-content/churchuploads/<id>-BULL-<MM-DD-YYYY>.pdf; those uploads have text while church-bulletin.org's copy can be a scan: pin 'page-pdfs <parish bulletins page> filename=*-BULL-*.pdf' (names vary in case and digits; the resolver orders by the file-name date, not page order).
 
 
 ## Rules settled for this diocese
@@ -184,6 +190,21 @@ Decisions that apply to more than one record, and who made them.
 - The eleven Eastern Catholic churches GCatholic lists (rite set) are other-jurisdiction exclusions (Stamford Ukrainian, Passaic Ruthenian, St. Maron of Brooklyn, St. Thomas Syro-Malabar of Chicago). (accepted by survey-review, 002-survey-review, 2026-11-13)
 - A church the 2017 pastoral plan closed with no decree is dated by a dated local report of its final Mass; the Courant's 2017 closures list is the plan, not proof of the date. (map batches `north-suburbs` and `hartford-city`, 2026-11-13)
 - A closure date on the parish's own history page is recorded as `last_mass` even when it is years before the relegation decree, and the decree is cited as well. (map batch `east-hartford-glastonbury`, 2026-11-13)
+- Whether a church is in use is decided from the Mass schedule and every church section of
+  the Mass intentions, not the masthead's church list, which can keep a church closed years
+  earlier. Before excluding a church missing from page 1, grep two years of issues for
+  `<name> Church`: a merged parish can hold a weekly intentions-only Mass or a feast-day
+  public Mass in a church with no listed weekly Mass. (map batches
+  `meriden-wallingford-cheshire`, `hamden-north-haven-shoreline` and `waterbury`,
+  2026-11-14)
+- A church missing from a merger decree's list of the new parish's sacred edifices is no
+  longer that parish's, but is recorded as open unless a source dates its closure. (map
+  batch `new-haven-east-haven`, 2026-11-14)
+- A church the 2017 plan closed that holds Mass again is open: check the current schedule
+  before applying a 2017 closure report. (map batch `west-haven-milford`, 2026-11-14)
+- GCatholic Plus Codes are sometimes ~500 m off the building: where the finder pin and the
+  ParishesOnline org's address agree, use them. (map batch `lower-naugatuck-valley`,
+  2026-11-14)
 
 ## Log
 
