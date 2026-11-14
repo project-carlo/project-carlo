@@ -130,6 +130,9 @@ neighbouring diocese is mapped to learn from.
 None yet. Proposed in the survey manifest (`scratch/norwich-map-1/survey.json`) for
 `survey-review`.
 
+- A church the diocese's List of Parishes (March 6, 2026) marks 'Closed - For inquiries or records, contact ...' may be excluded with reason closed on that wording, when no current bulletin of the successor parish lists Mass there; last_mass left empty unless another source dates it. (accepted by survey-review, 002-survey-review, 2026-11-14)
+- The three Eastern Catholic churches GCatholic lists in the territory (St. Mary Ukrainian, Colchester; Protection of the BVM Ukrainian, Willimantic; St. Ann Melkite, Waterford) are excluded as other-jurisdiction. (accepted by survey-review, 002-survey-review, 2026-11-14)
+
 ## Log
 
 - 2026-11-14: survey (Run norwich-map-1). Rosters: directory 88, gcatholic 86, locator-map
