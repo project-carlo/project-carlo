@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-13
   quote: 49 South St., Litchfield, Connecticut 06759-4005
   note: Plus Code 87H8PRW6+3Q.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

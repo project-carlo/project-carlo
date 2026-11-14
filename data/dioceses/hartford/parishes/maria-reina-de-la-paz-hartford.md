@@ -18,6 +18,7 @@ evidence:
   note: The page builds its list in JavaScript; in the browser its 'DOWNLOAD THE LAST BULLETIN' link is
     the 8 November 2026 issue, followed by older /bulletin-documents/<random>.pdf files. The directory's
     site mariareinadelapazct.com redirects to mrpct.org.
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-13
   quote: 501 Naugatuck Ave., Milford, Connecticut 06460-5084
   note: GCatholic Plus Code 87H86V2X+5Q.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

@@ -24,6 +24,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22093
   seen: 2026-11-13
   note: GCatholic 'Our Lady of Sorrows', 79 New Park Ave., Hartford 06106-2109, Plus Code 87H9Q73R+XW.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

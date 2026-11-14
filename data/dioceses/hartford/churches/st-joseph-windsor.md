@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-13
   quote: 1747 Poquonock Ave., Poquonock, Connecticut 06064-0253
   note: GCatholic 'St. Joseph' (Poquonock), Plus Code 87H9W83C+F6.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-13
   quote: 254 Burritt St., Plantsville, Connecticut 06479-1426
   note: GCatholic 'St. Aloysius', Plus Code 87H9H39V+FC.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

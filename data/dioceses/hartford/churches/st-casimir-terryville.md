@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-13
   quote: 19 Allen St., Terryville, Connecticut 06786
   note: Plus Code 87H8MXGW+XP.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

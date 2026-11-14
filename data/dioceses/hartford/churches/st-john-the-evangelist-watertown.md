@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-13
   quote: 21 Academy Hill Rd., Watertown, Connecticut 06795-2101
   note: GCatholic 'St. John the Evangelist', Plus Code 87H8JV2M+W8.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

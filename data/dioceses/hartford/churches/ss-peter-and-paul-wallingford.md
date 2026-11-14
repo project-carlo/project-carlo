@@ -25,6 +25,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22202
   seen: 2026-11-13
   note: 'GCatholic: Sts. Peter and Paul, 139 N Orchard St., Wallingford 06492-3617, Plus Code 87H9F55J+F9.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

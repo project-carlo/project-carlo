@@ -27,6 +27,7 @@ evidence:
   note: Image-only issue of 15 November 2026, read by rendering. Page 1 masthead lists 'Saint Anthony
     Church, 70 Washington Ave, New Haven, CT 06519'; page 3 'Sunday Masses (English)' and 'Daily Masses
     (English)' give Sunday 8:00 AM.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

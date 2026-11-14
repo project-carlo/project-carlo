@@ -25,6 +25,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22094
   seen: 2026-11-13
   note: GCatholic 'Sts. Cyril and Methodius', 55 Charter Oak Ave., Hartford 06106-1902, Plus Code 87H9Q85H+83.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

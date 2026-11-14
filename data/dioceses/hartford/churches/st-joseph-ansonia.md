@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-13
   quote: 32 Jewett St., Ansonia, Connecticut 06401-2499
   note: GCatholic Plus Code 87H88WQH+W8.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

@@ -29,6 +29,7 @@ evidence:
   note: 'Page 1 of the 15 November 2026 St. Pio of Pietrelcina bulletin, ''Our Churches and Mass Schedules'':
     ''Saint Vincent dePaul (SVDP), 80 Taylor Avenue, East Haven, Ct 06512''; Saturday Vigil 5:00 pm, Sunday
     11:45 am, Monday to Wednesday 8:45 am.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

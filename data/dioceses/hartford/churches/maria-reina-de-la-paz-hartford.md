@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-13
   note: 'GCatholic ''St. Lawrence O’Toole'', 494 New Britain Ave., Hartford 06106-3735, phone +1 (860)
     522-1129, Plus Code 87H9P8Q2+C9: the same building under its former name.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

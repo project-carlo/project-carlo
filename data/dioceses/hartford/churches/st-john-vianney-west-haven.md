@@ -31,6 +31,7 @@ evidence:
   quote: In 2020, Our Lady of Victory’s 10-acre campus was sold to the Christian Fellowship Church of
     God and Our Lady of Victory moved to the St. John Vianney Church on Captain Thomas Boulevard.
   note: New Haven Register, 8 December 2021. Explains why the church closed in 2017 holds Mass again.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

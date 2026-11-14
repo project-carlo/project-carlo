@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-13
   note: The parish site's Bulletins page links only one PDF, the 5 October 2025 issue (cdn.diocesanweb.org/beacon/ssjustinmichael/wp-content/uploads/2025/10/20251005B-1-1.pdf);
     it does not embed the ParishesOnline widget. The current issues were found by probing the org slug.
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

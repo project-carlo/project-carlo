@@ -22,6 +22,7 @@ evidence:
   note: 'probe po: org title ''St. Junipero Serra Parish - St. Margaret Mary Church'', 80 Hayes Rd, South
     Windsor, website saintjuniperoserra.org; issues through 2026-11-15. The org slug still carries the
     pre-merger name of St. Margaret Mary.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

@@ -28,6 +28,7 @@ evidence:
   note: Image-only issue of 15 November 2026, read by rendering. Page 1 masthead lists 'Saint Martin de
     Porres Church, 136 Dixwell Avenue, New Haven, CT 06511'; page 3 'Sunday Masses (English)' and 'Daily
     Masses (English)' give Sunday 10:00 AM.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-13
   quote: 44 Washington Ave., North Haven, Connecticut 06473-1799
   note: GCatholic Plus Code 87H994RR+C9.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

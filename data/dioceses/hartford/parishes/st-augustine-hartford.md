@@ -19,6 +19,7 @@ evidence:
     in June-September, then Affinity-, Canva-, C-Bulletin- and Bulletin-for-<date>.pdf); no other kind
     of PDF on the page. The 030485 suggests an old LPi container 03/0485, which probe container found
     no issue in for the last 3 Sundays and probe po could not resolve.
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

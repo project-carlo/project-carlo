@@ -26,6 +26,7 @@ evidence:
   note: 'Journal Inquirer, Joseph Villanova, 22 January 2025: the schedule effective 1 March 2025 drops
     Assumption''s Saturday 5 p.m. Mass; the parish was created from the merger of four Manchester churches
     in 2021.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

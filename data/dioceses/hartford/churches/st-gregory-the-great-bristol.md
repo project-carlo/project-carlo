@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-13
   quote: 235 Maltby St., Bristol, Connecticut 06010-3892
   note: GCatholic 'St. Gregory the Great', Plus Code 87H9P32Q+M4.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-13
   quote: 61 N Cliff St., Ansonia, Connecticut 06401-1698
   note: GCatholic 'Assumption', Plus Code 87H88WXC+G7.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-13
   quote: 1620 Whitney Ave., Hamden, Connecticut 06517-2024
   note: GCatholic Plus Code 87H9935Q+8W.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

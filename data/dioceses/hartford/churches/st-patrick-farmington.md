@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-13
   quote: 110 Main St., Farmington, Connecticut 06034-0523
   note: GCatholic 'St. Patrick', Plus Code 87H9P598+HQ.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

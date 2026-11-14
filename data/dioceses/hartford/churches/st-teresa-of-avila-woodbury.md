@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-13
   quote: 11 Washington Ave., Woodbury, Connecticut 06798-5001
   note: GCatholic 'St. Teresa of Avila', Plus Code 87H8GQWR+GG.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

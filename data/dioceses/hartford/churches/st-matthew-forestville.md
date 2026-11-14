@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-13
   quote: 120 Church Ave., Forestville, Connecticut 06011-9216
   note: GCatholic 'St. Matthew', Plus Code 87H9M3GX+5F.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

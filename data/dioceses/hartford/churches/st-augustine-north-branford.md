@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-13
   quote: 30 Caputo Rd., North Branford, Connecticut 06471-1027
   note: GCatholic Plus Code 87H985MW+VC.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

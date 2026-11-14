@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-14
   note: 'probe po: ''St. Louis de Montfort Parish'', 49 South St, Litchfield, lpi 0018000000Qc0ByAAJ,
     container 03/0572, latest issue 15 November 2026.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

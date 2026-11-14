@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-13
   quote: 318 Church St., Naugatuck, Connecticut 06770-2894
   note: GCatholic 'St. Francis of Assisi', Plus Code 87H8FWVW+54.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

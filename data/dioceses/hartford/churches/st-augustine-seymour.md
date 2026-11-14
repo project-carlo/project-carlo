@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-13
   quote: 35 Washington Ave., Seymour, Connecticut 06794-0303
   note: GCatholic 'St. Augustine', Plus Code 87H89WRH+Q5; its ZIP 06794 is not Seymour's.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

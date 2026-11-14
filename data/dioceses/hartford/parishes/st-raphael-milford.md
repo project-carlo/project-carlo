@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-14
   note: probe url of the parish's diocesanweb Bulletins page finds lpi:0018000000Qx9TOAAZ (the ParishesOnline
     widget for the org above) and no self-hosted PDFs.
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

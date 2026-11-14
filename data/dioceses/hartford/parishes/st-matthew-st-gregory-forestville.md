@@ -27,6 +27,7 @@ evidence:
   note: church-bulletin.org/?id=955 ('saint-matthew-saint-gregory-the-great-parish-bristol-ct-06010')
     carries the same 15 November issue as an 8-page scan with no text layer; the LPi container copy has
     text, so the row reads ParishesOnline.
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

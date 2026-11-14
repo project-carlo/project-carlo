@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-13
   quote: 379 Broad St., Windsor, Connecticut 06095-3004
   note: GCatholic 'St. Gabriel', Plus Code 87H9R9X3+5M.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

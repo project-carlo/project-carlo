@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-13
   note: 'probe po 0018000000Qc2MxAAJ: org ''SS Isidore and Maria'', 2577 Main St, Glastonbury; container
     04/0896, latest issue 15 November 2026.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

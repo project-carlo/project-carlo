@@ -52,6 +52,7 @@ evidence:
     No regular masses will be held.
   note: NBC Connecticut, 18 August 2023, on the archdiocese's 30 September 2023 changes. The 2024-2026
     bulletins show a school-year Tuesday Mass there all the same.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

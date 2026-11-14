@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-13
   quote: 150 S Main St.
   note: GCatholic 'St. Philip', 150 S Main St., East Windsor, Connecticut 06088-9760; Plus Code 87H9V9QR+VF.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

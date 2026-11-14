@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-13
   quote: 33 Whitfield St., Guilford, Connecticut 06437-1944
   note: GCatholic 'St. George', Plus Code 87H978J8+XR.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

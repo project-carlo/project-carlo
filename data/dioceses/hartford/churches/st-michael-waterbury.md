@@ -28,6 +28,7 @@ evidence:
   note: '15 November 2026 Immaculate Conception bulletin: page 1 schedule ''St. Michael Sun: 9am''; page
     2 ''St. Michael the Archangel 62 St Michael''s Dr (SMA)''; page 3 intentions ''St. Michael the Archangel
     | SMA'' Sun Nov 15 9:00am, Sun Nov 22 9:00am.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

@@ -19,6 +19,7 @@ evidence:
   note: 'probe po of the widget id on the parish''s Bulletins page: org ''Holy Disciples Parish'', 21
     Academy Hill, Watertown, Connecticut 06795-2101, LPi id 0018000000Qc1R6AAJ, container 03/0007, latest
     issue 2026-11-15.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

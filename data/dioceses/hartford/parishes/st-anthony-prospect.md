@@ -20,6 +20,7 @@ evidence:
   seen: 2026-11-14
   note: 'probe po: org at 4 Union City Rd., Prospect, Connecticut 06712-0117, LPi id 0018000000Qx9U5AAJ,
     container 04/0768, latest issue 2026-11-15.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

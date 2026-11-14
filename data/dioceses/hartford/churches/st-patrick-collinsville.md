@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-13
   quote: 7 Burlington Ave., Collinsville, Connecticut 06022-0287
   note: GCatholic 'St. Patrick', Plus Code 87H9R35F+FH (41.80869, -72.92606).
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

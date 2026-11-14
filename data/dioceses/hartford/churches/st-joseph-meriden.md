@@ -37,6 +37,7 @@ revisit: Check the Our Lady Queen of Angels bulletins of March 2027 for a St. Jo
   Joseph Church, and the Christmas 2026 schedule for any Mass there; if none, look for a relegation decree
   or closure notice.
 revisit_after: 2027-03-22
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

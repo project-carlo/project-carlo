@@ -24,6 +24,7 @@ evidence:
   seen: 2026-11-13
   quote: 70 Gulf St., Milford, Connecticut 06460
   note: GCatholic Plus Code 87H86XG2+86.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-14
   note: Parish site (diocesanweb) links the ParishesOnline org from its Bulletins menu item; /bulletins/
     itself answers 404.
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

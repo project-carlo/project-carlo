@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-13
   quote: 48 East St., Bethlehem, Connecticut 06751-0192
   note: GCatholic 'Nativity', Plus Code 87H8JQQW+JH.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

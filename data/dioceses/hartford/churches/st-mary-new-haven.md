@@ -27,6 +27,7 @@ evidence:
   note: Image-only issue of 15 November 2026, read by rendering. Page 1 masthead lists 'Saint Mary Church,
     5 Hillhouse Avenue, New Haven, CT 06511'; page 3 'Sunday Masses (English)' and 'Daily Masses (English)'
     give Sunday 11:00 AM and 5:00 PM, Monday to Friday 12:00 PM.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

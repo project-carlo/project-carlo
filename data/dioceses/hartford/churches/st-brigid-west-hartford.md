@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-13
   quote: 1088 New Britain Ave., West Hartford, Connecticut 06110-2426
   note: GCatholic 'St. Brigid', Plus Code 87H9P7JC+G8.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

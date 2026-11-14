@@ -16,6 +16,7 @@ evidence:
   seen: 2026-11-13
   note: Bulletins page (diocesanweb) links one PDF, the current issue 20261115B.pdf (LPi-style file name,
     but uploaded to the parish's own cdn.diocesanweb.org folder; no ParishesOnline link on the site).
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

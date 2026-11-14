@@ -23,6 +23,7 @@ evidence:
   quote: 'Saturday: 9 AM and 4 PM (Vigil)'
   note: Mass Times page lists Saint Bridget Church only; 'Epiphany Chapel' is listed for adoration (Tuesday,
     Wednesday), not Mass.
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

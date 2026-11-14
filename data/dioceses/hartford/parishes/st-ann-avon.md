@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-13
   note: 'probe po: org ''Church of St. Ann'', 289 Arch Rd, Avon; container 04/0700, latest issue 15 November
     2026.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

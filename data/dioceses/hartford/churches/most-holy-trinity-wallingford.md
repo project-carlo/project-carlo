@@ -25,6 +25,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22200
   seen: 2026-11-13
   note: 'GCatholic: Holy Trinity, 68 N Colony St., Wallingford 06492-3696, Plus Code 87H9F55G+7H.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

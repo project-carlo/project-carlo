@@ -27,6 +27,7 @@ evidence:
   note: Image-only issue of 15 November 2026, read by rendering. Page 1 masthead lists 'Saint Aedan Church,
     112 Fountain Street, New Haven, CT 06515'; page 3 'Sunday Masses (English)' and 'Daily Masses (English)'
     give Sunday 9:00 AM.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

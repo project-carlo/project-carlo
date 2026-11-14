@@ -23,6 +23,7 @@ evidence:
   note: 'probe po: ''Our Lady of Mercy Church'', 19 S Canal St, Plainville, lpi 0018000000Qx9SzAAJ, website
     olmct.org, but no issues listed; not the bulletin''s current home, so not recorded as a publication
     id.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

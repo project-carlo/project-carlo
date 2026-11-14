@@ -29,6 +29,7 @@ evidence:
   note: 'Page 1 of the 15 November 2026 St. Pio of Pietrelcina bulletin, ''Our Churches and Mass Schedules'':
     ''Our Lady of Pompeii (OLOP), 355 Foxon Road, East Haven, Ct 06513''; Saturday Vigil 4:00 pm, Sunday
     7:30 and 10:30 am, Monday to Thursday 8:00 am.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

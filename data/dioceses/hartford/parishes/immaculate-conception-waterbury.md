@@ -23,6 +23,7 @@ evidence:
   seen: 2026-11-14
   note: 'probe po: org ''Immaculate Conception Parish'', 74 W Main St, Waterbury, CT 06702; container
     03/1341; weekly issues to 15 November 2026.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

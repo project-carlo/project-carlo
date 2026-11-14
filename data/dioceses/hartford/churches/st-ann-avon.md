@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-13
   quote: 289 Arch Rd., Avon, Connecticut 06001-4209
   note: GCatholic 'St. Ann', Plus Code 87H9Q4XQ+PR.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

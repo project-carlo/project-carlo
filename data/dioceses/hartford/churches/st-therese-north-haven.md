@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-13
   quote: 555 Middletown Ave., North Haven, Connecticut 06473-4000
   note: GCatholic Plus Code 87H99556+82.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-13
   quote: 4 North St., Norfolk, Connecticut 06018
   note: Plus Code 87H8XQVX+Q7; its ZIP 06018 is Canaan's.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-13
   quote: 7 River Rd., Cornwall Bridge, Connecticut 06069-0218
   note: GCatholic 'St. Bridget', Plus Code 87H8RJCG+FP.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

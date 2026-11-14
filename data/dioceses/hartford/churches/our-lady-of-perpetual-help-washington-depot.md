@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-13
   quote: Route 47, Washington Depot, Connecticut 06794-0303
   note: GCatholic 'Our Lady of Perpetual Help', Plus Code 87H8JMPM+JP.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

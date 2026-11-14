@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-13
   note: Parish finder entry 133 'St. Francis Xavier Parish', 26 Chestnut Land Rd, New Milford 06776 (website
     field 'http://stfrancisxaviernewmilford@aohct.org', an email address); pin 41.602332, -73.402354.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

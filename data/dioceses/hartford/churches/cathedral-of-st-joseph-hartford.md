@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-13
   note: ParishesOnline org address 140 Farmington Ave, Hartford, CT 06105-3783, pin 41.7703, -72.7040
     (about 1 km west of the directory pin).
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

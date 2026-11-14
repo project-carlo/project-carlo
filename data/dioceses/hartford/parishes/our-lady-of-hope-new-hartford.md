@@ -20,6 +20,7 @@ evidence:
   seen: 2026-11-14
   note: 'probe po: ''Our Lady of Hope Parish'', 60 Town Hill Rd, New Hartford, container 04/0975, latest
     issue 22 November 2026.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

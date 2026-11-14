@@ -24,6 +24,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22129
   seen: 2026-11-13
   note: GCatholic 'Holy Cross', 31 Biruta St., New Britain, Plus Code 87H9M6M6+3M.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

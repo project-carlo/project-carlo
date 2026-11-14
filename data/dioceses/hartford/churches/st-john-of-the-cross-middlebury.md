@@ -29,6 +29,7 @@ evidence:
   seen: 2026-11-13
   quote: 1321 Whittemore Rd., Middlebury, Connecticut 06762-0361
   note: GCatholic 'St. John of the Cross', Plus Code 87H8GVGG+V7.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

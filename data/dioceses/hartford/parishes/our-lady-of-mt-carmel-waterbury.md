@@ -18,6 +18,7 @@ evidence:
   note: 'probe po: org ''Our Lady of Mount Carmel Church'', 785 Highland Ave, Waterbury, CT 06708-4199,
     LPi 0018000000QbzyxAAB, container 03/0018, latest issue 22 November 2026. The parish homepage links
     its publication page.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

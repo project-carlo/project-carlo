@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-13
   quote: 19 South Canal St., Plainville, Connecticut 06062-2799
   note: GCatholic 'Our Lady of Mercy', Plus Code 87H9M48H+WP; gives the office address.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-13
   quote: 64 Pearl St.
   note: GCatholic 'St. Patrick', 64 Pearl St., Enfield, Connecticut 06082-3594; Plus Code 87H9XCW2+P8.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

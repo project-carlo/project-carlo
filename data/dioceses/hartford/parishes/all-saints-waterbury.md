@@ -21,6 +21,7 @@ evidence:
   note: 'probe po: org ''All Saints/Todos los Santos Parish'', 515 S Main St, Waterbury, CT 06706, website
     www.allsaintswtby.org, LPi 0018000000Qx9TgAAJ, container 03/1242, latest issue 22 November 2026; the
     20261108B.pdf issue there is the one the parish site re-hosts.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

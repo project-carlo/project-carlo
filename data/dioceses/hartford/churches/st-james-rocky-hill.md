@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-13
   quote: 767 Elm St., Rocky Hill, Connecticut 06067-1902
   note: GCatholic 'St. James', Plus Code 87H9M85M+X7.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

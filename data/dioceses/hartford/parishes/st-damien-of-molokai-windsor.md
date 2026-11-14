@@ -21,6 +21,7 @@ evidence:
   quote: In October of 2020, St. Gertrude Parish was subsumed into St. Damien parish, thereby consolidating
     all of Windsor’s faithful under one Catholic parish.
   note: 'Also: St. Joseph and St. Gabriel parishes merged by decree of 29 June 2017 to form St. Damien.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

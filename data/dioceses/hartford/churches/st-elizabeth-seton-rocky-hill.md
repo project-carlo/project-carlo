@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-13
   quote: 280 Brook St., Rocky Hill, Connecticut 06067-3602
   note: GCatholic 'St. Elizabeth Seton', Plus Code 87H9J8VV+CW.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

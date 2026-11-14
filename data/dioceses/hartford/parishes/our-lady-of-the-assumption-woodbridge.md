@@ -17,6 +17,7 @@ evidence:
   seen: 2026-11-14
   note: 'probe po: ''Church of Our Lady of the Assumption'', 81 Center Rd, Woodbridge 06525; website assumptionchurch.com;
     container 03/0784, latest issue 15 November 2026. The parish''s diocesanweb site links this org.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

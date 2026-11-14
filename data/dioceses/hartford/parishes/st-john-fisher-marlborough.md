@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-13
   note: 'probe po: ''St. John Fisher Church'', 30 Jones Hollow Rd, Marlborough; issues through 2026-11-22
     (posted early) in container 03/0362.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

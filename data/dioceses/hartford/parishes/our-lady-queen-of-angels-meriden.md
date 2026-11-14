@@ -30,6 +30,7 @@ evidence:
   note: 'Mass Times page: Our Lady of Mount Carmel Church (Saturday 4:00 pm, Sunday 8:00 am), Our Lady
     Queen of Angels Chapel, 109 Goodwill Ave (Monday-Friday 7:30 am), Holy Angels Church (Sunday 10:30
     am); no St. Joseph.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

@@ -24,6 +24,7 @@ evidence:
   seen: 2026-11-13
   quote: 321 Circular Ave., Hamden, Connecticut 06514-3441
   note: GCatholic Plus Code 87H99347+3F.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-14
   note: fetch:check with the pinned page-pdfs recipe picked Bulletin_15November2026.pdf (PDF, the 15 November
     2026 issue read above).
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

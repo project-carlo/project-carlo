@@ -24,6 +24,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22138
   seen: 2026-11-13
   note: GCatholic 'St. Maurice', 100 Wightman Rd., New Britain, Plus Code 87H9M55W+C7.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

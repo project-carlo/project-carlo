@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-13
   quote: 731 Main St., Branford, Connecticut 06405-3693
   note: GCatholic 'St. Mary', Plus Code 87H975HP+P2.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

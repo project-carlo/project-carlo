@@ -24,6 +24,7 @@ evidence:
   seen: 2026-11-13
   quote: 400 Merwin Ave., Woodmont, Connecticut 06460-7198
   note: GCatholic Plus Code 87H962J3+G9.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

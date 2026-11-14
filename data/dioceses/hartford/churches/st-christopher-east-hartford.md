@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-13
   quote: 538 Brewer St., East Hartford, Connecticut 06118-2305
   note: GCatholic 'St. Christopher', Plus Code 87H9P9WW+RG.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

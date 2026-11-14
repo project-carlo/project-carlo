@@ -21,6 +21,7 @@ evidence:
 - url: https://strosemeriden.org/
   seen: 2026-11-13
   note: 'probe url: diocesanweb site ''St. Rose Parish – Meriden, CT'' links ParishesOnline org st-rose-of-lima-parish-06450.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

@@ -27,6 +27,7 @@ evidence:
   note: '15 November 2026 bulletin (image, rendered), page 1: ''ST. BASIL THE GREAT AT ST. PIUS X CHURCH,
     525 WOODTICK RD, WOLCOTT'', Weekday Mass Monday | 8:00 AM, Tuesday | 8:00 AM; Saturday Vigil | 4:00
     PM; Sunday | 9:30 AM.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

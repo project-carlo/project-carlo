@@ -29,6 +29,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22115
   seen: 2026-11-13
   note: 'GCatholic: Holy Angels, 585 Main St., Meriden 06451-4934, Plus Code 87H9G5F3+87.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

@@ -17,6 +17,7 @@ evidence:
   seen: 2026-11-14
   note: 'probe po: ''Precious Blood'', 70 Gulf St, Milford 06460; website preciousbloodparishmilford.org;
     container 03/0155, latest issue 15 November 2026. The parish site links this org.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

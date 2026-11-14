@@ -25,6 +25,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22133
   seen: 2026-11-13
   note: GCatholic 'St. Francis of Assisi', 1755 Stanley St., New Britain, Plus Code 87H9M6VH+CC.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

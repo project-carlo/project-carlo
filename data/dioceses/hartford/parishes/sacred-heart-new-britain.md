@@ -19,6 +19,7 @@ evidence:
   note: The parish's diocesanweb Bulletins page links Discover Mass download.php issues; the Discover
     Mass church page is discovermass.com/church/sacred-heart-new-britain-ct/ (issues 1, 8 and 15 November
     2026 seen with issues.py).
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

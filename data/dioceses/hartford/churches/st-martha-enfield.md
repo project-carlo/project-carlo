@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-13
   quote: 214 Brainard Rd.
   note: GCatholic 'St. Martha', 214 Brainard Rd., Enfield, Connecticut 06082-2625; Plus Code 87J92CCP+36.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

@@ -24,6 +24,7 @@ evidence:
   seen: 2026-11-13
   quote: 450 Racebrook Rd., Orange, Connecticut 06477-2599
   note: GCatholic Plus Code 87H87XHR+2X.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-13
   quote: 81 Center Rd., Woodbridge, Connecticut 06525-1699
   note: GCatholic Plus Code 87H89X3W+C9; GCatholic names it 'Assumption'.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

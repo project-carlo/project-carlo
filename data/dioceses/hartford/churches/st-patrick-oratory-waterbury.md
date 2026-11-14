@@ -27,6 +27,7 @@ evidence:
   quote: 'Sunday:                     8:30am Low Mass'
   note: '15 November 2026 St. Patrick Oratory bulletin: masthead ''Saint Patrick Oratory, 50 Charles Street,
     Waterbury, CT 06708''; Mass Times Sunday 8:30am Low Mass, 10:30am High Mass, and daily Masses.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

@@ -23,6 +23,7 @@ evidence:
 revisit: Rerun fetch:check once the parish posts an issue newer than 1 November 2026; confirm it picks
   it.
 revisit_after: 2026-11-21
+promoted: 2026-11-14
 research:
 - method: probe get of the Bulletins page; newest linked issue
   url: https://stcatherine.info/bulletins/

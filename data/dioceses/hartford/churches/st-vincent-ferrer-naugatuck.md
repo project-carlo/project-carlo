@@ -24,6 +24,7 @@ evidence:
   seen: 2026-11-13
   quote: 1006 New Haven Rd., Naugatuck, Connecticut 06770-4731
   note: GCatholic 'St. Vincent Ferrer', Plus Code 87H8FXC9+66.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

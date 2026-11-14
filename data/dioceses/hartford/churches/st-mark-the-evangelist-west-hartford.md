@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-13
   quote: 467 Quaker Ln. S, West Hartford, Connecticut 06110-1042
   note: GCatholic 'St. Mark the Evangelist', Plus Code 87H9P7XC+G4.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

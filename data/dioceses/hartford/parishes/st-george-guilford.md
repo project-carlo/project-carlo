@@ -24,6 +24,7 @@ evidence:
 - url: https://stgeorgeguilford.org/
   seen: 2026-11-14
   note: 'probe url: diocesanweb WordPress site linking the ParishesOnline org st-george-church-06437.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

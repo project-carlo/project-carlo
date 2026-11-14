@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-13
   quote: 896 Main St.
   note: GCatholic 'St. James', 896 Main St., Manchester, Connecticut 06040-6003; Plus Code 87H9QF9H+W9.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

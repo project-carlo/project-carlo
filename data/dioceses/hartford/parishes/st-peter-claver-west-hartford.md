@@ -23,6 +23,7 @@ evidence:
   seen: 2026-11-13
   note: 'probe po: org ''St. Peter Claver Church'', 47 Pleasant St, West Hartford; container 03/1435,
     latest issue 15 November 2026.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

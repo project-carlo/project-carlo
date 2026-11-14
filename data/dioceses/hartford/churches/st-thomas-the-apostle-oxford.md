@@ -24,6 +24,7 @@ evidence:
   seen: 2026-11-13
   quote: 733 Oxford Rd., Rte. 67, Oxford, Connecticut 06478-1299
   note: GCatholic 'St. Thomas the Apostle', Plus Code 87H8FV32+X8.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

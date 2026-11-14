@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-13
   quote: 160 Main St., Torrington, Connecticut 06790
   note: Plus Code 87H8RV3H+GG.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

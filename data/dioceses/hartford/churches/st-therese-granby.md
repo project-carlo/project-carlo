@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-13
   quote: 120 W Granby Rd., Granby, Connecticut 06035-2907
   note: GCatholic 'St. Therese', Plus Code 87H9X53P+M8.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

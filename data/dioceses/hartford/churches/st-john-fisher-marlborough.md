@@ -26,6 +26,7 @@ evidence:
   quote: 30 Jones Hollow Rd.
   note: GCatholic 'St. John Fisher', 30 Jones Hollow Rd., Marlborough, Connecticut 06447-1141; Plus Code
     87H9JGMQ+XG.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

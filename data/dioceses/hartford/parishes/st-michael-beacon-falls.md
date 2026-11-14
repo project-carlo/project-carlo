@@ -20,6 +20,7 @@ evidence:
   note: 'probe po: org ''St. Michael Roman Catholic Church'', 25 Maple Ave, Beacon Falls 06403-1145, website
     www.saintmichaelsonline.org, LPi 0018000000Qc2IrAAJ, container 04/0415, weekly issues to 15 November
     2026.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

@@ -29,6 +29,7 @@ evidence:
   note: 'Mass Times page: Sacred Heart Church has the Wednesday 6:00 pm Rosary and a first-Saturday Children''s
     Rosary. The site''s only eCatholic link is the livestream page 2829.sites.ecatholic.com/parish-live,
     not a bulletin.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

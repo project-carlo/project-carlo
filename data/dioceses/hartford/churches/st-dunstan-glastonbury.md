@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-13
   quote: 1345 Manchester Rd., Glastonbury, Connecticut 06033-1823
   note: GCatholic 'St. Dunstan', Plus Code 87H9PF8F+FH.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

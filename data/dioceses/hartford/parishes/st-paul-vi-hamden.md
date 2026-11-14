@@ -28,6 +28,7 @@ evidence:
   note: Homepage 'Join Us For Mass' gives times for Saint Rita Church, Our Lady of Mt. Carmel and Blessed
     Sacrament only, and links the ParishesOnline org; its /bulletins/ page still offers only 20250615B
     (1).
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

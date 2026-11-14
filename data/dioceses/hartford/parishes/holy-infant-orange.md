@@ -17,6 +17,7 @@ evidence:
   seen: 2026-11-14
   note: 'probe po: ''Holy Infant Church'', 450 Racebrook Rd, Orange 06477; container 03/0852, latest issue
     15 November 2026. The parish''s diocesanweb Bulletins page embeds this org (lpi:0018000000Qbz1jAAB).'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

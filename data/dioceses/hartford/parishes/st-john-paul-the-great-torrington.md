@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-14
   note: 'probe po: ''St John Paul the Great Parish'', 160 Main St, Torrington, container 04/0982, latest
     issue 22 November 2026.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

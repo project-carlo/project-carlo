@@ -22,6 +22,7 @@ evidence:
     494 Main Street South, Woodbury, CT 06798, website princeofpeaceparish-aohct.org, LPi 0018000000Qc2UqAAJ,
     container 03/0159, latest issue 15 November 2026. probe url of the parish''s /bulletins/ page finds
     this org and LPi id.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

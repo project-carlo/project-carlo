@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-13
   note: 'Parish finder entry 151 ''St. Francis Xavier Parish: Our Lady of the Lakes Church'', 3 Old Town
     Park Rd., New Milford 06776; pin 41.532677, -73.427105.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

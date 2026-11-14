@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-13
   quote: Father Salemi Dr., Ansonia, Connecticut 06401-3296
   note: GCatholic 'Holy Rosary', Plus Code 87H88WQG+GC.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

@@ -17,6 +17,7 @@ evidence:
   seen: 2026-11-13
   note: Weekly Bulletins page lists 253 PDFs, all named '<Month>-<D>-<YYYY>-Bulletin*.pdf', newest first
     (November-8-2026-Bulletin.pdf on top); the 15 November issue was not yet posted on Friday 13 November.
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

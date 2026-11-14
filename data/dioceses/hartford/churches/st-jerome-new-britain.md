@@ -24,6 +24,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22134
   seen: 2026-11-13
   note: GCatholic 'St. Jerome', 1010 Slater Rd., New Britain, Plus Code 87H9M5VW+C9.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-13
   quote: 26 Broadway, Milford, Connecticut 06460
   note: GCatholic Plus Code 87H85WR8+X9.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

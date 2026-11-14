@@ -29,6 +29,7 @@ evidence:
 - url: https://parishesonline.com/organization/www-stnicholasct-org
   seen: 2026-11-14
   note: 'probe po: org address 135 Mountain Rd., Seymour, point 41.3869883,-73.1039513.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

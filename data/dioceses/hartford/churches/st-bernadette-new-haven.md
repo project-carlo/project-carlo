@@ -28,6 +28,7 @@ evidence:
   note: 'Page 1 of the 15 November 2026 St. Pio of Pietrelcina bulletin, ''Our Churches and Mass Schedules'':
     ''St Bernadette (SB), 385 Townsend Avenue, New Haven, Ct 06512''; Sunday 9:00 am, Thursday and Friday
     8:45 am.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

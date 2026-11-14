@@ -20,6 +20,7 @@ evidence:
   seen: 2026-11-13
   note: Bulletins page (diocesanweb) lists self-uploaded PDFs newest first, named <MM.DD.YYYY>-SH(P)-Bull*.pdf;
     newest on 2026-11-13 was 11.08.2026-SH-Bull-32OT.pdf.
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

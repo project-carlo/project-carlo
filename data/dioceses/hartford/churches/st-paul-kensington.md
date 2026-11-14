@@ -25,6 +25,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22105
   seen: 2026-11-13
   note: GCatholic 'St. Paul', 479 Alling St., Kensington, Plus Code 87H9J6MJ+R2.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

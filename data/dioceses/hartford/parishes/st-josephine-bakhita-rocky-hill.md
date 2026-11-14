@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-13
   note: 'probe po 0018000000Qc1NiAAJ: org ''St. Josephine Bakhita'', 767 Elm St, Rocky Hill; container
     03/0053, latest issue 15 November 2026.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

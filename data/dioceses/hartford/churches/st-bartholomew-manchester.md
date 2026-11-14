@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-13
   quote: 45 Ludlow Rd.
   note: GCatholic 'St. Bartholomew', 45 Ludlow Rd., Manchester, Connecticut 06040-4542; Plus Code 87H9QGP6+54.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

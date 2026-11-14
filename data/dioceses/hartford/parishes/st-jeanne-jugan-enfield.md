@@ -27,6 +27,7 @@ evidence:
   note: The decree recites that the parish was created by decree of October 21, 2022 from the merger of
     St. Raymond of Peñafort (St. Patrick, St. Adalbert, St. Martha) with the other Enfield parishes, and
     relegates St. Adalbert to profane use effective April 22, 2024.
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

@@ -30,6 +30,7 @@ evidence:
   note: 'Republican-American/CT Insider, 3 June 2025: the archdiocese''s merger of Our Lady of Perpetual
     Help (Washington, with its St. Patrick mission, Roxbury) into St. Francis Xavier, New Milford, from
     1 January 2026.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

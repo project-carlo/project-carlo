@@ -32,6 +32,7 @@ evidence:
   quote: St. Leo the Great Church 14 Bentwood Drive Waterbury, CT 06705
   note: 'Mary, Mother of the Church''s Mass times page: Saturday Vigil 4:00 PM, Sunday 8:00 AM and 11:00
     AM, Wednesday & Thursday 8:00 AM.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

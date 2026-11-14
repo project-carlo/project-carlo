@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-14
   note: 'probe po: org ''St Nicholas Parish'', 135 Mountain Rd., Seymour 06483, website stnicholasct.org,
     LPi 0018000000Qx9TQAAZ, container 03/1092, weekly issues to 15 November 2026.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

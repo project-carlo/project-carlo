@@ -23,6 +23,7 @@ evidence:
   seen: 2026-11-13
   note: 'probe url: diocesanweb site ''St. Faustina – Meriden, CT'' links the ParishesOnline org and container
     03/0023 (its link still points at the 24 May 2026 issue; the org lists issues to 15 November 2026).'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

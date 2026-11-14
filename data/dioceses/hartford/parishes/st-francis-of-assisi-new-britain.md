@@ -30,6 +30,7 @@ evidence:
 revisit: Rerun fetch:check once the 8 November 2026 issue is uploaded; confirm it picks it (the page lags
   the fortnightly issue date).
 revisit_after: 2026-11-27
+promoted: 2026-11-14
 research:
 - method: 'fetch:check --diocese hartford (reconcile): page-pdfs still picks SFC-The-Bulletin-October-25-2026.pdf,
     the newest linked; the fortnightly 8 November issue is not yet uploaded'

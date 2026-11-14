@@ -24,6 +24,7 @@ evidence:
   seen: 2026-11-13
   quote: 31 Oak St., Winsted, Connecticut 06098-0808
   note: GCatholic 'St. Joseph', Plus Code 87H8WWCP+G3.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-13
   note: The Bulletins page links church-bulletin.org/?id=600 and yearly pages (/2023-2/, /2024-2/, /bulletins/2025-2/,
     /2026-2/); /2026-2/ links 46 self-uploaded PDFs oldest first, newest 0600AnnunciationNovember-15FINAL-2026.pdf.
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

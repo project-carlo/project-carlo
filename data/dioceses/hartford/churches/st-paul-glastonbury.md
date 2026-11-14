@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-13
   quote: 2577 Main St., Glastonbury, Connecticut 06033-2023
   note: GCatholic 'St. Paul', Plus Code 87H9P97Q+QQ.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

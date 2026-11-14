@@ -30,6 +30,7 @@ evidence:
     Sunday 8:30 & 12:30pm (Spanish), Sunday 10:30am (English); Chapel (Shrine of St. Anne) Tuesday 9:00am;
     Shrine of St. Anne Monday through Friday 6:30pm Spanish. Page 1 office address 515 S. Main St., Waterbury,
     CT 06706.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

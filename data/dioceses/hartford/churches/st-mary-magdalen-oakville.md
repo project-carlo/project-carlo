@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-13
   quote: 145 Buckingham St., Oakville, Connecticut 06779-1728
   note: GCatholic 'St. Mary Magdalen', Plus Code 87H8HWR8+6J (41.59056, -73.08344).
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

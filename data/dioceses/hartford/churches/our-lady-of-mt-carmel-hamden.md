@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-13
   quote: 2819 Whitney Ave., Hamden, Connecticut 06518-2598
   note: GCatholic Plus Code 87H994X3+J4.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

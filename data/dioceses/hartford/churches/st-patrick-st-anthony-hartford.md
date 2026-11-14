@@ -25,6 +25,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22102
   seen: 2026-11-13
   note: GCatholic 'St. Patrick–St. Anthony', 285 Church St., Hartford 06103-1196, Plus Code 87H9Q89C+MQ.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

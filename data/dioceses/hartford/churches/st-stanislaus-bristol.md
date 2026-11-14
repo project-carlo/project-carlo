@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-13
   quote: 510 West St., Bristol, Connecticut 06011-1860
   note: GCatholic 'St. Stanislaus', Plus Code 87H9M3J2+88.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

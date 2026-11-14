@@ -20,6 +20,7 @@ evidence:
   seen: 2026-11-14
   note: 'probe po: org ''St. Margaret Roman Catholic Church'', 24 Academy St, Madison, CT 06443, lpi 0018000000Qc27aAAB,
     container 03/0648, latest issue 2026-11-15.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

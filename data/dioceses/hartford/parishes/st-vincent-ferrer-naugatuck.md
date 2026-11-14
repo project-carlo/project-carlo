@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-14
   note: The domain in the parish finder and GCatholic now serves 'Math Practice & Worksheets, K-12 | MathPath'
     (lapsed and taken over); the parish moved to saintvincentferrerchurch.com.
+promoted: 2026-11-14
 bulletin_status: available
 publication_reviews:
 - parish: st-francis-of-assisi-naugatuck

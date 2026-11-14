@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-13
   quote: 52 S Elm St., Windsor Locks, Connecticut 06096-0315
   note: GCatholic 'St. Robert Bellarmine', Plus Code 87H9W9F3+83.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

@@ -24,6 +24,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22120
   seen: 2026-11-13
   note: 'GCatholic: St. Rose of Lima, 35 Center St., Meriden 06450-5685, Plus Code 87H9G6P4+2Q.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

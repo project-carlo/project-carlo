@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-13
   quote: Pastor, St. Francis of Assisi Parish, Naugatuck & St. Vincent Ferrer Parish, Naugatuck
   note: Clergy directory, Rev. John Kuzhikottayil, S.D.B. (read by the survey, see diocese.md Sources).
+promoted: 2026-11-14
 bulletin_status: available
 publication_reviews:
 - parish: st-vincent-ferrer-naugatuck

@@ -29,6 +29,7 @@ evidence:
   seen: 2026-11-13
   quote: 544 Prospect St., Wethersfield, Connecticut 06109-3696
   note: GCatholic 'Incarnation', Plus Code 87H9M8R8+39.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

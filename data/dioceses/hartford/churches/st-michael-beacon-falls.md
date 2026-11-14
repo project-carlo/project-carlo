@@ -24,6 +24,7 @@ evidence:
   seen: 2026-11-13
   quote: 25 Maple Ave., Beacon Falls, Connecticut 06403-1145
   note: GCatholic 'St. Michael', Plus Code 87H8CWWQ+6J.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

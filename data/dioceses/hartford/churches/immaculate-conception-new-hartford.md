@@ -27,6 +27,7 @@ evidence:
   quote: 60 Town Hill Rd., New Hartford, Connecticut 06057-0285
   note: GCatholic gives the parish office address; Plus Code 87H9V2H8+HP, about 230 m west of the finder
     pin.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

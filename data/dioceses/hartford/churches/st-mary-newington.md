@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-13
   quote: 626 Willard Ave., Newington, Connecticut 06111-2614
   note: GCatholic 'St. Mary', Plus Code 87H9M7X9+V2.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

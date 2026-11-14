@@ -25,6 +25,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22052
   seen: 2026-11-13
   note: 'GCatholic: St. Bridget, 175 Main St., Cheshire 06410-2446, Plus Code 87H9G32W+WX.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

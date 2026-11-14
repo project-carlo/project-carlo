@@ -20,6 +20,7 @@ evidence:
 - url: https://stdunstanparish.org/
   seen: 2026-11-13
   note: Parish site (diocesanweb WordPress) links the ParishesOnline org the-church-of-st-dunstan.
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

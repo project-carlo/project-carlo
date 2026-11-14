@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-13
   quote: 17 Bridge St., Kent, Connecticut 06757-0186
   note: GCatholic 'Sacred Heart', Plus Code 87H8PGGC+3J.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

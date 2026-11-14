@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-13
   quote: 42 Spring St., Windsor Locks, Connecticut 06096-2311
   note: GCatholic 'St. Mary', Plus Code 87H9W9JC+63.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

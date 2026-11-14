@@ -17,6 +17,7 @@ evidence:
   note: 'Bulletins page (diocesanweb) lists PDFs newest first: Bulletin-November-8th.pdf, then Branches.pdf
     (the archdiocese''s weekly ''Branches on the Vine'' news), Dinner-Club-50-Years.pdf, Bulletin-November-1st.pdf.
     Earlier 2026 bulletins are named without the Bulletin- prefix (October-18th.pdf, January-4th.pdf).'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

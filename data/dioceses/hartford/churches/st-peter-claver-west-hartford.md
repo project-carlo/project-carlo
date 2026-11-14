@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-13
   quote: 47 Pleasant St., West Hartford, Connecticut 06107-1625
   note: GCatholic 'St. Peter Claver', Plus Code 87H9Q66W+R5.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

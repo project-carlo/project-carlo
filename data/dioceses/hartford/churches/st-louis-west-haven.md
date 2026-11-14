@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-13
   quote: 89 Bull Hill Ln., West Haven, Connecticut 06516-3998
   note: GCatholic Plus Code 87H9729C+H2.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

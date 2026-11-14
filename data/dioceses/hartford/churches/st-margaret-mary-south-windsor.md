@@ -28,6 +28,7 @@ evidence:
   quote: 80 Hayes Rd.
   note: GCatholic 'St. Margaret Mary', 80 Hayes Rd., South Windsor, Connecticut 06074-1499; Plus Code
     87H9VC2W+QW.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

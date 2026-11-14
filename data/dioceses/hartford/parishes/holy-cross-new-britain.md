@@ -20,6 +20,7 @@ evidence:
   seen: 2026-11-13
   note: 'probe po: ''Holy Cross Church'', 31 Biruta St, New Britain, Connecticut, 06053-2899; website
     holycrosschurchnb.org; container 03/0037, weekly issues 11, 18, 25 October and 1, 8, 15 November 2026.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-13
   quote: 183 Church St., Newington, Connecticut 06111-4818
   note: GCatholic 'Holy Spirit', Plus Code 87H9M795+3X.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

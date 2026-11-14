@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-13
   quote: 24 Academy St., Madison, Connecticut 06443-0814
   note: GCatholic 'St. Margaret', Plus Code 87H979JX+CR.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

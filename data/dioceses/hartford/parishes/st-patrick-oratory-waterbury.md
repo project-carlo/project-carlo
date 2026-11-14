@@ -17,6 +17,7 @@ evidence:
   seen: 2026-11-14
   note: The Institute's Waterbury bulletins page lists weekly PDFs at /images/waterbury/bulletins/<YYYYMMDD>.pdf,
     newest first (20261115.pdf first), back to 2022.
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

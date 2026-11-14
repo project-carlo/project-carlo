@@ -24,6 +24,7 @@ evidence:
   seen: 2026-11-13
   quote: 1 E Main St., Thomaston, Connecticut 06787-1651
   note: Plus Code 87H8MWFH+H2.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

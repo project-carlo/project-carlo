@@ -25,6 +25,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22201
   seen: 2026-11-13
   note: 'GCatholic: Resurrection, 115 Pond Hill Rd., Wallingford 06492-4836, Plus Code 87H9C5JJ+X2.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

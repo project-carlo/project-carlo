@@ -24,6 +24,7 @@ evidence:
   seen: 2026-11-13
   quote: 71 North St., Rte. 63, Goshen, Connecticut 06756-0177
   note: Plus Code 87H8RQP9+9V.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

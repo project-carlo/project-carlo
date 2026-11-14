@@ -27,6 +27,7 @@ evidence:
 - url: https://parishesonline.com/organization/basilica-of-the-immaculate-conception
   seen: 2026-11-14
   note: ParishesOnline org address 74 W Main St, Waterbury, CT 06702, at 41.5571154, -73.0416108.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

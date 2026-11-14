@@ -24,6 +24,7 @@ evidence:
   note: 'probe po (from the LPi id on saintkaterict.org/bulletins/): org ''SACRED HEART CHURCH - KENT,
     CT - MEMBER OF SAINT KATERI TEKAKWITHA PARISH'', PO Box 186, Kent, CT 06757, website saintkaterict.org,
     container 03/1127, latest issue 15 November 2026.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

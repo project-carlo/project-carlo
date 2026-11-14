@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-13
   quote: 52 New St., Sharon, Connecticut 06069-0218
   note: GCatholic 'St. Bernard', Plus Code 87H8VGJC+GF.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

@@ -29,6 +29,7 @@ evidence:
   note: '8 November 2026 All Saints bulletin, page 2 ''WEEKEND MASS'': ''Our Lady of Lourdes Church (English)
     Saturday 4:00pm & Sunday 7:30am''; weekday Mass Monday through Saturday 8:00am. Page 3 intentions
     head ''OUR LADY OF LOURDES CHURCH 309 S. MAIN ST., WATERBURY, CT''.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

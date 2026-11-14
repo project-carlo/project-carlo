@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-14
   note: 'probe po: org ''St. Pio of Pietrelcina Parish'', 355 Foxon Rd, East Haven, Connecticut 06513-2099;
     LPi 0018000000QbzzlAAB, container 03/0025; latest issue 15 November 2026.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

@@ -29,6 +29,7 @@ evidence:
   seen: 2026-11-13
   quote: 1331 Middletown Ave., Northford, Connecticut 06472-0160
   note: GCatholic Plus Code 87H996Q3+6P.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

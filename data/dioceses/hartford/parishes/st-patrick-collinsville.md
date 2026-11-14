@@ -17,6 +17,7 @@ evidence:
   note: The parish site's Current Bulletin page links the 15 November 2026 PDF on cdn.diocesanweb.org
     beside a cemetery-rules PDF, a reimbursement form and an archdiocesan sponsor certificate; past issues
     are on yearly pages (/2026-bulletins/ etc.).
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

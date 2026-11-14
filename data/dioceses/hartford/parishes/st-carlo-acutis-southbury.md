@@ -23,6 +23,7 @@ evidence:
   quote: Decree Middlebury-Southbury name change Effective 8.29.26
   note: 'Archdiocesan public notice, posted 29 July 2026: the Middlebury-Southbury parish renamed St.
     Carlo Acutis from 29 August 2026.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

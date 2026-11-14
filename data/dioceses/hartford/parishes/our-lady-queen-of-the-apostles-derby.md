@@ -25,6 +25,7 @@ evidence:
   note: '25 October 2026 issue, page 2 intentions: ''WEDNESDAY, OCTOBER 28 ... 06:30 pm Feast of St. Jude
     Mass / Misa de la fiesta de San Judas'', listed with the parish''s other Masses and no other church
     named.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

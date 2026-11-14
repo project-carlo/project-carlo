@@ -23,6 +23,7 @@ evidence:
   seen: 2026-11-14
   note: 'probe po: org ''St. John Bosco Parish'', 731 Main St, Branford, CT 06405, lpi 0018000000Qc2DDAAZ,
     container 03/0017, latest issue 2026-11-15.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

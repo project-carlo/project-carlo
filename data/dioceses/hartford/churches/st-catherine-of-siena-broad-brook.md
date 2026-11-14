@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-13
   quote: 6 Windsorville Rd.
   note: GCatholic 'St. Catherine', 6 Windsorville Rd., Broad Brook, Connecticut 06016; Plus Code 87H9WF63+PV.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

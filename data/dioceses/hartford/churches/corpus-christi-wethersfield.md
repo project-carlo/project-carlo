@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-13
   quote: 84 Somerset St., Wethersfield, Connecticut 06109-3068
   note: GCatholic 'Corpus Christi', Plus Code 87H9P85P+FV (41.70869, -72.66281).
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

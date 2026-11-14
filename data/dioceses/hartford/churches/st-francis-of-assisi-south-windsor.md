@@ -28,6 +28,7 @@ evidence:
   quote: 673 Ellington Rd.
   note: GCatholic 'St. Francis of Assisi', 673 Ellington Rd., South Windsor, Connecticut 06074-0952; Plus
     Code 87H9RC74+3J.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

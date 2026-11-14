@@ -19,6 +19,7 @@ evidence:
   seen: 2026-11-14
   note: 'probe po: org ''St. Thomas the Apostle Church'', 733 Oxford Rd, Rt. 67, Oxford 06478-1299, website
     www.stthomasoxford.org, LPi 0018000000Qc2WfAAJ, container 03/0975, weekly issues to 15 November 2026.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

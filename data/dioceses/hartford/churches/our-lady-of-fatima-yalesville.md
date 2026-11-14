@@ -25,6 +25,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22247
   seen: 2026-11-13
   note: 'GCatholic: Our Lady of Fatima, 382 Hope Hill Rd., Yalesville 06492-2254, Plus Code 87H9F5R9+2X.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

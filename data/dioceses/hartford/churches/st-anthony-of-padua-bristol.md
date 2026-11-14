@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-13
   quote: 111 School St., Bristol, Connecticut 06010-6078
   note: GCatholic 'St. Anthony', Plus Code 87H9M3C3+97.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

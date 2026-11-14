@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-13
   quote: 4 Main St., Canaan, Connecticut 06018-2459
   note: Plus Code 87J82MFG+V5.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

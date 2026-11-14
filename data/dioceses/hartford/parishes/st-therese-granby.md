@@ -20,6 +20,7 @@ evidence:
   seen: 2026-11-13
   note: Title 'St. Therese Parish – Granby, CT' (diocesanweb). Its Bulletins menu item links parishesonline.com/organization/st-therese-roman-catholic-church.
     The directory's link sttheresegranby.com redirects here.
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

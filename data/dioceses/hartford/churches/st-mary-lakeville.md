@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-13
   quote: 76 Sharon Rd., Lakeville, Connecticut 06039-0456
   note: Plus Code 87H8XH66+7X.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

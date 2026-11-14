@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-13
   quote: 940 Hopmeadow St., Simsbury, Connecticut 06070-0575
   note: GCatholic 'St. Mary', Plus Code 87H9V6J2+C5.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

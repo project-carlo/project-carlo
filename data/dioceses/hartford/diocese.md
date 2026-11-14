@@ -2,8 +2,9 @@
 name: Roman Catholic Archdiocese of Hartford
 state: CT
 website: https://archdioceseofhartford.org
-status: exploring
+status: promoted
 gcatholic: hart0
+promoted: 2026-11-14
 ---
 
 Three counties of central and western Connecticut: Hartford, New Haven and Litchfield. The

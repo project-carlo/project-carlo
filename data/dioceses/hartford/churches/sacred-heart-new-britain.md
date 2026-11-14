@@ -25,6 +25,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22130
   seen: 2026-11-13
   note: GCatholic 'Sacred Heart', 158 Broad St., New Britain, Plus Code 87H9M6F6+5G.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

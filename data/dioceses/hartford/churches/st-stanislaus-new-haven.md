@@ -27,6 +27,7 @@ evidence:
   note: Image-only issue of 15 November 2026, read by rendering. Page 1 masthead lists 'Saint Stanislaus
     Church, 9 Eld Street, New Haven, CT 06511'; page 3 'Sunday Masses (English)' and 'Daily Masses (English)'
     give Saturday 4:30 PM, Monday to Friday 7:00 AM, Saturday 8:00 AM.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

@@ -16,6 +16,7 @@ evidence:
   seen: 2026-11-13
   note: Bulletins page lists the parish's own uploads newest first (wp-content/uploads/2026/11/20261115B.pdf,
     ...08B, ...01B, back to 20260104B), preceded by an older link to cdn.diocesanweb.org/beacon/sscyrilmethodius/wp-content/uploads/2026/07/20260705B.pdf.
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

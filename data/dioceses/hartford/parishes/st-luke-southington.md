@@ -28,6 +28,7 @@ evidence:
     2024 to 12 Jan 2025): until November 2024 the WORSHIP LOCATIONS were Immaculate Conception, Mary Our
     Queen, Saint Dominic and Saint Aloysius; none of the issues read since July 2023 names St. Thomas
     Church.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

@@ -20,6 +20,7 @@ evidence:
 - url: https://wallingfordctcatholic.org/bulletins/
   seen: 2026-11-13
   note: The diocesanweb Bulletins page links parishesonline.com/organization/st-benedict-of-nursia-parish.
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

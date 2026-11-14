@@ -27,6 +27,7 @@ evidence:
   note: Image-only issue of 15 November 2026, read by rendering. Page 1 masthead lists 'St. Joseph Church,
     129 Edwards Street, New Haven, CT 06511'; page 3 'Sunday Masses (English)' and 'Daily Masses (English)'
     give Sunday 8:30 AM, Monday to Friday 5:00 PM.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-13
   quote: 80 Main St.
   note: GCatholic 'St. Bridget', 80 Main St., Manchester, Connecticut 06040-3188; Plus Code 87H9QFRG+M2.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

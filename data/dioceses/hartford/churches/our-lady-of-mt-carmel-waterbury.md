@@ -28,6 +28,7 @@ evidence:
   note: '15 November 2026 Our Lady of Mount Carmel bulletin, page 1: Saturday Vigil 4:00 P.M.; Sunday
     8:15 A.M. & 10:15 A.M.; Monday-Thursday 8:00 A.M. & First Friday 8:00 A.M. (Lower Church); address
     785 Highland Avenue, Waterbury, CT 06708.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

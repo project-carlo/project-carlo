@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-13
   quote: 105 Leetes Island Rd., Branford, Connecticut 06405-3308
   note: GCatholic 'St. Therese', Plus Code 87H976RQ+M6.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

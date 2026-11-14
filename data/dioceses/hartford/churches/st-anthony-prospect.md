@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-13
   quote: 4 Union City Rd., Prospect, Connecticut 06712-0117
   note: GCatholic 'St. Anthony', Plus Code 87H9G23C+C3.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

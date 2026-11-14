@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-13
   quote: 16 Bidwell Square, Unionville, Connecticut 06085-1116
   note: GCatholic 'St. Mary', Plus Code 87H9Q465+69 (41.76056, -72.89156).
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

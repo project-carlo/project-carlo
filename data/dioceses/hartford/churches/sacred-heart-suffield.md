@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-13
   quote: 446 Mountain Rd., Suffield, Connecticut 06078-0626
   note: GCatholic 'Sacred Heart', Plus Code 87H9X8MM+F7.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

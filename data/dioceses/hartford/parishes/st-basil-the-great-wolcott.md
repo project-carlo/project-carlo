@@ -32,6 +32,7 @@ evidence:
   note: 'Mary, Mother of the Church''s site gives both schedules: St. Leo the Great Church, 14 Bentwood
     Drive (Sat 4:00 PM, Sun 8:00 AM and 11:00 AM, Wed & Thu 8:00 AM) and St. Basil the Great Parish –
     St. Pius X Church, 525 Woodtick Road (Sat 4:00 PM, Sun 9:30 AM, Mon & Tue 8:00 AM).'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

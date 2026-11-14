@@ -29,6 +29,7 @@ evidence:
   note: '15 November 2026 Immaculate Conception bulletin: page 1 schedule ''Our Lady of Loreto Sat (Vigil):
     4pm Sun: 11am''; page 2 directory ''Our Lady of Loreto 12 Ardsley Rd (OLL)''; page 3 intentions for
     OLL Sat 14 Nov 4:00pm, Sun 15 Nov 11:00am.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

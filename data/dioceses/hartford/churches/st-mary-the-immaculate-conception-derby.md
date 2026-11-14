@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-13
   quote: 212 Elizabeth St., Derby, Connecticut 06418-1815
   note: GCatholic Plus Code 87H88WF5+RX.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

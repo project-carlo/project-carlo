@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-13
   quote: 75 Derby Ave., Derby, Connecticut 06418-2098
   note: GCatholic 'St. Michael the Archangel', Plus Code 87H88W99+CM.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

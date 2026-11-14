@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-13
   quote: 215 West St., Bristol, Connecticut 06010
   note: GCatholic 'St. Ann', Plus Code 87H9M2FX+9W.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

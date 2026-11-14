@@ -17,6 +17,7 @@ evidence:
   seen: 2026-11-13
   note: The homepage links the current bulletin PDF (11.08.2026-Bull-MCP-32OT.pdf on cdn.diocesanweb.org);
     the site has no /bulletins/ page (404) and links no ParishesOnline org.
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

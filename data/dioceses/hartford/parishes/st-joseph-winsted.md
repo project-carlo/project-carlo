@@ -17,6 +17,7 @@ evidence:
     bulletin online at www.DiscoverMass.com''): page 1 masthead ''Saint Joseph Roman Catholic Church,
     31 Oak St. Winsted, CT 06098'', The Franciscans of Immaculate Conception Province; page 2 Mass intentions
     Mon-Wed and Fri-Sat 8:00am, Thu 6:00pm, Sat 4:00pm, Sun 8:00am, 10:00am, 6:00pm, no other church named.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

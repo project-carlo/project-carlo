@@ -32,6 +32,7 @@ evidence:
     parishes; the new parish has eight sacred edifices: Saints Aedan and Brendan (formerly St. Aedan),
     St. Anthony, St. Martin de Porres, St. Michael, St. Francis (formerly Our Lady of Guadalupe''s), St.
     Stanislaus, St. Mary and St. Joseph.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

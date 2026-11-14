@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-14
   note: church-bulletin.org/0931 redirects here; its 2026-11-15.pdf is the same issue as 12 scanned pages
     with no text layer, so the record reads the jppc.net uploads instead.
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

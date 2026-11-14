@@ -24,6 +24,7 @@ evidence:
   seen: 2026-11-14
   note: 'probe po: org ''Our Lady of the Valley'', 61 North Cliff Street, Ansonia 06401, website olvansonia.org,
     LPi 0018000000Qbz2MAAR, container 04/1063, weekly issues to 15 November 2026.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

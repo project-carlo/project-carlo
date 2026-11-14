@@ -28,6 +28,7 @@ evidence:
   seen: 2026-11-13
   quote: 170 Main St., Terryville, Connecticut 06786
   note: Plus Code 87H8MXHR+CW.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

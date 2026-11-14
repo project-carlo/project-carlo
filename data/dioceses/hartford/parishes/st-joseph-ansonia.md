@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-13
   note: 'Parish finder: ''St. Joseph Parish'', 32 Jewett St., Ansonia, its own parish (no group), with
     no website.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

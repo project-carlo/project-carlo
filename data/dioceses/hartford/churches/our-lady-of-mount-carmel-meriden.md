@@ -29,6 +29,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22116
   seen: 2026-11-13
   note: 'GCatholic: Our Lady of Mount Carmel, 109 Goodwill Ave., Meriden 06451-3000, Plus Code 87H9G5RV+M6.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

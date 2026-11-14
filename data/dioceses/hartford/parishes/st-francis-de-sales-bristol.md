@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-13
   note: 'probe po: ''St. Francis de Sales Parish'', 180 Laurel St., Bristol 06010; container 03/0001,
     latest issue 15 November 2026.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

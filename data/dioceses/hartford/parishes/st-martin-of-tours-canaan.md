@@ -26,6 +26,7 @@ evidence:
   note: 'Lakeville Journal: St. Joseph''s in Winsted (Fr. Bruce Czapla) is taking St. Martin of Tours
     under its responsibility; St. Martin comprises Immaculate Conception, Norfolk, St. Joseph, Canaan
     and St. Mary, Lakeville.'
+promoted: 2026-11-14
 bulletin_status: available
 publication_reviews:
 - parish: st-joseph-winsted

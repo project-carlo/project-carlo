@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-13
   quote: 426 Hazard Ave.
   note: GCatholic 'St. Bernard', 426 Hazard Ave., Enfield, Connecticut 06082-4719; Plus Code 87H9XFP9+9H.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

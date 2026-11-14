@@ -27,6 +27,7 @@ evidence:
   quote: Our Lady Queen of Angels Chapel
   note: '17 November 2024 issue (text layer): daily 7:30 AM Mass and Monday adoration in the chapel then
     too.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

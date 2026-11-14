@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-13
   quote: 1050 Flanders Rd., Southington, Connecticut 06489-1344
   note: GCatholic 'St. Dominic', Plus Code 87H9J5M3+C5.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

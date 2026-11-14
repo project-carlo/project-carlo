@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-13
   quote: 15 Maplewood Ave., East Hartford, Connecticut 06108-4120
   note: GCatholic 'St. Mary', Plus Code 87H9Q9J7+6W.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

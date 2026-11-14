@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-13
   quote: 265 Stratton Brook Rd., West Simsbury, Connecticut 06092-0184
   note: GCatholic 'St. Catherine of Siena', Plus Code 87H9V49X+R5.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

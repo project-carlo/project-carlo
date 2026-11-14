@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-13
   quote: 26 Wintonbury Ave., Bloomfield, Connecticut 06002-2488
   note: GCatholic 'Sacred Heart', Plus Code 87H9R7J7+Q5.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

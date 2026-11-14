@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-13
   quote: 55 Hopewell Rd., South Glastonbury, Connecticut 06073-0175
   note: GCatholic 'St. Augustine', Plus Code 87H9MC92+57.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

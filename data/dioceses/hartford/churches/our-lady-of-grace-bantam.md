@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-13
   quote: Route 202, Bantam, Connecticut 06750-0427
   note: Plus Code 87H8PQF8+WW.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

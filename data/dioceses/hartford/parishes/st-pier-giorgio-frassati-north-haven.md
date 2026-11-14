@@ -44,6 +44,7 @@ evidence:
     North Branford, Saint Monica, Northford, Saint Barnabas, North Haven and Saint Therese, North Haven,
     Church buildings will remain as sacred places for divine worship, the new parish will henceforth be
     named Saint Pier Giorgio Frassati Parish.'''
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

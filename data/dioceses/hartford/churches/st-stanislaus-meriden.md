@@ -25,6 +25,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22121
   seen: 2026-11-13
   note: 'GCatholic: St. Stanislaus, 82 Akron St., Meriden 06450-5796, Plus Code 87H9G5MX+4X.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

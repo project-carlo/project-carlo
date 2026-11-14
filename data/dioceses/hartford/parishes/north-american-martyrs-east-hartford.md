@@ -29,6 +29,7 @@ evidence:
   quote: As a result, Our Lady of Peace Church and St. Rose Church were closed.
   note: 'History page: St. Edmund Campion Parish (St. Christopher and Our Lady of Peace) merged into North
     American Martyrs on 1 July 2024; St. Christopher and St. Mary''s are the surviving churches.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

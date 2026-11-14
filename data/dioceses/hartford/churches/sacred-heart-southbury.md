@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-13
   quote: 910 S Main St., Southbury, Connecticut 06488
   note: GCatholic 'Sacred Heart', Plus Code 87H8FQ67+8M.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

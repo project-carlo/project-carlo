@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-13
   quote: 107 E Main St., Torrington, Connecticut 06790
   note: Plus Code 87H8RV2J+Q8.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

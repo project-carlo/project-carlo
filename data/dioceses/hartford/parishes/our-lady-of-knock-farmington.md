@@ -20,6 +20,7 @@ evidence:
   seen: 2026-11-13
   note: 'probe po: org ''Our Lady of Knock Parish'', 16 Bidwell Square, Unionville; container 03/1432,
     latest issue 22 November 2026.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

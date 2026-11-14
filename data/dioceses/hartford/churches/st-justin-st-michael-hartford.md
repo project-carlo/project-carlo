@@ -30,6 +30,7 @@ evidence:
   quote: made their way to their new parish about 1.5 miles away at St. Justin-St. Michael Parish on Blue
     Hills Avenue
   note: 'Hartford Courant, 9 April 2017: the merged parish worships in the former St. Justin church.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

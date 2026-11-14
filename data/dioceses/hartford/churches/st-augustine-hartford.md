@@ -25,6 +25,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22097
   seen: 2026-11-13
   note: GCatholic 'St. Augustine', 10 Campfield Ave., Hartford 06114-1832, Plus Code 87H9P8V9+52.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

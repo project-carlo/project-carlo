@@ -22,6 +22,7 @@ evidence:
   note: The parish site's Bulletins page links parishesonline.com/organization/mary-gate-of-heaven-parish;
     its only self-hosted PDF is an old 2025-06 issue. The Branches-on-the-Vine PDF linked from the homepage
     is the archdiocese's weekly news, not the parish bulletin.
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-13
   note: 'probe po: org ''St Gianna Beretta Molla'', 1088 New Britain Ave, West Hartford; container 03/1398,
     latest issue 15 November 2026.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

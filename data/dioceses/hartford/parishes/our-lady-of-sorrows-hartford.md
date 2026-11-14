@@ -23,6 +23,7 @@ evidence:
   note: The parish's new diocesanweb site links parishesonline.com/organization/our-lady-of-sorrows-parish-06106.
     The directory's olsparishchurch.org serves an empty page that redirects in the browser to /lander
     (a parked domain).
+promoted: 2026-11-14
 bulletin_status: available
 ---
 
