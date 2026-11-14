@@ -124,6 +124,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - render.py's browser closes on very large scanned LPi PDFs (~90 MB); download with probe get --out into an empty folder and render with pdftoppm -f 1 -l 1 -r 80 -jpeg instead.
 - A diocesanweb bulletins page can be stale or empty while the parish's ParishesOnline org is live and unlinked: try probe po with guessed org slugs (<name>-parish, <name>-<zip>) before calling a bulletin not found.
 - Hartford Courant 7 May 2017 'list-of-parish-closures-and-mergers-by-town' gives the 2017 plan for every town. It is a plan, not proof, so pair it with a dated report found by searching html.duckduckgo.com for 'courant.com <church> final Mass'.
+- A guessed ParishesOnline slug can belong to a same-named parish elsewhere (st-marianne-cope-parish is Solvay, NY); check the org address from probe po before using it.
+- diocesanweb mastheads laid out in church columns come out interleaved from probe pdf; download with probe get --out and read page 1 with pdftotext -layout to tie each Mass time to its church.
 
 
 ## Rules settled for this diocese
