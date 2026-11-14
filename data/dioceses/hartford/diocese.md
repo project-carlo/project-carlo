@@ -162,6 +162,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A merged parish can still list a church among its buildings with no weekly Mass yet hold a feast-day public Mass there: grep two years of issues for '<name> Church' before excluding it.
 - LPi bulletins re-hosted on diocesanweb can also be named '<NN>-<NNNN>-<Month>-<D>-<YYYY>.pdf': the prefix is the container (03-0025 = 03/0025), so 'probe container' finds the ParishesOnline org directly.
 - A merger decree posted on the parish site lists the new parish's 'sacred edifices'; a church missing from it is no longer the parish's, but that is not a closure statement: record it as open unless a source dates the closure.
+- A merged parish can keep publishing under an older member's ParishesOnline org, with a new container (St. Pier Giorgio Frassati under st-elizabeth-of-the-trinity-parish, 03/0003 then 03/1511): follow the new parish site's org link, probe the org rather than the old container, and expect the predecessor sites to keep stale bulletin pages.
+- Mastheads here can keep listing a church closed years earlier (St. Paul VI still lists Ascension, closed Oct 2023): decide churches from the Mass schedule and the Mass intentions, not the masthead's church list.
 
 
 ## Rules settled for this diocese
