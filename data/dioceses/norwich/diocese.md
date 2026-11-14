@@ -131,6 +131,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 
 - Connecting Members (DNN) parish sites may carry LPi bulletins without an id probe url sees: the PDF footer gives the container ('<Parish> | 03-0263') and the bulletin page can embed the LPi widget id; ParishesOnline org slugs here follow '<name>-<zip>' (blessed-sacrament-parish-06066, st-luke-church-06029, all-saints-church-06072, st-edward-church-06076), so probe po a guessed slug to get the provider_id.
 - WordPress one-post-per-issue sites whose PDFs are Gravity Forms 'index.php?gf-download=' links: pin 'dated-post <category/bulletin page>'; fetch:check's guessed recipe pins one week's post page instead. Older gf-download links answer HTTP 401, so back issues can't be read to date closures.
+- eCatholic sites here (Cromwell 25247, Portland 5153, St. Mary of Czestochowa 5434) only link a ParishesOnline bulletin: the eCatholic bulletin path answers 403 every week, so map them as parishes_online and keep the eCatholic site id out of publication.
+- The Weebly addresses in the diocese's list fail TLS only in their www. form; the bare <name>.weebly.com answers. St. John Middletown's /area-parish-bulletins.html links ParishesOnline orgs for every Middletown-Old Saybrook deanery parish, which is a quick way to find their ids.
 
 
 ## Rules settled for this diocese
