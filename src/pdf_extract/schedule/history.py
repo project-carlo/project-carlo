@@ -104,7 +104,8 @@ def parish_history(conn: sqlite3.Connection, parish_id: int) -> History:
     revision at or before the call's base revision), so a later seed doesn't
     change how an earlier call was placed. A seed's newest dated bulletin
     counts as that week's first bulletin, so the next one for the same week is
-    a correction.
+    a correction. A call is for a wrong bulletin when the model said so or the
+    bulletin was marked wrong since (a correction, `schedule wrong-bulletin`).
     """
     seeds = conn.execute(
         """SELECT revision, as_of FROM schedule_revision
@@ -129,8 +130,9 @@ def parish_history(conn: sqlite3.Connection, parish_id: int) -> History:
 
     places: list[CallPlace] = []
     rows = conn.execute(
-        f"""SELECT c.id, c.bulletin_id, c.published_date, c.wrong_bulletin, c.base_revision,
-                   b.fetched_at
+        f"""SELECT c.id, c.bulletin_id, c.published_date, c.base_revision, b.fetched_at,
+                   MAX(COALESCE(c.wrong_bulletin, 0), COALESCE(b.wrong_bulletin, 0))
+                       AS wrong_bulletin
             FROM llm_call c JOIN bulletin b ON b.id = c.bulletin_id
             WHERE c.parish_id = ? AND c.status IN ({", ".join("?" * len(SUCCEEDED))})
             ORDER BY c.id""",

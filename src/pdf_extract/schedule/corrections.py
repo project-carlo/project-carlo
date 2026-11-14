@@ -24,7 +24,16 @@ Everything is addressed by content, never by database ids: entries in the
 labels' form (as `pnpm schedule add --entry` takes them), a call by its run and
 its bulletin's content hash, a bulletin by its content hash. `as_of` is the
 schedule the correction was made against: the time of the parish's newest
-revision then (an ISO time, or a date for the end of that day).
+model (`llm`) revision then, or its seed's `as_of` if that is later (an ISO
+time, or a date for the end of that day).
+
+Only model revisions count as changes since `as_of`. They are written once, by
+the weekly run, and a pulled database carries their times. Seeds, corrections
+and the CSVs' `reference` revisions come from committed files and are written
+again, with a new time, into every database that loads them (the author's, each
+deploy's, the published one), so their times say nothing about what the author
+saw. A conflict with one of those shows as a `before` no longer in the schedule,
+or a failed check.
 
 - **Once per digest.** A file is loaded as one `human` revision whose note
   carries the digest of its parish, `as_of` and operations (`correction_digest`),
@@ -34,9 +43,10 @@ revision then (an ISO time, or a date for the end of that day).
 - **All or nothing.** The schedule operations are checked in order, with the
   hand edits' per-proposal checks (`policy.check_in_order`). The file is skipped
   and reported, not forced, when any operation fails: a `before` the schedule
-  no longer holds, a slot a revision after `as_of` touched (after the call, for
-  `apply`), a call, proposal or bulletin the database doesn't have. A skipped
-  file is tried again by every command until it loads or is removed.
+  no longer holds, a slot a model revision after `as_of` touched (for `apply`,
+  one after the call other than the call's own), a call, proposal or bulletin
+  the database doesn't have, or a bulletin not processed yet. A skipped file is
+  tried again by every command until it loads or is removed.
 
 `write_correction` writes a file from what `pnpm schedule ... --write-correction`
 was given; `load_corrections` loads every file not loaded yet.
@@ -48,7 +58,6 @@ import json
 import logging
 import re
 import sqlite3
-from collections.abc import Iterable
 from dataclasses import dataclass
 from datetime import date
 from pathlib import Path
@@ -58,11 +67,13 @@ from pdf_extract.classifiers.schedule_update import _without_nulls
 from pdf_extract.labeling.labels import is_valid_hash, is_valid_slug
 from pdf_extract.paths import DATA_DIR
 from pdf_extract.schedule.entries import Entry, EntryError, parse_entry
+from pdf_extract.schedule.history import SUCCEEDED
 from pdf_extract.schedule.policy import APPLIED, Schedule, check_in_order
 from pdf_extract.schedule.store import (
     ADD,
     DELETE,
     HUMAN,
+    LLM,
     MODIFY,
     Change,
     append_revision,
@@ -94,6 +105,7 @@ CHANGED_SINCE = "changed_since"
 UNKNOWN_CALL = "unknown_call"
 UNKNOWN_PROPOSAL = "unknown_proposal"
 UNKNOWN_BULLETIN = "unknown_bulletin"
+NOT_PROCESSED = "not_processed"
 
 FILE_KEYS = ("parish", "actor", "note", "as_of", "operations")
 OP_KEYS = {
@@ -104,6 +116,7 @@ OP_KEYS = {
     WRONG_BULLETIN: ({"content_hash"}, set()),
 }
 _NAME_RE = re.compile(r"^\d{4}-\d{2}-\d{2}-[a-z0-9]+(?:-[a-z0-9]+)*\.json$")
+_MARKER_RE = re.compile(r"\[correction ([0-9a-f]{64})\]")
 
 
 class CorrectionFileError(ValueError):
@@ -216,15 +229,42 @@ def revision_note(data: dict[str, Any], path: Path) -> str:
     return f"{data['note'].strip()} ({path.parent.name}/{path.name}) {_marker(correction_digest(data))}"
 
 
-def is_loaded(conn: sqlite3.Connection, parish_id: int, data: dict[str, Any]) -> int | None:
-    """The revision a file with this content made for the parish, or None."""
-    row = conn.execute(
-        """SELECT revision FROM schedule_revision
-           WHERE parish_id = ? AND source_kind = 'human' AND instr(note, ?) > 0
-           ORDER BY revision LIMIT 1""",
-        (parish_id, _marker(correction_digest(data))),
-    ).fetchone()
-    return None if row is None else int(row[0])
+def loaded_digests(conn: sqlite3.Connection) -> set[tuple[int, str]]:
+    """(parish id, digest) of every correction the database has a revision for."""
+    rows = conn.execute(
+        """SELECT parish_id, note FROM schedule_revision
+           WHERE source_kind = 'human' AND note LIKE '%[correction %'""",
+    ).fetchall()
+    return {(int(r[0]), d) for r in rows for d in _MARKER_RE.findall(r[1])}
+
+
+def is_loaded(conn: sqlite3.Connection, parish_id: int, data: dict[str, Any]) -> bool:
+    """Whether the parish has a revision made by a file with this content."""
+    return (parish_id, correction_digest(data)) in loaded_digests(conn)
+
+
+def check_bulletin(conn: sqlite3.Connection, parish_id: int, content_hash: str) -> None:
+    """Raise Skip unless the parish has a processed bulletin with this hash to mark wrong.
+
+    An unprocessed one is left alone: processing it would set the flag from the
+    model's answer and undo the mark.
+    """
+    rows = conn.execute(
+        "SELECT processed_at FROM bulletin WHERE parish_id = ? AND content_hash = ?",
+        (parish_id, content_hash),
+    ).fetchall()
+    if not rows:
+        raise Skip(UNKNOWN_BULLETIN, "the parish has no bulletin with that hash")
+    if any(r[0] is None for r in rows):
+        raise Skip(NOT_PROCESSED, "the bulletin isn't processed yet; it is marked once it is")
+
+
+def mark_wrong_bulletin(conn: sqlite3.Connection, parish_id: int, content_hash: str) -> int:
+    """Mark the parish's bulletin with this hash as not its own. Returns the rows marked."""
+    return conn.execute(
+        "UPDATE bulletin SET wrong_bulletin = 1 WHERE parish_id = ? AND content_hash = ?",
+        (parish_id, content_hash),
+    ).rowcount
 
 
 # ── Loading ─────────────────────────────────────────────────────────────────
@@ -238,6 +278,8 @@ class _Op:
     raw: Any
     since: int | None = None
     """The revision after which a touched slot makes it stale (None: after `as_of`)."""
+    call_id: int | None = None
+    """apply: the call, whose own revision doesn't count as a change since it."""
     proposed_change_id: int | None = None
 
 
@@ -260,10 +302,11 @@ def _call_ops(
 ) -> list[_Op]:
     where = f"operation {index + 1}"
     call = conn.execute(
-        """SELECT c.id, c.base_revision FROM llm_call c JOIN bulletin b ON b.id = c.bulletin_id
-           WHERE c.parish_id = ? AND c.run_id = ? AND b.content_hash = ?
-           ORDER BY c.id DESC LIMIT 1""",
-        (parish_id, op["run_id"], op["content_hash"]),
+        f"""SELECT c.id, c.base_revision FROM llm_call c JOIN bulletin b ON b.id = c.bulletin_id
+            WHERE c.parish_id = ? AND c.run_id = ? AND b.content_hash = ?
+              AND c.status IN ({", ".join("?" * len(SUCCEEDED))})
+            ORDER BY c.id DESC LIMIT 1""",
+        (parish_id, op["run_id"], op["content_hash"], *SUCCEEDED),
     ).fetchone()
     if call is None:
         raise Skip(UNKNOWN_CALL, f"{where}: no call of run {op['run_id']} for that bulletin")
@@ -287,25 +330,29 @@ def _call_ops(
     return [
         _Op(index, r["op"], r["target_entry_id"],
             _without_nulls(json.loads(r["raw_json"]).get("entry")),
-            since=call["base_revision"], proposed_change_id=r["id"])
+            since=call["base_revision"], call_id=call["id"], proposed_change_id=r["id"])
         for r in rows
     ]
 
 
 def _touched_slots(
     conn: sqlite3.Connection, parish_id: int, *, after_revision: int | None = None,
-    after_time: str | None = None,
+    after_time: str | None = None, call_id: int | None = None,
 ) -> set[str]:
-    """Slot keys of the entries the parish's revisions after a revision or a time changed."""
+    """Slot keys of the entries the parish's model revisions after a revision or a time
+    changed, leaving out `call_id`'s own (see the module docstring)."""
     if after_revision is not None:
-        where, param = "r.revision > ?", after_revision
+        where, params = "r.revision > ?", [after_revision]
     else:
-        where, param = "r.created_at > ?", after_time
+        where, params = "r.created_at > ?", [after_time]
+    if call_id is not None:
+        where += " AND COALESCE(r.llm_call_id, -1) != ?"
+        params.append(call_id)
     rows = conn.execute(
         f"""SELECT c.before_entry_id, c.after_entry_id FROM schedule_change c
             JOIN schedule_revision r ON r.parish_id = c.parish_id AND r.revision = c.revision
-            WHERE c.parish_id = ? AND {where}""",
-        (parish_id, param),
+            WHERE c.parish_id = ? AND r.source_kind = ? AND {where}""",
+        (parish_id, LLM, *params),
     ).fetchall()
     ids = {i for row in rows for i in row if i is not None}
     return {entry.slot_key for entry in load_entries(conn, ids).values()}
@@ -328,12 +375,10 @@ def _apply(
         where = f"operation {index + 1}"
         kind = op["op"]
         if kind == WRONG_BULLETIN:
-            found = conn.execute(
-                "SELECT COUNT(*) FROM bulletin WHERE parish_id = ? AND content_hash = ?",
-                (parish_id, op["content_hash"]),
-            ).fetchone()[0]
-            if not found:
-                raise Skip(UNKNOWN_BULLETIN, f"{where}: the parish has no bulletin with that hash")
+            try:
+                check_bulletin(conn, parish_id, op["content_hash"])
+            except Skip as exc:
+                raise Skip(exc.reason, f"{where}: {exc.detail}") from exc
             bulletins.append((index, op["content_hash"]))
         elif kind == APPLY:
             ops += _call_ops(conn, parish_id, index, op)
@@ -352,17 +397,19 @@ def _apply(
             raise Skip(outcome.reason, f"operation {o.index + 1}: {outcome.detail}")
 
     as_of = normalize_as_of(data["as_of"])
-    touched: dict[int | None, set[str]] = {}
+    touched: dict[tuple[int | None, int | None], set[str]] = {}
     for o, outcome in zip(ops, outcomes, strict=True):
-        if o.since not in touched:
-            touched[o.since] = _touched_slots(
-                conn, parish_id, after_revision=o.since, after_time=as_of,
+        key = (o.since, o.call_id)
+        if key not in touched:
+            touched[key] = _touched_slots(
+                conn, parish_id, after_revision=o.since, after_time=as_of, call_id=o.call_id,
             )
         slots = {e.slot_key for e in (live.get(o.target), outcome.entry) if e is not None}
-        if slots & touched[o.since]:
+        if slots & touched[key]:
             since = f"revision {o.since}" if o.since is not None else as_of
             raise Skip(CHANGED_SINCE,
-                       f"operation {o.index + 1}: a revision after {since} changed its slot")
+                       f"operation {o.index + 1}: a model revision after {since} "
+                       "changed its slot")
 
     changes = [
         Change(o.op, before_entry_id=o.target,
@@ -371,10 +418,7 @@ def _apply(
         for o, outcome in sorted(zip(ops, outcomes, strict=True), key=lambda p: p[1].order)
     ]
     for _, content_hash in bulletins:
-        conn.execute(
-            "UPDATE bulletin SET wrong_bulletin = 1 WHERE parish_id = ? AND content_hash = ?",
-            (parish_id, content_hash),
-        )
+        mark_wrong_bulletin(conn, parish_id, content_hash)
     revision = append_revision(
         conn, parish_id, source_kind=HUMAN, changes=retired + changes, run_id=run_id,
         actor=data["actor"], note=revision_note(data, path),
@@ -392,10 +436,10 @@ def _apply(
 
 def load_correction(
     conn: sqlite3.Connection, path: Path, *, run_id: str | None = None,
-    today: date | None = None,
+    today: date | None = None, loaded: set[tuple[int, str]] | None = None,
 ) -> dict[str, Any] | None:
     """Load one file: what loaded, `{"parish", "file", "reason"}` when skipped, None when
-    it was loaded before."""
+    it was loaded before. `loaded` is `loaded_digests`, when the caller has read it."""
     name = f"{path.parent.name}/{path.name}"
     try:
         data = read_correction(path)
@@ -406,27 +450,31 @@ def load_correction(
         return {"parish": data["parish"], "file": name,
                 "reason": f"{INVALID_FILE}: no parish {data['parish']}"}
     parish_id = int(row[0])
-    if is_loaded(conn, parish_id, data) is not None:
+    digest = correction_digest(data)
+    if (parish_id, digest) in (loaded_digests(conn) if loaded is None else loaded):
         return None
     try:
         with conn:
-            return _apply(conn, data, path, parish_id, run_id=run_id,
-                          today=today or date.today())
+            result = _apply(conn, data, path, parish_id, run_id=run_id,
+                            today=today or date.today())
     except Skip as exc:
         return {"parish": data["parish"], "file": name, "reason": str(exc)}
+    if loaded is not None:
+        loaded.add((parish_id, digest))
+    return result
 
 
 def load_corrections(
     conn: sqlite3.Connection, corrections_dir: Path = CORRECTIONS_DIR, *,
     run_id: str | None = None, today: date | None = None,
-    paths: Iterable[Path] | None = None,
 ) -> dict[str, list[dict[str, Any]]]:
     """Load every correction file not loaded yet. Returns what loaded and what was skipped."""
     loaded: list[dict[str, Any]] = []
     skipped: list[dict[str, Any]] = []
-    for path in correction_files(corrections_dir) if paths is None else paths:
+    digests = loaded_digests(conn)
+    for path in correction_files(corrections_dir):
         try:
-            result = load_correction(conn, path, run_id=run_id, today=today)
+            result = load_correction(conn, path, run_id=run_id, today=today, loaded=digests)
         except Exception as exc:  # one bad file must not stop every pipeline command
             LOGGER.exception("Loading the correction %s failed", path)
             result = {"parish": path.parent.name, "file": f"{path.parent.name}/{path.name}",
@@ -459,13 +507,14 @@ def entry_content(conn: sqlite3.Connection, entry_id: int) -> dict[str, Any]:
 
 
 def schedule_as_of(conn: sqlite3.Connection, parish_id: int) -> str:
-    """When the parish's newest revision was written: the schedule a correction is made against."""
+    """The schedule a correction is made against: when the parish's newest model revision
+    was written, or its seed's `as_of` if that is later (see the module docstring)."""
     row = conn.execute(
-        """SELECT created_at FROM schedule_revision WHERE parish_id = ?
-           ORDER BY revision DESC LIMIT 1""",
+        """SELECT MAX(CASE WHEN source_kind = 'seed' THEN as_of ELSE created_at END)
+           FROM schedule_revision WHERE parish_id = ? AND source_kind IN ('seed', 'llm')""",
         (parish_id,),
     ).fetchone()
-    if row is None:
+    if row[0] is None:
         raise CorrectionFileError("the parish has no schedule to correct")
     return row[0]
 

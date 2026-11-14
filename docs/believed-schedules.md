@@ -88,7 +88,8 @@ pnpm schedule corrections      # load any not loaded yet; list the ones skipped 
 ```
 
 A file names the parish, the actor, a note, `as_of` (the schedule it was made
-against: when the parish's newest revision was written) and its operations:
+against: when the parish's newest model revision was written, or its seed's
+`as_of` if that is later) and its operations:
 
 | `op` | Fields | What it does |
 |---|---|---|
@@ -99,8 +100,9 @@ against: when the parish's newest revision was written) and its operations:
 | `wrong_bulletin` | `content_hash` | marks the parish's bulletin as not its own |
 
 Entries are in the labels' form, as `--entry` takes them. A `wrong_bulletin`
-mark changes which bulletin ranks as the parish's; it doesn't undo what the
-call for it applied, which takes schedule operations in the same file.
+mark changes which bulletin ranks as the parish's, and the bulletin no longer
+counts toward which week the parish's bulletins have reached; it doesn't undo
+what the call for it applied, which takes schedule operations in the same file.
 
 **Loading.** Every pipeline command loads the files not loaded yet, after the
 seeds (`schedule/corrections.py`). A file is one `human` revision whose note
@@ -111,10 +113,19 @@ does nothing, and rewording its note doesn't load it again. A file of only
 **Guards.** A file applies whole or not at all. Its schedule operations are
 checked in order with the hand edits' checks, and it is skipped, not forced,
 when a `before` is no longer in the schedule, an operation fails a check (a
-`duplicate`, say), a revision written after `as_of` changed one of its slots
-(for `apply`, any revision after the call), or the call, proposal or bulletin
-it names isn't in the database. A skipped file is tried again by every command,
-and reported, until it loads or is removed.
+`duplicate`, say), a model revision written after `as_of` changed one of its
+slots (for `apply`, any model revision after the call but its own), the call,
+proposal or bulletin it names isn't in the database, or the bulletin to mark
+isn't processed yet. A skipped file is tried again by every command, and
+reported, until it loads or is removed.
+
+Only model revisions count as changes since `as_of`: the weekly run writes
+them once, and a pulled database keeps their times. Seeds, corrections and the
+CSVs' revisions are written again, at a new time, into each database that
+loads them, so a correction written on top of one that hasn't reached the
+published database yet still loads after it. A clash with one of those shows
+as a `before` no longer in the schedule or a failed check. Make corrections
+against a freshly pulled database.
 
 **Going live.** A deploy builds the site's snapshot from the published database
 with the files loaded, so a correction is on the site once its pull request
@@ -123,7 +134,10 @@ the next weekly run loads the files into the published one, after its
 before-copy, so its checks see them, and its report lists each correction
 applied and each skipped, with the reason. Both loads start from the same
 published database, so they make the same revision; a file the database
-already has a revision for is never loaded again.
+already has a revision for is never loaded again. A deploy whose CSVs remove a
+parish or church deploys the published data unchanged, so its
+corrections wait for the same reviewed weekly run; its summary marks them
+`"deployed": false`.
 
 A skipped correction doesn't fail CI. It shows in the preview deploy's data
 snapshot summary (`seeded.corrections.skipped`) and in every weekly report,

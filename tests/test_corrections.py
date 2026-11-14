@@ -19,6 +19,7 @@ from pdf_extract.schedule.corrections import (
     CORRECTIONS_DIR,
     INVALID_FILE,
     NOT_IN_SCHEDULE,
+    NOT_PROCESSED,
     UNKNOWN_BULLETIN,
     correction_files,
     load_corrections,
@@ -27,6 +28,7 @@ from pdf_extract.schedule.corrections import (
 )
 from pdf_extract.schedule.edits import edit_entry
 from pdf_extract.schedule.entries import parse_entry
+from pdf_extract.schedule.history import parish_history
 from pdf_extract.schedule.policy import DUPLICATE, MASS_DELETE, REJECTED
 from pdf_extract.schedule.store import live_entries, parish_churches, write_seed
 from pdf_extract.schedule.update import process_update_mode
@@ -163,12 +165,13 @@ def test_a_correction_is_skipped_when_a_later_revision_touched_its_slot(
     as_of = schedule_as_of(conn, _pid(conn))
     pid = _pid(conn)
     sun11 = next(i for i, e in live_entries(conn, pid).items() if e.start_time == 660)
-    # Deleted and put back: the content is the same, but someone looked at the slot since.
+    # Deleted and put back by the model: the content is the same, but it looked at the
+    # slot since.
     edit_entry(conn, pid, "delete", target_entry_id=sun11, actor="model", today=TODAY)
     edit_entry(conn, pid, "add", entry=SUN_11, actor="model", today=TODAY)
     with conn:
-        conn.execute("UPDATE schedule_revision SET created_at = '2099-01-01T00:00:00Z' "
-                     "WHERE revision > 1")
+        conn.execute("UPDATE schedule_revision SET created_at = '2099-01-01T00:00:00Z', "
+                     "source_kind = 'llm' WHERE revision > 1")
     _write("2026-11-09-drop-eleven.json", [{"op": "delete", "before": SUN_11}], as_of=as_of)
 
     [skipped] = load_corrections(conn, today=TODAY)["skipped"]
@@ -180,13 +183,47 @@ def test_a_correction_is_skipped_when_a_later_revision_touched_its_slot(
         "test-parish/2026-11-09-drop-nine.json"]
 
 
+def test_a_correction_on_top_of_one_not_published_yet_loads_after_it(
+    conn: sqlite3.Connection,
+) -> None:
+    """Each database loads a correction at its own time, so only model revisions count."""
+    _seed(conn, [SUN_9, SUN_11])
+    as_of = schedule_as_of(conn, _pid(conn))
+    _write("2026-11-09-a-late-mass.json", [
+        {"op": "modify", "before": SUN_11, "after": {**SUN_11, "start_time": "11:30 AM"}},
+    ], as_of=as_of)
+    assert len(load_corrections(conn, today=TODAY)["loaded"]) == 1
+    # The author writes the next one against the first, as their database has it...
+    later = schedule_as_of(conn, _pid(conn))
+    _write("2026-11-10-b-choir.json", [{
+        "op": "modify", "before": {**SUN_11, "start_time": "11:30 AM"},
+        "after": {**SUN_11, "start_time": "11:30 AM", "note": "Choir"},
+    }], as_of=later)
+    # ...and the published database loads the first one after that.
+    with conn:
+        conn.execute("UPDATE schedule_revision SET created_at = '2099-01-01T00:00:00Z' "
+                     "WHERE revision = 2")
+
+    result = load_corrections(conn, today=TODAY)
+
+    assert result["skipped"] == []
+    assert [r["file"] for r in result["loaded"]] == ["test-parish/2026-11-10-b-choir.json"]
+
+
 def test_a_bulletin_can_be_marked_wrong_by_a_file(conn: sqlite3.Connection) -> None:
     _seed(conn, [SUN_9])
     bulletin = insert_bulletin(conn, parish_id=_pid(conn), source_url="https://example.org/f.pdf",
                                content_hash=HASH, fetched_at="2026-11-01T12:00:00Z")
     as_of = schedule_as_of(conn, _pid(conn))
+    # Not processed yet: processing would set the flag from the model's answer.
     _write("2026-11-09-flyer.json", [{"op": "wrong_bulletin", "content_hash": HASH}],
            as_of=as_of)
+    [skipped] = load_corrections(conn, today=TODAY)["skipped"]
+    assert skipped["reason"].startswith(NOT_PROCESSED)
+    with conn:
+        conn.execute("UPDATE bulletin SET processed_at = '2026-11-01T13:00:00Z' WHERE id = ?",
+                     (bulletin,))
+
     _write("2026-11-09-missing.json", [{"op": "wrong_bulletin", "content_hash": "cd" * 32}],
            as_of=as_of)
 
@@ -220,6 +257,15 @@ def test_a_rejected_call_is_applied_by_run_and_bulletin(conn: sqlite3.Connection
     _write("2026-11-09-apply-run-1.json", [
         {"op": "apply", "run_id": "run-1", "content_hash": HASH, "seq": [1, 4]},
     ], as_of=as_of)
+    # A later failed call for the same bulletin in the run is not the call the file names.
+    columns = [r[1] for r in conn.execute("PRAGMA table_info(llm_call)") if r[1] != "id"]
+    copied = ", ".join(
+        {"status": "'api_error'", "request_key": "request_key || '-retry'"}.get(c, c)
+        for c in columns
+    )
+    with conn:
+        conn.execute(f"INSERT INTO llm_call ({', '.join(columns)}) "
+                     f"SELECT {copied} FROM llm_call")
 
     [loaded] = load_corrections(conn, today=TODAY)["loaded"]
 
@@ -235,6 +281,51 @@ def test_a_rejected_call_is_applied_by_run_and_bulletin(conn: sqlite3.Connection
     ], as_of=as_of)
     [skipped] = load_corrections(conn, today=TODAY)["skipped"]
     assert skipped["reason"].startswith(DUPLICATE)
+
+
+def test_a_call_s_own_revision_does_not_make_its_rejected_proposals_stale(
+    conn: sqlite3.Connection,
+) -> None:
+    _seed(conn, [SUN_9, SUN_11])
+    sun_10 = {**SUN_9, "start_time": "10:00 AM"}
+    insert_bulletin(conn, parish_id=_pid(conn), source_url="https://example.org/b.pdf",
+                    content_hash=HASH, fetched_at="2026-11-01T12:00:00Z")
+    with conn:
+        start_run(conn, "run-1", git_sha=None, trigger="test")
+    # The call adds 10:00, then the same Mass with a note, which duplicates it.
+    process_update_mode(conn, run_id="run-1", concurrency=1, updater=FakeUpdater(_reply(
+        changes=[{"op": "add", "entry": e, "page_number": 1, "rationale": "new"}
+                 for e in (sun_10, {**sun_10, "note": "Latin"})],
+    )))
+    assert [tuple(r) for r in conn.execute(
+        "SELECT seq, reason FROM proposed_change ORDER BY seq")] == [(1, "auto"), (2, DUPLICATE)]
+    # A person prefers the second: drop the first and apply it.
+    _write("2026-11-09-latin.json", [
+        {"op": "delete", "before": sun_10},
+        {"op": "apply", "run_id": "run-1", "content_hash": HASH, "seq": [2]},
+    ], as_of=schedule_as_of(conn, _pid(conn)))
+
+    result = load_corrections(conn, today=TODAY)
+
+    assert result["skipped"] == []
+    notes = {e.note for e in live_entries(conn, _pid(conn)).values() if e.start_time == 600}
+    assert notes == {"Latin"}
+
+
+def test_a_bulletin_marked_wrong_no_longer_counts_toward_the_parish_s_weeks(
+    conn: sqlite3.Connection,
+) -> None:
+    _seed(conn, [SUN_9])
+    insert_bulletin(conn, parish_id=_pid(conn), source_url="https://example.org/b.pdf",
+                    content_hash=HASH, fetched_at="2026-11-01T12:00:00Z")
+    process_update_mode(conn, run_id=None, concurrency=1, updater=FakeUpdater(_reply(
+        published_date="2026-11-01",
+    )))
+    assert parish_history(conn, _pid(conn)).mark is not None
+    _write("2026-11-09-other-parish.json", [{"op": "wrong_bulletin", "content_hash": HASH}],
+           as_of=schedule_as_of(conn, _pid(conn)))
+    assert len(load_corrections(conn, today=TODAY)["loaded"]) == 1
+    assert parish_history(conn, _pid(conn)).mark is None
 
 
 def test_a_malformed_file_is_skipped(conn: sqlite3.Connection) -> None:

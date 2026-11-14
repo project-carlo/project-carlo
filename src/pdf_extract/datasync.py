@@ -504,6 +504,13 @@ def build_deploy_snapshot(
             "data unchanged until a reviewed weekly run publishes the removal",
             seeded["parishes_deleted"], removed_churches,
         )
+        if seeded.get("corrections", {}).get("loaded"):
+            # They loaded into this database, but the published snapshot is what deploys.
+            seeded["corrections"]["deployed"] = False
+            LOGGER.warning(
+                "%d correction files wait for the same weekly run",
+                len(seeded["corrections"]["loaded"]),
+            )
         return {
             "run_id": pulled["run_id"],
             "seeded": seeded,

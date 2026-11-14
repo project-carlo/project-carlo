@@ -44,14 +44,18 @@ from pdf_extract.schedule.corrections import (
     APPLY,
     WRONG_BULLETIN,
     CorrectionFileError,
+    Skip,
+    check_bulletin,
     entry_content,
     load_correction,
     load_corrections,
+    mark_wrong_bulletin,
     schedule_as_of,
     write_correction,
 )
 from pdf_extract.schedule.edits import EditError, apply_proposals, edit_entry
 from pdf_extract.schedule.entries import EntryError, parse_entry
+from pdf_extract.schedule.history import SUCCEEDED
 from pdf_extract.schedule.store import (
     ADD,
     DELETE,
@@ -126,7 +130,11 @@ def _write_and_load(
         )
     except CorrectionFileError as exc:
         raise ScheduleCommandError(str(exc)) from exc
-    result = load_correction(conn, path)
+    try:
+        result = load_correction(conn, path)
+    except BaseException:
+        path.unlink()
+        raise
     if result is None or "reason" in result:
         path.unlink()
         reason = "an identical correction is loaded already" if result is None \
@@ -149,6 +157,20 @@ def _cmd_apply(args: argparse.Namespace) -> Result:
             if not call["run_id"]:
                 raise ScheduleCommandError(
                     f"call {args.call} has no run id, so a correction can't name it"
+                )
+            # A correction names the call by its run and bulletin, so it must be the
+            # one successful call those name (the loader takes the newest).
+            named = conn.execute(
+                f"""SELECT MAX(c.id) FROM llm_call c JOIN bulletin b ON b.id = c.bulletin_id
+                    WHERE c.run_id = ? AND b.content_hash = ? AND c.parish_id = (
+                        SELECT parish_id FROM llm_call WHERE id = ?)
+                      AND c.status IN ({", ".join("?" * len(SUCCEEDED))})""",
+                (call["run_id"], call["content_hash"], args.call, *SUCCEEDED),
+            ).fetchone()[0]
+            if named != args.call:
+                raise ScheduleCommandError(
+                    f"call {args.call} isn't the newest successful call of its run for its "
+                    "bulletin, so a correction can't name it"
                 )
             op: dict[str, Any] = {
                 "op": APPLY, "run_id": call["run_id"], "content_hash": call["content_hash"],
@@ -222,14 +244,12 @@ def _cmd_wrong_bulletin(args: argparse.Namespace) -> Result:
             return _write_and_load(conn, args, args.parish, [
                 {"op": WRONG_BULLETIN, "content_hash": args.content_hash},
             ])
+        try:
+            check_bulletin(conn, parish_id, args.content_hash)
+        except Skip as exc:
+            raise ScheduleCommandError(exc.detail) from exc
         with conn:
-            marked = conn.execute(
-                """UPDATE bulletin SET wrong_bulletin = 1
-                   WHERE parish_id = ? AND content_hash = ?""",
-                (parish_id, args.content_hash),
-            ).rowcount
-        if not marked:
-            raise ScheduleCommandError("the parish has no bulletin with that content hash")
+            marked = mark_wrong_bulletin(conn, parish_id, args.content_hash)
         return {"parish": args.parish, "bulletins_marked": marked}
     finally:
         conn.close()
