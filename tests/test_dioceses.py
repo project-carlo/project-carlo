@@ -553,6 +553,21 @@ def test_decode_plus_code_matches_the_reference() -> None:
     assert rosters.decode_plus_code("CWC8+R9") is None
 
 
+def test_paths_are_read_from_where_pnpm_diocese_ran(tmp_path: Path, monkeypatch) -> None:
+    from pdf_extract.dioceses.cli import _user_path
+
+    scratch = tmp_path / "scratch" / "job"
+    monkeypatch.setenv("INIT_CWD", str(scratch))
+    monkeypatch.setenv("npm_lifecycle_event", "diocese")
+    assert _user_path("olp.pdf") == scratch / "olp.pdf"
+    assert _user_path("/tmp/x.pdf") == Path("/tmp/x.pdf")
+    # Another script's INIT_CWD (the dispatcher's `pnpm factory run`) is not ours.
+    monkeypatch.setenv("npm_lifecycle_event", "factory")
+    assert _user_path("olp.pdf") == Path("olp.pdf")
+    monkeypatch.delenv("npm_lifecycle_event")
+    assert _user_path("olp.pdf") == Path("olp.pdf")
+
+
 def test_gcatholic_pages_parse() -> None:
     index = (
         '<tr id="L1"><td><span class="znote">Forestport</span></td><td>'
