@@ -164,6 +164,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A merger decree posted on the parish site lists the new parish's 'sacred edifices'; a church missing from it is no longer the parish's, but that is not a closure statement: record it as open unless a source dates the closure.
 - A merged parish can keep publishing under an older member's ParishesOnline org, with a new container (St. Pier Giorgio Frassati under st-elizabeth-of-the-trinity-parish, 03/0003 then 03/1511): follow the new parish site's org link, probe the org rather than the old container, and expect the predecessor sites to keep stale bulletin pages.
 - Mastheads here can keep listing a church closed years earlier (St. Paul VI still lists Ascension, closed Oct 2023): decide churches from the Mass schedule and the Mass intentions, not the masthead's church list.
+- A church the 2017 plan closed can hold Mass again (St. John Vianney, West Haven, reused from 2020 when Our Lady of Victory sold its campus): check the current schedule before applying a 2017 closure report.
 
 
 ## Rules settled for this diocese
