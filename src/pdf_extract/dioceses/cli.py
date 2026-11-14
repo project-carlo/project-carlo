@@ -10,6 +10,7 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import json
+import os
 import sys
 from collections.abc import Callable
 from pathlib import Path
@@ -19,6 +20,22 @@ from pdf_extract.dioceses import batches, records, report, rosters, web
 from pdf_extract.dioceses.records import EXCLUSION_REASONS, KINDS, PARISH, DioceseError
 
 Handler = Callable[[argparse.Namespace], dict[str, Any]]
+
+
+def _user_path(value: str) -> Path:
+    """A path the user typed, read from the folder they typed `pnpm diocese` in.
+
+    pnpm runs the script from the repository root, so a bare relative path would
+    land there (a worker's `probe get --out olp.pdf` saved outside its scratch
+    folder). pnpm sets INIT_CWD to where it was run; it is trusted only when
+    `npm_lifecycle_event` says this is that `diocese` script, since a direct
+    `python -m pdf_extract diocese` can inherit an outer pnpm's.
+    """
+    path = Path(value).expanduser()
+    init_cwd = os.environ.get("INIT_CWD")
+    if path.is_absolute() or not init_cwd or os.environ.get("npm_lifecycle_event") != "diocese":
+        return path
+    return Path(init_cwd) / path
 
 
 # ── New records ─────────────────────────────────────────────────────────────
@@ -99,7 +116,7 @@ def _cmd_new(kind_name: str) -> Handler:
             fields["publication"] = args.publication
         if not fields.get("name"):
             raise DioceseError("--name is required (or --from a roster entry)")
-        body = Path(args.body_file).read_text(encoding="utf-8") if args.body_file else None
+        body = _user_path(args.body_file).read_text(encoding="utf-8") if args.body_file else None
         if args.slug_arg and args.slug and args.slug_arg != args.slug:
             raise DioceseError(f"two slugs given ({args.slug_arg!r} and --slug {args.slug!r}); "
                                "give one")
@@ -184,7 +201,7 @@ def _write_record(args: argparse.Namespace) -> dict[str, Any]:
         raise ValueError(f"non-finite JSON value {value!r}")
 
     try:
-        text = sys.stdin.read() if args.file == "-" else Path(args.file).read_text(encoding="utf-8")
+        text = sys.stdin.read() if args.file == "-" else _user_path(args.file).read_text(encoding="utf-8")
         payload = json.loads(text, parse_constant=invalid_constant)
     except (OSError, ValueError) as exc:
         raise DioceseError(f"cannot read record JSON: {exc}") from None
@@ -201,7 +218,7 @@ HANDLERS: dict[str, Handler] = {
     "gaps": lambda a: report.gaps(a.diocese, a.kind),
     "validate": lambda a: records.validate(a.diocese),
     "write": _write_record,
-    "batches-validate": lambda a: batches.validate(a.diocese, Path(a.file) if a.file else None),
+    "batches-validate": lambda a: batches.validate(a.diocese, _user_path(a.file) if a.file else None),
     "search": lambda a: records.search(" ".join(a.query), diocese=a.diocese, kinds=a.kind,
                                        limit=a.limit),
     "merge": lambda a: records.merge_parishes(a.diocese, a.parishes, a.into, note=a.note or ""),
@@ -216,7 +233,7 @@ HANDLERS: dict[str, Handler] = {
     "roster-list": lambda a: rosters.list_rosters(a.diocese),
     "roster-fetch": lambda a: rosters.fetch_roster(a.diocese, a.source, a.target or "",
                                                    name=a.name or "", limit=a.limit),
-    "roster-import": lambda a: rosters.import_roster(a.diocese, a.name, Path(a.file),
+    "roster-import": lambda a: rosters.import_roster(a.diocese, a.name, _user_path(a.file),
                                                      title=a.title or "", url=a.url or "",
                                                      notes=a.notes or ""),
     "roster-show": _roster_show,
@@ -227,10 +244,10 @@ HANDLERS: dict[str, Handler] = {
         pages=a.pages, chars=a.chars),
     "probe-po": lambda a: {"results": [web.parishes_online_org(k, issues=a.issues)
                                        for k in a.keys]},
-    "probe-get": lambda a: web.get(a.url, out=Path(a.out) if a.out else None, chars=a.chars),
+    "probe-get": lambda a: web.get(a.url, out=_user_path(a.out) if a.out else None, chars=a.chars),
     "probe-pdf": lambda a: web.pdf_text(a.url, pages=a.pages, chars=a.chars, grep=a.grep or ()),
     "recheck": _recheck,
-    "export": lambda a: records.export_csv(a.diocese, Path(a.out_dir)),
+    "export": lambda a: records.export_csv(a.diocese, _user_path(a.out_dir)),
     "promote": lambda a: records.promote(a.diocese, dry_run=a.dry_run),
 }
 
