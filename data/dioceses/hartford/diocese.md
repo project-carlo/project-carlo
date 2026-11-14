@@ -129,6 +129,9 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - When the parish finder's link for a quasi-parish or ethnic community points into another parish's site, it may be an old history page: search html.duckduckgo.com for the community's own domain (East Hartford's Ghanaian quasi-parish has its own diocesanweb site) before treating it as covered by that parish's bulletin.
 - diocesanweb parish history pages (/<church>-church/) can date a church's closure years before its relegation decree; record that as last_mass and cite the decree as well. Archdiocesan decrees and 'Bulletin Blurb' notices are scanned images or PDFs, so render them to read the effective date.
 - pnpm diocese probe get --out resolves a relative path from the repository root, not the shell's directory: always pass an absolute path inside the scratch folder.
+- diocesanweb sites that upload <YYYYMMDD>B.pdf files are hosting LPi bulletins: grep the ad pages for '4lpi.com' to get the container (e.g. 'St. Paul, Kensington, CT 03-0062'), then probe po a guessed org slug (<name>-church-<zip>) and record parishes_online rather than page-pdfs.
+- Solutio (Joomla) sites (/bulletin/<n>-<title>/file, 403 to probes) open in visit.py with --screenshot of the /file link, which shows page 1 in Chrome's PDF viewer for the masthead; record them unsupported with gap joomla-file-endpoint.
+- To date when a church's Mass ended, run probe container <a/b> --from <date> --weeks 160 --step 8 --all --pages 1 and look for where it leaves the schedule, then narrow the gap with --weeks 8 --all --pages 3 to find the announcement.
 
 
 ## Rules settled for this diocese
