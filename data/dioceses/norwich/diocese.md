@@ -125,6 +125,14 @@ neighbouring diocese is mapped to learn from.
 - **Discover Mass:** not seen yet. If it appears, it caps downloads per IP per day (134-byte
   replies), as other dioceses found.
 
+## New lessons
+
+Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
+
+- Connecting Members (DNN) parish sites may carry LPi bulletins without an id probe url sees: the PDF footer gives the container ('<Parish> | 03-0263') and the bulletin page can embed the LPi widget id; ParishesOnline org slugs here follow '<name>-<zip>' (blessed-sacrament-parish-06066, st-luke-church-06029, all-saints-church-06072, st-edward-church-06076), so probe po a guessed slug to get the provider_id.
+- WordPress one-post-per-issue sites whose PDFs are Gravity Forms 'index.php?gf-download=' links: pin 'dated-post <category/bulletin page>'; fetch:check's guessed recipe pins one week's post page instead. Older gf-download links answer HTTP 401, so back issues can't be read to date closures.
+
+
 ## Rules settled for this diocese
 
 None yet. Proposed in the survey manifest (`scratch/norwich-map-1/survey.json`) for
