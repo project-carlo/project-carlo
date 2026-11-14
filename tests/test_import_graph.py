@@ -5,6 +5,11 @@
   CLI that wires them together) never imports those three.
 - No two modules import each other, directly or through others, counting
   imports made inside functions: those must not be a way around a cycle.
+
+Importing `a.b.c` also runs `a.b`'s `__init__`, so that counts as an import
+of `a.b` too, unless the importer is inside `a.b` (Python has started loading
+it already). `pdf_extract`'s own `__init__` is therefore never counted: every
+module is inside it.
 """
 
 from __future__ import annotations
@@ -38,7 +43,21 @@ def _modules() -> dict[str, Path]:
 
 
 def _is_type_checking(node: ast.If) -> bool:
-    return "TYPE_CHECKING" in ast.unparse(node.test)
+    """`if TYPE_CHECKING:` or `if typing.TYPE_CHECKING:`, whose body never runs."""
+    test = node.test
+    return (isinstance(test, ast.Name) and test.id == "TYPE_CHECKING") or (
+        isinstance(test, ast.Attribute) and test.attr == "TYPE_CHECKING"
+    )
+
+
+def _absolute(module: str, node: ast.ImportFrom) -> str | None:
+    """The module `node` imports from, with a relative import made absolute."""
+    if node.level == 0:
+        return node.module
+    package = module if _modules()[module].name == "__init__.py" else module.rpartition(".")[0]
+    for _ in range(node.level - 1):
+        package = package.rpartition(".")[0]
+    return f"{package}.{node.module}" if node.module else package
 
 
 def _imports(module: str) -> list[tuple[str, str | None]]:
@@ -53,9 +72,10 @@ def _imports(module: str) -> list[tuple[str, str | None]]:
             continue
         if isinstance(node, ast.Import):
             found += [(a.name, None) for a in node.names if a.name.split(".")[0] == PACKAGE]
-        elif isinstance(node, ast.ImportFrom) and node.level == 0 and node.module:
-            if node.module.split(".")[0] == PACKAGE:
-                found += [(node.module, a.name) for a in node.names]
+        elif isinstance(node, ast.ImportFrom):
+            imported = _absolute(module, node)
+            if imported and imported.split(".")[0] == PACKAGE:
+                found += [(imported, a.name) for a in node.names]
         stack.extend(ast.iter_child_nodes(node))
     return found
 
@@ -75,7 +95,14 @@ def _graph() -> dict[str, frozenset[str]]:
         targets = set()
         for imported, name in _imports(module):
             submodule = f"{imported}.{name}"
-            targets.add(submodule if submodule in modules else _resolve(imported))
+            target = submodule if submodule in modules else _resolve(imported)
+            targets.add(target)
+            # The packages above it, whose `__init__` runs first.
+            package = target.rpartition(".")[0]
+            while package:
+                if package in modules and not _in(module, package):
+                    targets.add(package)
+                package = package.rpartition(".")[0]
         targets.discard(module)
         graph[module] = frozenset(targets)
     return graph
@@ -97,8 +124,20 @@ def test_the_pipeline_does_not_import_the_labeler_evals_or_factory():
     assert wrong == []
 
 
+def _reachable(module: str) -> set[str]:
+    graph = _graph()
+    seen: set[str] = set()
+    stack = [module]
+    while stack:
+        for target in graph[stack.pop()]:
+            if target not in seen:
+                seen.add(target)
+                stack.append(target)
+    return seen - {module}
+
+
 def test_the_model_imports_only_timeparse():
-    assert _graph()[f"{PACKAGE}.model"] <= {f"{PACKAGE}.timeparse"}
+    assert _reachable(f"{PACKAGE}.model") <= {f"{PACKAGE}.timeparse"}
 
 
 def test_the_vocabulary_is_imported_from_the_model_not_from_labels():
