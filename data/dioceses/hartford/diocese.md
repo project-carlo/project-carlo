@@ -173,14 +173,15 @@ From `probe url` of all 98 sites the finder links (2026-11-13), and the map batc
   the schedule, then narrow with `--weeks 8 --all --pages 3` to find the announcement.
   A relegation decree recites the parish's merger decree and earlier relegations of its
   sibling churches: read decree page 1 when dating a merged parish's other churches.
+  A merged parish's lapsed old site (now a domain auction page) still shows in DuckDuckGo
+  with its `LO.ashx?name=~/Bulletins/...` PDFs, and Wayback may hold none: the snippets
+  say what to look for in the live parish's issues, but are not quotable evidence.
 - From the neighbours: Albany found image-only ParishesOnline bulletins common (about one in
   five), and one bulletin printed into two LPi containers with only the ad page differing.
 
 ## New lessons
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
-
-- A merged parish's old non-diocesanweb site can lapse to a domain auction page; DuckDuckGo still returns its bulletin PDFs (LO.ashx?name=~/Bulletins/...) with snippets, but Wayback may hold none: search snippets point to what to look for, they are not quotable evidence.
 
 
 ## Rules settled for this diocese
