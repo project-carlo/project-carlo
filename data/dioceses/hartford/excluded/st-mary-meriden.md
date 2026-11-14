@@ -25,6 +25,7 @@ evidence:
 parish: our-lady-queen-of-angels-meriden
 revisit: Find a dated report of St. Mary's final Mass (Record-Journal 2017-2018, or a St. Mary / OLQA
   bulletin of that period) to fill last_mass.
+revisit_after: 2027-02-01
 ---
 
 ## Why it is excluded

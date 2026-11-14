@@ -37,6 +37,15 @@ research:
     or the OLG org if one exists) for the last Mass at St. Rose; or a New Haven Register / New Haven Independent
     report
   retry_when: An older bulletin archive or a news report is found
+- method: probe container 03/0184 --from 2023-06-25 --step 8 --all; rendered pages 6-7 of the 25 June
+    2023 issue (the New Haven parishes' combined bulletin, Our Lady of Guadalupe pages are images)
+  url: https://container.parishesonline.com/bulletins/03/0184/20230625B.pdf
+  checked: '2026-11-14'
+  outcome: not-found
+  next_action: Find Our Lady of Guadalupe's own 2018-2022 bulletins (earlier container or osvhub.com/ourladyofguadalupe)
+    and see when St. Rose leaves the schedule; the 25 June 2023 page 6 schedules Mass only at San Francisco
+    de Asis / St. Francis of Assisi, with no closure notice
+  retry_when: Our Lady of Guadalupe's pre-2023 container or archive is identified
 ---
 
 ## What is known

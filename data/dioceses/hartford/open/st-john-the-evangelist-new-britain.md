@@ -38,6 +38,14 @@ research:
   next_action: Search the New Britain Herald archive and older St. Francis bulletins (2022-2024 uploads
     on the diocesanweb host) for the end of Masses at St. John
   retry_when: An archive of 2022-2024 St. Francis bulletins or a dated news report is found
+- method: 'Archdiocese news and public notices, WordPress posts API search (archdioceseofhartford.org/wp-json/wp/v2/posts?search=...)
+    for the church name: no decree or report of it'
+  checked: '2026-11-14'
+  outcome: not-found
+  url: https://archdioceseofhartford.org/wp-json/wp/v2/posts?search=John%20the%20Evangelist
+  next_action: Search the New Britain Herald archive for the last Mass at 655 East St. (stfranciscatholic.org/bulletins/
+    links issues only from 21 December 2025, so the parish's own earlier issues are not online there)
+  retry_when: A New Britain Herald archive search or the parish office is available
 ---
 
 ## What is known

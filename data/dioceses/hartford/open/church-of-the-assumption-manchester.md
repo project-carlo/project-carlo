@@ -37,6 +37,14 @@ line1: 27 South Adams Street
 city: Manchester
 state: CT
 postal_code: '06040'
+research:
+- method: probe container 03/0019 --weeks 10 --all --pages 14; grep of the St. Teresa of Calcutta issues
+    of 13 September to 15 November 2026 for Assumption and Bengali
+  checked: '2026-11-14'
+  outcome: not-found
+  next_action: Read the Christmas and Holy Week 2027 schedules in the St. Teresa bulletin for a Mass at
+    Assumption; look for a relegation decree under the archdiocese's Public Notices
+  retry_when: The December 2026 or March 2027 St. Teresa bulletins are published
 ---
 
 ## What is known

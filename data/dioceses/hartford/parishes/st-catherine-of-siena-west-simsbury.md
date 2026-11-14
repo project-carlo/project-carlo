@@ -20,6 +20,9 @@ evidence:
 - url: https://parishesonline.com/organization/st-catherine-of-siena-roman-catholic-church-6092
   seen: 2026-11-13
   note: 'probe po: org exists (LPi id 0018000000Qc1G0AAJ, 264 Stratton Brook Rd) but lists no publications.'
+revisit: Rerun fetch:check once the parish posts an issue newer than 1 November 2026; confirm it picks
+  it.
+revisit_after: 2026-11-21
 research:
 - method: probe get of the Bulletins page; newest linked issue
   url: https://stcatherine.info/bulletins/
@@ -28,6 +31,14 @@ research:
   next_action: Confirm the 8 and 15 November issues get posted (the newest on 2026-11-13 was 1 November)
   retry_when: Next map or reconcile pass
   revisit_after: 2026-11-20
+- method: 'fetch:check --diocese hartford (reconcile) and probe get of the Bulletins page: the page links
+    only the 25 October and 1 November 2026 issues, so page-pdfs picks STC-Bulletin-11126.pdf, the right
+    parish''s bulletin but two weeks old'
+  url: https://stcatherine.info/bulletins/
+  checked: '2026-11-14'
+  outcome: not-found
+  next_action: Rerun fetch:check and confirm it picks the newest issue
+  retry_when: The Bulletins page links an issue dated after 1 November 2026
 bulletin_status: available
 ---
 

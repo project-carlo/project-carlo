@@ -37,6 +37,14 @@ research:
   next_action: Phone the parish office or search the Lakeville Journal archive for St. Patrick church,
     Falls Village
   retry_when: A source naming the building's status turns up, or by 2027-02-01
+- method: 'Archdiocese news and public notices, WordPress posts API search (archdioceseofhartford.org/wp-json/wp/v2/posts?search=...)
+    for the church name: no decree or report of it'
+  checked: '2026-11-14'
+  outcome: not-found
+  url: https://archdioceseofhartford.org/wp-json/wp/v2/posts?search=Falls%20Village
+  next_action: Phone the St. Martin of Tours office or search the Lakeville Journal archive for St. Patrick
+    church, Falls Village
+  retry_when: The parish office or a Lakeville Journal archive search is available
 ---
 
 ## What is known

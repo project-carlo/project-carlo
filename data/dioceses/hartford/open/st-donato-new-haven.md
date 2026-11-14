@@ -28,6 +28,20 @@ research:
   next_action: Search the Catholic Transcript / New Haven Register archives for St. Donato's closing or
     the suppression of its parish (before 2017)
   retry_when: A newspaper archive search is available
+- method: DuckDuckGo search ('"St. Donato" New Haven Lombard church closed' and a merger-year variant)
+  url: https://html.duckduckgo.com/html/
+  checked: '2026-11-14'
+  outcome: not-found
+  next_action: Search the Catholic Transcript archive (thecatholicnewsarchive.org) and New Haven Register
+    for St. Donato's closing or merger, or ask the Blessed Michael McGivney office
+  retry_when: A newspaper archive search or the parish office is available
+- method: 'Archdiocese news and public notices, WordPress posts API search (archdioceseofhartford.org/wp-json/wp/v2/posts?search=...)
+    for the church name: no decree or report of it'
+  checked: '2026-11-14'
+  outcome: not-found
+  url: https://archdioceseofhartford.org/wp-json/wp/v2/posts?search=Donato
+  next_action: Search the Catholic Transcript archive and New Haven Register for St. Donato's closing
+  retry_when: A newspaper archive search is available
 ---
 
 ## What is known

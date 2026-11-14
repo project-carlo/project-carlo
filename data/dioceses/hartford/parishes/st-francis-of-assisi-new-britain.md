@@ -30,6 +30,14 @@ evidence:
 revisit: Rerun fetch:check once the 8 November 2026 issue is uploaded; confirm it picks it (the page lags
   the fortnightly issue date).
 revisit_after: 2026-11-27
+research:
+- method: 'fetch:check --diocese hartford (reconcile): page-pdfs still picks SFC-The-Bulletin-October-25-2026.pdf,
+    the newest linked; the fortnightly 8 November issue is not yet uploaded'
+  url: https://stfranciscatholic.org/bulletins/
+  checked: '2026-11-14'
+  outcome: not-found
+  next_action: Rerun fetch:check and confirm it picks the 8 or 22 November issue
+  retry_when: The Bulletins page links an issue dated after 25 October 2026
 bulletin_status: available
 ---
 

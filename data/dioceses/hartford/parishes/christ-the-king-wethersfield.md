@@ -32,7 +32,7 @@ Christ the King Parish, Wethersfield publishes one weekly bulletin through Paris
 
 Two, both in page 1's Mass schedule: Church of the Incarnation, 544 Prospect St (Saturday 4:30 pm, Sunday 9:30 am, Monday/Wednesday/Friday 9:00 am; `incarnation-wethersfield`) and Corpus Christi Church (Sunday 8:00 and 11:00 am, Tuesday/Thursday/Saturday 7:30 am; `corpus-christi-wethersfield`). These are the directory's two churches of the parish (42, 39) and GCatholic's 22235 and 22234.
 
-The Hartford Courant's 7 May 2017 list says "St. Luke building closing and merging with Corpus Christi and Sacred Heart to form Christ the King; Incarnation unchanged"; Incarnation later joined (the directory now lists it as a Christ the King church). Sacred Heart, 56 Hartford Ave, is not in this bulletin: it is the church of the Sacred Heart of Jesus Korean quasi-parish (`sacred-heart-wethersfield`). St. Luke is in neither roster and the bulletin does not name it (grep of the 15 November issue for "Luke" finds only a Gospel citation).
+The Hartford Courant's 7 May 2017 list says "St. Luke building closing and merging with Corpus Christi and Sacred Heart to form Christ the King; Incarnation unchanged"; Incarnation later joined (the directory now lists it as a Christ the King church). Sacred Heart, 56 Hartford Ave, is not in this bulletin: it is the church of the Sacred Heart of Jesus Korean quasi-parish (`sacred-heart-wethersfield`). St. Luke, 66 Bolton St., Hartford, is GCatholic 22100 (the directory omits it) and is excluded as closed, last Mass 25 June 2017 (`excluded/st-luke-hartford`, Courant 26 August 2017); the bulletin does not name it (grep of the 15 November issue for "Luke" finds only a Gospel citation).
 
 ## Website and bulletin provider
 

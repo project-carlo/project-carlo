@@ -39,6 +39,14 @@ research:
   next_action: Search the Republican-American archive for 2017 coverage of the Wolcott merger, or the
     Wolcott land records for a sale of 1300 Woodtick Rd
   retry_when: An archive search of the Republican-American or Wolcott land records becomes available
+- method: 'Archdiocese news and public notices, WordPress posts API search (archdioceseofhartford.org/wp-json/wp/v2/posts?search=...)
+    for the church name: no decree or report of it'
+  checked: '2026-11-14'
+  outcome: not-found
+  url: https://archdioceseofhartford.org/wp-json/wp/v2/posts?search=Goretti
+  next_action: Search the Republican-American archive for 2017 coverage of the Wolcott merger, or ask
+    the St. Basil office
+  retry_when: A Republican-American archive search or the parish office is available
 ---
 
 ## What is known

@@ -44,6 +44,9 @@ finder: mostly churches closed or merged away, plus eleven Eastern Catholic chur
   - Spelling slips in parish names (North America Martyrs, St. Franics, St. Pio of Peitrelcina,
     St. Maximilan Kolbe) are normalised in `group` by the scraper.
   - The Mass schedule (`mass_times`) is the diocese's own; how stale it is is unchecked.
+  - The homepage's "Archdiocese at a Glance" (https://archdioceseofhartford.org/, read
+    2026-11-14) says "92 Parishes & Missions": the finder's 93 units with St. Matthew and
+    St. Gregory the Great counted as one (see *Clergy directory*).
 - **GCatholic:** `rosters/gcatholic.json`, key `hart0`, 229 entries, fetched 2026-11-13.
   - **It is pre-merger:** it lists about 45 Roman churches the finder doesn't (closed, merged
     or relegated, e.g. St. Rose and Our Lady of Peace, East Hartford, both relegated by decree;
@@ -212,6 +215,15 @@ Decisions that apply to more than one record, and who made them.
 ## Log
 
 Newest first: date, what was done, and the `pnpm diocese coverage` numbers after it.
+
+- 2026-11-14: Reconcile (factory run hartford-map-1) after 17 map batches (11 to 32 roster
+  entries each, usually 20-27). Coverage: directory 167/167 accounted for, 148/158 modelled;
+  GCatholic 229/229, 146/163 modelled. Records: 89 parishes (82 fetchable, 5 `unsupported`,
+  2 `no_bulletin`), 158 churches, 66 exclusions, 8 open. No merges or moves: the audit's two
+  shared-pastor pairs (Naugatuck; Canaan/Winsted) have content-supported `separate` reviews.
+  The 8 open records each had one more check (bulletins, archdiocese news API, searches);
+  none settled. `fetch:check`: 82 rows, all the right parish's latest posted issue; St.
+  Catherine (1 Nov) and St. Francis, New Britain (25 Oct, fortnightly) lag on their sites.
 
 - 2026-11-13: Survey (factory run hartford-map-1). Rosters: directory 167, gcatholic 229.
   Batch plan in `batches.json`: 17 batches, `north-suburbs` first. No parish records yet.

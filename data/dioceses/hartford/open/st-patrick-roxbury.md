@@ -46,6 +46,15 @@ research:
   next_action: Read the archived home pages for a St. Patrick final-Mass notice; the bulletin PDFs themselves
     are not archived
   retry_when: Wayback stops answering HTTP 429 to probe get
+- method: 'Wayback Machine raw snapshot of ourlady-stpatrick.org/OLPHHome.aspx (20250709id_) via probe
+    get: HTTP 429 again; archdiocese posts API search for Roxbury found nothing'
+  url: https://web.archive.org/web/20250709id_/http://www.ourlady-stpatrick.org/OLPHHome.aspx
+  checked: '2026-11-14'
+  outcome: access-blocked
+  next_action: Open the archived OLPH home pages with parish-site-access visit.py for a St. Patrick final-Mass
+    notice; or search the New Milford Spectrum / Voices for a December 2025 final Mass at St. Patrick,
+    Roxbury
+  retry_when: The Wayback Machine stops answering 429, or a browser session is available
 ---
 
 ## What is known

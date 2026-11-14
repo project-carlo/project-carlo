@@ -34,6 +34,8 @@ parish: st-gianna-beretta-molla-west-hartford
 
 St. Helena, 30 Echo Lane, West Hartford, was one of the three churches merged into St. Gianna Beretta Molla Parish in 2017 (Hartford Courant list of 7 May 2017: "St. Brigid, St. Mark the Evangelist and St. Helena merging to form St. Gianna"). It is no longer a worship site of the Latin archdiocese: Saint Gianna's 15 November 2026 bulletin schedules Masses only at Saint Brigid and Saint Mark, and the parish finder omits St. Helena. We-Ha (8 January 2021), quoting the archbishop's letter, says "the Syro-Malabar community utilizes the St. Helena property for its services", and the St. Thomas Syro-Malabar Catholic Church's own site (syromalabarct.org, read 2026-11-13) gives its address as 30 Echo Ln, West Hartford, with Holy Qurbana Sundays at 11:30AM. The building is therefore an open church of the Syro-Malabar Eparchy of St. Thomas the Apostle of Chicago, excluded here as other-jurisdiction (the diocese's rule for Eastern Catholic churches).
 
+The community itself has its own record under its GCatholic entry, `excluded/st-thomas-syro-malabar-west-hartford` (gcatholic:16963): the two records are one building under two roster entries, kept apart so each roster entry keeps its own source and name. Neither reaches the CSVs.
+
 Inferred, not read: whether the archdiocese still owns the building or leases it; neither changes the exclusion.
 
 ## What would change this

@@ -32,6 +32,22 @@ research:
   next_action: Ask the parish office or search Windsor news and land records for the building's status
   retry_when: A relegation decree or news item about St. Gertrude, Windsor appears, or the St. Damien
     bulletin mentions the building
+- method: 'DuckDuckGo search (''St. Gertrude church Windsor Connecticut 550 Matianuck'', and a sold/closing
+    variant): only Mass-time aggregators, one labelling it ''CLOSED - go to: www.windsorcatholic.org''
+    (not a source)'
+  url: https://html.duckduckgo.com/html/
+  checked: '2026-11-14'
+  outcome: not-found
+  next_action: Ask the St. Damien office or search Windsor land records and Hartford Courant archives
+    for the building's status
+  retry_when: A newspaper archive search, land records or the parish office is available
+- method: 'Archdiocese news and public notices, WordPress posts API search (archdioceseofhartford.org/wp-json/wp/v2/posts?search=...)
+    for the church name: no decree or report of it'
+  checked: '2026-11-14'
+  outcome: not-found
+  url: https://archdioceseofhartford.org/wp-json/wp/v2/posts?search=Gertrude
+  next_action: Ask the St. Damien office or search Windsor land records for the building's status
+  retry_when: The parish office or land records are available
 ---
 
 ## What is known
