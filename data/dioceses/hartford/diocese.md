@@ -167,6 +167,9 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A church the 2017 plan closed can hold Mass again (St. John Vianney, West Haven, reused from 2020 when Our Lady of Victory sold its campus): check the current schedule before applying a 2017 closure report.
 - A parish the finder lists with no website can still publish on ParishesOnline: a DuckDuckGo search for '<church> <town> CT bulletin' surfaces its container PDFs, and probe po '<name>-church-<zip>' finds the org; record the org page as the website.
 - GCatholic Plus Codes here are sometimes ~500 m off the building (Good Shepherd, Seymour): when the finder pin and the ParishesOnline org point agree with each other, prefer them.
+- Two ParishesOnline orgs can serve one container (st-basil-the-great-mary-mother-of-the-church-st-leo and mary-mother-of-the-church-parish-st-leo both read 03/0349): when probe po shows the same container under two orgs, make one row and record both orgs' po-org and lpi ids.
+- A parish that posts its bulletin only as photos in a public Facebook group is bulletin_provider unsupported with fetch_gap kind facebook-group-images (visit.py reads the post text; the images sit behind the login overlay).
+- A church missing from a bulletin's page-1 Mass schedule can still have a weekly Mass in the intentions (a school-year Tuesday Mass at Blessed Sacrament, Waterbury): read every church section of the intentions before excluding.
 
 
 ## Rules settled for this diocese
