@@ -134,6 +134,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - eCatholic sites here (Cromwell 25247, Portland 5153, St. Mary of Czestochowa 5434) only link a ParishesOnline bulletin: the eCatholic bulletin path answers 403 every week, so map them as parishes_online and keep the eCatholic site id out of publication.
 - The Weebly addresses in the diocese's list fail TLS only in their www. form; the bare <name>.weebly.com answers. St. John Middletown's /area-parish-bulletins.html links ParishesOnline orgs for every Middletown-Old Saybrook deanery parish, which is a quick way to find their ids.
 - Some LPi bulletin PDFs here have a text layer in a shifted font encoding (each character 29 code points low, digits lost): decode with chr(ord(c)+29) to read the masthead, store no verbatim quote, and add a research item on whether the pipeline gets Mass times.
+- Servant Keeper (servantpc 'fw2') parish sites render in JavaScript: probe get/probe url see only templates, so open them with visit.py; jnccfaith.org's /parish-bulletin embeds ParishesOnline publication-page links that give the org and container.
+- Some bulletins here are image-only (the Cathedral's DNN LinkClick scans; LPi 03/0123 pages 1-5): probe pdf finds no text, so read page 1 with render.py, quote only from text pages, and add an unsupported-format research item on whether the pipeline OCRs them.
 
 
 ## Rules settled for this diocese
