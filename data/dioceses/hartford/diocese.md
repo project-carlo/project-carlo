@@ -180,6 +180,8 @@ From `probe url` of all 98 sites the finder links (2026-11-13), and the map batc
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- A merged parish's old non-diocesanweb site can lapse to a domain auction page; DuckDuckGo still returns its bulletin PDFs (LO.ashx?name=~/Bulletins/...) with snippets, but Wayback may hold none: search snippets point to what to look for, they are not quotable evidence.
+
 
 ## Rules settled for this diocese
 
