@@ -11,6 +11,7 @@ import sqlite3
 from collections import Counter
 from typing import Any
 
+from pdf_extract.model import EVENT_TYPE_LABELS, EventKey
 from pdf_extract.schedule.entries import Entry
 from pdf_extract.schedule.history import SUCCEEDED, CallPlace, parish_history
 from pdf_extract.schedule.policy import APPLIED, MASS_DELETE, REJECTED, STALE_BULLETIN
@@ -27,13 +28,10 @@ CHANGED_IN_A_ROW = 3
 # A live weekly entry none of the parish's last this-many bulletins printed is flagged.
 UNSEEN_BULLETINS = 4
 
-EVENT_TYPE_LABELS = {"mass": "Mass", "confession": "Confession", "adoration": "Adoration"}
 _DAY_ABBREV = {
     "monday": "Mon", "tuesday": "Tue", "wednesday": "Wed", "thursday": "Thu",
     "friday": "Fri", "saturday": "Sat", "sunday": "Sun",
 }
-
-EventKey = tuple[str, str, str, str | None, str | None, str, str | None, bool]
 
 
 def describe_event(key: EventKey) -> str:

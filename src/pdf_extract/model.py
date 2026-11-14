@@ -28,6 +28,7 @@ from typing import Any
 from pdf_extract.timeparse import normalize_event_date, time_to_minutes
 
 EVENT_TYPES = ("mass", "confession", "adoration")
+EVENT_TYPE_LABELS = {"mass": "Mass", "confession": "Confession", "adoration": "Adoration"}
 EVENT_KINDS = ("weekly", "specific_date")
 DAYS = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
 WEEKS_OF_MONTH = ("first", "second", "third", "fourth", "fifth", "last")
@@ -45,6 +46,10 @@ ENTRY_KEYS = (
 # Keys an entry written before they existed may lack; a missing one reads as
 # false.
 ENTRY_KEYS_ADDED_LATER = ("exclude_weeks",)
+
+# An event as the extraction compares it: church slug, event type, event kind,
+# day of week, date, start time, end time, cancelled.
+EventKey = tuple[str, str, str, str | None, str | None, str, str | None, bool]
 
 _SLUG_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 _HASH_RE = re.compile(r"^[0-9a-f]{64}$")

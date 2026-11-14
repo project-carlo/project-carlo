@@ -26,6 +26,7 @@ from pdf_extract.bulletin_week import (
     stale_parishes,
 )
 from pdf_extract.extract_frontend_db import extract as extract_snapshot
+from pdf_extract.model import EVENT_TYPE_LABELS
 from pdf_extract.parish_sites.resolve import OLD_PICK_MARK
 from pdf_extract.runs import (
     FAILED_STATUSES,
@@ -34,7 +35,7 @@ from pdf_extract.runs import (
     consecutive_failures,
     parish_results,
 )
-from pdf_extract.schedule.report import EVENT_TYPE_LABELS, render_update_mode, update_mode_report
+from pdf_extract.schedule.report import render_update_mode, update_mode_report
 from pdf_extract.schedule.store import unseeded_slugs, update_mode_slugs
 from pdf_extract.schedule_diff import parish_changed
 from pdf_extract.storage import latest_bulletin_ids, load_bulletins

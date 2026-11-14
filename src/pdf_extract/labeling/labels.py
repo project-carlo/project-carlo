@@ -24,6 +24,7 @@ from pathlib import Path
 from typing import Any
 
 from pdf_extract.model import (
+    ENTRY_KEYS,
     ENTRY_KEYS_ADDED_LATER,
     check_keys,
     entry_value_errors,
@@ -47,11 +48,8 @@ LABEL_KEYS = (
     "schema_version", "parish_slug", "content_hash", "source_url", "status", "flags",
     "published_date", "note", "labeler", "seconds_spent", "updated_at", "events",
 )
-EVENT_KEYS = (
-    "church_slug", "event_type", "event_kind", "day_of_week", "date", "start_time",
-    "end_time", "cancelled", "weeks_of_month", "exclude_weeks", "season", "page_number",
-    "note", "origin", "optional",
-)
+# A label event is a schedule entry plus where it was read and who wrote it.
+EVENT_KEYS = (*ENTRY_KEYS, "page_number", "origin", "optional")
 # Keys a label written before they existed may lack; a missing one reads as
 # null (`exclude_weeks`: false).
 EVENT_KEYS_ADDED_LATER = (*ENTRY_KEYS_ADDED_LATER, "optional")
