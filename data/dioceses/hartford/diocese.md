@@ -170,6 +170,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Two ParishesOnline orgs can serve one container (st-basil-the-great-mary-mother-of-the-church-st-leo and mary-mother-of-the-church-parish-st-leo both read 03/0349): when probe po shows the same container under two orgs, make one row and record both orgs' po-org and lpi ids.
 - A parish that posts its bulletin only as photos in a public Facebook group is bulletin_provider unsupported with fetch_gap kind facebook-group-images (visit.py reads the post text; the images sit behind the login overlay).
 - A church missing from a bulletin's page-1 Mass schedule can still have a weekly Mass in the intentions (a school-year Tuesday Mass at Blessed Sacrament, Waterbury): read every church section of the intentions before excluding.
+- A finder/GCatholic parish domain can be squatted (saintvincentferrerchurch.org serves a math site): the ParishesOnline org's website field gives the current domain. Org slugs here can also be '<name>-roman-catholic-church' with no ZIP.
+- probe pdf reads only the first 3 pages by default; the LPi ad page carrying the container line is near the end, so pass --pages <page_count>.
 
 
 ## Rules settled for this diocese
