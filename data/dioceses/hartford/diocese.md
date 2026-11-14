@@ -126,6 +126,9 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Hartford Courant 7 May 2017 'list-of-parish-closures-and-mergers-by-town' gives the 2017 plan for every town. It is a plan, not proof, so pair it with a dated report found by searching html.duckduckgo.com for 'courant.com <church> final Mass'.
 - A guessed ParishesOnline slug can belong to a same-named parish elsewhere (st-marianne-cope-parish is Solvay, NY); check the org address from probe po before using it.
 - diocesanweb mastheads laid out in church columns come out interleaved from probe pdf; download with probe get --out and read page 1 with pdftotext -layout to tie each Mass time to its church.
+- When the parish finder's link for a quasi-parish or ethnic community points into another parish's site, it may be an old history page: search html.duckduckgo.com for the community's own domain (East Hartford's Ghanaian quasi-parish has its own diocesanweb site) before treating it as covered by that parish's bulletin.
+- diocesanweb parish history pages (/<church>-church/) can date a church's closure years before its relegation decree; record that as last_mass and cite the decree as well. Archdiocesan decrees and 'Bulletin Blurb' notices are scanned images or PDFs, so render them to read the effective date.
+- pnpm diocese probe get --out resolves a relative path from the repository root, not the shell's directory: always pass an absolute path inside the scratch folder.
 
 
 ## Rules settled for this diocese
