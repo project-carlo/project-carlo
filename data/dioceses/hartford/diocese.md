@@ -160,6 +160,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - church-bulletin.org: an unpinned fetch:check can reach the issue through an unrelated site page (e.g. /kids-bulletin/); pin `page-pdfs https://www.church-bulletin.org/<slug>` (the ?id=<n> redirect target, listed newest first) instead.
 - Archdiocesan relegation decrees recite the parish's merger decree and earlier relegations of sibling churches (the Immaculate Conception, Southington decree dates Mary Our Queen's relegation to 5 June 2025): read decree page 1 when dating a merged parish's other churches.
 - A merged parish can still list a church among its buildings with no weekly Mass yet hold a feast-day public Mass there: grep two years of issues for '<name> Church' before excluding it.
+- LPi bulletins re-hosted on diocesanweb can also be named '<NN>-<NNNN>-<Month>-<D>-<YYYY>.pdf': the prefix is the container (03-0025 = 03/0025), so 'probe container' finds the ParishesOnline org directly.
+- A merger decree posted on the parish site lists the new parish's 'sacred edifices'; a church missing from it is no longer the parish's, but that is not a closure statement: record it as open unless a source dates the closure.
 
 
 ## Rules settled for this diocese
