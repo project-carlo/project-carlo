@@ -87,51 +87,75 @@ finder: mostly churches closed or merged away, plus eleven Eastern Catholic chur
 
 ### Bulletin publishers here
 
-From `probe url` of all 98 sites the finder links (2026-11-13):
+From `probe url` of all 98 sites the finder links (2026-11-13), and the map batches since:
 
 - **Most parish sites are diocese-built WordPress (diocesanweb.org, "beacon"):** 77 of 98.
-  The bulletin is on a `/bulletins/` (sometimes `/bulletin/` or `/weekly-bulletin/`) page.
-  Either a PDF uploaded to `cdn.diocesanweb.org/beacon/<site>/wp-content/uploads/<YYYY>/<MM>/`
-  (St. Ann, Avon: `2026/11/November-15-2026.pdf`; St. Jeanne Jugan: `20261115B.pdf`) or a
-  ParishesOnline publication widget (McGivney's `publicationWidget?type=bulletin&id=...`).
-  File names vary by parish. Other diocesanweb PDFs on the same host are forms and notices,
-  not bulletins.
-- **ParishesOnline (LPi)** appears on 32 sites, often as an org link beside a self-uploaded PDF.
-  Org slugs found: see `scratch/hartford-map-1/001-survey/probe-all.tsv`. Some org names are
-  older than the parish: St. Junipero Serra's is `st-margaret-mary-church-06074`; North
-  American Martyrs' is `...-st-marys-and-st-rose-churches`, also linked from the St. Isaac
-  Jogues quasi-parish's page; Mary, Mother of the Church and St. Basil both link
-  `st-basil-the-great-mary-mother-of-the-church-st-leo`.
-- **Others seen once or twice:** church-bulletin.org / jppc.net (St. Francis of Assisi,
-  Naugatuck; Our Lady of Mercy, Plainville), bonventure.net (St. Thomas and St. Timothy; St.
-  Joseph, Bristol), eCatholic (St. Paul, Kensington), Discover Mass (St. Peter Claver), Wix or
-  similar (nbcatholics.org, stelizabethofthetrinity.org).
-- **Needs a real browser** (`probe url` said NO-PARISH-WORDS or 4xx): stmatthewrcc.com,
-  saintvincentferrerchurch.org, ourlady-stpatrick.org, olsparishchurch.org, stjoachimct.org.
+  The bulletin is on a `/bulletins/` (sometimes `/bulletin/`, `/weekly-bulletin/` or
+  `/current-bulletin/`) page: a PDF uploaded to
+  `cdn.diocesanweb.org/beacon/<site>/wp-content/uploads/<YYYY>/<MM>/` (file names vary by
+  parish, e.g. `November-15-2026.pdf`), a ParishesOnline publication widget
+  (`publicationWidget?type=bulletin&id=...`), or a link to church-bulletin.org or LPi.
+  - The same pages and the yearly archives also link forms (cemetery rules, sponsor
+    certificates) and *Branches on the Vine* (`Branches*.pdf`, the archdiocese's weekly
+    news, not a parish bulletin). Unfiltered `page-pdfs` can pick either as first-listed:
+    check the pick and pin the page plus a filename glob for the parish's own files
+    (`filename=Bulletin-*.pdf`).
+  - Uploads named `<YYYYMMDD>B.pdf` are LPi bulletins re-hosted: grep the ad pages for
+    `4lpi.com` to get the container line ("St. Paul, Kensington, CT 03-0062"), find the org
+    with `probe po` and a guessed slug (`<name>-church-<zip>`), and record
+    `parishes_online` rather than `page-pdfs`.
+  - A stale or empty bulletins page doesn't mean no bulletin: the parish's ParishesOnline
+    org may be live and unlinked. Try `probe po` with guessed slugs (`<name>-parish`,
+    `<name>-<zip>`) before calling it not found.
+  - Mastheads laid out in church columns come out interleaved from `probe pdf`: download
+    with `probe get --out` and read page 1 with `pdftotext -layout` to tie each Mass time
+    to its church. `--out` resolves a relative path from the repository root, not the
+    shell's directory: pass an absolute path inside your scratch folder.
+  - Parish history pages (`/<church>-church/`) can date a church's closure; see *Rules
+    settled*. Archdiocesan decrees and "Bulletin Blurb" notices on these sites are scanned
+    images or PDFs: render them to read the effective date.
+- **ParishesOnline (LPi)** appears on 32 sites, often as an org link beside a self-uploaded
+  PDF, and behind the `<YYYYMMDD>B.pdf` uploads above. Org slugs found: see
+  `scratch/hartford-map-1/001-survey/probe-all.tsv`. Org names are often older than the
+  parish (St. Junipero Serra's is `st-margaret-mary-church-06074`), and one org can be
+  linked from two parishes' sites: read the masthead. A guessed slug can belong to a
+  same-named parish in another state (`st-marianne-cope-parish` is Solvay, NY): check the
+  org address `probe po` gives before using it. `render.py`'s browser closes on very large
+  scanned issues (~90 MB): `probe get --out` into an empty folder and render with
+  `pdftoppm -f 1 -l 1 -r 80 -jpeg`.
+- **church-bulletin.org / jppc.net:** linked from diocesanweb pages as
+  `church-bulletin.org/?id=<n>`. Unpinned `fetch:check` prints recipe `linked-issue-page`
+  and picks `church-bulletin.org/bulletin/<slug>/<date>.pdf`, which can be a scan while the
+  parish's own diocesanweb upload of the same issue has text: compare before pinning.
+- **bonventure.net** (`sponsors.bonventure.net/?page=<id>`, PDFs at
+  `pdfs/<id>/<YYYY-MM-DD>.pdf`): `page-pdfs` resolves the current issue, but the https
+  download fails certificate verification (incomplete chain); `probe get` works over http.
+  Record `bulletin_provider: unsupported` with fetch_gap kind `tls-certificate-unverified`.
+- **Solutio (Joomla) sites:** bulletins at `/bulletin/<n>-<title>/file`, which answer 403 to
+  probes. `visit.py --screenshot` of the `/file` link shows page 1 in Chrome's PDF viewer,
+  enough for the masthead. Record them `unsupported` with gap `joomla-file-endpoint`.
+- **Others seen once or twice:** Discover Mass, Wix or similar (nbcatholics.org,
+  stelizabethofthetrinity.org). Wix and Weebly file hosts answer 429 to rapid `probe pdf`;
+  space the requests.
+- **Needs a real browser** (`probe url` said NO-PARISH-WORDS or 4xx at survey):
+  stmatthewrcc.com, saintvincentferrerchurch.org, ourlady-stpatrick.org,
+  olsparishchurch.org.
+- **Parish finder links for quasi-parishes and ethnic communities** can point into another
+  parish's site, sometimes to an old history page. Search `html.duckduckgo.com` for the
+  community's own domain before treating it as covered by that parish's bulletin.
+- **Dating a closure** (sources, not publishers): for churches the 2017 plan closed with
+  no decree, the Hartford Courant's 7 May 2017 `list-of-parish-closures-and-mergers-by-town`
+  gives the plan for every town, and `probe get` of `html.duckduckgo.com/html/?q=...`
+  ("courant.com <church> final Mass") finds dated local reports (Courant June 2017 "final
+  regular Mass" articles, the Suffield Observer). For a later end, run `probe container
+  <a/b> --from <date> --weeks 160 --step 8 --all --pages 1`, see where the church leaves
+  the schedule, then narrow with `--weeks 8 --all --pages 3` to find the announcement.
 - From the neighbours: Albany found image-only ParishesOnline bulletins common (about one in
   five), and one bulletin printed into two LPi containers with only the ad page differing.
-  Wix and Weebly file hosts answer 429 to rapid `probe pdf`; space the requests.
 
 ## New lessons
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
-
-- 'Branches on the Vine' PDFs (Branches*.pdf) on diocesanweb parish sites are the archdiocese's weekly news, not a parish bulletin; when a bulletins page mixes them in, pin page-pdfs with a filename glob for the parish's own files (e.g. filename=Bulletin-*.pdf).
-- diocesanweb 'current-bulletin' and yearly-archive pages also link forms (cemetery rules, sponsor certificates); unfiltered page-pdfs can pick one as first-listed, so check the pick and pin the page plus a filename glob.
-- For churches the 2017 pastoral plan closed with no decree, html.duckduckgo.com/html/?q=... via probe get finds local reports (Hartford Courant June 2017 'final regular Mass' articles, the Suffield Observer) that date the last Mass.
-- bonventure.net (sponsors.bonventure.net/?page=<id>, PDFs at pdfs/<id>/<YYYY-MM-DD>.pdf): page-pdfs resolves the current issue but the https download fails certificate verification (incomplete chain); probe get works over http. Record bulletin_provider unsupported with fetch_gap kind tls-certificate-unverified.
-- diocesanweb sites linking church-bulletin.org/?id=<n>: unpinned fetch:check prints recipe linked-issue-page and picks church-bulletin.org/bulletin/<slug>/<date>.pdf, which can be scanned while the parish's own diocesanweb upload of the same issue has text; compare before pinning.
-- render.py's browser closes on very large scanned LPi PDFs (~90 MB); download with probe get --out into an empty folder and render with pdftoppm -f 1 -l 1 -r 80 -jpeg instead.
-- A diocesanweb bulletins page can be stale or empty while the parish's ParishesOnline org is live and unlinked: try probe po with guessed org slugs (<name>-parish, <name>-<zip>) before calling a bulletin not found.
-- Hartford Courant 7 May 2017 'list-of-parish-closures-and-mergers-by-town' gives the 2017 plan for every town. It is a plan, not proof, so pair it with a dated report found by searching html.duckduckgo.com for 'courant.com <church> final Mass'.
-- A guessed ParishesOnline slug can belong to a same-named parish elsewhere (st-marianne-cope-parish is Solvay, NY); check the org address from probe po before using it.
-- diocesanweb mastheads laid out in church columns come out interleaved from probe pdf; download with probe get --out and read page 1 with pdftotext -layout to tie each Mass time to its church.
-- When the parish finder's link for a quasi-parish or ethnic community points into another parish's site, it may be an old history page: search html.duckduckgo.com for the community's own domain (East Hartford's Ghanaian quasi-parish has its own diocesanweb site) before treating it as covered by that parish's bulletin.
-- diocesanweb parish history pages (/<church>-church/) can date a church's closure years before its relegation decree; record that as last_mass and cite the decree as well. Archdiocesan decrees and 'Bulletin Blurb' notices are scanned images or PDFs, so render them to read the effective date.
-- pnpm diocese probe get --out resolves a relative path from the repository root, not the shell's directory: always pass an absolute path inside the scratch folder.
-- diocesanweb sites that upload <YYYYMMDD>B.pdf files are hosting LPi bulletins: grep the ad pages for '4lpi.com' to get the container (e.g. 'St. Paul, Kensington, CT 03-0062'), then probe po a guessed org slug (<name>-church-<zip>) and record parishes_online rather than page-pdfs.
-- Solutio (Joomla) sites (/bulletin/<n>-<title>/file, 403 to probes) open in visit.py with --screenshot of the /file link, which shows page 1 in Chrome's PDF viewer for the masthead; record them unsupported with gap joomla-file-endpoint.
-- To date when a church's Mass ended, run probe container <a/b> --from <date> --weeks 160 --step 8 --all --pages 1 and look for where it leaves the schedule, then narrow the gap with --weeks 8 --all --pages 3 to find the announcement.
 
 
 ## Rules settled for this diocese
@@ -141,6 +165,8 @@ Decisions that apply to more than one record, and who made them.
 - A church relegated to profane use by a published archdiocesan decree is excluded as closed, dated to the decree unless a bulletin gives the last Mass, even if the parish finder or GCatholic still lists it; check the parish's current bulletin first for a continuing Mass there. (accepted by survey-review, 002-survey-review, 2026-11-13)
 - A shared pastor named in the clergy directory puts the two parishes in one batch and in a shared audit group, but makes one row only if a current bulletin covers both (as Albany settled). (accepted by survey-review, 002-survey-review, 2026-11-13)
 - The eleven Eastern Catholic churches GCatholic lists (rite set) are other-jurisdiction exclusions (Stamford Ukrainian, Passaic Ruthenian, St. Maron of Brooklyn, St. Thomas Syro-Malabar of Chicago). (accepted by survey-review, 002-survey-review, 2026-11-13)
+- A church the 2017 pastoral plan closed with no decree is dated by a dated local report of its final Mass; the Courant's 2017 closures list is the plan, not proof of the date. (map batches `north-suburbs` and `hartford-city`, 2026-11-13)
+- A closure date on the parish's own history page is recorded as `last_mass` even when it is years before the relegation decree, and the decree is cited as well. (map batch `east-hartford-glastonbury`, 2026-11-13)
 
 ## Log
 
