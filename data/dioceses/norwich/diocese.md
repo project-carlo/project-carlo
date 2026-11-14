@@ -133,6 +133,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - WordPress one-post-per-issue sites whose PDFs are Gravity Forms 'index.php?gf-download=' links: pin 'dated-post <category/bulletin page>'; fetch:check's guessed recipe pins one week's post page instead. Older gf-download links answer HTTP 401, so back issues can't be read to date closures.
 - eCatholic sites here (Cromwell 25247, Portland 5153, St. Mary of Czestochowa 5434) only link a ParishesOnline bulletin: the eCatholic bulletin path answers 403 every week, so map them as parishes_online and keep the eCatholic site id out of publication.
 - The Weebly addresses in the diocese's list fail TLS only in their www. form; the bare <name>.weebly.com answers. St. John Middletown's /area-parish-bulletins.html links ParishesOnline orgs for every Middletown-Old Saybrook deanery parish, which is a quick way to find their ids.
+- Some LPi bulletin PDFs here have a text layer in a shifted font encoding (each character 29 code points low, digits lost): decode with chr(ord(c)+29) to read the masthead, store no verbatim quote, and add a research item on whether the pipeline gets Mass times.
 
 
 ## Rules settled for this diocese
