@@ -27,7 +27,10 @@ plans*, *Sources*) are the standard you judge by.
    planning region in a roster's `group` is a problem: `audit` would pair every member.
 4. **Exclusions.** Each `excluded` entry needs a reason that holds: a duplicate names the
    entry it duplicates, and that entry is in a batch; "outside the diocese" names where it
-   belongs. Spot-check them; check every one when there are only a few.
+   belongs. Spot-check them; check every one when there are only a few. A rule or
+   exclusion that treats Eastern-rite churches as other-jurisdiction holds only for those
+   whose GCatholic `Jurisdiction:` line names an eparchy or exarchate (US Coptic Catholic
+   churches name the Latin diocese).
 5. **`diocese.md`.** The intro says how the diocese is organised; *Sources* says what each
    list is, its URL and date, how far to trust it, and where the rosters disagree;
    *Bulletin publishers here* holds only lines a map job needs. It must not settle

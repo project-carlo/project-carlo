@@ -31,8 +31,11 @@ their *Sources*, *Bulletin publishers here* and *Rules settled*.
    pastoral plan, the clergy list (which parishes share a pastor). Write each list in
    `diocese.md` *Sources*: what it is, its URL and date, what it is good for and how far to
    trust it here, and where the rosters disagree (entries only GCatholic still lists,
-   Eastern Catholic or other-jurisdiction churches, missions and chapels). Don't settle
-   individual parishes; leave that to the map jobs.
+   Eastern Catholic or other-jurisdiction churches, missions and chapels). An Eastern-rite
+   church is other-jurisdiction only when its GCatholic page's `Jurisdiction:` line names
+   an eparchy or exarchate: Coptic Catholic churches in the US have no eparchy and name
+   the Latin diocese, so they are mapped here like any church. Don't write a rule that
+   excludes a rite wholesale. Don't settle individual parishes; leave that to the map jobs.
 4. **Seed the playbook.** Fill in *Bulletin publishers here* with what the neighbouring
    dioceses found about the publishers likely to appear (Discover Mass's daily download
    cap, eCatholic sites behind Cloudflare, ...). Keep it to the lines a map job needs.
