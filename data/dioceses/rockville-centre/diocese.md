@@ -4,7 +4,7 @@ state: NY
 website: https://www.drvc.org
 status: promoted
 gcatholic: rock2
-promoted: 2026-11-13
+promoted: 2026-11-14
 ---
 
 The whole of Long Island east of New York City: Nassau County (Hempstead, Garden City,
