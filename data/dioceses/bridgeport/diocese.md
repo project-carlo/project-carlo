@@ -4,7 +4,7 @@ state: CT
 website: https://www.bridgeportdiocese.org
 status: promoted
 gcatholic: brid0
-promoted: 2026-11-12
+promoted: 2026-11-14
 ---
 
 Fairfield County, Connecticut, the whole county and nothing else: Bridgeport, Stamford,
