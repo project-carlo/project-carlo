@@ -140,6 +140,9 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A GoDaddy-builder bulletin page (PDFs on img1.wsimg.com) that posts English and Spanish editions each week: page-pdfs with filename=English*.pdf picks the English issue even on an oldest-first page.
 - Wix parish sites (PDFs at _files/ugd/<acct>_<hash>.pdf): fetch:check's page-pdfs picks the site header's 'Bulletin' link to the current issue, but the hashed names and image-only pages leave freshness 'unknown'; confirm the date by rendering the issue's page 2.
 - When a parish site is down (Cloudflare 522), the Wayback CDX API (probe get 'https://web.archive.org/cdx/search/cdx?url=<domain>/*&output=json&filter=statuscode:200&collapse=urlkey') lists its old bulletin files and dates the last issue posted.
+- visit.py --text drops the content of eCatholic tab panels (e.g. a 'Daily Schedules' page); visit.py --html <file> keeps it for grep.
+- visit.py can hang on an eCatholic homepage (olpseminary.com) while its sub-pages load; find sub-pages with a DuckDuckGo site: search and visit them directly.
+- John Patrick issues that are image-only now can have text layers in older issues: probe pdf --grep across past dated issues on the church-bulletin.org page to find and quote merger or closure letters.
 
 ## Rules settled for this diocese
 
