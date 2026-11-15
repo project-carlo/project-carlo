@@ -103,6 +103,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - church-bulletin.org/<guessed slug> answers 200 even when no bulletin exists (a generic archive page or a page with no PDFs). Only a jppc id linked from the parish site, or a page listing dated PDFs, is evidence.
 - Bon Venture bulletins (sponsors.bonventure.net/?page=<id>, often linked only from a cover image on the parish's bulletin page): page-pdfs picks the current pdfs/<id>/YYYY-MM-DD.pdf but the https download fails certificate verification; record bulletin_provider unsupported with fetch_gap tls-certificate-unverified, keeping the page-pdfs recipe in provider_id.
 - When a parish site is dead or unreachable, probe po '<name>-church-<zip>' often finds its ParishesOnline org (christ-the-king-church-02881, st-mary-star-of-the-sea-church-02882); check the org has issues, since some list none.
+- One LPi bulletin can be posted in two containers with different ad pages and footers (St. Pius X 03/4092 and St. Clare 03/1399): compare rendered pages 1-2, then record both containers on one row. The footer's account name (here 'St. Clare St Vincent de Paul') can name a church the masthead has dropped.
+- Some LPi issues here have an encoded-font text layer: probe pdf reports every page readable but returns glyph codes ('/0/1 /2/3...') and --grep finds nothing. Read them with render.py, as with image-only issues.
 
 
 ## Rules settled for this diocese
