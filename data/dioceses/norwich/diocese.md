@@ -20,8 +20,11 @@ them is mapped yet (2026-11-14). The diocese's "Reorganization" page
 (norwichdiocese.org/Reorganization, read 2026-11-14) is its confirmed joint Chapter 11 plan
 for abuse claims, not a parish restructuring.
 
-**How it is organised.** About **50 canonical parishes and some 68 open churches** in four
-deaneries (the March 2026 list below; count made from it, the diocese states no figure). Two
+**How it is organised.** About **50 canonical parishes and some 74 open places** in four
+deaneries (the March 2026 list below: 88 entries less 14 marked closed, so 71 churches, 2
+missions and 1 chapel; count made from it, the diocese states no figure. The locator map has
+75, the same 74 plus closed St. Thomas More; GCatholic has 73 open Latin churches and omits the
+cathedral). Two
 kinds of grouping, both named in the list:
 
 - **Merged parishes** with several churches: St. Andre Bessette (Plainfield, Moosup,
@@ -166,6 +169,15 @@ Proposed in the survey manifest (`scratch/norwich-map-1/survey.json`) and accept
 
 ## Log
 
+- 2026-11-14: reconcile (Run norwich-map-1). Nine batches ran (eight regional of 22-39
+  roster entries, about 8-13 places each, plus the 3 Eastern Catholic exclusions). Coverage
+  100% of all three rosters: directory 88/88, gcatholic 86/86, locator-map 75/75; modelled
+  70/74 of the directory's not-excluded entries (the other four are the `unsupported` Divine
+  Mercy's churches and open St. Francis Chapel). Records: 42 parish rows (41 collectable, 1
+  `unsupported`), 74 churches, 24 exclusions, 2 `open/`. No merges or moves. Recorded
+  `separate` reviews for St. John and St. Sebastian, Middletown, against the five Middlesex
+  parishes their "area/deanery parish bulletins" pages link. `fetch:check` picked a current
+  issue for all 41 collectable rows. Corrected the intro's open-church count (68 to 74).
 - 2026-11-14: survey (Run norwich-map-1). Rosters: directory 88, gcatholic 86, locator-map
   75 (249 entries). Nine batches in `batches.json`, first `tolland-north`; `batches
   validate` passed. No parish records yet.

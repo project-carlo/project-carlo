@@ -32,6 +32,22 @@ line1: 2 Central Ave.
 city: Niantic
 state: CT
 postal_code: '06357'
+research:
+- method: probe pdf --grep 'Francis|Crescent|summer' on the newest St. John XXIII bulletin (container
+    03/1158, November 15, 2026)
+  url: https://container.parishesonline.com/bulletins/03/1158/20261115B.pdf
+  checked: '2026-11-14'
+  outcome: not-found
+  next_action: Grep the June-August 2027 issues of container 03/1158 for St. Francis or Crescent, or call
+    the parish office (860-739-9722)
+  retry_when: Summer 2027 bulletins are published (from June 2027)
+- method: probe get of the parish site's Masses page and its 'Mass Schedule for St. Agnes & St. Matthias'
+    post; St. Francis Chapel appears only as a menu link to the history page
+  url: https://www.saintagnescatholicchurch.com/?page_id=2350
+  checked: '2026-11-14'
+  outcome: not-found
+  next_action: Re-read the Masses page for a summer schedule
+  retry_when: June 2027, when a summer schedule would be posted
 ---
 
 ## What is known

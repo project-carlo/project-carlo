@@ -23,6 +23,22 @@ line1: 15 Mohegan Ave.
 city: New London
 state: CT
 postal_code: '06320'
+research:
+- method: probe get of the Academy's Chaplains page, text searched for Mass, Catholic and Sunday; only
+    'Swab Summer Catholic Choir' matches, no Mass times
+  url: https://uscga.edu/cadet-life/cadet-resources/chaplains/
+  checked: '2026-11-14'
+  outcome: not-found
+  next_action: Ask the Academy chaplain's office (860-444-8480) whether the Catholic Mass is public and
+    when, and whether the ministry is the Archdiocese for the Military Services
+  retry_when: Someone can phone or email the chaplain's office, or the Academy posts a chapel schedule
+- method: probe pdf --grep 'Coast Guard|Academy|Memorial Chapel' on the newest St. Brendan the Navigator
+    bulletin (container 03/1228, November 15, 2026)
+  url: https://container.parishesonline.com/bulletins/03/1228/20261115B.pdf
+  checked: '2026-11-14'
+  outcome: not-found
+  next_action: Ask the chaplain's office as above
+  retry_when: Someone can contact the chaplain's office
 ---
 
 ## What is known

@@ -30,6 +30,62 @@ publication_reviews:
     note: The November 15, 2026 masthead (page 1) of container 03/0082 names Saint Sebastian Catholic
       Church, 155 Washington Street, alone, with Rev. James Thaikoottathil as pastor; that issue has no
       'St. John' or 'Saint John'.
+- parish: st-john-paul-ii-east-hampton
+  decision: separate
+  evidence:
+  - url: https://container.parishesonline.com/bulletins/03/1513/20261115B.pdf
+    seen: 2026-11-14
+    note: The November 15, 2026 masthead (page 1) of container 03/1513 names Saint John Catholic Church,
+      19 St. John Square, Middletown, alone, with its own Mass times.
+  - url: https://container.parishesonline.com/bulletins/03/1195/20261115B.pdf
+    seen: 2026-11-14
+    note: The November 15, 2026 masthead (page 1) of container 03/1195 names St. John Paul II Parish,
+      the churches of St. Patrick, East Hampton and St. Bridget of Kildare, Moodus, with pastor Father
+      Dariusz K. Dudzik.
+- parish: st-lawrence-killingworth
+  decision: separate
+  evidence:
+  - url: https://container.parishesonline.com/bulletins/03/1513/20261115B.pdf
+    seen: 2026-11-14
+    note: The November 15, 2026 masthead (page 1) of container 03/1513 names Saint John Catholic Church,
+      19 St. John Square, Middletown, alone, with its own Mass times.
+  - url: https://container.parishesonline.com/bulletins/04/0920/20261115B.pdf
+    seen: 2026-11-14
+    note: The November 15, 2026 masthead (page 1) of container 04/0920 names St. Lawrence, Hemlock Drive,
+      Killingworth, with Rev. Joseph F. De Costa as pastor and its own Mass times.
+- parish: st-mary-of-the-visitation-clinton
+  decision: separate
+  evidence:
+  - url: https://container.parishesonline.com/bulletins/03/1513/20261115B.pdf
+    seen: 2026-11-14
+    note: The November 15, 2026 masthead (page 1) of container 03/1513 names Saint John Catholic Church,
+      19 St. John Square, Middletown, alone, with its own Mass times.
+  - url: https://container.parishesonline.com/bulletins/03/0104/20261115B.pdf
+    seen: 2026-11-14
+    note: The November 15, 2026 masthead (page 1) of container 03/0104 names St. Mary Church of the Visitation,
+      54 Grove Street, Clinton, with one Mass schedule.
+- parish: st-pio-old-saybrook
+  decision: separate
+  evidence:
+  - url: https://container.parishesonline.com/bulletins/03/1513/20261115B.pdf
+    seen: 2026-11-14
+    note: The November 15, 2026 masthead (page 1) of container 03/1513 names Saint John Catholic Church,
+      19 St. John Square, Middletown, alone, with its own Mass times.
+  - url: https://container.parishesonline.com/bulletins/03/0172/20261115B.pdf
+    seen: 2026-11-14
+    note: The November 15, 2026 masthead (page 1) of container 03/0172 names St. Pio Parish, the churches
+      of St. John, Old Saybrook and St. Mark, Westbrook, with Rev. Grzegorz P. Brozonowicz as pastor.
+- parish: st-teresa-of-calcutta-essex
+  decision: separate
+  evidence:
+  - url: https://container.parishesonline.com/bulletins/03/1513/20261115B.pdf
+    seen: 2026-11-14
+    note: The November 15, 2026 masthead (page 1) of container 03/1513 names Saint John Catholic Church,
+      19 St. John Square, Middletown, alone, with its own Mass times.
+  - url: https://container.parishesonline.com/bulletins/03/0729/20261115B.pdf
+    seen: 2026-11-14
+    note: The November 15, 2026 masthead (page 1) of container 03/0729 shows St. Teresa of Calcutta Parish,
+      Fr. Arul Rajan Peter, pastor, with Mass times for Chester and Essex only.
 ---
 
 ## Publisher
