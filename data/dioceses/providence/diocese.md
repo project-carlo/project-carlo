@@ -101,6 +101,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - When a site drops probe connections (RemoteDisconnected) but fetch:check downloads its PDFs, save the issue with tools/fetch_pdf.py and read it with render.py (probe pdf takes URLs only).
 - ParishesOnline org slugs here can be possessive with no ZIP (st-marthas-church, st-brendans-church). Try these when '<name>-<zip>' fails. Two old orgs can share one container after a merger: record both orgs' ids on the one row.
 - church-bulletin.org/<guessed slug> answers 200 even when no bulletin exists (a generic archive page or a page with no PDFs). Only a jppc id linked from the parish site, or a page listing dated PDFs, is evidence.
+- Bon Venture bulletins (sponsors.bonventure.net/?page=<id>, often linked only from a cover image on the parish's bulletin page): page-pdfs picks the current pdfs/<id>/YYYY-MM-DD.pdf but the https download fails certificate verification; record bulletin_provider unsupported with fetch_gap tls-certificate-unverified, keeping the page-pdfs recipe in provider_id.
+- When a parish site is dead or unreachable, probe po '<name>-church-<zip>' often finds its ParishesOnline org (christ-the-king-church-02881, st-mary-star-of-the-sea-church-02882); check the org has issues, since some list none.
 
 
 ## Rules settled for this diocese
