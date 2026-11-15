@@ -98,6 +98,9 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Squarespace parish bulletin pages (PDFs at <site>/s/Web-MMDDYY.pdf, newest first) work with provider other and recipe page-pdfs, but fetch:check can't date the file names (freshness 'unknown'): confirm the issue from the Mass intentions, since the page-1 date line can be a stale template (seen at Our Lady of Mercy, East Greenwich).
 - Some ParishesOnline orgs have no LPi container and carry parish-uploaded PDFs (customer-data-prod-bucket.s3.amazonaws.com/organization-uploads/<lpi id>/publications/...); probe po lists them, but the parishes_online collector fails ('No matching anchor link'): record bulletin_provider unsupported with fetch_gap kind po-user-upload (seen at Sacred Heart, West Warwick).
 - An eCatholic site that posts LPi issues in its documents folder (files.ecatholic.com/<id>/documents/YYYY/MM/<date>B.pdf) rather than /bulletins: its 'Bulletin archive' link (visit.py --links --match parishesonline) gives parishesonline.com/find/<slug>, and probe po <slug> without a zip suffix returns the org (saints-john-and-paul-church).
+- When a site drops probe connections (RemoteDisconnected) but fetch:check downloads its PDFs, save the issue with tools/fetch_pdf.py and read it with render.py (probe pdf takes URLs only).
+- ParishesOnline org slugs here can be possessive with no ZIP (st-marthas-church, st-brendans-church). Try these when '<name>-<zip>' fails. Two old orgs can share one container after a merger: record both orgs' ids on the one row.
+- church-bulletin.org/<guessed slug> answers 200 even when no bulletin exists (a generic archive page or a page with no PDFs). Only a jppc id linked from the parish site, or a page listing dated PDFs, is evidence.
 
 
 ## Rules settled for this diocese
