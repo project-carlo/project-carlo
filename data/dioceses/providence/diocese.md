@@ -91,6 +91,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 
 - An eCatholic parish site whose Bulletins page only embeds ParishesOnline issues (no files at files.ecatholic.com/<id>/bulletins) publishes on ParishesOnline: record the po-org/lpi/po-container ids and not the eCatholic site id (seen at St. Joseph, Ashton).
 - John Patrick Publishing bulletins: set website to the church-bulletin.org/<slug> page (jppc.net/onlinebulletins/<id>template.pdf redirects there), provider other with recipe page-pdfs. It needs no browser even when the parish's own site can't be reached.
+- A John Patrick church-bulletin.org page can carry another parish's bulletin (St. Matthew Cranston's page is titled 'Saint Matthew @ Saint Paul Church' and posts St. Paul's LPi issue). Compare its masthead with the host parish's bulletin, and record the page as an extra publication id on the host's row, not as a row of its own.
+- Duda parish sites (PDFs on irp.cdn-website.com/<site>/files/uploaded/, linked from a /bulletin page in newest-first order) read with provider other and recipe page-pdfs on the /bulletin page.
 
 
 ## Rules settled for this diocese
