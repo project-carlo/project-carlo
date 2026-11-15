@@ -138,6 +138,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A John Patrick parish with an eCatholic site may also post the same issue at files.ecatholic.com/<id>/bulletins/YYYYMMDD.pdf with a text layer, where the JPPC copy is image-only: use `issues.py ecatholic --grep` on it to read or date schedule changes, and record the eCatholic id as a second publication id.
 - WordPress parish sites that link their bulletin page only as ?page_id=N: find it with probe get <site>/wp-json/wp/v2/pages?search=bulletin, or list PDFs newest first with /wp-json/wp/v2/media?mime_type=application/pdf.
 - A GoDaddy-builder bulletin page (PDFs on img1.wsimg.com) that posts English and Spanish editions each week: page-pdfs with filename=English*.pdf picks the English issue even on an oldest-first page.
+- Wix parish sites (PDFs at _files/ugd/<acct>_<hash>.pdf): fetch:check's page-pdfs picks the site header's 'Bulletin' link to the current issue, but the hashed names and image-only pages leave freshness 'unknown'; confirm the date by rendering the issue's page 2.
+- When a parish site is down (Cloudflare 522), the Wayback CDX API (probe get 'https://web.archive.org/cdx/search/cdx?url=<domain>/*&output=json&filter=statuscode:200&collapse=urlkey') lists its old bulletin files and dates the last issue posted.
 
 ## Rules settled for this diocese
 
