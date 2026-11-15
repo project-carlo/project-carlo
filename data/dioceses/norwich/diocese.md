@@ -97,31 +97,57 @@ The survey (Run norwich-map-1, 2026-11-14) planned nine batches in `batches.json
 
 ### Bulletin publishers here
 
-From probing 45 parish sites on 2026-11-14 (`probe url`, then `visit.py` for the 403s); no
-neighbouring diocese is mapped to learn from.
+From probing parish sites on 2026-11-14 and the map batches since; no neighbouring diocese
+is mapped to learn from. Many parish sites here, whatever builds them, only link a
+ParishesOnline bulletin: look for the LPi container before you record the site's own builder.
 
-- **ParishesOnline / LPi is the most common.** Containers and ids seen: Groton tri-parish
-  03/0770 (org `tri-parish-community-of-sacred-heart-our-lady-of-lourdes-st-mary`), Mystic
-  04/0504, St. Teresa of Calcutta 03/0729 (lpi:0018000000QbzzxAAB), St. Brendan
-  lpi:0018000000QxAEWAA3, St. Edward lpi:0018000000Qx96BAAR, St. Therese
-  lpi:0018000000Qc2DZAAZ; orgs `st-columba-church-06237` (Good Shepherd),
-  `st-agnes-and-st-matthias-catholic-church`, `st-mary-church-of-the-visitation` (Clinton),
-  `st-peter-church-6441` (Higganum). The locator map links more `parishesonline.com/find/`
-  orgs (Putnam, Danielson, Norwichtown, Taftville, Occum, Preston, Moodus, Brooklyn and
-  Hampton, North Stonington). Account names may carry old members.
-- **eCatholic sites answer 403 to `probe url`** and open in `visit.py`: St. John Cromwell
-  25247, St. Mary Portland 5153, St. Mary of Czestochowa Middletown 5434, St. Joseph
-  Rockville 25042; Sacred Heart Groton's site also 403s (it embeds ParishesOnline).
-- **Connecting Members (DNN) sites**, the diocese's own builder: the Cathedral and Blessed
-  Sacrament, with the bulletin at `/Resources/Bulletin` or `/Resources/Sunday-Bulletin`.
-- **Others:** Wix `_files/ugd/` PDFs (catholicwindham.org), Squarespace
-  (saintannecluster.org `/bulletin`), WordPress one post per issue (saintphilipct.com
-  `/category/bulletin/`), a self-hosted dated folder (saintjosephnorwich.com
-  `/bulletins/2025-2026YearA/<date> <Sunday>.pdf`), Duda (stlawrencechurch.com).
-- **Unreachable:** the Weebly addresses the list gives for St. John and St. Sebastian,
-  Middletown fail TLS; GCatholic gives saintjohnchurchmiddletown.com and
-  stsebastianct.org. guardianangelsparishofcolchester.org answers 404 at its root;
-  St. Francis Middletown (stfrancisct.com) answered 500.
+- **ParishesOnline / LPi is the most common.** Org slugs here follow `<name>-<zip>`
+  (`blessed-sacrament-parish-06066`, `st-luke-church-06029`); when a parish site hides the
+  id, or its domain is dead or disconnected, `probe po` a guessed slug to get the
+  `provider_id`, and the org's website field then gives the parish's current site.
+  - **Several orgs can share one container**, even for parishes with different pastors:
+    `probe po` every org a parish site or the locator map links, and record every org and
+    lpi id on the one row whose container they share.
+  - **The locator map's `parishesonline.com/find/` links can be dead orgs** with no
+    publications: if `probe po` finds none, look for a self-hosted bulletin on the parish's
+    own site, and keep the dead org in evidence, not publication.
+  - **The PDF footer names the container** (`<Parish> | 03-0263`) when no page shows an id.
+  - **Some PDFs have a shifted text layer**: each character 29 code points low, digits
+    lost. Decode with `chr(ord(c)+29)` to read the masthead, store no verbatim quote, and
+    add a research item on whether the pipeline gets Mass times.
+- **Image-only bulletins** (some LPi containers' first pages, the Cathedral's DNN
+  `LinkClick` scans): `probe pdf` finds no text. Read page 1 with `render.py`, quote only
+  from text pages, and add an unsupported-format research item on whether the pipeline
+  OCRs them.
+- **Connecting Members (DNN) sites**, the diocese's own builder: the bulletin is at
+  `/Resources/Bulletin` or `/Resources/Sunday-Bulletin`, either a hosted scan or an LPi
+  bulletin whose widget id is embedded on that page though `probe url` on the home page
+  sees none.
+- **eCatholic sites answer 403 to `probe url`** and open in `visit.py`. Here they only link
+  a ParishesOnline bulletin; the eCatholic bulletin path answers 403 every week. Map them
+  as `parishes_online` and keep the eCatholic site id out of publication.
+- **Duda** (`irp.cdn-website.com`): the ParishesOnline widget id is only on `/bulletin`, not
+  the home page; `probe url` the bulletin page.
+- **Servant Keeper** (servantpc `fw2`) sites render in JavaScript, so `probe get` and
+  `probe url` see only templates: open them with `visit.py`. Their bulletin page can embed
+  ParishesOnline publication links that give the org and container.
+- **Weebly:** the addresses in the List of Parishes fail TLS only in their `www.` form; the
+  bare `<name>.weebly.com` answers. St. John Middletown's `/area-parish-bulletins.html`
+  links the ParishesOnline orgs of every Middletown-Old Saybrook deanery parish: a quick
+  way to their ids.
+- **WordPress, one post per issue:** pin `dated-post <category or bulletin page>`. Where the
+  PDFs are Gravity Forms `index.php?gf-download=` links, fetch:check's guessed recipe pins
+  one week's post instead, and older links answer HTTP 401, so back issues can't date a
+  closure.
+- **Bonventure** (`sponsors.bonventure.net/?page=<id>`, issues `pdfs/<id>/<YYYY-MM-DD>.pdf`)
+  reads over http only; the fetcher upgrades to https and fails certificate verification.
+  Map it unsupported with `fetch_gap` kind `tls-certificate-unverified` and keep the
+  page-pdfs recipe in `provider_id`.
+- **Others seen:** Wix `_files/ugd/` PDFs, Squarespace `/bulletin`, a self-hosted dated
+  folder of PDFs.
+- **Lapsed domains** can belong to a same-named church elsewhere (one GCatholic website is
+  now an English Anglican parish), not only to the squatters the README warns of: read the
+  page before you use a GCatholic or locator-map website.
 - **Discover Mass:** not seen yet. If it appears, it caps downloads per IP per day (134-byte
   replies), as other dioceses found.
 
@@ -129,24 +155,10 @@ neighbouring diocese is mapped to learn from.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
-- Connecting Members (DNN) parish sites may carry LPi bulletins without an id probe url sees: the PDF footer gives the container ('<Parish> | 03-0263') and the bulletin page can embed the LPi widget id; ParishesOnline org slugs here follow '<name>-<zip>' (blessed-sacrament-parish-06066, st-luke-church-06029, all-saints-church-06072, st-edward-church-06076), so probe po a guessed slug to get the provider_id.
-- WordPress one-post-per-issue sites whose PDFs are Gravity Forms 'index.php?gf-download=' links: pin 'dated-post <category/bulletin page>'; fetch:check's guessed recipe pins one week's post page instead. Older gf-download links answer HTTP 401, so back issues can't be read to date closures.
-- eCatholic sites here (Cromwell 25247, Portland 5153, St. Mary of Czestochowa 5434) only link a ParishesOnline bulletin: the eCatholic bulletin path answers 403 every week, so map them as parishes_online and keep the eCatholic site id out of publication.
-- The Weebly addresses in the diocese's list fail TLS only in their www. form; the bare <name>.weebly.com answers. St. John Middletown's /area-parish-bulletins.html links ParishesOnline orgs for every Middletown-Old Saybrook deanery parish, which is a quick way to find their ids.
-- Some LPi bulletin PDFs here have a text layer in a shifted font encoding (each character 29 code points low, digits lost): decode with chr(ord(c)+29) to read the masthead, store no verbatim quote, and add a research item on whether the pipeline gets Mass times.
-- Servant Keeper (servantpc 'fw2') parish sites render in JavaScript: probe get/probe url see only templates, so open them with visit.py; jnccfaith.org's /parish-bulletin embeds ParishesOnline publication-page links that give the org and container.
-- Some bulletins here are image-only (the Cathedral's DNN LinkClick scans; LPi 03/0123 pages 1-5): probe pdf finds no text, so read page 1 with render.py, quote only from text pages, and add an unsupported-format research item on whether the pipeline OCRs them.
-- Bonventure bulletins (sponsors.bonventure.net/?page=<id>, issues pdfs/<id>/<YYYY-MM-DD>.pdf) read over http only; the fetcher upgrades to https and fails certificate verification, so map them unsupported with fetch_gap kind tls-certificate-unverified and keep the page-pdfs recipe in provider_id.
-- Several ParishesOnline org accounts can point at one container (Groton tri-parish + Our Lady of Lourdes on 03/0770; St. Michael Pawcatuck + St. Patrick Mystic on 04/0504, though they have different pastors): probe po each org a parish site or the locator map links, and record every org/lpi id on the one row whose container they share.
-- The locator map's parishesonline.com/find links can point at dead org accounts (st-james-parish-06239 has no publications): probe po each, and if empty look for a self-hosted bulletin on the parish's own site; keep the dead org in evidence, not publication.
-- Duda (irp.cdn-website.com) parish sites here carry the ParishesOnline widget id only on /bulletin, not the home page: probe url the bulletin page to get the lpi id.
-- A parish's dead or Wix-disconnected domain doesn't mean it has no bulletin: the '<name>-<zip>' ParishesOnline slug guess (guardian-angels-parish-06415) found the org, and the org's website field gave the parish's current site.
-- Lapsed parish domains here can be taken by same-named churches elsewhere (stmaryscoventry.org is now an English Anglican parish): read the page before you use a GCatholic website.
-
 
 ## Rules settled for this diocese
 
-None yet. Proposed in the survey manifest (`scratch/norwich-map-1/survey.json`) for
+Proposed in the survey manifest (`scratch/norwich-map-1/survey.json`) and accepted by
 `survey-review`.
 
 - A church the diocese's List of Parishes (March 6, 2026) marks 'Closed - For inquiries or records, contact ...' may be excluded with reason closed on that wording, when no current bulletin of the successor parish lists Mass there; last_mass left empty unless another source dates it. (accepted by survey-review, 002-survey-review, 2026-11-14)
