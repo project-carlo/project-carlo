@@ -95,6 +95,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Duda parish sites (PDFs on irp.cdn-website.com/<site>/files/uploaded/, linked from a /bulletin page in newest-first order) read with provider other and recipe page-pdfs on the /bulletin page.
 - Several LPi bulletins here (St. Joseph North Scituate, St. Michael Smithfield, St. Philip Greenville) are image-only apart from the ad pages: probe pdf sees only the footer, so read the masthead and Mass schedule with render.py.
 - When an LPi footer gives a container but no org slug, try probe po with '<name>-<zip>' (st-michaels-church-02917 worked); an eCatholic site that hosts the same LPi file can then be recorded on parishes_online, with the ecatholic id as a second publication id, so fetch avoids Cloudflare.
+- Squarespace parish bulletin pages (PDFs at <site>/s/Web-MMDDYY.pdf, newest first) work with provider other and recipe page-pdfs, but fetch:check can't date the file names (freshness 'unknown'): confirm the issue from the Mass intentions, since the page-1 date line can be a stale template (seen at Our Lady of Mercy, East Greenwich).
 
 
 ## Rules settled for this diocese
