@@ -7,7 +7,7 @@ gcatholic: broo0
 audit_ignore_groups:
 - deaneries
 - parishes
-promoted: 2026-11-12
+promoted: 2026-11-14
 ---
 
 The Diocese of Brooklyn is the boroughs of Brooklyn (Kings County) and Queens (Queens County),
