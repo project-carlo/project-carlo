@@ -96,6 +96,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Several LPi bulletins here (St. Joseph North Scituate, St. Michael Smithfield, St. Philip Greenville) are image-only apart from the ad pages: probe pdf sees only the footer, so read the masthead and Mass schedule with render.py.
 - When an LPi footer gives a container but no org slug, try probe po with '<name>-<zip>' (st-michaels-church-02917 worked); an eCatholic site that hosts the same LPi file can then be recorded on parishes_online, with the ecatholic id as a second publication id, so fetch avoids Cloudflare.
 - Squarespace parish bulletin pages (PDFs at <site>/s/Web-MMDDYY.pdf, newest first) work with provider other and recipe page-pdfs, but fetch:check can't date the file names (freshness 'unknown'): confirm the issue from the Mass intentions, since the page-1 date line can be a stale template (seen at Our Lady of Mercy, East Greenwich).
+- Some ParishesOnline orgs have no LPi container and carry parish-uploaded PDFs (customer-data-prod-bucket.s3.amazonaws.com/organization-uploads/<lpi id>/publications/...); probe po lists them, but the parishes_online collector fails ('No matching anchor link'): record bulletin_provider unsupported with fetch_gap kind po-user-upload (seen at Sacred Heart, West Warwick).
+- An eCatholic site that posts LPi issues in its documents folder (files.ecatholic.com/<id>/documents/YYYY/MM/<date>B.pdf) rather than /bulletins: its 'Bulletin archive' link (visit.py --links --match parishesonline) gives parishesonline.com/find/<slug>, and probe po <slug> without a zip suffix returns the org (saints-john-and-paul-church).
 
 
 ## Rules settled for this diocese
