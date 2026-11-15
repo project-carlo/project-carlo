@@ -130,6 +130,9 @@ them with `visit.py --bulletin` before concluding there is no bulletin.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- visit.py can hang past its timeout on Google Sites parish pages (sites.google-built, 'Embedded Files'); read them with probe get and check the data-code embeds for a Drive or bulletin link instead.
+- When the finder's homepage is a masstimes.org map link, the parish's email domain (e.g. name@<domain>.org) or a DuckDuckGo html search (probe get https://html.duckduckgo.com/html/?q=...) can find its real site.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
