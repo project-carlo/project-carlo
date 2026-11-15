@@ -89,6 +89,8 @@ of the blocked ones (2026-11-14, `scratch/providence-map-1/001-survey/probe-all.
 
 Decisions that apply to more than one record, and who made them.
 
+- Finder entries that are notices (ids 34817, 25351, 33152, 29428) are not places and are excluded from planning; nothing is recorded for them. (accepted by survey-review, 002-survey-review, 2026-11-15)
+
 ## Log
 
 Newest first: date, what was done, and the `pnpm diocese coverage` numbers after it.
