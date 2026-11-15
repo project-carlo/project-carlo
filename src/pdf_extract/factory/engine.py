@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import json
 import logging
+import re
 import subprocess
 from collections.abc import Callable
 from datetime import datetime, timedelta
@@ -71,6 +72,26 @@ from pdf_extract.factory.workers import CRASH, OK, PARTIAL, SANDBOX, TIMEOUT
 LOGGER = logging.getLogger(__name__)
 # What a git, gh or command call raises when it fails; a job's tick waits and tries again.
 TRANSIENT = (FactoryError, OSError, subprocess.SubprocessError)
+# git or gh failing because GitHub can't be reached or won't take the login: an outage, the
+# network, a rate limit, or the keyring holding gh's token still locked after a reboot.
+# Nothing the owner can answer on an issue (which couldn't be opened anyway), so the job
+# waits it out, however long it takes, instead of blocking its Run.
+UNREACHABLE = re.compile("|".join((
+    r"could not read (username|password)", r"terminal prompts disabled",
+    r"authentication failed", r"requires authentication", r"bad credentials",
+    r"\bHTTP 401\b", r"gh auth login",
+    r"could not resolve host", r"failed to connect", r"unable to access",
+    r"connection (refused|reset|timed out|closed)", r"timed out", r"i/o timeout",
+    r"no such host", r"error connecting to", r"remote end hung up", r"early EOF",
+    r"RPC failed", r"\bTLS\b", r"\bSSL\b",
+    r"\bHTTP 5\d\d\b", r"returned error: 5\d\d", r"bad gateway", r"service unavailable",
+    r"internal server error", r"rate limit",
+)), re.IGNORECASE)
+
+
+def unreachable(error: Exception | str) -> bool:
+    """Whether a git or gh failure is GitHub being out of reach rather than a real error."""
+    return bool(UNREACHABLE.search(str(error)))
 REGENERATE = "pnpm --silent diocese promote {diocese}"
 
 
@@ -108,23 +129,35 @@ class Engine:
             outcome = self.work(job)
         except TRANSIENT as exc:
             return self._work_failed(job, key, exc)
-        if self.ledger.get(key):
-            self.ledger.set(key, 0)
+        for k in (key, f"unreachable:{job['id']}"):
+            if self.ledger.get(k):
+                self.ledger.set(k, 0)
         return outcome
 
     def _work_failed(self, job: Any, key: str, exc: Exception) -> Outcome:
         """git or GitHub failed partway through a job (a network blip, an expired login), or a
         file the stage reads is missing. Each step after the gates runs once, so trying the
-        job again picks up where it stopped; after a few failures in a row the Run blocks on
-        an issue instead."""
+        job again picks up where it stopped. GitHub out of reach is waited out, trying again
+        less and less often; any other failure blocks the Run on an issue after a few in a
+        row."""
         LOGGER.warning("job %s failed: %s", job["id"], exc)
-        failures = (self.ledger.get(key) or 0) + 1
-        self.ledger.set(key, failures)
         job = self.ledger.job(job["id"])
         if job["status"] == RUNNING:
             # Its worker's result, if any, is lost: resume the session.
             self.ledger.set_job(job["id"], status=QUEUED, pending_prompt=pending("resume")
                                 if job["session_id"] else job["pending_prompt"])
+        if unreachable(exc):
+            tries_key = f"unreachable:{job['id']}"
+            tries = (self.ledger.get(tries_key) or 0) + 1
+            self.ledger.set(tries_key, tries)
+            minutes = min(self.config.failure_retry_minutes * 2 ** min(tries - 1, 10),
+                          max(self.config.unreachable_retry_max_minutes,
+                              self.config.failure_retry_minutes))
+            until = self.clock() + timedelta(minutes=minutes)
+            return Outcome("waiting", f"job {job['id']} can't reach GitHub ({tries} tries, "
+                           f"{exc}); trying again in {minutes} minutes", until)
+        failures = (self.ledger.get(key) or 0) + 1
+        self.ledger.set(key, failures)
         if failures >= self.config.max_failures:
             # The Run blocks, not the job: once the issue is closed, the job carries on
             # from the step that failed instead of starting its worker again.

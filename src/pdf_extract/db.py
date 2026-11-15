@@ -10,8 +10,9 @@ Two tables are the exception. `parish` and `church` are curated by hand in
 seeded into the database (matched by slug) before every pipeline command, so
 an edited CSV takes effect on the next command.
 
-Approved seed files are loaded by `seeding.loader`, which the commands that
-want them call after `ensure_db`.
+Approved seed files and correction files are loaded by `seeding.loader` and
+`schedule.corrections`, which the commands that want them call after
+`ensure_db`.
 """
 
 from __future__ import annotations
@@ -401,8 +402,9 @@ def ensure_db(db_path: Path = DEFAULT_DB_PATH) -> dict[str, Any]:
     CSVs. Refuses to invent a database: running the pipeline against an empty
     one would look like every parish had lost its schedule.
 
-    It does not load seed files: a command that wants them calls
-    `seeding.loader.load_seeds` next.
+    It loads neither seed nor correction files: a command that wants them
+    calls `seeding.loader.load_seeds`, then
+    `schedule.corrections.load_correction_files`, next.
     """
     if not db_path.exists():
         raise DatabaseMissingError(

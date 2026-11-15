@@ -24,11 +24,14 @@ lessons_before_integrate: 15   # integrate runs once more after the last batch
 
 # A job's attempts. The Run blocks after max_crashes worker crashes, or after
 # max_failures git or GitHub failures in a row (retried every failure_retry_minutes).
+# GitHub out of reach (an outage, the network, a rate limit, gh's login unavailable) never
+# blocks: the job waits it out, the wait doubling up to unreachable_retry_max_minutes.
 # A session that ends partway is continued max_continues times, then the Run blocks.
 max_crashes: 3
 max_continues: 1
 max_failures: 3
 failure_retry_minutes: 5
+unreachable_retry_max_minutes: 30
 # The worker sandbox failing to start a worker: retried every sandbox_retry_minutes, and
 # the Run blocks after max_sandbox_failures in a row.
 max_sandbox_failures: 3

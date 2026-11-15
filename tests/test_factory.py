@@ -29,6 +29,7 @@ from pdf_extract.factory import playbook, readiness, render, report
 from pdf_extract.factory import usage as usage_mod
 from pdf_extract.factory.config import Account, Config, FactoryError, JobUsage, load_config
 from pdf_extract.factory.dispatcher import Dispatcher
+from pdf_extract.factory.engine import unreachable
 from pdf_extract.factory.forge import LocalForge
 from pdf_extract.factory.handoff import read_handoff
 from pdf_extract.factory.ledger import (
@@ -842,7 +843,7 @@ def test_github_failing_again_and_again_blocks_the_run(env: Env) -> None:
     open_pr = env.forge.open_pr
 
     def down(*args: Any) -> str:
-        raise FactoryError("gh: authentication expired")
+        raise FactoryError("gh pr create: HTTP 422: Validation Failed")
 
     env.forge.open_pr = down  # type: ignore[method-assign]
     d = env.dispatcher(map_script())
@@ -858,6 +859,50 @@ def test_github_failing_again_and_again_blocks_the_run(env: Env) -> None:
     drive(d)
     assert map_run(env)["status"] == IN_REVIEW
     assert len(env.ledger.jobs(map_run(env)["id"], "pr")) == 1
+
+
+@pytest.mark.parametrize("error", [
+    "git push --quiet -u origin HEAD:refs/heads/factory/x: fatal: could not read Username "
+    "for 'https://github.com': terminal prompts disabled",
+    "gh pr create: HTTP 401: Requires authentication (https://api.github.com/graphql)",
+    "gh pr create: HTTP 502: Bad Gateway",
+    "git push: fatal: unable to access 'https://github.com/o/r.git/': Could not resolve host",
+])
+def test_github_out_of_reach_is_waited_out_without_blocking(env: Env, error: str) -> None:
+    open_pr = env.forge.open_pr
+
+    def down(*args: Any) -> str:
+        raise FactoryError(error)
+
+    env.forge.open_pr = down  # type: ignore[method-assign]
+    d = env.dispatcher(map_script())
+    out = drive(d)
+    assert "can't reach GitHub" in out[-1] and "in 5 minutes" in out[-1]
+    waits = []
+    for _ in range(8):
+        outcome = d.tick()
+        assert outcome.action == "waiting", outcome
+        assert outcome.wait_until is not None
+        waits.append(round((outcome.wait_until - env.now).total_seconds() / 60))
+    assert waits == [10, 20, 30, 30, 30, 30, 30, 30]  # doubling, up to the cap
+    assert map_run(env)["status"] != BLOCKED
+    assert not list((env.forge.folder / "issues").glob("*.json"))
+    # GitHub back: the job carries on where it stopped.
+    env.forge.open_pr = open_pr  # type: ignore[method-assign]
+    drive(d)
+    assert map_run(env)["status"] == IN_REVIEW
+    assert env.ledger.get(f"unreachable:{env.ledger.jobs(map_run(env)['id'], 'pr')[0]['id']}") == 0
+
+
+def test_unreachable_tells_github_outages_from_real_failures() -> None:
+    assert unreachable("fatal: could not read Username for 'https://github.com'")
+    assert unreachable("gh issue view: HTTP 401: Requires authentication")
+    assert unreachable("gh api: HTTP 503: Service Unavailable")
+    assert unreachable("gh: API rate limit exceeded for user ID 1")
+    assert unreachable("fatal: unable to access 'https://github.com/x': Failed to connect")
+    assert not unreachable("gh pr create: HTTP 422: Validation Failed")
+    assert not unreachable("! [rejected] HEAD -> factory/x (non-fast-forward)")
+    assert not unreachable("factory/stages/map.yaml reads: missing file docs/x.md")
 
 
 def test_a_parish_flag_from_a_stage_that_cant_park_is_sent_back(tmp_path: Path) -> None:

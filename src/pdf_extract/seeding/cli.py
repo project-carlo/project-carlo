@@ -66,6 +66,7 @@ from typing import Any
 
 from pdf_extract.classifiers.seed_ask import MODELS
 from pdf_extract.db import ensure_db
+from pdf_extract.schedule.corrections import load_correction_files
 from pdf_extract.schedule.store import parish_churches
 from pdf_extract.seeding import queries
 from pdf_extract.seeding import slots as slot_writes
@@ -97,6 +98,7 @@ Result = dict[str, Any]
 def _connect():
     ensure_db(DEFAULT_DB_PATH)
     load_seeds(DEFAULT_DB_PATH)
+    load_correction_files(DEFAULT_DB_PATH)
     return connect_db(DEFAULT_DB_PATH)
 
 

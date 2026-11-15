@@ -68,6 +68,7 @@ from pdf_extract.process import process_bulletins
 from pdf_extract.replay_gates import archived_run_ids, replay
 from pdf_extract.replay_gates import render as render_replay
 from pdf_extract.schedule.cli import ScheduleCommandError, add_schedule_parser
+from pdf_extract.schedule.corrections import load_correction_files
 from pdf_extract.schedule_diff import parish_changed
 from pdf_extract.seeding.cli import add_seed_parser
 from pdf_extract.seeding.loader import load_seeds
@@ -148,9 +149,10 @@ def _add_eval_model_args(parser: argparse.ArgumentParser) -> None:
 
 
 def _ensure_db() -> None:
-    """Migrate the DB, re-seed parishes/churches from the CSVs and load approved seeds."""
+    """Migrate the DB, re-seed parishes/churches from the CSVs, load seeds and corrections."""
     ensure_db(DEFAULT_DB_PATH)
     load_seeds(DEFAULT_DB_PATH)
+    load_correction_files(DEFAULT_DB_PATH)
 
 
 # ── Command handlers ────────────────────────────────────────────────────────

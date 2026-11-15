@@ -561,8 +561,11 @@ policy rejected or the report flagged:
 - **add**, **modify** or **delete** entries directly, with the same checks.
 
 `actor` is the person, `note` says why. The command runs against the local
-database, which is published as it is today. An editing interface is out of
-scope.
+database, which is never published: only the weekly run and Publish Data Run
+hold the keys that write the published copy. To reach it, an edit is written
+as a correction file with `--write-correction`, reviewed in a pull request and
+loaded by the pipeline ([believed-schedules.md](believed-schedules.md#corrections)).
+An editing interface is out of scope.
 
 ## The report
 
