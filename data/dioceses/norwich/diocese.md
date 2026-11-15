@@ -138,6 +138,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Some bulletins here are image-only (the Cathedral's DNN LinkClick scans; LPi 03/0123 pages 1-5): probe pdf finds no text, so read page 1 with render.py, quote only from text pages, and add an unsupported-format research item on whether the pipeline OCRs them.
 - Bonventure bulletins (sponsors.bonventure.net/?page=<id>, issues pdfs/<id>/<YYYY-MM-DD>.pdf) read over http only; the fetcher upgrades to https and fails certificate verification, so map them unsupported with fetch_gap kind tls-certificate-unverified and keep the page-pdfs recipe in provider_id.
 - Several ParishesOnline org accounts can point at one container (Groton tri-parish + Our Lady of Lourdes on 03/0770; St. Michael Pawcatuck + St. Patrick Mystic on 04/0504, though they have different pastors): probe po each org a parish site or the locator map links, and record every org/lpi id on the one row whose container they share.
+- The locator map's parishesonline.com/find links can point at dead org accounts (st-james-parish-06239 has no publications): probe po each, and if empty look for a self-hosted bulletin on the parish's own site; keep the dead org in evidence, not publication.
+- Duda (irp.cdn-website.com) parish sites here carry the ParishesOnline widget id only on /bulletin, not the home page: probe url the bulletin page to get the lpi id.
 
 
 ## Rules settled for this diocese
