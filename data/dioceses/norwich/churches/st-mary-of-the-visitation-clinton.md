@@ -32,6 +32,7 @@ evidence:
   note: 'Page 1 of the November 15, 2026 bulletin: ST. MARY CHURCH OF THE VISITATION, 54 Grove Street,
     Clinton, CT 06413; weekend Masses Saturday 9:00am, 4:00pm Vigil, 6:00pm (Spanish), Sunday 7:30am,
     9:00am, 11:30am, 6:00pm (Brazilian); weekdays Monday-Friday 9:00am.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

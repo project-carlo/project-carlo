@@ -17,6 +17,7 @@ evidence:
   note: 'eCatholic site (ecatholic:5434); answers 403 to probe url, read with parish-site-access visit.py:
     its ''Bulletins'' link goes to parishesonline.com/find/the-parish-family-of-st-mary-of-czestochowa-church.
     issues.py found no eCatholic-hosted bulletins (403 for the last 8 Sundays).'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

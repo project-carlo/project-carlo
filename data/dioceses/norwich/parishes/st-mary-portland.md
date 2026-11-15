@@ -16,6 +16,7 @@ evidence:
   note: 'eCatholic site (ecatholic:5153); answers 403 to probe url, read with parish-site-access visit.py:
     its ''Bulletin'' link goes to parishesonline.com/find/st-mary-parish-06480. issues.py found no eCatholic-hosted
     bulletins (403 for the last 8 Sundays).'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-14
   note: 'probe po: ''Saint Maurice Catholic Church'', 32 Hebron Rd, Bolton, lpi 0018000000Qc2I3AAJ, container
     03/0312, issues to November 15, 2026.'
+promoted: 2026-11-14
 bulletin_status: available
 publication_reviews:
 - parish: good-shepherd-columbia

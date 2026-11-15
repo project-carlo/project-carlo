@@ -23,6 +23,7 @@ evidence:
   seen: 2026-11-14
   note: 'Diocese of Norwich List of Parishes (March 6, 2026): St. Agnes, Niantic ''Yoked with Saint Matthias,
     East Lyme''; St. Francis Chapel, Crescent Beach ''Mission of St. Agnes, Niantic. Summer Chapel-Seasonal''.'
+promoted: 2026-11-14
 research:
 - method: probe pdf --grep 'St. Francis' --grep Crescent on container 03/1158 issues of 2025-07-06, 2025-08-03,
     2026-05-31, 2026-06-28, 2026-07-05, 2026-07-12, 2026-07-26, 2026-08-09, 2026-08-30

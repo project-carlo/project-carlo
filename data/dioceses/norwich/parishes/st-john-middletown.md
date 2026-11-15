@@ -16,6 +16,7 @@ evidence:
   seen: 2026-11-14
   note: The parish's Area Parish Bulletins page embeds the LPi widget id 0018000000Qc1P9AAJ ('Saint John
     - Middletown (See Below)') and links 'Saint Sebastian - Middletown' separately to parishesonline.com/organization/st-sebastian-st-john.
+promoted: 2026-11-14
 bulletin_status: available
 publication_reviews:
 - parish: st-sebastian-middletown

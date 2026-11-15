@@ -32,6 +32,7 @@ evidence:
   note: 'Page 1 of the November 15, 2026 St. Pio bulletin: St. John The Evangelist, 161 Main Street, Old
     Saybrook, CT 06475, with weekend Masses Saturday 4:00 pm, Sunday 7:30 am, 9:00 am & 11:00 am and daily
     Masses Monday, Wednesday, Thursday at 7:15 am; page 2 has an ''At St. John Church'' Mass list.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

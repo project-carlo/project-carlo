@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-14
   note: Diocese of Norwich Parish Locator Map lists 'Our Lady of LaSalette Church', 25 Providence Road,
     Brooklyn.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

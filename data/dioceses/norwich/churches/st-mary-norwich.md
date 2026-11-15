@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-14
   note: 'Diocese List of Parishes (March 6, 2026): ''St. Mary (Est. 1845), 70 Central Ave., 06360-4794'',
     yoked with SS Peter & Paul.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

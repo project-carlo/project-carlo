@@ -31,6 +31,7 @@ evidence:
   quote: 33 West Street
   note: 'Page 1 of the November 15, 2026 St. Joseph bulletin: Saint Joseph Church, 33 West Street, Vernon
     Rockville, Connecticut 06066; Saturday 4:00 pm Vigil, Sunday 8:00 am (Polish) and 10 am (English).'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

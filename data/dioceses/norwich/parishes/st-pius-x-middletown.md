@@ -16,6 +16,7 @@ evidence:
   seen: 2026-11-14
   note: The parish's bulletin page embeds the ParishesOnline publication widget with id 0018000000Qc2P7AAJ
     (probe get).
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

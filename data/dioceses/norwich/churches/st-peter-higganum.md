@@ -32,6 +32,7 @@ evidence:
   note: 'Page 1 of the November 15, 2026 Saint Peter Church bulletin: Saturday Vigil 4:00 pm, Sunday Mass
     8:30am and 11:00am, weekdays Mon. Tues. Wed. & Fri. 8 a.m., Sat. 9 a.m.; 30 Saint Peter''s Lane, P.
     O. Box 707, Higganum, CT 06441.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

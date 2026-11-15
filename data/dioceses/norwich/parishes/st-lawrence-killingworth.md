@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-14
   note: Duda site (irp.cdn-website.com files); probe url counts a parishesonline.com link. Its calendar
     shows 4pm Vigil Mass on Saturday, 8:30am and 10:30am Mass on Sunday, 7pm Mass on Tuesday.
+promoted: 2026-11-14
 research:
 - method: probe pdf of the November 15, 2026 issue (container 04/0920)
   url: https://container.parishesonline.com/bulletins/04/0920/20261115B.pdf

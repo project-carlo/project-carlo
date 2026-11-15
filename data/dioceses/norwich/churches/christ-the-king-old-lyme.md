@@ -28,6 +28,7 @@ evidence:
 - url: https://www.google.com/maps/d/viewer?mid=1VTpfhm6bXf8ZfwM_tX0Ikl--m9E8l7a5
   seen: 2026-11-14
   note: 'Diocese parish locator map: ''Christ the King Parish'', 1 McCurdy Road, Old Lyme.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

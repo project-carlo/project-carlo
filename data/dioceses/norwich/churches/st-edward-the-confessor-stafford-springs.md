@@ -31,6 +31,7 @@ evidence:
   quote: 'Saturday Vigil: 4:00pm'
   note: 'Page 1 of the November 15, 2026 St. Edward bulletin: Saturday Vigil 4:00pm, Sunday 9:00am; address
     27 Church Street, Stafford Springs, CT 06076-1117.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

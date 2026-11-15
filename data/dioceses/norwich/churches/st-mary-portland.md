@@ -31,6 +31,7 @@ evidence:
   quote: Sunday at 8:00 and 10:30 a.m.
   note: 'Page 1 of the November 15, 2026 St. Mary bulletin: 45 Freestone Ave, Portland; Saturday at 5:00
     p.m., Sunday at 8:00 and 10:30 a.m.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

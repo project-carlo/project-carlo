@@ -34,6 +34,7 @@ evidence:
     Rd., Moodus, CT 06469 with its schedule (Saturday Vigil 5:30 pm, Sunday 7:00 am & 11:00 am, Friday
     8:00 am); the week''s Mass list marks ''5:30 pm Mass:(SB)'' and ''7:00 am Mass: (SB)'', with ''(SB)St.
     Bridget''.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

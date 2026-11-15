@@ -29,6 +29,7 @@ evidence:
   note: The website the diocese's list gives for St. Mary (www.stmaryjc.weconnect.com) answers 'Temporarily
     Unavailable' (bare host) or fails TLS (www.); www.saintcatherineofsienapreston.org timed out at DNS;
     www.stthomasvoluntown.org doesn't resolve; www.stmaryjc.4lpi.com (GCatholic) didn't load in the browser.
+promoted: 2026-11-14
 research:
 - method: probe url and visit.py of the parish sites given by the diocese and GCatholic
   url: https://stmaryjc.weconnect.com/

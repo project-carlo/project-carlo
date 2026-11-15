@@ -32,6 +32,7 @@ evidence:
   note: 'Page 1 of the November 15, 2026 St. Teresa of Calcutta bulletin: Saturday Vigil 5:30 PM (Essex),
     Sunday 8:30 AM & 12:00 PM (Essex), daily Mass Monday, Wednesday & Friday 8:30 AM (Essex); the Essex
     office is at 14 Prospect Street, Essex, CT 06426.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

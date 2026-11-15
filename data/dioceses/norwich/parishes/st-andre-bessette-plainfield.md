@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-14
   note: 'probe po: ''St. Andre Bessette Parish'', 10 Railroad Ave, Plainfield, Connecticut 06374, container
     04/0778, latest issue 2026-11-22.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

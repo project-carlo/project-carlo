@@ -29,6 +29,7 @@ evidence:
 - url: https://www.google.com/maps/d/viewer?mid=1VTpfhm6bXf8ZfwM_tX0Ikl--m9E8l7a5
   seen: 2026-11-14
   note: 'Diocese parish locator map: ''Saint Mary Church'', 80 Maple Avenue, Willimantic; website https://www.catholicwindham.org/.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

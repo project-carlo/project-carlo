@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-14
   note: 'Diocese parish locator map: ''Saint Mary, Mother of the Redeemer Church'', 69 Groton Long Point
     Road, Groton.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

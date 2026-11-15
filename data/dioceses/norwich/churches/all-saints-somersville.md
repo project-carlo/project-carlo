@@ -31,6 +31,7 @@ evidence:
   quote: Saturday | 4:30pm (Vigil)
   note: 'Page 1 Mass schedule of the November 15, 2026 All Saints bulletin: Saturday 4:30pm, Sunday 9:15am,
     Monday and Wednesday 9:00am.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

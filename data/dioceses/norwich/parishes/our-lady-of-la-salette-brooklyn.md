@@ -29,6 +29,7 @@ evidence:
   note: 'probe url: a Wix site titled ''Our Lady Of Lasalette and Our Lady of Lourdes Parish'', linking
     /bulletins; no publisher id in the static HTML. GCatholic''s www.lasalette-lourdes.org does not resolve
     (DEAD-DNS).'
+promoted: 2026-11-14
 research:
 - method: probe pdf on the November 15, 2026 issue (container 04/0499); page 1 has no text layer
   url: https://container.parishesonline.com/bulletins/04/0499/20261115B.pdf

@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-14
   note: The diocese's Full Group Directory lists 'Saint Edmunds Retreat, P.O. Box 399, Enders Island,
     Mystic, CT 06355-0399', website www.endersisland.com (redirects to endersisland.org).
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

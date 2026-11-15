@@ -29,6 +29,7 @@ evidence:
 - url: https://www.google.com/maps/d/viewer?mid=1VTpfhm6bXf8ZfwM_tX0Ikl--m9E8l7a5
   seen: 2026-11-14
   note: Locator map 'Saint Joseph Church', 120 Cliff Street, Norwich (linked there to jnccfaith.org).
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

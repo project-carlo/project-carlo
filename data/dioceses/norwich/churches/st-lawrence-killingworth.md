@@ -32,6 +32,7 @@ evidence:
     and reads as garbage; decoded by shifting each character by 29, the digits are lost): Hemlock Drive,
     Killingworth, CT; ''Sunday Masses: Vigil Saturday … pm, Sunday … am … am; Daily Masses: Monday No
     Mass, Tuesday … pm, Wednesday - Saturday … am''.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

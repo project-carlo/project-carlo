@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-14
   note: 'Diocese List of Parishes (March 6, 2026): ''Sacred Heart (Est. 1902), 52 West Town St., Norwichtown,
     06360-2296''.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

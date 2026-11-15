@@ -31,6 +31,7 @@ evidence:
   note: 'Page 1 (image, render.py) of the November 15, 2026 Blessed Sacrament bulletin: Contact Us ''Saint
     Bernard, 25 St. Bernard Terrace, Rockville, CT 06066''; Mass schedule Saturday 4:00 pm, Sunday 8:00
     am, 10:00 am, 12:00 pm, Mon/Wed/Fri 8:00 am (St. Bernard).'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

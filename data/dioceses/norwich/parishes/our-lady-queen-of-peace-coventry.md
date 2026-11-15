@@ -32,6 +32,7 @@ evidence:
   note: GCatholic's site for St. Mary and St. Joseph is now a Church of England parish in Coventry, England
     (menus 'The Walsgrave (magazine)', 'APCM Paper Work 2025'); not this parish. The diocese's www.stmarycoventy.org
     and www.stmary-stthomas.community.org do not resolve; stthomasaquinasuconn.org answered 403.
+promoted: 2026-11-14
 research:
 - method: probe pdf of the November 15, 2026 issue
   url: https://container.parishesonline.com/bulletins/04/0008/20261115B.pdf

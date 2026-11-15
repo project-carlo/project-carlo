@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-14
   note: 'Diocese parish locator map: ''Saint Mary, Star of the Sea Church'', 10 Huntington Street, New
     London.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

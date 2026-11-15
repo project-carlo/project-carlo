@@ -32,6 +32,7 @@ evidence:
   note: 'Page 1 of the November 15, 2026 St. Mary of Czestochowa bulletin: ''Rectory: 79 South Main Street''
     and ''Church Entrance: 28 Hubbard Street (GPS Directions)''; Saturday Vigil 4:00 pm, Sunday 8:30 am
     (Polish) and 10:30 am.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

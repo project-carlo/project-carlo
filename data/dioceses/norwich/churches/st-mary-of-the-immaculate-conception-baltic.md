@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-14
   note: 'Diocese List of Parishes (March 6, 2026): ''St. Mary of the Immaculate Conception (Est. 1866),
     70 W. Main St., 06330-1348'', yoked with St. Joseph, Occum, and Sacred Heart, Taftville.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

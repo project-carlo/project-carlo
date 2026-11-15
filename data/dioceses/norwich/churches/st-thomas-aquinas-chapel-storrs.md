@@ -33,6 +33,7 @@ evidence:
   seen: 2026-11-14
   note: 'Diocese parish locator map: ''Saint Thomas Aquinas Church'', 46 North Eagleville Road, Storrs;
     website http://stmary-stthomas.community/.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

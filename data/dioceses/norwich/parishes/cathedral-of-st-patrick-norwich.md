@@ -17,6 +17,7 @@ evidence:
   quote: November 15, 2026
   note: 'Connecting Members (DNN) Sunday Bulletin page: a Documents table of LinkClick.aspx?fileticket=
     downloads, newest first, one per Sunday from August 23 to November 15, 2026.'
+promoted: 2026-11-14
 research:
 - method: probe pdf of the November 15, 2026 issue
   url: https://www.cathedralofsaintpatrick.org/LinkClick.aspx?fileticket=yJXFp4SqP2U%3d&tabid=3023&portalid=40&mid=6178

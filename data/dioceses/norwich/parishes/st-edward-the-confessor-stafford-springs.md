@@ -18,6 +18,7 @@ evidence:
   seen: 2026-11-14
   note: 'probe po: ''St. Edward Church'', 27 Church Street, Stafford Springs, Connecticut 06076, container
     03/1293, latest issue 2026-11-15.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

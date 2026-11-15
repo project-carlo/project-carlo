@@ -31,6 +31,7 @@ evidence:
   note: The diocese's listed domain answers 404 with Wix's 'This domain isn't connected to a site' page
     (read with visit.py). The locator map's standrewcolchester.org and stfrancisassisilebanonct.org and
     GCatholic's standrewofcolchester.org do not resolve.
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

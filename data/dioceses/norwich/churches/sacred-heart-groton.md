@@ -29,6 +29,7 @@ evidence:
   seen: 2026-11-14
   note: 'Diocese parish locator map: ''Sacred Heart Church'', 56 Sacred Heart Drive, Groton (pastor given
     as Rev. Dariusz K. Dudzik, older than the March 2026 list).'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

@@ -31,6 +31,7 @@ evidence:
   quote: Sunday | 7:30am, 9:00am, 10:30am, 12:00pm
   note: 'Page 1 of the November 15, 2026 St. Pius X bulletin: 310 Westfield St., Middletown; Sunday Vigil
     5:00pm, Sunday 7:30, 9:00, 10:30am and 12:00pm.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

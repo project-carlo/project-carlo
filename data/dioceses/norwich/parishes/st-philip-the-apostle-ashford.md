@@ -17,6 +17,7 @@ evidence:
   quote: Bulletin-11-15-2026.pdf
   note: WordPress post 'Bulletin November 15, 2026' (category bulletin, posted 2026-11-13) linking the
     PDF through a Gravity Forms gf-download URL.
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

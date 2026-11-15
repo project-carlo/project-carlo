@@ -25,6 +25,7 @@ evidence:
 - url: https://www.sjpii.org
   seen: 2026-11-14
   note: 'probe url: the parish site loads 4lpi.com assets and links https://www.sjpii.org/bulletin.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

@@ -30,6 +30,7 @@ evidence:
   quote: June - August, Saturday Vigil Mass at 5:30 pm
   note: Our Lady of Grace's own site (from the diocese's list) gives Mass times and the St. Brendan office
     phone 860-443-5393, and links no bulletin of its own.
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

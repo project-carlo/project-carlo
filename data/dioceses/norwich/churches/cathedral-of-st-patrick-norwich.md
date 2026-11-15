@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-14
   note: Listed in the Diocese of Norwich Parish Locator Map as 'Cathedral of Saint Patrick', 213 Broadway,
     Norwich, CT.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

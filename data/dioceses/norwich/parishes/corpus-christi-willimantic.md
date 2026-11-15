@@ -27,6 +27,7 @@ evidence:
   note: 'Diocese of Norwich List of Parishes (March 6, 2026): St. Joseph, Willimantic ''Merged with Sagrado
     Corazon de Jesus, Windham, and Saint Mary, Willimantic'', website www.catholicwindham.org; St. Margaret,
     Scotland ''Closed – For inquiries or records, contact St. Joseph, Willimantic.'''
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

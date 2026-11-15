@@ -31,6 +31,7 @@ evidence:
   quote: Sun    Nov 15,   9:00 am Quiet Mass - Fr. Michael
   note: Page 3 Mass schedule of the November 15, 2026 St. Philip bulletin; page 1 gives the church as
     64 Pompey Hollow Rd., Ashford, CT 06278.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

@@ -2,8 +2,9 @@
 name: Roman Catholic Diocese of Norwich
 state: CT
 website: https://www.norwichdiocese.org
-status: exploring
+status: promoted
 gcatholic: norw0
+promoted: 2026-11-14
 ---
 
 Four counties of eastern Connecticut, plus Fishers Island, New York: **New London** (Norwich,

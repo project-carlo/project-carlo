@@ -32,6 +32,7 @@ evidence:
   seen: 2026-11-14
   note: Diocese of Norwich Parish Locator Map lists 'Saint John the Apostle Church', 10 Railroad Avenue,
     Plainfield.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

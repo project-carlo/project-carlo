@@ -31,6 +31,7 @@ evidence:
   quote: Sunday Masses - 7:30 AM, 10:30 AM, 6:00 PM
   note: Page 1 of the November 15, 2026 St. Luke bulletin, under 'Church of Saint Luke, 141 Maple Street
     ... Ellington'.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

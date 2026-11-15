@@ -34,6 +34,7 @@ evidence:
   seen: 2026-11-14
   note: 'Locator map ''Saint John Church'', 190 Fitchville Road, Fitchville, CT: ''Mission Church of Sacred
     Heart, Norwichtown''.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

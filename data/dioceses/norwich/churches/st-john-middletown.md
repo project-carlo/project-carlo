@@ -31,6 +31,7 @@ evidence:
   quote: 'Sunday Holy Mass:  9:00 AM'
   note: 'Page 1 of the November 15, 2026 St. John bulletin: 19 St. John Square, Middletown; Saturday Vigil
     4:00 PM, Sunday 9:00 AM.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

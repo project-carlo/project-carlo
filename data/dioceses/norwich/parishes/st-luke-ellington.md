@@ -19,6 +19,7 @@ evidence:
   seen: 2026-11-14
   note: 'probe po: ''St. Luke Church'', 141 Maple Street, Ellington, Connecticut 06029, website churchofstlukect.com,
     container 03/1339, latest issue 2026-11-15.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

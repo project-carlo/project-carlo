@@ -19,6 +19,7 @@ evidence:
 - url: https://stmarysclinton.org/
   seen: 2026-11-14
   note: 'probe url: www.stmarysclinton.org redirects here and links po-org:st-mary-church-of-the-visitation.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

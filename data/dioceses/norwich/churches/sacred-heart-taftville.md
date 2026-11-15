@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-14
   note: 'Diocese List of Parishes (March 6, 2026): ''Sacred Heart (Est. 1883), 156 Providence St., P.O.
     Box 208, 06380-0208'', yoked with Saint Mary, Baltic, and Saint Joseph, Occum.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

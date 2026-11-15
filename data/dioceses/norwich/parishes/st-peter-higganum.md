@@ -19,6 +19,7 @@ evidence:
 - url: https://www.stpeterhigganum.com
   seen: 2026-11-14
   note: 'probe url: the parish site links po-org:st-peter-church-6441.'
+promoted: 2026-11-14
 bulletin_status: available
 publication_reviews:
 - parish: st-lawrence-killingworth

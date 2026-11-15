@@ -21,6 +21,7 @@ evidence:
   quote: St. Sebastian Roman Catholic Church is on the edge of the Wesleyan campus and only a short walk.
   note: Wesleyan University's Catholic chaplaincy page sends students to St. Sebastian's Masses and lists
     no campus Mass.
+promoted: 2026-11-14
 bulletin_status: available
 publication_reviews:
 - parish: st-john-middletown

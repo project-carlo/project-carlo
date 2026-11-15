@@ -28,6 +28,7 @@ evidence:
 - url: https://www.google.com/maps/d/viewer?mid=1VTpfhm6bXf8ZfwM_tX0Ikl--m9E8l7a5
   seen: 2026-11-14
   note: 'Diocese parish locator map: ''Our Lady of Lourdes Church'', 1650 Route 12, Gales Ferry.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

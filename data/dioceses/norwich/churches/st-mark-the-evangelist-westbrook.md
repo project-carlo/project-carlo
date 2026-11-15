@@ -32,6 +32,7 @@ evidence:
   note: 'Page 1 of the November 15, 2026 St. Pio bulletin: St. Mark The Evangelist, 222 McVeagh Road,
     Westbrook, CT 06498, with weekend Masses Saturday 5:00 pm, Sunday 8:00 am, 10:00 am & 7:00 pm and
     daily Masses Tuesday & Friday at 7:15 am; page 2 has an ''At St. Mark Church'' Mass list.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

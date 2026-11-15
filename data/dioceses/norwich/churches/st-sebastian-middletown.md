@@ -32,6 +32,7 @@ evidence:
   quote: Sunday | 8:00am, 11:00am & 5:00pm
   note: 'Page 1 of the November 15, 2026 St. Sebastian bulletin: 155 Washington Street, Middletown; Saturday
     Vigil 5:00pm, Sunday 8:00am, 11:00am and 5:00pm.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

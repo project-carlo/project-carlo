@@ -17,6 +17,7 @@ evidence:
   quote: 2026-11-15 33rd Sunday in Ordinary Time
   note: 'Self-hosted bulletin list: PDFs in /bulletins/2025-2026YearA/ named ''<date> <Sunday>.pdf'',
     weekly from August 9 to November 15, 2026.'
+promoted: 2026-11-14
 bulletin_status: available
 publication_reviews:
 - parish: sacred-heart-norwichtown

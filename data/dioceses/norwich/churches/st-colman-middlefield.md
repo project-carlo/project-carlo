@@ -30,6 +30,7 @@ evidence:
   quote: 170 Hubbard St.
   note: 'Page 1 of the November 15, 2026 Our Lady of Mercy bulletin: St. Colman Church, 170 Hubbard St.,
     Middlefield, CT 06455; MASS TIMES Sunday 8:00 AM (St. Colman) and 10:00 AM (St. Colman).'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

@@ -20,6 +20,7 @@ evidence:
     sacredheartchurchtaftville.org redirect here (probe url, 2026-11-14); stmarybaltic.com (the locator
     map''s link) does not resolve. probe po: org ''Saint Anne''s Catholic Community'', 156 Providence
     St, Taftville, lpi:0018000000Qc044AAB, container 03/0123, latest issue 2026-11-15.'
+promoted: 2026-11-14
 research:
 - method: probe pdf of the November 15, 2026 issue
   url: https://container.parishesonline.com/bulletins/03/0123/20261115B.pdf

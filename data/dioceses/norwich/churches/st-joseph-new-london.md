@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-14
   note: 'Diocese parish locator map: ''Saint Joseph Church'', 37 Squire Street, New London (the parish
     office).'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

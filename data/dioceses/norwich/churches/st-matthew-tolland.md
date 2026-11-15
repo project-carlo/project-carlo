@@ -31,6 +31,7 @@ evidence:
   note: 'Page 1 (image, render.py) of the November 15, 2026 Blessed Sacrament bulletin: Contact Us ''Saint
     Matthew, 111 Tolland Green, Tolland, CT 06084''; Mass schedule Saturday 5:00 pm, Sunday 8:30 am, 10:30
     am, Tues/Thurs 9:00 am (St. Matthew).'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

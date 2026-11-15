@@ -19,6 +19,7 @@ evidence:
   seen: 2026-11-14
   note: St. John Middletown's Area Parish Bulletins page links 'Saint Francis of Assisi - Middletown'
     to parishesonline.com/find/st-francis-of-assisi-church-06457.
+promoted: 2026-11-14
 research:
 - method: probe url and visit.py on the parish site
   url: https://www.stfrancisct.com/

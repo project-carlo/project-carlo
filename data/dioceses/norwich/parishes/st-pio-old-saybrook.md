@@ -19,6 +19,7 @@ evidence:
 - url: https://www.saintpioct.org
   seen: 2026-11-14
   note: 'probe url: the parish site answers and links parishesonline.com.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

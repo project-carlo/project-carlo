@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-14
   note: 'probe url: the parish''s Wix site lists its bulletins as _files/ugd PDFs; the first, 4cd92f_8ad34628b3c546c789c978f17a323c71.pdf,
     has the same 8 pages and 03-0387 footer as the ParishesOnline issue.'
+promoted: 2026-11-14
 research:
 - method: probe pdf / probe container 03/0387 --pages 2 on the 2026-11-15 issue
   url: https://container.parishesonline.com/bulletins/03/0387/20261115B.pdf

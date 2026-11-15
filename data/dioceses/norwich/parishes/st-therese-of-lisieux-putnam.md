@@ -21,6 +21,7 @@ evidence:
   note: 'probe po: ''St. Mary Church'', 218 Providence St, Putnam, Connecticut 06260-1514, website www.stthereseputnam.org,
     container 03/0332, latest issue 2026-11-15. The diocese''s locator map links this org for St. Mary,
     Putnam.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

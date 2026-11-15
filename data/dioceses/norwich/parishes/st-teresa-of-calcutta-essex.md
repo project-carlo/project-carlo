@@ -19,6 +19,7 @@ evidence:
   seen: 2026-11-14
   note: 'probe url: the parish site embeds lpi:0018000000QbzzxAAB and po-container:03/0729 and links the
     parishesonline.com publication page for st-teresa-of-calcutta-parish-06426.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

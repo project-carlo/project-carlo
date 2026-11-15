@@ -19,6 +19,7 @@ evidence:
     03/0218 (newest 20261115B) and the footer ''TWO PARISHES • ONE COMMUNITY IN CHRIST / St. Mary Church
     and Sts. Peter & Paul Church''. probe po: org titled ''Joint Norwich Catholic Cluster'', 181 Elizabeth
     St, lpi:0018000000Qc07kAAB.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

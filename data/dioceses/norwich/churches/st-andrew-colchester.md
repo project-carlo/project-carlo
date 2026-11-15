@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-14
   note: 'Diocese parish locator map: ''Saint Andrew Church'', 128 Norwich Avenue, Colchester; website
     www.standrewcolchester.org.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

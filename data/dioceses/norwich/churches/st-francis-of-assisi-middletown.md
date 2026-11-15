@@ -31,6 +31,7 @@ evidence:
   quote: Sunday/Domingo ,English, 9am
   note: 'Page 1 of the November 15, 2026 St. Francis of Assisi bulletin: 10 Elm Street, Middletown; Saturday
     4pm Vigil, Sunday 9am English and 11am Spanish.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

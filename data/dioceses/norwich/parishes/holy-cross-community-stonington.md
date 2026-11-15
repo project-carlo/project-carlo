@@ -36,6 +36,7 @@ evidence:
   seen: 2026-11-14
   note: 'probe get: St. Michael''s bulletins page links parishesonline.com/organization/st-michael-church-06379.
     probe url of stpatrickmystic.org (Wix) finds po-container:04/0504.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

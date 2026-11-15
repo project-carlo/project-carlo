@@ -31,6 +31,7 @@ evidence:
   quote: 'Sunday: 7:30 am & 9:30 am'
   note: 'Page 1 of the November 15, 2026 St. John bulletin: 5 St. John''s Court, Cromwell; Saturday Vigil
     4:00 pm, Sunday 7:30 and 9:30 am.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

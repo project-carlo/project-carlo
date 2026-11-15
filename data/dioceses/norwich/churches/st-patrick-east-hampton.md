@@ -33,6 +33,7 @@ evidence:
     Street, East Hampton beside its schedule (Saturday Vigil 4:00 pm, Sunday 9:00 am, Wednesday & Thursday
     8:00 am); the week''s Mass list marks ''4:00 pm Mass: (SP)'' and ''9:00 am Mass:(SP)'', with ''(SP)St.
     Patrick''.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

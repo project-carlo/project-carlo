@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-14
   note: Locator map 'Saint Joseph Church', 11 Baltic Road, Versailles, CT (the mailing village), linking
     parishesonline.com/find/st-josephs-church-06383.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

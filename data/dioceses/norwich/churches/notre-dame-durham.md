@@ -30,6 +30,7 @@ evidence:
   quote: Saturday Vigil 4 PM, Notre Dame Church
   note: Page 2 of the November 15, 2026 Our Lady of Mercy bulletin; page 1 gives Notre Dame Church, 272
     Main St., Durham, CT 06422, and weekday Masses at 8:00 AM there.
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

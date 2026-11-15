@@ -18,6 +18,7 @@ evidence:
   note: 'WordPress parish site; its ''Bulletins and Weekly Readings'' links go to parishesonline.com/find/sacred-heart-church-06360.
     probe po: org ''Sacred Heart Church'', 52 W Town St, Norwich, lpi:0018000000Qc04CAAR, container 03/0472,
     latest issue 2026-11-15.'
+promoted: 2026-11-14
 bulletin_status: available
 publication_reviews:
 - parish: st-joseph-norwich

@@ -32,6 +32,7 @@ evidence:
   note: 'probe get: Our Lady of Lourdes'' bulletin page embeds the ParishesOnline publication widget id
     0018000000QbzyVAAR. sacredheartgroton.org (embeds container 03/0770 per the survey) and stmarysgroton.org
     answer 403 to probe url.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-14
   note: 'Diocese parish locator map: ''Saint Mary, Our Lady of the Rosary Church'', 34 North Main Street,
     Jewett City.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

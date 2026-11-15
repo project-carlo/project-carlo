@@ -30,6 +30,7 @@ evidence:
   quote: Merged with St. Matthew, Tolland
   note: Diocese List of Parishes (March 6, 2026), St. Bernard, Rockville entry; Very Rev. Richard J. Ricard
     pastor of both.
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

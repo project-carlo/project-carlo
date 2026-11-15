@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-14
   note: 'Diocese List of Parishes (March 6, 2026): ''SS. Peter & Paul (Est. 1936), 181 Elizabeth St.,
     06360-6199'', yoked with St. Mary.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

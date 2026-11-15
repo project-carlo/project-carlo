@@ -31,6 +31,7 @@ evidence:
   note: 'Page 1 of the November 15, 2026 St. Teresa of Calcutta bulletin: Saturday Vigil 4:00 PM (Chester),
     Sunday 10:00 AM (Chester), daily Mass Tuesday, Thursday & Saturday 8:30 AM (Chester); the Chester
     office is at 48 Middlesex Ave, Chester, CT 06412.'
+promoted: 2026-11-14
 ---
 
 ## Holds Mass

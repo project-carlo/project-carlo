@@ -22,6 +22,7 @@ evidence:
   note: 'probe po: org ''St. James Parish'', 12 Franklin St, Danielson, lpi 0018000000f8FKTAA2, has no
     publications (''this organization does not publish a bulletin here now''). The diocese''s locator
     map links this org; it is a hosting account, not this bulletin, so its ids are kept out of publication.'
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

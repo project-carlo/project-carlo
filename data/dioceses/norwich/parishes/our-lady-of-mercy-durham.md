@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-14
   note: Wix site ('Home | StColmans/NotreDame'); probe url found no bulletin link or publisher id in its
     HTML, so the row's website is the ParishesOnline org page.
+promoted: 2026-11-14
 bulletin_status: available
 ---
 

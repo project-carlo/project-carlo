@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-14
   note: 'probe po: ''St. Columba Church'', PO Box 146, Columbia, lpi 0018000000Qc1HlAAJ, container 03/0984,
     issues to November 15, 2026.'
+promoted: 2026-11-14
 research:
 - method: probe pdf of the November 15, 2026 issue
   url: https://container.parishesonline.com/bulletins/03/0984/20261115B.pdf
