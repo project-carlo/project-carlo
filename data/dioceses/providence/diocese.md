@@ -85,6 +85,14 @@ of the blocked ones (2026-11-14, `scratch/providence-map-1/001-survey/probe-all.
 - 14 homepages were UNREACHABLE to `probe url` (stbren.com and ctkri.org also failed in the
   browser); 58 loaded with no publisher on the home page: use `visit.py --bulletin`.
 
+## New lessons
+
+Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
+
+- An eCatholic parish site whose Bulletins page only embeds ParishesOnline issues (no files at files.ecatholic.com/<id>/bulletins) publishes on ParishesOnline: record the po-org/lpi/po-container ids and not the eCatholic site id (seen at St. Joseph, Ashton).
+- John Patrick Publishing bulletins: set website to the church-bulletin.org/<slug> page (jppc.net/onlinebulletins/<id>template.pdf redirects there), provider other with recipe page-pdfs. It needs no browser even when the parish's own site can't be reached.
+
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
