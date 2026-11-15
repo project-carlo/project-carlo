@@ -65,47 +65,70 @@ churches, four of them Eastern Catholic.
 
 ### Bulletin publishers here
 
-From `probe url` of the finder's 129 distinct homepages and `visit.py --bulletin` on twelve
-of the blocked ones (2026-11-14, `scratch/providence-map-1/001-survey/probe-all.tsv`):
+From `probe url` of the finder's 129 distinct homepages (survey, 2026-11-14) and the map
+batches since. About a quarter of homepages answer 403 or don't load to `probe url`; open
+them with `visit.py --bulletin` before concluding there is no bulletin.
 
-- **eCatholic sites behind Cloudflare are common:** 32 homepages answered 403 to `probe
-  url`; all seven opened with `visit.py` loaded and were eCatholic (e.g.
-  `ecatholic:17050` olcsvp.org, `ecatholic:14522` saintjohnpaulri.com). Read issues with
+- **eCatholic, usually behind Cloudflare:** a homepage that answers 403 to `probe url` is
+  most often eCatholic (`ecatholic:<id>`); it loads in `visit.py`. Read issues with
   `issues.py ecatholic`. `ecatholic:5523` is the diocese's own site (bulletin inserts,
-  documents): don't record it on a parish.
-- **ParishesOnline (LPi), region 03:** linked on 16+ sites, often beside an eCatholic id
-  (St. Lucy: `po-container:03/1380`; SS. Rose and Clement: `po-container:03/0323`; St.
-  Mary of the Bay: `po-org:st-mary-of-the-bay-parish`). Read the masthead, not the org name.
-- **John Patrick Publishing (jppc.net / church-bulletin.org):** linked on 15 or more sites
-  (St. Ann Providence, St. Matthew Cranston, St. Bernard Wickford, St. Patrick Harrisville,
-  St. Joseph Pascoag, St. Eugene...). See parish-site-access for the church-bulletin.org
-  layout.
-- **Discover Mass:** Holy Spirit, Central Falls's finder homepage is its Discover Mass page
-  (`discovermass:holy-spirit-central-falls-ri`).
-- 14 homepages were UNREACHABLE to `probe url` (stbren.com and ctkri.org also failed in the
-  browser); 58 loaded with no publisher on the home page: use `visit.py --bulletin`.
+  documents): never record it on a parish. Many eCatholic sites only repost LPi:
+  - Bulletins page embeds ParishesOnline issues, with no files at
+    `files.ecatholic.com/<id>/bulletins`: the parish publishes on ParishesOnline; record the
+    po-org/lpi/po-container ids, not the eCatholic id.
+  - LPi files in the documents folder (`files.ecatholic.com/<id>/documents/YYYY/MM/<date>B.pdf`):
+    its "Bulletin archive" link (`visit.py --links --match parishesonline`) gives
+    `parishesonline.com/find/<slug>`; `probe po <slug>` finds the org.
+  - Once the LPi org is found, record the row on `parishes_online`, with the eCatholic id
+    as a second publication id, so fetch avoids Cloudflare.
+- **ParishesOnline (LPi), region 03:** linked on 16+ sites, often beside an eCatholic id.
+  Read the masthead, not the org name or footer: a footer's account name (e.g. 'St. Clare
+  St Vincent de Paul') can name a church the masthead has dropped.
+  - Finding the org when the footer gives only a container, or the parish site is dead:
+    `probe po` with `<name>-<zip>` (`st-michaels-church-02917`), `<name>-church-<zip>`
+    (`christ-the-king-church-02881`), or a possessive slug with no ZIP
+    (`st-marthas-church`). Check the org lists issues; some list none.
+  - One bulletin can sit in two containers with different ad pages and footers, and two
+    pre-merger orgs can share one container: compare rendered pages 1-2, then record every
+    container and org id on the one row.
+  - Many issues here are image-only apart from the ad pages, or have an encoded-font text
+    layer (`probe pdf` calls every page readable but returns glyph codes like `/0/1 /2/3`
+    and `--grep` finds nothing). Read the masthead and Mass schedule with `render.py`.
+  - Orgs with no LPi container that carry parish-uploaded PDFs
+    (`customer-data-prod-bucket.s3.amazonaws.com/organization-uploads/<lpi id>/publications/...`):
+    `probe po` lists them but the `parishes_online` collector fails ("No matching anchor
+    link"). Record `bulletin_provider: unsupported`, fetch_gap kind `po-user-upload`.
+- **John Patrick Publishing (jppc.net / church-bulletin.org):** linked on 15+ sites. Set
+  website to the `church-bulletin.org/<slug>` page (`jppc.net/onlinebulletins/<id>template.pdf`
+  redirects there), provider `other`, recipe `page-pdfs`; no browser needed even when the
+  parish's own site can't be reached. Traps:
+  - A guessed `church-bulletin.org/<slug>` answers 200 even with no bulletin (a generic
+    archive page, or one with no PDFs). Only a jppc id linked from the parish site, or a
+    page listing dated PDFs, is evidence.
+  - A page can carry another parish's bulletin (St. Matthew Cranston's posts St. Paul's
+    LPi issue). Compare its masthead with the host parish's bulletin and record the page as
+    an extra publication id on the host's row, not as a row of its own.
+- **Duda sites** (PDFs on `irp.cdn-website.com/<site>/files/uploaded/`, linked newest
+  first from a `/bulletin` page): provider `other`, recipe `page-pdfs` on the `/bulletin`
+  page.
+- **Squarespace sites** (PDFs at `<site>/s/Web-MMDDYY.pdf`, newest first): provider
+  `other`, recipe `page-pdfs`. `fetch:check` can't date the file names (freshness
+  `unknown`), and the page-1 date line can be a stale template: confirm the issue from
+  the Mass intentions.
+- **Bon Venture** (`sponsors.bonventure.net/?page=<id>`, often linked only from a cover
+  image on the parish's bulletin page): `page-pdfs` finds the current
+  `pdfs/<id>/YYYY-MM-DD.pdf`, but the https download fails certificate verification.
+  Record `bulletin_provider: unsupported`, fetch_gap `tls-certificate-unverified`, keeping
+  the `page-pdfs` recipe in `provider_id`.
+- **Discover Mass:** some finder homepages are a Discover Mass page
+  (`discovermass:<slug>`).
+- **Sites that drop probe connections** (RemoteDisconnected) while `fetch:check` downloads
+  their PDFs: save the issue with `tools/fetch_pdf.py` and read it with `render.py`
+  (`probe pdf` takes URLs only).
 
 ## New lessons
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
-
-- An eCatholic parish site whose Bulletins page only embeds ParishesOnline issues (no files at files.ecatholic.com/<id>/bulletins) publishes on ParishesOnline: record the po-org/lpi/po-container ids and not the eCatholic site id (seen at St. Joseph, Ashton).
-- John Patrick Publishing bulletins: set website to the church-bulletin.org/<slug> page (jppc.net/onlinebulletins/<id>template.pdf redirects there), provider other with recipe page-pdfs. It needs no browser even when the parish's own site can't be reached.
-- A John Patrick church-bulletin.org page can carry another parish's bulletin (St. Matthew Cranston's page is titled 'Saint Matthew @ Saint Paul Church' and posts St. Paul's LPi issue). Compare its masthead with the host parish's bulletin, and record the page as an extra publication id on the host's row, not as a row of its own.
-- Duda parish sites (PDFs on irp.cdn-website.com/<site>/files/uploaded/, linked from a /bulletin page in newest-first order) read with provider other and recipe page-pdfs on the /bulletin page.
-- Several LPi bulletins here (St. Joseph North Scituate, St. Michael Smithfield, St. Philip Greenville) are image-only apart from the ad pages: probe pdf sees only the footer, so read the masthead and Mass schedule with render.py.
-- When an LPi footer gives a container but no org slug, try probe po with '<name>-<zip>' (st-michaels-church-02917 worked); an eCatholic site that hosts the same LPi file can then be recorded on parishes_online, with the ecatholic id as a second publication id, so fetch avoids Cloudflare.
-- Squarespace parish bulletin pages (PDFs at <site>/s/Web-MMDDYY.pdf, newest first) work with provider other and recipe page-pdfs, but fetch:check can't date the file names (freshness 'unknown'): confirm the issue from the Mass intentions, since the page-1 date line can be a stale template (seen at Our Lady of Mercy, East Greenwich).
-- Some ParishesOnline orgs have no LPi container and carry parish-uploaded PDFs (customer-data-prod-bucket.s3.amazonaws.com/organization-uploads/<lpi id>/publications/...); probe po lists them, but the parishes_online collector fails ('No matching anchor link'): record bulletin_provider unsupported with fetch_gap kind po-user-upload (seen at Sacred Heart, West Warwick).
-- An eCatholic site that posts LPi issues in its documents folder (files.ecatholic.com/<id>/documents/YYYY/MM/<date>B.pdf) rather than /bulletins: its 'Bulletin archive' link (visit.py --links --match parishesonline) gives parishesonline.com/find/<slug>, and probe po <slug> without a zip suffix returns the org (saints-john-and-paul-church).
-- When a site drops probe connections (RemoteDisconnected) but fetch:check downloads its PDFs, save the issue with tools/fetch_pdf.py and read it with render.py (probe pdf takes URLs only).
-- ParishesOnline org slugs here can be possessive with no ZIP (st-marthas-church, st-brendans-church). Try these when '<name>-<zip>' fails. Two old orgs can share one container after a merger: record both orgs' ids on the one row.
-- church-bulletin.org/<guessed slug> answers 200 even when no bulletin exists (a generic archive page or a page with no PDFs). Only a jppc id linked from the parish site, or a page listing dated PDFs, is evidence.
-- Bon Venture bulletins (sponsors.bonventure.net/?page=<id>, often linked only from a cover image on the parish's bulletin page): page-pdfs picks the current pdfs/<id>/YYYY-MM-DD.pdf but the https download fails certificate verification; record bulletin_provider unsupported with fetch_gap tls-certificate-unverified, keeping the page-pdfs recipe in provider_id.
-- When a parish site is dead or unreachable, probe po '<name>-church-<zip>' often finds its ParishesOnline org (christ-the-king-church-02881, st-mary-star-of-the-sea-church-02882); check the org has issues, since some list none.
-- One LPi bulletin can be posted in two containers with different ad pages and footers (St. Pius X 03/4092 and St. Clare 03/1399): compare rendered pages 1-2, then record both containers on one row. The footer's account name (here 'St. Clare St Vincent de Paul') can name a church the masthead has dropped.
-- Some LPi issues here have an encoded-font text layer: probe pdf reports every page readable but returns glyph codes ('/0/1 /2/3...') and --grep finds nothing. Read them with render.py, as with image-only issues.
-
 
 ## Rules settled for this diocese
 
