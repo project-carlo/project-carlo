@@ -1,4 +1,7 @@
-"""API list prices, for putting a dollar figure on an eval run's token usage.
+"""API list prices, for putting a dollar figure on a model call's token usage.
+
+The weekly run's update calls, `seed extract` and `seed ask`, and the eval
+report all price their calls here.
 
 Prices are USD per million tokens at the standard tier (and, where a model's
 `flex` is set, the flex tier), as published on the date in PRICES_AS_OF; update

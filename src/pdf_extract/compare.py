@@ -21,6 +21,7 @@ from typing import Any
 
 from pdf_extract.blobstore import bulletin_pdf_key
 from pdf_extract.extract_run import bulletins_path, events_path, run_summary_path
+from pdf_extract.model import EventKey
 from pdf_extract.paths import DATA_DIR
 from pdf_extract.runner import RUNS_DIR
 from pdf_extract.storage import DEFAULT_DB_PATH, connect_db, load_bulletins, utc_now_iso
@@ -29,7 +30,6 @@ LOGGER = logging.getLogger(__name__)
 
 COMPARE_DIR = RUNS_DIR / "compare"
 
-EventKey = tuple[str, str, str, str | None, str | None, str, str | None, bool]
 EventsByBulletin = dict[str, list[dict[str, Any]]]
 EventKeysByBulletin = dict[str, set[EventKey]]
 

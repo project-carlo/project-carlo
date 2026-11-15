@@ -43,7 +43,7 @@ from pdf_extract.seeding.files import (
     write_seed_file,
 )
 from pdf_extract.seeding.finalize import finalize_seed
-from pdf_extract.seeding.loader import is_loaded, load_approved_seeds
+from pdf_extract.seeding.loader import is_loaded, load_approved_seeds, load_seeds
 from pdf_extract.seeding.queries import (
     SeedContext,
     SeedError,
@@ -885,7 +885,7 @@ def test_a_seed_that_fails_its_checks_is_skipped(conn, demo, seed):
     assert render_seeds(result)[-1].startswith(f"- **{PARISH}** seed file not loaded")
 
 
-def test_ensure_db_loads_approved_seeds_unless_told_not_to(pipeline_dir: Path):
+def test_ensure_db_leaves_approved_seeds_to_load_seeds(pipeline_dir: Path):
     create_db()
     seed = {
         "schema_version": 1, "parish_slug": "test-parish", "status": APPROVED,
@@ -905,13 +905,13 @@ def test_ensure_db_loads_approved_seeds_unless_told_not_to(pipeline_dir: Path):
         }],
     }
     write_seed_file(seed, pipeline_dir / "data" / "seeds")
-    held = ensure_db(load_seeds=False)
+    held = ensure_db()
     assert "seeds" not in held
-    result = ensure_db()
+    result = load_seeds()
     # The bulletin isn't in this database: the seed loads without a sighting.
-    assert [(r["parish"], r["entries"], r["sightings"]) for r in result["seeds"]["loaded"]] == [
+    assert [(r["parish"], r["entries"], r["sightings"]) for r in result["loaded"]] == [
         ("test-parish", 1, 0)]
-    assert ensure_db()["seeds"] == {"loaded": [], "skipped": []}
+    assert load_seeds() == {"loaded": [], "skipped": []}
 
 
 # ── HTTP ────────────────────────────────────────────────────────────────────

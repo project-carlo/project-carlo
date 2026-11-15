@@ -240,7 +240,7 @@ code departs from it. The code is `src/pdf_extract/seeding/`, the `ask` prompt
   result cache. `ask` is cached under `runs/seed-ask/cache/`, by model and
   prompt version, PDF, church list, date and question; on OpenAI it reads the
   PDF at high detail with medium reasoning, since a question is about small
-  print. `gpt-6.1-sol` has no price in `evals/pricing.py`, so its calls record
+  print. `gpt-6.1-sol` has no price in `classifiers/pricing.py`, so its calls record
   `cost_usd` as null.
 - **Output** is compact text, `--json` the full result: `__main__` prints a
   command's `render` when it sets one.
@@ -335,7 +335,7 @@ code departs from it. The code is `src/pdf_extract/seeding/`, the `ask` prompt
 - **The weekly run loads seeds after taking its before-copy**, so its
   snapshot checks compare a newly seeded parish with its last extracted
   schedule, as [Batches and the run's change gate](#loading-seeds) says. Every
-  other command loads them in `db.ensure_db`, after the CSVs. A deploy
+  other command loads them with `seeding.loader.load_seeds`, after `db.ensure_db` has applied the CSVs. A deploy
   (`data snapshot`) never loads them: like a CSV removal, a seed goes live
   through a weekly run.
 - **Loaded once per digest.** The revision's note is `seed file <parish>

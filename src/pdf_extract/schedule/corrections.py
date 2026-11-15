@@ -64,7 +64,7 @@ from pathlib import Path
 from typing import Any
 
 from pdf_extract.classifiers.schedule_update import _without_nulls
-from pdf_extract.labeling.labels import is_valid_hash, is_valid_slug
+from pdf_extract.model import is_valid_hash, is_valid_slug
 from pdf_extract.paths import DATA_DIR
 from pdf_extract.schedule.entries import Entry, EntryError, parse_entry
 from pdf_extract.schedule.history import SUCCEEDED
@@ -88,6 +88,7 @@ from pdf_extract.schedule.store import (
     retire_ended,
     sha256_text,
 )
+from pdf_extract.storage import DEFAULT_DB_PATH, connect_db
 
 LOGGER = logging.getLogger(__name__)
 
@@ -488,6 +489,23 @@ def load_corrections(
             LOGGER.info("Loaded correction %s as revision %s", result["file"], result["revision"])
             loaded.append(result)
     return {"loaded": loaded, "skipped": skipped}
+
+
+def load_correction_files(
+    db_path: Path = DEFAULT_DB_PATH, *, corrections_dir: Path = CORRECTIONS_DIR,
+    run_id: str | None = None,
+) -> dict[str, list[dict[str, Any]]]:
+    """Load the correction files not loaded yet into the database at `db_path`.
+
+    Pipeline commands call this after `db.ensure_db` and `seeding.loader.load_seeds`.
+    The weekly run calls it after taking its before-copy instead, so its change
+    checks see what each correction changed.
+    """
+    conn = connect_db(db_path)
+    try:
+        return load_corrections(conn, corrections_dir, run_id=run_id)
+    finally:
+        conn.close()
 
 
 # ── Writing ─────────────────────────────────────────────────────────────────

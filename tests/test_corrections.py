@@ -11,7 +11,7 @@ from typing import Any
 
 import pytest
 
-from pdf_extract.db import create_db, ensure_db
+from pdf_extract.db import create_db
 from pdf_extract.report import render_corrections
 from pdf_extract.runs import start_run
 from pdf_extract.schedule.corrections import (
@@ -22,6 +22,7 @@ from pdf_extract.schedule.corrections import (
     NOT_PROCESSED,
     UNKNOWN_BULLETIN,
     correction_files,
+    load_correction_files,
     load_corrections,
     read_correction,
     schedule_as_of,
@@ -125,7 +126,7 @@ def test_a_correction_file_loads_once_as_one_human_revision(conn: sqlite3.Connec
     data = json.loads(path.read_text(encoding="utf-8"))
     path.write_text(json.dumps({**data, "note": "reworded"}), encoding="utf-8")
     assert load_corrections(conn, today=TODAY) == {"loaded": [], "skipped": []}
-    assert ensure_db()["corrections"] == {"loaded": [], "skipped": []}
+    assert load_correction_files() == {"loaded": [], "skipped": []}
     assert len(_revisions(conn)) == 2
 
 

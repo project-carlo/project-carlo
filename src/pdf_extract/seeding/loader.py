@@ -20,13 +20,9 @@ import sqlite3
 from pathlib import Path
 from typing import Any
 
+from pdf_extract.model import normalize_as_of
 from pdf_extract.schedule.entries import parse_entry
-from pdf_extract.schedule.store import (
-    normalize_as_of,
-    parish_churches,
-    update_mode_parishes,
-    write_seed,
-)
+from pdf_extract.schedule.store import parish_churches, update_mode_parishes, write_seed
 from pdf_extract.seeding.checks import check_seed
 from pdf_extract.seeding.files import (
     APPROVED,
@@ -38,6 +34,7 @@ from pdf_extract.seeding.files import (
     revision_note,
     seed_slugs,
 )
+from pdf_extract.storage import DEFAULT_DB_PATH, connect_db
 
 LOGGER = logging.getLogger(__name__)
 
@@ -152,3 +149,18 @@ def _load_one(
         return {"parish": slug, "reason": str(exc)}
     latest_seeds[parish_id] = result["as_of"]
     return result
+
+
+def load_seeds(
+    db_path: Path = DEFAULT_DB_PATH, *, seeds_dir: Path = SEEDS_DIR, run_id: str | None = None,
+) -> dict[str, list[dict[str, Any]]]:
+    """Load the approved seed files not loaded yet into the database at `db_path`.
+
+    Pipeline commands call this after `db.ensure_db`. The weekly run calls it
+    after taking its before-copy instead, so its change checks see the seeds.
+    """
+    conn = connect_db(db_path)
+    try:
+        return load_approved_seeds(conn, seeds_dir, run_id=run_id)
+    finally:
+        conn.close()

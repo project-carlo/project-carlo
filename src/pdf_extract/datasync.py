@@ -34,6 +34,7 @@ from pathlib import Path
 from typing import Any
 
 from pdf_extract.blobstore import BlobStoreError, CachedBlobStore, get_store
+from pdf_extract.db import ensure_db, migrate
 from pdf_extract.extract_frontend_db import (
     DEST_SNAPSHOT,
     SNAPSHOT_NAME,
@@ -44,6 +45,7 @@ from pdf_extract.extract_frontend_db import (
 from pdf_extract.paths import DATA_DIR
 from pdf_extract.pdf_compact import MAX_STORED_BULLETIN_BYTES, compact_bulletin_pdf
 from pdf_extract.pdf_truncate import max_pages_for
+from pdf_extract.schedule.corrections import load_correction_files
 from pdf_extract.storage import DEFAULT_DB_PATH, connect_db, utc_now_iso
 
 LOGGER = logging.getLogger(__name__)
@@ -475,9 +477,6 @@ def build_deploy_snapshot(
     parishes.csv/churches.csv edits (seeded by `ensure_db`) show up in a
     preview and on merge without waiting for the next weekly run.
     """
-    # Imported here: db imports this module's neighbours.
-    from pdf_extract.db import ensure_db, migrate
-
     pulled = pull(db=True, snapshot=False, db_path=db_path)
     conn = connect_db(db_path)
     try:
@@ -492,7 +491,11 @@ def build_deploy_snapshot(
     # are loaded here, into a database the deploy doesn't publish, and the
     # next weekly run loads them into the published one (each file's checks
     # make the second load safe).
-    seeded = {**ensure_db(db_path, load_seeds=False), "migrations_applied": migrations}
+    seeded = {
+        **ensure_db(db_path),
+        "corrections": load_correction_files(db_path),
+        "migrations_applied": migrations,
+    }
     removed_churches = seeded["churches_deleted"] + seeded.get("churches_retired", 0)
     if seeded["parishes_deleted"] or removed_churches:
         # Removing a parish or church deletes its events (or, for a church

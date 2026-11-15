@@ -39,7 +39,7 @@ from pathlib import Path
 from typing import Any
 
 from pdf_extract.db import ensure_db
-from pdf_extract.labeling.labels import is_valid_hash
+from pdf_extract.model import is_valid_hash
 from pdf_extract.schedule.corrections import (
     APPLY,
     WRONG_BULLETIN,
@@ -48,6 +48,7 @@ from pdf_extract.schedule.corrections import (
     check_bulletin,
     entry_content,
     load_correction,
+    load_correction_files,
     load_corrections,
     mark_wrong_bulletin,
     schedule_as_of,
@@ -66,6 +67,7 @@ from pdf_extract.schedule.store import (
     render_view,
     write_seed,
 )
+from pdf_extract.seeding.loader import load_seeds
 from pdf_extract.storage import DEFAULT_DB_PATH, connect_db
 
 Result = dict[str, Any]
@@ -76,7 +78,10 @@ class ScheduleCommandError(ValueError):
 
 
 def _connect(*, load_corrections: bool = True):
-    ensure_db(DEFAULT_DB_PATH, load_corrections=load_corrections)
+    ensure_db(DEFAULT_DB_PATH)
+    load_seeds(DEFAULT_DB_PATH)
+    if load_corrections:
+        load_correction_files(DEFAULT_DB_PATH)
     return connect_db(DEFAULT_DB_PATH)
 
 

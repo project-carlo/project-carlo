@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import pytest
 
-from pdf_extract.evals.pricing import call_cost, model_of, thinking_unrecorded
+from pdf_extract.classifiers.pricing import call_cost, model_of, thinking_unrecorded
 
 
 def test_model_of_takes_the_version_before_its_options():

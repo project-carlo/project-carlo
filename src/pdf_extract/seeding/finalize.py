@@ -30,7 +30,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from pdf_extract.labeling.labels import ENTRY_KEYS
+from pdf_extract.model import ENTRY_KEYS
 from pdf_extract.seeding.coverage import attach_history, attach_variants
 from pdf_extract.seeding.files import (
     AGENT,

@@ -9,6 +9,10 @@ Two tables are the exception. `parish` and `church` are curated by hand in
 `data/parishes.csv` and `data/churches.csv`, reviewed in pull requests, and
 seeded into the database (matched by slug) before every pipeline command, so
 an edited CSV takes effect on the next command.
+
+Approved seed files and correction files are loaded by `seeding.loader` and
+`schedule.corrections`, which the commands that want them call after
+`ensure_db`.
 """
 
 from __future__ import annotations
@@ -20,11 +24,7 @@ import sqlite3
 from pathlib import Path
 from typing import Any
 
-from pdf_extract.schedule.corrections import CORRECTIONS_DIR
-from pdf_extract.schedule.corrections import load_corrections as load_corrections_into
 from pdf_extract.schedule.store import DELETE, REFERENCE, Change, append_revision
-from pdf_extract.seeding.files import SEEDS_DIR
-from pdf_extract.seeding.loader import load_approved_seeds
 from pdf_extract.storage import (
     CHURCHES_CSV_PATH,
     DEFAULT_DB_PATH,
@@ -395,26 +395,16 @@ def create_db(db_path: Path = DEFAULT_DB_PATH) -> dict[str, Any]:
     return {"db_path": str(db_path), "migrations_applied": migrations, **seeded}
 
 
-def ensure_db(
-    db_path: Path = DEFAULT_DB_PATH,
-    *,
-    load_seeds: bool = True,
-    seeds_dir: Path = SEEDS_DIR,
-    load_corrections: bool = True,
-    corrections_dir: Path = CORRECTIONS_DIR,
-) -> dict[str, Any]:
+def ensure_db(db_path: Path = DEFAULT_DB_PATH) -> dict[str, Any]:
     """Bring an existing database up to date before a pipeline command runs.
 
-    Applies pending migrations, re-seeds the reference tables from the CSVs,
-    loads the approved seed files not loaded yet (`seeding.loader`; the
-    result is under `seeds`), then the correction files not loaded yet
-    (`schedule.corrections`; under `corrections`). Refuses to invent a
-    database: running the pipeline against an empty one would look like every
-    parish had lost its schedule.
+    Applies pending migrations and re-seeds the reference tables from the
+    CSVs. Refuses to invent a database: running the pipeline against an empty
+    one would look like every parish had lost its schedule.
 
-    `load_seeds` and `load_corrections` off leave the files for later: the
-    weekly run loads them after taking its before-copy, so its change checks
-    see them.
+    It loads neither seed nor correction files: a command that wants them
+    calls `seeding.loader.load_seeds`, then
+    `schedule.corrections.load_correction_files`, next.
     """
     if not db_path.exists():
         raise DatabaseMissingError(
@@ -425,34 +415,6 @@ def ensure_db(
     try:
         migrations = migrate(conn)
         seeded = seed_reference_data(conn)
-        result: dict[str, Any] = {"migrations_applied": migrations, **seeded}
-        if load_seeds:
-            result["seeds"] = load_approved_seeds(conn, seeds_dir)
-        if load_corrections:
-            result["corrections"] = load_corrections_into(conn, corrections_dir)
     finally:
         conn.close()
-    return result
-
-
-def load_seeds(
-    db_path: Path = DEFAULT_DB_PATH, *, seeds_dir: Path = SEEDS_DIR, run_id: str | None = None,
-) -> dict[str, list[dict[str, Any]]]:
-    """Load the approved seed files into the database at `db_path` (see `ensure_db`)."""
-    conn = connect_db(db_path)
-    try:
-        return load_approved_seeds(conn, seeds_dir, run_id=run_id)
-    finally:
-        conn.close()
-
-
-def load_correction_files(
-    db_path: Path = DEFAULT_DB_PATH, *, corrections_dir: Path = CORRECTIONS_DIR,
-    run_id: str | None = None,
-) -> dict[str, list[dict[str, Any]]]:
-    """Load the correction files into the database at `db_path` (see `ensure_db`)."""
-    conn = connect_db(db_path)
-    try:
-        return load_corrections_into(conn, corrections_dir, run_id=run_id)
-    finally:
-        conn.close()
+    return {"migrations_applied": migrations, **seeded}

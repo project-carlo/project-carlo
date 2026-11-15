@@ -35,7 +35,7 @@ from datetime import date, timedelta
 from typing import Any
 
 from pdf_extract.bulletin_week import parse_iso_date
-from pdf_extract.labeling.labels import DAYS
+from pdf_extract.model import DAYS, EVENT_TYPE_LABELS
 from pdf_extract.schedule.qualifiers import (
     QualifierError,
     columns_to_season,
@@ -49,7 +49,6 @@ from pdf_extract.timeparse import minutes_to_time
 WINDOW_DAYS = 42
 
 _WEEKDAY = {day.lower(): index for index, day in enumerate(DAYS)}
-_TYPE_LABELS = {"mass": "Mass", "confession": "Confession", "adoration": "Adoration"}
 _MAX_ERRORS = 20
 
 Tables = dict[str, list[dict[str, Any]]]
@@ -326,7 +325,7 @@ def _pattern(item: Item) -> str:
 
 def describe_parts(item: Item, projection: Projection | None = None) -> tuple[str, list[str]]:
     """(head, details): "Adoration · Fri", ["7:00 PM–8:00 PM", "every Friday"]."""
-    label = _TYPE_LABELS.get(item.event_type, item.event_type or "Event")
+    label = EVENT_TYPE_LABELS.get(item.event_type, item.event_type or "Event")
     if item.weekly:
         head = f"{label} · {(item.day or '?').strip().capitalize()[:3]}"
         details = [_time_range(item), _pattern(item)]
