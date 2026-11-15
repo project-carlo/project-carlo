@@ -140,6 +140,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Several ParishesOnline org accounts can point at one container (Groton tri-parish + Our Lady of Lourdes on 03/0770; St. Michael Pawcatuck + St. Patrick Mystic on 04/0504, though they have different pastors): probe po each org a parish site or the locator map links, and record every org/lpi id on the one row whose container they share.
 - The locator map's parishesonline.com/find links can point at dead org accounts (st-james-parish-06239 has no publications): probe po each, and if empty look for a self-hosted bulletin on the parish's own site; keep the dead org in evidence, not publication.
 - Duda (irp.cdn-website.com) parish sites here carry the ParishesOnline widget id only on /bulletin, not the home page: probe url the bulletin page to get the lpi id.
+- A parish's dead or Wix-disconnected domain doesn't mean it has no bulletin: the '<name>-<zip>' ParishesOnline slug guess (guardian-angels-parish-06415) found the org, and the org's website field gave the parish's current site.
+- Lapsed parish domains here can be taken by same-named churches elsewhere (stmaryscoventry.org is now an English Anglican parish): read the page before you use a GCatholic website.
 
 
 ## Rules settled for this diocese
