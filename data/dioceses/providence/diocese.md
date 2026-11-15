@@ -136,6 +136,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - An LPi issue's text layer can hold a stale old page under the current image (St. Thomas Warren page 1 reads 'September 17, 2023'), so fetch:check reports a date conflict: render page 1 and date the issue from the inner pages.
 - LPi containers here are not all region 03: St. Raymond is 04/0915 (org st-raymond-church); try `probe container 04/<n>` or `probe po <name>-church` when a 03 guess fails.
 - A John Patrick parish with an eCatholic site may also post the same issue at files.ecatholic.com/<id>/bulletins/YYYYMMDD.pdf with a text layer, where the JPPC copy is image-only: use `issues.py ecatholic --grep` on it to read or date schedule changes, and record the eCatholic id as a second publication id.
+- WordPress parish sites that link their bulletin page only as ?page_id=N: find it with probe get <site>/wp-json/wp/v2/pages?search=bulletin, or list PDFs newest first with /wp-json/wp/v2/media?mime_type=application/pdf.
+- A GoDaddy-builder bulletin page (PDFs on img1.wsimg.com) that posts English and Spanish editions each week: page-pdfs with filename=English*.pdf picks the English issue even on an oldest-first page.
 
 ## Rules settled for this diocese
 
