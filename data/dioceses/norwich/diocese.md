@@ -137,6 +137,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Servant Keeper (servantpc 'fw2') parish sites render in JavaScript: probe get/probe url see only templates, so open them with visit.py; jnccfaith.org's /parish-bulletin embeds ParishesOnline publication-page links that give the org and container.
 - Some bulletins here are image-only (the Cathedral's DNN LinkClick scans; LPi 03/0123 pages 1-5): probe pdf finds no text, so read page 1 with render.py, quote only from text pages, and add an unsupported-format research item on whether the pipeline OCRs them.
 - Bonventure bulletins (sponsors.bonventure.net/?page=<id>, issues pdfs/<id>/<YYYY-MM-DD>.pdf) read over http only; the fetcher upgrades to https and fails certificate verification, so map them unsupported with fetch_gap kind tls-certificate-unverified and keep the page-pdfs recipe in provider_id.
+- Several ParishesOnline org accounts can point at one container (Groton tri-parish + Our Lady of Lourdes on 03/0770; St. Michael Pawcatuck + St. Patrick Mystic on 04/0504, though they have different pastors): probe po each org a parish site or the locator map links, and record every org/lpi id on the one row whose container they share.
 
 
 ## Rules settled for this diocese
