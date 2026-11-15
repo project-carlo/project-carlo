@@ -132,6 +132,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 
 - visit.py can hang past its timeout on Google Sites parish pages (sites.google-built, 'Embedded Files'); read them with probe get and check the data-code embeds for a Drive or bulletin link instead.
 - When the finder's homepage is a masstimes.org map link, the parish's email domain (e.g. name@<domain>.org) or a DuckDuckGo html search (probe get https://html.duckduckgo.com/html/?q=...) can find its real site.
+- A bulletin posted only as a Word .doc (WordPress uploads) can't be fetched: fetch_pdf.py refuses it as 'Not a PDF'. Read it with tools/fetch_raw.py + tools/doc_text.py and record unsupported with fetch_gap kind word-doc-bulletin.
+- An LPi issue's text layer can hold a stale old page under the current image (St. Thomas Warren page 1 reads 'September 17, 2023'), so fetch:check reports a date conflict: render page 1 and date the issue from the inner pages.
 
 ## Rules settled for this diocese
 
