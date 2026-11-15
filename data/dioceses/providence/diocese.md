@@ -93,6 +93,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - John Patrick Publishing bulletins: set website to the church-bulletin.org/<slug> page (jppc.net/onlinebulletins/<id>template.pdf redirects there), provider other with recipe page-pdfs. It needs no browser even when the parish's own site can't be reached.
 - A John Patrick church-bulletin.org page can carry another parish's bulletin (St. Matthew Cranston's page is titled 'Saint Matthew @ Saint Paul Church' and posts St. Paul's LPi issue). Compare its masthead with the host parish's bulletin, and record the page as an extra publication id on the host's row, not as a row of its own.
 - Duda parish sites (PDFs on irp.cdn-website.com/<site>/files/uploaded/, linked from a /bulletin page in newest-first order) read with provider other and recipe page-pdfs on the /bulletin page.
+- Several LPi bulletins here (St. Joseph North Scituate, St. Michael Smithfield, St. Philip Greenville) are image-only apart from the ad pages: probe pdf sees only the footer, so read the masthead and Mass schedule with render.py.
+- When an LPi footer gives a container but no org slug, try probe po with '<name>-<zip>' (st-michaels-church-02917 worked); an eCatholic site that hosts the same LPi file can then be recorded on parishes_online, with the ecatholic id as a second publication id, so fetch avoids Cloudflare.
 
 
 ## Rules settled for this diocese
