@@ -266,6 +266,7 @@ def build_report(
     snapshot_verification: dict[str, Any] | None,
     seeded: dict[str, Any] | None = None,
     seeds: dict[str, Any] | None = None,
+    corrections: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     """Everything the run changed and every reason to hold it, as one dict.
 
@@ -278,6 +279,8 @@ def build_report(
     comparison cannot see them; they are reported and gated here instead.
     `seeds` is what loading the approved seed files did (`seeding.loader`),
     after `before_db` was taken, so their schedules are in the comparison.
+    `corrections` is what loading the correction files did
+    (`schedule.corrections`), also after `before_db` was taken.
     """
     if snapshot_verification is None:
         snapshot_verification = verify_databases(before_db, after_db, date.today())
@@ -392,6 +395,10 @@ def build_report(
         "seeds": {
             "loaded": (seeds or {}).get("loaded", []),
             "skipped": (seeds or {}).get("skipped", []),
+        },
+        "corrections": {
+            "loaded": (corrections or {}).get("loaded", []),
+            "skipped": (corrections or {}).get("skipped", []),
         },
         "attention": {
             "failures": failures,
@@ -673,6 +680,7 @@ def render_markdown(report: dict[str, Any], *, max_changed_parishes: int = 40) -
             f"\n…and {len(changes) - max_changed_parishes} more parishes; see report.json."
         )
     lines += render_seeds(report.get("seeds") or {})
+    lines += render_corrections(report.get("corrections") or {})
     if report.get("update_mode"):
         lines += render_update_mode(report["update_mode"])
     return "\n".join(lines) + "\n"
@@ -692,4 +700,27 @@ def render_seeds(seeds: dict[str, Any]) -> list[str]:
         )
     for item in skipped:
         lines.append(f"- **{item['parish']}** seed file not loaded: {item['reason']}")
+    return lines
+
+
+def render_corrections(corrections: dict[str, Any]) -> list[str]:
+    """The correction files this run loaded and the ones it skipped, if any."""
+    loaded, skipped = corrections.get("loaded") or [], corrections.get("skipped") or []
+    if not loaded and not skipped:
+        return []
+    lines = ["", "### Corrections", ""]
+    for item in loaded:
+        marks = item.get("wrong_bulletins") or 0
+        extra = f", {marks} bulletin{'s' if marks != 1 else ''} marked wrong" if marks else ""
+        line = (
+            f"- **{item['parish']}** `{item['file']}` applied (revision {item['revision']}, "
+            f"{item['changes']} change{'s' if item['changes'] != 1 else ''}{extra}, by "
+            f"{item.get('actor') or 'unknown'})"
+        )
+        lines.append(f"{line}: {item['note']}" if item.get("note") else line)
+    for item in skipped:
+        lines.append(
+            f"- **{item['parish']}** `{item['file']}` skipped: {item['reason']}. "
+            "Update or remove the file."
+        )
     return lines

@@ -20,6 +20,8 @@ import sqlite3
 from pathlib import Path
 from typing import Any
 
+from pdf_extract.schedule.corrections import CORRECTIONS_DIR
+from pdf_extract.schedule.corrections import load_corrections as load_corrections_into
 from pdf_extract.schedule.store import DELETE, REFERENCE, Change, append_revision
 from pdf_extract.seeding.files import SEEDS_DIR
 from pdf_extract.seeding.loader import load_approved_seeds
@@ -398,17 +400,21 @@ def ensure_db(
     *,
     load_seeds: bool = True,
     seeds_dir: Path = SEEDS_DIR,
+    load_corrections: bool = True,
+    corrections_dir: Path = CORRECTIONS_DIR,
 ) -> dict[str, Any]:
     """Bring an existing database up to date before a pipeline command runs.
 
     Applies pending migrations, re-seeds the reference tables from the CSVs,
-    and loads the approved seed files not loaded yet (`seeding.loader`; the
-    result is under `seeds`). Refuses to invent a database: running the
-    pipeline against an empty one would look like every parish had lost its
-    schedule.
+    loads the approved seed files not loaded yet (`seeding.loader`; the
+    result is under `seeds`), then the correction files not loaded yet
+    (`schedule.corrections`; under `corrections`). Refuses to invent a
+    database: running the pipeline against an empty one would look like every
+    parish had lost its schedule.
 
-    `load_seeds` off leaves the seed files for later: the weekly run loads
-    them after taking its before-copy, so its change checks see them.
+    `load_seeds` and `load_corrections` off leave the files for later: the
+    weekly run loads them after taking its before-copy, so its change checks
+    see them.
     """
     if not db_path.exists():
         raise DatabaseMissingError(
@@ -422,6 +428,8 @@ def ensure_db(
         result: dict[str, Any] = {"migrations_applied": migrations, **seeded}
         if load_seeds:
             result["seeds"] = load_approved_seeds(conn, seeds_dir)
+        if load_corrections:
+            result["corrections"] = load_corrections_into(conn, corrections_dir)
     finally:
         conn.close()
     return result
@@ -434,5 +442,17 @@ def load_seeds(
     conn = connect_db(db_path)
     try:
         return load_approved_seeds(conn, seeds_dir, run_id=run_id)
+    finally:
+        conn.close()
+
+
+def load_correction_files(
+    db_path: Path = DEFAULT_DB_PATH, *, corrections_dir: Path = CORRECTIONS_DIR,
+    run_id: str | None = None,
+) -> dict[str, list[dict[str, Any]]]:
+    """Load the correction files into the database at `db_path` (see `ensure_db`)."""
+    conn = connect_db(db_path)
+    try:
+        return load_corrections_into(conn, corrections_dir, run_id=run_id)
     finally:
         conn.close()

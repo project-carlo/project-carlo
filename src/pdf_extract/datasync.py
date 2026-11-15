@@ -488,6 +488,10 @@ def build_deploy_snapshot(
     published = extract(db_path, snapshot_path, keep_previous=False)
     # Seed files wait for the weekly run, whose checks compare a newly seeded
     # parish with its last extracted schedule; a deploy would skip them.
+    # Correction files are reviewed decisions, so they go live on merge: they
+    # are loaded here, into a database the deploy doesn't publish, and the
+    # next weekly run loads them into the published one (each file's checks
+    # make the second load safe).
     seeded = {**ensure_db(db_path, load_seeds=False), "migrations_applied": migrations}
     removed_churches = seeded["churches_deleted"] + seeded.get("churches_retired", 0)
     if seeded["parishes_deleted"] or removed_churches:
@@ -500,6 +504,13 @@ def build_deploy_snapshot(
             "data unchanged until a reviewed weekly run publishes the removal",
             seeded["parishes_deleted"], removed_churches,
         )
+        if seeded.get("corrections", {}).get("loaded"):
+            # They loaded into this database, but the published snapshot is what deploys.
+            seeded["corrections"]["deployed"] = False
+            LOGGER.warning(
+                "%d correction files wait for the same weekly run",
+                len(seeded["corrections"]["loaded"]),
+            )
         return {
             "run_id": pulled["run_id"],
             "seeded": seeded,
