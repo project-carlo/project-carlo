@@ -1,0 +1,951 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-sorrows-linwood",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:47:34Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-16T21:25:12Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. The weekend, weekday and Saturday confession times are identical in both bulletins (Nov 8 and 15) and on the homepage. Open: whether to record the parish's 24/7 perpetual Adoration, whose location is never stated.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "078599441bc46c8abc6dc7fa1d4537420cfcfec808f102a1976571ed94c17452",
+      "fetched_at": "2026-11-15T16:47:34Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "0c3b055453241ea3452ab6b80ebb8f4da1116b93d3f46e569553d2eaaab718d0",
+      "fetched_at": "2026-11-08T15:55:57Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-linwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "07859944",
+          "page": 1,
+          "said": "MASS TIMES Sunday 8 a.m. Mass 10 a.m. Mass (Livestreamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c3b0554",
+          "page": 1,
+          "said": "MASS TIMES Sunday 8 a.m. Mass 10 a.m. Mass (Livestreamed)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read, and in the newest issue's intentions for Nov 15 and 22.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-linwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "07859944",
+          "page": 1,
+          "said": "MASS TIMES Sunday 8 a.m. Mass 10 a.m. Mass (Livestreamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c3b0554",
+          "page": 1,
+          "said": "MASS TIMES Sunday 8 a.m. Mass 10 a.m. Mass (Livestreamed)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read, and in the newest issue's intentions for Nov 15 and 22.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-linwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "07859944",
+          "page": 1,
+          "said": "Monday ... Friday 7:45 a.m. Daily Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c3b0554",
+          "page": 1,
+          "said": "Monday ... Friday 7:45 a.m. Daily Mass"
+        }
+      ],
+      "rationale": "R1: printed for each weekday in the Mass Times box of both bulletins read; the newest issue's intentions list 7:45 a.m. Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-linwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "07859944",
+          "page": 1,
+          "said": "Monday ... Friday 7:45 a.m. Daily Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c3b0554",
+          "page": 1,
+          "said": "Monday ... Friday 7:45 a.m. Daily Mass"
+        }
+      ],
+      "rationale": "R1: printed for each weekday in the Mass Times box of both bulletins read; the newest issue's intentions list 7:45 a.m. Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-linwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "07859944",
+          "page": 1,
+          "said": "Monday ... Friday 7:45 a.m. Daily Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c3b0554",
+          "page": 1,
+          "said": "Monday ... Friday 7:45 a.m. Daily Mass"
+        }
+      ],
+      "rationale": "R1: printed for each weekday in the Mass Times box of both bulletins read; the newest issue's intentions list 7:45 a.m. Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-linwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "07859944",
+          "page": 1,
+          "said": "Monday ... Friday 7:45 a.m. Daily Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c3b0554",
+          "page": 1,
+          "said": "Monday ... Friday 7:45 a.m. Daily Mass"
+        }
+      ],
+      "rationale": "R1: printed for each weekday in the Mass Times box of both bulletins read; the newest issue's intentions list 7:45 a.m. Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-linwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "07859944",
+          "page": 1,
+          "said": "Monday ... Friday 7:45 a.m. Daily Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c3b0554",
+          "page": 1,
+          "said": "Monday ... Friday 7:45 a.m. Daily Mass"
+        }
+      ],
+      "rationale": "R1: printed for each weekday in the Mass Times box of both bulletins read; the newest issue's intentions list 7:45 a.m. Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-linwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "07859944",
+          "page": 1,
+          "said": "Tuesday 7:45 a.m. Daily Mass 6:30 p.m. Mass St. Anthony Novena follows"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c3b0554",
+          "page": 1,
+          "said": "Tuesday 7:45 a.m. Daily Mass 6:30 p.m. Mass St. Anthony Novena follows"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read; the newest issue's intentions list Tuesday Nov 17 6:30 p.m.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-linwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "07859944",
+          "page": 1,
+          "said": "Saturday 8 a.m. Daily Mass ... 5:00 p.m. Vigil Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c3b0554",
+          "page": 1,
+          "said": "Saturday 8 a.m. Daily Mass ... 5:00 p.m. Vigil Mass"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read; the newest issue's intentions list Saturday Nov 21 8:00 a.m. and 5:00 p.m.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-linwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "07859944",
+          "page": 1,
+          "said": "Saturday 8 a.m. Daily Mass ... 5:00 p.m. Vigil Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c3b0554",
+          "page": 1,
+          "said": "Saturday 8 a.m. Daily Mass ... 5:00 p.m. Vigil Mass"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read; the newest issue's intentions list Saturday Nov 21 8:00 a.m. and 5:00 p.m.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-linwood",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "07859944",
+          "page": 1,
+          "said": "Saturday ... 3:45 Confessions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c3b0554",
+          "page": 1,
+          "said": "Saturday ... 3:45 Confessions"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofsorrows.us/",
+          "said": "Saturday 8:00 a.m. Daily Mass 3:45 Confessions 5:00 p.m. Vigil Mass"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read; no end time is given, so end_time stays null (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "07859944",
+          "page": 1,
+          "said": "Our Lady of Sorrows Church / A Perpetual Eucharistic Adoration Parish, 24 hours a day, 7 days a week / 724 Maple Avenue, Linwood"
+        },
+        {
+          "source": "agent",
+          "bulletin": "07859944",
+          "page": 3,
+          "said": "PERPETUAL ADORATION Offer God 1 hour per week 24 Hours/Day - 7 Days a Week ... Adorers Needed: Thursday - 3:00 am"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofsorrows.us/",
+          "said": "Perpetual Adoration 24 hours/day-7 Days/Week Adorers are needed."
+        }
+      ],
+      "rationale": "R30/R32: both bulletins and the website advertise 24/7 perpetual Adoration with an adorer roster (still seeking a Thursday 3 AM adorer), so it is current, but neither bulletin nor the site (Adorers page, homepage) says where it is held or names a chapel; POLICY leaves out a chapel whose location is unclear. Leaning include because the bulletin prints the claim directly under the parish's only church and its address, and the homepage's Holy Week notes treat Adoration as the church's own (suspended for the Triduum, resuming after the Easter Vigil). 00:00-23:59 each day is the closest the format comes to continuous Adoration.",
+      "question": "Add the parish's perpetual Adoration (24 hours a day, 7 days a week) at Our Lady of Sorrows church?",
+      "options": [
+        {
+          "label": "Every day, all day",
+          "entry": {
+            "church_slug": "our-lady-of-sorrows-linwood",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual Adoration"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "perpetual"
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "07859944",
+          "page": 1,
+          "said": "Our Lady of Sorrows Church / A Perpetual Eucharistic Adoration Parish, 24 hours a day, 7 days a week / 724 Maple Avenue, Linwood"
+        },
+        {
+          "source": "agent",
+          "bulletin": "07859944",
+          "page": 3,
+          "said": "PERPETUAL ADORATION Offer God 1 hour per week 24 Hours/Day - 7 Days a Week ... Adorers Needed: Thursday - 3:00 am"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofsorrows.us/",
+          "said": "Perpetual Adoration 24 hours/day-7 Days/Week Adorers are needed."
+        }
+      ],
+      "rationale": "R30/R32: both bulletins and the website advertise 24/7 perpetual Adoration with an adorer roster (still seeking a Thursday 3 AM adorer), so it is current, but neither bulletin nor the site (Adorers page, homepage) says where it is held or names a chapel; POLICY leaves out a chapel whose location is unclear. Leaning include because the bulletin prints the claim directly under the parish's only church and its address, and the homepage's Holy Week notes treat Adoration as the church's own (suspended for the Triduum, resuming after the Easter Vigil). 00:00-23:59 each day is the closest the format comes to continuous Adoration.",
+      "question": "Add the parish's perpetual Adoration (24 hours a day, 7 days a week) at Our Lady of Sorrows church?",
+      "options": [
+        {
+          "label": "Every day, all day",
+          "entry": {
+            "church_slug": "our-lady-of-sorrows-linwood",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual Adoration"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "perpetual"
+    },
+    {
+      "id": "s14",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "07859944",
+          "page": 1,
+          "said": "Our Lady of Sorrows Church / A Perpetual Eucharistic Adoration Parish, 24 hours a day, 7 days a week / 724 Maple Avenue, Linwood"
+        },
+        {
+          "source": "agent",
+          "bulletin": "07859944",
+          "page": 3,
+          "said": "PERPETUAL ADORATION Offer God 1 hour per week 24 Hours/Day - 7 Days a Week ... Adorers Needed: Thursday - 3:00 am"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofsorrows.us/",
+          "said": "Perpetual Adoration 24 hours/day-7 Days/Week Adorers are needed."
+        }
+      ],
+      "rationale": "R30/R32: both bulletins and the website advertise 24/7 perpetual Adoration with an adorer roster (still seeking a Thursday 3 AM adorer), so it is current, but neither bulletin nor the site (Adorers page, homepage) says where it is held or names a chapel; POLICY leaves out a chapel whose location is unclear. Leaning include because the bulletin prints the claim directly under the parish's only church and its address, and the homepage's Holy Week notes treat Adoration as the church's own (suspended for the Triduum, resuming after the Easter Vigil). 00:00-23:59 each day is the closest the format comes to continuous Adoration.",
+      "question": "Add the parish's perpetual Adoration (24 hours a day, 7 days a week) at Our Lady of Sorrows church?",
+      "options": [
+        {
+          "label": "Every day, all day",
+          "entry": {
+            "church_slug": "our-lady-of-sorrows-linwood",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual Adoration"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "perpetual"
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "07859944",
+          "page": 1,
+          "said": "Our Lady of Sorrows Church / A Perpetual Eucharistic Adoration Parish, 24 hours a day, 7 days a week / 724 Maple Avenue, Linwood"
+        },
+        {
+          "source": "agent",
+          "bulletin": "07859944",
+          "page": 3,
+          "said": "PERPETUAL ADORATION Offer God 1 hour per week 24 Hours/Day - 7 Days a Week ... Adorers Needed: Thursday - 3:00 am"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofsorrows.us/",
+          "said": "Perpetual Adoration 24 hours/day-7 Days/Week Adorers are needed."
+        }
+      ],
+      "rationale": "R30/R32: both bulletins and the website advertise 24/7 perpetual Adoration with an adorer roster (still seeking a Thursday 3 AM adorer), so it is current, but neither bulletin nor the site (Adorers page, homepage) says where it is held or names a chapel; POLICY leaves out a chapel whose location is unclear. Leaning include because the bulletin prints the claim directly under the parish's only church and its address, and the homepage's Holy Week notes treat Adoration as the church's own (suspended for the Triduum, resuming after the Easter Vigil). 00:00-23:59 each day is the closest the format comes to continuous Adoration.",
+      "question": "Add the parish's perpetual Adoration (24 hours a day, 7 days a week) at Our Lady of Sorrows church?",
+      "options": [
+        {
+          "label": "Every day, all day",
+          "entry": {
+            "church_slug": "our-lady-of-sorrows-linwood",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual Adoration"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "perpetual"
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "07859944",
+          "page": 1,
+          "said": "Our Lady of Sorrows Church / A Perpetual Eucharistic Adoration Parish, 24 hours a day, 7 days a week / 724 Maple Avenue, Linwood"
+        },
+        {
+          "source": "agent",
+          "bulletin": "07859944",
+          "page": 3,
+          "said": "PERPETUAL ADORATION Offer God 1 hour per week 24 Hours/Day - 7 Days a Week ... Adorers Needed: Thursday - 3:00 am"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofsorrows.us/",
+          "said": "Perpetual Adoration 24 hours/day-7 Days/Week Adorers are needed."
+        }
+      ],
+      "rationale": "R30/R32: both bulletins and the website advertise 24/7 perpetual Adoration with an adorer roster (still seeking a Thursday 3 AM adorer), so it is current, but neither bulletin nor the site (Adorers page, homepage) says where it is held or names a chapel; POLICY leaves out a chapel whose location is unclear. Leaning include because the bulletin prints the claim directly under the parish's only church and its address, and the homepage's Holy Week notes treat Adoration as the church's own (suspended for the Triduum, resuming after the Easter Vigil). 00:00-23:59 each day is the closest the format comes to continuous Adoration.",
+      "question": "Add the parish's perpetual Adoration (24 hours a day, 7 days a week) at Our Lady of Sorrows church?",
+      "options": [
+        {
+          "label": "Every day, all day",
+          "entry": {
+            "church_slug": "our-lady-of-sorrows-linwood",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual Adoration"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "perpetual"
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "07859944",
+          "page": 1,
+          "said": "Our Lady of Sorrows Church / A Perpetual Eucharistic Adoration Parish, 24 hours a day, 7 days a week / 724 Maple Avenue, Linwood"
+        },
+        {
+          "source": "agent",
+          "bulletin": "07859944",
+          "page": 3,
+          "said": "PERPETUAL ADORATION Offer God 1 hour per week 24 Hours/Day - 7 Days a Week ... Adorers Needed: Thursday - 3:00 am"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofsorrows.us/",
+          "said": "Perpetual Adoration 24 hours/day-7 Days/Week Adorers are needed."
+        }
+      ],
+      "rationale": "R30/R32: both bulletins and the website advertise 24/7 perpetual Adoration with an adorer roster (still seeking a Thursday 3 AM adorer), so it is current, but neither bulletin nor the site (Adorers page, homepage) says where it is held or names a chapel; POLICY leaves out a chapel whose location is unclear. Leaning include because the bulletin prints the claim directly under the parish's only church and its address, and the homepage's Holy Week notes treat Adoration as the church's own (suspended for the Triduum, resuming after the Easter Vigil). 00:00-23:59 each day is the closest the format comes to continuous Adoration.",
+      "question": "Add the parish's perpetual Adoration (24 hours a day, 7 days a week) at Our Lady of Sorrows church?",
+      "options": [
+        {
+          "label": "Every day, all day",
+          "entry": {
+            "church_slug": "our-lady-of-sorrows-linwood",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual Adoration"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "perpetual"
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "07859944",
+          "page": 1,
+          "said": "Our Lady of Sorrows Church / A Perpetual Eucharistic Adoration Parish, 24 hours a day, 7 days a week / 724 Maple Avenue, Linwood"
+        },
+        {
+          "source": "agent",
+          "bulletin": "07859944",
+          "page": 3,
+          "said": "PERPETUAL ADORATION Offer God 1 hour per week 24 Hours/Day - 7 Days a Week ... Adorers Needed: Thursday - 3:00 am"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofsorrows.us/",
+          "said": "Perpetual Adoration 24 hours/day-7 Days/Week Adorers are needed."
+        }
+      ],
+      "rationale": "R30/R32: both bulletins and the website advertise 24/7 perpetual Adoration with an adorer roster (still seeking a Thursday 3 AM adorer), so it is current, but neither bulletin nor the site (Adorers page, homepage) says where it is held or names a chapel; POLICY leaves out a chapel whose location is unclear. Leaning include because the bulletin prints the claim directly under the parish's only church and its address, and the homepage's Holy Week notes treat Adoration as the church's own (suspended for the Triduum, resuming after the Easter Vigil). 00:00-23:59 each day is the closest the format comes to continuous Adoration.",
+      "question": "Add the parish's perpetual Adoration (24 hours a day, 7 days a week) at Our Lady of Sorrows church?",
+      "options": [
+        {
+          "label": "Every day, all day",
+          "entry": {
+            "church_slug": "our-lady-of-sorrows-linwood",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual Adoration"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "perpetual"
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-linwood",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-19",
+        "start_time": "17:30",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Family Adoration & Fellowship"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "07859944",
+          "page": 4,
+          "said": "Thursday, November 19th Family Adoration & Fellowship 5:30 pm - 7:00 pm"
+        }
+      ],
+      "rationale": "POLICY, Final source checks: a combined Adoration-and-fellowship event does not give the Adoration's own times, and no place is given; any Adoration then falls inside the perpetual Adoration asked about separately (R37).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-linwood",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-12",
+        "start_time": "07:00",
+        "end_time": "08:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent retreat, OLS Hall"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "07859944",
+          "page": 5,
+          "said": "retreat Saturday, December 12th ... VENUE: OLS HALL 7:00-8:00 am Adoration ... Please sign-up only if you're able to attend the full retreat"
+        }
+      ],
+      "rationale": "R24/POLICY, What to extract: part of a sign-up retreat limited to those attending it in full, so not open to the public.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-linwood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-12",
+        "start_time": "11:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent retreat, OLS Hall"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "07859944",
+          "page": 5,
+          "said": "11:15-12:00 Noon Mass & Anointing ... Please sign-up only if you're able to attend the full retreat without any exception"
+        }
+      ],
+      "rationale": "R24/POLICY, What to extract: the retreat's Mass is limited to signed-up participants who attend the full retreat, so it is closed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "07859944",
+          "page": 1,
+          "said": "HOLYDAY SCHEDULE: VIGIL, 6:30 P.M. & 8:00 A.M. MASSES"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c3b0554",
+          "page": 1,
+          "said": "HOLYDAY SCHEDULE: VIGIL, 6:30 P.M. & 8:00 A.M. MASSES"
+        }
+      ],
+      "rationale": "R26/POLICY, Dates: a generic holy-day pattern with no date the bulletin pins down; update mode records the holy days when bulletins date them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
