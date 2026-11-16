@@ -1,0 +1,1195 @@
+{
+  "schema_version": 1,
+  "parish_slug": "church-of-the-incarnation",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:47:23Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-16T20:22:11Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (Incarnation, Mantua). The schedule box is identical in the Nov 8 and Nov 15, 2026 bulletins: weekday 7 and 8:30 AM, Saturday 8:30 AM and 5 PM, Sunday 7:30/9:30/11:30 AM, Wednesday Adoration 9-4, confessions after the 8:30 AM Mass Mon-Sat and Saturday 4-4:30 PM; two Christmas Eve Masses (4 PM, 10 PM) are dated. Open: how to record the 7 AM weekday Mass's summer break (Memorial Day to early September).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "f90eb20b7d4077d86aa32ed59497a73d258eb6ecf32c5b4eccace71bc2198651",
+      "fetched_at": "2026-11-15T16:47:23Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "e597f3c7b2559775dac6a26de3a351170ed6141dea7ef08c807272c5994766eb",
+      "fetched_at": "2026-11-08T15:55:45Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f90eb20b",
+          "page": 1,
+          "said": "Monday - Friday...7 a.m. and 8:30 a.m. (No 7 a.m. Mass from Memorial Day through early September)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e597f3c7",
+          "page": 1,
+          "said": "Monday - Friday...7 a.m. and 8:30 a.m. (No 7 a.m. Mass from Memorial Day through early September)"
+        }
+      ],
+      "rationale": "R30: printed in the schedule box of both bulletins (Nov 8 and Nov 15), but the summer break runs between movable dates (Memorial Day to 'early September') that a month-only season can only approximate; September-May is the closest, slightly overstating late May and early September. Leaning per POLICY, Weekly qualifiers (season with the months it gives).",
+      "question": "Weekday 7 AM Mass: 'No 7 a.m. Mass from Memorial Day through early September'. Record it as September through May?",
+      "options": [
+        {
+          "label": "Mon-Fri 7 AM, September-May",
+          "entry": {
+            "church_slug": "incarnation-mantua",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": null,
+              "end_month": 5,
+              "end_day": null
+            },
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Mon-Fri 7 AM, all year",
+          "entry": {
+            "church_slug": "incarnation-mantua",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "seven-am"
+    },
+    {
+      "id": "s2",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f90eb20b",
+          "page": 1,
+          "said": "Monday - Friday...7 a.m. and 8:30 a.m. (No 7 a.m. Mass from Memorial Day through early September)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e597f3c7",
+          "page": 1,
+          "said": "Monday - Friday...7 a.m. and 8:30 a.m. (No 7 a.m. Mass from Memorial Day through early September)"
+        }
+      ],
+      "rationale": "R30: printed in the schedule box of both bulletins (Nov 8 and Nov 15), but the summer break runs between movable dates (Memorial Day to 'early September') that a month-only season can only approximate; September-May is the closest, slightly overstating late May and early September. Leaning per POLICY, Weekly qualifiers (season with the months it gives).",
+      "question": "Weekday 7 AM Mass: 'No 7 a.m. Mass from Memorial Day through early September'. Record it as September through May?",
+      "options": [
+        {
+          "label": "Mon-Fri 7 AM, September-May",
+          "entry": {
+            "church_slug": "incarnation-mantua",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": null,
+              "end_month": 5,
+              "end_day": null
+            },
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Mon-Fri 7 AM, all year",
+          "entry": {
+            "church_slug": "incarnation-mantua",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "seven-am"
+    },
+    {
+      "id": "s3",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f90eb20b",
+          "page": 1,
+          "said": "Monday - Friday...7 a.m. and 8:30 a.m. (No 7 a.m. Mass from Memorial Day through early September)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e597f3c7",
+          "page": 1,
+          "said": "Monday - Friday...7 a.m. and 8:30 a.m. (No 7 a.m. Mass from Memorial Day through early September)"
+        }
+      ],
+      "rationale": "R30: printed in the schedule box of both bulletins (Nov 8 and Nov 15), but the summer break runs between movable dates (Memorial Day to 'early September') that a month-only season can only approximate; September-May is the closest, slightly overstating late May and early September. Leaning per POLICY, Weekly qualifiers (season with the months it gives).",
+      "question": "Weekday 7 AM Mass: 'No 7 a.m. Mass from Memorial Day through early September'. Record it as September through May?",
+      "options": [
+        {
+          "label": "Mon-Fri 7 AM, September-May",
+          "entry": {
+            "church_slug": "incarnation-mantua",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": null,
+              "end_month": 5,
+              "end_day": null
+            },
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Mon-Fri 7 AM, all year",
+          "entry": {
+            "church_slug": "incarnation-mantua",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "seven-am"
+    },
+    {
+      "id": "s4",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f90eb20b",
+          "page": 1,
+          "said": "Monday - Friday...7 a.m. and 8:30 a.m. (No 7 a.m. Mass from Memorial Day through early September)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e597f3c7",
+          "page": 1,
+          "said": "Monday - Friday...7 a.m. and 8:30 a.m. (No 7 a.m. Mass from Memorial Day through early September)"
+        }
+      ],
+      "rationale": "R30: printed in the schedule box of both bulletins (Nov 8 and Nov 15), but the summer break runs between movable dates (Memorial Day to 'early September') that a month-only season can only approximate; September-May is the closest, slightly overstating late May and early September. Leaning per POLICY, Weekly qualifiers (season with the months it gives).",
+      "question": "Weekday 7 AM Mass: 'No 7 a.m. Mass from Memorial Day through early September'. Record it as September through May?",
+      "options": [
+        {
+          "label": "Mon-Fri 7 AM, September-May",
+          "entry": {
+            "church_slug": "incarnation-mantua",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": null,
+              "end_month": 5,
+              "end_day": null
+            },
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Mon-Fri 7 AM, all year",
+          "entry": {
+            "church_slug": "incarnation-mantua",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "seven-am"
+    },
+    {
+      "id": "s5",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f90eb20b",
+          "page": 1,
+          "said": "Monday - Friday...7 a.m. and 8:30 a.m. (No 7 a.m. Mass from Memorial Day through early September)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e597f3c7",
+          "page": 1,
+          "said": "Monday - Friday...7 a.m. and 8:30 a.m. (No 7 a.m. Mass from Memorial Day through early September)"
+        }
+      ],
+      "rationale": "R30: printed in the schedule box of both bulletins (Nov 8 and Nov 15), but the summer break runs between movable dates (Memorial Day to 'early September') that a month-only season can only approximate; September-May is the closest, slightly overstating late May and early September. Leaning per POLICY, Weekly qualifiers (season with the months it gives).",
+      "question": "Weekday 7 AM Mass: 'No 7 a.m. Mass from Memorial Day through early September'. Record it as September through May?",
+      "options": [
+        {
+          "label": "Mon-Fri 7 AM, September-May",
+          "entry": {
+            "church_slug": "incarnation-mantua",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": null,
+              "end_month": 5,
+              "end_day": null
+            },
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Mon-Fri 7 AM, all year",
+          "entry": {
+            "church_slug": "incarnation-mantua",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "seven-am"
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "incarnation-mantua",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f90eb20b",
+          "page": 1,
+          "said": "Monday - Friday...7 a.m. and 8:30 a.m.; Saturday...8:30 a.m. and 5 p.m. (Vigil Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e597f3c7",
+          "page": 1,
+          "said": "Monday - Friday...7 a.m. and 8:30 a.m.; Saturday...8:30 a.m. and 5 p.m. (Vigil Mass)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read, and in each week's Mass intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "incarnation-mantua",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f90eb20b",
+          "page": 1,
+          "said": "Monday - Friday...7 a.m. and 8:30 a.m.; Saturday...8:30 a.m. and 5 p.m. (Vigil Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e597f3c7",
+          "page": 1,
+          "said": "Monday - Friday...7 a.m. and 8:30 a.m.; Saturday...8:30 a.m. and 5 p.m. (Vigil Mass)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read, and in each week's Mass intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "incarnation-mantua",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f90eb20b",
+          "page": 1,
+          "said": "Monday - Friday...7 a.m. and 8:30 a.m.; Saturday...8:30 a.m. and 5 p.m. (Vigil Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e597f3c7",
+          "page": 1,
+          "said": "Monday - Friday...7 a.m. and 8:30 a.m.; Saturday...8:30 a.m. and 5 p.m. (Vigil Mass)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read, and in each week's Mass intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "incarnation-mantua",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f90eb20b",
+          "page": 1,
+          "said": "Monday - Friday...7 a.m. and 8:30 a.m.; Saturday...8:30 a.m. and 5 p.m. (Vigil Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e597f3c7",
+          "page": 1,
+          "said": "Monday - Friday...7 a.m. and 8:30 a.m.; Saturday...8:30 a.m. and 5 p.m. (Vigil Mass)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read, and in each week's Mass intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "incarnation-mantua",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f90eb20b",
+          "page": 1,
+          "said": "Monday - Friday...7 a.m. and 8:30 a.m.; Saturday...8:30 a.m. and 5 p.m. (Vigil Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e597f3c7",
+          "page": 1,
+          "said": "Monday - Friday...7 a.m. and 8:30 a.m.; Saturday...8:30 a.m. and 5 p.m. (Vigil Mass)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read, and in each week's Mass intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "incarnation-mantua",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f90eb20b",
+          "page": 1,
+          "said": "Monday - Friday...7 a.m. and 8:30 a.m.; Saturday...8:30 a.m. and 5 p.m. (Vigil Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e597f3c7",
+          "page": 1,
+          "said": "Monday - Friday...7 a.m. and 8:30 a.m.; Saturday...8:30 a.m. and 5 p.m. (Vigil Mass)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read, and in each week's Mass intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "incarnation-mantua",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f90eb20b",
+          "page": 1,
+          "said": "Saturday...8:30 a.m. and 5 p.m. (Vigil Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e597f3c7",
+          "page": 1,
+          "said": "Saturday...8:30 a.m. and 5 p.m. (Vigil Mass)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read, and in the Mass intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "incarnation-mantua",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f90eb20b",
+          "page": 1,
+          "said": "Sunday....7:30 a.m., 9:30 a.m., 11:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e597f3c7",
+          "page": 1,
+          "said": "Sunday....7:30 a.m., 9:30 a.m., 11:30 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read, and in the Mass intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "incarnation-mantua",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f90eb20b",
+          "page": 1,
+          "said": "Sunday....7:30 a.m., 9:30 a.m., 11:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e597f3c7",
+          "page": 1,
+          "said": "Sunday....7:30 a.m., 9:30 a.m., 11:30 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read, and in the Mass intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "incarnation-mantua",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f90eb20b",
+          "page": 1,
+          "said": "Sunday....7:30 a.m., 9:30 a.m., 11:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e597f3c7",
+          "page": 1,
+          "said": "Sunday....7:30 a.m., 9:30 a.m., 11:30 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read, and in the Mass intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "incarnation-mantua",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f90eb20b",
+          "page": 1,
+          "said": "Eucharistic Adoration..Wednesdays from 9:00 a.m. to 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e597f3c7",
+          "page": 1,
+          "said": "Eucharistic Adoration..Wednesdays from 9:00 a.m. to 4:00 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "incarnation-mantua",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:30 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f90eb20b",
+          "page": 1,
+          "said": "Confessions are heard Monday through Saturday following the 8:30 A.M. Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e597f3c7",
+          "page": 1,
+          "said": "Confessions are heard Monday through Saturday following the 8:30 A.M. Mass"
+        }
+      ],
+      "rationale": "R1, R10: printed in both bulletins; POLICY, Times puts confession after a weekday (non-vigil) Mass 30 minutes after it starts, so 9:00 AM with no end time. The Saturday 8:30 AM is a morning Mass, not the vigil, so the weekday rule applies.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "incarnation-mantua",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:30 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f90eb20b",
+          "page": 1,
+          "said": "Confessions are heard Monday through Saturday following the 8:30 A.M. Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e597f3c7",
+          "page": 1,
+          "said": "Confessions are heard Monday through Saturday following the 8:30 A.M. Mass"
+        }
+      ],
+      "rationale": "R1, R10: printed in both bulletins; POLICY, Times puts confession after a weekday (non-vigil) Mass 30 minutes after it starts, so 9:00 AM with no end time. The Saturday 8:30 AM is a morning Mass, not the vigil, so the weekday rule applies.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "incarnation-mantua",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:30 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f90eb20b",
+          "page": 1,
+          "said": "Confessions are heard Monday through Saturday following the 8:30 A.M. Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e597f3c7",
+          "page": 1,
+          "said": "Confessions are heard Monday through Saturday following the 8:30 A.M. Mass"
+        }
+      ],
+      "rationale": "R1, R10: printed in both bulletins; POLICY, Times puts confession after a weekday (non-vigil) Mass 30 minutes after it starts, so 9:00 AM with no end time. The Saturday 8:30 AM is a morning Mass, not the vigil, so the weekday rule applies.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "incarnation-mantua",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:30 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f90eb20b",
+          "page": 1,
+          "said": "Confessions are heard Monday through Saturday following the 8:30 A.M. Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e597f3c7",
+          "page": 1,
+          "said": "Confessions are heard Monday through Saturday following the 8:30 A.M. Mass"
+        }
+      ],
+      "rationale": "R1, R10: printed in both bulletins; POLICY, Times puts confession after a weekday (non-vigil) Mass 30 minutes after it starts, so 9:00 AM with no end time. The Saturday 8:30 AM is a morning Mass, not the vigil, so the weekday rule applies.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "incarnation-mantua",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:30 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f90eb20b",
+          "page": 1,
+          "said": "Confessions are heard Monday through Saturday following the 8:30 A.M. Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e597f3c7",
+          "page": 1,
+          "said": "Confessions are heard Monday through Saturday following the 8:30 A.M. Mass"
+        }
+      ],
+      "rationale": "R1, R10: printed in both bulletins; POLICY, Times puts confession after a weekday (non-vigil) Mass 30 minutes after it starts, so 9:00 AM with no end time. The Saturday 8:30 AM is a morning Mass, not the vigil, so the weekday rule applies.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "incarnation-mantua",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:30 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f90eb20b",
+          "page": 1,
+          "said": "Confessions are heard Monday through Saturday following the 8:30 A.M. Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e597f3c7",
+          "page": 1,
+          "said": "Confessions are heard Monday through Saturday following the 8:30 A.M. Mass"
+        }
+      ],
+      "rationale": "R1, R10: printed in both bulletins; POLICY, Times puts confession after a weekday (non-vigil) Mass 30 minutes after it starts, so 9:00 AM with no end time. The Saturday 8:30 AM is a morning Mass, not the vigil, so the weekday rule applies.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "incarnation-mantua",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f90eb20b",
+          "page": 1,
+          "said": "and on Saturdays from 4:00 P.M. to 4:30 P.M. in church or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e597f3c7",
+          "page": 1,
+          "said": "and on Saturdays from 4:00 P.M. to 4:30 P.M. in church or by appointment"
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "incarnation-mantua",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f90eb20b",
+          "page": 5,
+          "said": "Children from our parish will perform the story of Jesus' birth on Christmas Eve prior to the 4 p.m. Mass"
+        }
+      ],
+      "rationale": "R1, R16: a dated Christmas Eve Mass after as_of, printed in the Live Nativity notice; POLICY, Weekly or dated rule 7 makes it dated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "incarnation-mantua",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "22:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f90eb20b",
+          "page": 5,
+          "said": "Our Festival Choir will soon begin rehearsals for the Christmas Eve Mass at 10 p.m."
+        }
+      ],
+      "rationale": "R1, R16: a dated Christmas Eve Mass after as_of, printed in the Festival Choir notice; POLICY, Weekly or dated rule 7 makes it dated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f90eb20b",
+          "page": 1,
+          "said": "Holy Days....5 p.m. (Vigil Mass) 7 a.m., 8:30 a.m. and 7 p.m. on Holy Day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e597f3c7",
+          "page": 1,
+          "said": "Holy Days....5 p.m. (Vigil Mass) 7 a.m., 8:30 a.m. and 7 p.m. on Holy Day"
+        }
+      ],
+      "rationale": "POLICY, Dates: the holy-day times name no date, and dates may not be projected from them; update mode will record them when a bulletin dates a holy day. R25.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f90eb20b",
+          "page": 1,
+          "said": "Confessions ... or by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f90eb20b",
+          "page": 5,
+          "said": "Nursing Home Ministry ... setting up for Mass once monthly"
+        }
+      ],
+      "rationale": "R22, R24: a monthly Mass at area nursing homes, off-site, with no time or place given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
