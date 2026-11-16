@@ -145,6 +145,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - John Patrick issues that are image-only now can have text layers in older issues: probe pdf --grep across past dated issues on the church-bulletin.org page to find and quote merger or closure letters.
 - Weebly pages that embed each week's bulletin as a Canva design (iframe canva.com/design/<id>/<key>/view?embed): visit.py --text on the /view URL returns the full text (masthead, Mass times); record unsupported with fetch_gap canva-design-viewer.
 - Mission or occasional-use buildings that a weekly LPi schedule omits can show up in the Christmas Eve intentions: grep the issue of the Sunday before Christmas for the building's name to date a Mass there.
+- Finder entries of parishes merged away (e.g. Holy Family, Pawtucket) can keep their pre-merger Mass times after the merger note: check them against the successor's current bulletin before treating them as evidence of Mass.
 
 ## Rules settled for this diocese
 
