@@ -168,6 +168,8 @@ them with `visit.py --bulletin` before concluding there is no bulletin.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- Eastern Catholic churches GCatholic lists in the territory are excluded as other-jurisdiction; a closed Latin church whose building now houses one (St. Ann Cranston, now St. George Maronite) goes on that record's roster, not under closed, since the building still holds public Mass.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
