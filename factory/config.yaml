@@ -16,7 +16,7 @@ job_usage:
   map:           { five_hour: 25, weekly: 1 }   # eight-parish batches: estimated, no history yet
   integrate:     { five_hour: 5, weekly: 1 }
   reconcile:     { five_hour: 25, weekly: 2 }
-  seed:          { five_hour: 10, weekly: 1 }   # no history yet: like a four-parish map job
+  seed:          { five_hour: 6, weekly: 1 }    # camden-seed-1: about 5 a parish (11 jobs, ≥51 together)
   seed-review:   { five_hour: 15, weekly: 1 }   # no history yet: an Opus reviewer
 
 max_send_backs: 2
