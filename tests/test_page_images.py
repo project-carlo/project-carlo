@@ -89,6 +89,9 @@ def test_a_region_zooms_into_the_part_of_the_page_as_shown(tmp_path: Path):
     rotated = _pdf(rotate=90)
     [im] = pi.render(rotated, tmp_path, "rot", page=1, region="bottom-left")["images"]
     assert im["width"] > im["height"] and _darkness(im["path"]) > 0.35
+    # A zoom of every page would cost more than the pages: it takes the pages it zooms.
+    with pytest.raises(pi.PageImageError, match="add --page N"):
+        pi.render(_pdf(3), tmp_path, "abc", region="top")
 
 
 def test_a_sheet_tiles_labelled_pages_into_one_image_read_takes_whole(tmp_path: Path):

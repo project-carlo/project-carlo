@@ -33,9 +33,9 @@ Do one parish at a time. Finish and finalize each before starting the next.
    <parish> <hash> --page N --region bottom-right` (halves, quarters, or `x0,y0,x1,y1`
    fractions from the top left) renders that part sharp, and one zoom can take a whole
    schedule box. Each render prints its token cost; Read shrinks anything over 2000 px,
-   so a whole page above about 180 dpi buys nothing. `seed pdf <parish> <hash>` writes a bulletin's
-   PDF, with the pipeline's page numbers. Draft its slots, then run `seed mark-read
-   <parish> <hash>`.
+   so a whole page above about 180 dpi buys nothing. `seed pdf <parish> <hash>` writes a
+   bulletin's PDF, with the pipeline's page numbers. Draft its slots, then run `seed
+   mark-read <parish> <hash>`.
 3. **Compare with history.** `seed history <parish> [--bulletins N]` prints one table per
    bulletin, and it is free. Apply R7–R9. Use your own readings across bulletins to
    establish recurrence (R35); one silent issue does not erase a repeated schedule
@@ -46,10 +46,11 @@ Do one parish at a time. Finish and finalize each before starting the next.
    [pattern]`, which searches every stored bulletin at once (with no pattern, it searches
    for schedule words). Then read one bulletin at a time with `seed text <parish> <hash>
    [--page N]`, which usually costs less context than images. Use `seed pages` only for a
-   page that is an image or whose layout matters. For an issue that is only images,
-   `seed pages <parish> <hash> --sheet [--page 2-10]` tiles its pages into one labelled
-   image (about 55 dpi a page) to find the pages that hold what you need; render just
-   those, and zoom (`--region`) where the print is small. Run `seed mark-read` on each
+   page that is an image or whose layout matters. For an issue of more than a few pages
+   that is only images, `seed pages <parish> <hash> --sheet [--page 2-10]` tiles its pages
+   into labelled sheets (one image for up to about 12 pages, each sharp enough to tell
+   what it holds) to find the pages you need; render just those, and zoom (`--region`)
+   where the print is small. For two or three pages a sheet saves nothing: render them. Run `seed mark-read` on each
    bulletin you read. To look up a church, use `seed church <name and town>` (R21).
 5. **Website (when R5 calls for it).** `seed site <parish>` prints the
    homepage's text and the links that look like schedules. `seed site <parish>

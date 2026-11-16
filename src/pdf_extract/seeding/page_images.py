@@ -233,6 +233,8 @@ def render(
     if sheet and region:
         raise PageImageError("--sheet tiles whole pages; zoom into one page's --region "
                              "without it")
+    if region and page is None:
+        raise PageImageError("--region zooms into the pages you name: add --page N")
     fractions = None
     if region:
         region, fractions = parse_region(region)
