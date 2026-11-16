@@ -32,7 +32,8 @@ Read: the stored bulletins
   bulletins <parish> [--limit N]                      newest first, with pages and flags
   pdf       <parish> <bulletin>                       the PDF the pipeline reads, locally
   text      <parish> <bulletin> [--page N]            its text, page by page
-  pages     <parish> <bulletin> [--page N] [--dpi D]  pages as PNGs
+  pages     <parish> <bulletin> [--page N|N-M,..] [--region R] [--sheet] [--dpi D]
+                                                      pages as PNGs, each with its token cost
   grep      <parish> [pattern] [--bulletins N]        search every stored bulletin's text
 
 Compare: other sources
@@ -68,7 +69,7 @@ from pdf_extract.classifiers.seed_ask import MODELS
 from pdf_extract.db import ensure_db
 from pdf_extract.schedule.corrections import load_correction_files
 from pdf_extract.schedule.store import parish_churches
-from pdf_extract.seeding import queries
+from pdf_extract.seeding import page_images, queries
 from pdf_extract.seeding import slots as slot_writes
 from pdf_extract.seeding.calls import call_limit, load_or_start, run_ask, run_extract
 from pdf_extract.seeding.checks import check_seed
@@ -189,6 +190,7 @@ def _text(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
 def _pages(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
     return queries.render_pages(
         conn, args.parish, args.bulletin, page=args.page, dpi=args.dpi,
+        region=args.region, sheet=args.sheet,
     )
 
 
@@ -479,7 +481,20 @@ def _text_text(r: Result) -> str:
 
 
 def _text_pages(r: Result) -> str:
-    return "\n".join(r["paths"])
+    lines = []
+    for im in r["images"]:
+        pages = "p" + page_images.page_ranges(im["pages"], ",")
+        what = f"{pages} {im['region']}" if im["region"] else pages
+        lowered = (f" (--dpi {im['lowered_from']} lowered: Read would shrink it)"
+                   if im["lowered_from"] else "")
+        lines.append(f"{im['path']}  {what}  {im['width']}x{im['height']} px, "
+                     f"{im['dpi']} dpi{lowered}, ~{im['tokens']:,} tokens")
+    if len(r["images"]) > 1:
+        lines.append(f"{len(r['images'])} images, ~{r['tokens']:,} tokens")
+    if any(not im["region"] and len(im["pages"]) == 1 for im in r["images"]):
+        lines.append("Small print or an unclear digit: zoom with --page N --region "
+                     "(top-left, bottom, ... or x0,y0,x1,y1)")
+    return "\n".join(lines)
 
 
 def _text_history(r: Result) -> str:
@@ -883,11 +898,21 @@ def add_seed_parser(
     bulletin(p)
     p.add_argument("--page", type=int, help="Only this page (default: all)")
 
-    p = leaf("pages", "Render a bulletin's pages to PNGs", _with_conn(_pages), _text_pages)
+    p = leaf("pages", "Render a bulletin's pages to PNGs sized for Read, each with its token "
+             "cost: whole pages, a zoomed region, or sheets of pages to scan",
+             _with_conn(_pages), _text_pages)
     parish(p)
     bulletin(p)
-    p.add_argument("--page", type=int, help="Only this page (default: all)")
-    p.add_argument("--dpi", type=int, default=150, help="Resolution (default 150)")
+    p.add_argument("--page", help="Only these pages: 3, 3-10 or 2,4-10 (default: all)")
+    p.add_argument("--region", help=f"Zoom into {page_images.REGION_HELP}; rendered to "
+                   f"{page_images.ZOOM_LONG_EDGE} px on its long edge, up to "
+                   f"{page_images.ZOOM_MAX_DPI} dpi")
+    p.add_argument("--sheet", action="store_true",
+                   help="Tile the pages into labelled sheets, each one image, to find which "
+                        f"pages to read (at least {page_images.SHEET_MIN_DPI} dpi per page)")
+    p.add_argument("--dpi", type=int,
+                   help=f"Resolution (default {page_images.PAGE_DPI} for a page; a region "
+                        "zooms; a sheet fits). Lowered when Read would shrink the image")
 
     p = leaf("grep", "Search the text of every bulletin with a stored PDF", _with_conn(_grep),
              _text_grep)
