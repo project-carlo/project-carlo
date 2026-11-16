@@ -33,11 +33,11 @@ promoted: 2026-09-26
 
 ## Publisher
 
-One bulletin, published by Catholic Family of South Buffalo (Family #31), covering 5 worship site(s). PR 14 modelled this as `catholic-family-south-buffalo`.
+One bulletin, published by Catholic Family of South Buffalo (Family #31), covering 4 worship sites (5 until St. Ambrose closed on 1 November 2026). PR 14 modelled this as `catholic-family-south-buffalo`.
 
 ## Worship sites
 
-St. Teresa Church; St. Martin of Tours Church; St. Ambrose Church; Holy Family Church; Our Lady of Perpetual Help Church. Each church record gives the Mass evidence. Churches of the family that no longer hold Mass are in excluded/ or open/.
+St. Teresa Church; St. Martin of Tours Church; Holy Family Church; Our Lady of Perpetual Help Church. Each church record gives the Mass evidence. Churches of the family that no longer hold Mass are in excluded/ or open/: St. Ambrose Church had its last Mass on 1 November 2026 (`excluded/st-ambrose-buffalo`; the family's central office stays at its 260 Okell St. site).
 
 Not a worship site here: the chapel of Mercy Hospital of Buffalo (565 Abbott Road). Every issue
 from 20 September to 25 October 2026 lists, among the week's Mass intentions on page 8, "12:00pm •
