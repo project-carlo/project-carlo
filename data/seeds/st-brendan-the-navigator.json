@@ -1,0 +1,675 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-brendan-the-navigator",
+  "status": "ready",
+  "as_of": "2026-11-15T16:17:14Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-16T21:49:13Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches, Maris Stella (Avalon) and St. Paul (Stone Harbor). The schedule box, Adoration list and Mass intentions agree in both bulletins read (Nov 8 and Nov 15, 2026); no history stored. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "4add3d9fef8806aa6ca217825d16776cfea0cab64c2fc5a2d5f24a336cd9b97c",
+      "fetched_at": "2026-11-15T16:17:14Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "9bf6df8e5b102f48e12c26e3c6922ea0d3d143a7409bc867e4b4662051b7b0bc",
+      "fetched_at": "2026-11-08T15:42:29Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maris-stella-avalon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4add3d9f",
+          "page": 1,
+          "said": "Maris Stella Church ... Saturday 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf6df8e",
+          "page": 1,
+          "said": "Maris Stella Church ... Saturday 4:30pm"
+        }
+      ],
+      "rationale": "R1: printed in the Parish Mass Schedule box of both bulletins read; the intentions list the Saturday Vigil 4:30pm (MS).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maris-stella-avalon",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4add3d9f",
+          "page": 1,
+          "said": "Maris Stella Church ... Saturday 4:30pm Confession | 3:30-4pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf6df8e",
+          "page": 1,
+          "said": "Maris Stella Church ... Saturday 4:30pm Confession | 3:30-4pm"
+        }
+      ],
+      "rationale": "R1: printed under Maris Stella's Saturday in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maris-stella-avalon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4add3d9f",
+          "page": 1,
+          "said": "Maris Stella Church ... Sunday 9am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf6df8e",
+          "page": 1,
+          "said": "Maris Stella Church ... Sunday 9am"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; the intentions list 9:00am (MS).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-stone-harbor",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4add3d9f",
+          "page": 1,
+          "said": "St. Paul Church ... Sunday 7:30am & 10:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf6df8e",
+          "page": 1,
+          "said": "St. Paul Church ... Sunday 7:30am & 10:15am"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; the intentions list 7:30am and 10:15am (SP).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-stone-harbor",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4add3d9f",
+          "page": 1,
+          "said": "St. Paul Church ... Sunday 7:30am & 10:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf6df8e",
+          "page": 1,
+          "said": "St. Paul Church ... Sunday 7:30am & 10:15am"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; the intentions list 7:30am and 10:15am (SP).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maris-stella-avalon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4add3d9f",
+          "page": 1,
+          "said": "Maris Stella Church ... Weekdays Tue, Thu, Sat | 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf6df8e",
+          "page": 1,
+          "said": "Maris Stella Church ... Weekdays Tue, Thu, Sat | 8am"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; the intentions place these 8:00am Masses at (MS).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maris-stella-avalon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4add3d9f",
+          "page": 1,
+          "said": "Maris Stella Church ... Weekdays Tue, Thu, Sat | 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf6df8e",
+          "page": 1,
+          "said": "Maris Stella Church ... Weekdays Tue, Thu, Sat | 8am"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; the intentions place these 8:00am Masses at (MS).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maris-stella-avalon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4add3d9f",
+          "page": 1,
+          "said": "Maris Stella Church ... Weekdays Tue, Thu, Sat | 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf6df8e",
+          "page": 1,
+          "said": "Maris Stella Church ... Weekdays Tue, Thu, Sat | 8am"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; the intentions place these 8:00am Masses at (MS).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-stone-harbor",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4add3d9f",
+          "page": 1,
+          "said": "St. Paul Church ... Weekdays Mon, Wed, Fri | 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf6df8e",
+          "page": 1,
+          "said": "St. Paul Church ... Weekdays Mon, Wed, Fri | 8am"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; the intentions place these 8:00am Masses at (SP).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-stone-harbor",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4add3d9f",
+          "page": 1,
+          "said": "St. Paul Church ... Weekdays Mon, Wed, Fri | 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf6df8e",
+          "page": 1,
+          "said": "St. Paul Church ... Weekdays Mon, Wed, Fri | 8am"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; the intentions place these 8:00am Masses at (SP).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-stone-harbor",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4add3d9f",
+          "page": 1,
+          "said": "St. Paul Church ... Weekdays Mon, Wed, Fri | 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf6df8e",
+          "page": 1,
+          "said": "St. Paul Church ... Weekdays Mon, Wed, Fri | 8am"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; the intentions place these 8:00am Masses at (SP).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maris-stella-avalon",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4add3d9f",
+          "page": 1,
+          "said": "Weekdays Tue, Thu, Sat | 8am Confession after Sat AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf6df8e",
+          "page": 1,
+          "said": "Weekdays Tue, Thu, Sat | 8am Confession after Sat AM Mass"
+        }
+      ],
+      "rationale": "R1, R10: Saturday 8am is a weekday Mass, so confession after it starts 30 minutes later with no end time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "maris-stella-avalon",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour after the 8:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4add3d9f",
+          "page": 1,
+          "said": "Holy Hour Thursday after Mass until 9:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf6df8e",
+          "page": 1,
+          "said": "Holy Hour Thursday after Mass until 9:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4add3d9f",
+          "page": 7,
+          "said": "Adoration Maris Stella: Thursday after 8am Mass - 9:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf6df8e",
+          "page": 7,
+          "said": "Adoration Maris Stella: Thursday after 8am Mass - 9:30am"
+        }
+      ],
+      "rationale": "R1, R10: start 30 minutes after the Thursday 8am weekday Mass at Maris Stella; end 9:30am as printed. Same in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-stone-harbor",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4add3d9f",
+          "page": 1,
+          "said": "St. Paul Church ... Holy Hour Wednesday | 6 - 7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf6df8e",
+          "page": 1,
+          "said": "St. Paul Church ... Holy Hour Wednesday | 6 - 7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4add3d9f",
+          "page": 7,
+          "said": "Adoration St. Paul Church: Wednesday from 6 - 7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf6df8e",
+          "page": 7,
+          "said": "Adoration St. Paul Church: Wednesday from 6 - 7pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and the Adoration list of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-stone-harbor",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4add3d9f",
+          "page": 7,
+          "said": "Adoration ... St. Paul Church: Wednesday from 6 - 7pm / First Friday after 8am Mass - Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf6df8e",
+          "page": 7,
+          "said": "Adoration ... St. Paul Church: Wednesday from 6 - 7pm / First Friday after 8am Mass - Noon"
+        }
+      ],
+      "rationale": "R1, R10, R11: the newest bulletin's Adoration list prints it under St. Paul, where the Friday 8am Mass is; start 30 minutes after that weekday Mass, end at noon. Neither bulletin's week (Nov 8, Nov 15) holds a first Friday, but both print the standing line.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4add3d9f",
+          "page": 7,
+          "said": "OPEN FOR PRIVATE PRAYER St. Paul Church: Daily 9am - 4pm; Sacred Heart Church: Daily 9am - 4pm; Maris Stella Church: Saturday Only, 9am - 3pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf6df8e",
+          "page": 7,
+          "said": "OPEN FOR PRIVATE PRAYER St. Paul Church: Daily 9am - 4pm; Sacred Heart Church: Daily 9am - 4pm; Maris Stella Church: Saturday Only, 9am - 3pm"
+        }
+      ],
+      "rationale": "R38, R26: church open hours for private prayer are not an Adoration schedule; nothing to record. Sacred Heart is not a parish church here and has no service listed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4add3d9f",
+          "page": 7,
+          "said": "Rosary Group Maris Stella Church: Tuesday evenings, 5:30pm; Divine Mercy Chaplet Maris Stella Tuesday after 8am Mass, St. Paul Wednesday after the 8am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bf6df8e",
+          "page": 7,
+          "said": "Rosary Group Maris Stella Church: Tuesday evenings, 5:30pm; Divine Mercy Chaplet Maris Stella Tuesday after 8am Mass, St. Paul Wednesday after the 8am Mass"
+        }
+      ],
+      "rationale": "R24: Rosary and Divine Mercy Chaplet are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
