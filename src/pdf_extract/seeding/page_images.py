@@ -9,9 +9,10 @@ its size and token cost, so the drafter sees what a choice costs.
 Three shapes, cheapest first:
 - a sheet (`--sheet`): several pages tiled into one labelled image, to find which pages
   hold something (an older issue's dated items) before reading them;
-- a page, at PAGE_DPI unless `--dpi` says otherwise: enough to find and read most text;
+- a page, at PAGE_DPI unless `--dpi` says otherwise: on 14 image-only Camden schedule
+  pages (191 times), Opus 5.5 read the same times at 100, 120 and 150 dpi;
 - a region (`--region`): part of a page, zoomed to ZOOM_LONG_EDGE px, for small print
-  and for every time read off an image.
+  and an unclear digit.
 """
 
 from __future__ import annotations

@@ -492,7 +492,7 @@ def _text_pages(r: Result) -> str:
     if len(r["images"]) > 1:
         lines.append(f"{len(r['images'])} images, ~{r['tokens']:,} tokens")
     if any(not im["region"] and len(im["pages"]) == 1 for im in r["images"]):
-        lines.append("Small print, and any time you cite: zoom with --page N --region "
+        lines.append("Small print or an unclear digit: zoom with --page N --region "
                      "(top-left, bottom, ... or x0,y0,x1,y1)")
     return "\n".join(lines)
 
