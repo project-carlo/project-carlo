@@ -20,6 +20,7 @@ from pypdf import PdfReader
 from pdf_extract.blobstore import CachedBlobStore, bulletin_pdf_key, get_store
 from pdf_extract.bulletin_week import bulletin_week
 from pdf_extract.model import DAYS, WEEKS_OF_MONTH, is_valid_hash, normalize_as_of
+from pdf_extract.seeding import page_images
 from pdf_extract.seeding.checks import COVERED_DAYS, covered_weeks
 from pdf_extract.seeding.files import (
     SEEDS_DIR,
@@ -225,36 +226,19 @@ def export_pdf(
 
 def render_pages(
     conn: sqlite3.Connection, parish_slug: str, ref: str, *,
-    page: int | None = None, dpi: int = 150,
+    page: str | int | None = None, dpi: int | None = None,
+    region: str | None = None, sheet: bool = False,
     work_dir: Path = WORK_DIR,
 ) -> dict[str, Any]:
-    """`seed pages`: render one page, or all, to PNGs for a closer look."""
-    if not 36 <= dpi <= 600:
-        raise SeedError("--dpi must be between 36 and 600")
+    """`seed pages`: pages, a region of them or sheets of them as PNGs (`page_images`)."""
     bulletin = resolve_bulletin(conn, parish_slug, ref)
     data = bulletin_pdf(parish_slug, bulletin["content_hash"])
-    out_dir = work_dir / parish_slug
-    out_dir.mkdir(parents=True, exist_ok=True)
-    pdf = pdfium.PdfDocument(data)
     try:
-        total = len(pdf)
-        if page is not None and not 1 <= page <= total:
-            raise SeedError(f"The bulletin has pages 1 to {total}")
-        numbers = [page] if page is not None else list(range(1, total + 1))
-        paths = []
-        for number in numbers:
-            pdf_page = pdf[number - 1]
-            try:
-                image = pdf_page.render(scale=dpi / 72).to_pil()
-            finally:
-                pdf_page.close()
-            path = out_dir / f"{bulletin['short']}-p{number}-{dpi}dpi.png"
-            image.save(path, format="PNG")
-            paths.append(path.as_posix())
-    finally:
-        pdf.close()
-    return {"parish": parish_slug, "bulletin": bulletin["content_hash"], "pages": total,
-            "paths": paths}
+        result = page_images.render(data, work_dir / parish_slug, bulletin["short"],
+                                    page=page, dpi=dpi, region=region, sheet=sheet)
+    except page_images.PageImageError as e:
+        raise SeedError(str(e)) from None
+    return {"parish": parish_slug, "bulletin": bulletin["content_hash"], **result}
 
 
 def page_texts(

@@ -512,8 +512,11 @@ def test_pdf_and_pages_are_written_for_the_agent(conn, tmp_path: Path):
     assert pdf["pages"] == 3
     pages = render_pages(conn, PARISH, "latest", page=2, dpi=50, work_dir=tmp_path)
     assert len(pages["paths"]) == 1 and Path(pages["paths"][0]).read_bytes()[:4] == b"\x89PNG"
+    assert pages["images"][0]["tokens"] == pages["tokens"] > 0
     with pytest.raises(SeedError, match="pages 1 to 3"):
         render_pages(conn, PARISH, "latest", page=9, work_dir=tmp_path)
+    with pytest.raises(SeedError, match="--region"):
+        render_pages(conn, PARISH, "latest", page=1, region="middle", work_dir=tmp_path)
 
 
 def test_text_reads_each_page_and_marks_the_ones_that_are_only_images(conn):
