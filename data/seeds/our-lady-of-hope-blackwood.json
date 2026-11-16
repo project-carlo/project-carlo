@@ -1,0 +1,1993 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-hope-blackwood",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:47:32Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-16T21:12:37Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches. Both bulletins read (Nov 8 and Nov 15, image pages) print the same schedule box; it marks only the Spanish Masses as St. Jude, and neither it nor the website names the church for the English weekend and weekday schedules. Open: two grouped questions (weekend; weekday incl. Friday Adoration and confessions) on which church, leaning St. Agnes. Dated Christmas/New Year and Guadalupe Masses are explicitly at St. Agnes.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "53744ff86249b47f7a722da259579a519a95cdd1528def6efa9bb393167715ef",
+      "fetched_at": "2026-11-15T16:47:32Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "1367b9742e027a94151ca3768bad42ebfb08751a4f12c67a2d4a9c0122ba1dad",
+      "fetched_at": "2026-11-08T15:55:53Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-blackwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 1,
+          "said": "MISA EN ESPAÑOL (ST. JUDE CHURCH) SÁBADO: 6:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1367b974",
+          "page": 1,
+          "said": "MISA EN ESPAÑOL (ST. JUDE CHURCH) SÁBADO: 6:00PM"
+        }
+      ],
+      "rationale": "R1: printed under the St. Jude Spanish Mass heading in both bulletins read (Nov 8 and Nov 15).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-blackwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 1,
+          "said": "MISA EN ESPAÑOL (ST. JUDE CHURCH) DOMINGO: 9:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1367b974",
+          "page": 1,
+          "said": "MISA EN ESPAÑOL (ST. JUDE CHURCH) DOMINGO: 9:30AM"
+        }
+      ],
+      "rationale": "R1: printed under the St. Jude Spanish Mass heading in both bulletins read (Nov 8 and Nov 15).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 1,
+          "said": "MASS SCHEDULE SATURDAY: 4:30PM VIGIL"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1367b974",
+          "page": 1,
+          "said": "SATURDAY: 4:30PM VIGIL"
+        },
+        {
+          "source": "website",
+          "url": "http://ourladyofhopenj.org/",
+          "said": "Weekend Masses Saturday: 4:30pm Vigil"
+        }
+      ],
+      "rationale": "R32: the schedule box gives no church, only the Spanish Masses are marked St. Jude; the website gives no church either. Leaning St. Agnes: the parish office and parish center are at St. Agnes's address, the Dec 5 tree lighting 'after 4:30 Mass' is followed by dinner in the parish center (latest p7), youth are asked to 'join us at the 6:00PM Mass' and 'walk over to the Parish Center after' (1367b974 p8), and every Christmas/New Year Mass is at St. Agnes (latest p7).",
+      "question": "The weekend Mass schedule and Saturday afternoon confessions name no church. Which church are they at?",
+      "options": [
+        {
+          "label": "St. Agnes",
+          "entry": {
+            "church_slug": "st-agnes-blackwood",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "St. Jude",
+          "entry": {
+            "church_slug": "st-jude-blackwood",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekend"
+    },
+    {
+      "id": "s4",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 1,
+          "said": "SUNDAY: 7:30AM, 9:30AM, 11:30AM, 6:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1367b974",
+          "page": 1,
+          "said": "SUNDAY: 7:30AM, 9:30AM, 11:30AM, 6:00PM"
+        },
+        {
+          "source": "website",
+          "url": "http://ourladyofhopenj.org/",
+          "said": "Sunday: 7:30am, 9:30am, 11:30am, 6:00pm"
+        }
+      ],
+      "rationale": "R32: the schedule box gives no church, only the Spanish Masses are marked St. Jude; the website gives no church either. Leaning St. Agnes: the parish office and parish center are at St. Agnes's address, the Dec 5 tree lighting 'after 4:30 Mass' is followed by dinner in the parish center (latest p7), youth are asked to 'join us at the 6:00PM Mass' and 'walk over to the Parish Center after' (1367b974 p8), and every Christmas/New Year Mass is at St. Agnes (latest p7).",
+      "question": "The weekend Mass schedule and Saturday afternoon confessions name no church. Which church are they at?",
+      "options": [
+        {
+          "label": "St. Agnes",
+          "entry": {
+            "church_slug": "st-agnes-blackwood",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "St. Jude",
+          "entry": {
+            "church_slug": "st-jude-blackwood",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekend"
+    },
+    {
+      "id": "s5",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 1,
+          "said": "SUNDAY: 7:30AM, 9:30AM, 11:30AM, 6:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1367b974",
+          "page": 1,
+          "said": "SUNDAY: 7:30AM, 9:30AM, 11:30AM, 6:00PM"
+        },
+        {
+          "source": "website",
+          "url": "http://ourladyofhopenj.org/",
+          "said": "Sunday: 7:30am, 9:30am, 11:30am, 6:00pm"
+        }
+      ],
+      "rationale": "R32: the schedule box gives no church, only the Spanish Masses are marked St. Jude; the website gives no church either. Leaning St. Agnes: the parish office and parish center are at St. Agnes's address, the Dec 5 tree lighting 'after 4:30 Mass' is followed by dinner in the parish center (latest p7), youth are asked to 'join us at the 6:00PM Mass' and 'walk over to the Parish Center after' (1367b974 p8), and every Christmas/New Year Mass is at St. Agnes (latest p7).",
+      "question": "The weekend Mass schedule and Saturday afternoon confessions name no church. Which church are they at?",
+      "options": [
+        {
+          "label": "St. Agnes",
+          "entry": {
+            "church_slug": "st-agnes-blackwood",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "St. Jude",
+          "entry": {
+            "church_slug": "st-jude-blackwood",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekend"
+    },
+    {
+      "id": "s6",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 1,
+          "said": "SUNDAY: 7:30AM, 9:30AM, 11:30AM, 6:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1367b974",
+          "page": 1,
+          "said": "SUNDAY: 7:30AM, 9:30AM, 11:30AM, 6:00PM"
+        },
+        {
+          "source": "website",
+          "url": "http://ourladyofhopenj.org/",
+          "said": "Sunday: 7:30am, 9:30am, 11:30am, 6:00pm"
+        }
+      ],
+      "rationale": "R32: the schedule box gives no church, only the Spanish Masses are marked St. Jude; the website gives no church either. Leaning St. Agnes: the parish office and parish center are at St. Agnes's address, the Dec 5 tree lighting 'after 4:30 Mass' is followed by dinner in the parish center (latest p7), youth are asked to 'join us at the 6:00PM Mass' and 'walk over to the Parish Center after' (1367b974 p8), and every Christmas/New Year Mass is at St. Agnes (latest p7).",
+      "question": "The weekend Mass schedule and Saturday afternoon confessions name no church. Which church are they at?",
+      "options": [
+        {
+          "label": "St. Agnes",
+          "entry": {
+            "church_slug": "st-agnes-blackwood",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "11:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "St. Jude",
+          "entry": {
+            "church_slug": "st-jude-blackwood",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "11:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekend"
+    },
+    {
+      "id": "s7",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 1,
+          "said": "SUNDAY: 7:30AM, 9:30AM, 11:30AM, 6:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1367b974",
+          "page": 1,
+          "said": "SUNDAY: 7:30AM, 9:30AM, 11:30AM, 6:00PM"
+        },
+        {
+          "source": "website",
+          "url": "http://ourladyofhopenj.org/",
+          "said": "Sunday: 7:30am, 9:30am, 11:30am, 6:00pm"
+        }
+      ],
+      "rationale": "R32: the schedule box gives no church, only the Spanish Masses are marked St. Jude; the website gives no church either. Leaning St. Agnes: the parish office and parish center are at St. Agnes's address, the Dec 5 tree lighting 'after 4:30 Mass' is followed by dinner in the parish center (latest p7), youth are asked to 'join us at the 6:00PM Mass' and 'walk over to the Parish Center after' (1367b974 p8), and every Christmas/New Year Mass is at St. Agnes (latest p7).",
+      "question": "The weekend Mass schedule and Saturday afternoon confessions name no church. Which church are they at?",
+      "options": [
+        {
+          "label": "St. Agnes",
+          "entry": {
+            "church_slug": "st-agnes-blackwood",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "18:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "St. Jude",
+          "entry": {
+            "church_slug": "st-jude-blackwood",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "18:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekend"
+    },
+    {
+      "id": "s8",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 1,
+          "said": "CONFESSIONS SATURDAY: 9:30AM - 10:00AM AND 3:30PM - 4:15PM OR BY APPOINTMENT"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1367b974",
+          "page": 1,
+          "said": "SATURDAY: 9:30AM - 10:00AM AND 3:30PM - 4:15PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 7,
+          "said": "Sacrament of Penance 3:30pm - 4:15pm Saturday, November 28th, December 5th, 12th, 19th"
+        }
+      ],
+      "rationale": "R32: no church given; it runs up to the 4:30 PM Vigil, so it goes with the weekend Masses. Leaning St. Agnes for the reasons on the weekend Masses (parish office/center at St. Agnes, all Christmas Masses at St. Agnes).",
+      "question": "The weekend Mass schedule and Saturday afternoon confessions name no church. Which church are they at?",
+      "options": [
+        {
+          "label": "St. Agnes",
+          "entry": {
+            "church_slug": "st-agnes-blackwood",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:30",
+            "end_time": "16:15",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "St. Jude",
+          "entry": {
+            "church_slug": "st-jude-blackwood",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:30",
+            "end_time": "16:15",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekend"
+    },
+    {
+      "id": "s9",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 1,
+          "said": "WEEK DAY MASS MONDAY-FRIDAY: 8:00AM AND 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1367b974",
+          "page": 1,
+          "said": "MONDAY-FRIDAY: 8:00AM AND 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 3,
+          "said": "Monday-Friday intentions list 8:00 am and 9:00 am each day"
+        }
+      ],
+      "rationale": "R32: no church given in the bulletin or on the website. A separate group from the weekend because weekday services could be at the other church. Leaning St. Agnes: the parish office is there and nothing places weekday services at St. Jude; the bulletins mention a 'Chapel' (sanctuary candle, youth Pizza & Prayer) whose location is not given.",
+      "question": "The weekday Masses, Saturday 9 AM Mass, Friday Adoration, and Monday/Saturday-morning confessions name no church. Which church are they at?",
+      "options": [
+        {
+          "label": "St. Agnes",
+          "entry": {
+            "church_slug": "st-agnes-blackwood",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "St. Jude",
+          "entry": {
+            "church_slug": "st-jude-blackwood",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekday"
+    },
+    {
+      "id": "s10",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 1,
+          "said": "WEEK DAY MASS MONDAY-FRIDAY: 8:00AM AND 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1367b974",
+          "page": 1,
+          "said": "MONDAY-FRIDAY: 8:00AM AND 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 3,
+          "said": "Monday-Friday intentions list 8:00 am and 9:00 am each day"
+        }
+      ],
+      "rationale": "R32: no church given in the bulletin or on the website. A separate group from the weekend because weekday services could be at the other church. Leaning St. Agnes: the parish office is there and nothing places weekday services at St. Jude; the bulletins mention a 'Chapel' (sanctuary candle, youth Pizza & Prayer) whose location is not given.",
+      "question": "The weekday Masses, Saturday 9 AM Mass, Friday Adoration, and Monday/Saturday-morning confessions name no church. Which church are they at?",
+      "options": [
+        {
+          "label": "St. Agnes",
+          "entry": {
+            "church_slug": "st-agnes-blackwood",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "St. Jude",
+          "entry": {
+            "church_slug": "st-jude-blackwood",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekday"
+    },
+    {
+      "id": "s11",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 1,
+          "said": "WEEK DAY MASS MONDAY-FRIDAY: 8:00AM AND 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1367b974",
+          "page": 1,
+          "said": "MONDAY-FRIDAY: 8:00AM AND 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 3,
+          "said": "Monday-Friday intentions list 8:00 am and 9:00 am each day"
+        }
+      ],
+      "rationale": "R32: no church given in the bulletin or on the website. A separate group from the weekend because weekday services could be at the other church. Leaning St. Agnes: the parish office is there and nothing places weekday services at St. Jude; the bulletins mention a 'Chapel' (sanctuary candle, youth Pizza & Prayer) whose location is not given.",
+      "question": "The weekday Masses, Saturday 9 AM Mass, Friday Adoration, and Monday/Saturday-morning confessions name no church. Which church are they at?",
+      "options": [
+        {
+          "label": "St. Agnes",
+          "entry": {
+            "church_slug": "st-agnes-blackwood",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "St. Jude",
+          "entry": {
+            "church_slug": "st-jude-blackwood",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekday"
+    },
+    {
+      "id": "s12",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 1,
+          "said": "WEEK DAY MASS MONDAY-FRIDAY: 8:00AM AND 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1367b974",
+          "page": 1,
+          "said": "MONDAY-FRIDAY: 8:00AM AND 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 3,
+          "said": "Monday-Friday intentions list 8:00 am and 9:00 am each day"
+        }
+      ],
+      "rationale": "R32: no church given in the bulletin or on the website. A separate group from the weekend because weekday services could be at the other church. Leaning St. Agnes: the parish office is there and nothing places weekday services at St. Jude; the bulletins mention a 'Chapel' (sanctuary candle, youth Pizza & Prayer) whose location is not given.",
+      "question": "The weekday Masses, Saturday 9 AM Mass, Friday Adoration, and Monday/Saturday-morning confessions name no church. Which church are they at?",
+      "options": [
+        {
+          "label": "St. Agnes",
+          "entry": {
+            "church_slug": "st-agnes-blackwood",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "St. Jude",
+          "entry": {
+            "church_slug": "st-jude-blackwood",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekday"
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 1,
+          "said": "WEEK DAY MASS MONDAY-FRIDAY: 8:00AM AND 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1367b974",
+          "page": 1,
+          "said": "MONDAY-FRIDAY: 8:00AM AND 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 3,
+          "said": "Monday-Friday intentions list 8:00 am and 9:00 am each day"
+        }
+      ],
+      "rationale": "R32: no church given in the bulletin or on the website. A separate group from the weekend because weekday services could be at the other church. Leaning St. Agnes: the parish office is there and nothing places weekday services at St. Jude; the bulletins mention a 'Chapel' (sanctuary candle, youth Pizza & Prayer) whose location is not given.",
+      "question": "The weekday Masses, Saturday 9 AM Mass, Friday Adoration, and Monday/Saturday-morning confessions name no church. Which church are they at?",
+      "options": [
+        {
+          "label": "St. Agnes",
+          "entry": {
+            "church_slug": "st-agnes-blackwood",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "St. Jude",
+          "entry": {
+            "church_slug": "st-jude-blackwood",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekday"
+    },
+    {
+      "id": "s14",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 1,
+          "said": "WEEK DAY MASS MONDAY-FRIDAY: 8:00AM AND 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1367b974",
+          "page": 1,
+          "said": "MONDAY-FRIDAY: 8:00AM AND 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 3,
+          "said": "Monday-Friday intentions list 8:00 am and 9:00 am each day"
+        }
+      ],
+      "rationale": "R32: no church given in the bulletin or on the website. Leaning St. Agnes: the parish office is there and nothing places weekday services at St. Jude.",
+      "question": "The weekday Masses, Saturday 9 AM Mass, Friday Adoration, and Monday/Saturday-morning confessions name no church. Which church are they at?",
+      "options": [
+        {
+          "label": "St. Agnes",
+          "entry": {
+            "church_slug": "st-agnes-blackwood",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "St. Jude",
+          "entry": {
+            "church_slug": "st-jude-blackwood",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekday"
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 1,
+          "said": "WEEK DAY MASS MONDAY-FRIDAY: 8:00AM AND 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1367b974",
+          "page": 1,
+          "said": "MONDAY-FRIDAY: 8:00AM AND 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 3,
+          "said": "Monday-Friday intentions list 8:00 am and 9:00 am each day"
+        }
+      ],
+      "rationale": "R32: no church given in the bulletin or on the website. Leaning St. Agnes: the parish office is there and nothing places weekday services at St. Jude.",
+      "question": "The weekday Masses, Saturday 9 AM Mass, Friday Adoration, and Monday/Saturday-morning confessions name no church. Which church are they at?",
+      "options": [
+        {
+          "label": "St. Agnes",
+          "entry": {
+            "church_slug": "st-agnes-blackwood",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "St. Jude",
+          "entry": {
+            "church_slug": "st-jude-blackwood",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekday"
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 1,
+          "said": "WEEK DAY MASS MONDAY-FRIDAY: 8:00AM AND 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1367b974",
+          "page": 1,
+          "said": "MONDAY-FRIDAY: 8:00AM AND 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 3,
+          "said": "Monday-Friday intentions list 8:00 am and 9:00 am each day"
+        }
+      ],
+      "rationale": "R32: no church given in the bulletin or on the website. Leaning St. Agnes: the parish office is there and nothing places weekday services at St. Jude.",
+      "question": "The weekday Masses, Saturday 9 AM Mass, Friday Adoration, and Monday/Saturday-morning confessions name no church. Which church are they at?",
+      "options": [
+        {
+          "label": "St. Agnes",
+          "entry": {
+            "church_slug": "st-agnes-blackwood",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "St. Jude",
+          "entry": {
+            "church_slug": "st-jude-blackwood",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekday"
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 1,
+          "said": "WEEK DAY MASS MONDAY-FRIDAY: 8:00AM AND 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1367b974",
+          "page": 1,
+          "said": "MONDAY-FRIDAY: 8:00AM AND 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 3,
+          "said": "Monday-Friday intentions list 8:00 am and 9:00 am each day"
+        }
+      ],
+      "rationale": "R32: no church given in the bulletin or on the website. Leaning St. Agnes: the parish office is there and nothing places weekday services at St. Jude.",
+      "question": "The weekday Masses, Saturday 9 AM Mass, Friday Adoration, and Monday/Saturday-morning confessions name no church. Which church are they at?",
+      "options": [
+        {
+          "label": "St. Agnes",
+          "entry": {
+            "church_slug": "st-agnes-blackwood",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "St. Jude",
+          "entry": {
+            "church_slug": "st-jude-blackwood",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekday"
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 1,
+          "said": "WEEK DAY MASS MONDAY-FRIDAY: 8:00AM AND 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1367b974",
+          "page": 1,
+          "said": "MONDAY-FRIDAY: 8:00AM AND 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 3,
+          "said": "Monday-Friday intentions list 8:00 am and 9:00 am each day"
+        }
+      ],
+      "rationale": "R32: no church given in the bulletin or on the website. Leaning St. Agnes: the parish office is there and nothing places weekday services at St. Jude.",
+      "question": "The weekday Masses, Saturday 9 AM Mass, Friday Adoration, and Monday/Saturday-morning confessions name no church. Which church are they at?",
+      "options": [
+        {
+          "label": "St. Agnes",
+          "entry": {
+            "church_slug": "st-agnes-blackwood",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "St. Jude",
+          "entry": {
+            "church_slug": "st-jude-blackwood",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekday"
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 1,
+          "said": "SATURDAY: 9:00AM MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1367b974",
+          "page": 1,
+          "said": "SATURDAY: 9:00AM MASS"
+        }
+      ],
+      "rationale": "R32: no church given in the bulletin or on the website. Leaning St. Agnes: the parish office is there and nothing places weekday services at St. Jude.",
+      "question": "The weekday Masses, Saturday 9 AM Mass, Friday Adoration, and Monday/Saturday-morning confessions name no church. Which church are they at?",
+      "options": [
+        {
+          "label": "St. Agnes",
+          "entry": {
+            "church_slug": "st-agnes-blackwood",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "St. Jude",
+          "entry": {
+            "church_slug": "st-jude-blackwood",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekday"
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 1,
+          "said": "FRIDAY: FOLLOWING 9AM MASS, EXPOSITION AND ADORATION OF THE BLESSED SACRAMENT 6:30PM BENEDICTION"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1367b974",
+          "page": 1,
+          "said": "FRIDAY: FOLLOWING 9AM MASS, EXPOSITION AND ADORATION OF THE BLESSED SACRAMENT 6:30PM BENEDICTION"
+        }
+      ],
+      "rationale": "R32: no church given. Times by R10: after the weekday 9 AM Mass is 9:30 AM; it ends with Benediction at 6:30 PM (POLICY: Benediction note). It follows the Friday 9 AM Mass, so it is at the same church as that Mass. Leaning St. Agnes as for the weekday Masses.",
+      "question": "The weekday Masses, Saturday 9 AM Mass, Friday Adoration, and Monday/Saturday-morning confessions name no church. Which church are they at?",
+      "options": [
+        {
+          "label": "St. Agnes",
+          "entry": {
+            "church_slug": "st-agnes-blackwood",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": "18:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Benediction"
+          },
+          "leaning": true
+        },
+        {
+          "label": "St. Jude",
+          "entry": {
+            "church_slug": "st-jude-blackwood",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": "18:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Benediction"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekday"
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 1,
+          "said": "CONFESSIONS SATURDAY: 9:30AM - 10:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1367b974",
+          "page": 1,
+          "said": "SATURDAY: 9:30AM - 10:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 7,
+          "said": "Sacrament of Penance 9:30am - 10:00am Saturday, November 28th, December 5th, 12th, 19th"
+        }
+      ],
+      "rationale": "R32: no church given; it follows the Saturday 9 AM Mass. Leaning St. Agnes as for the weekday Masses.",
+      "question": "The weekday Masses, Saturday 9 AM Mass, Friday Adoration, and Monday/Saturday-morning confessions name no church. Which church are they at?",
+      "options": [
+        {
+          "label": "St. Agnes",
+          "entry": {
+            "church_slug": "st-agnes-blackwood",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": "10:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "St. Jude",
+          "entry": {
+            "church_slug": "st-jude-blackwood",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": "10:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekday"
+    },
+    {
+      "id": "s22",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 1,
+          "said": "CONFESSIONS MONDAY: 7:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1367b974",
+          "page": 1,
+          "said": "CONFESSIONS MONDAY: 7:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 7,
+          "said": "Sacrament of Penance 7:30pm Monday, November 30th, December 7th, 14th, 21st"
+        },
+        {
+          "source": "website",
+          "url": "http://ourladyofhopenj.org/",
+          "said": "Reconciliation ... Monday: 7:30-08:00pm"
+        }
+      ],
+      "rationale": "R32: no church given; it follows the Monday Rosary/Novena. The bulletin gives no end time, so end is left null (the website's 7:30-8:00 would also fit). Leaning St. Agnes as for the weekday Masses.",
+      "question": "The weekday Masses, Saturday 9 AM Mass, Friday Adoration, and Monday/Saturday-morning confessions name no church. Which church are they at?",
+      "options": [
+        {
+          "label": "St. Agnes",
+          "entry": {
+            "church_slug": "st-agnes-blackwood",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "19:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "St. Jude",
+          "entry": {
+            "church_slug": "st-jude-blackwood",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "19:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekday"
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 1,
+          "said": "MONDAY: 6:30PM ROSARY 7:00PM MIRACULOUS MEDAL NOVENA"
+        }
+      ],
+      "rationale": "R24: a Rosary and a Novena are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 1,
+          "said": "HOLY DAYS OF OBLIGATION EVE OF HOLY DAY: 7:00PM HOLY DAY: 8:00AM, 9:00AM, 12:10PM, 7:00PM"
+        }
+      ],
+      "rationale": "POLICY, Dates: the generic holy-day schedule pins no date and no church; the next holy day (Dec 8) is not printed with a date, so no dated entries are projected. Update mode will read the bulletin that announces it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 8,
+          "said": "Pizza & Prayer, first Sunday: Mass 6 PM followed by pizza & adoration until 8:30 PM, in the meeting room after the 6PM Mass; Young Hope calendar: Pizza & Prayer 7:15 PM Chapel (Dec 6, Jan 10, Feb 7...)"
+        }
+      ],
+      "rationale": "R24, POLICY Final source checks: Adoration inside the youth ministry's Pizza & Prayer evening has no start time of its own (7:15 PM is the event's start, pizza comes first), the 'Chapel' is not located, and the dates are not strictly first Sundays (Jan 10). The 6 PM Mass is the weekly Sunday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 1,
+          "said": "CONFESSIONS ... OR BY APPOINTMENT"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-blackwood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-12",
+        "start_time": "20:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Feast of Our Lady of Guadalupe"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 7,
+          "said": "Feast of Our Lady of Guadalupe Celebration December 12 ... 8:30pm: Mass St. Agnes Church"
+        }
+      ],
+      "rationale": "R1, R16: a dated special Mass at a named church, after as_of. The 5:30 PM Novena & Rosary at St. Jude is a devotion (R24).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-blackwood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 7,
+          "said": "CHRISTMAS EVE MASSES 4:00pm St. Agnes Church 6:00pm St. Agnes Church 8:00pm St. Agnes Church"
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Eve Masses at St. Agnes, after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-blackwood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 7,
+          "said": "CHRISTMAS EVE MASSES 4:00pm St. Agnes Church 6:00pm St. Agnes Church 8:00pm St. Agnes Church"
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Eve Masses at St. Agnes, after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-blackwood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "20:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 7,
+          "said": "CHRISTMAS EVE MASSES 4:00pm St. Agnes Church 6:00pm St. Agnes Church 8:00pm St. Agnes Church"
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Eve Masses at St. Agnes, after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-blackwood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "00:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Midnight Mass"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 7,
+          "said": "11:30pm (Choir Prelude) 12:00am St. Agnes Church"
+        }
+      ],
+      "rationale": "R1, R16: the 12:00 AM Christmas Mass is listed under Christmas Eve, so it falls at midnight starting December 25. The 11:30 PM choir prelude is not a Mass (R24).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-blackwood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Day"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 7,
+          "said": "CHRISTMAS DAY MASSES 7:30am 9:30am 11:30am St. Agnes Church (No Evening Mass)"
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Day Masses at St. Agnes. 'No Evening Mass' cancels no weekly slot (Friday has none), so no cancellation (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-blackwood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Day"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 7,
+          "said": "CHRISTMAS DAY MASSES 7:30am 9:30am 11:30am St. Agnes Church (No Evening Mass)"
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Day Masses at St. Agnes. 'No Evening Mass' cancels no weekly slot (Friday has none), so no cancellation (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-blackwood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Day"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 7,
+          "said": "CHRISTMAS DAY MASSES 7:30am 9:30am 11:30am St. Agnes Church (No Evening Mass)"
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Day Masses at St. Agnes. 'No Evening Mass' cancels no weekly slot (Friday has none), so no cancellation (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s35",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-blackwood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-31",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "New Year's Eve"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 7,
+          "said": "NEW YEAR'S EVE MASSES 7:00pm St. Agnes Church"
+        }
+      ],
+      "rationale": "R1, R16: dated New Year's Eve Mass at St. Agnes.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s36",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-blackwood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2027-01-01",
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "New Year's Day"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 7,
+          "said": "NEW YEAR'S DAY MASSES 7:30am 9:30am 11:30am St. Agnes Church (No Evening Mass)"
+        }
+      ],
+      "rationale": "R1, R16: dated New Year's Day Masses at St. Agnes; 'No Evening Mass' cancels no weekly slot (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s37",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-blackwood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2027-01-01",
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "New Year's Day"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 7,
+          "said": "NEW YEAR'S DAY MASSES 7:30am 9:30am 11:30am St. Agnes Church (No Evening Mass)"
+        }
+      ],
+      "rationale": "R1, R16: dated New Year's Day Masses at St. Agnes; 'No Evening Mass' cancels no weekly slot (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s38",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-blackwood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2027-01-01",
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "New Year's Day"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53744ff8",
+          "page": 7,
+          "said": "NEW YEAR'S DAY MASSES 7:30am 9:30am 11:30am St. Agnes Church (No Evening Mass)"
+        }
+      ],
+      "rationale": "R1, R16: dated New Year's Day Masses at St. Agnes; 'No Evening Mass' cancels no weekly slot (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
