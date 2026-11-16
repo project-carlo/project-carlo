@@ -4,7 +4,7 @@ state: NY
 website: https://www.buffalodiocese.org
 status: promoted
 gcatholic: buff0
-promoted: 2026-10-27
+promoted: 2026-11-16
 ---
 
 ## Sources
@@ -103,3 +103,16 @@ promoted: 2026-10-27
   or the CCBN Central Office Chapel (16 Peter St., on Assumption's parcel; its weekday Mass moved
   to St. Margaret on 12 October); both explained in their parish records. Promoted. Coverage:
   directory 167/167; families 146/151; mass-times 141/145; GCatholic 174/216.
+- 2026-11-16: Phase 1 of a check against the diocese's own lists (parish finder and weekend
+  Mass-times pages, re-read 2026-11-14; the finder is unchanged since 26 September, and the
+  Mass-times pages differ only in Olean's 7:30 a.m. Sunday Mass and a second spelling of Holy
+  Family, Niagara Falls). St. Ambrose, Buffalo closed: the South Buffalo bulletin of 18 October
+  announced "Final Mass at St. Ambrose, November 1", and from 8 November the masthead lists only
+  Holy Family and St. Martin of Tours. It is excluded as closed (`last_mass` 2026-11-01) and
+  removed from the live CSVs; the diocese's finder and Mass-times pages still list it. Our Lady
+  of Bistrica: the diocesan pages still give three weekend Masses, but the 15 November bulletin
+  says weekend Masses ended and two Tuesday 6:30 p.m. Masses a month remain, as the live schedule
+  already shows; evidence added, no schedule change. SS. Columba-Brigid and St. Anthony of Padua
+  ran one or two issues behind on the site: fetch-check picks each page's newest issue, and the
+  parishes post after the weekly fetch, so neither is a fetch gap (noted on both records).
+  Promoted. Coverage: directory 167/167; families 146/151; mass-times 141/145; GCatholic 174/216.
