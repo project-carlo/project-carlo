@@ -1,0 +1,1042 @@
+{
+  "schema_version": 1,
+  "parish_slug": "infant-jesus",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:47:25Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-16T20:39:10Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches: St. Margaret (Woodbury Heights) holds Sat 4 PM, Sun 8:30/10, Mon-Sat 8:30 AM and Saturday confessions; St. John Vianney (Deptford) holds Sun 11:30. Both November 2026 bulletins (all-image PDFs, read as rendered pages) agree. Thanksgiving: 9 AM Mass replaces 8:30. Open: where the Friday Adoration chapel (Our Lady of Guadalupe) is, and a website-only Sunday confession. The 6:45 AM school-day convent Mass is excluded.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "324bb165c74ed27c3ed09a9b27bf7e26efb1d110f40d366744df63117742ab97",
+      "fetched_at": "2026-11-15T16:47:25Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "27fcbfd333bb112861fe0c1ba84946936499168e464d44464dcc14e71f3060d0",
+      "fetched_at": "2026-11-08T15:55:49Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-woodbury-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "324bb165",
+          "page": 1,
+          "said": "Saturday: 4:00 PM at St. Margaret (Live Streamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27fcbfd3",
+          "page": 1,
+          "said": "Saturday: 4:00 PM at St. Margaret (Live Streamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "324bb165",
+          "page": 3,
+          "said": "Saturday 4:00 PM intentions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27fcbfd3",
+          "page": 3,
+          "said": "Saturday 4:00 PM intentions"
+        }
+      ],
+      "rationale": "R1: printed in the Liturgical Schedule box of both bulletins read; intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-woodbury-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "324bb165",
+          "page": 1,
+          "said": "Sunday: 8:30, 10:00 AM at St. Margaret"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27fcbfd3",
+          "page": 1,
+          "said": "Sunday: 8:30, 10:00 AM at St. Margaret"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read. The November 22 Christ the King 10:00 AM Solemn Mass and procession (latest p6) is the regular 10:00 Mass, so no separate slot (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-woodbury-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "324bb165",
+          "page": 1,
+          "said": "Sunday: 8:30, 10:00 AM at St. Margaret"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27fcbfd3",
+          "page": 1,
+          "said": "Sunday: 8:30, 10:00 AM at St. Margaret"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read. The November 22 Christ the King 10:00 AM Solemn Mass and procession (latest p6) is the regular 10:00 Mass, so no separate slot (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-vianney-deptford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "324bb165",
+          "page": 1,
+          "said": "11:30 AM at St. John Vianney"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27fcbfd3",
+          "page": 1,
+          "said": "11:30 AM at St. John Vianney"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-woodbury-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "324bb165",
+          "page": 1,
+          "said": "Daily Mass ... Mondays thru Saturday 8:30 AM at St. Margaret"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27fcbfd3",
+          "page": 1,
+          "said": "Daily Mass ... Mondays thru Saturday 8:30 AM at St. Margaret"
+        },
+        {
+          "source": "agent",
+          "bulletin": "324bb165",
+          "page": 3,
+          "said": "8:30 AM in each day's intentions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27fcbfd3",
+          "page": 3,
+          "said": "8:30 AM in each day's intentions"
+        }
+      ],
+      "rationale": "R1: Daily Mass box of both bulletins; the intentions list 8:30 AM every Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-woodbury-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "324bb165",
+          "page": 1,
+          "said": "Daily Mass ... Mondays thru Saturday 8:30 AM at St. Margaret"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27fcbfd3",
+          "page": 1,
+          "said": "Daily Mass ... Mondays thru Saturday 8:30 AM at St. Margaret"
+        },
+        {
+          "source": "agent",
+          "bulletin": "324bb165",
+          "page": 3,
+          "said": "8:30 AM in each day's intentions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27fcbfd3",
+          "page": 3,
+          "said": "8:30 AM in each day's intentions"
+        }
+      ],
+      "rationale": "R1: Daily Mass box of both bulletins; the intentions list 8:30 AM every Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-woodbury-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "324bb165",
+          "page": 1,
+          "said": "Daily Mass ... Mondays thru Saturday 8:30 AM at St. Margaret"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27fcbfd3",
+          "page": 1,
+          "said": "Daily Mass ... Mondays thru Saturday 8:30 AM at St. Margaret"
+        },
+        {
+          "source": "agent",
+          "bulletin": "324bb165",
+          "page": 3,
+          "said": "8:30 AM in each day's intentions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27fcbfd3",
+          "page": 3,
+          "said": "8:30 AM in each day's intentions"
+        }
+      ],
+      "rationale": "R1: Daily Mass box of both bulletins; the intentions list 8:30 AM every Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-woodbury-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "324bb165",
+          "page": 1,
+          "said": "Daily Mass ... Mondays thru Saturday 8:30 AM at St. Margaret"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27fcbfd3",
+          "page": 1,
+          "said": "Daily Mass ... Mondays thru Saturday 8:30 AM at St. Margaret"
+        },
+        {
+          "source": "agent",
+          "bulletin": "324bb165",
+          "page": 3,
+          "said": "8:30 AM in each day's intentions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27fcbfd3",
+          "page": 3,
+          "said": "8:30 AM in each day's intentions"
+        }
+      ],
+      "rationale": "R1: Daily Mass box of both bulletins; the intentions list 8:30 AM every Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-woodbury-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "324bb165",
+          "page": 1,
+          "said": "Daily Mass ... Mondays thru Saturday 8:30 AM at St. Margaret"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27fcbfd3",
+          "page": 1,
+          "said": "Daily Mass ... Mondays thru Saturday 8:30 AM at St. Margaret"
+        },
+        {
+          "source": "agent",
+          "bulletin": "324bb165",
+          "page": 3,
+          "said": "8:30 AM in each day's intentions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27fcbfd3",
+          "page": 3,
+          "said": "8:30 AM in each day's intentions"
+        }
+      ],
+      "rationale": "R1: Daily Mass box of both bulletins; the intentions list 8:30 AM every Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-woodbury-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "324bb165",
+          "page": 1,
+          "said": "Daily Mass ... Mondays thru Saturday 8:30 AM at St. Margaret"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27fcbfd3",
+          "page": 1,
+          "said": "Daily Mass ... Mondays thru Saturday 8:30 AM at St. Margaret"
+        },
+        {
+          "source": "agent",
+          "bulletin": "324bb165",
+          "page": 3,
+          "said": "8:30 AM in each day's intentions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27fcbfd3",
+          "page": 3,
+          "said": "8:30 AM in each day's intentions"
+        }
+      ],
+      "rationale": "R1: Daily Mass box of both bulletins; the intentions list 8:30 AM every Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-woodbury-heights",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "324bb165",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Saturdays 9:00-9:30 AM; 2:30-3:30 PM at St. Margaret Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27fcbfd3",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Saturdays 9:00-9:30 AM; 2:30-3:30 PM at St. Margaret Church"
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-woodbury-heights",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "14:30",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "324bb165",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Saturdays 9:00-9:30 AM; 2:30-3:30 PM at St. Margaret Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27fcbfd3",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Saturdays 9:00-9:30 AM; 2:30-3:30 PM at St. Margaret Church"
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-woodbury-heights",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "324bb165",
+          "page": 5,
+          "said": "Thanksgiving Day Mass Thursday, November 26th 9:00 a.m. St. Margaret Church"
+        }
+      ],
+      "rationale": "R1, R16: dated special Mass after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-woodbury-heights",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "324bb165",
+          "page": 5,
+          "said": "There will be no 8:30 a.m. mass this day"
+        }
+      ],
+      "rationale": "R1, R16, R18: the newest bulletin cancels the weekly Thursday 8:30 AM Mass on Thanksgiving; the weekly slot stays.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-woodbury-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Convent, 745 Third Street; school days only"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "324bb165",
+          "page": 1,
+          "said": "Daily Mass 6:45 AM in Convent- School Days"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27fcbfd3",
+          "page": 1,
+          "said": "Daily Mass 6:45 AM in Convent- School Days"
+        },
+        {
+          "source": "website",
+          "url": "https://theinfantjesusparish.org/schedules/weekly-mass-schedules/",
+          "said": "School Days: St. Margaret Church, 6:45AM, 8:30 AM"
+        }
+      ],
+      "rationale": "R23, R33: both bulletins put this Mass in the Convent (745 Third St., a separate address from St. Margaret Church at 845 Third St.; listed under CONVENT on p1), which the church list lacks. It is also school days only, which a weekly slot cannot express. The website places it at St. Margaret Church, but the newer, repeated bulletin wording names the convent, and the school-days limit stands either way.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-woodbury-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Convent, 745 Third Street; school days only"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "324bb165",
+          "page": 1,
+          "said": "Daily Mass 6:45 AM in Convent- School Days"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27fcbfd3",
+          "page": 1,
+          "said": "Daily Mass 6:45 AM in Convent- School Days"
+        },
+        {
+          "source": "website",
+          "url": "https://theinfantjesusparish.org/schedules/weekly-mass-schedules/",
+          "said": "School Days: St. Margaret Church, 6:45AM, 8:30 AM"
+        }
+      ],
+      "rationale": "R23, R33: both bulletins put this Mass in the Convent (745 Third St., a separate address from St. Margaret Church at 845 Third St.; listed under CONVENT on p1), which the church list lacks. It is also school days only, which a weekly slot cannot express. The website places it at St. Margaret Church, but the newer, repeated bulletin wording names the convent, and the school-days limit stands either way.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-woodbury-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Convent, 745 Third Street; school days only"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "324bb165",
+          "page": 1,
+          "said": "Daily Mass 6:45 AM in Convent- School Days"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27fcbfd3",
+          "page": 1,
+          "said": "Daily Mass 6:45 AM in Convent- School Days"
+        },
+        {
+          "source": "website",
+          "url": "https://theinfantjesusparish.org/schedules/weekly-mass-schedules/",
+          "said": "School Days: St. Margaret Church, 6:45AM, 8:30 AM"
+        }
+      ],
+      "rationale": "R23, R33: both bulletins put this Mass in the Convent (745 Third St., a separate address from St. Margaret Church at 845 Third St.; listed under CONVENT on p1), which the church list lacks. It is also school days only, which a weekly slot cannot express. The website places it at St. Margaret Church, but the newer, repeated bulletin wording names the convent, and the school-days limit stands either way.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-woodbury-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Convent, 745 Third Street; school days only"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "324bb165",
+          "page": 1,
+          "said": "Daily Mass 6:45 AM in Convent- School Days"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27fcbfd3",
+          "page": 1,
+          "said": "Daily Mass 6:45 AM in Convent- School Days"
+        },
+        {
+          "source": "website",
+          "url": "https://theinfantjesusparish.org/schedules/weekly-mass-schedules/",
+          "said": "School Days: St. Margaret Church, 6:45AM, 8:30 AM"
+        }
+      ],
+      "rationale": "R23, R33: both bulletins put this Mass in the Convent (745 Third St., a separate address from St. Margaret Church at 845 Third St.; listed under CONVENT on p1), which the church list lacks. It is also school days only, which a weekly slot cannot express. The website places it at St. Margaret Church, but the newer, repeated bulletin wording names the convent, and the school-days limit stands either way.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-woodbury-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Convent, 745 Third Street; school days only"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "324bb165",
+          "page": 1,
+          "said": "Daily Mass 6:45 AM in Convent- School Days"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27fcbfd3",
+          "page": 1,
+          "said": "Daily Mass 6:45 AM in Convent- School Days"
+        },
+        {
+          "source": "website",
+          "url": "https://theinfantjesusparish.org/schedules/weekly-mass-schedules/",
+          "said": "School Days: St. Margaret Church, 6:45AM, 8:30 AM"
+        }
+      ],
+      "rationale": "R23, R33: both bulletins put this Mass in the Convent (745 Third St., a separate address from St. Margaret Church at 845 Third St.; listed under CONVENT on p1), which the church list lacks. It is also school days only, which a weekly slot cannot express. The website places it at St. Margaret Church, but the newer, repeated bulletin wording names the convent, and the school-days limit stands either way.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-woodbury-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Convent, 745 Third Street; school days only"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "324bb165",
+          "page": 1,
+          "said": "Daily Mass 6:45 AM in Convent- School Days"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27fcbfd3",
+          "page": 1,
+          "said": "Daily Mass 6:45 AM in Convent- School Days"
+        },
+        {
+          "source": "website",
+          "url": "https://theinfantjesusparish.org/schedules/weekly-mass-schedules/",
+          "said": "School Days: St. Margaret Church, 6:45AM, 8:30 AM"
+        }
+      ],
+      "rationale": "R23, R33: both bulletins put this Mass in the Convent (745 Third St., a separate address from St. Margaret Church at 845 Third St.; listed under CONVENT on p1), which the church list lacks. It is also school days only, which a weekly slot cannot express. The website places it at St. Margaret Church, but the newer, repeated bulletin wording names the convent, and the school-days limit stands either way.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "324bb165",
+          "page": 1,
+          "said": "Holy Day Masses Vigil: 4:00 PM at St. Margaret 6:00PM at St. John Vianney Holy Day 8:30 AM, 12 Noon and 7:00 PM at St. Margaret"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27fcbfd3",
+          "page": 1,
+          "said": "Holy Day Masses Vigil: 4:00 PM at St. Margaret 6:00PM at St. John Vianney Holy Day 8:30 AM, 12 Noon and 7:00 PM at St. Margaret"
+        }
+      ],
+      "rationale": "POLICY, Dates: a generic holy-day schedule with no dates; dates are never projected. Update mode will read the bulletins that date them (e.g. December 8).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "324bb165",
+          "page": 3,
+          "said": "Adoration is held in Our Lady of Guadalupe Chapel on Fridays from 9:00 a.m. - 5:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "27fcbfd3",
+          "page": 3,
+          "said": "Adoration is held in Our Lady of Guadalupe Chapel on Fridays from 9:00 a.m. - 5:00 p.m."
+        }
+      ],
+      "rationale": "R32: both bulletins print it the same way, but neither says where the chapel is, and the website does not mention it. The parish has two churches plus a convent (745 Third St.) and rectory chapel (334 Beech Ave.), so it could be off-site. Leaning leave out per POLICY (unclear location); a reviewer who knows the chapel is in St. Margaret Church should choose that.",
+      "question": "Add Friday 9 AM-5 PM Adoration in Our Lady of Guadalupe Chapel, and at which church?",
+      "options": [
+        {
+          "label": "St. Margaret",
+          "entry": {
+            "church_slug": "st-margaret-woodbury-heights",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "17:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Our Lady of Guadalupe Chapel"
+          }
+        },
+        {
+          "label": "St. John Vianney",
+          "entry": {
+            "church_slug": "st-john-vianney-deptford",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "17:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Our Lady of Guadalupe Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://theinfantjesusparish.org/schedules/weekly-mass-schedules/",
+          "said": "Confession Schedule ... Sundays 11:00-11:15AM at St. John Vianney Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "324bb165",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Saturdays 9:00-9:30 AM; 2:30-3:30 PM at St. Margaret Church (no Sunday time)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27fcbfd3",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Saturdays 9:00-9:30 AM; 2:30-3:30 PM at St. Margaret Church (no Sunday time)"
+        }
+      ],
+      "rationale": "R29/R6: only the website prints it. The bulletins' Reconciliation box gives the full confession schedule as Saturdays only, and the same website page looks partly stale: it places the 6:45 AM Mass at St. Margaret Church, not the convent, and omits the Saturday 8:30 AM Mass. Leaning leave out; a wrong time is worse than a missing one.",
+      "question": "Add the website's Sunday 11:00-11:15 AM Confession at St. John Vianney?",
+      "options": [
+        {
+          "label": "Sundays 11:00-11:15 AM",
+          "entry": {
+            "church_slug": "st-john-vianney-deptford",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "11:00",
+            "end_time": "11:15",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    }
+  ],
+  "church_list_issues": [
+    {
+      "church": "Convent, 745 Third Street, Woodbury Heights",
+      "said": "Daily Mass 6:45 AM in Convent- School Days",
+      "bulletin": "324bb165",
+      "page": 1
+    }
+  ]
+}
