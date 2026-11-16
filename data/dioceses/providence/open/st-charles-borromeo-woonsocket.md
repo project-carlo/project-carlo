@@ -18,6 +18,11 @@ evidence:
   note: 'St. Joseph bulletins of 21 and 28 December 2025, 29 March, 5 April, 1 and 15 November 2026 grepped
     for ''Charles'': only Mount Saint Charles Academy ads and the 4 November feast of Saint Charles Borromeo
     in the intentions; no Mass at the church.'
+- url: https://www.thericatholic.com/stories/living-out-our-true-faith-through-charity,12544
+  seen: 2026-11-16
+  quote: While waiting for a funeral cortege to arrive at St. Charles Church in Woonsocket
+  note: 'Rhode Island Catholic column posted September 23, 2021: a funeral at the church after its January
+    2020 closure. Old, and not evidence of a Mass now.'
 parish: st-joseph-woonsocket
 line1: 190 North Main St.
 city: Woonsocket
@@ -31,6 +36,12 @@ research:
   outcome: not-found
   next_action: Grep the December 2026 St. Joseph issues and any diocesan news for a Mass or event at St.
     Charles church
+  retry_when: The Christmas 2026 issues are posted
+- method: DuckDuckGo search of thericatholic.com for St. Charles Woonsocket church news (2019-2026)
+  url: https://html.duckduckgo.com/html/?q=site%3Athericatholic.com+%22St.+Charles%22+Woonsocket+church+2026
+  checked: '2026-11-16'
+  outcome: not-found
+  next_action: Grep the December 2026 St. Joseph issues for a Mass, funeral or event at St. Charles church
   retry_when: The Christmas 2026 issues are posted
 ---
 

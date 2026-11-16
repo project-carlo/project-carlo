@@ -33,6 +33,15 @@ line1: 1799 Warwick Ave.
 city: Warwick
 state: RI
 postal_code: 02889
+research:
+- method: Parish blog sainttimothy.weconnect.com/blog for a notice on Masses returning to St. Timothy
+  url: https://sainttimothy.weconnect.com/blog
+  checked: '2026-11-16'
+  outcome: access-blocked
+  next_action: Read the newest St. Timothy and St. Rita bulletin (container 03/0355) page 1 'MASSES AND
+    DEVOTIONS' box, or the parish blog
+  retry_when: A bulletin after 15 November 2026 is posted, or the blog answers (it said 'temporarily unavailable'
+    on 2026-11-16)
 ---
 
 ## What is known

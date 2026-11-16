@@ -25,6 +25,14 @@ evidence:
   seen: 2026-11-14
   note: The diocesan finder, which gives Mass times for its parishes and chapels, has no entry for the
     seminary.
+research:
+- method: visit.py --text on the seminary homepage, looking for a public Mass time (reconcile)
+  url: https://olpseminary.com/
+  checked: '2026-11-16'
+  outcome: access-blocked
+  next_action: Read olpseminary.com (home, Daily Schedule, news) for a Mass the public is invited to;
+    a published public time makes the chapel a church row
+  retry_when: The site loads in the browser (timed out twice, 180 s and 500 s, on 2026-11-16)
 ---
 
 ## Why it is excluded

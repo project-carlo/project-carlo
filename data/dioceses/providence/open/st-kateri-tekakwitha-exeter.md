@@ -47,6 +47,14 @@ research:
   outcome: not-found
   next_action: Read the newest St. Bernard bulletin for any Exeter Mass or a statement on the building
   retry_when: A new St. Bernard issue, or a diocesan or news source on the Exeter building, appears
+- method: probe url https://kateritekakwitha.org/ (retry)
+  url: https://kateritekakwitha.org/
+  checked: '2026-11-16'
+  outcome: access-blocked
+  next_action: Retry probe url / visit.py on kateritekakwitha.org; or read St. Bernard's newest bulletin
+    for an Exeter Mass
+  retry_when: The site answers (504 at the egress proxy on 2026-11-15 and 2026-11-16), or a new St. Bernard
+    issue is posted
 ---
 
 ## What is known

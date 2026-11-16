@@ -46,6 +46,13 @@ research:
   next_action: Read the newest bulletin's Mass box for St. Edward and any notice of resumption or closure
   retry_when: A new St. Anthony bulletin is posted after Fr. Stephano Kwak's return, or by 2027-02-15
   revisit_after: 2027-02-15
+- method: DuckDuckGo search of thericatholic.com for St. Edward, Branch Avenue news (found only the 2022
+    merger and its shelter ministries)
+  url: https://html.duckduckgo.com/html/?q=site%3Athericatholic.com+%22St.+Edward%22+Providence+Branch+Avenue
+  checked: '2026-11-16'
+  outcome: not-found
+  next_action: Read the newest St. Anthony bulletin's Mass box for St. Edward
+  retry_when: A new St. Anthony bulletin is posted after Fr. Stephano Kwak's return, or by 2027-02-15
 ---
 
 ## What is known

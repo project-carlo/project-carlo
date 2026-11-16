@@ -34,6 +34,13 @@ research:
   outcome: found
   next_action: Recheck that the Bulletin page posts an issue newer than 11 October 2026
   retry_when: After 2026-12-15, or when St. Luke's bulletin stops printing Holy Angels' schedule
+- method: probe get on the Bulletin page and probe pdf on the PDF it links (reconcile)
+  url: https://www.holyangelschurchri.org/bulletin.html
+  checked: '2026-11-16'
+  outcome: found
+  next_action: Recheck that the Bulletin page posts an issue newer than 11 October 2026; if not, merge
+    into st-luke-barrington
+  retry_when: After 2026-12-15, or when St. Luke's bulletin stops printing Holy Angels' schedule
 bulletin_status: available
 ---
 
