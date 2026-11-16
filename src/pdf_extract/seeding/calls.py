@@ -20,10 +20,9 @@ from hashlib import sha256
 from typing import Any
 
 from pdf_extract.blobstore import get_store
-from pdf_extract.classifiers import get_classifier
+from pdf_extract.classifiers import get_classifier, pricing
 from pdf_extract.classifiers.seed_ask import GEMINI_MODEL, MODELS, OPENAI_MODEL, SeedAsker
-from pdf_extract.evals import pricing
-from pdf_extract.labeling.bulletins import gemini_rows
+from pdf_extract.model import gemini_rows
 from pdf_extract.runner import (
     _cache_version_component,
     load_cached_result,

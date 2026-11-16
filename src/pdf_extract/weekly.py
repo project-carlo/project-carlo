@@ -29,7 +29,7 @@ from pathlib import Path
 from typing import Any
 
 from pdf_extract.datasync import compact_copy, run_out_dir
-from pdf_extract.db import ensure_db, load_seeds
+from pdf_extract.db import ensure_db
 from pdf_extract.dioceses.records import PARISH, diocese_dir
 from pdf_extract.extract_frontend_db import SNAPSHOT_NAME
 from pdf_extract.extract_frontend_db import extract as extract_snapshot
@@ -37,6 +37,8 @@ from pdf_extract.fetch import fetch_bulletins
 from pdf_extract.process import process_bulletins
 from pdf_extract.report import build_report, render_markdown, snapshot_context
 from pdf_extract.runs import finish_run, start_run
+from pdf_extract.schedule.corrections import load_correction_files
+from pdf_extract.seeding.loader import load_seeds
 from pdf_extract.storage import DEFAULT_DB_PATH, connect_db, list_parishes
 from pdf_extract.verify_frontend_snapshot import verify_frontend_snapshot
 
@@ -183,9 +185,10 @@ def run_weekly(
 ) -> dict[str, Any]:
     # The stages always work on the default database, so the run does too.
     db_path = DEFAULT_DB_PATH
-    # Seed files are loaded after the before-copy below, so the run's checks
-    # compare newly seeded parishes with their last extracted schedules.
-    seeded = ensure_db(db_path, load_seeds=False)
+    # Seed and correction files are loaded after the before-copy below, so the
+    # run's checks compare newly seeded parishes with their last extracted
+    # schedules, and see what each correction changed.
+    seeded = ensure_db(db_path)
     conn = connect_db(db_path)
     try:
         scope = resolve_run_scope(conn, parishes=parishes, dioceses=dioceses)
@@ -212,6 +215,7 @@ def run_weekly(
     report: dict[str, Any] | None = None
     try:
         seeds = load_seeds(db_path, run_id=run_id)
+        corrections = load_correction_files(db_path, run_id=run_id)
         stages["fetch"] = fetch_bulletins(run_id=run_id, slugs=slugs)
         stages["process"] = process_bulletins(
             concurrency=concurrency, run_id=run_id, slugs=slugs,
@@ -242,6 +246,7 @@ def run_weekly(
             snapshot_verification=verification,
             seeded=seeded,
             seeds=seeds,
+            corrections=corrections,
         )
         status = report["status"]
     finally:
@@ -268,6 +273,7 @@ def run_weekly(
         "stages": stages,
         "totals": report["totals"],
         "seeds": report.get("seeds"),
+        "corrections": report.get("corrections"),
         "scope": None if scope is None else scope.as_dict(),
     }
 

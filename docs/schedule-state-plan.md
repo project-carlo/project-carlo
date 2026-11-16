@@ -310,16 +310,16 @@ not change the church, event type or kind: the policy rejects that as
 remove the weekly slot without counting as a delete.
 
 **Weeks of the month and season** are structured as in the labels
-(`labeling/labels.py`). The database stores `weeks_of_month` as a 6-bit mask,
+(`model.py`). The database stores `weeks_of_month` as a 6-bit mask,
 plus a seventh bit for `exclude_weeks` ("every Sunday except the last" is
 `["last"]` excluded, which no list of remaining weeks can say), always in
-`labels.canonical_weeks`' form, and the season as four integer columns. The
+`model.canonical_weeks`' form, and the season as four integer columns. The
 view, the model's output and the snapshot use the labels' forms:
 `["first", "third"]` with `exclude_weeks` false, and
 `{"start_month": 5, "start_day": null, "end_month": 10, "end_day": null}`.
 One converter, in one module, does the translation and is shared with the
 labels code. The columns' checks only bound the days at 31; the entry checks
-in code also hold each day to its month (`labels.DAYS_IN_MONTH`), and an entry
+in code also hold each day to its month (`model.DAYS_IN_MONTH`), and an entry
 that fails them is rejected as `invalid_entry`.
 
 **Cancellations** are specific_date entries with `cancelled = 1`, as in the
@@ -561,8 +561,11 @@ policy rejected or the report flagged:
 - **add**, **modify** or **delete** entries directly, with the same checks.
 
 `actor` is the person, `note` says why. The command runs against the local
-database, which is published as it is today. An editing interface is out of
-scope.
+database, which is never published: only the weekly run and Publish Data Run
+hold the keys that write the published copy. To reach it, an edit is written
+as a correction file with `--write-correction`, reviewed in a pull request and
+loaded by the pipeline ([believed-schedules.md](believed-schedules.md#corrections)).
+An editing interface is out of scope.
 
 ## The report
 

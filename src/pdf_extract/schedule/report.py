@@ -11,6 +11,7 @@ import sqlite3
 from collections import Counter
 from typing import Any
 
+from pdf_extract.model import EVENT_TYPE_LABELS, EventKey
 from pdf_extract.schedule.entries import Entry
 from pdf_extract.schedule.history import SUCCEEDED, CallPlace, parish_history
 from pdf_extract.schedule.policy import APPLIED, MASS_DELETE, REJECTED, STALE_BULLETIN
@@ -27,10 +28,27 @@ CHANGED_IN_A_ROW = 3
 # A live weekly entry none of the parish's last this-many bulletins printed is flagged.
 UNSEEN_BULLETINS = 4
 
-def describe_entry(entry: Entry) -> str:
-    """`report.describe_event` with the weeks of the month, season and note an entry carries."""
-    from pdf_extract.report import describe_event  # report imports this module
+_DAY_ABBREV = {
+    "monday": "Mon", "tuesday": "Tue", "wednesday": "Wed", "thursday": "Thu",
+    "friday": "Fri", "saturday": "Sat", "sunday": "Sun",
+}
 
+
+def describe_event(key: EventKey) -> str:
+    """"Confession · Sat 3:00 PM–4:00 PM" or "Mass · 2026-10-04 9:00 AM (cancelled)"."""
+    _church, event_type, kind, day_of_week, date, start, end, cancelled = key
+    label = EVENT_TYPE_LABELS.get(event_type, event_type or "Event")
+    when = (
+        _DAY_ABBREV.get((day_of_week or "").lower(), day_of_week or "?")
+        if kind == "weekly"
+        else (date or "?")
+    )
+    time = f"{start}–{end}" if end else start
+    return f"{label} · {when} {time}" + (" (cancelled)" if cancelled else "")
+
+
+def describe_entry(entry: Entry) -> str:
+    """`describe_event` with the weeks of the month, season and note an entry carries."""
     text = describe_event((
         "", entry.event_type, entry.event_kind, entry.day_of_week, entry.date,
         minutes_to_time(entry.start_time), minutes_to_time(entry.end_time),

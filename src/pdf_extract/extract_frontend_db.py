@@ -75,7 +75,7 @@ from pathlib import Path
 from typing import Any
 
 from pdf_extract.bulletin_week import parse_iso_date, week_order_sql
-from pdf_extract.labeling.labels import DAYS
+from pdf_extract.model import DAYS
 from pdf_extract.schedule.qualifiers import (
     mask_excludes_weeks,
     mask_to_weeks,

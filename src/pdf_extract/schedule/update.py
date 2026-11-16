@@ -35,6 +35,7 @@ from datetime import date
 from typing import Any
 
 from pdf_extract.blobstore import get_store
+from pdf_extract.classifiers.pricing import call_cost
 from pdf_extract.classifiers.schedule_update import (
     API_ERROR,
     CONTEXT_TEMPLATE,
@@ -51,7 +52,7 @@ from pdf_extract.classifiers.schedule_update import (
     parse_response,
     render_context,
 )
-from pdf_extract.evals.pricing import call_cost
+from pdf_extract.model import canonical_json, sha256_text
 from pdf_extract.runs import (
     PROCESS_CORRECTION,
     PROCESS_FAILED,
@@ -82,7 +83,6 @@ from pdf_extract.schedule.store import (
     LLM,
     Change,
     append_revision,
-    canonical_json,
     current_revision,
     intern_entry,
     live_entries,
@@ -90,7 +90,6 @@ from pdf_extract.schedule.store import (
     render_view,
     replace_sightings,
     retire_ended,
-    sha256_text,
     store_prompt_blob,
     store_view,
     update_mode_parishes,

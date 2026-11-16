@@ -16,7 +16,7 @@ tiers, in the order they are tried:
 - `exact`: church, type, kind, weekday or date, start time, cancelled, end time,
   `weeks_of_month` and `season` all agree (notes and page numbers are ignored).
   Weeks agree when they pick the same weeks, however written
-  (`labels.canonical_weeks`): "every week except the first" excluded is the
+  (`model.canonical_weeks`): "every week except the first" excluded is the
   second to fifth listed.
 - `core`: the first six agree; end time or a recurrence qualifier differs.
 - `weekly_vs_dated`: weekly on one side and dated on the other, on the same weekday,
@@ -63,17 +63,10 @@ from datetime import date, timedelta
 from pathlib import Path
 from typing import Any
 
-from pdf_extract.classifiers import get_classifier
-from pdf_extract.evals import pricing
+from pdf_extract.classifiers import get_classifier, pricing
 from pdf_extract.evals.run import DEFAULT_STATUSES, version_dir_name
-from pdf_extract.labeling.labels import (
-    DAYS,
-    LABELS_DIR,
-    WEEKS_OF_MONTH,
-    canonical_weeks,
-    is_valid_hash,
-    is_valid_slug,
-)
+from pdf_extract.labeling.labels import LABELS_DIR
+from pdf_extract.model import DAYS, WEEKS_OF_MONTH, canonical_weeks, is_valid_hash, is_valid_slug
 from pdf_extract.runner import run_dir
 from pdf_extract.storage import utc_now_iso
 from pdf_extract.timeparse import time_to_minutes
