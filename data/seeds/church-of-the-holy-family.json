@@ -1,0 +1,818 @@
+{
+  "schema_version": 1,
+  "parish_slug": "church-of-the-holy-family",
+  "status": "ready",
+  "as_of": "2026-11-15T16:47:21Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-16T20:17:10Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (Holy Family, Sewell). Both bulletins read (Nov 8 and Nov 15, 2026, all image pages) print the same Liturgical Schedule: Sat 4:30 PM, Sun 8/10/11:30, Mon-Sat 9 AM, First Friday 7 PM Mass and 6:30 PM Confession, Sat Confession 9:30-10 and 3:30-4:15, Tuesday Adoration 9:30-6:30 with Benediction, First Friday Adoration 9:30-11:30. Dated: Filipino Apostolate Mass Nov 22 3 PM and Advent Holy Hour Dec 1. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "a4603f8b735e7c726f951a99cc87a2daa179b5a1cd485897ec5df35636e783d8",
+      "fetched_at": "2026-11-15T16:47:21Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "92fc9698722c9aa37e75aedbe1b67f1ac4769848a869aa6c4d8b37901af2179f",
+      "fetched_at": "2026-11-08T15:55:42Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-sewell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4603f8b",
+          "page": 2,
+          "said": "Saturday Evening Mass 4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "92fc9698",
+          "page": 2,
+          "said": "Saturday Evening Mass 4:30 pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Liturgical Schedule box and the Masses for the Week of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-sewell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4603f8b",
+          "page": 2,
+          "said": "Sunday Mass 8:00 am, 10:00 am, 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "92fc9698",
+          "page": 2,
+          "said": "Sunday Mass 8:00 am, 10:00 am, 11:30 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Liturgical Schedule box and the Masses for the Week of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-sewell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4603f8b",
+          "page": 2,
+          "said": "Sunday Mass 8:00 am, 10:00 am, 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "92fc9698",
+          "page": 2,
+          "said": "Sunday Mass 8:00 am, 10:00 am, 11:30 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Liturgical Schedule box and the Masses for the Week of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-sewell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4603f8b",
+          "page": 2,
+          "said": "Sunday Mass 8:00 am, 10:00 am, 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "92fc9698",
+          "page": 2,
+          "said": "Sunday Mass 8:00 am, 10:00 am, 11:30 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Liturgical Schedule box and the Masses for the Week of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-sewell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4603f8b",
+          "page": 2,
+          "said": "Daily Mass (Monday-Saturday) 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "92fc9698",
+          "page": 2,
+          "said": "Daily Mass (Monday-Saturday) 9:00 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Liturgical Schedule box of both bulletins; every weekday's 9:00 a.m. Mass appears in both weeks' Masses for the Week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-sewell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4603f8b",
+          "page": 2,
+          "said": "Daily Mass (Monday-Saturday) 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "92fc9698",
+          "page": 2,
+          "said": "Daily Mass (Monday-Saturday) 9:00 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Liturgical Schedule box of both bulletins; every weekday's 9:00 a.m. Mass appears in both weeks' Masses for the Week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-sewell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4603f8b",
+          "page": 2,
+          "said": "Daily Mass (Monday-Saturday) 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "92fc9698",
+          "page": 2,
+          "said": "Daily Mass (Monday-Saturday) 9:00 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Liturgical Schedule box of both bulletins; every weekday's 9:00 a.m. Mass appears in both weeks' Masses for the Week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-sewell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4603f8b",
+          "page": 2,
+          "said": "Daily Mass (Monday-Saturday) 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "92fc9698",
+          "page": 2,
+          "said": "Daily Mass (Monday-Saturday) 9:00 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Liturgical Schedule box of both bulletins; every weekday's 9:00 a.m. Mass appears in both weeks' Masses for the Week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-sewell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4603f8b",
+          "page": 2,
+          "said": "Daily Mass (Monday-Saturday) 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "92fc9698",
+          "page": 2,
+          "said": "Daily Mass (Monday-Saturday) 9:00 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Liturgical Schedule box of both bulletins; every weekday's 9:00 a.m. Mass appears in both weeks' Masses for the Week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-sewell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4603f8b",
+          "page": 2,
+          "said": "Daily Mass (Monday-Saturday) 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "92fc9698",
+          "page": 2,
+          "said": "Daily Mass (Monday-Saturday) 9:00 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Liturgical Schedule box of both bulletins; every weekday's 9:00 a.m. Mass appears in both weeks' Masses for the Week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-sewell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4603f8b",
+          "page": 2,
+          "said": "Daily Mass (Monday-Saturday) 9:00 am (and 7:00 pm on First Fridays)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "92fc9698",
+          "page": 2,
+          "said": "Daily Mass (Monday-Saturday) 9:00 am (and 7:00 pm on First Fridays)"
+        }
+      ],
+      "rationale": "R1: the standing Liturgical Schedule box in both bulletins names a First Friday 7:00 pm Mass; POLICY rule 2 makes it weekly with weeks_of_month first. Neither bulletin's week holds a first Friday (R11), so it is not in either week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-sewell",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4603f8b",
+          "page": 2,
+          "said": "Confessions Saturday 9:30-10:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "92fc9698",
+          "page": 2,
+          "said": "Confessions Saturday 9:30-10:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4603f8b",
+          "page": 3,
+          "said": "Confession--9:30am, Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "92fc9698",
+          "page": 3,
+          "said": "Confession--9:30am, Church"
+        }
+      ],
+      "rationale": "R1: printed in the Confessions box and the This Week calendar of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-sewell",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4603f8b",
+          "page": 2,
+          "said": "Confessions Saturday 3:30-4:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "92fc9698",
+          "page": 2,
+          "said": "Confessions Saturday 3:30-4:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4603f8b",
+          "page": 3,
+          "said": "Confession--3:30pm, Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "92fc9698",
+          "page": 3,
+          "said": "Confession--3:30pm, Church"
+        }
+      ],
+      "rationale": "R1: printed in the Confessions box and the This Week calendar of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-sewell",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4603f8b",
+          "page": 2,
+          "said": "Confessions First Fridays 6:30 pm or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "92fc9698",
+          "page": 2,
+          "said": "Confessions First Fridays 6:30 pm or by appointment"
+        }
+      ],
+      "rationale": "R1: standing schedule box in both bulletins; POLICY gives no end_time as none is printed. The 'by appointment' alternative has no time (R26).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-sewell",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4603f8b",
+          "page": 2,
+          "said": "Adoration of the Most Blessed Sacrament Tuesday 9:30-6:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "92fc9698",
+          "page": 2,
+          "said": "Adoration of the Most Blessed Sacrament Tuesday 9:30-6:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4603f8b",
+          "page": 3,
+          "said": "Adoration--9:30-6:30pm, Church; Benediction--6:30pm, Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "92fc9698",
+          "page": 3,
+          "said": "Adoration--9:30-6:30pm, Church; Benediction--6:30pm, Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a4603f8b",
+          "page": 8,
+          "said": "Adoration of the Blessed Sacrament on all Tuesdays will now be extended until 6:30pm ... conclude with the Chaplet of Divine Mercy and Benediction"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box, the This Week calendar and the Adoration Schedule notice of both bulletins. POLICY, Times: the printed 9:30 clock time wins over 'after the 9am Mass'; Benediction is the note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-sewell",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "11:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4603f8b",
+          "page": 2,
+          "said": "Adoration of the Most Blessed Sacrament First Friday 9:30-11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "92fc9698",
+          "page": 2,
+          "said": "Adoration of the Most Blessed Sacrament First Friday 9:30-11:30 am"
+        }
+      ],
+      "rationale": "R1: standing schedule box of both bulletins; POLICY rule 2 makes it weekly, first week. Neither bulletin's week holds a first Friday (R11).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-sewell",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-22",
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Filipino Apostolate of South Jersey"
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4603f8b",
+          "page": 8,
+          "said": "You are invited to join the Filipino Apostolate on Sunday, November 22 for the Holy Rosary and Mass followed by fellowship in the Aquin Center. All are welcomed. 3:00pm, Mass with Father Mike de Leon"
+        }
+      ],
+      "rationale": "R1, R16: dated, open ('All are welcomed') Mass after as_of, announced in the parish's own bulletin with fellowship in its Aquin Center, so at Holy Family, the parish's only church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-sewell",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-01",
+        "start_time": "18:45",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Holy Hour"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "92fc9698",
+          "page": 8,
+          "said": "O Come, O Come, Emmanuel Advent Holy Hour ... Tuesday, December 1, 2026 6:45 - 8:00 PM, Church of the Holy Family, 226 Hurffville Road ... All are welcome."
+        }
+      ],
+      "rationale": "R19, R16: a dated Holy Hour (POLICY: Holy Hour is Adoration) at the parish church after as_of, announced in the November 8 bulletin; the newest issue does not contradict it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4603f8b",
+          "page": 2,
+          "said": "Rosary Monday through Saturday 8:30 am; Miraculous Medal Novena Wednesdays after the 9:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "92fc9698",
+          "page": 2,
+          "said": "Rosary Monday through Saturday 8:30 am; Miraculous Medal Novena Wednesdays after the 9:00 am Mass"
+        }
+      ],
+      "rationale": "R24: Rosary and Novena are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4603f8b",
+          "page": 8,
+          "said": "2:30pm, Holy Rosary (Filipino Apostolate, November 22)"
+        }
+      ],
+      "rationale": "R24: a Rosary is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a4603f8b",
+          "page": 2,
+          "said": "Holy Day Schedule (please check the bulletin) 7:00 pm (Vigil), 9:00 am & 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "92fc9698",
+          "page": 2,
+          "said": "Holy Day Schedule (please check the bulletin) 7:00 pm (Vigil), 9:00 am & 7:00 pm"
+        }
+      ],
+      "rationale": "POLICY, Dates: the generic holy-day times pin down no date, and the bulletin says to check it for each holy day; update mode records dated holy-day Masses when a bulletin prints them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
