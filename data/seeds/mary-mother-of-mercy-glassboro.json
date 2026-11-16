@@ -1,0 +1,752 @@
+{
+  "schema_version": 1,
+  "parish_slug": "mary-mother-of-mercy-glassboro",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:16:58Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-16T20:45:26Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches: Our Lady of Lourdes (Glassboro) and Our Lady, Queen of Peace (Pitman). The Nov 8 and Nov 22 bulletins (image-only; read from rendered pages) print the same Mass, Saturday confession and Wednesday 9:30 AM-noon exposition schedule, all settled. Open: the 'Wednesdays of Advent' 6:30-7 PM confessions at OLQP, proposed as dated Dec 2/9/16/23 entries.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "eaa931e631bcf89ccfe8007a35b1f1ef54c7ffc4e25e17e8e420994c87d70cec",
+      "fetched_at": "2026-11-15T16:16:58Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "b3a041dcba46d87e23f0b650f6ef687bf5791b82fedcafbd687dde6a39a8d6c9",
+      "fetched_at": "2026-11-08T15:42:17Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-glassboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eaa931e6",
+          "page": 2,
+          "said": "Saturday: 5:00PM OLL"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b3a041dc",
+          "page": 2,
+          "said": "Saturday: 5:00PM OLL"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read (Nov 8 and Nov 22 issues); intentions list the 5:00 PM vigil.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-glassboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eaa931e6",
+          "page": 2,
+          "said": "Sunday: 8:00AM OLL"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b3a041dc",
+          "page": 2,
+          "said": "Sunday: 8:00AM OLL"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-pitman",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eaa931e6",
+          "page": 2,
+          "said": "Sunday: 9:30AM OLQP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b3a041dc",
+          "page": 2,
+          "said": "Sunday: 9:30AM OLQP"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-glassboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eaa931e6",
+          "page": 2,
+          "said": "Sunday: 11:00AM OLL"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b3a041dc",
+          "page": 2,
+          "said": "Sunday: 11:00AM OLL"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-pitman",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eaa931e6",
+          "page": 2,
+          "said": "Monday - No Mass / Tues., Thurs. - Sat.: 9:00AM OLQP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b3a041dc",
+          "page": 2,
+          "said": "Monday - No Mass / Tues., Thurs. - Sat.: 9:00AM OLQP"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the p10 intentions list 9:00 AM Tue, Thu, Fri, Sat.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-pitman",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eaa931e6",
+          "page": 2,
+          "said": "Monday - No Mass / Tues., Thurs. - Sat.: 9:00AM OLQP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b3a041dc",
+          "page": 2,
+          "said": "Monday - No Mass / Tues., Thurs. - Sat.: 9:00AM OLQP"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the p10 intentions list 9:00 AM Tue, Thu, Fri, Sat.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-pitman",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eaa931e6",
+          "page": 2,
+          "said": "Monday - No Mass / Tues., Thurs. - Sat.: 9:00AM OLQP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b3a041dc",
+          "page": 2,
+          "said": "Monday - No Mass / Tues., Thurs. - Sat.: 9:00AM OLQP"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the p10 intentions list 9:00 AM Tue, Thu, Fri, Sat.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-pitman",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eaa931e6",
+          "page": 2,
+          "said": "Monday - No Mass / Tues., Thurs. - Sat.: 9:00AM OLQP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b3a041dc",
+          "page": 2,
+          "said": "Monday - No Mass / Tues., Thurs. - Sat.: 9:00AM OLQP"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the p10 intentions list 9:00 AM Tue, Thu, Fri, Sat.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-glassboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eaa931e6",
+          "page": 2,
+          "said": "Wed.: 9:00AM OLL"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b3a041dc",
+          "page": 2,
+          "said": "Wed.: 9:00AM OLL"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-pitman",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eaa931e6",
+          "page": 2,
+          "said": "Reconciliation: Saturday: 9:30-10AM, OLQP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b3a041dc",
+          "page": 2,
+          "said": "Reconciliation: Saturday: 9:30-10AM, OLQP"
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-glassboro",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:45",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eaa931e6",
+          "page": 2,
+          "said": "Reconciliation: Saturday: 3:45-4:30PM, OLL"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b3a041dc",
+          "page": 2,
+          "said": "Reconciliation: Saturday: 3:45-4:30PM, OLL"
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eaa931e6",
+          "page": 2,
+          "said": "and by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-glassboro",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction; after the 9:00 AM Mass"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eaa931e6",
+          "page": 9,
+          "said": "The Blessed Sacrament is exposed on Wednesdays, after the 9 AM Mass until Noon, closing with Benediction."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b3a041dc",
+          "page": 9,
+          "said": "The Blessed Sacrament is exposed on Wednesdays, after the 9 AM Mass until Noon, closing with Benediction."
+        }
+      ],
+      "rationale": "R1, R10: printed in both bulletins; POLICY times 'after' a weekday Mass as 30 minutes after it starts, so 9:30 AM, ending at noon. The only Wednesday 9 AM Mass is at Our Lady of Lourdes (p2), so the exposition is there.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eaa931e6",
+          "page": 9,
+          "said": "Holy Family Chapel in Our Lady of Lourdes Church is open for private prayer during parish office hours."
+        }
+      ],
+      "rationale": "R38: a chapel open for private prayer is not an Adoration schedule; no exposition is stated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eaa931e6",
+          "page": 5,
+          "said": "during Advent there will be opportunities for individual confession on: Wednesdays of Advent, 6:30 PM-7:00 PM in Our Lady, Queen of Peace Church"
+        }
+      ],
+      "rationale": "R33/POLICY Dates: 'Wednesdays of Advent' names no dates or months, and a season would recur on wrong dates next year. Advent 2026 runs Nov 29-Dec 24, so its Wednesdays are Dec 2, 9, 16, 23; leaning to these dated entries since the time and church are clear, but the dates are worked out rather than printed.",
+      "question": "Add the Advent Wednesday confessions (6:30-7:00 PM, Our Lady, Queen of Peace) as dated entries for Dec 2, 9, 16 and 23?",
+      "options": [
+        {
+          "label": "Dated Advent Wednesdays",
+          "entry": {
+            "church_slug": "our-lady-queen-of-peace-pitman",
+            "event_type": "confession",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-02",
+            "start_time": "18:30",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Advent"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "advent-confession"
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eaa931e6",
+          "page": 5,
+          "said": "Wednesdays of Advent, 6:30 PM-7:00 PM in Our Lady, Queen of Peace Church"
+        }
+      ],
+      "rationale": "R33/POLICY Dates: 'Wednesdays of Advent' names no dates or months, and a season would recur on wrong dates next year. Advent 2026 runs Nov 29-Dec 24, so its Wednesdays are Dec 2, 9, 16, 23; leaning to these dated entries since the time and church are clear, but the dates are worked out rather than printed.",
+      "question": "Add the Advent Wednesday confessions (6:30-7:00 PM, Our Lady, Queen of Peace) as dated entries for Dec 2, 9, 16 and 23?",
+      "options": [
+        {
+          "label": "Dated Advent Wednesdays",
+          "entry": {
+            "church_slug": "our-lady-queen-of-peace-pitman",
+            "event_type": "confession",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-09",
+            "start_time": "18:30",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Advent"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "advent-confession"
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eaa931e6",
+          "page": 5,
+          "said": "Wednesdays of Advent, 6:30 PM-7:00 PM in Our Lady, Queen of Peace Church"
+        }
+      ],
+      "rationale": "R33/POLICY Dates: 'Wednesdays of Advent' names no dates or months, and a season would recur on wrong dates next year. Advent 2026 runs Nov 29-Dec 24, so its Wednesdays are Dec 2, 9, 16, 23; leaning to these dated entries since the time and church are clear, but the dates are worked out rather than printed.",
+      "question": "Add the Advent Wednesday confessions (6:30-7:00 PM, Our Lady, Queen of Peace) as dated entries for Dec 2, 9, 16 and 23?",
+      "options": [
+        {
+          "label": "Dated Advent Wednesdays",
+          "entry": {
+            "church_slug": "our-lady-queen-of-peace-pitman",
+            "event_type": "confession",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-16",
+            "start_time": "18:30",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Advent"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "advent-confession"
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eaa931e6",
+          "page": 5,
+          "said": "Wednesdays of Advent, 6:30 PM-7:00 PM in Our Lady, Queen of Peace Church"
+        }
+      ],
+      "rationale": "R33/POLICY Dates: 'Wednesdays of Advent' names no dates or months, and a season would recur on wrong dates next year. Advent 2026 runs Nov 29-Dec 24, so its Wednesdays are Dec 2, 9, 16, 23; leaning to these dated entries since the time and church are clear, but the dates are worked out rather than printed.",
+      "question": "Add the Advent Wednesday confessions (6:30-7:00 PM, Our Lady, Queen of Peace) as dated entries for Dec 2, 9, 16 and 23?",
+      "options": [
+        {
+          "label": "Dated Advent Wednesdays",
+          "entry": {
+            "church_slug": "our-lady-queen-of-peace-pitman",
+            "event_type": "confession",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-23",
+            "start_time": "18:30",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Advent"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "advent-confession"
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eaa931e6",
+          "page": 5,
+          "said": "Evening Advent of Recollection, Monday, December 14th @ 7 pm ... A Reflection, Eucharistic Adoration, Confession, Night Prayer and Benediction. Our Lady of Lourdes Church"
+        }
+      ],
+      "rationale": "POLICY, Final source checks: the 7 PM evening includes Adoration and Confession but gives them no times of their own, so neither component can be recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eaa931e6",
+          "page": 7,
+          "said": "Healing Mass ... Please join us: December 5, 2026, St. Luke Church, Stratford"
+        }
+      ],
+      "rationale": "R22, R26: St. Luke, Stratford belongs to another parish (our-lady-of-guadalupe-lindenwold), and no time is given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b3a041dc",
+          "page": 7,
+          "said": "Sunday November 15 at 3 p.m. Saint Mary of Mount Carmel Parish, 285 Route 206 Hammonton"
+        }
+      ],
+      "rationale": "R22: held at another parish's church (St. Anthony of Padua, 285 Route 206, Hammonton) and by registration for jubilee couples.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
