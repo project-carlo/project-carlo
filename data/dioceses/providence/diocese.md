@@ -69,10 +69,19 @@ From `probe url` of the finder's 129 distinct homepages (survey, 2026-11-14) and
 batches since. About a quarter of homepages answer 403 or don't load to `probe url`; open
 them with `visit.py --bulletin` before concluding there is no bulletin.
 
+- **Finding a site or its old issues:** when the finder's homepage is only a masstimes.org
+  map link, try the parish's email domain or a DuckDuckGo search (`probe get
+  'https://html.duckduckgo.com/html/?q=...'`; `site:` finds sub-pages too). When a site is
+  down (Cloudflare 522), the Wayback CDX API (`probe get
+  'https://web.archive.org/cdx/search/cdx?url=<domain>/*&output=json&filter=statuscode:200&collapse=urlkey'`)
+  lists its old bulletin files and dates the last issue posted.
 - **eCatholic, usually behind Cloudflare:** a homepage that answers 403 to `probe url` is
   most often eCatholic (`ecatholic:<id>`); it loads in `visit.py`. Read issues with
   `issues.py ecatholic`. `ecatholic:5523` is the diocese's own site (bulletin inserts,
-  documents): never record it on a parish. Many eCatholic sites only repost LPi:
+  documents): never record it on a parish. `visit.py --text` drops tab-panel content
+  (e.g. a 'Daily Schedules' page): save `visit.py --html <file>` and grep that. `visit.py`
+  can hang on a homepage whose sub-pages load: find the sub-pages by search and visit
+  them directly. Many eCatholic sites only repost LPi:
   - Bulletins page embeds ParishesOnline issues, with no files at
     `files.ecatholic.com/<id>/bulletins`: the parish publishes on ParishesOnline; record the
     po-org/lpi/po-container ids, not the eCatholic id.
@@ -81,19 +90,25 @@ them with `visit.py --bulletin` before concluding there is no bulletin.
     `parishesonline.com/find/<slug>`; `probe po <slug>` finds the org.
   - Once the LPi org is found, record the row on `parishes_online`, with the eCatholic id
     as a second publication id, so fetch avoids Cloudflare.
-- **ParishesOnline (LPi), region 03:** linked on 16+ sites, often beside an eCatholic id.
-  Read the masthead, not the org name or footer: a footer's account name (e.g. 'St. Clare
-  St Vincent de Paul') can name a church the masthead has dropped.
+- **ParishesOnline (LPi), mostly region 03:** linked on 16+ sites, often beside an
+  eCatholic id. Read the masthead, not the org name or footer: a footer's account name
+  (e.g. 'St. Clare St Vincent de Paul') can name a church the masthead has dropped.
   - Finding the org when the footer gives only a container, or the parish site is dead:
     `probe po` with `<name>-<zip>` (`st-michaels-church-02917`), `<name>-church-<zip>`
-    (`christ-the-king-church-02881`), or a possessive slug with no ZIP
-    (`st-marthas-church`). Check the org lists issues; some list none.
+    (`christ-the-king-church-02881`), `<name>-church`, or a possessive slug with no ZIP
+    (`st-marthas-church`). Check the org lists issues; some list none. Not every container
+    is region 03: when a 03 guess fails, try `probe container 04/<n>`.
   - One bulletin can sit in two containers with different ad pages and footers, and two
     pre-merger orgs can share one container: compare rendered pages 1-2, then record every
     container and org id on the one row.
   - Many issues here are image-only apart from the ad pages, or have an encoded-font text
     layer (`probe pdf` calls every page readable but returns glyph codes like `/0/1 /2/3`
     and `--grep` finds nothing). Read the masthead and Mass schedule with `render.py`.
+  - The text layer can hold a stale page under the current image (a 2023 date on page 1),
+    so `fetch:check` reports a date conflict: render page 1 and date the issue from the
+    inner pages.
+  - A mission or occasional-use church the weekly schedule omits can appear in the
+    Christmas Eve Masses: grep the issue for the Sunday before Christmas for its name.
   - Orgs with no LPi container that carry parish-uploaded PDFs
     (`customer-data-prod-bucket.s3.amazonaws.com/organization-uploads/<lpi id>/publications/...`):
     `probe po` lists them but the `parishes_online` collector fails ("No matching anchor
@@ -101,13 +116,24 @@ them with `visit.py --bulletin` before concluding there is no bulletin.
 - **John Patrick Publishing (jppc.net / church-bulletin.org):** linked on 15+ sites. Set
   website to the `church-bulletin.org/<slug>` page (`jppc.net/onlinebulletins/<id>template.pdf`
   redirects there), provider `other`, recipe `page-pdfs`; no browser needed even when the
-  parish's own site can't be reached. Traps:
+  parish's own site can't be reached. Current issues are often image-only, but older
+  issues on the page can have text layers: `probe pdf --grep` across them finds merger
+  or closure letters to quote. Traps:
   - A guessed `church-bulletin.org/<slug>` answers 200 even with no bulletin (a generic
     archive page, or one with no PDFs). Only a jppc id linked from the parish site, or a
     page listing dated PDFs, is evidence.
   - A page can carry another parish's bulletin (St. Matthew Cranston's posts St. Paul's
     LPi issue). Compare its masthead with the host parish's bulletin and record the page as
     an extra publication id on the host's row, not as a row of its own.
+  - A parish with an eCatholic site may also post the same issue, with a text layer, at
+    `files.ecatholic.com/<id>/bulletins/YYYYMMDD.pdf`: read or date it with `issues.py
+    ecatholic --grep`, and record the eCatholic id as a second publication id.
+- **WordPress sites** whose bulletin page is linked only as `?page_id=N`: find it with
+  `probe get <site>/wp-json/wp/v2/pages?search=bulletin`, or list PDFs newest first with
+  `/wp-json/wp/v2/media?mime_type=application/pdf`. A bulletin posted only as a Word
+  `.doc` can't be fetched (`fetch_pdf.py` says 'Not a PDF'): read it with
+  `tools/fetch_raw.py` + `tools/doc_text.py`, record `unsupported`, fetch_gap
+  `word-doc-bulletin`.
 - **Duda sites** (PDFs on `irp.cdn-website.com/<site>/files/uploaded/`, linked newest
   first from a `/bulletin` page): provider `other`, recipe `page-pdfs` on the `/bulletin`
   page.
@@ -115,6 +141,18 @@ them with `visit.py --bulletin` before concluding there is no bulletin.
   `other`, recipe `page-pdfs`. `fetch:check` can't date the file names (freshness
   `unknown`), and the page-1 date line can be a stale template: confirm the issue from
   the Mass intentions.
+- **Wix sites** (PDFs at `_files/ugd/<acct>_<hash>.pdf`): `page-pdfs` picks the header's
+  'Bulletin' link to the current issue, but hashed names and image-only pages leave
+  freshness `unknown`: date the issue by rendering page 2.
+- **GoDaddy-builder sites** (PDFs on `img1.wsimg.com`) posting English and Spanish
+  editions each week: `page-pdfs` with `filename=English*.pdf` picks the English issue
+  even on an oldest-first page.
+- **Weebly pages embedding each week's bulletin as a Canva design** (iframe
+  `canva.com/design/<id>/<key>/view?embed`): `visit.py --text` on the `/view` URL returns
+  the full text (masthead, Mass times). Record `unsupported`, fetch_gap
+  `canva-design-viewer`.
+- **Google Sites** ('Embedded Files'): `visit.py` can hang past its timeout; read them
+  with `probe get` and check the data-code embeds for a Drive or bulletin link.
 - **Bon Venture** (`sponsors.bonventure.net/?page=<id>`, often linked only from a cover
   image on the parish's bulletin page): `page-pdfs` finds the current
   `pdfs/<id>/YYYY-MM-DD.pdf`, but the https download fails certificate verification.
@@ -130,28 +168,12 @@ them with `visit.py --bulletin` before concluding there is no bulletin.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
-- visit.py can hang past its timeout on Google Sites parish pages (sites.google-built, 'Embedded Files'); read them with probe get and check the data-code embeds for a Drive or bulletin link instead.
-- When the finder's homepage is a masstimes.org map link, the parish's email domain (e.g. name@<domain>.org) or a DuckDuckGo html search (probe get https://html.duckduckgo.com/html/?q=...) can find its real site.
-- A bulletin posted only as a Word .doc (WordPress uploads) can't be fetched: fetch_pdf.py refuses it as 'Not a PDF'. Read it with tools/fetch_raw.py + tools/doc_text.py and record unsupported with fetch_gap kind word-doc-bulletin.
-- An LPi issue's text layer can hold a stale old page under the current image (St. Thomas Warren page 1 reads 'September 17, 2023'), so fetch:check reports a date conflict: render page 1 and date the issue from the inner pages.
-- LPi containers here are not all region 03: St. Raymond is 04/0915 (org st-raymond-church); try `probe container 04/<n>` or `probe po <name>-church` when a 03 guess fails.
-- A John Patrick parish with an eCatholic site may also post the same issue at files.ecatholic.com/<id>/bulletins/YYYYMMDD.pdf with a text layer, where the JPPC copy is image-only: use `issues.py ecatholic --grep` on it to read or date schedule changes, and record the eCatholic id as a second publication id.
-- WordPress parish sites that link their bulletin page only as ?page_id=N: find it with probe get <site>/wp-json/wp/v2/pages?search=bulletin, or list PDFs newest first with /wp-json/wp/v2/media?mime_type=application/pdf.
-- A GoDaddy-builder bulletin page (PDFs on img1.wsimg.com) that posts English and Spanish editions each week: page-pdfs with filename=English*.pdf picks the English issue even on an oldest-first page.
-- Wix parish sites (PDFs at _files/ugd/<acct>_<hash>.pdf): fetch:check's page-pdfs picks the site header's 'Bulletin' link to the current issue, but the hashed names and image-only pages leave freshness 'unknown'; confirm the date by rendering the issue's page 2.
-- When a parish site is down (Cloudflare 522), the Wayback CDX API (probe get 'https://web.archive.org/cdx/search/cdx?url=<domain>/*&output=json&filter=statuscode:200&collapse=urlkey') lists its old bulletin files and dates the last issue posted.
-- visit.py --text drops the content of eCatholic tab panels (e.g. a 'Daily Schedules' page); visit.py --html <file> keeps it for grep.
-- visit.py can hang on an eCatholic homepage (olpseminary.com) while its sub-pages load; find sub-pages with a DuckDuckGo site: search and visit them directly.
-- John Patrick issues that are image-only now can have text layers in older issues: probe pdf --grep across past dated issues on the church-bulletin.org page to find and quote merger or closure letters.
-- Weebly pages that embed each week's bulletin as a Canva design (iframe canva.com/design/<id>/<key>/view?embed): visit.py --text on the /view URL returns the full text (masthead, Mass times); record unsupported with fetch_gap canva-design-viewer.
-- Mission or occasional-use buildings that a weekly LPi schedule omits can show up in the Christmas Eve intentions: grep the issue of the Sunday before Christmas for the building's name to date a Mass there.
-- Finder entries of parishes merged away (e.g. Holy Family, Pawtucket) can keep their pre-merger Mass times after the merger note: check them against the successor's current bulletin before treating them as evidence of Mass.
-
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
 
 - Finder entries that are notices (ids 34817, 25351, 33152, 29428) are not places and are excluded from planning; nothing is recorded for them. (accepted by survey-review, 002-survey-review, 2026-11-15)
+- A finder entry for a parish merged away can keep its pre-merger Mass times below the merger note: those times are not evidence of Mass. Check each church against the successor's current bulletin. (map batch `pawtucket-central-falls`, 2026-11-16)
 
 ## Log
 
