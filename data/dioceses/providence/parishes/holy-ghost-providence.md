@@ -18,6 +18,7 @@ evidence:
   note: Parish's eCatholic site (ecatholic:25512, behind Cloudflare; read with visit.py --bulletin). Its
     bulletin link is https://www.jppc.net/onlinebulletins/983template.pdf, which redirects to the church-bulletin.org
     page. issues.py ecatholic 25512 found no files under files.ecatholic.com/25512/bulletins in 12 Sundays.
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

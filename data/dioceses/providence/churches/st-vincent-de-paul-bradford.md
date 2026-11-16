@@ -26,6 +26,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22467
   seen: 2026-11-15
   note: 'GCatholic 22467: St. Vincent de Paul, 5 Church St., Bradford, Rhode Island 02808, Plus Code 87HC97X3+G6.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-14
   note: 'GCatholic 22332: Our Lady of Mount Carmel, 141 State St., Bristol, Rhode Island 02809-2205, Plus
     Code 87HCMPCG+FR.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

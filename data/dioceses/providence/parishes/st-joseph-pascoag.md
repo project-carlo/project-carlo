@@ -17,6 +17,7 @@ evidence:
   seen: 2026-11-14
   note: 'probe url: the parish''s WordPress site links https://www.jppc.net/onlinebulletins/958template.pdf,
     which redirects to the church-bulletin.org page recorded as website.'
+promoted: 2026-11-16
 bulletin_status: available
 publication_reviews:
 - parish: st-eugene-chepachet

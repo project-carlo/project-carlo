@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-14
   note: 'Finder entry 12244: ''As of July 1, 2019, St. Mary, West Warwick is a mission church of SS. John
     and James Parish, West Warwick.'' Read in a browser.'
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

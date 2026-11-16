@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-15
   note: 'GCatholic 22381: St. Thomas More, 53 Rockland St., Narragansett, Rhode Island 02882-3620, Plus
     Code 87HCCGHP+6X.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

@@ -19,6 +19,7 @@ evidence:
   note: 'probe url: parish WordPress site (built by John Patrick Publishing, ''JPPC Version 24.04.03''
     in its stylesheet) lists self-hosted PDFs newest first: wp-content/uploads/20261115B.pdf, 20261108B.pdf,
     20261101B.pdf ... 20260823.pdf.'
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

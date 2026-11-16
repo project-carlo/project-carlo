@@ -19,6 +19,7 @@ evidence:
   note: 'Answers 403 to probe url (Cloudflare); visit.py loads it: an eCatholic site (ecatholic:29297)
     whose bulletin link is parishesonline.com/publication-page/st-lucys-catholic-church-2842?selectedPublication=.../03/1380/20261115B.pdf,
     LPi id 0018000000Qx7thAAB.'
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

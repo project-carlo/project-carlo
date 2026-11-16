@@ -24,6 +24,7 @@ evidence:
   seen: 2026-11-14
   note: 'probe po: org ''St. Joseph Parish Family'', LPi 0018000000Qc1V9AAJ, container 03/0641, 150 Danielson
     Pike, North Scituate; latest issue 2026-11-15.'
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

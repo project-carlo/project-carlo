@@ -18,6 +18,7 @@ evidence:
   note: 'Parish WordPress Bulletin page (read with parish-site-access visit.py; probe url could not connect)
     lists self-hosted PDFs newest first: wp-content/uploads/2026/11/11-15-26.pdf, 11-08-26.pdf, 2026/10/11-01-26.pdf
     ... back to 8-16-26.pdf, plus a Registration-Form-1.pdf link.'
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

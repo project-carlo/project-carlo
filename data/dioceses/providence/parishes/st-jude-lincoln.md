@@ -18,6 +18,7 @@ evidence:
   note: GoDaddy site; 'This Week' page links the current bulletin as a Google Drive file and an 'Archive'
     Drive folder (drive.google.com/drive/u/1/folders/1fKgSu182OLHVAD2LvOy7Q9QkaZmlWO9x). Rendered with
     JavaScript; read in a browser (parish-site-access visit.py).
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

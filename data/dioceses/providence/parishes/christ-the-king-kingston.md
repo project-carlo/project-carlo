@@ -22,6 +22,7 @@ evidence:
   quote: Error. Page cannot be displayed. Please contact your service provider for more details.
   note: The finder's homepage for 12219 answers 200 with only this hosting error page; the browser got
     ERR_BLOCKED_BY_CLIENT (http) and ERR_CERT_COMMON_NAME_INVALID (https).
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

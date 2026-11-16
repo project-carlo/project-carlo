@@ -28,6 +28,7 @@ evidence:
   seen: 2026-11-15
   note: 'GCatholic 22341: St. Mary, 437 Carolina Back Rd., Charlestown, Rhode Island 02813, Plus Code
     87HCF83R+5G.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

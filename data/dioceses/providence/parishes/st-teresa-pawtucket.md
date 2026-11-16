@@ -24,6 +24,7 @@ evidence:
   note: Finder 12187 'St. Teresa of the Child Jesus', 358 Newport Ave., Pawtucket; website http://www.stteresari.com;
     Pastor Rev. Joshua A. Barrow; Saturday 4:00 PM, Sunday 7:30, 9:00, 10:30 AM, weekdays 7:15 AM (001-survey
     details.json).
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

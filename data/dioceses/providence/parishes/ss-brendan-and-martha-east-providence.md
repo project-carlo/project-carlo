@@ -36,6 +36,7 @@ evidence:
     both current worship sites.'' Its websites (stbren.com, stmarthaschurch.com) are dead: stbren.com
     fails its TLS certificate in probe url and the browser; stmarthaschurch.com answers ''SITE NOT FOUND''
     (404).'
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

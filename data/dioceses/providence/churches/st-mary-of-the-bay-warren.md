@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-14
   note: 'GCatholic 22444: St. Mary of the Bay, 645 Main St., Warren, Rhode Island 02885-4318, Plus Code
     87HCPPG9+96.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

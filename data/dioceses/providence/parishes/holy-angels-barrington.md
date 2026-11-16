@@ -27,6 +27,7 @@ revisit: Is Holy Angels' own bulletin still published? On 2026-11-14 its Bulleti
   2026 issue. If it is still stale, merge into st-luke-barrington (whose bulletin prints Holy Angels'
   schedule).
 revisit_after: 2026-12-15
+promoted: 2026-11-16
 research:
 - method: fetch:check with page-pdfs on the Bulletin page
   url: https://www.holyangelschurchri.org/bulletin.html

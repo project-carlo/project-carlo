@@ -28,6 +28,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22416
   seen: 2026-11-14
   note: GCatholic 22416 St. Adalbert, 866 Atwells Ave., Providence, Rhode Island 02909, Plus Code 87HCRHF3+WQ.
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

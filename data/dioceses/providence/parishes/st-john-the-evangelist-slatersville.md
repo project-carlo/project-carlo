@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-15
   note: 'probe po: org ''St. John the Evangelist Church'', 63 Church St., Slatersville 02876-0266, container
     03/0327, latest issue 2026-11-15.'
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

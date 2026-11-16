@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-15
   note: 'probe po: ''St. Mary Star of the Sea Church'', 864 Point Judith Rd., Narragansett, Rhode Island,
     02882; lpi 0018000000Qc2FwAAJ, container 03/0941; latest issue 2026-11-15.'
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

@@ -18,6 +18,7 @@ evidence:
   note: Linked as the bulletin on saintkevinri.org (the finder's stkevin-stbenedict.org redirects there);
     probe url follows it to the church-bulletin.org page, which lists one PDF per Sunday, newest first
     (2026-11-15, 2026-11-08, ...).
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

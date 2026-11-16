@@ -17,6 +17,7 @@ evidence:
   seen: 2026-11-15
   note: 'probe url: the parish''s Duda site bulletin page links ParishesOnline po-org:st-josephs-church-02840
     (LPi 0018000000Qc1UNAAZ, container 04/0958, latest issue 2026-11-15). Finder entry 12171 gives stjosephsnewport.org.'
+promoted: 2026-11-16
 bulletin_status: available
 publication_reviews:
 - parish: jesus-saviour-newport

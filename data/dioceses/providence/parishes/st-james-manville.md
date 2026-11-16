@@ -20,6 +20,7 @@ evidence:
   quote: 'Parochial Administrator: Rev. Robert E. Lacombe'
   note: Finder entry 12162; same administrator as entry 12160 (St. Ambrose, Albion). Behind Cloudflare;
     read in a browser.
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-14
   note: 'GCatholic 22363: St. Margaret, 1098 Pawtucket Ave., Rumford, East Providence (Plus Code 41.8441875,
     -71.3510625).'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-14
   note: 'GCatholic 22343: Our Lady of Czestochowa, 445 Washington St., Coventry (Plus Code coordinates
     41.6955625, -71.5371875).'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

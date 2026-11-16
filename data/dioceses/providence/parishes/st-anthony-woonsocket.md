@@ -22,6 +22,7 @@ evidence:
   note: Finder 12256 'St. Anthony', 128 Green St., website saintanthonywoonsocket.org, Pastor Rev. Msgr.
     Ronald P. Simeone; Saturday 5:00 PM; Sunday 8:30, 10:30 AM, 1:30 PM Vietnamese (second Sunday only),
     5:00 PM.
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

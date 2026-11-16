@@ -26,6 +26,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22418
   seen: 2026-11-14
   note: GCatholic 22418 St. Ann, 280 Hawkins St., Providence, Rhode Island 02904, Plus Code 87HCVH2H+GP.
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

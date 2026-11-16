@@ -33,6 +33,7 @@ evidence:
 revisit: Re-read the St. Paul bulletin's Mass list for the St. Matthews 9:30 Sunday Mass (transition under
   way in November 2026)
 revisit_after: 2027-02-01
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

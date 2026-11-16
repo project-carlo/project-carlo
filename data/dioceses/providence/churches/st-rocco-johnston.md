@@ -25,6 +25,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22374
   seen: 2026-11-14
   note: GCatholic 22374 St. Rocco, 931 Atwood Ave., Johnston, Rhode Island 02919-624[0], Plus Code 87HCQGW8+PJ.
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

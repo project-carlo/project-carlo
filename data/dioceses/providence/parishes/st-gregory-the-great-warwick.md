@@ -21,6 +21,7 @@ evidence:
   note: Parish site (eCatholic 30550, behind Cloudflare; read with parish-site-access visit.py) embeds
     the ParishesOnline widget for lpi 0018000000Qc1MFAAZ. The eCatholic id is the site, not the bulletin,
     so it is not recorded as a publication.
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

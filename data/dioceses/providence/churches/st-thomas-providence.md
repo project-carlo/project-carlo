@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-14
   note: GCatholic 22432 St. Thomas, 65 Fruit Hill Ave., Providence, Rhode Island 02909-5598, Plus Code
     87HCRGPJ+CQ.
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

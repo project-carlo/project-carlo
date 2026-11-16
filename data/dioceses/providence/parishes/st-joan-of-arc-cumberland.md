@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-14
   note: Redirects to church-bulletin.org/saint-joan-of-arc-parish-cumberland-ri-02864, which lists one
     PDF per Sunday back to 2024-11-17, newest 2026-11-15.
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

@@ -27,6 +27,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22470
   seen: 2026-11-14
   note: GCatholic 22470 Our Lady, Queen of Martyrs, 1409 Park Ave, Woonsocket 02895-6597, Plus Code 87HCXFMM+RG.
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

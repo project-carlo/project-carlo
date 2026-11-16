@@ -19,6 +19,7 @@ evidence:
 - url: https://stanthonysww.com/
   seen: 2026-11-14
   note: Parish site (UNREACHABLE to probe url; loaded with visit.py) embeds po-org:st-anthony-church-02893.
+promoted: 2026-11-16
 bulletin_status: available
 publication_reviews:
 - parish: christ-the-king-west-warwick

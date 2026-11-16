@@ -16,6 +16,7 @@ evidence:
 - url: https://www.stelizabethri.com/bulletin.html
   seen: 2026-11-15
   note: Parish site's Bulletin page links https://parishesonline.com/organization/st-elizabeths-church.
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

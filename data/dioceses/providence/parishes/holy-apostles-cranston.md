@@ -18,6 +18,7 @@ evidence:
   note: 'probe url: Bulletin page lists PDFs on irp.cdn-website.com/c775168d/files/uploaded/ named 219C_YYYY_MM_DD.pdf
     (one ''219c_web_09-13.pdf''), newest first; 4lpi.com links on the site. The 15 November issue was
     not yet posted.'
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

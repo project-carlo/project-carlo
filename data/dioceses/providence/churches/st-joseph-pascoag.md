@@ -25,6 +25,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22336
   seen: 2026-11-14
   note: 'GCatholic 22336: St. Joseph, 183 Sayles Ave., Pascoag, Rhode Island 02859-0188, Plus Code 87HCX76W+29.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

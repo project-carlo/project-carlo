@@ -29,6 +29,7 @@ evidence:
   seen: 2026-11-15
   note: 'GCatholic 22368: Our Lady of Victory, 169 Main St., Ashaway, Rhode Island 02804-2243, Plus Code
     87HCC6C6+57.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

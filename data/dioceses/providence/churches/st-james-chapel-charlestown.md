@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-15
   note: 'GCatholic 22342: St. James (Chapel), 2079 Matunuck Schoolhouse Rd., Charlestown, Rhode Island
     02813, Plus Code 87HC99JJ+M3.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-14
   note: 'GCatholic 22453: St. Clement, 111 Long St., Warwick, Rhode Island 02886, Plus Code 87HCMHW9+Q5
     (group ''Sts. Rose and Clement Parish'').'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

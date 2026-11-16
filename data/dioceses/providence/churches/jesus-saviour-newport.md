@@ -24,6 +24,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22384
   seen: 2026-11-14
   note: 'GCatholic 22384: Jesus Saviour, 1 Vernon Ave., Newport, Rhode Island 02840-1431, Plus Code 87HCGM3W+GV.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

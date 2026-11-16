@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-14
   note: GCatholic 22423 St. Charles Borromeo, 178 Dexter St., Providence, Rhode Island 02907-2463, Plus
     Code 87HCRH6C+V8.
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

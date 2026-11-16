@@ -21,6 +21,7 @@ evidence:
   note: 'parish-site-access visit.py --bulletin: Squarespace page listing PDFs on olmparish.org/s/, newest
     first (Web-111526.pdf, Web-11826-2ray.pdf, Web-11126-7w3j.pdf, Web-102526.pdf ...). No publisher id
     on the site; the issue carries no publisher footer.'
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

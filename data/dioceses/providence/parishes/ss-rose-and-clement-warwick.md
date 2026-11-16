@@ -28,6 +28,7 @@ evidence:
     merged into SS Rose and Clement Parish, Warwick.
   note: Finder entry 12235 (read in a browser); also '(Parishes of St. Rose and St. Clement merged on
     Dec. 13, 1998)'; Saturday 4:00 PM, Sunday 8:00, 10:30 AM.
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

@@ -25,6 +25,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22475
   seen: 2026-11-14
   note: GCatholic 22475 St. Joseph, 1200 Mendon Rd., Woonsocket 02895-3999, Plus Code 87JC2G3C+F5.
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

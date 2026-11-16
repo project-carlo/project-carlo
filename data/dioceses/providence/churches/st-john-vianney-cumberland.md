@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-14
   note: 'ParishesOnline org address: 3609 Diamond Hill Rd, Cumberland, Rhode Island, 02864 (41.986328,
     -71.411332).'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

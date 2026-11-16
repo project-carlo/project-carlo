@@ -30,6 +30,7 @@ evidence:
     to merge into St. Anthony Parish, North Providence effective December 31, 2022 ... The Presentation
     and St. Edward church buildings will remain open and available as additional worship venues of St.
     Anthony Parish.'' Read in a browser (Cloudflare).'
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

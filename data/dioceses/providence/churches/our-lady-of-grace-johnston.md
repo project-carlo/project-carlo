@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-14
   note: GCatholic 22371 Our Lady of Grace, George Waterman Rd., Johnston, Rhode Island 02919-2712, Plus
     Code 87HCRGQ8+X9.
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

@@ -26,6 +26,7 @@ evidence:
   note: Finder entry 12142 (St. Patrick, merged into St. Aidan); entry 12138 (St. Aidan) says 'Merged
     into St. Aidan-St. Patrick July 1, 2018'; entry 20485 is the merged parish. Behind Cloudflare; read
     in a browser.
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

@@ -20,6 +20,7 @@ evidence:
     7, 2026' ... 'October 18, ...', each a hashed _files/ugd/29fe1c_<hash>.pdf link.
 revisit: Rerun fetch:check and confirm it picks the 22 November 2026 (or later) issue, page 2 header date.
 revisit_after: 2026-11-24
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

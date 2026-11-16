@@ -25,6 +25,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22377
   seen: 2026-11-14
   note: 'GCatholic 22377: St. Jude, 301 Front St., Lincoln, Rhode Island 02865-2421, Plus Code 87HCWH3Q+98.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

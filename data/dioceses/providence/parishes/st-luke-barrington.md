@@ -19,6 +19,7 @@ evidence:
   note: 'probe url: the parish site links its bulletin at https://church-bulletin.org/?id=993, which redirects
     to https://www.church-bulletin.org/saint-luke-church-barrington-ri-02806 (titled ''Saint Luke Church
     Bulletin''; weekly PDFs from 2024-11-17 to 2026-11-15).'
+promoted: 2026-11-16
 bulletin_status: available
 publication_reviews:
 - parish: holy-angels-barrington

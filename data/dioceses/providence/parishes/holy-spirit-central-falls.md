@@ -24,6 +24,7 @@ evidence:
     Otoniel J. Gomez (sabbatical 09-06-26 through 11-21-26; temporary administrator Rev. Gildardo Suarez).
     Finder 24221 ''St. Matthew (now Holy Spirit Church)'', 1030 Dexter Street: ''St. Matthew closed 2007,
     it is now Holy Spirit Church.'''
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

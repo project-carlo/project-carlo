@@ -17,6 +17,7 @@ evidence:
   note: 'probe url: WordPress parish site linking ParishesOnline org immaculate-conception-church-02920
     (lpi:0018000000Qbz47AAB, container 03/0145, latest issue 2026-11-15, org address 237 Garden Hills
     Dr).'
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

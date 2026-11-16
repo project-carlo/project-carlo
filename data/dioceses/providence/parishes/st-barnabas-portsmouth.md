@@ -21,6 +21,7 @@ evidence:
   note: 'Finder entry 12189 St. Barnabas: ''Pastor: Very Rev. David G. Thurber, Jr.''; entry 12188 St.
     Anthony, Portsmouth: ''Parochial Administrator: Very Reverend David G. Thurber, Jr.'' Read from the
     survey''s saved copy (scratch/providence-map-1/001-survey/dl/details.json).'
+promoted: 2026-11-16
 bulletin_status: available
 publication_reviews:
 - parish: st-anthony-portsmouth

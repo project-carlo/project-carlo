@@ -20,6 +20,7 @@ evidence:
     and its own archive of /s/<date>.pdf files whose newest is /s/2026-09-20.pdf. https://church-bulletin.org/?id=999
     redirects to https://www.church-bulletin.org/saint-francis-xavier-church-east-providence-ri-02914
     (''Saint Francis Xavier Church Bulletin''; latest PDFs 2026-11-08 and 2026-11-15).'
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-15
   note: 'GCatholic 22388: St. Bernard, 275 Tower Hill Rd., Wickford, Rhode Island 02852-5618, Plus Code
     87HCHG8P+R7.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

@@ -22,6 +22,7 @@ evidence:
   note: Parish site's bulletin links (bulletins.htm?week=0..3) run a script that redirects to a self-hosted
     copy, https://www.straymonds.com/bulletin/20261115B.pdf (same 4-page issue, same page 1 text); commented-out
     lines in the script point to container.parishesonline.com/bulletins/04/0915/.
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-15
   note: 'GCatholic 22436: Christ the King, 180 Old North Rd., Kingston, Rhode Island 02881-1415, Plus
     Code 87HCFFPH+48.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

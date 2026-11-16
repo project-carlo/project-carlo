@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-14
   note: 'GCatholic 22354: St. Joan of Arc, 3357 Mendon Rd., Cumberland, Rhode Island 02864-2112, Plus
     Code 87HCXGHR+4P.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

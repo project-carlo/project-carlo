@@ -25,6 +25,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22426
   seen: 2026-11-14
   note: GCatholic 22426 St. Mary, 538 Broadway, Providence, Rhode Island 02909-1895, Plus Code 87HCRH97+47.
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

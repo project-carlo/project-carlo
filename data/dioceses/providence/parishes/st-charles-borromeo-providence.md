@@ -29,6 +29,7 @@ evidence:
   seen: 2026-11-14
   note: Finder entry 12206 St. Charles Borromeo, 178 Dexter St., Pastor Rev. Jaime A. Garcia, who is also
     pastor of St. Michael the Archangel (12210).
+promoted: 2026-11-16
 bulletin_status: available
 publication_reviews:
 - parish: st-michael-the-archangel-providence

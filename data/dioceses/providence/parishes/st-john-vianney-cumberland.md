@@ -20,6 +20,7 @@ evidence:
   seen: 2026-11-14
   note: 'probe po: ''St. John Vianney Parish'', 3609 Diamond Hill Rd, Cumberland, lpi 0018000000Qx7ttAAB,
     container 03/1406, latest issue 2026-11-15.'
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-14
   note: 'GCatholic 22459: St. Anthony, 10 Sunset Ave., West Warwick (Plus Code coordinates 41.7154375,
     -71.5250625).'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-14
   note: 'GCatholic 22350: St. Matthew, Elmwood Ave. & Park Ave., Cranston, Rhode Island 02910, Plus Code
     87HCQHGH+C7.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

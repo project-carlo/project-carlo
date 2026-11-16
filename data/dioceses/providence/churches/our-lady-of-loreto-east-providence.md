@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-14
   note: 'GCatholic 22359: Our Lady of Loreto, 346 Waterman Ave., East Providence (Plus Code 41.8194375,
     -71.3655625).'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

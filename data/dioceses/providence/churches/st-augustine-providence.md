@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-14
   note: GCatholic 22420 St. Augustine, 639 Mount Pleasant Ave., Providence, Rhode Island 02908, Plus Code
     87HCRGWW+8J.
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

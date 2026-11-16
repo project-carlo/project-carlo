@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-14
   note: 'GCatholic 22344: Sts. John and Paul, 341 S Main St., Coventry (Plus Code coordinates 41.6804375,
     -71.5756875).'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

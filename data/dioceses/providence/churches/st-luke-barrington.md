@@ -25,6 +25,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22331
   seen: 2026-11-14
   note: 'GCatholic 22331: St. Luke, 108 Washington Rd., Barrington (Plus Code 41.7504375, -71.3403125).'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

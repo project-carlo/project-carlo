@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-15
   note: 'probe po: Our Lady of Grace Church, 4 Lafayette St, Johnston, RI 02919-2712; lpi 0018000000Qbz8cAAB,
     container 03/1238; weekly issues 2026-10-11 to 2026-11-15.'
+promoted: 2026-11-16
 bulletin_status: available
 publication_reviews:
 - parish: st-robert-bellarmine-johnston

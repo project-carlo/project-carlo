@@ -24,6 +24,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22334
   seen: 2026-11-14
   note: 'GCatholic 22334: St. Mary, 330 Wood St., Bristol, Rhode Island 02809-3208, Plus Code 87HCMPCH+GJ.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

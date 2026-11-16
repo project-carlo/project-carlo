@@ -16,6 +16,7 @@ evidence:
   seen: 2026-11-15
   note: Parish WordPress site's Bulletin Archive page links https://church-bulletin.org/?id=9023, which
     redirects to the church-bulletin.org page above.
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

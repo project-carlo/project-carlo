@@ -28,6 +28,7 @@ evidence:
   seen: 2026-11-14
   note: 'GCatholic 22358: Our Lady of Mercy, ''4th Ave., East Greenwich, Rhode Island 02818-3525'', Plus
     Code 87HCMG3V+P2.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

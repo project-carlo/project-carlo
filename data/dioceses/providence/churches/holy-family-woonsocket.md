@@ -29,6 +29,7 @@ evidence:
 revisit: Check the Holy Trinity bulletins of December 2026 for a Christmas Mass at the Holy Family building;
   if none and no other use is named, reconsider.
 revisit_after: 2027-01-05
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

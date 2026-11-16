@@ -28,6 +28,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22395
   seen: 2026-11-14
   note: 'GCatholic 22395: St. Cecilia, 1253 Newport Ave, Pawtucket, Rhode Island 02861, Plus Code 87HCVJQW+5G.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

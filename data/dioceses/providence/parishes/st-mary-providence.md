@@ -18,6 +18,7 @@ evidence:
   seen: 2026-11-15
   note: 'WordPress Bulletins page lists issues newest first: bulletin-111526.pdf, bulletin-110826.pdf,
     bulletin-110126.pdf, bulletin-102526.pdf ... under wp-content/uploads/YYYY/MM/.'
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

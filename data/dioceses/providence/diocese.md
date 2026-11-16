@@ -2,8 +2,9 @@
 name: Roman Catholic Diocese of Providence
 state: RI
 website: https://dioceseofprovidence.org
-status: exploring
+status: promoted
 gcatholic: prov0
+promoted: 2026-11-16
 ---
 
 The whole state of Rhode Island: Providence, Kent, Washington, Newport and Bristol counties.

@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-14
   note: 'GCatholic 22346: Holy Apostles, 800 Pippin Orchard Rd., Cranston, Rhode Island 02921-3603, Plus
     Code 87HCQFF7+3P.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

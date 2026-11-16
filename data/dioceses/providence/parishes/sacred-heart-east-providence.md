@@ -17,6 +17,7 @@ evidence:
   seen: 2026-11-14
   note: 'probe url: the parish site links https://church-bulletin.org/9025, which redirects to https://www.church-bulletin.org/sacred-heart-church-east-providence-ri-02914
     (''Sacred Heart Church Bulletin''; latest PDFs 2026-11-08 and 2026-11-15).'
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

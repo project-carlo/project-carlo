@@ -30,6 +30,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22348
   seen: 2026-11-14
   note: 'GCatholic 22348: St. Mark, 15 Garden Ct., Cranston, Rhode Island 02920, Plus Code 87HCQG7V+4J.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

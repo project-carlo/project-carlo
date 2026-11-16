@@ -29,6 +29,7 @@ evidence:
   seen: 2026-11-14
   note: 'GCatholic 22401: St. John the Baptist, 69 Quincy Ave., Pawtucket, Rhode Island 02860-2830, Plus
     Code 87HCVJF3+4C.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

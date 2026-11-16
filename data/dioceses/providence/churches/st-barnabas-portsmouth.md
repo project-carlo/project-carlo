@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-14
   note: 'GCatholic 22406: St. Barnabas, 1697 E Main Rd., Portsmouth, Rhode Island 02871-2427, Plus Code
     87HCHPHX+P5.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

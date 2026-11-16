@@ -26,6 +26,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22462
   seen: 2026-11-14
   note: 'GCatholic 22462: St. Mary, 68 Church St., West Warwick (Plus Code coordinates 41.6873125, -71.5200625).'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

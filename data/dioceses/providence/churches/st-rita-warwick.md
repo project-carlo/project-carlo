@@ -26,6 +26,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22452
   seen: 2026-11-14
   note: 'GCatholic 22452: St. Rita, 722 Oakland Beach Ave., Warwick, Rhode Island 02889, Plus Code 87HCMJQ2+QR.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

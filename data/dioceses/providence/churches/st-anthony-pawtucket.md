@@ -24,6 +24,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22399
   seen: 2026-11-14
   note: 'GCatholic 22399: St. Anthony, 32 Lawn Ave., Pawtucket, Rhode Island 02860-3523, Plus Code 87HCVHFX+8W.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

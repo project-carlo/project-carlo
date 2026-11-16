@@ -20,6 +20,7 @@ evidence:
 - url: https://rosary463.com/
   seen: 2026-11-15
   note: Parish WordPress site links http://www.parishesonline.com/find/our-lady-of-the-rosary-church.
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

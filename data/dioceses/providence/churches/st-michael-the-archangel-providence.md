@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-14
   note: GCatholic 22427 St. Michael the Archangel, 239 Oxford St., Providence, Rhode Island 02905-2096,
     Plus Code 87HCRH2P+J6.
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

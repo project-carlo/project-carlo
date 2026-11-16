@@ -22,6 +22,7 @@ evidence:
     TO ST. PIUS V! Read Our Bulletin!' to https://www.parishesonline.com/find/st-pius-v-church?preview.
     Its own /bulletins page lists eCatholic issues only up to March 6, 2022 (files.ecatholic.com/16012/bulletins/20220306.pdf);
     issues.py found no eCatholic issue for 1-15 November 2026 (403).
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-14
   note: GCatholic 22392 St. Anthony, 1413 Mineral Spring Ave., North Providence, Rhode Island 02904-4503,
     Plus Code 87HCVH85+J7.
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

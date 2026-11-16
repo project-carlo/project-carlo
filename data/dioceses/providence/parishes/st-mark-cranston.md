@@ -18,6 +18,7 @@ evidence:
   note: 'probe url: Bulletin page lists dated PDFs on irp.cdn-website.com/f75fb7af/files/uploaded/ (11-15-26.pdf,
     11-8-26.pdf, 11-1-26.pdf ...), newest first. No publisher id on the site; the issue carries no LPi
     or other publisher footer.'
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

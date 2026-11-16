@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-14
   note: 'GCatholic 22456: Christ the King, 120 Legris Ave., West Warwick (Plus Code coordinates 41.6959375,
     -71.5201875).'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

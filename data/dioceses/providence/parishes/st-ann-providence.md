@@ -23,6 +23,7 @@ evidence:
   quote: MERGING DECREE OF SAINT AGNES
   note: Pastor's letter on St. Agnes's closure and merger into St. Ann (text layer), effective Monday,
     November 8, 2025; see excluded/st-agnes-providence.
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

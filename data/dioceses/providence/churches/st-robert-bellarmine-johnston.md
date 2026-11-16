@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-14
   note: GCatholic 22373 St. Robert Bellarmine, 1804 Atwood Ave., Johnston, Rhode Island 02919-324[4],
     Plus Code 87HCRFPV+XF.
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

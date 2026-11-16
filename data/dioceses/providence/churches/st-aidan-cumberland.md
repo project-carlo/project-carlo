@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-14
   note: 'GCatholic 22353: St. Aidan, 1460 Diamond Hill Rd., Cumberland, Rhode Island 02864-5510, Plus
     Code 87HCWHJW+GJ.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

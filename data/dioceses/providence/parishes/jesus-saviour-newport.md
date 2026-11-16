@@ -17,6 +17,7 @@ evidence:
   seen: 2026-11-15
   note: 'probe url: the parish site''s bulletin page embeds LPi 0018000000Qbz5GAAR (org the-church-of-jesus-saviour,
     container 03/0610, latest issue 2026-11-15). Finder entry 12169 gives jsaviournewportri.org.'
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

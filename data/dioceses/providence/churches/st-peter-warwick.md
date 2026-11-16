@@ -25,6 +25,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22451
   seen: 2026-11-14
   note: 'GCatholic 22451: St. Peter, 350 Fair St., Warwick, Rhode Island 02888, Plus Code 87HCQJ34+PG.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

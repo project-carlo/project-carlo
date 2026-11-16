@@ -45,6 +45,7 @@ evidence:
 revisit: Grep the Christmas 2026 issue for St. Joseph (195 Walcott St.) and Our Lady of Consolation (211
   Sabin St.); see open/st-joseph-pawtucket and open/our-lady-of-consolation-pawtucket.
 revisit_after: 2027-01-05
+promoted: 2026-11-16
 research:
 - method: 'Holy Family''s own channels: holyfamilypawtucket.org (DEAD-DNS; Wayback CDX shows an eCatholic
     site last captured May 2025; its bulletins page snapshot answered HTTP 429), issues.py discovermass

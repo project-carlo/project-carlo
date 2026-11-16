@@ -25,6 +25,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22442
   seen: 2026-11-14
   note: 'GCatholic 22442: St. Alexander, 218 Main St., Warren, Rhode Island 02885, Plus Code 87HCPPM8+V9.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

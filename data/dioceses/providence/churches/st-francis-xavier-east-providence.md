@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-14
   note: 'GCatholic 22362: St. Francis Xavier, 79 N Carpenter St., East Providence (Plus Code 41.8171875,
     -71.3731875).'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

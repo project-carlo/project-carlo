@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-15
   note: 'GCatholic 22380: St. Mary, Star of the Sea, 864 Point Judith Rd., Narragansett, Rhode Island
     02882-5524, Plus Code 87HC9GQ7+7X.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

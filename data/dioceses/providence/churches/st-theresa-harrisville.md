@@ -29,6 +29,7 @@ evidence:
   seen: 2026-11-14
   note: 'GCatholic 22338: St. Theresa of the Child Jesus (Shrine of the Little Flower), 35 Dion Dr., Harrisville,
     Rhode Island 02830-1731, Plus Code 87HCX9MM+H7.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

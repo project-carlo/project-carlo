@@ -18,6 +18,7 @@ evidence:
   note: 'probe url: the Bulletin page links self-hosted PDFs on wp-content/uploads/ with irregular names,
     a ''Bulletin-links-2024.pdf'' first, then Nov.-15-Bulletin-FINAL.pdf.pdf, Nov.-8-FINAL.pdf, Bulletin-Nov.-1-Final.pdf,
     20261025B.pdf, Bulletin-Oct-18.pdf.pdf ...'
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

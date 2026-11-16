@@ -19,6 +19,7 @@ evidence:
   seen: 2026-11-15
   note: 'probe po: ''St. Mary Church'', 330 Wood St, Bristol, Rhode Island, 02809-3208, container 03/0709,
     latest issue 2026-11-15.'
+promoted: 2026-11-16
 bulletin_status: available
 publication_reviews:
 - parish: our-lady-of-mount-carmel-bristol

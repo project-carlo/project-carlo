@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-15
   note: 'probe po: org ''Immaculate Conception Church'', LPi 0018000000Qbz49AAB, container 03/0259, 111
     High Street, Westerly; latest issue 2026-11-15.'
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

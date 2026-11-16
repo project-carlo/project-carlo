@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-14
   note: Finder 12181 'St. Anthony', 32 Lawn St., Pawtucket; '(Portuguese) Established 1926, 32 Lawn Ave.';
     Administrator Rev. Nuno Miguel da Silva Rodrigues, CSSp.
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

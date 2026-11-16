@@ -27,6 +27,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22428
   seen: 2026-11-14
   note: GCatholic 22428 St. Patrick, 244 Smith St., Providence, Rhode Island 02908, Plus Code 87HCRHMJ+25.
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

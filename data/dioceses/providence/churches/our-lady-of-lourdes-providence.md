@@ -32,6 +32,7 @@ evidence:
   seen: 2026-11-14
   note: GCatholic 22413 Our Lady of Lourdes, 901 Atwells Ave., Providence, Rhode Island 02909, Plus Code
     87HCRHG2+3W.
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

@@ -20,6 +20,7 @@ evidence:
   seen: 2026-11-14
   note: Parish site (403 to probe url, Cloudflare; loaded with visit.py) is eCatholic site 17050, with
     a /bulletins page. The finder gives olcsvp.org for both entries 12127 and 12129.
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

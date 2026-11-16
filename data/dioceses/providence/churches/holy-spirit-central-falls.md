@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-14
   note: 'GCatholic 22339: Holy Spirit (listed as a parish), 1030 Dexter St., Central Falls, Rhode Island
     02863-1717, Plus Code 87HCVHQX+VH.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

@@ -22,6 +22,7 @@ evidence:
   note: 'Finder entry 12193 ''Holy Cross (closed)'': ''04-2018: Holy Cross merged with St. Thomas Parish,
     Providence to become a mission church of St. Thomas ... Later 2018: Holy Cross parish closed.''; Sunday
     9:30 AM. Read in a browser.'
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

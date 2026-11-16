@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-15
   note: 'GCatholic 22389: St. Francis de Sales, 381 School St., North Kingstown, Rhode Island 02852, Plus
     Code 87HCJG8J+X3.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

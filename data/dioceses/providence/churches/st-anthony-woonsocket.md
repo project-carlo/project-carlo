@@ -23,6 +23,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22473
   seen: 2026-11-14
   note: GCatholic 22473 St. Anthony, 128 Greene St., Woonsocket 02895-456[5], Plus Code 87JC2F2Q+4Q.
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

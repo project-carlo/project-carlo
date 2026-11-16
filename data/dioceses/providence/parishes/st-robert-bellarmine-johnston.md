@@ -18,6 +18,7 @@ evidence:
   seen: 2026-11-15
   note: Parish homepage answers 403 to probe url; read with parish-site-access visit.py, it is eCatholic
     site 14377 and links /bulletins.
+promoted: 2026-11-16
 bulletin_status: available
 publication_reviews:
 - parish: our-lady-of-grace-johnston

@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-14
   note: 'GCatholic 22449: St. Gregory the Great, 360 Cowesett Rd., Warwick, Rhode Island 02886, Plus Code
     87HCMGMJ+9R.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

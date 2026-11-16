@@ -24,6 +24,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22333
   seen: 2026-11-14
   note: 'GCatholic 22333: St. Elizabeth, 577 Wood St., Bristol, Rhode Island 02809-2326, Plus Code 87HCMPGG+5R.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

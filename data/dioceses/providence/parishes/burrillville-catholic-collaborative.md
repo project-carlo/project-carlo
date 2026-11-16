@@ -23,6 +23,7 @@ evidence:
   seen: 2026-11-14
   note: 'St. Patrick, Harrisville''s own WordPress site: its Bulletin page links https://www.jppc.net/onlinebulletins/9012template.pdf,
     the same John Patrick id 9012 as the Collaborative, so St. Patrick has no separate bulletin.'
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-14
   note: 'GCatholic 22335: Our Lady of Good Help, 1063 Victory Hwy., Mapleville, Rhode Island 02839-1183,
     Plus Code 87HCX942+23.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

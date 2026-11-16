@@ -19,6 +19,7 @@ evidence:
 revisit: Rerun fetch:check after 22 November 2026 and confirm page-pdfs still picks the first-listed (newest)
   issue.
 revisit_after: 2026-11-24
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

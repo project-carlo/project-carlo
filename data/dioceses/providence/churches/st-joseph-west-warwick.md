@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-14
   note: 'GCatholic 22461: St. Joseph, 854 Providence St., West Warwick (Plus Code coordinates 41.7245625,
     -71.4918125).'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

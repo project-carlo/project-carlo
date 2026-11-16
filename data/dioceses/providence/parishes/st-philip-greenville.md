@@ -24,6 +24,7 @@ evidence:
   seen: 2026-11-14
   note: 'probe po: org ''Saint Philip Church'', 622 Putnam Pike, Greenville, RI, 02828-1434; LPi 0018000000Qc2OaAAJ,
     container 03/0083; latest issue 2026-11-15.'
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

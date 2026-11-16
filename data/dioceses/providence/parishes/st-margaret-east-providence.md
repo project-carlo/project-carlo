@@ -17,6 +17,7 @@ evidence:
   seen: 2026-11-14
   note: 'visit.py --bulletin (probe url could not connect): WordPress Bulletins page listing PDFs newest
     first, the first being the 15 November 2026 issue, then 8 November and 1 November.'
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

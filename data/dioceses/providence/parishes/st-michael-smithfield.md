@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-14
   note: 'probe po: org ''St. Michael''s Church'', 80 Farnum Pike, Smithfield, Rhode Island, 02917-3399;
     LPi 0018000000Qc2IeAAJ, container 03/0714; latest issue 2026-11-15.'
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

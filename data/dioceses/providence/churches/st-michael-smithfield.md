@@ -28,6 +28,7 @@ evidence:
 - url: https://parishesonline.com/organization/st-michaels-church-02917
   seen: 2026-11-14
   note: ParishesOnline org address 80 Farnum Pike, Smithfield, Rhode Island, 02917-3399.
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

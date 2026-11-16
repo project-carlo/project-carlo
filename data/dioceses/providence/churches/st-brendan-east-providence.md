@@ -26,6 +26,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22361
   seen: 2026-11-14
   note: 'GCatholic 22361: St. Brendan, 60 Turner Ave., East Providence (Plus Code 41.7708125, -71.3593125).'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

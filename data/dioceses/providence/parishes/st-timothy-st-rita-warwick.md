@@ -38,6 +38,7 @@ evidence:
   note: 'probe po: ''St. Timothy Church'', 1799 Warwick Ave, Warwick, RI 02889-1700, lpi 0018000000Qc2WtAAJ,
     container 03/0355, latest issue 2026-11-15. probe po finds no St. Rita org in Warwick (st-rita-church
     is Marion, MA; st-rita-church-02889 does not exist).'
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

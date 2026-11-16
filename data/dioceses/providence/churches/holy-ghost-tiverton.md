@@ -27,6 +27,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22438
   seen: 2026-11-14
   note: 'GCatholic 22438: Holy Ghost, Judson St., Tiverton, Rhode Island 02878, Plus Code 87HCMR98+35.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

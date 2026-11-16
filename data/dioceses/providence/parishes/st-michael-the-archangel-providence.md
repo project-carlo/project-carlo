@@ -23,6 +23,7 @@ evidence:
   seen: 2026-11-14
   note: Finder entry 12210 St. Michael the Archangel, 239 Oxford St., Pastor Rev. Jaime A. Garcia, who
     is also pastor of St. Charles Borromeo (12206).
+promoted: 2026-11-16
 bulletin_status: available
 publication_reviews:
 - parish: st-charles-borromeo-providence

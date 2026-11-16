@@ -29,6 +29,7 @@ evidence:
     to secular use: ''Mass and any other public worship or liturgical act is now prohibited there. This
     means that the church building is closed permanently''. The SS. Peter and Paul decree (sspp-relegation.pdf,
     same date) says the same of that church.'
+promoted: 2026-11-16
 bulletin_status: available
 publication_reviews:
 - parish: sacred-heart-west-warwick

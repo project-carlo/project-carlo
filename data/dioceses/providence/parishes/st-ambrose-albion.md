@@ -20,6 +20,7 @@ evidence:
   quote: 'Parochial Administrator: Rev. Robert E. Lacombe'
   note: Finder entry 12160; the same administrator is named on entry 12162 (St. James, Manville). Behind
     Cloudflare; read in a browser.
+promoted: 2026-11-16
 bulletin_status: available
 publication_reviews:
 - parish: st-james-manville

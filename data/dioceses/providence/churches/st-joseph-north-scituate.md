@@ -35,6 +35,7 @@ evidence:
   seen: 2026-11-14
   note: 'GCatholic 22433: St. Joseph, Danielson Pike & Route 116, North Scituate, Rhode Island 02857,
     Plus Code 87HCRCJ6+MW.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

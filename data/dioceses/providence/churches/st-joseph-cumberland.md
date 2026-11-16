@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-14
   note: 'GCatholic 22356: St. Joseph, 1303 Mendon Rd., Cumberland, Rhode Island 02864-0892, Plus Code
     87HCWHMC+MX.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

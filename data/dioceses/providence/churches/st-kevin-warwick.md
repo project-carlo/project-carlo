@@ -25,6 +25,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22450
   seen: 2026-11-14
   note: 'GCatholic 22450: St. Kevin, 333 Sandy Ln., Warwick, Rhode Island 02889, Plus Code 87HCPJ64+QW.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

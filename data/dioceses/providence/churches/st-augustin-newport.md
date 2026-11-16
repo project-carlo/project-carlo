@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-14
   note: 'GCatholic 22385: St. Augustin, Carroll Ave. & Harrison Ave., Newport, Rhode Island 02840, Plus
     Code 87HCFMCM+HV.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

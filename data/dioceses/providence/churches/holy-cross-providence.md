@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-14
   note: GCatholic 22410 Holy Cross, 645 Hartford Ave., Providence, Rhode Island 02909-5717, Plus Code
     87HCRG9M+WG.
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-15
   note: Parish WordPress site (unreachable to probe url; read with parish-site-access visit.py) embeds
     ParishesOnline org st-mary-of-the-bay-parish.
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

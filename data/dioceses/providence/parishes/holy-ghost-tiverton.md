@@ -20,6 +20,7 @@ evidence:
   note: 'WordPress Bulletin page (unreachable to probe url; read with parish-site-access visit.py) lists
     six issues oldest first: bulletin-2026_10_11.pages.pdf ... bulletin-2026_11_15.pages.pdf under wp-content/uploads/2026/11/.
     A 6 November 2026 post says ''Our weekly bulletins have returned to the website.'''
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

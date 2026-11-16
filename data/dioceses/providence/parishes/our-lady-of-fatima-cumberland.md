@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-14
   note: 'probe po: ''Our Lady of Fatima Church'', 1 Fatima Dr, Cumberland, lpi 0018000000Qx7tsAAB, container
     03/1052, latest issue 2026-11-15.'
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

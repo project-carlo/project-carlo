@@ -20,6 +20,7 @@ evidence:
 - url: https://dioceseofprovidence.org/parishfinder
   seen: 2026-11-14
   note: Finder entry 12195 Holy Name of Jesus, 99 Camp St., Pastor Rev. Lazarus E. Onuh, website http://www.holynameprovidence.org.
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

@@ -24,6 +24,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22412
   seen: 2026-11-14
   note: GCatholic 22412 Holy Name of Jesus, 99 Camp St., Providence, Rhode Island 02906, Plus Code 87HCRHRW+6J.
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

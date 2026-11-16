@@ -25,6 +25,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22387
   seen: 2026-11-14
   note: 'GCatholic 22387: St. Mary, 12 William St., Newport, Rhode Island 02840, Plus Code 87HCFMMP+JR.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

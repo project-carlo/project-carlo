@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-15
   note: 'probe po: org ''Blessed Sacrament Church'', 239 Regent Ave, Providence 02908-4552, lpi 0018000000QbyvlAAB,
     container 03/0187, latest issue 2026-11-15.'
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

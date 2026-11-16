@@ -22,6 +22,7 @@ evidence:
   note: 'visit.py (the site answers 403 to probe url): eCatholic site 30577, whose ''Bulletins'' link
     goes to https://www.parishesonline.com/find/our-lady-of-loreto-roman-catholic-church; issues.py found
     no files at files.ecatholic.com/30577 for the six Sundays to 15 November.'
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

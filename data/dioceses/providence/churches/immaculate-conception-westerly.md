@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-15
   note: 'GCatholic 22464: Immaculate Conception, 111 High St., Westerly, Rhode Island 02891, Plus Code
     87HC95JF+HR.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

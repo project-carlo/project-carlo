@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-14
   note: 'GCatholic 22330: Holy Angels, 341 Maple Ave., Barrington (its city field reads ''Rhode Island
     02806-341'', a truncated ZIP; Plus Code 41.7390625, -71.3193125).'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

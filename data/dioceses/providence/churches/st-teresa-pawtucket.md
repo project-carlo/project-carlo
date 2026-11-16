@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-14
   note: 'GCatholic 22404: St. Teresa of the Child Jesus, 358 Newport Ave., Pawtucket, Rhode Island 02861-4130,
     Plus Code 87HCVJ8W+V4.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

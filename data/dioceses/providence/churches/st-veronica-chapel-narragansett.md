@@ -28,6 +28,7 @@ evidence:
   seen: 2026-11-15
   note: 'GCatholic 22382: St. Veronica (Chapel), 1035 Boston Neck Rd., Rt. 1A, Narragansett, Rhode Island
     02882, Plus Code 87HCFHM7+3G.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

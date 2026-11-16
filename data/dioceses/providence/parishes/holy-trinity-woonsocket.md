@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-15
   note: 'probe po: org ''Holy Trinity Parish'', 1409 Park Ave, Woonsocket 02895-6597, lpi 0018000000Qc011AAB,
     container 03/0095, latest issue 2026-11-15.'
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-14
   note: 'GCatholic 22367: St. Eugene, 1247 Putnam Pike, Chepachet, Rhode Island 02814-1100, Plus Code
     87HCW88F+GQ.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

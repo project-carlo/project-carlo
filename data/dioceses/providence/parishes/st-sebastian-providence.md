@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-14
   note: Finder entry 12214 St. Sebastian, 67 Cole Ave., Pastor Rev. Edward A. Sousa, Jr.; entry 12208
     St. Joseph names him 'Administrator pro tem'.
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

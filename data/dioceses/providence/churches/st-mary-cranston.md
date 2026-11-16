@@ -25,6 +25,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22349
   seen: 2026-11-14
   note: 'GCatholic 22349: St. Mary, 1525 Cranston St., Cranston, Rhode Island 02920-6740, Plus Code 87HCQGQP+WV.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

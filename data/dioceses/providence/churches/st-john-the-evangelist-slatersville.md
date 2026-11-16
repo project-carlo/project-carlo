@@ -24,6 +24,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22393
   seen: 2026-11-14
   note: GCatholic 22393 St. John the Evangelist, 63 Church St., Slatersville 02876, Plus Code 87HCXCWC+X3.
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

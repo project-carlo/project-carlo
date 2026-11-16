@@ -26,6 +26,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22411
   seen: 2026-11-14
   note: GCatholic 22411 Holy Ghost, 1 Knight St., Providence, Rhode Island 02909, Plus Code 87HCRHF8+GV.
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

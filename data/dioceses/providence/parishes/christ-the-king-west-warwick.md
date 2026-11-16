@@ -21,6 +21,7 @@ evidence:
   note: Linked from the parish site www.ctkwwri.org (probe url). Redirects to the John Patrick Publishing
     page church-bulletin.org/church-of-christ-the-king-west-warwick-ri-02893, 'Latest Edition November
     15, 2026 Bulletin', weekly archive back to 2026.
+promoted: 2026-11-16
 bulletin_status: available
 publication_reviews:
 - parish: st-anthony-west-warwick

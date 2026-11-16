@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-15
   note: 'probe po: ''The Faith Community of St. Francis De Sales'', 381 School St, North Kingstown, Rhode
     Island, 02852-1892; lpi 0018000000Qc1KMAAZ, container 03/0637, latest issue 2026-11-15.'
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

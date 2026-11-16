@@ -25,6 +25,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22429
   seen: 2026-11-14
   note: GCatholic 22429 St. Pius V, 55 Elmhurst Ave., Providence, Rhode Island 02908, Plus Code 87HCRHR7+GG.
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

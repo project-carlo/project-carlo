@@ -23,6 +23,7 @@ evidence:
   seen: 2026-11-14
   note: 'probe po: org ''Saints John and Paul Church'', 341 S Main St, Coventry, Rhode Island, 02816-5987,
     website www.stsjohnpaulri.com; LPi 0018000000Qc072AAB, container 03/0946; latest issue 2026-11-15.'
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

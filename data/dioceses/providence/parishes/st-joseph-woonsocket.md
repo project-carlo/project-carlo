@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-15
   note: 'probe po: org ''St. Joseph''s Church'', 1200 Mendon Rd, Woonsocket 02895-3999, lpi 0018000000Qc1TdAAJ,
     container 03/0652, latest issue 2026-11-15.'
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

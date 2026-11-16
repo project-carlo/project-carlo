@@ -28,6 +28,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22466
   seen: 2026-11-15
   note: 'GCatholic 22466: St. Pius X, 44 Elm St., Westerly, Rhode Island 02891, Plus Code 87HC95CC+P8.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

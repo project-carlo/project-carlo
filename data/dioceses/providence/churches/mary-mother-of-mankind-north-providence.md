@@ -25,6 +25,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22390
   seen: 2026-11-14
   note: GCatholic 22390 Mary, Mother of Mankind, 25 4th St., North Providence, Plus Code 87HCVG6C+VM.
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

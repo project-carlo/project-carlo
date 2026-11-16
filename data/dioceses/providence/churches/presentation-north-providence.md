@@ -29,6 +29,7 @@ evidence:
   seen: 2026-11-14
   note: GCatholic 22391 Presentation of the Blessed Virgin Mary, 1081 Mineral Spring Ave., North Providence,
     Rhode Island 02904, Plus Code 87HCVH9F+87.
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

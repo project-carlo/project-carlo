@@ -27,6 +27,7 @@ revisit: Check container 03/0224 for the 22 November 2026 issue (the 25 October 
   until the weekend of November 21 & 22); if it never resumes, read the St. Mary of the Bay bulletin for
   St. Thomas's Masses and merge.
 revisit_after: 2026-11-24
+promoted: 2026-11-16
 research:
 - method: probe container 03/0224 --weeks 4 (and probe po st-thomas-the-apostle-church-02885)
   url: https://parishesonline.com/organization/st-thomas-the-apostle-church-02885

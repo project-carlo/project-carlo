@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-14
   note: 'GCatholic 22386: St. Joseph, Broadway & Mann Ave., Newport, Rhode Island 02840-2708, Plus Code
     87HCFMRQ+XJ.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

@@ -25,6 +25,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22430
   seen: 2026-11-14
   note: GCatholic 22430 St. Raymond, 1240 N Main St., Providence, Rhode Island 02906, Plus Code 87HCVH3X+GH.
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

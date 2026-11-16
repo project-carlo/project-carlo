@@ -23,6 +23,7 @@ evidence:
   seen: 2026-11-15
   note: 'probe po: ''Our Lady of Mount Carmel Church'', 141 State St, Bristol, Rhode Island, 02809-2228,
     LPi 0018000000Qbzz4AAB, container 03/0955, latest issue 2026-11-15.'
+promoted: 2026-11-16
 bulletin_status: available
 publication_reviews:
 - parish: st-mary-bristol

@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-14
   note: 'GCatholic 22352: Our Lady of Fatima, Fatima Dr., Cumberland, Rhode Island 02864-8229, Plus Code
     87HCWJ46+6G.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

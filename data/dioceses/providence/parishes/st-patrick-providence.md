@@ -20,6 +20,7 @@ evidence:
     to the 1 November 2026 issue on img1.wsimg.com. The ''Bulletin Archives'' page links no PDFs.'
 revisit: Rerun fetch:check and check whether the E-Bulletin page has moved past the 1 November 2026 issue.
 revisit_after: 2026-11-23
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

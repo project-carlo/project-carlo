@@ -24,6 +24,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22351
   seen: 2026-11-14
   note: 'GCatholic 22351: St. Paul, 1 St Paul Place, Cranston, Rhode Island 02905-3587, Plus Code 87HCQHGX+XV.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

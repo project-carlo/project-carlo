@@ -37,6 +37,7 @@ evidence:
   seen: 2026-11-15
   note: 'probe po: org ''St. Pius X'', LPi 0018000000Qx7u2AAB, container 03/4092, 44 Elm St, Westerly;
     latest issue 2026-11-15.'
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

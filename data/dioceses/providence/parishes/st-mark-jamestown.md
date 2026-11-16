@@ -18,6 +18,7 @@ evidence:
   note: 'Parish site (GoDaddy builder, read with visit.py): the Weekly Bulletins page links ''BULLETINS
     FOR ST. MARK'' to http://www.parishesonline.com/find/st-mark-roman-catholic-church-02835 (org LPi
     0018000000Qx7uXAAR, container 03/1120, latest issue 2026-11-15). Finder entry 12155 gives stmarkjtn.org.'
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

@@ -29,6 +29,7 @@ evidence:
   seen: 2026-11-15
   note: 'probe po: org ''Saint Joseph Church - Our Lady of Victory-St. Vincent de Paul'', LPi 0018000000Qc1TTAAZ,
     container 03/0423, 1105 Main St, Hope Valley; latest issue 2026-11-15.'
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

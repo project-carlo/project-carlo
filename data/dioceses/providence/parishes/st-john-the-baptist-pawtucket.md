@@ -40,6 +40,7 @@ evidence:
 revisit: Check whether the Message & Bulletin page's bulletin link has moved past the 25 October 2026
   issue, and whether a bulletin mentions Mass at St. Mary, 103 Pine St.
 revisit_after: 2026-11-29
+promoted: 2026-11-16
 research:
 - method: visit.py on the Message & Bulletin page; probe pdf of the one linked PDF; fetch:check; Wayback
     snapshot of the page (HTTP 429, not read)

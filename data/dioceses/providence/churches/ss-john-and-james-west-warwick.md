@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-14
   note: 'GCatholic 22460: Sts. John and James, 20 Washington St., West Warwick (Plus Code coordinates
     41.7033125, -71.5251875).'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

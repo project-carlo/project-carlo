@@ -21,6 +21,7 @@ evidence:
     page.'
 revisit: Check whether the homepage links a bulletins-2027 page and move website and provider_id to it.
 revisit_after: 2027-01-10
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

@@ -24,6 +24,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22431
   seen: 2026-11-14
   note: GCatholic 22431 St. Sebastian, 67 Cole Ave., Providence, Rhode Island 02906, Plus Code 87HCRJP7+53.
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

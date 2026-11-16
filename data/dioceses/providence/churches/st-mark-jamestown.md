@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-14
   note: 'GCatholic 22370: St. Mark, 60 Narragansett Ave., Jamestown, Rhode Island 02835-1174, Plus Code
     87HCFJWH+H8.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

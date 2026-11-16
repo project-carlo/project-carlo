@@ -24,6 +24,7 @@ evidence:
   seen: 2026-11-14
   note: 'Finder entries 12170 St. Augustin and 12172 St. Mary both give ''Pastor: Rev. Mark A. Sauriol''
     and the parish office at 12 William St., Newport. Read from the survey''s saved copy.'
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

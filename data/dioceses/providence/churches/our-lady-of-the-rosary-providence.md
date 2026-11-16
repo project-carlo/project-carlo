@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-14
   note: GCatholic 22415 Our Lady of the Rosary, 21 Traverse St., Providence, Rhode Island 02903, Plus
     Code 87HCRJ92+F7.
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

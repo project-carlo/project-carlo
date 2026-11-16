@@ -25,6 +25,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22364
   seen: 2026-11-14
   note: 'GCatholic 22364: St. Martha, 2595 Pawtucket Ave., East Providence (Plus Code 41.8038125, -71.3615625).'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

@@ -20,6 +20,7 @@ evidence:
 - url: http://www.stpeterswarwick.com
   seen: 2026-11-14
   note: probe url ok; the parish site embeds po-org:st-peter-church.
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

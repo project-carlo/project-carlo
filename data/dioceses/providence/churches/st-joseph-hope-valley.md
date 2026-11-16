@@ -25,6 +25,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22369
   seen: 2026-11-15
   note: 'GCatholic 22369: St. Joseph, 1105 Main St., Hope Valley, Rhode Island 02832-0388, Plus Code 87HCG77R+2F.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

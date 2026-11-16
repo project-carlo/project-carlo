@@ -26,6 +26,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-01/22360
   seen: 2026-11-14
   note: 'GCatholic 22360: Sacred Heart, 100 Taunton Ave., East Providence (Plus Code 41.8199375, -71.3779375).'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

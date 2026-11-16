@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-14
   note: 'probe po: ''The Historic St. Joseph Church'', 1303 Mendon Rd, Cumberland, lpi 0018000000Qc1V5AAJ,
     container 03/0587, latest issue 2026-11-15.'
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

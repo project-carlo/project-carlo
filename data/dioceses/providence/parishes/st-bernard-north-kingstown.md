@@ -23,6 +23,7 @@ evidence:
   note: Parish site (finder 12173 and 12150's homepage) links https://www.jppc.net/onlinebulletins/9020template.pdf,
     which redirects to https://www.church-bulletin.org/saint-bernard-church-north-kingstown-ri-02852 (dated
     PDFs, newest 2026-11-15).
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

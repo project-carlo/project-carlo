@@ -25,6 +25,7 @@ evidence:
   note: 'Mass schedule page: ''Weekend: Saturday at 4:00 pm (English, at O. L. of Lourdes Church, 901
     Atwells Ave''; ''Sunday at 9:30 am ( Polish ) and 11:30 am ( English )''; ''Monday – Friday at 8:00
     am''.'
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

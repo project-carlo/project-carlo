@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-14
   note: 'GCatholic 22345: St. Vincent de Paul, St Vincent de Paul St., Coventry (Plus Code coordinates
     41.6978125, -71.5493125).'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

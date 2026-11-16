@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-14
   note: GCatholic 2436 Cathedral of Sts. Peter and Paul, 30 Fenner St., Providence, Rhode Island 02903,
     Plus Code 87HCRH9M+R8.
+promoted: 2026-11-16
 ---
 
 ## Holds Mass

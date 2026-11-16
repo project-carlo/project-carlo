@@ -16,6 +16,7 @@ evidence:
   seen: 2026-11-14
   note: 'probe url: the parish site''s Bulletin page embeds ParishesOnline lpi:0018000000Qc2DMAAZ (org
     st-mary-church-02920, container 03/0154, latest issue 2026-11-15).'
+promoted: 2026-11-16
 bulletin_status: available
 ---
 

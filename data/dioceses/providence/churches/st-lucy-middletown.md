@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-14
   note: 'GCatholic 22379: St. Lucy, 909 West Main Rd., Middletown, Rhode Island 02842-6390, Plus Code
     87HCGPG3+WJ.'
+promoted: 2026-11-16
 ---
 
 ## Holds Mass
