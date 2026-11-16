@@ -143,6 +143,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - visit.py --text drops the content of eCatholic tab panels (e.g. a 'Daily Schedules' page); visit.py --html <file> keeps it for grep.
 - visit.py can hang on an eCatholic homepage (olpseminary.com) while its sub-pages load; find sub-pages with a DuckDuckGo site: search and visit them directly.
 - John Patrick issues that are image-only now can have text layers in older issues: probe pdf --grep across past dated issues on the church-bulletin.org page to find and quote merger or closure letters.
+- Weebly pages that embed each week's bulletin as a Canva design (iframe canva.com/design/<id>/<key>/view?embed): visit.py --text on the /view URL returns the full text (masthead, Mass times); record unsupported with fetch_gap canva-design-viewer.
+- Mission or occasional-use buildings that a weekly LPi schedule omits can show up in the Christmas Eve intentions: grep the issue of the Sunday before Christmas for the building's name to date a Mass there.
 
 ## Rules settled for this diocese
 
