@@ -1,0 +1,850 @@
+{
+  "schema_version": 1,
+  "parish_slug": "cathedral-of-the-immaculate-conception-camden",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:47:14Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-16T19:56:10Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches: the Cathedral and St. Joseph (Polish), which has the Friday 8:30 Mass in its rectory chapel. Both bulletins (Nov 8, Nov 15) agree, except that the Friday 5:30 PM confession was replaced by 7 PM First Fridays; the newer schedule is used. Open: whether to add the Dec 7-8 Immaculate Conception holy-day Masses, dated from the partly stale website.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "8c167dcd28884234fb9627dd9f8500c0b7147064e201786cda0a66911874d0f1",
+      "fetched_at": "2026-11-15T16:47:14Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "7cf7c30e4b70665eb0cbfb9a3937e444e111bc3f8fb6e08a54e76dee645dc7ae",
+      "fetched_at": "2026-11-08T15:55:38Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-of-the-immaculate-conception-camden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8c167dcd",
+          "page": 1,
+          "said": "Sunday—Domingo 8:30 am—English—Cathedral"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cf7c30e",
+          "page": 1,
+          "said": "Sunday—Domingo 8:30 am—English—Cathedral"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both bulletins read; the p4 intentions list 8:30 a.m. both Sundays.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-polish-camden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish/English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8c167dcd",
+          "page": 1,
+          "said": "10:15am—Polish/English - St. Joseph Polish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cf7c30e",
+          "page": 1,
+          "said": "10:15am—Polish/English - St. Joseph Polish"
+        }
+      ],
+      "rationale": "R1: printed in both schedule boxes; intentions list STJ 10:15 a.m. The website's 10:00 am is stale (R6; it also has the old 11:30 Spanish time).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-of-the-immaculate-conception-camden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8c167dcd",
+          "page": 1,
+          "said": "12pm—Español—Catedral"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cf7c30e",
+          "page": 1,
+          "said": "12pm—Español—Catedral"
+        }
+      ],
+      "rationale": "R1: printed in both schedule boxes; intentions list 12 p.m. The website's 11:30 am Español is stale; the bulletins win.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-of-the-immaculate-conception-camden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8c167dcd",
+          "page": 1,
+          "said": "12:05pm Monday to Friday—Cathedral"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cf7c30e",
+          "page": 1,
+          "said": "12:05pm Monday to Friday—Cathedral"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; the p4 intentions list 12:05 p.m. every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-of-the-immaculate-conception-camden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8c167dcd",
+          "page": 1,
+          "said": "12:05pm Monday to Friday—Cathedral"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cf7c30e",
+          "page": 1,
+          "said": "12:05pm Monday to Friday—Cathedral"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; the p4 intentions list 12:05 p.m. every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-of-the-immaculate-conception-camden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8c167dcd",
+          "page": 1,
+          "said": "12:05pm Monday to Friday—Cathedral"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cf7c30e",
+          "page": 1,
+          "said": "12:05pm Monday to Friday—Cathedral"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; the p4 intentions list 12:05 p.m. every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-of-the-immaculate-conception-camden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8c167dcd",
+          "page": 1,
+          "said": "12:05pm Monday to Friday—Cathedral"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cf7c30e",
+          "page": 1,
+          "said": "12:05pm Monday to Friday—Cathedral"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; the p4 intentions list 12:05 p.m. every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-of-the-immaculate-conception-camden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8c167dcd",
+          "page": 1,
+          "said": "12:05pm Monday to Friday—Cathedral"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cf7c30e",
+          "page": 1,
+          "said": "12:05pm Monday to Friday—Cathedral"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; the p4 intentions list 12:05 p.m. every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-polish-camden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Rectory chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8c167dcd",
+          "page": 1,
+          "said": "8:30am Fridays—St. Joseph Polish Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cf7c30e",
+          "page": 1,
+          "said": "8:30am Fridays—St. Joseph Polish Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8c167dcd",
+          "page": 4,
+          "said": "STJ = St. Joseph at 1010 Liberty St. Camden"
+        }
+      ],
+      "rationale": "R1, POLICY Churches and chapels: the St. Joseph chapel is on site at 1010 Liberty St. (intentions key 'STJ'; website: 'Friday 8:30 am in the Rectory Chapel').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-of-the-immaculate-conception-camden",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 12:05 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8c167dcd",
+          "page": 1,
+          "said": "Confessions at the Cathedral 11:30am Monday—Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cf7c30e",
+          "page": 1,
+          "said": "Confessions at the Cathedral 11:30am Monday—Friday"
+        }
+      ],
+      "rationale": "R1; POLICY Times: no end given, so it runs until the 12:05 Mass with no end_time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-of-the-immaculate-conception-camden",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 12:05 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8c167dcd",
+          "page": 1,
+          "said": "Confessions at the Cathedral 11:30am Monday—Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cf7c30e",
+          "page": 1,
+          "said": "Confessions at the Cathedral 11:30am Monday—Friday"
+        }
+      ],
+      "rationale": "R1; POLICY Times: no end given, so it runs until the 12:05 Mass with no end_time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-of-the-immaculate-conception-camden",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 12:05 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8c167dcd",
+          "page": 1,
+          "said": "Confessions at the Cathedral 11:30am Monday—Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cf7c30e",
+          "page": 1,
+          "said": "Confessions at the Cathedral 11:30am Monday—Friday"
+        }
+      ],
+      "rationale": "R1; POLICY Times: no end given, so it runs until the 12:05 Mass with no end_time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-of-the-immaculate-conception-camden",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 12:05 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8c167dcd",
+          "page": 1,
+          "said": "Confessions at the Cathedral 11:30am Monday—Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cf7c30e",
+          "page": 1,
+          "said": "Confessions at the Cathedral 11:30am Monday—Friday"
+        }
+      ],
+      "rationale": "R1; POLICY Times: no end given, so it runs until the 12:05 Mass with no end_time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-of-the-immaculate-conception-camden",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 12:05 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8c167dcd",
+          "page": 1,
+          "said": "Confessions at the Cathedral 11:30am Monday—Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cf7c30e",
+          "page": 1,
+          "said": "Confessions at the Cathedral 11:30am Monday—Friday"
+        }
+      ],
+      "rationale": "R1; POLICY Times: no end given, so it runs until the 12:05 Mass with no end_time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-of-the-immaculate-conception-camden",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 8:30 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8c167dcd",
+          "page": 1,
+          "said": "Confessions at the Cathedral ... 8am Sundays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cf7c30e",
+          "page": 1,
+          "said": "Confessions at the Cathedral ... 8am Sundays"
+        }
+      ],
+      "rationale": "R1; POLICY Times: no end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-of-the-immaculate-conception-camden",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8c167dcd",
+          "page": 1,
+          "said": "Confessions at the Cathedral ... 7pm First Fridays of the Month"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8c167dcd",
+          "page": 2,
+          "said": "First Friday of the month, the group gathers in the church for Exposition to the Blessed Sacrament and confessions."
+        }
+      ],
+      "rationale": "R1: the newest schedule box prints it; it is a standing monthly line, not a dated item. The newest week (third) and Nov 8 week (second) hold no first Friday (R11), but the schedule box states it outright.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-of-the-immaculate-conception-camden",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7cf7c30e",
+          "page": 1,
+          "said": "Confessions at the Cathedral 11:30am Monday—Friday 5:30pm Fridays, 8am Sundays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8c167dcd",
+          "page": 1,
+          "said": "7pm First Fridays of the Month, 8am Sundays"
+        }
+      ],
+      "rationale": "R40: the newest schedule box replaces the Nov 8 issue's '5:30pm Fridays' line with '7pm First Fridays of the Month'; the newer explicit schedule corrects the older one.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-of-the-immaculate-conception-camden",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8c167dcd",
+          "page": 1,
+          "said": "Eucharistic Adoration 7pm—First Friday of the Month- Cathedral"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cf7c30e",
+          "page": 1,
+          "said": "Eucharistic Adoration 7pm—First Friday of the Month- Cathedral"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8c167dcd",
+          "page": 2,
+          "said": "First Friday of the month, the group gathers in the church for Exposition to the Blessed Sacrament"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; no end time is given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8c167dcd",
+          "page": 1,
+          "said": "Holy Days of Obligation 12:05pm– Bilingual– Cathedral 7pm—Español—Catedral 4:30pm Vigil Mass—St. Joseph Polish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cf7c30e",
+          "page": 1,
+          "said": "Holy Days of Obligation 12:05pm– Bilingual– Cathedral 7pm—Español—Catedral 4:30pm Vigil Mass—St. Joseph Polish"
+        }
+      ],
+      "rationale": "POLICY Dates: the holy-day times have no date in the bulletin, so they are not weekly slots; the 4:30pm Vigil sits under Holy Days, not Sunday, so it is no Saturday vigil. The Dec 7-8 occurrences are asked separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8c167dcd",
+          "page": 1,
+          "said": "Holy Days of Obligation ... 4:30pm Vigil Mass—St. Joseph Polish"
+        },
+        {
+          "source": "website",
+          "url": "https://www.camdencathedral.com/mass-schedule2.html",
+          "said": "Holy Days Vigil Mass 4:30pm ... The Feast of the Immaculate Conception December 7th"
+        }
+      ],
+      "rationale": "R30/R6: the bulletin's holy-day schedule gives no date; the website gives Dec 7, but its Sunday times are stale. The newest bulletin's 4:30 vigil matches, and Dec 8 is the cathedral's patronal holy day, so I lean include. Later bulletins should confirm it.",
+      "question": "Add the Immaculate Conception holy-day Masses (Dec 7 4:30 PM vigil at St. Joseph, Dec 8 7 PM Spanish at the Cathedral)?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-joseph-polish-camden",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-07",
+            "start_time": "16:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Vigil of the Immaculate Conception"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "holyday"
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8c167dcd",
+          "page": 1,
+          "said": "Holy Days of Obligation 12:05pm– Bilingual– Cathedral 7pm—Español—Catedral"
+        },
+        {
+          "source": "website",
+          "url": "https://www.camdencathedral.com/mass-schedule2.html",
+          "said": "The Feast of the Immaculate Conception December 8th 12:05 pm Bilingual (Spanish/English) 7pm Español"
+        }
+      ],
+      "rationale": "R30/R6: same as the Dec 7 vigil. The 12:05 holy-day Mass coincides with the weekly Tuesday 12:05 Mass, so it is not recorded separately (POLICY rule 7).",
+      "question": "Add the Immaculate Conception holy-day Masses (Dec 7 4:30 PM vigil at St. Joseph, Dec 8 7 PM Spanish at the Cathedral)?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "cathedral-of-the-immaculate-conception-camden",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception; Spanish"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "holyday"
+    }
+  ]
+}
