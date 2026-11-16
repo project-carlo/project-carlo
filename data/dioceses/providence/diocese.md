@@ -168,14 +168,13 @@ them with `visit.py --bulletin` before concluding there is no bulletin.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
-- Eastern Catholic churches GCatholic lists in the territory are excluded as other-jurisdiction; a closed Latin church whose building now houses one (St. Ann Cranston, now St. George Maronite) goes on that record's roster, not under closed, since the building still holds public Mass.
-
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
 
 - Finder entries that are notices (ids 34817, 25351, 33152, 29428) are not places and are excluded from planning; nothing is recorded for them. (accepted by survey-review, 002-survey-review, 2026-11-15)
 - A finder entry for a parish merged away can keep its pre-merger Mass times below the merger note: those times are not evidence of Mass. Check each church against the successor's current bulletin. (map batch `pawtucket-central-falls`, 2026-11-16)
+- Eastern Catholic churches in the territory (GCatholic and the finder list them) are excluded as `other-jurisdiction`. When one now worships in a closed Latin church's building, the Latin church's roster entries go on the Eastern church's record, not a `closed` record, since the building still holds public Mass (e.g. St. Ann Cranston, now St. George Maronite). (map batch `eastern-catholic`, 2026-11-16)
 
 ## Log
 
