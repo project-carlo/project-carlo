@@ -1,0 +1,1136 @@
+{
+  "schema_version": 1,
+  "parish_slug": "notre-dame-de-la-mer",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:47:30Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-16T21:01:49Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches: Assumption (Wildwood Crest) and St. Ann (Wildwood). Year-round Masses and the October-May confession box agree in both bulletins read (all pages are images); summer-only Masses are left out under R33. Open: Adoration hours given only on the website (the bulletins point to a missing page 11 for extended Tuesday hours) and a website Tuesday Benediction.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "8b499ad34d7ad49ec57ec95356fdeef569defa7a12d50996e6f0403d0183a6ef",
+      "fetched_at": "2026-11-15T16:47:30Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "19e3bf64c56aabcd5a1c6b0e452d0fb193a5410e8c03478984b373cb806b111c",
+      "fetched_at": "2026-11-08T15:55:52Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-wildwood-crest",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b499ad3",
+          "page": 1,
+          "said": "ASSUMPTION CHURCH MASS Sunday 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "19e3bf64",
+          "page": 1,
+          "said": "ASSUMPTION CHURCH MASS Sunday 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8b499ad3",
+          "page": 2,
+          "said": "Year-Round Mass Schedules: Assumption Sunday: 8:30AM in winter, summer and modified summer schedules"
+        }
+      ],
+      "rationale": "R1: in the schedule box of both bulletins read; page 2 lists it in all three seasonal schedules, so it is year-round (no season).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-wildwood-crest",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b499ad3",
+          "page": 1,
+          "said": "ASSUMPTION CHURCH MASS Monday-Saturday (Daily) 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "19e3bf64",
+          "page": 1,
+          "said": "ASSUMPTION CHURCH MASS Monday-Saturday (Daily) 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8b499ad3",
+          "page": 2,
+          "said": "Assumption Daily Mass (Monday-Saturday): 8:30AM in winter, summer and modified summer schedules"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8b499ad3",
+          "page": 4,
+          "said": "Mass intentions at Assumption 8:30AM Monday November 16 through Saturday November 21"
+        }
+      ],
+      "rationale": "R1: in the schedule box of both bulletins and the intentions; page 2 gives it in all three seasonal schedules, so it is year-round.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-wildwood-crest",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b499ad3",
+          "page": 1,
+          "said": "ASSUMPTION CHURCH MASS Monday-Saturday (Daily) 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "19e3bf64",
+          "page": 1,
+          "said": "ASSUMPTION CHURCH MASS Monday-Saturday (Daily) 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8b499ad3",
+          "page": 2,
+          "said": "Assumption Daily Mass (Monday-Saturday): 8:30AM in winter, summer and modified summer schedules"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8b499ad3",
+          "page": 4,
+          "said": "Mass intentions at Assumption 8:30AM Monday November 16 through Saturday November 21"
+        }
+      ],
+      "rationale": "R1: in the schedule box of both bulletins and the intentions; page 2 gives it in all three seasonal schedules, so it is year-round.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-wildwood-crest",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b499ad3",
+          "page": 1,
+          "said": "ASSUMPTION CHURCH MASS Monday-Saturday (Daily) 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "19e3bf64",
+          "page": 1,
+          "said": "ASSUMPTION CHURCH MASS Monday-Saturday (Daily) 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8b499ad3",
+          "page": 2,
+          "said": "Assumption Daily Mass (Monday-Saturday): 8:30AM in winter, summer and modified summer schedules"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8b499ad3",
+          "page": 4,
+          "said": "Mass intentions at Assumption 8:30AM Monday November 16 through Saturday November 21"
+        }
+      ],
+      "rationale": "R1: in the schedule box of both bulletins and the intentions; page 2 gives it in all three seasonal schedules, so it is year-round.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-wildwood-crest",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b499ad3",
+          "page": 1,
+          "said": "ASSUMPTION CHURCH MASS Monday-Saturday (Daily) 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "19e3bf64",
+          "page": 1,
+          "said": "ASSUMPTION CHURCH MASS Monday-Saturday (Daily) 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8b499ad3",
+          "page": 2,
+          "said": "Assumption Daily Mass (Monday-Saturday): 8:30AM in winter, summer and modified summer schedules"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8b499ad3",
+          "page": 4,
+          "said": "Mass intentions at Assumption 8:30AM Monday November 16 through Saturday November 21"
+        }
+      ],
+      "rationale": "R1: in the schedule box of both bulletins and the intentions; page 2 gives it in all three seasonal schedules, so it is year-round.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-wildwood-crest",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b499ad3",
+          "page": 1,
+          "said": "ASSUMPTION CHURCH MASS Monday-Saturday (Daily) 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "19e3bf64",
+          "page": 1,
+          "said": "ASSUMPTION CHURCH MASS Monday-Saturday (Daily) 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8b499ad3",
+          "page": 2,
+          "said": "Assumption Daily Mass (Monday-Saturday): 8:30AM in winter, summer and modified summer schedules"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8b499ad3",
+          "page": 4,
+          "said": "Mass intentions at Assumption 8:30AM Monday November 16 through Saturday November 21"
+        }
+      ],
+      "rationale": "R1: in the schedule box of both bulletins and the intentions; page 2 gives it in all three seasonal schedules, so it is year-round.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-wildwood-crest",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b499ad3",
+          "page": 1,
+          "said": "ASSUMPTION CHURCH MASS Monday-Saturday (Daily) 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "19e3bf64",
+          "page": 1,
+          "said": "ASSUMPTION CHURCH MASS Monday-Saturday (Daily) 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8b499ad3",
+          "page": 2,
+          "said": "Assumption Daily Mass (Monday-Saturday): 8:30AM in winter, summer and modified summer schedules"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8b499ad3",
+          "page": 4,
+          "said": "Mass intentions at Assumption 8:30AM Monday November 16 through Saturday November 21"
+        }
+      ],
+      "rationale": "R1: in the schedule box of both bulletins and the intentions; page 2 gives it in all three seasonal schedules, so it is year-round.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-wildwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b499ad3",
+          "page": 1,
+          "said": "ST. ANN CHURCH MASS Saturday 4:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "19e3bf64",
+          "page": 1,
+          "said": "ST. ANN CHURCH MASS Saturday 4:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8b499ad3",
+          "page": 2,
+          "said": "St. Ann Saturday: 4:30PM in winter, summer and modified summer schedules"
+        }
+      ],
+      "rationale": "R1: in the schedule box of both bulletins; year-round per page 2's three seasonal schedules.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-wildwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b499ad3",
+          "page": 1,
+          "said": "ST. ANN CHURCH MASS Sunday 10:30AM** **Livestream"
+        },
+        {
+          "source": "agent",
+          "bulletin": "19e3bf64",
+          "page": 1,
+          "said": "ST. ANN CHURCH MASS Sunday 10:30AM** **Livestream"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8b499ad3",
+          "page": 2,
+          "said": "St. Ann Sunday: 10:30AM in winter, summer and modified summer schedules"
+        }
+      ],
+      "rationale": "R1: in the schedule box of both bulletins; year-round per page 2's three seasonal schedules.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-wildwood-crest",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 10,
+          "start_day": null,
+          "end_month": 5,
+          "end_day": null
+        },
+        "note": "After the 8:30 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b499ad3",
+          "page": 1,
+          "said": "MASS AND CONFESSION SCHEDULE First Weekend in October through Weekend before Memorial Day* ... CONFESSION Wednesday & Friday After 8:30AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "19e3bf64",
+          "page": 1,
+          "said": "MASS AND CONFESSION SCHEDULE First Weekend in October through Weekend before Memorial Day* ... CONFESSION Wednesday & Friday After 8:30AM Mass"
+        }
+      ],
+      "rationale": "R1, R10: after a weekday Mass is 30 minutes after it starts. POLICY, Weekly qualifiers: the box limits the schedule to 'First Weekend in October through Weekend before Memorial Day', so season October-May with no days (the ends are floating weekends; the bulletin prints no summer confession times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-wildwood-crest",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 10,
+          "start_day": null,
+          "end_month": 5,
+          "end_day": null
+        },
+        "note": "After the 8:30 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b499ad3",
+          "page": 1,
+          "said": "MASS AND CONFESSION SCHEDULE First Weekend in October through Weekend before Memorial Day* ... CONFESSION Wednesday & Friday After 8:30AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "19e3bf64",
+          "page": 1,
+          "said": "MASS AND CONFESSION SCHEDULE First Weekend in October through Weekend before Memorial Day* ... CONFESSION Wednesday & Friday After 8:30AM Mass"
+        }
+      ],
+      "rationale": "R1, R10: after a weekday Mass is 30 minutes after it starts. POLICY, Weekly qualifiers: the box limits the schedule to 'First Weekend in October through Weekend before Memorial Day', so season October-May with no days (the ends are floating weekends; the bulletin prints no summer confession times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-wildwood",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 10,
+          "start_day": null,
+          "end_month": 5,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b499ad3",
+          "page": 1,
+          "said": "MASS AND CONFESSION SCHEDULE First Weekend in October through Weekend before Memorial Day* ... ST. ANN CHURCH CONFESSION Saturday 3:30PM ~ 4:15PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "19e3bf64",
+          "page": 1,
+          "said": "MASS AND CONFESSION SCHEDULE First Weekend in October through Weekend before Memorial Day* ... ST. ANN CHURCH CONFESSION Saturday 3:30PM ~ 4:15PM"
+        }
+      ],
+      "rationale": "R1: in the schedule box of both bulletins. POLICY, Weekly qualifiers: the box limits it to 'First Weekend in October through Weekend before Memorial Day', so season October-May with no days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-wildwood-crest",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour of Intercession for youth, after the 8:30 AM Mass"
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b499ad3",
+          "page": 10,
+          "said": "HOLY HOUR OF INTERCESSION Praying for our Youth and Young Adults After 8:30AM Mass at Assumption Church THIRD MONDAY OF THE MONTH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "19e3bf64",
+          "page": 10,
+          "said": "HOLY HOUR OF INTERCESSION Praying for our Youth and Young Adults After 8:30AM Mass at Assumption Church THIRD MONDAY OF THE MONTH"
+        }
+      ],
+      "rationale": "R1, R10, R11: a Holy Hour is Adoration (POLICY); printed in both bulletins, and the newest week holds the third Monday (Nov 16). After a weekday Mass is 30 minutes after it starts; no end time is printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-wildwood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vigil of the Immaculate Conception"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b499ad3",
+          "page": 2,
+          "said": "HOLY DAYS OF OBLIGATION SOLEMNITY of the IMMACULATE CONCEPTION ... VIGIL MASS DECEMBER 7TH 6PM ST. ANN"
+        }
+      ],
+      "rationale": "R1, R16: a dated holy-day Mass outside the weekly schedule, after as_of. The December 8 8:30 AM Mass at Assumption is the regular Tuesday Mass and is not recorded separately (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-wildwood",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-15",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Communal Penance Service"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b499ad3",
+          "page": 2,
+          "said": "COMMUNAL PENANCE SERVICE DECEMBER 15TH 6 PM ST. ANN"
+        }
+      ],
+      "rationale": "R1, R16: a dated Confession service after as_of; no end time printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-wildwood-crest",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b499ad3",
+          "page": 2,
+          "said": "Thanksgiving Day November 26 8:30 AM Mass Assumption Church Distribution of Blessed Bread"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rules 6-7: the Thanksgiving Mass is the regular Thursday 8:30 AM Mass at Assumption, already a weekly slot; not duplicated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-wildwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Summer schedule, Memorial Day weekend through Labor Day"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b499ad3",
+          "page": 2,
+          "said": "SUMMER MASS SCHEDULE Memorial Day Weekend through Labor Day St. Ann ... Sunday: 7:00AM 8:30AM 10:30AM"
+        }
+      ],
+      "rationale": "R33: summer-only Masses run between floating holiday weekends (Memorial Day weekend to Labor Day, or to the last weekend in September); a month season (May-September) would show them for most of May and September when they are not held, and fixed days change every year. Left out; update mode should add them from summer bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-wildwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Summer and modified summer schedules, Memorial Day weekend through the last weekend in September"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b499ad3",
+          "page": 2,
+          "said": "SUMMER MASS SCHEDULE ... St. Ann Sunday 8:30AM; MODIFIED SUMMER MASS SCHEDULE Weekend following Labor Day through Last Weekend in September St. Ann Sunday: 8:30AM 10:30AM"
+        }
+      ],
+      "rationale": "R33: as for the summer 7:00 AM Mass; the season starts on Memorial Day weekend, which no month season can express.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-wildwood-crest",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Summer and modified summer schedules, Memorial Day weekend through the last weekend in September"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b499ad3",
+          "page": 2,
+          "said": "SUMMER MASS SCHEDULE ... Assumption Saturday: 4:30PM; MODIFIED SUMMER MASS SCHEDULE ... Assumption Saturday: 4:30PM"
+        }
+      ],
+      "rationale": "R33: as for the summer 7:00 AM Mass at St. Ann; the season starts on Memorial Day weekend, which no month season can express.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-wildwood-crest",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Summer schedule, Memorial Day weekend through Labor Day"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b499ad3",
+          "page": 2,
+          "said": "SUMMER MASS SCHEDULE Memorial Day Weekend through Labor Day ... Assumption Sunday: 8:30AM 10:30AM"
+        }
+      ],
+      "rationale": "R33: as for the summer 7:00 AM Mass at St. Ann; Memorial Day weekend to Labor Day cannot be written as a month season.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://notredamedelamer.org/adoration/",
+          "said": "Tuesday Adoration has been extended until evening, from 9am until 6pm, in the Church of the Assumption, followed by Benediction, beginning at 7pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8b499ad3",
+          "page": 2,
+          "said": "Extended Adoration Hours on Tuesdays See page 11 for more information"
+        },
+        {
+          "source": "agent",
+          "bulletin": "19e3bf64",
+          "page": 2,
+          "said": "Extended Adoration Hours on Tuesdays See page 11 for more information"
+        }
+      ],
+      "rationale": "R29, R6: both bulletins announce 'Extended Adoration Hours on Tuesdays' but the page they point to (page 11) is not in either PDF (10 pages). The website gives the hours and fits that announcement, but heads the page 'NEW ADORATION SCHEDULE AND BENEDICTION SERVICE - SIGN UP SHEET - COMING SOON', so whether the hours are in effect is unclear. Leaning include: the bulletin confirms extended Tuesday hours are current.",
+      "question": "Add the website's Tuesday Adoration, 9 AM-6 PM in Assumption Church?",
+      "options": [
+        {
+          "label": "Tuesdays 9 AM-6 PM",
+          "entry": {
+            "church_slug": "assumption-wildwood-crest",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "18:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "tue-adoration"
+    },
+    {
+      "id": "s23",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://notredamedelamer.org/adoration/",
+          "said": "Tuesday Adoration ... from 9am until 6pm, in the Church of the Assumption, followed by Benediction, beginning at 7pm."
+        }
+      ],
+      "rationale": "R29, R6: website only. 'Followed by' conflicts with a one-hour gap after the 6 PM end, and the page says the Benediction service is 'coming soon'. Leaning leave out: a wrong time is worse than a missing one.",
+      "question": "Add Tuesday Benediction at 7 PM in Assumption Church (website only)?",
+      "options": [
+        {
+          "label": "Tuesdays 7 PM Benediction",
+          "entry": {
+            "church_slug": "assumption-wildwood-crest",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Benediction"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://notredamedelamer.org/adoration/",
+          "said": "See Sign up Sheet for Monday Wednesday Thursday Friday Adoration from 9am until 1pm in the Saint Joseph Room, Assumption Church."
+        }
+      ],
+      "rationale": "R29, R6, R38: no bulletin prints these hours; only the website, under a 'NEW ADORATION SCHEDULE ... COMING SOON' heading. The St. Joseph Room is at Assumption Church. Leaning include because the bulletins' Tuesday 'extended' hours imply regular hours on other days. If included, the third-Monday 9 AM Holy Hour lies inside the Monday period (R37) and should be dropped as a separate slot.",
+      "question": "Add the website's Mon, Wed, Thu, Fri Adoration, 9 AM-1 PM in the St. Joseph Room, Assumption Church?",
+      "options": [
+        {
+          "label": "Mon, Wed, Thu, Fri 9 AM-1 PM",
+          "entry": {
+            "church_slug": "assumption-wildwood-crest",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "13:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Saint Joseph Room"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekday-adoration"
+    },
+    {
+      "id": "s25",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://notredamedelamer.org/adoration/",
+          "said": "See Sign up Sheet for Monday Wednesday Thursday Friday Adoration from 9am until 1pm in the Saint Joseph Room, Assumption Church."
+        }
+      ],
+      "rationale": "R29, R6, R38: no bulletin prints these hours; only the website, under a 'NEW ADORATION SCHEDULE ... COMING SOON' heading. The St. Joseph Room is at Assumption Church. Leaning include because the bulletins' Tuesday 'extended' hours imply regular hours on other days. If included, the third-Monday 9 AM Holy Hour lies inside the Monday period (R37) and should be dropped as a separate slot.",
+      "question": "Add the website's Mon, Wed, Thu, Fri Adoration, 9 AM-1 PM in the St. Joseph Room, Assumption Church?",
+      "options": [
+        {
+          "label": "Mon, Wed, Thu, Fri 9 AM-1 PM",
+          "entry": {
+            "church_slug": "assumption-wildwood-crest",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "13:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Saint Joseph Room"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekday-adoration"
+    },
+    {
+      "id": "s26",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://notredamedelamer.org/adoration/",
+          "said": "See Sign up Sheet for Monday Wednesday Thursday Friday Adoration from 9am until 1pm in the Saint Joseph Room, Assumption Church."
+        }
+      ],
+      "rationale": "R29, R6, R38: no bulletin prints these hours; only the website, under a 'NEW ADORATION SCHEDULE ... COMING SOON' heading. The St. Joseph Room is at Assumption Church. Leaning include because the bulletins' Tuesday 'extended' hours imply regular hours on other days. If included, the third-Monday 9 AM Holy Hour lies inside the Monday period (R37) and should be dropped as a separate slot.",
+      "question": "Add the website's Mon, Wed, Thu, Fri Adoration, 9 AM-1 PM in the St. Joseph Room, Assumption Church?",
+      "options": [
+        {
+          "label": "Mon, Wed, Thu, Fri 9 AM-1 PM",
+          "entry": {
+            "church_slug": "assumption-wildwood-crest",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "13:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Saint Joseph Room"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekday-adoration"
+    },
+    {
+      "id": "s27",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://notredamedelamer.org/adoration/",
+          "said": "See Sign up Sheet for Monday Wednesday Thursday Friday Adoration from 9am until 1pm in the Saint Joseph Room, Assumption Church."
+        }
+      ],
+      "rationale": "R29, R6, R38: no bulletin prints these hours; only the website, under a 'NEW ADORATION SCHEDULE ... COMING SOON' heading. The St. Joseph Room is at Assumption Church. Leaning include because the bulletins' Tuesday 'extended' hours imply regular hours on other days. If included, the third-Monday 9 AM Holy Hour lies inside the Monday period (R37) and should be dropped as a separate slot.",
+      "question": "Add the website's Mon, Wed, Thu, Fri Adoration, 9 AM-1 PM in the St. Joseph Room, Assumption Church?",
+      "options": [
+        {
+          "label": "Mon, Wed, Thu, Fri 9 AM-1 PM",
+          "entry": {
+            "church_slug": "assumption-wildwood-crest",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "13:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Saint Joseph Room"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekday-adoration"
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8b499ad3",
+          "page": 10,
+          "said": "ROSARY FOR WORLD PEACE 1st SATURDAYS 4:00PM St. Ann Church"
+        }
+      ],
+      "rationale": "R24: a Rosary is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
