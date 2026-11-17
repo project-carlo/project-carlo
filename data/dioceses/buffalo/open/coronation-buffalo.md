@@ -34,4 +34,4 @@ None found current. Wikipedia's undated sentence that Mass is held in Vietnamese
 
 ## Why it is not decided
 
-Under the owner's rule of 16 November 2026, a place whose public Mass is listed online but which publishes no bulletin is kept open here, not excluded as `no-bulletin`, so a coming feature can show it from the published times. `open/` is the closest status the CLI has: it keeps the place off the site and on the work list. Here the place's status itself is unsettled: the evidence points to closure but no source states it, so it stays open.
+Unlike the other open/ records, this one isn't kept open under the owner's "Mass published, no bulletin" rule: no current Mass times are published for Coronation. It is open because its status is unsettled. The evidence points to closure (it is on the 2024 closure list, it is missing from every current diocesan list, and the Vietnamese Mass has moved to Cheektowaga), but no source says it closed, and this diocese doesn't exclude on a plan and absence alone (diocese.md, Rules). `open/` keeps it off the site and on the work list until a decree, bulletin or news report settles it.

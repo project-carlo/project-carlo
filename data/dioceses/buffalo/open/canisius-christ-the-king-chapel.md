@@ -16,6 +16,12 @@ evidence:
     of the University .
   note: 'The chapel page: in summer (28 June to 23 August) the Sunday morning Mass moves to Riverfest
     Park, 249 Ohio St.'
+- url: https://www.canisius.edu/student-experience/faith-service/campus-ministry/christ-king-chapel
+  seen: 2026-11-17
+  quote: our morning Mass will be at 9:00 a.m. at Riverfest Park
+  note: 'The chapel page''s Mass schedule: "Sundays, June 28 through August 23, our morning Mass will
+    be at 9:00 a.m. at Riverfest Park, 249 Ohio Street, Buffalo, NY 14204", then "7:00pm (year-round,
+    Christ the King Chapel)" and weekday Masses Monday-Friday 12:05 PM.'
 line1: 2001 Main St.
 city: Buffalo
 state: NY
@@ -29,7 +35,7 @@ Canisius University's Christ the King Chapel holds public Masses all year: Sunda
 ## Mass times published
 
 - https://www.canisius.edu/student-experience/faith-service/campus-ministry (seen 2026-11-16): "Sunday Mass on campus is at 9:30am and 7:00pm. We also have Weekday Mass on M-F at 12:05pm in Christ the King Chapel."
-- https://www.canisius.edu/student-experience/faith-service/campus-ministry/christ-king-chapel (seen 2026-11-16): summer Sunday morning Mass at 9:00 a.m. at Riverfest Park, 249 Ohio St. (28 June to 23 August); Sunday 7:00 p.m. all year.
+- https://www.canisius.edu/student-experience/faith-service/campus-ministry/christ-king-chapel (seen 2026-11-16): summer Sunday morning Mass at 9:00 a.m. at Riverfest Park, 249 Ohio St. (28 June to 23 August: "our morning Mass will be at 9:00 a.m. at Riverfest Park"); Sunday 7:00 p.m. "year-round, Christ the King Chapel"; weekdays Monday-Friday 12:05 p.m.
 
 ## Why it is not decided
 

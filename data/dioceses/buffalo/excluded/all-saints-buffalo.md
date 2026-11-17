@@ -19,9 +19,8 @@ evidence:
 - url: https://en.wikipedia.org/wiki/List_of_churches_in_the_Diocese_of_Buffalo
   seen: 2026-11-16
   quote: The parish closed in July 2024.
-  note: Wikipedia, 'List of churches in the Diocese of Buffalo', closed-churches table (its 'Closed' column
-    is 'the year the last mass was celebrated'). All Saints, 127 Chadduck Ave., is in the Buffalo former-churches
-    table.
+  note: 'Wikipedia, ''List of churches in the Diocese of Buffalo'', Buffalo former-churches table (its
+    column is ''Parish defunct''): All Saints, 127 Chadduck Ave. The last-Mass date comes from WKBW, above.'
 - url: https://gcatholic.org/churches/usa-02/17553
   seen: 2026-11-16
   quote: 127 Chadduck Ave., Buffalo, New York 14207

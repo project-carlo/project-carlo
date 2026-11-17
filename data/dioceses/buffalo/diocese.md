@@ -179,3 +179,12 @@ promoted: 2026-11-16
     St. Vincent de Paul NF, St. John Neumann Strykersville, the Campus Ministry family entry).
   - No schedules changed. Coverage (accounted for): directory 167/167; families 146/151 ->
     147/151; mass-times 141/145 -> 143/145; GCatholic 174/216 -> 216/216.
+- 2026-11-17: Phase 3 review fixes.
+  - St. Jude the Apostle, North Tonawanda checked, because its bulletin announced a final Mass on
+    4 May 2025: regular Masses did end then, the merger was appealed to Rome (October 2025), and from
+    the 28 June 2026 bulletin a First Sunday 5:00 p.m. and First Friday 12:00 p.m. Mass are scheduled
+    there again. The 22 November 2026 bulletin still prints both, so the church and its live schedule
+    stand; its record now gives the history.
+  - Wikipedia's Buffalo former-churches table gives the year a parish ended ("Parish defunct"), not
+    the year of the last Mass. `last_mass` is kept only where another row dates the end of worship
+    (St. Francis Xavier 2007, St. Clare 2016) and removed for St. Agatha and Immaculate Heart of Mary.
