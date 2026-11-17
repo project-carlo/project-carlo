@@ -27,6 +27,13 @@ promoted: 2026-11-16
   (Renewal-Timeline-and-Summary-20240913.pdf). Its "merging and closing" lists are a plan: East
   Arcade, St. Hyacinth, Wilson and SS. Peter and Paul (Jamestown) are on them and still hold Mass.
   Closures are taken from bulletins, decrees and family sites instead.
+- Bishop's decrees: families post them on their own sites (reduction to profane use, merger,
+  relegation). Most are scanned PDFs with no text layer; read them with parish-site-access
+  `render.py`. Wikipedia's list (next item) links about 30 of them.
+- Wikipedia, "List of churches in the Diocese of Buffalo": a closed-churches table whose "Closed"
+  column is the year of the last Mass, with notes on sales and later use. It is a secondary source
+  (some rows cite nothing, e.g. Cassadaga), used here for old closures no primary source dates,
+  and its wikitext (`action=raw`) is the quickest way to the decrees it cites.
 
 ## Rules settled for this diocese
 
@@ -38,8 +45,9 @@ promoted: 2026-11-16
   (St. George, St. Brigid, Ascension). Only its entries marked "site" (Elba, East Bethany,
   Strykersville, Perry, Silver Springs, Corfu) are read as closed buildings. Each of those is also
   absent from its family's current bulletin.
-- A plan plus absence from a bulletin goes in open/, not excluded/ (St. James Depew, Divine
-  Mercy, St. Joseph Lockport, Panama, Cassadaga, Portville, St. Francis Tonawanda).
+- A plan plus absence from a bulletin goes in open/, not excluded/. (The seven PR 14 cases,
+  St. James Depew, Divine Mercy, St. Joseph Lockport, Panama, Cassadaga, Portville and
+  St. Francis Tonawanda, were all closed on stated sources on 2026-11-16; see the Log.)
 - Places that hold public Mass but publish no bulletin: Our Lady of Hope, St. Joseph University
   Parish and St. Andrew Kim were kept as `no_bulletin` parish rows, following Rochester's live
   `holy-apostles` row, so their churches stayed on the map. Superseded 2026-10-07: a `no_bulletin`
@@ -47,9 +55,18 @@ promoted: 2026-11-16
   University turned out to publish a bulletin and St. Andrew Kim had closed (see the Log).
   Syracuse excluded a similar place (Alibrandi) instead. The difference is that these three were
   already live churches in PR 14 and have their own church buildings in the diocesan roster.
-  Holy Family (Sanborn), which was never a church row, stays excluded as `no-bulletin`; the UB
-  Newman Center, excluded the same way, became a church of `st-joseph-university-buffalo` on
-  2026-10-07, whose bulletin prints its Masses.
+  The UB Newman Center, once excluded as `no-bulletin`, became a church of
+  `st-joseph-university-buffalo` on 2026-10-07, whose bulletin prints its Masses.
+- Owner's decision, 2026-11-16: a place whose public Mass is listed online (its own site,
+  Facebook, the diocese's pages) but which publishes no bulletin stays open/unresolved, not
+  excluded as `no-bulletin`, because a feature to show such places is coming. Each record says
+  where its times are published (URL, date seen, quote) in evidence and in a *Mass times
+  published* section. A place that never had a parish row goes in `open/` (a parish row needs a
+  website): Holy Family (Sanborn, reopened from `excluded/`), Niagara University's chapel, the
+  Canisius and St. Bonaventure University chapels, Mt. Irenaeus and the Infant Jesus Shrine. Our
+  Lady of Hope keeps its `no_bulletin` parish row, which is already unresolved and off the site.
+- Eastern Catholic churches in the territory are excluded as `other-jurisdiction`, each confirmed
+  on its GCatholic page (Ukrainian Stamford, Ruthenian Passaic, Maronite Brooklyn).
 
 ## Log
 
@@ -135,3 +152,30 @@ promoted: 2026-11-16
   Lockport (January-June and July-December) and St. Joseph University's school-year 7 p.m. Mass are
   noted there. After the fix, 97 of 131 match. No church or parish rows changed (promote: no changes);
   coverage unchanged.
+- 2026-11-16: Phase 3, closing coverage gaps (sources read 16 November 2026).
+  - The seven open/ churches: six closed on stated sources and one more on Wikipedia.
+    St. James / St. Mother Teresa, Depew: last Mass 8 June 2025 (Beloved Disciples bulletin).
+    St. Francis of Assisi, Tonawanda: 27 April 2025 (Tonawandas bulletin; the 71 Adam St. chapel
+    stays a church). Divine Mercy, Niagara Falls: "now closed" on its own archived site by
+    4 April 2025. Sacred Heart, Portville: final Mass summer 2025 (Olean Times Herald).
+    St. Joseph, Lockport and Our Lady of the Snows, Panama: bishop's decrees reducing them to
+    profane use, effective 2 June 2025 and 24 March 2025. Cassadaga: Wikipedia says closed in 2014
+    (uncited); everything else agrees.
+  - GCatholic's 42 unaccounted entries: 7 Eastern Catholic churches excluded as
+    `other-jurisdiction`; 31 excluded as closed, each dated from a bulletin, a decree, the news,
+    GCatholic or Wikipedia (2024-25 closings from bulletins where found: Bolivar, Andover,
+    Blasdell, Lackawanna St. Anthony, OLMC Niagara Falls, St. Augustine Clarence Center); the
+    Dominican nuns' monastery (moved to Ohio in 2020) and the Christ the King Seminary chapel
+    (sold 2025) among them; the St. John Neumann Shrine, Kenmore excluded as `no-public-mass`
+    (adoration only); Coronation, Buffalo and the Infant Jesus Shrine in open/.
+  - Owner's rule (Rules, above): Holy Family (Sanborn) reopened from `excluded/` to `open/`; new
+    open/ records for the Niagara University, Canisius and St. Bonaventure chapels and
+    Mt. Irenaeus, each with its published Mass times; Our Lady of Hope's row records its
+    published times (its site was still behind Cloudflare; ParishesOnline and Discover Mass have
+    no bulletin).
+  - Linked two naming artefacts: Holy Family of Jesus, Mary and Joseph (families, Mass-times) to
+    St. Joseph, Niagara Falls, and Mass-times "Our Lady the Lake" to St. Patrick, Barker. Still
+    unmatched: canonical parish names spread over several buildings (Our Lady of Charity,
+    St. Vincent de Paul NF, St. John Neumann Strykersville, the Campus Ministry family entry).
+  - No schedules changed. Coverage (accounted for): directory 167/167; families 146/151 ->
+    147/151; mass-times 141/145 -> 143/145; GCatholic 174/216 -> 216/216.

@@ -12,7 +12,7 @@ coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
 roster: ['directory:7507', 'families:f10-our-lady-of-the-lake-barker', 'gcatholic:17596', 'mass-times:our-lady-of-the-lake-barker',
-  'mass-times:st-patrick-barker']
+  'mass-times:st-patrick-barker', 'mass-times:our-lady-the-lake-barker']
 evidence:
 - url: https://container.parishesonline.com/bulletins/14/0428/20260920B.pdf
   seen: 2026-09-26
