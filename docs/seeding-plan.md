@@ -199,8 +199,10 @@ or approve the held run by hand.
 
 ## Out of scope
 
-- Using websites as the primary seed source (rules.md says how far a website
-  counts).
+- Using websites as the primary seed source of a parish with a bulletin (rules.md
+  says how far a website counts). A parish with no bulletin gets a source seed from
+  its own website or Facebook page instead
+  ([source-schedules-plan.md](source-schedules-plan.md)).
   Phone calls and the diocesan directory remain out of scope.
 - Using approved seeds as labels. Their weekly slots are close to a label for
   the newest bulletin, so this could come later.

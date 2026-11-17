@@ -1,2 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# A source seed's capture texts are hashed byte for byte (data/seeds/captures/).
+data/seeds/captures/** text eol=lf

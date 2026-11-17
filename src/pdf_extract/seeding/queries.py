@@ -24,7 +24,9 @@ from pdf_extract.seeding import page_images
 from pdf_extract.seeding.checks import COVERED_DAYS, covered_weeks
 from pdf_extract.seeding.files import (
     SEEDS_DIR,
+    SOURCE_SEED,
     WORK_DIR,
+    captures,
 )
 from pdf_extract.storage import (
     list_churches,
@@ -59,7 +61,8 @@ class SeedContext:
 # ── Parishes and bulletins ──────────────────────────────────────────────────
 def parish_row(conn: sqlite3.Connection, parish_slug: str) -> sqlite3.Row:
     row = conn.execute(
-        "SELECT id, slug, name, homepage_url FROM parish WHERE slug = ?", (parish_slug,),
+        "SELECT id, slug, name, homepage_url, bulletin_provider FROM parish WHERE slug = ?",
+        (parish_slug,),
     ).fetchone()
     if row is None:
         raise SeedError(f"Parish not found: {parish_slug} (is it in data/parishes.csv?)")
@@ -550,6 +553,26 @@ def brief(
         "history_events": len(summary),
         "history": summary if len(summary) <= BRIEF_HISTORY_ROWS else None,
         "pdf": pdf,
+    }
+
+
+def source_brief(
+    conn: sqlite3.Connection, parish_slug: str, seed: dict[str, Any] | None,
+) -> dict[str, Any]:
+    """`seed brief` for a `website_schedule` parish: no bulletins, PDF or history, so its
+    website and churches, and the pages its source seed has captured so far."""
+    parish = parish_row(conn, parish_slug)
+    seed = seed or {}
+    return {
+        "kind": SOURCE_SEED,
+        "parish": parish_slug,
+        "name": parish["name"],
+        "website": parish["homepage_url"],
+        "churches": [{"church": c["slug"], "name": c["name"], "address": _address(c)}
+                     for c in list_churches(conn, parish["id"])],
+        "captures": captures(seed),
+        "current_because": seed.get("current_because"),
+        "recheck_after": seed.get("recheck_after"),
     }
 
 

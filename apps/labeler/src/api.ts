@@ -20,6 +20,11 @@ export function pdfUrl(parish: string, hash: string): string {
   return `/api/bulletins/${parish}/${hash}/pdf`;
 }
 
+/** A source seed's capture: its stored text, or its screenshot. */
+export function captureUrl(parish: string, hash: string, part: "text" | "png"): string {
+  return `/api/seeds/${parish}/captures/${hash}/${part}`;
+}
+
 export const api = {
   config: () => request<Config>("/api/config"),
   bulletins: () => request<{ bulletins: BulletinSummary[]; progress: Progress }>("/api/bulletins"),

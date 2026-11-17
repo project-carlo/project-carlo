@@ -24,6 +24,7 @@ import re
 from datetime import UTC, date, datetime, time
 from hashlib import sha256
 from typing import Any
+from urllib.parse import urlsplit
 
 from pdf_extract.timeparse import normalize_event_date, time_to_minutes
 
@@ -34,6 +35,15 @@ DAYS = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sun
 WEEKS_OF_MONTH = ("first", "second", "third", "fourth", "fifth", "last")
 # The ordinals a month can have of a weekday; "last" is the fourth or the fifth.
 ORDINAL_WEEKS = WEEKS_OF_MONTH[:5]
+
+# A parish with no bulletin whose schedule comes from its own website or Facebook
+# page instead: a source seed (docs/source-schedules-plan.md). `fetch` and `process`
+# skip it; the seed is only replaced by a later approved one.
+WEBSITE_SCHEDULE = "website_schedule"
+# Where a source schedule is read: the parish's website, or its Facebook page.
+WEBSITE = "website"
+FACEBOOK = "facebook"
+SOURCE_PLATFORMS = (WEBSITE, FACEBOOK)
 
 # February has 29: a season boundary recurs every year, leap years included.
 DAYS_IN_MONTH = (31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)
@@ -320,3 +330,13 @@ def gemini_rows(events: list[Any]) -> list[dict[str, Any]]:
         row["problems"] = problems
         out.append(row)
     return out
+
+
+_FACEBOOK_HOSTS = ("facebook.com", "fb.com", "fb.me")
+
+
+def source_platform(url: str) -> str:
+    """`facebook` for a Facebook address, else `website`."""
+    host = (urlsplit(url).hostname or "").lower()
+    return FACEBOOK if any(host == h or host.endswith(f".{h}") for h in _FACEBOOK_HOSTS) \
+        else WEBSITE

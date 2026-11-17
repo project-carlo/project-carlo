@@ -245,22 +245,27 @@ def append_revision(
     actor: str | None = None,
     note: str | None = None,
     as_of: str | None = None,
+    source: tuple[str, str] | None = None,
 ) -> int:
     """Append a revision with its changes to the log and fold it in. Returns its number.
 
     A seed's `as_of` defaults to its creation time; other kinds have none.
+    `source` is a source seed's (platform, url): where its schedule was read.
     """
     revision = current_revision(conn, parish_id) + 1
     created_at = utc_now_iso()
     if source_kind == SEED:
         as_of = created_at if as_of is None else normalize_as_of(as_of)
+    # Only a source seed names the columns migration 0014 added, so every other
+    # revision is written as it always was.
+    extra = ("schedule_source", "schedule_source_url") if source is not None else ()
+    columns = ("parish_id", "revision", "source_kind", "llm_call_id", "run_id", "actor",
+               "note", "as_of", "created_at", *extra)
     conn.execute(
-        """INSERT INTO schedule_revision (
-               parish_id, revision, source_kind, llm_call_id, run_id, actor, note, as_of,
-               created_at
-           ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+        f"INSERT INTO schedule_revision ({', '.join(columns)}) "
+        f"VALUES ({', '.join('?' * len(columns))})",
         (parish_id, revision, source_kind, llm_call_id, run_id, actor, note,
-         as_of if source_kind == SEED else None, created_at),
+         as_of if source_kind == SEED else None, created_at, *(source or ())),
     )
     conn.executemany(
         """INSERT INTO schedule_change (
@@ -424,20 +429,23 @@ def write_seed(
     note: str | None = None,
     run_id: str | None = None,
     sightings: Iterable[tuple[int, Entry, int | None]] = (),
+    source: tuple[str, str] | None = None,
 ) -> int:
     """Write a seed revision making the parish's schedule exactly `entries`.
 
     The first seed switches the parish to update mode; a later one is a new
     seed revision of the adds, modifies and deletes against what is believed
     now, with its own `as_of`. `sightings` are (bulletin id, entry, page) for
-    entries whose bulletin the seeding method knows. Returns the revision.
+    entries whose bulletin the seeding method knows. `source` is a source
+    seed's (platform, url), the page its schedule was read on
+    (docs/source-schedules-plan.md). Returns the revision.
     Initial population itself is out of scope (docs/schedule-state-plan.md);
     this is what such a method calls.
     """
     changes = seed_changes(conn, live_entries(conn, parish_id), entries)
     revision = append_revision(
         conn, parish_id, source_kind=SEED, changes=changes, run_id=run_id, actor=actor,
-        note=note, as_of=as_of,
+        note=note, as_of=as_of, source=source,
     )
     conn.executemany(
         """INSERT OR REPLACE INTO entry_sighting (bulletin_id, entry_id, page_number, llm_call_id)

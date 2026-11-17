@@ -188,6 +188,14 @@ export function resolveBulletin(seed: SeedFile, ref: string | null | undefined):
   return matches.length === 1 ? matches[0].content_hash : null;
 }
 
+/** The full content hash of the source seed's capture `ref` names (a hash or a prefix of one). */
+export function resolveCapture(seed: SeedFile, ref: string | null | undefined): string | null {
+  if (!ref || ref.length < 8) return null;
+  const prefix = ref.replace(/…$/, "").toLowerCase();
+  const matches = (seed.captures ?? []).filter((c) => c.content_hash.startsWith(prefix));
+  return matches.length === 1 ? matches[0].content_hash : null;
+}
+
 /** A slot's entry as an editor row, so RowEditor can edit it. */
 export function toEditorRow(entry: SeedEntry, page: number | null): EditorRow {
   return {

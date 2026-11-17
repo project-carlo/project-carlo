@@ -19,7 +19,12 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
-from pdf_extract.dioceses.records import NO_BULLETIN, OFF_SITE_PROVIDERS, UNSUPPORTED, parse_file
+from pdf_extract.dioceses.records import (
+    NO_BULLETIN_PROVIDERS,
+    OFF_SITE_PROVIDERS,
+    UNSUPPORTED,
+    parse_file,
+)
 from pdf_extract.factory import git, playbook
 from pdf_extract.factory.handoff import APPROVE
 from pdf_extract.factory.ledger import DONE, MAP, Ledger
@@ -76,14 +81,16 @@ def parish_records(worktree: Path, diocese: str) -> dict[str, dict[str, Any]]:
 
 def _with_source(worktree: Path, diocese: str) -> dict[str, dict[str, Any]]:
     return {slug: r for slug, r in parish_records(worktree, diocese).items()
-            if r.get("bulletin_provider") and r.get("bulletin_provider") != NO_BULLETIN}
+            if r.get("bulletin_provider")
+            and r.get("bulletin_provider") not in NO_BULLETIN_PROVIDERS}
 
 
 def seedable_parishes(worktree: Path, diocese: str) -> list[str]:
     """Parishes the map Run promoted with a bulletin source; excluded and open ones never,
     nor one whose bulletin `fetch` can't collect yet (`unsupported`, or a `fetch_gap`): it
     has no bulletins to seed from until its collector lands, its provider is set and the
-    gap is cleared."""
+    gap is cleared. A `website_schedule` parish has no bulletin to wait for: its source
+    seed is drafted outside seed Runs (docs/source-schedules-plan.md)."""
     return [slug for slug, r in _with_source(worktree, diocese).items()
             if not r.get("fetch_gap") and r.get("bulletin_provider") not in OFF_SITE_PROVIDERS]
 

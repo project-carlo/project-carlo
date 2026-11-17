@@ -68,7 +68,19 @@ export interface ChurchDetail extends ChurchBase {
   bulletin_url: string | null;
   /** YYYY-MM-DD: the Sunday of the week that bulletin is for, or null if it has no date. */
   bulletin_week: string | null;
+  /**
+   * Where a parish with no bulletin posts its times: its own website or its
+   * Facebook page. Null for a church whose times come from its bulletin.
+   */
+  schedule_source: ScheduleSource | null;
+  /** The page the times were read from, when `schedule_source` is set. */
+  source_url: string | null;
+  /** YYYY-MM-DD: when that page was last read, when `schedule_source` is set. */
+  checked_on: string | null;
 }
+
+/** Where a parish with no bulletin posts its times. */
+export type ScheduleSource = "website" | "facebook";
 
 /** A snapshot event as the data layer filters it; `occurrence` is its next occurrence. */
 export interface RawEvent {
