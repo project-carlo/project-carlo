@@ -1,10 +1,10 @@
 ---
 name: Holy Trinity
 reason: closed
-line1: 1419 Falls St., Niagara Falls
-city: New York 14303 ‎
+line1: 1419 Falls St.
+city: Niagara Falls
 state: NY
-postal_code: ''
+postal_code: '14303'
 decided: 2026-11-16
 roster: ['gcatholic:38889']
 evidence:

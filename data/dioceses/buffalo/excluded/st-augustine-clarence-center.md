@@ -2,7 +2,7 @@
 name: St. Augustine
 reason: closed
 line1: 8700 Goodrich Rd.
-city: Clarence
+city: Clarence Center
 state: NY
 postal_code: '14031'
 decided: 2026-11-16

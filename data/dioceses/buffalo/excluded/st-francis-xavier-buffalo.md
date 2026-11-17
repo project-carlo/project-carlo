@@ -1,10 +1,10 @@
 ---
 name: St. Francis Xavier
 reason: closed
-line1: 157 East St., Buffalo
-city: New York 14207 ‎
+line1: 157 East St.
+city: Buffalo
 state: NY
-postal_code: ''
+postal_code: '14207'
 decided: 2026-11-16
 roster: ['gcatholic:38883']
 evidence:

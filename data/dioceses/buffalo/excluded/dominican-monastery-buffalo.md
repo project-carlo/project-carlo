@@ -1,10 +1,10 @@
 ---
 name: Monastery of Our Lady of the Rosary (Dominican nuns)
 reason: closed
-line1: 335 Doat St., Buffalo
-city: New York 14211 ‎
+line1: 335 Doat St.
+city: Buffalo
 state: NY
-postal_code: ''
+postal_code: '14211'
 decided: 2026-11-16
 roster: ['gcatholic:38689']
 evidence:
