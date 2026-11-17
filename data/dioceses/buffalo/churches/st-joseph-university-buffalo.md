@@ -31,8 +31,20 @@ evidence:
 - url: https://container.parishesonline.com/bulletins/14/1703/20261004B.pdf
   seen: 2026-10-07
   note: 'Campus Ministry Family bulletin, 4 October 2026, page 1 (an image, read rendered): "4:00 PM (SJUP)",
-    Sunday "8:30 AM (SJUP)", "10:00 AM (SJUP)", "11:30 AM (SJUP)", student Mass "7:00 PM (SJUP)", and "St.
-    Joseph University Parish 3269 Main Street Buffalo | NY | 14214".'
+    Sunday "8:30 AM (SJUP)", "10:00 AM (SJUP)", "11:30 AM (SJUP)", student Mass "7:00 PM (SJUP)", and
+    "St. Joseph University Parish 3269 Main Street Buffalo | NY | 14214".'
+- url: https://container.parishesonline.com/bulletins/14/1703/20261115B.pdf
+  seen: 2026-11-16
+  note: 'This page is only an image (no text layer), so the lines are transcribed from the rendered page
+    rather than quoted. Page 1 ''Mass Times'' of the 15 November 2026 Campus Ministry Family bulletin:
+    ''Saturday Vigil Masses … 4:00 PM (SJUP)''; ''Sunday Masses 8:30 AM (SJUP) … 10:00 AM (SJUP) … 11:30
+    AM (SJUP)''; ''Sunday Student Masses … 7:00 PM (SJUP)''.'
+- url: https://www.buffalodiocese.org/saturday-afternoon-mass-times/
+  seen: 2026-11-16
+  note: 'Diocesan weekend Mass-times pages (re-read 2026-11-16; Saturday page modified 2026-09-02, Sunday
+    morning 2026-10-07, Sunday afternoon 2026-11-16) list ''St. Joseph University, Buffalo'': Sat. 4 p.m.,
+    Sun. 8:30 a.m., Sun. 11:30 a.m.; ''St. Joseph University Parish, Buffalo'': Sun. 7:00 p.m. (SCHOOL
+    YEAR ONLY). Out of date: the parish bulletin is the source for this church (no schedule change).'
 promoted: 2026-09-26
 ---
 
@@ -43,3 +55,7 @@ Yes, weekly. The Campus Ministry Family bulletin of 4 October 2026 (page 1) and 
 ## Name and address
 
 Name and address come from PR 14's row. On the house number, the modelled address agrees with the diocesan parish finder. Coordinates are from the diocesan parish finder.
+
+## Diocesan Mass-times pages
+
+2026-11-16: the diocese's weekend Mass-times pages list 'St. Joseph University, Buffalo': Sat. 4 p.m., Sun. 8:30 a.m., Sun. 11:30 a.m.; 'St. Joseph University Parish, Buffalo': Sun. 7:00 p.m. (SCHOOL YEAR ONLY). They differ from the site, but the 15 November 2026 Campus Ministry Family bulletin (an image) lists Saturday 4:00 p.m., Sunday 8:30, 10:00 and 11:30 a.m., and a Sunday 7:00 p.m. Student Mass here, as the site shows. The diocese leaves out the 10:00 a.m. Its 'Sun. 7:00 p.m. (SCHOOL YEAR ONLY)' is seasonal: the site shows it as weekly, which is right during the school year; the bulletin gives no summer schedule yet.

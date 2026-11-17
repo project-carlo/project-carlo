@@ -32,6 +32,17 @@ evidence:
   seen: 2026-09-26
   note: 'Diocesan weekend Mass-times pages (fetched 2026-09-26) list ''St. Pius X, Getzville'': Sat. 4
     p.m.; Sun. 10 a.m..'
+- url: https://container.parishesonline.com/bulletins/14/1019/20261115B.pdf
+  seen: 2026-11-16
+  quote: VIGIL 4:00 pm St. Gregory the Great 4:30 pm Good Shepherd SUNDAY 8:00 am St. Gregory the Great
+    9:00 am Good Shepherd 10:00 am St. Gregory the Great 11:00 am St. Pius X
+  note: Family Mass schedule on page 2 of the 15 November 2026 Good Shepherd / St. Pius X / St. Gregory
+    the Great bulletin.
+- url: https://www.buffalodiocese.org/saturday-afternoon-mass-times/
+  seen: 2026-11-16
+  note: 'Diocesan weekend Mass-times pages (re-read 2026-11-16; Saturday page modified 2026-09-02, Sunday
+    morning 2026-10-07, Sunday afternoon 2026-11-16) list ''St. Pius X, Getzville'': Sat. 4 p.m., Sun.
+    10 a.m. Out of date: the parish bulletin is the source for this church (no schedule change).'
 promoted: 2026-09-26
 ---
 
@@ -42,3 +53,7 @@ The Shepherd and Saints Family of Parishes bulletin (2026-09-20) lists Mass here
 ## Name and address
 
 Name and address come from PR 14's row. On the house number, the modelled address agrees with GCatholic, the diocesan parish finder. Coordinates are from GCatholic's Plus Code, decoded.
+
+## Diocesan Mass-times pages
+
+2026-11-16: the diocese's weekend Mass-times pages list 'St. Pius X, Getzville': Sat. 4 p.m., Sun. 10 a.m. They differ from the site, but the 15 November 2026 bulletin lists only Sunday 11:00 a.m. at St. Pius X and no Saturday vigil, as the site shows. The diocese's Saturday 4 p.m. and Sunday 10 a.m. are out of date.

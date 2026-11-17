@@ -32,6 +32,22 @@ evidence:
   seen: 2026-09-26
   note: 'Diocesan weekend Mass-times pages (fetched 2026-09-26) list ''Our Lady of Perpetual Help, Buffalo'':
     Sat. 4:30 p.m.; Sun. 10:00 a.m..'
+- url: https://container.parishesonline.com/bulletins/14/0940/20261115B.pdf
+  seen: 2026-11-16
+  quote: Sat./Sun.,Nov 21st-22nd -Our Lord Jesus Christ King of the Universe
+  note: 'Page 8 (Mass Intentions) of the 15 November 2026 Catholic Family of South Buffalo bulletin. The
+    times and church names on this page are set in a font whose text layer is unreadable, so they are
+    transcribed from the rendered page: for both weekends it lists ''4:00pm · St. Martin of Tours'', ''4:30pm
+    · St. Teresa'', ''8:00 am · The Church of the Holy Family'', ''9:00am · St. Martin of Tours'', ''10:00am
+    · Our Lady of Perpetual Help'', ''11:00am · St. Teresa'', ''11:30am · The Church of the Holy Family''
+    and ''6:30pm · St. Martin of Tours''. Our Lady of Perpetual Help''s only weekend Mass is Sunday 10:00
+    a.m.; the Saturday 4:30 p.m. is St. Teresa''s.'
+- url: https://www.buffalodiocese.org/saturday-afternoon-mass-times/
+  seen: 2026-11-16
+  note: 'Diocesan weekend Mass-times pages (re-read 2026-11-16; Saturday page modified 2026-09-02, Sunday
+    morning 2026-10-07, Sunday afternoon 2026-11-16) list ''Our Lady of Perpetual Help, Buffalo'': Sat.
+    4:30 p.m., Sun. 10:00 a.m. Out of date: the parish bulletin is the source for this church (no schedule
+    change).'
 promoted: 2026-09-26
 ---
 
@@ -42,3 +58,7 @@ The Catholic Family of South Buffalo bulletin (2026-09-20) lists Mass here; the 
 ## Name and address
 
 Name and address come from PR 14's row. On the house number, the modelled address agrees with GCatholic, the diocesan parish finder. Coordinates are from GCatholic's Plus Code, decoded. **Disputed:** Listings disagree between 115 and 125 O'Connell Ave. `address_verified` stays false until the parish confirms.
+
+## Diocesan Mass-times pages
+
+2026-11-16: the diocese's weekend Mass-times pages list 'Our Lady of Perpetual Help, Buffalo': Sat. 4:30 p.m., Sun. 10:00 a.m. They differ from the site, but the 15 November 2026 South Buffalo bulletin (p. 8) lists only a Sunday 10:00 a.m. weekend Mass here; the Saturday 4:30 p.m. Mass is at St. Teresa. The site shows Sunday 10:00 a.m..

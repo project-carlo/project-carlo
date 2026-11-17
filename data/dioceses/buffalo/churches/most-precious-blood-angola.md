@@ -32,6 +32,19 @@ evidence:
   seen: 2026-09-26
   note: 'Diocesan weekend Mass-times pages (fetched 2026-09-26) list ''Most Precious Blood, Angola'':
     Sat. 4 p.m.; Sat. 5:30 p.m.; Sun. 8 a.m..'
+- url: https://container.parishesonline.com/bulletins/14/1884/20261115B.pdf
+  seen: 2026-11-16
+  quote: 'Saturday Vigil: 4:00 PM- St. Mary of the Lake 4:00 PM- Most Precious Blood … Sunday: 8:00 AM-
+    Most Precious Blood … 10:30 AM- Most Precious Blood'
+  note: Page 1 Mass schedule of the 15 November 2026 Lakeshore Catholic Faith Community bulletin; the
+    intentions (p. 4) list 'Sat. 11/21 MPB Most Precious Blood 4:00pm', 'Sun. 11/22 MPB Most Precious
+    Blood 8:00am' and '10:30am'.
+- url: https://www.buffalodiocese.org/saturday-afternoon-mass-times/
+  seen: 2026-11-16
+  note: 'Diocesan weekend Mass-times pages (re-read 2026-11-16; Saturday page modified 2026-09-02, Sunday
+    morning 2026-10-07, Sunday afternoon 2026-11-16) list ''Most Precious Blood, Angola'': Sat. 4 p.m.,
+    Sat. 5:30 p.m., Sun. 8 a.m. Out of date: the parish bulletin is the source for this church (no schedule
+    change).'
 promoted: 2026-09-26
 ---
 
@@ -42,3 +55,7 @@ The Lakeshore Catholic Faith Community bulletin (2026-09-20) lists Mass here; th
 ## Name and address
 
 Name and address come from PR 14's row. On the house number, the modelled address agrees with GCatholic, the diocesan parish finder. Coordinates are from GCatholic's Plus Code, decoded.
+
+## Diocesan Mass-times pages
+
+2026-11-16: the diocese's weekend Mass-times pages list 'Most Precious Blood, Angola': Sat. 4 p.m., Sat. 5:30 p.m., Sun. 8 a.m. They differ from the site, but the 15 November 2026 Lakeshore bulletin lists Saturday 4:00 p.m. and Sunday 8:00 and 10:30 a.m. here, as the site shows. The diocese's Saturday 5:30 p.m. is out of date and it leaves out the Sunday 10:30 a.m..
