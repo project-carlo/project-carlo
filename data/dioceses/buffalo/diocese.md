@@ -116,3 +116,22 @@ promoted: 2026-11-16
   ran one or two issues behind on the site: fetch-check picks each page's newest issue, and the
   parishes post after the weekly fetch, so neither is a fetch gap (noted on both records).
   Promoted. Coverage: directory 167/167; families 146/151; mass-times 141/145; GCatholic 174/216.
+- 2026-11-16: Phase 2 of the check against the diocese's weekend Mass-times pages (re-read
+  2026-11-16; only the Sunday-afternoon page changed since 14 November, adding St. John the Baptist,
+  Lockport's third-Sunday 12:30 p.m. Spanish Mass). Combining the diocese's rows per church, 96 of
+  131 live churches matched the live snapshot's Saturday-evening and Sunday Masses and 35 differed.
+  Every difference was checked against the newest bulletin (15 or 22 November; SS. Columba-Brigid's
+  newest is 7-8 November). One was the site's error: St. James Major, Westfield's Saturday 4:00 p.m.
+  vigil runs every week, but the seed had dropped it on first Saturdays after reading the end of
+  "First Saturday Masses" (a separate devotion; the 8 November issue lists the 4:00 p.m. Mass on 7
+  November). It is fixed by the correction file
+  `data/corrections/chautauqua-family-catholic/2026-11-16-westfield-first-saturday-vigil.json`. SS.
+  Columba-Brigid differs only by its monthly bilingual Mass (last Sunday 10 a.m. instead of 9 and 11),
+  which the site stores. The other 33 are the diocese's errors: wrong or old times, Masses moved to
+  another church of the family, Masses it leaves out, and Greater East Buffalo's new schedule from 21
+  November. Our Lady of Bistrica was recorded in phase 1. The other 32, and SS. Columba-Brigid, now
+  carry the 16 November bulletin evidence (quoted, or transcribed where the page is only an image) and a
+  "Diocesan Mass-times pages" section; the seasonal vigils at All Saints and St. John the Baptist,
+  Lockport (January-June and July-December) and St. Joseph University's school-year 7 p.m. Mass are
+  noted there. After the fix, 97 of 131 match. No church or parish rows changed (promote: no changes);
+  coverage unchanged.
