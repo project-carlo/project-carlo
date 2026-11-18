@@ -42,10 +42,13 @@ bulletin shows, and `file-format.md` before writing an `edited` entry.
 
 Read the bulletins selectively: `seed grep <parish> <pattern>` across every stored issue,
 then `seed text <parish> <hash> --page N`; `seed pdf` or `seed pages` only when the layout
-or an image matters (`--sheet` finds the pages of an issue that is only images). Where an
-image's print is small or a digit is unclear, zoom: `seed pages <parish> <hash> --page N
---region R`. You may also use `status`, `slot show`, `bulletins`, `history`,
-`church` and `check`. Never run a command that writes or costs money: `slot` writes,
+or an image matters (`--sheet` finds the pages of an issue that is only images). Neither
+`grep` nor `text` reads the print of an image with no text layer; both flag the pages
+that have one. Look at the newest bulletin's once with `seed pages <parish> <hash>
+--images` (one image of them all) for Mass, Confession or Adoration times the drafter
+may have missed. Where an image's print is small or a digit is unclear, zoom: `seed pages
+<parish> <hash> --page N --region R`. You may also use `status`, `slot show`, `bulletins`,
+`history`, `church` and `check`. Never run a command that writes or costs money: `slot` writes,
 `finalize`, `mark-read`, `summary`, `start`, `block`, `church-issue`, `approve`, `ask`,
 `extract` (the last three are refused outright). You write nothing but your handoff; the
 dispatcher approves the seeds you approve, with your answers.
