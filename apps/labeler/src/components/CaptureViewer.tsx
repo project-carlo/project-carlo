@@ -69,7 +69,7 @@ export function CaptureViewer({ parish, capture }: Props) {
           <img
             onError={() => setImageMissing(true)}
             key={capture.screenshot_hash}
-            src={captureUrl(parish, capture.content_hash, "image")}
+            src={captureUrl(parish, capture.content_hash, "image", capture.screenshot_hash)}
             alt={`Screenshot of ${capture.url}`}
             className="w-full"
           />

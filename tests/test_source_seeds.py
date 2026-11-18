@@ -26,7 +26,7 @@ from pdf_extract.report import render_seeds, render_source_due
 from pdf_extract.seeding import captures as seed_captures
 from pdf_extract.seeding import cli as seed_cli
 from pdf_extract.seeding.captures import capture_page, linked_facebook_pages, screenshot_key
-from pdf_extract.seeding.checks import check_seed
+from pdf_extract.seeding.checks import check_seed, own_site_test
 from pdf_extract.seeding.files import (
     APPROVED,
     READY,
@@ -427,6 +427,30 @@ def test_a_website_capture_must_not_end_on_another_site(env, conn, capsys):
     assert any("ended on another site, https://parked.example/" in p for p in problems)
 
 
+def test_a_site_on_a_shared_host_is_only_its_own_part_of_it():
+    # A domain of its own: any host of it.
+    own = own_site_test("https://www.stritaweb.org")
+    assert own("https://stritaweb.org/mass-times") and own("https://events.stritaweb.org/")
+    assert not own("https://stluke.org/")
+    # A platform's subdomain: that host, not the platform's other sites.
+    own = own_site_test("https://stritaweb.weebly.com/")
+    assert own("https://stritaweb.weebly.com/mass-times.html")
+    assert not own("https://stlukeweb.weebly.com/mass-times.html")
+    # A shared host: the homepage's folder on it, not the other parishes' or the diocese's.
+    own = own_site_test("https://sites.google.com/view/stritaweb/home")
+    assert own("https://sites.google.com/view/stritaweb/mass-times")
+    assert not own("https://sites.google.com/view/stlukeweb/mass-times")
+    own = own_site_test("https://parishes.rcda.org/StRita/bulletin.php")
+    assert own("http://parishes.rcda.org/strita/masses.php")
+    assert own("https://parishes.rcda.org/StRita")
+    assert not own("https://parishes.rcda.org/StLuke/masses.php")
+    assert not own("https://www.rcda.org/mass-times")
+    own = own_site_test("http://parishes.rcda.org/OurLadyOfFatima/")
+    assert own("https://parishes.rcda.org/OurLadyOfFatima/index.php")
+    assert not own("https://parishes.rcda.org/OurLadyOfFatimaToo/")
+    assert not own_site_test("")("https://stritaweb.org/")
+
+
 def test_facebook_pages_are_named_alike():
     page = "https://www.facebook.com/stritaweb"
     assert facebook_page("https://m.facebook.com/StRitaWeb/posts/123") == page
@@ -435,6 +459,16 @@ def test_facebook_pages_are_named_alike():
         "https://www.facebook.com/profile.php?id=1000")
     assert facebook_page("https://www.facebook.com/people/St-Rita/1000/") == (
         "https://www.facebook.com/profile.php?id=1000")
+    # Pages with no username, by their id: two parishes' are two pages.
+    assert facebook_page("https://www.facebook.com/p/St-Rita-Parish-100064512345678/") == (
+        "https://www.facebook.com/profile.php?id=100064512345678")
+    assert facebook_page("https://www.facebook.com/p/Holy-Cross-100089999999999/") == (
+        "https://www.facebook.com/profile.php?id=100089999999999")
+    assert facebook_page("https://www.facebook.com/pages/category/Church/St-Rita-1000/") == (
+        "https://www.facebook.com/profile.php?id=1000")
+    assert facebook_page("https://www.facebook.com/p/") is None
+    assert facebook_page("https://www.facebook.com/pages/create") is None
+    assert facebook_page("https://www.facebook.com/media/set/?set=a.1") is None
     assert facebook_page("https://www.facebook.com/sharer/sharer.php?u=x") is None
     assert facebook_page(SITE) is None
     plugin = ("https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com"
@@ -473,12 +507,20 @@ def test_an_approved_source_seed_loads_with_its_page_and_reaches_the_snapshot(en
                                   content_hash="b" * 64, fetched_at="2025-01-02T00:00:00Z")
     save_processed_bulletin(conn, bulletin_id, [], processed_at="2025-01-02T01:00:00Z",
                             published_date="2025-01-05")
+    # An entry that bulletin printed too (one the source seed kept as it was).
+    conn.execute("INSERT INTO entry_sighting (bulletin_id, entry_id, page_number) "
+                 "SELECT ?, entry_id, 2 FROM current_schedule WHERE parish_id = ?",
+                 (bulletin_id, parish_id))
     conn.commit()
     extract(env["db"], dest, keep_previous=False)
-    churches = {c["slug"]: c for c in read_snapshot(dest.read_bytes())["churches"]}
+    snapshot = read_snapshot(dest.read_bytes())
+    churches = {c["slug"]: c for c in snapshot["churches"]}
     assert churches[CHURCH]["schedule_source"] == "website"
     assert churches[CHURCH]["bulletin_url"] is None
     assert churches[CHURCH]["bulletin_week"] is None
+    # Nor is it the page its times were found on.
+    events = [e for e in snapshot["events"] if e["church_id"] == churches[CHURCH]["id"]]
+    assert events and all(e["page_number"] is None for e in events)
 
     # A parish that has found a bulletin is shown as a bulletin parish.
     conn.execute("UPDATE parish SET bulletin_provider = 'parishes_online' WHERE slug = ?",

@@ -35,9 +35,11 @@ from __future__ import annotations
 import calendar
 import hashlib
 import sqlite3
+from collections.abc import Callable
 from datetime import date, timedelta
 from pathlib import Path
 from typing import Any
+from urllib.parse import unquote, urlsplit
 
 from pdf_extract.bulletin_week import bulletin_reference_date, bulletin_week, parse_iso_date
 from pdf_extract.model import (
@@ -386,10 +388,7 @@ def _source_problems(
             "from it"
         )
     homepage = parish["homepage_url"] or ""
-    domain = registrable_domain(url_host(homepage) or "")
-
-    def own_site(url: str) -> bool:
-        return bool(domain) and registrable_domain(url_host(url) or "") == domain
+    own_site = own_site_test(homepage)
 
     # Each capture's committed text, by its hash: its header, and the page's text.
     texts: dict[str, str | None] = {}
@@ -463,6 +462,43 @@ def _source_problems(
                     "from its screenshot as `cap <capture> image: …`"
                 )
     return problems
+
+
+def own_site_test(homepage: str) -> Callable[[str], bool]:
+    """Whether an address is on the parish's own website, `homepage` its address.
+
+    A site on a domain of its own (stmary.org) is every host of that domain. One on a
+    host it shares, a platform's or a diocese's subdomain (stmary.weebly.com,
+    sites.google.com/view/stmary/home, parishes.rcda.org/stmary/), is that host only,
+    and on it the homepage's folder, since the rest of the domain is other sites'.
+    """
+    home_host = (url_host(homepage) or "").removeprefix("www.")
+    domain = registrable_domain(home_host)
+    if not domain:
+        return lambda url: False
+    if home_host == domain:
+        return lambda url: registrable_domain(url_host(url) or "") == domain
+    # The homepage's folder: its path, less the page's name unless it ends with a slash.
+    folder = _path_segments(homepage)
+    if not _path(homepage).endswith("/"):
+        folder = folder[:-1]
+
+    def own(url: str) -> bool:
+        host = (url_host(url) or "").removeprefix("www.")
+        return host == home_host and _path_segments(url)[:len(folder)] == folder
+    return own
+
+
+def _path(url: str) -> str:
+    try:
+        return urlsplit(url).path
+    except ValueError:  # a malformed address
+        return ""
+
+
+def _path_segments(url: str) -> list[str]:
+    """An address's path as lowercase segments."""
+    return [unquote(s).lower() for s in _path(url).split("/") if s]
 
 
 def _screenshot_problems(slug: str, capture: dict[str, Any], shot_hash: Any, at: str,

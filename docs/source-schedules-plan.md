@@ -120,7 +120,9 @@ R6's per-slot `schedule_check`, which compares a website with a bulletin.
 - The committed text is there, with the hash the file gives, and its header
   names the page the file gives. The parish is `website_schedule`. Website
   captures are on the parish's own website (same registrable domain as its
-  `website`), and didn't end on another. Facebook captures are the parish's own
+  `website`, or on a shared host only its own part of it; see
+  [Implementation decisions](#implementation-decisions)), and didn't end on
+  another. Facebook captures are the parish's own
   page: its `website`, when that is a Facebook page, or one a capture of its
   website links. One is primary, and `as_of` is the newest capture's time.
 - `current_because` and `recheck_after` (after `as_of`) are present.
@@ -274,13 +276,22 @@ departs from it.
   moves its `captured_at` to now and replaces its screenshot, since a picture on
   the page (a Facebook schedule) can change under the same text; a quote read
   from the old screenshot then fails `seed check` until it is read again.
+- **A website on a shared host is only its own part of it.** A parish whose
+  `website` is on a domain of its own owns every host of that domain. One whose
+  `website` is a subdomain (a platform's, `stmary.weebly.com` or
+  `sites.google.com/view/stmary/home`, or a diocese's, `parishes.rcda.org/stmary/`)
+  owns only that host, and on it the folder its `website` is in, since the rest
+  of the domain is other parishes' sites or the diocese's.
 - **A Facebook page is the parish's own** when the parish's `website` is that
   page, or a captured page of its website links it (the header lists the
-  Facebook pages a website capture links, so the check needs no network).
+  Facebook pages a website capture links, so the check needs no network). A
+  page with no username (`/p/Name-123`, `/people/Name/123`) is named by its id,
+  so two parishes' such pages are never taken for one.
 - **`checked_on` is the date in the Eastern time zone**, where every parish on
   the site is, not UTC's.
 - **A source hides an old bulletin.** A church shown with a source has no
-  `bulletin_url` or `bulletin_week`, though its parish once published one.
+  `bulletin_url` or `bulletin_week`, though its parish once published one, and
+  its times have no bulletin page.
 - **Quotes are matched** case-, whitespace- and punctuation-insensitively
   (typographic quotes, dashes and ellipses made plain).
 - **`recheck_after`** is set by `finalize` to three months after `as_of`

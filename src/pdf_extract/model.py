@@ -348,15 +348,20 @@ _FACEBOOK_NOT_PAGES = frozenset({
     "", "sharer", "sharer.php", "share", "share.php", "dialog", "plugins", "tr", "login",
     "login.php", "home.php", "watch", "events", "hashtag", "help", "policies", "privacy",
     "legal", "photo", "photo.php", "story.php", "permalink.php", "reel", "reels", "search",
+    "l.php", "media", "stories", "notes", "photos", "videos",
 })
+# A page's id at the end of a path segment: `/p/St-Rita-Parish-100064512345678/`.
+_FACEBOOK_TRAILING_ID = re.compile(r"-(\d+)$")
 
 
 def facebook_page(url: str) -> str | None:
     """The Facebook page `url` is on, as a canonical address, or None when it names none.
 
     Every address on one page names it alike: `facebook.com/StRita`, `m.facebook.com/
-    strita/posts/1` and `facebook.com/profile.php?id=1` with its `id`. A page plugin's
-    address names the page in its `href`.
+    strita/posts/1` and `facebook.com/profile.php?id=1` with its `id`, as do `/p/St-Rita-1`,
+    `/people/St-Rita/1` and `/pages/category/Church/St-Rita-1`. A page plugin's address
+    names the page in its `href`. One under `/p/`, `/people/` or `/pages/` with no id
+    names none that can be told apart from another's.
     """
     if source_platform(url) != FACEBOOK:
         return None
@@ -368,11 +373,15 @@ def facebook_page(url: str) -> str | None:
         return facebook_page(query["href"][0])
     if head == "profile.php" and query.get("id"):
         return f"https://www.facebook.com/profile.php?id={query['id'][0]}"
-    if head in ("pages", "people", "pg") and len(segments) >= 2:
-        # /pages/Name/123 and /people/Name/123 by their id; /pg/name by its name.
-        last = segments[2] if head != "pg" and len(segments) >= 3 else segments[1]
-        return (f"https://www.facebook.com/profile.php?id={last}" if last.isdigit()
-                else f"https://www.facebook.com/{last.lower()}")
+    if head == "pg" and len(segments) >= 2:
+        return f"https://www.facebook.com/{segments[1].lower()}"
+    if head in ("pages", "people", "p"):
+        # By the page's id: a segment of its own (/pages/Name/123, /people/Name/123), or
+        # the end of its name (/p/Name-123, /pages/category/Kind/Name-123).
+        rest = segments[1:4]
+        page_id = next((s for s in rest if s.isdigit()), None) or next(
+            (m.group(1) for s in rest if (m := _FACEBOOK_TRAILING_ID.search(s))), None)
+        return None if page_id is None else f"https://www.facebook.com/profile.php?id={page_id}"
     if head == "groups" and len(segments) >= 2:
         return f"https://www.facebook.com/groups/{segments[1].lower()}"
     if head in _FACEBOOK_NOT_PAGES:

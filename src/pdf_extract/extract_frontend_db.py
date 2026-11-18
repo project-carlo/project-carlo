@@ -234,13 +234,19 @@ def read_snapshot(data: bytes) -> dict[str, list[dict[str, Any]]]:
 
 # Each parish's latest seed revision, when it was loaded from a source seed. A later
 # bulletin seed (the parish found a bulletin) hides it, as does a provider that isn't
-# `website_schedule` (the join above).
+# `website_schedule` (the joins in `extract` and `_SOURCED_PARISHES`).
 _LATEST_SOURCE_SEED = """
     SELECT * FROM (
         SELECT parish_id, schedule_source, schedule_source_url, as_of,
                ROW_NUMBER() OVER (PARTITION BY parish_id ORDER BY revision DESC) AS rn
         FROM schedule_revision WHERE source_kind = 'seed'
     ) WHERE schedule_source IS NOT NULL
+"""
+# The parishes shown with a source: their churches have no current bulletin.
+_SOURCED_PARISHES = f"""
+    SELECT sourced.parish_id FROM ({_LATEST_SOURCE_SEED}) sourced
+    JOIN parish p ON p.id = sourced.parish_id
+    WHERE sourced.rn = 1 AND p.bulletin_provider = '{WEBSITE_SCHEDULE}'
 """
 
 # The parishes on the site are all in the Eastern time zone (Delaware to New York), so
@@ -271,7 +277,8 @@ def _schedule_events(conn: sqlite3.Connection) -> list[tuple]:
     """Each seeded parish's believed schedule, entry ids negated.
 
     The page is the entry's sighting in its parish's current bulletin, the one
-    the church's `bulletin_url` opens.
+    the church's `bulletin_url` opens. A parish shown with a source has none, so
+    an entry its old bulletin printed has no page.
     """
     columns = {row[1] for row in conn.execute('PRAGMA table_info(schedule_entry)')}
     bounds = ', '.join(f'e.{name}' if name in columns else 'NULL'
@@ -285,6 +292,7 @@ def _schedule_events(conn: sqlite3.Connection) -> list[tuple]:
         FROM current_schedule s
         JOIN schedule_entry e ON e.id = s.entry_id
         LEFT JOIN ({_LATEST_BULLETIN}) latest ON latest.parish_id = s.parish_id AND latest.rn = 1
+            AND s.parish_id NOT IN ({_SOURCED_PARISHES})
         LEFT JOIN entry_sighting sighting
             ON sighting.bulletin_id = latest.id AND sighting.entry_id = e.id
         WHERE s.parish_id IN (

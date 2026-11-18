@@ -239,7 +239,9 @@ its own website or Facebook page (rules.md R42–R45; docs/source-schedules-plan
   So two pages with the same text are two captures. The screenshot (a WebP) is in the
   blob store, and its tiles are in `data/seed-work/<parish>/captures/` for reading.
 - `platform` is `facebook` for a Facebook address, else `website`. A website capture must
-  be on the parish's own website and end there (not redirect off it). A Facebook capture
+  be on the parish's own website and end there (not redirect off it): when its website
+  is on a shared host (`stmary.weebly.com`, `sites.google.com/view/stmary/`,
+  `parishes.rcda.org/stmary/`), only that host and, on it, the website's folder. A Facebook capture
   must be the parish's own page: its website in `data/parishes.csv` when that is a
   Facebook page, or a page a capture of its website links (so capture that page of the
   website too). Exactly one capture is `primary`: the page the site links as the times'
