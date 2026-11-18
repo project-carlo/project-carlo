@@ -1,0 +1,104 @@
+{
+  "parish": "shepherd-and-saints-family",
+  "actor": "lyonsl2 (via Claude)",
+  "note": "Chapel open 24 hours (#111): the seven 12:00 AM–11:59 PM weekly entries become one continuous entry. The 15 November 2026 bulletin: \"St. Gregory the Great Adoration—Open 24/7. An access code is needed between 9:00 pm—6:00 am.\" The code itself is not recorded.",
+  "as_of": "2026-11-15T17:24:37Z",
+  "operations": [
+    {
+      "op": "delete",
+      "before": {
+        "church_slug": "st-gregory-the-great-williamsville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "start_time": "12:00 AM",
+        "end_time": "11:59 PM",
+        "note": "Open 24/7; access code needed 9:00 PM-6:00 AM",
+        "day_of_week": "Friday"
+      }
+    },
+    {
+      "op": "delete",
+      "before": {
+        "church_slug": "st-gregory-the-great-williamsville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "start_time": "12:00 AM",
+        "end_time": "11:59 PM",
+        "note": "Open 24/7; access code needed 9:00 PM-6:00 AM",
+        "day_of_week": "Monday"
+      }
+    },
+    {
+      "op": "delete",
+      "before": {
+        "church_slug": "st-gregory-the-great-williamsville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "start_time": "12:00 AM",
+        "end_time": "11:59 PM",
+        "note": "Open 24/7; access code needed 9:00 PM-6:00 AM",
+        "day_of_week": "Saturday"
+      }
+    },
+    {
+      "op": "delete",
+      "before": {
+        "church_slug": "st-gregory-the-great-williamsville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "start_time": "12:00 AM",
+        "end_time": "11:59 PM",
+        "note": "Open 24/7; access code needed 9:00 PM-6:00 AM",
+        "day_of_week": "Sunday"
+      }
+    },
+    {
+      "op": "delete",
+      "before": {
+        "church_slug": "st-gregory-the-great-williamsville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "start_time": "12:00 AM",
+        "end_time": "11:59 PM",
+        "note": "Open 24/7; access code needed 9:00 PM-6:00 AM",
+        "day_of_week": "Thursday"
+      }
+    },
+    {
+      "op": "delete",
+      "before": {
+        "church_slug": "st-gregory-the-great-williamsville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "start_time": "12:00 AM",
+        "end_time": "11:59 PM",
+        "note": "Open 24/7; access code needed 9:00 PM-6:00 AM",
+        "day_of_week": "Tuesday"
+      }
+    },
+    {
+      "op": "delete",
+      "before": {
+        "church_slug": "st-gregory-the-great-williamsville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "start_time": "12:00 AM",
+        "end_time": "11:59 PM",
+        "note": "Open 24/7; access code needed 9:00 PM-6:00 AM",
+        "day_of_week": "Wednesday"
+      }
+    },
+    {
+      "op": "add",
+      "after": {
+        "church_slug": "st-gregory-the-great-williamsville",
+        "event_type": "adoration",
+        "event_kind": "continuous",
+        "open_from": "06:00",
+        "open_until": "21:00",
+        "access": "code_after_hours",
+        "note": null
+      }
+    }
+  ]
+}
