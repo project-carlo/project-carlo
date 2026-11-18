@@ -82,7 +82,7 @@ SOURCE: "HEAD: what it said, in its words"
   cap 5e60aa31: ...          a source seed's capture (`cap primary` its primary one):
                              a source seed's only kind of source, quoted as its text
                              reads; `cap 5e60aa31 image: ...` for a quote read from
-                             its screenshot
+                             its screenshot (finalize commits the screenshot)
   A slot's --page defaults to its source's page on the newest bulletin, and a
   source on the newest bulletin without a page takes the slot's.
   With web --src, --website-current "why current" and --website-context "why it
@@ -451,7 +451,11 @@ def _capture_source(seed: dict[str, Any], tokens: list[str], said: str, text: st
         "url": capture["url"], "said": said,
     }
     if len(tokens) == 3:
-        source["from_image"] = True
+        if not capture.get("screenshot_hash"):
+            raise SeedError(f"source {text!r}: capture {source['capture']} has no screenshot "
+                            "to quote")
+        # The screenshot it was read from: a new one of the page must be read again.
+        source["from_image"] = capture["screenshot_hash"]
     return source
 
 

@@ -61,14 +61,15 @@ export function CaptureViewer({ parish, capture }: Props) {
       <div className="min-h-0 flex-1 overflow-auto" data-testid="capture-viewer">
         {view === "screenshot" && capture.screenshot_hash && imageMissing ? (
           <p className="p-4 text-sm text-slate-300">
-            The screenshot isn't in storage here: it reaches R2 only from a machine that writes
-            there. The text is committed.
+            The screenshot isn't here: it is committed only when a quote was read from it,
+            and otherwise reaches R2 only from a machine that writes there. The text is
+            committed.
           </p>
         ) : view === "screenshot" && capture.screenshot_hash ? (
           <img
             onError={() => setImageMissing(true)}
             key={capture.screenshot_hash}
-            src={captureUrl(parish, capture.content_hash, "png")}
+            src={captureUrl(parish, capture.content_hash, "image")}
             alt={`Screenshot of ${capture.url}`}
             className="w-full"
           />

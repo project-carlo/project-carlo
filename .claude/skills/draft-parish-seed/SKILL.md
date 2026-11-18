@@ -23,7 +23,8 @@ address]` (run it under `xvfb-run -a`, like `seed site`); it prints the page's t
 the paths of its screenshot tiles, which you Read for what only a picture shows. Cite
 captures as `cap <capture>: <its words>` (rules.md R42–R45; file-format.md, "Source
 seeds"), say why the schedule looks current with `seed current <parish> "…"`, and commit
-`data/seeds/captures/<parish>/` with the file. Then steps 7 and 8 as for any parish.
+`data/seeds/captures/<parish>/` with the file (its texts, and the screenshots `finalize`
+puts there for quotes read from a picture). Then steps 7 and 8 as for any parish.
 
 1. **Start.** `pnpm seed start <parish>` creates the draft, or resumes it if it exists, and
    prints the brief: the website, the churches, the bulletins newest first, a summary of

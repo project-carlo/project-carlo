@@ -84,7 +84,7 @@ from pdf_extract.schedule.store import parish_churches
 from pdf_extract.seeding import page_images, queries
 from pdf_extract.seeding import slots as slot_writes
 from pdf_extract.seeding.calls import call_limit, load_or_start, run_ask, run_extract
-from pdf_extract.seeding.captures import capture_page, capture_text
+from pdf_extract.seeding.captures import capture_page, capture_text, keep_quoted_screenshots
 from pdf_extract.seeding.checks import check_seed
 from pdf_extract.seeding.coverage import diff, event_parts, missing_warning
 from pdf_extract.seeding.files import (
@@ -263,10 +263,10 @@ def _current(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
     seed["current_because"] = reason
     if args.recheck_after is not None:
         try:
-            date.fromisoformat(args.recheck_after)
+            # Stored as YYYY-MM-DD, whatever ISO form it was given in (20270115).
+            seed["recheck_after"] = date.fromisoformat(args.recheck_after).isoformat()
         except ValueError as exc:
             raise SeedError(f"--recheck-after is YYYY-MM-DD, not {args.recheck_after!r}") from exc
-        seed["recheck_after"] = args.recheck_after
     path = write_seed_file(seed, ctx.seeds_dir)
     return {"parish": args.parish, "current_because": reason,
             "recheck_after": seed.get("recheck_after"),
@@ -314,6 +314,9 @@ def _finalize(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
             past = [] if source else queries.recent_history(conn, slug)
             seed = {**finalize_seed(seed, churches, past), "parish_slug": slug}
             write_seed_file(seed, ctx.seeds_dir)
+            if source and seed.get("status") != APPROVED:
+                # A reviewer anywhere must see the screenshots its quotes were read from.
+                keep_quoted_screenshots(seed, ctx.seeds_dir)
             if seed.get("status") not in (APPROVED, BLOCKED) and not source:
                 # History is a hint, so uncovered events are warnings, not failures.
                 found = diff(seed, past)

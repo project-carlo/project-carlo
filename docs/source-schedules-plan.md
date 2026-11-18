@@ -74,17 +74,20 @@ tools store what was read:
 
 - `pnpm seed capture <parish> [path or address]` renders the page and keeps its
   visible text and a full-page screenshot. The text is committed beside the
-  seeds, `data/seeds/captures/<parish>/<sha256 of the text>.txt`, so its quotes
-  can be checked anywhere and a reviewer reads it in the pull request. The
-  screenshot (PNG) goes in the blob store, `captures/<parish>/<sha256>.png`,
-  with tiles that fit Read in `data/seed-work/<parish>/captures/`. It prints the
-  capture's id, its text and the tiles' paths.
+  seeds, `data/seeds/captures/<parish>/<sha256>.txt`, under a short header
+  naming the page (its address, where it ended, the Facebook pages it links),
+  so its quotes can be checked anywhere and a reviewer reads it in the pull
+  request. The screenshot (a WebP) goes in the blob store,
+  `captures/<parish>/<sha256>.webp`, with tiles that fit Read in
+  `data/seed-work/<parish>/captures/`, and is committed beside the text once a
+  quote is read from it. It prints the capture's id, its text and the tiles'
+  paths.
 - It uses the parish-site-access skill's headed Chrome, which gets past most
   Cloudflare checks and renders JavaScript sites. Facebook pages need that
   browser too, and may show only a login wall: the capture then reports it
   rather than storing an empty page.
-- Captures are named by content, like bulletins, so capturing an unchanged page
-  again adds nothing, and the future updater can see whether a page changed
+- Captures are named by content (the page's address and its text), like
+  bulletins, so capturing an unchanged page again adds nothing, and the future updater can see whether a page changed
   since the last seed.
 
 ## The seed file
@@ -111,11 +114,15 @@ R6's per-slot `schedule_check`, which compares a website with a bulletin.
 - No bulletins and no calls. Every source cites a capture in the file, and its
   `said` appears in that capture's committed text (case, whitespace and
   typographic quotes and dashes folded), so a quote can't be made up. A quote
-  read from the screenshot is marked `from_image` and can't be matched.
-- The committed text is there, with the hash the file gives. The parish is
-  `website_schedule`. Website captures are on the parish's own website (same
-  registrable domain as its `website`). One is primary, and `as_of` is the
-  newest capture's time.
+  read from the screenshot names that screenshot in `from_image` and can't be
+  matched, so the screenshot must be committed for the reviewer, and must still
+  be the capture's (a newer screenshot of the page means reading it again).
+- The committed text is there, with the hash the file gives, and its header
+  names the page the file gives. The parish is `website_schedule`. Website
+  captures are on the parish's own website (same registrable domain as its
+  `website`), and didn't end on another. Facebook captures are the parish's own
+  page: its `website`, when that is a Facebook page, or one a capture of its
+  website links. One is primary, and `as_of` is the newest capture's time.
 - `current_because` and `recheck_after` (after `as_of`) are present.
 - The checks that don't depend on bulletins still apply: entry validity,
   churches, duplicate slots, dated entries on or after `as_of`'s date, and
@@ -197,9 +204,10 @@ query takes them from the parish's latest seed revision when the parish is
 The Seeds view shows a source seed's captures where it shows bulletin tabs:
 the screenshot, the stored text and a link to the live page. Clicking a
 source opens its capture. A new route,
-`GET /api/seeds/<parish>/captures/<hash>/<text|png>`, serves the committed text
-and the screenshot from the blob store, only for a capture the parish's seed
-file lists. The rest of the review is the same.
+`GET /api/seeds/<parish>/captures/<hash>/<text|image>`, serves the committed
+text and the screenshot (the committed one, else the blob store's), only for a
+capture the parish's seed file lists. A source quoted from a screenshot is
+marked for the reviewer to check there. The rest of the review is the same.
 
 ## Weekly run and report
 
@@ -255,12 +263,24 @@ departs from it.
   keys only (writes are `CARLO_REMOTE_WRITE`), so a capture kept only in the
   blob store would never leave the drafter's machine. The text is small, so it
   is committed in `data/seeds/captures/`, with `eol=lf` in `.gitattributes`
-  so a checkout can't change its hash. The screenshot stays in the blob store:
-  it reaches R2 only from a machine that writes there, and the labeler says so
-  when it is missing.
-- **A capture is its text.** Capturing a page whose text is unchanged keeps the
-  capture, moves its `captured_at` to now and replaces its screenshot, since a
-  picture on the page (a Facebook schedule) can change under the same text.
+  so a checkout can't change its hash. A screenshot stays in the blob store
+  unless a quote was read from it: then `finalize` commits it beside the text
+  (a WebP, a tenth of a PNG's size), since nothing else checks that quote and a
+  reviewer elsewhere must see it. Any other screenshot reaches R2 only from a
+  machine that writes there, and the labeler says so when it is missing.
+- **A capture is its page and text.** The header is hashed with the text, so two
+  pages with the same text (two that are only a picture, under the same menus)
+  are two captures. Capturing a page whose text is unchanged keeps the capture,
+  moves its `captured_at` to now and replaces its screenshot, since a picture on
+  the page (a Facebook schedule) can change under the same text; a quote read
+  from the old screenshot then fails `seed check` until it is read again.
+- **A Facebook page is the parish's own** when the parish's `website` is that
+  page, or a captured page of its website links it (the header lists the
+  Facebook pages a website capture links, so the check needs no network).
+- **`checked_on` is the date in the Eastern time zone**, where every parish on
+  the site is, not UTC's.
+- **A source hides an old bulletin.** A church shown with a source has no
+  `bulletin_url` or `bulletin_week`, though its parish once published one.
 - **Quotes are matched** case-, whitespace- and punctuation-insensitively
   (typographic quotes, dashes and ellipses made plain).
 - **`recheck_after`** is set by `finalize` to three months after `as_of`

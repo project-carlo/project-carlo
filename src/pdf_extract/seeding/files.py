@@ -17,7 +17,9 @@ of its own website or Facebook page that `seed capture` stored
 Its `captures` are the pages read, each slot cites them, and it says why the
 schedule looks current (`current_because`) and when to read it again
 (`recheck_after`). Each capture's text is committed beside the seeds, in
-`captures/<parish>/<content hash>.txt`, so its quotes can be checked anywhere.
+`captures/<parish>/<content hash>.txt`, so its quotes can be checked anywhere, and
+so is each screenshot a quote was read from (`<screenshot hash>.webp`), so a
+reviewer anywhere can see it.
 """
 
 from __future__ import annotations
@@ -114,8 +116,12 @@ SOURCE_SEED_KEYS = ("kind", "captures", "current_because", "recheck_after")
 OPTIONAL_SEED_KEYS = ("church_list_issues", *SOURCE_SEED_KEYS)
 OPTIONAL_SLOT_KEYS = ("group", "weekly_omission")
 # A capture: one page as `seed capture` stored it. `content_hash` is the SHA-256 of
-# its text, `screenshot_hash` the PNG's (null when none was taken), and `primary`
-# marks the one page the website links as the times' source.
+# its committed text (`capture_document`: the page's address, and the Facebook pages it
+# links, then its text), so two pages with the same text are two captures.
+# `screenshot_hash` is the screenshot's (a WebP; null when none was taken), and
+# `primary` marks the one page the website links as the times' source. A source that
+# quotes the screenshot names it in `from_image`, so a new screenshot of the page
+# can't silently stand behind an old quote.
 CAPTURE_KEYS = (
     "content_hash", "url", "final_url", "platform", "captured_at", "screenshot_hash", "primary",
 )
@@ -156,6 +162,50 @@ def read_capture_text(
         return capture_text_path(parish_slug, content_hash, seeds_dir).read_text(encoding="utf-8")
     except FileNotFoundError:
         return None
+
+
+def screenshot_path(parish_slug: str, screenshot_hash: str, seeds_dir: Path = SEEDS_DIR) -> Path:
+    """Where a screenshot a quote was read from is committed (`seed finalize` puts it there)."""
+    if not is_valid_slug(parish_slug) or not is_valid_hash(screenshot_hash):
+        raise SeedFileError(f"Invalid screenshot: {parish_slug!r} {screenshot_hash!r}")
+    return seeds_dir / CAPTURES_DIRNAME / parish_slug / f"{screenshot_hash}.webp"
+
+
+# A capture's committed text opens with what it is of, hashed with the page's text:
+# the address asked for, where it ended when that differs, and the Facebook pages it
+# links (what makes a Facebook page the parish's own). A blank line ends it.
+CAPTURED_FROM = "Captured from "
+ENDED_AT = "Ended at "
+LINKS_FACEBOOK = "Links to Facebook page "
+
+
+def capture_document(url: str, final_url: str | None, facebook_pages: list[str], text: str,
+                     ) -> str:
+    """A capture's committed text: its header, a blank line, the page's text."""
+    lines = [CAPTURED_FROM + url]
+    if final_url:
+        lines.append(ENDED_AT + final_url)
+    lines += [LINKS_FACEBOOK + page for page in facebook_pages]
+    return "\n".join(lines) + "\n\n" + text.rstrip("\n") + "\n"
+
+
+def parse_capture_document(document: str) -> tuple[dict[str, Any], str] | None:
+    """A capture's header (`url`, `final_url`, `facebook_pages`) and the page's text, or
+    None when it doesn't open with a header."""
+    head, sep, body = document.partition("\n\n")
+    lines = head.split("\n")
+    if not sep or not lines[0].startswith(CAPTURED_FROM):
+        return None
+    header: dict[str, Any] = {"url": lines[0].removeprefix(CAPTURED_FROM), "final_url": None,
+                              "facebook_pages": []}
+    for line in lines[1:]:
+        if line.startswith(ENDED_AT) and header["final_url"] is None:
+            header["final_url"] = line.removeprefix(ENDED_AT)
+        elif line.startswith(LINKS_FACEBOOK):
+            header["facebook_pages"].append(line.removeprefix(LINKS_FACEBOOK))
+        else:
+            return None
+    return header, body
 
 
 def seed_slugs(seeds_dir: Path = SEEDS_DIR) -> list[str]:
@@ -716,10 +766,11 @@ def _validate_source_slot(seed: dict[str, Any], slot: dict[str, Any], where: str
         if not _nonempty(source.get("said")):
             errors.append(f"{at}.said is required: what the page says, in its words")
         if "from_image" in source:
-            if source["from_image"] is not True:
-                errors.append(f"{at}.from_image is true or left out")
-            elif not capture.get("screenshot_hash"):
+            if not capture.get("screenshot_hash"):
                 errors.append(f"{at}.from_image needs a capture with a screenshot")
+            elif not is_valid_hash(source["from_image"]):
+                errors.append(f"{at}.from_image is the screenshot_hash of the screenshot it "
+                              "was read from, or left out")
     return errors
 
 

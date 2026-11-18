@@ -224,8 +224,11 @@ export interface SeedSource {
   said: string;
   /** A source seed's: the capture it quotes (a prefix of its hash). */
   capture?: string;
-  /** Read from the capture's screenshot, so its text can't confirm it. */
-  from_image?: boolean;
+  /**
+   * Read from the capture's screenshot (this is its hash), so its text can't confirm
+   * it: check it against the screenshot.
+   */
+  from_image?: string;
   schedule_check?: {
     checked_at: string;
     current_because: string;

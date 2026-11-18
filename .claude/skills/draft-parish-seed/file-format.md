@@ -232,14 +232,22 @@ its own website or Facebook page (rules.md R42–R45; docs/source-schedules-plan
 "recheck_after": "2027-02-16"
 ```
 
-- `captures` are the pages `seed capture` stored, named by the SHA-256 of their text.
-  The text is committed in `data/seeds/captures/<parish>/<content_hash>.txt`; commit it
-  with the seed file. The screenshot is in the blob store, and its tiles are in
-  `data/seed-work/<parish>/captures/` for reading. `platform` is `facebook` for a
-  Facebook address, else `website`, which must be on the parish's own website. Exactly
-  one capture is `primary`: the page the site links as the times' source.
+- `captures` are the pages `seed capture` stored, named by the SHA-256 of their committed
+  text, `data/seeds/captures/<parish>/<content_hash>.txt`; commit it with the seed file.
+  The text opens with a header saying what it is of (`Captured from <url>`, `Ended at
+  <final_url>`, `Links to Facebook page <page>`), then a blank line and the page's text.
+  So two pages with the same text are two captures. The screenshot (a WebP) is in the
+  blob store, and its tiles are in `data/seed-work/<parish>/captures/` for reading.
+- `platform` is `facebook` for a Facebook address, else `website`. A website capture must
+  be on the parish's own website and end there (not redirect off it). A Facebook capture
+  must be the parish's own page: its website in `data/parishes.csv` when that is a
+  Facebook page, or a page a capture of its website links (so capture that page of the
+  website too). Exactly one capture is `primary`: the page the site links as the times'
+  source.
 - `as_of` is the newest capture's `captured_at` (`finalize` sets it). Capturing a page
-  whose text is unchanged keeps the capture and moves its time to now.
+  whose text is unchanged keeps the capture, moves its time to now and replaces its
+  screenshot; `seed check` then asks for each quote read from the old screenshot to be
+  read again from the new one.
 - `current_because` (`seed current`) says why the schedule looks current (R44).
 - `recheck_after` is when to read the pages again; `finalize` sets it to three months
   after `as_of` unless you set it (`seed current --recheck-after`). The weekly report
@@ -248,7 +256,11 @@ its own website or Facebook page (rules.md R42–R45; docs/source-schedules-plan
   `{"source": "website", "capture": "5e60aa31", "url": "https://stritaweb.org/mass-times",
   "said": "Saturday Vigil 4:00 PM"}`. `source` is the capture's platform, `url` its
   address, and `said` must appear in the capture's text (case, spacing and typographic
-  quotes and dashes aside). Add `"from_image": true` to a quote read from the screenshot.
+  quotes and dashes aside), after its header. A quote read from the screenshot has
+  `"from_image": "<the capture's screenshot_hash>"` instead: nothing can match it to the
+  text, so `seed finalize` commits that screenshot as
+  `data/seeds/captures/<parish>/<screenshot_hash>.webp` for the reviewer, and `seed
+  check` fails until it is there. Commit it with the text.
 - Write them as `cap 5e60aa31: Saturday Vigil 4:00 PM` (`cap primary: …` for the primary
-  capture), or `cap 5e60aa31 image: …` for a screenshot quote.
+  capture), or `cap 5e60aa31 image: …` for a screenshot quote (it fills in `from_image`).
 - A source seed has no `history` sources, no `weekly_omission` and no paid calls.

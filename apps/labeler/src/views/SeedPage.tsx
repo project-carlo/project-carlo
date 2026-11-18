@@ -712,7 +712,12 @@ function SlotCard(props: SlotCardProps) {
               >
                 <span className="font-semibold text-slate-600">{source.source}</span>
                 {source.url && <span className="text-slate-400"> · {hostOf(source.url)}</span>}
-                {source.from_image && <span className="text-slate-400"> · from its screenshot</span>}
+                {source.from_image && (
+                  // Nothing checks a quote read from a picture: the reviewer is the check.
+                  <span className="text-amber-700" title="Read from the screenshot: no check can match it to the page's text, so check it against the screenshot">
+                    {" "}· from its screenshot: check it there
+                  </span>
+                )}
                 <span className="block text-slate-800">{source.said}</span>
               </button>
             );

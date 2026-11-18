@@ -21,15 +21,19 @@ rules it enforces are .claude/skills/draft-parish-seed/rules.md R1, R2, R5):
 
 A source seed (docs/source-schedules-plan.md) has no bulletins: its `as_of` is
 its newest capture's time, and with `check_evidence` its parish is
-`website_schedule`, its website captures are on the parish's own site, each
-capture's committed text is there with the hash the file gives, and every
-source's `said` is in its capture's text (one read from the screenshot,
-`from_image`, can't be matched).
+`website_schedule`, each capture's committed text is there with the hash the
+file gives and says it is of the page the file gives, its website captures are on
+(and stay on) the parish's own site, its Facebook captures are the parish's own
+page (its website, or one its website's captures link), and every source's
+`said` is in its capture's text. One read from the screenshot (`from_image`)
+can't be matched: it must name the capture's screenshot, committed, so a
+reviewer can see it.
 """
 
 from __future__ import annotations
 
 import calendar
+import hashlib
 import sqlite3
 from datetime import date, timedelta
 from pathlib import Path
@@ -38,11 +42,14 @@ from typing import Any
 from pdf_extract.bulletin_week import bulletin_reference_date, bulletin_week, parse_iso_date
 from pdf_extract.model import (
     DAYS,
+    FACEBOOK,
     WEBSITE,
     WEBSITE_SCHEDULE,
     WEEKS_OF_MONTH,
+    facebook_page,
     normalize_as_of,
     sha256_text,
+    source_platform,
 )
 from pdf_extract.parish_sites.links import registrable_domain, url_host
 from pdf_extract.schedule.entries import UNKNOWN_CHURCH, Entry, EntryError, parse_entry
@@ -59,9 +66,11 @@ from pdf_extract.seeding.files import (
     newest_capture,
     newest_read_bulletin,
     normalize_quote,
+    parse_capture_document,
     read_capture_text,
     resolve_capture,
     resolve_hash,
+    screenshot_path,
     validate_seed,
 )
 
@@ -363,10 +372,12 @@ def check_seed(
 def _source_problems(
     conn: sqlite3.Connection, seed: dict[str, Any], parish_id: int, seeds_dir: Path,
 ) -> list[str]:
-    """What a source seed's evidence needs: the right parish, its own pages, real quotes."""
+    """What a source seed's evidence needs: the right parish, its own pages, real quotes,
+    and each screenshot a quote was read from committed."""
     parish = conn.execute(
         "SELECT slug, homepage_url, bulletin_provider FROM parish WHERE id = ?", (parish_id,),
     ).fetchone()
+    slug = parish["slug"]
     problems = []
     if parish["bulletin_provider"] != WEBSITE_SCHEDULE:
         problems.append(
@@ -374,36 +385,103 @@ def _source_problems(
             f"is {parish['bulletin_provider'] or 'empty'}: a parish with a bulletin is seeded "
             "from it"
         )
-    domain = registrable_domain(url_host(parish["homepage_url"] or "") or "")
+    homepage = parish["homepage_url"] or ""
+    domain = registrable_domain(url_host(homepage) or "")
+
+    def own_site(url: str) -> bool:
+        return bool(domain) and registrable_domain(url_host(url) or "") == domain
+
+    # Each capture's committed text, by its hash: its header, and the page's text.
     texts: dict[str, str | None] = {}
+    headers: dict[str, dict[str, Any]] = {}
     for capture in captures(seed):
         short = capture["content_hash"][:12]
-        if capture["platform"] == WEBSITE and (
-                not domain or registrable_domain(url_host(capture["url"]) or "") != domain):
-            problems.append(f"capture {short} ({capture['url']}) is not on the parish's own "
-                            f"website, {parish['homepage_url'] or 'none in data/parishes.csv'}")
-        text = read_capture_text(parish["slug"], capture["content_hash"], seeds_dir)
-        if text is None:
+        document = read_capture_text(slug, capture["content_hash"], seeds_dir)
+        parsed = None
+        if document is None:
             problems.append(f"capture {short}'s text is missing: commit "
-                            f"data/seeds/captures/{parish['slug']}/{capture['content_hash']}.txt")
-        elif sha256_text(text) != capture["content_hash"]:
+                            f"data/seeds/captures/{slug}/{capture['content_hash']}.txt")
+        elif sha256_text(document) != capture["content_hash"]:
             problems.append(f"capture {short}'s text has changed since it was captured")
-            text = None
-        texts[capture["content_hash"]] = text
+        elif (parsed := parse_capture_document(document)) is None:
+            problems.append(f"capture {short}'s text doesn't say what page it is of: capture "
+                            "the page again")
+        elif (parsed[0]["url"], parsed[0]["final_url"]) != (capture["url"],
+                                                             capture["final_url"]):
+            problems.append(f"capture {short}'s url and final_url must be those its text "
+                            f"was captured from ({parsed[0]['url']}, "
+                            f"{parsed[0]['final_url']})")
+            parsed = None
+        texts[capture["content_hash"]] = parsed[1] if parsed else None
+        if parsed:
+            headers[capture["content_hash"]] = parsed[0]
+
+    # The parish's own Facebook pages: its website, when that is a Facebook page, and
+    # each one a page of its own website links.
+    own_facebook = {facebook_page(homepage)} - {None}
+    for capture in captures(seed):
+        header = headers.get(capture["content_hash"])
+        if header and capture["platform"] == WEBSITE and own_site(capture["url"]):
+            own_facebook.update(header["facebook_pages"])
+
+    for capture in captures(seed):
+        short = capture["content_hash"][:12]
+        url, final = capture["url"], capture["final_url"]
+        if capture["platform"] == WEBSITE:
+            if not own_site(url):
+                problems.append(f"capture {short} ({url}) is not on the parish's own website, "
+                                f"{homepage or 'none in data/parishes.csv'}")
+            elif final and not own_site(final):
+                problems.append(f"capture {short} ({url}) ended on another site, {final}: "
+                                "quote the parish's own pages (if the parish has moved, "
+                                "correct its website in the diocese's records first)")
+        elif capture["platform"] == FACEBOOK:
+            if facebook_page(url) not in own_facebook:
+                problems.append(
+                    f"capture {short} ({url}) is not the parish's own Facebook page: capture "
+                    "the page of its website that links it"
+                    + (f" (its website links {', '.join(sorted(own_facebook))})"
+                       if own_facebook else " (no capture of its website links one)"))
+            elif final and source_platform(final) != FACEBOOK:
+                problems.append(f"capture {short} ({url}) ended off Facebook, at {final}")
+
     for slot in seed["slots"]:
         for j, src in enumerate(slot["sources"]):
             capture = resolve_capture(seed, src.get("capture"))
-            if capture is None or src.get("from_image"):
+            if capture is None:
+                continue
+            at = f"{slot['id']}.sources[{j}]"
+            if "from_image" in src:
+                problems.extend(_screenshot_problems(slug, capture, src["from_image"], at,
+                                                     seeds_dir))
                 continue
             text = texts.get(capture["content_hash"])
             if text is not None and normalize_quote(src["said"]) not in normalize_quote(text):
                 problems.append(
-                    f"{slot['id']}.sources[{j}].said is not in capture "
-                    f"{capture['content_hash'][:12]}'s text: quote the page as it reads "
-                    "(`pnpm seed capture-text`), or mark a quote read from its screenshot "
-                    "from_image"
+                    f"{at}.said is not in capture {capture['content_hash'][:12]}'s text: quote "
+                    "the page as it reads (`pnpm seed capture-text`), or cite a quote read "
+                    "from its screenshot as `cap <capture> image: …`"
                 )
     return problems
+
+
+def _screenshot_problems(slug: str, capture: dict[str, Any], shot_hash: Any, at: str,
+                         seeds_dir: Path) -> list[str]:
+    """A quote read from a screenshot: the capture's current one, committed as it was."""
+    if not isinstance(shot_hash, str) or shot_hash != capture["screenshot_hash"]:
+        return [f"{at} was read from a screenshot the capture no longer has (the page was "
+                "captured again): read its new tiles and write the source again"]
+    try:
+        path = screenshot_path(slug, shot_hash, seeds_dir)
+        data = path.read_bytes()
+    except (OSError, ValueError):
+        return [f"{at} quotes screenshot {shot_hash[:12]}, which isn't committed in "
+                f"data/seeds/captures/{slug}/: `pnpm seed finalize` commits it from this "
+                "machine's store, or capture the page again here"]
+    if hashlib.sha256(data).hexdigest() != shot_hash:
+        return [f"{at}: the committed screenshot {shot_hash[:12]} has changed since it was "
+                "captured"]
+    return []
 
 
 def _bulletin_problems(

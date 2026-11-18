@@ -1,5 +1,7 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 
-# A source seed's capture texts are hashed byte for byte (data/seeds/captures/).
-data/seeds/captures/** text eol=lf
+# A source seed's capture texts and screenshots are hashed byte for byte
+# (data/seeds/captures/).
+data/seeds/captures/**/*.txt text eol=lf
+data/seeds/captures/**/*.webp binary

@@ -328,9 +328,12 @@ leave out, asking, blocking) apply to the page's words as they apply to a bullet
 - Do: `seed capture <parish> [path or address]` each page before citing it, and cite it as
   `cap <capture>: <its words>`; `seed check` finds each quote in the capture's text. A
   quote you read from the screenshot (a schedule posted as a picture) is `cap <capture>
-  image: …`. Only the parish's own website and its own Facebook page are sources: not the
-  diocese's directory, MassTimes, Google or another parish's site. Make the page that
-  holds the schedule primary (`--primary`); the site links it.
+  image: …`: nothing checks it but the reviewer, so quote only what the picture plainly
+  shows. Only the parish's own website and its own Facebook page are sources: not the
+  diocese's directory, MassTimes, Google or another parish's site. Its Facebook page is
+  its own when its website links it: capture the website page that does (usually the
+  homepage). Make the page that holds the schedule primary (`--primary`); the site
+  links it.
 
 **R43. What a page can settle.**
 - When: a capture bears on a slot.

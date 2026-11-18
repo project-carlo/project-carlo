@@ -23,9 +23,10 @@ API:
                                               problems `seed check` finds
 - `PUT  /api/seeds/<parish>`                  validate and save a reviewed seed file; an
                                               approved one must pass `seed check`
-- `GET  /api/seeds/<parish>/captures/<hash>/text`, `.../png`
+- `GET  /api/seeds/<parish>/captures/<hash>/text`, `.../image`
                                               a source seed's capture: its committed text,
-                                              or its screenshot from the blob store
+                                              or its screenshot (committed when a quote
+                                              was read from it, else from the blob store)
 """
 
 from __future__ import annotations
@@ -62,6 +63,7 @@ from pdf_extract.seeding.files import (
     captures,
     read_capture_text,
     read_seed,
+    screenshot_path,
 )
 from pdf_extract.seeding.review import (
     SeedReviewError,
@@ -234,7 +236,7 @@ def make_handler(app: LabelerApp) -> type[BaseHTTPRequestHandler]:
                 return self._with_db(lambda conn: self._json(
                     approve_ready_seeds(conn, reviewer, app.seeds_dir)))
             if (len(parts) == 5 and parts[0] == "seeds" and parts[2] == "captures"
-                    and parts[4] in ("text", "png") and reading):
+                    and parts[4] in ("text", "image") and reading):
                 return self._capture(*self._bulletin_key(parts[1], parts[3]), parts[4])
             if len(parts) == 2 and parts[0] == "seeds" and is_valid_slug(parts[1]):
                 if reading:
@@ -306,12 +308,17 @@ def make_handler(app: LabelerApp) -> type[BaseHTTPRequestHandler]:
                     raise _ApiError(HTTPStatus.NOT_FOUND, "This capture's text is not committed")
                 return self._send(HTTPStatus.OK, text.encode("utf-8"),
                                   "text/plain; charset=utf-8")
-            png_hash = listed.get("screenshot_hash")
-            data = get_store().get(screenshot_key(parish, png_hash)) if png_hash else None
+            shot_hash = listed.get("screenshot_hash")
+            data = None
+            if shot_hash:
+                # Committed when a quote was read from it; otherwise only in the blob store.
+                committed = screenshot_path(parish, shot_hash, app.seeds_dir)
+                data = (committed.read_bytes() if committed.is_file()
+                        else get_store().get(screenshot_key(parish, shot_hash)))
             if data is None:
                 raise _ApiError(HTTPStatus.NOT_FOUND, "This capture's screenshot is not in "
                                 "storage (it reaches R2 only from a machine that writes there)")
-            self._send(HTTPStatus.OK, data, "image/png",
+            self._send(HTTPStatus.OK, data, "image/webp",
                        {"Cache-Control": "private, max-age=86400"})
 
         def _body(self) -> Any:

@@ -21,7 +21,7 @@ export function pdfUrl(parish: string, hash: string): string {
 }
 
 /** A source seed's capture: its stored text, or its screenshot. */
-export function captureUrl(parish: string, hash: string, part: "text" | "png"): string {
+export function captureUrl(parish: string, hash: string, part: "text" | "image"): string {
   return `/api/seeds/${parish}/captures/${hash}/${part}`;
 }
 
