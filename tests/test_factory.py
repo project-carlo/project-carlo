@@ -1588,6 +1588,9 @@ def test_unsupported_parishes_wait_on_a_collector_until_their_provider_is_set(
         "parishes_online", "unsupported"))
     (folder / "none.md").write_text(parish_record("directory:4").replace(
         "parishes_online", "no_bulletin"))
+    # No bulletin to wait for: its source seed is drafted outside seed Runs.
+    (folder / "sourced.md").write_text(parish_record("directory:5").replace(
+        "parishes_online", "website_schedule"))
     assert plan.seedable_parishes(tmp_path, D) == ["live"]
     assert plan.fetch_gap_parishes(tmp_path, D) == ["bare", "gap"]
     # Flipping the provider and clearing the gap seeds it like any other.

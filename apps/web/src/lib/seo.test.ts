@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import type { ChurchDetail } from "@carlo/core";
 import {
+  buildChurchDescription,
   buildChurchTitle,
   buildCityDescription,
   churchBreadcrumbJsonLd,
@@ -23,7 +24,28 @@ const church: ChurchDetail = {
   homepage_url: "https://stcharlesgreece.org",
   bulletin_url: null,
   bulletin_week: null,
+  schedule_source: null,
+  source_url: null,
+  checked_on: null,
 };
+
+describe("buildChurchDescription", () => {
+  it("names the bulletin, or the page a parish with none posts its times on", () => {
+    expect(buildChurchDescription(church)).toBe(
+      "Mass, Confession, and Adoration times for St. Charles Borromeo in Rochester, NY, from the parish’s weekly bulletin.",
+    );
+    expect(
+      buildChurchDescription({
+        ...church,
+        schedule_source: "facebook",
+        source_url: "https://www.facebook.com/stcharles",
+        checked_on: "2026-11-16",
+      }),
+    ).toBe(
+      "Mass, Confession, and Adoration times for St. Charles Borromeo in Rochester, NY, from the parish’s Facebook page.",
+    );
+  });
+});
 
 describe("churchJsonLd", () => {
   it("emits the church as Church structured data", () => {

@@ -16,6 +16,16 @@ command, and `--json` gives a command's full output.
 
 Do one parish at a time. Finish and finalize each before starting the next.
 
+**A parish with no bulletin** (`bulletin_provider: website_schedule`) gets a source seed
+instead, and steps 2–6 don't apply. `seed start` says so. Capture each page of the
+parish's own website or Facebook page you rely on with `seed capture <parish> [path or
+address]` (run it under `xvfb-run -a`, like `seed site`); it prints the page's text and
+the paths of its screenshot tiles, which you Read for what only a picture shows. Cite
+captures as `cap <capture>: <its words>` (rules.md R42–R45; file-format.md, "Source
+seeds"), say why the schedule looks current with `seed current <parish> "…"`, and commit
+`data/seeds/captures/<parish>/` with the file (its texts, and the screenshots `finalize`
+puts there for quotes read from a picture). Then steps 7 and 8 as for any parish.
+
 1. **Start.** `pnpm seed start <parish>` creates the draft, or resumes it if it exists, and
    prints the brief: the website, the churches, the bulletins newest first, a summary of
    history, and the newest PDF's path. `seed brief <parish>` prints the brief again. If

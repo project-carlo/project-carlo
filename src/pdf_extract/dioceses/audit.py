@@ -125,8 +125,9 @@ def audit_rows(d: Diocese, groups: Mapping[str, set[str]], *, fetch: bool = Fals
     probe coverage, including failures and work skipped offline or at a limit.
     """
     all_rows = d.of(PARISH)
+    # A row with no bulletin (`no_bulletin`, or `website_schedule`) shares none.
     rows = {s: r for s, r in sorted(all_rows.items())
-            if r.get("bulletin_provider") != records.NO_BULLETIN}
+            if r.get("bulletin_provider") not in records.NO_BULLETIN_PROVIDERS}
     buckets = {label: set(slugs) & rows.keys() for label, slugs in groups.items()}
     sources: dict[str, list[str]] = {}
     recipes: dict[str, Recipe] = {}
@@ -137,7 +138,7 @@ def audit_rows(d: Diocese, groups: Mapping[str, set[str]], *, fetch: bool = Fals
     scope: dict[str, Any] = {
         "mode": "fetch" if fetch else "offline", "rows_total": len(all_rows),
         "rows_considered": len(rows), "considered_parishes": list(rows),
-        "rows_skipped": [{"parish": s, "reason": "no_bulletin"}
+        "rows_skipped": [{"parish": s, "reason": all_rows[s].get("bulletin_provider")}
                          for s in sorted(all_rows.keys() - rows.keys())],
         "unreadable_records": list(d.unreadable),
         "possible_pairs": len(rows) * (len(rows) - 1) // 2,

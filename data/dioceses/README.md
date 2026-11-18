@@ -83,7 +83,8 @@ than reopening them):
    column.
 3. The dataset tracks real worship sites, not a diocesan list. A place with solid evidence
    goes in whether or not the diocese's directory lists it.
-4. The site shows only places it can give a schedule for. A `no_bulletin` parish row and its
+4. The site shows only places it can give a schedule for, from a bulletin or from a source
+   schedule (a `website_schedule` row, below). A `no_bulletin` parish row and its
    churches stay in the records, with their evidence and a `revisit`, but `promote` leaves
    them out of the live CSVs (and removes them if they were live, which `validate` warns about
    until it is done), and they carry no `promoted` stamp. `coverage` counts their churches as
@@ -152,7 +153,13 @@ and retry triggers before making requests. Legacy records need no mass backfill.
   live CSV rows and other-diocese claims still block sharing. The exception survives
   promotion and import; the database identifies parishes by slug, not website.
 - `bulletin_provider`: `parishes_online`, `ecatholic`, `discover_mass`, `other`,
-  `google_drive`, `no_bulletin` or `unsupported`. The last two are kept in the records and
+  `google_drive`, `website_schedule`, `no_bulletin` or `unsupported`. `website_schedule`
+  is a parish that publishes no bulletin but posts its times on its own website or its own
+  Facebook page, which is its `website`: it is promoted and live, `fetch` skips it, and
+  its schedule is a source seed drafted from those pages
+  ([docs/source-schedules-plan.md](../../docs/source-schedules-plan.md)). It needs no
+  `publication` ids and never has a `fetch_gap`; a bulletin that `fetch` can't collect
+  is `unsupported`, never `website_schedule`. The last two are kept in the records and
   left off the site with their churches (Settled policy 4: the site shows only places it
   can give a schedule for): `no_bulletin` when no bulletin was found, `unsupported` when
   the parish publishes one that no collector reads yet. An `unsupported` row needs a

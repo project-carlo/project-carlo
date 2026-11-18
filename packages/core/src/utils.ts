@@ -58,6 +58,17 @@ export function formatLongMonthDay(dateStr: string): string {
   return LONG_MONTH_DAY_FORMATTER.format(new Date(dateStr + "T12:00:00"));
 }
 
+const LONG_DATE_FORMATTER = new Intl.DateTimeFormat("en-US", {
+  month: "long",
+  day: "numeric",
+  year: "numeric",
+});
+
+/** "November 16, 2026": a date that may be months back, so with its year. */
+export function formatLongDate(dateStr: string): string {
+  return LONG_DATE_FORMATTER.format(new Date(dateStr + "T12:00:00"));
+}
+
 const SHORT_MONTH_DAY_FORMATTER = new Intl.DateTimeFormat("en-US", {
   month: "short",
   day: "numeric",

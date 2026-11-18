@@ -57,7 +57,8 @@ def resolve_url(homepage: str | None, where: str | None) -> str:
     return urljoin(homepage if homepage.endswith("/") else homepage + "/", where or "")
 
 
-def _blocked(text: str) -> bool:
+def blocked(text: str) -> bool:
+    """Whether `text` is a challenge page rather than the page."""
     head = text[:2000].lower()
     return any(marker in head for marker in BLOCKED_MARKERS)
 
@@ -82,8 +83,15 @@ def schedule_links(page: str, base: str) -> list[dict[str, str]]:
 
 
 def _browser_html(url: str) -> tuple[str, str]:
-    """The page as the stealth browser renders it, and the address it ended at: in
-    Chrome, which Cloudflare passes more often, or Playwright's Chromium without it."""
+    """The page as the stealth browser renders it, and the address it ended at."""
+    page, final, _ = browser_page(url)
+    return page, final
+
+
+def browser_page(url: str, *, screenshot: bool = False) -> tuple[str, str, bytes | None]:
+    """The page as the stealth browser renders it, the address it ended at and, when
+    asked, a full-page PNG screenshot: in Chrome, which Cloudflare passes more often, or
+    Playwright's Chromium without it."""
     from pdf_extract.browser import goto_with_retry, launch_stealth_browser
 
     for channel in ("chrome", None):
@@ -92,9 +100,10 @@ def _browser_html(url: str) -> tuple[str, str]:
                 goto_with_retry(page=page, page_url=url)
                 for _ in range(BROWSER_SETTLE_STEPS):
                     page.wait_for_timeout(BROWSER_SETTLE_MS)
-                    if not _blocked(html_text(page.content())):
+                    if not blocked(html_text(page.content())):
                         break
-                return page.content(), page.url
+                png = page.screenshot(full_page=True) if screenshot else None  # type: ignore[attr-defined]
+                return page.content(), page.url, png
         except Exception as exc:
             if channel is None or "is not found" not in str(exc):
                 raise
@@ -123,10 +132,10 @@ def read_site(
     else:
         notes.append(f"plain request: {resp.error or resp.status}")
     text = html_text(page) if page else ""
-    if browser and (not text or _blocked(text) or len(text) < MIN_TEXT_CHARS):
+    if browser and (not text or blocked(text) or len(text) < MIN_TEXT_CHARS):
         if text:
             notes.append("plain request: "
-                         + ("a challenge page" if _blocked(text) else f"only {len(text)} chars"))
+                         + ("a challenge page" if blocked(text) else f"only {len(text)} chars"))
         try:
             page, final = _browser_html(url)
             text, how = html_text(page), "browser"
@@ -135,7 +144,7 @@ def read_site(
             hint = (" (no display: run it under xvfb-run)"
                     if "display" in str(exc).lower() or "x server" in str(exc).lower() else "")
             notes.append(f"browser: {type(exc).__name__}: {first}{hint}")
-    if not text or _blocked(text):
+    if not text or blocked(text):
         raise SeedError(f"Could not read {url}: " + ("; ".join(notes) or "no text")
                         + ". Rely on the bulletins, or note the website was unreadable.")
     result = {
