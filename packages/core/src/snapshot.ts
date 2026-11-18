@@ -39,7 +39,7 @@ type Columns<Row> = { [K in keyof Row]: Row[K][] };
  * ADDED_COLUMNS). A snapshot written before one was added lacks it, and it
  * reads as null: such a snapshot is still served while a deploy is pending.
  */
-type AddedChurchColumns = "bulletin_week";
+type AddedChurchColumns = "bulletin_week" | "diocese";
 
 /** Older snapshots have no exclusions or absolute date bounds. */
 type AddedEventColumns = "exclude_weeks" | "valid_from" | "valid_until";
@@ -199,6 +199,7 @@ export function parseSnapshot(json: string): Snapshot {
     Omit<ChurchDetail, AddedChurchColumns>
   > &
     Partial<Columns<Pick<ChurchDetail, AddedChurchColumns>>>;
+  const dioceses = c.diocese;
   const churches: ChurchBase[] = c.id.map((id, row) => ({
     id,
     parish_id: c.parish_id[row],
@@ -211,6 +212,7 @@ export function parseSnapshot(json: string): Snapshot {
     postal_code: c.postal_code[row],
     latitude: c.latitude[row],
     longitude: c.longitude[row],
+    diocese: dioceses?.[row] ?? null,
   }));
   const rowBySlug = new Map(c.slug.map((slug, row) => [slug, row]));
   const {

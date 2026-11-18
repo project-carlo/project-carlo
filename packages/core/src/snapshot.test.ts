@@ -22,6 +22,7 @@ describe("parseSnapshot", () => {
         postal_code: null,
         latitude: 43.1,
         longitude: -77.6,
+        diocese: "rochester",
       },
       {
         id: 3,
@@ -35,6 +36,7 @@ describe("parseSnapshot", () => {
         postal_code: "14620",
         latitude: null,
         longitude: null,
+        diocese: null,
       },
     ]);
   });
@@ -144,6 +146,13 @@ describe("parseSnapshot", () => {
     delete churches.bulletin_week;
     const older = parseSnapshot(JSON.stringify({ ...fixture, churches }));
     expect(older.churchDetail("b")?.bulletin_week).toBeNull();
+  });
+
+  it("reads a snapshot without dioceses as churches with none", () => {
+    const churches: Partial<typeof fixture.churches> = { ...fixture.churches };
+    delete churches.diocese;
+    const older = parseSnapshot(JSON.stringify({ ...fixture, churches }));
+    expect(older.churches.map((c) => c.diocese)).toEqual([null, null]);
   });
 
   it("reads a snapshot without exclude_weeks as no exclusions", () => {

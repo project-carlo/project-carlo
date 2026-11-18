@@ -18,7 +18,7 @@ from pdf_extract.storage import (
 
 LOGGER = logging.getLogger(__name__)
 
-_PARISHES_FIELDNAMES = ["slug", "name", "website", "bulletin_provider", "provider_id"]
+_PARISHES_FIELDNAMES = ["slug", "name", "website", "bulletin_provider", "provider_id", "diocese"]
 _CHURCHES_FIELDNAMES = [
     "parish_id", "slug", "name", "line1", "line2", "city", "state", "postal_code",
     "name_verified", "address_verified", "latitude", "longitude",

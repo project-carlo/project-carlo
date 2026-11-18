@@ -68,6 +68,16 @@ export interface ChurchFilters {
   daysOfWeek?: number[];
   timeFrom?: number;
   timeTo?: number;
+  /** Only this diocese's churches (the embed's `diocese=`); every church when unset. */
+  diocese?: string | null;
+}
+
+/** Whether `church` is in `diocese`; every church is when no diocese is given. */
+export function inDiocese(
+  church: Pick<ChurchBase, "diocese">,
+  diocese: string | null | undefined,
+): boolean {
+  return !diocese || church.diocese === diocese;
 }
 
 // The snapshot is loaded once and never mutated, so every church and event is
@@ -293,6 +303,7 @@ export function collectMapItems(
 
   const items: ChurchMapItem[] = [];
   for (const church of churches) {
+    if (!inDiocese(church, filters.diocese)) continue;
     const churchEvents = grouped.get(church.id);
     // No matching events means no event types, which the map never showed.
     if (!churchEvents || churchEvents.length === 0) continue;
@@ -324,11 +335,13 @@ export async function fetchChurches(
 /** What the typeahead gets back: the shared church row, geocoded ones only. */
 export type ChurchSearchResult = ChurchBase;
 
-export async function fetchAllChurchesForSearch(): Promise<
-  ChurchSearchResult[]
-> {
+export async function fetchAllChurchesForSearch(
+  diocese?: string | null,
+): Promise<ChurchSearchResult[]> {
   const { churches } = await getSnapshot();
-  return churches.filter((c) => c.latitude !== null && c.longitude !== null);
+  return churches.filter(
+    (c) => c.latitude !== null && c.longitude !== null && inDiocese(c, diocese),
+  );
 }
 
 /** One church with its parish links; shared with the prerenderer. */

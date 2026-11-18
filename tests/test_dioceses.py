@@ -399,6 +399,7 @@ def test_promote_adds_updates_and_retires_live_rows(root: Path) -> None:
 
     records.promote("test")
     assert [r["slug"] for r in _live("PARISHES_CSV_PATH")] == ["live-parish", "st-ann"]
+    assert [r["diocese"] for r in _live("PARISHES_CSV_PATH")] == ["", "test"]
     d = records.load("test")
     assert d.of(records.PARISH)["st-ann"]["promoted"] == records.today()
     assert records.load_meta("test")["status"] == "promoted"
@@ -524,6 +525,15 @@ def test_live_parishes_have_a_bulletin_provider() -> None:
     with live.open(encoding="utf-8") as fh:
         quiet = [r["slug"] for r in csv.DictReader(fh) if r["bulletin_provider"] == "no_bulletin"]
     assert quiet == []
+
+
+def test_live_parishes_name_the_diocese_their_record_is_in() -> None:
+    data = Path(__file__).parents[1] / "data"
+    with (data / "parishes.csv").open(encoding="utf-8") as fh:
+        live = {r["slug"]: r["diocese"] for r in csv.DictReader(fh)}
+    folders = {path.stem: path.parent.parent.name
+               for path in (data / "dioceses").glob("*/parishes/*.md")}
+    assert {slug: d for slug, d in live.items() if folders.get(slug) != d} == {}
 
 
 def test_question_moves_a_church_to_open_and_off_the_site(root: Path) -> None:

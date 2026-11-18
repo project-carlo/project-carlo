@@ -275,6 +275,23 @@ describe("collectMapItems", () => {
     expect(items.map((item) => item.id)).toEqual([101]);
   });
 
+  it("keeps only the diocese's churches when one is given", () => {
+    const churches = [
+      church(121, { diocese: "syracuse" }),
+      church(122, { diocese: "rochester" }),
+      church(123, { diocese: null }),
+    ];
+    const events = churches.map((c) => rawEvent({ id: c.id * 10, church_id: c.id }));
+
+    const ids = (diocese?: string | null) =>
+      collectMapItems(churches, events, { ...allTypes, diocese }).map((i) => i.id);
+
+    expect(ids("syracuse")).toEqual([121]);
+    expect(ids("albany")).toEqual([]);
+    expect(ids(null)).toEqual([121, 122, 123]);
+    expect(ids()).toEqual([121, 122, 123]);
+  });
+
   it("summarises a church's matching events", () => {
     const churches = [church(111)];
     const events = [

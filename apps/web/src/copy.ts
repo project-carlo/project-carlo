@@ -43,3 +43,8 @@ export const FILTER_TIME_HEADING = "Starting";
 export const ANY_DAY = "Any day";
 export const ANY_TIME = "Any time";
 export const CLEAR_FILTERS = "Clear filters";
+
+/** The embed (src/lib/embed.ts): its heading, for screen readers, and the
+ *  credit that links to the full site, followed by the wordmark. */
+export const EMBED_HEADING = "Mass, Confession & Adoration times";
+export const POWERED_BY = "Powered by";

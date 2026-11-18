@@ -34,10 +34,11 @@ import {
 } from "../lib/mapView";
 import {
   approximateLocationQuery,
-  churchSearchIndexQuery,
+  churchSearchIndexQueryFor,
   isFirstVisitStart,
 } from "../lib/homeStartQueries";
-import { firstVisitStart, type MapStart } from "../lib/mapStart";
+import { churchBounds, firstVisitStart, type MapStart } from "../lib/mapStart";
+import { embedDiocese, fullSiteMapHref } from "../lib/embed";
 import { useBrowserLocation } from "../hooks/useBrowserLocation";
 import { useMapSelection } from "../hooks/useMapSelection";
 import { useChurchesInView } from "../hooks/useChurchesInView";
@@ -71,9 +72,9 @@ function withMapView(search: string, view: MapView | null): string {
  * for when a router navigation is under way: a second one would cancel it.
  * Does nothing once the next page's entry has replaced the map's.
  */
-function writeViewToHistoryEntry(view: MapView): void {
+function writeViewToHistoryEntry(view: MapView, mapPath: string): void {
   const { pathname, search, hash } = window.location;
-  if (pathname !== "/") return;
+  if (pathname !== mapPath) return;
   window.history.replaceState(
     window.history.state,
     "",
@@ -81,11 +82,47 @@ function writeViewToHistoryEntry(view: MapView): void {
   );
 }
 
-export function HomePage() {
+/** The embed's answer to a `diocese=` the site has no churches for. */
+function EmbedDioceseUnavailable({ diocese }: { diocese: string }) {
+  return (
+    <main className="flex min-h-dvh items-center justify-center bg-paper px-4">
+      <div className="max-w-sm space-y-3 border border-rule-strong bg-paper px-6 py-5 text-center shadow-missal-overlay">
+        <h1 className="font-display text-[1.35rem] leading-tight font-normal text-ink">
+          This diocese isn’t supported yet
+        </h1>
+        <p className="font-serif text-[0.9375rem] text-ink-soft">
+          Project Carlo has no churches for the diocese{" "}
+          <span className="text-ink">“{diocese}”</span>. Check the diocese id
+          in the embed code, or the link you followed.
+        </p>
+        <p className="font-serif text-[0.9375rem]">
+          <a href="/" target="_blank" rel="noopener" className="rubric-link">
+            See every church on Project Carlo
+            <span className="sr-only"> (opens in a new tab)</span>
+          </a>
+        </p>
+      </div>
+    </main>
+  );
+}
+
+interface HomePageProps {
+  /**
+   * The embed (src/lib/embed.ts, views/EmbedPage.tsx): the map without the
+   * site's masthead, limited to the `diocese=` in the URL when there is one,
+   * and opening on its churches rather than near the visitor's IP location.
+   */
+  embed?: boolean;
+}
+
+export function HomePage({ embed = false }: HomePageProps = {}) {
   useDocumentMeta({
     title: HOME_TITLE,
     description: HOME_DESCRIPTION,
-    canonicalUrl: canonicalForPath("/"),
+    // The embed repeats the homepage, so it's kept out of search results, as
+    // its prerendered shell (embed.html) is.
+    canonicalUrl: embed ? undefined : canonicalForPath("/"),
+    noindex: embed,
   });
 
   const [urlFilters, setUrlFilters] = useFilterUrlState();
@@ -137,24 +174,35 @@ export function HomePage() {
   const [urlMapView] = useState<MapView | null>(() =>
     decodeMapViewFromParams(new URLSearchParams(window.location.search)),
   );
+  // Read once, like the view: a frame's URL is set by the page it's on.
+  const [diocese] = useState(() =>
+    embed ? embedDiocese(window.location.search) : null,
+  );
 
   // A first visit (no view in the URL, nothing to fly to from the landing
   // page) starts near where the visitor's IP address puts them, zoomed out
   // because the estimate can be well off, or else on the whole area the site
   // covers. The map waits for the estimate, which is capped at a short
   // timeout, rather than jump once it arrives.
-  const [wantsFirstVisitStart] = useState(() =>
-    isFirstVisitStart(window.location.search, location.state),
+  // The embed opens on the churches it shows instead: it sits on a diocese's
+  // site, so where the visitor is matters less than the diocese's territory.
+  const [wantsFirstVisitStart] = useState(
+    () => !embed && isFirstVisitStart(window.location.search, location.state),
   );
+  const startsOnChurches = embed && !urlMapView;
   const { data: approximateLocation, isPending: approximatePending } =
     useQuery({ ...approximateLocationQuery, enabled: wantsFirstVisitStart });
   const approximateSettled = !wantsFirstVisitStart || !approximatePending;
   // Every church, not just the ones the filters leave: the start mustn't
-  // depend on the filters in a link. The search box shares this query.
+  // depend on the filters in a link. The search box shares this query. The
+  // embed always reads it, for its diocese's churches: none says the diocese
+  // isn't covered.
   const { data: allChurches } = useQuery({
-    ...churchSearchIndexQuery,
-    enabled: wantsFirstVisitStart,
+    ...churchSearchIndexQueryFor(diocese),
+    enabled: wantsFirstVisitStart || embed,
   });
+  const dioceseUnavailable =
+    diocese != null && allChurches != null && allChurches.length === 0;
   const mapViewTimerRef = useRef<number | null>(null);
   // The camera as of the last pan/zoom. The URL only catches up after the
   // debounce below, so anything that needs the view now reads it from here.
@@ -180,7 +228,7 @@ export function HomePage() {
       mapViewTimerRef.current = window.setTimeout(() => {
         mapViewTimerRef.current = null;
         if (leavingRef.current) {
-          writeViewToHistoryEntry(view);
+          writeViewToHistoryEntry(view, location.pathname);
         } else {
           setSearchParams((prev) => encodeMapViewToParams(view, prev), {
             replace: true,
@@ -188,7 +236,7 @@ export function HomePage() {
         }
       }, 400);
     },
-    [setSearchParams],
+    [setSearchParams, location.pathname],
   );
   useEffect(
     () => () => {
@@ -213,9 +261,9 @@ export function HomePage() {
     window.clearTimeout(mapViewTimerRef.current);
     mapViewTimerRef.current = null;
     if (latestMapViewRef.current) {
-      writeViewToHistoryEntry(latestMapViewRef.current);
+      writeViewToHistoryEntry(latestMapViewRef.current, location.pathname);
     }
-  }, [leaving]);
+  }, [leaving, location.pathname]);
 
   // Mirror the query string, with the latest view, into sessionStorage so
   // in-app "Map" links (plain pushes to "/") can restore the current filters
@@ -256,8 +304,8 @@ export function HomePage() {
   }, [location.pathname, location.search, location.state, center]);
 
   const apiFilters = useMemo(
-    () => churchFiltersFor(appliedFilters),
-    [appliedFilters],
+    () => ({ ...churchFiltersFor(appliedFilters), diocese }),
+    [appliedFilters, diocese],
   );
 
   const { data, error, refetch } = useQuery({
@@ -273,11 +321,16 @@ export function HomePage() {
   // anywhere near it gives way to the whole covered area rather than open
   // on an empty map.
   const [mapStart, setMapStart] = useState<MapStart | null | undefined>(() => {
-    if (wantsFirstVisitStart) return undefined;
+    if (wantsFirstVisitStart || startsOnChurches) return undefined;
     return urlMapView ? { kind: "view", view: urlMapView } : null;
   });
   useEffect(() => {
     if (mapStart !== undefined || !allChurches || !approximateSettled) return;
+    if (startsOnChurches) {
+      const bounds = churchBounds(allChurches);
+      setMapStart(bounds ? { kind: "area", bounds } : null);
+      return;
+    }
     const start = firstVisitStart(
       approximateLocation ?? null,
       allChurches,
@@ -287,7 +340,14 @@ export function HomePage() {
     if (start?.kind === "near" && approximateLocation) {
       setApproximateArea(approximateLocation.label);
     }
-  }, [mapStart, allChurches, approximateSettled, approximateLocation, isDesktop]);
+  }, [
+    mapStart,
+    allChurches,
+    approximateSettled,
+    approximateLocation,
+    isDesktop,
+    startsOnChurches,
+  ]);
 
   // Filters apply as they change on every viewport, so the panel never shows
   // a selection the map isn't using.
@@ -321,6 +381,13 @@ export function HomePage() {
 
   const pinnedPlaceTitle = centerOn?.placeTitle;
   const mapReady = data != null && mapStart !== undefined;
+  const embedOverlay = useMemo(
+    () =>
+      embed ? { fullSiteHref: fullSiteMapHref(location.search), diocese } : undefined,
+    [embed, location.search, diocese],
+  );
+
+  if (dioceseUnavailable) return <EmbedDioceseUnavailable diocese={diocese} />;
 
   return (
     <main
@@ -376,6 +443,7 @@ export function HomePage() {
         getSearchCenter={getSearchCenter}
         pinnedPlaceTitle={pinnedPlaceTitle}
         onClearPlace={handleClearPlace}
+        embed={embedOverlay}
       >
         {approximateArea && !pinnedPlaceTitle ? (
           <div className="mt-3 flex items-baseline justify-between gap-3 font-serif text-[0.9375rem]">

@@ -50,8 +50,10 @@ EVENTS = [
 SNAPSHOT_FIXTURE = Path(__file__).resolve().parents[1] / "packages/core/src/snapshot.fixture.json"
 # Nulls, strings that repeat, and a gap in the event ids.
 CHURCH_ROWS = [
-    (7, 1, "b", "B", None, None, "Rochester", "NY", None, 43.1, -77.6, None, None, "2026-09-20"),
-    (3, 1, "a", "A", "1 Main St", None, None, "NY", "14620", None, None, "https://a", None, None),
+    (7, 1, "b", "B", None, None, "Rochester", "NY", None, 43.1, -77.6, None, None, "2026-09-20",
+     "rochester"),
+    (3, 1, "a", "A", "1 Main St", None, None, "NY", "14620", None, None, "https://a", None, None,
+     None),
 ]
 # A negative id (an update-mode entry), weeks of the month, weeks excluded, a
 # season that wraps the new year, and a cancellation naming a weekly row.
@@ -115,6 +117,7 @@ def test_snapshot_has_the_latest_bulletins_churches_and_events(db: Path, tmp_pat
     assert church["bulletin_url"] == "https://example.org/new.pdf"
     assert church["bulletin_week"] == "2026-09-20"
     assert church["homepage_url"] == "https://example.org"
+    assert church["diocese"] is None  # the test parish's CSV row names none
     events = tables["events"]
     assert [e["id"] for e in events] == sorted(e["id"] for e in events)
     assert all(e["id"] < 0 for e in events)
@@ -318,6 +321,7 @@ def test_a_parish_with_no_processed_bulletin_has_no_bulletin(
 def test_a_snapshot_written_before_an_added_column_reads_it_as_null() -> None:
     document = json.loads(gzip.decompress(encode_snapshot(CHURCH_ROWS, EVENT_ROWS)))
     del document["churches"]["bulletin_week"]
+    del document["churches"]["diocese"]
     del document["events"]["exclude_weeks"]
     data = gzip.compress(json.dumps(document).encode())
 
@@ -325,8 +329,24 @@ def test_a_snapshot_written_before_an_added_column_reads_it_as_null() -> None:
     churches = tables["churches"]
 
     assert [church["bulletin_week"] for church in churches] == [None, None]
+    assert [church["diocese"] for church in churches] == [None, None]
     assert [church["slug"] for church in churches] == ["b", "a"]
     assert [event["exclude_weeks"] for event in tables["events"]] == [None] * 4
+
+
+def test_a_churchs_diocese_is_its_parishs_in_the_csv(db: Path, tmp_path: Path) -> None:
+    dest = tmp_path / "frontend.json.gz"
+    parishes = tmp_path / "parishes.csv"
+    parishes.write_text(
+        "slug,name,website,diocese\n"
+        "test-parish,Test Parish,https://example.org,rochester\n",
+        encoding="utf-8",
+    )
+
+    extract(db, dest, build_date=BUILD_DATE, parishes_csv=parishes)
+
+    [church] = read_snapshot(dest.read_bytes())["churches"]
+    assert church["diocese"] == "rochester"
 
 
 def test_snapshot_bytes_are_deterministic(db: Path, tmp_path: Path) -> None:
@@ -395,8 +415,8 @@ def test_verify_passes_for_the_same_data(db: Path, tmp_path: Path) -> None:
 
 
 def test_verify_fails_when_weekly_events_and_churches_change(tmp_path: Path) -> None:
-    church = (1, 1, "a", "A", None, None, None, None, None, None, None, None, None, None)
-    other = (2, 1, "b", "B", None, None, None, None, None, None, None, None, None, None)
+    church = (1, 1, "a", "A", None, None, None, None, None, None, None, None, None, None, None)
+    other = (2, 1, "b", "B", None, None, None, None, None, None, None, None, None, None, None)
     weekly = [
         (i, 1, "mass", "weekly", "Sunday", None, 480 + 60 * i, None, 0, None, None,
          [], None, None, None, None, None, False, None, None)

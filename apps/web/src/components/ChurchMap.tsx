@@ -2,6 +2,7 @@ import {
   Fragment,
   memo,
   useCallback,
+  useContext,
   useEffect,
   useMemo,
   useRef,
@@ -44,13 +45,20 @@ import {
   CURRENT_CHURCH_PIN_BODY,
   CURRENT_CHURCH_Z_INDEX_OFFSET,
 } from "../lib/churchPin";
-import { useDocumentLinks } from "../lib/documentLinks";
+import { NewTabLinksContext, useInAppLinkProps } from "../lib/documentLinks";
 import { OSM_TILE_URL } from "../lib/staticMap";
 import { UNNAMED_CHURCH } from "../copy";
 import { Fleuron } from "@/components/Fleuron";
 
 const OSM_ATTRIBUTION =
   '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+
+const NEW_TAB = 'target="_blank" rel="noopener" ';
+
+/** The attribution's links, opened in a new tab (in the embed, not the frame). */
+function linksInNewTab(html: string): string {
+  return html.replaceAll("<a ", `<a ${NEW_TAB}`);
+}
 
 const defaultCenter: [number, number] = [43.1566, -77.6088];
 
@@ -465,7 +473,7 @@ function scheduleCaption(events: EventSummary[]): string {
  * one open popup rather than for all ~130 pins on every filter change.
  */
 function ChurchPopupBody({ church }: { church: ChurchMapItem }) {
-  const documentLinks = useDocumentLinks();
+  const linkProps = useInAppLinkProps();
   // upcoming_events arrives pre-sorted from fetchChurches; rolling it up keeps
   // that order while collapsing each day's several times onto one row.
   const dayRows = useMemo(
@@ -547,7 +555,7 @@ function ChurchPopupBody({ church }: { church: ChurchMapItem }) {
       <div className="map-popup-foot">
         <Link
           to={`/churches/${church.slug}/`}
-          reloadDocument={documentLinks}
+          {...linkProps}
           className="map-popup-foot-link font-serif text-[0.9375rem]"
         >
           <span>Full schedule</span>
@@ -563,12 +571,12 @@ function ChurchPopupBody({ church }: { church: ChurchMapItem }) {
  * name, linking to its page.
  */
 function ChurchPopupName({ church }: { church: ChurchMapItem }) {
-  const documentLinks = useDocumentLinks();
+  const linkProps = useInAppLinkProps();
   return (
     <div className="map-popup-compact">
       <Link
         to={`/churches/${church.slug}/`}
-        reloadDocument={documentLinks}
+        {...linkProps}
         className="map-popup-compact-link font-display text-[0.9375rem] leading-[1.2]"
       >
         {church.name ?? UNNAMED_CHURCH}
@@ -991,8 +999,16 @@ export const ChurchMap = memo(function ChurchMap({
     ? [initialView.lat, initialView.lng]
     : defaultCenter;
   const zoom = initialView?.zoom ?? 11;
+  // In the embed, the attribution's links (OpenStreetMap's, Leaflet's) open
+  // in a new tab too, rather than replace the map inside the frame.
+  const newTabLinks = useContext(NewTabLinksContext);
   function handleReady(map: LeafletMap) {
     if (start) placeStart(map, start);
+    const { attributionControl } = map;
+    const prefix = attributionControl?.options.prefix;
+    if (newTabLinks && typeof prefix === "string") {
+      attributionControl.setPrefix(linksInNewTab(prefix));
+    }
   }
 
   // The last selection whose popup has been opened; see ChurchMarker.
@@ -1024,7 +1040,7 @@ export const ChurchMap = memo(function ChurchMap({
       {onViewChange && <ViewReporter onViewChange={onViewChange} />}
       <PopupPaneElevator />
       <TileLayer
-        attribution={OSM_ATTRIBUTION}
+        attribution={newTabLinks ? linksInNewTab(OSM_ATTRIBUTION) : OSM_ATTRIBUTION}
         url={OSM_TILE_URL}
         maxZoom={19}
       />

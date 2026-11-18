@@ -996,7 +996,7 @@ def export_rows(d: Diocese) -> tuple[list[dict[str, str]], list[dict[str, str]]]
     parishes = [
         {"slug": slug, "name": cell(r.get("name")), "website": cell(r.get("website")),
          "bulletin_provider": cell(r.get("bulletin_provider")),
-         "provider_id": cell(r.get("provider_id"))}
+         "provider_id": cell(r.get("provider_id")), "diocese": d.slug}
         for slug, r in sorted(d.of(PARISH).items()) if slug not in skip_p
     ]
     churches = [
@@ -1008,7 +1008,9 @@ def export_rows(d: Diocese) -> tuple[list[dict[str, str]], list[dict[str, str]]]
     return parishes, churches
 
 
-PARISH_CSV_FIELDS = ["slug", "name", "website", "bulletin_provider", "provider_id"]
+# `diocese` is the folder under data/dioceses/ the parish's record is in; the
+# snapshot carries it to each church for the embed's `diocese=` filter.
+PARISH_CSV_FIELDS = ["slug", "name", "website", "bulletin_provider", "provider_id", "diocese"]
 CHURCH_CSV_FIELDS = [
     "parish_id", "slug", "name", "line1", "line2", "city", "state", "postal_code",
     "name_verified", "address_verified", "latitude", "longitude",
