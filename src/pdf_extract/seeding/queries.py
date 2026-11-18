@@ -227,15 +227,17 @@ def export_pdf(
 def render_pages(
     conn: sqlite3.Connection, parish_slug: str, ref: str, *,
     page: str | int | None = None, dpi: int | None = None,
-    region: str | None = None, sheet: bool = False,
+    region: str | None = None, sheet: bool = False, images: bool = False,
     work_dir: Path = WORK_DIR,
 ) -> dict[str, Any]:
-    """`seed pages`: pages, a region of them or sheets of them as PNGs (`page_images`)."""
+    """`seed pages`: pages, a region of them, sheets of them, or the images on them with
+    no text layer, as PNGs (`page_images`)."""
     bulletin = resolve_bulletin(conn, parish_slug, ref)
     data = bulletin_pdf(parish_slug, bulletin["content_hash"])
     try:
         result = page_images.render(data, work_dir / parish_slug, bulletin["short"],
-                                    page=page, dpi=dpi, region=region, sheet=sheet)
+                                    page=page, dpi=dpi, region=region, sheet=sheet,
+                                    images=images)
     except page_images.PageImageError as e:
         raise SeedError(str(e)) from None
     return {"parish": parish_slug, "bulletin": bulletin["content_hash"], **result}

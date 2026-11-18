@@ -34,6 +34,7 @@ Read: the stored bulletins
   text      <parish> <bulletin> [--page N]            its text, page by page
   pages     <parish> <bulletin> [--page N|N-M,..] [--region R] [--sheet] [--dpi D]
                                                       pages as PNGs, each with its token cost
+  pages     <parish> <bulletin> --images [--page N-M] those images, packed into one PNG
   grep      <parish> [pattern] [--bulletins N]        search every stored bulletin's text
 
 Compare: other sources
@@ -190,7 +191,7 @@ def _text(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
 def _pages(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
     return queries.render_pages(
         conn, args.parish, args.bulletin, page=args.page, dpi=args.dpi,
-        region=args.region, sheet=args.sheet,
+        region=args.region, sheet=args.sheet, images=args.images,
     )
 
 
@@ -481,6 +482,8 @@ def _text_text(r: Result) -> str:
 
 
 def _text_pages(r: Result) -> str:
+    if "image_only" in r:
+        return _text_textless_images(r)
     lines = []
     for im in r["images"]:
         pages = "p" + page_images.page_ranges(im["pages"], ",")
@@ -494,6 +497,32 @@ def _text_pages(r: Result) -> str:
     if any(not im["region"] and len(im["pages"]) == 1 for im in r["images"]):
         lines.append("Small print or an unclear digit: zoom with --page N --region "
                      "(top-left, bottom, ... or x0,y0,x1,y1)")
+    return "\n".join(lines)
+
+
+def _text_textless_images(r: Result) -> str:
+    """`seed pages --images`: each image, and the page and region of each tile on it."""
+    lines = []
+    searched = "p" + page_images.page_ranges(r["searched"], ",")
+    for im in r["images"]:
+        lines.append(f"{im['path']}  images with no text layer on "
+                     f"p{page_images.page_ranges(im['pages'], ',')}  {im['width']}x"
+                     f"{im['height']} px, {im['dpi']} dpi, ~{im['tokens']:,} tokens")
+        for t in im["tiles"]:
+            also = (f"  (also on p{','.join(str(p) for p in t['also_on'])})"
+                    if t["also_on"] else "")
+            lines.append(f"  {t['tile']:>2}  --page {t['page']} --region {t['region']}{also}")
+    if len(r["images"]) > 1:
+        lines.append(f"{len(r['images'])} images, ~{r['tokens']:,} tokens")
+    if r["images"]:
+        lines.append("Each tile is tagged with its number and page. Zoom into one where the "
+                     "print is small: `seed pages <parish> <bulletin>` with its --page and "
+                     "--region")
+    else:
+        lines.append(f"No images with no text layer on {searched}")
+    if r["image_only"]:
+        only = page_images.page_ranges(r["image_only"], ",")
+        lines.append(f"Only an image, so not tiled: p{only} (render it with --page N)")
     return "\n".join(lines)
 
 
@@ -910,6 +939,10 @@ def add_seed_parser(
     p.add_argument("--sheet", action="store_true",
                    help="Tile the pages into labelled sheets, each one image, to find which "
                         f"pages to read (at least {page_images.SHEET_MIN_DPI} dpi per page)")
+    p.add_argument("--images", action="store_true",
+                   help="Pack the images on the pages with text that have no text layer, "
+                        "whose print `seed text` can't show, into one labelled image, each "
+                        "tile listed with its page and region to zoom into")
     p.add_argument("--dpi", type=int,
                    help=f"Resolution (default {page_images.PAGE_DPI} for a page; a region "
                         "zooms; a sheet fits). Lowered when Read would shrink the image")
