@@ -20,6 +20,10 @@ decision, rationale and question) and leaves the rest to this:
 - `status` is `needs_review` while a question is open, else `ready` (a blocked file
   keeps its status).
 
+A source seed (docs/source-schedules-plan.md) gets no history sources and has no
+bulletins to mark: its `as_of` is its newest capture's time, and `recheck_after`
+defaults to `files.RECHECK_MONTHS` after that.
+
 An approved file is the reviewer's and is left as it is.
 
 It changes nothing it can't fill in for certain: a wrong value is left for
@@ -30,7 +34,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from pdf_extract.labeling.labels import ENTRY_KEYS
+from pdf_extract.model import ENTRY_KEYS, normalize_as_of
 from pdf_extract.seeding.coverage import attach_history, attach_variants
 from pdf_extract.seeding.files import (
     AGENT,
@@ -38,6 +42,9 @@ from pdf_extract.seeding.files import (
     BLOCKED,
     NEEDS_HUMAN,
     SLOT_KEYS,
+    default_recheck_after,
+    is_source_seed,
+    newest_capture,
     newest_read_bulletin,
     resolve_hash,
     status_after_review,
@@ -135,6 +142,8 @@ def finalize_seed(
         return seed
     seed = dict(seed)
     church = churches[0] if len(churches) == 1 else None
+    if is_source_seed(seed):
+        return _finalize_source(seed, church)
     slots = seed.get("slots")
     if isinstance(slots, list):  # anything else is left for `seed check` to report
         taken = {s["id"] for s in slots if isinstance(s, dict) and isinstance(s.get("id"), str)}
@@ -165,6 +174,25 @@ def finalize_seed(
     newest = newest_read_bulletin(seed)
     if newest is not None:
         seed["as_of"] = newest["fetched_at"]
+    if seed.get("status") != BLOCKED:
+        seed["status"] = status_after_review(seed)
+    return seed
+
+
+def _finalize_source(seed: dict[str, Any], church: str | None) -> dict[str, Any]:
+    """A source seed's bookkeeping: its slots' defaults, `as_of`, `recheck_after`, status."""
+    slots = seed.get("slots")
+    if isinstance(slots, list):
+        taken = {s["id"] for s in slots if isinstance(s, dict) and isinstance(s.get("id"), str)}
+        seed["slots"] = [fill_slot(s, church, taken) if isinstance(s, dict) else s
+                         for s in slots]
+    newest = newest_capture(seed)
+    if newest is not None:
+        seed["as_of"] = newest["captured_at"]
+        recheck = seed.get("recheck_after")
+        # A date the drafter set stays, unless a newer capture has overtaken it.
+        if not isinstance(recheck, str) or recheck <= normalize_as_of(seed["as_of"])[:10]:
+            seed["recheck_after"] = default_recheck_after(newest["captured_at"])
     if seed.get("status") != BLOCKED:
         seed["status"] = status_after_review(seed)
     return seed

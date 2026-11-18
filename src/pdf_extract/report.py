@@ -26,6 +26,7 @@ from pdf_extract.bulletin_week import (
     stale_parishes,
 )
 from pdf_extract.extract_frontend_db import extract as extract_snapshot
+from pdf_extract.model import EVENT_TYPE_LABELS
 from pdf_extract.parish_sites.resolve import OLD_PICK_MARK
 from pdf_extract.runs import (
     FAILED_STATUSES,
@@ -37,6 +38,8 @@ from pdf_extract.runs import (
 from pdf_extract.schedule.report import render_update_mode, update_mode_report
 from pdf_extract.schedule.store import unseeded_slugs, update_mode_slugs
 from pdf_extract.schedule_diff import parish_changed
+from pdf_extract.seeding.files import SEEDS_DIR
+from pdf_extract.seeding.loader import due_source_seeds
 from pdf_extract.storage import latest_bulletin_ids, load_bulletins
 from pdf_extract.verify_frontend_snapshot import verify_frontend_snapshot
 
@@ -45,35 +48,15 @@ from pdf_extract.verify_frontend_snapshot import verify_frontend_snapshot
 # week in which almost nothing was refreshed.
 FETCH_FAILURE_HOLD_FRACTION = 0.5
 
-_TYPE_LABELS = {"mass": "Mass", "confession": "Confession", "adoration": "Adoration"}
-_DAY_ABBREV = {
-    "monday": "Mon", "tuesday": "Tue", "wednesday": "Wed", "thursday": "Thu",
-    "friday": "Fri", "saturday": "Sat", "sunday": "Sun",
-}
 # A parish's mode this run: seeded before it, seeded by it (its first run on
 # the site), new to the parish table, or without a seed (not on the site).
 UPDATE, SEEDED, NEW, UNSEEDED = "update", "new seed", "new", "unseeded"
-
-EventKey = tuple[str, str, str, str | None, str | None, str, str | None, bool]
 
 
 def _open_ro(path: Path) -> sqlite3.Connection:
     conn = sqlite3.connect(f"file:{path}?mode=ro", uri=True)
     conn.row_factory = sqlite3.Row
     return conn
-
-
-def describe_event(key: EventKey) -> str:
-    """"Confession · Sat 3:00 PM–4:00 PM" or "Mass · 2026-10-04 9:00 AM (cancelled)"."""
-    _church, event_type, kind, day_of_week, date, start, end, cancelled = key
-    label = _TYPE_LABELS.get(event_type, event_type or "Event")
-    when = (
-        _DAY_ABBREV.get((day_of_week or "").lower(), day_of_week or "?")
-        if kind == "weekly"
-        else (date or "?")
-    )
-    time = f"{start}–{end}" if end else start
-    return f"{label} · {when} {time}" + (" (cancelled)" if cancelled else "")
 
 
 def _parish_ids(conn: sqlite3.Connection) -> dict[int, str]:
@@ -266,6 +249,8 @@ def build_report(
     snapshot_verification: dict[str, Any] | None,
     seeded: dict[str, Any] | None = None,
     seeds: dict[str, Any] | None = None,
+    corrections: dict[str, Any] | None = None,
+    seeds_dir: Path = SEEDS_DIR,
 ) -> dict[str, Any]:
     """Everything the run changed and every reason to hold it, as one dict.
 
@@ -278,6 +263,10 @@ def build_report(
     comparison cannot see them; they are reported and gated here instead.
     `seeds` is what loading the approved seed files did (`seeding.loader`),
     after `before_db` was taken, so their schedules are in the comparison.
+    `corrections` is what loading the correction files did
+    (`schedule.corrections`), also after `before_db` was taken.
+    `source_schedules_due` lists the source seeds in `seeds_dir` whose pages are
+    due to be read again: a warning, which never holds the run.
     """
     if snapshot_verification is None:
         snapshot_verification = verify_databases(before_db, after_db, date.today())
@@ -318,6 +307,7 @@ def build_report(
         ]
         stale = _stale_parishes(conn, attempted)
         update_mode = update_mode_report(conn, run_id)
+        source_due = due_source_seeds(conn, date.today().isoformat(), seeds_dir)
     finally:
         conn.close()
 
@@ -393,6 +383,11 @@ def build_report(
             "loaded": (seeds or {}).get("loaded", []),
             "skipped": (seeds or {}).get("skipped", []),
         },
+        "corrections": {
+            "loaded": (corrections or {}).get("loaded", []),
+            "skipped": (corrections or {}).get("skipped", []),
+        },
+        "source_schedules_due": source_due,
         "attention": {
             "failures": failures,
             "wrong_bulletins": wrong_bulletins,
@@ -496,7 +491,7 @@ def _comparison_lines(report: dict[str, Any]) -> list[str]:
 def _describe_loss(loss: dict[str, Any]) -> str:
     where = f"**{loss['parish_slug']}**"
     if loss["level"] == "church":
-        label = _TYPE_LABELS.get(loss["event_type"], loss["event_type"])
+        label = EVENT_TYPE_LABELS.get(loss["event_type"], loss["event_type"])
         where += f" `{loss['church_slug']}` {label}"
     text = f"{where} loses {loss['missing']} of its {loss['before']} upcoming dates"
     if loss["moved"]:
@@ -553,7 +548,7 @@ def _render_parish(change: dict[str, Any]) -> list[str]:
         )
         lines.append("")
         for group in availability["groups"]:
-            label = _TYPE_LABELS.get(group["event_type"], group["event_type"])
+            label = EVENT_TYPE_LABELS.get(group["event_type"], group["event_type"])
             text = (
                 f"- `{group['church_slug']}` {label}: lost {group['lost']} of {group['before']}"
                 f", gained {group['gained']}"
@@ -673,6 +668,8 @@ def render_markdown(report: dict[str, Any], *, max_changed_parishes: int = 40) -
             f"\n…and {len(changes) - max_changed_parishes} more parishes; see report.json."
         )
     lines += render_seeds(report.get("seeds") or {})
+    lines += render_source_due(report.get("source_schedules_due") or [])
+    lines += render_corrections(report.get("corrections") or {})
     if report.get("update_mode"):
         lines += render_update_mode(report["update_mode"])
     return "\n".join(lines) + "\n"
@@ -685,11 +682,48 @@ def render_seeds(seeds: dict[str, Any]) -> list[str]:
         return []
     lines = ["", "### Seeds", ""]
     for item in loaded:
+        source = f"from {item['source_url']}, " if item.get("source_url") else ""
         lines.append(
-            f"- **{item['parish']}** seeded (revision {item['revision']}, "
+            f"- **{item['parish']}** seeded ({source}revision {item['revision']}, "
             f"{item['entries']} entries, as of {item['as_of']}, approved by "
             f"{item.get('reviewer') or 'unknown'}): on the site from this run"
         )
     for item in skipped:
         lines.append(f"- **{item['parish']}** seed file not loaded: {item['reason']}")
+    return lines
+
+
+def render_source_due(due: list[dict[str, Any]]) -> list[str]:
+    """The source schedules whose pages are due to be read again, if any."""
+    if not due:
+        return []
+    lines = ["", "### Source schedules due", "",
+             "These parishes have no bulletin; their times are from their own website or "
+             "Facebook page, and are due to be checked there again. They stay on the site."]
+    lines += [f"- **{d['parish']}**: recheck after {d['recheck_after']} (read "
+              f"{str(d.get('as_of') or '')[:10]}, {d.get('source_url') or 'no page'})"
+              for d in due]
+    return lines
+
+
+def render_corrections(corrections: dict[str, Any]) -> list[str]:
+    """The correction files this run loaded and the ones it skipped, if any."""
+    loaded, skipped = corrections.get("loaded") or [], corrections.get("skipped") or []
+    if not loaded and not skipped:
+        return []
+    lines = ["", "### Corrections", ""]
+    for item in loaded:
+        marks = item.get("wrong_bulletins") or 0
+        extra = f", {marks} bulletin{'s' if marks != 1 else ''} marked wrong" if marks else ""
+        line = (
+            f"- **{item['parish']}** `{item['file']}` applied (revision {item['revision']}, "
+            f"{item['changes']} change{'s' if item['changes'] != 1 else ''}{extra}, by "
+            f"{item.get('actor') or 'unknown'})"
+        )
+        lines.append(f"{line}: {item['note']}" if item.get("note") else line)
+    for item in skipped:
+        lines.append(
+            f"- **{item['parish']}** `{item['file']}` skipped: {item['reason']}. "
+            "Update or remove the file."
+        )
     return lines

@@ -13,7 +13,6 @@ import pytest
 from pdf_extract.blobstore import CachedBlobStore, LocalBlobStore, set_store
 from pdf_extract.labeling.bulletins import (
     bulletin_detail,
-    gemini_rows,
     list_bulletins,
     next_bulletin,
     parish_bulletins,
@@ -30,6 +29,7 @@ from pdf_extract.labeling.labels import (
     write_label,
 )
 from pdf_extract.labeling.server import LabelerApp, make_server
+from pdf_extract.model import gemini_rows
 from pdf_extract.storage import connect_db
 
 HASH = "a" * 64

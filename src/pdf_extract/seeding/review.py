@@ -98,7 +98,7 @@ def seed_detail(
             ).fetchall()
         }
     shape = validate_seed(seed, parish_slug=parish_slug)
-    problems = shape or check_seed(conn, seed, parish_slug=parish_slug)
+    problems = shape or check_seed(conn, seed, parish_slug=parish_slug, seeds_dir=seeds_dir)
     return {
         # A file the page can't show (a key missing, a list that isn't one) comes
         # back as its problems only, to be fixed in the file.
@@ -306,7 +306,7 @@ def _save(
         seed["blocked_reason"] = None
     errors = validate_seed(seed, parish_slug=parish_slug)
     if not errors and seed["status"] == APPROVED:
-        errors = check_seed(conn, seed, parish_slug=parish_slug)
+        errors = check_seed(conn, seed, parish_slug=parish_slug, seeds_dir=seeds_dir)
     if errors:
         raise SeedReviewError("; ".join(errors[:5]) + (" …" if len(errors) > 5 else ""))
     write_seed_file(seed, seeds_dir)

@@ -7,23 +7,46 @@ checks the file's shape; `checks` checks it against the database, and
 `loader` turns an approved one into a `seed` revision.
 
 Entries are in the labels' event shape without `page_number`, `origin` and
-`optional` (`labels.ENTRY_KEYS`), with 24-hour `HH:MM` times, so they are what
+`optional` (`model.ENTRY_KEYS`), with 24-hour `HH:MM` times, so they are what
 `pnpm schedule seed` reads and can be scored against the labels as they are.
+
+A file's `kind` is `bulletin` (the default, so files written before kinds existed
+are bulletin seeds) or `source`: a parish with no bulletin, drafted from pages
+of its own website or Facebook page that `seed capture` stored
+(docs/source-schedules-plan.md). A source seed lists no bulletins and no calls.
+Its `captures` are the pages read, each slot cites them, and it says why the
+schedule looks current (`current_because`) and when to read it again
+(`recheck_after`). Each capture's text is committed beside the seeds, in
+`captures/<parish>/<content hash>.txt`, so its quotes can be checked anywhere, and
+so is each screenshot a quote was read from (`<screenshot hash>.webp`), so a
+reviewer anywhere can see it.
 """
 
 from __future__ import annotations
 
+import calendar
 import json
 import os
 import re
 import threading
 from dataclasses import dataclass
+from datetime import date
 from pathlib import Path
 from typing import Any
 
-from pdf_extract.labeling.labels import is_valid_hash, is_valid_slug, validate_entry
+from pdf_extract.model import (
+    SOURCE_PLATFORMS,
+    WEBSITE,
+    canonical_json,
+    is_iso_date,
+    is_valid_hash,
+    is_valid_slug,
+    normalize_as_of,
+    sha256_text,
+    source_platform,
+    validate_entry,
+)
 from pdf_extract.paths import DATA_DIR
-from pdf_extract.schedule.store import canonical_json, normalize_as_of, sha256_text
 from pdf_extract.storage import utc_now_iso
 
 SCHEMA_VERSION = 1
@@ -50,11 +73,21 @@ SLOT_STATUSES = (SETTLED, NEEDS_HUMAN)
 
 # A slot's `sources[].source`: the agent's own reading, extract mode's stored
 # events, a page of the parish's website (with its `url`), or the id of one of
-# the file's `calls`.
+# the file's `calls`. A source seed's sources are its captures instead: `website`
+# or `facebook`, each naming the capture it quotes.
 AGENT = "agent"
 HISTORY = "history"
-WEBSITE = "website"
 SOURCE_KINDS = (AGENT, HISTORY, WEBSITE)
+CAPTURE_SOURCES = SOURCE_PLATFORMS  # website, facebook
+
+# A file's `kind` (module docstring).
+BULLETIN_SEED = "bulletin"
+SOURCE_SEED = "source"
+SEED_KINDS = (BULLETIN_SEED, SOURCE_SEED)
+# Where each capture's text is kept, under the seeds folder (committed).
+CAPTURES_DIRNAME = "captures"
+# A source seed is read again this many months after its `as_of`, by default.
+RECHECK_MONTHS = 3
 
 EXTRACT = "extract"
 ASK = "ask"
@@ -78,8 +111,20 @@ SLOT_KEYS = (
 # `church_list_issues`: churches or chapels the bulletins name that the church
 # list lacks or can't place, for whoever maintains data/churches.csv. A slot's
 # `group`: open questions that share one are one question, answered together.
-OPTIONAL_SEED_KEYS = ("church_list_issues",)
+# A source seed's own keys, which a bulletin seed never has.
+SOURCE_SEED_KEYS = ("kind", "captures", "current_because", "recheck_after")
+OPTIONAL_SEED_KEYS = ("church_list_issues", *SOURCE_SEED_KEYS)
 OPTIONAL_SLOT_KEYS = ("group", "weekly_omission")
+# A capture: one page as `seed capture` stored it. `content_hash` is the SHA-256 of
+# its committed text (`capture_document`: the page's address, and the Facebook pages it
+# links, then its text), so two pages with the same text are two captures.
+# `screenshot_hash` is the screenshot's (a WebP; null when none was taken), and
+# `primary` marks the one page the website links as the times' source. A source that
+# quotes the screenshot names it in `from_image`, so a new screenshot of the page
+# can't silently stand behind an old quote.
+CAPTURE_KEYS = (
+    "content_hash", "url", "final_url", "platform", "captured_at", "screenshot_hash", "primary",
+)
 CHURCH_ISSUE_KEYS = ("church", "said", "bulletin", "page")
 # Shortest prefix of a content hash that may name a bulletin inside a file.
 MIN_HASH_PREFIX = 8
@@ -101,6 +146,66 @@ def seed_path(parish_slug: str, seeds_dir: Path = SEEDS_DIR) -> Path:
     if not path.is_relative_to(root):
         raise SeedFileError(f"Seed path escapes {seeds_dir}: {path}")
     return path
+
+
+def capture_text_path(parish_slug: str, content_hash: str, seeds_dir: Path = SEEDS_DIR) -> Path:
+    """Where a capture's text is committed; raises SeedFileError for anything unsafe."""
+    if not is_valid_slug(parish_slug) or not is_valid_hash(content_hash):
+        raise SeedFileError(f"Invalid capture: {parish_slug!r} {content_hash!r}")
+    return seeds_dir / CAPTURES_DIRNAME / parish_slug / f"{content_hash}.txt"
+
+
+def read_capture_text(
+    parish_slug: str, content_hash: str, seeds_dir: Path = SEEDS_DIR,
+) -> str | None:
+    try:
+        return capture_text_path(parish_slug, content_hash, seeds_dir).read_text(encoding="utf-8")
+    except FileNotFoundError:
+        return None
+
+
+def screenshot_path(parish_slug: str, screenshot_hash: str, seeds_dir: Path = SEEDS_DIR) -> Path:
+    """Where a screenshot a quote was read from is committed (`seed finalize` puts it there)."""
+    if not is_valid_slug(parish_slug) or not is_valid_hash(screenshot_hash):
+        raise SeedFileError(f"Invalid screenshot: {parish_slug!r} {screenshot_hash!r}")
+    return seeds_dir / CAPTURES_DIRNAME / parish_slug / f"{screenshot_hash}.webp"
+
+
+# A capture's committed text opens with what it is of, hashed with the page's text:
+# the address asked for, where it ended when that differs, and the Facebook pages it
+# links (what makes a Facebook page the parish's own). A blank line ends it.
+CAPTURED_FROM = "Captured from "
+ENDED_AT = "Ended at "
+LINKS_FACEBOOK = "Links to Facebook page "
+
+
+def capture_document(url: str, final_url: str | None, facebook_pages: list[str], text: str,
+                     ) -> str:
+    """A capture's committed text: its header, a blank line, the page's text."""
+    lines = [CAPTURED_FROM + url]
+    if final_url:
+        lines.append(ENDED_AT + final_url)
+    lines += [LINKS_FACEBOOK + page for page in facebook_pages]
+    return "\n".join(lines) + "\n\n" + text.rstrip("\n") + "\n"
+
+
+def parse_capture_document(document: str) -> tuple[dict[str, Any], str] | None:
+    """A capture's header (`url`, `final_url`, `facebook_pages`) and the page's text, or
+    None when it doesn't open with a header."""
+    head, sep, body = document.partition("\n\n")
+    lines = head.split("\n")
+    if not sep or not lines[0].startswith(CAPTURED_FROM):
+        return None
+    header: dict[str, Any] = {"url": lines[0].removeprefix(CAPTURED_FROM), "final_url": None,
+                              "facebook_pages": []}
+    for line in lines[1:]:
+        if line.startswith(ENDED_AT) and header["final_url"] is None:
+            header["final_url"] = line.removeprefix(ENDED_AT)
+        elif line.startswith(LINKS_FACEBOOK):
+            header["facebook_pages"].append(line.removeprefix(LINKS_FACEBOOK))
+        else:
+            return None
+    return header, body
 
 
 def seed_slugs(seeds_dir: Path = SEEDS_DIR) -> list[str]:
@@ -162,7 +267,81 @@ def new_seed(parish_slug: str, bulletins: list[dict[str, Any]]) -> dict[str, Any
     }
 
 
+def new_source_seed(parish_slug: str) -> dict[str, Any]:
+    """An empty source draft: no bulletins, no captures yet."""
+    return {
+        **new_seed(parish_slug, []),
+        "kind": SOURCE_SEED,
+        "captures": [],
+        "current_because": None,
+        "recheck_after": None,
+    }
+
+
+def add_months(day: date, months: int) -> date:
+    """`day` that many months later, on the month's last day when it has fewer days."""
+    month = day.month - 1 + months
+    year, month = day.year + month // 12, month % 12 + 1
+    return day.replace(year=year, month=month,
+                       day=min(day.day, calendar.monthrange(year, month)[1]))
+
+
+def default_recheck_after(as_of: str) -> str:
+    """When a source seed is read again by default: RECHECK_MONTHS after its `as_of`."""
+    return add_months(date.fromisoformat(normalize_as_of(as_of)[:10]), RECHECK_MONTHS).isoformat()
+
+
 # ── Reading a file ──────────────────────────────────────────────────────────
+def seed_kind(seed: dict[str, Any]) -> str:
+    """`bulletin` or `source` (anything else is reported by `validate_seed`)."""
+    kind = seed.get("kind", BULLETIN_SEED)
+    return kind if isinstance(kind, str) else str(kind)
+
+
+def is_source_seed(seed: dict[str, Any]) -> bool:
+    return seed_kind(seed) == SOURCE_SEED
+
+
+def captures(seed: dict[str, Any]) -> list[dict[str, Any]]:
+    return [c for c in _list(seed.get("captures")) if isinstance(c, dict)
+            and isinstance(c.get("content_hash"), str)]
+
+
+def resolve_capture(seed: dict[str, Any], ref: Any) -> dict[str, Any] | None:
+    """The file's capture `ref` names (its content hash or a unique prefix)."""
+    if not isinstance(ref, str) or len(ref) < MIN_HASH_PREFIX:
+        return None
+    ref = ref.removesuffix("…").lower()
+    found = [c for c in captures(seed) if c["content_hash"].startswith(ref)]
+    return found[0] if len(found) == 1 else None
+
+
+def newest_capture(seed: dict[str, Any]) -> dict[str, Any] | None:
+    """The newest capture: the one a source seed's `as_of` names."""
+    timed = [c for c in captures(seed) if _is_time(c.get("captured_at"))]
+    return max(timed, key=lambda c: normalize_as_of(c["captured_at"]), default=None)
+
+
+def primary_capture(seed: dict[str, Any]) -> dict[str, Any] | None:
+    """The page the website links as the times' source."""
+    return next((c for c in captures(seed) if c.get("primary") is True), None)
+
+
+def short_capture(seed: dict[str, Any], full: str) -> str:
+    """The shortest prefix (8 characters or more) naming capture `full` in the file."""
+    for n in range(MIN_HASH_PREFIX, len(full)):
+        found = resolve_capture(seed, full[:n])
+        if found is not None and found["content_hash"] == full:
+            return full[:n]
+    return full
+
+
+def normalize_quote(text: str) -> str:
+    """Text as a quote is matched against a capture: case and whitespace folded, and
+    typographic quotes, dashes and dots made plain."""
+    text = text.translate({0x2018: "'", 0x2019: "'", 0x201C: '"', 0x201D: '"',
+                           0x2013: "-", 0x2014: "-", 0x2026: "...", 0xA0: " "})
+    return " ".join(text.lower().split())
 def _list(value: Any) -> list[Any]:
     """A list field of a file that may be malformed: anything but a list reads as empty."""
     return value if isinstance(value, list) else []
@@ -293,15 +472,21 @@ def seed_digest(seed: dict[str, Any]) -> str:
 
     The loader records it in the seed revision's note, so an unchanged file is
     loaded once, and editing a rationale or a question does not load it again.
+    A source seed's digest also covers its primary page, which the revision
+    records; a bulletin seed's is what it always was.
     """
     entries = sorted(
         canonical_json({"entry": s["entry"], "page": s.get("page")}) for s in included_slots(seed)
     )
     as_of = seed.get("as_of")
-    return sha256_text(canonical_json({
+    content: dict[str, Any] = {
         "as_of": normalize_as_of(as_of) if isinstance(as_of, str) else None,
         "entries": entries,
-    }))
+    }
+    if is_source_seed(seed):
+        primary = primary_capture(seed)
+        content["source"] = primary.get("url") if primary else None
+    return sha256_text(canonical_json(content))
 
 
 def revision_note(seed: dict[str, Any]) -> str:
@@ -476,7 +661,9 @@ def _validate_slot(seed: dict[str, Any], slot: Any, where: str, call_ids: set[st
                 errors.append(f"{at}.reason must explain the agent's omission judgment")
 
     sources = slot["sources"]
-    if not isinstance(sources, list) or not sources:
+    if is_source_seed(seed):
+        errors.extend(_validate_source_slot(seed, slot, where))
+    elif not isinstance(sources, list) or not sources:
         errors.append(f"{where}.sources must list at least one source")
     else:
         for j, source in enumerate(sources):
@@ -547,6 +734,109 @@ def _validate_slot(seed: dict[str, Any], slot: Any, where: str, call_ids: set[st
     return errors
 
 
+def _validate_source_slot(seed: dict[str, Any], slot: dict[str, Any], where: str) -> list[str]:
+    """A source seed's slot: no bulletin page, and every source quotes one of its captures."""
+    errors: list[str] = []
+    if slot["page"] is not None:
+        errors.append(f"{where}.page must be null: a source seed has no bulletin")
+    if "weekly_omission" in slot:
+        errors.append(f"{where}.weekly_omission is for a bulletin seed")
+    sources = slot["sources"]
+    if not isinstance(sources, list) or not sources:
+        return errors + [f"{where}.sources must list at least one capture it quotes"]
+    for j, source in enumerate(sources):
+        at = f"{where}.sources[{j}]"
+        if not isinstance(source, dict):
+            errors.append(f"{at} must be an object")
+            continue
+        extra = sorted(set(source) - {"source", "capture", "url", "said", "from_image"})
+        if extra:
+            errors.append(f"{at}: unknown {', '.join(extra)} (a source seed's source is a "
+                          "capture: source, capture, url, said, from_image)")
+        if source.get("source") not in CAPTURE_SOURCES:
+            errors.append(f"{at}.source must be website or facebook: the capture's platform")
+        capture = resolve_capture(seed, source.get("capture"))
+        if capture is None:
+            errors.append(f"{at}.capture must name one of the file's captures")
+            continue
+        if source.get("source") != capture.get("platform"):
+            errors.append(f"{at}.source must be {capture.get('platform')}, its capture's platform")
+        if source.get("url") != capture.get("url"):
+            errors.append(f"{at}.url must be its capture's, {capture.get('url')}")
+        if not _nonempty(source.get("said")):
+            errors.append(f"{at}.said is required: what the page says, in its words")
+        if "from_image" in source:
+            if not capture.get("screenshot_hash"):
+                errors.append(f"{at}.from_image needs a capture with a screenshot")
+            elif not is_valid_hash(source["from_image"]):
+                errors.append(f"{at}.from_image is the screenshot_hash of the screenshot it "
+                              "was read from, or left out")
+    return errors
+
+
+def _validate_captures(seed: dict[str, Any]) -> list[str]:
+    found = seed.get("captures")
+    if not isinstance(found, list):
+        return ["captures must be a list"]
+    errors: list[str] = []
+    seen: set[str] = set()
+    for i, capture in enumerate(found):
+        where = f"captures[{i}]"
+        if not isinstance(capture, dict):
+            errors.append(f"{where} must be an object")
+            continue
+        key_errors = _keys(capture, CAPTURE_KEYS, where)
+        if key_errors:
+            errors.extend(key_errors)
+            continue
+        if not is_valid_hash(capture["content_hash"]):
+            errors.append(f"{where}.content_hash must be the SHA-256 of the capture's text")
+        elif capture["content_hash"] in seen:
+            errors.append(f"{where}: capture {capture['content_hash'][:12]} is listed twice")
+        else:
+            seen.add(capture["content_hash"])
+        url = capture["url"]
+        if not (isinstance(url, str) and url.startswith(("https://", "http://"))):
+            errors.append(f"{where}.url must be the page's http(s) address")
+        elif capture["platform"] != source_platform(url):
+            errors.append(f"{where}.platform must be {source_platform(url)} for {url}")
+        if capture["final_url"] is not None and not isinstance(capture["final_url"], str):
+            errors.append(f"{where}.final_url must be null or the address the page ended at")
+        if capture["platform"] not in SOURCE_PLATFORMS:
+            errors.append(f"{where}.platform must be website or facebook")
+        if not _is_time(capture["captured_at"]):
+            errors.append(f"{where}.captured_at must be an ISO time")
+        if capture["screenshot_hash"] is not None and not is_valid_hash(capture["screenshot_hash"]):
+            errors.append(f"{where}.screenshot_hash must be null or a SHA-256 hex digest")
+        if not isinstance(capture["primary"], bool):
+            errors.append(f"{where}.primary must be true or false")
+    if not errors and found and sum(1 for c in found if c["primary"]) != 1:
+        errors.append("captures: exactly one must be primary, the page the site links")
+    return errors
+
+
+def _validate_kind(seed: dict[str, Any]) -> list[str]:
+    """A source seed's own keys, or their absence from a bulletin seed."""
+    kind = seed.get("kind", BULLETIN_SEED)
+    if kind not in SEED_KINDS:
+        return [f"kind must be one of {', '.join(SEED_KINDS)}"]
+    if kind == BULLETIN_SEED:
+        extra = [k for k in SOURCE_SEED_KEYS if k != "kind" and k in seed]
+        return [f"{', '.join(extra)}: only a source seed has these"] if extra else []
+    errors = _keys(seed, (*SEED_KEYS, *SOURCE_SEED_KEYS), "seed", OPTIONAL_SEED_KEYS)
+    if errors:
+        return errors
+    if seed["bulletins"]:
+        errors.append("bulletins must be empty: a source seed is drafted from captures")
+    if seed["calls"]:
+        errors.append("calls must be empty: a source seed makes no paid calls")
+    if seed["current_because"] is not None and not isinstance(seed["current_because"], str):
+        errors.append("current_because must be null or a string")
+    if seed["recheck_after"] is not None and not is_iso_date(seed["recheck_after"]):
+        errors.append("recheck_after must be null or YYYY-MM-DD")
+    return errors + _validate_captures(seed)
+
+
 def validate_seed(seed: Any, *, parish_slug: str | None = None) -> list[str]:
     """Every reason `seed` is not a well-formed seed file (empty when it is).
 
@@ -581,6 +871,8 @@ def validate_seed(seed: Any, *, parish_slug: str | None = None) -> list[str]:
     errors.extend(_validate_bulletins(seed))
     errors.extend(_validate_calls(seed))
     errors.extend(_validate_church_issues(seed))
+    if not errors:
+        errors.extend(_validate_kind(seed))
     if errors:
         return errors
 
@@ -694,6 +986,18 @@ def status_errors(seed: dict[str, Any]) -> list[str]:
         errors.append("approved_at is only set on an approved seed")
     if status == BLOCKED and not _nonempty(seed["blocked_reason"]):
         errors.append("a blocked seed says why in blocked_reason")
+    if is_source_seed(seed) and status in (NEEDS_REVIEW, READY, APPROVED):
+        if not captures(seed):
+            errors.append("a source seed lists the pages it read: `pnpm seed capture`")
+        if not _nonempty(seed.get("current_because")):
+            errors.append("current_because is required once the draft is done: why the "
+                          "schedule looks current (`pnpm seed current`)")
+        recheck = seed.get("recheck_after")
+        if recheck is None:
+            errors.append("recheck_after is required once the draft is done: when to read "
+                          "the pages again")
+        elif isinstance(seed["as_of"], str) and recheck <= normalize_as_of(seed["as_of"])[:10]:
+            errors.append(f"recheck_after ({recheck}) must be after as_of")
     return errors
 
 
@@ -719,6 +1023,7 @@ class SeedSummary:
     blocked_reason: str | None
     church_list_issues: int = 0
     problem: str | None = None
+    kind: str = BULLETIN_SEED
 
     @classmethod
     def of(cls, slug: str, seed: dict[str, Any] | None, problem: str | None = None):
@@ -739,4 +1044,5 @@ class SeedSummary:
             if isinstance(seed.get("blocked_reason"), str) else None,
             church_list_issues=len(church_list_issues(seed)),
             problem=problem,
+            kind=seed_kind(seed) if seed_kind(seed) in SEED_KINDS else "invalid",
         )

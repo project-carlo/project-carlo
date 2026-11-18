@@ -294,9 +294,12 @@ def parse_gcatholic_index(page: str) -> list[dict[str, str]]:
     GCatholic lists Eastern Catholic churches in the territory too (class
     `che`, with their rite); those belong to an eparchy, not this diocese, and
     come back with `rite` set so they are easy to exclude as other-jurisdiction.
+
+    Cathedrals and basilicas head the list in rows with a bare id (`<tr id="2046">`,
+    linked under `../northamerica/`), the rest as `<tr id="L11990">`.
     """
     out = []
-    for row in re.findall(r"<tr id=\"L\d+\">(.*?)</tr>", page, flags=re.S):
+    for row in re.findall(r"<tr id=\"L?\d+\">(.*?)</tr>", page, flags=re.S):
         link = re.search(r'href="\.\./([a-z0-9-]+)/(\d+)"\s+class="(ch[a-z])"[^>]*>(.*?)</a>',
                          row, flags=re.S)
         if not link:
@@ -309,12 +312,15 @@ def parse_gcatholic_index(page: str) -> list[dict[str, str]]:
                  if re.search(r"\w", n)]
         region = re.search(r'class="zregion"[^>]*>(.*?)</span>', row, flags=re.S)
         title = re.search(r'title="([^"]+)"', row)
+        kind = html.unescape(title.group(1)).split(" of ")[0] if title else ""
+        if re.search(r"\bCathedral$", kind):  # "St. Augustine Cathedral"
+            kind = "Cathedral"
         rite = re.search(r'class="zrite">([^<]+)</a>', row)
         entry = {
             "id": link.group(2), "path": f"{link.group(1)}/{link.group(2)}",
             "name": web.html_text(link.group(4)), "index_city": notes[0] if notes else "",
             "group": next((n for n in notes[1:] if not n.startswith("(")), ""),
-            "kind": html.unescape(title.group(1)).split(" of ")[0] if title else "",
+            "kind": kind,
         }
         qualifier = next((n.strip("() ") for n in notes[1:] if n.startswith("(")), "")
         if qualifier:

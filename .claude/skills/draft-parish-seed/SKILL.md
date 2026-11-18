@@ -16,6 +16,16 @@ command, and `--json` gives a command's full output.
 
 Do one parish at a time. Finish and finalize each before starting the next.
 
+**A parish with no bulletin** (`bulletin_provider: website_schedule`) gets a source seed
+instead, and steps 2–6 don't apply. `seed start` says so. Capture each page of the
+parish's own website or Facebook page you rely on with `seed capture <parish> [path or
+address]` (run it under `xvfb-run -a`, like `seed site`); it prints the page's text and
+the paths of its screenshot tiles, which you Read for what only a picture shows. Cite
+captures as `cap <capture>: <its words>` (rules.md R42–R45; file-format.md, "Source
+seeds"), say why the schedule looks current with `seed current <parish> "…"`, and commit
+`data/seeds/captures/<parish>/` with the file (its texts, and the screenshots `finalize`
+puts there for quotes read from a picture). Then steps 7 and 8 as for any parish.
+
 1. **Start.** `pnpm seed start <parish>` creates the draft, or resumes it if it exists, and
    prints the brief: the website, the churches, the bulletins newest first, a summary of
    history, and the newest PDF's path. `seed brief <parish>` prints the brief again. If
@@ -24,10 +34,18 @@ Do one parish at a time. Finish and finalize each before starting the next.
    cite its history but can't read it. Write the file with `seed slot` and the other write
    commands (step 7), not by editing the JSON or writing scripts. `seed slot list <parish>`
    shows the draft's slots and their ids.
-2. **Read the newest bulletin in full** (R2), from the PDF `start` wrote. `seed pdf
-   <parish> <hash>` writes any other bulletin's PDF, with the pipeline's page numbers. For
-   a page that is only an image, or a dense table, `seed pages <parish> <hash> --page N
-   [--dpi 200]` renders a PNG. Draft its slots, then run `seed mark-read <parish> <hash>`.
+2. **Read the newest bulletin in full** (R2). `seed text <parish> <hash>` is the cheapest
+   read, and it marks each page that is only an image. Render a page that is only an
+   image, or whose layout matters (a schedule box, a table, a calendar, where the text
+   can detach a time from its heading), with `seed pages <parish> <hash> --page N`: 100
+   dpi, which reads ordinary schedule boxes and intentions as well as 150. **Zoom when
+   print is small or you are unsure of any digit** of a time you cite: `seed pages
+   <parish> <hash> --page N --region bottom-right` (halves, quarters, or `x0,y0,x1,y1`
+   fractions from the top left) renders that part sharp, and one zoom can take a whole
+   schedule box. Each render prints its token cost; Read shrinks anything over 2000 px,
+   so a whole page above about 180 dpi buys nothing. `seed pdf <parish> <hash>` writes a
+   bulletin's PDF, with the pipeline's page numbers. Draft its slots, then run `seed
+   mark-read <parish> <hash>`.
 3. **Compare with history.** `seed history <parish> [--bulletins N]` prints one table per
    bulletin, and it is free. Apply R7–R9. Use your own readings across bulletins to
    establish recurrence (R35); one silent issue does not erase a repeated schedule
@@ -37,9 +55,13 @@ Do one parish at a time. Finish and finalize each before starting the next.
 4. **Read further back** when R3 or R11 calls for it. Start with `seed grep <parish>
    [pattern]`, which searches every stored bulletin at once (with no pattern, it searches
    for schedule words). Then read one bulletin at a time with `seed text <parish> <hash>
-   [--page N]`, which usually costs less context than the PDF. Use `seed pages` only for a
-   page that is an image or whose layout matters. Run `seed mark-read` on each bulletin
-   you read. To look up a church, use `seed church <name and town>` (R21).
+   [--page N]`, which usually costs less context than images. Use `seed pages` only for a
+   page that is an image or whose layout matters. For an issue of more than a few pages
+   that is only images, `seed pages <parish> <hash> --sheet [--page 2-10]` tiles its pages
+   into labelled sheets (one image for up to about 12 pages, each sharp enough to tell
+   what it holds) to find the pages you need; render just those, and zoom (`--region`)
+   where the print is small. For two or three pages a sheet saves nothing: render them. Run `seed mark-read` on each
+   bulletin you read. To look up a church, use `seed church <name and town>` (R21).
 5. **Website (when R5 calls for it).** `seed site <parish>` prints the
    homepage's text and the links that look like schedules. `seed site <parish>
    /mass-times` (or a full address) prints one of those pages, and each page is kept for

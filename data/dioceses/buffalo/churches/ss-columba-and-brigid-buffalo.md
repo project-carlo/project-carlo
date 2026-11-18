@@ -32,6 +32,16 @@ evidence:
   seen: 2026-09-26
   note: 'Diocesan weekend Mass-times pages (fetched 2026-09-26) list ''SS. Columba-Brigid, Buffalo'':
     Sat. 4 p.m.; Sun. 9 a.m. (Spanish); Sun. 11 a.m..'
+- url: https://www.sscolumbabrigid.org/_files/ugd/1e676d_04176fab5530478cb2d1311da801ed10.pdf
+  seen: 2026-11-16
+  quote: 'Saturday: 4 p.m. Sunday: 9 a.m. (Spanish/Español) 11 a.m. Last Sunday of Month: 10 a.m. (bilingual)'
+  note: Page 1 of the 7-8 November 2026 bulletin, the newest the parish had posted on 16 November.
+- url: https://www.buffalodiocese.org/saturday-afternoon-mass-times/
+  seen: 2026-11-16
+  note: 'Diocesan weekend Mass-times pages (re-read 2026-11-16; Saturday page modified 2026-09-02, Sunday
+    morning 2026-10-07, Sunday afternoon 2026-11-16) list ''SS. Columba-Brigid, Buffalo'': Sat. 4 p.m.,
+    Sun. 9 a.m. (Spanish), Sun. 11 a.m. The difference is the monthly Mass, not an error (no schedule
+    change).'
 promoted: 2026-09-26
 ---
 
@@ -42,3 +52,7 @@ The SS. Columba-Brigid Church bulletin (current issue) lists Mass here; the evid
 ## Name and address
 
 Name and address come from PR 14's row. On the house number, the modelled address agrees with the diocesan parish finder. Coordinates are from the diocesan parish finder.
+
+## Diocesan Mass-times pages
+
+2026-11-16: the diocese's weekend Mass-times pages list 'SS. Columba-Brigid, Buffalo': Sat. 4 p.m., Sun. 9 a.m. (Spanish), Sun. 11 a.m. They differ from the site, but the parish's bulletin (7-8 November 2026, the newest posted) gives Saturday 4 p.m., Sunday 9 a.m. (Spanish) and 11 a.m., and one bilingual 10 a.m. Mass on the last Sunday of the month. The site stores exactly that: Sunday 9:00 and 11:00 every Sunday except the last, and 10:00 on the last Sunday. The diocese lists Sunday 9 and 11 without the monthly exception, so the difference is the monthly bilingual Mass, not an error.

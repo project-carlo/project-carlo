@@ -199,8 +199,10 @@ or approve the held run by hand.
 
 ## Out of scope
 
-- Using websites as the primary seed source (rules.md says how far a website
-  counts).
+- Using websites as the primary seed source of a parish with a bulletin (rules.md
+  says how far a website counts). A parish with no bulletin gets a source seed from
+  its own website or Facebook page instead
+  ([source-schedules-plan.md](source-schedules-plan.md)).
   Phone calls and the diocesan directory remain out of scope.
 - Using approved seeds as labels. Their weekly slots are close to a label for
   the newest bulletin, so this could come later.
@@ -233,14 +235,19 @@ code departs from it. The code is `src/pdf_extract/seeding/`, the `ask` prompt
   whose PDF is another row's (stored before fetch compared downloads by their
   bytes) is listed as a duplicate, and the other commands skip it.
 - **`seed pdf` and `seed pages`** write to `data/seed-work/<parish>/`
-  (gitignored): the PDF the pipeline reads, and PNGs at `--dpi` (150).
+  (gitignored): the PDF the pipeline reads, and PNGs. A page is 100 dpi by
+  default, `--region` zooms into part of one (1600 px, up to 300 dpi), and
+  `--sheet` tiles pages into labelled sheets for finding the ones to read.
+  Every PNG fits what Claude Code's Read passes on unshrunk (2000 px on the long
+  edge, 4,784 visual tokens), a higher `--dpi` is lowered to fit, and each
+  reports its token cost (`seeding/page_images.py`).
 - **Calls.** Both ask the bulletin as of its fetch date, as the evals do, so a
   replay is served from the cache. `extract` runs the eval classifiers
   (`gpt-6-luna --model gpt-6.1-sol`, `gemini-flash-qualified`) and shares their
   result cache. `ask` is cached under `runs/seed-ask/cache/`, by model and
   prompt version, PDF, church list, date and question; on OpenAI it reads the
   PDF at high detail with medium reasoning, since a question is about small
-  print. `gpt-6.1-sol` has no price in `evals/pricing.py`, so its calls record
+  print. `gpt-6.1-sol` has no price in `classifiers/pricing.py`, so its calls record
   `cost_usd` as null.
 - **Output** is compact text, `--json` the full result: `__main__` prints a
   command's `render` when it sets one.
@@ -335,7 +342,7 @@ code departs from it. The code is `src/pdf_extract/seeding/`, the `ask` prompt
 - **The weekly run loads seeds after taking its before-copy**, so its
   snapshot checks compare a newly seeded parish with its last extracted
   schedule, as [Batches and the run's change gate](#loading-seeds) says. Every
-  other command loads them in `db.ensure_db`, after the CSVs. A deploy
+  other command loads them with `seeding.loader.load_seeds`, after `db.ensure_db` has applied the CSVs. A deploy
   (`data snapshot`) never loads them: like a CSV removal, a seed goes live
   through a weekly run.
 - **Loaded once per digest.** The revision's note is `seed file <parish>

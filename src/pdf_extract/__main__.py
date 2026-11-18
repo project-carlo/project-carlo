@@ -68,8 +68,10 @@ from pdf_extract.process import process_bulletins
 from pdf_extract.replay_gates import archived_run_ids, replay
 from pdf_extract.replay_gates import render as render_replay
 from pdf_extract.schedule.cli import ScheduleCommandError, add_schedule_parser
+from pdf_extract.schedule.corrections import load_correction_files
 from pdf_extract.schedule_diff import parish_changed
 from pdf_extract.seeding.cli import add_seed_parser
+from pdf_extract.seeding.loader import load_seeds
 from pdf_extract.seeding.queries import SeedError
 from pdf_extract.storage import DEFAULT_DB_PATH, delete_db, utc_now_iso
 from pdf_extract.verify_frontend_snapshot import verify_frontend_snapshot
@@ -147,8 +149,10 @@ def _add_eval_model_args(parser: argparse.ArgumentParser) -> None:
 
 
 def _ensure_db() -> None:
-    """Migrate the DB and re-seed parishes/churches from the CSVs before a command."""
+    """Migrate the DB, re-seed parishes/churches from the CSVs, load seeds and corrections."""
     ensure_db(DEFAULT_DB_PATH)
+    load_seeds(DEFAULT_DB_PATH)
+    load_correction_files(DEFAULT_DB_PATH)
 
 
 # ── Command handlers ────────────────────────────────────────────────────────
@@ -168,6 +172,11 @@ def _diocese_fetch_rows(diocese: str, slugs: Collection[str] | None) -> list[dic
     if none := [s for s in off_site
                 if parishes[s].get("bulletin_provider") == diocese_records.NO_BULLETIN]:
         raise DioceseError(f"no_bulletin, so there is nothing to fetch: {', '.join(none)}")
+    if sourced := sorted(s for s in slugs or () if parishes.get(s, {}).get(
+            "bulletin_provider") == diocese_records.WEBSITE_SCHEDULE):
+        raise DioceseError(f"website_schedule, so there is no bulletin to fetch: "
+                           f"{', '.join(sourced)}. Its schedule is a source seed "
+                           "(`pnpm seed capture`)")
     if off_site:
         raise DioceseError(
             f"unsupported, so fetch has no collector for it: {', '.join(off_site)}. To check "

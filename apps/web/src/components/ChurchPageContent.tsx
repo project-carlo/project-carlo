@@ -9,13 +9,19 @@ import {
   type EventType,
   formatAddress,
   formatEventDate,
+  formatLongDate,
   formatLongMonthDay,
   formatMonthDay,
   formatTimeRange,
   slotQualifier,
   titleCase,
 } from "@carlo/core";
-import { CHURCH_LIST, DISCLAIMER, UNNAMED_CHURCH } from "../copy";
+import {
+  CHURCH_LIST,
+  churchDisclaimer,
+  SOURCE_NAMES,
+  UNNAMED_CHURCH,
+} from "../copy";
 import {
   ExternalLinkIcon,
   FileTextIcon,
@@ -220,6 +226,23 @@ function BulletinLabel({ week }: { week: string | null }) {
   );
 }
 
+/**
+ * Where a parish with no bulletin posts its times, and when they were last
+ * read there: "From the parish website · checked November 16, 2026". Exempt
+ * from the sitemap's change dates like the bulletin's week, though it moves
+ * only when the parish's page is read again. One string, so the element holds
+ * text only.
+ */
+function SourceLabel({ church }: { church: ChurchDetail }) {
+  const from = church.schedule_source
+    ? `From ${SOURCE_NAMES[church.schedule_source]}`
+    : "";
+  const checked = church.checked_on
+    ? ` · checked ${formatLongDate(church.checked_on)}`
+    : "";
+  return <span {...{ [LASTMOD_EXEMPT_ATTRIBUTE]: "" }}>{from + checked}</span>;
+}
+
 /** Church list › {City} › {Church}, without the city when the address has none. */
 function churchCrumbs(church: ChurchDetail, city: CityLink | null): Crumb[] {
   const crumbs: Crumb[] = [{ label: CHURCH_LIST, to: CHURCH_INDEX_PATH }];
@@ -302,6 +325,25 @@ export function ChurchPageContent({
                 <FileTextIcon className="size-3.5" />
                 <BulletinLabel week={church.bulletin_week} />
               </span>
+            ) : church.schedule_source &&
+              church.source_url &&
+              church.source_url !== church.homepage_url ? (
+              <a
+                href={church.source_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-track="schedule_source"
+                className="rubric-link inline-flex items-center gap-2 font-serif text-[0.9375rem]"
+              >
+                <ExternalLinkIcon className="size-3.5" />
+                <SourceLabel church={church} />
+              </a>
+            ) : church.schedule_source ? (
+              // The parish website link above already opens the page.
+              <span className="inline-flex items-center gap-2 font-serif text-[0.9375rem] text-ink-soft">
+                <FileTextIcon className="size-3.5" />
+                <SourceLabel church={church} />
+              </span>
             ) : null}
             <FeedbackTrigger
               church={church}
@@ -314,8 +356,9 @@ export function ChurchPageContent({
 
         {events.length === 0 ? (
           <p className="mx-auto mt-6 max-w-2xl text-center font-serif text-sm text-ink-soft md:mt-8">
-            No times listed yet. The parish bulletin may not include them, or
-            we couldn’t read it.
+            {church.schedule_source
+              ? `No times listed yet. ${titleCase(SOURCE_NAMES[church.schedule_source])} may not include them, or we couldn’t read it.`
+              : "No times listed yet. The parish bulletin may not include them, or we couldn’t read it."}
             {church.homepage_url
               ? " Check the parish website, or suggest an edit."
               : " Check with the parish, or suggest an edit."}
@@ -468,7 +511,7 @@ export function ChurchPageContent({
         <div className="mx-auto mt-16 max-w-2xl">
           <Fleuron solo className="text-brass" />
           <p className="mt-4 text-center font-serif text-[0.9rem] text-ink-faint">
-            {DISCLAIMER}
+            {churchDisclaimer(church)}
           </p>
         </div>
       </div>

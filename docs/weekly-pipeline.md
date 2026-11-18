@@ -165,8 +165,12 @@ Every pipeline command first brings the local database up to date: it applies
 new migrations and re-seeds the `parish` and `church` tables from the CSVs,
 matching rows by slug. An edited CSV takes effect on the next command. A
 parish or church removed from its CSV is deleted along with its bulletins and
-events.
+events. It then loads the approved seed files and the correction files
+(`data/corrections/`, [believed-schedules.md](believed-schedules.md#corrections))
+not loaded yet. The weekly run loads both after taking its before-copy, so its
+checks see what they change.
 
 To change the schema, add the next numbered file to `data/migrations/`; never
 edit one that has shipped. `PRAGMA user_version` records which migrations a
-database has.
+database has. Migrations are for the schema only: a correction to data goes in
+a correction file.

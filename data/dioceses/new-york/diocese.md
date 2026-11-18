@@ -7,7 +7,7 @@ gcatholic: newy0
 city_aliases:
   Southeast: Brewster
   Town of Southeast: Brewster
-promoted: 2026-11-09
+promoted: 2026-11-17
 ---
 
 Ten counties: Manhattan, the Bronx and Staten Island in New York City, then Westchester, Putnam,

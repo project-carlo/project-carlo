@@ -20,24 +20,24 @@ import sqlite3
 from pathlib import Path
 from typing import Any
 
+from pdf_extract.model import WEBSITE_SCHEDULE, normalize_as_of
 from pdf_extract.schedule.entries import parse_entry
-from pdf_extract.schedule.store import (
-    normalize_as_of,
-    parish_churches,
-    update_mode_parishes,
-    write_seed,
-)
+from pdf_extract.schedule.store import parish_churches, update_mode_parishes, write_seed
 from pdf_extract.seeding.checks import check_seed
 from pdf_extract.seeding.files import (
     APPROVED,
     SEEDS_DIR,
     SeedFileError,
     included_slots,
+    is_source_seed,
     newest_read_bulletin,
+    primary_capture,
     read_seed,
     revision_note,
+    seed_kind,
     seed_slugs,
 )
+from pdf_extract.storage import DEFAULT_DB_PATH, connect_db
 
 LOGGER = logging.getLogger(__name__)
 
@@ -77,19 +77,24 @@ def load_seed(
         (bulletin_id, entry, slot["page"])
         for slot, entry in zip(slots, entries) if slot["page"] is not None
     ]
+    # A source seed has no bulletin: the revision records the page its times are from.
+    primary = primary_capture(seed) if is_source_seed(seed) else None
+    source = None if primary is None else (primary["platform"], primary["url"])
     with conn:
         revision = write_seed(
             conn, parish_id, entries,
             as_of=seed["as_of"], actor=seed["reviewer"], note=revision_note(seed),
-            run_id=run_id, sightings=sightings,
+            run_id=run_id, sightings=sightings, source=source,
         )
     return {
         "parish": seed["parish_slug"],
+        "kind": seed_kind(seed),
         "revision": revision,
         "entries": len(entries),
         "sightings": len(sightings),
         "as_of": normalize_as_of(seed["as_of"]),
         "reviewer": seed["reviewer"],
+        **({"source_url": source[1]} if source else {}),
     }
 
 
@@ -152,3 +157,47 @@ def _load_one(
         return {"parish": slug, "reason": str(exc)}
     latest_seeds[parish_id] = result["as_of"]
     return result
+
+
+def due_source_seeds(
+    conn: sqlite3.Connection, today: str, seeds_dir: Path = SEEDS_DIR,
+) -> list[dict[str, Any]]:
+    """The live source seeds whose `recheck_after` has come: their pages are due to be read
+    again (docs/source-schedules-plan.md). A warning only: the times stay on the site.
+
+    Live means approved, and its parish still `website_schedule` (a parish that has found
+    a bulletin is seeded from it).
+    """
+    providers = dict(conn.execute("SELECT slug, bulletin_provider FROM parish").fetchall())
+    due = []
+    for slug in seed_slugs(seeds_dir):
+        if providers.get(slug) != WEBSITE_SCHEDULE:
+            continue
+        try:
+            seed = read_seed(slug, seeds_dir)
+        except SeedFileError:
+            continue  # the loader reports it
+        if not isinstance(seed, dict) or seed.get("status") != APPROVED \
+                or not is_source_seed(seed):
+            continue
+        recheck = seed.get("recheck_after")
+        if isinstance(recheck, str) and recheck <= today:
+            primary = primary_capture(seed)
+            due.append({"parish": slug, "recheck_after": recheck, "as_of": seed.get("as_of"),
+                        "source_url": primary.get("url") if primary else None})
+    return sorted(due, key=lambda d: (d["recheck_after"], d["parish"]))
+
+
+def load_seeds(
+    db_path: Path = DEFAULT_DB_PATH, *, seeds_dir: Path = SEEDS_DIR, run_id: str | None = None,
+) -> dict[str, list[dict[str, Any]]]:
+    """Load the approved seed files not loaded yet into the database at `db_path`.
+
+    Pipeline commands call this after `db.ensure_db`. The weekly run calls it
+    after taking its before-copy instead, so its change checks see the seeds.
+    """
+    conn = connect_db(db_path)
+    try:
+        return load_approved_seeds(conn, seeds_dir, run_id=run_id)
+    finally:
+        conn.close()

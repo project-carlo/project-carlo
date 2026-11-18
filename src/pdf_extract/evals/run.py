@@ -34,8 +34,9 @@ from pathlib import Path
 from typing import Any
 
 from pdf_extract.classifiers import Classifier, get_classifier
-from pdf_extract.labeling.bulletins import find_bulletin, gemini_rows
-from pdf_extract.labeling.labels import LABELS_DIR, is_valid_hash, is_valid_slug
+from pdf_extract.labeling.bulletins import find_bulletin
+from pdf_extract.labeling.labels import LABELS_DIR
+from pdf_extract.model import gemini_rows, is_valid_hash, is_valid_slug
 from pdf_extract.runner import (
     ExtractFn,
     iter_extraction_outcomes,

@@ -27,7 +27,8 @@ from hashlib import sha256
 from typing import Any
 
 from pdf_extract.bulletin_week import parse_iso_date
-from pdf_extract.labeling.labels import DAYS, EVENT_KINDS, EVENT_TYPES
+from pdf_extract.model import DAYS, EVENT_KINDS, EVENT_TYPES
+from pdf_extract.model import ENTRY_KEYS as LABEL_ENTRY_KEYS
 from pdf_extract.schedule.qualifiers import (
     QualifierError,
     columns_to_season,
@@ -43,12 +44,8 @@ from pdf_extract.timeparse import minutes_to_time, time_to_minutes
 UNKNOWN_CHURCH = "unknown_church"
 INVALID_ENTRY = "invalid_entry"
 
-# The keys an entry may carry in the labels' form.
-ENTRY_KEYS = frozenset({
-    "church_slug", "event_type", "event_kind", "day_of_week", "date", "start_time",
-    "end_time", "cancelled", "weeks_of_month", "exclude_weeks", "season", "note",
-    "valid_from", "valid_until",
-})
+# The keys an entry may carry: the labels' form plus the dates it holds between.
+ENTRY_KEYS = frozenset({*LABEL_ENTRY_KEYS, "valid_from", "valid_until"})
 
 
 @dataclass(frozen=True)

@@ -29,6 +29,17 @@ evidence:
   seen: 2026-09-26
   note: 'Diocesan weekend Mass-times pages (fetched 2026-09-26) list ''St. George, West Falls'': Sun.
     10:30 a.m..'
+- url: https://container.parishesonline.com/bulletins/14/0467/20261115B.pdf
+  seen: 2026-11-16
+  note: This page is only an image (no text layer), so the lines are transcribed from the rendered page
+    rather than quoted. Page 2 of the 15 November 2026 WHEAT bulletin, under 'Memorare Chapel, 74 Old
+    Glenwood Rd., West Falls, NY', lists 'Monday, November 16 8:00 am All Souls' and 'Saturday, November
+    21 9:00 am All Souls', and no Sunday Mass.
+- url: https://www.buffalodiocese.org/sunday-morning-mass-times/
+  seen: 2026-11-16
+  note: 'Diocesan weekend Mass-times pages (re-read 2026-11-16; Saturday page modified 2026-09-02, Sunday
+    morning 2026-10-07, Sunday afternoon 2026-11-16) list ''St. George, West Falls'': Sun. 10:30 a.m.
+    Out of date: the parish bulletin is the source for this church (no schedule change).'
 promoted: 2026-09-26
 ---
 
@@ -39,3 +50,7 @@ The WHEAT Roman Catholic Family of Parishes bulletin (2026-09-20) lists Mass her
 ## Name and address
 
 Name and address come from PR 14's row. PR 14 carried it as `st-george-west-falls`. On the house number, the modelled address agrees with GCatholic, the bulletin. Coordinates are from GCatholic's Plus Code, decoded. **Disputed:** The WHEAT bulletin gives 74 Old Glenwood Rd for the Memorare Chapel, the former St. George church. `address_verified` stays false until the parish confirms.
+
+## Diocesan Mass-times pages
+
+2026-11-16: the diocese's weekend Mass-times pages list 'St. George, West Falls': Sun. 10:30 a.m. They differ from the site, but the 15 November 2026 WHEAT bulletin (p. 2, an image) lists only Monday 8:00 a.m. and Saturday 9:00 a.m. Masses at the chapel and no Sunday Mass, which is what the site shows.

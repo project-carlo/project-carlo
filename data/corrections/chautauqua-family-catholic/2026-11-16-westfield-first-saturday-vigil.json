@@ -1,0 +1,36 @@
+{
+  "parish": "chautauqua-family-catholic",
+  "actor": "lyonsl2 (via Claude)",
+  "note": "Westfield (St. Dominic, [W]) has its Saturday 4:00 PM vigil every week, first Saturdays included. The 8 November 2026 bulletin, p. 2, lists \"SATURDAY, NOVEMBER 7 – 32ND SUNDAY IN ORDINARY TIME\" (a first Saturday) with \"[W] 4:00PM\" and an intention (\"Busia, Aunt Irene & Auntie Barb\"). The discontinued \"Celebration of First Saturday Masses at St. Dominic's Parish\" (25 Oct and 1 Nov issues, p. 4) was a separate devotion, so the seed answer that dropped first Saturdays (s19) was wrong. The 22 November issue, p. 2, lists \"[W] 4:00PM\" on 21 and 28 November.",
+  "as_of": "2026-11-08T21:03:26Z",
+  "operations": [
+    {
+      "op": "modify",
+      "before": {
+        "church_slug": "st-james-major-westfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "start_time": "4:00 PM",
+        "day_of_week": "Saturday",
+        "weeks_of_month": [
+          "second",
+          "third",
+          "fourth",
+          "fifth"
+        ]
+      },
+      "after": {
+        "church_slug": "st-james-major-westfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "start_time": "16:00",
+        "end_time": null,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      }
+    }
+  ]
+}

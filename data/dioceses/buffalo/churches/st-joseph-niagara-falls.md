@@ -11,7 +11,8 @@ longitude: -79.0450625
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster: ['directory:7758', 'gcatholic:17688']
+roster: ['directory:7758', 'gcatholic:17688', 'families:f35-holy-family-of-jesus-mary-and-joseph-niagara-falls',
+  'mass-times:holy-family-of-jesus-mary-and-joseph-niagara-falls']
 evidence:
 - url: https://container.parishesonline.com/bulletins/14/1887/20260920B.pdf
   seen: 2026-09-26

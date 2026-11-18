@@ -21,9 +21,8 @@ import shlex
 from dataclasses import dataclass, field
 from typing import Any
 
-from pdf_extract.labeling.labels import DAYS, WEEKS_OF_MONTH
+from pdf_extract.model import DAYS, WEEKS_OF_MONTH, normalize_as_of
 from pdf_extract.schedule.entries import Entry, parse_entry
-from pdf_extract.schedule.store import normalize_as_of
 from pdf_extract.seeding.checks import entry_problem
 from pdf_extract.seeding.files import (
     AGENT,
@@ -38,9 +37,14 @@ from pdf_extract.seeding.files import (
     RULE_ID,
     SETTLED,
     WEBSITE,
+    captures,
     church_issue_problems,
     group_problems,
+    is_source_seed,
+    primary_capture,
+    resolve_capture,
     resolve_hash,
+    short_capture,
     slot_problems,
 )
 from pdf_extract.seeding.finalize import fill_slot, next_slot_id
@@ -75,6 +79,10 @@ SOURCE: "HEAD: what it said, in its words"
   web https://...: ...       a page `seed site` printed
   history [9f2c41d0]: ...    only what history can't say itself
   c1 p3: ...                 a paid call
+  cap 5e60aa31: ...          a source seed's capture (`cap primary` its primary one):
+                             a source seed's only kind of source, quoted as its text
+                             reads; `cap 5e60aa31 image: ...` for a quote read from
+                             its screenshot (finalize commits the screenshot)
   A slot's --page defaults to its source's page on the newest bulletin, and a
   source on the newest bulletin without a page takes the slot's.
   With web --src, --website-current "why current" and --website-context "why it
@@ -387,6 +395,8 @@ def parse_source(seed: dict[str, Any], text: str, *, head_optional: bool = False
     if not said:
         raise SeedError(f"source {text!r}: say what it said after `: `")
     tokens = head.split()
+    if is_source_seed(seed):
+        return [_capture_source(seed, tokens, said, text)]
     calls = {c.get("id"): c for c in seed.get("calls") or [] if isinstance(c, dict)}
     kind: str = AGENT
     page: int | None = None
@@ -422,11 +432,41 @@ def parse_source(seed: dict[str, Any], text: str, *, head_optional: bool = False
     return out
 
 
+def _capture_source(seed: dict[str, Any], tokens: list[str], said: str, text: str,
+                    ) -> dict[str, Any]:
+    """A source seed's source: `cap PREFIX [image]`, PREFIX a capture's hash or `primary`."""
+    if not tokens or tokens[0].lower() not in ("cap", "capture") or len(tokens) not in (2, 3) \
+            or (len(tokens) == 3 and tokens[2].lower() != "image"):
+        raise SeedError(f"source {text!r}: a source seed's source is `cap CAPTURE: said` or "
+                        "`cap CAPTURE image: said` (CAPTURE: 8+ characters of a capture's "
+                        "hash, or primary)")
+    ref = tokens[1]
+    capture = primary_capture(seed) if ref.lower() == "primary" else resolve_capture(seed, ref)
+    if capture is None:
+        listed = ", ".join(c["content_hash"][:8] for c in captures(seed)) or "none yet"
+        raise SeedError(f"source {text!r}: {ref!r} names none of the file's captures "
+                        f"({listed}; `pnpm seed capture` adds one)")
+    source: dict[str, Any] = {
+        "source": capture["platform"], "capture": short_capture(seed, capture["content_hash"]),
+        "url": capture["url"], "said": said,
+    }
+    if len(tokens) == 3:
+        if not capture.get("screenshot_hash"):
+            raise SeedError(f"source {text!r}: capture {source['capture']} has no screenshot "
+                            "to quote")
+        # The screenshot it was read from: a new one of the page must be read again.
+        source["from_image"] = capture["screenshot_hash"]
+    return source
+
+
 def format_source(source: Any) -> str:
     """A source as the spec that writes it."""
     if not isinstance(source, dict):
         return repr(source)
     kind = source.get("source")
+    if isinstance(source.get("capture"), str):
+        image = " image" if source.get("from_image") else ""
+        return f"cap {source['capture'][:MIN_HASH_PREFIX]}{image}: {source.get('said')}"
     if kind == WEBSITE:
         head = f"web {source.get('url')}"
     else:
