@@ -51,7 +51,8 @@ SHEET_GUTTER_PX = 8
 IMAGES_MAX_DPI, IMAGES_MIN_DPI, IMAGES_DPI_STEP = 110, 50, 5
 TILE_MAX_EDGE = 1100            # a longer tile is shrunk, so a full-page flyer can't shrink all
 TILE_GUTTER_PX = 3
-TILE_LABEL_PX = 13              # the red tag on a tile's top left, with its number and page
+TILE_LABEL_PX = 13              # the red tag above a tile, with its number and page...
+TILE_TAG_PX = TILE_LABEL_PX + 4  # ...in a strip of this height, so it covers none of its print
 TILE_TRIM_TOLERANCE = 18        # a border within this of its corner's colour is trimmed off
 TILE_BLANK_SHARE = 0.01         # a tile with less marked than this, trimmed, is left out
 IMAGES_MIN_WIDTH, IMAGES_WIDTH_STEP = 400, 40  # widths tried for packing, up to MAX_IMAGE_EDGE
@@ -267,6 +268,15 @@ class _Tile:
     def label(self, number: int) -> str:
         return f"{number} p{','.join(str(p) for p in [self.page, *self.also_on])}"
 
+    def cell(self, dpi: int, tag_width: int) -> tuple[int, int]:
+        """Its size in px with the strip above it that holds its tag."""
+        width, height = self.size(dpi)
+        return max(width, tag_width), height + TILE_TAG_PX
+
+
+def _tag_width(label: str) -> int:
+    return math.ceil(_font(TILE_LABEL_PX).getlength(label)) + 6
+
 
 def _trim(image: Image.Image) -> tuple[tuple[int, int, int, int] | None, float]:
     """The box inside `image` that differs from its top-left colour, and the share of
@@ -291,7 +301,8 @@ def _fingerprint(image: Image.Image) -> tuple:
 
 def _tiles(pages: dict[int, pdfium.PdfPage],
            found: list[textless.TextlessImage]) -> list[_Tile]:
-    """Each textless image trimmed of its border; slivers, blanks and repeats left out."""
+    """Each textless image trimmed of its border; slivers, blanks and repeats on other
+    pages left out (two alike on one page are both kept, in case they only look alike)."""
     tiles: list[_Tile] = []
     seen: dict[tuple, _Tile] = {}
     scale = IMAGES_MAX_DPI / 72
@@ -306,14 +317,15 @@ def _tiles(pages: dict[int, pdfium.PdfPage],
         if min(size_pt) < textless.MIN_SIDE_PT:
             continue
         fingerprint = _fingerprint(image.crop(box))
-        if fingerprint in seen:
-            if area.page != seen[fingerprint].page and area.page not in seen[fingerprint].also_on:
-                seen[fingerprint].also_on.append(area.page)
+        prior = seen.get(fingerprint)
+        if prior is not None and area.page != prior.page:
+            if area.page not in prior.also_on:
+                prior.also_on.append(area.page)
             continue
         span_x, span_y = (x1 - x0) / image.width, (y1 - y0) / image.height
         tile = _Tile(area.page, (x0 + left * span_x, y0 + top * span_y,
                                  x0 + right * span_x, y0 + bottom * span_y), size_pt, [])
-        seen[fingerprint] = tile
+        seen.setdefault(fingerprint, tile)
         tiles.append(tile)
     return tiles
 
@@ -407,9 +419,14 @@ _CANVAS = (1904, 1960)
 def _plan(tiles: list[_Tile]) -> tuple[int, list[tuple[list[int], list[Size]]]]:
     """The resolution, and each image's tiles and their positions: the highest dpi at
     which all fit one image, else IMAGES_MIN_DPI on as many as they need, each filled
-    tallest first."""
+    tallest first. Tile k is numbered k + 1."""
+    tags = [_tag_width(t.label(k + 1)) for k, t in enumerate(tiles)]
+
+    def cells(dpi: int, ks: list[int]) -> list[Size]:
+        return [tiles[k].cell(dpi, tags[k]) for k in ks]
+
     for dpi in range(IMAGES_MAX_DPI, IMAGES_MIN_DPI - 1, -IMAGES_DPI_STEP):
-        positions = pack([t.size(dpi) for t in tiles])
+        positions = pack(cells(dpi, list(range(len(tiles)))))
         if positions is not None:
             return dpi, [(list(range(len(tiles))), positions)]
     dpi = IMAGES_MIN_DPI
@@ -419,12 +436,11 @@ def _plan(tiles: list[_Tile]) -> tuple[int, list[tuple[list[int], list[Size]]]]:
     while left:
         group: list[int] = []
         for k in left:
-            if skyline_pack(_padded([tiles[i].size(dpi) for i in group + [k]]),
-                            *canvas) is not None:
+            if skyline_pack(_padded(cells(dpi, group + [k])), *canvas) is not None:
                 group.append(k)
         group = sorted(group or left[:1])
         left = [k for k in left if k not in group]
-        sizes = [tiles[k].size(dpi) for k in group]
+        sizes = cells(dpi, group)
         positions = pack(sizes) or skyline_pack(_padded(sizes), *canvas)
         assert positions is not None
         sheets.append((group, positions))
@@ -433,18 +449,18 @@ def _plan(tiles: list[_Tile]) -> tuple[int, list[tuple[list[int], list[Size]]]]:
 
 def _tile_sheet(pages: dict[int, pdfium.PdfPage], tiles: list[tuple[int, _Tile]],
                 positions: list[Size], dpi: int) -> Image.Image:
-    """`tiles` (numbered) rendered at `dpi`, placed and tagged with their numbers."""
-    sizes = [tile.size(dpi) for _, tile in tiles]
-    sheet = Image.new("RGB", _used(sizes, positions), (190, 190, 190))
+    """`tiles` (numbered) rendered at `dpi`, placed, each tagged with its number above it."""
+    labels = [tile.label(number) for number, tile in tiles]
+    cells = [tile.cell(dpi, _tag_width(label)) for (_, tile), label in zip(tiles, labels)]
+    sheet = Image.new("RGB", _used(cells, positions), (190, 190, 190))
     draw, font = ImageDraw.Draw(sheet), _font(TILE_LABEL_PX)
-    for (number, tile), size, (x, y) in zip(tiles, sizes, positions):
+    for (_, tile), label, (x, y) in zip(tiles, labels, positions):
         image = _render(pages[tile.page], dpi, tile.box)
+        size = tile.size(dpi)
         if image.size != size:  # rounding, or shrunk to TILE_MAX_EDGE
             image = image.resize(size, Image.Resampling.LANCZOS)
-        sheet.paste(image, (x, y))
-        label = tile.label(number)
-        draw.rectangle((x, y, x + draw.textlength(label, font=font) + 5,
-                        y + TILE_LABEL_PX + 3), fill=(200, 0, 0))
+        sheet.paste(image, (x, y + TILE_TAG_PX))
+        draw.rectangle((x, y, x + _tag_width(label) - 1, y + TILE_TAG_PX - 2), fill=(200, 0, 0))
         draw.text((x + 3, y + 1), label, fill=(255, 255, 255), font=font)
     return sheet
 

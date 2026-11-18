@@ -250,9 +250,7 @@ def page_texts(
     """`seed text`: each page's text layer, a cheap read of a bulletin.
 
     A page with too little text (`image_only`) is only an image: render it
-    with `seed pages` to read it. On the others, `textless_images` are the
-    images the text layer doesn't cover (`textless`), whose print it can't
-    hold: `seed pages --images` tiles them.
+    with `seed pages` to read it.
     """
     bulletin = resolve_bulletin(conn, parish_slug, ref)
     total, pages = _pdf_texts(bulletin_pdf(parish_slug, bulletin["content_hash"]), page)
@@ -261,8 +259,7 @@ def page_texts(
 
 
 def _pdf_texts(data: bytes, page: int | None = None) -> tuple[int, list[dict[str, Any]]]:
-    """The PDF's page count, and the text layer of one page or all, with the images
-    on each text page that have no text layer."""
+    """The PDF's page count, and the text layer of one page or all."""
     pdf = pdfium.PdfDocument(data)
     try:
         total = len(pdf)
@@ -276,15 +273,12 @@ def _pdf_texts(data: bytes, page: int | None = None) -> tuple[int, list[dict[str
                 textpage = pdf_page.get_textpage()
                 try:
                     text = textless.page_text(textpage)
-                    image_only = textless.is_image_only(text)
-                    found = [] if image_only else textless.textless_images(
-                        pdf_page, textpage, number)
                 finally:
                     textpage.close()
             finally:
                 pdf_page.close()
-            pages.append({"page": number, "text": text, "image_only": image_only,
-                          "textless_images": [a.as_dict() for a in found]})
+            pages.append({"page": number, "text": text,
+                          "image_only": textless.is_image_only(text)})
     finally:
         pdf.close()
     return total, pages
@@ -323,9 +317,8 @@ def grep_bulletins(
 
     Searches the text layer, as `seed text` reads it, line by line and in any
     case; `pattern` is a regular expression, `SCHEDULE_PATTERN` when None. A
-    page that is only an image can't be searched, and is listed as such;
-    `textless_pages` are the others with images whose print the text layer
-    doesn't hold (`seed text`). `bulletins` limits it to the newest N (0: all).
+    page that is only an image can't be searched, and is listed as such.
+    `bulletins` limits it to the newest N (0: all).
     """
     try:
         regex = re.compile(pattern or SCHEDULE_PATTERN, re.IGNORECASE)
@@ -342,7 +335,7 @@ def grep_bulletins(
         try:
             _, pages = _pdf_texts(_read_pdf(parish_slug, b["content_hash"]))
         except Exception as exc:  # unreadable: say so, don't stop
-            out.append({**item, "error": str(exc), "pages": [], "textless_pages": []})
+            out.append({**item, "error": str(exc), "pages": []})
             continue
         found = []
         for p in pages:
@@ -351,8 +344,7 @@ def grep_bulletins(
             if p["image_only"] or hits:
                 found.append({"page": p["page"], "image_only": p["image_only"],
                               "hunks": _hunks(lines, hits)})
-        out.append({**item, "error": None, "pages": found,
-                    "textless_pages": [p["page"] for p in pages if p["textless_images"]]})
+        out.append({**item, "error": None, "pages": found})
     return {
         "parish": parish_slug,
         "pattern": regex.pattern,

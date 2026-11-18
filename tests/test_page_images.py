@@ -1,5 +1,5 @@
 """`seed pages`' renders: sized for Read, cropped where asked, tiled into labelled sheets;
-and the images with no text layer that `seed text` flags and `seed pages --images` packs."""
+and the images on text pages with no text layer, which `seed pages --images` packs."""
 
 from __future__ import annotations
 
@@ -15,7 +15,7 @@ from pypdf import PdfReader, PdfWriter
 
 from pdf_extract.seeding import cli as seed_cli
 from pdf_extract.seeding import page_images as pi
-from pdf_extract.seeding import queries, textless
+from pdf_extract.seeding import textless
 
 LETTER = (612, 792)
 
@@ -249,22 +249,7 @@ def test_images_the_text_layer_doesnt_cover_are_found_then_merged():
         (1, _fractions(BESIDE_IT)),
         (2, _fractions((50, 50, 250, 250))),  # in the form's space, twice that
     ]
-    assert found[0].where == "left" and found[2].where == "top left"
     assert found[0].share == pytest.approx(250 * 350 / (612 * 792), abs=0.001)
-
-
-def test_text_flags_the_images_with_no_text_layer():
-    total, pages = queries._pdf_texts(_layout_pdf(DETECTION_PDF))
-    assert total == 3 and [p["image_only"] for p in pages] == [False, False, True]
-    assert [len(p["textless_images"]) for p in pages] == [2, 1, 0]
-    first = pages[0]["textless_images"][0]
-    assert first["where"] == "left" and first["share"] == pytest.approx(0.181, abs=0.002)
-    out = seed_cli._text_text({"parish": "st-x", "bulletin": "ab" * 32, "pages": total,
-                               "fetched_at": "2026-11-15T16:22:00Z", "texts": pages})
-    assert "=== page 1 (2 images with no text layer: 23% of the page, left, right)" in out
-    assert "=== page 3 (only an image: render it with `seed pages`)" in out
-    assert out.endswith("on p1-2: their print is not in the text. See them in one image: "
-                        "`seed pages st-x abababababab --images`")
 
 
 def test_images_are_trimmed_tagged_and_listed_once_with_every_page(tmp_path: Path):
@@ -272,6 +257,7 @@ def test_images_are_trimmed_tagged_and_listed_once_with_every_page(tmp_path: Pat
     framed = _picture(300, 300, 12, border=60)   # a white frame around it, trimmed off
     data = _layout_pdf([
         [("text", 50, 40, 10, NEWS), ("image", (50, 100, 250, 200), logo),
+         ("image", (50, 220, 250, 320), logo),  # alike on one page: both kept
          ("image", (300, 300, 550, 550), framed),
          ("image", (50, 600, 250, 750), Image.new("RGB", (40, 30), "white"))],  # blank
         [("text", 50, 40, 10, NEWS), ("image", (300, 600, 500, 700), logo)],
@@ -283,15 +269,18 @@ def test_images_are_trimmed_tagged_and_listed_once_with_every_page(tmp_path: Pat
     assert pi.fits(im["width"], im["height"]) and im["dpi"] == pi.IMAGES_MAX_DPI
     assert Path(im["path"]).name == "abc-images-p1-2-110dpi.png" and im["pages"] == [1, 2]
     assert r["tokens"] == im["tokens"] == pi.image_tokens(im["width"], im["height"])
-    by_page = {(t["page"], tuple(t["also_on"])): t for t in im["tiles"]}
-    assert set(by_page) == {(1, (2,)), (1, ())}  # the logo once, with both pages
-    region = [float(v) for v in by_page[1, ()]["region"].split(",")]
+    # The logo on page 2 is listed with page 1's first logo, not as a tile of its own.
+    assert sorted((t["page"], t["also_on"]) for t in im["tiles"]) == [
+        (1, []), (1, []), (1, [2])]
+    [region] = [[float(v) for v in t["region"].split(",")] for t in im["tiles"]
+                if float(t["region"].split(",")[0]) > 0.4]
     x0, y0, x1, y1 = _fractions((300, 300, 550, 550))
     inset = 50 / 612  # the frame: 60 of 300 px across 250 pt
     assert x0 + inset - 0.02 <= region[0] and region[2] <= x1 - inset + 0.02
     assert region[0] > x0 and region[2] < x1 and region[1] > y0 and region[3] < y1
-    tile = Image.open(im["path"]).convert("RGB")
-    assert tile.getpixel((2, 2)) == (200, 0, 0)  # a tile's red tag
+    sheet = Image.open(im["path"]).convert("RGB")
+    assert sheet.getpixel((2, 2)) == (200, 0, 0)  # a tile's red tag, in a strip above it
+    assert sheet.getpixel((2, pi.TILE_TAG_PX + 2)) != (200, 0, 0)
     # Only the page that is only an image: nothing to pack.
     assert pi.render(data, tmp_path, "abc", images=True, page=3)["images"] == []
     with pytest.raises(pi.PageImageError, match="--images packs"):
@@ -329,5 +318,6 @@ def test_tiles_take_the_sharpest_dpi_that_fits_one_image_else_several():
     assert dpi == pi.IMAGES_MIN_DPI and len(sheets) > 1
     assert sorted(k for group, _ in sheets for k in group) == list(range(30))
     for group, positions in sheets:
-        size = pi._Tile(1, (0, 0, 1, 1), (600, 780), []).size(dpi)
-        assert pi.fits(*pi._used([size] * len(group), positions))
+        tile = pi._Tile(1, (0, 0, 1, 1), (600, 780), [])
+        cells = [tile.cell(dpi, pi._tag_width(tile.label(k + 1))) for k in group]
+        assert pi.fits(*pi._used(cells, positions))

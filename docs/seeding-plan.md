@@ -237,10 +237,11 @@ code departs from it. The code is `src/pdf_extract/seeding/`, the `ask` prompt
   default, `--region` zooms into part of one (1600 px, up to 300 dpi), and
   `--sheet` tiles pages into labelled sheets for finding the ones to read.
   `--images` packs the images on text pages that have no text layer
-  (`seeding/textless.py`), which `seed text` and `seed grep` flag but can't read,
-  into one labelled image, each tile listed with its page and region. Every PNG fits what Claude Code's Read passes on unshrunk (2000 px on the long
-  edge, 4,784 visual tokens), a higher `--dpi` is lowered to fit, and each
-  reports its token cost (`seeding/page_images.py`).
+  (`seeding/textless.py`), whose print `seed text` can't read, into one
+  labelled image, each tile listed with its page and region. Every PNG fits
+  what Claude Code's Read passes on unshrunk (2000 px on the long edge, 4,784
+  visual tokens), a higher `--dpi` is lowered to fit, and each reports its
+  token cost (`seeding/page_images.py`).
 - **Calls.** Both ask the bulletin as of its fetch date, as the evals do, so a
   replay is served from the cache. `extract` runs the eval classifiers
   (`gpt-6-luna --model gpt-6.1-sol`, `gemini-flash-qualified`) and shares their

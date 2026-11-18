@@ -1,10 +1,9 @@
 """Images on a bulletin's text pages with no text layer over them.
 
 `seed text` reads a PDF's text layer, so print that is only pixels (a schedule set as a
-picture, a flyer pasted in) is invisible to it. A page with almost no text is flagged as
-only an image; this finds, on the other pages, the images that hold next to none of the
-page's text. `seed text` flags them, and `seed pages --images` tiles them into one image
-(`page_images.render_textless`).
+picture, a flyer pasted in) is invisible to it. A page with almost no text is only an
+image; this finds, on the other pages, the images that hold next to none of the page's
+text, which `seed pages --images` packs into one image (`page_images`).
 
 On the newest bulletin of 250 parishes (1,789 pages), 45% of text pages had such an image
 over 15% of the page. Most were cover art, photos and ads, but some held Mass, Confession
@@ -49,27 +48,6 @@ class TextlessImage:
     def share(self) -> float:
         x0, y0, x1, y1 = self.box
         return (x1 - x0) * (y1 - y0)
-
-    @property
-    def where(self) -> str:
-        """Where on the page: `top right`, `bottom`, `middle`, `most of the page`."""
-        x0, y0, x1, y1 = self.box
-
-        def side(a0: float, a1: float, low: str, high: str) -> str:
-            if a1 - a0 > 2 / 3:
-                return ""
-            middle = (a0 + a1) / 2
-            return low if middle < 1 / 3 else high if middle > 2 / 3 else ""
-
-        named = " ".join(s for s in (side(y0, y1, "top", "bottom"),
-                                     side(x0, x1, "left", "right")) if s)
-        if named:
-            return named
-        return "most of the page" if min(x1 - x0, y1 - y0) > 2 / 3 else "middle"
-
-    def as_dict(self) -> dict[str, object]:
-        return {"box": [round(v, 3) for v in self.box], "share": round(self.share, 3),
-                "where": self.where}
 
 
 def page_text(textpage: pdfium.PdfTextPage) -> str:
