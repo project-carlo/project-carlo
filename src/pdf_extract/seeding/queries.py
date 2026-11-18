@@ -20,7 +20,7 @@ from pypdf import PdfReader
 from pdf_extract.blobstore import CachedBlobStore, bulletin_pdf_key, get_store
 from pdf_extract.bulletin_week import bulletin_week
 from pdf_extract.model import DAYS, WEEKS_OF_MONTH, is_valid_hash, normalize_as_of
-from pdf_extract.seeding import page_images
+from pdf_extract.seeding import page_images, textless
 from pdf_extract.seeding.checks import COVERED_DAYS, covered_weeks
 from pdf_extract.seeding.files import (
     SEEDS_DIR,
@@ -36,7 +36,7 @@ from pdf_extract.timeparse import time_to_minutes
 # Shortest hash prefix a command accepts for a bulletin.
 MIN_REF_CHARS = 6
 # Fewer characters than this on a page: it is only an image (`seed text`).
-MIN_PAGE_TEXT_CHARS = 40
+MIN_PAGE_TEXT_CHARS = textless.MIN_PAGE_TEXT_CHARS
 # How many bulletins `seed history` shows, and `seed diff` compares when the
 # blob store can't say which PDFs it holds.
 HISTORY_BULLETINS = 4
@@ -250,7 +250,9 @@ def page_texts(
     """`seed text`: each page's text layer, a cheap read of a bulletin.
 
     A page with too little text (`image_only`) is only an image: render it
-    with `seed pages` to read it.
+    with `seed pages` to read it. On the others, `textless_images` are the
+    images the text layer doesn't cover (`textless`), whose print it can't
+    hold: `seed pages --images` tiles them.
     """
     bulletin = resolve_bulletin(conn, parish_slug, ref)
     total, pages = _pdf_texts(bulletin_pdf(parish_slug, bulletin["content_hash"]), page)
@@ -259,7 +261,8 @@ def page_texts(
 
 
 def _pdf_texts(data: bytes, page: int | None = None) -> tuple[int, list[dict[str, Any]]]:
-    """The PDF's page count, and the text layer of one page or all."""
+    """The PDF's page count, and the text layer of one page or all, with the images
+    on each text page that have no text layer."""
     pdf = pdfium.PdfDocument(data)
     try:
         total = len(pdf)
@@ -272,13 +275,16 @@ def _pdf_texts(data: bytes, page: int | None = None) -> tuple[int, list[dict[str
             try:
                 textpage = pdf_page.get_textpage()
                 try:
-                    text = textpage.get_text_range().replace("\r\n", "\n").strip()
+                    text = textless.page_text(textpage)
+                    image_only = textless.is_image_only(text)
+                    found = [] if image_only else textless.textless_images(
+                        pdf_page, textpage, number)
                 finally:
                     textpage.close()
             finally:
                 pdf_page.close()
-            pages.append({"page": number, "text": text,
-                          "image_only": len(text) < MIN_PAGE_TEXT_CHARS})
+            pages.append({"page": number, "text": text, "image_only": image_only,
+                          "textless_images": [a.as_dict() for a in found]})
     finally:
         pdf.close()
     return total, pages
@@ -317,8 +323,9 @@ def grep_bulletins(
 
     Searches the text layer, as `seed text` reads it, line by line and in any
     case; `pattern` is a regular expression, `SCHEDULE_PATTERN` when None. A
-    page that is only an image can't be searched, and is listed as such.
-    `bulletins` limits it to the newest N (0: all).
+    page that is only an image can't be searched, and is listed as such;
+    `textless_pages` are the others with images whose print the text layer
+    doesn't hold (`seed text`). `bulletins` limits it to the newest N (0: all).
     """
     try:
         regex = re.compile(pattern or SCHEDULE_PATTERN, re.IGNORECASE)
@@ -335,7 +342,7 @@ def grep_bulletins(
         try:
             _, pages = _pdf_texts(_read_pdf(parish_slug, b["content_hash"]))
         except Exception as exc:  # unreadable: say so, don't stop
-            out.append({**item, "error": str(exc), "pages": []})
+            out.append({**item, "error": str(exc), "pages": [], "textless_pages": []})
             continue
         found = []
         for p in pages:
@@ -344,7 +351,8 @@ def grep_bulletins(
             if p["image_only"] or hits:
                 found.append({"page": p["page"], "image_only": p["image_only"],
                               "hunks": _hunks(lines, hits)})
-        out.append({**item, "error": None, "pages": found})
+        out.append({**item, "error": None, "pages": found,
+                    "textless_pages": [p["page"] for p in pages if p["textless_images"]]})
     return {
         "parish": parish_slug,
         "pattern": regex.pattern,

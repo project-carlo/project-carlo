@@ -31,7 +31,8 @@ Write: the draft's slots, checked as they are written (`seed slot --help`: the s
 Read: the stored bulletins
   bulletins <parish> [--limit N]                      newest first, with pages and flags
   pdf       <parish> <bulletin>                       the PDF the pipeline reads, locally
-  text      <parish> <bulletin> [--page N]            its text, page by page
+  text      <parish> <bulletin> [--page N]            its text, page by page, and the
+                                                      images on each with no text layer
   pages     <parish> <bulletin> [--page N|N-M,..] [--region R] [--sheet] [--dpi D]
                                                       pages as PNGs, each with its token cost
   pages     <parish> <bulletin> --images [--page N-M] those images, packed into one PNG
@@ -471,13 +472,33 @@ def _text_pdf(r: Result) -> str:
     return f"{r['path']}  ({r['pages']} pages, fetched {_when(r['fetched_at'])})"
 
 
+def _textless_note(areas: list[dict[str, Any]]) -> str:
+    """`2 images with no text layer: 38% of the page, top right, bottom`."""
+    wheres = list(dict.fromkeys(a["where"] for a in areas))
+    share = sum(a["share"] for a in areas)
+    return (f"{len(areas)} image{'s' if len(areas) > 1 else ''} with no text layer: "
+            f"{max(1, round(share * 100))}% of the page, {', '.join(wheres[:3])}"
+            + (", ..." if len(wheres) > 3 else ""))
+
+
+def _images_hint(r: Result, pages: list[int]) -> str:
+    short = r["bulletin"][:12]
+    return (f"Images with no text layer on p{page_images.page_ranges(pages, ',')}: their print "
+            f"is not in the text. See them in one image: `seed pages {r['parish']} {short} "
+            "--images`")
+
+
 def _text_text(r: Result) -> str:
     lines = [f"{r['bulletin'][:12]}  {r['pages']} pages, fetched {_when(r['fetched_at'])}"]
     for p in r["texts"]:
-        lines.append(f"=== page {p['page']}" +
-                     (" (only an image: render it with `seed pages`)" if p["image_only"] else ""))
+        note = ("only an image: render it with `seed pages`" if p["image_only"]
+                else _textless_note(p["textless_images"]) if p["textless_images"] else "")
+        lines.append(f"=== page {p['page']}" + (f" ({note})" if note else ""))
         if p["text"]:
             lines.append(p["text"])
+    textless_pages = [p["page"] for p in r["texts"] if p["textless_images"]]
+    if textless_pages:
+        lines.append(_images_hint(r, textless_pages))
     return "\n".join(lines)
 
 
@@ -727,6 +748,10 @@ def _text_grep(r: Result) -> str:
                 if i:
                     lines.append("  --")
                 lines += [f"  {'>' if line['match'] else ' '} {line['text']}" for line in hunk]
+        if b["textless_pages"]:
+            lines.append(f"{head}: images with no text layer, not searched, on "
+                         f"p{page_images.page_ranges(b['textless_pages'], ',')} (`seed pages "
+                         f"{r['parish']} {b['short']} --images`)")
     if r["not_searched"]:
         lines.append(f"…{r['not_searched']} older not searched (no stored PDF, or --bulletins)")
     return "\n".join(lines)

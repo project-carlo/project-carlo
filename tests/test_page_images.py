@@ -15,7 +15,7 @@ from pypdf import PdfReader, PdfWriter
 
 from pdf_extract.seeding import cli as seed_cli
 from pdf_extract.seeding import page_images as pi
-from pdf_extract.seeding import textless
+from pdf_extract.seeding import queries, textless
 
 LETTER = (612, 792)
 
@@ -251,6 +251,20 @@ def test_images_the_text_layer_doesnt_cover_are_found_then_merged():
     ]
     assert found[0].where == "left" and found[2].where == "top left"
     assert found[0].share == pytest.approx(250 * 350 / (612 * 792), abs=0.001)
+
+
+def test_text_flags_the_images_with_no_text_layer():
+    total, pages = queries._pdf_texts(_layout_pdf(DETECTION_PDF))
+    assert total == 3 and [p["image_only"] for p in pages] == [False, False, True]
+    assert [len(p["textless_images"]) for p in pages] == [2, 1, 0]
+    first = pages[0]["textless_images"][0]
+    assert first["where"] == "left" and first["share"] == pytest.approx(0.181, abs=0.002)
+    out = seed_cli._text_text({"parish": "st-x", "bulletin": "ab" * 32, "pages": total,
+                               "fetched_at": "2026-11-15T16:22:00Z", "texts": pages})
+    assert "=== page 1 (2 images with no text layer: 23% of the page, left, right)" in out
+    assert "=== page 3 (only an image: render it with `seed pages`)" in out
+    assert out.endswith("on p1-2: their print is not in the text. See them in one image: "
+                        "`seed pages st-x abababababab --images`")
 
 
 def test_images_are_trimmed_tagged_and_listed_once_with_every_page(tmp_path: Path):
