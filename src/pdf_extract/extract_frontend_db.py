@@ -29,10 +29,11 @@ bulletin, the one its events come from: `bulletin_week` is the ISO date of
 the Sunday of the week that bulletin is for (`bulletin_week.bulletin_week`),
 or null when the bulletin has no date at all. A church's `diocese` is its
 parish's in data/parishes.csv (the folder under data/dioceses/ the parish's
-record is in), or null when the CSV gives none. It is read from the CSV, not
-the database: a deploy can build from the published database before the CSVs
-are seeded into it (`datasync.build_deploy_snapshot`), and the website's embed
-filters on it, so it must not wait for a weekly run. Churches retired from
+record is in), or for a parish no longer in the CSV the folder its record is
+still in, or else null. It is read from the files, not the database: a
+deploy can build from the published database before the CSVs are seeded into
+it (`datasync.build_deploy_snapshot`), and the website's embed filters on it,
+so it must not wait for a weekly run. Churches retired from
 churches.csv are left out, and so are the churches of parishes without an
 approved seed: their bulletins are fetched, but they aren't on the site yet.
 
@@ -326,16 +327,31 @@ def finish_events(rows: list[tuple], build_date: date) -> list[tuple]:
     return sorted(out, key=lambda r: r[_ID])
 
 
-def parish_dioceses(parishes_csv: Path) -> dict[str, str]:
-    """Each parish slug's diocese in `parishes_csv`; a parish without one is left out."""
+def parish_dioceses(parishes_csv: Path, dioceses_dir: Path) -> dict[str, str]:
+    """Each parish slug's diocese: its row's in `parishes_csv`, or else the
+    folder under `dioceses_dir` its record is in, as a parish taken off the
+    CSV (excluded, or set to `no_bulletin`) keeps its record there. A deploy
+    can still serve such a parish's churches from the published database
+    while the removal waits for a reviewed weekly run, so it needs a diocese
+    too. A parish with neither is left out.
+
+    A missing `parishes_csv` is an error, not an empty map: the snapshot
+    would ship with no church in any diocese.
+    """
     if not parishes_csv.exists():
-        return {}
+        raise FileNotFoundError(
+            f"{parishes_csv} not found; run from the repository root or pass parishes_csv"
+        )
+    dioceses = {
+        path.stem: path.parent.parent.name
+        for kind in ("excluded", "parishes")
+        for path in sorted(dioceses_dir.glob(f"*/{kind}/*.md"))
+    }
     with open(parishes_csv, encoding="utf-8", newline="") as f:
-        return {
-            row["slug"].strip(): diocese
-            for row in csv.DictReader(f)
-            if (diocese := (row.get("diocese") or "").strip())
-        }
+        for row in csv.DictReader(f):
+            if diocese := (row.get("diocese") or "").strip():
+                dioceses[row["slug"].strip()] = diocese
+    return dioceses
 
 
 def extract(
@@ -345,13 +361,15 @@ def extract(
     keep_previous: bool = True,
     build_date: date | None = None,
     parishes_csv: Path | None = None,
+    dioceses_dir: Path | None = None,
 ) -> dict[str, object]:
     """Write the frontend snapshot of `source` to `dest`.
 
     With `keep_previous`, an existing snapshot at `dest` is first moved to
     `<dest>.previous` for `verify-frontend-snapshot` to compare against.
     `build_date` (default today) is the day before which dated rows are left out.
-    Each church's `diocese` comes from `parishes_csv` (default data/parishes.csv).
+    Each church's `diocese` comes from `parishes_csv` (default data/parishes.csv),
+    or else from the parish's record in `dioceses_dir` (default data/dioceses/).
     """
     if not source.exists():
         raise FileNotFoundError(f"Source database not found: {source}")
@@ -377,10 +395,15 @@ def extract(
                 "SELECT DISTINCT parish_id FROM schedule_revision WHERE source_kind = 'seed'"
             ).fetchall()
         }
-        dioceses = parish_dioceses(storage.PARISHES_CSV_PATH if parishes_csv is None else parishes_csv)
+        dioceses = parish_dioceses(
+            storage.PARISHES_CSV_PATH if parishes_csv is None else parishes_csv,
+            storage.DIOCESES_DIR if dioceses_dir is None else dioceses_dir,
+        )
         # Only parishes with an approved seed are on the site.
         churches = [(*row[:-1], dioceses.get(row[-1])) for row in churches if row[1] in seeded]
         shown = {row[0] for row in churches}
+        if without := sum(row[-1] is None for row in churches):
+            LOGGER.warning("%d churches have no diocese; the embed leaves them out", without)
         events = [
             row for row in finish_events(_schedule_events(src), build_date or date.today())
             if row[_CHURCH] in shown

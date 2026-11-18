@@ -34,3 +34,26 @@ export function fullSiteMapHref(search: string): string {
   const query = params.toString();
   return query ? `/?${query}` : "/";
 }
+
+/** The parameters a visit is credited to a campaign by (src/lib/analytics.ts). */
+const CAMPAIGN_PARAMS = ["utm_source", "ref"] as const;
+
+/**
+ * Where a link in the embed opens, in a new tab: its own URL, plus the
+ * embed's campaign when it's a page of this site and carries none of its own.
+ * The new tab's first pageview reads the campaign from its URL, and its
+ * referrer is the embed (this site), which analytics doesn't count, so
+ * without it the visit would look direct.
+ */
+export function embedLinkHref(href: string, embedHref: string): string {
+  const embed = new URL(embedHref);
+  const url = new URL(href, embed);
+  if (url.origin !== embed.origin || CAMPAIGN_PARAMS.some((p) => url.searchParams.has(p))) {
+    return url.href;
+  }
+  for (const param of CAMPAIGN_PARAMS) {
+    const value = embed.searchParams.get(param);
+    if (value) url.searchParams.set(param, value);
+  }
+  return url.href;
+}

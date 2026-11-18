@@ -77,12 +77,19 @@ next to the data, so it needs one clear place to report a wrong time.
 - **No masthead or site links.** The card holds the search and filters, and a
   "Powered by Project Carlo" line links to the full site's map at the same view,
   filters and `ref`, in a new tab.
-- **Links open in a new tab.** Church pages, the credit and the map's
-  attribution all open on the full site in a new tab (`NewTabLinksContext` in
-  `src/lib/documentLinks.ts`), never inside the frame. Nothing in the embed
-  adds a history entry: inside a frame that would take over the host page's
-  back button. The map's view goes into the frame's own entry by
-  `replaceState`, as on the home page.
+- **Links open in a new tab.** Every link clicked in the embed (church pages,
+  the credit, the map's attribution) opens in a new tab, never inside the
+  frame: one capturing click handler on the embed's root does it
+  (`src/views/EmbedPage.tsx`), so a link added later is covered too. Links to
+  the site carry the embed's `ref` (or `utm_source`), so the visit is credited
+  to the embed. Nothing in the embed adds a history entry: inside a frame that
+  would take over the host page's back button. The map's view goes into the
+  frame's own entry by `replaceState`, as on the home page, but not into the
+  session's remembered map search, which the full site's "Map" links restore.
+- **The host page keeps its scrolling.** The mouse wheel zooms the map only
+  once it has been clicked, until the pointer leaves it, and on a touch screen
+  one finger scrolls the page while two move the map (`FramedGestures` in
+  `src/components/ChurchMap.tsx`).
 - **`diocese=<slug>`** keeps the map and the search to that diocese's churches
   and opens the map fitted to them, instead of near the visitor's IP location.
   The slug is the diocese's folder in `data/dioceses/`. A diocese with no
@@ -103,7 +110,9 @@ the folder its parish's record is in, which `pnpm diocese promote` writes and
 (`src/pdf_extract/extract_frontend_db.py`) reads it from the CSV when it builds
 the snapshot, rather than from the database, so a deploy that serves the
 published database's data (while CSV removals wait for a reviewed weekly run)
-still has every church's diocese.
+still has every church's diocese; a parish already taken off the CSV gets the
+folder its record is still in. A missing CSV stops the build rather than ship
+a snapshot with no church in any diocese.
 
 To try the embed framed on another page locally, build the site, run `wrangler
 dev`, and open a page from another origin with an `<iframe>` pointing at it.

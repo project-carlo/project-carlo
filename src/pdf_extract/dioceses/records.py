@@ -1631,7 +1631,7 @@ def export_csv(diocese: str, out_dir: Path) -> dict[str, Any]:
     return {"diocese": diocese, "written": written}
 
 
-def _write_live_csv(path: Path, columns: list[str], rows: list[dict[str, str]]) -> None:
+def write_live_csv(path: Path, columns: list[str], rows: list[dict[str, str]]) -> None:
     """Write `rows` under the file's own header, adding any of `columns` it lacks."""
     with open(path, encoding="utf-8", newline="") as f:
         header = next(csv.reader(f), [])
@@ -1728,8 +1728,8 @@ def promote(diocese: str, *, dry_run: bool = False) -> dict[str, Any]:
                     r.pop("promoted", None)
                 else:
                     r["promoted"] = r.get("promoted") or stamp
-        _write_live_csv(storage.PARISHES_CSV_PATH, PARISH_CSV_FIELDS, new_p)
-        _write_live_csv(storage.CHURCHES_CSV_PATH, CHURCH_CSV_FIELDS, new_c)
+        write_live_csv(storage.PARISHES_CSV_PATH, PARISH_CSV_FIELDS, new_p)
+        write_live_csv(storage.CHURCHES_CSV_PATH, CHURCH_CSV_FIELDS, new_c)
         _save(d, after)
         meta_path = diocese_dir(diocese) / META_FILE
         front, body = parse_file(meta_path)

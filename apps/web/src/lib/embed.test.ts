@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { embedDiocese, fullSiteMapHref } from "./embed";
+import { embedDiocese, embedLinkHref, fullSiteMapHref } from "./embed";
 
 describe("embedDiocese", () => {
   it("reads the diocese an embed asks for", () => {
@@ -28,5 +28,31 @@ describe("fullSiteMapHref", () => {
   it("is the bare map when nothing else is in the query", () => {
     expect(fullSiteMapHref("?diocese=syracuse")).toBe("/");
     expect(fullSiteMapHref("")).toBe("/");
+  });
+});
+
+describe("embedLinkHref", () => {
+  const embed = "https://projectcarlo.com/embed?diocese=syracuse&ref=diocese-syracuse";
+
+  it("credits a page of the site to the embed's campaign", () => {
+    expect(embedLinkHref("/churches/st-mary/", embed)).toBe(
+      "https://projectcarlo.com/churches/st-mary/?ref=diocese-syracuse",
+    );
+    expect(embedLinkHref("/churches/st-mary/", "https://projectcarlo.com/embed?utm_source=x")).toBe(
+      "https://projectcarlo.com/churches/st-mary/?utm_source=x",
+    );
+  });
+
+  it("keeps a link's own campaign", () => {
+    expect(embedLinkHref("/?ref=other", embed)).toBe("https://projectcarlo.com/?ref=other");
+  });
+
+  it("leaves other sites' links and an embed without a campaign alone", () => {
+    expect(embedLinkHref("https://www.openstreetmap.org/copyright", embed)).toBe(
+      "https://www.openstreetmap.org/copyright",
+    );
+    expect(embedLinkHref("/churches/st-mary/", "https://projectcarlo.com/embed")).toBe(
+      "https://projectcarlo.com/churches/st-mary/",
+    );
   });
 });

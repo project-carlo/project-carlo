@@ -7,6 +7,7 @@ import logging
 from pathlib import Path
 
 from pdf_extract.address import address_key
+from pdf_extract.dioceses.records import CHURCH_CSV_FIELDS, PARISH_CSV_FIELDS, write_live_csv
 from pdf_extract.storage import (
     CHURCHES_CSV_PATH,
     DETECT_RESULTS_PATH,
@@ -18,27 +19,10 @@ from pdf_extract.storage import (
 
 LOGGER = logging.getLogger(__name__)
 
-_PARISHES_FIELDNAMES = ["slug", "name", "website", "bulletin_provider", "provider_id", "diocese"]
-_CHURCHES_FIELDNAMES = [
-    "parish_id", "slug", "name", "line1", "line2", "city", "state", "postal_code",
-    "name_verified", "address_verified", "latitude", "longitude",
-]
-
-
 def _read_csv(path: Path) -> list[dict[str, str]]:
     """Read a CSV into plain dicts, one per row."""
     with open(path, encoding="utf-8") as f:
         return [dict(row) for row in csv.DictReader(f)]
-
-
-def _write_csv(path: Path, fieldnames: list[str], rows: list[dict[str, str]]) -> None:
-    """Write rows to a CSV via a temp file, then atomically rename."""
-    tmp = path.with_suffix(".csv.tmp")
-    with open(tmp, "w", encoding="utf-8", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames, lineterminator="\n")
-        writer.writeheader()
-        writer.writerows(rows)
-    tmp.replace(path)
 
 
 def apply_detect_results() -> dict[str, int]:
@@ -64,7 +48,7 @@ def apply_detect_results() -> dict[str, int]:
             row.setdefault("provider_id", "")
             unchanged += 1
 
-    _write_csv(PARISHES_CSV_PATH, _PARISHES_FIELDNAMES, rows)
+    write_live_csv(PARISHES_CSV_PATH, PARISH_CSV_FIELDS, rows)
     DETECT_RESULTS_PATH.unlink()
     LOGGER.info("Applied detect results to parishes.csv: %d updated, %d unchanged", updated, unchanged)
     return {"updated": updated, "unchanged": unchanged}
@@ -109,7 +93,7 @@ def apply_geocode_results() -> dict[str, int]:
             row.setdefault("latitude", "")
             row.setdefault("longitude", "")
 
-    _write_csv(CHURCHES_CSV_PATH, _CHURCHES_FIELDNAMES, rows)
+    write_live_csv(CHURCHES_CSV_PATH, CHURCH_CSV_FIELDS, rows)
     GEOCODE_RESULTS_PATH.unlink()
     LOGGER.info("Applied geocode results to churches.csv: %d updated", updated)
     return {"updated": updated}

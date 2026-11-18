@@ -2,7 +2,6 @@ import {
   Fragment,
   memo,
   useCallback,
-  useContext,
   useEffect,
   useMemo,
   useRef,
@@ -45,20 +44,13 @@ import {
   CURRENT_CHURCH_PIN_BODY,
   CURRENT_CHURCH_Z_INDEX_OFFSET,
 } from "../lib/churchPin";
-import { NewTabLinksContext, useInAppLinkProps } from "../lib/documentLinks";
+import { useDocumentLinks } from "../lib/documentLinks";
 import { OSM_TILE_URL } from "../lib/staticMap";
 import { UNNAMED_CHURCH } from "../copy";
 import { Fleuron } from "@/components/Fleuron";
 
 const OSM_ATTRIBUTION =
   '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
-
-const NEW_TAB = 'target="_blank" rel="noopener" ';
-
-/** The attribution's links, opened in a new tab (in the embed, not the frame). */
-function linksInNewTab(html: string): string {
-  return html.replaceAll("<a ", `<a ${NEW_TAB}`);
-}
 
 const defaultCenter: [number, number] = [43.1566, -77.6088];
 
@@ -184,6 +176,42 @@ interface ChurchMapProps {
   /** Church pins open a small card with only the church's name, for a map
    *  too small to hold the full one (the city and church pages' previews). */
   compactPopups?: boolean;
+  /** Framed on another site's page (the embed): the map leaves the page's
+   *  scrolling alone; see FramedGestures. */
+  framed?: boolean;
+}
+
+/**
+ * The gestures of a map framed on another site's page, which mustn't take
+ * the page's scrolling: the wheel zooms only once the map has been clicked,
+ * until the pointer leaves it, and on a touch screen one finger scrolls the
+ * page while two move and zoom the map (Leaflet's pinch pans too).
+ */
+function FramedGestures() {
+  const map = useMap();
+  useEffect(() => {
+    const container = map.getContainer();
+    const wheelOn = () => map.scrollWheelZoom.enable();
+    const wheelOff = () => map.scrollWheelZoom.disable();
+    wheelOff();
+    container.addEventListener("pointerdown", wheelOn);
+    container.addEventListener("mouseleave", wheelOff);
+    const touchOnly = window.matchMedia("(hover: none) and (pointer: coarse)");
+    // Without Leaflet's dragging the container takes `touch-action: pan-x
+    // pan-y`, so the browser scrolls the page for one finger.
+    const syncDragging = () => {
+      if (touchOnly.matches) map.dragging.disable();
+      else map.dragging.enable();
+    };
+    syncDragging();
+    touchOnly.addEventListener("change", syncDragging);
+    return () => {
+      container.removeEventListener("pointerdown", wheelOn);
+      container.removeEventListener("mouseleave", wheelOff);
+      touchOnly.removeEventListener("change", syncDragging);
+    };
+  }, [map]);
+  return null;
 }
 
 /**
@@ -473,7 +501,7 @@ function scheduleCaption(events: EventSummary[]): string {
  * one open popup rather than for all ~130 pins on every filter change.
  */
 function ChurchPopupBody({ church }: { church: ChurchMapItem }) {
-  const linkProps = useInAppLinkProps();
+  const documentLinks = useDocumentLinks();
   // upcoming_events arrives pre-sorted from fetchChurches; rolling it up keeps
   // that order while collapsing each day's several times onto one row.
   const dayRows = useMemo(
@@ -555,7 +583,7 @@ function ChurchPopupBody({ church }: { church: ChurchMapItem }) {
       <div className="map-popup-foot">
         <Link
           to={`/churches/${church.slug}/`}
-          {...linkProps}
+          reloadDocument={documentLinks}
           className="map-popup-foot-link font-serif text-[0.9375rem]"
         >
           <span>Full schedule</span>
@@ -571,12 +599,12 @@ function ChurchPopupBody({ church }: { church: ChurchMapItem }) {
  * name, linking to its page.
  */
 function ChurchPopupName({ church }: { church: ChurchMapItem }) {
-  const linkProps = useInAppLinkProps();
+  const documentLinks = useDocumentLinks();
   return (
     <div className="map-popup-compact">
       <Link
         to={`/churches/${church.slug}/`}
-        {...linkProps}
+        reloadDocument={documentLinks}
         className="map-popup-compact-link font-display text-[0.9375rem] leading-[1.2]"
       >
         {church.name ?? UNNAMED_CHURCH}
@@ -983,6 +1011,7 @@ export const ChurchMap = memo(function ChurchMap({
   mapRef,
   currentChurchId,
   compactPopups = false,
+  framed = false,
 }: ChurchMapProps) {
   const withCoords = useMemo(() => churches.filter(hasCoords), [churches]);
   const clusterIndex = useMemo(
@@ -999,16 +1028,8 @@ export const ChurchMap = memo(function ChurchMap({
     ? [initialView.lat, initialView.lng]
     : defaultCenter;
   const zoom = initialView?.zoom ?? 11;
-  // In the embed, the attribution's links (OpenStreetMap's, Leaflet's) open
-  // in a new tab too, rather than replace the map inside the frame.
-  const newTabLinks = useContext(NewTabLinksContext);
   function handleReady(map: LeafletMap) {
     if (start) placeStart(map, start);
-    const { attributionControl } = map;
-    const prefix = attributionControl?.options.prefix;
-    if (newTabLinks && typeof prefix === "string") {
-      attributionControl.setPrefix(linksInNewTab(prefix));
-    }
   }
 
   // The last selection whose popup has been opened; see ChurchMarker.
@@ -1038,9 +1059,10 @@ export const ChurchMap = memo(function ChurchMap({
       whenReady={handleReady}
     >
       {onViewChange && <ViewReporter onViewChange={onViewChange} />}
+      {framed && <FramedGestures />}
       <PopupPaneElevator />
       <TileLayer
-        attribution={newTabLinks ? linksInNewTab(OSM_ATTRIBUTION) : OSM_ATTRIBUTION}
+        attribution={OSM_ATTRIBUTION}
         url={OSM_TILE_URL}
         maxZoom={19}
       />

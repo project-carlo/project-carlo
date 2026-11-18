@@ -197,7 +197,11 @@ export function HomePage({ embed = false }: HomePageProps = {}) {
   // depend on the filters in a link. The search box shares this query. The
   // embed always reads it, for its diocese's churches: none says the diocese
   // isn't covered.
-  const { data: allChurches } = useQuery({
+  const {
+    data: allChurches,
+    error: allChurchesError,
+    refetch: refetchAllChurches,
+  } = useQuery({
     ...churchSearchIndexQueryFor(diocese),
     enabled: wantsFirstVisitStart || embed,
   });
@@ -219,7 +223,7 @@ export function HomePage({ embed = false }: HomePageProps = {}) {
   const handleMapViewChange = useCallback(
     (view: MapView) => {
       latestMapViewRef.current = view;
-      rememberHomeSearch(withMapView(window.location.search, view));
+      if (!embed) rememberHomeSearch(withMapView(window.location.search, view));
       if (mapViewTimerRef.current != null) {
         window.clearTimeout(mapViewTimerRef.current);
       }
@@ -236,7 +240,7 @@ export function HomePage({ embed = false }: HomePageProps = {}) {
         }
       }, 400);
     },
-    [setSearchParams, location.pathname],
+    [setSearchParams, location.pathname, embed],
   );
   useEffect(
     () => () => {
@@ -267,10 +271,13 @@ export function HomePage({ embed = false }: HomePageProps = {}) {
 
   // Mirror the query string, with the latest view, into sessionStorage so
   // in-app "Map" links (plain pushes to "/") can restore the current filters
-  // + view, even when the page is left before the view reaches the URL.
+  // + view, even when the page is left before the view reaches the URL. Not
+  // the embed's: its `diocese=` and campaign would follow the visitor around
+  // the full site.
   useEffect(() => {
+    if (embed) return;
     rememberHomeSearch(withMapView(location.search, latestMapViewRef.current));
-  }, [location.search]);
+  }, [location.search, embed]);
 
   const [filterPanelOpen, setFilterPanelOpen] = useState(false);
   const isDesktop = useMinWidth(DESKTOP_MIN_WIDTH);
@@ -303,16 +310,32 @@ export function HomePage({ embed = false }: HomePageProps = {}) {
     );
   }, [location.pathname, location.search, location.state, center]);
 
+  // No `diocese` key without one, so the query shares its cache entry with
+  // CityMapView's: a null would hash differently from a missing key.
   const apiFilters = useMemo(
-    () => ({ ...churchFiltersFor(appliedFilters), diocese }),
+    () =>
+      diocese
+        ? { ...churchFiltersFor(appliedFilters), diocese }
+        : churchFiltersFor(appliedFilters),
     [appliedFilters, diocese],
   );
 
-  const { data, error, refetch } = useQuery({
+  const {
+    data,
+    error: churchesError,
+    refetch: refetchChurches,
+  } = useQuery({
     queryKey: ["churches", apiFilters],
     queryFn: () => fetchChurches(apiFilters),
     placeholderData: keepPreviousData,
   });
+  // The map waits on the search index too (a first visit's start, the
+  // embed's churches), so its failure is the map's, and retry refetches it.
+  const error = churchesError ?? allChurchesError;
+  const refetch = useCallback(() => {
+    if (churchesError) void refetchChurches();
+    if (allChurchesError) void refetchAllChurches();
+  }, [churchesError, allChurchesError, refetchChurches, refetchAllChurches]);
 
   // Where the map mounts, settled once (on a first visit) every church and
   // the IP estimate are in, then left alone: MapContainer reads it only once.
@@ -380,7 +403,12 @@ export function HomePage({ embed = false }: HomePageProps = {}) {
   );
 
   const pinnedPlaceTitle = centerOn?.placeTitle;
-  const mapReady = data != null && mapStart !== undefined;
+  // An embed for a diocese waits for its churches even with a view in the
+  // URL: one the site doesn't cover gets the notice, not a map then the notice.
+  const mapReady =
+    data != null &&
+    mapStart !== undefined &&
+    (diocese == null || allChurches != null);
   const embedOverlay = useMemo(
     () =>
       embed ? { fullSiteHref: fullSiteMapHref(location.search), diocese } : undefined,
@@ -409,6 +437,7 @@ export function HomePage({ embed = false }: HomePageProps = {}) {
             onViewChange={handleMapViewChange}
             onClearPlace={handleClearPlace}
             mapRef={setMap}
+            framed={embed}
           />
         ) : null}
       </div>
@@ -421,7 +450,7 @@ export function HomePage({ embed = false }: HomePageProps = {}) {
             <InlineQueryError
               title="Couldn’t load churches"
               message="Check your connection and try again."
-              onRetry={() => refetch()}
+              onRetry={refetch}
               centered
             />
           </div>

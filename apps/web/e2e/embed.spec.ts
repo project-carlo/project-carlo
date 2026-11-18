@@ -78,20 +78,54 @@ test("the embed opens church pages in a new tab and adds nothing to the host's h
   await input.pressSequentially("Cathedral of the Immaculate");
   await page.getByRole("option", { name: /Cathedral of the Immaculate Conception/ }).click();
   const link = page.locator(".leaflet-popup").getByRole("link", { name: /Full schedule/ });
-  await expect(link).toHaveAttribute("target", "_blank");
-  await expect(link).toHaveAttribute("href", "/churches/cathedral-immaculate-conception-syracuse/");
 
+  // In a new tab, credited to the embed's campaign.
   const [tab] = await Promise.all([page.context().waitForEvent("page"), link.click()]);
-  await expect(tab).toHaveURL(/\/churches\/cathedral-immaculate-conception-syracuse\/$/);
+  await expect(tab).toHaveURL(
+    /\/churches\/cathedral-immaculate-conception-syracuse\/\?ref=diocese-syracuse$/,
+  );
   await tab.close();
+
+  // The map's attribution too, though Leaflet writes its links itself.
+  await page.context().route("https://www.openstreetmap.org/**", (route) =>
+    route.fulfill({ body: "" }),
+  );
+  const [osm] = await Promise.all([
+    page.context().waitForEvent("page"),
+    page.locator(".leaflet-control-attribution").getByRole("link", { name: "OpenStreetMap" }).click(),
+  ]);
+  await expect(osm).toHaveURL("https://www.openstreetmap.org/copyright");
+  await osm.close();
 
   // Still the embed, with the map's moves kept in its own entry.
   await expect(page).toHaveURL(/\/embed\?/);
   expect(await page.evaluate(() => history.length)).toBe(historyLength);
-  await expect(page.locator(".leaflet-control-attribution a").first()).toHaveAttribute(
-    "target",
-    "_blank",
-  );
+
+  // The popup's close button is a link to "#close", and only closes it.
+  await page.locator(".leaflet-popup-close-button").click();
+  await expect(page.locator(".leaflet-popup")).toHaveCount(0);
+  expect(page.context().pages()).toHaveLength(1);
+});
+
+test("an embed with a view in its URL still says a diocese isn't covered, with no map first", async ({
+  page,
+}) => {
+  await page.goto("/embed?diocese=not-a-diocese&lat=43&lng=-76&z=10");
+
+  await expect(page.getByRole("heading", { name: "This diocese isn’t supported yet" })).toBeVisible({
+    timeout: 15_000,
+  });
+  await expect(page.locator(".leaflet-container")).toHaveCount(0);
+});
+
+test("the embed leaves nothing for the full site's map links to restore", async ({ page }) => {
+  await openEmbed(page);
+  await page.getByRole("button", { name: "Zoom in" }).click();
+  await expect
+    .poll(() => new URL(page.url()).searchParams.get("lat"), { timeout: 5_000 })
+    .not.toBeNull();
+
+  expect(await page.evaluate(() => sessionStorage.getItem("carlo:home-search"))).toBeNull();
 });
 
 test("an embed for a diocese the site doesn't cover says so", async ({ page }) => {
@@ -108,4 +142,22 @@ test("an embed for a diocese the site doesn't cover says so", async ({ page }) =
 test("an embed without a diocese shows every church", async ({ page }) => {
   await openEmbed(page, "/embed");
   await expect(page.getByRole("link", { name: /Powered by Project Carlo/ })).toBeVisible();
+});
+
+test("the embed's map leaves the wheel to the host page until it's clicked", async ({ page }) => {
+  await openEmbed(page);
+  const box = (await page.locator(".leaflet-container").boundingBox())!;
+  const view = () => new URL(page.url()).searchParams.get("z");
+
+  await page.mouse.move(box.x + box.width * 0.75, box.y + box.height * 0.75);
+  await page.mouse.wheel(0, -600);
+  await page.waitForTimeout(1_000);
+  expect(view()).toBeNull();
+
+  await page.mouse.down();
+  await page.mouse.up();
+  await page.waitForTimeout(1_000);
+  const before = view();
+  await page.mouse.wheel(0, -600);
+  await expect.poll(view, { timeout: 5_000 }).not.toBe(before);
 });

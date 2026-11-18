@@ -349,6 +349,29 @@ def test_a_churchs_diocese_is_its_parishs_in_the_csv(db: Path, tmp_path: Path) -
     assert church["diocese"] == "rochester"
 
 
+def test_a_parish_off_the_csv_keeps_the_diocese_of_its_record(db: Path, tmp_path: Path) -> None:
+    # Taken off parishes.csv, but still served from the published database
+    # until a reviewed weekly run publishes the removal.
+    dest = tmp_path / "frontend.json.gz"
+    parishes = tmp_path / "parishes.csv"
+    parishes.write_text("slug,name,website,diocese\n", encoding="utf-8")
+    record = tmp_path / "dioceses" / "syracuse" / "parishes" / "test-parish.md"
+    record.parent.mkdir(parents=True)
+    record.write_text("---\nname: Test Parish\n---\n", encoding="utf-8")
+
+    extract(db, dest, build_date=BUILD_DATE, parishes_csv=parishes,
+            dioceses_dir=tmp_path / "dioceses")
+
+    [church] = read_snapshot(dest.read_bytes())["churches"]
+    assert church["diocese"] == "syracuse"
+
+
+def test_extract_refuses_a_missing_parishes_csv(db: Path, tmp_path: Path) -> None:
+    with pytest.raises(FileNotFoundError, match="parishes.csv"):
+        extract(db, tmp_path / "frontend.json.gz", build_date=BUILD_DATE,
+                parishes_csv=tmp_path / "parishes.csv")
+
+
 def test_snapshot_bytes_are_deterministic(db: Path, tmp_path: Path) -> None:
     first = tmp_path / "a.json.gz"
     second = tmp_path / "b.json.gz"
