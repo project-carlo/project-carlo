@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import type { ChurchBase } from "@carlo/core";
+import { type ChurchBase, countChurches, isAdorationChapel } from "@carlo/core";
 import { cityPath, citySlugFor, type City } from "@/lib/cities";
 import { churchPath } from "@/lib/seo";
 import { CHURCH_LIST, SOURCE_PHRASE, UNNAMED_CHURCH } from "@/copy";
 import { SiteHeader } from "@/components/SiteHeader";
 
 /** What the all-churches index lists for each church. */
-export type ChurchIndexEntry = Pick<ChurchBase, "slug" | "name" | "city" | "state">;
+export type ChurchIndexEntry = Pick<ChurchBase, "slug" | "name" | "city" | "state" | "kind">;
 
 /** The city pages, as `cityIndex` builds them, so headings match their titles. */
 export type ChurchIndexCity = Pick<City, "slug" | "label" | "churches">;
@@ -65,7 +65,7 @@ export function ChurchIndexContent({
             {CHURCH_LIST}
           </h1>
           <p className="mt-4 font-serif text-[1rem] text-ink-soft">
-            Mass, Confession, and Adoration times at {churches.length} Catholic
+            Mass, Confession, and Adoration times at {countChurches(churches)} Catholic
             churches, {SOURCE_PHRASE}.
           </p>
         </section>
@@ -118,6 +118,11 @@ export function ChurchIndexContent({
                     >
                       {church.name ?? UNNAMED_CHURCH}
                     </Link>
+                    {isAdorationChapel(church) ? (
+                      <span className="ml-2 font-serif text-[0.9rem] italic text-ink-faint">
+                        Adoration chapel
+                      </span>
+                    ) : null}
                   </li>
                 ))}
               </ul>

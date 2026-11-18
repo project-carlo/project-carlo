@@ -13,6 +13,7 @@ from typing import Any
 from pdf_extract.address import format_address
 from pdf_extract.blobstore import bulletin_pdf_key, get_store
 from pdf_extract.bulletin_week import week_order_sql
+from pdf_extract.model import ACCESS_KINDS, CONTINUOUS
 from pdf_extract.paths import DATA_DIR, ROOT
 from pdf_extract.pdf_truncate import ensure_truncated_pdf, max_pages_for
 from pdf_extract.timeparse import minutes_to_time, normalize_event_date, time_to_minutes
@@ -103,8 +104,8 @@ def get_parish_by_name(conn: sqlite3.Connection, name: str) -> sqlite3.Row | Non
 def list_churches(conn: sqlite3.Connection, parish_id: int) -> list[sqlite3.Row]:
     """The parish's churches, retired ones (no longer in churches.csv) left out."""
     return conn.execute(
-        "SELECT id, parish_id, slug, name, address_line1, address_line2, city, state, postal_code"
-        " FROM church WHERE parish_id = ? AND retired_at IS NULL ORDER BY id",
+        "SELECT id, parish_id, slug, name, address_line1, address_line2, city, state, postal_code,"
+        " kind FROM church WHERE parish_id = ? AND retired_at IS NULL ORDER BY id",
         (parish_id,),
     ).fetchall()
 
@@ -212,9 +213,10 @@ def event_row_values(conn: sqlite3.Connection, row: dict[str, Any]) -> tuple | N
     """Column values for an event row, from its extracted (string) form.
 
     Returns (church_id, event_type, event_kind, day_of_week, date, start_time,
-    end_time, cancelled, page_number, note), or None with a logged warning when
-    the row cannot be stored: an unknown church, or a start time or date the
-    parsers cannot read.
+    end_time, cancelled, page_number, note, access, open_from, open_until), or
+    None with a logged warning when the row cannot be stored: an unknown church,
+    or a start time or date the parsers cannot read. A continuous chapel has no
+    start time; its `access` and unlocked hours are kept.
     """
     church_slug = row.get("church_slug")
     church = conn.execute(
@@ -224,6 +226,19 @@ def event_row_values(conn: sqlite3.Connection, row: dict[str, Any]) -> tuple | N
         LOGGER.warning("Skipping event: unknown church %r", church_slug)
         return None
 
+    event_kind = row.get("event_kind", "")
+    page_number = row.get("page_number")
+    note_raw = row.get("note")
+    note = note_raw.strip() if isinstance(note_raw, str) and note_raw.strip() else None
+    page = page_number if isinstance(page_number, int) else None
+    if event_kind == CONTINUOUS:
+        access = row.get("access") if row.get("access") in ACCESS_KINDS else "not_stated"
+        hours = [time_to_minutes(row.get(k)) for k in ("open_from", "open_until")]
+        if None in hours or access != "code_after_hours":
+            hours = [None, None]
+        return (church["id"], "adoration", CONTINUOUS, None, None, None, None, 0, page, note,
+                access, *hours)
+
     start_minutes = time_to_minutes(row.get("start_time"))
     if start_minutes is None:
         LOGGER.warning(
@@ -232,7 +247,6 @@ def event_row_values(conn: sqlite3.Connection, row: dict[str, Any]) -> tuple | N
         )
         return None
 
-    event_kind = row.get("event_kind", "")
     event_date = None
     if event_kind == "specific_date":
         event_date = normalize_event_date(row.get("date"))
@@ -243,8 +257,6 @@ def event_row_values(conn: sqlite3.Connection, row: dict[str, Any]) -> tuple | N
             )
             return None
 
-    page_number = row.get("page_number")
-    note_raw = row.get("note")
     return (
         church["id"],
         row.get("event_type", ""),
@@ -254,8 +266,9 @@ def event_row_values(conn: sqlite3.Connection, row: dict[str, Any]) -> tuple | N
         start_minutes,
         time_to_minutes(row.get("end_time")),
         int(bool(row.get("cancelled", False))),
-        page_number if isinstance(page_number, int) else None,
-        note_raw.strip() if isinstance(note_raw, str) and note_raw.strip() else None,
+        page,
+        note,
+        None, None, None,
     )
 
 
@@ -272,8 +285,9 @@ def _insert_events(
         conn.execute(
             """INSERT INTO event(
                    bulletin_id, church_id, event_type, event_kind, day_of_week, date,
-                   start_time, end_time, cancelled, page_number, note
-               ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                   start_time, end_time, cancelled, page_number, note, access, open_from,
+                   open_until
+               ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
             (bulletin_id, *values),
         )
         stored += 1
@@ -317,7 +331,8 @@ def load_events(
     sql = """SELECT e.id, e.bulletin_id, c.slug AS church_slug,
                     b.source_url AS bulletin_source_url,
                     e.event_type, e.event_kind, e.day_of_week, e.date,
-                    e.start_time, e.end_time, e.cancelled, e.page_number, e.note
+                    e.start_time, e.end_time, e.cancelled, e.page_number, e.note,
+                    e.access, e.open_from, e.open_until
              FROM event e
              JOIN church c ON c.id = e.church_id
              JOIN bulletin b ON b.id = e.bulletin_id"""
@@ -334,6 +349,12 @@ def load_events(
         row["start_time"] = minutes_to_time(row["start_time"])
         row["end_time"] = minutes_to_time(row["end_time"])
         row["cancelled"] = bool(row["cancelled"])
+        if row["access"] is None:
+            for key in ("access", "open_from", "open_until"):
+                del row[key]
+        else:
+            row["open_from"] = minutes_to_time(row["open_from"])
+            row["open_until"] = minutes_to_time(row["open_until"])
         out.append(row)
     return out
 
@@ -374,7 +395,12 @@ def read_bulletin_pdf(parish_slug: str, content_hash: str) -> bytes | None:
 def church_list_for_prompt(
     conn: sqlite3.Connection, parish_id: int
 ) -> list[dict[str, Any]]:
-    """A parish's known churches in the {slug, name, address} shape the prompts take."""
+    """A parish's known churches in the {slug, name, address} shape the prompts take.
+
+    An Adoration chapel at its own address (`church.kind`) also says so, as
+    `"kind": "adoration_chapel"`; a church says nothing more, so its parish's
+    list reads as it did before chapels were listed.
+    """
     return [
         {
             "slug": r["slug"],
@@ -383,6 +409,7 @@ def church_list_for_prompt(
                 r["address_line1"], r["address_line2"],
                 r["city"], r["state"], r["postal_code"],
             ),
+            **({"kind": r["kind"]} if r["kind"] not in (None, "church") else {}),
         }
         for r in list_churches(conn, parish_id)
     ]

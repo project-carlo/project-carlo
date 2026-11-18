@@ -9,7 +9,12 @@ import pytest
 
 from pdf_extract.db import _migration_files, create_db, migrate
 from pdf_extract.schedule.edits import EditError, edit_entry
-from pdf_extract.schedule.entries import BOUND_COLUMNS, ENTRY_COLUMNS, parse_entry
+from pdf_extract.schedule.entries import (
+    ACCESS_COLUMNS,
+    BOUND_COLUMNS,
+    ENTRY_COLUMNS,
+    parse_entry,
+)
 from pdf_extract.schedule.policy import (
     APPLIED,
     DUPLICATE,
@@ -281,8 +286,8 @@ def test_migration_rekeys_history_and_current_without_changing_content_or_refere
         if number < 9:
             (previous / path.name).write_text(path.read_text())
     conn = connect_db(tmp_path / "old.db")
-    # The old application's entries had no date bounds.
-    old_columns = tuple(c for c in ENTRY_COLUMNS if c not in BOUND_COLUMNS)
+    # The old application's entries had no date bounds or access.
+    old_columns = tuple(c for c in ENTRY_COLUMNS if c not in (*BOUND_COLUMNS, *ACCESS_COLUMNS))
     old_app = pytest.MonkeyPatch()
     old_app.setattr("pdf_extract.schedule.entries.ENTRY_COLUMNS", old_columns)
     old_app.setattr("pdf_extract.schedule.store.ENTRY_COLUMNS", old_columns)

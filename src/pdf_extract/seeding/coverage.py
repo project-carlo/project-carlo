@@ -33,7 +33,7 @@ from __future__ import annotations
 from datetime import date
 from typing import Any
 
-from pdf_extract.model import DAYS, normalize_as_of
+from pdf_extract.model import CONTINUOUS, DAYS, normalize_as_of
 from pdf_extract.seeding.files import (
     EXCLUDE,
     HISTORY,
@@ -90,6 +90,13 @@ def matches(entry: Any, event: dict[str, Any]) -> bool:
         return False
     if entry.get("event_type") != event.get("event_type"):
         return False
+    if entry.get("event_kind") == CONTINUOUS:
+        # A chapel open 24 hours is what history read as whole days (00:00 to the
+        # evening's end) or as a chapel of its own.
+        church = entry.get("church_slug")
+        return (not church or not event.get("church_slug") or church == event["church_slug"]) \
+            and (event.get("event_kind") == CONTINUOUS
+                 or (event.get("start_time") == "00:00" and (event.get("end_time") or "") >= "23:00"))
     if not event.get("start_time") or entry.get("start_time") != event["start_time"]:
         return False
     church = entry.get("church_slug")

@@ -3,9 +3,16 @@
  * and JSON-LD (schema.org) builders used by the prerendered church pages and
  * (in a later phase) the client-rendered routes.
  */
+// Types only: vite.config.ts loads this module with Node, which can't resolve
+// @carlo/core's runtime imports.
 import type { ChurchBase, ChurchDetail } from "@carlo/core";
 import { cityPath, type City, type CityLink } from "./cities";
 import { CHURCH_LIST, SOURCE_NAMES, SOURCE_PHRASE, UNNAMED_CHURCH } from "../copy";
+
+/** An Adoration chapel at its own address (core's `isAdorationChapel`): no Mass or Confession. */
+function isChapel(place: Pick<ChurchBase, "kind">): boolean {
+  return place.kind === "adoration_chapel";
+}
 
 export const SITE_NAME = "Project Carlo";
 export const SITE_LOCALE = "en_US";
@@ -60,7 +67,9 @@ export function churchLocation(church: ChurchDetail): string {
 export function buildChurchTitle(church: ChurchDetail): string {
   const name = church.name?.trim() || UNNAMED_CHURCH;
   const place = church.city?.trim() || church.state?.trim();
-  return `${place ? `${name}, ${place}` : name} · Mass Times · ${SITE_NAME}`;
+  // An Adoration chapel at its own address has no Mass or Confession.
+  const times = isChapel(church) ? "Adoration Times" : "Mass Times";
+  return `${place ? `${name}, ${place}` : name} · ${times} · ${SITE_NAME}`;
 }
 
 /** SERP-snippet description for a church page (kept under ~155 chars). */
@@ -71,7 +80,10 @@ export function buildChurchDescription(church: ChurchDetail): string {
   const from = church.schedule_source
     ? SOURCE_NAMES[church.schedule_source]
     : "the parish’s weekly bulletin";
-  return `Mass, Confession, and Adoration times for ${name}${where}, from ${from}.`;
+  const services = isChapel(church)
+    ? "Adoration times"
+    : "Mass, Confession, and Adoration times";
+  return `${services} for ${name}${where}, from ${from}.`;
 }
 
 /** Canonical path of the prerendered all-churches index page. */
@@ -217,11 +229,17 @@ export function buildCityTitle(city: Pick<City, "label">): string {
 export function buildCityDescription(
   city: Pick<City, "label" | "churches">,
 ): string {
-  const count = city.churches.length;
+  const count = city.churches.filter((church) => !isChapel(church)).length;
+  const chapels = city.churches.length - count;
   const churches =
-    count === 1
+    city.churches.length === 1
       ? `${city.churches[0].name?.trim() || "the Catholic church"}`
-      : `the ${count} Catholic churches`;
+      : `the ${count === 1 ? "Catholic church" : `${count} Catholic churches`}` +
+        (chapels === 0
+          ? ""
+          : chapels === 1
+            ? " and Adoration chapel"
+            : ` and ${chapels} Adoration chapels`);
   return `Mass, Confession, and Adoration times at ${churches} in ${city.label} and nearby churches, ${SOURCE_PHRASE}.`;
 }
 

@@ -28,7 +28,9 @@ from pdf_extract.schedule.entries import (
 )
 from pdf_extract.schedule.store import ADD, DELETE, MODIFY
 
-POLICY_VERSION = "2"
+# 3: continuous chapels, and notes holding a phone number, email address or door
+# code rejected as `invalid_entry` (`model.private_detail`).
+POLICY_VERSION = "3"
 DECIDED_BY = f"policy@{POLICY_VERSION}"
 
 APPLIED = "applied"

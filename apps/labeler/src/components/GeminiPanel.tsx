@@ -67,6 +67,12 @@ function SourceLine({ source }: { source: BulletinDetail["gemini"]["source"] }) 
 }
 
 function describe(g: GeminiRow): string {
+  if (g.event_kind === "continuous") {
+    const hours = g.open_from && g.open_until
+      ? `, unlocked ${formatTime(g.open_from)}–${formatTime(g.open_until)}`
+      : "";
+    return `Every day, 24h (${(g.access ?? "not_stated").replace(/_/g, " ")}${hours})`;
+  }
   const when =
     g.event_kind === "weekly"
       ? (g.day_of_week ?? g.raw.day_of_week ?? "?")

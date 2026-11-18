@@ -12,7 +12,9 @@ every provider, and can be served from a prompt cache, while `CONTEXT_TEMPLATE`
 
 `flatten_events` turns a payload into the pipeline's flat event dicts, with the
 qualifiers in the flat form PR 22 uses (`weeks_of_month`, `season_start_month`,
-...) plus `exclude_weeks`; `model.gemini_rows` reads that form into
+...) plus `exclude_weeks`. A chapel open 24 hours (`continuous_adoration`) is
+one event of kind `continuous`, with no day, date or times and its `access`,
+`open_from` and `open_until`; `model.gemini_rows` reads that form into
 label rows.
 """
 
@@ -25,7 +27,13 @@ from typing import Any, Literal
 from pydantic import BaseModel, ConfigDict, Field
 
 from pdf_extract.classifiers.schedule_policy import POLICY
-from pdf_extract.model import DAYS_IN_MONTH, WEEKS_OF_MONTH, canonical_weeks
+from pdf_extract.model import (
+    ACCESS_KINDS,
+    CONTINUOUS,
+    DAYS_IN_MONTH,
+    WEEKS_OF_MONTH,
+    canonical_weeks,
+)
 from pdf_extract.schedule_extraction import _normalize_published_date, _valid_str
 
 MONTHS = (
@@ -155,6 +163,48 @@ class DateSlot(BaseModel):
     )
 
 
+Access = Literal["not_stated", "code_after_hours", "code", "arrangement"]
+
+
+class ContinuousAdoration(BaseModel):
+    """A standing Adoration chapel open every day, around the clock, at one church."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    church_slug: str = Field(description=_SLUG_DESC)
+    access: Access = Field(
+        description=(
+            "How a visitor gets in, as the bulletin says: `not_stated` when it says "
+            "nothing; `code_after_hours` when a door code is needed at some hours only; "
+            "`code` when a code is needed at every hour; `arrangement` when it is open "
+            "only to those who arrange it with the parish (sign up, contact the office)."
+        ),
+    )
+    open_from: str | None = Field(
+        default=None,
+        description=(
+            "`code_after_hours` only: when the chapel is unlocked from, if the bulletin "
+            "gives the hours. 'Code needed 9:00 PM-6:00 AM' is open from `6:00 AM`. "
+            + _TIME_DESC
+        ),
+    )
+    open_until: str | None = Field(
+        default=None,
+        description=(
+            "`code_after_hours` only: when the chapel is unlocked until, e.g. `9:00 PM`. "
+            + _TIME_DESC
+        ),
+    )
+    page_number: int | None = Field(default=None, description=_PAGE_DESC)
+    note: str | None = Field(
+        default=None,
+        description=(
+            "The chapel's name or a short exception ('Adoration Chapel', 'closed during "
+            "Mass'). Never a door code, phone number, email address or person's name."
+        ),
+    )
+
+
 class WeeklySchedule(BaseModel):
     """Recurring weekly lines grouped by Mass, Confession, and Adoration."""
 
@@ -202,6 +252,13 @@ class QualifiedSchedulePayload(BaseModel):
     cancellations: Cancellations = Field(
         default_factory=Cancellations,
         description="Include cancelled events here.",
+    )
+    continuous_adoration: list[ContinuousAdoration] = Field(
+        default_factory=list,
+        description=(
+            "Adoration chapels open every day around the clock, one per church. Not "
+            "repeated in `weekly_schedule`."
+        ),
     )
     church_list_needs_review: bool = Field(
         default=False,
@@ -360,9 +417,39 @@ def flatten_events(raw: QualifiedSchedulePayload | dict[str, Any]) -> dict[str, 
                     **_season_fields(item.get("season") if weekly else None),
                 })
 
+    events.extend(_continuous_events(raw.get("continuous_adoration")))
     return {
         "events": events,
         "church_list_needs_review": bool(raw.get("church_list_needs_review", False)),
         "published_date": _normalize_published_date(raw.get("published_date")),
         "wrong_bulletin": bool(raw.get("wrong_bulletin", False)),
     }
+
+
+def _continuous_events(items: Any) -> list[dict[str, Any]]:
+    """The `continuous_adoration` chapels as flat events: kind `continuous`, no day or times."""
+    out = []
+    for item in items if isinstance(items, list) else []:
+        if not isinstance(item, dict) or not _valid_str(item.get("church_slug")):
+            continue
+        page, note = item.get("page_number"), item.get("note")
+        access = item.get("access")
+        out.append({
+            "church_slug": item["church_slug"],
+            "type": "adoration",
+            "kind": CONTINUOUS,
+            "day_of_week": None,
+            "date": None,
+            "start_time": None,
+            "end_time": None,
+            "cancelled": False,
+            "page_number": page if isinstance(page, int) else None,
+            "note": note.strip() if isinstance(note, str) and note.strip() else None,
+            "weeks_of_month": [],
+            "exclude_weeks": False,
+            **_season_fields(None),
+            "access": access if access in ACCESS_KINDS else "not_stated",
+            **{key: item[key] if _valid_str(item.get(key)) else None
+               for key in ("open_from", "open_until")},
+        })
+    return out

@@ -61,6 +61,15 @@ one, a dated cancellation, and an open question, each rationale citing its rule:
     "rationale": "R1, R16: the newest bulletin cancels one date of the weekly Monday Mass."
   },
   {
+    "decision": "include", "status": "settled", "page": 1,
+    "entry": {"church_slug": "st-marys-oswego", "event_type": "adoration",
+              "event_kind": "continuous", "start_time": null, "access": "code_after_hours",
+              "open_from": "06:00", "open_until": "21:00", "note": "Adoration Chapel"},
+    "sources": [{"source": "agent", "bulletin": "9f2c41d0", "page": 1,
+                 "said": "Adoration Chapel open 24/7; access code needed 9:00 PM-6:00 AM"}],
+    "rationale": "R46: a standing chapel open around the clock; a code is needed overnight."
+  },
+  {
     "decision": "exclude", "status": "settled", "page": 2,
     "entry": {"church_slug": "st-marys-oswego", "event_type": "mass",
               "day_of_week": "Monday", "start_time": "12:15",
@@ -150,7 +159,13 @@ writes nothing if a check fails. `pnpm seed slot --help` has the full syntax.
   `08:00,10:30`, or `4pm`); `@church` (a slug, or a unique part of one of the parish's;
   needed when it has several); weeks (`first`, `2nd,4th`, `last`, or `except=last` for
   the weeks it skips); `season=9-5` or `season=9/15-5/31`; `cancelled`; and last,
-  `note=` with the rest of the text. Several days or times make one slot each.
+  `note=` with the rest of the text. Several days or times make one slot each. A chapel
+  open 24 hours (R46) is `adoration 24h` with no day or time, plus `access=not-stated`
+  (the default), `code-after-hours`, `code` or `arrangement`, and `open=06:00-21:00` for
+  a code-after-hours chapel's unlocked hours: its entry is `event_kind: "continuous"`
+  with null times and `access`, `open_from`, `open_until`.
+- A **note** never holds a person's name, a phone number, an email address or a door
+  code: `seed check` refuses the last three, and the reviewer looks for names.
 - A **source** is `"HEAD: what it said"`. The head is `latest p2` (the newest listed
   bulletin), hash prefixes `9f2c41d0,1ab3e7c2 p2` (one source each), `web URL`,
   `history`, or a call's id (`c1 p3`). A slot's `page` defaults to its source's page on

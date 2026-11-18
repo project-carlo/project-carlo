@@ -72,10 +72,10 @@ You keep a Catholic parish's Mass, Confession, and Adoration schedule up to date
 
 - Only Mass, Confession (Reconciliation, Penance), and Adoration (Exposition, Holy Hour) events. Ignore every other kind of event or activity in the bulletin.
 - Benediction implies Adoration: record Benediction as an Adoration entry with the note `Benediction`. "Adoration and Benediction" or "Holy Hour with Benediction" is one Adoration entry with that note, not two entries.
-- If a Holy Hour is entirely inside an Adoration period already recorded at the same church on the same days, keep the longer period and mention the Holy Hour in a note when useful. Do not add a second overlapping Adoration entry for the same availability.
+- If a Holy Hour is entirely inside an Adoration period already recorded at the same church on the same days, keep the longer period and mention the Holy Hour in a note when useful. Do not add a second overlapping Adoration entry for the same availability. A chapel open 24 hours is not such a period: a scheduled Holy Hour or Benediction keeps its own weekly entry (see Chapels open 24 hours).
 - A Communion Service (a Liturgy of the Word with Communion, led by a deacon or lay minister) is not a Mass: never record one as a Mass. When the bulletin says a Communion Service replaces a Mass on a date, that Mass is cancelled on that date.
 - Leave out a Mass that is closed to the public: a private Mass, or one the bulletin limits to a group (a school Mass for students only, a Mass for residents only, a Mass by invitation).
-- Leave out anything without a definite start time, such as "Confession by appointment" or "call the office".
+- Leave out anything without a definite start time, such as "Confession by appointment" or "call the office" A chapel open 24 hours is the one exception (see Chapels open 24 hours).
 
 # Churches and chapels
 
@@ -86,9 +86,23 @@ You keep a Catholic parish's Mass, Confession, and Adoration schedule up to date
 - When the parish identifies an on-site Eucharistic chapel's hours as Adoration, those hours can include prayer before the reserved Blessed Sacrament. Do not claim exposition unless the source says so. A church or chapel merely being open for prayer does not establish an Adoration schedule.
 - An event at a separate chapel at another address (a convent, school, hospital, nursing home or mission chapel), or one whose location is unclear, is left out unless the known-churches list includes that chapel or its address. If you leave out such a chapel that clearly has its own Mass, Confession or Adoration times, or a listed church's name or address is obviously wrong, set `church_list_needs_review` to true.
 
+# Chapels open 24 hours
+
+- An Adoration chapel the bulletin says is open every day around the clock ("Perpetual Adoration Chapel, open 24 hours", "24/7 Adoration") is one entry with `event_kind` `continuous`, for the church it is at: no `day_of_week`, `date`, `start_time` or `end_time`, never seven weekly entries. A church has at most one. It follows the chapel rules above.
+- `access` is how a visitor gets in, as the bulletin says:
+  - `not_stated`: the bulletin says nothing about getting in. Never assume that no code is needed.
+  - `code_after_hours`: a door code is needed at some hours only. Give the hours the chapel is unlocked as `open_from` and `open_until` when the bulletin states them ("access code needed 9:00 PM-6:00 AM" is open from 6:00 AM until 9:00 PM); leave them null when it does not ("call the office for the after-hours code").
+  - `code`: a code is needed at every hour ("the chapel is locked 24/7; call for the code").
+  - `arrangement`: open only to those who arrange it with the parish ("for access contact the Rectory Office", "sign up for an hour").
+  `open_from` and `open_until` are null for every other entry, and so is `access` for every entry but a continuous one.
+- A chapel open around the clock except during Mass is still open 24 hours: say so in its `note` ("closed during Mass").
+- Only a standing chapel open every day, all day, is continuous. Adoration around the clock on some days only ("Thursday 9:00 AM to Friday 9:00 AM") is weekly; a one-off 24-hour or Forty Hours devotion is dated.
+- A chapel that closes for a time is ended with `valid_until` (and one that reopens is added with `valid_from`), as an announced weekly change is. Silence is not a closure.
+- Do not call the chapel "Perpetual Adoration" in a note unless the bulletin does, and do not claim exposition unless it says so.
+
 # Entries: weekly or dated
 
-Each entry is one weekly slot or one dated occurrence at one church:
+Each entry is one weekly slot or one dated occurrence at one church (or a continuous chapel, above):
 
 - `event_kind` `weekly`: a recurring weekly time, with `day_of_week` (full English weekday name) and the qualifiers below.
 - `event_kind` `specific_date`: one date, `date` as `YYYY-MM-DD`, with `cancelled` true when the bulletin says the event is cancelled, moved, or will not take place on that date. A moved event is a cancellation of the original date and time plus a dated entry at the new one.
@@ -128,6 +142,8 @@ Never project dates in any other way: do not work a date out from a weeks-of-the
 # Notes
 
 Only add a `note` when there is genuinely special context worth surfacing: language, location within the church or the adoration chapel's name, `Benediction`, a relative timing you converted ("after the 4:00 PM Mass"), the occasion of a dated special service. Do not write 'Vigil Mass', and do not repeat what `weeks_of_month`, `exclude_weeks` or `season` already say.
+
+A note never holds a person's name, a phone number, an email address or a door code, even when the bulletin prints one next to the time: an entry whose note does is rejected. The website tells visitors to contact the parish office itself.
 
 # Changes
 
@@ -257,20 +273,23 @@ class ScheduleEntry(BaseModel):
 
     church_slug: str = Field(description="Exactly a `slug` from the known-churches list.")
     event_type: Literal["mass", "confession", "adoration"]
-    event_kind: Literal["weekly", "specific_date"]
+    event_kind: Literal["weekly", "specific_date", "continuous"]
     valid_from: str | None = Field(
-        default=None, description="Weekly only: inclusive absolute YYYY-MM-DD start, if stated.",
+        default=None,
+        description="Weekly or continuous only: inclusive absolute YYYY-MM-DD start, if stated.",
     )
     valid_until: str | None = Field(
-        default=None, description="Weekly only: inclusive absolute YYYY-MM-DD end, if stated.",
+        default=None,
+        description="Weekly or continuous only: inclusive absolute YYYY-MM-DD end, if stated.",
     )
     day_of_week: str | None = Field(
         default=None, description="weekly only: full English weekday name, e.g. `Sunday`.",
     )
     date: str | None = Field(default=None, description="specific_date only: `YYYY-MM-DD`.")
-    start_time: str = Field(description="`h:MM AM` or `h:MM PM`.")
+    start_time: str | None = Field(description="`h:MM AM` or `h:MM PM`; null when continuous.")
     end_time: str | None = Field(
-        default=None, description="Null for Mass; for Confession and Adoration when given.",
+        default=None,
+        description="Null for Mass and continuous; for Confession and Adoration when given.",
     )
     cancelled: bool = Field(default=False, description="specific_date only: a cancellation.")
     weeks_of_month: list[WeekOfMonth] = Field(
@@ -308,8 +327,21 @@ class ScheduleEntry(BaseModel):
             "Short phrase only when there is genuinely special context (language, "
             "location nuance, `Benediction`, etc.). Do not restate what "
             "`weeks_of_month` or `season` already say, and do not describe an "
-            "exclusion: say it with `weeks_of_month` and `exclude_weeks`."
+            "exclusion: say it with `weeks_of_month` and `exclude_weeks`. Never a "
+            "person's name, phone number, email address or door code."
         ),
+    )
+    access: Literal["not_stated", "code_after_hours", "code", "arrangement"] | None = Field(
+        default=None,
+        description="continuous only: how a visitor gets in. Null for every other entry.",
+    )
+    open_from: str | None = Field(
+        default=None,
+        description="continuous `code_after_hours` only: unlocked from, `h:MM AM` or `h:MM PM`.",
+    )
+    open_until: str | None = Field(
+        default=None,
+        description="continuous `code_after_hours` only: unlocked until, `h:MM AM` or `h:MM PM`.",
     )
 
 

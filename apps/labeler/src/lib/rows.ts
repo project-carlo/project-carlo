@@ -57,6 +57,17 @@ export function blankRow(
 /** A Gemini row accepted as ground truth. Unreadable fields stay empty for the labeller to fill. */
 export function fromGemini(g: GeminiRow): EditorRow {
   const kind = g.event_kind ?? "weekly";
+  if (kind === "continuous") {
+    return {
+      ...blankContinuous(g.church_slug, g.page_number),
+      gemini_id: g.id,
+      note: g.note,
+      access: g.access ?? "not_stated",
+      open_from: g.open_from ?? null,
+      open_until: g.open_until ?? null,
+      origin: "gemini",
+    };
+  }
   return {
     id: newId(),
     gemini_id: g.id,
@@ -74,6 +85,31 @@ export function fromGemini(g: GeminiRow): EditorRow {
     page_number: g.page_number,
     note: g.note,
     origin: "gemini",
+    optional: null,
+  };
+}
+
+/** A chapel open 24 hours: Adoration, no day, date or times, access not stated yet. */
+function blankContinuous(church: string, page: number | null): EditorRow {
+  return {
+    id: newId(),
+    church_slug: church,
+    event_type: "adoration",
+    event_kind: "continuous",
+    day_of_week: null,
+    date: null,
+    start_time: "",
+    end_time: null,
+    cancelled: false,
+    weeks_of_month: [],
+    exclude_weeks: false,
+    season: null,
+    page_number: page,
+    note: null,
+    access: "not_stated",
+    open_from: null,
+    open_until: null,
+    origin: "human",
     optional: null,
   };
 }
@@ -98,6 +134,20 @@ export function editRow(row: EditorRow, patch: Patch): EditorRow {
   if (!changed.length) return row;
   const edited = changed.some((k) => k !== "optional");
   const next: EditorRow = { ...row, ...patch, origin: edited ? editedOrigin(row.origin) : row.origin };
+  if (next.event_kind === "continuous") {
+    // A chapel open 24 hours is Adoration with no day, date or times of its own.
+    Object.assign(next, {
+      event_type: "adoration", day_of_week: null, date: null, start_time: "", end_time: null,
+      cancelled: false, weeks_of_month: [], season: null,
+      access: next.access ?? "not_stated",
+    });
+    if (next.access !== "code_after_hours") Object.assign(next, { open_from: null, open_until: null });
+    delete next.pending_split;
+  } else {
+    delete next.access;
+    delete next.open_from;
+    delete next.open_until;
+  }
   if (next.event_kind === "specific_date") {
     next.day_of_week = null;
     next.weeks_of_month = [];
@@ -256,12 +306,38 @@ export function rowProblems(row: EditorRow): string[] {
   if (!row.church_slug) problems.push("church");
   if (row.event_kind === "weekly" && !row.day_of_week) problems.push("day");
   if (row.event_kind === "specific_date" && !row.date) problems.push("date");
+  if (row.event_kind === "continuous") {
+    if (!row.open_from !== !row.open_until) problems.push("unlocked hours");
+    return problems;
+  }
   if (minutesOf(row.start_time) === null) problems.push("start time");
   if (row.season && seasonProblems(row.season).length) problems.push("season");
   return problems;
 }
 
 export function toLabelEvent(row: EditorRow): LabelEvent {
+  if (row.event_kind === "continuous") {
+    return {
+      church_slug: row.church_slug,
+      event_type: "adoration",
+      event_kind: "continuous",
+      day_of_week: null,
+      date: null,
+      start_time: null,
+      end_time: null,
+      cancelled: false,
+      weeks_of_month: [],
+      exclude_weeks: false,
+      season: null,
+      page_number: row.page_number,
+      note: row.note?.trim() ? row.note.trim() : null,
+      access: row.access ?? "not_stated",
+      open_from: row.open_from ?? null,
+      open_until: row.open_until ?? null,
+      origin: row.origin,
+      optional: row.optional ?? null,
+    };
+  }
   return {
     church_slug: row.church_slug,
     event_type: row.event_type,
@@ -284,6 +360,7 @@ export function toLabelEvent(row: EditorRow): LabelEvent {
 export function fromLabelEvent(event: LabelEvent): EditorRow {
   return {
     ...event,
+    start_time: event.start_time ?? "",
     exclude_weeks: event.exclude_weeks ?? false,
     optional: event.optional ?? null,
     id: newId(),
