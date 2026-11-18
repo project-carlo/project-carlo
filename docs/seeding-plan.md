@@ -87,15 +87,12 @@ the owner's changes to seed-review's answers. The drafting skill keeps its refer
 (`pnpm data:pull`) and the blob store as the labeler does, and prints compact text by
 default, or `--json` on request. `pnpm seed --help`, which prints the docstring of
 `src/pdf_extract/seeding/cli.py`, is the command reference. It lists the commands by phase:
-batch, draft, read, compare and paid calls.
+batch, draft, read, compare and second opinion.
 
-`M` is `gpt-6.1-sol` or `gemini-3-flash-preview`. `extract` and `ask` refuse
-once a parish has used its call limit (`CARLO_SEED_CALL_LIMIT`, default 4),
-so a confused drafter can't run up the bill. A cache hit doesn't count.
-
-`ask` needs a new small prompt: `POLICY`, the parish's churches, the date,
-then the question, with a schema of `answer`, `page` and `quote`. It is
-versioned and cached like the classifiers.
+The drafter makes no model calls. `seed ask` and `seed extract`, which it could once make
+(limited by `CARLO_SEED_CALL_LIMIT`), were removed for the dispatcher's blind second opinion
+on every seed ([seed-second-opinion-plan.md](seed-second-opinion-plan.md)); `seed opinion
+show|keep` read and answer it. Older files' `ask` and `extract` calls stay readable.
 
 There is no `seed load`: loading is what the pipeline does with approved files.
 `pnpm schedule seed` stays as the low-level loader for one-off fixes.
@@ -214,8 +211,8 @@ or approve the held run by hand.
 ## Implementation decisions
 
 Decisions made while implementing this plan, where it was silent or where the
-code departs from it. The code is `src/pdf_extract/seeding/`, the `ask` prompt
-`classifiers/seed_ask.py`, the drafting skill `.claude/skills/draft-parish-seed/` (with its `rules.md` and
+code departs from it. The code is `src/pdf_extract/seeding/`, the second opinion's prompt
+`classifiers/seed_opinion.py`, the drafting skill `.claude/skills/draft-parish-seed/` (with its `rules.md` and
 `file-format.md`), and the labeler's `views/SeedPage.tsx` and `lib/seeds.ts`.
 
 ### Commands

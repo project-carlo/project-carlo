@@ -27,9 +27,11 @@ from pdf_extract.seeding.checks import entry_problem
 from pdf_extract.seeding.files import (
     AGENT,
     APPROVED,
+    ASK,
     BLOCKED,
     DRAFTING,
     EXCLUDE,
+    EXTRACT,
     HISTORY,
     INCLUDE,
     MIN_HASH_PREFIX,
@@ -701,7 +703,10 @@ def add_question(draft: Draft, args: argparse.Namespace) -> list[str]:
 
 
 def _cites_call(draft: Draft, slot: dict[str, Any]) -> bool:
-    calls = {c.get("id") for c in draft.seed["calls"] if isinstance(c, dict)}
+    """Whether the slot cites an old paid call (`seed ask`/`extract`), whose evidence stays.
+    The second opinion's sources are the dispatcher's, made again on every comparison."""
+    calls = {c.get("id") for c in draft.seed["calls"]
+             if isinstance(c, dict) and c.get("kind") in (ASK, EXTRACT)}
     return any(isinstance(s, dict) and s.get("source") in calls for s in slot.get("sources") or [])
 
 

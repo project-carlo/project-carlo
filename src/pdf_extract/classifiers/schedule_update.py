@@ -510,6 +510,7 @@ class OpenAIScheduleUpdater:
         file_detail: ImageDetail = UPDATE_FILE_DETAIL,
         service_tier: str = UPDATE_SERVICE_TIER,
         max_retries: int = 5,
+        api_key: str | None = None,
     ) -> None:
         if reasoning_effort not in REASONING_EFFORTS:
             raise ClassifierOptionError(f"Unknown reasoning effort {reasoning_effort!r}")
@@ -523,6 +524,9 @@ class OpenAIScheduleUpdater:
         }
         self.service_tier = service_tier
         self._max_retries = max_retries
+        # None: the client reads OPENAI_API_KEY. The factory's dispatcher passes its .env's,
+        # which it keeps out of its own environment.
+        self._api_key = api_key
         self._clients: dict[str, OpenAI] = {}
 
     @property
@@ -538,9 +542,11 @@ class OpenAIScheduleUpdater:
         # Built on first use, so a run with no update-mode parish needs no API key.
         if tier not in self._clients:
             if tier == "flex":
-                client = OpenAI(max_retries=FLEX_MAX_RETRIES, timeout=FLEX_TIMEOUT_SECONDS)
+                client = OpenAI(api_key=self._api_key, max_retries=FLEX_MAX_RETRIES,
+                                timeout=FLEX_TIMEOUT_SECONDS)
             else:
-                client = OpenAI(max_retries=self._max_retries, timeout=REQUEST_TIMEOUT_SECONDS)
+                client = OpenAI(api_key=self._api_key, max_retries=self._max_retries,
+                                timeout=REQUEST_TIMEOUT_SECONDS)
             self._clients[tier] = client
         return self._clients[tier]
 
@@ -587,7 +593,10 @@ class OpenAIScheduleUpdater:
         }
 
     def call(self, pdf_bytes: bytes, context: str) -> RawReply:
-        request = self.request(pdf_bytes, context)
+        return self.send(self.request(pdf_bytes, context))
+
+    def send(self, request: dict[str, Any]) -> RawReply:
+        """One `responses.create`, at flex first, then at the standard tier if flex has no room."""
         tier = self.service_tier
         started = time.monotonic()
         if tier != "flex":

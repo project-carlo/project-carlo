@@ -32,6 +32,12 @@ You change nothing unless the owner asks.
   back, blocked, flagged, or far over the stage's usual quota or turns.
 - **A Run:** `pnpm factory status`, then inspect the jobs that were sent back or raised
   flags, and the PR's list of seed-review's decisions.
+- **The second opinion** on seeds: `inspect <job>` of a seed job shows its parish's
+  (bulletins, cost, differences and how each was resolved), and `inspect --stage seed`
+  totals them with the shares changed, asked and kept. Many kept differences, or keeps
+  seed-review sent back, mean the drafter dismisses luna; many changes on slots the
+  reviewer then finds right mean it defers. `pnpm seed opinion show <parish>` lists one
+  seed's.
 
 Start from what later stages said: a reviewer's send-back problems, a gate's failure or
 the owner's issue answer usually point straight at the mistake. Then read the spec as the

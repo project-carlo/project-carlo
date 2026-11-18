@@ -56,15 +56,19 @@ SLOT_STATUSES = (SETTLED, NEEDS_HUMAN)
 
 # A slot's `sources[].source`: the agent's own reading, extract mode's stored
 # events, a page of the parish's website (with its `url`), or the id of one of
-# the file's `calls`.
+# the file's `calls` (the dispatcher's second opinion, which `second_opinion` holds).
 AGENT = "agent"
 HISTORY = "history"
 WEBSITE = "website"
 SOURCE_KINDS = (AGENT, HISTORY, WEBSITE)
 
+# A call's `kind`. `opinion` is the dispatcher's blind second reading of the bulletins
+# (`second_opinion`); `extract` and `ask` were the drafter's own calls, since removed,
+# and stay readable in older files.
+OPINION = "opinion"
 EXTRACT = "extract"
 ASK = "ask"
-CALL_KINDS = (EXTRACT, ASK)
+CALL_KINDS = (OPINION, EXTRACT, ASK)
 
 # An answered question's `answer.choice`: an option's index, or what the
 # reviewer did instead of picking one.
@@ -82,9 +86,11 @@ SLOT_KEYS = (
 )
 # Keys a file may leave out (files written before they existed have none).
 # `church_list_issues`: churches or chapels the bulletins name that the church
-# list lacks or can't place, for whoever maintains data/churches.csv. A slot's
-# `group`: open questions that share one are one question, answered together.
-OPTIONAL_SEED_KEYS = ("church_list_issues",)
+# list lacks or can't place, for whoever maintains data/churches.csv.
+# `second_opinion`: the dispatcher's blind second reading and its differences from the
+# slots (`second_opinion.py` checks it). A slot's `group`: open questions that share
+# one are one question, answered together.
+OPTIONAL_SEED_KEYS = ("church_list_issues", "second_opinion")
 OPTIONAL_SLOT_KEYS = ("group", "weekly_omission")
 CHURCH_ISSUE_KEYS = ("church", "said", "bulletin", "page")
 # Shortest prefix of a content hash that may name a bulletin inside a file.
@@ -249,11 +255,6 @@ def included_slots(seed: dict[str, Any]) -> list[dict[str, Any]]:
         s for s in _list(seed.get("slots"))
         if isinstance(s, dict) and s.get("status") == SETTLED and s.get("decision") == INCLUDE
     ]
-
-
-def paid_calls(seed: dict[str, Any]) -> int:
-    """External model calls that were not served from a cache."""
-    return sum(1 for c in _list(seed.get("calls")) if isinstance(c, dict) and not c.get("cached"))
 
 
 def calls_cost(seed: dict[str, Any]) -> float:
@@ -589,6 +590,9 @@ def validate_seed(seed: Any, *, parish_slug: str | None = None) -> list[str]:
     errors.extend(_validate_church_issues(seed))
     if errors:
         return errors
+    errors = _validate_second_opinion(seed)
+    if errors:
+        return errors
 
     call_ids = {c["id"] for c in seed["calls"]}
     slots = seed["slots"]
@@ -607,6 +611,159 @@ def validate_seed(seed: Any, *, parish_slug: str | None = None) -> list[str]:
     if errors:
         return errors
     return status_errors(seed)
+
+
+# ── The second opinion ──────────────────────────────────────────────────────
+# `second_opinion` (`second_opinion.py` writes it; file-format.md describes it). The
+# kinds of difference and the reasons one needs no answer are `opinion.KINDS` and
+# `opinion.RESOLVED_REASONS` (a test keeps them the same).
+OPINION_KEYS = (
+    "model", "version", "call", "request_key", "today", "revealed_at", "bulletins",
+    "cost_usd", "entries", "entries_sha256", "differences",
+)
+OPTIONAL_OPINION_KEYS = ("reads", "church_list_needs_review")
+DIFFERENCE_KINDS = ("missing", "extra", "differs", "excluded", "question")
+AUTO_REASONS = ("policy-exclusion", "website", "unseen-bulletins")
+# How a difference was resolved: the drafter kept its slot (with a source and a rule),
+# changed the seed (the difference is gone), asked (a question with the opinion's
+# reading as an option), a reviewer answered its slot, or the opinion could not see what
+# settled it (`auto`, with its reason).
+KEPT, CHANGED, ASKED, ANSWERED, AUTO = "kept", "changed", "asked", "answered", "auto"
+RESOLUTIONS = (KEPT, CHANGED, ASKED, ANSWERED, AUTO)
+_LABEL = re.compile(r"^B[1-9]\d*$")
+
+
+def _validate_second_opinion(seed: dict[str, Any]) -> list[str]:
+    section = seed.get("second_opinion")
+    if section is None:
+        return []
+    where = "second_opinion"
+    if not isinstance(section, dict):
+        return [f"{where} must be an object"]
+    errors = _keys(section, OPINION_KEYS, where, OPTIONAL_OPINION_KEYS)
+    if errors:
+        return errors
+    for key in ("model", "version", "request_key", "entries_sha256"):
+        if not _nonempty(section[key]):
+            errors.append(f"{where}.{key} is required")
+    calls = {c.get("id"): c for c in _list(seed.get("calls")) if isinstance(c, dict)}
+    call = calls.get(section["call"])
+    if call is None or call.get("kind") != OPINION:
+        errors.append(f"{where}.call must name one of the file's calls, of kind {OPINION}")
+    if not isinstance(section["today"], str) or not re.fullmatch(r"\d{4}-\d{2}-\d{2}",
+                                                                  section["today"]):
+        errors.append(f"{where}.today must be YYYY-MM-DD")
+    if not _is_time(section["revealed_at"]):
+        errors.append(f"{where}.revealed_at must be an ISO time")
+    cost = section["cost_usd"]
+    if cost is not None and (not isinstance(cost, (int, float)) or isinstance(cost, bool)):
+        errors.append(f"{where}.cost_usd must be null or a number")
+    labels: set[str] = set()
+    bulletins = section["bulletins"]
+    if not isinstance(bulletins, list) or not bulletins:
+        errors.append(f"{where}.bulletins must list the bulletins it read")
+    else:
+        for i, b in enumerate(bulletins):
+            at = f"{where}.bulletins[{i}]"
+            if not isinstance(b, dict):
+                errors.append(f"{at} must be an object")
+                continue
+            errors.extend(_keys(b, ("label", "content_hash", "fetched_at", "published_date"), at))
+            if not isinstance(b.get("label"), str) or not _LABEL.match(b["label"]):
+                errors.append(f"{at}.label must be B1, B2...")
+            else:
+                labels.add(b["label"])
+            if not is_valid_hash(b.get("content_hash")):
+                errors.append(f"{at}.content_hash must be a full SHA-256 hex digest")
+    entry_ids: set[str] = set()
+    entries = section["entries"]
+    if not isinstance(entries, list):
+        errors.append(f"{where}.entries must be a list")
+        entries = []
+    for i, e in enumerate(entries):
+        at = f"{where}.entries[{i}]"
+        if not isinstance(e, dict):
+            errors.append(f"{at} must be an object")
+            continue
+        errors.extend(_keys(e, ("id", "entry", "evidence", "problems"), at))
+        if not _nonempty(e.get("id")) or e["id"] in entry_ids:
+            errors.append(f"{at}.id must be a unique id")
+        else:
+            entry_ids.add(e["id"])
+        if not isinstance(e.get("entry"), dict):
+            errors.append(f"{at}.entry must be an object")
+        if not isinstance(e.get("problems"), list):
+            errors.append(f"{at}.problems must be a list")
+        evidence = e.get("evidence")
+        if not isinstance(evidence, list):
+            errors.append(f"{at}.evidence must be a list")
+            continue
+        for j, item in enumerate(evidence):
+            if not isinstance(item, dict) or set(item) - {"bulletin", "page", "quote"}:
+                errors.append(f"{at}.evidence[{j}] must be {{bulletin, page, quote}}")
+            elif item.get("page") is not None and not _is_page(item["page"]):
+                errors.append(f"{at}.evidence[{j}].page must be null or a page number")
+    differences = section["differences"]
+    if not isinstance(differences, list):
+        return errors + [f"{where}.differences must be a list"]
+    ids: set[str] = set()
+    for i, d in enumerate(differences):
+        at = f"{where}.differences[{i}]"
+        if not isinstance(d, dict):
+            errors.append(f"{at} must be an object")
+            continue
+        found = _keys(d, ("id", "kind", "fields", "opinion", "slots", "opinion_said",
+                          "seed_said", "resolution"), at)
+        if found:
+            errors.extend(found)
+            continue
+        if not isinstance(d["id"], str) or not re.fullmatch(r"d[1-9]\d*", d["id"]) \
+                or d["id"] in ids:
+            errors.append(f"{at}.id must be a unique d1, d2...")
+        else:
+            ids.add(d["id"])
+        if d["kind"] not in DIFFERENCE_KINDS:
+            errors.append(f"{at}.kind must be one of {', '.join(DIFFERENCE_KINDS)}")
+        for key in ("fields", "opinion", "slots"):
+            if not isinstance(d[key], list) or not all(isinstance(x, str) for x in d[key]):
+                errors.append(f"{at}.{key} must be a list of strings")
+        if isinstance(d["opinion"], list) and set(d["opinion"]) - entry_ids:
+            errors.append(f"{at}.opinion must name the section's entries")
+        for key in ("opinion_said", "seed_said"):
+            if not isinstance(d[key], str):
+                errors.append(f"{at}.{key} must be a string")
+        errors.extend(_validate_resolution(seed, d["resolution"], f"{at}.resolution"))
+    return errors
+
+
+def _validate_resolution(seed: dict[str, Any], resolution: Any, where: str) -> list[str]:
+    if resolution is None:
+        return []
+    if not isinstance(resolution, dict) or resolution.get("how") not in RESOLUTIONS:
+        return [f"{where} must be null or an object whose how is one of "
+                f"{', '.join(RESOLUTIONS)}"]
+    how = resolution["how"]
+    if how == KEPT:
+        errors = _keys(resolution, ("how", "src", "why", "at"), where)
+        if errors:
+            return errors
+        src = resolution["src"]
+        if not isinstance(src, list) or not src or not all(
+                isinstance(s, dict) and resolve_hash(seed, s.get("bulletin"))
+                and _is_page(s.get("page")) and _nonempty(s.get("said")) for s in src):
+            errors.append(f"{where}.src must cite a bulletin page and what it says")
+        if not _nonempty(resolution["why"]) or not (
+                RULE_ID.search(resolution["why"]) or "POLICY" in resolution["why"]):
+            errors.append(f"{where}.why must give the reason, citing its rule (R…) or POLICY")
+        if not _is_time(resolution["at"]):
+            errors.append(f"{where}.at must be an ISO time")
+        return errors
+    if how == AUTO:
+        errors = _keys(resolution, ("how", "reason"), where)
+        if not errors and resolution["reason"] not in AUTO_REASONS:
+            errors.append(f"{where}.reason must be one of {', '.join(AUTO_REASONS)}")
+        return errors
+    return _keys(resolution, ("how",), where)
 
 
 def _validate_church_issues(seed: dict[str, Any]) -> list[str]:

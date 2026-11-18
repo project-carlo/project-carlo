@@ -98,6 +98,12 @@ class Config:
     seed_ready_bulletins: int = 2
     seed_first_run_share: float = 0.8
     seed_follow_up_weeks: int = 6
+    # The second opinion on each seed (docs/seed-second-opinion-plan.md): calls at once,
+    # how long a seed job waits for one at its reveal before going on without it, and how
+    # many of the newest bulletins it reads.
+    opinion_workers: int = 8
+    opinion_timeout_minutes: int = 20
+    opinion_max_bulletins: int = 4
     tick_seconds: int = 60
     issue_poll_minutes: int = 10
     readiness_check_hours: int = 24

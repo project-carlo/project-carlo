@@ -15,7 +15,6 @@ import pytest
 
 from pdf_extract.__main__ import main
 from pdf_extract.blobstore import CachedBlobStore, LocalBlobStore, bulletin_pdf_key, set_store
-from pdf_extract.classifiers.seed_ask import GEMINI_MODEL, OPENAI_MODEL, SeedAsker
 from pdf_extract.db import create_db, ensure_db
 from pdf_extract.labeling.demo import build_demo, make_pdf
 from pdf_extract.labeling.server import LabelerApp, make_server
@@ -26,7 +25,6 @@ from pdf_extract.schedule.store import (
     rebuild_current_schedule,
     update_mode_parishes,
 )
-from pdf_extract.seeding import calls as seed_calls
 from pdf_extract.seeding import cli as seed_cli
 from pdf_extract.seeding.checks import check_seed
 from pdf_extract.seeding.coverage import diff, event_said, matches, missing_warning
@@ -608,61 +606,6 @@ def test_brief_is_where_a_draft_starts(conn, tmp_path):
     assert our_lady["history"] == [] and "path" in our_lady["pdf"]
 
 
-# ── External calls ──────────────────────────────────────────────────────────
-class _FakeClassifier:
-    name = "fake-extract"
-    version = "fake-model+prompt-0"
-    calls = 0
-
-    def extract(self, pdf_bytes, *, churches, today):
-        type(self).calls += 1
-        return {"events": [{"church_slug": HF, "type": "mass", "kind": "weekly",
-                            "day_of_week": "Sunday", "start_time": "8:00 AM"}],
-                "published_date": "2026-09-27", "wrong_bulletin": False,
-                "usage": {"input_tokens": 1000, "output_tokens": 100}}
-
-
-def test_extract_is_cached_recorded_and_limited(conn, demo, monkeypatch):
-    _FakeClassifier.calls = 0
-    monkeypatch.setattr(seed_calls, "extraction_classifier", lambda model: _FakeClassifier())
-    monkeypatch.setenv("CARLO_SEED_CALL_LIMIT", "1")
-    ctx = SeedContext(seeds_dir=demo["seeds_dir"])
-    first = seed_calls.run_extract(conn, ctx, PARISH, "latest", OPENAI_MODEL)
-    again = seed_calls.run_extract(conn, ctx, PARISH, "latest", OPENAI_MODEL)
-    assert _FakeClassifier.calls == 1
-    assert (first["cached"], again["cached"]) == (False, True)
-    assert first["events"][0]["start_time"] == "08:00"
-    assert [c["id"] for c in read_seed(PARISH, demo["seeds_dir"])["calls"]] == ["c1", "c2"]
-    older = parish_bulletins(conn, PARISH)[1]["content_hash"][:8]
-    with pytest.raises(SeedError, match="used its 1 external calls"):
-        seed_calls.run_extract(conn, ctx, PARISH, older, OPENAI_MODEL)
-    assert validate_seed(read_seed(PARISH, demo["seeds_dir"])) == []
-
-
-def test_ask_answers_with_a_page_and_quote_and_starts_a_file(conn, demo, monkeypatch):
-    asked = []
-
-    def fake_ask(self, pdf, *, churches, today, question):
-        asked.append((self.model, today.isoformat(), question))
-        return {"answer": "3:00-3:45 PM", "page": 2, "quote": "Saturday 3:00 - 3:45 PM",
-                "usage": {"prompt_tokens": 2000, "output_tokens": 50}}
-
-    monkeypatch.setattr(SeedAsker, "ask", fake_ask)
-    ctx = SeedContext(seeds_dir=demo["root"] / "fresh-seeds")
-    call = seed_calls.run_ask(conn, ctx, "st-anne-demo", "latest", GEMINI_MODEL,
-                              "When are Saturday confessions?")
-    assert call["answer"] == "3:00-3:45 PM" and call["page"] == 2 and not call["cached"]
-    assert call["cost_usd"] is not None
-    again = seed_calls.run_ask(conn, ctx, "st-anne-demo", "latest", GEMINI_MODEL,
-                               "When are Saturday confessions?")
-    assert again["cached"] and len(asked) == 1
-    assert asked[0] == (GEMINI_MODEL, "2026-09-25", "When are Saturday confessions?")
-    started = read_seed("st-anne-demo", ctx.seeds_dir)
-    assert started["status"] == "drafting" and len(started["calls"]) == 2
-    with pytest.raises(SeedError, match="must be one of"):
-        seed_calls.run_ask(conn, ctx, "st-anne-demo", "latest", "gpt-4", "Q?")
-
-
 # ── Review ──────────────────────────────────────────────────────────────────
 def test_review_answers_then_approves(conn, demo, seed):
     with pytest.raises(SeedReviewError, match="questions are still open"):
@@ -1093,13 +1036,13 @@ def test_seed_help_lists_every_command_by_phase(capsys):
         main(["seed", "--help"])
     out = capsys.readouterr().out
     heads = [out.index(h) for h in ("\nBatch:", "\nDraft:", "\nRead:", "\nCompare:",
-                                    "\nPaid calls:")]
+                                    "\nSecond opinion:")]
     assert heads == sorted(heads)
     listed = {line.split()[0] for line in out.splitlines() if line.startswith("  ")}
     assert listed >= {"status", "check", "questions", "approve", "start", "brief",
                       "mark-read", "finalize", "bulletins", "pdf", "text", "pages", "grep",
-                      "history", "diff", "church", "site", "ask", "extract"}
-    assert "init" not in listed
+                      "history", "diff", "church", "site", "opinion"}
+    assert "init" not in listed and not listed & {"ask", "extract"}
 
 
 def test_questions_lists_each_question_its_leaning_and_answer(demo_cli, seed, capsys):
@@ -1251,23 +1194,6 @@ def test_one_seed_file_that_raises_does_not_stop_the_others(conn, demo, seed, mo
     assert result["skipped"] == [{"parish": PARISH, "reason": "RuntimeError: boom"}]
 
 
-def test_a_call_keeps_what_the_file_gained_while_it_ran(conn, demo, monkeypatch):
-    ctx = SeedContext(seeds_dir=demo["seeds_dir"])
-    extract = _FakeClassifier.extract
-
-    def extract_while_the_agent_saves(self, pdf, *, churches, today):
-        saved = read_seed(PARISH, demo["seeds_dir"])
-        saved["summary"] = "Written while the call ran."
-        write_seed_file(saved, demo["seeds_dir"])
-        return extract(self, pdf, churches=churches, today=today)
-
-    monkeypatch.setattr(_FakeClassifier, "extract", extract_while_the_agent_saves)
-    monkeypatch.setattr(seed_calls, "extraction_classifier", lambda model: _FakeClassifier())
-    seed_calls.run_extract(conn, ctx, PARISH, "latest", OPENAI_MODEL)
-    saved = read_seed(PARISH, demo["seeds_dir"])
-    assert saved["summary"] == "Written while the call ran." and len(saved["calls"]) == 1
-
-
 @pytest.fixture
 def routed_cli(demo, tmp_path, monkeypatch):
     """Keep the real CLI context routing, with an isolated database and data tree."""
@@ -1276,11 +1202,10 @@ def routed_cli(demo, tmp_path, monkeypatch):
     return demo
 
 
-def test_resume_preserves_decisions_evidence_and_paid_call_limit(
-    demo_cli, conn, seed, monkeypatch,
-):
+def test_resume_preserves_decisions_evidence_and_old_calls(demo_cli, conn, seed):
+    # A call from the removed `seed ask` stays readable, and resuming keeps it.
     seed["status"] = "drafting"
-    seed["calls"] = [{"id": "c1", "kind": "ask", "model": GEMINI_MODEL,
+    seed["calls"] = [{"id": "c1", "kind": "ask", "model": "gemini-3-flash-preview",
                       "bulletin": seed["bulletins"][0]["content_hash"], "cached": False,
                       "question": "When?", "answer": "Saturday", "page": 2,
                       "quote": "Sat 4 PM", "cost_usd": 0.01}]
@@ -1288,13 +1213,7 @@ def test_resume_preserves_decisions_evidence_and_paid_call_limit(
     before = path.read_bytes()
     assert main(["seed", "init", PARISH, "--resume"]) == 0
     assert path.read_bytes() == before
-    monkeypatch.setenv("CARLO_SEED_CALL_LIMIT", "1")
-    _FakeClassifier.calls = 0
-    monkeypatch.setattr(seed_calls, "extraction_classifier", lambda model: _FakeClassifier())
-    with pytest.raises(SeedError, match="used its 1 external calls"):
-        seed_calls.run_extract(conn, SeedContext(seeds_dir=demo_cli["seeds_dir"]),
-                               PARISH, "latest", OPENAI_MODEL)
-    assert _FakeClassifier.calls == 0
+    assert validate_seed(read_seed(PARISH, demo_cli["seeds_dir"])) == []
 
 
 def test_mark_read_preserves_a_consulted_bulletin_without_slot_citations(demo_cli, seed, capsys):

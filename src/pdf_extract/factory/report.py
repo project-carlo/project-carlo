@@ -29,6 +29,7 @@ from pdf_extract.factory.plan import diocese_dir, next_job, read_seed
 from pdf_extract.factory.spec import load_stage, parse_stage, spec_path
 from pdf_extract.factory.usage import COOLDOWNS
 from pdf_extract.factory.workers import strip_frontmatter
+from pdf_extract.seeding import second_opinion
 
 Commands = Callable[[str, Path], tuple[bool, str]]
 
@@ -155,6 +156,8 @@ def inspect(ledger: Ledger, job: Any, runs_dir: Path,
                  "answer": json.loads(j["input"]).get("answer")}
                 for j in ledger.all("SELECT * FROM job WHERE resumes_job = ?", job["id"])]
     folder = runs_dir / job["run_id"] / job["name"]
+    opinions = [opinion_row(r) for r in ledger.all(
+        "SELECT * FROM seed_opinion WHERE job_id = ? ORDER BY id", job["id"])]
     return {
         "job": job["id"], "name": f"{job['run_id']}/{job['name']}", "stage": job["stage"],
         "status": job["status"], "commit": job["commit_sha"], "account": job["account"],
@@ -166,6 +169,7 @@ def inspect(ledger: Ledger, job: Any, runs_dir: Path,
         "quota": {w: combine(measures[w]) for w in WINDOWS},
         "flags": [_flag(f) for f in ledger.all("SELECT * FROM flag WHERE job_id = ?", job["id"])],
         "reviewed_by": later, "decisions": decisions, "answers_requeued": requeued,
+        "opinions": opinions,
         "actions": [a["name"] for a in ledger.all("SELECT name FROM action WHERE job_id = ?",
                                                   job["id"])],
         "transcripts": sorted(str(p) for p in folder.glob("*.jsonl")) if folder.exists() else [],
@@ -207,6 +211,7 @@ def text_inspect(r: dict[str, Any]) -> str:
                      f"{', against the lean' if d['against_lean'] else ''})")
     for q in r["answers_requeued"]:
         lines.append(f"answer requeued as job {q['job']} {q['name']} ({q['status']})")
+    lines += [opinion_line(o) for o in r.get("opinions") or []]
     lines += [f"transcript: {t}" for t in r["transcripts"]]
     return "\n".join(lines)
 
@@ -347,6 +352,82 @@ def _playbook_lines(ledger: Ledger, jobs: list[Any], worktree: Path, diocese: st
     return lines
 
 
+def opinion_row(row: Any) -> dict[str, Any]:
+    """A `seed_opinion` row for `inspect`, without its reply."""
+    return {"id": row["id"], "parish": row["parish"], "status": row["status"],
+            "model": row["model"], "bulletins": len(json.loads(row["bulletins"] or "[]")),
+            "cost_usd": row["cost_usd"], "reused_from": row["reused_from"],
+            "error": row["error"], "revealed_at": row["revealed_at"],
+            "stats": json.loads(row["stats"] or "null")}
+
+
+def opinion_line(o: dict[str, Any]) -> str:
+    """`second opinion: done, 3 bulletins, $0.0031; 4 differences: 2 changed, ...`."""
+    cost = "reused" if o["reused_from"] else f"${o['cost_usd'] or 0:.4f}"
+    head = f"second opinion {o['parish']}: {o['status']}, {o['bulletins']} bulletins, {cost}"
+    st = o.get("stats")
+    if st:
+        head += (f"; {st['differences']} differences: {st['changed']} changed, {st['asked']} "
+                 f"asked, {st['kept']} kept, {st['unresolved']} open ({st['agree']} of "
+                 f"{st['entries']} entries agree; {st['auto']} needed no answer)")
+    return head + (f"; {o['error']}" if o["error"] else "")
+
+
+OPINION_TOTALS = ("differences", "changed", "asked", "kept")
+
+
+def _opinion_lines(ledger: Ledger, run: Any, worktree: Path) -> list[str]:
+    """The second opinion on the Run's approved seeds: a table, every difference the
+    drafter kept against it, and the seeds that went without one."""
+    rows = ledger.all("SELECT * FROM seed_opinion WHERE run_id = ? ORDER BY id", run["id"])
+    seeds = {p: read_seed(worktree, p) for p in json.loads(run["parishes"] or "[]")}
+    approved = {p: s for p, s in seeds.items() if s and s.get("status") == "approved"}
+    if not rows and not any(second_opinion.section(s) for s in approved.values()):
+        return []
+    totals = dict.fromkeys(OPINION_TOTALS, 0)
+    kept, missing, compared, model = [], [], 0, None
+    for parish, seed in sorted(approved.items()):
+        sec = second_opinion.section(seed)
+        st = second_opinion.stats(seed)
+        if sec is None or st is None:
+            last = next((r for r in reversed(rows) if r["parish"] == parish), None)
+            why = (ledger.get(f"opinion_missing:{run['id']}:{parish}")
+                   or (last and (last["error"] or last["status"])) or "never asked")
+            missing.append(f"- `{parish}`: {_one_line(why)}")
+            continue
+        compared += 1
+        model = model or sec.get("model")
+        for k in OPINION_TOTALS:
+            totals[k] += st[k]
+        for d in sec.get("differences") or []:
+            resolution = d.get("resolution") or {}
+            if resolution.get("how") != "kept":
+                continue
+            src = "; ".join(f"{str(x.get('bulletin'))[:8]} p{x.get('page')} “{_one_line(x.get('said'))}”"
+                            for x in resolution.get("src") or [])
+            fields = f": {', '.join(d['fields'])}" if d.get("fields") else ""
+            kept.append(f"- `{parish}` {d['id']} ({d['kind']}{fields}): {sec.get('model')} read "
+                        f"{d['opinion_said']}; the seed has {', '.join(d['slots']) or '-'} "
+                        f"{d['seed_said']}. **Kept:** {src}. {_one_line(resolution.get('why'))}")
+    cost = sum(r["cost_usd"] or 0 for r in rows)
+    lines = [f"Each seed was compared with a blind reading of its newest bulletins by "
+             f"{model or 'gpt-6-luna'}; its drafter changed the seed, asked, or kept the slot "
+             "with a cited page for each difference (docs/seed-second-opinion-plan.md). "
+             "Differences the opinion couldn't settle (the website, R22-R26 exclusions, "
+             "bulletins it wasn't given) aren't counted.", "",
+             "| parishes | compared | differences | changed | asked | kept | cost |",
+             "|---:|---:|---:|---:|---:|---:|---:|",
+             f"| {len(approved)} | {compared} | {totals['differences']} | {totals['changed']} | "
+             f"{totals['asked']} | {totals['kept']} | ${cost:.3f} |", "",
+             "### Kept against the second opinion", "",
+             "Two model families read these differently and the drafter overruled the "
+             "second; `seed-review` checked each against the page cited.", "",
+             *(kept or ["- none"])]
+    if missing:
+        lines += ["", "### Seeds without a second opinion", "", *missing]
+    return lines
+
+
 def _decision_line(d: Any) -> str:
     against = "**against the lean** " if d["against_lean"] else ""
     return (f"- {against}`{d['parish']}` {d['slot']}: {d['question']} Lean: {d['lean'] or '-'}. "
@@ -411,6 +492,9 @@ def pr_text(ledger: Ledger, run: Any, worktree: Path, commands: Commands) -> tup
                 lines += [f"### {heading}", "", *[_decision_line(d) for d in mine], ""]
         if not decisions:
             lines += ["- none", ""]
+        opinion = _opinion_lines(ledger, run, worktree)
+        if opinion:
+            lines += ["## Second opinion", "", *opinion, ""]
         lines += ["## Advisory flags", "", *_flag_lines(advisory),
                   "", "## Parked parishes", "", *_flag_lines(parked)]
     lines += ["", "🤖 Generated by the onboarding factory with [Claude Code]"

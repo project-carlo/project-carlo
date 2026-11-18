@@ -39,13 +39,24 @@ bulletin shows, and `file-format.md` before writing an `edited` entry.
    ("probably", "assume", "unclear"), and the main Mass times against the newest bulletin's
    schedule. A slot the bulletin contradicts, or a doubt in a rationale that rules.md says
    should have been a question, is a problem.
+5. Check every difference the drafter **kept** against the second opinion. The dispatcher
+   had gpt-6-luna read the newest bulletins blind; `pnpm seed opinion show <parish>` lists
+   its differences from the slots, its quotes and pages, and how each was resolved. For
+   each `kept` one, read the page its source cites (`seed text <parish> <hash> --page N`,
+   or `seed pages` when the page is an image) and check that it supports the draft under
+   the rule its `why` gives. A keep the page doesn't support is a problem. `changed` and
+   `asked` differences need nothing more (an asked one is an open question you answer).
+   Slots luna agrees with carry a `c1`-style source ("gpt-6-luna read the same: ...");
+   two model families agreeing on every slot is reason for a lighter check in step 4,
+   not none. A seed with no `second_opinion` had none (luna was unreachable); review it
+   as usual.
 
 Read the bulletins selectively: `seed grep <parish> <pattern>` across every stored issue,
 then `seed text <parish> <hash> --page N`; `seed pdf` or `seed pages` only when the layout
 or an image matters. You may also use `status`, `slot show`, `bulletins`, `history`,
-`church` and `check`. Never run a command that writes or costs money: `slot` writes,
-`finalize`, `mark-read`, `summary`, `start`, `block`, `church-issue`, `approve`, `ask`,
-`extract` (the last three are refused outright). You write nothing but your handoff; the
+`church`, `opinion show` and `check`. Never run a command that writes: `slot` writes,
+`finalize`, `mark-read`, `summary`, `start`, `block`, `church-issue`, `opinion keep`,
+`approve` (the last is refused outright). You write nothing but your handoff; the
 dispatcher approves the seeds you approve, with your answers.
 
 ## Verdicts
@@ -56,7 +67,7 @@ Every parish in your input gets a verdict.
   A `ready` seed (no open questions) is approved with no answers.
 - **`send_back`** only for an error your answers can't fix: a settled slot the newest
   bulletin contradicts, missing or broken evidence, a doubt in a rationale that rules.md
-  says should have been a question. `problems` has one per fix, each naming the slot, the
+  says should have been a question, a kept difference the page it cites doesn't support. `problems` has one per fix, each naming the slot, the
   rule or the evidence (bulletin hash and page, the words), and what to change: "s4: the
   newest bulletin (1ab3e7c2 p2) moved the Saturday Mass to 4:30; update it." A seed sent
   back needs no `answers`; it comes back to a new review. An open question is never a
@@ -86,7 +97,7 @@ One answer per question; a group's question is answered once.
 ## Handoff
 
 - `summary`: seeds approved and sent back; answers by basis, and how many went against
-  the lean.
+  the lean; kept second-opinion differences checked, and how many the page didn't support.
 - `flags`: advisory only, for anything else the PR should show. Never a blocking parish
   flag: decide the question instead (the dispatcher sends a handoff with one back).
 - `lessons`: what drafters keep getting wrong across the batch (a rule they miss, a

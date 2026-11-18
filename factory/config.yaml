@@ -49,6 +49,13 @@ timezone: America/New_York
 seed_ready_bulletins: 2
 seed_first_run_share: 0.8
 seed_follow_up_weeks: 6
+# The second opinion on each seed (docs/seed-second-opinion-plan.md): gpt-6-luna reads each
+# parish's newest opinion_max_bulletins bulletins blind when its seed Run starts, at most
+# opinion_workers calls at once. A seed job whose gates pass waits up to
+# opinion_timeout_minutes for its parish's, then goes on without it (the PR says so).
+opinion_workers: 8
+opinion_timeout_minutes: 20
+opinion_max_bulletins: 4
 
 # Quota readings (docs/factory-quota.md). calibration_gap_seconds > 0 holds the
 # next job on an account that long after its last attempt, for calibration runs only.

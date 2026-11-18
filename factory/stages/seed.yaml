@@ -8,9 +8,10 @@ tools: [Bash, Read, Grep, Edit, Write]
 writes:
   - data/seeds/{parish}.json
   - scratch/{run}/{job}/**
-# What its workers get from the dispatcher's .env: bulletins from R2, and the model keys
-# `seed ask` and `seed extract` call. Scoped keys are a follow-up (factory-sandbox-plan.md).
-secrets: [R2_*, GEMINI_API_KEY, OPENAI_API_KEY]
+# What its workers get from the dispatcher's .env: bulletins from R2. No model keys: the
+# dispatcher makes the one model call a seed gets, its second opinion
+# (docs/seed-second-opinion-plan.md). Scoped keys are a follow-up (factory-sandbox-plan.md).
+secrets: [R2_*]
 # `seed check` reads bulletins from R2.
 gate_secrets: [R2_*]
 gates:

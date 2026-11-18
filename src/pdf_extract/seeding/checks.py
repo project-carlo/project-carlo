@@ -17,7 +17,9 @@ rules it enforces are .claude/skills/draft-parish-seed/rules.md R1, R2, R5):
   or retain an established weekly slot after one assessed omission;
   except what the newest bulletin can't be expected to print (`older_evidence_ok`):
   a weeks-of-the-month slot none of whose weeks fall in the newest bulletin's
-  week, or a dated entry from `as_of` on that an older bulletin announced.
+  week, or a dated entry from `as_of` on that an older bulletin announced;
+- until the seed is approved, the second opinion's entries are as the dispatcher wrote
+  them and every difference from them is resolved (`second_opinion`).
 """
 
 from __future__ import annotations
@@ -33,6 +35,7 @@ from pdf_extract.schedule.entries import UNKNOWN_CHURCH, Entry, EntryError, pars
 from pdf_extract.schedule.store import parish_churches
 from pdf_extract.seeding.files import (
     AGENT,
+    APPROVED,
     BLOCKED,
     DRAFTING,
     INCLUDE,
@@ -42,6 +45,7 @@ from pdf_extract.seeding.files import (
     resolve_hash,
     validate_seed,
 )
+from pdf_extract.seeding.second_opinion import opinion_problems
 
 # The days a bulletin's calendar is taken to cover: its week's Sunday through
 # the next Sunday (an issue's calendar usually runs from its Sunday to the next).
@@ -211,6 +215,7 @@ def check_seed(
     parish_slug: str,
     check_bulletins: bool = True,
     check_evidence: bool = True,
+    opinion_sha: str | None = None,
 ) -> list[str]:
     """Every problem with a seed file (empty when it can be reviewed and loaded).
 
@@ -220,6 +225,7 @@ def check_seed(
     (the loader resolves what it can and needs only the entries).
     `check_evidence` off trusts a person's already-approved decisions: newer
     drafting evidence rules must not prevent previously approved seeds loading.
+    `opinion_sha` is the hash of the second opinion's entries the dispatcher kept.
     """
     problems = validate_seed(seed, parish_slug=parish_slug)
     if problems:
@@ -231,6 +237,10 @@ def check_seed(
         problems.append(
             "status is still drafting: set needs_review (open questions) or ready, or blocked"
         )
+    # The drafter's to answer, a blocked parish's too (docs/seed-second-opinion-plan.md);
+    # an approved seed is its reviewer's, and loads whatever the opinion said.
+    if seed["status"] != APPROVED:
+        problems.extend(opinion_problems(seed, expected_sha=opinion_sha))
     if seed["status"] == BLOCKED:
         return problems
 
