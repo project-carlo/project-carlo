@@ -58,6 +58,17 @@ whose parish closed can still be a worship site. In Buffalo, every closure sourc
 St. George (West Falls) had closed, but the family's own schedule still listed a Saturday
 Mass there.
 
+**A parish's Adoration chapel at an address of its own is a church row too**, with
+`kind: adoration_chapel`, though it holds no Mass: its address, pin and page carry its
+Adoration (a chapel open 24 hours, or its timed Holy Hours). Record one when the parish's
+bulletin or website gives the chapel's address and its hours, with that as the evidence;
+the site lists it as a chapel and leaves it out of church counts. A chapel inside a listed
+church, attached to it or on its grounds is not a row: its times belong to that church
+(the Sacre Coeur chapel behind St. Denis, Havertown, has no address of its own, so it is
+`st-denis-havertown`'s). A chapel that is not in the known-churches list still sets
+`church_list_needs_review` when a bulletin gives its times. Any other chapel without public
+Mass stays `no-public-mass`.
+
 **Everything else goes in `excluded/`, with a reason** (`pnpm diocese new excluded --help`
 lists them):
 
@@ -65,7 +76,7 @@ lists them):
 |---|---|
 | `closed` | no Mass any more: closed, merged away, sold, demolished. Put the date in `last_mass` when a source gives it (`2017` or `2017-06` when it gives no day) |
 | `no-bulletin` | **open**, with public Mass, but nothing the pipeline could read. Don't file these under `closed`; that list has to stay a record of what actually shut down |
-| `no-public-mass` | offices, schools, pregnancy centers, cemeteries, private convent or hospital chapels |
+| `no-public-mass` | offices, schools, pregnancy centers, cemeteries, private convent or hospital chapels (a parish's Adoration chapel at its own address is a church row with `kind: adoration_chapel` instead) |
 | `not-catholic` | a same-named Orthodox, Episcopal, Lutheran... church |
 | `other-jurisdiction` | another diocese or an Eastern Catholic eparchy (GCatholic lists these in the territory) |
 | `other` | none of the above; the explanation says what |

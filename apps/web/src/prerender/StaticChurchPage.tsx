@@ -1,5 +1,5 @@
 import { MemoryRouter } from "react-router-dom";
-import type { ChurchDetail, EventSummary } from "@carlo/core";
+import type { ChurchDetail, ContinuousAdoration, EventSummary } from "@carlo/core";
 import type { CityLink } from "../lib/cities";
 import type { CityMapData } from "../lib/cityMapLayout";
 import { ChurchPageContent } from "../components/ChurchPageContent";
@@ -14,6 +14,8 @@ import { StaticPageHead } from "./StaticPageHead";
 
 interface StaticChurchPageProps {
   church: ChurchDetail;
+  /** Its chapel open 24 hours, or null. */
+  continuous: ContinuousAdoration | null;
   city: CityLink | null;
   map: CityMapData | null;
   events: EventSummary[];
@@ -28,6 +30,7 @@ interface StaticChurchPageProps {
 
 export function StaticChurchPage({
   church,
+  continuous,
   city,
   map,
   events,
@@ -55,7 +58,13 @@ export function StaticChurchPage({
       />
       <body>
         <MemoryRouter>
-          <ChurchPageContent church={church} city={city} map={map} events={events} />
+          <ChurchPageContent
+            church={church}
+            continuous={continuous}
+            city={city}
+            map={map}
+            events={events}
+          />
         </MemoryRouter>
         {map ? <script type="module" src={cityMapScript} /> : null}
       </body>

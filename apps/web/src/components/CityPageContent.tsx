@@ -2,6 +2,9 @@ import { Fragment, type ReactNode } from "react";
 import { Link } from "react-router-dom";
 import type { CityChurchEntry, CityPageData } from "../api";
 import {
+  type ChurchBase,
+  type ContinuousAdoration,
+  continuousRow,
   EVENT_TYPE_LABELS,
   type EventSummary,
   type EventType,
@@ -83,6 +86,41 @@ function Disclosure({
   );
 }
 
+/**
+ * A type's weekly rows; for Adoration, a chapel open 24 hours first, as in the
+ * map popup.
+ */
+function typeRows(
+  events: EventSummary[],
+  type: EventType,
+  continuous: ContinuousAdoration | null,
+): ScheduleRollupRow[] {
+  const rows = weeklyScheduleRows(eventsOfType(events, type));
+  return type === "adoration" && continuous
+    ? [continuousRow(continuous, { compact: true }), ...rows]
+    : rows;
+}
+
+/** An Adoration chapel at its own address has no Mass: its card leads with Adoration. */
+function isChapel(church: ChurchBase): boolean {
+  return church.kind === "adoration_chapel";
+}
+
+function MainSchedule({ entry }: { entry: CityChurchEntry }) {
+  if (isChapel(entry.church)) {
+    const rows = typeRows(entry.schedule, "adoration", entry.continuous);
+    if (rows.length === 0) {
+      return (
+        <p className="font-serif text-[0.95rem] italic text-ink-faint">
+          No weekly Adoration times listed.
+        </p>
+      );
+    }
+    return <ScheduleRows rows={rows} />;
+  }
+  return <MassSchedule events={entry.schedule} />;
+}
+
 function MassSchedule({ events }: { events: EventSummary[] }) {
   const rows = weeklyScheduleRows(eventsOfType(events, "mass"));
   if (rows.length === 0) {
@@ -95,10 +133,14 @@ function MassSchedule({ events }: { events: EventSummary[] }) {
   return <ScheduleRows rows={rows} />;
 }
 
-function SecondarySchedules({ events }: { events: EventSummary[] }) {
-  const sections = SECONDARY_TYPES.map((type) => ({
+function SecondarySchedules({ entry }: { entry: CityChurchEntry }) {
+  // A chapel's card already shows its Adoration.
+  const types = isChapel(entry.church)
+    ? SECONDARY_TYPES.filter((type) => type !== "adoration")
+    : SECONDARY_TYPES;
+  const sections = types.map((type) => ({
     type,
-    rows: weeklyScheduleRows(eventsOfType(events, type)),
+    rows: typeRows(entry.schedule, type, entry.continuous),
   })).filter((s) => s.rows.length > 0);
   if (sections.length === 0) return null;
   const summary = sections
@@ -134,7 +176,7 @@ function FullScheduleLink({ slug }: { slug: string }) {
 
 /** One of the city's own churches: its Mass times shown, the rest a click away. */
 function CityChurch({ entry }: { entry: CityChurchEntry }) {
-  const { church, schedule } = entry;
+  const { church } = entry;
   const address = formatAddress(church);
   return (
     <li className="py-7">
@@ -150,9 +192,9 @@ function CityChurch({ entry }: { entry: CityChurchEntry }) {
         </p>
       ) : null}
       <div className="mt-4">
-        <MassSchedule events={schedule} />
+        <MainSchedule entry={entry} />
       </div>
-      <SecondarySchedules events={schedule} />
+      <SecondarySchedules entry={entry} />
       <div>
         <FullScheduleLink slug={church.slug} />
       </div>
@@ -162,7 +204,7 @@ function CityChurch({ entry }: { entry: CityChurchEntry }) {
 
 /** A church outside the city: where and how far, with its Mass times folded away. */
 function NearbyChurch({ entry }: { entry: CityChurchEntry }) {
-  const { church, schedule, citySlug, distanceMiles } = entry;
+  const { church, citySlug, distanceMiles } = entry;
   const place = [church.city?.trim(), church.state?.trim()]
     .filter(Boolean)
     .join(", ");
@@ -188,8 +230,8 @@ function NearbyChurch({ entry }: { entry: CityChurchEntry }) {
           </>
         ) : null}
       </p>
-      <Disclosure summary="Mass times">
-        <MassSchedule events={schedule} />
+      <Disclosure summary={isChapel(church) ? "Adoration times" : "Mass times"}>
+        <MainSchedule entry={entry} />
         <FullScheduleLink slug={church.slug} />
       </Disclosure>
     </li>

@@ -14,6 +14,7 @@ describe("parseSnapshot", () => {
         id: 7,
         parish_id: 1,
         slug: "b",
+        kind: "adoration_chapel",
         name: "B",
         address_line1: null,
         address_line2: null,
@@ -27,6 +28,7 @@ describe("parseSnapshot", () => {
         id: 3,
         parish_id: 1,
         slug: "a",
+        kind: "church",
         name: "A",
         address_line1: "1 Main St",
         address_line2: null,
@@ -180,6 +182,33 @@ describe("parseSnapshot", () => {
     ]);
   });
 
+  it("reads a chapel open 24 hours into its own list, not the timed events", () => {
+    const s = snapshot();
+    expect(s.events.some((ev) => ev.id === 20)).toBe(false);
+    expect(s.continuous).toEqual([
+      {
+        id: 20,
+        church_id: 7,
+        access: "code_after_hours",
+        open_from: 360,
+        open_until: 1260,
+        note: "Adoration Chapel",
+        page_number: 1,
+        valid_from: null,
+        valid_until: null,
+      },
+    ]);
+    expect(s.continuousOf(7).map((chapel) => chapel.id)).toEqual([20]);
+    expect(s.continuousOf(3)).toEqual([]);
+  });
+
+  it("reads a snapshot written before chapels as churches with none", () => {
+    const churches: Partial<typeof fixture.churches> = { ...fixture.churches };
+    delete churches.kind;
+    const older = parseSnapshot(JSON.stringify({ ...fixture, version: 3, churches }));
+    expect(older.churches.map((church) => church.kind)).toEqual(["church", "church"]);
+  });
+
   it("groups events by church, in id order", () => {
     const s = snapshot();
     expect(s.eventsOf(7).map((ev) => ev.id)).toEqual([10, 15]);
@@ -207,8 +236,8 @@ describe("effective-date snapshot compatibility", () => {
 
   it("uses bounds from a version 3 snapshot", () => {
     const s = parseSnapshot(JSON.stringify({...fixture, events: {...fixture.events,
-      valid_until: ["2026-10-30", null, null, null],
-      valid_from: [null, null, null, "2026-10-31"],
+      valid_until: ["2026-10-30", null, null, null, null],
+      valid_from: [null, null, null, "2026-10-31", null],
     }}));
     expect(computeNextOccurrence(s.events[0], new Date(2026, 10, 1))).toBeNull();
     expect(new Date(computeNextOccurrence(s.events[3], new Date(2026, 9, 25))!))

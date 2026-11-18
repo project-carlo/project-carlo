@@ -1,6 +1,7 @@
 import { beforeEach, describe, expect, it } from "vitest";
 import {
   ChurchNotFoundError,
+  churchContinuous,
   CityNotFoundError,
   churchCity,
   cityPageData,
@@ -11,7 +12,12 @@ import {
   resetMapItemCache,
   type ChurchFilters,
 } from "./api";
-import { type ChurchBase, parseSnapshot, type RawEvent } from "@carlo/core";
+import {
+  type ChurchBase,
+  type ContinuousAdoration,
+  parseSnapshot,
+  type RawEvent,
+} from "@carlo/core";
 import fixture from "@carlo/core/snapshot.fixture.json";
 
 function rawEvent(overrides: Partial<RawEvent> = {}): RawEvent {
@@ -246,6 +252,7 @@ function church(id: number, overrides: Partial<ChurchBase> = {}): ChurchBase {
     id,
     parish_id: id,
     slug: `parish-${id}`,
+    kind: "church",
     name: `Parish ${id}`,
     address_line1: "1 Main St",
     address_line2: null,
@@ -412,6 +419,65 @@ describe("collectMapItems", () => {
     expect(morningOnly[0].upcoming_events).toHaveLength(1);
     expect(morningOnly[0]).not.toBe(both[0]);
   });
+
+  describe("a chapel open 24 hours", () => {
+    const chapel = (overrides: Partial<ContinuousAdoration> = {}): ContinuousAdoration => ({
+      id: -9001,
+      church_id: 141,
+      access: "code_after_hours",
+      open_from: 6 * 60,
+      open_until: 21 * 60,
+      note: "Adoration Chapel",
+      page_number: 1,
+      valid_from: null,
+      valid_until: null,
+      ...overrides,
+    });
+
+    it("matches every Adoration search, whatever the day and time", () => {
+      const [item] = collectMapItems([church(141)], [], {
+        types: ["adoration"],
+        daysOfWeek: [2],
+        timeFrom: 2 * 60,
+        timeTo: 3 * 60,
+      }, [chapel()]);
+
+      expect(item.id).toBe(141);
+      expect(item.event_types).toEqual(["adoration"]);
+      expect(item.continuous?.id).toBe(-9001);
+      expect(item.upcoming_events).toEqual([]);
+    });
+
+    it("is left out of a search that isn't for Adoration", () => {
+      const events = [rawEvent({ id: 1401, church_id: 141 })];
+      const [item] = collectMapItems([church(141)], events, { types: ["mass"] }, [chapel()]);
+
+      expect(item.continuous).toBeNull();
+      expect(item.event_types).toEqual(["mass"]);
+      expect(collectMapItems([church(142)], [], { types: ["mass"] }, [
+        chapel({ church_id: 142 }),
+      ])).toEqual([]);
+    });
+
+    it("keeps the church's timed Holy Hours beside it", () => {
+      const events = [
+        rawEvent({ id: 1402, church_id: 141, event_type: "adoration", start_time: 19 * 60 }),
+      ];
+      const [item] = collectMapItems([church(141)], events, { types: ["adoration"] }, [
+        chapel(),
+      ]);
+
+      expect(item.continuous).not.toBeNull();
+      expect(item.upcoming_events.map((e) => e.id)).toEqual([1402]);
+    });
+
+    it("is not shown while closed", () => {
+      const closed = chapel({ valid_until: "2000-01-01" });
+      expect(collectMapItems([church(143)], [], allTypes, [
+        { ...closed, church_id: 143 },
+      ])).toEqual([]);
+    });
+  });
 });
 
 describe("church page lookups", () => {
@@ -424,6 +490,16 @@ describe("church page lookups", () => {
       bulletin_url: null,
     });
     expect(() => findChurch(snapshot, "missing")).toThrow(ChurchNotFoundError);
+  });
+
+  it("finds a church's chapel open 24 hours apart from its timed events", () => {
+    // Church 7's chapel (id 20) needs a door code outside 6 a.m. to 9 p.m.
+    expect(churchContinuous(snapshot, 7)).toMatchObject({
+      id: 20,
+      access: "code_after_hours",
+    });
+    expect(churchContinuous(snapshot, 3)).toBeNull();
+    expect(churchSchedule(snapshot, "b", []).map((ev) => ev.id)).not.toContain(20);
   });
 
   it("lists a church's upcoming events of the chosen types in schedule order", () => {

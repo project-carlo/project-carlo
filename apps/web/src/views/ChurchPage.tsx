@@ -78,6 +78,7 @@ export function ChurchPage() {
     return (
       <ChurchPageContent
         church={church}
+        continuous={churchQuery.data?.continuous ?? null}
         city={churchQuery.data?.city ?? null}
         map={churchQuery.data?.map ?? null}
         events={events}

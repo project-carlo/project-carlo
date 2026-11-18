@@ -138,6 +138,20 @@ def _csv_float(value: str | None) -> float | None:
     return float(raw)
 
 
+# What a churches.csv row is (its `kind` column; blank for a church): a place of
+# public Mass, or a parish's Adoration chapel at an address of its own.
+CHURCH_KINDS = ("church", "adoration_chapel")
+
+
+def church_kind(value: str | None) -> str:
+    """A churches.csv `kind` cell as stored: blank is a church."""
+    kind = (value or "").strip() or "church"
+    if kind not in CHURCH_KINDS:
+        raise ValueError(f"churches.csv: kind must be blank or one of {', '.join(CHURCH_KINDS)}, "
+                         f"not {value!r}")
+    return kind
+
+
 def _read_csv(path: Path, required: set[str]) -> list[dict[str, str]]:
     with open(path, encoding="utf-8") as f:
         reader = csv.DictReader(f)
@@ -253,8 +267,8 @@ def seed_reference_data(
                 """INSERT INTO church(
                        parish_id, slug, name, address_line1, address_line2, city, state,
                        postal_code, name_verified, address_verified, latitude, longitude,
-                       created_at
-                   ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                       kind, created_at
+                   ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                    ON CONFLICT(slug) DO UPDATE SET
                        parish_id = excluded.parish_id,
                        name = excluded.name,
@@ -267,6 +281,7 @@ def seed_reference_data(
                        address_verified = excluded.address_verified,
                        latitude = excluded.latitude,
                        longitude = excluded.longitude,
+                       kind = excluded.kind,
                        retired_at = NULL""",
                 (
                     parish["id"],
@@ -281,6 +296,7 @@ def seed_reference_data(
                     _csv_bool(row.get("address_verified")),
                     _csv_float(row.get("latitude")),
                     _csv_float(row.get("longitude")),
+                    church_kind(row.get("kind")),
                     now,
                 ),
             )

@@ -13,6 +13,7 @@ const church: ChurchDetail = {
   id: 1,
   parish_id: 10,
   slug: "st-charles-borromeo",
+  kind: "church",
   name: "St. Charles Borromeo",
   address_line1: "3003 Dewey Ave",
   address_line2: null,
@@ -43,6 +44,19 @@ describe("buildChurchDescription", () => {
       }),
     ).toBe(
       "Mass, Confession, and Adoration times for St. Charles Borromeo in Rochester, NY, from the parish’s Facebook page.",
+    );
+  });
+});
+
+describe("an Adoration chapel at its own address", () => {
+  const chapel = { ...church, kind: "adoration_chapel" as const, name: "Adoration Chapel" };
+
+  it("is titled and described by its Adoration alone", () => {
+    expect(buildChurchTitle(chapel)).toBe(
+      "Adoration Chapel, Rochester · Adoration Times · Project Carlo",
+    );
+    expect(buildChurchDescription(chapel)).toBe(
+      "Adoration times for Adoration Chapel in Rochester, NY, from the parish’s weekly bulletin.",
     );
   });
 });

@@ -25,11 +25,11 @@ Extract Mass, Confession, and Adoration schedule information from the attached C
 - Only extract Mass, Confession (Reconciliation, Penance), and Adoration (Exposition, Holy Hour) events. Ignore every other kind of event or activity in the bulletin, including a Rosary, Novena, Anointing of the Sick or other devotion the bulletin does not call a Mass, Confession or Adoration.
 - A Holy Hour is Adoration even when other prayer goes with it ("Holy Hour and Night Prayer"), unless the bulletin says the Blessed Sacrament is not exposed.
 - Benediction implies Adoration: record Benediction as an Adoration event with the note `Benediction`. "Adoration and Benediction" or "Holy Hour with Benediction" is one Adoration event with that note, not two events.
-- If a Holy Hour is entirely inside an Adoration period already recorded at the same church on the same days, keep the longer period and mention the Holy Hour in a note when useful. Do not duplicate the same availability as overlapping Adoration entries.
+- If a Holy Hour is entirely inside an Adoration period already recorded at the same church on the same days, keep the longer period and mention the Holy Hour in a note when useful. Do not duplicate the same availability as overlapping Adoration entries. A chapel open 24 hours is not such a period: a scheduled Holy Hour or Benediction keeps its own weekly entry (see Chapels open 24 hours).
 - A Communion Service (a Liturgy of the Word with Communion, led by a deacon or lay minister) is not a Mass: never record one as a Mass. When the bulletin says a Communion Service replaces a Mass on a date, record that Mass under `cancellations` for that date.
 - Leave out a Mass that is closed to the public: a private Mass, or one the bulletin limits to a group (a school Mass for students only, a Mass for residents only, a Mass by invitation). A wedding, a funeral, or a memorial or anniversary Mass for one person is closed unless the bulletin invites everyone to it.
 - A Mass the regular schedule lists "with" a school or group ("First Friday Mass with St. Mary's School") is open unless the bulletin limits it.
-- Skip anything without a definite start time, such as "Confession by appointment" or "call the office".
+- Skip anything without a definite start time, such as "Confession by appointment" or "call the office" A chapel open 24 hours is the one exception (see Chapels open 24 hours).
 
 # Churches and chapels
 
@@ -39,6 +39,18 @@ Extract Mass, Confession, and Adoration schedule information from the attached C
 - A parish adoration chapel belongs to the church it is at. When it is at the same location as a listed church (inside it, attached to it, or on the same grounds), record its times at that church and name the chapel in a short `note`. Leave it out when it is somewhere else you would need to drive to, or when it is unclear where it is.
 - When the parish identifies an on-site Eucharistic chapel's hours as Adoration, those hours can include prayer before the reserved Blessed Sacrament. Do not claim exposition unless the source says so. A church or chapel merely being open for prayer does not establish an Adoration schedule.
 - An event at a separate chapel at another address (a convent, school, hospital, nursing home or mission chapel), or one whose location is unclear, is left out unless the known-churches list includes that chapel or its address. If you leave out such a chapel that clearly has its own Mass, Confession or Adoration times, set `church_list_needs_review` to true.
+
+# Chapels open 24 hours
+
+- An Adoration chapel the bulletin says is open every day around the clock ("Perpetual Adoration Chapel, open 24 hours", "24/7 Adoration") goes in `continuous_adoration`: one entry for its church, with no day or times, never seven weekly entries. It follows the chapel rules above: record it at the listed church it is at.
+- `access` is how a visitor gets in, as the bulletin says:
+  - `not_stated`: the bulletin says nothing about getting in. Never assume that no code is needed.
+  - `code_after_hours`: a door code is needed at some hours only. Give the hours the chapel is unlocked as `open_from` and `open_until` when the bulletin states them ("access code needed 9:00 PM-6:00 AM" is open from 6:00 AM until 9:00 PM); leave them null when it does not ("call the office for the after-hours code").
+  - `code`: a code is needed at every hour ("the chapel is locked 24/7; call for the code").
+  - `arrangement`: open only to those who arrange it with the parish ("for access contact the Rectory Office", "sign up for an hour").
+- A chapel open around the clock except during Mass is still open 24 hours: say so in its `note` ("closed during Mass").
+- Only a standing chapel open every day, all day, is continuous. Adoration around the clock on some days only ("Thursday 9:00 AM to Friday 9:00 AM") is weekly; a one-off 24-hour or Forty Hours devotion is dated.
+- Do not call the chapel "Perpetual Adoration" in a note unless the bulletin does, and do not claim exposition unless it says so.
 
 # Weekly or dated
 
@@ -85,6 +97,8 @@ Never project dates in any other way: do not work a date out from a weeks-of-the
 # Notes
 
 Only add a `note` when there is genuinely special context worth surfacing: language, location within the church or the adoration chapel's name, `Benediction`, a relative timing you converted ("after the 4:00 PM Mass"), the occasion of a dated special service. Do not write 'Vigil Mass', and do not repeat what `weeks_of_month`, `exclude_weeks` or `season` already say.
+
+A note never holds a person's name, a phone number, an email address or a door code, even when the bulletin prints one next to the time. The website tells visitors to contact the parish office itself.
 
 # Bulletin
 

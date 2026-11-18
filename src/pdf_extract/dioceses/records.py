@@ -171,7 +171,7 @@ CHURCH = Kind(
         "latitude", "longitude", "coordinates_from", "name_verified", "address_verified",
         "roster", "evidence",
     ),
-    optional=("replaces", *_REVISIT, "promoted", "research"),
+    optional=("replaces", *_REVISIT, "promoted", "research", "kind"),
     template="""\
 ## Holds Mass
 
@@ -776,6 +776,10 @@ def _check_church(label: str, r: Mapping[str, Any], p: Problems) -> None:
         p.errors.append(f"{label}: latitude must be between -90 and 90")
     if isinstance(lng, int | float) and not isinstance(lng, bool) and not -180 <= lng <= 180:
         p.errors.append(f"{label}: longitude must be between -180 and 180")
+    kind = r.get("kind")
+    if kind not in (None, "", "church", "adoration_chapel"):
+        p.errors.append(f"{label}: kind must be church or adoration_chapel (an Adoration "
+                        f"chapel at its own address), not {kind!r}")
     source = r.get("coordinates_from") or ""
     if lat is not None and not source:
         p.warnings.append(f"{label}: say where the coordinates came from (coordinates_from)")
@@ -1025,7 +1029,7 @@ def export_rows(d: Diocese) -> tuple[list[dict[str, str]], list[dict[str, str]]]
 PARISH_CSV_FIELDS = ["slug", "name", "website", "bulletin_provider", "provider_id"]
 CHURCH_CSV_FIELDS = [
     "parish_id", "slug", "name", "line1", "line2", "city", "state", "postal_code",
-    "name_verified", "address_verified", "latitude", "longitude",
+    "name_verified", "address_verified", "latitude", "longitude", "kind",
 ]
 
 
