@@ -1,0 +1,1125 @@
+{
+  "schema_version": 1,
+  "parish_slug": "sts-peter-and-paul-turnersville",
+  "status": "ready",
+  "as_of": "2026-11-15T16:48:14Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T17:40:19Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, Sts. Peter and Paul, Turnersville; both bulletins (Nov 8 and Nov 15, 2026; image-only pages, read from renders) print the same Liturgical Schedule box: Sat 4 PM, Sun 8:30/10/11:30, Mon-Sat 9 AM, Confession Sat 3-3:30 and Mon-Sat after the 9 AM Mass (9:30 per R10), and Thursday Exposition 9:30 AM-6:30 PM. Dated Advent/Christmas/holy-day Masses and the Dec 15 Penance Service come from the Schedule of Parish Events. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "273f1b9c4d7f09f71ec2881cd4763660c5265d1c1d6e78071279278b8f32041a",
+      "fetched_at": "2026-11-15T16:48:14Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "1ca1ddf288466ba28137aeaf78d6589b24a9a70e44cd213fbcf3426dc32b2afd",
+      "fetched_at": "2026-11-08T15:56:29Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-peter-and-paul-turnersville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "273f1b9c",
+          "page": 1,
+          "said": "Sunday Masses Saturday: 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1ca1ddf2",
+          "page": 1,
+          "said": "Sunday Masses Saturday: 4:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Liturgical Schedule box of both bulletins read; the Mass intentions list Saturday 4:00PM each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-peter-and-paul-turnersville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "273f1b9c",
+          "page": 1,
+          "said": "Sunday: 8:30, 10:00 & 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1ca1ddf2",
+          "page": 1,
+          "said": "Sunday: 8:30, 10:00 & 11:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Liturgical Schedule box of both bulletins read and in the Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-peter-and-paul-turnersville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "273f1b9c",
+          "page": 1,
+          "said": "Sunday: 8:30, 10:00 & 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1ca1ddf2",
+          "page": 1,
+          "said": "Sunday: 8:30, 10:00 & 11:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Liturgical Schedule box of both bulletins read and in the Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-peter-and-paul-turnersville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "273f1b9c",
+          "page": 1,
+          "said": "Sunday: 8:30, 10:00 & 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1ca1ddf2",
+          "page": 1,
+          "said": "Sunday: 8:30, 10:00 & 11:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Liturgical Schedule box of both bulletins read and in the Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-peter-and-paul-turnersville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "273f1b9c",
+          "page": 1,
+          "said": "Daily: Monday thru Saturday 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1ca1ddf2",
+          "page": 1,
+          "said": "Daily: Monday thru Saturday 9:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Liturgical Schedule box of both bulletins read and in every weekday's Mass intentions. POLICY, Weekly or dated rule 6: the dated 9:00 AM Masses on Dec 8, Dec 25 and Jan 1 fall on this weekly slot and are not duplicated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-peter-and-paul-turnersville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "273f1b9c",
+          "page": 1,
+          "said": "Daily: Monday thru Saturday 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1ca1ddf2",
+          "page": 1,
+          "said": "Daily: Monday thru Saturday 9:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Liturgical Schedule box of both bulletins read and in every weekday's Mass intentions. POLICY, Weekly or dated rule 6: the dated 9:00 AM Masses on Dec 8, Dec 25 and Jan 1 fall on this weekly slot and are not duplicated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-peter-and-paul-turnersville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "273f1b9c",
+          "page": 1,
+          "said": "Daily: Monday thru Saturday 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1ca1ddf2",
+          "page": 1,
+          "said": "Daily: Monday thru Saturday 9:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Liturgical Schedule box of both bulletins read and in every weekday's Mass intentions. POLICY, Weekly or dated rule 6: the dated 9:00 AM Masses on Dec 8, Dec 25 and Jan 1 fall on this weekly slot and are not duplicated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-peter-and-paul-turnersville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "273f1b9c",
+          "page": 1,
+          "said": "Daily: Monday thru Saturday 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1ca1ddf2",
+          "page": 1,
+          "said": "Daily: Monday thru Saturday 9:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Liturgical Schedule box of both bulletins read and in every weekday's Mass intentions. POLICY, Weekly or dated rule 6: the dated 9:00 AM Masses on Dec 8, Dec 25 and Jan 1 fall on this weekly slot and are not duplicated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-peter-and-paul-turnersville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "273f1b9c",
+          "page": 1,
+          "said": "Daily: Monday thru Saturday 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1ca1ddf2",
+          "page": 1,
+          "said": "Daily: Monday thru Saturday 9:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Liturgical Schedule box of both bulletins read and in every weekday's Mass intentions. POLICY, Weekly or dated rule 6: the dated 9:00 AM Masses on Dec 8, Dec 25 and Jan 1 fall on this weekly slot and are not duplicated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-peter-and-paul-turnersville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "273f1b9c",
+          "page": 1,
+          "said": "Daily: Monday thru Saturday 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1ca1ddf2",
+          "page": 1,
+          "said": "Daily: Monday thru Saturday 9:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Liturgical Schedule box of both bulletins read and in every weekday's Mass intentions. POLICY, Weekly or dated rule 6: the dated 9:00 AM Masses on Dec 8, Dec 25 and Jan 1 fall on this weekly slot and are not duplicated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-peter-and-paul-turnersville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "273f1b9c",
+          "page": 1,
+          "said": "Sacrament of Reconciliation (Confession) Saturday 3:00-3:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1ca1ddf2",
+          "page": 1,
+          "said": "Sacrament of Reconciliation (Confession) Saturday 3:00-3:30 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Liturgical Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-peter-and-paul-turnersville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "273f1b9c",
+          "page": 1,
+          "said": "Sacrament of Reconciliation (Confession) Monday-Saturday after the 9AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1ca1ddf2",
+          "page": 1,
+          "said": "Sacrament of Reconciliation (Confession) Monday-Saturday after the 9AM Mass"
+        }
+      ],
+      "rationale": "R1, R10: printed in both bulletins with no clock time; after a weekday Mass starts 30 minutes after it (the Saturday 9 AM is a morning weekday Mass, not the vigil). No end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-peter-and-paul-turnersville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "273f1b9c",
+          "page": 1,
+          "said": "Sacrament of Reconciliation (Confession) Monday-Saturday after the 9AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1ca1ddf2",
+          "page": 1,
+          "said": "Sacrament of Reconciliation (Confession) Monday-Saturday after the 9AM Mass"
+        }
+      ],
+      "rationale": "R1, R10: printed in both bulletins with no clock time; after a weekday Mass starts 30 minutes after it (the Saturday 9 AM is a morning weekday Mass, not the vigil). No end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-peter-and-paul-turnersville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "273f1b9c",
+          "page": 1,
+          "said": "Sacrament of Reconciliation (Confession) Monday-Saturday after the 9AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1ca1ddf2",
+          "page": 1,
+          "said": "Sacrament of Reconciliation (Confession) Monday-Saturday after the 9AM Mass"
+        }
+      ],
+      "rationale": "R1, R10: printed in both bulletins with no clock time; after a weekday Mass starts 30 minutes after it (the Saturday 9 AM is a morning weekday Mass, not the vigil). No end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-peter-and-paul-turnersville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "273f1b9c",
+          "page": 1,
+          "said": "Sacrament of Reconciliation (Confession) Monday-Saturday after the 9AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1ca1ddf2",
+          "page": 1,
+          "said": "Sacrament of Reconciliation (Confession) Monday-Saturday after the 9AM Mass"
+        }
+      ],
+      "rationale": "R1, R10: printed in both bulletins with no clock time; after a weekday Mass starts 30 minutes after it (the Saturday 9 AM is a morning weekday Mass, not the vigil). No end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-peter-and-paul-turnersville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "273f1b9c",
+          "page": 1,
+          "said": "Sacrament of Reconciliation (Confession) Monday-Saturday after the 9AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1ca1ddf2",
+          "page": 1,
+          "said": "Sacrament of Reconciliation (Confession) Monday-Saturday after the 9AM Mass"
+        }
+      ],
+      "rationale": "R1, R10: printed in both bulletins with no clock time; after a weekday Mass starts 30 minutes after it (the Saturday 9 AM is a morning weekday Mass, not the vigil). No end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-peter-and-paul-turnersville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "273f1b9c",
+          "page": 1,
+          "said": "Sacrament of Reconciliation (Confession) Monday-Saturday after the 9AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1ca1ddf2",
+          "page": 1,
+          "said": "Sacrament of Reconciliation (Confession) Monday-Saturday after the 9AM Mass"
+        }
+      ],
+      "rationale": "R1, R10: printed in both bulletins with no clock time; after a weekday Mass starts 30 minutes after it (the Saturday 9 AM is a morning weekday Mass, not the vigil). No end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-peter-and-paul-turnersville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Exposition after the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "273f1b9c",
+          "page": 1,
+          "said": "Exposition of the Blessed Sacrament Following the 9:00 AM Mass Thursday, concluding at 6:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1ca1ddf2",
+          "page": 1,
+          "said": "Exposition of the Blessed Sacrament Following the 9:00 AM Mass Thursday, concluding at 6:30 PM"
+        }
+      ],
+      "rationale": "R1, R10: printed in both bulletins; starts 30 minutes after the weekday 9:00 AM Mass and ends at the stated 6:30 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-peter-and-paul-turnersville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vigil of the Immaculate Conception"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "273f1b9c",
+          "page": 5,
+          "said": "Feast of the Immaculate Conception Monday, December 7, 2026, 7:00 PM Vigil Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1ca1ddf2",
+          "page": 5,
+          "said": "Monday, December 7, 2026, 7:00 PM Vigil Mass"
+        }
+      ],
+      "rationale": "R1, R16: dated holy-day Mass after as_of, printed in both bulletins' Schedule of Parish Events.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-peter-and-paul-turnersville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "273f1b9c",
+          "page": 5,
+          "said": "Tuesday, December 8, 2026, 9:00 AM, 12:15 & 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1ca1ddf2",
+          "page": 5,
+          "said": "Tuesday, December 8, 2026, 9:00 AM, 12:15 & 7:00 PM"
+        }
+      ],
+      "rationale": "R1, R16: dated holy-day Masses outside the weekly schedule; the 9:00 AM is the weekly Tuesday Mass (POLICY rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-peter-and-paul-turnersville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "273f1b9c",
+          "page": 5,
+          "said": "Tuesday, December 8, 2026, 9:00 AM, 12:15 & 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1ca1ddf2",
+          "page": 5,
+          "said": "Tuesday, December 8, 2026, 9:00 AM, 12:15 & 7:00 PM"
+        }
+      ],
+      "rationale": "R1, R16: dated holy-day Masses outside the weekly schedule; the 9:00 AM is the weekly Tuesday Mass (POLICY rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-peter-and-paul-turnersville",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-15",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Penance Service"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "273f1b9c",
+          "page": 5,
+          "said": "Advent Penance Service Tuesday, December 15, 2026, 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1ca1ddf2",
+          "page": 5,
+          "said": "Advent Penance Service Tuesday, December 15, 2026, 7:00 PM"
+        }
+      ],
+      "rationale": "R1, R16: a dated penance service (Confession) after as_of; no end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-peter-and-paul-turnersville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "273f1b9c",
+          "page": 5,
+          "said": "Christmas Eve - December 24, 2026 Masses - 4:00 PM, 8:00 PM, 12:00 Midnight"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1ca1ddf2",
+          "page": 5,
+          "said": "Christmas Eve Masses - 4:00 PM, 8:00 PM, 12:00 Midnight"
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Eve Masses printed in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-peter-and-paul-turnersville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "20:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "273f1b9c",
+          "page": 5,
+          "said": "Christmas Eve - December 24, 2026 Masses - 4:00 PM, 8:00 PM, 12:00 Midnight"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1ca1ddf2",
+          "page": 5,
+          "said": "Christmas Eve Masses - 4:00 PM, 8:00 PM, 12:00 Midnight"
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Eve Masses printed in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-peter-and-paul-turnersville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "00:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Midnight Mass (listed under Christmas Eve)"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "273f1b9c",
+          "page": 5,
+          "said": "Christmas Eve - December 24, 2026 Masses - 4:00 PM, 8:00 PM, 12:00 Midnight"
+        }
+      ],
+      "rationale": "R1, R16: the 12:00 Midnight Mass listed under Christmas Eve begins at 12:00 AM on December 25.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-peter-and-paul-turnersville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Day"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "273f1b9c",
+          "page": 5,
+          "said": "Christmas Day - December 25, 2026 Masses - 9:00 AM, 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1ca1ddf2",
+          "page": 5,
+          "said": "Christmas Day Masses - 9:00 AM, 11:00 AM"
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Mass outside the weekly schedule; the 9:00 AM is the weekly Friday Mass (POLICY rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-peter-and-paul-turnersville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-31",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vigil of Mary, Mother of God"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "273f1b9c",
+          "page": 5,
+          "said": "Solemnity of Mary, Mother of God Thursday, December 31, 2026, 4:00 PM Vigil Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1ca1ddf2",
+          "page": 5,
+          "said": "Thursday, December 31, 2026, 4:00 PM Vigil Mass"
+        }
+      ],
+      "rationale": "R1, R16: dated holy-day vigil Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-peter-and-paul-turnersville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2027-01-01",
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mary, Mother of God"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "273f1b9c",
+          "page": 5,
+          "said": "Friday, January 1, 2027, 9:00 AM, 11:00 AM Masses"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1ca1ddf2",
+          "page": 5,
+          "said": "Friday, January 1, 2027, 9:00 AM, 11:00 AM Masses"
+        }
+      ],
+      "rationale": "R1, R16: dated holy-day Mass outside the weekly schedule; the 9:00 AM is the weekly Friday Mass (POLICY rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "273f1b9c",
+          "page": 1,
+          "said": "Holy Day Masses Vigil 7:00PM; Holy Day 9:00AM, 12:15 and 7:00 PM"
+        }
+      ],
+      "rationale": "POLICY, Dates: a generic holy-day pattern pins down no date; the dated holy days (Dec 7-8, Dec 31-Jan 1) are recorded from the events list.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "273f1b9c",
+          "page": 1,
+          "said": "Miraculous Medal Devotions Following the 9:00AM Mass on Saturday"
+        }
+      ],
+      "rationale": "R24: a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
