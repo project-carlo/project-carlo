@@ -1,0 +1,1206 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-teresa-of-calcutta-collingswood",
+  "status": "ready",
+  "as_of": "2026-11-15T16:48:09Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T13:50:23Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches (St. John, Collingswood; Holy Saviour, Westmont). Weekend, daily, Thursday Adoration and Saturday Confession times agree in both bulletins (Nov 8 and Nov 15, 2026) and the website. Dated entries: Care of Creation Mass, Thanksgiving Mass and Adoration cancellation, Immaculate Conception, Christmas Reconciliation and Christmas/New Year Masses. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "f8065cf7a55487b1f3367eb0c108119d98d3fc42b9f2e44f0eaad4f898344804",
+      "fetched_at": "2026-11-15T16:48:09Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "af2eaa62606fe1818231e943017a13c91290beffab38c6d8ab9a22f1a1ece9de",
+      "fetched_at": "2026-11-08T15:56:22Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-saviour-westmont",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8065cf7",
+          "page": 2,
+          "said": "Saturday: 4:00 PM - HS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "af2eaa62",
+          "page": 2,
+          "said": "Saturday: 4:00 PM - HS"
+        }
+      ],
+      "rationale": "R1, R35: Regular Weekend Masses box of both bulletins; intentions list 4pm(HS) each Saturday; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-saviour-westmont",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8065cf7",
+          "page": 2,
+          "said": "Sunday: 8:00 AM - HS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "af2eaa62",
+          "page": 2,
+          "said": "Sunday: 8:00 AM - HS"
+        }
+      ],
+      "rationale": "R1, R35: Regular Weekend Masses box of both bulletins; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-collingswood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8065cf7",
+          "page": 2,
+          "said": "Sunday: 9:30 AM - SJ Live streamed (YouTube)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "af2eaa62",
+          "page": 2,
+          "said": "Sunday: 9:30 AM - SJ Live streamed (YouTube)"
+        }
+      ],
+      "rationale": "R1, R35: Regular Weekend Masses box of both bulletins; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-collingswood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8065cf7",
+          "page": 2,
+          "said": "Sunday: 11:00 AM - SJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "af2eaa62",
+          "page": 2,
+          "said": "Sunday: 11:00 AM - SJ"
+        }
+      ],
+      "rationale": "R1, R35: Regular Weekend Masses box of both bulletins; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-saviour-westmont",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In American Sign Language and voice interpreted"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8065cf7",
+          "page": 2,
+          "said": "Sunday: 11:00 AM - HS in American Sign Language and Voice Interpreted for those with hearing"
+        },
+        {
+          "source": "agent",
+          "bulletin": "af2eaa62",
+          "page": 2,
+          "said": "Sunday: 11:00 AM - HS in American Sign Language and Voice Interpreted for those with hearing"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f8065cf7",
+          "page": 9,
+          "said": "Every Sunday the Mass is signed in ASL ... 11:00AM Mass at Holy Saviour Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "af2eaa62",
+          "page": 9,
+          "said": "Every Sunday the Mass is signed in ASL ... 11:00AM Mass at Holy Saviour Church"
+        }
+      ],
+      "rationale": "R1, R35: schedule box and Deaf Ministry page of both bulletins; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-collingswood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8065cf7",
+          "page": 2,
+          "said": "Mon., Tues., Wed., Fri.: 9:00 AM St. John Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "af2eaa62",
+          "page": 2,
+          "said": "Mon., Tues., Wed., Fri.: 9:00 AM St. John Church"
+        }
+      ],
+      "rationale": "R1, R35: Daily Masses in both bulletins' schedule box; intentions list 9am(SJ) on these days; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-collingswood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8065cf7",
+          "page": 2,
+          "said": "Mon., Tues., Wed., Fri.: 9:00 AM St. John Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "af2eaa62",
+          "page": 2,
+          "said": "Mon., Tues., Wed., Fri.: 9:00 AM St. John Church"
+        }
+      ],
+      "rationale": "R1, R35: Daily Masses in both bulletins' schedule box; intentions list 9am(SJ) on these days; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-collingswood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8065cf7",
+          "page": 2,
+          "said": "Mon., Tues., Wed., Fri.: 9:00 AM St. John Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "af2eaa62",
+          "page": 2,
+          "said": "Mon., Tues., Wed., Fri.: 9:00 AM St. John Church"
+        }
+      ],
+      "rationale": "R1, R35: Daily Masses in both bulletins' schedule box; intentions list 9am(SJ) on these days; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-collingswood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8065cf7",
+          "page": 2,
+          "said": "Mon., Tues., Wed., Fri.: 9:00 AM St. John Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "af2eaa62",
+          "page": 2,
+          "said": "Mon., Tues., Wed., Fri.: 9:00 AM St. John Church"
+        }
+      ],
+      "rationale": "R1, R35: Daily Masses in both bulletins' schedule box; intentions list 9am(SJ) on these days; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-saviour-westmont",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8065cf7",
+          "page": 2,
+          "said": "Thursday: 9AM Holy Saviour Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "af2eaa62",
+          "page": 2,
+          "said": "Thursday: 9AM Holy Saviour Church"
+        }
+      ],
+      "rationale": "R1, R35: Daily Masses in both bulletins' schedule box; intentions list 9am(HS) Thursday; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-saviour-westmont",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8065cf7",
+          "page": 3,
+          "said": "ADORATION-Thursday at Holy Saviour Church 9:30am-8pm. Silent Adoration 9:30am to 7pm; Rosary, Benediction 7pm to 8pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "af2eaa62",
+          "page": 3,
+          "said": "ADORATION-Thursday at Holy Saviour Church 9:30am-8pm. Silent Adoration 9:30am to 7pm; Rosary, Benediction 7pm to 8pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f8065cf7",
+          "page": 2,
+          "said": "Adoration: Thursdays: After 9:00am Mass—8pm (HS)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "af2eaa62",
+          "page": 2,
+          "said": "Adoration: Thursdays: After 9:00am Mass—8pm (HS)"
+        }
+      ],
+      "rationale": "R1, R35: the Adoration box in both bulletins gives the clock times (POLICY, Times: a stated clock time wins); Benediction 7-8 PM is part of the same period, so one entry with note Benediction (POLICY).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-saviour-westmont",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8065cf7",
+          "page": 2,
+          "said": "RECONCILIATION: Saturday: 3:00-3:45 Holy Saviour Church or anytime by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "af2eaa62",
+          "page": 2,
+          "said": "RECONCILIATION: Saturday: 3:00-3:45 Holy Saviour Church or anytime by appointment."
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8065cf7",
+          "page": 2,
+          "said": "or anytime by appointment."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-saviour-westmont",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-23",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass for the Care of Creation"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8065cf7",
+          "page": 5,
+          "said": "Mass for the Care of Creation on Monday, November 23rd at 7pm at Holy Saviour Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "af2eaa62",
+          "page": 5,
+          "said": "Mass for the Care of Creation on Monday, November 23rd at 7pm at Holy Saviour Church"
+        }
+      ],
+      "rationale": "R1, R16: dated special Mass on or after as_of, open to all ('join us').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-collingswood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day Mass and food blessing"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8065cf7",
+          "page": 3,
+          "said": "Thanksgiving Day Mass- 9am at St. John's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "af2eaa62",
+          "page": 3,
+          "said": "Thanksgiving Day Mass- 9am at St. John's Church"
+        }
+      ],
+      "rationale": "R1, R16: dated holiday Mass. R17: the bulletin does not say the weekly Thursday 9 AM Holy Saviour Mass is cancelled, so that slot is left alone.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-saviour-westmont",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:30",
+        "end_time": "20:00",
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8065cf7",
+          "page": 3,
+          "said": "No Adoration on Thanksgiving Day."
+        },
+        {
+          "source": "agent",
+          "bulletin": "af2eaa62",
+          "page": 3,
+          "said": "No Adoration on Thanksgiving Day."
+        }
+      ],
+      "rationale": "R1, R16: explicit cancellation of the weekly Thursday Adoration on Thanksgiving, November 26.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8065cf7",
+          "page": 3,
+          "said": "Nov. 12th Adoration will be from 9:30am-4pm."
+        }
+      ],
+      "rationale": "R16: dated change before as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8065cf7",
+          "page": 3,
+          "said": "The Special Needs Mass is canceled on November 22."
+        }
+      ],
+      "rationale": "R26, R17: neither bulletin nor the website gives a time or church for a Special Needs Mass, and no weekly slot of that name exists to cancel; nothing with a time to record.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-collingswood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception vigil"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "af2eaa62",
+          "page": 5,
+          "said": "Monday, December 7 at 7 PM (Vigil Mass) at St. John"
+        }
+      ],
+      "rationale": "R19: holy day Mass announced in the Nov 8 bulletin, nothing newer contradicts it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-saviour-westmont",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "af2eaa62",
+          "page": 5,
+          "said": "Tuesday, December 8 at 7 PM at Holy Saviour."
+        }
+      ],
+      "rationale": "R19: holy day Mass announced in the Nov 8 bulletin. Its 9 AM St. John Mass is the weekly Tuesday slot (POLICY rule 6), so not recorded separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-collingswood",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-15",
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Reconciliation"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8065cf7",
+          "page": 5,
+          "said": "Tuesday, December 15, 2026 – St. John's Church 4:00 – 5:00 PM then 7:00 – 8:00 PM"
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Reconciliation.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-collingswood",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-15",
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Reconciliation"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8065cf7",
+          "page": 5,
+          "said": "Tuesday, December 15, 2026 – St. John's Church 4:00 – 5:00 PM then 7:00 – 8:00 PM"
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Reconciliation, second session.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-collingswood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8065cf7",
+          "page": 5,
+          "said": "Christmas Eve Masses – Thursday, December 24, 2026: 4:00 PM – St. John's Church"
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-saviour-westmont",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8065cf7",
+          "page": 5,
+          "said": "Christmas Eve Masses – Thursday, December 24, 2026: 5:00 PM – Holy Saviour Church"
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-collingswood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "00:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Midnight Mass"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8065cf7",
+          "page": 5,
+          "said": "Christmas Eve Masses: Midnight – St. John's Church"
+        }
+      ],
+      "rationale": "R1, R16: Midnight Mass listed under Christmas Eve; midnight starts December 25 at 12:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-saviour-westmont",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Day"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8065cf7",
+          "page": 5,
+          "said": "Christmas Day Masses – Friday, December 25, 2026: 8:00 AM – Holy Saviour Church"
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Mass. R17: the weekly Friday 9 AM is not stated as cancelled, so left alone.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-collingswood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Day"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8065cf7",
+          "page": 5,
+          "said": "Christmas Day Masses: 10:00 AM – St. John's Church"
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-saviour-westmont",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Day; ASL and voice interpreted"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8065cf7",
+          "page": 5,
+          "said": "Christmas Day Masses: 11:00 AM – Holy Saviour Church Mass in ASL & Voice Interpreted"
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-saviour-westmont",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-31",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "New Year's Eve"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8065cf7",
+          "page": 5,
+          "said": "New Year's Eve – Thursday, December 31, 2026: 4:00 PM – Holy Saviour Church"
+        }
+      ],
+      "rationale": "R1, R16: dated holy day vigil Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-saviour-westmont",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2027-01-01",
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "New Year's Day; ASL and voice interpreted"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8065cf7",
+          "page": 5,
+          "said": "New Year's Day – Friday, January 1, 2027: 9:00 AM – St. John's Church; 11:00 AM – Holy Saviour Church Mass in ASL & Voice Interpreted"
+        }
+      ],
+      "rationale": "R1, R16: dated holy day Mass. The 9:00 AM St. John Mass is the weekly Friday slot (POLICY rule 6), not recorded separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-stratford",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-05",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Healing Mass"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8065cf7",
+          "page": 9,
+          "said": "Healing Mass ... December 5, 2026 10am St. Luke Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f8065cf7",
+          "page": 6,
+          "said": "Healing Mass - Fr Rene Canales—12/05/26, 10am"
+        }
+      ],
+      "rationale": "R22: St. Luke, Stratford belongs to Our Lady of Guadalupe, Lindenwold, not this parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-the-apostle-gibbsboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8065cf7",
+          "page": 9,
+          "said": "2nd Weekend of the Month St. Andrew the Apostle ... Gibbsboro, NJ. Mainstream Mass Saturday, 4:30pm Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "af2eaa62",
+          "page": 9,
+          "said": "2nd Weekend of the Month St. Andrew the Apostle ... Gibbsboro, NJ. Mainstream Mass Saturday, 4:30pm Mass"
+        }
+      ],
+      "rationale": "R22: Deaf Ministry listing at another parish's church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-eucharist-cherry-hill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second"
+        ],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 10,
+          "start_day": null,
+          "end_month": 4,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8065cf7",
+          "page": 9,
+          "said": "Holy Eucharist Parish 344 Kresson Road, Cherry Hill, NJ. Mainstream Mass Sunday (Oct. - Apr.) 9:45AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "af2eaa62",
+          "page": 9,
+          "said": "Holy Eucharist Parish 344 Kresson Road, Cherry Hill, NJ. Mainstream Mass Sunday (Oct. - Apr.) 9:45AM"
+        }
+      ],
+      "rationale": "R22: Deaf Ministry listing at another parish's church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8065cf7",
+          "page": 3,
+          "said": "PRAY THE ROSARY DAILY After the 9am Mass"
+        }
+      ],
+      "rationale": "R24: the Rosary is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
