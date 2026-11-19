@@ -1,0 +1,952 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-rose-of-lima-haddon-heights",
+  "status": "ready",
+  "as_of": "2026-11-15T16:48:07Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T13:40:41Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two listed churches, but every schedule in both bulletins (Nov 8 and Nov 15, 2026) and on the website is at St. Rose of Lima, Haddon Heights; nothing is printed for St. Francis de Sales, Barrington. Schedule box is identical in both issues and matches the website: Sat 5:30 vigil, Sun 8/9:30/11 and 5:30 (not Memorial Day-Labor Day), weekday 6:30 & 8:30, Sat 8:30, Sat confessions 9-9:45 and 4:15-5:15, Friday chapel Adoration 9-5. 6:30 AM Masses on Nov 26-27 are cancelled. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "d110f4768da5934ea9753d01e81bbb4a1d2f66ab200fae824c530859c3b6e846",
+      "fetched_at": "2026-11-15T16:48:07Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "63c402e2694e72e172bde948c71792eae56a8d1e0d1d514a74c51655cb950533",
+      "fetched_at": "2026-11-08T15:56:20Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-haddon-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d110f476",
+          "page": 1,
+          "said": "Saturday Vigil: 5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "63c402e2",
+          "page": 1,
+          "said": "Saturday Vigil: 5:30 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the week calendar repeats it (Vigil Mass — Church 5:30pm).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-haddon-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d110f476",
+          "page": 1,
+          "said": "Sunday: 8:00am, 9:30am, 11:00am, 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "63c402e2",
+          "page": 1,
+          "said": "Sunday: 8:00am, 9:30am, 11:00am, 5:30pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in the week calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-haddon-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d110f476",
+          "page": 1,
+          "said": "Sunday: 8:00am, 9:30am, 11:00am, 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "63c402e2",
+          "page": 1,
+          "said": "Sunday: 8:00am, 9:30am, 11:00am, 5:30pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in the week calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-haddon-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d110f476",
+          "page": 1,
+          "said": "Sunday: 8:00am, 9:30am, 11:00am, 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "63c402e2",
+          "page": 1,
+          "said": "Sunday: 8:00am, 9:30am, 11:00am, 5:30pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in the week calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-haddon-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": 7,
+          "end_month": 5,
+          "end_day": 23
+        },
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d110f476",
+          "page": 1,
+          "said": "Sunday: ... 5:30pm (* there is no Sunday 5:30pm evening Mass from Memorial Day to Labor Day weekends)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "63c402e2",
+          "page": 1,
+          "said": "Sunday: ... 5:30pm (* there is no Sunday 5:30pm evening Mass from Memorial Day to Labor Day weekends)"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly qualifiers (season): the box omits it from Memorial Day weekend through Labor Day weekend. Labor Day Sunday always falls Aug 31-Sep 6 and Memorial Day Sunday May 24-30, so 9/7-5/23 covers exactly the Sundays it runs in every year.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-haddon-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d110f476",
+          "page": 1,
+          "said": "Weekdays: Mon-Fri… 6:30am & 8:30am (CHAPEL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "63c402e2",
+          "page": 1,
+          "said": "Weekdays: Mon-Fri… 6:30am & 8:30am (CHAPEL)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins; the intentions of both weeks list 6:30am every weekday. The chapel is on the St. Rose campus (week calendar lists it with the church, lounge and school).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-haddon-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d110f476",
+          "page": 1,
+          "said": "Weekdays: Mon-Fri… 6:30am & 8:30am (CHAPEL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "63c402e2",
+          "page": 1,
+          "said": "Weekdays: Mon-Fri… 6:30am & 8:30am (CHAPEL)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins; the intentions of both weeks list 6:30am every weekday. The chapel is on the St. Rose campus (week calendar lists it with the church, lounge and school).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-haddon-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d110f476",
+          "page": 1,
+          "said": "Weekdays: Mon-Fri… 6:30am & 8:30am (CHAPEL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "63c402e2",
+          "page": 1,
+          "said": "Weekdays: Mon-Fri… 6:30am & 8:30am (CHAPEL)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins; the intentions of both weeks list 6:30am every weekday. The chapel is on the St. Rose campus (week calendar lists it with the church, lounge and school).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-haddon-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d110f476",
+          "page": 1,
+          "said": "Weekdays: Mon-Fri… 6:30am & 8:30am (CHAPEL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "63c402e2",
+          "page": 1,
+          "said": "Weekdays: Mon-Fri… 6:30am & 8:30am (CHAPEL)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins; the intentions of both weeks list 6:30am every weekday. The chapel is on the St. Rose campus (week calendar lists it with the church, lounge and school).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-haddon-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d110f476",
+          "page": 1,
+          "said": "Weekdays: Mon-Fri… 6:30am & 8:30am (CHAPEL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "63c402e2",
+          "page": 1,
+          "said": "Weekdays: Mon-Fri… 6:30am & 8:30am (CHAPEL)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins; the intentions of both weeks list 6:30am every weekday. The chapel is on the St. Rose campus (week calendar lists it with the church, lounge and school).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-haddon-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d110f476",
+          "page": 1,
+          "said": "Weekdays: Mon-Fri… 6:30am & 8:30am (CHAPEL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "63c402e2",
+          "page": 1,
+          "said": "Weekdays: Mon-Fri… 6:30am & 8:30am (CHAPEL)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins and in both weeks' intentions. No location note: the bulletin says chapel, the website's Daily Mass Schedule says Church for 8:30; both are at St. Rose.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-haddon-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d110f476",
+          "page": 1,
+          "said": "Weekdays: Mon-Fri… 6:30am & 8:30am (CHAPEL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "63c402e2",
+          "page": 1,
+          "said": "Weekdays: Mon-Fri… 6:30am & 8:30am (CHAPEL)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins and in both weeks' intentions. No location note: the bulletin says chapel, the website's Daily Mass Schedule says Church for 8:30; both are at St. Rose.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-haddon-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d110f476",
+          "page": 1,
+          "said": "Weekdays: Mon-Fri… 6:30am & 8:30am (CHAPEL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "63c402e2",
+          "page": 1,
+          "said": "Weekdays: Mon-Fri… 6:30am & 8:30am (CHAPEL)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins and in both weeks' intentions. No location note: the bulletin says chapel, the website's Daily Mass Schedule says Church for 8:30; both are at St. Rose.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-haddon-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d110f476",
+          "page": 1,
+          "said": "Weekdays: Mon-Fri… 6:30am & 8:30am (CHAPEL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "63c402e2",
+          "page": 1,
+          "said": "Weekdays: Mon-Fri… 6:30am & 8:30am (CHAPEL)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins and in both weeks' intentions. No location note: the bulletin says chapel, the website's Daily Mass Schedule says Church for 8:30; both are at St. Rose.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-haddon-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d110f476",
+          "page": 1,
+          "said": "Weekdays: Mon-Fri… 6:30am & 8:30am (CHAPEL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "63c402e2",
+          "page": 1,
+          "said": "Weekdays: Mon-Fri… 6:30am & 8:30am (CHAPEL)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins and in both weeks' intentions. No location note: the bulletin says chapel, the website's Daily Mass Schedule says Church for 8:30; both are at St. Rose.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-haddon-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d110f476",
+          "page": 1,
+          "said": "Saturday 8:30am (CHURCH)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "63c402e2",
+          "page": 1,
+          "said": "Saturday 8:30am (CHURCH)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-haddon-heights",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "09:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d110f476",
+          "page": 1,
+          "said": "Confessions Saturday 9:00am-9:45am & Saturday 4:15pm-5:15pm or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "63c402e2",
+          "page": 1,
+          "said": "Confessions Saturday 9:00am-9:45am & Saturday 4:15pm-5:15pm or by appointment"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the week calendar repeats both times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-haddon-heights",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": "17:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d110f476",
+          "page": 1,
+          "said": "Confessions Saturday 9:00am-9:45am & Saturday 4:15pm-5:15pm or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "63c402e2",
+          "page": 1,
+          "said": "Confessions Saturday 9:00am-9:45am & Saturday 4:15pm-5:15pm or by appointment"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the week calendar repeats both times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-haddon-heights",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d110f476",
+          "page": 1,
+          "said": "Chapel open for Adoration Fridays 9am-5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "63c402e2",
+          "page": 1,
+          "said": "Chapel open for Adoration Fridays 9am-5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d110f476",
+          "page": 8,
+          "said": "EUCHARISTIC ADORATION AT ST. ROSE OF LIMA CHAPEL– EVERY FRIDAY 9AM -5PM"
+        }
+      ],
+      "rationale": "R1, R38: the parish calls the Friday chapel hours Adoration in both bulletins (box, week calendar and page 8 notice).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-haddon-heights",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d110f476",
+          "page": 4,
+          "said": "Please note: There will be no 6:30am Mass held on Thursday Nov 26 or Friday, November 27th"
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin cancels the 6:30 AM Mass on this date, after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-haddon-heights",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d110f476",
+          "page": 4,
+          "said": "Please note: There will be no 6:30am Mass held on Thursday Nov 26 or Friday, November 27th"
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin cancels the 6:30 AM Mass on this date, after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d110f476",
+          "page": 1,
+          "said": "Chapel open ... for Prayer Mon. 9am-5pm, Tues/Wed/Thurs 9am-7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "63c402e2",
+          "page": 1,
+          "said": "Chapel open ... for Prayer Mon. 9am-5pm, Tues/Wed/Thurs 9am-7pm"
+        }
+      ],
+      "rationale": "R38: Mon-Thu the chapel is only open for prayer, which does not establish Adoration (website: 'open for Private Prayer').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d110f476",
+          "page": 4,
+          "said": "Thanksgiving Day, Thursday, Nov. 26 at 8:30am Mass in the Church"
+        }
+      ],
+      "rationale": "POLICY Weekly or dated rule 7: the Thanksgiving Mass and food blessing is the regular Thursday 8:30 AM Mass, already a weekly slot; no separate entry.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d110f476",
+          "page": 1,
+          "said": "Confessions ... or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "63c402e2",
+          "page": 1,
+          "said": "Confessions ... or by appointment"
+        }
+      ],
+      "rationale": "R26: by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "63c402e2",
+          "page": 7,
+          "said": "Healing Mass Celebrated by Fr. Rene' December 5, 2026 at 10am St. Luke Church, Stratford"
+        }
+      ],
+      "rationale": "R22: held at St. Luke, Stratford, another parish's church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "63c402e2",
+          "page": 7,
+          "said": "Wedding Anniversary Mass celebrated by Bishop Joseph A. Williams"
+        }
+      ],
+      "rationale": "R22, R24: a diocesan event with no St. Rose location or time given in the text.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d110f476",
+          "page": 1,
+          "said": "St. Rose School All Saints Day Parade and Mass- Nov 2"
+        }
+      ],
+      "rationale": "R16: a school Mass dated before as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
