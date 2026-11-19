@@ -1,0 +1,941 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-trinity-bridgewater",
+  "status": "ready",
+  "as_of": "2026-11-15T16:03:10Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T22:45:28Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, Holy Trinity, Bridgewater, served by the Raritan Oratory; the bulletin's schedule box also lists the Oratory's Raritan churches (St. Ann, St. Joseph, Shrine Chapel), which belong to other parishes and are excluded (R22). Holy Trinity's own schedule (Sat 5 PM, Sun 10:30 AM, Fri 7 PM Mass; Wed 11-noon Confession) is identical in both bulletins read and matches the intentions. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "f559e20e6200c3c29488dd20ba85b83cd2e8cd654b4311c4969065956f15a26c",
+      "fetched_at": "2026-11-15T16:03:10Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "1ca652aea958d3b6249efbefeb1b4512e4a4aad217178386a28d26471d1d2333",
+      "fetched_at": "2026-11-08T15:31:00Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-bridgewater",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f559e20e",
+          "page": 1,
+          "said": "Saturday Evening 5:00 pm ---- Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1ca652ae",
+          "page": 1,
+          "said": "Saturday Evening 5:00 pm ---- Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f559e20e",
+          "page": 2,
+          "said": "SATURDAY, November 21, Vigil ... 5:00pm People of Our Parish"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read, and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-bridgewater",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f559e20e",
+          "page": 1,
+          "said": "Sunday 10:30 am ---- Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1ca652ae",
+          "page": 1,
+          "said": "Sunday 10:30 am ---- Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f559e20e",
+          "page": 2,
+          "said": "SUNDAY, November 22 ... 10:30am Grace Lutzko (1st Anniv)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read, and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-bridgewater",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f559e20e",
+          "page": 1,
+          "said": "Weekdays ... Friday, 7:00 pm ---- Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1ca652ae",
+          "page": 1,
+          "said": "Weekdays ... Friday, 7:00 pm ---- Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f559e20e",
+          "page": 2,
+          "said": "FRIDAY, November 20, Weekday 7:00pm Nicholas Dutto"
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass schedule of both bulletins and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-bridgewater",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f559e20e",
+          "page": 1,
+          "said": "CONFESSIONS Wednesday, 11:00 am - 12 noon ---- Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1ca652ae",
+          "page": 1,
+          "said": "CONFESSIONS Wednesday, 11:00 am - 12 noon ---- Holy Trinity"
+        }
+      ],
+      "rationale": "R1: printed in the confession schedule of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-raritan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f559e20e",
+          "page": 1,
+          "said": "Saturday Evening 4:00 pm (English) ---- St. Joseph"
+        }
+      ],
+      "rationale": "R22: the shared Raritan Oratory schedule box lists St. Joseph, Raritan, which is another parish's church (seed church: st-joseph-raritan); its times belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-raritan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f559e20e",
+          "page": 1,
+          "said": "7:30 am (Spanish), 12:00 pm (Spanish) ---- St. Joseph"
+        }
+      ],
+      "rationale": "R22: St. Joseph, Raritan is another parish's church; its times belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-raritan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f559e20e",
+          "page": 1,
+          "said": "7:30 am (Spanish), 12:00 pm (Spanish) ---- St. Joseph"
+        }
+      ],
+      "rationale": "R22: St. Joseph, Raritan is another parish's church; its times belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-raritan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f559e20e",
+          "page": 1,
+          "said": "9:00 am (English) ---- St. Joseph"
+        }
+      ],
+      "rationale": "R22: St. Joseph, Raritan is another parish's church; its times belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-raritan",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f559e20e",
+          "page": 1,
+          "said": "Saturday, 3:00 pm - 3:30 pm ---- St. Joseph"
+        }
+      ],
+      "rationale": "R22: St. Joseph, Raritan is another parish's church; its times belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-raritan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f559e20e",
+          "page": 1,
+          "said": "Sunday 7:30 am, 10:30 am, 12:00 pm & 5:00 pm ---- St. Ann"
+        }
+      ],
+      "rationale": "R22: St. Ann, Raritan is another parish's church (seed church: st-ann-raritan); its times belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-raritan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f559e20e",
+          "page": 1,
+          "said": "Sunday 7:30 am, 10:30 am, 12:00 pm & 5:00 pm ---- St. Ann"
+        }
+      ],
+      "rationale": "R22: St. Ann, Raritan is another parish's church (seed church: st-ann-raritan); its times belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-raritan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f559e20e",
+          "page": 1,
+          "said": "Sunday 7:30 am, 10:30 am, 12:00 pm & 5:00 pm ---- St. Ann"
+        }
+      ],
+      "rationale": "R22: St. Ann, Raritan is another parish's church (seed church: st-ann-raritan); its times belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-raritan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f559e20e",
+          "page": 1,
+          "said": "Sunday 7:30 am, 10:30 am, 12:00 pm & 5:00 pm ---- St. Ann"
+        }
+      ],
+      "rationale": "R22: St. Ann, Raritan is another parish's church (seed church: st-ann-raritan); its times belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-raritan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f559e20e",
+          "page": 1,
+          "said": "Monday - Friday, 8:00 am ---- St. Ann"
+        }
+      ],
+      "rationale": "R22: St. Ann, Raritan is another parish's church; its times belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-raritan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f559e20e",
+          "page": 1,
+          "said": "Monday - Friday, 8:00 am ---- St. Ann"
+        }
+      ],
+      "rationale": "R22: St. Ann, Raritan is another parish's church; its times belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-raritan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f559e20e",
+          "page": 1,
+          "said": "Monday - Friday, 8:00 am ---- St. Ann"
+        }
+      ],
+      "rationale": "R22: St. Ann, Raritan is another parish's church; its times belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-raritan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f559e20e",
+          "page": 1,
+          "said": "Monday - Friday, 8:00 am ---- St. Ann"
+        }
+      ],
+      "rationale": "R22: St. Ann, Raritan is another parish's church; its times belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-raritan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f559e20e",
+          "page": 1,
+          "said": "Monday - Friday, 8:00 am ---- St. Ann"
+        }
+      ],
+      "rationale": "R22: St. Ann, Raritan is another parish's church; its times belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-raritan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f559e20e",
+          "page": 1,
+          "said": "Saturday, 9:00am ---- St. Ann"
+        }
+      ],
+      "rationale": "R22: St. Ann, Raritan is another parish's church; its times belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f559e20e",
+          "page": 1,
+          "said": "Saturday, After 9:30 am Mass ---- St. Ann"
+        }
+      ],
+      "rationale": "R22: St. Ann, Raritan is another parish's church. The line also names a 9:30 Mass the box lists at 9:00, so no time is recorded here.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "shrine-chapel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Latin"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f559e20e",
+          "page": 1,
+          "said": "10:30 am (Latin) ---- Shrine Chapel"
+        }
+      ],
+      "rationale": "R22: the Shrine Chapel of the Blessed Sacrament, Raritan is another parish's listed church; its times belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "shrine-chapel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f559e20e",
+          "page": 1,
+          "said": "Monday - Friday, 12:15 pm (English) ---- Shrine Chapel"
+        }
+      ],
+      "rationale": "R22: the Shrine Chapel, Raritan is another parish's listed church; its times belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "shrine-chapel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f559e20e",
+          "page": 1,
+          "said": "Monday - Friday, 12:15 pm (English) ---- Shrine Chapel"
+        }
+      ],
+      "rationale": "R22: the Shrine Chapel, Raritan is another parish's listed church; its times belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "shrine-chapel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f559e20e",
+          "page": 1,
+          "said": "Monday - Friday, 12:15 pm (English) ---- Shrine Chapel"
+        }
+      ],
+      "rationale": "R22: the Shrine Chapel, Raritan is another parish's listed church; its times belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "shrine-chapel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f559e20e",
+          "page": 1,
+          "said": "Monday - Friday, 12:15 pm (English) ---- Shrine Chapel"
+        }
+      ],
+      "rationale": "R22: the Shrine Chapel, Raritan is another parish's listed church; its times belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "shrine-chapel",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f559e20e",
+          "page": 1,
+          "said": "Monday - Friday, 12:15 pm (English) ---- Shrine Chapel"
+        }
+      ],
+      "rationale": "R22: the Shrine Chapel, Raritan is another parish's listed church; its times belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "shrine-chapel",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f559e20e",
+          "page": 1,
+          "said": "Friday, 11:00am - 12 noon ---- Shrine Chapel"
+        }
+      ],
+      "rationale": "R22: the Shrine Chapel, Raritan is another parish's listed church; its times belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f559e20e",
+          "page": 1,
+          "said": "(or by appointment)"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
