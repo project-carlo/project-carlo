@@ -38,6 +38,8 @@ from pdf_extract.runs import (
 from pdf_extract.schedule.report import render_update_mode, update_mode_report
 from pdf_extract.schedule.store import unseeded_slugs, update_mode_slugs
 from pdf_extract.schedule_diff import parish_changed
+from pdf_extract.seeding.files import SEEDS_DIR
+from pdf_extract.seeding.loader import due_source_seeds
 from pdf_extract.storage import latest_bulletin_ids, load_bulletins
 from pdf_extract.verify_frontend_snapshot import verify_frontend_snapshot
 
@@ -248,6 +250,7 @@ def build_report(
     seeded: dict[str, Any] | None = None,
     seeds: dict[str, Any] | None = None,
     corrections: dict[str, Any] | None = None,
+    seeds_dir: Path = SEEDS_DIR,
 ) -> dict[str, Any]:
     """Everything the run changed and every reason to hold it, as one dict.
 
@@ -262,6 +265,8 @@ def build_report(
     after `before_db` was taken, so their schedules are in the comparison.
     `corrections` is what loading the correction files did
     (`schedule.corrections`), also after `before_db` was taken.
+    `source_schedules_due` lists the source seeds in `seeds_dir` whose pages are
+    due to be read again: a warning, which never holds the run.
     """
     if snapshot_verification is None:
         snapshot_verification = verify_databases(before_db, after_db, date.today())
@@ -302,6 +307,7 @@ def build_report(
         ]
         stale = _stale_parishes(conn, attempted)
         update_mode = update_mode_report(conn, run_id)
+        source_due = due_source_seeds(conn, date.today().isoformat(), seeds_dir)
     finally:
         conn.close()
 
@@ -381,6 +387,7 @@ def build_report(
             "loaded": (corrections or {}).get("loaded", []),
             "skipped": (corrections or {}).get("skipped", []),
         },
+        "source_schedules_due": source_due,
         "attention": {
             "failures": failures,
             "wrong_bulletins": wrong_bulletins,
@@ -661,6 +668,7 @@ def render_markdown(report: dict[str, Any], *, max_changed_parishes: int = 40) -
             f"\n…and {len(changes) - max_changed_parishes} more parishes; see report.json."
         )
     lines += render_seeds(report.get("seeds") or {})
+    lines += render_source_due(report.get("source_schedules_due") or [])
     lines += render_corrections(report.get("corrections") or {})
     if report.get("update_mode"):
         lines += render_update_mode(report["update_mode"])
@@ -674,13 +682,27 @@ def render_seeds(seeds: dict[str, Any]) -> list[str]:
         return []
     lines = ["", "### Seeds", ""]
     for item in loaded:
+        source = f"from {item['source_url']}, " if item.get("source_url") else ""
         lines.append(
-            f"- **{item['parish']}** seeded (revision {item['revision']}, "
+            f"- **{item['parish']}** seeded ({source}revision {item['revision']}, "
             f"{item['entries']} entries, as of {item['as_of']}, approved by "
             f"{item.get('reviewer') or 'unknown'}): on the site from this run"
         )
     for item in skipped:
         lines.append(f"- **{item['parish']}** seed file not loaded: {item['reason']}")
+    return lines
+
+
+def render_source_due(due: list[dict[str, Any]]) -> list[str]:
+    """The source schedules whose pages are due to be read again, if any."""
+    if not due:
+        return []
+    lines = ["", "### Source schedules due", "",
+             "These parishes have no bulletin; their times are from their own website or "
+             "Facebook page, and are due to be checked there again. They stay on the site."]
+    lines += [f"- **{d['parish']}**: recheck after {d['recheck_after']} (read "
+              f"{str(d.get('as_of') or '')[:10]}, {d.get('source_url') or 'no page'})"
+              for d in due]
     return lines
 
 

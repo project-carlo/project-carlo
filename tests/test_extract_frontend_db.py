@@ -50,8 +50,10 @@ EVENTS = [
 SNAPSHOT_FIXTURE = Path(__file__).resolve().parents[1] / "packages/core/src/snapshot.fixture.json"
 # Nulls, strings that repeat, and a gap in the event ids.
 CHURCH_ROWS = [
-    (7, 1, "b", "B", None, None, "Rochester", "NY", None, 43.1, -77.6, None, None, "2026-09-20"),
-    (3, 1, "a", "A", "1 Main St", None, None, "NY", "14620", None, None, "https://a", None, None),
+    (7, 1, "b", "B", None, None, "Rochester", "NY", None, 43.1, -77.6, None, None, "2026-09-20",
+     None, None, None),
+    (3, 1, "a", "A", "1 Main St", None, None, "NY", "14620", None, None, "https://a", None, None,
+     "facebook", "https://www.facebook.com/a", "2026-11-16"),
 ]
 # A negative id (an update-mode entry), weeks of the month, weeks excluded, a
 # season that wraps the new year, and a cancellation naming a weekly row.
@@ -395,8 +397,8 @@ def test_verify_passes_for_the_same_data(db: Path, tmp_path: Path) -> None:
 
 
 def test_verify_fails_when_weekly_events_and_churches_change(tmp_path: Path) -> None:
-    church = (1, 1, "a", "A", None, None, None, None, None, None, None, None, None, None)
-    other = (2, 1, "b", "B", None, None, None, None, None, None, None, None, None, None)
+    church = (1, 1, "a", "A", *[None] * 13)
+    other = (2, 1, "b", "B", *[None] * 13)
     weekly = [
         (i, 1, "mass", "weekly", "Sunday", None, 480 + 60 * i, None, 0, None, None,
          [], None, None, None, None, None, False, None, None)

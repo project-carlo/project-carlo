@@ -42,7 +42,7 @@ BUCKET = "carlo-test"
 def _snapshot(*slugs: str) -> bytes:
     """A snapshot with one church per slug and no events."""
     churches = [
-        (i, 1, slug, slug, None, None, None, None, None, None, None, None, None, None)
+        (i, 1, slug, slug, *[None] * 13)
         for i, slug in enumerate(slugs, start=1)
     ]
     return encode_snapshot(churches, [])

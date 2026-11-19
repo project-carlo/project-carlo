@@ -33,6 +33,17 @@ evidence:
   seen: 2026-09-26
   note: 'Diocesan weekend Mass-times pages (fetched 2026-09-26) list ''St. Vincent de Paul, Springbrook'':
     Sat. 4 p.m.; Sun. 10 a.m..'
+- url: https://container.parishesonline.com/bulletins/14/0467/20261115B.pdf
+  seen: 2026-11-16
+  note: 'This page is only an image (no text layer), so the lines are transcribed from the rendered page
+    rather than quoted. Page 2 of the 15 November 2026 WHEAT bulletin, under ''St. Vincent de Paul'':
+    ''Saturday, November 21 4:00pm Louis Russo'' and ''Sunday, November 22 8:00am Norma Russo … 10:00am
+    Bill Burritt''.'
+- url: https://www.buffalodiocese.org/saturday-afternoon-mass-times/
+  seen: 2026-11-16
+  note: 'Diocesan weekend Mass-times pages (re-read 2026-11-16; Saturday page modified 2026-09-02, Sunday
+    morning 2026-10-07, Sunday afternoon 2026-11-16) list ''St. Vincent de Paul, Springbrook'': Sat. 4
+    p.m., Sun. 10 a.m. Out of date: the parish bulletin is the source for this church (no schedule change).'
 promoted: 2026-09-26
 ---
 
@@ -43,3 +54,7 @@ The WHEAT Roman Catholic Family of Parishes bulletin (2026-09-20) lists Mass her
 ## Name and address
 
 Name and address come from PR 14's row. On the house number, the modelled address agrees with GCatholic, the diocesan parish finder. Coordinates are from GCatholic's Plus Code, decoded.
+
+## Diocesan Mass-times pages
+
+2026-11-16: the diocese's weekend Mass-times pages list 'St. Vincent de Paul, Springbrook': Sat. 4 p.m., Sun. 10 a.m. They differ from the site, but the 15 November 2026 WHEAT bulletin (p. 2, an image) lists Saturday 4:00 p.m. and Sunday 8:00 and 10:00 a.m. here, as the site shows. The diocese leaves out the Sunday 8:00 a.m..

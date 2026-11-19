@@ -33,12 +33,25 @@ evidence:
   seen: 2026-09-26
   note: 'Diocesan weekend Mass-times pages (fetched 2026-09-26) list ''Our Lady of Bistrica, Lackawanna'':
     Sat. 5 p.m.; Sun. 10 a.m. (Croatian); Sun. 11:30 a.m..'
+- url: https://container.parishesonline.com/bulletins/14/1727/20261115B.pdf
+  seen: 2026-11-16
+  quote: Although weekend Masses are no longer held at Our Lady of Bistrica, two Masses per month are
+    celebrated there
+  note: Page 3 of the 15 November 2026 Our Lady of Victory bulletin; the next Mass is 'Tuesday, November
+    17 at 6:30 p.m.', and page 4 lists Tuesday, December 1 at 6:30 p.m.
+- url: https://www.buffalodiocese.org/saturday-afternoon-mass-times/
+  seen: 2026-11-14
+  note: 'The diocesan weekend Mass-times pages (Saturday page modified 2026-09-02, Sunday morning page
+    2026-10-07) still list Sat. 5 p.m., Sun. 10 a.m. (Croatian) and Sun. 11:30 a.m. here. Stale: the bulletin
+    says weekend Masses ended.'
 promoted: 2026-09-26
 ---
 
 ## Holds Mass
 
-The Our Lady of Victory Basilica bulletin (2026-09-20) lists Mass here; the evidence quotes the lines. Weekend Masses have ended here; the pastor keeps two Tuesday-evening Masses a month. The parish was suppressed into Our Lady of Victory by a 2026 decree, but the church still holds Mass.
+The Our Lady of Victory Basilica bulletin (2026-09-20) lists Mass here; the evidence quotes the lines. Weekend Masses have ended here; the pastor keeps two Tuesday-evening Masses a month. The parish was suppressed into Our Lady of Victory by a 2026 decree, but the church still holds Mass. The 15 November 2026 bulletin says the same ("weekend Masses are no longer held", next Mass Tuesday 17 November at 6:30 p.m.).
+
+The diocese's weekend Mass-times pages still list three weekend Masses here (checked 2026-11-14). They are out of date; the bulletin is the source for this church's schedule.
 
 ## Name and address
 

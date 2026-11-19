@@ -32,6 +32,16 @@ evidence:
   seen: 2026-09-26
   note: 'Diocesan weekend Mass-times pages (fetched 2026-09-26) list ''St. Hyacinth, Dunkirk'': Sat. 4
     p.m..'
+- url: https://container.parishesonline.com/bulletins/14/1221/20261115B.pdf
+  seen: 2026-11-16
+  note: 'This page is only an image (no text layer), so the lines are transcribed from the rendered page
+    rather than quoted. Page 1 ''MASS SCHEDULE'' of the 15 November 2026 Lord''s Vineyard bulletin: ''SATURDAY
+    VIGIL 4:00 pm St. Hyacinth (HYA)''; ''SUNDAY 7:00 am St. Hyacinth''.'
+- url: https://www.buffalodiocese.org/saturday-afternoon-mass-times/
+  seen: 2026-11-16
+  note: 'Diocesan weekend Mass-times pages (re-read 2026-11-16; Saturday page modified 2026-09-02, Sunday
+    morning 2026-10-07, Sunday afternoon 2026-11-16) list ''St. Hyacinth, Dunkirk'': Sat. 4 p.m. Out of
+    date: the parish bulletin is the source for this church (no schedule change).'
 promoted: 2026-09-26
 ---
 
@@ -42,3 +52,7 @@ The The Lord's Vineyard Family of Parishes bulletin (2026-09-20) lists Mass here
 ## Name and address
 
 Name and address come from PR 14's row. On the house number, the modelled address agrees with the diocesan parish finder. Coordinates are from the diocesan parish finder.
+
+## Diocesan Mass-times pages
+
+2026-11-16: the diocese's weekend Mass-times pages list 'St. Hyacinth, Dunkirk': Sat. 4 p.m. They differ from the site, but the 15 November 2026 Lord's Vineyard bulletin (an image) lists Saturday 4:00 p.m. and Sunday 7:00 a.m. here, as the site shows. The diocese leaves out the Sunday 7:00 a.m..

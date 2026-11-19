@@ -513,6 +513,35 @@ def test_unsupported_needs_a_fetch_gap_and_other_gap_rows_are_warned(root: Path)
     assert any(w.startswith("parish 'odd': no publication id recorded") for w in warnings)
 
 
+def test_website_schedule_parishes_go_live_without_a_bulletin(root: Path, capsys) -> None:
+    # A parish with no bulletin, its times on its own site (docs/source-schedules-plan.md).
+    _parish()
+    _church()
+    _parish("sourced", bulletin_provider="website_schedule")
+    _church("sourced-town", parish="sourced")
+    records.promote("test")
+    assert {r["slug"] for r in _live("PARISHES_CSV_PATH")} == {"live-parish", "st-ann",
+                                                               "sourced"}
+    assert {r["slug"] for r in _live("CHURCHES_CSV_PATH")} == {"st-live", "st-ann-town",
+                                                               "sourced-town"}
+    assert next(r for r in _live("PARISHES_CSV_PATH") if r["slug"] == "sourced")[
+        "bulletin_provider"] == "website_schedule"
+    warnings = records.validate("test")["dioceses"]["test"]["warnings"]
+    # It publishes no bulletin, so there is no publication id to ask for.
+    assert not [w for w in warnings if w.startswith("parish 'sourced'")]
+    # fetch has nothing to read.
+    assert main(["fetch-check", "--diocese", "test", "--parish", "sourced"]) == 1
+    assert "website_schedule, so there is no bulletin to fetch: sourced" in \
+        capsys.readouterr().err
+    # A bulletin fetch can't collect is unsupported, never a source schedule.
+    with pytest.raises(DioceseError, match="website_schedule has no bulletin, so no fetch_gap"):
+        records.write_record("test", "parish", "sourced", {"fetch_gap": GAP})
+    records.write_record("test", "parish", "sourced", {"bulletin_status": "available"})
+    warnings = records.validate("test")["dioceses"]["test"]["warnings"]
+    assert any(w.startswith("parish 'sourced': website_schedule is for a parish with no "
+                            "bulletin") for w in warnings)
+
+
 def test_fetch_check_explains_an_unsupported_parish(root: Path, capsys) -> None:
     _parish("gap", bulletin_provider="unsupported", fetch_gap=GAP)
     assert main(["fetch-check", "--diocese", "test", "--parish", "gap"]) == 1

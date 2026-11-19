@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { api, pdfUrl } from "../api";
+import { CaptureViewer } from "../components/CaptureViewer";
 import { PdfViewer, type ScrollRequest } from "../components/PdfViewer";
 import { RowEditor } from "../components/RowEditor";
 import { formatDate } from "../lib/dates";
@@ -22,6 +23,7 @@ import {
   replaceSlot,
   replaceSlots,
   resolveBulletin,
+  resolveCapture,
   slotGroups,
   toEditorRow,
 } from "../lib/seeds";
@@ -110,7 +112,15 @@ function SeedReview({ initial, parish, labeler, onLabelerChange }: Props & { ini
     const read = seed.bulletins.filter((b) => b.read);
     return read.length ? read : seed.bulletins;
   }, [seed.bulletins]);
-  const [activeHash, setActiveHash] = useState<string | null>(tabs[0]?.content_hash ?? null);
+  // A source seed has no bulletins: its tabs are the pages it captured, primary first.
+  const isSource = seed.kind === "source";
+  const captureTabs = useMemo(
+    () => [...(seed.captures ?? [])].sort((a, b) => Number(b.primary) - Number(a.primary)),
+    [seed.captures],
+  );
+  const [activeHash, setActiveHash] = useState<string | null>(
+    (isSource ? captureTabs[0]?.content_hash : tabs[0]?.content_hash) ?? null,
+  );
   const [scrollTo, setScrollTo] = useState<ScrollRequest | null>(null);
   const groups = useMemo(() => slotGroups(seed), [seed]);
   const ordered = useMemo(
@@ -298,6 +308,36 @@ function SeedReview({ initial, parish, labeler, onLabelerChange }: Props & { ini
 
   return (
     <div className="grid h-full grid-cols-[minmax(0,3fr)_minmax(0,2fr)] grid-rows-[minmax(0,1fr)] overflow-hidden">
+      {isSource ? (
+        <div className="flex min-h-0 flex-col">
+          <div className="flex shrink-0 gap-1 overflow-x-auto border-b border-slate-700 bg-slate-900 px-2 pt-1.5" data-testid="capture-tabs">
+            {captureTabs.map((c) => (
+              <button
+                key={c.content_hash}
+                onClick={() => setActiveHash(c.content_hash)}
+                className={`rounded-t px-2.5 py-1 text-xs whitespace-nowrap ${
+                  c.content_hash === activeHash ? "bg-slate-800 text-white" : "text-slate-400 hover:text-slate-200"
+                }`}
+                title={`${c.content_hash}\n${c.url}\ncaptured ${c.captured_at}`}
+              >
+                {c.platform === "facebook" ? "Facebook" : "Website"} · {hostOf(c.url)}
+                {c.primary && " · primary"}
+              </button>
+            ))}
+          </div>
+          <div className="min-h-0 flex-1">
+            {captureTabs.find((c) => c.content_hash === activeHash) ? (
+              <CaptureViewer
+                key={activeHash}
+                parish={parish}
+                capture={captureTabs.find((c) => c.content_hash === activeHash)!}
+              />
+            ) : (
+              <div className="p-4 text-slate-500">The seed has captured no page.</div>
+            )}
+          </div>
+        </div>
+      ) : (
       <div className="flex min-h-0 flex-col">
         <div className="flex shrink-0 gap-1 overflow-x-auto border-b border-slate-700 bg-slate-900 px-2 pt-1.5" data-testid="bulletin-tabs">
           {tabs.map((b) => (
@@ -323,6 +363,7 @@ function SeedReview({ initial, parish, labeler, onLabelerChange }: Props & { ini
           )}
         </div>
       </div>
+      )}
 
       <div className="flex min-w-0 flex-col border-l border-slate-300 bg-slate-50">
         <header className="shrink-0 space-y-1.5 border-b border-slate-200 bg-white px-3 py-2">
@@ -373,6 +414,13 @@ function SeedReview({ initial, parish, labeler, onLabelerChange }: Props & { ini
             {seed.reviewer && ` · reviewer ${seed.reviewer}`}
             {seed.approved_at && ` · approved ${seed.approved_at.slice(0, 10)}`}
           </p>
+          {isSource && (
+            <p className="text-xs text-slate-700" data-testid="source-seed">
+              No bulletin: drafted from the parish's own pages.
+              {seed.current_because && ` Current because ${seed.current_because}`}
+              {seed.recheck_after && ` · read again after ${seed.recheck_after}`}
+            </p>
+          )}
           {seed.status === "blocked" && <p className="text-sm text-zinc-700">Blocked: {seed.blocked_reason}</p>}
           {drafting && <p className="text-sm text-amber-800">A drafter is still drafting this parish; it can't be reviewed yet.</p>}
           {detail.problems.length > 0 && (
@@ -651,6 +699,29 @@ function SlotCard(props: SlotCardProps) {
       )}
       <div className="mt-1.5 grid grid-cols-[repeat(auto-fill,minmax(10rem,1fr))] gap-1.5">
         {slot.sources.map((source, i) => {
+          if (source.capture) {
+            // A source seed's capture: open it on the left, as a bulletin source opens its page.
+            const hash = resolveCapture(seed, source.capture);
+            return (
+              <button
+                key={i}
+                onClick={() => props.onSource(hash, null)}
+                disabled={!hash}
+                className="rounded border border-slate-200 bg-slate-50 px-1.5 py-1 text-left text-xs hover:border-sky-400 disabled:hover:border-slate-200"
+                title={source.url ?? undefined}
+              >
+                <span className="font-semibold text-slate-600">{source.source}</span>
+                {source.url && <span className="text-slate-400"> · {hostOf(source.url)}</span>}
+                {source.from_image && (
+                  // Nothing checks a quote read from a picture: the reviewer is the check.
+                  <span className="text-amber-700" title="Read from the screenshot: no check can match it to the page's text, so check it against the screenshot">
+                    {" "}· from its screenshot: check it there
+                  </span>
+                )}
+                <span className="block text-slate-800">{source.said}</span>
+              </button>
+            );
+          }
           if (source.url && /^https?:\/\//.test(source.url)) {
             return (
               <a

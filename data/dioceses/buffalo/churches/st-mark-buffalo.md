@@ -31,6 +31,17 @@ evidence:
 - url: https://www.buffalodiocese.org/sunday-morning-mass-times/
   seen: 2026-09-26
   note: 'Diocesan weekend Mass-times pages (fetched 2026-09-26) list ''St. Mark, Buffalo'': Sun. 8 a.m..'
+- url: https://container.parishesonline.com/bulletins/14/1007/20261115B.pdf
+  seen: 2026-11-16
+  quote: 4:00 PM ~ SMK (Fr Bryan Zielenieski) - Patricia and Rita
+  note: 'Page 2 Mass Intentions of the 15 November 2026 Catholic Community of Buffalo North bulletin:
+    St. Mark (SMK) has ''4:00 PM'' on both Saturdays and ''8:00 AM'' on both Sundays. Page 4: ''Join us
+    for Mass on Saturday, November, 14 at 4:00 p.m. as we recognize all our Fall Sports teams.'''
+- url: https://www.buffalodiocese.org/sunday-morning-mass-times/
+  seen: 2026-11-16
+  note: 'Diocesan weekend Mass-times pages (re-read 2026-11-16; Saturday page modified 2026-09-02, Sunday
+    morning 2026-10-07, Sunday afternoon 2026-11-16) list ''St. Mark, Buffalo'': Sun. 8 a.m. Out of date:
+    the parish bulletin is the source for this church (no schedule change).'
 promoted: 2026-09-26
 ---
 
@@ -41,3 +52,7 @@ The Catholic Community Buffalo North bulletin (2026-09-20) lists Mass here; the 
 ## Name and address
 
 Name and address come from PR 14's row. On the house number, the modelled address agrees with GCatholic, the diocesan parish finder. Coordinates are from GCatholic's Plus Code, decoded.
+
+## Diocesan Mass-times pages
+
+2026-11-16: the diocese's weekend Mass-times pages list 'St. Mark, Buffalo': Sun. 8 a.m. They differ from the site, but the 15 November 2026 Buffalo North bulletin lists Saturday 4:00 p.m. and Sunday 8:00 a.m. here, as the site shows. The diocese lists only Sunday 8 a.m. here and gives the Saturday 4:00 p.m. to St. Rose of Lima.

@@ -106,6 +106,8 @@ class Attempts:
         values = render.job_values(self.ledger, run, job)
         before = json.loads(job["pending_prompt"] or "null") or {}
         kind, prompt, session = render.next_prompt(self.ledger, run, job, spec, values)
+        # The worker's scratch folder exists before it starts, so its first write there works.
+        (worktree / render.scratch_rel(run["id"], job["name"])).mkdir(parents=True, exist_ok=True)
         if kind in ("start", "fresh"):
             files = reads | render.input_files(self.ledger, run, job)
             for rel, text in files.items():

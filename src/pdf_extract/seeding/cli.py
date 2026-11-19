@@ -32,7 +32,9 @@ Read: the stored bulletins
   bulletins <parish> [--limit N]                      newest first, with pages and flags
   pdf       <parish> <bulletin>                       the PDF the pipeline reads, locally
   text      <parish> <bulletin> [--page N]            its text, page by page
-  pages     <parish> <bulletin> [--page N] [--dpi D]  pages as PNGs
+  pages     <parish> <bulletin> [--page N|N-M,..] [--region R] [--sheet] [--dpi D]
+                                                      pages as PNGs, each with its token cost
+  pages     <parish> <bulletin> --images [--page N-M] its images with no text layer, in one PNG
   grep      <parish> [pattern] [--bulletins N]        search every stored bulletin's text
 
 Compare: other sources
@@ -41,6 +43,16 @@ Compare: other sources
   church    <query>                     whose church a name, town or address is
   site      <parish> [path or address] [--fresh] [--no-browser]
                                         a website page as text
+
+Source seeds: a website_schedule parish, with no bulletin (docs/source-schedules-plan.md)
+  capture      <parish> [path or address] [--primary]
+                                        store a website or Facebook page; prints its text
+                                        and screenshot tiles. `start` begins the draft
+  capture-text <parish> <capture>       a capture's stored text, to quote from
+  current      <parish> "why" [--recheck-after YYYY-MM-DD]
+                                        why the schedule looks current
+  A source seed cites its captures (`cap 5e60aa31: …`); it has no bulletins, history
+  or paid calls.
 
 Paid calls: cached, recorded in the file's `calls`, CARLO_SEED_CALL_LIMIT per parish (4)
   ask       <parish> <bulletin> --model M "question"   one question about one bulletin
@@ -61,26 +73,33 @@ import json
 import os
 import sys
 from collections.abc import Callable
+from datetime import date
 from pathlib import Path
 from typing import Any
 
 from pdf_extract.classifiers.seed_ask import MODELS
 from pdf_extract.db import ensure_db
+from pdf_extract.model import WEBSITE_SCHEDULE
 from pdf_extract.schedule.corrections import load_correction_files
 from pdf_extract.schedule.store import parish_churches
-from pdf_extract.seeding import queries
+from pdf_extract.seeding import page_images, queries
 from pdf_extract.seeding import slots as slot_writes
 from pdf_extract.seeding.calls import call_limit, load_or_start, run_ask, run_extract
+from pdf_extract.seeding.captures import capture_page, capture_text, keep_quoted_screenshots
 from pdf_extract.seeding.checks import check_seed
 from pdf_extract.seeding.coverage import diff, event_parts, missing_warning
 from pdf_extract.seeding.files import (
     APPROVED,
     BLOCKED,
     NEEDS_HUMAN,
+    SOURCE_SEED,
     SeedFileError,
     SeedSummary,
     asked_questions,
+    is_source_seed,
+    primary_capture,
     read_seed,
+    seed_kind,
     seed_path,
     seed_slugs,
     write_seed_file,
@@ -140,6 +159,7 @@ def _start(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
     stored = [b["content_hash"][:12] for b in seed["bulletins"]
               if held is None or b["content_hash"] in held]
     return {"parish": args.parish, "path": Path(os.path.relpath(path)).as_posix(),
+            "kind": seed_kind(seed),
             "bulletins": len(seed["bulletins"]), "stored": stored, "resumed": resumed,
             "status": seed.get("status"), "slots": len(seed.get("slots") or []),
             "calls": len(seed.get("calls") or []), "warnings": warnings,
@@ -167,7 +187,10 @@ def _mark_read(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
 
 
 def _brief(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
-    return queries.brief(conn, args.parish)
+    parish = queries.parish_row(conn, args.parish)
+    if parish["bulletin_provider"] != WEBSITE_SCHEDULE:
+        return queries.brief(conn, args.parish)
+    return queries.source_brief(conn, args.parish, read_seed(args.parish, ctx.seeds_dir))
 
 
 def _bulletins(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
@@ -189,6 +212,7 @@ def _text(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
 def _pages(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
     return queries.render_pages(
         conn, args.parish, args.bulletin, page=args.page, dpi=args.dpi,
+        region=args.region, sheet=args.sheet, images=args.images,
     )
 
 
@@ -206,6 +230,48 @@ def _site(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
     parish = queries.parish_row(conn, args.parish)
     url = resolve_url(parish["homepage_url"], args.where)
     return read_site(args.parish, url, browser=not args.no_browser, fresh=args.fresh)
+
+
+def _capture(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
+    parish = queries.parish_row(conn, args.parish)
+    seed = load_or_start(conn, ctx, args.parish)
+    url = resolve_url(parish["homepage_url"], args.where)
+    result = capture_page(seed, url, primary=args.primary, seeds_dir=ctx.seeds_dir)
+    path = write_seed_file(seed, ctx.seeds_dir)
+    return {**result, "path": Path(os.path.relpath(path)).as_posix()}
+
+
+def _capture_text_cmd(args: argparse.Namespace) -> Result:
+    ctx = _ctx(args)
+    seed = _read_for_slots(ctx, args.parish)
+    ref = args.capture
+    if ref.lower() == "primary":
+        primary = primary_capture(seed)
+        ref = primary["content_hash"] if primary else ref
+    return capture_text(seed, ref, ctx.seeds_dir)
+
+
+def _current(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
+    seed = _read_for_slots(ctx, args.parish)
+    if not is_source_seed(seed):
+        raise SeedError("current_because is a source seed's: a bulletin seed is current "
+                        "because its bulletin is")
+    if seed.get("status") == APPROVED:
+        raise SeedError("An approved seed belongs to its reviewer; it cannot be changed")
+    reason = args.reason.strip()
+    if not reason:
+        raise SeedError("Say why the schedule looks current")
+    seed["current_because"] = reason
+    if args.recheck_after is not None:
+        try:
+            # Stored as YYYY-MM-DD, whatever ISO form it was given in (20270115).
+            seed["recheck_after"] = date.fromisoformat(args.recheck_after).isoformat()
+        except ValueError as exc:
+            raise SeedError(f"--recheck-after is YYYY-MM-DD, not {args.recheck_after!r}") from exc
+    path = write_seed_file(seed, ctx.seeds_dir)
+    return {"parish": args.parish, "current_because": reason,
+            "recheck_after": seed.get("recheck_after"),
+            "path": Path(os.path.relpath(path)).as_posix()}
 
 
 def _diff(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
@@ -244,10 +310,15 @@ def _finalize(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
                 continue  # the check below reports it
             parish = queries.parish_row(conn, slug)
             churches = sorted(parish_churches(conn, parish["id"]))
-            past = queries.recent_history(conn, slug)
+            # A source seed has no bulletins, so extract mode's history has nothing for it.
+            source = is_source_seed(seed)
+            past = [] if source else queries.recent_history(conn, slug)
             seed = {**finalize_seed(seed, churches, past), "parish_slug": slug}
             write_seed_file(seed, ctx.seeds_dir)
-            if seed.get("status") not in (APPROVED, BLOCKED):
+            if source and seed.get("status") != APPROVED:
+                # A reviewer anywhere must see the screenshots its quotes were read from.
+                keep_quoted_screenshots(seed, ctx.seeds_dir)
+            if seed.get("status") not in (APPROVED, BLOCKED) and not source:
                 # History is a hint, so uncovered events are warnings, not failures.
                 found = diff(seed, past)
                 warnings[slug] = [missing_warning(row, len(found["bulletins"]))
@@ -281,7 +352,8 @@ def _check(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
             continue
         # An approved file is its reviewer's: newer drafting evidence rules don't apply.
         problems = check_seed(conn, seed, parish_slug=slug,
-                              check_evidence=seed.get("status") != APPROVED)
+                              check_evidence=seed.get("status") != APPROVED,
+                              seeds_dir=ctx.seeds_dir)
         summary = SeedSummary.of(slug, seed)
         files.append({
             "parish": slug, "status": summary.status,
@@ -479,7 +551,47 @@ def _text_text(r: Result) -> str:
 
 
 def _text_pages(r: Result) -> str:
-    return "\n".join(r["paths"])
+    if "image_only" in r:
+        return _text_textless_images(r)
+    lines = []
+    for im in r["images"]:
+        pages = "p" + page_images.page_ranges(im["pages"], ",")
+        what = f"{pages} {im['region']}" if im["region"] else pages
+        lowered = (f" (--dpi {im['lowered_from']} lowered: Read would shrink it)"
+                   if im["lowered_from"] else "")
+        lines.append(f"{im['path']}  {what}  {im['width']}x{im['height']} px, "
+                     f"{im['dpi']} dpi{lowered}, ~{im['tokens']:,} tokens")
+    if len(r["images"]) > 1:
+        lines.append(f"{len(r['images'])} images, ~{r['tokens']:,} tokens")
+    if any(not im["region"] and len(im["pages"]) == 1 for im in r["images"]):
+        lines.append("Small print or an unclear digit: zoom with --page N --region "
+                     "(top-left, bottom, ... or x0,y0,x1,y1)")
+    return "\n".join(lines)
+
+
+def _text_textless_images(r: Result) -> str:
+    """`seed pages --images`: each image, and the page and region of each tile on it."""
+    lines = []
+    searched = "p" + page_images.page_ranges(r["searched"], ",")
+    for im in r["images"]:
+        lines.append(f"{im['path']}  images with no text layer on "
+                     f"p{page_images.page_ranges(im['pages'], ',')}  {im['width']}x"
+                     f"{im['height']} px, {im['dpi']} dpi, ~{im['tokens']:,} tokens")
+        for t in im["tiles"]:
+            also = (f"  (also on p{','.join(str(p) for p in t['also_on'])})"
+                    if t["also_on"] else "")
+            lines.append(f"  {t['tile']:>2}  --page {t['page']} --region {t['region']}{also}")
+    if len(r["images"]) > 1:
+        lines.append(f"{len(r['images'])} images, ~{r['tokens']:,} tokens")
+    if r["images"]:
+        lines.append(f"Zoom into a tile: `seed pages {r['parish']} {r['bulletin'][:12]}` "
+                     "with its --page and --region")
+    else:
+        lines.append(f"No images with no text layer on {searched}")
+    if r["image_only"]:
+        only = page_images.page_ranges(r["image_only"], ",")
+        lines.append(f"Only an image, so not tiled: p{only} (render it with --page N)")
+    return "\n".join(lines)
 
 
 def _text_history(r: Result) -> str:
@@ -588,6 +700,11 @@ def _text_written(r: Result) -> str:
 
 
 def _text_start(r: Result) -> str:
+    if r.get("kind") == SOURCE_SEED:
+        text = (f"{r['path']}: resumed an existing source draft ({r['status']}, {r['slots']} "
+                "slots). Read it before editing; change only what needs correcting"
+                if r["resumed"] else f"{r['path']}: a new source draft (no bulletins)")
+        return text + "\n\n" + _text_brief(r["brief"])
     if r["resumed"]:
         text = (f"{r['path']}: resumed an existing draft ({r['status']}, {r['slots']} slots, "
                 f"{r['calls']} calls) listing {r['bulletins']} bulletins. Read it before "
@@ -642,6 +759,20 @@ def _text_brief(r: Result) -> str:
     lines = [f"{r['parish']}: {r['name']}  {r['website'] or '(no website)'}"]
     lines += [f"  {c['church']:40} {c['name']}, {c['address'] or '(no address)'}"
               for c in r["churches"]]
+    if r.get("kind") == SOURCE_SEED:
+        lines.append("website_schedule: no bulletin. A source seed, from the parish's own "
+                     "website or Facebook page: `pnpm seed capture "
+                     f"{r['parish']} [path or address]` each page you rely on")
+        for c in r["captures"]:
+            lines.append(f"  cap {c['content_hash'][:8]}{' (primary)' if c.get('primary') else ''}"
+                         f"  {c.get('platform')} {c.get('url')}  {_when(c.get('captured_at'))}")
+        if not r["captures"]:
+            lines.append("  no captures yet")
+        if r.get("current_because"):
+            lines.append(f"current because: {r['current_because']}")
+        if r.get("recheck_after"):
+            lines.append(f"recheck after: {r['recheck_after']}")
+        return "\n".join(lines)
     lines.append(_text_bulletins(r["bulletins"]))
     week = r.get("newest_week")
     if week:
@@ -706,6 +837,34 @@ def _text_site(r: Result) -> str:
     lines.append("=== text")
     lines.append(r["text"])
     return "\n".join(lines)
+
+
+def _text_capture(r: Result) -> str:
+    c = r["capture"]
+    if "new" in r:
+        state = "a new capture" if r["new"] else "the same text as before"
+        lines = [f"{r['path']}: {state}, cap {c['short']}"
+                 + (" (primary)" if c["primary"] else "")
+                 + f"; its text is {r['text_path']} (commit it)"]
+    else:
+        lines = [f"{r['parish']}: cap {c['short']}" + (" (primary)" if c["primary"] else "")]
+    lines.append(f"  {c['platform']} {c['url']}" + (f" -> {c['final_url']}" if c["final_url"]
+                                                     else "")
+                 + f", captured {_when(c['captured_at'])}")
+    for tile in r.get("tiles", []):
+        lines.append(f"  screenshot {tile['path']} ({tile['width']}x{tile['height']}, "
+                     f"{tile['tokens']} tokens)")
+    lines += [f"! {w}" for w in r.get("warnings", [])]
+    lines.append(f"Cite it as `cap {c['short']}: <its words>`, or `cap {c['short']} image: …` "
+                 "for what only the screenshot shows")
+    lines.append("=== text")
+    lines.append(r["text"].rstrip("\n"))
+    return "\n".join(lines)
+
+
+def _text_current(r: Result) -> str:
+    return (f"{r['path']}: current because {r['current_because']}; recheck after "
+            f"{r['recheck_after'] or '(finalize sets it)'}")
 
 
 def _text_diff(r: Result) -> str:
@@ -883,11 +1042,25 @@ def add_seed_parser(
     bulletin(p)
     p.add_argument("--page", type=int, help="Only this page (default: all)")
 
-    p = leaf("pages", "Render a bulletin's pages to PNGs", _with_conn(_pages), _text_pages)
+    p = leaf("pages", "Render a bulletin's pages to PNGs sized for Read, each with its token "
+             "cost: whole pages, a zoomed region, or sheets of pages to scan",
+             _with_conn(_pages), _text_pages)
     parish(p)
     bulletin(p)
-    p.add_argument("--page", type=int, help="Only this page (default: all)")
-    p.add_argument("--dpi", type=int, default=150, help="Resolution (default 150)")
+    p.add_argument("--page", help="Only these pages: 3, 3-10 or 2,4-10 (default: all)")
+    p.add_argument("--region", help=f"Zoom into {page_images.REGION_HELP}; rendered to "
+                   f"{page_images.ZOOM_LONG_EDGE} px on its long edge, up to "
+                   f"{page_images.ZOOM_MAX_DPI} dpi")
+    p.add_argument("--sheet", action="store_true",
+                   help="Tile the pages into labelled sheets, each one image, to find which "
+                        f"pages to read (at least {page_images.SHEET_MIN_DPI} dpi per page)")
+    p.add_argument("--images", action="store_true",
+                   help="Pack the images on the pages with text that have no text layer, "
+                        "whose print `seed text` can't show, into one labelled image, each "
+                        "tile listed with its page and region to zoom into")
+    p.add_argument("--dpi", type=int,
+                   help=f"Resolution (default {page_images.PAGE_DPI} for a page; a region "
+                        "zooms; a sheet fits). Lowered when Read would shrink the image")
 
     p = leaf("grep", "Search the text of every bulletin with a stored PDF", _with_conn(_grep),
              _text_grep)
@@ -909,6 +1082,30 @@ def add_seed_parser(
     parish(p)
     p.add_argument("--bulletins", type=int,
                    help="The newest N processed bulletins (default: those with a stored PDF)")
+
+    # A source seed's pages (docs/source-schedules-plan.md)
+    p = leaf("capture", "Store a website or Facebook page for a source seed, and print it",
+             _with_conn(_capture), _text_capture)
+    parish(p)
+    p.add_argument("where", nargs="?",
+                   help="A path on the parish's site (/mass-times) or a full address, a "
+                        "Facebook page's included (default: its homepage)")
+    p.add_argument("--primary", action="store_true",
+                   help="Make this the page the website links as the times' source "
+                        "(default: the first capture)")
+
+    p = leaf("capture-text", "A capture's stored text, to quote from", _capture_text_cmd,
+             _text_capture)
+    parish(p)
+    p.add_argument("capture", help="8+ characters of the capture's hash, or primary")
+
+    p = leaf("current", "Why a source seed's schedule looks current, and when to read it again",
+             _with_conn(_current), _text_current)
+    parish(p)
+    p.add_argument("reason", help="The clues: a dated post, the pastor, this year's dates…")
+    p.add_argument("--recheck-after", metavar="YYYY-MM-DD",
+                   help="When to read the pages again (default: 3 months after the newest "
+                        "capture, set by finalize)")
 
     p = leaf("church", "Look a church up by slug, name, town or address", _with_conn(_church),
              _text_church)

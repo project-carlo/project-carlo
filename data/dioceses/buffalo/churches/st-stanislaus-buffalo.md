@@ -32,6 +32,19 @@ evidence:
   seen: 2026-09-26
   note: 'Diocesan weekend Mass-times pages (fetched 2026-09-26) list ''St. Stanislaus, Buffalo'': Sat.
     4 p.m.; Sun. 10:15 a.m.; Sun. 12 p.m. (Polish); Sun. 12 p.m. (Polish); Sun. 5 p.m..'
+- url: https://files.ecatholic.com/35834/bulletins/20261115.pdf?t=1794501748000
+  seen: 2026-11-16
+  quote: Please be advised that the schedule of weekend Masses as of November 21, 2026 has been changed
+    … St. Stanislaus-5:30 pm Sunday-St. Stanislaus-8:00 am-No Music St. Stanislaus-9:30 am-Polish St.
+    Stanislaus-10:30 am-English … St. Stanislaus-5:00 pm in Pitass Chapel
+  note: Page 2 of the 15 November 2026 Greater East Buffalo bulletin. Before 21 November, St. Stanislaus
+    had Saturday 4:00 p.m. and Sunday 10:15 a.m., 12:00 p.m. (Polish) and 5:00 p.m. (page 1 masthead).
+- url: https://www.buffalodiocese.org/saturday-afternoon-mass-times/
+  seen: 2026-11-16
+  note: 'Diocesan weekend Mass-times pages (re-read 2026-11-16; Saturday page modified 2026-09-02, Sunday
+    morning 2026-10-07, Sunday afternoon 2026-11-16) list ''St. Stanislaus, Buffalo'': Sat. 4 p.m., Sun.
+    10:15 a.m., Sun. 12 p.m. (Polish), Sun. 12 p.m. (Polish), Sun. 5 p.m. Out of date: the parish bulletin
+    is the source for this church (no schedule change).'
 promoted: 2026-09-26
 ---
 
@@ -42,3 +55,7 @@ The Greater East Buffalo Family of Parishes bulletin (2026-09-20) lists Mass her
 ## Name and address
 
 Name and address come from PR 14's row. On the house number, the modelled address agrees with GCatholic, the diocesan parish finder. Coordinates are from GCatholic's Plus Code, decoded.
+
+## Diocesan Mass-times pages
+
+2026-11-16: the diocese's weekend Mass-times pages list 'St. Stanislaus, Buffalo': Sat. 4 p.m., Sun. 10:15 a.m., Sun. 12 p.m. (Polish), Sun. 12 p.m. (Polish), Sun. 5 p.m. They differ from the site, but the 15 November 2026 Greater East Buffalo bulletin announces a new weekend schedule from 21 November 2026: Saturday 5:30 p.m. and Sunday 8:00 a.m., 9:30 a.m. (Polish), 10:30 a.m. and 5:00 p.m. (Pitass Chapel) here. The site has it, dated from 21 November. The diocese still lists the old schedule.
