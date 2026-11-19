@@ -1,0 +1,611 @@
+{
+  "schema_version": 1,
+  "parish_slug": "church-of-the-sacred-heart-south-plainfield",
+  "status": "ready",
+  "as_of": "2026-11-15T16:50:30Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T22:35:20Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend (Sat 5 PM, Sun 9 and 11:30 AM), weekday (Mon 7 PM, Tue-Sat 9 AM), Saturday and Monday Confession and Monday 6-7 PM Adoration agree in both bulletins read (Nov 8 and Nov 15, 2026). No open questions; holy-day times are undated and the Dec. 2 exposition at the Parish Center Chapel (another address) is left out.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "0e3eb71ba1fbcfa1805b17a2acfa9515f12f17ce3aa3c9d2b48c249b75fa3c28",
+      "fetched_at": "2026-11-15T16:50:30Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "3c7d6c0a7bfba01da9ca05622401afb47b1de45c158ad067dc7812f87dd64cf0",
+      "fetched_at": "2026-11-08T22:02:26Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "church-of-the-sacred-heart-south-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0e3eb71b",
+          "page": 1,
+          "said": "Weekend: Saturday Vigil Mass 5:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c7d6c0a",
+          "page": 1,
+          "said": "Weekend: Saturday Vigil Mass 5:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0e3eb71b",
+          "page": 3,
+          "said": "5:00 PM Anna Muglia, r. by Emilia Muglia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c7d6c0a",
+          "page": 3,
+          "said": "5:00 PM Anna Muglia, r. by Emilia Muglia"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "church-of-the-sacred-heart-south-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0e3eb71b",
+          "page": 1,
+          "said": "Sunday 9:00AM and 11:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c7d6c0a",
+          "page": 1,
+          "said": "Sunday 9:00AM and 11:30AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read, and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "church-of-the-sacred-heart-south-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0e3eb71b",
+          "page": 1,
+          "said": "Sunday 9:00AM and 11:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c7d6c0a",
+          "page": 1,
+          "said": "Sunday 9:00AM and 11:30AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read, and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "church-of-the-sacred-heart-south-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0e3eb71b",
+          "page": 1,
+          "said": "Daily: Monday 7:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c7d6c0a",
+          "page": 1,
+          "said": "Daily: Monday 7:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0e3eb71b",
+          "page": 3,
+          "said": "Monday, November 16, Weekday ... 7:00 PM Robert D. Rinaldi"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box of both bulletins gives the Monday evening Mass; the intentions list it at 7:00 PM each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "church-of-the-sacred-heart-south-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0e3eb71b",
+          "page": 1,
+          "said": "Daily: Monday 7:00PM, Tuesday, Wednesday, Thursday, Friday, and Saturday 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c7d6c0a",
+          "page": 1,
+          "said": "Daily: Monday 7:00PM, Tuesday, Wednesday, Thursday, Friday, and Saturday 9:00AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "church-of-the-sacred-heart-south-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0e3eb71b",
+          "page": 1,
+          "said": "Daily: Monday 7:00PM, Tuesday, Wednesday, Thursday, Friday, and Saturday 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c7d6c0a",
+          "page": 1,
+          "said": "Daily: Monday 7:00PM, Tuesday, Wednesday, Thursday, Friday, and Saturday 9:00AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "church-of-the-sacred-heart-south-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0e3eb71b",
+          "page": 1,
+          "said": "Daily: Monday 7:00PM, Tuesday, Wednesday, Thursday, Friday, and Saturday 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c7d6c0a",
+          "page": 1,
+          "said": "Daily: Monday 7:00PM, Tuesday, Wednesday, Thursday, Friday, and Saturday 9:00AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "church-of-the-sacred-heart-south-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0e3eb71b",
+          "page": 1,
+          "said": "Daily: Monday 7:00PM, Tuesday, Wednesday, Thursday, Friday, and Saturday 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c7d6c0a",
+          "page": 1,
+          "said": "Daily: Monday 7:00PM, Tuesday, Wednesday, Thursday, Friday, and Saturday 9:00AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "church-of-the-sacred-heart-south-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0e3eb71b",
+          "page": 1,
+          "said": "Daily: Monday 7:00PM, Tuesday, Wednesday, Thursday, Friday, and Saturday 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c7d6c0a",
+          "page": 1,
+          "said": "Daily: Monday 7:00PM, Tuesday, Wednesday, Thursday, Friday, and Saturday 9:00AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "church-of-the-sacred-heart-south-plainfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0e3eb71b",
+          "page": 1,
+          "said": "CONFESSIONS Saturday 4:00 to 4:45PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c7d6c0a",
+          "page": 1,
+          "said": "CONFESSIONS Saturday 4:00 to 4:45PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "church-of-the-sacred-heart-south-plainfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "18:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0e3eb71b",
+          "page": 1,
+          "said": "Monday 6:00 to 6:45PM when we have Adoration."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c7d6c0a",
+          "page": 1,
+          "said": "Monday 6:00 to 6:45PM when we have Adoration."
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the Monday Adoration it depends on is itself weekly (box and both weeks' intentions), so the condition holds every week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "church-of-the-sacred-heart-south-plainfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0e3eb71b",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION Monday 6:00 to 7:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c7d6c0a",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION Monday 6:00 to 7:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0e3eb71b",
+          "page": 3,
+          "said": "6:00 PM Eucharistic Adoration and Rosary 6:45PM Benediction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c7d6c0a",
+          "page": 3,
+          "said": "6:00 PM Eucharistic Adoration and Rosary 6:45PM Benediction"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box of both bulletins gives Monday 6-7 PM; the intentions of both weeks show it with Benediction (POLICY: Benediction is a note on the Adoration).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0e3eb71b",
+          "page": 1,
+          "said": "Holy Days 9:00AM, 12:10 PM and 7:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c7d6c0a",
+          "page": 1,
+          "said": "Holy Days 9:00AM, 12:10 PM and 7:00PM"
+        }
+      ],
+      "rationale": "POLICY, Dates; R16: holy-day times name no date, so no dated entry can be recorded; holy days within scope will come from later bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0e3eb71b",
+          "page": 1,
+          "said": "Confessions are also available by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c7d6c0a",
+          "page": 1,
+          "said": "Confessions are also available by appointment."
+        }
+      ],
+      "rationale": "R26: by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "church-of-the-sacred-heart-south-plainfield",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-02",
+        "start_time": "10:00",
+        "end_time": "11:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Heart to Heart, Parish Center Chapel"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0e3eb71b",
+          "page": 4,
+          "said": "Heart to Heart ... In Person: Parish Center Chapel, 10:00-11:00AM ... Dec. 2 - Adoration. The Blessed Sacrament will be exposed"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c7d6c0a",
+          "page": 4,
+          "said": "Heart to Heart ... In Person: Parish Center Chapel, 10:00-11:00AM ... Dec. 2 - Adoration. The Blessed Sacrament will be exposed"
+        }
+      ],
+      "rationale": "R22, R23: the Parish Center is at 200 Randolph Ave., a different address from the church (149 South Plainfield Ave.), and its chapel is not on the church list; a one-time exposition at a prayer gathering there is left out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "church_list_issues": [
+    {
+      "church": "Parish Center Chapel, 200 Randolph Ave., South Plainfield",
+      "said": "Heart to Heart, first Wednesday monthly, Parish Center Chapel 10:00-11:00AM; Dec. 2 - Adoration. The Blessed Sacrament will be exposed",
+      "bulletin": "0e3eb71b",
+      "page": 4
+    }
+  ]
+}
