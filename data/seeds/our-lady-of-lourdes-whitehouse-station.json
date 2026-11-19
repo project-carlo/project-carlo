@@ -1,0 +1,510 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-lourdes-whitehouse-station",
+  "status": "ready",
+  "as_of": "2026-11-15T16:19:15Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T23:07:37Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekday (Mon-Wed, Fri 8:30 am; Thu noon), weekend (Sat 4:30 pm, Sun 8:30 and 10:30 am), Saturday confession and Friday 9:00 am-Noon Adoration agree in both bulletins (Nov 8 and Nov 22 issues). Dated: Thanksgiving 9:00 am Mass and Christmas Eve 7:00 pm Mass. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "267a1ae6e2e38dc51add75e1134db74a39d483ccf6400e8e33a3b41dc9e71fe7",
+      "fetched_at": "2026-11-15T16:19:15Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "248f07e1b84f5620bfea51524af9ccd6d9b6d5377096e6f4501e30990e688634",
+      "fetched_at": "2026-11-08T15:44:01Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-whitehouse-station",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "267a1ae6",
+          "page": 1,
+          "said": "Mass Schedule Monday-Wednesday & Friday | 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "248f07e1",
+          "page": 1,
+          "said": "Mass Schedule Monday-Wednesday & Friday | 8:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list 8:30 am Masses on those days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-whitehouse-station",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "267a1ae6",
+          "page": 1,
+          "said": "Mass Schedule Monday-Wednesday & Friday | 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "248f07e1",
+          "page": 1,
+          "said": "Mass Schedule Monday-Wednesday & Friday | 8:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list 8:30 am Masses on those days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-whitehouse-station",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "267a1ae6",
+          "page": 1,
+          "said": "Mass Schedule Monday-Wednesday & Friday | 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "248f07e1",
+          "page": 1,
+          "said": "Mass Schedule Monday-Wednesday & Friday | 8:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list 8:30 am Masses on those days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-whitehouse-station",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "267a1ae6",
+          "page": 1,
+          "said": "Mass Schedule Monday-Wednesday & Friday | 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "248f07e1",
+          "page": 1,
+          "said": "Mass Schedule Monday-Wednesday & Friday | 8:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list 8:30 am Masses on those days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-whitehouse-station",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "267a1ae6",
+          "page": 1,
+          "said": "Mass Schedule Thursday | 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "248f07e1",
+          "page": 1,
+          "said": "Mass Schedule Thursday | 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins; the Nov 12 intentions list a Noon Mass. The Thanksgiving 9:00 am Mass is a dated listing that changes no weekly slot (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-whitehouse-station",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "267a1ae6",
+          "page": 1,
+          "said": "Saturday Vigil | 4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "248f07e1",
+          "page": 1,
+          "said": "Saturday Vigil | 4:30 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-whitehouse-station",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "267a1ae6",
+          "page": 1,
+          "said": "Sunday | 8:30 and 10:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "248f07e1",
+          "page": 1,
+          "said": "Sunday | 8:30 and 10:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-whitehouse-station",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "267a1ae6",
+          "page": 1,
+          "said": "Sunday | 8:30 and 10:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "248f07e1",
+          "page": 1,
+          "said": "Sunday | 8:30 and 10:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-whitehouse-station",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "267a1ae6",
+          "page": 1,
+          "said": "Confession Saturday | 3:30 - 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "248f07e1",
+          "page": 1,
+          "said": "Confession Saturday | 3:30 - 4:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "267a1ae6",
+          "page": 1,
+          "said": "Confession Other | By Appointment"
+        }
+      ],
+      "rationale": "R26: by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-whitehouse-station",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "267a1ae6",
+          "page": 5,
+          "said": "Friday, November 27 ... 9:00 am - Noon | Adoration"
+        },
+        {
+          "source": "agent",
+          "bulletin": "267a1ae6",
+          "page": 1,
+          "said": "Adoration Friday following the 8:30 am Mass - Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "248f07e1",
+          "page": 1,
+          "said": "Adoration Friday following the 8:30 am Mass - Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "248f07e1",
+          "page": 5,
+          "said": "Friday, November 13 ... 9:00 am - Noon | Adoration"
+        }
+      ],
+      "rationale": "R1, POLICY Times: the schedule box says after the 8:30 am Mass until Noon; the intentions in both bulletins give the clock time 9:00 am - Noon, which a stated clock time wins and matches R10's 30 minutes after a weekday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-whitehouse-station",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "267a1ae6",
+          "page": 5,
+          "said": "Thursday, November 26 Thanksgiving Day 9:00 am | Estella Dominguez -Aza r/b Katie Pierson"
+        }
+      ],
+      "rationale": "R1, R16, R17: a dated Thanksgiving Mass with a public intention; the bulletin does not cancel the weekly Thursday noon Mass, so that slot is left alone.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-whitehouse-station",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "267a1ae6",
+          "page": 6,
+          "said": "The choir (grades 2-12) will sing at the 7:00 pm Mass on Thursday, December 24"
+        },
+        {
+          "source": "agent",
+          "bulletin": "248f07e1",
+          "page": 2,
+          "said": "will sing at the 7:00 pm Mass on Thursday, December 24"
+        }
+      ],
+      "rationale": "R1, R16: a dated Christmas Eve Mass after as_of, printed in both bulletins; other Christmas Masses are not yet printed and update mode will read them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
