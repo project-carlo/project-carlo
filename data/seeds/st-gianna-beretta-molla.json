@@ -1,0 +1,669 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-gianna-beretta-molla",
+  "status": "ready",
+  "as_of": "2026-11-15T16:47:47Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T12:46:26Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both bulletins (Nov 8 and Nov 15) print the same schedule box: Sat 4:30 PM, Sun 8, 10, 12 (Latin Novus Ordo), 2 PM (Spanish); weekdays 8:30 AM, Fri 7 PM Spanish; confession Sat 3:30-4:15, Sun 1:15-1:45 (Spanish). A First Saturday devotion (Mass, Adoration, Confession) begins Dec 5 and is left out under R20. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "d15dd833db6aff0d048c1b24c39887e0c046c37534fc3c9294a78f0ffe1a26a4",
+      "fetched_at": "2026-11-15T16:47:47Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "03160cf06d5a2cc70b362f206c83debc876ff0fbece0a462b316a3045f161207",
+      "fetched_at": "2026-11-08T15:56:08Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gianna-beretta-molla-northfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d15dd833",
+          "page": 1,
+          "said": "WEEKEND MASSES Saturday: 4:30 PM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03160cf0",
+          "page": 1,
+          "said": "WEEKEND MASSES Saturday: 4:30 PM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions on p2 list it each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gianna-beretta-molla-northfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d15dd833",
+          "page": 1,
+          "said": "Sunday: 8 & 10 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03160cf0",
+          "page": 1,
+          "said": "Sunday: 8 & 10 AM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gianna-beretta-molla-northfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d15dd833",
+          "page": 1,
+          "said": "Sunday: 8 & 10 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03160cf0",
+          "page": 1,
+          "said": "Sunday: 8 & 10 AM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gianna-beretta-molla-northfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Novus Ordo in Latin"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d15dd833",
+          "page": 1,
+          "said": "Sunday 12 Noon: Novus Ordo Latin"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03160cf0",
+          "page": 1,
+          "said": "Sunday 12 Noon: Novus Ordo Latin"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gianna-beretta-molla-northfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "14:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d15dd833",
+          "page": 1,
+          "said": "Sunday: 2:00 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03160cf0",
+          "page": 1,
+          "said": "Sunday: 2:00 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gianna-beretta-molla-northfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d15dd833",
+          "page": 1,
+          "said": "WeekDay MASSES Monday-Friday 8:30 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03160cf0",
+          "page": 1,
+          "said": "WeekDay MASSES Monday-Friday 8:30 AM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the p2 intentions list 8:30 AM each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gianna-beretta-molla-northfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d15dd833",
+          "page": 1,
+          "said": "WeekDay MASSES Monday-Friday 8:30 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03160cf0",
+          "page": 1,
+          "said": "WeekDay MASSES Monday-Friday 8:30 AM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the p2 intentions list 8:30 AM each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gianna-beretta-molla-northfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d15dd833",
+          "page": 1,
+          "said": "WeekDay MASSES Monday-Friday 8:30 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03160cf0",
+          "page": 1,
+          "said": "WeekDay MASSES Monday-Friday 8:30 AM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the p2 intentions list 8:30 AM each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gianna-beretta-molla-northfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d15dd833",
+          "page": 1,
+          "said": "WeekDay MASSES Monday-Friday 8:30 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03160cf0",
+          "page": 1,
+          "said": "WeekDay MASSES Monday-Friday 8:30 AM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the p2 intentions list 8:30 AM each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gianna-beretta-molla-northfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d15dd833",
+          "page": 1,
+          "said": "WeekDay MASSES Monday-Friday 8:30 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03160cf0",
+          "page": 1,
+          "said": "WeekDay MASSES Monday-Friday 8:30 AM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the p2 intentions list 8:30 AM each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gianna-beretta-molla-northfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d15dd833",
+          "page": 1,
+          "said": "Friday: 7:00 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03160cf0",
+          "page": 1,
+          "said": "Friday: 7:00 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; p2 intentions list Friday 7:00 PM Mass in Spanish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gianna-beretta-molla-northfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d15dd833",
+          "page": 1,
+          "said": "CONFESSIONS Saturdays: 3:30 PM to 4:15 PM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03160cf0",
+          "page": 1,
+          "said": "CONFESSIONS Saturdays: 3:30 PM to 4:15 PM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gianna-beretta-molla-northfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:15",
+        "end_time": "13:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d15dd833",
+          "page": 1,
+          "said": "Sundays: 1:15PM-1:45PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03160cf0",
+          "page": 1,
+          "said": "Sundays: 1:15PM-1:45PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d15dd833",
+          "page": 1,
+          "said": "Anytime by Appointment."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d15dd833",
+          "page": 1,
+          "said": "Holy DayS OF OBLIGATION Vigil: 7:00 PM (English) Feast Day: 8:30 AM (English) 12:00 Noon (English) 7:00 PM (Spanish)"
+        }
+      ],
+      "rationale": "R24, POLICY Dates: the generic holy-day schedule names no date, and POLICY forbids projecting dates; update mode will record a holy day when a bulletin dates it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gianna-beretta-molla-northfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "First Saturday Devotion to Our Lady of Fatima"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d15dd833",
+          "page": 3,
+          "said": "First Saturday Devotion ... Beginning Saturday, December 5 ... 8:30 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03160cf0",
+          "page": 5,
+          "said": "Beginning Saturday, December 5 ... 8:30 am Mass"
+        }
+      ],
+      "rationale": "R20: a new First Saturday service announced to begin December 5, after as_of; left out so update mode records it from the bulletins that show it running.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gianna-beretta-molla-northfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d15dd833",
+          "page": 3,
+          "said": "9:00 am Adoration & Confession 9:30 am Benediction (Beginning Saturday, December 5)"
+        }
+      ],
+      "rationale": "R20: part of the First Saturday Devotion that begins December 5, after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gianna-beretta-molla-northfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "During Adoration"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d15dd833",
+          "page": 3,
+          "said": "9:00 am Adoration & Confession (Beginning Saturday, December 5)"
+        }
+      ],
+      "rationale": "R20: part of the First Saturday Devotion that begins December 5, after as_of; POLICY would time it with the Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
