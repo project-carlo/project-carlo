@@ -1,0 +1,596 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-elizabeth-ann-seton-absecon",
+  "status": "ready",
+  "as_of": "2026-11-15T16:47:45Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T12:44:02Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. The page 1 schedule box (Sat 4 PM; Sun 8, 10, 11:30; weekdays 6:45 AM Mon-Fri; Sat confession 3-3:30 and 5-5:30; Friday Adoration 7 AM-5 PM) is identical in both bulletins (Nov 8 and Nov 15), and the intentions agree. Adds the dated Thanksgiving Day Mass at 8:30 AM. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "ad66e8bc1e59e2c82bbfa62f845a4700714cc2abe7d068f5d66db0bd9dd6a3b3",
+      "fetched_at": "2026-11-15T16:47:45Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "5dd532bf81a10c2c46e096ae42c48873149233bad2093ba3351d27dddfb27578",
+      "fetched_at": "2026-11-08T22:01:32Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-absecon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ad66e8bc",
+          "page": 1,
+          "said": "MASS SCHEDULE ... Saturday | 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5dd532bf",
+          "page": 1,
+          "said": "MASS SCHEDULE ... Saturday | 4:00 pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page 1 schedule box of both bulletins and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-absecon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ad66e8bc",
+          "page": 1,
+          "said": "Sunday | 8:00, 10:00 (livestream) & 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5dd532bf",
+          "page": 1,
+          "said": "Sunday | 8:00, 10:00 (livestream) & 11:30 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page 1 schedule box of both bulletins and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-absecon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ad66e8bc",
+          "page": 1,
+          "said": "Sunday | 8:00, 10:00 (livestream) & 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5dd532bf",
+          "page": 1,
+          "said": "Sunday | 8:00, 10:00 (livestream) & 11:30 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page 1 schedule box of both bulletins and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-absecon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ad66e8bc",
+          "page": 1,
+          "said": "Sunday | 8:00, 10:00 (livestream) & 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5dd532bf",
+          "page": 1,
+          "said": "Sunday | 8:00, 10:00 (livestream) & 11:30 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page 1 schedule box of both bulletins and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-absecon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ad66e8bc",
+          "page": 1,
+          "said": "Weekdays | 6:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5dd532bf",
+          "page": 1,
+          "said": "Weekdays | 6:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ad66e8bc",
+          "page": 2,
+          "said": "intentions MONDAY ... FRIDAY 6:45 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5dd532bf",
+          "page": 2,
+          "said": "intentions MONDAY ... FRIDAY 6:45 AM"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box gives Weekdays 6:45 am; the intentions list 6:45 AM Monday to Friday only (Saturday has just the 4:00 PM), so weekdays means Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-absecon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ad66e8bc",
+          "page": 1,
+          "said": "Weekdays | 6:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5dd532bf",
+          "page": 1,
+          "said": "Weekdays | 6:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ad66e8bc",
+          "page": 2,
+          "said": "intentions MONDAY ... FRIDAY 6:45 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5dd532bf",
+          "page": 2,
+          "said": "intentions MONDAY ... FRIDAY 6:45 AM"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box gives Weekdays 6:45 am; the intentions list 6:45 AM Monday to Friday only (Saturday has just the 4:00 PM), so weekdays means Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-absecon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ad66e8bc",
+          "page": 1,
+          "said": "Weekdays | 6:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5dd532bf",
+          "page": 1,
+          "said": "Weekdays | 6:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ad66e8bc",
+          "page": 2,
+          "said": "intentions MONDAY ... FRIDAY 6:45 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5dd532bf",
+          "page": 2,
+          "said": "intentions MONDAY ... FRIDAY 6:45 AM"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box gives Weekdays 6:45 am; the intentions list 6:45 AM Monday to Friday only (Saturday has just the 4:00 PM), so weekdays means Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-absecon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ad66e8bc",
+          "page": 1,
+          "said": "Weekdays | 6:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5dd532bf",
+          "page": 1,
+          "said": "Weekdays | 6:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ad66e8bc",
+          "page": 2,
+          "said": "intentions MONDAY ... FRIDAY 6:45 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5dd532bf",
+          "page": 2,
+          "said": "intentions MONDAY ... FRIDAY 6:45 AM"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box gives Weekdays 6:45 am; the intentions list 6:45 AM Monday to Friday only (Saturday has just the 4:00 PM), so weekdays means Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-absecon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ad66e8bc",
+          "page": 1,
+          "said": "Weekdays | 6:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5dd532bf",
+          "page": 1,
+          "said": "Weekdays | 6:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ad66e8bc",
+          "page": 2,
+          "said": "intentions MONDAY ... FRIDAY 6:45 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5dd532bf",
+          "page": 2,
+          "said": "intentions MONDAY ... FRIDAY 6:45 AM"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box gives Weekdays 6:45 am; the intentions list 6:45 AM Monday to Friday only (Saturday has just the 4:00 PM), so weekdays means Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-absecon",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ad66e8bc",
+          "page": 1,
+          "said": "CONFESSION Saturday | 3:00 - 3:30 pm, 5:00 - 5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5dd532bf",
+          "page": 1,
+          "said": "CONFESSION Saturday | 3:00 - 3:30 pm, 5:00 - 5:30 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-absecon",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "17:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ad66e8bc",
+          "page": 1,
+          "said": "CONFESSION Saturday | 3:00 - 3:30 pm, 5:00 - 5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5dd532bf",
+          "page": 1,
+          "said": "CONFESSION Saturday | 3:00 - 3:30 pm, 5:00 - 5:30 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-absecon",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ad66e8bc",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION Friday | 7:00 am - 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5dd532bf",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION Friday | 7:00 am - 5:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-absecon",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ad66e8bc",
+          "page": 2,
+          "said": "Thanksgiving Day Mass November 26, 2026 8:30 am"
+        }
+      ],
+      "rationale": "R1, R16, R17: a dated holiday Mass on or after as_of; no cancellation of the weekday 6:45 is stated, so the weekly slot is left alone.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ad66e8bc",
+          "page": 4,
+          "said": "Consoling the Heart of Jesus GROUP RETREAT, Weekly Mondays 6:30 PM in Msgr. Coyne Hall, Concluding Mass on 12/7"
+        }
+      ],
+      "rationale": "R24, R26: the group retreat's concluding Mass on 12/7 has no stated time and belongs to a retreat group; nothing to record.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
