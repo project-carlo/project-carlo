@@ -1,0 +1,564 @@
+{
+  "schema_version": 1,
+  "parish_slug": "the-catholic-community-of-the-holy-spirit",
+  "status": "ready",
+  "as_of": "2026-11-15T16:48:15Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T17:44:59Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Three worship sites: Mullica Hill Parish Center (Sat 4 PM, Sun 10:30 AM, Mon/Wed/Fri 9 AM Masses; Sat 3 PM Confession; Thu 7-8 PM Holy Hour), Woodstown Parish Center (Sun 8:30 AM) and St. Joseph, Woodstown (Tue/Thu 9 AM). Both bulletins read (Nov 8 and Nov 15) agree; no open questions. Off-site Friends Village Mass and a Mullica Gardens Communion Service are excluded.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "4799a4c0605d5039c084afcedd92cb293dd363a892fd8d585cd59020b53e288c",
+      "fetched_at": "2026-11-15T16:48:15Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "c8d5a9de6c0bb90327f9c30edeebf9ca4e00be439278f46eb1d696f126a2b506",
+      "fetched_at": "2026-11-08T15:56:33Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mullica-hill-parish-center",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4799a4c0",
+          "page": 1,
+          "said": "Mass Schedule & Worship Sites Saturday 4:00 PM Mullica Hill PC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c8d5a9de",
+          "page": 1,
+          "said": "Mass Schedule & Worship Sites Saturday 4:00 PM Mullica Hill PC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4799a4c0",
+          "page": 2,
+          "said": "Saturday November 21, 2026 MHPC 4:00 PM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read (Nov 8 and Nov 15) and in the newest's Mass list.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "woodstown-parish-center",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4799a4c0",
+          "page": 1,
+          "said": "Sunday 8:30 AM Woodstown PC 2 Lamplighter Drive - Woodstown"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c8d5a9de",
+          "page": 1,
+          "said": "Sunday 8:30 AM Woodstown PC 2 Lamplighter Drive - Woodstown"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4799a4c0",
+          "page": 2,
+          "said": "Sunday November 22, 2026 8:30 AM ... WPC"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read; WPC is the Woodstown Parish Center at 2 Lamplighter Dr.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mullica-hill-parish-center",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4799a4c0",
+          "page": 1,
+          "said": "*10:30 AM Mullica Hill PC *Live Streamed"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c8d5a9de",
+          "page": 1,
+          "said": "*10:30 AM Mullica Hill PC *Live Streamed"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4799a4c0",
+          "page": 2,
+          "said": "10:30 AM ... MHPC"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mullica-hill-parish-center",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4799a4c0",
+          "page": 1,
+          "said": "Daily Masses 9:00 AM M, W &F (MHPC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c8d5a9de",
+          "page": 1,
+          "said": "Daily Masses 9:00 AM M, W &F (MHPC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4799a4c0",
+          "page": 2,
+          "said": "Monday/Wednesday/Friday November 16/18/20 MHPC 9:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: daily Mass schedule in both bulletins read, confirmed by the newest's dated Mass list.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mullica-hill-parish-center",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4799a4c0",
+          "page": 1,
+          "said": "Daily Masses 9:00 AM M, W &F (MHPC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c8d5a9de",
+          "page": 1,
+          "said": "Daily Masses 9:00 AM M, W &F (MHPC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4799a4c0",
+          "page": 2,
+          "said": "Monday/Wednesday/Friday November 16/18/20 MHPC 9:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: daily Mass schedule in both bulletins read, confirmed by the newest's dated Mass list.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mullica-hill-parish-center",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4799a4c0",
+          "page": 1,
+          "said": "Daily Masses 9:00 AM M, W &F (MHPC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c8d5a9de",
+          "page": 1,
+          "said": "Daily Masses 9:00 AM M, W &F (MHPC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4799a4c0",
+          "page": 2,
+          "said": "Monday/Wednesday/Friday November 16/18/20 MHPC 9:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: daily Mass schedule in both bulletins read, confirmed by the newest's dated Mass list.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-woodstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4799a4c0",
+          "page": 1,
+          "said": "Daily Masses 9:00 AM T, TH (St. Joseph Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c8d5a9de",
+          "page": 1,
+          "said": "Daily Masses 9:00 AM T, TH (St. Joseph Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4799a4c0",
+          "page": 2,
+          "said": "Tuesday/Thursday November 17/19 SJC 9:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: daily Mass schedule in both bulletins read; SJC is St. Joseph Church, Woodstown.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-woodstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4799a4c0",
+          "page": 1,
+          "said": "Daily Masses 9:00 AM T, TH (St. Joseph Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c8d5a9de",
+          "page": 1,
+          "said": "Daily Masses 9:00 AM T, TH (St. Joseph Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4799a4c0",
+          "page": 2,
+          "said": "Tuesday/Thursday November 17/19 SJC 9:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: daily Mass schedule in both bulletins read; SJC is St. Joseph Church, Woodstown.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mullica-hill-parish-center",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4799a4c0",
+          "page": 1,
+          "said": "Confessions 3:00 PM Saturday Mullica Hill PC or by Appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c8d5a9de",
+          "page": 1,
+          "said": "Confessions 3:00 PM Saturday Mullica Hill PC or by Appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4799a4c0",
+          "page": 3,
+          "said": "Reconciliation is offered weekly on Saturday at 3PM in the Mullica Hill Parish Center"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c8d5a9de",
+          "page": 2,
+          "said": "Reconciliation is offered weekly on Saturday at 3PM in the Mullica Hill Parish Center or by appointment."
+        }
+      ],
+      "rationale": "R1, R35: printed in both bulletins; no end time given, so end_time is null (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mullica-hill-parish-center",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4799a4c0",
+          "page": 5,
+          "said": "On Thursday evenings ... will have Holy Hour from 7PM - 8PM in the Mullica Hill Parish Center ... Blessed Sacrament is solemnly exposed"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4799a4c0",
+          "page": 4,
+          "said": "Exposition of the Blessed Sacrament (Adoration) Holy Hour is Beginning each Thursday evening starting November 5th at 7:00 PM - 8:00 PM at the Mullica Hill Parish Center."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4799a4c0",
+          "page": 2,
+          "said": "Thursday November 19 7:00 PM Eucharistic Adoration MHPC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c8d5a9de",
+          "page": 4,
+          "said": "Exposition of the Blessed Sacrament (Adoration) Holy Hour is Beginning each Thursday evening starting November 5th at 7:00 PM - 8:00 PM at the Mullica Hill Parish Center."
+        }
+      ],
+      "rationale": "R1, R35: weekly Thursday Holy Hour with exposition, begun November 5 (before as_of), printed in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4799a4c0",
+          "page": 1,
+          "said": "Confessions ... or by Appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mullica-hill-parish-center",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-17",
+        "start_time": "11:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "At Friends Village"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4799a4c0",
+          "page": 6,
+          "said": "11/17: 11:15 AM Mass Friends Village"
+        }
+      ],
+      "rationale": "R22: Friends Village is a retirement community, not on the church list (seed church finds no match); POLICY leaves out events at other locations. A nursing-home Mass for residents is not a parish church event, so not a church-list issue.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mullica-hill-parish-center",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-24",
+        "start_time": "14:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Communion Service at Mullica Gardens"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4799a4c0",
+          "page": 6,
+          "said": "11/24: 2:00 PM Mullica Gardens Communion Service"
+        }
+      ],
+      "rationale": "R24, R25: a Communion Service is not a Mass, and Mullica Gardens is an off-site facility (R22).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
