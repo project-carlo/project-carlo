@@ -1,0 +1,451 @@
+{
+  "schema_version": 1,
+  "parish_slug": "divine-mercy-carteret",
+  "status": "ready",
+  "as_of": "2026-11-15T16:50:34Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T22:37:35Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (Holy Family, Carteret). The schedule box and Mass intentions agree in both bulletins read (Nov 8 and Nov 15, 2026): Sat 4 PM vigil, Sun 7:30 and 10:45 AM, 8 AM Mass Monday to Saturday, Saturday confession 3:15-3:45 PM. No Adoration, no dated changes, no open questions; no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "6351c92f7b531f49a8928245f00006d8d31e535bb759db86fa9931ae9a3b8035",
+      "fetched_at": "2026-11-15T16:50:34Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "0b8b3109d9f242ea3b4f024e90ff99fc781cd0822e010f653d957c656f9b330a",
+      "fetched_at": "2026-11-08T15:58:54Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-carteret",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6351c92f",
+          "page": 1,
+          "said": "MASS SCHEDULE All at Holy Family Church Saturday Vigil: 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b8b3109",
+          "page": 1,
+          "said": "MASS SCHEDULE All at Holy Family Church Saturday Vigil: 4:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list 4:00 pm each Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-carteret",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6351c92f",
+          "page": 1,
+          "said": "Sunday: 7:30 and 10:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b8b3109",
+          "page": 1,
+          "said": "Sunday: 7:30 and 10:45am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list both Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-carteret",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6351c92f",
+          "page": 1,
+          "said": "Sunday: 7:30 and 10:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b8b3109",
+          "page": 1,
+          "said": "Sunday: 7:30 and 10:45am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list both Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-carteret",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6351c92f",
+          "page": 1,
+          "said": "Weekdays: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b8b3109",
+          "page": 1,
+          "said": "Weekdays: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6351c92f",
+          "page": 2,
+          "said": "Monday, November 16th ... 8:00 am For the Parishioners"
+        }
+      ],
+      "rationale": "R1: 'Weekdays: 8:00am' in the schedule box of both bulletins; the intentions list 8:00 am every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-carteret",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6351c92f",
+          "page": 1,
+          "said": "Weekdays: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b8b3109",
+          "page": 1,
+          "said": "Weekdays: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6351c92f",
+          "page": 2,
+          "said": "Monday, November 16th ... 8:00 am For the Parishioners"
+        }
+      ],
+      "rationale": "R1: 'Weekdays: 8:00am' in the schedule box of both bulletins; the intentions list 8:00 am every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-carteret",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6351c92f",
+          "page": 1,
+          "said": "Weekdays: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b8b3109",
+          "page": 1,
+          "said": "Weekdays: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6351c92f",
+          "page": 2,
+          "said": "Monday, November 16th ... 8:00 am For the Parishioners"
+        }
+      ],
+      "rationale": "R1: 'Weekdays: 8:00am' in the schedule box of both bulletins; the intentions list 8:00 am every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-carteret",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6351c92f",
+          "page": 1,
+          "said": "Weekdays: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b8b3109",
+          "page": 1,
+          "said": "Weekdays: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6351c92f",
+          "page": 2,
+          "said": "Monday, November 16th ... 8:00 am For the Parishioners"
+        }
+      ],
+      "rationale": "R1: 'Weekdays: 8:00am' in the schedule box of both bulletins; the intentions list 8:00 am every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-carteret",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6351c92f",
+          "page": 1,
+          "said": "Weekdays: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b8b3109",
+          "page": 1,
+          "said": "Weekdays: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6351c92f",
+          "page": 2,
+          "said": "Monday, November 16th ... 8:00 am For the Parishioners"
+        }
+      ],
+      "rationale": "R1: 'Weekdays: 8:00am' in the schedule box of both bulletins; the intentions list 8:00 am every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-carteret",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6351c92f",
+          "page": 2,
+          "said": "Saturday, November 21st - Presentation of the Blessed Ever-Virgin Mary 8:00 am †Fr. Chester Miodowski by Divine Mercy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b8b3109",
+          "page": 2,
+          "said": "Saturday, November 7th 8:00 am For the Parishioners"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6351c92f",
+          "page": 1,
+          "said": "Weekdays: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b8b3109",
+          "page": 1,
+          "said": "Weekdays: 8:00am"
+        }
+      ],
+      "rationale": "R35, POLICY Weekly or dated rule 4: the intentions list an 8:00 am Saturday Mass on Nov 7, 14 and 21 across both bulletins, unmarked as special, consistent with the box's 'Weekdays: 8:00am'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-carteret",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6351c92f",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION (CONFESSION) Saturday: 3:15 - 3:45 pm at Holy Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0b8b3109",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION (CONFESSION) Saturday: 3:15 - 3:45 pm at Holy Family"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
