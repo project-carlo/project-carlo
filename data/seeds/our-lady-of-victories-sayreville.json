@@ -1,0 +1,838 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-victories-sayreville",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:04:41Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T23:21:50Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, Our Lady of Victories. Two issues were read (Oct 25 and Nov 8; the Nov 15 fetch is the Nov 8 issue). Their intentions and the Oct 25 cover box agree on Sat 5 PM; Sun 7:30, 9:30 and 12:00; Mon-Fri 6:45 AM; Mon 7 PM; Sat 9 AM; and confession Sat 11-12 and Mon 6-6:45 PM. The cover box's Sunday 11:30 is stale (the intentions and the website say 12:00). The Immaculate Conception Masses come from the website. Open: First Friday Adoration (website only).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "c14ff12470fe985ddba427818028b0571de949a49cea246797798a4be4952d61",
+      "fetched_at": "2026-11-15T16:04:41Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "e4d9adc35ada434f473f18e5650297836ed419a806ef0af061d1310852d083e2",
+      "fetched_at": "2026-11-08T15:31:52Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-sayreville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c14ff124",
+          "page": 2,
+          "said": "SATURDAY — November 14, 2026 ... 5:00 PM † Eugene Lieberman"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d9adc3",
+          "page": 1,
+          "said": "Saturday Vigil: 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d9adc3",
+          "page": 2,
+          "said": "SATURDAY — October 31, 2026 ... 5:00 PM † Joey Orsini"
+        }
+      ],
+      "rationale": "R1, R35: the Saturday 5:00 PM Mass is in the intentions of both issues read and in the Oct 25 cover schedule box; the website Mass Times agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-sayreville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c14ff124",
+          "page": 2,
+          "said": "SUNDAY — November 8, 2026 7:30 AM For Our Parishioners; SUNDAY — November 15, 2026 7:30 AM For Our Parishioners"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d9adc3",
+          "page": 1,
+          "said": "Sunday: 7:30 am, 9:30 am, 11:30 am"
+        }
+      ],
+      "rationale": "R1, R35: in the intentions for all four Sundays the two issues cover and in the Oct 25 schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-sayreville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c14ff124",
+          "page": 2,
+          "said": "SUNDAY — November 8, 2026 ... 9:30 AM † Msgr. James P. Moran; The 9:30am Sunday Mass is Live Streamed"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d9adc3",
+          "page": 1,
+          "said": "Sunday: 7:30 am, 9:30 am, 11:30 am"
+        }
+      ],
+      "rationale": "R1, R35: in the intentions for all four Sundays the two issues cover and in the Oct 25 schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-sayreville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c14ff124",
+          "page": 2,
+          "said": "SUNDAY — November 8, 2026 ... 12:00 PM † Rosie Lecaroz; SUNDAY — November 15, 2026 ... 12:00 PM † Rosie Lecaroz"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d9adc3",
+          "page": 2,
+          "said": "SUNDAY — October 25, 2026 ... 12:00 PM † Frank Bella; SUNDAY — November 1, 2026 ... 12:00 PM † Eugene Fedor"
+        },
+        {
+          "source": "website",
+          "url": "https://olvsayrenj.com/mass-times",
+          "said": "Sunday Mass Schedule Sunday : 7:30 AM ... 9:30 AM ... 12:00 PM"
+        }
+      ],
+      "rationale": "R35, R40: the intentions of all four Sundays in both issues and the parish website give 12:00 PM. The Oct 25 cover box's 11:30 am (see the excluded 11:30 slot) is a stale template line that the newest issue no longer prints.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-sayreville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e4d9adc3",
+          "page": 1,
+          "said": "Sunday: 7:30 am, 9:30 am, 11:30 am"
+        }
+      ],
+      "rationale": "R40: only the Oct 25 cover schedule box says 11:30 am. That issue's own intentions, the newest issue's intentions and the website all give 12:00 PM for the third Sunday Mass, so 11:30 is a stale line; the Mass is recorded at 12:00.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-sayreville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c14ff124",
+          "page": 2,
+          "said": "MONDAY — November 9 ... FRIDAY — November 13, 2026: 6:45 AM intentions each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d9adc3",
+          "page": 1,
+          "said": "Monday—Friday: 6:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d9adc3",
+          "page": 2,
+          "said": "MONDAY — October 26 ... FRIDAY — October 30, 2026: 6:45 AM intentions each day"
+        }
+      ],
+      "rationale": "R1, R35: a 6:45 AM Mass each weekday in both issues' intentions and the Oct 25 schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-sayreville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c14ff124",
+          "page": 2,
+          "said": "MONDAY — November 9 ... FRIDAY — November 13, 2026: 6:45 AM intentions each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d9adc3",
+          "page": 1,
+          "said": "Monday—Friday: 6:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d9adc3",
+          "page": 2,
+          "said": "MONDAY — October 26 ... FRIDAY — October 30, 2026: 6:45 AM intentions each day"
+        }
+      ],
+      "rationale": "R1, R35: a 6:45 AM Mass each weekday in both issues' intentions and the Oct 25 schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-sayreville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c14ff124",
+          "page": 2,
+          "said": "MONDAY — November 9 ... FRIDAY — November 13, 2026: 6:45 AM intentions each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d9adc3",
+          "page": 1,
+          "said": "Monday—Friday: 6:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d9adc3",
+          "page": 2,
+          "said": "MONDAY — October 26 ... FRIDAY — October 30, 2026: 6:45 AM intentions each day"
+        }
+      ],
+      "rationale": "R1, R35: a 6:45 AM Mass each weekday in both issues' intentions and the Oct 25 schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-sayreville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c14ff124",
+          "page": 2,
+          "said": "MONDAY — November 9 ... FRIDAY — November 13, 2026: 6:45 AM intentions each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d9adc3",
+          "page": 1,
+          "said": "Monday—Friday: 6:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d9adc3",
+          "page": 2,
+          "said": "MONDAY — October 26 ... FRIDAY — October 30, 2026: 6:45 AM intentions each day"
+        }
+      ],
+      "rationale": "R1, R35: a 6:45 AM Mass each weekday in both issues' intentions and the Oct 25 schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-sayreville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c14ff124",
+          "page": 2,
+          "said": "MONDAY — November 9 ... FRIDAY — November 13, 2026: 6:45 AM intentions each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d9adc3",
+          "page": 1,
+          "said": "Monday—Friday: 6:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d9adc3",
+          "page": 2,
+          "said": "MONDAY — October 26 ... FRIDAY — October 30, 2026: 6:45 AM intentions each day"
+        }
+      ],
+      "rationale": "R1, R35: a 6:45 AM Mass each weekday in both issues' intentions and the Oct 25 schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-sayreville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c14ff124",
+          "page": 2,
+          "said": "MONDAY — November 9, 2026 ... 7:00 PM † John Zampella ... Followed by Miraculous Medal Novena"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d9adc3",
+          "page": 1,
+          "said": "Monday Evening: 7:00 pm Followed by Novena to Our Lady of the Miraculous Medal"
+        }
+      ],
+      "rationale": "R1, R35: Monday 7:00 PM Mass in both issues' intentions and the Oct 25 schedule box; the novena after it is a devotion (R24).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-sayreville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c14ff124",
+          "page": 2,
+          "said": "SATURDAY — November 14, 2026 9:00 AM † Mass Association"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d9adc3",
+          "page": 1,
+          "said": "Saturday Mornings: 9:00 am"
+        }
+      ],
+      "rationale": "R1, R35: Saturday 9:00 AM Mass in both issues' intentions and the Oct 25 schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-sayreville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c14ff124",
+          "page": 2,
+          "said": "Sacrament of Penance Saturday: 11:00 am to 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d9adc3",
+          "page": 1,
+          "said": "SACRAMENT OF PENANCE Saturday: 11:00 am to 12:00 pm"
+        }
+      ],
+      "rationale": "R1: in the Sacrament of Penance box of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-sayreville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "18:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c14ff124",
+          "page": 2,
+          "said": "Sacrament of Penance ... Monday: 6:00 pm to 6:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d9adc3",
+          "page": 1,
+          "said": "Monday: 6:00 pm to 6:45 pm"
+        }
+      ],
+      "rationale": "R1: in the Sacrament of Penance box of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e4d9adc3",
+          "page": 1,
+          "said": "*Also by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-sayreville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St Padre Pio Prayer Group Mass"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c14ff124",
+          "page": 5,
+          "said": "St Padre Pio Prayer Group of St Ambrose Parish, Old Bridge ... Mass will be celebrated on Saturday November 21, 2026 at 9:00am"
+        }
+      ],
+      "rationale": "R22/R32 and POLICY rule 7: the notice is from a St Ambrose, Old Bridge group and names no church. If it is at OLV, it is the regular Saturday 9:00 AM Mass; if not, it belongs to another parish. Either way it needs no slot of its own.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-sayreville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-06",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "First Friday Healing Mass, St. Mary, Mother of God, Middletown"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e4d9adc3",
+          "page": 5,
+          "said": "FIRST FRIDAY HEALING MASS Saint Mary, Mother of God Church Middletown, New Jersey Friday, November 6, 2026 at 6:30 p.m."
+        }
+      ],
+      "rationale": "R22, R16: another parish's church, and the date is before as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-sayreville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://olvsayrenj.com/mass-times",
+          "said": "Upcoming Holy Days Immaculate Conception December 7 : 7:00 PM ... December 8 : 6:45 AM ... 9:00 AM ... 12:10 PM ... 7:00 PM",
+          "schedule_check": {
+            "checked_at": "2026-11-19T23:25:12Z",
+            "current_because": "Checked 2026-11-19: the page lists the current weekly schedule matching both 2026 bulletins and the upcoming 2026 holy day; its events widget shows Sundays from Nov 22, 2026.",
+            "bulletin": "c14ff124",
+            "fits_because": "The newest bulletin (Nov 8 issue) prints intentions only; the Oct 25 schedule box says 'Holy Days: As announced', and Dec 8 2026 is a Tuesday, so these Masses are additional to the regular 6:45 AM one."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish website's holy-day schedule gives these dated Masses; the bulletins announce holy days separately. Dec 7 7:00 PM and Dec 8 6:45 AM coincide with the weekly Monday 7 PM and weekday 6:45 AM Masses, so they are not duplicated (POLICY, Weekly or dated, rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-sayreville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://olvsayrenj.com/mass-times",
+          "said": "Upcoming Holy Days Immaculate Conception December 7 : 7:00 PM ... December 8 : 6:45 AM ... 9:00 AM ... 12:10 PM ... 7:00 PM",
+          "schedule_check": {
+            "checked_at": "2026-11-19T23:25:12Z",
+            "current_because": "Checked 2026-11-19: the page lists the current weekly schedule matching both 2026 bulletins and the upcoming 2026 holy day; its events widget shows Sundays from Nov 22, 2026.",
+            "bulletin": "c14ff124",
+            "fits_because": "The newest bulletin (Nov 8 issue) prints intentions only; the Oct 25 schedule box says 'Holy Days: As announced', and Dec 8 2026 is a Tuesday, so these Masses are additional to the regular 6:45 AM one."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish website's holy-day schedule gives these dated Masses; the bulletins announce holy days separately. Dec 7 7:00 PM and Dec 8 6:45 AM coincide with the weekly Monday 7 PM and weekday 6:45 AM Masses, so they are not duplicated (POLICY, Weekly or dated, rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-sayreville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://olvsayrenj.com/mass-times",
+          "said": "Upcoming Holy Days Immaculate Conception December 7 : 7:00 PM ... December 8 : 6:45 AM ... 9:00 AM ... 12:10 PM ... 7:00 PM",
+          "schedule_check": {
+            "checked_at": "2026-11-19T23:25:12Z",
+            "current_because": "Checked 2026-11-19: the page lists the current weekly schedule matching both 2026 bulletins and the upcoming 2026 holy day; its events widget shows Sundays from Nov 22, 2026.",
+            "bulletin": "c14ff124",
+            "fits_because": "The newest bulletin (Nov 8 issue) prints intentions only; the Oct 25 schedule box says 'Holy Days: As announced', and Dec 8 2026 is a Tuesday, so these Masses are additional to the regular 6:45 AM one."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish website's holy-day schedule gives these dated Masses; the bulletins announce holy days separately. Dec 7 7:00 PM and Dec 8 6:45 AM coincide with the weekly Monday 7 PM and weekday 6:45 AM Masses, so they are not duplicated (POLICY, Weekly or dated, rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://olvsayrenj.com/first-friday-adoration",
+          "said": "Eucharistic Adoration every First Friday following the 9:00 am Mass. 6 pm Benediction. *Funerals may affect times."
+        },
+        {
+          "source": "website",
+          "url": "https://olvsayrenj.com/",
+          "said": "Adoration ... 1st Friday 9:00 AM to 6:00 PM"
+        }
+      ],
+      "rationale": "R29/R6: only the website gives it, and neither bulletin read covers a first Friday (R11), so neither can confirm it. Its clock times are clear (9 AM–6 PM), but 'following the 9:00 am Mass' clashes with the bulletins' Friday Mass at 6:45 AM, which leaves some doubt that the page is current. Leaning include at the stated clock times (POLICY, Times).",
+      "question": "Add First Friday Adoration 9 AM–6 PM (Benediction) from the website?",
+      "options": [
+        {
+          "label": "First Fridays 9:00 AM–6:00 PM",
+          "entry": {
+            "church_slug": "our-lady-of-victories-sayreville",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "18:00",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Benediction"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    }
+  ]
+}
