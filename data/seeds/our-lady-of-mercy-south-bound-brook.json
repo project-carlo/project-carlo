@@ -1,0 +1,465 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-mercy-south-bound-brook",
+  "status": "ready",
+  "as_of": "2026-11-15T16:16:31Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T23:09:25Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both bulletins read (Nov 8 and Nov 15, 2026) print the same schedule box: Sat 4 PM, Sun 9 AM and 11:30 AM Korean, Tue 7 PM and Wed-Fri 9 AM in the chapel, Thursday exposition 30 minutes after the 9 AM Mass, Saturday confession 3:20-3:40 PM. No open questions; no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "a18b6df6712bd3323ab2a5f6a27eb4c078b9551147be42a7ac863480ac0236f6",
+      "fetched_at": "2026-11-15T16:16:31Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "48f172601b37b2cfb432ee32279c78fac1348198fb3a585a96eb476c59d6c49d",
+      "fetched_at": "2026-11-08T15:41:08Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-south-bound-brook",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a18b6df6",
+          "page": 1,
+          "said": "Saturday Evening ....4:00 PM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48f17260",
+          "page": 1,
+          "said": "Saturday Evening ....4:00 PM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a18b6df6",
+          "page": 2,
+          "said": "Saturday, November 21 4:00 PM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-south-bound-brook",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a18b6df6",
+          "page": 1,
+          "said": "Sunday: ....... 9 AM (English), 11:30 AM (Korean)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48f17260",
+          "page": 1,
+          "said": "Sunday: ....... 9 AM (English), 11:30 AM (Korean)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-south-bound-brook",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Korean"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a18b6df6",
+          "page": 1,
+          "said": "Sunday: ....... 9 AM (English), 11:30 AM (Korean)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48f17260",
+          "page": 1,
+          "said": "Sunday: ....... 9 AM (English), 11:30 AM (Korean)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a18b6df6",
+          "page": 2,
+          "said": "11:30 AM Korean Mass"
+        }
+      ],
+      "rationale": "R1, R35: the regular schedule box of both bulletins lists the Korean Mass; nothing limits it to a group, so it is open (POLICY).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-south-bound-brook",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a18b6df6",
+          "page": 1,
+          "said": "Tuesday....7 PM (In the Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48f17260",
+          "page": 1,
+          "said": "Tuesday....7 PM (In the Chapel)"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins; the chapel is in the church per POLICY, Churches and chapels (Mass intentions list it with the parish's Masses).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-south-bound-brook",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a18b6df6",
+          "page": 1,
+          "said": "Wednesday, Thursday, Friday....9 AM (In the Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48f17260",
+          "page": 1,
+          "said": "Wednesday, Thursday, Friday....9 AM (In the Chapel)"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins, matched by the intentions of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-south-bound-brook",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a18b6df6",
+          "page": 1,
+          "said": "Wednesday, Thursday, Friday....9 AM (In the Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48f17260",
+          "page": 1,
+          "said": "Wednesday, Thursday, Friday....9 AM (In the Chapel)"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins, matched by the intentions of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-south-bound-brook",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a18b6df6",
+          "page": 1,
+          "said": "Wednesday, Thursday, Friday....9 AM (In the Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48f17260",
+          "page": 1,
+          "said": "Wednesday, Thursday, Friday....9 AM (In the Chapel)"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins, matched by the intentions of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-south-bound-brook",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a18b6df6",
+          "page": 1,
+          "said": "Exposition of the Blessed Sacrament Thursday Morning after 9 AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48f17260",
+          "page": 1,
+          "said": "Exposition of the Blessed Sacrament Thursday Morning after 9 AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a18b6df6",
+          "page": 2,
+          "said": "9:00 AM ... Followed by 30 Minutes of Exposition of the Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48f17260",
+          "page": 2,
+          "said": "9:00 AM ... Followed by 30 Minutes of Exposition of the Blessed Sacrament"
+        }
+      ],
+      "rationale": "R10, R1: no clock time; POLICY puts 'after' a weekday Mass 30 minutes after it starts (9:30), and the intentions give the 30-minute duration, so 9:30-10:00. Same in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-south-bound-brook",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:20",
+        "end_time": "15:40",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a18b6df6",
+          "page": 1,
+          "said": "Saturdays from 3:20 PM to 3:40 PM and additional times upon request"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48f17260",
+          "page": 1,
+          "said": "Saturdays from 3:20 PM to 3:40 PM and additional times upon request"
+        }
+      ],
+      "rationale": "R1, R35: confession box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a18b6df6",
+          "page": 1,
+          "said": "and additional times upon request"
+        }
+      ],
+      "rationale": "R26: confession on request has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a18b6df6",
+          "page": 1,
+          "said": "Holy Days of Obligation......As Announced"
+        }
+      ],
+      "rationale": "R26: holy day Masses have no time in the schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-south-bound-brook",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a18b6df6",
+          "page": 2,
+          "said": "THANKSGIVING DAY MASS Mass will be celebrated in the Church on Thursday, November 26th at 9 AM."
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 6/7: Thanksgiving falls on a Thursday and the Mass is at the weekly Thursday 9:00 AM time at the same church, so it is covered by the weekly slot and not duplicated (only the room differs: the church rather than the chapel).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
