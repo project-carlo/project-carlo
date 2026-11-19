@@ -1,0 +1,941 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-pro-cathedral-camden",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:17:20Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T12:53:30Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches. St. Joseph Pro-Cathedral: Sunday 8:00 AM (English), 11:00 AM and 1:30 PM (Spanish), Saturday 6:00 PM (Spanish; from two weeks of intentions plus the website, not in the page-1 box), and 8:00 AM bilingual daily Mass Monday-Saturday in the chapel; St. Anthony of Padua: Sunday 9:15 AM (Spanish). Also a dated November 19 7:00 PM Divine Providence Mass. Open: the website's self-contradictory weekday confession times (5 PM vs 9 AM), which no bulletin prints.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "25a9a6819a39a6ff97e9cc44368348891f069ef1082744aa797290f59e93fb1a",
+      "fetched_at": "2026-11-15T16:17:20Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "202aaecb6b0cba8c94816f30dcc277672031890256bba1d0d1ede53a836ccd44",
+      "fetched_at": "2026-11-08T15:42:32Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-pro-cathedral-camden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "25a9a681",
+          "page": 1,
+          "said": "Mass Schedule St. Joseph Pro-Cathedral Sunday | Domingos 8:00 AM ~ English - Ingles"
+        },
+        {
+          "source": "agent",
+          "bulletin": "202aaecb",
+          "page": 1,
+          "said": "Mass Schedule St. Joseph Pro-Cathedral Sunday | Domingos 8:00 AM ~ English - Ingles"
+        }
+      ],
+      "rationale": "R1: printed in the St. Joseph Pro-Cathedral Mass schedule box of both bulletins read; the intentions list it too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-pro-cathedral-camden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "25a9a681",
+          "page": 1,
+          "said": "Mass Schedule St. Joseph Pro-Cathedral Sunday | Domingos 11:00 AM ~ Spanish - Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "202aaecb",
+          "page": 1,
+          "said": "Mass Schedule St. Joseph Pro-Cathedral Sunday | Domingos 11:00 AM ~ Spanish - Español"
+        }
+      ],
+      "rationale": "R1: printed in the St. Joseph Pro-Cathedral Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-pro-cathedral-camden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "25a9a681",
+          "page": 1,
+          "said": "Mass Schedule St. Joseph Pro-Cathedral Sunday | Domingos 1:30 PM ~ Spanish - Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "202aaecb",
+          "page": 1,
+          "said": "Mass Schedule St. Joseph Pro-Cathedral Sunday | Domingos 1:30 PM ~ Spanish - Español"
+        }
+      ],
+      "rationale": "R1: printed in the St. Joseph Pro-Cathedral Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-pro-cathedral-camden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Bilingual, in the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "25a9a681",
+          "page": 1,
+          "said": "Daily Mass Monday through Saturday 8:00 AM ~ Bilingue at the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "202aaecb",
+          "page": 1,
+          "said": "Daily Mass Monday through Saturday 8:00 AM ~ Bilingue at the Chapel"
+        }
+      ],
+      "rationale": "R1: printed under the St. Joseph Pro-Cathedral heading of the schedule box in both bulletins; the St. Joseph intentions list 8:00 AM each weekday. POLICY, Churches and chapels: the daily Mass chapel is the church's own (the website lists it under St. Joseph Pro-Cathedral).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-pro-cathedral-camden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Bilingual, in the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "25a9a681",
+          "page": 1,
+          "said": "Daily Mass Monday through Saturday 8:00 AM ~ Bilingue at the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "202aaecb",
+          "page": 1,
+          "said": "Daily Mass Monday through Saturday 8:00 AM ~ Bilingue at the Chapel"
+        }
+      ],
+      "rationale": "R1: printed under the St. Joseph Pro-Cathedral heading of the schedule box in both bulletins; the St. Joseph intentions list 8:00 AM each weekday. POLICY, Churches and chapels: the daily Mass chapel is the church's own (the website lists it under St. Joseph Pro-Cathedral).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-pro-cathedral-camden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Bilingual, in the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "25a9a681",
+          "page": 1,
+          "said": "Daily Mass Monday through Saturday 8:00 AM ~ Bilingue at the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "202aaecb",
+          "page": 1,
+          "said": "Daily Mass Monday through Saturday 8:00 AM ~ Bilingue at the Chapel"
+        }
+      ],
+      "rationale": "R1: printed under the St. Joseph Pro-Cathedral heading of the schedule box in both bulletins; the St. Joseph intentions list 8:00 AM each weekday. POLICY, Churches and chapels: the daily Mass chapel is the church's own (the website lists it under St. Joseph Pro-Cathedral).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-pro-cathedral-camden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Bilingual, in the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "25a9a681",
+          "page": 1,
+          "said": "Daily Mass Monday through Saturday 8:00 AM ~ Bilingue at the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "202aaecb",
+          "page": 1,
+          "said": "Daily Mass Monday through Saturday 8:00 AM ~ Bilingue at the Chapel"
+        }
+      ],
+      "rationale": "R1: printed under the St. Joseph Pro-Cathedral heading of the schedule box in both bulletins; the St. Joseph intentions list 8:00 AM each weekday. POLICY, Churches and chapels: the daily Mass chapel is the church's own (the website lists it under St. Joseph Pro-Cathedral).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-pro-cathedral-camden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Bilingual, in the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "25a9a681",
+          "page": 1,
+          "said": "Daily Mass Monday through Saturday 8:00 AM ~ Bilingue at the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "202aaecb",
+          "page": 1,
+          "said": "Daily Mass Monday through Saturday 8:00 AM ~ Bilingue at the Chapel"
+        }
+      ],
+      "rationale": "R1: printed under the St. Joseph Pro-Cathedral heading of the schedule box in both bulletins; the St. Joseph intentions list 8:00 AM each weekday. POLICY, Churches and chapels: the daily Mass chapel is the church's own (the website lists it under St. Joseph Pro-Cathedral).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-pro-cathedral-camden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Bilingual, in the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "25a9a681",
+          "page": 1,
+          "said": "Daily Mass Monday through Saturday 8:00 AM ~ Bilingue at the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "202aaecb",
+          "page": 1,
+          "said": "Daily Mass Monday through Saturday 8:00 AM ~ Bilingue at the Chapel"
+        }
+      ],
+      "rationale": "R1: printed under the St. Joseph Pro-Cathedral heading of the schedule box in both bulletins; the St. Joseph intentions list 8:00 AM each weekday. POLICY, Churches and chapels: the daily Mass chapel is the church's own (the website lists it under St. Joseph Pro-Cathedral).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-pro-cathedral-camden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "25a9a681",
+          "page": 4,
+          "said": "Mass Intentions St. Joseph Pro-Cathedral, Saturday (Sabado) November 21st ... 6:00 PM Antonio Peña Salas"
+        },
+        {
+          "source": "agent",
+          "bulletin": "202aaecb",
+          "page": 4,
+          "said": "Mass Intentions St. Joseph Pro-Cathedral, Saturday (Sabado) November 14th 8:00 AM ... 6:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "25a9a681",
+          "page": 2,
+          "said": "Proclamadores de la Palabra ... Misa de Sabados 6:00PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sjprocathedral.org/",
+          "said": "MASS SCHEDULE ST. JOSEPH PRO-CATHEDRAL ... SATURDAY | SABADO 6:00 P.M. = Español"
+        }
+      ],
+      "rationale": "R35: the St. Joseph Pro-Cathedral intentions of both weeks read list a Saturday 6:00 PM Mass, the ministry list names a lector team for the Saturday 6:00 PM Mass, and the parish website's schedule gives Saturday 6:00 PM in Spanish. The page-1 box simply omits the vigil; it does not contradict it, so C1 does not apply.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-camden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "25a9a681",
+          "page": 1,
+          "said": "St. Anthony of Padua Sunday | Domingos 9:15 AM ~ Spanish -Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "202aaecb",
+          "page": 1,
+          "said": "St. Anthony of Padua Sunday | Domingos 9:15 AM ~ Spanish -Español"
+        }
+      ],
+      "rationale": "R1: printed under the St. Anthony of Padua heading of the schedule box in both bulletins; the St. Anthony intentions list 9:15 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-pro-cathedral-camden",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-19",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Celebration of Our Lady of Divine Providence"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "25a9a681",
+          "page": 3,
+          "said": "The first celebration will take place on Thursday, November 19, at 7:00 p.m., at St. Joseph Pro-Cathedral ... Everyone is warmly invited!"
+        },
+        {
+          "source": "agent",
+          "bulletin": "25a9a681",
+          "page": 4,
+          "said": "Thursday (Jueves) November 19th ... 7:00PM Juan Soto Gonzalez, Rafael Perez Vazquez, Reynaldo Beltran"
+        }
+      ],
+      "rationale": "R1, R16: a dated public celebration at St. Joseph Pro-Cathedral that the intentions list as a 7:00 PM Mass; it is after as_of. The November 22 celebration is at the regular 9:15 AM St. Anthony Mass, so it is not recorded separately (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "25a9a681",
+          "page": 3,
+          "said": "Advent Celebration ... Saturday, December 5, from 9:00 a.m. to 2:00 p.m., at the Oscar Romero Center at St. Joseph Pro-Cathedral. The celebration will include Holy Mass with Fr. Fabián Quintero"
+        }
+      ],
+      "rationale": "R26, POLICY (What to extract): the Mass inside the 9 AM-2 PM gathering has no definite start time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sjprocathedral.org/penance",
+          "said": "We have confessions in the church Monday through Saturday at 5:00 pm. No appointment is necessary. ... We have confessions from Monday throught Saturday at 9:00 am (after Mass)."
+        },
+        {
+          "source": "agent",
+          "bulletin": "25a9a681",
+          "page": 1,
+          "said": "(no confession times in either bulletin)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "202aaecb",
+          "page": 1,
+          "said": "(no confession times in either bulletin)"
+        }
+      ],
+      "rationale": "R6, R28/R29: neither bulletin read prints confession times, and the website's Penance page states two different Monday-Saturday times on the same page, so it can't settle which, if either, is current. Leaning leave out, since a wrong time is worse than a missing one.",
+      "question": "Add the website's weekday confession times? Its Penance page gives both 5:00 PM and 9:00 AM (after Mass) Monday-Saturday, and no bulletin prints confessions.",
+      "options": [
+        {
+          "label": "Mon-Sat 5:00 PM",
+          "entry": {
+            "church_slug": "st-joseph-pro-cathedral-camden",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "17:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the church"
+          }
+        },
+        {
+          "label": "Mon-Sat 9:00 AM",
+          "entry": {
+            "church_slug": "st-joseph-pro-cathedral-camden",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 8:00 AM Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "web-confession"
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sjprocathedral.org/penance",
+          "said": "We have confessions in the church Monday through Saturday at 5:00 pm. No appointment is necessary. ... We have confessions from Monday throught Saturday at 9:00 am (after Mass)."
+        },
+        {
+          "source": "agent",
+          "bulletin": "25a9a681",
+          "page": 1,
+          "said": "(no confession times in either bulletin)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "202aaecb",
+          "page": 1,
+          "said": "(no confession times in either bulletin)"
+        }
+      ],
+      "rationale": "R6, R28/R29: neither bulletin read prints confession times, and the website's Penance page states two different Monday-Saturday times on the same page, so it can't settle which, if either, is current. Leaning leave out, since a wrong time is worse than a missing one.",
+      "question": "Add the website's weekday confession times? Its Penance page gives both 5:00 PM and 9:00 AM (after Mass) Monday-Saturday, and no bulletin prints confessions.",
+      "options": [
+        {
+          "label": "Mon-Sat 5:00 PM",
+          "entry": {
+            "church_slug": "st-joseph-pro-cathedral-camden",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "17:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the church"
+          }
+        },
+        {
+          "label": "Mon-Sat 9:00 AM",
+          "entry": {
+            "church_slug": "st-joseph-pro-cathedral-camden",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 8:00 AM Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "web-confession"
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sjprocathedral.org/penance",
+          "said": "We have confessions in the church Monday through Saturday at 5:00 pm. No appointment is necessary. ... We have confessions from Monday throught Saturday at 9:00 am (after Mass)."
+        },
+        {
+          "source": "agent",
+          "bulletin": "25a9a681",
+          "page": 1,
+          "said": "(no confession times in either bulletin)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "202aaecb",
+          "page": 1,
+          "said": "(no confession times in either bulletin)"
+        }
+      ],
+      "rationale": "R6, R28/R29: neither bulletin read prints confession times, and the website's Penance page states two different Monday-Saturday times on the same page, so it can't settle which, if either, is current. Leaning leave out, since a wrong time is worse than a missing one.",
+      "question": "Add the website's weekday confession times? Its Penance page gives both 5:00 PM and 9:00 AM (after Mass) Monday-Saturday, and no bulletin prints confessions.",
+      "options": [
+        {
+          "label": "Mon-Sat 5:00 PM",
+          "entry": {
+            "church_slug": "st-joseph-pro-cathedral-camden",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "17:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the church"
+          }
+        },
+        {
+          "label": "Mon-Sat 9:00 AM",
+          "entry": {
+            "church_slug": "st-joseph-pro-cathedral-camden",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 8:00 AM Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "web-confession"
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sjprocathedral.org/penance",
+          "said": "We have confessions in the church Monday through Saturday at 5:00 pm. No appointment is necessary. ... We have confessions from Monday throught Saturday at 9:00 am (after Mass)."
+        },
+        {
+          "source": "agent",
+          "bulletin": "25a9a681",
+          "page": 1,
+          "said": "(no confession times in either bulletin)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "202aaecb",
+          "page": 1,
+          "said": "(no confession times in either bulletin)"
+        }
+      ],
+      "rationale": "R6, R28/R29: neither bulletin read prints confession times, and the website's Penance page states two different Monday-Saturday times on the same page, so it can't settle which, if either, is current. Leaning leave out, since a wrong time is worse than a missing one.",
+      "question": "Add the website's weekday confession times? Its Penance page gives both 5:00 PM and 9:00 AM (after Mass) Monday-Saturday, and no bulletin prints confessions.",
+      "options": [
+        {
+          "label": "Mon-Sat 5:00 PM",
+          "entry": {
+            "church_slug": "st-joseph-pro-cathedral-camden",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "17:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the church"
+          }
+        },
+        {
+          "label": "Mon-Sat 9:00 AM",
+          "entry": {
+            "church_slug": "st-joseph-pro-cathedral-camden",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 8:00 AM Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "web-confession"
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sjprocathedral.org/penance",
+          "said": "We have confessions in the church Monday through Saturday at 5:00 pm. No appointment is necessary. ... We have confessions from Monday throught Saturday at 9:00 am (after Mass)."
+        },
+        {
+          "source": "agent",
+          "bulletin": "25a9a681",
+          "page": 1,
+          "said": "(no confession times in either bulletin)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "202aaecb",
+          "page": 1,
+          "said": "(no confession times in either bulletin)"
+        }
+      ],
+      "rationale": "R6, R28/R29: neither bulletin read prints confession times, and the website's Penance page states two different Monday-Saturday times on the same page, so it can't settle which, if either, is current. Leaning leave out, since a wrong time is worse than a missing one.",
+      "question": "Add the website's weekday confession times? Its Penance page gives both 5:00 PM and 9:00 AM (after Mass) Monday-Saturday, and no bulletin prints confessions.",
+      "options": [
+        {
+          "label": "Mon-Sat 5:00 PM",
+          "entry": {
+            "church_slug": "st-joseph-pro-cathedral-camden",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "17:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the church"
+          }
+        },
+        {
+          "label": "Mon-Sat 9:00 AM",
+          "entry": {
+            "church_slug": "st-joseph-pro-cathedral-camden",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 8:00 AM Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "web-confession"
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sjprocathedral.org/penance",
+          "said": "We have confessions in the church Monday through Saturday at 5:00 pm. No appointment is necessary. ... We have confessions from Monday throught Saturday at 9:00 am (after Mass)."
+        },
+        {
+          "source": "agent",
+          "bulletin": "25a9a681",
+          "page": 1,
+          "said": "(no confession times in either bulletin)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "202aaecb",
+          "page": 1,
+          "said": "(no confession times in either bulletin)"
+        }
+      ],
+      "rationale": "R6, R28/R29: neither bulletin read prints confession times, and the website's Penance page states two different Monday-Saturday times on the same page, so it can't settle which, if either, is current. Leaning leave out, since a wrong time is worse than a missing one.",
+      "question": "Add the website's weekday confession times? Its Penance page gives both 5:00 PM and 9:00 AM (after Mass) Monday-Saturday, and no bulletin prints confessions.",
+      "options": [
+        {
+          "label": "Mon-Sat 5:00 PM",
+          "entry": {
+            "church_slug": "st-joseph-pro-cathedral-camden",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "17:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the church"
+          }
+        },
+        {
+          "label": "Mon-Sat 9:00 AM",
+          "entry": {
+            "church_slug": "st-joseph-pro-cathedral-camden",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 8:00 AM Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "web-confession"
+    }
+  ]
+}
