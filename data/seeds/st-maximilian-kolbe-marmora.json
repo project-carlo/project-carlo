@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-maximilian-kolbe-marmora",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:17:31Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-19T13:27:31Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:30:32Z",
   "summary": "Two churches. Church of the Resurrection's weekend, Tue-Fri 8 AM, Saturday 3 PM confession and First Friday Adoration (8:30 AM-1 PM, from the Nov 8 Stewardship issue and website) agree across both bulletins and the website. Open: St. Casimir, Woodbine, has a summer-only Sunday 9 AM Mass (Memorial Day-Labor Day, time only on the website) whose moving season can only be approximated.",
   "blocked_reason": null,
   "bulletins": [
@@ -413,9 +413,27 @@
     },
     {
       "id": "s11",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-casimir-woodbine",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 6,
+          "start_day": 1,
+          "end_month": 8,
+          "end_day": 31
+        },
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -467,7 +485,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:30:32Z"
+      }
     }
   ]
 }

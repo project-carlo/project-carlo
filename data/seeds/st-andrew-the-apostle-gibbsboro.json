@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-andrew-the-apostle-gibbsboro",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:47:43Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-16T21:44:57Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:29:57Z",
   "summary": "One church. Both bulletins read (Nov 8 and Nov 15, 2026) print the same p10 schedule box: Sat 4 PM vigil, Sun 8/10 AM and 6 PM, Mon-Sat 8 AM, Sat 3:15 PM confession, Adoration Mon-Fri 8:30-9:30 AM, Wed 7-8 PM and first-Wednesday all-day 8:30 AM-8 PM (regular Wednesday slots skip first Wednesdays to avoid overlap). Open: whether Adoration after the Saturday 8 AM Mass (website says Mon-Sat) should be included. The Nov 8 PDF's text layer is garbled; it was read from page images.",
   "blocked_reason": null,
   "bulletins": [
@@ -746,9 +746,22 @@
     },
     {
       "id": "s20",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-the-apostle-gibbsboro",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
       "page": 10,
       "sources": [
         {
@@ -795,7 +808,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:57Z"
+      }
     },
     {
       "id": "s21",

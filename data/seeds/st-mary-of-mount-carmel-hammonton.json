@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-mary-of-mount-carmel-hammonton",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:48:02Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-19T13:23:36Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:30:30Z",
   "summary": "Two churches: St. Joseph (weekday 8 AM, Wed Spanish 7 PM, Sat 5 PM vigil, Sun 9 AM and Spanish noon, confessions Wed and Sat) and St. Anthony of Padua (Sun 7:30 and 10:30). Both bulletins and the website agree. First-Friday Adoration comes from the Nov 8 bulletin and website (R12). Dated Thanksgiving and Guadalupe Masses are included. Open: whether the Immaculate Conception 7 PM Masses are Dec 7 or Dec 8.",
   "blocked_reason": null,
   "bulletins": [
@@ -907,9 +907,22 @@
     },
     {
       "id": "s24",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-hammonton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception, with Vespers"
+      },
       "page": 6,
       "sources": [
         {
@@ -962,14 +975,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:30:30Z"
+      },
       "group": "immaculate"
     },
     {
       "id": "s25",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-hammonton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception, Spanish"
+      },
       "page": 6,
       "sources": [
         {
@@ -1022,7 +1052,11 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:30:30Z"
+      },
       "group": "immaculate"
     }
   ]

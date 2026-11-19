@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-joseph-the-worker-haddon-township",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:47:58Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-19T13:09:06Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:30:21Z",
   "summary": "Two churches, St. Aloysius (Oaklyn) and St. Vincent Pallotti (Haddon Twp). The page-1 schedule box is identical in the Nov 8 and Nov 15 bulletins (newest is image-only, read from renders): weekend Masses, weekday 8:30 Masses, first-Friday Mass and Adoration, Saturday confessions; plus the Christmas Eve 4 PM Mass at SVP. Open: whether to add the Nov 24 Thanksgiving Children's Mass, which has no definite start time.",
   "blocked_reason": null,
   "bulletins": [
@@ -695,9 +695,22 @@
     },
     {
       "id": "s20",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-pallotti-haddon-township",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-24",
+        "start_time": "15:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Children's Mass"
+      },
       "page": 6,
       "sources": [
         {
@@ -733,7 +746,11 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:30:21Z"
+      }
     },
     {
       "id": "s19",

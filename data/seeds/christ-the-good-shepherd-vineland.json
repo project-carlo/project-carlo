@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "christ-the-good-shepherd-vineland",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:47:20Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-16T20:03:16Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:29:06Z",
   "summary": "Two churches, Sacred Heart and St. Isidore the Farmer; both bulletins read (Nov 8 and 15) print the same schedule box, which the website matches. Weekday Masses Tue-Wed and the first-Sunday Spanish Mass are at the Sacred Heart High School Chapel, not on the church list, so excluded (R23). Open: Tue/Wed confession location, and how to record the overnight Thursday-Friday Adoration.",
   "blocked_reason": null,
   "bulletins": [
@@ -588,9 +588,22 @@
     },
     {
       "id": "s15",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isidore-the-farmer-vineland",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
       "page": 1,
       "sources": [
         {
@@ -637,14 +650,31 @@
           }
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:06Z"
+      },
       "group": "tuewed-confession"
     },
     {
       "id": "s16",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isidore-the-farmer-vineland",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
       "page": 1,
       "sources": [
         {
@@ -691,7 +721,11 @@
           }
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:06Z"
+      },
       "group": "tuewed-confession"
     },
     {
@@ -976,9 +1010,22 @@
     },
     {
       "id": "s26",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isidore-the-farmer-vineland",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -1025,14 +1072,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:06Z"
+      },
       "group": "overnight-adoration"
     },
     {
       "id": "s27",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isidore-the-farmer-vineland",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "07:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -1074,7 +1138,11 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:06Z"
+      },
       "group": "overnight-adoration"
     }
   ],

@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-vincent-de-paul-mays-landing",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:48:14Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-19T17:38:06Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:30:52Z",
   "summary": "Two churches: St. Vincent de Paul (Mays Landing) and St. Bernard Mission (Dorothy), which has no times in either bulletin (Nov 8, Nov 15 2026) or on the website, so it has no slots. St. Vincent de Paul: Sat 5 PM, Sun 8 and 10:45 AM, Tue-Fri 7 AM chapel Mass, and Wed 7-8 PM confession, all agreed by both bulletins and the website. Open: Saturday confession end (bulletin 4:30 vs website 4:45), and the church for the Thanksgiving 9 AM and Nov 22 Confirmation Masses.",
   "blocked_reason": null,
   "bulletins": [
@@ -331,9 +331,22 @@
     },
     {
       "id": "s9",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-mays-landing",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -397,13 +410,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:30:52Z"
+      }
     },
     {
       "id": "s10",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-mays-landing",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
       "page": 4,
       "sources": [
         {
@@ -445,13 +475,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:30:52Z"
+      }
     },
     {
       "id": "s11",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-mays-landing",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-22",
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Confirmation Mass with Bishop Sullivan"
+      },
       "page": 4,
       "sources": [
         {
@@ -493,7 +540,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:30:52Z"
+      }
     },
     {
       "id": "s12",

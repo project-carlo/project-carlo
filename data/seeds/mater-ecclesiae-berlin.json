@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "mater-ecclesiae-berlin",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:47:30Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-16T20:53:54Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:29:31Z",
   "summary": "One church (Mater Ecclesiae, traditional Latin Mass). Both November 2026 bulletins print the same week: Sat 5 PM, Sun 8 and 10:30 AM (Benediction after), Mon-Tue/Thu-Sat 8 AM, Wed 7:30 PM, with confessions before each Mass; the homepage's Mass Times agree, with slightly different confession minutes (bulletin used). First Friday all-day Adoration comes from the website (R6). Open: the website-only Saturday 4-4:55 PM and First Friday 7:30 AM confessions.",
   "blocked_reason": null,
   "bulletins": [
@@ -958,9 +958,24 @@
     },
     {
       "id": "s27",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mater-ecclesiae-berlin",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 8:00 AM Mass"
+      },
       "page": null,
       "sources": [
         {
@@ -997,13 +1012,30 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:31Z"
+      }
     },
     {
       "id": "s28",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "mater-ecclesiae-berlin",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:55",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 5:00 PM Mass"
+      },
       "page": null,
       "sources": [
         {
@@ -1044,7 +1076,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:31Z"
+      }
     }
   ]
 }

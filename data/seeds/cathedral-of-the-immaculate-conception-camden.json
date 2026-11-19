@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "cathedral-of-the-immaculate-conception-camden",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:47:14Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-16T19:56:10Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:29:02Z",
   "summary": "Two churches: the Cathedral and St. Joseph (Polish), which has the Friday 8:30 Mass in its rectory chapel. Both bulletins (Nov 8, Nov 15) agree, except that the Friday 5:30 PM confession was replaced by 7 PM First Fridays; the newer schedule is used. Open: whether to add the Dec 7-8 Immaculate Conception holy-day Masses, dated from the partly stale website.",
   "blocked_reason": null,
   "bulletins": [
@@ -752,9 +752,22 @@
     },
     {
       "id": "s20",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-polish-camden",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vigil of the Immaculate Conception"
+      },
       "page": 1,
       "sources": [
         {
@@ -795,14 +808,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:02Z"
+      },
       "group": "holyday"
     },
     {
       "id": "s21",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-of-the-immaculate-conception-camden",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception; Spanish"
+      },
       "page": 1,
       "sources": [
         {
@@ -843,7 +873,11 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:02Z"
+      },
       "group": "holyday"
     }
   ]

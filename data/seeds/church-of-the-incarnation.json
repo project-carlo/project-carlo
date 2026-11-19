@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "church-of-the-incarnation",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:47:23Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-16T20:22:11Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:29:14Z",
   "summary": "One church (Incarnation, Mantua). The schedule box is identical in the Nov 8 and Nov 15, 2026 bulletins: weekday 7 and 8:30 AM, Saturday 8:30 AM and 5 PM, Sunday 7:30/9:30/11:30 AM, Wednesday Adoration 9-4, confessions after the 8:30 AM Mass Mon-Sat and Saturday 4-4:30 PM; two Christmas Eve Masses (4 PM, 10 PM) are dated. Open: how to record the 7 AM weekday Mass's summer break (Memorial Day to early September).",
   "blocked_reason": null,
   "bulletins": [
@@ -27,9 +27,27 @@
   "slots": [
     {
       "id": "s1",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "incarnation-mantua",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 5,
+          "end_day": null
+        },
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -93,14 +111,36 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:14Z"
+      },
       "group": "seven-am"
     },
     {
       "id": "s2",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "incarnation-mantua",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 5,
+          "end_day": null
+        },
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -164,14 +204,36 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:14Z"
+      },
       "group": "seven-am"
     },
     {
       "id": "s3",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "incarnation-mantua",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 5,
+          "end_day": null
+        },
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -235,14 +297,36 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:14Z"
+      },
       "group": "seven-am"
     },
     {
       "id": "s4",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "incarnation-mantua",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 5,
+          "end_day": null
+        },
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -306,14 +390,36 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:14Z"
+      },
       "group": "seven-am"
     },
     {
       "id": "s5",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "incarnation-mantua",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 5,
+          "end_day": null
+        },
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -377,7 +483,11 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:14Z"
+      },
       "group": "seven-am"
     },
     {

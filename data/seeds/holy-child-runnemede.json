@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "holy-child-runnemede",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:47:24Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-16T20:31:27Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:29:21Z",
   "summary": "Two churches (St. Teresa, St. Maria Goretti). Both bulletins are image-only and have no schedule box: Masses come from two weeks of Mass intentions in each (R35), and agree with the parish website; Confession and Adoration chapel hours are printed in both. Open: a Friday 7-8 PM Confession only the website lists, and a Dec 12 Advent Holy Hour addressed to liturgical ministers. The website's holy-day times (eve 4:15 PM, day 8:30 AM and 7 PM) were not projected to dates.",
   "blocked_reason": null,
   "bulletins": [
@@ -828,9 +828,22 @@
     },
     {
       "id": "s20",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-runnemede",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "During Adoration"
+      },
       "page": null,
       "sources": [
         {
@@ -865,13 +878,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:21Z"
+      }
     },
     {
       "id": "s21",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-runnemede",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-12",
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Holy Hour"
+      },
       "page": 6,
       "sources": [
         {
@@ -907,7 +937,11 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:21Z"
+      }
     }
   ]
 }
