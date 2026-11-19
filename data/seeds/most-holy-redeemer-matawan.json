@@ -1,0 +1,530 @@
+{
+  "schema_version": 1,
+  "parish_slug": "most-holy-redeemer-matawan",
+  "status": "ready",
+  "as_of": "2026-11-15T16:50:40Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T22:57:57Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both bulletins read (Nov 8 and Nov 15, 2026) print the same page-1 schedule: Sat 5 PM; Sun 8, 10, 11:30 AM; Mon/Tue/Wed/Fri 8 AM and Sat 9 AM; Confession Sat 4-4:30 PM; the intentions agree. Christmas Eve 5 PM (children's) and 9 PM Masses come from the Nov 8 issue (R19). No open questions; no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "7d4f6ff6d4d49d56f0deaf94fd11114e44263c1aeb39046f08c926151fad6b3c",
+      "fetched_at": "2026-11-15T16:50:40Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "00564976d4164bbc20ee7b2a14e118c00c6bd6b28f996c838fc78d89e8da679d",
+      "fetched_at": "2026-11-08T22:03:28Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-holy-redeemer-matawan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7d4f6ff6",
+          "page": 1,
+          "said": "We invite you to celebrate the Holy Eucharist Saturday 5:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "00564976",
+          "page": 1,
+          "said": "We invite you to celebrate the Holy Eucharist Saturday 5:00 p.m."
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 schedule of both bulletins read, and in both weeks' Mass intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-holy-redeemer-matawan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7d4f6ff6",
+          "page": 1,
+          "said": "Sunday 8:00, 10:00 and 11:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "00564976",
+          "page": 1,
+          "said": "Sunday 8:00, 10:00 and 11:30 a.m."
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 schedule of both bulletins read, and in both weeks' Mass intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-holy-redeemer-matawan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7d4f6ff6",
+          "page": 1,
+          "said": "Sunday 8:00, 10:00 and 11:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "00564976",
+          "page": 1,
+          "said": "Sunday 8:00, 10:00 and 11:30 a.m."
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 schedule of both bulletins read, and in both weeks' Mass intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-holy-redeemer-matawan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7d4f6ff6",
+          "page": 1,
+          "said": "Sunday 8:00, 10:00 and 11:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "00564976",
+          "page": 1,
+          "said": "Sunday 8:00, 10:00 and 11:30 a.m."
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 schedule of both bulletins read, and in both weeks' Mass intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-holy-redeemer-matawan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7d4f6ff6",
+          "page": 1,
+          "said": "Weekdays Monday, Tuesday, Wednesday, Friday - 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "00564976",
+          "page": 1,
+          "said": "Weekdays Monday, Tuesday, Wednesday, Friday - 8:00 a.m."
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 schedule of both bulletins read; both weeks' intentions (p2) list 8:00 AM Mon, Tue, Wed and Fri and no Thursday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-holy-redeemer-matawan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7d4f6ff6",
+          "page": 1,
+          "said": "Weekdays Monday, Tuesday, Wednesday, Friday - 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "00564976",
+          "page": 1,
+          "said": "Weekdays Monday, Tuesday, Wednesday, Friday - 8:00 a.m."
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 schedule of both bulletins read; both weeks' intentions (p2) list 8:00 AM Mon, Tue, Wed and Fri and no Thursday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-holy-redeemer-matawan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7d4f6ff6",
+          "page": 1,
+          "said": "Weekdays Monday, Tuesday, Wednesday, Friday - 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "00564976",
+          "page": 1,
+          "said": "Weekdays Monday, Tuesday, Wednesday, Friday - 8:00 a.m."
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 schedule of both bulletins read; both weeks' intentions (p2) list 8:00 AM Mon, Tue, Wed and Fri and no Thursday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-holy-redeemer-matawan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7d4f6ff6",
+          "page": 1,
+          "said": "Weekdays Monday, Tuesday, Wednesday, Friday - 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "00564976",
+          "page": 1,
+          "said": "Weekdays Monday, Tuesday, Wednesday, Friday - 8:00 a.m."
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 schedule of both bulletins read; both weeks' intentions (p2) list 8:00 AM Mon, Tue, Wed and Fri and no Thursday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-holy-redeemer-matawan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7d4f6ff6",
+          "page": 1,
+          "said": "& Saturday - 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "00564976",
+          "page": 1,
+          "said": "& Saturday - 9:00 a.m."
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 schedule of both bulletins read, and in both weeks' Mass intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-holy-redeemer-matawan",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Reconciliation Room in the Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7d4f6ff6",
+          "page": 1,
+          "said": "The Sacrament of Reconciliation Saturday from 4:00 - 4:30 p.m. in the Reconciliation Room in the Chapel or by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "00564976",
+          "page": 1,
+          "said": "The Sacrament of Reconciliation Saturday from 4:00 - 4:30 p.m. in the Reconciliation Room in the Chapel or by appointment."
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule of both bulletins read; the chapel is part of the church (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7d4f6ff6",
+          "page": 1,
+          "said": "or by appointment."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-holy-redeemer-matawan",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Children's Christmas Eve Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "00564976",
+          "page": 5,
+          "said": "Practices will soon begin for our Annual 5:00 pm Children's Christmas Eve Mass."
+        }
+      ],
+      "rationale": "R19: the November 8 bulletin announces the annual Children's Christmas Eve Mass at 5:00 PM, after as_of; nothing newer contradicts it. It is the parish's own Mass with the children's choir, not limited to a group (POLICY).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-holy-redeemer-matawan",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "21:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "00564976",
+          "page": 5,
+          "said": "The choir will also sing at the 9:00 p.m. Christmas Eve Mass."
+        }
+      ],
+      "rationale": "R19: the November 8 bulletin announces the 9:00 PM Christmas Eve Mass, after as_of; nothing newer contradicts it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7d4f6ff6",
+          "page": 4,
+          "said": "ST. PADRE PIO PRAYER GROUP OF ST. AMBROSE PARISH 83 Throckmorton Lane, Old Bridge ... Mass will be celebrated on Saturday, November 21st, 2026 at 9:00 a.m."
+        }
+      ],
+      "rationale": "R22: a Mass at St. Ambrose, Old Bridge (st-ambrose-old-bridge), another parish's church; its events belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7d4f6ff6",
+          "page": 2,
+          "said": "Confirmation, Wednesday, November 18th, 4:00 p.m. in the Church"
+        }
+      ],
+      "rationale": "R24: the bulletin calls it Confirmation, not a Mass (POLICY, What to extract); not recorded as a dated Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
