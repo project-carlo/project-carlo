@@ -1,0 +1,613 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-vincent-de-paul-mays-landing",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:48:14Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T17:38:06Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches: St. Vincent de Paul (Mays Landing) and St. Bernard Mission (Dorothy), which has no times in either bulletin (Nov 8, Nov 15 2026) or on the website, so it has no slots. St. Vincent de Paul: Sat 5 PM, Sun 8 and 10:45 AM, Tue-Fri 7 AM chapel Mass, and Wed 7-8 PM confession, all agreed by both bulletins and the website. Open: Saturday confession end (bulletin 4:30 vs website 4:45), and the church for the Thanksgiving 9 AM and Nov 22 Confirmation Masses.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "657ad45cd7c633506bf3de9294634455c35d5f48b7067103f1c9d22ca2f2a92d",
+      "fetched_at": "2026-11-15T16:48:14Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "66d7df09da4957dcdd3a6ae3bbf262378044b7368bdf6ced67f9c04b289d4338",
+      "fetched_at": "2026-11-08T22:01:45Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-mays-landing",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "657ad45c",
+          "page": 1,
+          "said": "Mass Schedule ~ St. Vincent de Paul Church Saturday 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66d7df09",
+          "page": 1,
+          "said": "Mass Schedule ~ St. Vincent de Paul Church Saturday 5:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-mays-landing",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "657ad45c",
+          "page": 1,
+          "said": "Sunday 8:00 and 10:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66d7df09",
+          "page": 1,
+          "said": "Sunday 8:00 and 10:45 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-mays-landing",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "657ad45c",
+          "page": 1,
+          "said": "Sunday 8:00 and 10:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66d7df09",
+          "page": 1,
+          "said": "Sunday 8:00 and 10:45 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-mays-landing",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "657ad45c",
+          "page": 1,
+          "said": "Morning Mass in Chapel ~ 7:00 am Tuesday, Wednesday, Thursday, and Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66d7df09",
+          "page": 1,
+          "said": "Morning Mass in Chapel ~ 7:00 am Tuesday, Wednesday, Thursday, and Friday"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in both weeks' intentions (p2); the chapel is in the church (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-mays-landing",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "657ad45c",
+          "page": 1,
+          "said": "Morning Mass in Chapel ~ 7:00 am Tuesday, Wednesday, Thursday, and Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66d7df09",
+          "page": 1,
+          "said": "Morning Mass in Chapel ~ 7:00 am Tuesday, Wednesday, Thursday, and Friday"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in both weeks' intentions (p2); the chapel is in the church (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-mays-landing",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "657ad45c",
+          "page": 1,
+          "said": "Morning Mass in Chapel ~ 7:00 am Tuesday, Wednesday, Thursday, and Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66d7df09",
+          "page": 1,
+          "said": "Morning Mass in Chapel ~ 7:00 am Tuesday, Wednesday, Thursday, and Friday"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in both weeks' intentions (p2); the chapel is in the church (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-mays-landing",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "657ad45c",
+          "page": 1,
+          "said": "Morning Mass in Chapel ~ 7:00 am Tuesday, Wednesday, Thursday, and Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66d7df09",
+          "page": 1,
+          "said": "Morning Mass in Chapel ~ 7:00 am Tuesday, Wednesday, Thursday, and Friday"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in both weeks' intentions (p2); the chapel is in the church (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-mays-landing",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "657ad45c",
+          "page": 1,
+          "said": "Confessions Wednesday 7:00 pm to 8:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66d7df09",
+          "page": 1,
+          "said": "Confessions Wednesday 7:00 pm to 8:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "657ad45c",
+          "page": 1,
+          "said": "Confessions ... Saturday 4:00 pm to 4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66d7df09",
+          "page": 1,
+          "said": "Confessions ... Saturday 4:00 pm to 4:30 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://vincentdepaul.org/",
+          "said": "Confessions Wednesday 7pm-8pm Saturday 4pm-4:45pm"
+        }
+      ],
+      "rationale": "R6, C8: the website conflicts with the bulletin on the end time. Leaning to the bulletin: both weekly issues (Nov 8 and Nov 15, 2026) print 4:30 and the bulletin is the newer, issue-dated source; the 5:00 PM vigil follows either way.",
+      "question": "Saturday confession at St. Vincent de Paul: the bulletin's 4:00-4:30 PM or the website's 4:00-4:45 PM?",
+      "options": [
+        {
+          "label": "4:00-4:30 PM (bulletin)",
+          "entry": {
+            "church_slug": "st-vincent-de-paul-mays-landing",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:00",
+            "end_time": "16:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "4:00-4:45 PM (website)",
+          "entry": {
+            "church_slug": "st-vincent-de-paul-mays-landing",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:00",
+            "end_time": "16:45",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "657ad45c",
+          "page": 4,
+          "said": "Thurs, Nov 26th - Thanksgiving Day Mass at 9 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66d7df09",
+          "page": 5,
+          "said": "Thurs, Nov 26th - Thanksgiving Day Mass at 9am"
+        }
+      ],
+      "rationale": "R32, R17: the parish events list gives no church. Leaning St. Vincent de Paul: it is the only church with any printed schedule (St. Bernard Mission has none in either bulletin or on the website). The weekly Thursday 7 AM Mass is left alone (R17).",
+      "question": "Add the Thanksgiving Day Mass, Thu Nov 26 9 AM, at St. Vincent de Paul Church?",
+      "options": [
+        {
+          "label": "Nov 26 9:00 AM at St. Vincent de Paul",
+          "entry": {
+            "church_slug": "st-vincent-de-paul-mays-landing",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-26",
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Thanksgiving Day"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "657ad45c",
+          "page": 4,
+          "said": "Sun, Nov 22nd - Bishop Sullivan celebrates Confirmation Mass at 12:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66d7df09",
+          "page": 5,
+          "said": "Sun, Nov 22nd - Bishop Sullivan celebrates Confirmation Mass at 1230pm"
+        }
+      ],
+      "rationale": "R30, R32: no church is given, and a Confirmation Mass is chiefly for the confirmandi and their families, though the bulletin does not limit it. Leaning include at St. Vincent de Paul, the only church with a printed schedule; POLICY closes only Masses the bulletin limits.",
+      "question": "Add the Confirmation Mass with Bishop Sullivan, Sun Nov 22 12:30 PM, at St. Vincent de Paul Church?",
+      "options": [
+        {
+          "label": "Nov 22 12:30 PM at St. Vincent de Paul",
+          "entry": {
+            "church_slug": "st-vincent-de-paul-mays-landing",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-22",
+            "start_time": "12:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Confirmation Mass with Bishop Sullivan"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-mays-landing",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-29",
+        "start_time": "10:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Bishop Williams celebrates"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "657ad45c",
+          "page": 4,
+          "said": "Sun, Nov 29th - Bishop Williams celebrates the 10:45 AM Mass"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7: a special occasion at the regular Sunday 10:45 AM Mass is covered by the weekly slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-mays-landing",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-10",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mercy Night with Bishop Williams"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "657ad45c",
+          "page": 4,
+          "said": "Thurs, Dec 10th - Mercy Night with Bishop Williams at 6 PM - Eucharistic Adoration, confessions with MANY priests, and a talk by Bishop Williams"
+        }
+      ],
+      "rationale": "POLICY, Final source checks: the 6 PM start is the whole Mercy Night's; its Adoration and confession components have no times of their own, and no church is named. Update mode will read later issues, which may time them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-mays-landing",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-15",
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Diocesan Wedding Anniversary Mass at St. Mary of Mt. Carmel, Hammonton"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "657ad45c",
+          "page": 4,
+          "said": "Sun, Nov 15th - Diocesan Wedding Anniversary Mass at 3 PM at St. Mary of Mt. Carmel Parish in Hammonton"
+        }
+      ],
+      "rationale": "R22: held at another parish; also before as_of (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://vincentdepaul.org/",
+          "said": "Holy Days 7:00am, 12:10pm & 7:00pm (Christmas Day and New Years Day 10am)"
+        }
+      ],
+      "rationale": "POLICY, Dates: the website's holy-day times name no dates, so no dated entry can be recorded; update mode will read the Advent and Christmas bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
