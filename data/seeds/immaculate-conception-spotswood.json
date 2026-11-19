@@ -1,0 +1,1129 @@
+{
+  "schema_version": 1,
+  "parish_slug": "immaculate-conception-spotswood",
+  "status": "ready",
+  "as_of": "2026-11-15T16:50:38Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T22:50:50Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. The schedule box (p1), intentions and calendar agree across both bulletins read (Nov 8 and Nov 15, 2026): weekend 5 PM vigil and 7/9/11 AM, weekday 7 and 9:30 AM, Saturday 8:30 AM, Saturday confession 3:30-4:30, Adoration Mon-Thu 7:30-9:15 AM and Fri 7-8 PM. One dated cancellation: no exposition Fri Nov 27. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "7ec4c3ce1325560454c73d0bc6f7503c92c53f65e2b5c765aec3b6e48f4040cb",
+      "fetched_at": "2026-11-15T16:50:38Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "e149232ed358d5208ce0d297af92d3d41030ebf7b52bbe539adc3bc64829e67c",
+      "fetched_at": "2026-11-08T22:02:51Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-spotswood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 1,
+          "said": "Vigil Mass, Saturday: 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e149232e",
+          "page": 1,
+          "said": "Vigil Mass, Saturday: 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 2,
+          "said": "SATURDAY, NOVEMBER 21, 2026 ... 5:00 PM Patricia Lovrich"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-spotswood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 1,
+          "said": "Sunday: 7:00, 9:00, 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e149232e",
+          "page": 1,
+          "said": "Sunday: 7:00, 9:00, 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 2,
+          "said": "SUNDAY, NOVEMBER 22, 2026 7:00 AM ... 9:00 AM ... 11:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read and in the intentions. The 2nd/4th-Sunday Family Mass (p4) is the regular 11 AM Mass, not a separate slot (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-spotswood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 1,
+          "said": "Sunday: 7:00, 9:00, 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e149232e",
+          "page": 1,
+          "said": "Sunday: 7:00, 9:00, 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 2,
+          "said": "SUNDAY, NOVEMBER 22, 2026 7:00 AM ... 9:00 AM ... 11:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read and in the intentions. The 2nd/4th-Sunday Family Mass (p4) is the regular 11 AM Mass, not a separate slot (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-spotswood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 1,
+          "said": "Sunday: 7:00, 9:00, 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e149232e",
+          "page": 1,
+          "said": "Sunday: 7:00, 9:00, 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 2,
+          "said": "SUNDAY, NOVEMBER 22, 2026 7:00 AM ... 9:00 AM ... 11:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read and in the intentions. The 2nd/4th-Sunday Family Mass (p4) is the regular 11 AM Mass, not a separate slot (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-spotswood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 1,
+          "said": "DAILY EUCHARIST Monday - Friday: 7:00 & 9:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e149232e",
+          "page": 1,
+          "said": "DAILY EUCHARIST Monday - Friday: 7:00 & 9:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16 ... FRIDAY, NOVEMBER 20: 7:00 AM / 9:30 AM intentions each day"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins and every weekday's intentions. The Upcoming Events list shows 'Daily Mass 7 am' alone on Thursday Nov 19 (older issue) and Thursday Nov 26 (newest); the newest issue's Nov 19 intentions list 9:30 AM, so this is a carried-over template line, not a cancellation (R17, R39).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-spotswood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 1,
+          "said": "DAILY EUCHARIST Monday - Friday: 7:00 & 9:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e149232e",
+          "page": 1,
+          "said": "DAILY EUCHARIST Monday - Friday: 7:00 & 9:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16 ... FRIDAY, NOVEMBER 20: 7:00 AM / 9:30 AM intentions each day"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins and every weekday's intentions. The Upcoming Events list shows 'Daily Mass 7 am' alone on Thursday Nov 19 (older issue) and Thursday Nov 26 (newest); the newest issue's Nov 19 intentions list 9:30 AM, so this is a carried-over template line, not a cancellation (R17, R39).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-spotswood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 1,
+          "said": "DAILY EUCHARIST Monday - Friday: 7:00 & 9:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e149232e",
+          "page": 1,
+          "said": "DAILY EUCHARIST Monday - Friday: 7:00 & 9:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16 ... FRIDAY, NOVEMBER 20: 7:00 AM / 9:30 AM intentions each day"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins and every weekday's intentions. The Upcoming Events list shows 'Daily Mass 7 am' alone on Thursday Nov 19 (older issue) and Thursday Nov 26 (newest); the newest issue's Nov 19 intentions list 9:30 AM, so this is a carried-over template line, not a cancellation (R17, R39).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-spotswood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 1,
+          "said": "DAILY EUCHARIST Monday - Friday: 7:00 & 9:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e149232e",
+          "page": 1,
+          "said": "DAILY EUCHARIST Monday - Friday: 7:00 & 9:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16 ... FRIDAY, NOVEMBER 20: 7:00 AM / 9:30 AM intentions each day"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins and every weekday's intentions. The Upcoming Events list shows 'Daily Mass 7 am' alone on Thursday Nov 19 (older issue) and Thursday Nov 26 (newest); the newest issue's Nov 19 intentions list 9:30 AM, so this is a carried-over template line, not a cancellation (R17, R39).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-spotswood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 1,
+          "said": "DAILY EUCHARIST Monday - Friday: 7:00 & 9:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e149232e",
+          "page": 1,
+          "said": "DAILY EUCHARIST Monday - Friday: 7:00 & 9:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16 ... FRIDAY, NOVEMBER 20: 7:00 AM / 9:30 AM intentions each day"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins and every weekday's intentions. The Upcoming Events list shows 'Daily Mass 7 am' alone on Thursday Nov 19 (older issue) and Thursday Nov 26 (newest); the newest issue's Nov 19 intentions list 9:30 AM, so this is a carried-over template line, not a cancellation (R17, R39).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-spotswood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 1,
+          "said": "DAILY EUCHARIST Monday - Friday: 7:00 & 9:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e149232e",
+          "page": 1,
+          "said": "DAILY EUCHARIST Monday - Friday: 7:00 & 9:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16 ... FRIDAY, NOVEMBER 20: 7:00 AM / 9:30 AM intentions each day"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins and every weekday's intentions. The Upcoming Events list shows 'Daily Mass 7 am' alone on Thursday Nov 19 (older issue) and Thursday Nov 26 (newest); the newest issue's Nov 19 intentions list 9:30 AM, so this is a carried-over template line, not a cancellation (R17, R39).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-spotswood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 1,
+          "said": "DAILY EUCHARIST Monday - Friday: 7:00 & 9:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e149232e",
+          "page": 1,
+          "said": "DAILY EUCHARIST Monday - Friday: 7:00 & 9:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16 ... FRIDAY, NOVEMBER 20: 7:00 AM / 9:30 AM intentions each day"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins and every weekday's intentions. The Upcoming Events list shows 'Daily Mass 7 am' alone on Thursday Nov 19 (older issue) and Thursday Nov 26 (newest); the newest issue's Nov 19 intentions list 9:30 AM, so this is a carried-over template line, not a cancellation (R17, R39).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-spotswood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 1,
+          "said": "DAILY EUCHARIST Monday - Friday: 7:00 & 9:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e149232e",
+          "page": 1,
+          "said": "DAILY EUCHARIST Monday - Friday: 7:00 & 9:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16 ... FRIDAY, NOVEMBER 20: 7:00 AM / 9:30 AM intentions each day"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins and every weekday's intentions. The Upcoming Events list shows 'Daily Mass 7 am' alone on Thursday Nov 19 (older issue) and Thursday Nov 26 (newest); the newest issue's Nov 19 intentions list 9:30 AM, so this is a carried-over template line, not a cancellation (R17, R39).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-spotswood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 1,
+          "said": "DAILY EUCHARIST Monday - Friday: 7:00 & 9:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e149232e",
+          "page": 1,
+          "said": "DAILY EUCHARIST Monday - Friday: 7:00 & 9:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16 ... FRIDAY, NOVEMBER 20: 7:00 AM / 9:30 AM intentions each day"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins and every weekday's intentions. The Upcoming Events list shows 'Daily Mass 7 am' alone on Thursday Nov 19 (older issue) and Thursday Nov 26 (newest); the newest issue's Nov 19 intentions list 9:30 AM, so this is a carried-over template line, not a cancellation (R17, R39).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-spotswood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 1,
+          "said": "DAILY EUCHARIST Monday - Friday: 7:00 & 9:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e149232e",
+          "page": 1,
+          "said": "DAILY EUCHARIST Monday - Friday: 7:00 & 9:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16 ... FRIDAY, NOVEMBER 20: 7:00 AM / 9:30 AM intentions each day"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins and every weekday's intentions. The Upcoming Events list shows 'Daily Mass 7 am' alone on Thursday Nov 19 (older issue) and Thursday Nov 26 (newest); the newest issue's Nov 19 intentions list 9:30 AM, so this is a carried-over template line, not a cancellation (R17, R39).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-spotswood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 1,
+          "said": "Saturday: 8:30 am** Miraculous Medal Novena is prayed at 8:15 am**"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e149232e",
+          "page": 1,
+          "said": "Saturday: 8:30 am** Miraculous Medal Novena is prayed at 8:15 am**"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 2,
+          "said": "SATURDAY, NOVEMBER 21, 2026 8:30 AM Matthew Ledbetter"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins and the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-spotswood",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 1,
+          "said": "CONFESSIONS Saturday: 3:30 to 4:30 pm or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e149232e",
+          "page": 1,
+          "said": "CONFESSIONS Saturday: 3:30 to 4:30 pm or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 4,
+          "said": "November 21 ... Confession 3:30 pm"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-spotswood",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "09:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 1,
+          "said": "ADORATION OF THE BLESSED SACRAMENT Monday - Thursday: 7:30 - 9:15 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e149232e",
+          "page": 1,
+          "said": "ADORATION OF THE BLESSED SACRAMENT Monday - Thursday: 7:30 - 9:15 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 3,
+          "said": "Exposition, Adoration and Benediction of the Blessed Sacrament is regularly held in our church from Monday through Thursday after the 7 am mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e149232e",
+          "page": 2,
+          "said": "Exposition, Adoration and Benediction of the Blessed Sacrament is regularly held in our church from Monday through Thursday after the 7 am mass"
+        }
+      ],
+      "rationale": "R1, POLICY Times: the schedule box gives the clock times 7:30-9:15, which win over 'after the 7 am mass'; Benediction per POLICY. Same in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-spotswood",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "09:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 1,
+          "said": "ADORATION OF THE BLESSED SACRAMENT Monday - Thursday: 7:30 - 9:15 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e149232e",
+          "page": 1,
+          "said": "ADORATION OF THE BLESSED SACRAMENT Monday - Thursday: 7:30 - 9:15 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 3,
+          "said": "Exposition, Adoration and Benediction of the Blessed Sacrament is regularly held in our church from Monday through Thursday after the 7 am mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e149232e",
+          "page": 2,
+          "said": "Exposition, Adoration and Benediction of the Blessed Sacrament is regularly held in our church from Monday through Thursday after the 7 am mass"
+        }
+      ],
+      "rationale": "R1, POLICY Times: the schedule box gives the clock times 7:30-9:15, which win over 'after the 7 am mass'; Benediction per POLICY. Same in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-spotswood",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "09:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 1,
+          "said": "ADORATION OF THE BLESSED SACRAMENT Monday - Thursday: 7:30 - 9:15 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e149232e",
+          "page": 1,
+          "said": "ADORATION OF THE BLESSED SACRAMENT Monday - Thursday: 7:30 - 9:15 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 3,
+          "said": "Exposition, Adoration and Benediction of the Blessed Sacrament is regularly held in our church from Monday through Thursday after the 7 am mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e149232e",
+          "page": 2,
+          "said": "Exposition, Adoration and Benediction of the Blessed Sacrament is regularly held in our church from Monday through Thursday after the 7 am mass"
+        }
+      ],
+      "rationale": "R1, POLICY Times: the schedule box gives the clock times 7:30-9:15, which win over 'after the 7 am mass'; Benediction per POLICY. Same in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-spotswood",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "09:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 1,
+          "said": "ADORATION OF THE BLESSED SACRAMENT Monday - Thursday: 7:30 - 9:15 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e149232e",
+          "page": 1,
+          "said": "ADORATION OF THE BLESSED SACRAMENT Monday - Thursday: 7:30 - 9:15 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 3,
+          "said": "Exposition, Adoration and Benediction of the Blessed Sacrament is regularly held in our church from Monday through Thursday after the 7 am mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e149232e",
+          "page": 2,
+          "said": "Exposition, Adoration and Benediction of the Blessed Sacrament is regularly held in our church from Monday through Thursday after the 7 am mass"
+        }
+      ],
+      "rationale": "R1, POLICY Times: the schedule box gives the clock times 7:30-9:15, which win over 'after the 7 am mass'; Benediction per POLICY. Same in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-spotswood",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 1,
+          "said": "Friday: 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e149232e",
+          "page": 1,
+          "said": "Friday: 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 3,
+          "said": "every Friday from 7 pm until 8 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 4,
+          "said": "November 20 ... Exposition 7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e149232e",
+          "page": 2,
+          "said": "every Friday from 7 pm until 8 pm"
+        }
+      ],
+      "rationale": "R1, R35: schedule box and the Adoration notice of both bulletins; the notice gives the 8 pm end. Benediction per POLICY.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-spotswood",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 4,
+          "said": "November 27 Daily Masses 7 am and 9:30 am NO EXPOSTION"
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin's calendar cancels Friday exposition on Nov 27 (day after Thanksgiving), on or after as_of. (The older issue's 'no Adoration on Friday, November 13' is before as_of, R16.)",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-spotswood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Miraculous Medal Novena"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 4,
+          "said": "Novena and Mass 8:15 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 1,
+          "said": "Saturday: 8:30 am** Miraculous Medal Novena is prayed at 8:15 am**"
+        }
+      ],
+      "rationale": "R24: 8:15 is the Novena, a devotion; the Saturday Mass is 8:30 per the schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 1,
+          "said": "HOLY DAYS OF OBLIGATION Vigil Mass: 7:30 pm Holy Day: 7:00, 9:30 am & 5:00 pm"
+        }
+      ],
+      "rationale": "R25, POLICY Dates: a generic holy-day schedule with no date the bulletin pins down; dates are not projected. Update mode will pick up dated holy-day Masses (e.g. Dec 8) when a bulletin prints them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 1,
+          "said": "CONFESSIONS ... or by appointment"
+        }
+      ],
+      "rationale": "R26: by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-spotswood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Padre Pio Mass at St. Ambrose, Old Bridge"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ec4c3ce",
+          "page": 5,
+          "said": "Mass will be celebrated on Saturday November 21, 2026 at 9:00 AM ... St Ambrose Parish. 83 Throckmorton Lane, Old Bridge"
+        }
+      ],
+      "rationale": "R22: held at St. Ambrose, Old Bridge (st-ambrose-old-bridge), another parish's church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
