@@ -1,0 +1,1127 @@
+{
+  "schema_version": 1,
+  "parish_slug": "assumption-of-the-blessed-virgin-mary-hackettstown",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:50:29Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T22:30:33Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. The schedule box (Mon-Sat 8 AM; Fri 7 PM Spanish; Sat 4:30 PM and 7 PM Spanish; Sun 8 and 10 AM; Sat 8:30 AM Confession; Wed & Sat 8:30-noon Adoration) is identical in both bulletins read; dated Masses come from the holiday calendar on p7. Open: whether the Faith Formation early Advent Penance session is public.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "59aa40258c10d17b98323146282fbd0c1ce078cef95fd5b3245e104fe8dce362",
+      "fetched_at": "2026-11-15T16:50:29Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "49d5d99b5be541e23cc4ce05e1c2b4433ffc0b33183cfc30cd06661f2dab2a26",
+      "fetched_at": "2026-11-08T15:58:52Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-the-blessed-virgin-mary-hackettstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59aa4025",
+          "page": 1,
+          "said": "MASS SCHEDULE Monday – Saturday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "49d5d99b",
+          "page": 1,
+          "said": "MASS SCHEDULE Monday – Saturday 8:00 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read; the intentions on p2 list an 8:00am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-the-blessed-virgin-mary-hackettstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59aa4025",
+          "page": 1,
+          "said": "MASS SCHEDULE Monday – Saturday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "49d5d99b",
+          "page": 1,
+          "said": "MASS SCHEDULE Monday – Saturday 8:00 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read; the intentions on p2 list an 8:00am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-the-blessed-virgin-mary-hackettstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59aa4025",
+          "page": 1,
+          "said": "MASS SCHEDULE Monday – Saturday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "49d5d99b",
+          "page": 1,
+          "said": "MASS SCHEDULE Monday – Saturday 8:00 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read; the intentions on p2 list an 8:00am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-the-blessed-virgin-mary-hackettstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59aa4025",
+          "page": 1,
+          "said": "MASS SCHEDULE Monday – Saturday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "49d5d99b",
+          "page": 1,
+          "said": "MASS SCHEDULE Monday – Saturday 8:00 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read; the intentions on p2 list an 8:00am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-the-blessed-virgin-mary-hackettstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59aa4025",
+          "page": 1,
+          "said": "MASS SCHEDULE Monday – Saturday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "49d5d99b",
+          "page": 1,
+          "said": "MASS SCHEDULE Monday – Saturday 8:00 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read; the intentions on p2 list an 8:00am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-the-blessed-virgin-mary-hackettstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59aa4025",
+          "page": 1,
+          "said": "MASS SCHEDULE Monday – Saturday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "49d5d99b",
+          "page": 1,
+          "said": "MASS SCHEDULE Monday – Saturday 8:00 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read; the intentions on p2 list an 8:00am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-the-blessed-virgin-mary-hackettstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59aa4025",
+          "page": 1,
+          "said": "Also, on Friday 7:00 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "49d5d99b",
+          "page": 1,
+          "said": "Also, on Friday 7:00 pm (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins. The 12/18 Simbang Gabi Mass and 1/1 7:00 pm Spanish Mass in the holiday calendar fall at this weekly time and are not recorded separately (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-the-blessed-virgin-mary-hackettstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59aa4025",
+          "page": 1,
+          "said": "Saturday Vigil Masses: 4:30 pm (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "49d5d99b",
+          "page": 1,
+          "said": "Saturday Vigil Masses: 4:30 pm (English)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-the-blessed-virgin-mary-hackettstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59aa4025",
+          "page": 1,
+          "said": "Saturday Vigil Masses: ... & 7:00 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "49d5d99b",
+          "page": 1,
+          "said": "Saturday Vigil Masses: ... & 7:00 pm (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-the-blessed-virgin-mary-hackettstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59aa4025",
+          "page": 1,
+          "said": "Sunday Masses: 8 am & 10 am (Both English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "49d5d99b",
+          "page": 1,
+          "said": "Sunday Masses: 8 am & 10 am (Both English)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-the-blessed-virgin-mary-hackettstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59aa4025",
+          "page": 1,
+          "said": "Sunday Masses: 8 am & 10 am (Both English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "49d5d99b",
+          "page": 1,
+          "said": "Sunday Masses: 8 am & 10 am (Both English)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-the-blessed-virgin-mary-hackettstown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59aa4025",
+          "page": 1,
+          "said": "Confession: Saturday 8:30 am or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "49d5d99b",
+          "page": 1,
+          "said": "Confession: Saturday 8:30 am or by appointment"
+        }
+      ],
+      "rationale": "R1, POLICY Times: start printed, no end given, so end_time null. 'By appointment' has no time (R26).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-the-blessed-virgin-mary-hackettstown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59aa4025",
+          "page": 1,
+          "said": "Adoration: Wed. & Sat. from 8:30 am until Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "49d5d99b",
+          "page": 1,
+          "said": "Adoration: Wed. & Sat. from 8:30 am until Noon"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-the-blessed-virgin-mary-hackettstown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59aa4025",
+          "page": 1,
+          "said": "Adoration: Wed. & Sat. from 8:30 am until Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "49d5d99b",
+          "page": 1,
+          "said": "Adoration: Wed. & Sat. from 8:30 am until Noon"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-the-blessed-virgin-mary-hackettstown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-15",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Faith Formation Family Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59aa4025",
+          "page": 2,
+          "said": "Sunday, November 15th 6:00pm: Faith Formation Family Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "59aa4025",
+          "page": 4,
+          "said": "Family Faith Formation Mass is at 6:00PM on Sunday, 11/15. This Mass will achieve your Sunday obligation"
+        }
+      ],
+      "rationale": "R1, R16: dated Mass outside the weekly schedule on as_of's date; listed in the parish intentions and not limited to a group (POLICY, What to extract).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-the-blessed-virgin-mary-hackettstown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2027-01-03",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Faith Formation Family Mass"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59aa4025",
+          "page": 7,
+          "said": "01/03/2027 – Sunday 6:00 pm Faith Formation Family Mass"
+        }
+      ],
+      "rationale": "R1, R16: dated Mass in the parish holiday calendar; open like the Nov 15 Family Mass, which the bulletin says fulfils the Sunday obligation.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-the-blessed-virgin-mary-hackettstown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59aa4025",
+          "page": 7,
+          "said": "12/8 – Tuesday 8:00 am & 10:00 am 7:00 pm – Bilingual Immaculate Conception of the BVM"
+        }
+      ],
+      "rationale": "R1, R16: holy-day Mass outside the weekly schedule (the 8:00 am is the weekly Tuesday Mass).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-the-blessed-virgin-mary-hackettstown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception; bilingual"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59aa4025",
+          "page": 7,
+          "said": "12/8 – Tuesday ... 7:00 pm – Bilingual Immaculate Conception of the BVM"
+        }
+      ],
+      "rationale": "R1, R16: holy-day Mass outside the weekly schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-the-blessed-virgin-mary-hackettstown",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-09",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Parish Advent Penance Service"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59aa4025",
+          "page": 7,
+          "said": "12/9 – Wednesday 6:30 pm Parish Advent Penance Service"
+        }
+      ],
+      "rationale": "R1, R16: a Penance service is Confession under POLICY, What to extract; dated, start only.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59aa4025",
+          "page": 7,
+          "said": "12/9 – Wednesday 4:30 pm – 5:15 pm Faith Formation Advent Penance Service (early session)"
+        }
+      ],
+      "rationale": "R30: labelled for Faith Formation (an early session of the parish service at 6:30 pm, which is included); unclear whether it is open to the public. Leaning leave out since the public parish service the same evening is recorded.",
+      "question": "Add the Faith Formation early-session Advent Penance Service (Dec 9, 4:30-5:15 PM)?",
+      "options": [
+        {
+          "label": "Dec 9 4:30-5:15 PM",
+          "entry": {
+            "church_slug": "assumption-of-the-blessed-virgin-mary-hackettstown",
+            "event_type": "confession",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-09",
+            "start_time": "16:30",
+            "end_time": "17:15",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Faith Formation Advent Penance Service"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-the-blessed-virgin-mary-hackettstown",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-16",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Faith Formation Christmas tree blessing & adoration"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59aa4025",
+          "page": 7,
+          "said": "12/16 – Wednesday 6:00 pm Faith Formation Christmas tree blessing & adoration"
+        }
+      ],
+      "rationale": "POLICY, Final source checks: the 6:00 pm is the start of a combined tree-blessing event; the Adoration component has no timing of its own.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-the-blessed-virgin-mary-hackettstown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59aa4025",
+          "page": 7,
+          "said": "12/24 – Thursday 4:00 pm English ... 10:00 pm – English Christmas Eve"
+        }
+      ],
+      "rationale": "R1, R16: Christmas Eve Masses in the parish holiday calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-the-blessed-virgin-mary-hackettstown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "22:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59aa4025",
+          "page": 7,
+          "said": "12/24 – Thursday 4:00 pm English ... 10:00 pm – English Christmas Eve"
+        }
+      ],
+      "rationale": "R1, R16: Christmas Eve Masses in the parish holiday calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-the-blessed-virgin-mary-hackettstown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve; Spanish"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59aa4025",
+          "page": 7,
+          "said": "12/24 – Thursday ... 7:00 pm Spanish Christmas Eve"
+        }
+      ],
+      "rationale": "R1, R16: Christmas Eve Mass in the parish holiday calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-the-blessed-virgin-mary-hackettstown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "21:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve music"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59aa4025",
+          "page": 7,
+          "said": "12/24 – Thursday ... 9:30 pm – Music"
+        }
+      ],
+      "rationale": "R24: music before the 10:00 pm Mass, not a Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-the-blessed-virgin-mary-hackettstown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Day"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59aa4025",
+          "page": 7,
+          "said": "12/25 – Friday 8:00 am & 10:00 am – English 12:00 pm – Bilingual Christmas Day"
+        }
+      ],
+      "rationale": "R1, R16: Christmas Day Mass outside the weekly schedule (the 8:00 am is the weekly Friday Mass). The calendar does not mention the Friday 7 pm Spanish Mass; no cancellation is stated (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-the-blessed-virgin-mary-hackettstown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Day; bilingual"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59aa4025",
+          "page": 7,
+          "said": "12/25 – Friday ... 12:00 pm – Bilingual Christmas Day"
+        }
+      ],
+      "rationale": "R1, R16: Christmas Day Mass outside the weekly schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-the-blessed-virgin-mary-hackettstown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-31",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "New Year's Eve"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59aa4025",
+          "page": 7,
+          "said": "12/31 – Thursday 4:00 pm – English 7:00 pm – Spanish New Year's Eve"
+        }
+      ],
+      "rationale": "R1, R16: New Year's Eve Mass outside the weekly schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-the-blessed-virgin-mary-hackettstown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-31",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "New Year's Eve; Spanish"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59aa4025",
+          "page": 7,
+          "said": "12/31 – Thursday ... 7:00 pm – Spanish New Year's Eve"
+        }
+      ],
+      "rationale": "R1, R16: New Year's Eve Mass outside the weekly schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-the-blessed-virgin-mary-hackettstown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2027-01-01",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "New Year's Day"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59aa4025",
+          "page": 7,
+          "said": "01/01/2027 - Friday 8:00 am & 10:00 am – English 7:00 pm – Spanish New Year's Day"
+        }
+      ],
+      "rationale": "R1, R16: holy-day Mass outside the weekly schedule; 8:00 am and 7:00 pm match the weekly Friday Masses (POLICY rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59aa4025",
+          "page": 3,
+          "said": "praying the Rosary on Sunday mornings starting at 7:30 am, before the 8:00am Mass"
+        }
+      ],
+      "rationale": "R24: Rosary (and the weekday Zoom Rosary) is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "59aa4025",
+          "page": 7,
+          "said": "12/5 – Saturday 5:15 pm Christmas tree blessing, praying at the live nativity"
+        }
+      ],
+      "rationale": "R24: a blessing, not Mass, Confession or Adoration. The 11/26 8:00 am Thanksgiving Mass and 12/12 Our Lady of Guadalupe Masses (8:00, 4:30, 7:00) fall at weekly times and are not recorded separately (POLICY rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
