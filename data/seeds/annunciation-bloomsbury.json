@@ -1,0 +1,586 @@
+{
+  "schema_version": 1,
+  "parish_slug": "annunciation-bloomsbury",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:50:29Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T18:31:35Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. The Mass Times and Sacraments box (page 1, an image) and the intentions agree in both bulletins and with the website: Sat 4:30 PM vigil, Sun 9 and 11:30, Mon/Wed/Thu/Fri 9 AM, First Saturday 9 AM, Saturday confession 4 PM, plus a dated Nov 21 9 AM feast Mass. Open: a Tuesday 9 AM Mass seen only in the intentions (leaning out per C1) and whether the First Saturday Holy Hour/Cenacle hour is Adoration (leaning in at 9:30-10:30).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "ca85718a93d6f96b332afc78a5a1ae2f6cfb0c94aa5f6a34c2dfffcb4d957761",
+      "fetched_at": "2026-11-15T16:50:29Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "4e52deaaa49b5f36b3745dd69c3a17e2a39c1394b797e712badb8c72980c3798",
+      "fetched_at": "2026-11-08T15:58:49Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bloomsbury",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ca85718a",
+          "page": 1,
+          "said": "Saturday Vigil - 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e52deaa",
+          "page": 1,
+          "said": "Saturday Vigil - 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca85718a",
+          "page": 2,
+          "said": "SATURDAY November 21st ... 4:30PM Birthday Blessings for Jane Jones"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read and in the intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bloomsbury",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ca85718a",
+          "page": 1,
+          "said": "Sunday - 9:00 AM and 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e52deaa",
+          "page": 1,
+          "said": "Sunday - 9:00 AM and 11:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://annunciationrcc.org/",
+          "said": "Sunday 9:00 am and 11:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read and in the intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bloomsbury",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ca85718a",
+          "page": 1,
+          "said": "Sunday - 9:00 AM and 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e52deaa",
+          "page": 1,
+          "said": "Sunday - 9:00 AM and 11:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://annunciationrcc.org/",
+          "said": "Sunday 9:00 am and 11:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read and in the intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bloomsbury",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ca85718a",
+          "page": 1,
+          "said": "Mon., Wed., Thurs., Fri. - 9 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e52deaa",
+          "page": 1,
+          "said": "Mon., Wed., Thurs., Fri. - 9 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://annunciationrcc.org/",
+          "said": "Monday, Wednesday – Friday 9:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read, with intentions at 9:00AM on these days in both weeks; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bloomsbury",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ca85718a",
+          "page": 1,
+          "said": "Mon., Wed., Thurs., Fri. - 9 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e52deaa",
+          "page": 1,
+          "said": "Mon., Wed., Thurs., Fri. - 9 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://annunciationrcc.org/",
+          "said": "Monday, Wednesday – Friday 9:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read, with intentions at 9:00AM on these days in both weeks; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bloomsbury",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ca85718a",
+          "page": 1,
+          "said": "Mon., Wed., Thurs., Fri. - 9 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e52deaa",
+          "page": 1,
+          "said": "Mon., Wed., Thurs., Fri. - 9 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://annunciationrcc.org/",
+          "said": "Monday, Wednesday – Friday 9:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read, with intentions at 9:00AM on these days in both weeks; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bloomsbury",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ca85718a",
+          "page": 1,
+          "said": "Mon., Wed., Thurs., Fri. - 9 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e52deaa",
+          "page": 1,
+          "said": "Mon., Wed., Thurs., Fri. - 9 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://annunciationrcc.org/",
+          "said": "Monday, Wednesday – Friday 9:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read, with intentions at 9:00AM on these days in both weeks; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bloomsbury",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ca85718a",
+          "page": 1,
+          "said": "First Sat. - 9 AM and Holy Hour"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e52deaa",
+          "page": 1,
+          "said": "First Sat. - 9 AM and Holy Hour"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca85718a",
+          "page": 2,
+          "said": "A Mass has been added for First Saturday at 9:00am followed by a Cenacle hour"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e52deaa",
+          "page": 2,
+          "said": "A Mass has been added for First Saturday at 9:00am followed by a Cenacle hour"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e52deaa",
+          "page": 2,
+          "said": "SATURDAY November 7th 9:00AM Our Parishioners"
+        }
+      ],
+      "rationale": "R1: the newest Mass Times box names First Saturday 9 AM (POLICY, Weekly or dated rule 2); the older bulletin's intentions show it on Saturday Nov 7, a first Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bloomsbury",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ca85718a",
+          "page": 1,
+          "said": "Reconciliation Saturday 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e52deaa",
+          "page": 1,
+          "said": "Reconciliation Saturday 4:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Sacraments box of both bulletins read; no end time given, so end_time is null (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bloomsbury",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "The Presentation of the Blessed Virgin Mary"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ca85718a",
+          "page": 2,
+          "said": "SATURDAY November 21st The Presentation of the Blessed Virgin Mary 9:00AM Our Parishioners"
+        }
+      ],
+      "rationale": "R1, R16: a dated 9:00AM Mass in the intentions on the feast, a third Saturday outside the First Saturday slot (Nov 14 has no 9 AM); dated per POLICY, Weekly or dated rule 3, and after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ca85718a",
+          "page": 2,
+          "said": "TUESDAY November 17th St. Elizabeth of Hungary 9:00AM Souls of Purgatory"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e52deaa",
+          "page": 2,
+          "said": "TUESDAY November 10 St. Leo the Great, Pope 9:00AM Our Parishioners"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca85718a",
+          "page": 1,
+          "said": "Mon., Wed., Thurs., Fri. - 9 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e52deaa",
+          "page": 1,
+          "said": "Mon., Wed., Thurs., Fri. - 9 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://annunciationrcc.org/",
+          "said": "Monday, Wednesday – Friday 9:00 am"
+        }
+      ],
+      "rationale": "Leaning per C1: R35 would make two weeks of matching intentions weekly, but both bulletins' schedule box and the website list weekday Masses Mon, Wed, Thu, Fri and pointedly omit Tuesday; the Tuesday intention may be a Mass offered privately. Unresolved conflict with the stated public schedule.",
+      "question": "The intentions list a 9:00 AM Tuesday Mass both weeks, but the Mass Times box and website skip Tuesday. Add a weekly Tuesday 9 AM Mass?",
+      "options": [
+        {
+          "label": "Tuesdays 9 AM",
+          "entry": {
+            "church_slug": "annunciation-bloomsbury",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ca85718a",
+          "page": 1,
+          "said": "First Sat. - 9 AM and Holy Hour"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e52deaa",
+          "page": 1,
+          "said": "First Sat. - 9 AM and Holy Hour"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca85718a",
+          "page": 2,
+          "said": "A Mass has been added for First Saturday at 9:00am followed by a Cenacle hour with the Consecration to the Immaculate Heart of Mary."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e52deaa",
+          "page": 2,
+          "said": "A Mass has been added for First Saturday at 9:00am followed by a Cenacle hour with the Consecration to the Immaculate Heart of Mary."
+        }
+      ],
+      "rationale": "R30: POLICY counts a Holy Hour as Adoration unless the Blessed Sacrament is said not to be exposed, but page 2 describes it as a Cenacle hour (a Marian prayer with Consecration to the Immaculate Heart), which may not involve exposition. No clock time: R10 puts it 30 min after the 9 AM Saturday weekday Mass, and 'hour' gives the 10:30 end. Leaning include because the schedule box calls it a Holy Hour.",
+      "question": "Add the First Saturday Holy Hour (a Cenacle hour after the 9 AM Mass) as Adoration, 9:30-10:30 AM?",
+      "options": [
+        {
+          "label": "First Saturdays 9:30-10:30 AM",
+          "entry": {
+            "church_slug": "annunciation-bloomsbury",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": "10:30",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Holy Hour (Cenacle) after the 9:00 AM First Saturday Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    }
+  ]
+}
