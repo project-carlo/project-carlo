@@ -1,0 +1,495 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-maximilian-kolbe-marmora",
+  "status": "approved",
+  "as_of": "2026-11-15T16:17:31Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T13:27:31Z",
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:30:32Z",
+  "summary": "Two churches. Church of the Resurrection's weekend, Tue-Fri 8 AM, Saturday 3 PM confession and First Friday Adoration (8:30 AM-1 PM, from the Nov 8 Stewardship issue and website) agree across both bulletins and the website. Open: St. Casimir, Woodbine, has a summer-only Sunday 9 AM Mass (Memorial Day-Labor Day, time only on the website) whose moving season can only be approximated.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "db9c55c452837f1d8cfbda39847b3e85c56b0edd4f5e76caa85cd6806b722559",
+      "fetched_at": "2026-11-15T16:17:31Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "610fdf3794b069590a9b0adcb36258a1a1e2ea7d1ba2fb84115589cb584994b0",
+      "fetched_at": "2026-11-08T15:42:46Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-marmora",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "db9c55c4",
+          "page": 1,
+          "said": "Church of the Resurrection: Daily Mass: Tuesday-Friday, 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "610fdf37",
+          "page": 1,
+          "said": "Church of the Resurrection: Daily Mass: Tuesday-Friday, 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "db9c55c4",
+          "page": 2,
+          "said": "Mass Intentions Tue-Fri November 17-20, 8:00am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box of both bulletins read, and the intentions list 8:00am Tuesday to Friday in each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-marmora",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "db9c55c4",
+          "page": 1,
+          "said": "Church of the Resurrection: Daily Mass: Tuesday-Friday, 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "610fdf37",
+          "page": 1,
+          "said": "Church of the Resurrection: Daily Mass: Tuesday-Friday, 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "db9c55c4",
+          "page": 2,
+          "said": "Mass Intentions Tue-Fri November 17-20, 8:00am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box of both bulletins read, and the intentions list 8:00am Tuesday to Friday in each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-marmora",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "db9c55c4",
+          "page": 1,
+          "said": "Church of the Resurrection: Daily Mass: Tuesday-Friday, 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "610fdf37",
+          "page": 1,
+          "said": "Church of the Resurrection: Daily Mass: Tuesday-Friday, 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "db9c55c4",
+          "page": 2,
+          "said": "Mass Intentions Tue-Fri November 17-20, 8:00am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box of both bulletins read, and the intentions list 8:00am Tuesday to Friday in each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-marmora",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "db9c55c4",
+          "page": 1,
+          "said": "Church of the Resurrection: Daily Mass: Tuesday-Friday, 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "610fdf37",
+          "page": 1,
+          "said": "Church of the Resurrection: Daily Mass: Tuesday-Friday, 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "db9c55c4",
+          "page": 2,
+          "said": "Mass Intentions Tue-Fri November 17-20, 8:00am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box of both bulletins read, and the intentions list 8:00am Tuesday to Friday in each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-marmora",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "db9c55c4",
+          "page": 1,
+          "said": "Saturday, 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "610fdf37",
+          "page": 1,
+          "said": "Saturday, 4:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read; intentions list 4:00pm each Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-marmora",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "db9c55c4",
+          "page": 1,
+          "said": "Sunday, 8:00am, 10:00am ( also live streamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "610fdf37",
+          "page": 1,
+          "said": "Sunday, 8:00am, 10:00am ( also live streamed)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read; intentions list both Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-marmora",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "db9c55c4",
+          "page": 1,
+          "said": "Sunday, 8:00am, 10:00am ( also live streamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "610fdf37",
+          "page": 1,
+          "said": "Sunday, 8:00am, 10:00am ( also live streamed)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read; intentions list both Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-marmora",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "db9c55c4",
+          "page": 1,
+          "said": "Confessions: Saturday, 3:00pm or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "610fdf37",
+          "page": 1,
+          "said": "Confessions: Saturday, 3:00pm or by appointment"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; no end time given, so end_time is null (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "db9c55c4",
+          "page": 1,
+          "said": "Confessions: ... or by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-marmora",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "13:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "610fdf37",
+          "page": 5,
+          "said": "ADORATION: is held the First Friday of the Month, in the Church of the Resurrection from 8:30am (following mass) ending with Benediction at 1pm."
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintmaxkolbe.com/",
+          "said": "Holy Hour/Adoration at Church of the Resurrection First Friday | 8:30am to 1:00pm Benediction at closing"
+        }
+      ],
+      "rationale": "R12: a First Friday service; the newest bulletin's week (Nov 15-22) holds only third weeks and the Nov 8 week only second weeks, so neither issue would print it in its calendar. The Nov 8 Stewardship edition prints it as a standing ministry listing, and the parish website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-casimir-woodbine",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 6,
+          "start_day": 1,
+          "end_month": 8,
+          "end_day": 31
+        },
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "db9c55c4",
+          "page": 1,
+          "said": "Saint Casimir Church: 304 Clay Street, Woodbine, NJ 08270 Masses celebrated Memorial Day-Labor Day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "610fdf37",
+          "page": 1,
+          "said": "Saint Casimir Church: 304 Clay Street, Woodbine, NJ 08270 Masses celebrated Memorial Day-Labor Day"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintmaxkolbe.com/",
+          "said": "St. Casimir 304 Clay Street | Woodbine, NJ 08270 Mass offered Memorial Day to Labor Day Sunday | 9:00 am"
+        }
+      ],
+      "rationale": "R30, R33: the bulletins say St. Casimir has Masses Memorial Day-Labor Day but give no time; the homepage gives Sunday 9:00 am. The season's ends move each year (Memorial Day May 25-31, Labor Day Sep 1-7), which fixed season days can't express. Leaning to a conservative June 1-August 31 season, which never shows a Mass that isn't held and misses at most the edge Sundays; out of season at as_of anyway. Also unclear whether the Sunday of Memorial Day weekend counts.",
+      "question": "Add St. Casimir's summer Sunday 9:00 AM Mass (Memorial Day to Labor Day)?",
+      "options": [
+        {
+          "label": "Sundays 9 AM, June 1-August 31",
+          "entry": {
+            "church_slug": "st-casimir-woodbine",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 6,
+              "start_day": 1,
+              "end_month": 8,
+              "end_day": 31
+            },
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:30:32Z"
+      }
+    }
+  ]
+}

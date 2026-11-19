@@ -1,0 +1,1428 @@
+{
+  "schema_version": 1,
+  "parish_slug": "the-parish-of-all-saints",
+  "status": "approved",
+  "as_of": "2026-11-15T16:17:39Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T17:47:50Z",
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:30:58Z",
+  "summary": "Two sites at 621 Dock St., Millville: St. Mary Magdalen church (weekend Masses and weekend confession) and the Saint John Bosco Chapel (weekday 8 AM Mass, weekday confession, Thursday Adoration 9-6). Both image-only bulletins (Nov 8 and Nov 15) and the website agree. Open: where the Wednesday Rectory Porch confession and the first-Saturday 9 AM Mass belong, and which church holds the Thanksgiving and Immaculate Conception Masses.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "a5db9a60a9d846c37cdcea6f5780eb0d9eac83f2f8d018832bda80d7d31d6de5",
+      "fetched_at": "2026-11-15T16:17:39Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "6b8a9a3caeadb559872df11fca45213985948d0f769ad3f2fc0f86894a4de960",
+      "fetched_at": "2026-11-08T15:42:50Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-magdalen-millville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 1,
+          "said": "Weekends Saturday - 4:00pm Vigil Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b8a9a3c",
+          "page": 1,
+          "said": "Weekends Saturday - 4:00pm Vigil Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 2,
+          "said": "4:00PM intentions each Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b8a9a3c",
+          "page": 2,
+          "said": "4:00PM intentions each Saturday"
+        }
+      ],
+      "rationale": "R1: printed in the Holy Mass Schedule and the intentions of both bulletins; the website agrees. Weekend Masses are at the parish church, St. Mary Magdalen: weekday Mass is marked 'in the chapel' only, weekend confession is in the 'church confessional', and tickets are sold 'in the main vestibule of the church after each Mass'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-magdalen-millville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 1,
+          "said": "Sunday - 8:00am & 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b8a9a3c",
+          "page": 1,
+          "said": "Sunday - 8:00am & 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 2,
+          "said": "Sunday 8:00AM ... 10:30AM intentions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b8a9a3c",
+          "page": 2,
+          "said": "Sunday 8:00AM ... 10:30AM intentions"
+        }
+      ],
+      "rationale": "R1: printed in the Holy Mass Schedule and the intentions of both bulletins; the website agrees. At St. Mary Magdalen for the reasons given on the Saturday vigil slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-magdalen-millville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 1,
+          "said": "Sunday - 8:00am & 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b8a9a3c",
+          "page": 1,
+          "said": "Sunday - 8:00am & 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 2,
+          "said": "Sunday 8:00AM ... 10:30AM intentions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b8a9a3c",
+          "page": 2,
+          "said": "Sunday 8:00AM ... 10:30AM intentions"
+        }
+      ],
+      "rationale": "R1: printed in the Holy Mass Schedule and the intentions of both bulletins; the website agrees. At St. Mary Magdalen for the reasons given on the Saturday vigil slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-bosco-chapel-millville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 1,
+          "said": "Monday through Friday - 8:00am - in the chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b8a9a3c",
+          "page": 1,
+          "said": "Monday through Friday - 8:00am - in the chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 2,
+          "said": "8:00AM intentions Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b8a9a3c",
+          "page": 2,
+          "said": "8:00AM intentions Monday to Friday"
+        },
+        {
+          "source": "website",
+          "url": "https://www.allsaintsnj.org/",
+          "said": "8AM Daily Mass is now being held in the Saint John Bosco Chapel (inside the All Saints Parish Building, maroon awning)"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins and their intentions; the website names the chapel as the Saint John Bosco Chapel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-bosco-chapel-millville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 1,
+          "said": "Monday through Friday - 8:00am - in the chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b8a9a3c",
+          "page": 1,
+          "said": "Monday through Friday - 8:00am - in the chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 2,
+          "said": "8:00AM intentions Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b8a9a3c",
+          "page": 2,
+          "said": "8:00AM intentions Monday to Friday"
+        },
+        {
+          "source": "website",
+          "url": "https://www.allsaintsnj.org/",
+          "said": "8AM Daily Mass is now being held in the Saint John Bosco Chapel (inside the All Saints Parish Building, maroon awning)"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins and their intentions; the website names the chapel as the Saint John Bosco Chapel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-bosco-chapel-millville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 1,
+          "said": "Monday through Friday - 8:00am - in the chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b8a9a3c",
+          "page": 1,
+          "said": "Monday through Friday - 8:00am - in the chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 2,
+          "said": "8:00AM intentions Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b8a9a3c",
+          "page": 2,
+          "said": "8:00AM intentions Monday to Friday"
+        },
+        {
+          "source": "website",
+          "url": "https://www.allsaintsnj.org/",
+          "said": "8AM Daily Mass is now being held in the Saint John Bosco Chapel (inside the All Saints Parish Building, maroon awning)"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins and their intentions; the website names the chapel as the Saint John Bosco Chapel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-bosco-chapel-millville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 1,
+          "said": "Monday through Friday - 8:00am - in the chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b8a9a3c",
+          "page": 1,
+          "said": "Monday through Friday - 8:00am - in the chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 2,
+          "said": "8:00AM intentions Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b8a9a3c",
+          "page": 2,
+          "said": "8:00AM intentions Monday to Friday"
+        },
+        {
+          "source": "website",
+          "url": "https://www.allsaintsnj.org/",
+          "said": "8AM Daily Mass is now being held in the Saint John Bosco Chapel (inside the All Saints Parish Building, maroon awning)"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins and their intentions; the website names the chapel as the Saint John Bosco Chapel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-bosco-chapel-millville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 1,
+          "said": "Monday through Friday - 8:00am - in the chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b8a9a3c",
+          "page": 1,
+          "said": "Monday through Friday - 8:00am - in the chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 2,
+          "said": "8:00AM intentions Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b8a9a3c",
+          "page": 2,
+          "said": "8:00AM intentions Monday to Friday"
+        },
+        {
+          "source": "website",
+          "url": "https://www.allsaintsnj.org/",
+          "said": "8AM Daily Mass is now being held in the Saint John Bosco Chapel (inside the All Saints Parish Building, maroon awning)"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins and their intentions; the website names the chapel as the Saint John Bosco Chapel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-bosco-chapel-millville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass; chapel confessional"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 2,
+          "said": "Monday - Friday - Following 8:00am Mass in the Chapel Confessional"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b8a9a3c",
+          "page": 2,
+          "said": "Monday - Friday - Following 8:00am Mass in the Chapel Confessional"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 1,
+          "said": "Everyday following 8:00AM Mass - chapel confessional"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b8a9a3c",
+          "page": 1,
+          "said": "Everyday following 8:00AM Mass - chapel confessional"
+        }
+      ],
+      "rationale": "R1, R10: printed in the weekly confession schedule of both bulletins, Monday to Friday; no clock time, so 30 minutes after the weekday 8:00 AM Mass, no end time. Page 1's 'Everyday' is the same line; page 2 limits it to Monday-Friday, matching the website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-bosco-chapel-millville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass; chapel confessional"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 2,
+          "said": "Monday - Friday - Following 8:00am Mass in the Chapel Confessional"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b8a9a3c",
+          "page": 2,
+          "said": "Monday - Friday - Following 8:00am Mass in the Chapel Confessional"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 1,
+          "said": "Everyday following 8:00AM Mass - chapel confessional"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b8a9a3c",
+          "page": 1,
+          "said": "Everyday following 8:00AM Mass - chapel confessional"
+        }
+      ],
+      "rationale": "R1, R10: printed in the weekly confession schedule of both bulletins, Monday to Friday; no clock time, so 30 minutes after the weekday 8:00 AM Mass, no end time. Page 1's 'Everyday' is the same line; page 2 limits it to Monday-Friday, matching the website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-bosco-chapel-millville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass; chapel confessional"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 2,
+          "said": "Monday - Friday - Following 8:00am Mass in the Chapel Confessional"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b8a9a3c",
+          "page": 2,
+          "said": "Monday - Friday - Following 8:00am Mass in the Chapel Confessional"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 1,
+          "said": "Everyday following 8:00AM Mass - chapel confessional"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b8a9a3c",
+          "page": 1,
+          "said": "Everyday following 8:00AM Mass - chapel confessional"
+        }
+      ],
+      "rationale": "R1, R10: printed in the weekly confession schedule of both bulletins, Monday to Friday; no clock time, so 30 minutes after the weekday 8:00 AM Mass, no end time. Page 1's 'Everyday' is the same line; page 2 limits it to Monday-Friday, matching the website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-bosco-chapel-millville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass; chapel confessional"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 2,
+          "said": "Monday - Friday - Following 8:00am Mass in the Chapel Confessional"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b8a9a3c",
+          "page": 2,
+          "said": "Monday - Friday - Following 8:00am Mass in the Chapel Confessional"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 1,
+          "said": "Everyday following 8:00AM Mass - chapel confessional"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b8a9a3c",
+          "page": 1,
+          "said": "Everyday following 8:00AM Mass - chapel confessional"
+        }
+      ],
+      "rationale": "R1, R10: printed in the weekly confession schedule of both bulletins, Monday to Friday; no clock time, so 30 minutes after the weekday 8:00 AM Mass, no end time. Page 1's 'Everyday' is the same line; page 2 limits it to Monday-Friday, matching the website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-bosco-chapel-millville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass; chapel confessional"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 2,
+          "said": "Monday - Friday - Following 8:00am Mass in the Chapel Confessional"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b8a9a3c",
+          "page": 2,
+          "said": "Monday - Friday - Following 8:00am Mass in the Chapel Confessional"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 1,
+          "said": "Everyday following 8:00AM Mass - chapel confessional"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b8a9a3c",
+          "page": 1,
+          "said": "Everyday following 8:00AM Mass - chapel confessional"
+        }
+      ],
+      "rationale": "R1, R10: printed in the weekly confession schedule of both bulletins, Monday to Friday; no clock time, so 30 minutes after the weekday 8:00 AM Mass, no end time. Page 1's 'Everyday' is the same line; page 2 limits it to Monday-Friday, matching the website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-magdalen-millville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "14:30",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Church confessional"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 2,
+          "said": "Saturday - 2:30pm - 3:30pm - Church Confessional"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b8a9a3c",
+          "page": 2,
+          "said": "Saturday - 2:30pm - 3:30pm - Church Confessional"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins' confession schedules and on the website; 'Church Confessional' places it at St. Mary Magdalen.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-magdalen-millville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:45",
+        "end_time": "10:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Church confessional"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 2,
+          "said": "Sunday - 9:45am - 10:15am - Church Confessional"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b8a9a3c",
+          "page": 2,
+          "said": "Sunday - 9:45am - 10:15am - Church Confessional"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins' confession schedules and on the website; 'Church Confessional' places it at St. Mary Magdalen.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-bosco-chapel-millville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 1,
+          "said": "Eucharistic Adoration - Thursday - 9am - 6pm Benediction - 6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 3,
+          "said": "Every Thursday - Eucharistic Adoration - 9AM - 6PM in the SJB Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b8a9a3c",
+          "page": 3,
+          "said": "Every Thursday - Eucharistic Adoration - 9AM - 6PM in the SJB Chapel"
+        }
+      ],
+      "rationale": "R1, POLICY (Benediction): printed in both bulletins, in the SJB (Saint John Bosco) Chapel; Benediction at 6 PM ends it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-magdalen-millville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Rectory Porch"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 2,
+          "said": "Wednesday - 4:00pm - 6:00pm - Rectory Porch"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b8a9a3c",
+          "page": 2,
+          "said": "Wednesday - 4:00pm - 6:00pm - Rectory Porch"
+        },
+        {
+          "source": "website",
+          "url": "https://www.allsaintsnj.org/",
+          "said": "Wednesday 4PM to 6PM (Rectory Porch)"
+        }
+      ],
+      "rationale": "R30, R32: a regular, clearly timed confession, but on the rectory porch, not in either listed church or chapel. Both are at 621 Dock St., so the rectory appears to be on the same grounds. Leaning to attach it to the parish church with a note, as the parish's main site.",
+      "question": "Which church holds the Wednesday 4-6 PM confessions on the Rectory Porch?",
+      "options": [
+        {
+          "label": "St. Mary Magdalen, rectory porch",
+          "entry": {
+            "church_slug": "st-mary-magdalen-millville",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "16:00",
+            "end_time": "18:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Rectory Porch"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Saint John Bosco Chapel, rectory porch",
+          "entry": {
+            "church_slug": "st-john-bosco-chapel-millville",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "16:00",
+            "end_time": "18:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Rectory Porch"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:30:58Z"
+      }
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-magdalen-millville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Purgatorial Society Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 1,
+          "said": "Holy Mass Schedule 1st Saturday of each month, 9:00am Purgatorial Society Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b8a9a3c",
+          "page": 1,
+          "said": "Holy Mass Schedule 1st Saturday of each month, 9:00am Purgatorial Society Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://www.allsaintsnj.org/",
+          "said": "Weekday Masses ... 1st Saturdays 9:00AM"
+        }
+      ],
+      "rationale": "R32, R12: a monthly Mass printed in both bulletins' schedule box (page 1 of the newest too, but its week holds no first Saturday, so page null); neither bulletin nor the website names its church. Only the Monday-Friday 8 AM Mass is marked 'in the chapel', so leaning to the church. The Nov 8 bulletin's intentions for Saturday Nov 7 list only the 4 PM Mass; a missing intention proves nothing (R39).",
+      "question": "Where is the first-Saturday 9:00 AM Purgatorial Society Mass?",
+      "options": [
+        {
+          "label": "St. Mary Magdalen",
+          "entry": {
+            "church_slug": "st-mary-magdalen-millville",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Purgatorial Society Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Saint John Bosco Chapel",
+          "entry": {
+            "church_slug": "st-john-bosco-chapel-millville",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Purgatorial Society Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:30:58Z"
+      }
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-magdalen-millville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 5,
+          "said": "Thanksgiving Day Mass will be celebrated on November 26th at 9AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 3,
+          "said": "Nov. 26 - Thanksgiving Day Mass - 9am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b8a9a3c",
+          "page": 5,
+          "said": "Thanksgiving Day Mass will be celebrated on November 26th at 9AM"
+        }
+      ],
+      "rationale": "R32, R16, R17: a dated Mass after as_of with no church named. Leaning to the church for a parish-wide holiday Mass with a food blessing; weekday Masses are in the chapel. No cancellation of the Thursday 8 AM Mass is stated, so that slot stays.",
+      "question": "Where is the Thanksgiving Day 9:00 AM Mass on November 26?",
+      "options": [
+        {
+          "label": "St. Mary Magdalen",
+          "entry": {
+            "church_slug": "st-mary-magdalen-millville",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-26",
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Thanksgiving Day"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Saint John Bosco Chapel",
+          "entry": {
+            "church_slug": "st-john-bosco-chapel-millville",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-26",
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Thanksgiving Day"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:30:58Z"
+      }
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-magdalen-millville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vigil of the Immaculate Conception"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 3,
+          "said": "Dec. 7 - Vigil Mass for Immaculate Conception - 4pm - Followed by the Grand Illumination"
+        }
+      ],
+      "rationale": "R32, R16: holy-day Masses after as_of with no church named. Leaning to the church: a holy-day vigil at the usual weekend vigil time, followed by the Grand Illumination.",
+      "question": "Where are the Immaculate Conception Masses (Dec 7 4 PM vigil, Dec 8 7 PM)?",
+      "options": [
+        {
+          "label": "St. Mary Magdalen",
+          "entry": {
+            "church_slug": "st-mary-magdalen-millville",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-07",
+            "start_time": "16:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Vigil of the Immaculate Conception"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Saint John Bosco Chapel",
+          "entry": {
+            "church_slug": "st-john-bosco-chapel-millville",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-07",
+            "start_time": "16:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Vigil of the Immaculate Conception"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:30:58Z"
+      },
+      "group": "immaculate"
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-magdalen-millville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 3,
+          "said": "Dec. 8 - Immaculate Conception Masses - 8am & 7pm"
+        }
+      ],
+      "rationale": "R32, R16: holy-day Mass after as_of with no church named. Leaning to the church, as for the vigil. The 8 AM Mass that day is the regular Tuesday 8 AM Mass (POLICY, Weekly or dated rule 7), recorded separately as excluded.",
+      "question": "Where are the Immaculate Conception Masses (Dec 7 4 PM vigil, Dec 8 7 PM)?",
+      "options": [
+        {
+          "label": "St. Mary Magdalen",
+          "entry": {
+            "church_slug": "st-mary-magdalen-millville",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Saint John Bosco Chapel",
+          "entry": {
+            "church_slug": "st-john-bosco-chapel-millville",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:30:58Z"
+      },
+      "group": "immaculate"
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-bosco-chapel-millville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 3,
+          "said": "Dec. 8 - Immaculate Conception Masses - 8am & 7pm"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rules 6-7: Dec 8, 2026 is a Tuesday, and 8 AM is the regular weekday Mass, so only the weekly slot is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 1,
+          "said": "Spanish Mass Divine Mercy Parish, Vineland - Sunday - 8am & 12pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b8a9a3c",
+          "page": 1,
+          "said": "Spanish Mass Divine Mercy Parish, Vineland - Sunday - 8am & 12pm"
+        }
+      ],
+      "rationale": "R22: another parish's church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 1,
+          "said": "Holy Cross Parish, St. Theresa, Bridgeton - Sunday - 7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b8a9a3c",
+          "page": 1,
+          "said": "Holy Cross Parish, St. Theresa, Bridgeton - Sunday - 7pm"
+        }
+      ],
+      "rationale": "R22: another parish's church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 2,
+          "said": "TELEVISED MASS Comcast Channel 22 - Sunday at 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b8a9a3c",
+          "page": 2,
+          "said": "TELEVISED MASS Comcast Channel 22 - Sunday at 12:00pm"
+        }
+      ],
+      "rationale": "R22: a broadcast, not a Mass at a listed church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 4,
+          "said": "PLEASE JOIN US EACH DAY FOR The Holy Rosary at 6:30PM Dial No-Cost Conference"
+        }
+      ],
+      "rationale": "R24: a Rosary by phone conference, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 3,
+          "said": "Nov. 29, Dec 6, 13, & 20 - Vespers - 4pm in the church"
+        }
+      ],
+      "rationale": "R24: Vespers is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a5db9a60",
+          "page": 3,
+          "said": "Nov. 22 - Feast of Christ the King - outdoor Eucaristic Procession"
+        }
+      ],
+      "rationale": "R24, R26: a procession with no time, not an Adoration schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.allsaintsnj.org/",
+          "said": "Saint John Bosco Chapel will be open for 8AM daily Mass & private prayer when the parish office is open"
+        }
+      ],
+      "rationale": "R38: the chapel being open for private prayer does not establish Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

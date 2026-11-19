@@ -1,0 +1,1623 @@
+{
+  "schema_version": 1,
+  "parish_slug": "the-parish-of-saint-monica",
+  "status": "approved",
+  "as_of": "2026-11-15T16:48:22Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T17:52:52Z",
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:31:01Z",
+  "summary": "Three Atlantic City churches; all weekday and evening Masses are at Our Lady Star of the Sea. The schedule box, intentions and website agree across both November bulletins; confessions run 30 to 10 minutes before each Mon-Sat evening Mass. Open: whether the Saturday 4:15 PM vigil counts as an evening Mass for confession. The Mercy Adoration Chapel at Cappella Studio is excluded and listed as a church-list issue (no address).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "ee67b72fcdf2373f57587a4acceff1c958e0f11892ca64ccddb004fe9a6a982a",
+      "fetched_at": "2026-11-15T16:48:22Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "ab0728743ce4f1c061d7e5c74f17ea2907a0e84372008dbe75115eb683a82b2b",
+      "fetched_at": "2026-11-08T22:01:54Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-atlantic-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 1,
+          "said": "Our Lady Star of the Sea Monday—Friday 7:00 AM ENGLISH 5:15 PM ENGLISH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab072874",
+          "page": 1,
+          "said": "Our Lady Star of the Sea Monday—Friday 7:00 AM ENGLISH 5:15 PM ENGLISH"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read, matched by both weeks' intentions and the website schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-atlantic-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 1,
+          "said": "Our Lady Star of the Sea Monday—Friday 7:00 AM ENGLISH 5:15 PM ENGLISH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab072874",
+          "page": 1,
+          "said": "Our Lady Star of the Sea Monday—Friday 7:00 AM ENGLISH 5:15 PM ENGLISH"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read, matched by both weeks' intentions and the website schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-atlantic-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 1,
+          "said": "Our Lady Star of the Sea Monday—Friday 7:00 AM ENGLISH 5:15 PM ENGLISH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab072874",
+          "page": 1,
+          "said": "Our Lady Star of the Sea Monday—Friday 7:00 AM ENGLISH 5:15 PM ENGLISH"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read, matched by both weeks' intentions and the website schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-atlantic-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 1,
+          "said": "Our Lady Star of the Sea Monday—Friday 7:00 AM ENGLISH 5:15 PM ENGLISH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab072874",
+          "page": 1,
+          "said": "Our Lady Star of the Sea Monday—Friday 7:00 AM ENGLISH 5:15 PM ENGLISH"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read, matched by both weeks' intentions and the website schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-atlantic-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 1,
+          "said": "Our Lady Star of the Sea Monday—Friday 7:00 AM ENGLISH 5:15 PM ENGLISH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab072874",
+          "page": 1,
+          "said": "Our Lady Star of the Sea Monday—Friday 7:00 AM ENGLISH 5:15 PM ENGLISH"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read, matched by both weeks' intentions and the website schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-atlantic-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 1,
+          "said": "Our Lady Star of the Sea Monday—Friday 7:00 AM ENGLISH 5:15 PM ENGLISH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab072874",
+          "page": 1,
+          "said": "Our Lady Star of the Sea Monday—Friday 7:00 AM ENGLISH 5:15 PM ENGLISH"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read, matched by both weeks' intentions and the website schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-atlantic-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 1,
+          "said": "Our Lady Star of the Sea Monday—Friday 7:00 AM ENGLISH 5:15 PM ENGLISH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab072874",
+          "page": 1,
+          "said": "Our Lady Star of the Sea Monday—Friday 7:00 AM ENGLISH 5:15 PM ENGLISH"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read, matched by both weeks' intentions and the website schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-atlantic-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 1,
+          "said": "Our Lady Star of the Sea Monday—Friday 7:00 AM ENGLISH 5:15 PM ENGLISH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab072874",
+          "page": 1,
+          "said": "Our Lady Star of the Sea Monday—Friday 7:00 AM ENGLISH 5:15 PM ENGLISH"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read, matched by both weeks' intentions and the website schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-atlantic-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 1,
+          "said": "Our Lady Star of the Sea Monday—Friday 7:00 AM ENGLISH 5:15 PM ENGLISH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab072874",
+          "page": 1,
+          "said": "Our Lady Star of the Sea Monday—Friday 7:00 AM ENGLISH 5:15 PM ENGLISH"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read, matched by both weeks' intentions and the website schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-atlantic-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 1,
+          "said": "Our Lady Star of the Sea Monday—Friday 7:00 AM ENGLISH 5:15 PM ENGLISH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab072874",
+          "page": 1,
+          "said": "Our Lady Star of the Sea Monday—Friday 7:00 AM ENGLISH 5:15 PM ENGLISH"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read, matched by both weeks' intentions and the website schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-atlantic-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vietnamese"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 1,
+          "said": "Tuesday 6:30 PM VIETNAMESE"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab072874",
+          "page": 1,
+          "said": "Tuesday 6:30 PM VIETNAMESE"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins and the website. The intentions mark it (E/OLSS); the schedule box and website both say Vietnamese, so the note follows them. The Nov 24 Holy Martyrs of Vietnam celebration at 6:30 PM is this weekly Mass (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-atlantic-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 1,
+          "said": "Wednesday 7:00 PM SPANISH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab072874",
+          "page": 1,
+          "said": "Wednesday 7:00 PM SPANISH"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins, intentions and website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-atlantic-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 1,
+          "said": "Saturday Vigil Masses 4:15 PM ENGLISH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab072874",
+          "page": 1,
+          "said": "Saturday Vigil Masses 4:15 PM ENGLISH"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins, intentions and website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-atlantic-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 1,
+          "said": "Saturday Vigil Masses 6:00 PM SPANISH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab072874",
+          "page": 1,
+          "said": "Saturday Vigil Masses 6:00 PM SPANISH"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins, intentions and website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-atlantic-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 1,
+          "said": "Sunday 7:30 AM ENGLISH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab072874",
+          "page": 1,
+          "said": "Sunday 7:30 AM ENGLISH"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins, intentions and website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-atlantic-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 1,
+          "said": "Sunday 10:00 AM SPANISH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab072874",
+          "page": 1,
+          "said": "Sunday 10:00 AM SPANISH"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins, intentions and website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-atlantic-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vietnamese"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 1,
+          "said": "Sunday 6:00 PM VIETNAMESE"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab072874",
+          "page": 1,
+          "said": "Sunday 6:00 PM VIETNAMESE"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins, intentions and website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-atlantic-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 1,
+          "said": "Saint Michael 10 N. Mississippi Avenue Sat—8:00 AM ENGLISH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab072874",
+          "page": 1,
+          "said": "Saint Michael 10 N. Mississippi Avenue Sat—8:00 AM ENGLISH"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins, intentions (E/SM) and website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-atlantic-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 1,
+          "said": "Saint Michael Sun—9:30 AM ENGLISH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab072874",
+          "page": 1,
+          "said": "Saint Michael Sun—9:30 AM ENGLISH"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins, intentions (E/SM) and website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-nicholas-of-tolentine-atlantic-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 1,
+          "said": "Saint Nicholas of Tolentine 1409 Pacific Avenue Sun—11:30 AM ENGLISH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab072874",
+          "page": 1,
+          "said": "Saint Nicholas of Tolentine 1409 Pacific Avenue Sun—11:30 AM ENGLISH"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins, intentions (E/SNT) and website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-atlantic-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "16:45",
+        "end_time": "17:05",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "before the 5:15 PM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 2,
+          "said": "A priest is available for confessions 30 minutes prior to all evening Masses, Monday through Saturday. The last confession will be heard 10 minutes prior to the scheduled time for Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab072874",
+          "page": 2,
+          "said": "A priest is available for confessions 30 minutes prior to all evening Masses, Monday through Saturday. The last confession will be heard 10 minutes prior to the scheduled time for Mass."
+        },
+        {
+          "source": "website",
+          "url": "https://accatholic.org/mass-and-confession-schedule/",
+          "said": "Please do not come for confession any later than 10 min before Mass or any earlier than 30 min before Mass."
+        }
+      ],
+      "rationale": "R1, R10, POLICY Times: 30 minutes before the weekday 5:15 PM Mass at OLSS (all evening Masses are there), ending at the stated last-confession time 10 minutes before Mass. Both bulletins and the website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-atlantic-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "16:45",
+        "end_time": "17:05",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "before the 5:15 PM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 2,
+          "said": "A priest is available for confessions 30 minutes prior to all evening Masses, Monday through Saturday. The last confession will be heard 10 minutes prior to the scheduled time for Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab072874",
+          "page": 2,
+          "said": "A priest is available for confessions 30 minutes prior to all evening Masses, Monday through Saturday. The last confession will be heard 10 minutes prior to the scheduled time for Mass."
+        },
+        {
+          "source": "website",
+          "url": "https://accatholic.org/mass-and-confession-schedule/",
+          "said": "Please do not come for confession any later than 10 min before Mass or any earlier than 30 min before Mass."
+        }
+      ],
+      "rationale": "R1, R10, POLICY Times: 30 minutes before the weekday 5:15 PM Mass at OLSS (all evening Masses are there), ending at the stated last-confession time 10 minutes before Mass. Both bulletins and the website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-atlantic-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "16:45",
+        "end_time": "17:05",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "before the 5:15 PM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 2,
+          "said": "A priest is available for confessions 30 minutes prior to all evening Masses, Monday through Saturday. The last confession will be heard 10 minutes prior to the scheduled time for Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab072874",
+          "page": 2,
+          "said": "A priest is available for confessions 30 minutes prior to all evening Masses, Monday through Saturday. The last confession will be heard 10 minutes prior to the scheduled time for Mass."
+        },
+        {
+          "source": "website",
+          "url": "https://accatholic.org/mass-and-confession-schedule/",
+          "said": "Please do not come for confession any later than 10 min before Mass or any earlier than 30 min before Mass."
+        }
+      ],
+      "rationale": "R1, R10, POLICY Times: 30 minutes before the weekday 5:15 PM Mass at OLSS (all evening Masses are there), ending at the stated last-confession time 10 minutes before Mass. Both bulletins and the website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-atlantic-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "16:45",
+        "end_time": "17:05",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "before the 5:15 PM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 2,
+          "said": "A priest is available for confessions 30 minutes prior to all evening Masses, Monday through Saturday. The last confession will be heard 10 minutes prior to the scheduled time for Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab072874",
+          "page": 2,
+          "said": "A priest is available for confessions 30 minutes prior to all evening Masses, Monday through Saturday. The last confession will be heard 10 minutes prior to the scheduled time for Mass."
+        },
+        {
+          "source": "website",
+          "url": "https://accatholic.org/mass-and-confession-schedule/",
+          "said": "Please do not come for confession any later than 10 min before Mass or any earlier than 30 min before Mass."
+        }
+      ],
+      "rationale": "R1, R10, POLICY Times: 30 minutes before the weekday 5:15 PM Mass at OLSS (all evening Masses are there), ending at the stated last-confession time 10 minutes before Mass. Both bulletins and the website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-atlantic-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "16:45",
+        "end_time": "17:05",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "before the 5:15 PM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 2,
+          "said": "A priest is available for confessions 30 minutes prior to all evening Masses, Monday through Saturday. The last confession will be heard 10 minutes prior to the scheduled time for Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab072874",
+          "page": 2,
+          "said": "A priest is available for confessions 30 minutes prior to all evening Masses, Monday through Saturday. The last confession will be heard 10 minutes prior to the scheduled time for Mass."
+        },
+        {
+          "source": "website",
+          "url": "https://accatholic.org/mass-and-confession-schedule/",
+          "said": "Please do not come for confession any later than 10 min before Mass or any earlier than 30 min before Mass."
+        }
+      ],
+      "rationale": "R1, R10, POLICY Times: 30 minutes before the weekday 5:15 PM Mass at OLSS (all evening Masses are there), ending at the stated last-confession time 10 minutes before Mass. Both bulletins and the website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-atlantic-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "18:20",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "before the 6:30 PM Vietnamese Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 2,
+          "said": "confessions 30 minutes prior to all evening Masses, Monday through Saturday. The last confession will be heard 10 minutes prior"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab072874",
+          "page": 2,
+          "said": "confessions 30 minutes prior to all evening Masses, Monday through Saturday. The last confession will be heard 10 minutes prior"
+        }
+      ],
+      "rationale": "R1, R10: 30 minutes before the Tuesday 6:30 PM evening Mass, last confession 10 minutes before.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-atlantic-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "18:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "before the 7:00 PM Spanish Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 2,
+          "said": "confessions 30 minutes prior to all evening Masses, Monday through Saturday. The last confession will be heard 10 minutes prior"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab072874",
+          "page": 2,
+          "said": "confessions 30 minutes prior to all evening Masses, Monday through Saturday. The last confession will be heard 10 minutes prior"
+        }
+      ],
+      "rationale": "R1, R10: 30 minutes before the Wednesday 7:00 PM evening Mass, last confession 10 minutes before.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-atlantic-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "17:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "before the 6:00 PM Spanish Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 2,
+          "said": "confessions 30 minutes prior to all evening Masses, Monday through Saturday. The last confession will be heard 10 minutes prior"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab072874",
+          "page": 2,
+          "said": "confessions 30 minutes prior to all evening Masses, Monday through Saturday. The last confession will be heard 10 minutes prior"
+        }
+      ],
+      "rationale": "R1, R10: 30 minutes before the Saturday 6:00 PM evening Mass, last confession 10 minutes before.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-atlantic-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:45",
+        "end_time": "16:05",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "before the 4:15 PM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 2,
+          "said": "confessions 30 minutes prior to all evening Masses, Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab072874",
+          "page": 2,
+          "said": "confessions 30 minutes prior to all evening Masses, Monday through Saturday"
+        }
+      ],
+      "rationale": "R30: whether a 4:15 PM vigil counts as an 'evening' Mass is a judgment call. Leaning include: it is a Saturday vigil, only an hour earlier than the weekday 5:15 PM Mass the line clearly covers, and the website repeats 'before all evening Masses Monday thru Saturday' under the church that has it.",
+      "question": "Is the Saturday 4:15 PM vigil an 'evening Mass' with confessions 3:45-4:05 PM before it?",
+      "options": [
+        {
+          "label": "Saturdays 3:45-4:05 PM",
+          "entry": {
+            "church_slug": "our-lady-star-of-the-sea-atlantic-city",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:45",
+            "end_time": "16:05",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "before the 4:15 PM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:31:01Z"
+      }
+    },
+    {
+      "id": "s30",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 2,
+          "said": "Confessions are also available by appointment at the parish office."
+        }
+      ],
+      "rationale": "R26: by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-atlantic-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "17:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 2,
+          "said": "confessions 30 minutes prior to all evening Masses, Monday through Saturday"
+        }
+      ],
+      "rationale": "R24: the line limits confessions to Monday through Saturday, so the Sunday 6:00 PM Mass has none.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-atlantic-city",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 9,
+          "said": "Masses will be celebrated on Thanksgiving Day, November 26th at 9:00 AM (English) and at 6:00 PM (Español). Both Masses will be in Our Lady Star of the Sea Church."
+        }
+      ],
+      "rationale": "R1, R16: dated holiday Mass after as_of. R17: the bulletin does not cancel the regular 7:00 AM or 5:15 PM Masses that day, so the weekly slots are left alone.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-atlantic-city",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day, Spanish"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 9,
+          "said": "Thanksgiving Day, November 26th ... at 6:00 PM (Español). Both Masses will be in Our Lady Star of the Sea Church."
+        }
+      ],
+      "rationale": "R1, R16: dated holiday Mass after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-atlantic-city",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Day after Thanksgiving"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 9,
+          "said": "Friday, November 27th Mass at 9:00 AM"
+        }
+      ],
+      "rationale": "R1, R16: dated Mass under the Thanksgiving notice that places its Masses at OLSS, the only church with weekday Masses. R17: the 7:00 AM Mass is not said to be cancelled, so it is left alone.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s35",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-atlantic-city",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 9,
+          "said": "Friday, November 27th Mass at 9:00 AM No Evening Mass"
+        }
+      ],
+      "rationale": "R1, R16: the bulletin cancels the Friday evening (5:15 PM) Mass on November 27.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s36",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-atlantic-city",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "16:45",
+        "end_time": "17:05",
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 9,
+          "said": "Friday, November 27th ... No Evening Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 2,
+          "said": "confessions 30 minutes prior to all evening Masses"
+        }
+      ],
+      "rationale": "R16, R36 dependency wording: confession is offered only before evening Masses, and there is no evening Mass on November 27.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s37",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-atlantic-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "At the Mercy Chapel, Cappella Studio"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 5,
+          "said": "The Mercy Chapel at Cappella Studio is open daily, Monday through Friday, from 9:00 AM to 4:00 PM. We are always in need of adorers"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab072874",
+          "page": 6,
+          "said": "Mercy Adoration Chapel in Cappella Studio"
+        },
+        {
+          "source": "website",
+          "url": "https://accatholic.org/",
+          "said": "Cappella Studio ... a functional chapel, all situated on the campus of The Parish of Saint Monica"
+        }
+      ],
+      "rationale": "R23: the Mercy Adoration Chapel is at Cappella Studio, whose address neither bulletin nor the website gives (only 'on the campus of the parish'); it is not on the church list and can't be placed at a listed church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s38",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-atlantic-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "At the Mercy Chapel, Cappella Studio"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 5,
+          "said": "The Mercy Chapel at Cappella Studio is open daily, Monday through Friday, from 9:00 AM to 4:00 PM. We are always in need of adorers"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab072874",
+          "page": 6,
+          "said": "Mercy Adoration Chapel in Cappella Studio"
+        },
+        {
+          "source": "website",
+          "url": "https://accatholic.org/",
+          "said": "Cappella Studio ... a functional chapel, all situated on the campus of The Parish of Saint Monica"
+        }
+      ],
+      "rationale": "R23: the Mercy Adoration Chapel is at Cappella Studio, whose address neither bulletin nor the website gives (only 'on the campus of the parish'); it is not on the church list and can't be placed at a listed church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s39",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-atlantic-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "At the Mercy Chapel, Cappella Studio"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 5,
+          "said": "The Mercy Chapel at Cappella Studio is open daily, Monday through Friday, from 9:00 AM to 4:00 PM. We are always in need of adorers"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab072874",
+          "page": 6,
+          "said": "Mercy Adoration Chapel in Cappella Studio"
+        },
+        {
+          "source": "website",
+          "url": "https://accatholic.org/",
+          "said": "Cappella Studio ... a functional chapel, all situated on the campus of The Parish of Saint Monica"
+        }
+      ],
+      "rationale": "R23: the Mercy Adoration Chapel is at Cappella Studio, whose address neither bulletin nor the website gives (only 'on the campus of the parish'); it is not on the church list and can't be placed at a listed church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s40",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-atlantic-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "At the Mercy Chapel, Cappella Studio"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 5,
+          "said": "The Mercy Chapel at Cappella Studio is open daily, Monday through Friday, from 9:00 AM to 4:00 PM. We are always in need of adorers"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab072874",
+          "page": 6,
+          "said": "Mercy Adoration Chapel in Cappella Studio"
+        },
+        {
+          "source": "website",
+          "url": "https://accatholic.org/",
+          "said": "Cappella Studio ... a functional chapel, all situated on the campus of The Parish of Saint Monica"
+        }
+      ],
+      "rationale": "R23: the Mercy Adoration Chapel is at Cappella Studio, whose address neither bulletin nor the website gives (only 'on the campus of the parish'); it is not on the church list and can't be placed at a listed church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s41",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-atlantic-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "At the Mercy Chapel, Cappella Studio"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee67b72f",
+          "page": 5,
+          "said": "The Mercy Chapel at Cappella Studio is open daily, Monday through Friday, from 9:00 AM to 4:00 PM. We are always in need of adorers"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab072874",
+          "page": 6,
+          "said": "Mercy Adoration Chapel in Cappella Studio"
+        },
+        {
+          "source": "website",
+          "url": "https://accatholic.org/",
+          "said": "Cappella Studio ... a functional chapel, all situated on the campus of The Parish of Saint Monica"
+        }
+      ],
+      "rationale": "R23: the Mercy Adoration Chapel is at Cappella Studio, whose address neither bulletin nor the website gives (only 'on the campus of the parish'); it is not on the church list and can't be placed at a listed church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "church_list_issues": [
+    {
+      "church": "Mercy Adoration Chapel, Cappella Studio (Parish of Saint Monica campus, Atlantic City)",
+      "said": "Mercy Chapel at Cappella Studio open Monday through Friday 9:00 AM to 4:00 PM; always in need of adorers",
+      "bulletin": "ee67b72f",
+      "page": 5
+    }
+  ]
+}

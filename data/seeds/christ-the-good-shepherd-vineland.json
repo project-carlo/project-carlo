@@ -1,0 +1,1157 @@
+{
+  "schema_version": 1,
+  "parish_slug": "christ-the-good-shepherd-vineland",
+  "status": "approved",
+  "as_of": "2026-11-15T16:47:20Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-16T20:03:16Z",
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:29:06Z",
+  "summary": "Two churches, Sacred Heart and St. Isidore the Farmer; both bulletins read (Nov 8 and 15) print the same schedule box, which the website matches. Weekday Masses Tue-Wed and the first-Sunday Spanish Mass are at the Sacred Heart High School Chapel, not on the church list, so excluded (R23). Open: Tue/Wed confession location, and how to record the overnight Thursday-Friday Adoration.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "a9cdc270275833e9851043cf5afe474158d87fd4b9f4d9a1f745f73e5ebdc794",
+      "fetched_at": "2026-11-15T16:47:20Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "ca6e7b740d07045c47e7b0d95b9029eab4bd8c66821ffe505c62fe722705083a",
+      "fetched_at": "2026-11-08T15:55:41Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isidore-the-farmer-vineland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9cdc270",
+          "page": 1,
+          "said": "ST. ISIDORE THE FARMER CHURCH Saturday: 8:00 am & 4:30 pm Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca6e7b74",
+          "page": 1,
+          "said": "ST. ISIDORE THE FARMER CHURCH Saturday: 8:00 am & 4:30 pm Vigil"
+        },
+        {
+          "source": "website",
+          "url": "https://christtheshepherdvineland.org/",
+          "said": "Weekdays (8am Masses) ... Saint Isidore Church Saturday"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list Saturday 8:00 AM each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isidore-the-farmer-vineland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9cdc270",
+          "page": 1,
+          "said": "ST. ISIDORE THE FARMER CHURCH Saturday: 8:00 am & 4:30 pm Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca6e7b74",
+          "page": 1,
+          "said": "ST. ISIDORE THE FARMER CHURCH Saturday: 8:00 am & 4:30 pm Vigil"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isidore-the-farmer-vineland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9cdc270",
+          "page": 1,
+          "said": "ST. ISIDORE THE FARMER CHURCH Sunday: 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca6e7b74",
+          "page": 1,
+          "said": "ST. ISIDORE THE FARMER CHURCH Sunday: 9:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-vineland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9cdc270",
+          "page": 1,
+          "said": "SACRED HEART CHURCH Sunday: 11:00 am (Live-streamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca6e7b74",
+          "page": 1,
+          "said": "SACRED HEART CHURCH Sunday: 11:00 am (Live-streamed)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isidore-the-farmer-vineland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Isidore Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9cdc270",
+          "page": 1,
+          "said": "ST. ISIDORE CHAPEL Thursday through Friday: 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca6e7b74",
+          "page": 1,
+          "said": "ST. ISIDORE CHAPEL Thursday through Friday: 8:00 am"
+        }
+      ],
+      "rationale": "R1, POLICY Churches and chapels: printed in both bulletins; the chapel is St. Isidore's own (the website groups it with St. Isidore, and Adoration 'at St. Isidore's' runs between these Masses), so it belongs to the church with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isidore-the-farmer-vineland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Isidore Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9cdc270",
+          "page": 1,
+          "said": "ST. ISIDORE CHAPEL Thursday through Friday: 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca6e7b74",
+          "page": 1,
+          "said": "ST. ISIDORE CHAPEL Thursday through Friday: 8:00 am"
+        }
+      ],
+      "rationale": "R1, POLICY Churches and chapels: printed in both bulletins; the chapel is St. Isidore's own (the website groups it with St. Isidore, and Adoration 'at St. Isidore's' runs between these Masses), so it belongs to the church with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-vineland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Sacred Heart High School Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9cdc270",
+          "page": 1,
+          "said": "SACRED HEART HIGH CHAPEL Tuesday through Wednesday: 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca6e7b74",
+          "page": 1,
+          "said": "SACRED HEART HIGH CHAPEL Tuesday through Wednesday: 8:00 am"
+        },
+        {
+          "source": "website",
+          "url": "https://christtheshepherdvineland.org/",
+          "said": "Weekdays (8am Masses) Sacred Heart High School Chapel Tuesday-Wednesday"
+        }
+      ],
+      "rationale": "R23, POLICY Churches and chapels: the bulletin lists the Sacred Heart High (School) Chapel under its own heading, separate from Sacred Heart Church, and the website names it the Sacred Heart High School Chapel; a school chapel not on the church list, address not given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-vineland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Sacred Heart High School Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9cdc270",
+          "page": 1,
+          "said": "SACRED HEART HIGH CHAPEL Tuesday through Wednesday: 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca6e7b74",
+          "page": 1,
+          "said": "SACRED HEART HIGH CHAPEL Tuesday through Wednesday: 8:00 am"
+        },
+        {
+          "source": "website",
+          "url": "https://christtheshepherdvineland.org/",
+          "said": "Weekdays (8am Masses) Sacred Heart High School Chapel Tuesday-Wednesday"
+        }
+      ],
+      "rationale": "R23, POLICY Churches and chapels: the bulletin lists the Sacred Heart High (School) Chapel under its own heading, separate from Sacred Heart Church, and the website names it the Sacred Heart High School Chapel; a school chapel not on the church list, address not given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-vineland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish; Sacred Heart High School Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9cdc270",
+          "page": 1,
+          "said": "SACRED HEART HIGH CHAPEL ... Spanish Ministry: 12:15pm (1st Sunday of the month)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca6e7b74",
+          "page": 1,
+          "said": "SACRED HEART HIGH CHAPEL ... Spanish Ministry: 12:15pm (1st Sunday of the month)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9cdc270",
+          "page": 6,
+          "said": "Every first Sunday of the month CTGS will be offering a Spanish Mass at 12:30pm ... It will be held at the Sacred Heart High School Chapel. The next mass will be on December 6, 2026"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca6e7b74",
+          "page": 6,
+          "said": "Every first Sunday of the month CTGS will be offering a Spanish Mass at 12:30pm ... It will be held at the Sacred Heart High School Chapel. The next mass will be on December 6, 2026"
+        }
+      ],
+      "rationale": "R23: held at the Sacred Heart High School Chapel, which the church list lacks. (The two pages also disagree on the time, 12:15 vs 12:30; moot while the chapel is excluded.)",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isidore-the-farmer-vineland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9cdc270",
+          "page": 4,
+          "said": "Monday ... 7:00 PM No Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca6e7b74",
+          "page": 4,
+          "said": "Monday ... 7:00 PM No Mass"
+        }
+      ],
+      "rationale": "R39: a reused intentions template line; no Monday Mass is in the schedule box, and it says No Mass. Nothing to record.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isidore-the-farmer-vineland",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass; St. Isidore Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9cdc270",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION held at ST. ISIDORE THE FARMER CHURCH Tuesday- Saturday: Following 8:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca6e7b74",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION held at ST. ISIDORE THE FARMER CHURCH Tuesday- Saturday: Following 8:00 am Mass"
+        }
+      ],
+      "rationale": "R10: following the weekday 8:00 AM Mass at St. Isidore's chapel, so 30 minutes after it starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isidore-the-farmer-vineland",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass; St. Isidore Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9cdc270",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION held at ST. ISIDORE THE FARMER CHURCH Tuesday- Saturday: Following 8:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca6e7b74",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION held at ST. ISIDORE THE FARMER CHURCH Tuesday- Saturday: Following 8:00 am Mass"
+        }
+      ],
+      "rationale": "R10: following the weekday 8:00 AM Mass at St. Isidore's chapel, so 30 minutes after it starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isidore-the-farmer-vineland",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9cdc270",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION held at ST. ISIDORE THE FARMER CHURCH Tuesday- Saturday: Following 8:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca6e7b74",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION held at ST. ISIDORE THE FARMER CHURCH Tuesday- Saturday: Following 8:00 am Mass"
+        }
+      ],
+      "rationale": "R10: following the Saturday 8:00 AM Mass at St. Isidore Church; a morning Mass, not the vigil, so 30 minutes after it starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isidore-the-farmer-vineland",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9cdc270",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION held at ST. ISIDORE THE FARMER CHURCH ... Saturday: 3:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca6e7b74",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION held at ST. ISIDORE THE FARMER CHURCH ... Saturday: 3:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; no end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isidore-the-farmer-vineland",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9cdc270",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION held at ST. ISIDORE THE FARMER CHURCH Tuesday- Saturday: Following 8:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca6e7b74",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION held at ST. ISIDORE THE FARMER CHURCH Tuesday- Saturday: Following 8:00 am Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://christtheshepherdvineland.org/",
+          "said": "Sacrament of Reconciliation Tuesday – Saturday: Following 8:00 am Mass / Saturday: 3:00 pm held at St. Isidore the Farmer Church"
+        }
+      ],
+      "rationale": "R32/R28: on Tuesday and Wednesday the 8:00 AM Mass is at the Sacred Heart High School Chapel, so 'following' it at St. Isidore across town is doubtful; the website attaches 'held at St. Isidore' to the Saturday 3 PM line only. Leaning leave out: the likely place is the unlisted school chapel (R23).",
+      "question": "Tuesday/Wednesday confession 'following 8:00 am Mass' is listed as held at St. Isidore, but those Masses are at the Sacred Heart High School Chapel. Add 8:30 AM confession at St. Isidore?",
+      "options": [
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Tue/Wed 8:30 AM at St. Isidore",
+          "entry": {
+            "church_slug": "st-isidore-the-farmer-vineland",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 8:00 AM Mass"
+          }
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:06Z"
+      },
+      "group": "tuewed-confession"
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isidore-the-farmer-vineland",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9cdc270",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION held at ST. ISIDORE THE FARMER CHURCH Tuesday- Saturday: Following 8:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca6e7b74",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION held at ST. ISIDORE THE FARMER CHURCH Tuesday- Saturday: Following 8:00 am Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://christtheshepherdvineland.org/",
+          "said": "Sacrament of Reconciliation Tuesday – Saturday: Following 8:00 am Mass / Saturday: 3:00 pm held at St. Isidore the Farmer Church"
+        }
+      ],
+      "rationale": "R32/R28: on Tuesday and Wednesday the 8:00 AM Mass is at the Sacred Heart High School Chapel, so 'following' it at St. Isidore across town is doubtful; the website attaches 'held at St. Isidore' to the Saturday 3 PM line only. Leaning leave out: the likely place is the unlisted school chapel (R23).",
+      "question": "Tuesday/Wednesday confession 'following 8:00 am Mass' is listed as held at St. Isidore, but those Masses are at the Sacred Heart High School Chapel. Add 8:30 AM confession at St. Isidore?",
+      "options": [
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Tue/Wed 8:30 AM at St. Isidore",
+          "entry": {
+            "church_slug": "st-isidore-the-farmer-vineland",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 8:00 AM Mass"
+          }
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:06Z"
+      },
+      "group": "tuewed-confession"
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9cdc270",
+          "page": 6,
+          "said": "Miraculous Metal Novena every Wednesday after the 8am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca6e7b74",
+          "page": 6,
+          "said": "Miraculous Metal Novena every Wednesday after the 8am Mass"
+        }
+      ],
+      "rationale": "R24: a novena is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9cdc270",
+          "page": 6,
+          "said": "Due to our Parish only having one fulltime Priest we can no longer offer confessions by appointments."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca6e7b74",
+          "page": 6,
+          "said": "Due to our Parish only having one fulltime Priest we can no longer offer confessions by appointments."
+        }
+      ],
+      "rationale": "R26: no confession by appointment; nothing to record.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-vineland",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9cdc270",
+          "page": 6,
+          "said": "THANKSGIVING MASS Thursday, November 26, 2026 10am at Sacred Heart Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca6e7b74",
+          "page": 6,
+          "said": "THANKSGIVING MASS Thursday, November 26, 2026 10am at Sacred Heart Church"
+        }
+      ],
+      "rationale": "R1, R16: a dated holiday Mass after as_of. R17: the regular Thursday 8:00 AM Mass is not said to be cancelled, so it stays.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-vineland",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9cdc270",
+          "page": 7,
+          "said": "Feast of the Immaculate Conception DECEMBER 8TH Mass times: Sacred Heart Church 8:00am"
+        }
+      ],
+      "rationale": "R1, R16: a holy-day Mass at Sacred Heart Church itself, not the high school chapel where the weekly Tuesday Mass is, so it is not a duplicate of a weekly slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isidore-the-farmer-vineland",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9cdc270",
+          "page": 7,
+          "said": "Feast of the Immaculate Conception DECEMBER 8TH Mass times: ... St. Isidore Church 6:00pm"
+        }
+      ],
+      "rationale": "R1, R16: a dated holy-day Mass after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isidore-the-farmer-vineland",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Vigil"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9cdc270",
+          "page": 9,
+          "said": "Christmas Vigil Thursday, December 24, 2026 4:30pm- Saint Isidore Church"
+        }
+      ],
+      "rationale": "R1, R16: a dated Christmas Mass after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-vineland",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "00:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Midnight Mass"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9cdc270",
+          "page": 9,
+          "said": "Christmas Vigil Thursday, December 24, 2026 ... Midnight Mass 12:00am- Sacred Heart Church"
+        }
+      ],
+      "rationale": "R1, R16: the Midnight Mass begins at 12:00 AM on December 25.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isidore-the-farmer-vineland",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Day"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9cdc270",
+          "page": 9,
+          "said": "Christmas Day Friday, December 25, 2026 9:00am- Saint Isidore Church"
+        }
+      ],
+      "rationale": "R1, R16: a dated Christmas Mass after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-vineland",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Day"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9cdc270",
+          "page": 9,
+          "said": "Christmas Day Friday, December 25, 2026 ... 11:00am –Sacred Heart Church"
+        }
+      ],
+      "rationale": "R1, R16: a dated Christmas Mass after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isidore-the-farmer-vineland",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9cdc270",
+          "page": 1,
+          "said": "ADORATION OF THE BLESSED SACRAMENT (at ST. ISIDORE'S) Begins after the Thursday 8:00 am Mass until Friday at 7:45 am before the 8:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca6e7b74",
+          "page": 1,
+          "said": "ADORATION OF THE BLESSED SACRAMENT (at ST. ISIDORE'S) Begins after the Thursday 8:00 am Mass until Friday at 7:45 am before the 8:00 am Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://christtheshepherdvineland.org/",
+          "said": "Adoration of the Blessed Sacrament held at St. Isidore the Farmer Church Begins after the 8:00 am Mass on Thursday Until 7:45 am Friday"
+        }
+      ],
+      "rationale": "R10 gives the start, 30 minutes after the weekday Mass (8:30 AM); the end is printed as Friday 7:45 AM. One slot cannot cross midnight, so this asks how to represent it (R33). Leaning split at midnight, which states the printed hours exactly.",
+      "question": "Adoration at St. Isidore runs from after the Thursday 8:00 AM Mass until 7:45 AM Friday (overnight). Record it as Thursday 8:30 AM-11:59 PM plus Friday 12:00-7:45 AM?",
+      "options": [
+        {
+          "label": "Split at midnight",
+          "entry": {
+            "church_slug": "st-isidore-the-farmer-vineland",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:06Z"
+      },
+      "group": "overnight-adoration"
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isidore-the-farmer-vineland",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "07:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9cdc270",
+          "page": 1,
+          "said": "ADORATION OF THE BLESSED SACRAMENT (at ST. ISIDORE'S) Begins after the Thursday 8:00 am Mass until Friday at 7:45 am before the 8:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca6e7b74",
+          "page": 1,
+          "said": "ADORATION OF THE BLESSED SACRAMENT (at ST. ISIDORE'S) Begins after the Thursday 8:00 am Mass until Friday at 7:45 am before the 8:00 am Mass"
+        }
+      ],
+      "rationale": "R10 gives the start, 30 minutes after the weekday Mass (8:30 AM); the end is printed as Friday 7:45 AM. One slot cannot cross midnight, so this asks how to represent it (R33). Leaning split at midnight, which states the printed hours exactly.",
+      "question": "Adoration at St. Isidore runs from after the Thursday 8:00 AM Mass until 7:45 AM Friday (overnight). Record it as Thursday 8:30 AM-11:59 PM plus Friday 12:00-7:45 AM?",
+      "options": [
+        {
+          "label": "Split at midnight",
+          "entry": {
+            "church_slug": "st-isidore-the-farmer-vineland",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "07:45",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:06Z"
+      },
+      "group": "overnight-adoration"
+    }
+  ],
+  "church_list_issues": [
+    {
+      "church": "Sacred Heart High School Chapel, Vineland",
+      "said": "SACRED HEART HIGH CHAPEL Tuesday through Wednesday: 8:00 am; Spanish Ministry 12:15pm (1st Sunday of the month); p6 gives the Spanish Mass as 12:30pm",
+      "bulletin": "a9cdc270",
+      "page": 1
+    }
+  ]
+}

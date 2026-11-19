@@ -1,0 +1,1052 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-michael-the-archangel-clayton",
+  "status": "approved",
+  "as_of": "2026-11-15T16:48:03Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T13:30:34Z",
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:30:34Z",
+  "summary": "Two churches (St. Catherine of Siena, Clayton; Nativity, Franklinville), both image-only bulletins (Nov 8 and Nov 15, 2026) read in full and agreeing on the Mass and Adoration schedule; Saturday afternoon Confession times shifted slightly in the newest issue, which is followed. Open: three Confession times printed as conditional on Fr. Goyette's availability (one group) and Sunday Confession after 'most' 10:30 AM Masses.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "f8284d21b27c7b583049615addd0ba4770240621e808c6f3038f29694237f4aa",
+      "fetched_at": "2026-11-15T16:48:03Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "d5f31b9d6c597727f4ba480d223826f2c0cfd76acdd26bbbea4e4c52fee0273c",
+      "fetched_at": "2026-11-08T15:56:16Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "church-of-the-nativity-franklinville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8284d21",
+          "page": 1,
+          "said": "Weekend Mass Schedule: Saturday: 4 PM at Nativity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5f31b9d",
+          "page": 1,
+          "said": "Weekend Mass Schedule: Saturday: 4 PM at Nativity"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both issues read; the intentions list Sat 4:00 PM - N each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-clayton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8284d21",
+          "page": 1,
+          "said": "Sunday: 8 AM at St. Catherine"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5f31b9d",
+          "page": 1,
+          "said": "Sunday: 8 AM at St. Catherine"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both issues read and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "church-of-the-nativity-franklinville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8284d21",
+          "page": 1,
+          "said": "Sunday: 10:30 AM at Nativity (Live-streamed on Facebook and YouTube every couple of weeks.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5f31b9d",
+          "page": 1,
+          "said": "Sunday: 10:30 AM at Nativity (Live-streamed on Facebook and YouTube every couple of weeks.)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both issues read and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-clayton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8284d21",
+          "page": 1,
+          "said": "Daily Mass Schedule: Mon. & Thurs.: 9 AM at St. Catherine"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5f31b9d",
+          "page": 1,
+          "said": "Daily Mass Schedule: Mon. & Thurs.: 9 AM at St. Catherine"
+        }
+      ],
+      "rationale": "R1, R35: printed in the daily schedule of both issues; intentions list 9:00 AM - SC on these days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-clayton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8284d21",
+          "page": 1,
+          "said": "Daily Mass Schedule: Mon. & Thurs.: 9 AM at St. Catherine"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5f31b9d",
+          "page": 1,
+          "said": "Daily Mass Schedule: Mon. & Thurs.: 9 AM at St. Catherine"
+        }
+      ],
+      "rationale": "R1, R35: printed in the daily schedule of both issues; intentions list 9:00 AM - SC on these days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "church-of-the-nativity-franklinville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8284d21",
+          "page": 1,
+          "said": "Tue. & Wed.: 9 AM at Nativity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5f31b9d",
+          "page": 1,
+          "said": "Tue. & Wed.: 9 AM at Nativity"
+        }
+      ],
+      "rationale": "R1, R35: printed in the daily schedule of both issues; intentions list 9:00 AM - N on these days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "church-of-the-nativity-franklinville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8284d21",
+          "page": 1,
+          "said": "Tue. & Wed.: 9 AM at Nativity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5f31b9d",
+          "page": 1,
+          "said": "Tue. & Wed.: 9 AM at Nativity"
+        }
+      ],
+      "rationale": "R1, R35: printed in the daily schedule of both issues; intentions list 9:00 AM - N on these days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "church-of-the-nativity-franklinville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8284d21",
+          "page": 1,
+          "said": "Friday: 7 PM at Nativity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5f31b9d",
+          "page": 1,
+          "said": "Friday: 7 PM at Nativity"
+        }
+      ],
+      "rationale": "R1, R35: printed in the daily schedule of both issues; intentions list Fri 7:00 PM - N.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-clayton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8284d21",
+          "page": 1,
+          "said": "Saturday: 7:30 AM at St Catherine"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5f31b9d",
+          "page": 1,
+          "said": "Saturday: 7:30 AM at St Catherine"
+        }
+      ],
+      "rationale": "R1, R35: printed in the daily schedule of both issues; intentions list Sat 7:30 AM - SC.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "church-of-the-nativity-franklinville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:25",
+        "end_time": "15:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8284d21",
+          "page": 1,
+          "said": "Confession: Saturday: 3:25-3:50 PM at Nativity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5f31b9d",
+          "page": 1,
+          "said": "Saturday: 3:30-3:45 PM at Nativity"
+        }
+      ],
+      "rationale": "R1, R40: the newest schedule box gives 3:25-3:50 PM (no asterisk, so not conditional); the Nov 8 issue's 3:30-3:45 is the older standing time, corrected by the newer issue.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "church-of-the-nativity-franklinville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:40",
+        "end_time": "20:10",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "If Fr. Goyette is available"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8284d21",
+          "page": 1,
+          "said": "Friday: 7:40-8:10 PM at Nativity* ... * If Fr. Goyette is Available"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5f31b9d",
+          "page": 1,
+          "said": "Friday: 7:50-8:20 PM at Nativity*"
+        }
+      ],
+      "rationale": "R30: the schedule box prints a clock time but makes it conditional on the pastor's availability (hedged availability needs a human decision). Leaning include, since it is the regular printed schedule; times per the newest issue (R40).",
+      "question": "Include the Confession times marked '* If Fr. Goyette is Available'?",
+      "options": [
+        {
+          "label": "Include with note",
+          "entry": {
+            "church_slug": "church-of-the-nativity-franklinville",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "19:40",
+            "end_time": "20:10",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "If Fr. Goyette is available"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:30:34Z"
+      },
+      "group": "goyette"
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-clayton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:10",
+        "end_time": "08:40",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "If Fr. Goyette is available"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8284d21",
+          "page": 1,
+          "said": "Saturday: 8:10-8:40 AM at St. Catherine* ... * If Fr. Goyette is Available"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5f31b9d",
+          "page": 1,
+          "said": "Saturday: 7:50-8:20 AM at St. Catherine*"
+        }
+      ],
+      "rationale": "R30: the schedule box prints a clock time but makes it conditional on the pastor's availability (hedged availability needs a human decision). Leaning include, since it is the regular printed schedule; times per the newest issue (R40).",
+      "question": "Include the Confession times marked '* If Fr. Goyette is Available'?",
+      "options": [
+        {
+          "label": "Include with note",
+          "entry": {
+            "church_slug": "st-catherine-of-siena-clayton",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:10",
+            "end_time": "08:40",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "If Fr. Goyette is available"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:30:34Z"
+      },
+      "group": "goyette"
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-clayton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:20",
+        "end_time": "07:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "If Fr. Goyette is available"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8284d21",
+          "page": 1,
+          "said": "Sunday: 7:20-7:50 AM at St. Catherine* ... * If Fr. Goyette is Available"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5f31b9d",
+          "page": 1,
+          "said": "Sunday: 7:20-7:50 AM at St. Catherine* ... * If Fr. Goyette is Available"
+        }
+      ],
+      "rationale": "R30: the schedule box prints a clock time but makes it conditional on the pastor's availability (hedged availability needs a human decision). Leaning include, since it is the regular printed schedule in both issues.",
+      "question": "Include the Confession times marked '* If Fr. Goyette is Available'?",
+      "options": [
+        {
+          "label": "Include with note",
+          "entry": {
+            "church_slug": "st-catherine-of-siena-clayton",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "07:20",
+            "end_time": "07:50",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "If Fr. Goyette is available"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:30:34Z"
+      },
+      "group": "goyette"
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "church-of-the-nativity-franklinville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 10:30 AM Mass, most Sundays"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8284d21",
+          "page": 1,
+          "said": "Sun. after most 10:30 AM Mass at Nativity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5f31b9d",
+          "page": 1,
+          "said": "Sun. after most 10:30 AM Mass at Nativity"
+        }
+      ],
+      "rationale": "R30: 'most' is hedged availability, which needs a human decision. If included, R10 times it an hour after the weekend Mass starts (11:30 AM), no end. Leaning include with the hedge in the note, as it is printed in the regular schedule of both issues.",
+      "question": "Include Sunday Confession 'after most 10:30 AM Mass' at Nativity (11:30 AM per POLICY)?",
+      "options": [
+        {
+          "label": "Sundays 11:30 AM with note",
+          "entry": {
+            "church_slug": "church-of-the-nativity-franklinville",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "11:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 10:30 AM Mass, most Sundays"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:30:34Z"
+      }
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-clayton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 9 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8284d21",
+          "page": 2,
+          "said": "Eucharistic Adoration: Mon.-Thurs. 8-9 AM before morning Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5f31b9d",
+          "page": 2,
+          "said": "Eucharistic Adoration: Mon.-Thurs. 8-9 AM before morning Mass"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Prayer Network box of both issues with clock times. The box names no church, but it ties Adoration to the morning Mass, which on Mon and Thu is 9 AM at St. Catherine only (p1 daily schedule).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-clayton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 9 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8284d21",
+          "page": 2,
+          "said": "Eucharistic Adoration: Mon.-Thurs. 8-9 AM before morning Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5f31b9d",
+          "page": 2,
+          "said": "Eucharistic Adoration: Mon.-Thurs. 8-9 AM before morning Mass"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Prayer Network box of both issues with clock times. The box names no church, but it ties Adoration to the morning Mass, which on Mon and Thu is 9 AM at St. Catherine only (p1 daily schedule).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "church-of-the-nativity-franklinville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 9 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8284d21",
+          "page": 2,
+          "said": "Eucharistic Adoration: Mon.-Thurs. 8-9 AM before morning Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5f31b9d",
+          "page": 2,
+          "said": "Eucharistic Adoration: Mon.-Thurs. 8-9 AM before morning Mass"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Prayer Network box of both issues with clock times. The box names no church, but it ties Adoration to the morning Mass, which on Tue and Wed is 9 AM at Nativity only (p1 daily schedule).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "church-of-the-nativity-franklinville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 9 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8284d21",
+          "page": 2,
+          "said": "Eucharistic Adoration: Mon.-Thurs. 8-9 AM before morning Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5f31b9d",
+          "page": 2,
+          "said": "Eucharistic Adoration: Mon.-Thurs. 8-9 AM before morning Mass"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Prayer Network box of both issues with clock times. The box names no church, but it ties Adoration to the morning Mass, which on Tue and Wed is 9 AM at Nativity only (p1 daily schedule).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "church-of-the-nativity-franklinville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8284d21",
+          "page": 2,
+          "said": "Every Monday 6-7 PM at Nativity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5f31b9d",
+          "page": 2,
+          "said": "Every Monday 6-7 PM at Nativity"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Prayer Network box of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "church-of-the-nativity-franklinville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "20:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8284d21",
+          "page": 2,
+          "said": "Every Friday 8 PM at Nativity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5f31b9d",
+          "page": 2,
+          "said": "Every Friday 8 PM at Nativity"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Prayer Network box of both issues; no end time given, so none recorded (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "church-of-the-nativity-franklinville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 10:30 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8284d21",
+          "page": 2,
+          "said": "Every Sunday after 10:30 AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5f31b9d",
+          "page": 2,
+          "said": "Every Sunday after 10:30 AM Mass"
+        }
+      ],
+      "rationale": "R1, R10: printed in the Prayer Network box of both issues; after a weekend Mass is an hour after it starts (11:30 AM), no end. The 10:30 AM Sunday Mass is only at Nativity (p1), so it is there.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8284d21",
+          "page": 2,
+          "said": "St. Catherine's Church vestibule is open 10 AM - 2 PM Monday through Friday"
+        }
+      ],
+      "rationale": "R38: a building open for prayer does not establish Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8284d21",
+          "page": 6,
+          "said": "Eucharistic Adoration takes place at St. Mary's Church (253 Old Dutch Mill Road, Malaga, NJ) each week from Sunday at 6:00 PM through Wednesday at 9:00 AM"
+        }
+      ],
+      "rationale": "R22: St. Mary, Malaga (st-mary-malaga) belongs to Our Lady of the Blessed Sacrament parish; its events belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8284d21",
+          "page": 1,
+          "said": "Holy Day Mass Schedule: Vigil: 7 PM at St. Catherine; Holy Day: 9 AM & 7 PM at Nativity"
+        }
+      ],
+      "rationale": "POLICY, Dates; R16: the box gives no dates, and holy-day Masses are dated, so nothing can be recorded until a bulletin dates them (e.g. December 8).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8284d21",
+          "page": 1,
+          "said": "Stations of the Cross: Friday: 6:30 PM at Nativity"
+        }
+      ],
+      "rationale": "R24: Stations of the Cross is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8284d21",
+          "page": 2,
+          "said": "Rosary: Mon.-Thurs. after morning Mass and after all weekend Masses; Every Tuesday after the 9 AM Mass - Novena to the Miraculous Medal"
+        }
+      ],
+      "rationale": "R24: Rosary and Novena are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f8284d21",
+          "page": 1,
+          "said": "Or by appointment, call the Parish Office"
+        }
+      ],
+      "rationale": "R26: Confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

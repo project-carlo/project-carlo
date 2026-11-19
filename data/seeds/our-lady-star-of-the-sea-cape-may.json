@@ -1,0 +1,805 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-star-of-the-sea-cape-may",
+  "status": "approved",
+  "as_of": "2026-11-15T16:47:40Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-16T21:36:59Z",
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:29:53Z",
+  "summary": "Two churches listed; every scheduled service is at Our Lady Star of the Sea (the website heads the same schedule 'Current Mass Schedule at Our Lady Star of the Sea'); St. Agnes, Cape May Point, gets no times in either bulletin. Schedule is identical in the Nov 8 and Nov 15 issues and on the website: Sat 4 PM, Sun 8:30/10:30/6 PM, Mon-Fri 11 AM, first-Saturday 9 AM Mass, Confession Sat 3 PM and Tue/Thu after the 11 AM Mass, first-Friday Adoration 9-11 AM. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "4a62d94576ba18e96c6d9e0fb927809ba4f26c276805288e4fe57c6bea594a91",
+      "fetched_at": "2026-11-15T16:47:40Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "faf6c447e51c8b4e36a8b0db8465897cb1277407729026c82b175e27045d12e1",
+      "fetched_at": "2026-11-08T15:56:00Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-cape-may",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4a62d945",
+          "page": 1,
+          "said": "Current Mass Schedule ... Saturday: 4:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "faf6c447",
+          "page": 1,
+          "said": "Saturday: 4:00PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ladystarofthesea.org/olss/",
+          "said": "Current Mass Schedule at Our Lady Star of the Sea Sat. 4:00PM Sun. 8:30, 10:30AM and 6:00PM"
+        }
+      ],
+      "rationale": "R1: printed in the Current Mass Schedule box of both bulletins and in each week's intentions; the website heads the same schedule 'Current Mass Schedule at Our Lady Star of the Sea'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-cape-may",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4a62d945",
+          "page": 1,
+          "said": "Sunday: 8:30, 10:30 (Live Stream as well) 6:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "faf6c447",
+          "page": 1,
+          "said": "Sunday: 8:30, 10:30 (Live Stream as well) 6:00PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in the intentions; website places it at Our Lady Star of the Sea.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-cape-may",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4a62d945",
+          "page": 1,
+          "said": "Sunday: 8:30, 10:30 (Live Stream as well) 6:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "faf6c447",
+          "page": 1,
+          "said": "Sunday: 8:30, 10:30 (Live Stream as well) 6:00PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in the intentions; website places it at Our Lady Star of the Sea.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-cape-may",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4a62d945",
+          "page": 1,
+          "said": "Sunday: 8:30, 10:30 (Live Stream as well) 6:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "faf6c447",
+          "page": 1,
+          "said": "Sunday: 8:30, 10:30 (Live Stream as well) 6:00PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in the intentions; website places it at Our Lady Star of the Sea.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-cape-may",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4a62d945",
+          "page": 1,
+          "said": "Daily Mass: Monday - Friday @ 11:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "faf6c447",
+          "page": 1,
+          "said": "Daily Mass: Monday - Friday @ 11:00AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in each weekday's intentions (p2); website: 'Daily Mass: Mon. - Fri. 11:00 AM Star of the Sea'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-cape-may",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4a62d945",
+          "page": 1,
+          "said": "Daily Mass: Monday - Friday @ 11:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "faf6c447",
+          "page": 1,
+          "said": "Daily Mass: Monday - Friday @ 11:00AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in each weekday's intentions (p2); website: 'Daily Mass: Mon. - Fri. 11:00 AM Star of the Sea'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-cape-may",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4a62d945",
+          "page": 1,
+          "said": "Daily Mass: Monday - Friday @ 11:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "faf6c447",
+          "page": 1,
+          "said": "Daily Mass: Monday - Friday @ 11:00AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in each weekday's intentions (p2); website: 'Daily Mass: Mon. - Fri. 11:00 AM Star of the Sea'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-cape-may",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4a62d945",
+          "page": 1,
+          "said": "Daily Mass: Monday - Friday @ 11:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "faf6c447",
+          "page": 1,
+          "said": "Daily Mass: Monday - Friday @ 11:00AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in each weekday's intentions (p2); website: 'Daily Mass: Mon. - Fri. 11:00 AM Star of the Sea'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-cape-may",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4a62d945",
+          "page": 1,
+          "said": "Daily Mass: Monday - Friday @ 11:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "faf6c447",
+          "page": 1,
+          "said": "Daily Mass: Monday - Friday @ 11:00AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in each weekday's intentions (p2); website: 'Daily Mass: Mon. - Fri. 11:00 AM Star of the Sea'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-cape-may",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4a62d945",
+          "page": 1,
+          "said": "Mass the 1st Saturday of Each Month: 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "faf6c447",
+          "page": 2,
+          "said": "SATURDAY, November 7 9;00a John Tice, Jr."
+        }
+      ],
+      "rationale": "R1: the newest schedule box names the first-Saturday Mass; the Nov 7 (first Saturday) intentions confirm a 9:00 AM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-cape-may",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4a62d945",
+          "page": 1,
+          "said": "Confessions: Saturday 3:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a62d945",
+          "page": 7,
+          "said": "CONFESSIONS Saturday: 3:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "faf6c447",
+          "page": 1,
+          "said": "Confessions: Saturday 3:00PM"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins; no end time given, so none recorded (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-cape-may",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "after the 11:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4a62d945",
+          "page": 1,
+          "said": "Confessions: Tues. & Thurs. after 11:00AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a62d945",
+          "page": 7,
+          "said": "Tuesday and Thursday: after the 11:00AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "faf6c447",
+          "page": 1,
+          "said": "Tues. & Thurs. after 11:00AM Mass"
+        }
+      ],
+      "rationale": "R10: after a weekday Mass is 30 minutes after it starts; printed in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-cape-may",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "after the 11:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4a62d945",
+          "page": 1,
+          "said": "Confessions: Tues. & Thurs. after 11:00AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a62d945",
+          "page": 7,
+          "said": "Tuesday and Thursday: after the 11:00AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "faf6c447",
+          "page": 1,
+          "said": "Tues. & Thurs. after 11:00AM Mass"
+        }
+      ],
+      "rationale": "R10: after a weekday Mass is 30 minutes after it starts; printed in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-cape-may",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "11:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4a62d945",
+          "page": 1,
+          "said": "Eucharistic Adoration: 1st Friday of Each Month 9:00 - 11:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "faf6c447",
+          "page": 1,
+          "said": "Eucharistic Adoration: 1st Friday of Each Month 9:00 - 11:00AM"
+        }
+      ],
+      "rationale": "R1: the newest schedule box prints it by name; also in the Nov 8 issue and on the website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-cape-may",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Church open for private prayer"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4a62d945",
+          "page": 1,
+          "said": "Church Open for Private Prayer: Mon. - Fri. 9:30AM - 4:00PM"
+        }
+      ],
+      "rationale": "R38/POLICY, Churches and chapels: the church merely being open for prayer is not an Adoration schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-cape-may",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Church open for private prayer"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4a62d945",
+          "page": 1,
+          "said": "Church Open for Private Prayer: Mon. - Fri. 9:30AM - 4:00PM"
+        }
+      ],
+      "rationale": "R38/POLICY, Churches and chapels: the church merely being open for prayer is not an Adoration schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-cape-may",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Church open for private prayer"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4a62d945",
+          "page": 1,
+          "said": "Church Open for Private Prayer: Mon. - Fri. 9:30AM - 4:00PM"
+        }
+      ],
+      "rationale": "R38/POLICY, Churches and chapels: the church merely being open for prayer is not an Adoration schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-cape-may",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Church open for private prayer"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4a62d945",
+          "page": 1,
+          "said": "Church Open for Private Prayer: Mon. - Fri. 9:30AM - 4:00PM"
+        }
+      ],
+      "rationale": "R38/POLICY, Churches and chapels: the church merely being open for prayer is not an Adoration schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-cape-may",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Church open for private prayer"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4a62d945",
+          "page": 1,
+          "said": "Church Open for Private Prayer: Mon. - Fri. 9:30AM - 4:00PM"
+        }
+      ],
+      "rationale": "R38/POLICY, Churches and chapels: the church merely being open for prayer is not an Adoration schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4a62d945",
+          "page": 1,
+          "said": "Daily Mass ... Rosary 10:30AM"
+        }
+      ],
+      "rationale": "R24: the Rosary before daily Mass is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4a62d945",
+          "page": 6,
+          "said": "join with fellow grandparents for mass ... Nov. 23rd - after the 9AM daily Mass; Where: St. John Neumann Church Parish Office"
+        }
+      ],
+      "rationale": "R22: the 9 AM daily Mass is at St. John Neumann, another parish, not at this parish's churches.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4a62d945",
+          "page": 4,
+          "said": "Diocesan Wedding Anniversary Mass, Sunday November 15, 2026 at 3 PM, Saint Mary of Mount Carmel Parish, Hammonton"
+        }
+      ],
+      "rationale": "R22: held at another parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

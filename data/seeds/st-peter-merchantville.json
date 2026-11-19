@@ -1,0 +1,1258 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-peter-merchantville",
+  "status": "approved",
+  "as_of": "2026-11-15T16:48:05Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T13:35:09Z",
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:30:37Z",
+  "summary": "One church. Mass (Sat 4 PM vigil; Sun 8:30, 10:30, 7 PM; Mon-Sat 9 AM) and Confession (Tue noon-12:30; Sat 2:30-3:30 and 6:30-7 PM) agree in both bulletins (Nov 8 and Nov 15) and on the website. Open: Mon-Fri 7:15 AM-8 PM Adoration in the parish Adoration Chapel, whose hours come from the website and the Nov 8 pastor's letter but whose location is not stated; and the chapel's Nov 26-27 closures.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "f465bcf571103a4c1f86e3c68e7a3207d77197f526bdeef784415be8f878d39f",
+      "fetched_at": "2026-11-15T16:48:05Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "deca8d52b243563570c320556731bb90e6dc075208e6c2825a0fe39c8d8645c1",
+      "fetched_at": "2026-11-08T15:56:18Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-merchantville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f465bcf5",
+          "page": 1,
+          "said": "MASS SCHEDULE Saturday Evening ....4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "deca8d52",
+          "page": 1,
+          "said": "MASS SCHEDULE Saturday Evening ....4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f465bcf5",
+          "page": 3,
+          "said": "Saturday 4:00 PM (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "deca8d52",
+          "page": 3,
+          "said": "Saturday 4:00 PM (Mass intentions)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box and the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-merchantville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f465bcf5",
+          "page": 1,
+          "said": "Sunday ....8:30, 10:30 and 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "deca8d52",
+          "page": 1,
+          "said": "Sunday ....8:30, 10:30 and 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f465bcf5",
+          "page": 3,
+          "said": "Sunday 8:30 AM, 10:30 AM, 7:00 PM (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "deca8d52",
+          "page": 3,
+          "said": "Sunday 8:30 AM, 10:30 AM, 7:00 PM (Mass intentions)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box and the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-merchantville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f465bcf5",
+          "page": 1,
+          "said": "Sunday ....8:30, 10:30 and 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "deca8d52",
+          "page": 1,
+          "said": "Sunday ....8:30, 10:30 and 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f465bcf5",
+          "page": 3,
+          "said": "Sunday 8:30 AM, 10:30 AM, 7:00 PM (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "deca8d52",
+          "page": 3,
+          "said": "Sunday 8:30 AM, 10:30 AM, 7:00 PM (Mass intentions)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box and the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-merchantville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f465bcf5",
+          "page": 1,
+          "said": "Sunday ....8:30, 10:30 and 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "deca8d52",
+          "page": 1,
+          "said": "Sunday ....8:30, 10:30 and 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f465bcf5",
+          "page": 3,
+          "said": "Sunday 8:30 AM, 10:30 AM, 7:00 PM (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "deca8d52",
+          "page": 3,
+          "said": "Sunday 8:30 AM, 10:30 AM, 7:00 PM (Mass intentions)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box and the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-merchantville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f465bcf5",
+          "page": 1,
+          "said": "Weekdays ....9:00am  Saturdays ....9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "deca8d52",
+          "page": 1,
+          "said": "Weekdays ....9:00am  Saturdays ....9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f465bcf5",
+          "page": 3,
+          "said": "9:00 AM intention each day Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "deca8d52",
+          "page": 3,
+          "said": "9:00 AM intention each day Monday through Saturday"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box gives weekdays and Saturdays 9:00am; the intentions of both bulletins list 9:00 AM Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-merchantville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f465bcf5",
+          "page": 1,
+          "said": "Weekdays ....9:00am  Saturdays ....9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "deca8d52",
+          "page": 1,
+          "said": "Weekdays ....9:00am  Saturdays ....9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f465bcf5",
+          "page": 3,
+          "said": "9:00 AM intention each day Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "deca8d52",
+          "page": 3,
+          "said": "9:00 AM intention each day Monday through Saturday"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box gives weekdays and Saturdays 9:00am; the intentions of both bulletins list 9:00 AM Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-merchantville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f465bcf5",
+          "page": 1,
+          "said": "Weekdays ....9:00am  Saturdays ....9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "deca8d52",
+          "page": 1,
+          "said": "Weekdays ....9:00am  Saturdays ....9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f465bcf5",
+          "page": 3,
+          "said": "9:00 AM intention each day Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "deca8d52",
+          "page": 3,
+          "said": "9:00 AM intention each day Monday through Saturday"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box gives weekdays and Saturdays 9:00am; the intentions of both bulletins list 9:00 AM Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-merchantville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f465bcf5",
+          "page": 1,
+          "said": "Weekdays ....9:00am  Saturdays ....9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "deca8d52",
+          "page": 1,
+          "said": "Weekdays ....9:00am  Saturdays ....9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f465bcf5",
+          "page": 3,
+          "said": "9:00 AM intention each day Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "deca8d52",
+          "page": 3,
+          "said": "9:00 AM intention each day Monday through Saturday"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box gives weekdays and Saturdays 9:00am; the intentions of both bulletins list 9:00 AM Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-merchantville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f465bcf5",
+          "page": 1,
+          "said": "Weekdays ....9:00am  Saturdays ....9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "deca8d52",
+          "page": 1,
+          "said": "Weekdays ....9:00am  Saturdays ....9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f465bcf5",
+          "page": 3,
+          "said": "9:00 AM intention each day Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "deca8d52",
+          "page": 3,
+          "said": "9:00 AM intention each day Monday through Saturday"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box gives weekdays and Saturdays 9:00am; the intentions of both bulletins list 9:00 AM Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-merchantville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f465bcf5",
+          "page": 1,
+          "said": "Weekdays ....9:00am  Saturdays ....9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "deca8d52",
+          "page": 1,
+          "said": "Weekdays ....9:00am  Saturdays ....9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f465bcf5",
+          "page": 3,
+          "said": "9:00 AM intention each day Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "deca8d52",
+          "page": 3,
+          "said": "9:00 AM intention each day Monday through Saturday"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box gives weekdays and Saturdays 9:00am; the intentions of both bulletins list 9:00 AM Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-merchantville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "12:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f465bcf5",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION - Tuesday 12 Noon-12:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "deca8d52",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION - Tuesday 12 Noon-12:30pm"
+        }
+      ],
+      "rationale": "R1: printed in the Sacraments section of both bulletins; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-merchantville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "14:30",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f465bcf5",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION - Saturday 2:30-3:30pm and 6:30-7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "deca8d52",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION - Saturday 2:30-3:30pm and 6:30-7:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Sacraments section of both bulletins; the website gives the same two Saturday windows.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-merchantville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f465bcf5",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION - Saturday 2:30-3:30pm and 6:30-7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "deca8d52",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION - Saturday 2:30-3:30pm and 6:30-7:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Sacraments section of both bulletins; the website gives the same two Saturday windows.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.saintpetermerchantville.com/liturgical-schedule",
+          "said": "Confessions by Appointment: Please see one of the priests or call the Rectory."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.saintpetermerchantville.com/liturgical-schedule",
+          "said": "Sunday Exposition of the Blessed Sacrament: Periodically on Sundays at 11:30 a.m."
+        }
+      ],
+      "rationale": "R24/R33: 'periodically' gives no weekly or named-week pattern and no date; nothing to record.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f465bcf5",
+          "page": 1,
+          "said": "Holy Days ....watch the bulletin for schedules"
+        }
+      ],
+      "rationale": "R26: no holy-day times printed in the bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-merchantville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.saintpetermerchantville.com/liturgical-schedule",
+          "said": "Eucharistic Adoration Monday through Friday, 7:15 a.m. to 8:00 p.m., in the Adoration Chapel."
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintpetermerchantville.com/",
+          "said": "EXPOSITION OF THE BLESSED SACRAMENT: Monday – Friday: 7:15 a.m. – 8:00 p.m. (Church opens 7:10 a.m.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "deca8d52",
+          "page": 2,
+          "said": "Remember that the chapel is open Monday-Friday, from 7:15 AM – 8:00 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "deca8d52",
+          "page": 5,
+          "said": "In order to cover all the hours of exposition in the Adoration Chapel, and thus keep it open each day, we must cover the hours listed below"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f465bcf5",
+          "page": 1,
+          "said": "Adoration Chapel: See Website"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f465bcf5",
+          "page": 5,
+          "said": "In order to cover all the hours of exposition in the Adoration Chapel, and thus keep it open each day"
+        }
+      ],
+      "rationale": "R32/R22: the hours are clear and current (website, Nov 8 pastor's letter; newest bulletin p1 refers to the website and p5 confirms daily exposition in the chapel), but no source says where the Adoration Chapel is. Leaning include: the homepage ties exposition to the church opening at 7:10 a.m. and the bulletin pairs 'Sanctuary Lamp in Church' with 'in Chapel', suggesting a chapel at St. Peter, 43 W. Maple Ave. Newest bulletin prints no hours, so page null.",
+      "question": "Include Monday-Friday Adoration 7:15 AM-8:00 PM in the parish Adoration Chapel at St. Peter?",
+      "options": [
+        {
+          "label": "Mon-Fri 7:15 AM-8:00 PM",
+          "entry": {
+            "church_slug": "st-peter-merchantville",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "07:15",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:30:37Z"
+      },
+      "group": "chapel"
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-merchantville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.saintpetermerchantville.com/liturgical-schedule",
+          "said": "Eucharistic Adoration Monday through Friday, 7:15 a.m. to 8:00 p.m., in the Adoration Chapel."
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintpetermerchantville.com/",
+          "said": "EXPOSITION OF THE BLESSED SACRAMENT: Monday – Friday: 7:15 a.m. – 8:00 p.m. (Church opens 7:10 a.m.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "deca8d52",
+          "page": 2,
+          "said": "Remember that the chapel is open Monday-Friday, from 7:15 AM – 8:00 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "deca8d52",
+          "page": 5,
+          "said": "In order to cover all the hours of exposition in the Adoration Chapel, and thus keep it open each day, we must cover the hours listed below"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f465bcf5",
+          "page": 1,
+          "said": "Adoration Chapel: See Website"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f465bcf5",
+          "page": 5,
+          "said": "In order to cover all the hours of exposition in the Adoration Chapel, and thus keep it open each day"
+        }
+      ],
+      "rationale": "R32/R22: the hours are clear and current (website, Nov 8 pastor's letter; newest bulletin p1 refers to the website and p5 confirms daily exposition in the chapel), but no source says where the Adoration Chapel is. Leaning include: the homepage ties exposition to the church opening at 7:10 a.m. and the bulletin pairs 'Sanctuary Lamp in Church' with 'in Chapel', suggesting a chapel at St. Peter, 43 W. Maple Ave. Newest bulletin prints no hours, so page null.",
+      "question": "Include Monday-Friday Adoration 7:15 AM-8:00 PM in the parish Adoration Chapel at St. Peter?",
+      "options": [
+        {
+          "label": "Mon-Fri 7:15 AM-8:00 PM",
+          "entry": {
+            "church_slug": "st-peter-merchantville",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "07:15",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:30:37Z"
+      },
+      "group": "chapel"
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-merchantville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.saintpetermerchantville.com/liturgical-schedule",
+          "said": "Eucharistic Adoration Monday through Friday, 7:15 a.m. to 8:00 p.m., in the Adoration Chapel."
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintpetermerchantville.com/",
+          "said": "EXPOSITION OF THE BLESSED SACRAMENT: Monday – Friday: 7:15 a.m. – 8:00 p.m. (Church opens 7:10 a.m.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "deca8d52",
+          "page": 2,
+          "said": "Remember that the chapel is open Monday-Friday, from 7:15 AM – 8:00 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "deca8d52",
+          "page": 5,
+          "said": "In order to cover all the hours of exposition in the Adoration Chapel, and thus keep it open each day, we must cover the hours listed below"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f465bcf5",
+          "page": 1,
+          "said": "Adoration Chapel: See Website"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f465bcf5",
+          "page": 5,
+          "said": "In order to cover all the hours of exposition in the Adoration Chapel, and thus keep it open each day"
+        }
+      ],
+      "rationale": "R32/R22: the hours are clear and current (website, Nov 8 pastor's letter; newest bulletin p1 refers to the website and p5 confirms daily exposition in the chapel), but no source says where the Adoration Chapel is. Leaning include: the homepage ties exposition to the church opening at 7:10 a.m. and the bulletin pairs 'Sanctuary Lamp in Church' with 'in Chapel', suggesting a chapel at St. Peter, 43 W. Maple Ave. Newest bulletin prints no hours, so page null.",
+      "question": "Include Monday-Friday Adoration 7:15 AM-8:00 PM in the parish Adoration Chapel at St. Peter?",
+      "options": [
+        {
+          "label": "Mon-Fri 7:15 AM-8:00 PM",
+          "entry": {
+            "church_slug": "st-peter-merchantville",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "07:15",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:30:37Z"
+      },
+      "group": "chapel"
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-merchantville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.saintpetermerchantville.com/liturgical-schedule",
+          "said": "Eucharistic Adoration Monday through Friday, 7:15 a.m. to 8:00 p.m., in the Adoration Chapel."
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintpetermerchantville.com/",
+          "said": "EXPOSITION OF THE BLESSED SACRAMENT: Monday – Friday: 7:15 a.m. – 8:00 p.m. (Church opens 7:10 a.m.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "deca8d52",
+          "page": 2,
+          "said": "Remember that the chapel is open Monday-Friday, from 7:15 AM – 8:00 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "deca8d52",
+          "page": 5,
+          "said": "In order to cover all the hours of exposition in the Adoration Chapel, and thus keep it open each day, we must cover the hours listed below"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f465bcf5",
+          "page": 1,
+          "said": "Adoration Chapel: See Website"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f465bcf5",
+          "page": 5,
+          "said": "In order to cover all the hours of exposition in the Adoration Chapel, and thus keep it open each day"
+        }
+      ],
+      "rationale": "R32/R22: the hours are clear and current (website, Nov 8 pastor's letter; newest bulletin p1 refers to the website and p5 confirms daily exposition in the chapel), but no source says where the Adoration Chapel is. Leaning include: the homepage ties exposition to the church opening at 7:10 a.m. and the bulletin pairs 'Sanctuary Lamp in Church' with 'in Chapel', suggesting a chapel at St. Peter, 43 W. Maple Ave. Newest bulletin prints no hours, so page null.",
+      "question": "Include Monday-Friday Adoration 7:15 AM-8:00 PM in the parish Adoration Chapel at St. Peter?",
+      "options": [
+        {
+          "label": "Mon-Fri 7:15 AM-8:00 PM",
+          "entry": {
+            "church_slug": "st-peter-merchantville",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "07:15",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:30:37Z"
+      },
+      "group": "chapel"
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-merchantville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.saintpetermerchantville.com/liturgical-schedule",
+          "said": "Eucharistic Adoration Monday through Friday, 7:15 a.m. to 8:00 p.m., in the Adoration Chapel."
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintpetermerchantville.com/",
+          "said": "EXPOSITION OF THE BLESSED SACRAMENT: Monday – Friday: 7:15 a.m. – 8:00 p.m. (Church opens 7:10 a.m.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "deca8d52",
+          "page": 2,
+          "said": "Remember that the chapel is open Monday-Friday, from 7:15 AM – 8:00 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "deca8d52",
+          "page": 5,
+          "said": "In order to cover all the hours of exposition in the Adoration Chapel, and thus keep it open each day, we must cover the hours listed below"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f465bcf5",
+          "page": 1,
+          "said": "Adoration Chapel: See Website"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f465bcf5",
+          "page": 5,
+          "said": "In order to cover all the hours of exposition in the Adoration Chapel, and thus keep it open each day"
+        }
+      ],
+      "rationale": "R32/R22: the hours are clear and current (website, Nov 8 pastor's letter; newest bulletin p1 refers to the website and p5 confirms daily exposition in the chapel), but no source says where the Adoration Chapel is. Leaning include: the homepage ties exposition to the church opening at 7:10 a.m. and the bulletin pairs 'Sanctuary Lamp in Church' with 'in Chapel', suggesting a chapel at St. Peter, 43 W. Maple Ave. Newest bulletin prints no hours, so page null.",
+      "question": "Include Monday-Friday Adoration 7:15 AM-8:00 PM in the parish Adoration Chapel at St. Peter?",
+      "options": [
+        {
+          "label": "Mon-Fri 7:15 AM-8:00 PM",
+          "entry": {
+            "church_slug": "st-peter-merchantville",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "07:15",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:30:37Z"
+      },
+      "group": "chapel"
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-merchantville",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "07:15",
+        "end_time": "20:00",
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel; Thanksgiving"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f465bcf5",
+          "page": 5,
+          "said": "CHAPEL IS CLOSED November 26 and 27"
+        }
+      ],
+      "rationale": "R16, R27: the newest bulletin closes the chapel on Thanksgiving and the day after. Kept as its own question so rejecting the weekly Adoration does not decide it; include only if the weekday Adoration is included.",
+      "question": "Record the Adoration Chapel closures on November 26 and 27 (only if weekday Adoration is kept)?",
+      "options": [
+        {
+          "label": "Record both closures",
+          "entry": {
+            "church_slug": "st-peter-merchantville",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-26",
+            "start_time": "07:15",
+            "end_time": "20:00",
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel; Thanksgiving"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:30:37Z"
+      },
+      "group": "chapel-closed"
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-merchantville",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "07:15",
+        "end_time": "20:00",
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel; day after Thanksgiving"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f465bcf5",
+          "page": 5,
+          "said": "CHAPEL IS CLOSED November 26 and 27"
+        }
+      ],
+      "rationale": "R16, R27: the newest bulletin closes the chapel on Thanksgiving and the day after. Kept as its own question so rejecting the weekly Adoration does not decide it; include only if the weekday Adoration is included.",
+      "question": "Record the Adoration Chapel closures on November 26 and 27 (only if weekday Adoration is kept)?",
+      "options": [
+        {
+          "label": "Record both closures",
+          "entry": {
+            "church_slug": "st-peter-merchantville",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-27",
+            "start_time": "07:15",
+            "end_time": "20:00",
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel; day after Thanksgiving"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:30:37Z"
+      },
+      "group": "chapel-closed"
+    }
+  ]
+}

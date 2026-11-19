@@ -1,0 +1,775 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-the-worker-haddon-township",
+  "status": "approved",
+  "as_of": "2026-11-15T16:47:58Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T13:09:06Z",
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:30:21Z",
+  "summary": "Two churches, St. Aloysius (Oaklyn) and St. Vincent Pallotti (Haddon Twp). The page-1 schedule box is identical in the Nov 8 and Nov 15 bulletins (newest is image-only, read from renders): weekend Masses, weekday 8:30 Masses, first-Friday Mass and Adoration, Saturday confessions; plus the Christmas Eve 4 PM Mass at SVP. Open: whether to add the Nov 24 Thanksgiving Children's Mass, which has no definite start time.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "12b3b3fe375836e9b09dc697b4e320022e0f40f56c0333feb781672526411c79",
+      "fetched_at": "2026-11-15T16:47:58Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "553945d75d14eb777de52359e49ad7960fb3937f0630f4e23d9f7f86b3db173e",
+      "fetched_at": "2026-11-08T15:56:14Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-oaklyn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "12b3b3fe",
+          "page": 1,
+          "said": "Weekend Mass Times 4 pm, Saturday SA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "553945d7",
+          "page": 1,
+          "said": "Weekend Mass Times 4 pm, Saturday SA"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins; the intentions list 4:00pm SA each Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-pallotti-haddon-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "12b3b3fe",
+          "page": 1,
+          "said": "Weekend Mass Times 5 pm, Saturday SVP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "553945d7",
+          "page": 1,
+          "said": "Weekend Mass Times 5 pm, Saturday SVP"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins; the intentions list 5:00pm SVP each Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-pallotti-haddon-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "12b3b3fe",
+          "page": 1,
+          "said": "8:30 am, Sunday SVP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "553945d7",
+          "page": 1,
+          "said": "8:30 am, Sunday SVP"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-oaklyn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "12b3b3fe",
+          "page": 1,
+          "said": "10 am, Sunday SA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "553945d7",
+          "page": 1,
+          "said": "10 am, Sunday SA"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-pallotti-haddon-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "12b3b3fe",
+          "page": 1,
+          "said": "11 am, Sunday SVP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "553945d7",
+          "page": 1,
+          "said": "11 am, Sunday SVP"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-pallotti-haddon-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "12b3b3fe",
+          "page": 1,
+          "said": "Weekday Mass 8:30 am, M, T, Fri., Sat. SVP Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "553945d7",
+          "page": 1,
+          "said": "Weekday Mass 8:30 am, M, T, Fri., Sat. SVP Chapel"
+        }
+      ],
+      "rationale": "R1: weekday schedule box of both bulletins; page 2 intentions list 8:30am SVP Chapel for these days. POLICY, Churches: the chapel of SVP belongs to SVP.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-pallotti-haddon-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "12b3b3fe",
+          "page": 1,
+          "said": "Weekday Mass 8:30 am, M, T, Fri., Sat. SVP Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "553945d7",
+          "page": 1,
+          "said": "Weekday Mass 8:30 am, M, T, Fri., Sat. SVP Chapel"
+        }
+      ],
+      "rationale": "R1: weekday schedule box of both bulletins; page 2 intentions list 8:30am SVP Chapel for these days. POLICY, Churches: the chapel of SVP belongs to SVP.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-pallotti-haddon-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "12b3b3fe",
+          "page": 1,
+          "said": "Weekday Mass 8:30 am, M, T, Fri., Sat. SVP Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "553945d7",
+          "page": 1,
+          "said": "Weekday Mass 8:30 am, M, T, Fri., Sat. SVP Chapel"
+        }
+      ],
+      "rationale": "R1: weekday schedule box of both bulletins; page 2 intentions list 8:30am SVP Chapel for these days. POLICY, Churches: the chapel of SVP belongs to SVP.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-oaklyn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "12b3b3fe",
+          "page": 1,
+          "said": "8:30 am, Thursdays SA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "553945d7",
+          "page": 1,
+          "said": "8:30 am, Thursdays SA"
+        }
+      ],
+      "rationale": "R1: weekday schedule box of both bulletins; page 2 intentions list Thu 8:30am SA.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-pallotti-haddon-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second",
+          "third",
+          "fourth",
+          "fifth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "12b3b3fe",
+          "page": 1,
+          "said": "8:30 am, M, T, Fri., Sat. SVP Chapel / 8:30 am, 1st Fri. of mo. SVP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "553945d7",
+          "page": 1,
+          "said": "8:30 am, M, T, Fri., Sat. SVP Chapel / 8:30 am, 1st Fri. of mo. SVP"
+        }
+      ],
+      "rationale": "R1: the box lists Friday 8:30 in the SVP Chapel and separately '1st Fri. of mo. SVP' (no 'Chapel'), so the chapel note is kept off first Fridays; the first-Friday Mass is its own slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-pallotti-haddon-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "12b3b3fe",
+          "page": 1,
+          "said": "8:30 am, 1st Fri. of mo. SVP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "553945d7",
+          "page": 1,
+          "said": "8:30 am, 1st Fri. of mo. SVP"
+        }
+      ],
+      "rationale": "R1, R12: named first-Friday line in the schedule box of both bulletins (neither week holds a first Friday, but the standing box prints it).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-pallotti-haddon-township",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "12b3b3fe",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament 9-10 am, 1st Fri. of mo. SVP (Hospitality in the Chapel after.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "553945d7",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament 9-10 am, 1st Fri. of mo. SVP (Hospitality in the Chapel after.)"
+        }
+      ],
+      "rationale": "R1, R12: named first-Friday Adoration in the schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-oaklyn",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "12b3b3fe",
+          "page": 1,
+          "said": "Confessions 3 pm - 3:45 pm, Sat. SA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "553945d7",
+          "page": 1,
+          "said": "Confessions 3 pm - 3:45 pm, Sat. SA"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-pallotti-haddon-township",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "12b3b3fe",
+          "page": 1,
+          "said": "Confessions 4 pm - 4:45 pm, Sat. SVP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "553945d7",
+          "page": 1,
+          "said": "Confessions 4 pm - 4:45 pm, Sat. SVP"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-pallotti-haddon-township",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "12b3b3fe",
+          "page": 4,
+          "said": "Nativity Play ... held on Christmas Eve at 3:30 PM, before the 4:00 PM Mass at St. Vincent Pallotti Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "553945d7",
+          "page": 4,
+          "said": "Nativity Play ... held on Christmas Eve at 3:30 PM, before the 4:00 PM Mass at St. Vincent Pallotti Church"
+        }
+      ],
+      "rationale": "R1, R16: a dated holiday Mass outside the weekly schedule (POLICY, Weekly or dated rule 7), clearly placed and timed, after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "12b3b3fe",
+          "page": 1,
+          "said": "Holy Days of Obligation 8:30 am & 12 Noon at SVP; 6 pm at SA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "553945d7",
+          "page": 1,
+          "said": "Holy Days of Obligation 8:30 am & 12 Noon at SVP; 6 pm at SA"
+        }
+      ],
+      "rationale": "POLICY, Dates: the holy-day times name no date, and dates are never projected; update mode will read the bulletins that date each holy day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-oaklyn",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day, Blessing of Food"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "12b3b3fe",
+          "page": 3,
+          "said": "Blessing of Food during the 8:30am daily Mass on Thanksgiving Day, 11/26 at St. Aloysius"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7: the occasion is celebrated at the regular Thursday 8:30 AM SA Mass, already a weekly slot; not recorded separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-camden",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-20",
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Catholic Business Network"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "12b3b3fe",
+          "page": 4,
+          "said": "Prayer & Mass at 8:15 AM in St. Bartholomew Church of Sacred Heart Parish"
+        }
+      ],
+      "rationale": "R22: St. Bartholomew, Camden belongs to Sacred Heart Parish (seed church), not this parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-pallotti-haddon-township",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-24",
+        "start_time": "15:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Children's Mass"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "12b3b3fe",
+          "page": 6,
+          "said": "Tuesday, Nov. 24th - 3:45-5:00 classes held in SVP Church for a Thanksgiving Children's Mass. Mass is open to all parishioners."
+        }
+      ],
+      "rationale": "R30: open to all, but POLICY skips events without a definite start time and the 3:45 is the class block's start; leaning leave out since a wrong time is worse than a missing one.",
+      "question": "Add the Thanksgiving Children's Mass on Tue Nov 24 at SVP? The bulletin gives only the class block 3:45-5:00, not the Mass's start.",
+      "options": [
+        {
+          "label": "Tue Nov 24, 3:45 PM at SVP",
+          "entry": {
+            "church_slug": "st-vincent-pallotti-haddon-township",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-24",
+            "start_time": "15:45",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Thanksgiving Children's Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:30:21Z"
+      }
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "12b3b3fe",
+          "page": 10,
+          "said": "Healing Mass Celebrated by Fr. René ... December 5, 2026 10am St. Luke Church"
+        }
+      ],
+      "rationale": "R22: held at St. Luke Church, not one of this parish's churches and not found in the church list for this area; left out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

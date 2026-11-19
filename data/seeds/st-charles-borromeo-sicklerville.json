@@ -1,0 +1,781 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-charles-borromeo-sicklerville",
+  "status": "approved",
+  "as_of": "2026-11-15T16:47:42Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-16T21:51:29Z",
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:30:02Z",
+  "summary": "One church, St. Charles Borromeo, Sicklerville; two bulletins (Nov 8 and Nov 15, 2026, image-only PDFs read as rendered pages) agree on Sat 4 PM, Sun 7:30/9/11 AM, Mon-Fri 9 AM in the on-campus Emmaus Chapel and Sat 3-3:30 PM confession; the website matches. Dated: a Nov 18 family Holy Hour and the Dec 24 4 PM Christmas Eve Family Mass. Open: whether the Holy Childhood Association's Monday 7-8 PM hour before the Blessed Sacrament counts as Adoration (leaning leave out).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "11a51e7cae21ff8ce581b823df0bbd5d9b30f29a1a8266c3e91ba34007984220",
+      "fetched_at": "2026-11-15T16:47:42Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "48bb22756f0e83bde8a06e228993d5e7de48e452f496ddbf69c3611fbc14041c",
+      "fetched_at": "2026-11-08T15:56:04Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-sicklerville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a51e7c",
+          "page": 1,
+          "said": "WEEKEND MASSES Saturday Vigil Mass 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48bb2275",
+          "page": 1,
+          "said": "WEEKEND MASSES Saturday Vigil Mass 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "11a51e7c",
+          "page": 2,
+          "said": "Saturday ... 4:00 (Mass Intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48bb2275",
+          "page": 2,
+          "said": "Saturday ... 4:00 (Mass Intentions)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box and the Mass intentions of both bulletins read (Nov 8 and Nov 15); the website gives Saturday 4 pm Vigil.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-sicklerville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a51e7c",
+          "page": 1,
+          "said": "Sunday Masses - 7:30am, 9am & 11am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48bb2275",
+          "page": 1,
+          "said": "Sunday Masses - 7:30am, 9am & 11am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "11a51e7c",
+          "page": 2,
+          "said": "Sunday ... 7:30 / 9:00 / 11:00 (Mass Intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48bb2275",
+          "page": 2,
+          "said": "Sunday ... 7:30 / 9:00 / 11:00 (Mass Intentions)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box and the Mass intentions of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-sicklerville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a51e7c",
+          "page": 1,
+          "said": "Sunday Masses - 7:30am, 9am & 11am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48bb2275",
+          "page": 1,
+          "said": "Sunday Masses - 7:30am, 9am & 11am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "11a51e7c",
+          "page": 2,
+          "said": "Sunday ... 7:30 / 9:00 / 11:00 (Mass Intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48bb2275",
+          "page": 2,
+          "said": "Sunday ... 7:30 / 9:00 / 11:00 (Mass Intentions)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box and the Mass intentions of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-sicklerville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a51e7c",
+          "page": 1,
+          "said": "Sunday Masses - 7:30am, 9am & 11am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48bb2275",
+          "page": 1,
+          "said": "Sunday Masses - 7:30am, 9am & 11am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "11a51e7c",
+          "page": 2,
+          "said": "Sunday ... 7:30 / 9:00 / 11:00 (Mass Intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48bb2275",
+          "page": 2,
+          "said": "Sunday ... 7:30 / 9:00 / 11:00 (Mass Intentions)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box and the Mass intentions of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-sicklerville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Emmaus Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a51e7c",
+          "page": 1,
+          "said": "Weekday Masses 9:00 am (Mon-Fri) in Emmaus Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48bb2275",
+          "page": 1,
+          "said": "Weekday Masses 9:00 am (Mon-Fri) in Emmaus Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "11a51e7c",
+          "page": 2,
+          "said": "Monday-Friday 9AM / 9:00 (Mass Intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48bb2275",
+          "page": 2,
+          "said": "Monday-Friday 9AM / 9:00 (Mass Intentions)"
+        }
+      ],
+      "rationale": "R1, R35; POLICY, Churches and chapels: in the schedule box and the intentions of both bulletins. Emmaus Chapel is the parish's own weekday chapel on the single St. Charles campus (176 Stagecoach Rd; the Nov 8 issue p3 places the 'adoration chapel' 'on the campus of St. Charles Borromeo'), so it belongs to the church, named in a note. Website: 'Mon-Fri - 9:00am in Chapel'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-sicklerville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Emmaus Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a51e7c",
+          "page": 1,
+          "said": "Weekday Masses 9:00 am (Mon-Fri) in Emmaus Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48bb2275",
+          "page": 1,
+          "said": "Weekday Masses 9:00 am (Mon-Fri) in Emmaus Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "11a51e7c",
+          "page": 2,
+          "said": "Monday-Friday 9AM / 9:00 (Mass Intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48bb2275",
+          "page": 2,
+          "said": "Monday-Friday 9AM / 9:00 (Mass Intentions)"
+        }
+      ],
+      "rationale": "R1, R35; POLICY, Churches and chapels: in the schedule box and the intentions of both bulletins. Emmaus Chapel is the parish's own weekday chapel on the single St. Charles campus (176 Stagecoach Rd; the Nov 8 issue p3 places the 'adoration chapel' 'on the campus of St. Charles Borromeo'), so it belongs to the church, named in a note. Website: 'Mon-Fri - 9:00am in Chapel'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-sicklerville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Emmaus Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a51e7c",
+          "page": 1,
+          "said": "Weekday Masses 9:00 am (Mon-Fri) in Emmaus Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48bb2275",
+          "page": 1,
+          "said": "Weekday Masses 9:00 am (Mon-Fri) in Emmaus Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "11a51e7c",
+          "page": 2,
+          "said": "Monday-Friday 9AM / 9:00 (Mass Intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48bb2275",
+          "page": 2,
+          "said": "Monday-Friday 9AM / 9:00 (Mass Intentions)"
+        }
+      ],
+      "rationale": "R1, R35; POLICY, Churches and chapels: in the schedule box and the intentions of both bulletins. Emmaus Chapel is the parish's own weekday chapel on the single St. Charles campus (176 Stagecoach Rd; the Nov 8 issue p3 places the 'adoration chapel' 'on the campus of St. Charles Borromeo'), so it belongs to the church, named in a note. Website: 'Mon-Fri - 9:00am in Chapel'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-sicklerville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Emmaus Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a51e7c",
+          "page": 1,
+          "said": "Weekday Masses 9:00 am (Mon-Fri) in Emmaus Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48bb2275",
+          "page": 1,
+          "said": "Weekday Masses 9:00 am (Mon-Fri) in Emmaus Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "11a51e7c",
+          "page": 2,
+          "said": "Monday-Friday 9AM / 9:00 (Mass Intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48bb2275",
+          "page": 2,
+          "said": "Monday-Friday 9AM / 9:00 (Mass Intentions)"
+        }
+      ],
+      "rationale": "R1, R35; POLICY, Churches and chapels: in the schedule box and the intentions of both bulletins. Emmaus Chapel is the parish's own weekday chapel on the single St. Charles campus (176 Stagecoach Rd; the Nov 8 issue p3 places the 'adoration chapel' 'on the campus of St. Charles Borromeo'), so it belongs to the church, named in a note. Website: 'Mon-Fri - 9:00am in Chapel'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-sicklerville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Emmaus Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a51e7c",
+          "page": 1,
+          "said": "Weekday Masses 9:00 am (Mon-Fri) in Emmaus Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48bb2275",
+          "page": 1,
+          "said": "Weekday Masses 9:00 am (Mon-Fri) in Emmaus Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "11a51e7c",
+          "page": 2,
+          "said": "Monday-Friday 9AM / 9:00 (Mass Intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48bb2275",
+          "page": 2,
+          "said": "Monday-Friday 9AM / 9:00 (Mass Intentions)"
+        }
+      ],
+      "rationale": "R1, R35; POLICY, Churches and chapels: in the schedule box and the intentions of both bulletins. Emmaus Chapel is the parish's own weekday chapel on the single St. Charles campus (176 Stagecoach Rd; the Nov 8 issue p3 places the 'adoration chapel' 'on the campus of St. Charles Borromeo'), so it belongs to the church, named in a note. Website: 'Mon-Fri - 9:00am in Chapel'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-sicklerville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a51e7c",
+          "page": 1,
+          "said": "Reconciliation (Confession): Saturday at 3:00pm-3:30pm in Church or by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "48bb2275",
+          "page": 1,
+          "said": "Reconciliation (Confession): Saturday at 3:00pm-3:30pm in Church or by appointment."
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the website's schedule says 'Saturday - 3:00 pm to 3:30pm' (its calendar widget shows 3:00-3:45 for Nov 21, but the printed schedule and website schedule text agree on 3:30).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a51e7c",
+          "page": 1,
+          "said": "Reconciliation ... or by appointment."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a51e7c",
+          "page": 1,
+          "said": "EMMAUS CHAPEL Open Daily (Mon-Fri) 8:00 am - 2:00 pm Closed Sat & Sun"
+        }
+      ],
+      "rationale": "R38: these are the chapel's opening hours; the bulletin never calls them Adoration, and a building being open for prayer does not establish an Adoration schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a51e7c",
+          "page": 1,
+          "said": "Rosary & Divine Mercy Chaplet: Prayed after Daily Mass (M-F)"
+        }
+      ],
+      "rationale": "R24: a Rosary and chaplet are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-sicklerville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve Family Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a51e7c",
+          "page": 3,
+          "said": "Mass Details - Mass Time: Christmas Eve, Dec 24 at 4PM. Arrival: Children must arrive in the Church by 3:30PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "48bb2275",
+          "page": 3,
+          "said": "Mass Details - Mass Time: Christmas Eve, Dec 24 at 4PM. Arrival: Children must arrive in the Church by 3:30PM."
+        }
+      ],
+      "rationale": "R1, R16: a dated Christmas Eve Family Mass in the Church, after as_of; open to all (the children's choir sings at it). Other Christmas Masses are not yet printed; update mode will read them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-sicklerville",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-18",
+        "start_time": "18:15",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Family Festival of Praise Holy Hour"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a51e7c",
+          "page": 5,
+          "said": "Wed. 11/18 - Family festival of Praise Holy Hour - 6:15pm-7pm in the Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48bb2275",
+          "page": 5,
+          "said": "Wed. 11/18 - Family festival of Praise Holy Hour - 6:15pm-7pm in the Church"
+        }
+      ],
+      "rationale": "R1, R16; POLICY, What to extract: a dated Holy Hour in the Church on or after as_of, listed among Faith Formation's 'Coming up' events with no restriction on who may attend; POLICY records a Holy Hour as Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-sicklerville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Betania X prayer group, adoration chapel"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "48bb2275",
+          "page": 3,
+          "said": "We will meet on the campus of St. Charles Borromeo in the adoration chapel this Thurs, Nov 12, and every 2nd Thursday, thereafter beginning promptly at 7pm. ... We start each session praying the Rosary, Chaplet of Divine Mercy and other prayers"
+        }
+      ],
+      "rationale": "R24: a prayer group's Rosary and Divine Mercy meeting before the reserved Sacrament, not called Adoration or a Holy Hour, with no end time and no exposition stated; the same notice also says it 'meets nearly every Thursday'. Not in the newest bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a51e7c",
+          "page": 4,
+          "said": "CHRISTIAN MEDITATION GROUP ... meets in the Chapel the first Wednesday of each month from 7-8PM."
+        }
+      ],
+      "rationale": "R24: a contemplative-prayer group meeting, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "48bb2275",
+          "page": 3,
+          "said": "Diocese of Camden ... Wedding Anniversary Mass ... Sun, Nov 15 at 3PM, St. Mary of Mount Carmel Parish, 285 Rte 206, Hammonton"
+        }
+      ],
+      "rationale": "R22: held at another parish's church; it is also already past by as_of (Nov 15, 16:47).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-sicklerville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Childhood Association"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a51e7c",
+          "page": 4,
+          "said": "The Holy Childhood Association has been meeting on Monday evenings from 7 to 8PM for the last 20 years. We spend an hour before the Blessed Sacrament praying for our families ... Please consider praying with us on Monday evenings."
+        }
+      ],
+      "rationale": "R30, R32: an open invitation to a weekly hour before the Blessed Sacrament, but the bulletin does not say where it meets, never calls it Adoration or a Holy Hour, and does not say the Sacrament is exposed; it reads as a prayer group's meeting. Printed in the newest bulletin only (not in Nov 8). Leaning leave out.",
+      "question": "Add the Holy Childhood Association's Monday 7-8 PM hour 'before the Blessed Sacrament' as weekly Adoration?",
+      "options": [
+        {
+          "label": "Mondays 7-8 PM Adoration",
+          "entry": {
+            "church_slug": "st-charles-borromeo-sicklerville",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Holy Childhood Association"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:30:02Z"
+      }
+    }
+  ]
+}

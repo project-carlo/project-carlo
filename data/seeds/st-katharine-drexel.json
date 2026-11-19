@@ -1,0 +1,515 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-katharine-drexel",
+  "status": "approved",
+  "as_of": "2026-11-15T16:17:26Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T13:14:15Z",
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:30:23Z",
+  "summary": "One church. Both bulletins read (Nov 8 and Nov 15, 2026) print the same schedule box: Sat 4:30 PM vigil, Sun 8:30/10:30 AM and 5 PM, weekdays 8 AM, Sat 9 AM, Saturday confession 3-3:45 PM, and Wednesday Adoration 8:30 AM-4 PM from mid-September through June. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "d8f67a3f331ff6d6de7d54d35581573f354cdc8c513fc8757296887dd05ffb40",
+      "fetched_at": "2026-11-15T16:17:26Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "2ad6ba74036d7bd4d72bf45ea77c5c86ae9670befa8cf6c59bd7709ee5ac240e",
+      "fetched_at": "2026-11-08T15:42:43Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-drexel-egg-harbor-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8f67a3f",
+          "page": 1,
+          "said": "Weekend Masses Saturday | 4:30pm Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ad6ba74",
+          "page": 1,
+          "said": "Weekend Masses Saturday | 4:30pm Vigil"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-drexel-egg-harbor-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8f67a3f",
+          "page": 1,
+          "said": "Sunday | 8:30am, 10:30am, & 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ad6ba74",
+          "page": 1,
+          "said": "Sunday | 8:30am, 10:30am, & 5:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-drexel-egg-harbor-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8f67a3f",
+          "page": 1,
+          "said": "Sunday | 8:30am, 10:30am, & 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ad6ba74",
+          "page": 1,
+          "said": "Sunday | 8:30am, 10:30am, & 5:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-drexel-egg-harbor-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8f67a3f",
+          "page": 1,
+          "said": "Sunday | 8:30am, 10:30am, & 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ad6ba74",
+          "page": 1,
+          "said": "Sunday | 8:30am, 10:30am, & 5:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-drexel-egg-harbor-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8f67a3f",
+          "page": 1,
+          "said": "Weekday Masses Monday - Friday| 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ad6ba74",
+          "page": 1,
+          "said": "Weekday Masses Monday - Friday| 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the intentions list 8:00 AM Masses each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-drexel-egg-harbor-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8f67a3f",
+          "page": 1,
+          "said": "Weekday Masses Monday - Friday| 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ad6ba74",
+          "page": 1,
+          "said": "Weekday Masses Monday - Friday| 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the intentions list 8:00 AM Masses each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-drexel-egg-harbor-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8f67a3f",
+          "page": 1,
+          "said": "Weekday Masses Monday - Friday| 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ad6ba74",
+          "page": 1,
+          "said": "Weekday Masses Monday - Friday| 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the intentions list 8:00 AM Masses each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-drexel-egg-harbor-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8f67a3f",
+          "page": 1,
+          "said": "Weekday Masses Monday - Friday| 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ad6ba74",
+          "page": 1,
+          "said": "Weekday Masses Monday - Friday| 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the intentions list 8:00 AM Masses each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-drexel-egg-harbor-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8f67a3f",
+          "page": 1,
+          "said": "Weekday Masses Monday - Friday| 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ad6ba74",
+          "page": 1,
+          "said": "Weekday Masses Monday - Friday| 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the intentions list 8:00 AM Masses each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-drexel-egg-harbor-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8f67a3f",
+          "page": 1,
+          "said": "Saturday| 9:00am (followed by Rosary)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ad6ba74",
+          "page": 1,
+          "said": "Saturday| 9:00am (followed by Rosary)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the Rosary after it is left out under R24.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-drexel-egg-harbor-township",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8f67a3f",
+          "page": 1,
+          "said": "Eucharistic Adoration Every Wednesday 8:30am to 4:00pm Mid-September through June"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ad6ba74",
+          "page": 1,
+          "said": "Eucharistic Adoration Every Wednesday 8:30am to 4:00pm Mid-September through June"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly qualifiers: the schedule box limits it to mid-September through June, kept as the season's months. The 2ad6ba74 issue's 'NO ADORATION' on Wed 11/11 (Veterans Day) is before as_of (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-drexel-egg-harbor-township",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Drexel Hall"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8f67a3f",
+          "page": 1,
+          "said": "Confession Saturday| 3:00pm to 3:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ad6ba74",
+          "page": 1,
+          "said": "Confession Saturday| 3:00pm to 3:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d8f67a3f",
+          "page": 4,
+          "said": "3:00 PM SAC. OF RECONCILIATION (Drexel Hall)"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins. Drexel Hall is the church's worship space (p3: the Sanctuary Candle burns in Drexel Hall), so it belongs to the parish's one church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8f67a3f",
+          "page": 1,
+          "said": "8:00am and 7:00pm Holy Day of Obligation"
+        }
+      ],
+      "rationale": "POLICY, Dates: a generic holy-day line pins no date and is not weekly; update mode will pick up dated holy-day Masses (e.g. Dec 8) when a bulletin prints them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

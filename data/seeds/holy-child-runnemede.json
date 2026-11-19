@@ -1,0 +1,947 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-child-runnemede",
+  "status": "approved",
+  "as_of": "2026-11-15T16:47:24Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-16T20:31:27Z",
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:29:21Z",
+  "summary": "Two churches (St. Teresa, St. Maria Goretti). Both bulletins are image-only and have no schedule box: Masses come from two weeks of Mass intentions in each (R35), and agree with the parish website; Confession and Adoration chapel hours are printed in both. Open: a Friday 7-8 PM Confession only the website lists, and a Dec 12 Advent Holy Hour addressed to liturgical ministers. The website's holy-day times (eve 4:15 PM, day 8:30 AM and 7 PM) were not projected to dates.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "bce0d99ae282223299aa73c779c5060dc0c8f2a642180b5958cca9682b76e7a7",
+      "fetched_at": "2026-11-15T16:47:24Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "6a0a604bce03f601f0f359234cc61072c3fcb8d15df7a4eaae9c25db2f2786e8",
+      "fetched_at": "2026-11-08T15:55:47Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-runnemede",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bce0d99a",
+          "page": 3,
+          "said": "SATURDAY ... 4:30 pm +... (ST)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a0a604b",
+          "page": 3,
+          "said": "SATURDAY ... 4:30 pm +... (ST)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.holychildparish.net/mass-information",
+          "said": "St. Teresa Church Weekend Masses Saturday 4:30PM"
+        }
+      ],
+      "rationale": "R35, POLICY Weekly or dated rule 4: the Mass intentions of both bulletins list Saturday 4:30 pm (ST) for each of the two Saturdays they cover; the website's St. Teresa schedule agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-runnemede",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bce0d99a",
+          "page": 3,
+          "said": "SUNDAY 7:00 am ... (ST); 11:00 am ... (ST)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a0a604b",
+          "page": 3,
+          "said": "SUNDAY 7:00 am ... (ST); 11:00 am ... (ST)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.holychildparish.net/mass-information",
+          "said": "St. Teresa Church Sunday 7AM, 11AM"
+        }
+      ],
+      "rationale": "R35, POLICY Weekly or dated rule 4: the Mass intentions of both bulletins list Sunday 7:00 and 11:00 am at ST (St. Teresa Church) for each Sunday they cover; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-runnemede",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bce0d99a",
+          "page": 3,
+          "said": "SUNDAY 7:00 am ... (ST); 11:00 am ... (ST)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a0a604b",
+          "page": 3,
+          "said": "SUNDAY 7:00 am ... (ST); 11:00 am ... (ST)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.holychildparish.net/mass-information",
+          "said": "St. Teresa Church Sunday 7AM, 11AM"
+        }
+      ],
+      "rationale": "R35, POLICY Weekly or dated rule 4: the Mass intentions of both bulletins list Sunday 7:00 and 11:00 am at ST (St. Teresa Church) for each Sunday they cover; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-maria-goretti-runnemede",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bce0d99a",
+          "page": 3,
+          "said": "SUNDAY 9:00 am ... (SMG)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a0a604b",
+          "page": 3,
+          "said": "SUNDAY 9:00 am ... (SMG)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.holychildparish.net/mass-information",
+          "said": "St. Maria Goretti Church Weekend Mass Sunday 9:00AM"
+        }
+      ],
+      "rationale": "R35, POLICY Weekly or dated rule 4: the Mass intentions of both bulletins list Sunday 9:00 am at SMG (St. Maria Goretti Church) for each Sunday they cover; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-runnemede",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bce0d99a",
+          "page": 3,
+          "said": "MONDAY ... SATURDAY 8:30 am ... (ST)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a0a604b",
+          "page": 3,
+          "said": "MONDAY ... SATURDAY 8:30 am ... (ST)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.holychildparish.net/mass-information",
+          "said": "Weekday Mass & Saturday's 8:30AM"
+        }
+      ],
+      "rationale": "R35: the Mass intentions of both bulletins (weeks of November 8 and 15) list 8:30 am at ST every Monday to Saturday, with no special marking; the website's St. Teresa schedule gives 'Weekday Mass & Saturday's 8:30AM'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-runnemede",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bce0d99a",
+          "page": 3,
+          "said": "MONDAY ... SATURDAY 8:30 am ... (ST)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a0a604b",
+          "page": 3,
+          "said": "MONDAY ... SATURDAY 8:30 am ... (ST)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.holychildparish.net/mass-information",
+          "said": "Weekday Mass & Saturday's 8:30AM"
+        }
+      ],
+      "rationale": "R35: the Mass intentions of both bulletins (weeks of November 8 and 15) list 8:30 am at ST every Monday to Saturday, with no special marking; the website's St. Teresa schedule gives 'Weekday Mass & Saturday's 8:30AM'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-runnemede",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bce0d99a",
+          "page": 3,
+          "said": "MONDAY ... SATURDAY 8:30 am ... (ST)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a0a604b",
+          "page": 3,
+          "said": "MONDAY ... SATURDAY 8:30 am ... (ST)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.holychildparish.net/mass-information",
+          "said": "Weekday Mass & Saturday's 8:30AM"
+        }
+      ],
+      "rationale": "R35: the Mass intentions of both bulletins (weeks of November 8 and 15) list 8:30 am at ST every Monday to Saturday, with no special marking; the website's St. Teresa schedule gives 'Weekday Mass & Saturday's 8:30AM'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-runnemede",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bce0d99a",
+          "page": 3,
+          "said": "MONDAY ... SATURDAY 8:30 am ... (ST)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a0a604b",
+          "page": 3,
+          "said": "MONDAY ... SATURDAY 8:30 am ... (ST)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.holychildparish.net/mass-information",
+          "said": "Weekday Mass & Saturday's 8:30AM"
+        }
+      ],
+      "rationale": "R35: the Mass intentions of both bulletins (weeks of November 8 and 15) list 8:30 am at ST every Monday to Saturday, with no special marking; the website's St. Teresa schedule gives 'Weekday Mass & Saturday's 8:30AM'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-runnemede",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bce0d99a",
+          "page": 3,
+          "said": "MONDAY ... SATURDAY 8:30 am ... (ST)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a0a604b",
+          "page": 3,
+          "said": "MONDAY ... SATURDAY 8:30 am ... (ST)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.holychildparish.net/mass-information",
+          "said": "Weekday Mass & Saturday's 8:30AM"
+        }
+      ],
+      "rationale": "R35: the Mass intentions of both bulletins (weeks of November 8 and 15) list 8:30 am at ST every Monday to Saturday, with no special marking; the website's St. Teresa schedule gives 'Weekday Mass & Saturday's 8:30AM'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-runnemede",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bce0d99a",
+          "page": 3,
+          "said": "MONDAY ... SATURDAY 8:30 am ... (ST)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a0a604b",
+          "page": 3,
+          "said": "MONDAY ... SATURDAY 8:30 am ... (ST)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.holychildparish.net/mass-information",
+          "said": "Weekday Mass & Saturday's 8:30AM"
+        }
+      ],
+      "rationale": "R35: the Mass intentions of both bulletins (weeks of November 8 and 15) list 8:30 am at ST every Monday to Saturday, with no special marking; the website's St. Teresa schedule gives 'Weekday Mass & Saturday's 8:30AM'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-runnemede",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bce0d99a",
+          "page": 2,
+          "said": "Confessions are taking place on : Saturday 11 am to 12 Noon & 3:45 pm to 4:15 pm at St. Teresa Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a0a604b",
+          "page": 2,
+          "said": "Confessions are taking place on : Saturday 11 am to 12 Noon & 3:45 pm to 4:15 pm at St. Teresa Church"
+        }
+      ],
+      "rationale": "R1: printed in the Confessions paragraph of both bulletins. The website lists only the 11-12 window; a missing mention is not a conflict (R6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-runnemede",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:45",
+        "end_time": "16:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bce0d99a",
+          "page": 2,
+          "said": "Confessions are taking place on : Saturday 11 am to 12 Noon & 3:45 pm to 4:15 pm at St. Teresa Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a0a604b",
+          "page": 2,
+          "said": "Confessions are taking place on : Saturday 11 am to 12 Noon & 3:45 pm to 4:15 pm at St. Teresa Church"
+        }
+      ],
+      "rationale": "R1: printed in the Confessions paragraph of both bulletins. The website lists only the 11-12 window; a missing mention is not a conflict (R6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-maria-goretti-runnemede",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": "08:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bce0d99a",
+          "page": 2,
+          "said": "and Sunday 8:15 am to 8:45 am at Saint Maria Goretti Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a0a604b",
+          "page": 2,
+          "said": "and Sunday 8:15 am to 8:45 am at Saint Maria Goretti Church"
+        },
+        {
+          "source": "website",
+          "url": "https://www.holychildparish.net/mass-information",
+          "said": "Confessions Sunday 8:15-8:45AM"
+        }
+      ],
+      "rationale": "R1: printed in the Confessions paragraph of both bulletins; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-runnemede",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bce0d99a",
+          "page": 3,
+          "said": "Adoration of the Blessed Sacrament. ST Chapel hours are as follows: Monday & Wednesday 4PM to 7PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a0a604b",
+          "page": 3,
+          "said": "Adoration of the Blessed Sacrament. ST Chapel hours are as follows: Monday & Wednesday 4PM to 7PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.holychildparish.net/adoration-chapel",
+          "said": "The Adoration Chapel is located on the west side of St. Teresa Church ... the Blessed Sacrament is exposed"
+        }
+      ],
+      "rationale": "R1, R38: the chapel-hours box of both bulletins; the website places the chapel at St. Teresa Church and says the Sacrament is exposed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-runnemede",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bce0d99a",
+          "page": 3,
+          "said": "Adoration of the Blessed Sacrament. ST Chapel hours are as follows: Monday & Wednesday 4PM to 7PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a0a604b",
+          "page": 3,
+          "said": "Adoration of the Blessed Sacrament. ST Chapel hours are as follows: Monday & Wednesday 4PM to 7PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.holychildparish.net/adoration-chapel",
+          "said": "The Adoration Chapel is located on the west side of St. Teresa Church ... the Blessed Sacrament is exposed"
+        }
+      ],
+      "rationale": "R1, R38: the chapel-hours box of both bulletins; the website places the chapel at St. Teresa Church and says the Sacrament is exposed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-runnemede",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bce0d99a",
+          "page": 3,
+          "said": "ST Chapel hours are as follows: Tuesday & Thursday 9AM to Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a0a604b",
+          "page": 3,
+          "said": "ST Chapel hours are as follows: Tuesday & Thursday 9AM to Noon"
+        },
+        {
+          "source": "website",
+          "url": "https://www.holychildparish.net/adoration-chapel",
+          "said": "The Adoration Chapel is located on the west side of St. Teresa Church"
+        }
+      ],
+      "rationale": "R1, R38: the chapel-hours box of both bulletins; the website places the chapel at St. Teresa Church. The website's older paragraph 'open Monday through Friday from 9am to 7pm' is superseded by the hours both bulletins and the site's own hours list print.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-runnemede",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bce0d99a",
+          "page": 3,
+          "said": "ST Chapel hours are as follows: Tuesday & Thursday 9AM to Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a0a604b",
+          "page": 3,
+          "said": "ST Chapel hours are as follows: Tuesday & Thursday 9AM to Noon"
+        },
+        {
+          "source": "website",
+          "url": "https://www.holychildparish.net/adoration-chapel",
+          "said": "The Adoration Chapel is located on the west side of St. Teresa Church"
+        }
+      ],
+      "rationale": "R1, R38: the chapel-hours box of both bulletins; the website places the chapel at St. Teresa Church. The website's older paragraph 'open Monday through Friday from 9am to 7pm' is superseded by the hours both bulletins and the site's own hours list print.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-runnemede",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bce0d99a",
+          "page": 3,
+          "said": "Friday (Date Night with Jesus) 7PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a0a604b",
+          "page": 3,
+          "said": "Friday (Date Night with Jesus) 7PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.holychildparish.net/mass-information",
+          "said": "Solemn Adoration of the Blessed Sacrament. Come join us every Friday at Saint Teresa Church Adoration and Confessions from 7-8PM."
+        },
+        {
+          "source": "website",
+          "url": "https://www.holychildparish.net/adoration-chapel",
+          "said": "Date Night with Jesus Friday Evenings 7PM to 8PM"
+        }
+      ],
+      "rationale": "R1, R6: both bulletins' adoration box print Friday 7PM; the parish website, whose other times match the bulletins exactly, gives the same service as 7PM to 8PM at St. Teresa Church, so the end time is 8 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-maria-goretti-runnemede",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve; Christmas Pageant"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bce0d99a",
+          "page": 7,
+          "said": "Holy Child Christmas Pageant Christmas Eve Mass, December 24, 4:30pm, @St Maria Goretti Church"
+        }
+      ],
+      "rationale": "R1, R16: a dated Christmas Eve Mass after as_of, open to all. The volunteer form says '2024', a stale template line; the heading and rehearsal dates are this year's.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-runnemede",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "During Adoration"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.holychildparish.net/mass-information",
+          "said": "Come join us every Friday at Saint Teresa Church Adoration and Confessions from 7-8PM."
+        }
+      ],
+      "rationale": "R6, R29: the website gives Friday Adoration and Confessions 7-8 PM, and its other times match the bulletins, but both bulletins' Confessions paragraph lists only Saturday and Sunday, so it is unclear whether Friday confession continues. Leaning include, as the site is current (2026) and the Friday Adoration it pairs with is in both bulletins (R6, was C9).",
+      "question": "Add the Friday 7-8 PM Confession at St. Teresa that only the website lists?",
+      "options": [
+        {
+          "label": "Fridays 7-8 PM, during Adoration",
+          "entry": {
+            "church_slug": "st-teresa-runnemede",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "During Adoration"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:21Z"
+      }
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-runnemede",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-12",
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Holy Hour"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bce0d99a",
+          "page": 6,
+          "said": "Advent Holy Hour for Liturgical Ministers Sat. December 12 - 9:30AM - St Theresa Church ... We warmly invite all our Lectors, Sacristans, Extraordinary Ministers of Holy Communion, Cantors, Altar Servers, and their families"
+        }
+      ],
+      "rationale": "R30: a dated Holy Hour of Eucharistic Adoration at St. Teresa addressed to one group; POLICY leaves out services limited to a group, but this invitation does not say others are excluded. Leaning leave out, as it is presented as a ministers' event; no end time is given.",
+      "question": "Add the December 12 Advent Holy Hour, which invites liturgical ministers and their families?",
+      "options": [
+        {
+          "label": "Sat Dec 12 9:30 AM",
+          "entry": {
+            "church_slug": "st-teresa-runnemede",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-12",
+            "start_time": "09:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Advent Holy Hour"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:21Z"
+      }
+    }
+  ]
+}

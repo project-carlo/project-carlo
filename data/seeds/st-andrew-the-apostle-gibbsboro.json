@@ -1,0 +1,856 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-andrew-the-apostle-gibbsboro",
+  "status": "approved",
+  "as_of": "2026-11-15T16:47:43Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-16T21:44:57Z",
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:29:57Z",
+  "summary": "One church. Both bulletins read (Nov 8 and Nov 15, 2026) print the same p10 schedule box: Sat 4 PM vigil, Sun 8/10 AM and 6 PM, Mon-Sat 8 AM, Sat 3:15 PM confession, Adoration Mon-Fri 8:30-9:30 AM, Wed 7-8 PM and first-Wednesday all-day 8:30 AM-8 PM (regular Wednesday slots skip first Wednesdays to avoid overlap). Open: whether Adoration after the Saturday 8 AM Mass (website says Mon-Sat) should be included. The Nov 8 PDF's text layer is garbled; it was read from page images.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "e2f4fe60c74e26700e4e236b6b76214534b16f92919adbd6cd5fc01220b56f96",
+      "fetched_at": "2026-11-15T16:47:43Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "d570aeee5a18b2283152713f276d0dfa80760cf029f3d06b7d0df27e34eb5ebc",
+      "fetched_at": "2026-11-08T15:56:03Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-the-apostle-gibbsboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e2f4fe60",
+          "page": 10,
+          "said": "MASS SCHEDULE Weekend Saturday Vigil 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d570aeee",
+          "page": 10,
+          "said": "MASS SCHEDULE Weekend Saturday Vigil 4:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the p10 schedule box of both bulletins read; intentions list a 4:00 PM Saturday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-the-apostle-gibbsboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e2f4fe60",
+          "page": 10,
+          "said": "Sunday 8:00 AM, 10:00 AM & 6:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d570aeee",
+          "page": 10,
+          "said": "Sunday 8:00 AM, 10:00 AM & 6:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the p10 schedule box of both bulletins read; intentions and presider schedule match.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-the-apostle-gibbsboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e2f4fe60",
+          "page": 10,
+          "said": "Sunday 8:00 AM, 10:00 AM & 6:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d570aeee",
+          "page": 10,
+          "said": "Sunday 8:00 AM, 10:00 AM & 6:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the p10 schedule box of both bulletins read; intentions and presider schedule match.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-the-apostle-gibbsboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e2f4fe60",
+          "page": 10,
+          "said": "Sunday 8:00 AM, 10:00 AM & 6:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d570aeee",
+          "page": 10,
+          "said": "Sunday 8:00 AM, 10:00 AM & 6:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the p10 schedule box of both bulletins read; intentions and presider schedule match.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-the-apostle-gibbsboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e2f4fe60",
+          "page": 10,
+          "said": "Weekday Monday - Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d570aeee",
+          "page": 10,
+          "said": "Weekday Monday - Saturday 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p10 schedule box of both bulletins; each day has an 8:00 AM intention on p4.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-the-apostle-gibbsboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e2f4fe60",
+          "page": 10,
+          "said": "Weekday Monday - Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d570aeee",
+          "page": 10,
+          "said": "Weekday Monday - Saturday 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p10 schedule box of both bulletins; each day has an 8:00 AM intention on p4.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-the-apostle-gibbsboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e2f4fe60",
+          "page": 10,
+          "said": "Weekday Monday - Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d570aeee",
+          "page": 10,
+          "said": "Weekday Monday - Saturday 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p10 schedule box of both bulletins; each day has an 8:00 AM intention on p4.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-the-apostle-gibbsboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e2f4fe60",
+          "page": 10,
+          "said": "Weekday Monday - Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d570aeee",
+          "page": 10,
+          "said": "Weekday Monday - Saturday 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p10 schedule box of both bulletins; each day has an 8:00 AM intention on p4.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-the-apostle-gibbsboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e2f4fe60",
+          "page": 10,
+          "said": "Weekday Monday - Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d570aeee",
+          "page": 10,
+          "said": "Weekday Monday - Saturday 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p10 schedule box of both bulletins; each day has an 8:00 AM intention on p4.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-the-apostle-gibbsboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e2f4fe60",
+          "page": 10,
+          "said": "Weekday Monday - Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d570aeee",
+          "page": 10,
+          "said": "Weekday Monday - Saturday 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p10 schedule box of both bulletins; each day has an 8:00 AM intention on p4.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-the-apostle-gibbsboro",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e2f4fe60",
+          "page": 10,
+          "said": "Confession Saturday 3:15 PM (or by Appointment)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d570aeee",
+          "page": 10,
+          "said": "Confession Saturday 3:15 PM (or by Appointment)"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; no end time given, so none (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e2f4fe60",
+          "page": 10,
+          "said": "Confession ... (or by Appointment)"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-the-apostle-gibbsboro",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e2f4fe60",
+          "page": 10,
+          "said": "Eucharistic Adoration Monday through Friday 8:30 AM to 9:30 AM; Rosary and Adoration after 8:00 AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d570aeee",
+          "page": 10,
+          "said": "Eucharistic Adoration Monday through Friday 8:30 AM to 9:30 AM; Rosary and Adoration after 8:00 AM Mass"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins gives Mon-Fri 8:30-9:30 AM, which matches 'after 8:00 AM Mass' (R10, 30 minutes after a weekday Mass).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-the-apostle-gibbsboro",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e2f4fe60",
+          "page": 10,
+          "said": "Eucharistic Adoration Monday through Friday 8:30 AM to 9:30 AM; Rosary and Adoration after 8:00 AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d570aeee",
+          "page": 10,
+          "said": "Eucharistic Adoration Monday through Friday 8:30 AM to 9:30 AM; Rosary and Adoration after 8:00 AM Mass"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins gives Mon-Fri 8:30-9:30 AM, which matches 'after 8:00 AM Mass' (R10, 30 minutes after a weekday Mass).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-the-apostle-gibbsboro",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e2f4fe60",
+          "page": 10,
+          "said": "Eucharistic Adoration Monday through Friday 8:30 AM to 9:30 AM; Rosary and Adoration after 8:00 AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d570aeee",
+          "page": 10,
+          "said": "Eucharistic Adoration Monday through Friday 8:30 AM to 9:30 AM; Rosary and Adoration after 8:00 AM Mass"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins gives Mon-Fri 8:30-9:30 AM, which matches 'after 8:00 AM Mass' (R10, 30 minutes after a weekday Mass).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-the-apostle-gibbsboro",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e2f4fe60",
+          "page": 10,
+          "said": "Eucharistic Adoration Monday through Friday 8:30 AM to 9:30 AM; Rosary and Adoration after 8:00 AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d570aeee",
+          "page": 10,
+          "said": "Eucharistic Adoration Monday through Friday 8:30 AM to 9:30 AM; Rosary and Adoration after 8:00 AM Mass"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins gives Mon-Fri 8:30-9:30 AM, which matches 'after 8:00 AM Mass' (R10, 30 minutes after a weekday Mass).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-the-apostle-gibbsboro",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": true,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e2f4fe60",
+          "page": 10,
+          "said": "Monday through Friday 8:30 AM to 9:30 AM; First Wednesday of Each Month All Day Adoration 8:30 AM to 8:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d570aeee",
+          "page": 10,
+          "said": "Monday through Friday 8:30 AM to 9:30 AM; First Wednesday of Each Month All Day Adoration 8:30 AM to 8:00 PM"
+        }
+      ],
+      "rationale": "R1, R37/POLICY (no overlapping Adoration entries): every Wednesday 8:30-9:30 AM, but on first Wednesdays it lies inside the all-day 8:30 AM-8:00 PM period, so it is kept for the other weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-the-apostle-gibbsboro",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": true,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e2f4fe60",
+          "page": 10,
+          "said": "Wednesday 7:00 PM to 8:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d570aeee",
+          "page": 10,
+          "said": "Wednesday 7:00 PM to 8:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.churchofsaintandrews.org/eucharistic-adoration",
+          "said": "Adoration of the Most Blessed Sacrament is held every Wednesday evening from 7:00 PM until 8:00 PM in the Chapel."
+        }
+      ],
+      "rationale": "R1, R37/POLICY (no overlapping Adoration entries): every Wednesday 7-8 PM; on first Wednesdays it lies inside the all-day period ending 8:00 PM, so it is kept for the other weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-the-apostle-gibbsboro",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e2f4fe60",
+          "page": 10,
+          "said": "First Wednesday of Each Month All Day Adoration 8:30 AM to 8:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d570aeee",
+          "page": 10,
+          "said": "First Wednesday of Each Month All Day Adoration 8:30 AM to 8:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.churchofsaintandrews.org/eucharistic-adoration",
+          "said": "All Day Adoration is held from 9:00 AM until 8:00 PM on the first Wednesday of every month."
+        }
+      ],
+      "rationale": "R1, R12: printed in the schedule box of both bulletins (two bullets of one item, as the layout shows). The adoration page says 9:00 AM, but both bulletins and the site's own Mass Schedule page say 8:30 AM; the bulletin wins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-the-apostle-gibbsboro",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e2f4fe60",
+          "page": 10,
+          "said": "Weekday Monday - Saturday 8:00 AM / Rosary and Adoration after 8:00 AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d570aeee",
+          "page": 10,
+          "said": "Weekday Monday - Saturday 8:00 AM / Rosary and Adoration after 8:00 AM Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://www.churchofsaintandrews.org/empty-page",
+          "said": "Rosary and Adoration after 8:00 AM Mass (Monday - Saturday)"
+        }
+      ],
+      "rationale": "R30/R5: the bulletin box puts 'Rosary and Adoration after 8:00 AM Mass' under Monday-Saturday Mass, and the website's Mass Schedule says (Monday - Saturday), but the bulletin's Eucharistic Adoration list gives only Monday through Friday 8:30-9:30 AM. Leaning include at 8:30 AM (R10) with no end time, since no Saturday end is printed.",
+      "question": "Add Saturday Adoration after the 8:00 AM Mass (from 8:30 AM, no end time)?",
+      "options": [
+        {
+          "label": "Saturdays from 8:30 AM",
+          "entry": {
+            "church_slug": "st-andrew-the-apostle-gibbsboro",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 8:00 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:57Z"
+      }
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e2f4fe60",
+          "page": 10,
+          "said": "Rosary Monday through Friday 12:00 PM; Divine Mercy Chaplet Monday through Friday 3:00 PM"
+        }
+      ],
+      "rationale": "R24: Rosary and Divine Mercy Chaplet are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e2f4fe60",
+          "page": 8,
+          "said": "Plan to join us for a special Memorial Mass on December 5 at 4:00 PM"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7: December 5 is a Saturday; the Memorial Mass is the regular 4:00 PM Vigil, so only the weekly slot is recorded. Likewise Children and Family Masses (3rd Sunday 10 AM) and Masses of Inclusion (2nd Saturday 4 PM) are the regular Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

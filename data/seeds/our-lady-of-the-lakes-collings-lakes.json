@@ -1,0 +1,761 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-the-lakes-collings-lakes",
+  "status": "approved",
+  "as_of": "2026-11-15T16:47:37Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-16T21:35:02Z",
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:29:51Z",
+  "summary": "One church. Both bulletins (Nov 8, Nov 15) print the same schedule box: Tue 7pm, Wed-Fri 9:30am, Sat 5pm, Sun 9:30am Masses, Tuesday 6pm Adoration, and a Dec 8 holy-day 9:30am Mass. Open: whether the confessions printed 'when Fr. Pinzon is presiding' are weekly, and whether the weekday Masses of Nov 24-27, when the pastor is away, are cancelled. Renovations from Jan 11 move services to the parish hall (R20, left for update mode).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "032b5867cf398986a4f2a3d67222f1a857c40daa4cf0371db967af820d32ccc1",
+      "fetched_at": "2026-11-15T16:47:37Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "edb4bf2394bbf9b24ff88ecea1962d69f40bacb8c34e3772f356f3829e4c51b2",
+      "fetched_at": "2026-11-08T15:56:00Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lakes-collings-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "032b5867",
+          "page": 5,
+          "said": "Mass Schedule (unless noted differently) ... Saturday Vigil 5pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "edb4bf23",
+          "page": 5,
+          "said": "Mass Schedule (unless noted differently) ... Saturday Vigil 5pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "032b5867",
+          "page": 3,
+          "said": "SATURDAY ... 5pm: Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "edb4bf23",
+          "page": 3,
+          "said": "SATURDAY ... 5pm: Mass"
+        }
+      ],
+      "rationale": "R1: printed in the p5 Mass Schedule box of both bulletins read, and in each week's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lakes-collings-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "032b5867",
+          "page": 5,
+          "said": "Mass Schedule ... Sunday 9:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "edb4bf23",
+          "page": 5,
+          "said": "Mass Schedule ... Sunday 9:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "032b5867",
+          "page": 3,
+          "said": "SUNDAY ... 9:30am: Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "edb4bf23",
+          "page": 3,
+          "said": "SUNDAY ... 9:30am: Mass"
+        }
+      ],
+      "rationale": "R1: printed in the p5 Mass Schedule box of both bulletins read, and in each week's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lakes-collings-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "032b5867",
+          "page": 5,
+          "said": "Mass Schedule ... Tuesday 7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "edb4bf23",
+          "page": 5,
+          "said": "Mass Schedule ... Tuesday 7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "032b5867",
+          "page": 3,
+          "said": "TUESDAY, November 17th ... 7pm: Mass"
+        }
+      ],
+      "rationale": "R1: printed in the p5 Mass Schedule box of both bulletins read. The Nov 8 issue's 'No Mass or Confessions on Tuesday November 10th' was a one-date exception now past (R16, R40).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lakes-collings-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "032b5867",
+          "page": 5,
+          "said": "Mass Schedule ... Wednesday thru Friday 9:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "edb4bf23",
+          "page": 5,
+          "said": "Mass Schedule ... Wednesday thru Friday 9:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "032b5867",
+          "page": 3,
+          "said": "WEDNESDAY/THURSDAY/FRIDAY ... 9:30am: Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "edb4bf23",
+          "page": 3,
+          "said": "WEDNESDAY/THURSDAY/FRIDAY ... 9:30am: Mass"
+        }
+      ],
+      "rationale": "R1: printed in the p5 Mass Schedule box of both bulletins read and in both weeks' intentions. The Thanksgiving Day Mass (Thu Nov 26, 9:30am, p4) is the weekly Thursday Mass, so it is not recorded separately (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lakes-collings-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "032b5867",
+          "page": 5,
+          "said": "Mass Schedule ... Wednesday thru Friday 9:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "edb4bf23",
+          "page": 5,
+          "said": "Mass Schedule ... Wednesday thru Friday 9:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "032b5867",
+          "page": 3,
+          "said": "WEDNESDAY/THURSDAY/FRIDAY ... 9:30am: Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "edb4bf23",
+          "page": 3,
+          "said": "WEDNESDAY/THURSDAY/FRIDAY ... 9:30am: Mass"
+        }
+      ],
+      "rationale": "R1: printed in the p5 Mass Schedule box of both bulletins read and in both weeks' intentions. The Thanksgiving Day Mass (Thu Nov 26, 9:30am, p4) is the weekly Thursday Mass, so it is not recorded separately (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lakes-collings-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "032b5867",
+          "page": 5,
+          "said": "Mass Schedule ... Wednesday thru Friday 9:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "edb4bf23",
+          "page": 5,
+          "said": "Mass Schedule ... Wednesday thru Friday 9:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "032b5867",
+          "page": 3,
+          "said": "WEDNESDAY/THURSDAY/FRIDAY ... 9:30am: Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "edb4bf23",
+          "page": 3,
+          "said": "WEDNESDAY/THURSDAY/FRIDAY ... 9:30am: Mass"
+        }
+      ],
+      "rationale": "R1: printed in the p5 Mass Schedule box of both bulletins read and in both weeks' intentions. The Thanksgiving Day Mass (Thu Nov 26, 9:30am, p4) is the weekly Thursday Mass, so it is not recorded separately (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lakes-collings-lakes",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "032b5867",
+          "page": 5,
+          "said": "Eucharistic Adoration Every Tuesday 6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "edb4bf23",
+          "page": 5,
+          "said": "Eucharistic Adoration Every Tuesday 6pm"
+        }
+      ],
+      "rationale": "R1: printed in the p5 schedule box of both bulletins read; no end time is given, so end_time is null (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lakes-collings-lakes",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception, Holy Day of Obligation"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "032b5867",
+          "page": 4,
+          "said": "Tuesday, Dec. 8th is a Holy Day of Obligation for the Immaculate Conception."
+        },
+        {
+          "source": "agent",
+          "bulletin": "032b5867",
+          "page": 5,
+          "said": "Holy Days 9:30am & 7pm"
+        }
+      ],
+      "rationale": "R1, R16, POLICY rule 3: the bulletin pins Dec 8 as a holy day and its schedule box gives holy-day Masses at 9:30am and 7pm. The 7pm Mass coincides with the weekly Tuesday 7pm Mass, so only the 9:30am Mass is dated. The Nov 8 issue says the same (p4).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "032b5867",
+          "page": 5,
+          "said": "Miraculous Medal Novena Every Wednesday following Mass; Rosary Every weekday following daily Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "edb4bf23",
+          "page": 5,
+          "said": "Miraculous Medal Novena Every Wednesday following Mass; Rosary Every weekday following daily Mass"
+        }
+      ],
+      "rationale": "R24: a novena and a rosary are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "032b5867",
+          "page": 5,
+          "said": "Confession ... Also, by appointment and other occasions announced in the bulletin."
+        },
+        {
+          "source": "agent",
+          "bulletin": "edb4bf23",
+          "page": 5,
+          "said": "Confession ... Also, by appointment and other occasions announced in the bulletin."
+        }
+      ],
+      "rationale": "R26: by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lakes-collings-lakes",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "032b5867",
+          "page": 5,
+          "said": "Confession Saturday: 4:15pm-4:45pm ... When Fr. Pinzon is presiding at Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "edb4bf23",
+          "page": 5,
+          "said": "Confession Saturday: 4:15pm-4:45pm ... When Fr. Pinzon is presiding at Mass."
+        }
+      ],
+      "rationale": "Hedged availability needs a human decision (rules.md, closing note). Fr. Pinzon is the pastor and says the parish's Masses most weeks; leaning include. Same times in both bulletins read.",
+      "question": "Weekly confessions are printed 'When Fr. Pinzon is presiding at Mass'. Include them as weekly slots?",
+      "options": [
+        {
+          "label": "Include weekly",
+          "entry": {
+            "church_slug": "our-lady-of-the-lakes-collings-lakes",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:15",
+            "end_time": "16:45",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:51Z"
+      },
+      "group": "confession"
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lakes-collings-lakes",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:15",
+        "end_time": "18:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "032b5867",
+          "page": 5,
+          "said": "Confession ... Tuesday: 6:15-6:45pm When Fr. Pinzon is presiding at Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "edb4bf23",
+          "page": 5,
+          "said": "Confession ... Tuesday: 6:15-6:45pm When Fr. Pinzon is presiding at Mass."
+        }
+      ],
+      "rationale": "Hedged availability needs a human decision (rules.md, closing note). Fr. Pinzon is the pastor and says the parish's Masses most weeks; leaning include. Same times in both bulletins read. The Nov 8 issue's 'No Mass or Confessions on Tuesday November 10th' (p3) ties them to the Tuesday Mass.",
+      "question": "Weekly confessions are printed 'When Fr. Pinzon is presiding at Mass'. Include them as weekly slots?",
+      "options": [
+        {
+          "label": "Include weekly",
+          "entry": {
+            "church_slug": "our-lady-of-the-lakes-collings-lakes",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "18:15",
+            "end_time": "18:45",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:51Z"
+      },
+      "group": "confession"
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lakes-collings-lakes",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-24",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Pastor away"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "032b5867",
+          "page": 4,
+          "said": "There is a Thanksgiving Day Mass on Thursday, Nov. 26th, 9:30am. I'll be away that week Nov. 23-27, except for that Mass."
+        }
+      ],
+      "rationale": "R17 leans against inferring a cancellation the bulletin doesn't state; the Nov 22 issue (read by update mode) should say whether a supply priest covers. But the wording implies no Mass Nov 24, 25, 27.",
+      "question": "Fr. Pinzon writes 'I'll be away that week Nov. 23-27, except for that [Thanksgiving] Mass.' Record the other weekday Masses that week as cancelled?",
+      "options": [
+        {
+          "label": "Cancel",
+          "entry": {
+            "church_slug": "our-lady-of-the-lakes-collings-lakes",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-24",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Pastor away"
+          }
+        },
+        {
+          "label": "Leave as scheduled",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:51Z"
+      },
+      "group": "away-week"
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lakes-collings-lakes",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-25",
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Pastor away"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "032b5867",
+          "page": 4,
+          "said": "There is a Thanksgiving Day Mass on Thursday, Nov. 26th, 9:30am. I'll be away that week Nov. 23-27, except for that Mass."
+        }
+      ],
+      "rationale": "R17 leans against inferring a cancellation the bulletin doesn't state; the Nov 22 issue (read by update mode) should say whether a supply priest covers. But the wording implies no Mass Nov 24, 25, 27.",
+      "question": "Fr. Pinzon writes 'I'll be away that week Nov. 23-27, except for that [Thanksgiving] Mass.' Record the other weekday Masses that week as cancelled?",
+      "options": [
+        {
+          "label": "Cancel",
+          "entry": {
+            "church_slug": "our-lady-of-the-lakes-collings-lakes",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-25",
+            "start_time": "09:30",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Pastor away"
+          }
+        },
+        {
+          "label": "Leave as scheduled",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:51Z"
+      },
+      "group": "away-week"
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lakes-collings-lakes",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Pastor away"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "032b5867",
+          "page": 4,
+          "said": "There is a Thanksgiving Day Mass on Thursday, Nov. 26th, 9:30am. I'll be away that week Nov. 23-27, except for that Mass."
+        }
+      ],
+      "rationale": "R17 leans against inferring a cancellation the bulletin doesn't state; the Nov 22 issue (read by update mode) should say whether a supply priest covers. But the wording implies no Mass Nov 24, 25, 27.",
+      "question": "Fr. Pinzon writes 'I'll be away that week Nov. 23-27, except for that [Thanksgiving] Mass.' Record the other weekday Masses that week as cancelled?",
+      "options": [
+        {
+          "label": "Cancel",
+          "entry": {
+            "church_slug": "our-lady-of-the-lakes-collings-lakes",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-27",
+            "start_time": "09:30",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Pastor away"
+          }
+        },
+        {
+          "label": "Leave as scheduled",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:51Z"
+      },
+      "group": "away-week"
+    }
+  ]
+}

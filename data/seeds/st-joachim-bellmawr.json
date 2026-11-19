@@ -1,0 +1,608 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joachim-bellmawr",
+  "status": "approved",
+  "as_of": "2026-11-15T16:47:49Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T12:50:25Z",
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:30:13Z",
+  "summary": "One church (Annunciation, Bellmawr). Both bulletins read (Nov 1 and Nov 8 issues) print the same schedule: Sat 4 PM vigil, Sun 8 & 10 AM and 12 PM Spanish, weekday 7:30 AM Mon/Tue/Wed/Fri, Confession Sat 3 PM. The Fri Nov 27 7:30 AM Mass is cancelled for Thanksgiving. No Adoration is printed.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "2a016309303e8f9ca12c2f4327859d267ca3a3970c03cbba4056f329ac0a998e",
+      "fetched_at": "2026-11-15T16:47:49Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "e1ffc632c48b30df0bfcd63036f96f9688118c2209fe533effa7657636e92d49",
+      "fetched_at": "2026-11-08T15:56:10Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bellmawr",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2a016309",
+          "page": 1,
+          "said": "WEEKEND MASS SCHEDULE Saturday Vigil 4 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1ffc632",
+          "page": 1,
+          "said": "WEEKEND MASS SCHEDULE Saturday Vigil 4 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2a016309",
+          "page": 3,
+          "said": "Saturday 4:00 PM (Mass Schedule table)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1ffc632",
+          "page": 3,
+          "said": "Saturday 4:00 PM (Mass Schedule table)"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box and the Mass intentions table of both bulletins read (Nov 1 and Nov 8 issues).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bellmawr",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2a016309",
+          "page": 1,
+          "said": "Sunday 8 & 10 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1ffc632",
+          "page": 1,
+          "said": "Sunday 8 & 10 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2a016309",
+          "page": 3,
+          "said": "Sunday 8:00 AM, 10:00 AM (Mass Schedule table)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1ffc632",
+          "page": 3,
+          "said": "Sunday 8:00 AM, 10:00 AM (Mass Schedule table)"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box and the Mass intentions table of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bellmawr",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2a016309",
+          "page": 1,
+          "said": "Sunday 8 & 10 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1ffc632",
+          "page": 1,
+          "said": "Sunday 8 & 10 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2a016309",
+          "page": 3,
+          "said": "Sunday 8:00 AM, 10:00 AM (Mass Schedule table)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1ffc632",
+          "page": 3,
+          "said": "Sunday 8:00 AM, 10:00 AM (Mass Schedule table)"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box and the Mass intentions table of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bellmawr",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2a016309",
+          "page": 1,
+          "said": "WEEKEND MASS SCHEDULE ... Español: 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1ffc632",
+          "page": 1,
+          "said": "WEEKEND MASS SCHEDULE ... Español: 12:00 PM"
+        }
+      ],
+      "rationale": "R1: page-1 schedule box of both bulletins. The page-3 intentions table lists only the English Masses; a missing intention line is not evidence against the Mass (R39).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bellmawr",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2a016309",
+          "page": 1,
+          "said": "WEEKDAY MASSES Mon., Tues.,Weds.,Fri: 7:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1ffc632",
+          "page": 1,
+          "said": "WEEKDAY MASSES Mon., Tues.,Weds.,Fri: 7:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2a016309",
+          "page": 3,
+          "said": "Monday-Wednesday and Friday 7:30 AM; Thursday NO MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1ffc632",
+          "page": 3,
+          "said": "Monday-Wednesday and Friday 7:30 AM; Thursday NO MASS"
+        }
+      ],
+      "rationale": "R1: page-1 schedule box and the intentions table of both bulletins; Thursday is marked NO MASS.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bellmawr",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2a016309",
+          "page": 1,
+          "said": "WEEKDAY MASSES Mon., Tues.,Weds.,Fri: 7:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1ffc632",
+          "page": 1,
+          "said": "WEEKDAY MASSES Mon., Tues.,Weds.,Fri: 7:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2a016309",
+          "page": 3,
+          "said": "Monday-Wednesday and Friday 7:30 AM; Thursday NO MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1ffc632",
+          "page": 3,
+          "said": "Monday-Wednesday and Friday 7:30 AM; Thursday NO MASS"
+        }
+      ],
+      "rationale": "R1: page-1 schedule box and the intentions table of both bulletins; Thursday is marked NO MASS.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bellmawr",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2a016309",
+          "page": 1,
+          "said": "WEEKDAY MASSES Mon., Tues.,Weds.,Fri: 7:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1ffc632",
+          "page": 1,
+          "said": "WEEKDAY MASSES Mon., Tues.,Weds.,Fri: 7:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2a016309",
+          "page": 3,
+          "said": "Monday-Wednesday and Friday 7:30 AM; Thursday NO MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1ffc632",
+          "page": 3,
+          "said": "Monday-Wednesday and Friday 7:30 AM; Thursday NO MASS"
+        }
+      ],
+      "rationale": "R1: page-1 schedule box and the intentions table of both bulletins; Thursday is marked NO MASS.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bellmawr",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2a016309",
+          "page": 1,
+          "said": "WEEKDAY MASSES Mon., Tues.,Weds.,Fri: 7:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1ffc632",
+          "page": 1,
+          "said": "WEEKDAY MASSES Mon., Tues.,Weds.,Fri: 7:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2a016309",
+          "page": 3,
+          "said": "Monday-Wednesday and Friday 7:30 AM; Thursday NO MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1ffc632",
+          "page": 3,
+          "said": "Monday-Wednesday and Friday 7:30 AM; Thursday NO MASS"
+        }
+      ],
+      "rationale": "R1: page-1 schedule box and the intentions table of both bulletins; Thursday is marked NO MASS.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bellmawr",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2a016309",
+          "page": 2,
+          "said": "SACRAMENTS Reconciliation: Every Saturday at 3:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1ffc632",
+          "page": 2,
+          "said": "SACRAMENTS Reconciliation: Every Saturday at 3:00PM"
+        }
+      ],
+      "rationale": "R1: Sacraments box of both bulletins. No end time is printed, so none is recorded (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bellmawr",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2a016309",
+          "page": 6,
+          "said": "Please note: There will be no 7:30 AM Mass on Thursday, November 26th & Friday, November 27th."
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin cancels the Friday after Thanksgiving's 7:30 AM Mass, a date after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bellmawr",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2a016309",
+          "page": 6,
+          "said": "There will be no 7:30 AM Mass on Thursday, November 26th"
+        }
+      ],
+      "rationale": "R16/R17: the parish has no Thursday Mass (intentions table: Thursday NO MASS), so there is no weekly slot for this cancellation to apply to; recorded only for the reviewer.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bellmawr",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-22",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "75th anniversary bilingual Mass with Bishop Williams"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2a016309",
+          "page": 7,
+          "said": "Sunday, November 22, 2026 10:00 AM Mass celebrated by Bishop Joseph Williams, Bilingual Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1ffc632",
+          "page": 7,
+          "said": "Sunday, November 22, 2026 10:00 AM Mass celebrated by Bishop Joseph Williams, Bilingual Mass"
+        }
+      ],
+      "rationale": "R25, POLICY Weekly or dated rule 7: the anniversary is celebrated at the regular Sunday 10:00 AM Mass, so only the weekly slot is recorded. Nothing says the 12:00 PM Spanish Mass is cancelled that day (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bellmawr",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls Memorial Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e1ffc632",
+          "page": 6,
+          "said": "All Souls Day, Monday, November 2, 2026 at 7:00 PM"
+        }
+      ],
+      "rationale": "R16: a dated Mass before as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2a016309",
+          "page": 2,
+          "said": "Anointing of the Sick: Please notify the Parish Office for arrangements."
+        }
+      ],
+      "rationale": "R24/R26: not Mass, Confession or Adoration, and has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

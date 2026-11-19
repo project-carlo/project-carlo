@@ -1,0 +1,1366 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-guadalupe-lindenwold",
+  "status": "approved",
+  "as_of": "2026-11-15T16:17:02Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-16T21:08:33Z",
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:29:38Z",
+  "summary": "Two churches (St. Luke, Stratford; St. Lawrence/Guadalupe Shrine, Lindenwold) plus Our Lady of Grace Chapel, which is not on the church list. Both bulletins read (Nov 8, Nov 15) print the same schedule box, matching the website; Thanksgiving evening Mass and Adoration are cancelled. Open: one grouped question on whether the chapel (Mon/Wed bilingual Mass, first-Friday Mass, confessions, Wed/Thu Adoration, Monday Holy Hour) is on the St. Lawrence grounds.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "bb415c6f4420a569055002a6abde5164177f265bb9889dc9867af8add3a5ace5",
+      "fetched_at": "2026-11-15T16:17:02Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "6e866e73ddfef5b0e8d235ffd61c2b9288330bebcc99c65e278275fa88a7021a",
+      "fetched_at": "2026-11-08T15:42:21Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-stratford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bb415c6f",
+          "page": 1,
+          "said": "St. Luke Church; ... Saturday: 4pm, Sunday: 10am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e866e73",
+          "page": 1,
+          "said": "St. Luke Church; ... Saturday: 4pm, Sunday: 10am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb415c6f",
+          "page": 3,
+          "said": "Saturday, November 21 ... 4:00 pm (S)"
+        }
+      ],
+      "rationale": "R1: St. Luke's line of the page-1 schedule box in both bulletins read; the intentions list it and the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-stratford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bb415c6f",
+          "page": 1,
+          "said": "St. Luke Church; ... Saturday: 4pm, Sunday: 10am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e866e73",
+          "page": 1,
+          "said": "St. Luke Church; ... Saturday: 4pm, Sunday: 10am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb415c6f",
+          "page": 3,
+          "said": "Sunday, November 22 ... 10:00 am (S)"
+        }
+      ],
+      "rationale": "R1: page-1 schedule box in both bulletins; intentions and website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-stratford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bb415c6f",
+          "page": 1,
+          "said": "St. Luke Church; Monday - Thursday: 8am, Friday: 9am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e866e73",
+          "page": 1,
+          "said": "St. Luke Church; Monday - Thursday: 8am, Friday: 9am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb415c6f",
+          "page": 3,
+          "said": "8:00 am (S) each Monday-Thursday"
+        }
+      ],
+      "rationale": "R1: page-1 schedule box in both bulletins; the intentions list each day at 8:00 (S); website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-stratford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bb415c6f",
+          "page": 1,
+          "said": "St. Luke Church; Monday - Thursday: 8am, Friday: 9am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e866e73",
+          "page": 1,
+          "said": "St. Luke Church; Monday - Thursday: 8am, Friday: 9am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb415c6f",
+          "page": 3,
+          "said": "8:00 am (S) each Monday-Thursday"
+        }
+      ],
+      "rationale": "R1: page-1 schedule box in both bulletins; the intentions list each day at 8:00 (S); website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-stratford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bb415c6f",
+          "page": 1,
+          "said": "St. Luke Church; Monday - Thursday: 8am, Friday: 9am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e866e73",
+          "page": 1,
+          "said": "St. Luke Church; Monday - Thursday: 8am, Friday: 9am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb415c6f",
+          "page": 3,
+          "said": "8:00 am (S) each Monday-Thursday"
+        }
+      ],
+      "rationale": "R1: page-1 schedule box in both bulletins; the intentions list each day at 8:00 (S); website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-stratford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bb415c6f",
+          "page": 1,
+          "said": "St. Luke Church; Monday - Thursday: 8am, Friday: 9am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e866e73",
+          "page": 1,
+          "said": "St. Luke Church; Monday - Thursday: 8am, Friday: 9am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb415c6f",
+          "page": 3,
+          "said": "8:00 am (S) each Monday-Thursday"
+        }
+      ],
+      "rationale": "R1: page-1 schedule box in both bulletins; the intentions list each day at 8:00 (S); website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-stratford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bb415c6f",
+          "page": 1,
+          "said": "St. Luke Church; Monday - Thursday: 8am, Friday: 9am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e866e73",
+          "page": 1,
+          "said": "St. Luke Church; Monday - Thursday: 8am, Friday: 9am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb415c6f",
+          "page": 3,
+          "said": "Friday, November 20th 9:00 am (S)"
+        }
+      ],
+      "rationale": "R1: page-1 schedule box in both bulletins; intentions and website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-stratford",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bb415c6f",
+          "page": 1,
+          "said": "St. Luke Church ... Reconciliation: Saturday: 3:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e866e73",
+          "page": 1,
+          "said": "St. Luke Church ... Reconciliation: Saturday: 3:30pm"
+        }
+      ],
+      "rationale": "R1: page-1 schedule box in both bulletins; website agrees. No end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-lindenwold",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bb415c6f",
+          "page": 1,
+          "said": "St. Lawrence Church: ... Sunday: 8:30am & 11:30am (Misa en Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e866e73",
+          "page": 1,
+          "said": "St. Lawrence Church: ... Sunday: 8:30am & 11:30am (Misa en Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb415c6f",
+          "page": 3,
+          "said": "Sunday, November 22 ... 8:30 am (L)"
+        }
+      ],
+      "rationale": "R1: page-1 schedule box in both bulletins; intentions and website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-lindenwold",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bb415c6f",
+          "page": 1,
+          "said": "St. Lawrence Church: ... Sunday: 8:30am & 11:30am (Misa en Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e866e73",
+          "page": 1,
+          "said": "St. Lawrence Church: ... Sunday: 8:30am & 11:30am (Misa en Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb415c6f",
+          "page": 9,
+          "said": "Domingo: 11:30a.m. en la Iglesia Guadalupana"
+        }
+      ],
+      "rationale": "R1: page-1 schedule box and the Spanish page in both bulletins; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-lindenwold",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bb415c6f",
+          "page": 1,
+          "said": "St. Lawrence Church: Thursday: 7pm, Misa en Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e866e73",
+          "page": 1,
+          "said": "St. Lawrence Church: Thursday: 7pm, Misa en Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb415c6f",
+          "page": 3,
+          "said": "Thursday, November 19th ... 7:00 pm (L) Spanish"
+        }
+      ],
+      "rationale": "R1: page-1 schedule box, intentions and the Spanish page in both bulletins; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-lindenwold",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bb415c6f",
+          "page": 1,
+          "said": "St. Lawrence Church: ... Reconciliation: Thursday: 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e866e73",
+          "page": 1,
+          "said": "St. Lawrence Church: ... Reconciliation: Thursday: 6:30pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.guadalupeshrinenj.org/mass-schedule",
+          "said": "St. Lawrence: ... Reconciliation: Thursday: 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb415c6f",
+          "page": 9,
+          "said": "CONFESIONES Jueves: 7pm. en la Iglesia Guadalupana"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e866e73",
+          "page": 9,
+          "said": "En Guadalupe - Jueves a las 6p.m."
+        }
+      ],
+      "rationale": "R1, R40: the English schedule box of both bulletins and the parish website's schedule page give Thursday 6:30pm. The Spanish page's jumbled confession box disagrees with itself across weeks (7pm in the newest, the time of the Thursday Mass; 6pm on Nov 8), so it is treated as a translation-page error, not a standing change. No end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-lindenwold",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bb415c6f",
+          "page": 5,
+          "said": "11/26 THANKSGIVING DAY *PARISH OFFICE CLOSED *NO ADORATION *NO EVENING MASS"
+        }
+      ],
+      "rationale": "R1, R16: the newest calendar cancels the evening Mass on Thanksgiving (Thursday Nov 26); the only Thursday evening Mass is St. Lawrence's 7pm Spanish Mass. On or after as_of. The 6:30pm Thursday confession is not mentioned and its weekly slot is left alone (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-lindenwold",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Grace Chapel; bilingual"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bb415c6f",
+          "page": 1,
+          "said": "Our Lady of Grace Chapel; Monday & Wednesday: 7pm (Mon. & Wed. Mass in Bilingual) ... (Enter the Chapel through the old Spanish Office)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e866e73",
+          "page": 1,
+          "said": "Our Lady of Grace Chapel; Monday & Wednesday: 7pm (Mon. & Wed. Mass in Bilingual) ... (Enter the Chapel through the old Spanish Office)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb415c6f",
+          "page": 3,
+          "said": "7:00 pm (Our Lady of Grace Chapel) Bilingual (Mon Nov 16, Wed Nov 18)"
+        }
+      ],
+      "rationale": "R32: the chapel is not on the church list. Bulletins place it in Lindenwold ('Our Lady of Grace Chapel, Lindenwold, NJ', p4/p5), where St. Lawrence is the parish's only church, and say to enter it through the old Spanish Office; the website gives no address for it, and its sacraments page names a former 'Our Lady of Grace' church (whose records moved to this parish), so it might be a separate building. Leaning St. Lawrence because every source puts it in Lindenwold beside the shrine's offices; if it is elsewhere it becomes a church-list issue (R23).",
+      "question": "Our Lady of Grace Chapel is in Lindenwold, entered through the old Spanish Office; is it on the St. Lawrence grounds (135 N. White Horse Pike)?",
+      "options": [
+        {
+          "label": "Yes: record at St. Lawrence",
+          "entry": {
+            "church_slug": "st-lawrence-lindenwold",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Our Lady of Grace Chapel; bilingual"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out (chapel elsewhere)",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:38Z"
+      },
+      "group": "olg-chapel"
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-lindenwold",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Grace Chapel; bilingual"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bb415c6f",
+          "page": 1,
+          "said": "Our Lady of Grace Chapel; Monday & Wednesday: 7pm (Mon. & Wed. Mass in Bilingual) ... (Enter the Chapel through the old Spanish Office)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e866e73",
+          "page": 1,
+          "said": "Our Lady of Grace Chapel; Monday & Wednesday: 7pm (Mon. & Wed. Mass in Bilingual) ... (Enter the Chapel through the old Spanish Office)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb415c6f",
+          "page": 3,
+          "said": "7:00 pm (Our Lady of Grace Chapel) Bilingual (Mon Nov 16, Wed Nov 18)"
+        }
+      ],
+      "rationale": "R32: the chapel is not on the church list. Bulletins place it in Lindenwold ('Our Lady of Grace Chapel, Lindenwold, NJ', p4/p5), where St. Lawrence is the parish's only church, and say to enter it through the old Spanish Office; the website gives no address for it, and its sacraments page names a former 'Our Lady of Grace' church (whose records moved to this parish), so it might be a separate building. Leaning St. Lawrence because every source puts it in Lindenwold beside the shrine's offices; if it is elsewhere it becomes a church-list issue (R23).",
+      "question": "Our Lady of Grace Chapel is in Lindenwold, entered through the old Spanish Office; is it on the St. Lawrence grounds (135 N. White Horse Pike)?",
+      "options": [
+        {
+          "label": "Yes: record at St. Lawrence",
+          "entry": {
+            "church_slug": "st-lawrence-lindenwold",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Our Lady of Grace Chapel; bilingual"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out (chapel elsewhere)",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:38Z"
+      },
+      "group": "olg-chapel"
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-lindenwold",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Grace Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bb415c6f",
+          "page": 1,
+          "said": "Our Lady of Grace Chapel; ... First Friday of the Month: 7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e866e73",
+          "page": 1,
+          "said": "Our Lady of Grace Chapel; ... First Friday of the Month: 7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb415c6f",
+          "page": 4,
+          "said": "1st Friday Mass; 7:00 p.m.; Our Lady of Grace Chapel, Lindenwold, NJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e866e73",
+          "page": 4,
+          "said": "1st Friday Mass; 7:00 p.m.; Our Lady of Grace Chapel, Lindenwold, NJ"
+        }
+      ],
+      "rationale": "R32 (location, see group). The first-Friday Mass is printed in the standing schedule box of both bulletins and on the worship page; neither week holds a first Friday (R11), but the newest prints it as a standing monthly slot.",
+      "question": "Our Lady of Grace Chapel is in Lindenwold, entered through the old Spanish Office; is it on the St. Lawrence grounds (135 N. White Horse Pike)?",
+      "options": [
+        {
+          "label": "Yes: record at St. Lawrence",
+          "entry": {
+            "church_slug": "st-lawrence-lindenwold",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Our Lady of Grace Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out (chapel elsewhere)",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:38Z"
+      },
+      "group": "olg-chapel"
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-lindenwold",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Grace Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bb415c6f",
+          "page": 1,
+          "said": "Our Lady of Grace Chapel; Reconciliation: Monday, Wednesday & First Friday of the Month: 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e866e73",
+          "page": 1,
+          "said": "Our Lady of Grace Chapel; Reconciliation: Monday, Wednesday & First Friday of the Month: 6:30pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.guadalupeshrinenj.org/mass-schedule",
+          "said": "Our Lady of Grace Chapel: Reconciliation : Monday, Wednesday & First Friday of the Month: 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e866e73",
+          "page": 9,
+          "said": "Capilla 'Our Lady of Grace' Lunes, y miércoles a las 6p.m."
+        }
+      ],
+      "rationale": "R32 (location, see group). Time per R1/R40: English box in both bulletins and the website give 6:30pm; the Nov 8 Spanish page's 6pm and the newest Spanish page (no time) are treated as translation-page errors.",
+      "question": "Our Lady of Grace Chapel is in Lindenwold, entered through the old Spanish Office; is it on the St. Lawrence grounds (135 N. White Horse Pike)?",
+      "options": [
+        {
+          "label": "Yes: record at St. Lawrence",
+          "entry": {
+            "church_slug": "st-lawrence-lindenwold",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "18:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Our Lady of Grace Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out (chapel elsewhere)",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:38Z"
+      },
+      "group": "olg-chapel"
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-lindenwold",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Grace Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bb415c6f",
+          "page": 1,
+          "said": "Our Lady of Grace Chapel; Reconciliation: Monday, Wednesday & First Friday of the Month: 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e866e73",
+          "page": 1,
+          "said": "Our Lady of Grace Chapel; Reconciliation: Monday, Wednesday & First Friday of the Month: 6:30pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.guadalupeshrinenj.org/mass-schedule",
+          "said": "Our Lady of Grace Chapel: Reconciliation : Monday, Wednesday & First Friday of the Month: 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e866e73",
+          "page": 9,
+          "said": "Capilla 'Our Lady of Grace' Lunes, y miércoles a las 6p.m."
+        }
+      ],
+      "rationale": "R32 (location, see group). Time per R1/R40: English box in both bulletins and the website give 6:30pm; the Nov 8 Spanish page's 6pm and the newest Spanish page (no time) are treated as translation-page errors.",
+      "question": "Our Lady of Grace Chapel is in Lindenwold, entered through the old Spanish Office; is it on the St. Lawrence grounds (135 N. White Horse Pike)?",
+      "options": [
+        {
+          "label": "Yes: record at St. Lawrence",
+          "entry": {
+            "church_slug": "st-lawrence-lindenwold",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "18:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Our Lady of Grace Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out (chapel elsewhere)",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:38Z"
+      },
+      "group": "olg-chapel"
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-lindenwold",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Grace Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bb415c6f",
+          "page": 1,
+          "said": "Reconciliation: Monday, Wednesday & First Friday of the Month: 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e866e73",
+          "page": 1,
+          "said": "Reconciliation: Monday, Wednesday & First Friday of the Month: 6:30pm"
+        }
+      ],
+      "rationale": "R32 (location, see group). First-Friday confession before the 7pm First Friday Mass, in the standing schedule box of both bulletins and on the website.",
+      "question": "Our Lady of Grace Chapel is in Lindenwold, entered through the old Spanish Office; is it on the St. Lawrence grounds (135 N. White Horse Pike)?",
+      "options": [
+        {
+          "label": "Yes: record at St. Lawrence",
+          "entry": {
+            "church_slug": "st-lawrence-lindenwold",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "18:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Our Lady of Grace Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out (chapel elsewhere)",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:38Z"
+      },
+      "group": "olg-chapel"
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-lindenwold",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Grace Chapel"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bb415c6f",
+          "page": 4,
+          "said": "Adoration: Our Lady of Grace Chapel on Wednesdays & Thursdays: 12pm-6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e866e73",
+          "page": 4,
+          "said": "Adoration: Our Lady of Grace Chapel on Wednesdays & Thursdays: 12pm-6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb415c6f",
+          "page": 9,
+          "said": "ADORACIÓN AL SANTÍSIMO Miércoles y jueves de 12-6:30p.m. en la Capilla 'Our lady of Grace'"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb415c6f",
+          "page": 5,
+          "said": "*ADORATION; OUR LADY OF GRACE CHAPEL, LINDENWOLD; 12PM-6PM (Wed and Thu calendar cells)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e866e73",
+          "page": 5,
+          "said": "*ADORATION; OUR LADY OF GRACE CHAPEL, LINDENWOLD; 12PM-6PM (Wed and Thu calendar cells)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.guadalupeshrinenj.org/mass-schedule",
+          "said": "Adoration: Our Lady of Grace Chapel Wednesdays & Thursdays: 12pm-6:30pm"
+        }
+      ],
+      "rationale": "R32 (location, see group). End time 6:30pm per R40: the worship page and Spanish page of both bulletins and the website all say 12-6:30pm; only the abbreviated calendar cells say 12PM-6PM, and the chapel's 6:30pm Wednesday confession follows on directly.",
+      "question": "Our Lady of Grace Chapel is in Lindenwold, entered through the old Spanish Office; is it on the St. Lawrence grounds (135 N. White Horse Pike)?",
+      "options": [
+        {
+          "label": "Yes: record at St. Lawrence",
+          "entry": {
+            "church_slug": "st-lawrence-lindenwold",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": "18:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Our Lady of Grace Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out (chapel elsewhere)",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:38Z"
+      },
+      "group": "olg-chapel"
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-lindenwold",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Grace Chapel"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bb415c6f",
+          "page": 4,
+          "said": "Adoration: Our Lady of Grace Chapel on Wednesdays & Thursdays: 12pm-6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e866e73",
+          "page": 4,
+          "said": "Adoration: Our Lady of Grace Chapel on Wednesdays & Thursdays: 12pm-6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb415c6f",
+          "page": 9,
+          "said": "ADORACIÓN AL SANTÍSIMO Miércoles y jueves de 12-6:30p.m. en la Capilla 'Our lady of Grace'"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb415c6f",
+          "page": 5,
+          "said": "*ADORATION; OUR LADY OF GRACE CHAPEL, LINDENWOLD; 12PM-6PM (Wed and Thu calendar cells)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e866e73",
+          "page": 5,
+          "said": "*ADORATION; OUR LADY OF GRACE CHAPEL, LINDENWOLD; 12PM-6PM (Wed and Thu calendar cells)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.guadalupeshrinenj.org/mass-schedule",
+          "said": "Adoration: Our Lady of Grace Chapel Wednesdays & Thursdays: 12pm-6:30pm"
+        }
+      ],
+      "rationale": "R32 (location, see group). End time 6:30pm per R40: the worship page and Spanish page of both bulletins and the website all say 12-6:30pm; only the abbreviated calendar cells say 12PM-6PM, and the chapel's 6:30pm Wednesday confession follows on directly.",
+      "question": "Our Lady of Grace Chapel is in Lindenwold, entered through the old Spanish Office; is it on the St. Lawrence grounds (135 N. White Horse Pike)?",
+      "options": [
+        {
+          "label": "Yes: record at St. Lawrence",
+          "entry": {
+            "church_slug": "st-lawrence-lindenwold",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": "18:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Our Lady of Grace Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out (chapel elsewhere)",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:38Z"
+      },
+      "group": "olg-chapel"
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-lindenwold",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour in Our Lady of Grace Chapel, after the 7:00 PM Mass"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bb415c6f",
+          "page": 4,
+          "said": "Holy Hour: Mondays after 7:00 p.m. Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6e866e73",
+          "page": 4,
+          "said": "Holy Hour: Mondays after 7:00 p.m. Mass"
+        }
+      ],
+      "rationale": "R32 (location, see group). The Monday 7pm Mass is the chapel's bilingual Mass; R10 times a Holy Hour after a weekday Mass at 30 minutes after it starts (7:30pm), with no end time.",
+      "question": "Our Lady of Grace Chapel is in Lindenwold, entered through the old Spanish Office; is it on the St. Lawrence grounds (135 N. White Horse Pike)?",
+      "options": [
+        {
+          "label": "Yes: record at St. Lawrence",
+          "entry": {
+            "church_slug": "st-lawrence-lindenwold",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "19:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Holy Hour in Our Lady of Grace Chapel, after the 7:00 PM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out (chapel elsewhere)",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:38Z"
+      },
+      "group": "olg-chapel"
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-lindenwold",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "12:00",
+        "end_time": "18:30",
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bb415c6f",
+          "page": 5,
+          "said": "11/26 THANKSGIVING DAY ... *NO ADORATION *NO EVENING MASS"
+        }
+      ],
+      "rationale": "R32 (location, see group); R16: the Thanksgiving cancellation of Thursday Adoration, on or after as_of. It only matters if the chapel's Adoration is recorded, so it shares the group's answer.",
+      "question": "Our Lady of Grace Chapel is in Lindenwold, entered through the old Spanish Office; is it on the St. Lawrence grounds (135 N. White Horse Pike)?",
+      "options": [
+        {
+          "label": "Yes: record at St. Lawrence",
+          "entry": {
+            "church_slug": "st-lawrence-lindenwold",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-26",
+            "start_time": "12:00",
+            "end_time": "18:30",
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Thanksgiving Day"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out (chapel elsewhere)",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@15f160603bcc",
+        "at": "2026-11-19T18:29:38Z"
+      },
+      "group": "olg-chapel"
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.guadalupeshrinenj.org/",
+          "said": "a special Mass of Remembrance on the 12th of every month"
+        }
+      ],
+      "rationale": "R24, R33: website-only, with no time or church, and a day-of-month pattern the format cannot express; the bulletins' Nov 12 intentions show only the regular Thursday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

@@ -1,0 +1,663 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-simon-stock-berlin",
+  "status": "approved",
+  "as_of": "2026-11-15T16:48:08Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T13:43:43Z",
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:30:41Z",
+  "summary": "One church, Our Lady of Mount Carmel, Berlin. The schedule box (Mass Mon-Sat 8 AM, Sat 4 PM, Sun 8/10/12; Sat Confession 3-3:45; first-Wednesday all-day Adoration and Wednesday 6-7 PM Holy Hour) is identical in both bulletins read (Nov 8 and Nov 15, 2026), plus a dated Christmas Eve 4 PM Mass. No open questions; no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "811495dfbb5895295bbb63b3ec538ca02943ea5d0185df7dc0aaa77de704d48c",
+      "fetched_at": "2026-11-15T16:48:08Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "9a02340c13d5e686d881be5a81b18f8bbade5b15427d1f5956b159a4ff21c579",
+      "fetched_at": "2026-11-08T22:01:39Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-berlin",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "811495df",
+          "page": 1,
+          "said": "Mass Schedule Monday - Saturday: 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a02340c",
+          "page": 1,
+          "said": "Mass Schedule Monday - Saturday: 8:00 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box of both bulletins read (Nov 8 and Nov 15); the Mass intentions list 8 AM Masses daily.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-berlin",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "811495df",
+          "page": 1,
+          "said": "Mass Schedule Monday - Saturday: 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a02340c",
+          "page": 1,
+          "said": "Mass Schedule Monday - Saturday: 8:00 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box of both bulletins read (Nov 8 and Nov 15); the Mass intentions list 8 AM Masses daily.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-berlin",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "811495df",
+          "page": 1,
+          "said": "Mass Schedule Monday - Saturday: 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a02340c",
+          "page": 1,
+          "said": "Mass Schedule Monday - Saturday: 8:00 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box of both bulletins read (Nov 8 and Nov 15); the Mass intentions list 8 AM Masses daily.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-berlin",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "811495df",
+          "page": 1,
+          "said": "Mass Schedule Monday - Saturday: 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a02340c",
+          "page": 1,
+          "said": "Mass Schedule Monday - Saturday: 8:00 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box of both bulletins read (Nov 8 and Nov 15); the Mass intentions list 8 AM Masses daily.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-berlin",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "811495df",
+          "page": 1,
+          "said": "Mass Schedule Monday - Saturday: 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a02340c",
+          "page": 1,
+          "said": "Mass Schedule Monday - Saturday: 8:00 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box of both bulletins read (Nov 8 and Nov 15); the Mass intentions list 8 AM Masses daily.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-berlin",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "811495df",
+          "page": 1,
+          "said": "Mass Schedule Monday - Saturday: 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a02340c",
+          "page": 1,
+          "said": "Mass Schedule Monday - Saturday: 8:00 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box of both bulletins read (Nov 8 and Nov 15); the Mass intentions list 8 AM Masses daily.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-berlin",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "811495df",
+          "page": 1,
+          "said": "Mass Schedule Saturday: 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a02340c",
+          "page": 1,
+          "said": "Mass Schedule Saturday: 4:00 pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box of both bulletins read; the priest schedule also lists the 4 pm Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-berlin",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "811495df",
+          "page": 1,
+          "said": "Sunday: 8:00, 10:00 am & 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a02340c",
+          "page": 1,
+          "said": "Sunday: 8:00, 10:00 am & 12:00 pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box of both bulletins read; the Nov 15 Anniversary Mass at 12 pm is the regular Mass (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-berlin",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "811495df",
+          "page": 1,
+          "said": "Sunday: 8:00, 10:00 am & 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a02340c",
+          "page": 1,
+          "said": "Sunday: 8:00, 10:00 am & 12:00 pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box of both bulletins read; the Nov 15 Anniversary Mass at 12 pm is the regular Mass (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-berlin",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "811495df",
+          "page": 1,
+          "said": "Sunday: 8:00, 10:00 am & 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a02340c",
+          "page": 1,
+          "said": "Sunday: 8:00, 10:00 am & 12:00 pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box of both bulletins read; the Nov 15 Anniversary Mass at 12 pm is the regular Mass (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-berlin",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "811495df",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Every Saturday: 3:00 – 3:45 pm in the church or by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a02340c",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Every Saturday: 3:00 – 3:45 pm in the church or by appointment."
+        }
+      ],
+      "rationale": "R1, R35: printed in both bulletins; the priest schedules (latest p2, p4) list 3-3:45 pm Confessions on Saturdays.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-berlin",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "811495df",
+          "page": 1,
+          "said": "Eucharistic Adoration First Wednesday of each month 8:45 am - 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a02340c",
+          "page": 1,
+          "said": "Eucharistic Adoration First Wednesday of each month 8:45 am - 7:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; POLICY rule 2 makes it a first-week slot. The Nov 8 issue's past dated 'All-Day Adoration on November 11' (a second Wednesday) is a dated exception before as_of (R40, R16) and does not change the standing box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-berlin",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "second",
+          "third",
+          "fourth",
+          "fifth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour and Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "811495df",
+          "page": 1,
+          "said": "Every Wednesday 6:00 pm - 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a02340c",
+          "page": 1,
+          "said": "Every Wednesday 6:00 pm - 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "811495df",
+          "page": 2,
+          "said": "Adoration on November 18, 2026 Holy Hour and Benediction at 6 pm"
+        }
+      ],
+      "rationale": "R1, R37: 'Every Wednesday 6-7 pm' in both boxes; dated notices (Nov 18, Nov 11) call it a Holy Hour and Benediction. On first Wednesdays it lies inside the 8:45 am-7 pm Adoration, so the longer period covers it and this slot lists the remaining weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-berlin",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "811495df",
+          "page": 7,
+          "said": "The Youth Choir is forming to sing at the 4 pm Christmas Eve Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a02340c",
+          "page": 6,
+          "said": "The Youth Choir is forming to sing at the 4 pm Christmas Eve Mass."
+        }
+      ],
+      "rationale": "R1, R16: a dated Mass with a clock time at the parish church, after as_of; the Nov 8 issue prints the same line.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "811495df",
+          "page": 1,
+          "said": "Confession ... or by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "811495df",
+          "page": 2,
+          "said": "Dec. 8 Immaculate Conception-Holy Day of Obligation"
+        }
+      ],
+      "rationale": "R24, R26: the holy day is listed with no Mass times; update mode will read the issues that print them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "811495df",
+          "page": 1,
+          "said": "Church is open for private prayer Monday - Friday: 9:00 am - 5:00 pm Saturday: 9:00 am - 5:00 pm"
+        }
+      ],
+      "rationale": "R38: the church being open for private prayer does not establish an Adoration schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-berlin",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-04",
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour for discernment, St. John's Church, Collingswood"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "811495df",
+          "page": 9,
+          "said": "The next Holy Hour for discernment is Friday, December 4, 2026, 7-8 pm, at St. Teresa of Calcutta Parish, St. John's Church, 809 Park Avenue, Collingswood"
+        }
+      ],
+      "rationale": "R22: held at another parish's church; it belongs to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

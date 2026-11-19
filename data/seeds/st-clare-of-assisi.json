@@ -1,0 +1,681 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-clare-of-assisi",
+  "status": "approved",
+  "as_of": "2026-11-15T16:01:51Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-16T21:56:49Z",
+  "reviewer": "agent:seed-review@15f160603bcc",
+  "approved_at": "2026-11-19T18:30:04Z",
+  "summary": "Two churches, St. Michael (Gibbstown) and St. Joseph (Swedesboro). Weekend, daily Mass and Saturday confession times match in the page-1 schedule boxes of both bulletins read (Nov 8 and Nov 15, 2026); Friday 9 AM-1 PM Adoration at St. Joseph's is in both. Dated: Thanksgiving 10:30 AM Spanish Mass and the Dec 1 Advent Penance Service confessions. No open questions; no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "8fbdbf8c04885adf662e59f03f02e23e531f34b33fdc343cbfde322da085b0e1",
+      "fetched_at": "2026-11-15T16:01:51Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "4aabd9863ca0a7dc12c46011d0b23b8f476a9a16f82fadaa54a309371a5326b8",
+      "fetched_at": "2026-11-08T15:29:42Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-gibbstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8fbdbf8c",
+          "page": 1,
+          "said": "Saturday----4:30 pm Gibbstown"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4aabd986",
+          "page": 1,
+          "said": "Saturday----4:30 pm Gibbstown"
+        }
+      ],
+      "rationale": "R1: printed in the Sunday Mass Schedule box of both bulletins read; the intentions list it too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-swedesboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8fbdbf8c",
+          "page": 1,
+          "said": "6:00 pm Swedesboro (Misa en Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4aabd986",
+          "page": 1,
+          "said": "6:00 pm Swedesboro (Misa en Español)"
+        }
+      ],
+      "rationale": "R1: printed in the Sunday Mass Schedule box of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-gibbstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8fbdbf8c",
+          "page": 1,
+          "said": "Sunday------9:30 am Gibbstown"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4aabd986",
+          "page": 1,
+          "said": "Sunday------9:30 am Gibbstown"
+        }
+      ],
+      "rationale": "R1: printed in the Sunday Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-swedesboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8fbdbf8c",
+          "page": 1,
+          "said": "8:00 & 11:00 am Swedesboro"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4aabd986",
+          "page": 1,
+          "said": "8:00 & 11:00 am Swedesboro"
+        }
+      ],
+      "rationale": "R1: printed in the Sunday Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-swedesboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8fbdbf8c",
+          "page": 1,
+          "said": "8:00 & 11:00 am Swedesboro"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4aabd986",
+          "page": 1,
+          "said": "8:00 & 11:00 am Swedesboro"
+        }
+      ],
+      "rationale": "R1: printed in the Sunday Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-swedesboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8fbdbf8c",
+          "page": 1,
+          "said": "12:30 pm Swedesboro (Misa en Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4aabd986",
+          "page": 1,
+          "said": "12:30 pm Swedesboro (Misa en Español)"
+        }
+      ],
+      "rationale": "R1: printed in the Sunday Mass Schedule box of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-gibbstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8fbdbf8c",
+          "page": 1,
+          "said": "Gibbstown Monday, Tuesday & Wednesday ---------- 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4aabd986",
+          "page": 1,
+          "said": "Gibbstown Monday, Tuesday & Wednesday ---------- 8:30 am"
+        }
+      ],
+      "rationale": "R1: Daily Mass Schedule box of both bulletins; the intentions list 8:30 AM GB on these days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-gibbstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8fbdbf8c",
+          "page": 1,
+          "said": "Gibbstown Monday, Tuesday & Wednesday ---------- 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4aabd986",
+          "page": 1,
+          "said": "Gibbstown Monday, Tuesday & Wednesday ---------- 8:30 am"
+        }
+      ],
+      "rationale": "R1: Daily Mass Schedule box of both bulletins; the intentions list 8:30 AM GB on these days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-gibbstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8fbdbf8c",
+          "page": 1,
+          "said": "Gibbstown Monday, Tuesday & Wednesday ---------- 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4aabd986",
+          "page": 1,
+          "said": "Gibbstown Monday, Tuesday & Wednesday ---------- 8:30 am"
+        }
+      ],
+      "rationale": "R1: Daily Mass Schedule box of both bulletins; the intentions list 8:30 AM GB on these days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-swedesboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8fbdbf8c",
+          "page": 1,
+          "said": "Swedesboro Thursday & Friday ---------- 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4aabd986",
+          "page": 1,
+          "said": "Swedesboro Thursday & Friday ---------- 8:30 am"
+        }
+      ],
+      "rationale": "R1: Daily Mass Schedule box of both bulletins; the intentions list 8:30 AM SB on these days. The Thanksgiving 8:30 AM Swedesboro Mass (Nov 26) is this weekly slot (POLICY, Weekly or dated rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-swedesboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8fbdbf8c",
+          "page": 1,
+          "said": "Swedesboro Thursday & Friday ---------- 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4aabd986",
+          "page": 1,
+          "said": "Swedesboro Thursday & Friday ---------- 8:30 am"
+        }
+      ],
+      "rationale": "R1: Daily Mass Schedule box of both bulletins; the intentions list 8:30 AM SB on these days. The Thanksgiving 8:30 AM Swedesboro Mass (Nov 26) is this weekly slot (POLICY, Weekly or dated rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-swedesboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8fbdbf8c",
+          "page": 1,
+          "said": "Swedesboro ... Saturday ---------- 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4aabd986",
+          "page": 1,
+          "said": "Swedesboro ... Saturday ---------- 9:00 am"
+        }
+      ],
+      "rationale": "R1: Daily Mass Schedule box of both bulletins under the Swedesboro heading; the intentions list Saturday 9:00 AM SB.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-gibbstown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8fbdbf8c",
+          "page": 1,
+          "said": "Confessions Saturday ---------- 3:45 pm (GB)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4aabd986",
+          "page": 1,
+          "said": "Confessions Saturday ---------- 3:45 pm (GB)"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins; no end time given, so none recorded (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-swedesboro",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "after the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8fbdbf8c",
+          "page": 1,
+          "said": "Confessions ... Follow 9:00 am Mass (SB)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4aabd986",
+          "page": 1,
+          "said": "Confessions ... Follow 9:00 am Mass (SB)"
+        }
+      ],
+      "rationale": "R1, R10: printed in both bulletins with no clock time; Saturday 9:00 AM is a weekday (not vigil) Mass, so POLICY times it 30 minutes after it starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-swedesboro",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "13:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8fbdbf8c",
+          "page": 7,
+          "said": "Adoration Weekly on Fridays 9 to 1 PM St. Joseph's Church Swedesboro"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4aabd986",
+          "page": 7,
+          "said": "Adoration Weekly on Fridays 9 to 1 PM St. Joseph's Church Swedesboro"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8fbdbf8c",
+          "page": 4,
+          "said": "Friday ... 9:00 AM Adoration - SB Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4aabd986",
+          "page": 4,
+          "said": "Friday ... 9:00 AM Adoration - SB Church"
+        }
+      ],
+      "rationale": "R1: the Adoration box says weekly on Fridays 9 to 1 PM at St. Joseph's in both bulletins, and the Week at a Glance lists it on Nov 13 and Nov 20.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-swedesboro",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day, Spanish"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8fbdbf8c",
+          "page": 5,
+          "said": "Thanksgiving Masses Thursday, November 26th ... 10:30 AM Swedesboro (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4aabd986",
+          "page": 5,
+          "said": "Thanksgiving Masses Thursday, November 26th ... 10:30 AM Swedesboro (Spanish)"
+        }
+      ],
+      "rationale": "R1, R16: a dated holiday Mass outside the weekly schedule, on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-gibbstown",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-01",
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Penance Service"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8fbdbf8c",
+          "page": 5,
+          "said": "Advent Penance Service Tuesday, December 1st 7:00 PM Service 7:30 PM Confessions St. Michael's Church 320 Memorial Ave Gibbstown"
+        }
+      ],
+      "rationale": "R1, R16: dated confession time on or after as_of; no end time given. The 7:00 PM service itself is a penance service, not Mass, Confession or Adoration (R24).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
