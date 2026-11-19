@@ -1,0 +1,536 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-thomas-the-apostle-brigantine",
+  "status": "ready",
+  "as_of": "2026-11-15T16:48:12Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T17:34:33Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, St. Thomas the Apostle, Brigantine. Both bulletins read (Nov 8 and Nov 15, 2026; image-only PDFs, read from rendered pages) print the same schedule: Sat 4 PM vigil, Sun 8, 9:30, 11 AM, Mon-Sat 8:30 AM, Saturday 3 PM confession, Friday 9 AM-noon Adoration. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "312624472ab403344e5f159997111d81120a6488fec3da50f805f12373c6325a",
+      "fetched_at": "2026-11-15T16:48:12Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "7fb18498bd1c33a447b6ed5a2fde9af4fe21ad7516da7ff5285305139ec3f9c3",
+      "fetched_at": "2026-11-08T15:56:24Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-brigantine",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "31262447",
+          "page": 1,
+          "said": "MASS SCHEDULE WEEKENDS SAT: 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fb18498",
+          "page": 1,
+          "said": "WEEKENDS SAT: 4:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box on the cover of both bulletins read, and in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-brigantine",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "31262447",
+          "page": 1,
+          "said": "SUN: 8, 9:30 & 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fb18498",
+          "page": 1,
+          "said": "SUN: 8, 9:30 & 11:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the Mass intentions list each Sunday at 8:00am, 9:30am and 11:00am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-brigantine",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "31262447",
+          "page": 1,
+          "said": "SUN: 8, 9:30 & 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fb18498",
+          "page": 1,
+          "said": "SUN: 8, 9:30 & 11:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the Mass intentions list each Sunday at 8:00am, 9:30am and 11:00am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-brigantine",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "31262447",
+          "page": 1,
+          "said": "SUN: 8, 9:30 & 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fb18498",
+          "page": 1,
+          "said": "SUN: 8, 9:30 & 11:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the Mass intentions list each Sunday at 8:00am, 9:30am and 11:00am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-brigantine",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "31262447",
+          "page": 1,
+          "said": "WEEKDAYS Mon. - Sat. 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fb18498",
+          "page": 1,
+          "said": "WEEKDAYS Mon. - Sat. 8:30am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the Mass intentions list 8:30am each Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-brigantine",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "31262447",
+          "page": 1,
+          "said": "WEEKDAYS Mon. - Sat. 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fb18498",
+          "page": 1,
+          "said": "WEEKDAYS Mon. - Sat. 8:30am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the Mass intentions list 8:30am each Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-brigantine",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "31262447",
+          "page": 1,
+          "said": "WEEKDAYS Mon. - Sat. 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fb18498",
+          "page": 1,
+          "said": "WEEKDAYS Mon. - Sat. 8:30am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the Mass intentions list 8:30am each Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-brigantine",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "31262447",
+          "page": 1,
+          "said": "WEEKDAYS Mon. - Sat. 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fb18498",
+          "page": 1,
+          "said": "WEEKDAYS Mon. - Sat. 8:30am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the Mass intentions list 8:30am each Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-brigantine",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "31262447",
+          "page": 1,
+          "said": "WEEKDAYS Mon. - Sat. 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fb18498",
+          "page": 1,
+          "said": "WEEKDAYS Mon. - Sat. 8:30am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the Mass intentions list 8:30am each Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-brigantine",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "31262447",
+          "page": 1,
+          "said": "WEEKDAYS Mon. - Sat. 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fb18498",
+          "page": 1,
+          "said": "WEEKDAYS Mon. - Sat. 8:30am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the Mass intentions list 8:30am each Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-brigantine",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "31262447",
+          "page": 1,
+          "said": "CONFESSION Saturday: 3pm or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fb18498",
+          "page": 1,
+          "said": "CONFESSION Saturday: 3pm or by appointment"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; no end time given, so end_time is null (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-brigantine",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "31262447",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament: Every Friday from 9am-12noon. If there is a funeral, Adoration is held in the Parish Meeting Room, located behind the Rectory Office."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fb18498",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament: Every Friday from 9am-12noon."
+        }
+      ],
+      "rationale": "R1: Weekly Devotions box of both bulletins. The funeral-day room is behind the rectory office on the parish grounds, so it stays at the church (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "31262447",
+          "page": 1,
+          "said": "CONFESSION ... or by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-brigantine",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-24",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Interfaith Thanksgiving Service"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "31262447",
+          "page": 5,
+          "said": "Interfaith Thanksgiving Service - 7pm in the Church Hosted by St. Thomas"
+        }
+      ],
+      "rationale": "R24, R25: an interfaith prayer service, not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
