@@ -1,0 +1,549 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-sea-isle-city",
+  "status": "ready",
+  "as_of": "2026-11-15T16:47:53Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T12:56:46Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, St. Joseph, Sea Isle City. Both bulletins read (Nov 8 and Nov 15, 2026, image-only PDFs read as rendered pages) print the same schedule: Mon-Fri 8:00 AM, Sat 4:00 PM, Sun 8:00 and 10:30 AM, Saturday Reconciliation 3:00-3:30 PM; plus a dated Advent Penance Service on Dec 19 at 11:00 AM. No history stored; no open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "ef0d0f700df478d80d0ebd5ad74fda163e0a3261a5d0e7450264b0a96ea6497a",
+      "fetched_at": "2026-11-15T16:47:53Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "2b623fe9c63320c43ea227bb20fa206ad2a35abd6c7359c9637a3beaff32264a",
+      "fetched_at": "2026-11-08T15:56:11Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-sea-isle-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ef0d0f70",
+          "page": 2,
+          "said": "Mass schedule: ... Saturday 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b623fe9",
+          "page": 2,
+          "said": "Mass schedule: ... Saturday 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ef0d0f70",
+          "page": 3,
+          "said": "Mass intentions list Saturday 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b623fe9",
+          "page": 3,
+          "said": "Mass intentions list Saturday 4:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Contact Information and Schedule box of both bulletins read and in each week's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-sea-isle-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ef0d0f70",
+          "page": 2,
+          "said": "Sunday 8:00 AM & 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b623fe9",
+          "page": 2,
+          "said": "Sunday 8:00 AM & 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ef0d0f70",
+          "page": 3,
+          "said": "Mass intentions list Sunday 8:00 am and 10:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b623fe9",
+          "page": 3,
+          "said": "Mass intentions list Sunday 8:00 am and 10:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in each week's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-sea-isle-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ef0d0f70",
+          "page": 2,
+          "said": "Sunday 8:00 AM & 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b623fe9",
+          "page": 2,
+          "said": "Sunday 8:00 AM & 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ef0d0f70",
+          "page": 3,
+          "said": "Mass intentions list Sunday 8:00 am and 10:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b623fe9",
+          "page": 3,
+          "said": "Mass intentions list Sunday 8:00 am and 10:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in each week's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-sea-isle-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ef0d0f70",
+          "page": 2,
+          "said": "Mass schedule: Monday thru Friday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b623fe9",
+          "page": 2,
+          "said": "Mass schedule: Monday thru Friday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ef0d0f70",
+          "page": 3,
+          "said": "Mass intentions list 8:00 am each weekday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b623fe9",
+          "page": 3,
+          "said": "Mass intentions list 8:00 am each weekday"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; each weekday's 8:00 am Mass appears in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-sea-isle-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ef0d0f70",
+          "page": 2,
+          "said": "Mass schedule: Monday thru Friday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b623fe9",
+          "page": 2,
+          "said": "Mass schedule: Monday thru Friday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ef0d0f70",
+          "page": 3,
+          "said": "Mass intentions list 8:00 am each weekday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b623fe9",
+          "page": 3,
+          "said": "Mass intentions list 8:00 am each weekday"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; each weekday's 8:00 am Mass appears in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-sea-isle-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ef0d0f70",
+          "page": 2,
+          "said": "Mass schedule: Monday thru Friday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b623fe9",
+          "page": 2,
+          "said": "Mass schedule: Monday thru Friday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ef0d0f70",
+          "page": 3,
+          "said": "Mass intentions list 8:00 am each weekday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b623fe9",
+          "page": 3,
+          "said": "Mass intentions list 8:00 am each weekday"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; each weekday's 8:00 am Mass appears in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-sea-isle-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ef0d0f70",
+          "page": 2,
+          "said": "Mass schedule: Monday thru Friday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b623fe9",
+          "page": 2,
+          "said": "Mass schedule: Monday thru Friday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ef0d0f70",
+          "page": 3,
+          "said": "Mass intentions list 8:00 am each weekday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b623fe9",
+          "page": 3,
+          "said": "Mass intentions list 8:00 am each weekday"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; each weekday's 8:00 am Mass appears in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-sea-isle-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ef0d0f70",
+          "page": 2,
+          "said": "Mass schedule: Monday thru Friday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b623fe9",
+          "page": 2,
+          "said": "Mass schedule: Monday thru Friday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ef0d0f70",
+          "page": 3,
+          "said": "Mass intentions list 8:00 am each weekday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b623fe9",
+          "page": 3,
+          "said": "Mass intentions list 8:00 am each weekday"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; each weekday's 8:00 am Mass appears in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-sea-isle-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ef0d0f70",
+          "page": 2,
+          "said": "Reconciliation: Saturday 3:00-3:30 PM or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b623fe9",
+          "page": 2,
+          "said": "Reconciliation: Saturday 3:00-3:30 PM or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ef0d0f70",
+          "page": 6,
+          "said": "The Sacrament of Reconciliation is always available from 3:00-3:30pm prior to the 4:00pm Mass."
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and repeated on the Advent Penance Service notice.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-sea-isle-city",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-19",
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Penance Service, several priests"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ef0d0f70",
+          "page": 6,
+          "said": "Advent Penance Service December 19 11:00am ... several priests will be available to hear confessions."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b623fe9",
+          "page": 9,
+          "said": "Advent Penance Service December 19 11:00am"
+        }
+      ],
+      "rationale": "R1, R16: a dated penance service after as_of, announced in both bulletins under St. Joseph Parish; no end time given, so none recorded (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ef0d0f70",
+          "page": 2,
+          "said": "Reconciliation ... or by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ef0d0f70",
+          "page": 2,
+          "said": "Devotions: Daily Rosary: Monday through Friday 7:30 AM; Miraculous Medal Novena: Thursday after daily Mass"
+        }
+      ],
+      "rationale": "R24: the Rosary and the Miraculous Medal Novena are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
