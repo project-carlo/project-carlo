@@ -1,0 +1,826 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-stephen-pennsauken",
+  "status": "ready",
+  "as_of": "2026-11-15T16:48:08Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T13:48:16Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, St. Stephen, Pennsauken. Both bulletins read (Nov 8 and Nov 15, 2026) print the same schedule box: weekdays 9 AM, Saturday 4 PM with Reconciliation 3:15-3:45, Sunday 9 and 10:30, and First Friday Adoration for an hour after the 9 AM Mass. Dated Masses from the Upcoming Liturgical Events list (Thanksgiving, Immaculate Conception, Christmas, New Year) and a Padre Pio Healing Mass on Nov 23 are included; no history is stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "e67ae243a6ee13944685752de42b631fe59fd52a8de014463764b9c45825ae43",
+      "fetched_at": "2026-11-15T16:48:08Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "a61cc3901e7cfeeba5e03407d6565d7894fa4d0364c9859fb2a8f650ac3d3215",
+      "fetched_at": "2026-11-08T15:56:22Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-pennsauken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e67ae243",
+          "page": 1,
+          "said": "Daily Mass: Monday thru Friday - 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a61cc390",
+          "page": 1,
+          "said": "Daily Mass: Monday thru Friday - 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 1 of both bulletins read; the Mass intentions list a 9:00am Mass every weekday in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-pennsauken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e67ae243",
+          "page": 1,
+          "said": "Daily Mass: Monday thru Friday - 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a61cc390",
+          "page": 1,
+          "said": "Daily Mass: Monday thru Friday - 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 1 of both bulletins read; the Mass intentions list a 9:00am Mass every weekday in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-pennsauken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e67ae243",
+          "page": 1,
+          "said": "Daily Mass: Monday thru Friday - 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a61cc390",
+          "page": 1,
+          "said": "Daily Mass: Monday thru Friday - 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 1 of both bulletins read; the Mass intentions list a 9:00am Mass every weekday in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-pennsauken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e67ae243",
+          "page": 1,
+          "said": "Daily Mass: Monday thru Friday - 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a61cc390",
+          "page": 1,
+          "said": "Daily Mass: Monday thru Friday - 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 1 of both bulletins read; the Mass intentions list a 9:00am Mass every weekday in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-pennsauken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e67ae243",
+          "page": 1,
+          "said": "Daily Mass: Monday thru Friday - 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a61cc390",
+          "page": 1,
+          "said": "Daily Mass: Monday thru Friday - 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 1 of both bulletins read; the Mass intentions list a 9:00am Mass every weekday in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-pennsauken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e67ae243",
+          "page": 1,
+          "said": "Weekend Obligation: Saturday – 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a61cc390",
+          "page": 1,
+          "said": "Weekend Obligation: Saturday – 4:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-pennsauken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e67ae243",
+          "page": 1,
+          "said": "Sunday – 9:00am & 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a61cc390",
+          "page": 1,
+          "said": "Sunday – 9:00am & 10:30am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-pennsauken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e67ae243",
+          "page": 1,
+          "said": "Sunday – 9:00am & 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a61cc390",
+          "page": 1,
+          "said": "Sunday – 9:00am & 10:30am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-pennsauken",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e67ae243",
+          "page": 1,
+          "said": "Saturday – 4:00pm (Reconciliation 3:15pm-3:45pm)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a61cc390",
+          "page": 1,
+          "said": "Saturday – 4:00pm (Reconciliation 3:15pm-3:45pm)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-pennsauken",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "10:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:00 AM Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a61cc390",
+          "page": 1,
+          "said": "1st Friday Adoration: following the 9AM Mass for one hour."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e67ae243",
+          "page": 1,
+          "said": "1st Friday Adoration: following the 9AM Mass for one hour."
+        }
+      ],
+      "rationale": "R12, R10: a named first-Friday service in the standing schedule box of both bulletins; neither read week holds a first Friday. Following a weekday 9 AM Mass starts 30 minutes after it (9:30), for one hour (to 10:30).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-pennsauken",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-23",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Padre Pio Healing Mass & Novena"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e67ae243",
+          "page": 3,
+          "said": "St. Padre Pio Healing Mass & Novena Monday, November 23rd – 7:00 PM ... ALL ARE WELCOME!"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a61cc390",
+          "page": 4,
+          "said": "Our next Mass and Novena will be held on Monday, November 23, at 7:00 PM ... Everyone is prayerfully invited!"
+        }
+      ],
+      "rationale": "R1, R16: a dated public Mass at St. Stephen Church outside the weekly schedule, on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-pennsauken",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-25",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Vigil Mass"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e67ae243",
+          "page": 5,
+          "said": "Wed - Nov 25 7PM – Thanksgiving Vigil Mass (Thanksgiving Food Blessing)"
+        }
+      ],
+      "rationale": "R1, R16: dated holiday Mass outside the weekly schedule (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-pennsauken",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vigil, Immaculate Conception"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e67ae243",
+          "page": 5,
+          "said": "Mon – Dec 7 7PM – Vigil, Feast of the Immaculate Conception"
+        }
+      ],
+      "rationale": "R1, R16: dated holy-day vigil Mass outside the weekly schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-pennsauken",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-16",
+        "start_time": "18:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Confessions"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e67ae243",
+          "page": 5,
+          "said": "Wed – Dec 16 6:15PM – Advent Confessions"
+        }
+      ],
+      "rationale": "R1, R16: dated confession listed under Upcoming Liturgical Events; no end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-pennsauken",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve Family Mass"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e67ae243",
+          "page": 5,
+          "said": "Thu – Dec 24 4:00PM – FAMILY MASS"
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Mass outside the weekly schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-pennsauken",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "22:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Vigil Mass"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e67ae243",
+          "page": 5,
+          "said": "Thu – Dec 24 ... 10:PM – VIGIL MASS"
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Mass outside the weekly schedule; '10:PM' read as 10:00 PM on the Dec 24 line.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-pennsauken",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Day"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e67ae243",
+          "page": 5,
+          "said": "Fri – Dec 25 10:30AM – CHRISTMAS DAY MASS"
+        }
+      ],
+      "rationale": "R1, R16, R17: dated Christmas Day Mass; the bulletin does not cancel the Friday 9 AM Mass, so the weekly slot is left alone.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-pennsauken",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-31",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vigil, Mary Mother of God"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e67ae243",
+          "page": 5,
+          "said": "Thu – Dec 31 4PM – Vigil Mass of Mary Mother of God/New Year's Eve"
+        }
+      ],
+      "rationale": "R1, R16: dated holy-day vigil Mass outside the weekly schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-pennsauken",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e67ae243",
+          "page": 5,
+          "said": "Thu – Nov 26 9AM – Thanksgiving Day Mass"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated, rules 6-7: at the regular Thursday 9:00 AM weekday Mass time, so covered by the weekly slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-pennsauken",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e67ae243",
+          "page": 5,
+          "said": "Tues – Dec 8 9AM – Feast Day Mass (Holy Day of Obligation)"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated, rules 6-7: at the regular Tuesday 9:00 AM Mass time, so covered by the weekly slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-pennsauken",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2027-01-01",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mary Mother of God"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e67ae243",
+          "page": 5,
+          "said": "Fri – Jan 1 9AM – Mary Mother of God/ New Year's Day"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated, rules 6-7: at the regular Friday 9:00 AM Mass time, so covered by the weekly slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e67ae243",
+          "page": 1,
+          "said": "Holy Days: 9:00am & 7:00pm"
+        }
+      ],
+      "rationale": "R16: a generic holy-day line with no dates; the coming holy days are recorded from the dated Upcoming Liturgical Events list on page 5.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e67ae243",
+          "page": 1,
+          "said": "Miraculous Medal Novena: Thursday after 9AM Mass. Recitation of the Rosary: every Tuesday-7pm in the Church."
+        }
+      ],
+      "rationale": "R24: novena and Rosary are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e67ae243",
+          "page": 1,
+          "said": "Anointing of the Sick/Eucharist – Upon request after the 4:00pm Mass in the Chapel. Prior notification is necessary"
+        }
+      ],
+      "rationale": "R24, R26: Anointing is not a counted service, and it is by request only.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
