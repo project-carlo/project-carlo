@@ -1,0 +1,1200 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-family-new-brunswick",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:19:02Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T22:42:06Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Three churches (Sacred Heart, St. Joseph, St. Ladislaus). Weekend and weekday Masses agree between the schedule boxes and intentions of both bulletins (Nov 8 and Nov 15). Open: the Tuesday 7 PM Spanish Mass's church (box/website say St. Joseph, intentions say Sacred Heart), and two website-only Adoration services (Monday Holy Hour at St. Joseph; First Friday at Sacred Heart). No Confession times anywhere.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "e51d96a3df607ccbf4e39ba5f0bb6912c9a9fe4af05ae182b0d613c6391d005c",
+      "fetched_at": "2026-11-15T16:19:02Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "9f5cc4b44af6a85f249ea0e60f357bf23177c352daf4f3d9fd109475c2b7174a",
+      "fetched_at": "2026-11-08T15:43:50Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 1,
+          "said": "The Lord's Day: 4:30pm Sat. Vigil at Sacred Heart"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 2,
+          "said": "4:30 PM (SH) - (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f5cc4b4",
+          "page": 1,
+          "said": "4:30pm Sat. Vigil at Sacred Heart"
+        }
+      ],
+      "rationale": "R1, R35: in the schedule box and the intentions (both Saturdays) of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ladislaus-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 1,
+          "said": "8:00am (English, St. Ladislau)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 2,
+          "said": "8:00 AM - (SL) - (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f5cc4b4",
+          "page": 1,
+          "said": "8:00am (English, St. Ladislaus)"
+        }
+      ],
+      "rationale": "R1, R35: schedule box and intentions of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 1,
+          "said": "9:00am (Polish, St. Joseph)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 2,
+          "said": "9:00 AM- (SJ) - (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f5cc4b4",
+          "page": 1,
+          "said": "9:00am (Polish, St. Joseph)"
+        }
+      ],
+      "rationale": "R1, R35: schedule box and intentions of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ladislaus-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Hungarian"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 1,
+          "said": "9:00am (Hungarian, St. Ladislau)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 2,
+          "said": "9:00 AM - (SL) - (Hungarian)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f5cc4b4",
+          "page": 1,
+          "said": "9:00am (Hungarian, St. Ladislaus)"
+        }
+      ],
+      "rationale": "R1, R35: schedule box and intentions of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish/English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 1,
+          "said": "10:00am (Spanish/English, Sacred Heart)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 2,
+          "said": "10:00 AM - (SH) - (Bilingual)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f5cc4b4",
+          "page": 1,
+          "said": "10:00am (Spanish/English, Sacred Heart)"
+        }
+      ],
+      "rationale": "R1, R35: schedule box and intentions of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 1,
+          "said": "12:00pm (Spanish, St. Joseph)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 2,
+          "said": "12:00 PM - (SJ) Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f5cc4b4",
+          "page": 1,
+          "said": "12:00pm (Spanish, St. Joseph)"
+        }
+      ],
+      "rationale": "R1, R35: schedule box and intentions of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 1,
+          "said": "7:00pm (Spanish, St. Joseph)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 2,
+          "said": "7:00 PM - (SJ) Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f5cc4b4",
+          "page": 1,
+          "said": "7:00pm (Spanish, St. Joseph)"
+        }
+      ],
+      "rationale": "R1, R35: schedule box and intentions of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ladislaus-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 1,
+          "said": "Weekdays: 7:00am Mon - Fri (St. Ladislau)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 2,
+          "said": "7:00 AM (SL) - (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f5cc4b4",
+          "page": 1,
+          "said": "7:00am Mon - Fri (St. Ladislaus)"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins; each weekday's intentions in both weeks list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ladislaus-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 1,
+          "said": "Weekdays: 7:00am Mon - Fri (St. Ladislau)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 2,
+          "said": "7:00 AM (SL) - (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f5cc4b4",
+          "page": 1,
+          "said": "7:00am Mon - Fri (St. Ladislaus)"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins; each weekday's intentions in both weeks list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ladislaus-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 1,
+          "said": "Weekdays: 7:00am Mon - Fri (St. Ladislau)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 2,
+          "said": "7:00 AM (SL) - (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f5cc4b4",
+          "page": 1,
+          "said": "7:00am Mon - Fri (St. Ladislaus)"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins; each weekday's intentions in both weeks list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ladislaus-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 1,
+          "said": "Weekdays: 7:00am Mon - Fri (St. Ladislau)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 2,
+          "said": "7:00 AM (SL) - (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f5cc4b4",
+          "page": 1,
+          "said": "7:00am Mon - Fri (St. Ladislaus)"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins; each weekday's intentions in both weeks list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ladislaus-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 1,
+          "said": "Weekdays: 7:00am Mon - Fri (St. Ladislau)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 2,
+          "said": "7:00 AM (SL) - (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f5cc4b4",
+          "page": 1,
+          "said": "7:00am Mon - Fri (St. Ladislaus)"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins; each weekday's intentions in both weeks list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 1,
+          "said": "8:00am Mon - Sat (Sacred Heart )"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 2,
+          "said": "8:00 AM (SH) - (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f5cc4b4",
+          "page": 1,
+          "said": "8:00am Mon - Sat (Sacred Heart )"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins; each day's intentions in both weeks list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 1,
+          "said": "8:00am Mon - Sat (Sacred Heart )"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 2,
+          "said": "8:00 AM (SH) - (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f5cc4b4",
+          "page": 1,
+          "said": "8:00am Mon - Sat (Sacred Heart )"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins; each day's intentions in both weeks list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 1,
+          "said": "8:00am Mon - Sat (Sacred Heart )"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 2,
+          "said": "8:00 AM (SH) - (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f5cc4b4",
+          "page": 1,
+          "said": "8:00am Mon - Sat (Sacred Heart )"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins; each day's intentions in both weeks list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 1,
+          "said": "8:00am Mon - Sat (Sacred Heart )"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 2,
+          "said": "8:00 AM (SH) - (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f5cc4b4",
+          "page": 1,
+          "said": "8:00am Mon - Sat (Sacred Heart )"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins; each day's intentions in both weeks list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 1,
+          "said": "8:00am Mon - Sat (Sacred Heart )"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 2,
+          "said": "8:00 AM (SH) - (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f5cc4b4",
+          "page": 1,
+          "said": "8:00am Mon - Sat (Sacred Heart )"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins; each day's intentions in both weeks list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 1,
+          "said": "8:00am Mon - Sat (Sacred Heart )"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 2,
+          "said": "8:00 AM (SH) - (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f5cc4b4",
+          "page": 1,
+          "said": "8:00am Mon - Sat (Sacred Heart )"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins; each day's intentions in both weeks list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 1,
+          "said": "7:00pm Wed. (Sacred Heart, Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 2,
+          "said": "Wednesday, November 18 ... 7:00 PM (SH) - (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f5cc4b4",
+          "page": 1,
+          "said": "7:00pm Wed. (Sacred Heart, Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f5cc4b4",
+          "page": 2,
+          "said": "Wednesday, November 11 ... 7:00 PM (SH) - (Spanish)"
+        }
+      ],
+      "rationale": "R1, R35: schedule box and intentions of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 1,
+          "said": "7:00pm: Tues. (St. Joseph, Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 2,
+          "said": "Tuesday, November 17 ... 7:00 PM (SH) - (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f5cc4b4",
+          "page": 1,
+          "said": "7:00pm: Tues. (St. Joseph, Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f5cc4b4",
+          "page": 2,
+          "said": "Tuesday, November 10 ... 7:00 PM (SH) - (Spanish)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.holyfamilyforall.org/liturgy-sacraments/worship/",
+          "said": "TUESDAY EVENINGS St. Joseph (Spanish)"
+        }
+      ],
+      "rationale": "R28, C8: the Mass is certain (box and intentions, both weeks), but the schedule box in both issues and the website say St. Joseph while both weeks' intentions say (SH). Leaning St. Joseph: two separate sources agree, and the intentions line may copy the Wednesday line's (SH).",
+      "question": "Which church holds the Tuesday 7 PM Spanish Mass: St. Joseph (schedule box, website) or Sacred Heart (intentions)?",
+      "options": [
+        {
+          "label": "St. Joseph",
+          "entry": {
+            "church_slug": "st-joseph-new-brunswick",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Spanish"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Sacred Heart",
+          "entry": {
+            "church_slug": "sacred-heart-new-brunswick",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Spanish"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.holyfamilyforall.org/liturgy-sacraments/worship/",
+          "said": "At St. Joseph Church , there is a Holy Hour with Adoration on Mondays beginning at 7:00 PM."
+        }
+      ],
+      "rationale": "R29, R6: neither bulletin mentions it (their schedule box and intentions list only Masses, so silence is not a conflict). The page's Sunday and weekday Masses match the bulletin, but it also carries stale items (a 2019 Ash Wednesday schedule, a Thursday Hungarian Mass and First Saturday Mass the bulletins don't show), so whether it continues is uncertain. Leaning include: a definite, concrete weekly service. No end time given.",
+      "question": "Add the website's Monday 7 PM Holy Hour with Adoration at St. Joseph?",
+      "options": [
+        {
+          "label": "Mondays 7 PM",
+          "entry": {
+            "church_slug": "st-joseph-new-brunswick",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Holy Hour"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.holyfamilyforall.org/liturgy-sacraments/worship/",
+          "said": "On First Fridays, Adoration of the Blessed Sacrament will be offered in Sacred Heart Church following the 8:00 AM Mass. Adoration will be open for a short period while devotees are present."
+        }
+      ],
+      "rationale": "R29, R6, R12: website only; neither read bulletin's week holds a first Friday. POLICY, Times would start it 30 minutes after the 8 AM weekday Mass (R10). Leaning leave out: 'a short period while devotees are present' is hedged availability, and the page has stale items.",
+      "question": "Add First Friday Adoration at Sacred Heart after the 8:00 AM Mass (8:30 AM, no end time)?",
+      "options": [
+        {
+          "label": "First Fridays 8:30 AM",
+          "entry": {
+            "church_slug": "sacred-heart-new-brunswick",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 8:00 AM Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ladislaus-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Hungarian"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.holyfamilyforall.org/liturgy-sacraments/worship/",
+          "said": "7 pm 1x/week ... THURSDAY EVENINGS St.Ladislaus (Hungarian)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 2,
+          "said": "Thursday, November 19 - Weekday 7:00 AM - (SL ... 8:00 AM - (SH)"
+        }
+      ],
+      "rationale": "R6, R40: the website lists a Thursday evening Hungarian Mass, but the schedule box of both bulletins has no Thursday evening Mass and both weeks' intentions list only the 7 AM and 8 AM Masses on Thursday; the page does not fit the bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ladislaus-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Hungarian"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.holyfamilyforall.org/liturgy-sacraments/worship/",
+          "said": "10:00 AM FIRST SATURDAY OF EACH MONTH St. Ladislaus (Hungarian)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f5cc4b4",
+          "page": 2,
+          "said": "Saturday, November 7 - Weekday 8:00 AM (SH) ... 4:30 PM (SH)"
+        }
+      ],
+      "rationale": "R6, R12: website only; November 7 (a first Saturday) is in the 9f5cc4b4 intentions with only the 8:00 AM and 4:30 PM Masses, and the schedule box omits it, so the page does not fit the bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.holyfamilyforall.org/liturgy-sacraments/sacraments/",
+          "said": "monthly and seasonal Reconciliation Services rotated among our three churches. Priests are also available by appointment"
+        }
+      ],
+      "rationale": "R26: no Confession times in either bulletin or on the website; services and appointments have no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.holyfamilyforall.org/liturgy-sacraments/worship/",
+          "said": "with the exception of Thanksgiving Day, when Mass is held at 9 a.m. in English at one of our three churches."
+        }
+      ],
+      "rationale": "R32, R26: no church named and neither bulletin announces it yet; update mode will read the Thanksgiving issue.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-02",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Antorcha Guadalupana"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 3,
+          "said": "DECEMBER 2, 2026 6:00 pm Reception of the Antorcha Guadalupana 7:00 pm Mass at the Sacred Heart Church"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7: December 2 is a Wednesday, so this is the regular Wednesday 7 PM Mass at Sacred Heart; not recorded separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e51d96a3",
+          "page": 3,
+          "said": "Interfaith Thanksgiving Prayer Service on Tuesday, November 24 at 7:00 PM at Emanuel Lutheran Church"
+        }
+      ],
+      "rationale": "R24, R22: a prayer service, not a Mass, at another church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
