@@ -1,0 +1,588 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-somers-point",
+  "status": "ready",
+  "as_of": "2026-11-15T16:47:55Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T13:03:36Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both bulletins read (Nov 8 and Nov 15, 2026, all pages are images) print the same Mass and Confession box: Sat 4:30 PM and 7 PM Spanish, Sun 8/10/12, Mon-Wed and Fri 8:30 AM, Thu 6:30 PM, Saturday Confession 3:30-4 and 6-6:50 PM Spanish; both also announce first-Wednesday Adoration 5-7 PM. One dated entry: Thanksgiving Mass Nov 26 at 9:30 AM. No open questions; no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "bbc1ed8f8580d04477b044bcb00bf3dc86810128711d12a05e66250125d388c5",
+      "fetched_at": "2026-11-15T16:47:55Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "e54574cdcba59663036e5b2a6d96ff8937b4f78abfce452ed2ae6fc87422c60f",
+      "fetched_at": "2026-11-08T15:56:11Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-somers-point",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bbc1ed8f",
+          "page": 1,
+          "said": "Saturday: 4:30 PM & 7 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e54574cd",
+          "page": 1,
+          "said": "Saturday: 4:30 PM & 7 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass & Confession Times box of both bulletins read; the Mass intentions list it each Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-somers-point",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bbc1ed8f",
+          "page": 1,
+          "said": "Saturday: 4:30 PM & 7 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e54574cd",
+          "page": 1,
+          "said": "Saturday: 4:30 PM & 7 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass & Confession Times box of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-somers-point",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bbc1ed8f",
+          "page": 1,
+          "said": "Sunday: 8 AM, 10 AM (Live Streamed), 12 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e54574cd",
+          "page": 1,
+          "said": "Sunday: 8 AM, 10 AM (Live Streamed), 12 Noon"
+        }
+      ],
+      "rationale": "R1: printed in the Mass & Confession Times box of both bulletins read; the intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-somers-point",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bbc1ed8f",
+          "page": 1,
+          "said": "Sunday: 8 AM, 10 AM (Live Streamed), 12 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e54574cd",
+          "page": 1,
+          "said": "Sunday: 8 AM, 10 AM (Live Streamed), 12 Noon"
+        }
+      ],
+      "rationale": "R1: printed in the Mass & Confession Times box of both bulletins read; the intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-somers-point",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bbc1ed8f",
+          "page": 1,
+          "said": "Sunday: 8 AM, 10 AM (Live Streamed), 12 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e54574cd",
+          "page": 1,
+          "said": "Sunday: 8 AM, 10 AM (Live Streamed), 12 Noon"
+        }
+      ],
+      "rationale": "R1: printed in the Mass & Confession Times box of both bulletins read; the intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-somers-point",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bbc1ed8f",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday & Friday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e54574cd",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday & Friday: 8:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass & Confession Times box of both bulletins read; the intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-somers-point",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bbc1ed8f",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday & Friday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e54574cd",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday & Friday: 8:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass & Confession Times box of both bulletins read; the intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-somers-point",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bbc1ed8f",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday & Friday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e54574cd",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday & Friday: 8:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass & Confession Times box of both bulletins read; the intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-somers-point",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bbc1ed8f",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday & Friday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e54574cd",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday & Friday: 8:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass & Confession Times box of both bulletins read; the intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-somers-point",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bbc1ed8f",
+          "page": 1,
+          "said": "Thursday: 6:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e54574cd",
+          "page": 1,
+          "said": "Thursday: 6:30 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass & Confession Times box of both bulletins read; the intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-somers-point",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bbc1ed8f",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Saturday 3:30 - 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e54574cd",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Saturday 3:30 - 4:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-somers-point",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "18:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bbc1ed8f",
+          "page": 1,
+          "said": "Saturday 6:00 - 6:50 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e54574cd",
+          "page": 1,
+          "said": "Saturday 6:00 - 6:50 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bbc1ed8f",
+          "page": 9,
+          "said": "Fr. Vigilius Amanze serving St. Joseph's Hispanic Community ... Confessions: 6 - 6:50 pm church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e54574cd",
+          "page": 9,
+          "said": "Fr. Vigilius Amanze serving St. Joseph's Hispanic Community ... Confessions: 6 - 6:50 pm church"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the Hispanic-community box on p9 gives the same window in the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-somers-point",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bbc1ed8f",
+          "page": 6,
+          "said": "Join us for Adoration in the Church on the first Wednesday of each month from 5-7 pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e54574cd",
+          "page": 8,
+          "said": "Join us for Adoration in the Church on the first Wednesday of each month from 5-7 pm."
+        }
+      ],
+      "rationale": "R1: printed as a standing first-Wednesday service in both bulletins read; POLICY, Weekly or dated rule 2 makes it weekly with weeks_of_month first.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-somers-point",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bbc1ed8f",
+          "page": 5,
+          "said": "JOIN US FOR 9:30 AM MASS ON THANKSGIVING MORNING ... Thursday, November 26, at 9:30 AM"
+        }
+      ],
+      "rationale": "R1, R16: a dated holiday Mass after as_of. R17: the bulletin does not cancel the Thursday 6:30 PM Mass, so the weekly slot is left alone.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bbc1ed8f",
+          "page": 9,
+          "said": "Fr. Vig is available to bless homes & administer the Sacrament of Anointing of the Sick by appt."
+        }
+      ],
+      "rationale": "R24, R26: Anointing is not Mass, Confession or Adoration, and it is by appointment with no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
