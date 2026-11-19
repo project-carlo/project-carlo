@@ -1,0 +1,832 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-ambrose-old-bridge",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:50:47Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T23:31:23Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Mass, Saturday Confession and Friday-evening Adoration agree in both bulletins read (Nov 8 and 15, 2026; image-only pages, read rendered). Open: the hours of the First Friday All Night Vigil's Exposition, printed as 9:00PM-2:30AM in one box and 8PM-2AM in another.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "80eba28cbb9a8ac0c5a46c630c783af2e67fcc3f4ede977b2b3bdf929167ec5c",
+      "fetched_at": "2026-11-15T16:50:47Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "27f015b772f9f48e092d72e794fce8b84d0484b7dfb617b029351849c7cd98bc",
+      "fetched_at": "2026-11-08T15:59:22Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ambrose-old-bridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "80eba28c",
+          "page": 2,
+          "said": "Monday – Friday 6:30AM and 9:00AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27f015b7",
+          "page": 2,
+          "said": "Monday – Friday 6:30AM and 9:00AM Mass"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read (Nov 8, Nov 15); the intentions list 6:30 and 9:00 AM every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ambrose-old-bridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "80eba28c",
+          "page": 2,
+          "said": "Monday – Friday 6:30AM and 9:00AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27f015b7",
+          "page": 2,
+          "said": "Monday – Friday 6:30AM and 9:00AM Mass"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read (Nov 8, Nov 15); the intentions list 6:30 and 9:00 AM every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ambrose-old-bridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "80eba28c",
+          "page": 2,
+          "said": "Monday – Friday 6:30AM and 9:00AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27f015b7",
+          "page": 2,
+          "said": "Monday – Friday 6:30AM and 9:00AM Mass"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read (Nov 8, Nov 15); the intentions list 6:30 and 9:00 AM every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ambrose-old-bridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "80eba28c",
+          "page": 2,
+          "said": "Monday – Friday 6:30AM and 9:00AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27f015b7",
+          "page": 2,
+          "said": "Monday – Friday 6:30AM and 9:00AM Mass"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read (Nov 8, Nov 15); the intentions list 6:30 and 9:00 AM every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ambrose-old-bridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "80eba28c",
+          "page": 2,
+          "said": "Monday – Friday 6:30AM and 9:00AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27f015b7",
+          "page": 2,
+          "said": "Monday – Friday 6:30AM and 9:00AM Mass"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read (Nov 8, Nov 15); the intentions list 6:30 and 9:00 AM every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ambrose-old-bridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "80eba28c",
+          "page": 2,
+          "said": "Monday – Friday 6:30AM and 9:00AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27f015b7",
+          "page": 2,
+          "said": "Monday – Friday 6:30AM and 9:00AM Mass"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read (Nov 8, Nov 15); the intentions list 6:30 and 9:00 AM every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ambrose-old-bridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "80eba28c",
+          "page": 2,
+          "said": "Monday – Friday 6:30AM and 9:00AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27f015b7",
+          "page": 2,
+          "said": "Monday – Friday 6:30AM and 9:00AM Mass"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read (Nov 8, Nov 15); the intentions list 6:30 and 9:00 AM every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ambrose-old-bridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "80eba28c",
+          "page": 2,
+          "said": "Monday – Friday 6:30AM and 9:00AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27f015b7",
+          "page": 2,
+          "said": "Monday – Friday 6:30AM and 9:00AM Mass"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read (Nov 8, Nov 15); the intentions list 6:30 and 9:00 AM every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ambrose-old-bridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "80eba28c",
+          "page": 2,
+          "said": "Monday – Friday 6:30AM and 9:00AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27f015b7",
+          "page": 2,
+          "said": "Monday – Friday 6:30AM and 9:00AM Mass"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read (Nov 8, Nov 15); the intentions list 6:30 and 9:00 AM every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ambrose-old-bridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "80eba28c",
+          "page": 2,
+          "said": "Monday – Friday 6:30AM and 9:00AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27f015b7",
+          "page": 2,
+          "said": "Monday – Friday 6:30AM and 9:00AM Mass"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read (Nov 8, Nov 15); the intentions list 6:30 and 9:00 AM every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ambrose-old-bridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "80eba28c",
+          "page": 2,
+          "said": "Saturday 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27f015b7",
+          "page": 2,
+          "said": "Saturday 9:00AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read; intentions list Saturday 9:00 AM Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ambrose-old-bridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "80eba28c",
+          "page": 2,
+          "said": "5:00PM Vigil Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27f015b7",
+          "page": 2,
+          "said": "5:00PM Vigil Mass"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ambrose-old-bridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "80eba28c",
+          "page": 2,
+          "said": "Sunday 8:00AM, 10:00AM & Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27f015b7",
+          "page": 2,
+          "said": "Sunday 8:00AM, 10:00AM & Noon"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read; noon is 12:00 PM (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ambrose-old-bridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "80eba28c",
+          "page": 2,
+          "said": "Sunday 8:00AM, 10:00AM & Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27f015b7",
+          "page": 2,
+          "said": "Sunday 8:00AM, 10:00AM & Noon"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read; noon is 12:00 PM (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ambrose-old-bridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "80eba28c",
+          "page": 2,
+          "said": "Sunday 8:00AM, 10:00AM & Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27f015b7",
+          "page": 2,
+          "said": "Sunday 8:00AM, 10:00AM & Noon"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read; noon is 12:00 PM (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ambrose-old-bridge",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:45",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "80eba28c",
+          "page": 2,
+          "said": "SACRAMENT OF PENANCE: Saturday: 3:45-4:45PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27f015b7",
+          "page": 2,
+          "said": "SACRAMENT OF PENANCE: Saturday: 3:45-4:45PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80eba28c",
+          "page": 2,
+          "said": "Confessions @ 3:45PM"
+        }
+      ],
+      "rationale": "R1: the schedule box gives the start (3:45 PM) and the Penance notice on the same page gives 3:45-4:45 PM, in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ambrose-old-bridge",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "00:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "second",
+          "third",
+          "fourth",
+          "fifth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "80eba28c",
+          "page": 4,
+          "said": "Come and visit the Lord Every Friday evening 7:00PM – Midnight. Jesus will be on the altar in the Blessed Sacrament each Friday evening ... **except 1st Fridays as the church is already reserved for All Night Vigil**"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27f015b7",
+          "page": 4,
+          "said": "Come and visit the Lord Every Friday evening 7:00PM – Midnight. Jesus will be on the altar in the Blessed Sacrament each Friday evening ... **except 1st Fridays as the church is already reserved for All Night Vigil**"
+        }
+      ],
+      "rationale": "R1, R35: printed in both bulletins read; the Blessed Sacrament is on the altar (exposed). POLICY, Weekly qualifiers: 'except 1st Fridays' is written as the remaining weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ambrose-old-bridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Padre Pio Prayer Group Mass"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "80eba28c",
+          "page": 4,
+          "said": "Mass will be celebrated on the third Saturday each month at 9:00AM followed by veneration of a first class relic of St. Padre Pio. 2026 dates… November 21st"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27f015b7",
+          "page": 4,
+          "said": "Mass will be celebrated on the third Saturday each month at 9:00AM followed by veneration of a first class relic of St. Padre Pio. 2026 dates… November 21st"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7: the Padre Pio Mass is a special occasion at the regular Saturday 9:00 AM Mass, already recorded weekly; no separate slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "80eba28c",
+          "page": 4,
+          "said": "ALL NIGHT VIGIL FIRST FRIDAY EACH MONTH ... First Friday Mass, 15 Decades of the Rosary, Scapular Enrollment, Exposition, Stations of the Cross, Confessions...Midnight break"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27f015b7",
+          "page": 4,
+          "said": "ALL NIGHT VIGIL FIRST FRIDAY EACH MONTH ... First Friday Mass, 15 Decades of the Rosary, Scapular Enrollment, Exposition, Stations of the Cross, Confessions...Midnight break"
+        }
+      ],
+      "rationale": "R26, POLICY Final source checks: the vigil's First Friday Mass and Confessions have no clock time of their own, so they are not recorded; only the vigil's Exposition is asked about (separate slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "80eba28c",
+          "page": 4,
+          "said": "ALL NIGHT VIGIL FIRST FRIDAY EACH MONTH 9:00PM-2:30AM Saint Ambrose Church ... Exposition"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27f015b7",
+          "page": 4,
+          "said": "ALL NIGHT VIGIL FIRST FRIDAY EACH MONTH 9:00PM-2:30AM Saint Ambrose Church ... Exposition"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80eba28c",
+          "page": 4,
+          "said": "except 1st Fridays as the church is already reserved for All Night Vigil 8PM-2AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27f015b7",
+          "page": 4,
+          "said": "except 1st Fridays as the church is already reserved for All Night Vigil 8PM-2AM"
+        }
+      ],
+      "rationale": "R28: two boxes on the same page of both bulletins give the First Friday vigil (which includes Exposition) as 9:00PM-2:30AM and 8PM-2AM. Leaning to 9:00 PM-2:30 AM, the vigil's own notice (the other box gives when the church is reserved). Neither bulletin's week holds a first Friday (R11); the website (homepage) gives no times. The order of the night (Mass, Rosary, Exposition, Stations) means Exposition may not span the whole vigil.",
+      "question": "First Friday All Night Vigil Adoration: which hours?",
+      "options": [
+        {
+          "label": "First Fridays 9:00 PM-2:30 AM",
+          "entry": {
+            "church_slug": "st-ambrose-old-bridge",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "21:00",
+            "end_time": "02:30",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "All Night Vigil"
+          },
+          "leaning": true
+        },
+        {
+          "label": "First Fridays 8:00 PM-2:00 AM",
+          "entry": {
+            "church_slug": "st-ambrose-old-bridge",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "20:00",
+            "end_time": "02:00",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "All Night Vigil"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    }
+  ]
+}
