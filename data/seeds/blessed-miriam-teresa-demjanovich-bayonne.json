@@ -1,0 +1,1038 @@
+{
+  "schema_version": 1,
+  "parish_slug": "blessed-miriam-teresa-demjanovich-bayonne",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:21:24Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T08:49:28Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, St. Mary, Star of the Sea. The standing schedule box (weekday 6:30/9:00, Sat 9:00 and 4:00 vigil, Sun 8:30/10:00/11:30 Spanish, first-Friday 7 PM Spanish Mass, Sat 3-4 confession, Monday 7-8 PM and first-Saturday 3-4 PM Adoration) is identical in both bulletins read and matches the intentions. Dated: Forty Hours opening Mass Nov 20 7 PM and Guadalupe Mass Dec 12 6 PM. Open: whether to record the Nov 20-22 Forty Hours exposition.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "be16b74c4dd1d95d1b6bc203fe8e892cbd8969a3d21588554eb3ccd754002ceb",
+      "fetched_at": "2026-11-15T16:21:24Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "0d0ba64c0e0556e7c776d254be39809b1b0dd73968ef5d4c95b988b1a575c60b",
+      "fetched_at": "2026-11-08T15:45:49Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be16b74c",
+          "page": 1,
+          "said": "EUCHARISTIC LITURGIES Mon - Fri: 6:30am | 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d0ba64c",
+          "page": 1,
+          "said": "EUCHARISTIC LITURGIES Mon - Fri: 6:30am | 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "be16b74c",
+          "page": 4,
+          "said": "Mon., Nov. 16 ... 6:30 am ... 9:00 am (each weekday Nov. 16-20)"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharistic Liturgies box of both bulletins read and in each weekday's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be16b74c",
+          "page": 1,
+          "said": "EUCHARISTIC LITURGIES Mon - Fri: 6:30am | 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d0ba64c",
+          "page": 1,
+          "said": "EUCHARISTIC LITURGIES Mon - Fri: 6:30am | 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "be16b74c",
+          "page": 4,
+          "said": "Mon., Nov. 16 ... 6:30 am ... 9:00 am (each weekday Nov. 16-20)"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharistic Liturgies box of both bulletins read and in each weekday's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be16b74c",
+          "page": 1,
+          "said": "EUCHARISTIC LITURGIES Mon - Fri: 6:30am | 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d0ba64c",
+          "page": 1,
+          "said": "EUCHARISTIC LITURGIES Mon - Fri: 6:30am | 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "be16b74c",
+          "page": 4,
+          "said": "Mon., Nov. 16 ... 6:30 am ... 9:00 am (each weekday Nov. 16-20)"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharistic Liturgies box of both bulletins read and in each weekday's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be16b74c",
+          "page": 1,
+          "said": "EUCHARISTIC LITURGIES Mon - Fri: 6:30am | 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d0ba64c",
+          "page": 1,
+          "said": "EUCHARISTIC LITURGIES Mon - Fri: 6:30am | 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "be16b74c",
+          "page": 4,
+          "said": "Mon., Nov. 16 ... 6:30 am ... 9:00 am (each weekday Nov. 16-20)"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharistic Liturgies box of both bulletins read and in each weekday's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be16b74c",
+          "page": 1,
+          "said": "EUCHARISTIC LITURGIES Mon - Fri: 6:30am | 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d0ba64c",
+          "page": 1,
+          "said": "EUCHARISTIC LITURGIES Mon - Fri: 6:30am | 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "be16b74c",
+          "page": 4,
+          "said": "Mon., Nov. 16 ... 6:30 am ... 9:00 am (each weekday Nov. 16-20)"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharistic Liturgies box of both bulletins read and in each weekday's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be16b74c",
+          "page": 1,
+          "said": "EUCHARISTIC LITURGIES Mon - Fri: 6:30am | 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d0ba64c",
+          "page": 1,
+          "said": "EUCHARISTIC LITURGIES Mon - Fri: 6:30am | 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "be16b74c",
+          "page": 4,
+          "said": "Mon., Nov. 16 ... 6:30 am ... 9:00 am (each weekday Nov. 16-20)"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharistic Liturgies box of both bulletins read and in each weekday's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be16b74c",
+          "page": 1,
+          "said": "EUCHARISTIC LITURGIES Mon - Fri: 6:30am | 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d0ba64c",
+          "page": 1,
+          "said": "EUCHARISTIC LITURGIES Mon - Fri: 6:30am | 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "be16b74c",
+          "page": 4,
+          "said": "Mon., Nov. 16 ... 6:30 am ... 9:00 am (each weekday Nov. 16-20)"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharistic Liturgies box of both bulletins read and in each weekday's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be16b74c",
+          "page": 1,
+          "said": "EUCHARISTIC LITURGIES Mon - Fri: 6:30am | 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d0ba64c",
+          "page": 1,
+          "said": "EUCHARISTIC LITURGIES Mon - Fri: 6:30am | 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "be16b74c",
+          "page": 4,
+          "said": "Mon., Nov. 16 ... 6:30 am ... 9:00 am (each weekday Nov. 16-20)"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharistic Liturgies box of both bulletins read and in each weekday's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be16b74c",
+          "page": 1,
+          "said": "EUCHARISTIC LITURGIES Mon - Fri: 6:30am | 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d0ba64c",
+          "page": 1,
+          "said": "EUCHARISTIC LITURGIES Mon - Fri: 6:30am | 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "be16b74c",
+          "page": 4,
+          "said": "Mon., Nov. 16 ... 6:30 am ... 9:00 am (each weekday Nov. 16-20)"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharistic Liturgies box of both bulletins read and in each weekday's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be16b74c",
+          "page": 1,
+          "said": "EUCHARISTIC LITURGIES Mon - Fri: 6:30am | 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d0ba64c",
+          "page": 1,
+          "said": "EUCHARISTIC LITURGIES Mon - Fri: 6:30am | 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "be16b74c",
+          "page": 4,
+          "said": "Mon., Nov. 16 ... 6:30 am ... 9:00 am (each weekday Nov. 16-20)"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharistic Liturgies box of both bulletins read and in each weekday's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be16b74c",
+          "page": 1,
+          "said": "Primer Viernes: 7:00pm (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d0ba64c",
+          "page": 1,
+          "said": "Primer Viernes: 7:00pm (Español)"
+        }
+      ],
+      "rationale": "R1: the standing schedule box of both bulletins names the first-Friday Spanish Mass; POLICY, Weekly or dated rule 2 sets weeks_of_month.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be16b74c",
+          "page": 1,
+          "said": "Sat: 9:00am | 4:00pm (Anticipated)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d0ba64c",
+          "page": 1,
+          "said": "Sat: 9:00am | 4:00pm (Anticipated)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "be16b74c",
+          "page": 4,
+          "said": "Sat., Nov. 21 ... 9:00 am ... 4:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be16b74c",
+          "page": 1,
+          "said": "Sat: 9:00am | 4:00pm (Anticipated)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d0ba64c",
+          "page": 1,
+          "said": "Sat: 9:00am | 4:00pm (Anticipated)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "be16b74c",
+          "page": 4,
+          "said": "Sat., Nov. 21 ... 9:00 am ... 4:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be16b74c",
+          "page": 1,
+          "said": "Sun: 8:30am | 10:00am | 11:30am (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d0ba64c",
+          "page": 1,
+          "said": "Sun: 8:30am | 10:00am | 11:30am (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "be16b74c",
+          "page": 4,
+          "said": "Sun., Nov. 22 8:30 am ... 10:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be16b74c",
+          "page": 1,
+          "said": "Sun: 8:30am | 10:00am | 11:30am (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d0ba64c",
+          "page": 1,
+          "said": "Sun: 8:30am | 10:00am | 11:30am (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "be16b74c",
+          "page": 4,
+          "said": "Sun., Nov. 22 8:30 am ... 10:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be16b74c",
+          "page": 1,
+          "said": "Sun: 8:30am | 10:00am | 11:30am (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d0ba64c",
+          "page": 1,
+          "said": "Sun: 8:30am | 10:00am | 11:30am (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "be16b74c",
+          "page": 4,
+          "said": "11:30 am ESP"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; marked Español.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-bayonne",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be16b74c",
+          "page": 1,
+          "said": "Reconciliation: Saturdays | 3:00pm - 4:00pm, or by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d0ba64c",
+          "page": 1,
+          "said": "Reconciliation: Saturdays | 3:00pm - 4:00pm, or by appointment."
+        }
+      ],
+      "rationale": "R1: printed in the Sacramental Information box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be16b74c",
+          "page": 1,
+          "said": "Reconciliation: ... or by appointment."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-bayonne",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be16b74c",
+          "page": 1,
+          "said": "Weekly Eucharistic Adoration: Monday | 7:00pm - 8:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d0ba64c",
+          "page": 1,
+          "said": "Weekly Eucharistic Adoration: Monday | 7:00pm - 8:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "be16b74c",
+          "page": 4,
+          "said": "Mon., ... Holy Hour, 7 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d0ba64c",
+          "page": 4,
+          "said": "Mon., ... Holy Hour, 7 pm"
+        }
+      ],
+      "rationale": "R1: printed in the box of both bulletins and in the Week at a Glance of both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-bayonne",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction following the 4:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be16b74c",
+          "page": 1,
+          "said": "1st Saturday Eucharistic Adoration: 3:00pm - 4:00pm Benediction following 4:00pm Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d0ba64c",
+          "page": 1,
+          "said": "1st Saturday Eucharistic Adoration: 3:00pm - 4:00pm Benediction following 4:00pm Mass"
+        }
+      ],
+      "rationale": "R1, POLICY (Benediction): standing first-Saturday line in both bulletins; Benediction is kept as a note on the one Adoration event, not a second event without a clock time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-bayonne",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-20",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Forty Hours opening Mass"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be16b74c",
+          "page": 4,
+          "said": "Fri., Nov. 20 ... Forty Hours 7:00 pm Pro Populo"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d0ba64c",
+          "page": 2,
+          "said": "Our Forty Hours devotion will begin with Mass on Friday, November 20, at 7:00 pm."
+        }
+      ],
+      "rationale": "R1, R16: dated Mass on or after as_of, printed in the newest intentions and announced the week before; Nov. 20 is a third Friday, so it is not the first-Friday Spanish Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-bayonne",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-12",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Guadalupe"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be16b74c",
+          "page": 4,
+          "said": "Sat., Dec. 12 Our Lady of Guadalupe Mass and Celebration, 6:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "be16b74c",
+          "page": 4,
+          "said": "The Feastday Mass will be celebrated Saturday evening, December 12, followed by a fiesta in the ASCA cafeteria."
+        }
+      ],
+      "rationale": "R1, R16: dated feast Mass after as_of; the parish has one church, and only the fiesta is placed elsewhere (ASCA cafeteria).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0d0ba64c",
+          "page": 2,
+          "said": "From that moment on, with the exception of when other Masses are being offered, the Eucharist will be exposed for our adoration until we close our celebration with Solemn Vespers at 4:00 pm on Sunday, November 22."
+        },
+        {
+          "source": "agent",
+          "bulletin": "be16b74c",
+          "page": 4,
+          "said": "Fri.-Sun., Nov. 20-22 Forty Hours"
+        }
+      ],
+      "rationale": "R30, R33: continuous exposure across three days, broken by every Mass, cannot be written as dated entries without inventing day boundaries and a start relative to the opening Mass (R10 gives 7:30 PM). Leaning leave out: a wrong time is worse than a missing one, and the event ends Nov. 22, about when this seed loads.",
+      "question": "Record the Forty Hours exposition (Nov 20 after the 7 PM Mass to Nov 22 4 PM, except during Masses) as dated Adoration?",
+      "options": [
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Only Nov 20, 7:30-11:59 PM",
+          "entry": {
+            "church_slug": "st-mary-star-of-the-sea-bayonne",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-20",
+            "start_time": "19:30",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Forty Hours"
+          }
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0d0ba64c",
+          "page": 2,
+          "said": "Confessions in addition the normally scheduled Masses"
+        }
+      ],
+      "rationale": "R26: Forty Hours confessions are announced with no times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be16b74c",
+          "page": 1,
+          "said": "Miraculous Medal Novena: Tuesdays after 9:00am Mass; Communal Rosary: Weekdays after 9:00am Mass"
+        }
+      ],
+      "rationale": "R24: devotions that are not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
