@@ -1,0 +1,1213 @@
+{
+  "schema_version": 1,
+  "parish_slug": "most-sacred-heart-of-jesus-wallington",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:22:26Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T10:19:13Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church; English and Polish Masses. Weekend, weekday (Mon–Sat 7 and 8 AM, Saturday per the intentions) and confession times agree in both bulletins' schedule box and the website homepage. Open: whether weekday 7:30 AM confession includes Saturday, and the website-only First Friday overnight Adoration (leaning leave out).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "10afedbf1d8ceac727f649af1fb871f0d92829cfe92c6139a502987fbcb9c5ff",
+      "fetched_at": "2026-11-15T16:22:26Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "5d7d8b855c216235b9c235ef61f7ab26eef8770f2f08e55aeb630c4e1c27c5a4",
+      "fetched_at": "2026-11-08T15:46:40Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-sacred-heart-of-jesus-wallington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 1,
+          "said": "Mass Schedule Saturday Vigil ENG: 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5d7d8b85",
+          "page": 1,
+          "said": "Mass Schedule Saturday Vigil ENG: 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 3,
+          "said": "Saturday (Sobota) Evening Vigil Mass – November 21 5:00PM"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins and in the Mass intentions; website homepage agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-sacred-heart-of-jesus-wallington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 1,
+          "said": "Saturday Vigil ... POL: 6:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5d7d8b85",
+          "page": 1,
+          "said": "Saturday Vigil ... POL: 6:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 3,
+          "said": "Saturday (Sobota) Evening Vigil Mass – November 21 ... 6:30PM"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins and in the Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-sacred-heart-of-jesus-wallington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 1,
+          "said": "Sunday: ENG: 9:00AM & 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5d7d8b85",
+          "page": 1,
+          "said": "Sunday: ENG: 9:00AM & 12:00PM"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins; the intentions list 9:00AM and 12:00PM each Sunday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-sacred-heart-of-jesus-wallington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 1,
+          "said": "Sunday: ENG: 9:00AM & 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5d7d8b85",
+          "page": 1,
+          "said": "Sunday: ENG: 9:00AM & 12:00PM"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins; the intentions list 9:00AM and 12:00PM each Sunday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-sacred-heart-of-jesus-wallington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 1,
+          "said": "Sunday: ... POL: 7:30AM & 10:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5d7d8b85",
+          "page": 1,
+          "said": "Sunday: ... POL: 7:30AM & 10:30AM"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins; the intentions list 7:30AM and 10:30AM each Sunday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-sacred-heart-of-jesus-wallington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 1,
+          "said": "Sunday: ... POL: 7:30AM & 10:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5d7d8b85",
+          "page": 1,
+          "said": "Sunday: ... POL: 7:30AM & 10:30AM"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins; the intentions list 7:30AM and 10:30AM each Sunday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-sacred-heart-of-jesus-wallington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 1,
+          "said": "Weekdays: POL: 7:00AM ENG: 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5d7d8b85",
+          "page": 1,
+          "said": "Weekdays: POL: 7:00AM ENG: 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 3,
+          "said": "Monday–Friday intentions each list 7:00AM and 8:00AM"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins, confirmed by the daily Mass intentions in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-sacred-heart-of-jesus-wallington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 1,
+          "said": "Weekdays: POL: 7:00AM ENG: 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5d7d8b85",
+          "page": 1,
+          "said": "Weekdays: POL: 7:00AM ENG: 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 3,
+          "said": "Monday–Friday intentions each list 7:00AM and 8:00AM"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins, confirmed by the daily Mass intentions in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-sacred-heart-of-jesus-wallington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 1,
+          "said": "Weekdays: POL: 7:00AM ENG: 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5d7d8b85",
+          "page": 1,
+          "said": "Weekdays: POL: 7:00AM ENG: 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 3,
+          "said": "Monday–Friday intentions each list 7:00AM and 8:00AM"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins, confirmed by the daily Mass intentions in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-sacred-heart-of-jesus-wallington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 1,
+          "said": "Weekdays: POL: 7:00AM ENG: 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5d7d8b85",
+          "page": 1,
+          "said": "Weekdays: POL: 7:00AM ENG: 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 3,
+          "said": "Monday–Friday intentions each list 7:00AM and 8:00AM"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins, confirmed by the daily Mass intentions in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-sacred-heart-of-jesus-wallington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 1,
+          "said": "Weekdays: POL: 7:00AM ENG: 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5d7d8b85",
+          "page": 1,
+          "said": "Weekdays: POL: 7:00AM ENG: 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 3,
+          "said": "Monday–Friday intentions each list 7:00AM and 8:00AM"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins, confirmed by the daily Mass intentions in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-sacred-heart-of-jesus-wallington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 1,
+          "said": "Weekdays: POL: 7:00AM ENG: 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5d7d8b85",
+          "page": 1,
+          "said": "Weekdays: POL: 7:00AM ENG: 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 3,
+          "said": "Monday–Friday intentions each list 7:00AM and 8:00AM"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins, confirmed by the daily Mass intentions in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-sacred-heart-of-jesus-wallington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 1,
+          "said": "Weekdays: POL: 7:00AM ENG: 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5d7d8b85",
+          "page": 1,
+          "said": "Weekdays: POL: 7:00AM ENG: 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 3,
+          "said": "Monday–Friday intentions each list 7:00AM and 8:00AM"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins, confirmed by the daily Mass intentions in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-sacred-heart-of-jesus-wallington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 1,
+          "said": "Weekdays: POL: 7:00AM ENG: 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5d7d8b85",
+          "page": 1,
+          "said": "Weekdays: POL: 7:00AM ENG: 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 3,
+          "said": "Monday–Friday intentions each list 7:00AM and 8:00AM"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins, confirmed by the daily Mass intentions in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-sacred-heart-of-jesus-wallington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 1,
+          "said": "Weekdays: POL: 7:00AM ENG: 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5d7d8b85",
+          "page": 1,
+          "said": "Weekdays: POL: 7:00AM ENG: 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 3,
+          "said": "Monday–Friday intentions each list 7:00AM and 8:00AM"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins, confirmed by the daily Mass intentions in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-sacred-heart-of-jesus-wallington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 1,
+          "said": "Weekdays: POL: 7:00AM ENG: 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5d7d8b85",
+          "page": 1,
+          "said": "Weekdays: POL: 7:00AM ENG: 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 3,
+          "said": "Monday–Friday intentions each list 7:00AM and 8:00AM"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins, confirmed by the daily Mass intentions in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-sacred-heart-of-jesus-wallington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 3,
+          "said": "Saturday (Sobota) – November 21 7:00AM +John Wlazlo"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5d7d8b85",
+          "page": 3,
+          "said": "Saturday (Sobota) – November 14 7:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 1,
+          "said": "Weekdays: POL: 7:00AM ENG: 8:00AM"
+        }
+      ],
+      "rationale": "R35, R1: the intentions of both bulletins (Nov 14 and Nov 21) list Saturday 7:00AM and 8:00AM morning Masses, separate from the evening vigil; the box's 'Weekdays' line evidently covers Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-sacred-heart-of-jesus-wallington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 3,
+          "said": "Saturday (Sobota) – November 21 8:00AM -God's Blessings on Danuta"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5d7d8b85",
+          "page": 3,
+          "said": "Saturday (Sobota) – November 14 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 1,
+          "said": "Weekdays: POL: 7:00AM ENG: 8:00AM"
+        }
+      ],
+      "rationale": "R35, R1: the intentions of both bulletins (Nov 14 and Nov 21) list Saturday 7:00AM and 8:00AM morning Masses; the box's 'Weekdays' line evidently covers Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-sacred-heart-of-jesus-wallington",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 1,
+          "said": "Confessions Weekdays: 7:30am (except Holy Days)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5d7d8b85",
+          "page": 1,
+          "said": "Confessions Weekdays: 7:30am (except Holy Days)"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins and the website homepage; no end time is given, so none is recorded (POLICY, Times). The holy-day exception has no dates to record.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-sacred-heart-of-jesus-wallington",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 1,
+          "said": "Confessions Weekdays: 7:30am (except Holy Days)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5d7d8b85",
+          "page": 1,
+          "said": "Confessions Weekdays: 7:30am (except Holy Days)"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins and the website homepage; no end time is given, so none is recorded (POLICY, Times). The holy-day exception has no dates to record.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-sacred-heart-of-jesus-wallington",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 1,
+          "said": "Confessions Weekdays: 7:30am (except Holy Days)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5d7d8b85",
+          "page": 1,
+          "said": "Confessions Weekdays: 7:30am (except Holy Days)"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins and the website homepage; no end time is given, so none is recorded (POLICY, Times). The holy-day exception has no dates to record.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-sacred-heart-of-jesus-wallington",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 1,
+          "said": "Confessions Weekdays: 7:30am (except Holy Days)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5d7d8b85",
+          "page": 1,
+          "said": "Confessions Weekdays: 7:30am (except Holy Days)"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins and the website homepage; no end time is given, so none is recorded (POLICY, Times). The holy-day exception has no dates to record.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-sacred-heart-of-jesus-wallington",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 1,
+          "said": "Confessions Weekdays: 7:30am (except Holy Days)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5d7d8b85",
+          "page": 1,
+          "said": "Confessions Weekdays: 7:30am (except Holy Days)"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins and the website homepage; no end time is given, so none is recorded (POLICY, Times). The holy-day exception has no dates to record.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 1,
+          "said": "Confessions Weekdays: 7:30am (except Holy Days) Saturday: 4:00pm - 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 3,
+          "said": "Saturday (Sobota) – November 21 7:00AM ... 8:00AM"
+        }
+      ],
+      "rationale": "R30: 'Weekdays' usually means Mon–Fri, but the same box's 'Weekdays' Masses (7 and 8 AM) also run on Saturday per the intentions, so 7:30 AM between them likely applies Saturday too. Leaning include for consistency with that reading.",
+      "question": "Do the 'Weekdays' 7:30 AM confessions include Saturday?",
+      "options": [
+        {
+          "label": "Saturday 7:30 AM too",
+          "entry": {
+            "church_slug": "most-sacred-heart-of-jesus-wallington",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-sacred-heart-of-jesus-wallington",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 1,
+          "said": "Saturday: 4:00pm - 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5d7d8b85",
+          "page": 1,
+          "said": "Saturday: 4:00pm - 5:00pm"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; website homepage agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-sacred-heart-of-jesus-wallington",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": "17:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 1,
+          "said": "First Friday: 4:30PM - 5:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5d7d8b85",
+          "page": 1,
+          "said": "First Friday: 4:30PM - 5:30PM"
+        }
+      ],
+      "rationale": "R1: the newest bulletin's schedule box names the First Friday window (also in the older bulletin and the website).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-sacred-heart-of-jesus-wallington",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 1,
+          "said": "Thursday before First Friday: 6:00PM to 7:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5d7d8b85",
+          "page": 1,
+          "said": "Thursday before First Friday: 6:00PM to 7:00PM"
+        }
+      ],
+      "rationale": "R33: the Thursday before the first Friday is not always the first Thursday (it falls in the previous month when the month starts on a Friday), and no dates are printed, so the pattern can't be written without a false weekly approximation.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://mshchurch.com/adoration/",
+          "said": "Overnight Adoration of the Blessed Sacrament, held every First Friday of the Month from 7:00 PM to 7:00 AM"
+        }
+      ],
+      "rationale": "R29, R6: neither bulletin mentions Adoration (neither week holds a first Friday, but the schedule box lists the first-Friday confessions and not Adoration). The website page carries a 2025-01-02 date and the homepage's schedule (updated 2026-08) doesn't mention it, so whether it continues is unclear; leaning leave out because a wrong time is worse than a missing one.",
+      "question": "Add the website's First Friday overnight Adoration, 7 PM to 7 AM?",
+      "options": [
+        {
+          "label": "First Fridays 7 PM-7 AM",
+          "entry": {
+            "church_slug": "most-sacred-heart-of-jesus-wallington",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": "07:00",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Overnight Adoration"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10afedbf",
+          "page": 4,
+          "said": "You may bring non-perishable food items to the Masses on Thanksgiving Vigil & Thanksgiving Day"
+        }
+      ],
+      "rationale": "R26: Thanksgiving Vigil and Day Masses are mentioned with no times in either bulletin; 'Holydays: Consult the Bulletin'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
