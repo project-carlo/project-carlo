@@ -1,0 +1,581 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-mother-of-the-church-woodcliff-lake",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:22:36Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T13:35:12Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both bulletins read (Nov 8 and Nov 15, 2026) and the website give the same schedule: weekday 8:30 AM, Saturday 5:30 PM, Sunday 8:30 and 10:30 AM, Saturday 4:30-5:00 PM confession. Open: the Saturday 8 PM Neocatechumenal Way Eucharist (leaning leave out) and the sign-up Saturday 12:30-2:00 PM confession window (leaning include). No history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "1c85fa995fbb6a7f80d9574794226654cecaf4082c883c4e80ad478869ccdf47",
+      "fetched_at": "2026-11-15T16:22:36Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "7c928e231c85bc556e9b7754e425f9248a5c7d32071928d6635d570d6ce0bda1",
+      "fetched_at": "2026-11-08T15:46:50Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-mother-of-the-church-woodcliff-lake",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1c85fa99",
+          "page": 1,
+          "said": "Weekdays Monday-Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7c928e23",
+          "page": 1,
+          "said": "Weekdays Monday-Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1c85fa99",
+          "page": 3,
+          "said": "8:30 am [weekday intentions each day Mon-Fri]"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7c928e23",
+          "page": 3,
+          "said": "8:30 am [weekday intentions each day Mon-Fri]"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page 1 schedule box of both bulletins read, with weekday intentions on page 3 of each; the website's regular schedule agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-mother-of-the-church-woodcliff-lake",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1c85fa99",
+          "page": 1,
+          "said": "Weekdays Monday-Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7c928e23",
+          "page": 1,
+          "said": "Weekdays Monday-Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1c85fa99",
+          "page": 3,
+          "said": "8:30 am [weekday intentions each day Mon-Fri]"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7c928e23",
+          "page": 3,
+          "said": "8:30 am [weekday intentions each day Mon-Fri]"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page 1 schedule box of both bulletins read, with weekday intentions on page 3 of each; the website's regular schedule agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-mother-of-the-church-woodcliff-lake",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1c85fa99",
+          "page": 1,
+          "said": "Weekdays Monday-Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7c928e23",
+          "page": 1,
+          "said": "Weekdays Monday-Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1c85fa99",
+          "page": 3,
+          "said": "8:30 am [weekday intentions each day Mon-Fri]"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7c928e23",
+          "page": 3,
+          "said": "8:30 am [weekday intentions each day Mon-Fri]"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page 1 schedule box of both bulletins read, with weekday intentions on page 3 of each; the website's regular schedule agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-mother-of-the-church-woodcliff-lake",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1c85fa99",
+          "page": 1,
+          "said": "Weekdays Monday-Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7c928e23",
+          "page": 1,
+          "said": "Weekdays Monday-Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1c85fa99",
+          "page": 3,
+          "said": "8:30 am [weekday intentions each day Mon-Fri]"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7c928e23",
+          "page": 3,
+          "said": "8:30 am [weekday intentions each day Mon-Fri]"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page 1 schedule box of both bulletins read, with weekday intentions on page 3 of each; the website's regular schedule agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-mother-of-the-church-woodcliff-lake",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1c85fa99",
+          "page": 1,
+          "said": "Weekdays Monday-Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7c928e23",
+          "page": 1,
+          "said": "Weekdays Monday-Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1c85fa99",
+          "page": 3,
+          "said": "8:30 am [weekday intentions each day Mon-Fri]"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7c928e23",
+          "page": 3,
+          "said": "8:30 am [weekday intentions each day Mon-Fri]"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page 1 schedule box of both bulletins read, with weekday intentions on page 3 of each; the website's regular schedule agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-mother-of-the-church-woodcliff-lake",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1c85fa99",
+          "page": 1,
+          "said": "Weekends Saturday 5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7c928e23",
+          "page": 1,
+          "said": "Weekends Saturday 5:30 pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page 1 schedule box of both bulletins read; intentions list it each Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-mother-of-the-church-woodcliff-lake",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1c85fa99",
+          "page": 1,
+          "said": "Sunday 8:30 am & 10:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7c928e23",
+          "page": 1,
+          "said": "Sunday 8:30 am & 10:30 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page 1 schedule box of both bulletins read; intentions list both each Sunday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-mother-of-the-church-woodcliff-lake",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1c85fa99",
+          "page": 1,
+          "said": "Sunday 8:30 am & 10:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7c928e23",
+          "page": 1,
+          "said": "Sunday 8:30 am & 10:30 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page 1 schedule box of both bulletins read; intentions list both each Sunday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-mother-of-the-church-woodcliff-lake",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1c85fa99",
+          "page": 1,
+          "said": "Reconciliation Saturday ... 4:30 pm to 5:00 pm (OLMC Parish Priest) (No sign up required. First come, first served.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7c928e23",
+          "page": 1,
+          "said": "Reconciliation Saturday ... 4:30 pm to 5:00 pm (OLMC Parish Priest) (No sign up required. First come, first served.)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page 1 schedule box of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1c85fa99",
+          "page": 1,
+          "said": "Reconciliation Saturday (Sign up using link on parish website) 12:30 pm to 2:00 pm (Opus Dei Priest)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7c928e23",
+          "page": 1,
+          "said": "Reconciliation Saturday (Sign up using link on parish website) 12:30 pm to 2:00 pm (Opus Dei Priest)"
+        },
+        {
+          "source": "website",
+          "url": "https://motherofthechurch.org/",
+          "said": "Saturday: 12:30 pm - 2:00 pm by appointment with Fr. Bob Connor, a visiting Opus Dei Priest (Click here to schedule)"
+        }
+      ],
+      "rationale": "R30: POLICY skips confession 'by appointment' with no definite time, but this is a fixed weekly window printed in both bulletins, with sign-up for a place in it; the website calls it 'by appointment'. Leaning include with a note, since the window is definite and public.",
+      "question": "Include the Saturday 12:30-2:00 PM confessions with a visiting Opus Dei priest, which need sign-up on the parish website?",
+      "options": [
+        {
+          "label": "Include, with a sign-up note",
+          "entry": {
+            "church_slug": "our-lady-mother-of-the-church-woodcliff-lake",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "12:30",
+            "end_time": "14:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Visiting Opus Dei priest; sign up on the parish website"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out (by appointment)",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1c85fa99",
+          "page": 1,
+          "said": "Weekends Saturday 5:30 pm, 8:00 pm (Neocatechumenal Way Eucharist)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7c928e23",
+          "page": 1,
+          "said": "Weekends Saturday 5:30 pm, 8:00 pm (Neocatechumenal Way Eucharist)"
+        },
+        {
+          "source": "website",
+          "url": "https://motherofthechurch.org/",
+          "said": "Saturday Eve: 5:30 pm and 8:00 pm (Neocatechumenal Way Eucharist)"
+        }
+      ],
+      "rationale": "R30: printed in the weekend Mass box of both bulletins and on the website, with no stated limit, but labelled as the Neocatechumenal Way's Eucharist, which is normally the Way's communities' own celebration (POLICY, What to extract: a Mass limited to a group is left out). The intentions on page 3 never list it. Leaning leave out, since a wrong time is worse than a missing one.",
+      "question": "Include the Saturday 8:00 PM Neocatechumenal Way Eucharist as a public Mass?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "our-lady-mother-of-the-church-woodcliff-lake",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "20:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Neocatechumenal Way Eucharist"
+          }
+        },
+        {
+          "label": "Leave out (Neocatechumenal community's own Eucharist)",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1c85fa99",
+          "page": 1,
+          "said": "Holy Days See bulletin for schedule of Masses"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7c928e23",
+          "page": 1,
+          "said": "Holy Days See bulletin for schedule of Masses"
+        }
+      ],
+      "rationale": "R26: no holy-day times printed in either bulletin; none falls in the seed's scope from these issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1c85fa99",
+          "page": 6,
+          "said": "Encounter Night ... Holy Hour ... 07:00 pm - 10:00 pm ... Our Lady of Mercy, 2 Fremont Ave, Park Ridge, NJ, Saturday, November 21, 2026"
+        }
+      ],
+      "rationale": "R22, R25: an ad for another parish's event at Our Lady of Mercy, Park Ridge, not at this parish's church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
