@@ -1,0 +1,411 @@
+{
+  "schema_version": 1,
+  "parish_slug": "sacred-heart-north-bergen",
+  "status": "ready",
+  "as_of": "2026-11-15T16:53:26Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T22:17:54Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both bulletins read (Nov 8 and Nov 15 issues) print the same page-1 Mass Schedule, and the parish website's Mass Times page agrees: Sat 4:30 PM vigil, Sun 9:00 AM and 12:00 noon, 8:00 AM Mon-Wed, Fri, Sat (no Thursday Mass). Confession is by appointment only; no Adoration is printed. Pages 2-4 of both PDFs are blank (no text or fonts), so intentions and notices could not be read. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "ae4c0dc03593582c68f75ce29a026e2306bbf1f0d91ff28517fbb4b5e977b642",
+      "fetched_at": "2026-11-15T16:53:26Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "f7663da9de7cb9171440e9d5e5546b33675a8228188ce520ba4ee7ca15930f7e",
+      "fetched_at": "2026-11-08T22:05:13Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-north-bergen",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ae4c0dc0",
+          "page": 1,
+          "said": "Mass Schedule / Saturday: 8:00 am & 4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7663da9",
+          "page": 1,
+          "said": "Mass Schedule / Saturday: 8:00 am & 4:30 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sacredheartnorthbergen.com/mass-times.html",
+          "said": "Weekend Mass Saturday 4:30pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 Mass Schedule of both bulletins read (Nov 8 and Nov 15 issues); the parish website's Mass Times page agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-north-bergen",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ae4c0dc0",
+          "page": 1,
+          "said": "Sunday: 9:00 am & 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7663da9",
+          "page": 1,
+          "said": "Sunday: 9:00 am & 12:00 noon"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sacredheartnorthbergen.com/mass-times.html",
+          "said": "Sunday 9am, 12pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 Mass Schedule of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-north-bergen",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ae4c0dc0",
+          "page": 1,
+          "said": "Sunday: 9:00 am & 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7663da9",
+          "page": 1,
+          "said": "Sunday: 9:00 am & 12:00 noon"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sacredheartnorthbergen.com/mass-times.html",
+          "said": "Sunday 9am, 12pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 Mass Schedule of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-north-bergen",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ae4c0dc0",
+          "page": 1,
+          "said": "Weekday: Monday - Wednesday, Friday & Saturday at 8:00 am (No Masses on Thursday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7663da9",
+          "page": 1,
+          "said": "Weekday: Monday - Wednesday, Friday & Saturday at 8:00 am (No Masses on Thursday)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sacredheartnorthbergen.com/mass-times.html",
+          "said": "Daily Mass Monday 8am Tuesday 8am Wednesday 8am Thursday No Daily Mass Friday 8am Saturday 8am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 Mass Schedule of both bulletins read (Saturday 8:00 am also on the Saturday line); the website agrees. No Thursday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-north-bergen",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ae4c0dc0",
+          "page": 1,
+          "said": "Weekday: Monday - Wednesday, Friday & Saturday at 8:00 am (No Masses on Thursday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7663da9",
+          "page": 1,
+          "said": "Weekday: Monday - Wednesday, Friday & Saturday at 8:00 am (No Masses on Thursday)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sacredheartnorthbergen.com/mass-times.html",
+          "said": "Daily Mass Monday 8am Tuesday 8am Wednesday 8am Thursday No Daily Mass Friday 8am Saturday 8am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 Mass Schedule of both bulletins read (Saturday 8:00 am also on the Saturday line); the website agrees. No Thursday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-north-bergen",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ae4c0dc0",
+          "page": 1,
+          "said": "Weekday: Monday - Wednesday, Friday & Saturday at 8:00 am (No Masses on Thursday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7663da9",
+          "page": 1,
+          "said": "Weekday: Monday - Wednesday, Friday & Saturday at 8:00 am (No Masses on Thursday)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sacredheartnorthbergen.com/mass-times.html",
+          "said": "Daily Mass Monday 8am Tuesday 8am Wednesday 8am Thursday No Daily Mass Friday 8am Saturday 8am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 Mass Schedule of both bulletins read (Saturday 8:00 am also on the Saturday line); the website agrees. No Thursday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-north-bergen",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ae4c0dc0",
+          "page": 1,
+          "said": "Weekday: Monday - Wednesday, Friday & Saturday at 8:00 am (No Masses on Thursday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7663da9",
+          "page": 1,
+          "said": "Weekday: Monday - Wednesday, Friday & Saturday at 8:00 am (No Masses on Thursday)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sacredheartnorthbergen.com/mass-times.html",
+          "said": "Daily Mass Monday 8am Tuesday 8am Wednesday 8am Thursday No Daily Mass Friday 8am Saturday 8am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 Mass Schedule of both bulletins read (Saturday 8:00 am also on the Saturday line); the website agrees. No Thursday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-north-bergen",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ae4c0dc0",
+          "page": 1,
+          "said": "Weekday: Monday - Wednesday, Friday & Saturday at 8:00 am (No Masses on Thursday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7663da9",
+          "page": 1,
+          "said": "Weekday: Monday - Wednesday, Friday & Saturday at 8:00 am (No Masses on Thursday)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sacredheartnorthbergen.com/mass-times.html",
+          "said": "Daily Mass Monday 8am Tuesday 8am Wednesday 8am Thursday No Daily Mass Friday 8am Saturday 8am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 Mass Schedule of both bulletins read (Saturday 8:00 am also on the Saturday line); the website agrees. No Thursday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ae4c0dc0",
+          "page": 1,
+          "said": "Sacrament of Reconciliation By Appointment Only"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ae4c0dc0",
+          "page": 1,
+          "said": "Holy Days (except Christmas & New Year's): 8:00 am, 12:00 noon & 7:00 pm"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated and Dates: holy-day Masses are dated, and this standing line pins no date, so nothing can be recorded; update mode will read the issue that names the next holy day (e.g. Dec 8).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
