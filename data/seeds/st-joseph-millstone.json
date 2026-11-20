@@ -1,0 +1,649 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-millstone",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:51:18Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T04:19:40Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, St. Joseph, Hillsborough. Both bulletins read (Nov 8 and 15) print the same schedule box and intentions: Sat 4:45 PM, Sun 8:00/9:30/11:30 AM, Mon-Fri 8:35 AM, matching the website; plus a dated Thanksgiving Mass Nov 26 9:30 AM. Open: Saturday drive-up confessions, offered 'typically' 10-11 AM.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "4d80c88a243bc23de23e92691f19159ada4892e8a5ef4590f9ce9e7681e0f175",
+      "fetched_at": "2026-11-15T16:51:18Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "618c4557d4ddc025fc4c107cf1e3b5c56d8877d309c11d011b1aac2ef06cd468",
+      "fetched_at": "2026-11-08T15:59:45Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-millstone",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d80c88a",
+          "page": 1,
+          "said": "MASS SCHEDULE Saturday Vigil 4:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "618c4557",
+          "page": 1,
+          "said": "MASS SCHEDULE Saturday Vigil 4:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d80c88a",
+          "page": 2,
+          "said": "Sat. 4:45PM Francisco Rodriguez."
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass schedule box of both bulletins read and in both weeks' intentions; the website's Mass Schedule page agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-millstone",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d80c88a",
+          "page": 1,
+          "said": "Sunday 8:00 AM, 9:30 AM, 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "618c4557",
+          "page": 1,
+          "said": "Sunday 8:00 AM, 9:30 AM, 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d80c88a",
+          "page": 2,
+          "said": "Sun. 8:00AM ... 9:30AM ... 11:30AM"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass schedule box of both bulletins read and in both weeks' intentions. The 11:30 is outdoors in summer and indoors with an in-car option otherwise, at the same church; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-millstone",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d80c88a",
+          "page": 1,
+          "said": "Sunday 8:00 AM, 9:30 AM, 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "618c4557",
+          "page": 1,
+          "said": "Sunday 8:00 AM, 9:30 AM, 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d80c88a",
+          "page": 2,
+          "said": "Sun. 8:00AM ... 9:30AM ... 11:30AM"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass schedule box of both bulletins read and in both weeks' intentions. The 11:30 is outdoors in summer and indoors with an in-car option otherwise, at the same church; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-millstone",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d80c88a",
+          "page": 1,
+          "said": "Sunday 8:00 AM, 9:30 AM, 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "618c4557",
+          "page": 1,
+          "said": "Sunday 8:00 AM, 9:30 AM, 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d80c88a",
+          "page": 2,
+          "said": "Sun. 8:00AM ... 9:30AM ... 11:30AM"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass schedule box of both bulletins read and in both weeks' intentions. The 11:30 is outdoors in summer and indoors with an in-car option otherwise, at the same church; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-millstone",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:35",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d80c88a",
+          "page": 1,
+          "said": "Monday-Friday 8:35 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "618c4557",
+          "page": 1,
+          "said": "Monday-Friday 8:35 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d80c88a",
+          "page": 2,
+          "said": "Mon. 8:35AM ... Fri. 8:35AM"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass schedule box of both bulletins read and in both weeks' intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-millstone",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:35",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d80c88a",
+          "page": 1,
+          "said": "Monday-Friday 8:35 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "618c4557",
+          "page": 1,
+          "said": "Monday-Friday 8:35 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d80c88a",
+          "page": 2,
+          "said": "Mon. 8:35AM ... Fri. 8:35AM"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass schedule box of both bulletins read and in both weeks' intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-millstone",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:35",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d80c88a",
+          "page": 1,
+          "said": "Monday-Friday 8:35 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "618c4557",
+          "page": 1,
+          "said": "Monday-Friday 8:35 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d80c88a",
+          "page": 2,
+          "said": "Mon. 8:35AM ... Fri. 8:35AM"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass schedule box of both bulletins read and in both weeks' intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-millstone",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:35",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d80c88a",
+          "page": 1,
+          "said": "Monday-Friday 8:35 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "618c4557",
+          "page": 1,
+          "said": "Monday-Friday 8:35 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d80c88a",
+          "page": 2,
+          "said": "Mon. 8:35AM ... Fri. 8:35AM"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass schedule box of both bulletins read and in both weeks' intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-millstone",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:35",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d80c88a",
+          "page": 1,
+          "said": "Monday-Friday 8:35 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "618c4557",
+          "page": 1,
+          "said": "Monday-Friday 8:35 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d80c88a",
+          "page": 2,
+          "said": "Mon. 8:35AM ... Fri. 8:35AM"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass schedule box of both bulletins read and in both weeks' intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-millstone",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d80c88a",
+          "page": 3,
+          "said": "(Alternative) Thanksgiving Mass and Brunch Thursday, November 26, 2026 Mass at 9:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "618c4557",
+          "page": 3,
+          "said": "(Alternative) Thanksgiving Mass and Brunch Thursday, November 26, 2026 Mass at 9:30 AM"
+        }
+      ],
+      "rationale": "R1, R16: a dated Thanksgiving Mass to which everyone is invited, after as_of. R17: the bulletin cancels no weekday Mass, so the Thursday 8:35 slot is left alone.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d80c88a",
+          "page": 1,
+          "said": "Saturday Mornings Drive-up Confessions are offered every Saturday morning, typically between 10:00 and 11:00 AM. Always check the This Week email to learn if the time has been changed to accommodate funerals or baptisms."
+        },
+        {
+          "source": "agent",
+          "bulletin": "618c4557",
+          "page": 1,
+          "said": "Saturday Mornings Drive-up Confessions are offered every Saturday morning, typically between 10:00 and 11:00 AM. Always check the This Week email to learn if the time has been changed to accommodate funerals or baptisms."
+        },
+        {
+          "source": "website",
+          "url": "https://sjmillstone.com/sacraments",
+          "said": "For Confession times, please see the current This Week."
+        }
+      ],
+      "rationale": "Hedged availability (rules.md, closing note): every Saturday is stated, but the time is only 'typically' 10-11 and may move for funerals or baptisms. Leaning include: it is the parish's only confession schedule, printed identically in both bulletins; the website gives no time.",
+      "question": "Include the Saturday drive-up confessions, 'typically between 10:00 and 11:00 AM'?",
+      "options": [
+        {
+          "label": "Saturdays 10:00-11:00 AM, drive-up",
+          "entry": {
+            "church_slug": "st-joseph-millstone",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "10:00",
+            "end_time": "11:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Drive-up"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d80c88a",
+          "page": 1,
+          "said": "By Appointment Email Father Hank for an appointment if you cannot come on Saturday."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-millstone",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Communion Service in the parking lot"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d80c88a",
+          "page": 1,
+          "said": "Wednesday 10:00 AM 20 minutes Communion Service in the parking lot, sometimes led by lay minister."
+        },
+        {
+          "source": "agent",
+          "bulletin": "618c4557",
+          "page": 1,
+          "said": "Wednesday 10:00 AM 20 minutes Communion Service in the parking lot, sometimes led by lay minister."
+        }
+      ],
+      "rationale": "R25, POLICY: a Communion Service is not a Mass; it replaces no listed Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d80c88a",
+          "page": 1,
+          "said": "Holyday Vigil 7:00 PM Holyday 8:35 AM & 5:00 PM"
+        }
+      ],
+      "rationale": "POLICY, Dates: holy-day Masses are dated, and the bulletin names no holy day or date, so none is pinned down; update mode will read the bulletin that announces the next one.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d80c88a",
+          "page": 2,
+          "said": "8:00AM The Rosary is prayed before Mass."
+        }
+      ],
+      "rationale": "R24: the Rosary is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d80c88a",
+          "page": 3,
+          "said": "Sunday December 13 – Afternoon Concert and evening Benediction"
+        }
+      ],
+      "rationale": "R26: Benediction is given only as 'evening' with no definite time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4d80c88a",
+          "page": 3,
+          "said": "... invited to let Father Hank know if there is a time of day or day of week that would make it easier for you to participate in the special Memorial Mass."
+        }
+      ],
+      "rationale": "R24, R26: a memorial Mass with no date or time yet, for a specific group.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
