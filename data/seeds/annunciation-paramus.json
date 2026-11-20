@@ -1,0 +1,829 @@
+{
+  "schema_version": 1,
+  "parish_slug": "annunciation-paramus",
+  "status": "ready",
+  "as_of": "2026-11-15T16:52:30Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T08:36:49Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, no schedule box: weekend and weekday Masses come from three weeks of intentions in two bulletins and match the website. Weekday Mass and Wednesday Exposition are in the Parish Center's Holy Family Chapel on the church grounds. Saturday Confession and the Thanksgiving and Immaculate Conception Masses come from the parish website (R6). No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "08b165d21e25b43e9fc65e10389e30bc3913d33c6ec2694b2766df2de1ccb28a",
+      "fetched_at": "2026-11-15T16:52:30Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "a309484e0db6e81af964ecc69831fc2f1121574c1020f44225c32aecc1d75bf5",
+      "fetched_at": "2026-11-08T16:01:32Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-paramus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08b165d2",
+          "page": 3,
+          "said": "Sat., Nov 14 / 5:00 p.m. Rich Aronson"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a309484e",
+          "page": 3,
+          "said": "Sat., Nov 14 / 5:00 p.m. Rich Aronson"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a309484e",
+          "page": 3,
+          "said": "Sat., Nov 7 / 5:00 p.m. Robert Mattessich"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08b165d2",
+          "page": 3,
+          "said": "Sat., Nov 21 / 5:00 p.m. Gerard T. Hayes & Bernard T. Hayes"
+        },
+        {
+          "source": "website",
+          "url": "https://www.annunciationchurch.org/",
+          "said": "Sunday Mass Schedule Saturday : 5:00 PM"
+        }
+      ],
+      "rationale": "R35: the Saturday 5:00 PM Mass is in the intentions of three weekends across both bulletins (no schedule box is printed); the website's Mass schedule gives the same time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-paramus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08b165d2",
+          "page": 3,
+          "said": "Sun., Nov 22 ... 8:00 a.m. Parish Family / 11:00 a.m. Filomena Di Meglio / 5:30 p.m. Marilyn Tanella"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08b165d2",
+          "page": 3,
+          "said": "Sun., Nov 15 ... 8:00 a.m. Parish Family / 11:00 a.m. Walter and Elaine Mischler / 5:30 p.m. Pino Morin"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a309484e",
+          "page": 3,
+          "said": "Sun., Nov 15 ... 8:00 a.m. Parish Family / 11:00 a.m. Walter and Elaine Mischler / 5:30 p.m. Pino Morin"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a309484e",
+          "page": 3,
+          "said": "Sun., Nov 8 ... 8:00 a.m. Alfonso Piccinich / 11:00 a.m. John Gervasio / 5:30 p.m. Parish Family"
+        },
+        {
+          "source": "website",
+          "url": "https://www.annunciationchurch.org/",
+          "said": "Sunday : 8:00 AM ... 11:00 AM ... 5:30 PM"
+        }
+      ],
+      "rationale": "R35: the Sunday 8:00 AM, 11:00 AM and 5:30 PM Masses are in the intentions of three Sundays across both bulletins (no schedule box is printed); the website's Mass schedule gives the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-paramus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08b165d2",
+          "page": 3,
+          "said": "Sun., Nov 22 ... 8:00 a.m. Parish Family / 11:00 a.m. Filomena Di Meglio / 5:30 p.m. Marilyn Tanella"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08b165d2",
+          "page": 3,
+          "said": "Sun., Nov 15 ... 8:00 a.m. Parish Family / 11:00 a.m. Walter and Elaine Mischler / 5:30 p.m. Pino Morin"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a309484e",
+          "page": 3,
+          "said": "Sun., Nov 15 ... 8:00 a.m. Parish Family / 11:00 a.m. Walter and Elaine Mischler / 5:30 p.m. Pino Morin"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a309484e",
+          "page": 3,
+          "said": "Sun., Nov 8 ... 8:00 a.m. Alfonso Piccinich / 11:00 a.m. John Gervasio / 5:30 p.m. Parish Family"
+        },
+        {
+          "source": "website",
+          "url": "https://www.annunciationchurch.org/",
+          "said": "Sunday : 8:00 AM ... 11:00 AM ... 5:30 PM"
+        }
+      ],
+      "rationale": "R35: the Sunday 8:00 AM, 11:00 AM and 5:30 PM Masses are in the intentions of three Sundays across both bulletins (no schedule box is printed); the website's Mass schedule gives the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-paramus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08b165d2",
+          "page": 3,
+          "said": "Sun., Nov 22 ... 8:00 a.m. Parish Family / 11:00 a.m. Filomena Di Meglio / 5:30 p.m. Marilyn Tanella"
+        },
+        {
+          "source": "agent",
+          "bulletin": "08b165d2",
+          "page": 3,
+          "said": "Sun., Nov 15 ... 8:00 a.m. Parish Family / 11:00 a.m. Walter and Elaine Mischler / 5:30 p.m. Pino Morin"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a309484e",
+          "page": 3,
+          "said": "Sun., Nov 15 ... 8:00 a.m. Parish Family / 11:00 a.m. Walter and Elaine Mischler / 5:30 p.m. Pino Morin"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a309484e",
+          "page": 3,
+          "said": "Sun., Nov 8 ... 8:00 a.m. Alfonso Piccinich / 11:00 a.m. John Gervasio / 5:30 p.m. Parish Family"
+        },
+        {
+          "source": "website",
+          "url": "https://www.annunciationchurch.org/",
+          "said": "Sunday : 8:00 AM ... 11:00 AM ... 5:30 PM"
+        }
+      ],
+      "rationale": "R35: the Sunday 8:00 AM, 11:00 AM and 5:30 PM Masses are in the intentions of three Sundays across both bulletins (no schedule box is printed); the website's Mass schedule gives the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-paramus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Family Chapel, Parish Center"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08b165d2",
+          "page": 3,
+          "said": "Mon, Nov 16 ... Fri., Nov 20: 7:30 a.m. (an intention each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a309484e",
+          "page": 3,
+          "said": "Mon, Nov 9 ... Fri., Nov 13: 7:30 a.m. (an intention each weekday)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.annunciationchurch.org/",
+          "said": "Daily Mass Schedule Mon Fri 7:30 AM English In Parish Center Chapel (49 Demarest Rd.)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.annunciationchurch.org/",
+          "said": "Parish Center Address 49 Demarest Road ... (Staff offices and Holy Family Chapel are located at this address. ... To access the Parish Center from the church lot, use the stairs next to the school and follow the walkway to the front of the Parish Center.)"
+        }
+      ],
+      "rationale": "R35: a 7:30 AM Mass is in the intentions of every weekday of both bulletins' weeks. POLICY, Churches and chapels: the website places it in the Parish Center's Holy Family Chapel, reached on foot from the church lot (same grounds), so it belongs to the church with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-paramus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Family Chapel, Parish Center"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08b165d2",
+          "page": 3,
+          "said": "Mon, Nov 16 ... Fri., Nov 20: 7:30 a.m. (an intention each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a309484e",
+          "page": 3,
+          "said": "Mon, Nov 9 ... Fri., Nov 13: 7:30 a.m. (an intention each weekday)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.annunciationchurch.org/",
+          "said": "Daily Mass Schedule Mon Fri 7:30 AM English In Parish Center Chapel (49 Demarest Rd.)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.annunciationchurch.org/",
+          "said": "Parish Center Address 49 Demarest Road ... (Staff offices and Holy Family Chapel are located at this address. ... To access the Parish Center from the church lot, use the stairs next to the school and follow the walkway to the front of the Parish Center.)"
+        }
+      ],
+      "rationale": "R35: a 7:30 AM Mass is in the intentions of every weekday of both bulletins' weeks. POLICY, Churches and chapels: the website places it in the Parish Center's Holy Family Chapel, reached on foot from the church lot (same grounds), so it belongs to the church with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-paramus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Family Chapel, Parish Center"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08b165d2",
+          "page": 3,
+          "said": "Mon, Nov 16 ... Fri., Nov 20: 7:30 a.m. (an intention each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a309484e",
+          "page": 3,
+          "said": "Mon, Nov 9 ... Fri., Nov 13: 7:30 a.m. (an intention each weekday)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.annunciationchurch.org/",
+          "said": "Daily Mass Schedule Mon Fri 7:30 AM English In Parish Center Chapel (49 Demarest Rd.)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.annunciationchurch.org/",
+          "said": "Parish Center Address 49 Demarest Road ... (Staff offices and Holy Family Chapel are located at this address. ... To access the Parish Center from the church lot, use the stairs next to the school and follow the walkway to the front of the Parish Center.)"
+        }
+      ],
+      "rationale": "R35: a 7:30 AM Mass is in the intentions of every weekday of both bulletins' weeks. POLICY, Churches and chapels: the website places it in the Parish Center's Holy Family Chapel, reached on foot from the church lot (same grounds), so it belongs to the church with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-paramus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Family Chapel, Parish Center"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08b165d2",
+          "page": 3,
+          "said": "Mon, Nov 16 ... Fri., Nov 20: 7:30 a.m. (an intention each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a309484e",
+          "page": 3,
+          "said": "Mon, Nov 9 ... Fri., Nov 13: 7:30 a.m. (an intention each weekday)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.annunciationchurch.org/",
+          "said": "Daily Mass Schedule Mon Fri 7:30 AM English In Parish Center Chapel (49 Demarest Rd.)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.annunciationchurch.org/",
+          "said": "Parish Center Address 49 Demarest Road ... (Staff offices and Holy Family Chapel are located at this address. ... To access the Parish Center from the church lot, use the stairs next to the school and follow the walkway to the front of the Parish Center.)"
+        }
+      ],
+      "rationale": "R35: a 7:30 AM Mass is in the intentions of every weekday of both bulletins' weeks. POLICY, Churches and chapels: the website places it in the Parish Center's Holy Family Chapel, reached on foot from the church lot (same grounds), so it belongs to the church with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-paramus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Family Chapel, Parish Center"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08b165d2",
+          "page": 3,
+          "said": "Mon, Nov 16 ... Fri., Nov 20: 7:30 a.m. (an intention each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a309484e",
+          "page": 3,
+          "said": "Mon, Nov 9 ... Fri., Nov 13: 7:30 a.m. (an intention each weekday)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.annunciationchurch.org/",
+          "said": "Daily Mass Schedule Mon Fri 7:30 AM English In Parish Center Chapel (49 Demarest Rd.)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.annunciationchurch.org/",
+          "said": "Parish Center Address 49 Demarest Road ... (Staff offices and Holy Family Chapel are located at this address. ... To access the Parish Center from the church lot, use the stairs next to the school and follow the walkway to the front of the Parish Center.)"
+        }
+      ],
+      "rationale": "R35: a 7:30 AM Mass is in the intentions of every weekday of both bulletins' weeks. POLICY, Churches and chapels: the website places it in the Parish Center's Holy Family Chapel, reached on foot from the church lot (same grounds), so it belongs to the church with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-paramus",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction; Holy Family Chapel, Parish Center"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08b165d2",
+          "page": 5,
+          "said": "The prayer group meets on Wednesday evenings from 7:00 - 8:30 p.m. in the parish center chapel ... adore Our Lord, while in the presence of the Blessed Sacrament. Join us every Wednesday @ 7pm in the Parish Center chapel for Exposition of the Blessed Sacrament, Rosary, Divine Mercy Chaplet, and Benediction."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a309484e",
+          "page": 5,
+          "said": "The prayer group meets on Wednesday evenings from 7:00 - 8:30 p.m. in the parish center chapel ... adore Our Lord, while in the presence of the Blessed Sacrament. Join us every Wednesday @ 7pm in the Parish Center chapel for Exposition of the Blessed Sacrament, Rosary, Divine Mercy Chaplet, and Benediction."
+        },
+        {
+          "source": "website",
+          "url": "https://www.annunciationchurch.org/",
+          "said": "Wednesday 7:00 PM to 8:30 PM Daily Mass Chapel in the Parish Center"
+        }
+      ],
+      "rationale": "R1, R38: both bulletins print weekly Wednesday Exposition from 7 PM with Benediction in the parish center chapel; the website's Adoration tab gives Wednesday 7:00-8:30 PM there, matching the bulletin's 7:00-8:30 window. The chapel is on the church grounds (see the weekday Mass slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-paramus",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.annunciationchurch.org/",
+          "said": "Saturday 4:00 PM to 4:30 PM",
+          "schedule_check": {
+            "checked_at": "2026-11-20T08:39:43Z",
+            "current_because": "Checked 2026-11-20: the Mass Times widget lists upcoming 2026 dates (Thanksgiving Day Mass November 26, Immaculate Conception December 8, 12/7 Vigil), and its weekend and weekday Mass times match both read bulletins' intentions",
+            "bulletin": "08b165d2",
+            "fits_because": "Neither bulletin prints a confession time; Saturday 4:00-4:30 PM sits just before the Saturday 5:00 PM Mass both bulletins' intentions show, and the same widget's Adoration time matches the bulletin."
+          }
+        }
+      ],
+      "rationale": "R6: the parish website's Confession tab gives Saturday 4:00-4:30 PM; the bulletins print no confession schedule, and the time fits the 5:00 PM Saturday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-paramus",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.annunciationchurch.org/",
+          "said": "Upcoming Holy Days & Special Masses Thanksgiving Day Mass November 26 : 9:00 AM",
+          "schedule_check": {
+            "checked_at": "2026-11-20T08:39:43Z",
+            "current_because": "Checked 2026-11-20: the Mass Times widget lists upcoming 2026 dates (Thanksgiving Day Mass November 26, Immaculate Conception December 8, 12/7 Vigil), and its weekend and weekday Mass times match both read bulletins' intentions",
+            "bulletin": "08b165d2",
+            "fits_because": "Thursday November 26 is after the newest bulletin's week; the bulletin lists only the regular 7:30 AM weekday Mass intentions for its own week and says nothing that contradicts a Thanksgiving Mass."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish website lists a dated Thanksgiving Day Mass at 9:00 AM on November 26, 2026, after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-paramus",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vigil of the Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.annunciationchurch.org/",
+          "said": "Immaculate Conception December 8 : ... 5:00 PM English ... 12/7 Vigil",
+          "schedule_check": {
+            "checked_at": "2026-11-20T08:39:43Z",
+            "current_because": "Checked 2026-11-20: the Mass Times widget lists upcoming 2026 dates (Thanksgiving Day Mass November 26, Immaculate Conception December 8, 12/7 Vigil), and its weekend and weekday Mass times match both read bulletins' intentions",
+            "bulletin": "08b165d2",
+            "fits_because": "December 7-8 are beyond the newest bulletin's week; the holy day falls on a Tuesday and the bulletin gives no conflicting holy-day schedule."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the website lists a 5:00 PM vigil Mass on 12/7 for the Immaculate Conception, after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-paramus",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.annunciationchurch.org/",
+          "said": "Immaculate Conception December 8 : 7:30 AM ... Main Church 12:00 PM ... 5:00 PM",
+          "schedule_check": {
+            "checked_at": "2026-11-20T08:39:43Z",
+            "current_because": "Checked 2026-11-20: the Mass Times widget lists upcoming 2026 dates (Thanksgiving Day Mass November 26, Immaculate Conception December 8, 12/7 Vigil), and its weekend and weekday Mass times match both read bulletins' intentions",
+            "bulletin": "08b165d2",
+            "fits_because": "December 8, 2026 is a Tuesday beyond the newest bulletin's week; its 7:30 AM Mass is the regular weekday Mass, and the bulletin gives no conflicting holy-day schedule."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the website lists Immaculate Conception Masses on December 8 at 12:00 PM and 5:00 PM, after as_of. Its 7:30 AM Mass is the weekly Tuesday slot and is not repeated (POLICY, Weekly or dated rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-paramus",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.annunciationchurch.org/",
+          "said": "Immaculate Conception December 8 : 7:30 AM ... Main Church 12:00 PM ... 5:00 PM",
+          "schedule_check": {
+            "checked_at": "2026-11-20T08:39:43Z",
+            "current_because": "Checked 2026-11-20: the Mass Times widget lists upcoming 2026 dates (Thanksgiving Day Mass November 26, Immaculate Conception December 8, 12/7 Vigil), and its weekend and weekday Mass times match both read bulletins' intentions",
+            "bulletin": "08b165d2",
+            "fits_because": "December 8, 2026 is a Tuesday beyond the newest bulletin's week; its 7:30 AM Mass is the regular weekday Mass, and the bulletin gives no conflicting holy-day schedule."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the website lists Immaculate Conception Masses on December 8 at 12:00 PM and 5:00 PM, after as_of. Its 7:30 AM Mass is the weekly Tuesday slot and is not repeated (POLICY, Weekly or dated rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-paramus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Main Church through Lent"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.annunciationchurch.org/",
+          "said": "M W F 12:00 PM English In the Main Church through Lent"
+        }
+      ],
+      "rationale": "R33, R7: the website's M/W/F noon Mass is tied to Lent, which no month season can express, and neither bulletin's weekday intentions (Nov 9-13, Nov 16-20) shows a noon Mass, so it is not current.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-paramus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Main Church through Lent"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.annunciationchurch.org/",
+          "said": "M W F 12:00 PM English In the Main Church through Lent"
+        }
+      ],
+      "rationale": "R33, R7: the website's M/W/F noon Mass is tied to Lent, which no month season can express, and neither bulletin's weekday intentions (Nov 9-13, Nov 16-20) shows a noon Mass, so it is not current.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-paramus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Main Church through Lent"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.annunciationchurch.org/",
+          "said": "M W F 12:00 PM English In the Main Church through Lent"
+        }
+      ],
+      "rationale": "R33, R7: the website's M/W/F noon Mass is tied to Lent, which no month season can express, and neither bulletin's weekday intentions (Nov 9-13, Nov 16-20) shows a noon Mass, so it is not current.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08b165d2",
+          "page": 5,
+          "said": "Sacrament of Baptism Schedule ... Baptisms will be celebrated as follows @ 1:30PM"
+        }
+      ],
+      "rationale": "R24: baptisms and the monthly wedding anniversary blessing at the regular weekend Masses are not Mass, Confession or Adoration events of their own.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
