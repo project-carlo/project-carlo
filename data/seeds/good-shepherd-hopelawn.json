@@ -1,0 +1,552 @@
+{
+  "schema_version": 1,
+  "parish_slug": "good-shepherd-hopelawn",
+  "status": "approved",
+  "as_of": "2026-11-15T16:03:07Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T22:39:21Z",
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:55:51Z",
+  "summary": "One church (Our Lady of the Most Holy Rosary, Hopelawn). The p1 schedule box is identical in both bulletins (Nov 8 and Nov 15, 2026, image-only PDFs) and the Mass intentions match it. No open questions; no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "8116890780c99e8cc650c4faa35802dd21f000db27e48afab12ca9a2481b28fb",
+      "fetched_at": "2026-11-15T16:03:07Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "c12721f9635a41300fb97563009eec51cce9749efceef1e28d346197bb05d36d",
+      "fetched_at": "2026-11-08T15:30:56Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-most-holy-rosary-hopelawn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81168907",
+          "page": 1,
+          "said": "Weekend Mass Saturday | 4:30pm, Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c12721f9",
+          "page": 1,
+          "said": "Weekend Mass Saturday | 4:30pm, Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "81168907",
+          "page": 4,
+          "said": "Saturday, November 21 Vigil ... 4:30pm | Ramon Hernandez"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both bulletins read and in the Mass intentions (p4).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-most-holy-rosary-hopelawn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81168907",
+          "page": 1,
+          "said": "Sunday | 8:30am, 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c12721f9",
+          "page": 1,
+          "said": "Sunday | 8:30am, 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "81168907",
+          "page": 4,
+          "said": "Next Sunday, November 22 ... 8:30am | Padilla & Morales familes; 11:00am | Rose & Tommaso Torchia"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both bulletins read and in the Mass intentions (p4).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-most-holy-rosary-hopelawn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81168907",
+          "page": 1,
+          "said": "Sunday | 8:30am, 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c12721f9",
+          "page": 1,
+          "said": "Sunday | 8:30am, 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "81168907",
+          "page": 4,
+          "said": "Next Sunday, November 22 ... 8:30am | Padilla & Morales familes; 11:00am | Rose & Tommaso Torchia"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both bulletins read and in the Mass intentions (p4).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-most-holy-rosary-hopelawn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81168907",
+          "page": 1,
+          "said": "Monday | 7:00pm (Except Holidays, Mass will be at 9am)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c12721f9",
+          "page": 1,
+          "said": "Monday | 7:00pm (Except Holidays, Mass will be at 9am)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "81168907",
+          "page": 4,
+          "said": "Monday, November 16 - Weekday 7:00pm | Deceased Members of the Buffolino & Berlingieri families"
+        }
+      ],
+      "rationale": "R1: printed in the p1 box of both bulletins and in both weeks' intentions. The holiday 9 AM exception names no dates; no Monday holiday falls in the newest issue's week, so no dated entry is recorded (R17); update mode will read holiday notices.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-most-holy-rosary-hopelawn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81168907",
+          "page": 1,
+          "said": "Tuesday | 8:00am Wednesday | 8:00am Thursday | 8:00am Friday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c12721f9",
+          "page": 1,
+          "said": "Tuesday | 8:00am Wednesday | 8:00am Thursday | 8:00am Friday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "81168907",
+          "page": 4,
+          "said": "Tuesday-Friday, November 17-20: 8:00am intentions"
+        }
+      ],
+      "rationale": "R1: printed in the p1 box of both bulletins and in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-most-holy-rosary-hopelawn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81168907",
+          "page": 1,
+          "said": "Tuesday | 8:00am Wednesday | 8:00am Thursday | 8:00am Friday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c12721f9",
+          "page": 1,
+          "said": "Tuesday | 8:00am Wednesday | 8:00am Thursday | 8:00am Friday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "81168907",
+          "page": 4,
+          "said": "Tuesday-Friday, November 17-20: 8:00am intentions"
+        }
+      ],
+      "rationale": "R1: printed in the p1 box of both bulletins and in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-most-holy-rosary-hopelawn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81168907",
+          "page": 1,
+          "said": "Tuesday | 8:00am Wednesday | 8:00am Thursday | 8:00am Friday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c12721f9",
+          "page": 1,
+          "said": "Tuesday | 8:00am Wednesday | 8:00am Thursday | 8:00am Friday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "81168907",
+          "page": 4,
+          "said": "Tuesday-Friday, November 17-20: 8:00am intentions"
+        }
+      ],
+      "rationale": "R1: printed in the p1 box of both bulletins and in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-most-holy-rosary-hopelawn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81168907",
+          "page": 1,
+          "said": "Tuesday | 8:00am Wednesday | 8:00am Thursday | 8:00am Friday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c12721f9",
+          "page": 1,
+          "said": "Tuesday | 8:00am Wednesday | 8:00am Thursday | 8:00am Friday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "81168907",
+          "page": 4,
+          "said": "Tuesday-Friday, November 17-20: 8:00am intentions"
+        }
+      ],
+      "rationale": "R1: printed in the p1 box of both bulletins and in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-most-holy-rosary-hopelawn",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81168907",
+          "page": 1,
+          "said": "Reconciliation Saturday | 3:30pm - 4:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c12721f9",
+          "page": 1,
+          "said": "Reconciliation Saturday | 3:30pm - 4:15pm"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-most-holy-rosary-hopelawn",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81168907",
+          "page": 1,
+          "said": "Reconciliation ... Monday | 6:00pm - 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c12721f9",
+          "page": 1,
+          "said": "Reconciliation ... Monday | 6:00pm - 7:00pm"
+        }
+      ],
+      "rationale": "R1: printed with its own times in the p1 schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81168907",
+          "page": 1,
+          "said": "Reconciliation ... Other | By Appointment"
+        }
+      ],
+      "rationale": "R26: by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-most-holy-rosary-hopelawn",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81168907",
+          "page": 1,
+          "said": "Adoration Monday | 6:00pm - 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c12721f9",
+          "page": 1,
+          "said": "Adoration Monday | 6:00pm - 7:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-most-holy-rosary-hopelawn",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "81168907",
+          "page": 1,
+          "said": "Adoration ... Thursday | 8:30am - 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c12721f9",
+          "page": 1,
+          "said": "Adoration ... Thursday | 8:30am - 10:00am"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

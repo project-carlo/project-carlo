@@ -1,0 +1,786 @@
+{
+  "schema_version": 1,
+  "parish_slug": "shrine-chapel-of-the-blessed-sacrament-raritan",
+  "status": "approved",
+  "as_of": "2026-11-15T16:05:01Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T23:28:44Z",
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:56:30Z",
+  "summary": "One chapel (Raritan Oratory). Shrine services agree in both bulletins (Nov 8 and Nov 15): Sunday 10:30 Latin Mass, weekday 12:15 Mass, First Friday 7pm and First Saturday 9am Latin Masses, Friday 11-12 Confession, weekday Adoration 10-4 with Benediction. The Friday-to-first-Saturday overnight Adoration is excluded under R33; other Oratory churches' times belong to their parishes. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "61b3d994326c6980e6b2f3fbe8f80d0a4761fcf4ef928ee51a3009445705925d",
+      "fetched_at": "2026-11-15T16:05:01Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "d5d46efbea7f3480685c60606a7666f42626ccc804d7db2b4eff7e42d3473542",
+      "fetched_at": "2026-11-08T15:32:01Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "shrine-chapel-of-the-blessed-sacrament-raritan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Latin"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "61b3d994",
+          "page": 1,
+          "said": "Sunday... Shrine Chapel Latin 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5d46efb",
+          "page": 1,
+          "said": "Sunday... Shrine Chapel Latin 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "61b3d994",
+          "page": 2,
+          "said": "Sunday, November 15... 10:30am: *Msgr. John Esseff*"
+        }
+      ],
+      "rationale": "R1: Shrine's only Sunday Mass in the Raritan Oratory schedule box of both bulletins, and in the intentions each Sunday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "shrine-chapel-of-the-blessed-sacrament-raritan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "61b3d994",
+          "page": 1,
+          "said": "Monday through Friday....... 8:00 am St. Ann, 12:15 pm Shrine"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5d46efb",
+          "page": 1,
+          "said": "Monday through Friday....... 8:00 am St. Ann, 12:15 pm Shrine"
+        },
+        {
+          "source": "agent",
+          "bulletin": "61b3d994",
+          "page": 2,
+          "said": "12:15pm intentions Monday November 16 through Friday November 20"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; the intentions list 12:15pm every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "shrine-chapel-of-the-blessed-sacrament-raritan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "61b3d994",
+          "page": 1,
+          "said": "Monday through Friday....... 8:00 am St. Ann, 12:15 pm Shrine"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5d46efb",
+          "page": 1,
+          "said": "Monday through Friday....... 8:00 am St. Ann, 12:15 pm Shrine"
+        },
+        {
+          "source": "agent",
+          "bulletin": "61b3d994",
+          "page": 2,
+          "said": "12:15pm intentions Monday November 16 through Friday November 20"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; the intentions list 12:15pm every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "shrine-chapel-of-the-blessed-sacrament-raritan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "61b3d994",
+          "page": 1,
+          "said": "Monday through Friday....... 8:00 am St. Ann, 12:15 pm Shrine"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5d46efb",
+          "page": 1,
+          "said": "Monday through Friday....... 8:00 am St. Ann, 12:15 pm Shrine"
+        },
+        {
+          "source": "agent",
+          "bulletin": "61b3d994",
+          "page": 2,
+          "said": "12:15pm intentions Monday November 16 through Friday November 20"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; the intentions list 12:15pm every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "shrine-chapel-of-the-blessed-sacrament-raritan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "61b3d994",
+          "page": 1,
+          "said": "Monday through Friday....... 8:00 am St. Ann, 12:15 pm Shrine"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5d46efb",
+          "page": 1,
+          "said": "Monday through Friday....... 8:00 am St. Ann, 12:15 pm Shrine"
+        },
+        {
+          "source": "agent",
+          "bulletin": "61b3d994",
+          "page": 2,
+          "said": "12:15pm intentions Monday November 16 through Friday November 20"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; the intentions list 12:15pm every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "shrine-chapel-of-the-blessed-sacrament-raritan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "61b3d994",
+          "page": 1,
+          "said": "Monday through Friday....... 8:00 am St. Ann, 12:15 pm Shrine"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5d46efb",
+          "page": 1,
+          "said": "Monday through Friday....... 8:00 am St. Ann, 12:15 pm Shrine"
+        },
+        {
+          "source": "agent",
+          "bulletin": "61b3d994",
+          "page": 2,
+          "said": "12:15pm intentions Monday November 16 through Friday November 20"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; the intentions list 12:15pm every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "shrine-chapel-of-the-blessed-sacrament-raritan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Latin"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "61b3d994",
+          "page": 1,
+          "said": "First Fridays....7:00pm Shrine Latin"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5d46efb",
+          "page": 1,
+          "said": "First Fridays....7:00pm Shrine Latin"
+        },
+        {
+          "source": "agent",
+          "bulletin": "61b3d994",
+          "page": 2,
+          "said": "First Friday: 11am Confession,12:15pm Mass, 7pm Latin Mass"
+        }
+      ],
+      "rationale": "R1: printed as a standing First Friday Mass in the schedule box and Regular Shrine Schedule of both bulletins (POLICY, Weekly or dated rule 2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "shrine-chapel-of-the-blessed-sacrament-raritan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Latin"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "61b3d994",
+          "page": 1,
+          "said": "First Saturdays....9:00 am Shrine Latin"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5d46efb",
+          "page": 1,
+          "said": "First Saturdays....9:00 am Shrine Latin"
+        },
+        {
+          "source": "agent",
+          "bulletin": "61b3d994",
+          "page": 2,
+          "said": "First Saturday: 8:00am Benediction, 8:30am Rosary, 9:00am Latin Mass"
+        }
+      ],
+      "rationale": "R1: printed as a standing First Saturday Mass in the schedule box and Regular Shrine Schedule of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "shrine-chapel-of-the-blessed-sacrament-raritan",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "61b3d994",
+          "page": 1,
+          "said": "Friday....Shrine 11:00am -12:00pm or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5d46efb",
+          "page": 1,
+          "said": "Friday....Shrine 11:00am -12:00pm or by appointment"
+        }
+      ],
+      "rationale": "R1: Shrine's Friday Reconciliation in both bulletins; the First Friday 11am Confession on p2 is the same slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "shrine-chapel-of-the-blessed-sacrament-raritan",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "61b3d994",
+          "page": 2,
+          "said": "ADORATION Monday-Friday 10:00am-4:00pm; EXPOSITION of Blessed Sacrament Monday-Friday 10:am; BENEDICTION of Blessed Sacrament Monday-Friday 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5d46efb",
+          "page": 2,
+          "said": "ADORATION Monday-Friday 10:00am-4:00pm; EXPOSITION of Blessed Sacrament Monday-Friday 10:am; BENEDICTION of Blessed Sacrament Monday-Friday 4:00pm"
+        }
+      ],
+      "rationale": "R1, POLICY (Benediction implies Adoration): Regular Shrine Schedule in both bulletins; exposition at 10 and Benediction at 4 are one Adoration period.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "shrine-chapel-of-the-blessed-sacrament-raritan",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "61b3d994",
+          "page": 2,
+          "said": "ADORATION Monday-Friday 10:00am-4:00pm; EXPOSITION of Blessed Sacrament Monday-Friday 10:am; BENEDICTION of Blessed Sacrament Monday-Friday 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5d46efb",
+          "page": 2,
+          "said": "ADORATION Monday-Friday 10:00am-4:00pm; EXPOSITION of Blessed Sacrament Monday-Friday 10:am; BENEDICTION of Blessed Sacrament Monday-Friday 4:00pm"
+        }
+      ],
+      "rationale": "R1, POLICY (Benediction implies Adoration): Regular Shrine Schedule in both bulletins; exposition at 10 and Benediction at 4 are one Adoration period.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "shrine-chapel-of-the-blessed-sacrament-raritan",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "61b3d994",
+          "page": 2,
+          "said": "ADORATION Monday-Friday 10:00am-4:00pm; EXPOSITION of Blessed Sacrament Monday-Friday 10:am; BENEDICTION of Blessed Sacrament Monday-Friday 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5d46efb",
+          "page": 2,
+          "said": "ADORATION Monday-Friday 10:00am-4:00pm; EXPOSITION of Blessed Sacrament Monday-Friday 10:am; BENEDICTION of Blessed Sacrament Monday-Friday 4:00pm"
+        }
+      ],
+      "rationale": "R1, POLICY (Benediction implies Adoration): Regular Shrine Schedule in both bulletins; exposition at 10 and Benediction at 4 are one Adoration period.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "shrine-chapel-of-the-blessed-sacrament-raritan",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "61b3d994",
+          "page": 2,
+          "said": "ADORATION Monday-Friday 10:00am-4:00pm; EXPOSITION of Blessed Sacrament Monday-Friday 10:am; BENEDICTION of Blessed Sacrament Monday-Friday 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5d46efb",
+          "page": 2,
+          "said": "ADORATION Monday-Friday 10:00am-4:00pm; EXPOSITION of Blessed Sacrament Monday-Friday 10:am; BENEDICTION of Blessed Sacrament Monday-Friday 4:00pm"
+        }
+      ],
+      "rationale": "R1, POLICY (Benediction implies Adoration): Regular Shrine Schedule in both bulletins; exposition at 10 and Benediction at 4 are one Adoration period.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "shrine-chapel-of-the-blessed-sacrament-raritan",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "61b3d994",
+          "page": 2,
+          "said": "ADORATION Monday-Friday 10:00am-4:00pm; EXPOSITION of Blessed Sacrament Monday-Friday 10:am; BENEDICTION of Blessed Sacrament Monday-Friday 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5d46efb",
+          "page": 2,
+          "said": "ADORATION Monday-Friday 10:00am-4:00pm; EXPOSITION of Blessed Sacrament Monday-Friday 10:am; BENEDICTION of Blessed Sacrament Monday-Friday 4:00pm"
+        }
+      ],
+      "rationale": "R1, POLICY (Benediction implies Adoration): Regular Shrine Schedule in both bulletins; exposition at 10 and Benediction at 4 are one Adoration period.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "shrine-chapel-of-the-blessed-sacrament-raritan",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-15",
+        "start_time": "15:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Oratory Holy Hour"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "61b3d994",
+          "page": 2,
+          "said": "Sunday, November 15... 3:30pm: Oratory Holy Hour"
+        }
+      ],
+      "rationale": "R1, R16: dated Holy Hour in the Shrine's intentions on as_of's date (POLICY: a Holy Hour is Adoration). Not weekly: the Nov 8 issue had a 3:00pm Holy Hour for Priests instead, a different time and title (R35 needs the same time).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "shrine-chapel-of-the-blessed-sacrament-raritan",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "08:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Monthly Overnight Adoration"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "61b3d994",
+          "page": 2,
+          "said": "Monthly Overnight Adoration: Friday 8:00pm into FIRST SATURDAY 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5d46efb",
+          "page": 2,
+          "said": "Monthly Overnight Adoration: Friday 8:00pm into FIRST SATURDAY 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "61b3d994",
+          "page": 2,
+          "said": "First Saturday: 8:00am Benediction"
+        }
+      ],
+      "rationale": "R33: runs from the Friday evening before the first Saturday (not always a first Friday, e.g. when the 1st is a Saturday) to 8am Saturday; the format can't express the Friday half or a span across midnight, and no dates are printed. The 8:00am First Saturday Benediction closes this vigil.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "61b3d994",
+          "page": 1,
+          "said": "Holy Day Masses... 12:15pm: Shrine Chapel... 7:00pm Shrine Chapel Latin"
+        }
+      ],
+      "rationale": "POLICY, Dates: holy-day times are printed without any date; the bulletin pins down no holy day, so nothing is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "shrine-chapel-of-the-blessed-sacrament-raritan",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Private Wedding"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "61b3d994",
+          "page": 2,
+          "said": "Saturday, November 21... 3pm: Private Wedding"
+        }
+      ],
+      "rationale": "R24: a private wedding is closed to the public.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "61b3d994",
+          "page": 1,
+          "said": "Raritan Oratory Mass Schedule: St. Joseph, St. Ann, Holy Trinity Masses; Reconciliation Saturday St. Ann after the 9:00am Mass, St. Joseph 3:00-3:30pm; Wednesday Holy Trinity 11:00am-12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5d46efb",
+          "page": 1,
+          "said": "Raritan Oratory Mass Schedule: St. Joseph, St. Ann, Holy Trinity Masses; Reconciliation Saturday St. Ann after the 9:00am Mass, St. Joseph 3:00-3:30pm; Wednesday Holy Trinity 11:00am-12:00pm"
+        }
+      ],
+      "rationale": "R22: the shared Oratory box also lists St. Ann (st-ann-raritan), St. Joseph and Holy Trinity, Raritan, which are other parishes' churches; their times belong to those parishes.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "61b3d994",
+          "page": 2,
+          "said": "SHRINE HOURS Monday-Friday: 6:00am-6:00pm, Saturdays: 10:00am-6:00pm"
+        }
+      ],
+      "rationale": "POLICY, Churches and chapels / R40: building hours are not an Adoration schedule; Adoration is recorded from its own listing.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

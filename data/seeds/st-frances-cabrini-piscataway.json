@@ -1,0 +1,507 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-frances-cabrini-piscataway",
+  "status": "approved",
+  "as_of": "2026-11-15T16:50:57Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T03:42:05Z",
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:57:05Z",
+  "summary": "One church. The Mass Schedule box (weekend and weekday Masses) and Saturday Reconciliation 3:45-4:15 PM are identical in both bulletins read (Nov 8 and Nov 15, 2026), and the newest week's intentions match every weekday and weekend time. No Adoration, no dated services or cancellations on or after as_of, no history stored; no open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "bd49bbd73da22e877ef21c1baf416dead48ec2909ad4e722a2095a50c3bbf5a3",
+      "fetched_at": "2026-11-15T16:50:57Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "a2969e28bb22535f6becb6350739f1c37052ad5bdeab0eb1f9606395a36b3849",
+      "fetched_at": "2026-11-08T15:59:35Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-frances-cabrini-piscataway",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bd49bbd7",
+          "page": 1,
+          "said": "Mass Schedule: Saturday Vigil 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a2969e28",
+          "page": 1,
+          "said": "Mass Schedule: Saturday Vigil 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bd49bbd7",
+          "page": 2,
+          "said": "Saturday, November 21, 2026 ... 4:30 PM + Frank Galante"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read (Nov 15 and Nov 8) and in the newest week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-frances-cabrini-piscataway",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bd49bbd7",
+          "page": 1,
+          "said": "Mass Schedule: Sunday 7:30, 9:30, 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a2969e28",
+          "page": 1,
+          "said": "Mass Schedule: Sunday 7:30, 9:30, 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bd49bbd7",
+          "page": 2,
+          "said": "Sunday, November 22, 2026 7:30 AM ... 9:30 AM ... 11:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in the newest week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-frances-cabrini-piscataway",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bd49bbd7",
+          "page": 1,
+          "said": "Mass Schedule: Sunday 7:30, 9:30, 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a2969e28",
+          "page": 1,
+          "said": "Mass Schedule: Sunday 7:30, 9:30, 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bd49bbd7",
+          "page": 2,
+          "said": "Sunday, November 22, 2026 7:30 AM ... 9:30 AM ... 11:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in the newest week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-frances-cabrini-piscataway",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bd49bbd7",
+          "page": 1,
+          "said": "Mass Schedule: Sunday 7:30, 9:30, 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a2969e28",
+          "page": 1,
+          "said": "Mass Schedule: Sunday 7:30, 9:30, 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bd49bbd7",
+          "page": 2,
+          "said": "Sunday, November 22, 2026 7:30 AM ... 9:30 AM ... 11:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in the newest week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-frances-cabrini-piscataway",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bd49bbd7",
+          "page": 1,
+          "said": "Monday, Wednesday, Friday 12:10"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a2969e28",
+          "page": 1,
+          "said": "Monday, Wednesday, Friday 12:10"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bd49bbd7",
+          "page": 2,
+          "said": "Monday, November 16 12:10 PM; Wednesday, November 18 12:10 PM; Friday, November 20 12:10 PM"
+        }
+      ],
+      "rationale": "R1: Mass Schedule box of both bulletins; the intentions confirm 12:10 PM (noon hour) on those days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-frances-cabrini-piscataway",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bd49bbd7",
+          "page": 1,
+          "said": "Monday, Wednesday, Friday 12:10"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a2969e28",
+          "page": 1,
+          "said": "Monday, Wednesday, Friday 12:10"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bd49bbd7",
+          "page": 2,
+          "said": "Monday, November 16 12:10 PM; Wednesday, November 18 12:10 PM; Friday, November 20 12:10 PM"
+        }
+      ],
+      "rationale": "R1: Mass Schedule box of both bulletins; the intentions confirm 12:10 PM (noon hour) on those days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-frances-cabrini-piscataway",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bd49bbd7",
+          "page": 1,
+          "said": "Monday, Wednesday, Friday 12:10"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a2969e28",
+          "page": 1,
+          "said": "Monday, Wednesday, Friday 12:10"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bd49bbd7",
+          "page": 2,
+          "said": "Monday, November 16 12:10 PM; Wednesday, November 18 12:10 PM; Friday, November 20 12:10 PM"
+        }
+      ],
+      "rationale": "R1: Mass Schedule box of both bulletins; the intentions confirm 12:10 PM (noon hour) on those days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-frances-cabrini-piscataway",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bd49bbd7",
+          "page": 1,
+          "said": "Tuesday & Thursday 7:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a2969e28",
+          "page": 1,
+          "said": "Tuesday & Thursday 7:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bd49bbd7",
+          "page": 2,
+          "said": "Tuesday, November 17 7:00 AM; Thursday, November 19 7:00 AM"
+        }
+      ],
+      "rationale": "R1: Mass Schedule box of both bulletins and the newest week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-frances-cabrini-piscataway",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bd49bbd7",
+          "page": 1,
+          "said": "Tuesday & Thursday 7:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a2969e28",
+          "page": 1,
+          "said": "Tuesday & Thursday 7:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bd49bbd7",
+          "page": 2,
+          "said": "Tuesday, November 17 7:00 AM; Thursday, November 19 7:00 AM"
+        }
+      ],
+      "rationale": "R1: Mass Schedule box of both bulletins and the newest week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-frances-cabrini-piscataway",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bd49bbd7",
+          "page": 1,
+          "said": "Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a2969e28",
+          "page": 1,
+          "said": "Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bd49bbd7",
+          "page": 2,
+          "said": "Saturday, November 21, 2026 8:00 AM + Kathryn Spencer-Hayes"
+        }
+      ],
+      "rationale": "R1: Mass Schedule box of both bulletins and the newest week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-frances-cabrini-piscataway",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:45",
+        "end_time": "16:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bd49bbd7",
+          "page": 1,
+          "said": "Sacrament of Reconciliation: Saturdays 3:45-4:15 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a2969e28",
+          "page": 1,
+          "said": "Sacrament of Reconciliation: Saturdays 3:45-4:15 PM"
+        }
+      ],
+      "rationale": "R1: printed under Sacrament of Reconciliation in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

@@ -1,0 +1,1463 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-fatima-piscataway",
+  "status": "approved",
+  "as_of": "2026-11-15T16:50:41Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T23:04:23Z",
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:56:11Z",
+  "summary": "One church with a perpetual Adoration chapel in the on-campus Parish Center (recorded 24/7 at the church, R38). Mass and Confession times agree in both issues read (Nov 8 and Nov 15); the bulletin's confession end times (4:50, 6:50) differ slightly from the website's (4:45, 6:45) and the bulletin is followed. Open: whether to add the Dec 7-8 Immaculate Conception holy-day Masses from the standing holy-day schedule.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "9685f19bfb134a7979072e31fbcdce93e1681bbfe370a79002eb3094f8362567",
+      "fetched_at": "2026-11-15T16:50:41Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "34f2510a95ae2ff0a4f5f9f3f1c9d662e1e822c56efe384b5204136c485483df",
+      "fetched_at": "2026-11-08T22:02:46Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-piscataway",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9685f19b",
+          "page": 1,
+          "said": "HOLY MASS Weekend Saturday: 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "34f2510a",
+          "page": 1,
+          "said": "HOLY MASS Weekend Saturday: 5:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both issues read and in each week's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-piscataway",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9685f19b",
+          "page": 1,
+          "said": "Sunday: 7:00, 9:00, 11:00 am, 1:00 & 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "34f2510a",
+          "page": 1,
+          "said": "Sunday: 7:00, 9:00, 11:00 am, 1:00 & 5:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both issues read and in the Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-piscataway",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9685f19b",
+          "page": 1,
+          "said": "Sunday: 7:00, 9:00, 11:00 am, 1:00 & 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "34f2510a",
+          "page": 1,
+          "said": "Sunday: 7:00, 9:00, 11:00 am, 1:00 & 5:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both issues read and in the Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-piscataway",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9685f19b",
+          "page": 1,
+          "said": "Sunday: 7:00, 9:00, 11:00 am, 1:00 & 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "34f2510a",
+          "page": 1,
+          "said": "Sunday: 7:00, 9:00, 11:00 am, 1:00 & 5:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both issues read and in the Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-piscataway",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9685f19b",
+          "page": 1,
+          "said": "Sunday: 7:00, 9:00, 11:00 am, 1:00 & 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "34f2510a",
+          "page": 1,
+          "said": "Sunday: 7:00, 9:00, 11:00 am, 1:00 & 5:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both issues read and in the Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-piscataway",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9685f19b",
+          "page": 1,
+          "said": "Sunday: 7:00, 9:00, 11:00 am, 1:00 & 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "34f2510a",
+          "page": 1,
+          "said": "Sunday: 7:00, 9:00, 11:00 am, 1:00 & 5:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both issues read and in the Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-piscataway",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9685f19b",
+          "page": 1,
+          "said": "Weekdays Monday, Wednesday & Friday: 7:00 & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "34f2510a",
+          "page": 1,
+          "said": "Weekdays Monday, Wednesday & Friday: 7:00 & 9:00 am"
+        }
+      ],
+      "rationale": "R1: page 1 schedule box of both issues; the Mass intentions list the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-piscataway",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9685f19b",
+          "page": 1,
+          "said": "Weekdays Monday, Wednesday & Friday: 7:00 & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "34f2510a",
+          "page": 1,
+          "said": "Weekdays Monday, Wednesday & Friday: 7:00 & 9:00 am"
+        }
+      ],
+      "rationale": "R1: page 1 schedule box of both issues; the Mass intentions list the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-piscataway",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9685f19b",
+          "page": 1,
+          "said": "Weekdays Monday, Wednesday & Friday: 7:00 & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "34f2510a",
+          "page": 1,
+          "said": "Weekdays Monday, Wednesday & Friday: 7:00 & 9:00 am"
+        }
+      ],
+      "rationale": "R1: page 1 schedule box of both issues; the Mass intentions list the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-piscataway",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9685f19b",
+          "page": 1,
+          "said": "Weekdays Monday, Wednesday & Friday: 7:00 & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "34f2510a",
+          "page": 1,
+          "said": "Weekdays Monday, Wednesday & Friday: 7:00 & 9:00 am"
+        }
+      ],
+      "rationale": "R1: page 1 schedule box of both issues; the Mass intentions list the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-piscataway",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9685f19b",
+          "page": 1,
+          "said": "Weekdays Monday, Wednesday & Friday: 7:00 & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "34f2510a",
+          "page": 1,
+          "said": "Weekdays Monday, Wednesday & Friday: 7:00 & 9:00 am"
+        }
+      ],
+      "rationale": "R1: page 1 schedule box of both issues; the Mass intentions list the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-piscataway",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9685f19b",
+          "page": 1,
+          "said": "Weekdays Monday, Wednesday & Friday: 7:00 & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "34f2510a",
+          "page": 1,
+          "said": "Weekdays Monday, Wednesday & Friday: 7:00 & 9:00 am"
+        }
+      ],
+      "rationale": "R1: page 1 schedule box of both issues; the Mass intentions list the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-piscataway",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9685f19b",
+          "page": 1,
+          "said": "Tuesday & Thursday: 7:00 am & 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "34f2510a",
+          "page": 1,
+          "said": "Tuesday & Thursday: 7:00 am & 7:00 pm"
+        }
+      ],
+      "rationale": "R1: page 1 schedule box of both issues; the Mass intentions list the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-piscataway",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9685f19b",
+          "page": 1,
+          "said": "Tuesday & Thursday: 7:00 am & 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "34f2510a",
+          "page": 1,
+          "said": "Tuesday & Thursday: 7:00 am & 7:00 pm"
+        }
+      ],
+      "rationale": "R1: page 1 schedule box of both issues; the Mass intentions list the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-piscataway",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9685f19b",
+          "page": 1,
+          "said": "Tuesday & Thursday: 7:00 am & 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "34f2510a",
+          "page": 1,
+          "said": "Tuesday & Thursday: 7:00 am & 7:00 pm"
+        }
+      ],
+      "rationale": "R1: page 1 schedule box of both issues; the Mass intentions list the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-piscataway",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9685f19b",
+          "page": 1,
+          "said": "Tuesday & Thursday: 7:00 am & 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "34f2510a",
+          "page": 1,
+          "said": "Tuesday & Thursday: 7:00 am & 7:00 pm"
+        }
+      ],
+      "rationale": "R1: page 1 schedule box of both issues; the Mass intentions list the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-piscataway",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9685f19b",
+          "page": 1,
+          "said": "Saturday: 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "34f2510a",
+          "page": 1,
+          "said": "Saturday: 9:00 am"
+        }
+      ],
+      "rationale": "R1: page 1 weekday schedule of both issues and the Saturday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-piscataway",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9685f19b",
+          "page": 1,
+          "said": "PENANCE & RECONCILIATION Saturday: 4:00 - 4:50 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "34f2510a",
+          "page": 1,
+          "said": "PENANCE & RECONCILIATION Saturday: 4:00 - 4:50 pm"
+        }
+      ],
+      "rationale": "R1: page 1 schedule box of both issues. The website's Divine Worship Times page says 4:00-4:45pm; the newest bulletin's printed 4:50 end is used (POLICY, Times: the bulletin's clock time).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-piscataway",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "18:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9685f19b",
+          "page": 1,
+          "said": "Tuesday & Thursday: 6:00 - 6:50 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "34f2510a",
+          "page": 1,
+          "said": "Tuesday & Thursday: 6:00 - 6:50 pm"
+        }
+      ],
+      "rationale": "R1: page 1 schedule box of both issues. The website says 6:00-6:45pm; the newest bulletin's printed 6:50 end is used.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-piscataway",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "18:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9685f19b",
+          "page": 1,
+          "said": "Tuesday & Thursday: 6:00 - 6:50 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "34f2510a",
+          "page": 1,
+          "said": "Tuesday & Thursday: 6:00 - 6:50 pm"
+        }
+      ],
+      "rationale": "R1: page 1 schedule box of both issues. The website says 6:00-6:45pm; the newest bulletin's printed 6:50 end is used.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-piscataway",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Adoration Chapel in the Parish Center, 24/7 except during inclement weather"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9685f19b",
+          "page": 1,
+          "said": "EXPOSITION AND ADORATION OF THE BLESSED SACRAMENT Perpetual (24 hours a day, 7 days a week) in the Blessed Sacrament Chapel located in the Parish Center."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9685f19b",
+          "page": 8,
+          "said": "Our parish offers Exposition of the Blessed Sacrament 24 hours a day, 7 days a week (except during inclement weather) in our Eucharistic Adoration Chapel located in the Parish Center."
+        },
+        {
+          "source": "agent",
+          "bulletin": "34f2510a",
+          "page": 1,
+          "said": "Perpetual (24 hours a day, 7 days a week) in the Blessed Sacrament Chapel located in the Parish Center."
+        },
+        {
+          "source": "website",
+          "url": "https://www.olfparish.org/about-directions",
+          "said": "Parish Center - Offices & Meeting Rooms (Mailing Address) 50 Van Winkle Place, Piscataway, NJ 08854"
+        }
+      ],
+      "rationale": "R1, R38: the parish names exposition 24/7 in its chapel in the Parish Center. The Parish Center (50 Van Winkle Place) is on the church's campus: it geocodes (OpenStreetMap) about 120 m from the church's point in data/churches.csv, and the bulletin's room legend treats it as one campus with the church and Rec Center (499 New Market Rd). Seven daily slots 00:00-23:59, as other perpetual chapels are recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-piscataway",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Adoration Chapel in the Parish Center, 24/7 except during inclement weather"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9685f19b",
+          "page": 1,
+          "said": "EXPOSITION AND ADORATION OF THE BLESSED SACRAMENT Perpetual (24 hours a day, 7 days a week) in the Blessed Sacrament Chapel located in the Parish Center."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9685f19b",
+          "page": 8,
+          "said": "Our parish offers Exposition of the Blessed Sacrament 24 hours a day, 7 days a week (except during inclement weather) in our Eucharistic Adoration Chapel located in the Parish Center."
+        },
+        {
+          "source": "agent",
+          "bulletin": "34f2510a",
+          "page": 1,
+          "said": "Perpetual (24 hours a day, 7 days a week) in the Blessed Sacrament Chapel located in the Parish Center."
+        },
+        {
+          "source": "website",
+          "url": "https://www.olfparish.org/about-directions",
+          "said": "Parish Center - Offices & Meeting Rooms (Mailing Address) 50 Van Winkle Place, Piscataway, NJ 08854"
+        }
+      ],
+      "rationale": "R1, R38: the parish names exposition 24/7 in its chapel in the Parish Center. The Parish Center (50 Van Winkle Place) is on the church's campus: it geocodes (OpenStreetMap) about 120 m from the church's point in data/churches.csv, and the bulletin's room legend treats it as one campus with the church and Rec Center (499 New Market Rd). Seven daily slots 00:00-23:59, as other perpetual chapels are recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-piscataway",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Adoration Chapel in the Parish Center, 24/7 except during inclement weather"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9685f19b",
+          "page": 1,
+          "said": "EXPOSITION AND ADORATION OF THE BLESSED SACRAMENT Perpetual (24 hours a day, 7 days a week) in the Blessed Sacrament Chapel located in the Parish Center."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9685f19b",
+          "page": 8,
+          "said": "Our parish offers Exposition of the Blessed Sacrament 24 hours a day, 7 days a week (except during inclement weather) in our Eucharistic Adoration Chapel located in the Parish Center."
+        },
+        {
+          "source": "agent",
+          "bulletin": "34f2510a",
+          "page": 1,
+          "said": "Perpetual (24 hours a day, 7 days a week) in the Blessed Sacrament Chapel located in the Parish Center."
+        },
+        {
+          "source": "website",
+          "url": "https://www.olfparish.org/about-directions",
+          "said": "Parish Center - Offices & Meeting Rooms (Mailing Address) 50 Van Winkle Place, Piscataway, NJ 08854"
+        }
+      ],
+      "rationale": "R1, R38: the parish names exposition 24/7 in its chapel in the Parish Center. The Parish Center (50 Van Winkle Place) is on the church's campus: it geocodes (OpenStreetMap) about 120 m from the church's point in data/churches.csv, and the bulletin's room legend treats it as one campus with the church and Rec Center (499 New Market Rd). Seven daily slots 00:00-23:59, as other perpetual chapels are recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-piscataway",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Adoration Chapel in the Parish Center, 24/7 except during inclement weather"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9685f19b",
+          "page": 1,
+          "said": "EXPOSITION AND ADORATION OF THE BLESSED SACRAMENT Perpetual (24 hours a day, 7 days a week) in the Blessed Sacrament Chapel located in the Parish Center."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9685f19b",
+          "page": 8,
+          "said": "Our parish offers Exposition of the Blessed Sacrament 24 hours a day, 7 days a week (except during inclement weather) in our Eucharistic Adoration Chapel located in the Parish Center."
+        },
+        {
+          "source": "agent",
+          "bulletin": "34f2510a",
+          "page": 1,
+          "said": "Perpetual (24 hours a day, 7 days a week) in the Blessed Sacrament Chapel located in the Parish Center."
+        },
+        {
+          "source": "website",
+          "url": "https://www.olfparish.org/about-directions",
+          "said": "Parish Center - Offices & Meeting Rooms (Mailing Address) 50 Van Winkle Place, Piscataway, NJ 08854"
+        }
+      ],
+      "rationale": "R1, R38: the parish names exposition 24/7 in its chapel in the Parish Center. The Parish Center (50 Van Winkle Place) is on the church's campus: it geocodes (OpenStreetMap) about 120 m from the church's point in data/churches.csv, and the bulletin's room legend treats it as one campus with the church and Rec Center (499 New Market Rd). Seven daily slots 00:00-23:59, as other perpetual chapels are recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-piscataway",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Adoration Chapel in the Parish Center, 24/7 except during inclement weather"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9685f19b",
+          "page": 1,
+          "said": "EXPOSITION AND ADORATION OF THE BLESSED SACRAMENT Perpetual (24 hours a day, 7 days a week) in the Blessed Sacrament Chapel located in the Parish Center."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9685f19b",
+          "page": 8,
+          "said": "Our parish offers Exposition of the Blessed Sacrament 24 hours a day, 7 days a week (except during inclement weather) in our Eucharistic Adoration Chapel located in the Parish Center."
+        },
+        {
+          "source": "agent",
+          "bulletin": "34f2510a",
+          "page": 1,
+          "said": "Perpetual (24 hours a day, 7 days a week) in the Blessed Sacrament Chapel located in the Parish Center."
+        },
+        {
+          "source": "website",
+          "url": "https://www.olfparish.org/about-directions",
+          "said": "Parish Center - Offices & Meeting Rooms (Mailing Address) 50 Van Winkle Place, Piscataway, NJ 08854"
+        }
+      ],
+      "rationale": "R1, R38: the parish names exposition 24/7 in its chapel in the Parish Center. The Parish Center (50 Van Winkle Place) is on the church's campus: it geocodes (OpenStreetMap) about 120 m from the church's point in data/churches.csv, and the bulletin's room legend treats it as one campus with the church and Rec Center (499 New Market Rd). Seven daily slots 00:00-23:59, as other perpetual chapels are recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-piscataway",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Adoration Chapel in the Parish Center, 24/7 except during inclement weather"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9685f19b",
+          "page": 1,
+          "said": "EXPOSITION AND ADORATION OF THE BLESSED SACRAMENT Perpetual (24 hours a day, 7 days a week) in the Blessed Sacrament Chapel located in the Parish Center."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9685f19b",
+          "page": 8,
+          "said": "Our parish offers Exposition of the Blessed Sacrament 24 hours a day, 7 days a week (except during inclement weather) in our Eucharistic Adoration Chapel located in the Parish Center."
+        },
+        {
+          "source": "agent",
+          "bulletin": "34f2510a",
+          "page": 1,
+          "said": "Perpetual (24 hours a day, 7 days a week) in the Blessed Sacrament Chapel located in the Parish Center."
+        },
+        {
+          "source": "website",
+          "url": "https://www.olfparish.org/about-directions",
+          "said": "Parish Center - Offices & Meeting Rooms (Mailing Address) 50 Van Winkle Place, Piscataway, NJ 08854"
+        }
+      ],
+      "rationale": "R1, R38: the parish names exposition 24/7 in its chapel in the Parish Center. The Parish Center (50 Van Winkle Place) is on the church's campus: it geocodes (OpenStreetMap) about 120 m from the church's point in data/churches.csv, and the bulletin's room legend treats it as one campus with the church and Rec Center (499 New Market Rd). Seven daily slots 00:00-23:59, as other perpetual chapels are recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-piscataway",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Adoration Chapel in the Parish Center, 24/7 except during inclement weather"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9685f19b",
+          "page": 1,
+          "said": "EXPOSITION AND ADORATION OF THE BLESSED SACRAMENT Perpetual (24 hours a day, 7 days a week) in the Blessed Sacrament Chapel located in the Parish Center."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9685f19b",
+          "page": 8,
+          "said": "Our parish offers Exposition of the Blessed Sacrament 24 hours a day, 7 days a week (except during inclement weather) in our Eucharistic Adoration Chapel located in the Parish Center."
+        },
+        {
+          "source": "agent",
+          "bulletin": "34f2510a",
+          "page": 1,
+          "said": "Perpetual (24 hours a day, 7 days a week) in the Blessed Sacrament Chapel located in the Parish Center."
+        },
+        {
+          "source": "website",
+          "url": "https://www.olfparish.org/about-directions",
+          "said": "Parish Center - Offices & Meeting Rooms (Mailing Address) 50 Van Winkle Place, Piscataway, NJ 08854"
+        }
+      ],
+      "rationale": "R1, R38: the parish names exposition 24/7 in its chapel in the Parish Center. The Parish Center (50 Van Winkle Place) is on the church's campus: it geocodes (OpenStreetMap) about 120 m from the church's point in data/churches.csv, and the bulletin's room legend treats it as one campus with the church and Rec Center (499 New Market Rd). Seven daily slots 00:00-23:59, as other perpetual chapels are recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-piscataway",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "20:00",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour for the Dying, Parish Center"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9685f19b",
+          "page": 6,
+          "said": "Holy Hour for the Dying: 8:00 - 9:00 pm (PC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "34f2510a",
+          "page": 6,
+          "said": "Holy Hour for the Dying: 8:00 - 9:00 pm (PC)"
+        }
+      ],
+      "rationale": "R37: weekly in both issues' calendars, but entirely inside the perpetual Adoration already recorded at this church on Wednesdays; not a separate slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-piscataway",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour for the Dying, in the church"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9685f19b",
+          "page": 6,
+          "said": "Holy Hour for the Dying: 3:00 - 4:00 pm (Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "34f2510a",
+          "page": 6,
+          "said": "Holy Hour for the Dying: 3:00 - 4:00 pm (Church)"
+        }
+      ],
+      "rationale": "R37: weekly in both issues' calendars, but entirely inside the perpetual Adoration already recorded at this church on Thursdays; not a separate slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-piscataway",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-18",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Penance Service"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9685f19b",
+          "page": 5,
+          "said": "Advent Penance Service Friday, December 18th 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "34f2510a",
+          "page": 5,
+          "said": "Advent Penance Service Friday, December 18th 7:00 pm"
+        }
+      ],
+      "rationale": "R1, R16: a dated Penance Service (Confession) after as_of, announced in both issues' Upcoming Events; no end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-piscataway",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vigil of the Immaculate Conception"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "34f2510a",
+          "page": 6,
+          "said": "NEXT HOLY DAY OF OBLIGATION The Solemnity of The Immaculate Conception Tuesday, December 8, 2026"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9685f19b",
+          "page": 1,
+          "said": "Holy Days of Obligation 7:00 pm (Vigil); 7:00, 9:00 am; 12:00 & 7:00 pm"
+        }
+      ],
+      "rationale": "R30: the Nov 8 issue names Dec 8 as the next holy day and every issue prints a standing holy-day schedule (the website gives the same, excepting only Christmas and Jan 1), but no issue prints the Dec 8 times next to the date. Leaning include: the schedule is the parish's own and the date is printed. The 7 AM and 7 PM Dec 8 Masses match the weekly Tuesday slots and need no entry.",
+      "question": "Add the Immaculate Conception holy day Masses (vigil Mon Dec 7 7 PM; Tue Dec 8 9 AM and 12 PM)?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "our-lady-of-fatima-piscataway",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-07",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Vigil of the Immaculate Conception"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@05f8a0474956",
+        "at": "2026-11-20T06:56:11Z"
+      },
+      "group": "dec8"
+    },
+    {
+      "id": "s32",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-piscataway",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "34f2510a",
+          "page": 6,
+          "said": "NEXT HOLY DAY OF OBLIGATION The Solemnity of The Immaculate Conception Tuesday, December 8, 2026"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9685f19b",
+          "page": 1,
+          "said": "Holy Days of Obligation 7:00 pm (Vigil); 7:00, 9:00 am; 12:00 & 7:00 pm"
+        }
+      ],
+      "rationale": "R30: see the Dec 7 vigil slot in this group; same evidence.",
+      "question": "Add the Immaculate Conception holy day Masses (vigil Mon Dec 7 7 PM; Tue Dec 8 9 AM and 12 PM)?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "our-lady-of-fatima-piscataway",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@05f8a0474956",
+        "at": "2026-11-20T06:56:11Z"
+      },
+      "group": "dec8"
+    },
+    {
+      "id": "s33",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-piscataway",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "34f2510a",
+          "page": 6,
+          "said": "NEXT HOLY DAY OF OBLIGATION The Solemnity of The Immaculate Conception Tuesday, December 8, 2026"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9685f19b",
+          "page": 1,
+          "said": "Holy Days of Obligation 7:00 pm (Vigil); 7:00, 9:00 am; 12:00 & 7:00 pm"
+        }
+      ],
+      "rationale": "R30: see the Dec 7 vigil slot in this group; same evidence.",
+      "question": "Add the Immaculate Conception holy day Masses (vigil Mon Dec 7 7 PM; Tue Dec 8 9 AM and 12 PM)?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "our-lady-of-fatima-piscataway",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@05f8a0474956",
+        "at": "2026-11-20T06:56:11Z"
+      },
+      "group": "dec8"
+    },
+    {
+      "id": "s34",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9685f19b",
+          "page": 1,
+          "said": "Holy Rosary ... Our Lady of the Miraculous Medal Novena Tuesday: 6:50 pm; Saint Joseph Novena Thursday: 6:50 pm"
+        }
+      ],
+      "rationale": "R24: Rosary and novenas are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

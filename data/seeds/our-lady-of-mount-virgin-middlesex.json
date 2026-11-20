@@ -1,0 +1,831 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-mount-virgin-middlesex",
+  "status": "approved",
+  "as_of": "2026-11-15T16:50:46Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T23:11:05Z",
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:56:17Z",
+  "summary": "One church. The schedule box (weekend, weekday, Confession, 1st/3rd/5th Friday and 2nd/4th Thursday Adoration) is identical in both bulletins (Nov 8 and Nov 15) and on the website. Dated: Thanksgiving 9 AM Mass and cancelled Nov 26 evening Adoration; Immaculate Conception Masses from the website. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "bcb1884ddc39fde91333ad28592e9634f3191d7ed58493413fa5630b0db13610",
+      "fetched_at": "2026-11-15T16:50:46Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "9b973f57307b156f3d748deaabf2e5cec4238741bb0fa1ce06adffe6f4ae4f59",
+      "fetched_at": "2026-11-08T22:02:52Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-virgin-middlesex",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bcb1884d",
+          "page": 1,
+          "said": "MASS SCHEDULE: Saturdays: 8:00 am & 5:00 pm (Sunday Vigil Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b973f57",
+          "page": 1,
+          "said": "MASS SCHEDULE: Saturdays: 8:00 am & 5:00 pm (Sunday Vigil Mass)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read and in both weeks' Mass intentions; the website's Mass Times agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-virgin-middlesex",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bcb1884d",
+          "page": 1,
+          "said": "MASS SCHEDULE: Saturdays: 8:00 am & 5:00 pm (Sunday Vigil Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b973f57",
+          "page": 1,
+          "said": "MASS SCHEDULE: Saturdays: 8:00 am & 5:00 pm (Sunday Vigil Mass)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read and in both weeks' Mass intentions; the website's Mass Times agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-virgin-middlesex",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bcb1884d",
+          "page": 1,
+          "said": "Sundays: 8:00 am, 10:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b973f57",
+          "page": 1,
+          "said": "Sundays: 8:00 am, 10:00 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read and in both weeks' Mass intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-virgin-middlesex",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bcb1884d",
+          "page": 1,
+          "said": "Sundays: 8:00 am, 10:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b973f57",
+          "page": 1,
+          "said": "Sundays: 8:00 am, 10:00 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read and in both weeks' Mass intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-virgin-middlesex",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bcb1884d",
+          "page": 1,
+          "said": "Sundays: ... 1:30 pm (Misa en Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b973f57",
+          "page": 1,
+          "said": "Sundays: ... 1:30 pm (Misa en Español)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins and in both weeks' intentions; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-virgin-middlesex",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bcb1884d",
+          "page": 1,
+          "said": "Weekdays: 7:00 am (M, W, F)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b973f57",
+          "page": 1,
+          "said": "Weekdays: 7:00 am (M, W, F)"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins; each weekday appears at 7:00 A.M. in both weeks' Mass intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-virgin-middlesex",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bcb1884d",
+          "page": 1,
+          "said": "Weekdays: 7:00 am (M, W, F)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b973f57",
+          "page": 1,
+          "said": "Weekdays: 7:00 am (M, W, F)"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins; each weekday appears at 7:00 A.M. in both weeks' Mass intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-virgin-middlesex",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bcb1884d",
+          "page": 1,
+          "said": "Weekdays: 7:00 am (M, W, F)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b973f57",
+          "page": 1,
+          "said": "Weekdays: 7:00 am (M, W, F)"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins; each weekday appears at 7:00 A.M. in both weeks' Mass intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-virgin-middlesex",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bcb1884d",
+          "page": 1,
+          "said": "Weekdays: 12:00 Noon (Tue, Thu)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b973f57",
+          "page": 1,
+          "said": "Weekdays: 12:00 Noon (Tue, Thu)"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins; Tue and Thu 12:00 P.M. in both weeks' Mass intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-virgin-middlesex",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bcb1884d",
+          "page": 1,
+          "said": "Weekdays: 12:00 Noon (Tue, Thu)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b973f57",
+          "page": 1,
+          "said": "Weekdays: 12:00 Noon (Tue, Thu)"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins; Tue and Thu 12:00 P.M. in both weeks' Mass intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-virgin-middlesex",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bcb1884d",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION: Saturdays: 3:30 - 4:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b973f57",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION: Saturdays: 3:30 - 4:15 pm"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; the website gives the same window.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-virgin-middlesex",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:45",
+        "end_time": "13:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bcb1884d",
+          "page": 1,
+          "said": "Sundays: 12:45 - 1:15 pm (in Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b973f57",
+          "page": 1,
+          "said": "Sundays: 12:45 - 1:15 pm (in Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bcb1884d",
+          "page": 6,
+          "said": "Confesiones: Domingos antes de la Misa a las 12:45 pm a 1:15 pm"
+        }
+      ],
+      "rationale": "R1: schedule box and Spanish page of both bulletins; the clock times win (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-virgin-middlesex",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first",
+          "third",
+          "fifth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bcb1884d",
+          "page": 1,
+          "said": "ADORATION: 1st, 3rd & 5th Fridays: 7:30 am - 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b973f57",
+          "page": 1,
+          "said": "ADORATION: 1st, 3rd & 5th Fridays: 7:30 am - 12:00 Noon"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; the website gives the same weeks and hours. The newest week holds the third Friday (Nov 20).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-virgin-middlesex",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "second",
+          "fourth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bcb1884d",
+          "page": 1,
+          "said": "2nd & 4th Thursdays: 7:00 - 8:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b973f57",
+          "page": 1,
+          "said": "2nd & 4th Thursdays: 7:00 - 8:00 pm"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; the website gives the same weeks and hours.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-virgin-middlesex",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bcb1884d",
+          "page": 2,
+          "said": "Thanksgiving Mass Schedule Thanksgiving Day, November 26 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b973f57",
+          "page": 2,
+          "said": "Thanksgiving Mass Schedule Thanksgiving Day, November 26 9:00 am"
+        }
+      ],
+      "rationale": "R1, R16: dated holiday Mass on or after as_of. R17: the bulletin cancels no Mass, so the weekly Thursday noon Mass is left alone (it says only that the church closes 'after Mass').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-virgin-middlesex",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bcb1884d",
+          "page": 2,
+          "said": "There will be no evening adoration on Thursday, November 26."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b973f57",
+          "page": 2,
+          "said": "There will be no evening adoration on Thursday, November 26."
+        }
+      ],
+      "rationale": "R1, R16: Nov 26 is a fourth Thursday, so this cancels one occurrence of the 2nd & 4th Thursday evening Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-virgin-middlesex",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "07:30",
+        "end_time": "12:00",
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bcb1884d",
+          "page": 6,
+          "said": "No habrá adoración vespertina del Santísimo Sacramento el jueves 26 de noviembre ni adoración matutina el viernes 27 de noviembre."
+        }
+      ],
+      "rationale": "R17, POLICY Weekly qualifiers: Nov 27 is the fourth Friday, when the schedule (1st, 3rd & 5th Fridays, confirmed by the website) has no Adoration; the English notice mentions only Thursday. Nothing scheduled to cancel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bcb1884d",
+          "page": 6,
+          "said": "Acompáñanos a rezar el Santo Rosario todos los domingos a partir de las 12:45 pm antes de la Misa."
+        }
+      ],
+      "rationale": "R24: the Rosary is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bcb1884d",
+          "page": 6,
+          "said": "Retiro de Adviento 5 de Diciembre de 9 AM a 3 PM, 146 Metlars Ln, Piscataway ... Adoración y confesiones"
+        }
+      ],
+      "rationale": "R22, R24: a diocesan retreat at another address (Piscataway); its Adoration and Confession have no times of their own.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-virgin-middlesex",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.olmv.net/",
+          "said": "Upcoming Holy Days Immaculate Conception December 7 : 7:00 PM English",
+          "schedule_check": {
+            "checked_at": "2026-11-19T23:13:14Z",
+            "current_because": "Checked 2026-11-19: the homepage's Upcoming Holy Days sits beside 2026 events (Tricky Tray Nov 20, 2026; Dec 6 events) and its weekly Mass times match both bulletins exactly.",
+            "bulletin": "bcb1884d",
+            "fits_because": "The newest bulletin says 'Holy Days: See the Bulletin' and has not yet printed Advent holy days; Dec 7-8, 2026 fall on Mon-Tue, and these times fit the parish's 7 AM / noon / Spanish pattern."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish website's Upcoming Holy Days gives the vigil Mass of the Immaculate Conception; dated on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-virgin-middlesex",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.olmv.net/",
+          "said": "Immaculate Conception ... December 8 : 7:00 AM English 12:00 PM English 7:00 PM Spanish",
+          "schedule_check": {
+            "checked_at": "2026-11-19T23:13:19Z",
+            "current_because": "Checked 2026-11-19: the homepage's Upcoming Holy Days sits beside 2026 events (Tricky Tray Nov 20, 2026; Dec 6 events) and its weekly Mass times match both bulletins exactly.",
+            "bulletin": "bcb1884d",
+            "fits_because": "The newest bulletin says 'Holy Days: See the Bulletin' and has not yet printed Advent holy days; Dec 7-8, 2026 fall on Mon-Tue, and these times fit the parish's 7 AM / noon / Spanish pattern."
+          }
+        }
+      ],
+      "rationale": "R6, R16: website holy-day schedule; Tuesday normally has only the noon Mass, so 7 AM is dated. The 12:00 PM listed is the regular Tuesday noon Mass and is not duplicated (POLICY, Weekly or dated rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-virgin-middlesex",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception; Spanish"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.olmv.net/",
+          "said": "Immaculate Conception ... December 8 : ... 7:00 PM Spanish Español",
+          "schedule_check": {
+            "checked_at": "2026-11-19T23:13:23Z",
+            "current_because": "Checked 2026-11-19: the homepage's Upcoming Holy Days sits beside 2026 events (Tricky Tray Nov 20, 2026; Dec 6 events) and its weekly Mass times match both bulletins exactly.",
+            "bulletin": "bcb1884d",
+            "fits_because": "The newest bulletin says 'Holy Days: See the Bulletin' and has not yet printed Advent holy days; Dec 7-8, 2026 fall on Mon-Tue, and these times fit the parish's 7 AM / noon / Spanish pattern."
+          }
+        }
+      ],
+      "rationale": "R6, R16: website holy-day schedule gives a 7 PM Spanish Mass on December 8.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

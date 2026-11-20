@@ -1,0 +1,556 @@
+{
+  "schema_version": 1,
+  "parish_slug": "nativity-of-our-lord-monroe",
+  "status": "approved",
+  "as_of": "2026-11-15T16:50:39Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T23:00:24Z",
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:56:06Z",
+  "summary": "One church. Weekend Masses (Sat 4 PM; Sun 7:30, 9, 11), weekday Mass Mon-Fri 8:30 AM and Saturday confession 3-3:30 PM agree in the page 1 schedule box of both bulletins read (Nov 8 and Nov 15). Holy-day times are undated and left out. Open: Confession at the Nov 16 men's worship night (leaning leave out).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "60c49def02a939b75fee57dfa7999d4c431a03bd1836d4b8b722afb21f9d1a8c",
+      "fetched_at": "2026-11-15T16:50:39Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "000f11d6a820c0f758a68701c62c10d14724409783749960f3c5dc13f01fbffe",
+      "fetched_at": "2026-11-08T15:59:07Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-monroe",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "60c49def",
+          "page": 1,
+          "said": "Saturday: 4:00 PM (Vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "000f11d6",
+          "page": 1,
+          "said": "Saturday: 4:00 PM (Vigil)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read (Nov 8 and Nov 15); the intentions list Saturday 4:00 p.m. each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-monroe",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "60c49def",
+          "page": 1,
+          "said": "Sunday: 7:30 AM; 9:00 AM and 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "000f11d6",
+          "page": 1,
+          "said": "Sunday: 7:30 AM; 9:00 AM and 11:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read, and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-monroe",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "60c49def",
+          "page": 1,
+          "said": "Sunday: 7:30 AM; 9:00 AM and 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "000f11d6",
+          "page": 1,
+          "said": "Sunday: 7:30 AM; 9:00 AM and 11:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read, and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-monroe",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "60c49def",
+          "page": 1,
+          "said": "Sunday: 7:30 AM; 9:00 AM and 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "000f11d6",
+          "page": 1,
+          "said": "Sunday: 7:30 AM; 9:00 AM and 11:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read, and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-monroe",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "60c49def",
+          "page": 1,
+          "said": "Weekdays: Monday to Friday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "000f11d6",
+          "page": 1,
+          "said": "Weekdays: Monday to Friday: 8:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read; the page 2 intentions list 8:30 a.m. Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-monroe",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "60c49def",
+          "page": 1,
+          "said": "Weekdays: Monday to Friday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "000f11d6",
+          "page": 1,
+          "said": "Weekdays: Monday to Friday: 8:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read; the page 2 intentions list 8:30 a.m. Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-monroe",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "60c49def",
+          "page": 1,
+          "said": "Weekdays: Monday to Friday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "000f11d6",
+          "page": 1,
+          "said": "Weekdays: Monday to Friday: 8:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read; the page 2 intentions list 8:30 a.m. Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-monroe",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "60c49def",
+          "page": 1,
+          "said": "Weekdays: Monday to Friday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "000f11d6",
+          "page": 1,
+          "said": "Weekdays: Monday to Friday: 8:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read; the page 2 intentions list 8:30 a.m. Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-monroe",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "60c49def",
+          "page": 1,
+          "said": "Weekdays: Monday to Friday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "000f11d6",
+          "page": 1,
+          "said": "Weekdays: Monday to Friday: 8:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read; the page 2 intentions list 8:30 a.m. Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-monroe",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "60c49def",
+          "page": 1,
+          "said": "RECONCILIATION Saturdays 3:00 to 3:30 PM, or by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "000f11d6",
+          "page": 1,
+          "said": "RECONCILIATION Saturdays 3:00 to 3:30 PM, or by appointment."
+        }
+      ],
+      "rationale": "R1: printed on page 1 of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "60c49def",
+          "page": 1,
+          "said": "Reconciliation ... or by appointment."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "60c49def",
+          "page": 1,
+          "said": "Holydays: 7:00 PM (Vigil) & 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "000f11d6",
+          "page": 1,
+          "said": "Holydays: 7:00 PM (Vigil) & 8:30 AM"
+        }
+      ],
+      "rationale": "POLICY, Dates: the standing holy-day times name no date, and dates may not be projected from them; no holy day is dated in either bulletin. Update mode will read the bulletins that announce each holy day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "60c49def",
+          "page": 1,
+          "said": "Morning Prayer Wednesday and Thursday: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "000f11d6",
+          "page": 1,
+          "said": "Morning Prayer Wednesday and Thursday: 8:00 AM"
+        }
+      ],
+      "rationale": "R24: Morning Prayer is not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "60c49def",
+          "page": 4,
+          "said": "7:30 PM Communion Service Led by Deacon John Bertrand (Brothers of Nativity Men's Worship Night, Monday, November 16)"
+        }
+      ],
+      "rationale": "R25, POLICY: a Communion Service is not a Mass, and it replaces no Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-monroe",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-16",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Brothers of Nativity Men's Worship Night"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "60c49def",
+          "page": 4,
+          "said": "MONDAY, NOVEMBER 16 BEGINNING AT 7:00 PM NATIVITY OF OUR LORD CHURCH ... 7:00 PM Confession, Night Prayer & Reflection: Begin the evening with an opportunity for the Sacrament of Reconciliation ... ALL MEN OF THE PARISH ARE INVITED!"
+        }
+      ],
+      "rationale": "R30: flyer on page 4 (image) dates it within seed scope. POLICY's closed-event rule covers Masses only; this event is addressed to men, and Confession shares its 7:00 PM block with Night Prayer and Reflection (POLICY, Final source checks: a larger event does not time its components). Leaning leave out: limited audience and no Confession-specific time; the date has also already passed.",
+      "question": "Add the 7:00 PM Confession at the Nov 16 Men's Worship Night (men of the parish invited)?",
+      "options": [
+        {
+          "label": "Monday Nov 16, 7:00 PM confession",
+          "entry": {
+            "church_slug": "nativity-of-our-lord-monroe",
+            "event_type": "confession",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-16",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Brothers of Nativity Men's Worship Night"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@05f8a0474956",
+        "at": "2026-11-20T06:56:06Z"
+      }
+    }
+  ]
+}

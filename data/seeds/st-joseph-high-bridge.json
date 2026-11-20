@@ -1,0 +1,476 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-high-bridge",
+  "status": "approved",
+  "as_of": "2026-11-15T16:19:48Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T04:16:24Z",
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:57:28Z",
+  "summary": "One church, St. Joseph, High Bridge, with weekday Masses in the on-grounds Madonna & Child Chapel. The Nov 8 and Nov 15 bulletins print the same schedule box (Sat 4 PM; Sun 8 & 11 AM; Tue-Thu 8 AM; Sat confession 3:15-3:45; First Friday 6 PM Adoration), and the website matches. Dated: no daily Mass Nov 17 and 18; Christmas Eve 4 PM Mass. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "ec43039c239514faa531a5886c56031cc7f10a872c2a578b071d1c6f64d565b1",
+      "fetched_at": "2026-11-15T16:19:48Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "285bfde0b14c38736e2eb1c88b87ee499fe48cdd64f66db0f152043f963e3b3d",
+      "fetched_at": "2026-11-08T15:44:27Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-high-bridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec43039c",
+          "page": 1,
+          "said": "Saturday: Vigil Mass at 4 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "285bfde0",
+          "page": 1,
+          "said": "Saturday: Vigil Mass at 4 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Mass Schedule box of both bulletins read (Nov 8 and Nov 15); the intentions list a 4 pm Vigil each weekend; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-high-bridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec43039c",
+          "page": 1,
+          "said": "Sunday: Mass at 8 am & 11am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "285bfde0",
+          "page": 1,
+          "said": "Sunday: Mass at 8 am & 11am"
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Mass Schedule box of both bulletins read; the intentions list 8 am and 11 am each Sunday; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-high-bridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec43039c",
+          "page": 1,
+          "said": "Sunday: Mass at 8 am & 11am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "285bfde0",
+          "page": 1,
+          "said": "Sunday: Mass at 8 am & 11am"
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Mass Schedule box of both bulletins read; the intentions list 8 am and 11 am each Sunday; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-high-bridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Madonna & Child Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec43039c",
+          "page": 1,
+          "said": "Daily Mass Schedule: Chapel Tuesday, Wednesday, Thursday: 8 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "285bfde0",
+          "page": 1,
+          "said": "Daily Mass Schedule: Chapel Tuesday, Wednesday, Thursday: 8 am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sjchb.org/",
+          "said": "Tuesday | 8 am, Madonna & Child Chapel ... Chapel is located behind the Rectory"
+        }
+      ],
+      "rationale": "R1, R18: printed in the Daily Mass Schedule box of both bulletins; the Nov 8 intentions list each at 8 am in the Chapel. POLICY, Churches and chapels: the Madonna & Child Chapel is on the church's grounds (bulletin: 'behind the Rectory'; website: 'In the Chapel behind the Church'), so it is recorded at St. Joseph with a note. The Nov 15 intentions mark Nov 17 and 18 'No Daily Mass' without changing the schedule; those dates are recorded as cancellations.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-high-bridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Madonna & Child Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec43039c",
+          "page": 1,
+          "said": "Daily Mass Schedule: Chapel Tuesday, Wednesday, Thursday: 8 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "285bfde0",
+          "page": 1,
+          "said": "Daily Mass Schedule: Chapel Tuesday, Wednesday, Thursday: 8 am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sjchb.org/",
+          "said": "Tuesday | 8 am, Madonna & Child Chapel ... Chapel is located behind the Rectory"
+        }
+      ],
+      "rationale": "R1, R18: printed in the Daily Mass Schedule box of both bulletins; the Nov 8 intentions list each at 8 am in the Chapel. POLICY, Churches and chapels: the Madonna & Child Chapel is on the church's grounds (bulletin: 'behind the Rectory'; website: 'In the Chapel behind the Church'), so it is recorded at St. Joseph with a note. The Nov 15 intentions mark Nov 17 and 18 'No Daily Mass' without changing the schedule; those dates are recorded as cancellations.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-high-bridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Madonna & Child Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec43039c",
+          "page": 1,
+          "said": "Daily Mass Schedule: Chapel Tuesday, Wednesday, Thursday: 8 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "285bfde0",
+          "page": 1,
+          "said": "Daily Mass Schedule: Chapel Tuesday, Wednesday, Thursday: 8 am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sjchb.org/",
+          "said": "Tuesday | 8 am, Madonna & Child Chapel ... Chapel is located behind the Rectory"
+        }
+      ],
+      "rationale": "R1, R18: printed in the Daily Mass Schedule box of both bulletins; the Nov 8 intentions list each at 8 am in the Chapel. POLICY, Churches and chapels: the Madonna & Child Chapel is on the church's grounds (bulletin: 'behind the Rectory'; website: 'In the Chapel behind the Church'), so it is recorded at St. Joseph with a note. The Nov 15 intentions mark Nov 17 and 18 'No Daily Mass' without changing the schedule; those dates are recorded as cancellations.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-high-bridge",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-17",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Madonna & Child Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec43039c",
+          "page": 2,
+          "said": "Tuesday, November 17: Chapel ... 8 am No Daily Mass"
+        }
+      ],
+      "rationale": "R16, R18: the newest bulletin's intentions say no daily Mass on Tuesday Nov 17, on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-high-bridge",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-18",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Madonna & Child Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec43039c",
+          "page": 2,
+          "said": "Wednesday, November 18: Chapel ... 8 am No Daily Mass"
+        }
+      ],
+      "rationale": "R16, R18: the newest bulletin's intentions say no daily Mass on Wednesday Nov 18, on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-high-bridge",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec43039c",
+          "page": 1,
+          "said": "Confession Saturday: 3:15pm-3:45pm & by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "285bfde0",
+          "page": 1,
+          "said": "Confession Saturday: 3:15pm-3:45pm & by appointment"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins' schedule box; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec43039c",
+          "page": 1,
+          "said": "Confession ... & by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-high-bridge",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Madonna & Child Chapel; Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec43039c",
+          "page": 1,
+          "said": "Eucharistic Adoration Every First Friday, 6pm in the Madonna & Child Chapel, behind the Rectory."
+        },
+        {
+          "source": "agent",
+          "bulletin": "285bfde0",
+          "page": 1,
+          "said": "Eucharistic Adoration Every First Friday, 6pm in the Madonna & Child Chapel, behind the Rectory."
+        },
+        {
+          "source": "website",
+          "url": "https://www.sjchb.org/",
+          "said": "First Friday Holy Hour for Vocations | 6pm-7pm: Evening Prayer & Reflection with Father Roy followed by Benediction in the Chapel.",
+          "schedule_check": {
+            "checked_at": "2026-11-20T04:18:56Z",
+            "current_because": "Homepage names the current administrator Fr. Roy Quesea and Bishop Saporito, as the Nov 2026 bulletins do, and its Mass and confession times match them exactly.",
+            "bulletin": "ec43039c",
+            "fits_because": "The Nov 15 bulletin prints First Friday Adoration at 6pm in the Madonna & Child Chapel; the website gives the same start and chapel and adds the 7pm end and Benediction."
+          }
+        }
+      ],
+      "rationale": "R1, R11: the standing schedule box of both bulletins prints First Friday Adoration at 6pm in the on-grounds Madonna & Child Chapel (POLICY, Churches and chapels). R6: the parish website gives the end time and Benediction ('First Friday Holy Hour for Vocations | 6pm-7pm ... followed by Benediction in the Chapel'), which fits the bulletin's 6pm start; POLICY records Benediction as Adoration with that note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-high-bridge",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec43039c",
+          "page": 4,
+          "said": "the Christmas Eve Mass on December 24 in the Church at 4pm"
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin dates a Christmas Eve Mass at 4pm in the Church (the choir notice), after as_of. The website's Christmas page shows no readable times, so no other Christmas Masses are recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

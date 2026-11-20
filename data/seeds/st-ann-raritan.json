@@ -1,0 +1,643 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-ann-raritan",
+  "status": "approved",
+  "as_of": "2026-11-15T16:05:11Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T03:00:44Z",
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:56:39Z",
+  "summary": "One church, St. Ann, Raritan, whose bulletin's schedule box also lists the Oratory's other Raritan-area parishes (St. Joseph, Holy Trinity, the Shrine Chapel), excluded as their own parishes. Sunday 7:30, 10:30, 12:00 and 5:00 PM, Mon-Fri 8:00 AM and Saturday 9:00 AM Masses and Saturday confession after the 9 AM Mass agree in both bulletins (Nov 1 and Nov 15 issues) and their intentions. No open questions; no Adoration is printed.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "b76769bb2e93d4903a0472b8765b9a2429d1e8a706b1f5f17ce568e3f70be2f3",
+      "fetched_at": "2026-11-15T16:05:11Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "f5d89d2997f6b64e6c12811e7f6741cdace9f5d2388bfe9498caab88baec0a25",
+      "fetched_at": "2026-11-08T15:32:05Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-raritan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b76769bb",
+          "page": 1,
+          "said": "The Lord's Day Mass Schedule ... Sunday: 7:30 am St. Ann Church; 10:30 am St. Ann Church; 12:00 pm St. Ann Church; 5:00 pm St. Ann Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f5d89d29",
+          "page": 1,
+          "said": "The Lord's Day Mass Schedule ... Sunday: 7:30 am St. Ann Church; 10:30 am St. Ann Church; 12:00 pm St. Ann Church; 5:00 pm St. Ann Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b76769bb",
+          "page": 4,
+          "said": "Mass Intentions, Sunday: 7:30 am, 10:30 am, 12:00 pm, 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f5d89d29",
+          "page": 4,
+          "said": "Mass Intentions, Sunday: 7:30 am, 10:30 am, 12:00 pm, 5:00 pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box and the Sunday intentions of both bulletins read (Nov 1 and Nov 15 issues).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-raritan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b76769bb",
+          "page": 1,
+          "said": "The Lord's Day Mass Schedule ... Sunday: 7:30 am St. Ann Church; 10:30 am St. Ann Church; 12:00 pm St. Ann Church; 5:00 pm St. Ann Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f5d89d29",
+          "page": 1,
+          "said": "The Lord's Day Mass Schedule ... Sunday: 7:30 am St. Ann Church; 10:30 am St. Ann Church; 12:00 pm St. Ann Church; 5:00 pm St. Ann Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b76769bb",
+          "page": 4,
+          "said": "Mass Intentions, Sunday: 7:30 am, 10:30 am, 12:00 pm, 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f5d89d29",
+          "page": 4,
+          "said": "Mass Intentions, Sunday: 7:30 am, 10:30 am, 12:00 pm, 5:00 pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box and the Sunday intentions of both bulletins read (Nov 1 and Nov 15 issues).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-raritan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b76769bb",
+          "page": 1,
+          "said": "The Lord's Day Mass Schedule ... Sunday: 7:30 am St. Ann Church; 10:30 am St. Ann Church; 12:00 pm St. Ann Church; 5:00 pm St. Ann Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f5d89d29",
+          "page": 1,
+          "said": "The Lord's Day Mass Schedule ... Sunday: 7:30 am St. Ann Church; 10:30 am St. Ann Church; 12:00 pm St. Ann Church; 5:00 pm St. Ann Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b76769bb",
+          "page": 4,
+          "said": "Mass Intentions, Sunday: 7:30 am, 10:30 am, 12:00 pm, 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f5d89d29",
+          "page": 4,
+          "said": "Mass Intentions, Sunday: 7:30 am, 10:30 am, 12:00 pm, 5:00 pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box and the Sunday intentions of both bulletins read (Nov 1 and Nov 15 issues).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-raritan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b76769bb",
+          "page": 1,
+          "said": "The Lord's Day Mass Schedule ... Sunday: 7:30 am St. Ann Church; 10:30 am St. Ann Church; 12:00 pm St. Ann Church; 5:00 pm St. Ann Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f5d89d29",
+          "page": 1,
+          "said": "The Lord's Day Mass Schedule ... Sunday: 7:30 am St. Ann Church; 10:30 am St. Ann Church; 12:00 pm St. Ann Church; 5:00 pm St. Ann Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b76769bb",
+          "page": 4,
+          "said": "Mass Intentions, Sunday: 7:30 am, 10:30 am, 12:00 pm, 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f5d89d29",
+          "page": 4,
+          "said": "Mass Intentions, Sunday: 7:30 am, 10:30 am, 12:00 pm, 5:00 pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box and the Sunday intentions of both bulletins read (Nov 1 and Nov 15 issues).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-raritan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b76769bb",
+          "page": 1,
+          "said": "Weekday Mass Schedule, Monday throughFriday 8:00 am St. Ann Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f5d89d29",
+          "page": 1,
+          "said": "Weekday Mass Schedule, Monday throughFriday 8:00 am St. Ann Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b76769bb",
+          "page": 4,
+          "said": "Mass Intentions: 8:00 am each weekday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f5d89d29",
+          "page": 4,
+          "said": "Mass Intentions: 8:00 am each weekday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the weekday schedule box and in every weekday's intentions in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-raritan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b76769bb",
+          "page": 1,
+          "said": "Weekday Mass Schedule, Monday throughFriday 8:00 am St. Ann Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f5d89d29",
+          "page": 1,
+          "said": "Weekday Mass Schedule, Monday throughFriday 8:00 am St. Ann Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b76769bb",
+          "page": 4,
+          "said": "Mass Intentions: 8:00 am each weekday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f5d89d29",
+          "page": 4,
+          "said": "Mass Intentions: 8:00 am each weekday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the weekday schedule box and in every weekday's intentions in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-raritan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b76769bb",
+          "page": 1,
+          "said": "Weekday Mass Schedule, Monday throughFriday 8:00 am St. Ann Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f5d89d29",
+          "page": 1,
+          "said": "Weekday Mass Schedule, Monday throughFriday 8:00 am St. Ann Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b76769bb",
+          "page": 4,
+          "said": "Mass Intentions: 8:00 am each weekday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f5d89d29",
+          "page": 4,
+          "said": "Mass Intentions: 8:00 am each weekday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the weekday schedule box and in every weekday's intentions in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-raritan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b76769bb",
+          "page": 1,
+          "said": "Weekday Mass Schedule, Monday throughFriday 8:00 am St. Ann Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f5d89d29",
+          "page": 1,
+          "said": "Weekday Mass Schedule, Monday throughFriday 8:00 am St. Ann Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b76769bb",
+          "page": 4,
+          "said": "Mass Intentions: 8:00 am each weekday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f5d89d29",
+          "page": 4,
+          "said": "Mass Intentions: 8:00 am each weekday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the weekday schedule box and in every weekday's intentions in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-raritan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b76769bb",
+          "page": 1,
+          "said": "Weekday Mass Schedule, Monday throughFriday 8:00 am St. Ann Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f5d89d29",
+          "page": 1,
+          "said": "Weekday Mass Schedule, Monday throughFriday 8:00 am St. Ann Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b76769bb",
+          "page": 4,
+          "said": "Mass Intentions: 8:00 am each weekday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f5d89d29",
+          "page": 4,
+          "said": "Mass Intentions: 8:00 am each weekday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the weekday schedule box and in every weekday's intentions in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-raritan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b76769bb",
+          "page": 1,
+          "said": "Saturdays 9:00 am St. Ann Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f5d89d29",
+          "page": 1,
+          "said": "Saturdays 9:00 am St. Ann Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b76769bb",
+          "page": 4,
+          "said": "Saturday ... 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f5d89d29",
+          "page": 4,
+          "said": "Saturday ... 9:00 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the weekday schedule box and the Saturday intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-raritan",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b76769bb",
+          "page": 1,
+          "said": "Sacrament of Reconciliation: Saturday after the 9amMass St. Ann"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f5d89d29",
+          "page": 1,
+          "said": "Sacrament of Reconciliation: Saturday after the 9amMass St. Ann"
+        }
+      ],
+      "rationale": "R10, POLICY Times: no clock time is given; the Saturday 9:00 AM Mass is a weekday (not vigil or Sunday) Mass, so confession starts 30 minutes after it, 9:30 AM, with no end time. Printed identically in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b76769bb",
+          "page": 1,
+          "said": "Holy Day Mass Schedule: 8:00 am St. Ann Church; 7:00 pm St. Ann Church"
+        }
+      ],
+      "rationale": "POLICY Dates, R16: the holy-day times name no date, so no dated entry can be pinned down; update mode will pick up holy days from bulletins that date them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b76769bb",
+          "page": 1,
+          "said": "Saturday Vigil 4:00 pm St. Joseph Church, 5:00 pm Holy Trinity; Sunday St. Joseph, Holy Trinity, Shrine of Blessed Sacrament Masses; Mon-Fri 12:15 pm Shrine; Fridays 7:00 pm Holy Trinity; First Saturdays 9:00 am Shrine (Latin); Reconciliation Sat 3-3:30pm St. Joseph, Wed 11-12noon Holy Trinity, Fri 11-12noon Shrine of Bl. Sac."
+        }
+      ],
+      "rationale": "R22: the shared schedule box also lists St. Joseph (st-joseph-raritan), Holy Trinity (holy-trinity-bridgewater) and the Shrine Chapel of the Blessed Sacrament (shrine-chapel-of-the-blessed-sacrament-raritan); seed church shows each is its own parish, so their times belong to those parishes' seeds.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b76769bb",
+          "page": 1,
+          "said": "or by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f5d89d29",
+          "page": 4,
+          "said": "Wednesday, November 4 ... 7:00 pm KOC Memorial Mass; Monday, November 2 7:00 pm For the people of the parish"
+        }
+      ],
+      "rationale": "R16: dated Masses (All Souls Nov 2, KOC Memorial Mass Nov 4) fall before as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

@@ -1,0 +1,602 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-john-the-evangelist-lambertville",
+  "status": "approved",
+  "as_of": "2026-11-15T16:51:08Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T04:02:50Z",
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:57:20Z",
+  "summary": "Two churches: St. John (Lambertville) and St. Agnes (Stockton). Weekday 8:30 AM, Sat 5 PM, Sun 8/9:30/11 Masses and Sat 3:30-4:30 confessions at St. John; Sun 9:30 English and 11:00 Spanish at St. Agnes, identical in both bulletins (newest is image-only, read by rendering). No open questions; no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "2794ae5cd6438067b065dfd1902e577b02910587674447b309c463e7cee23249",
+      "fetched_at": "2026-11-15T16:51:08Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "9ecaeb408887d21ba35fa542415421c074c7eee792696048e7e6cad95c23aaa2",
+      "fetched_at": "2026-11-08T15:59:42Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-lambertville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2794ae5c",
+          "page": 1,
+          "said": "ST JOHN WEEKDAYS MONDAY through FRIDAY 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2794ae5c",
+          "page": 3,
+          "said": "8:30AM (intentions Mon Nov 16 - Fri Nov 20)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9ecaeb40",
+          "page": 1,
+          "said": "MONDAY through FRIDAY 8:30 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the St. John schedule box and in the dated intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-lambertville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2794ae5c",
+          "page": 1,
+          "said": "ST JOHN WEEKDAYS MONDAY through FRIDAY 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2794ae5c",
+          "page": 3,
+          "said": "8:30AM (intentions Mon Nov 16 - Fri Nov 20)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9ecaeb40",
+          "page": 1,
+          "said": "MONDAY through FRIDAY 8:30 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the St. John schedule box and in the dated intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-lambertville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2794ae5c",
+          "page": 1,
+          "said": "ST JOHN WEEKDAYS MONDAY through FRIDAY 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2794ae5c",
+          "page": 3,
+          "said": "8:30AM (intentions Mon Nov 16 - Fri Nov 20)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9ecaeb40",
+          "page": 1,
+          "said": "MONDAY through FRIDAY 8:30 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the St. John schedule box and in the dated intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-lambertville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2794ae5c",
+          "page": 1,
+          "said": "ST JOHN WEEKDAYS MONDAY through FRIDAY 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2794ae5c",
+          "page": 3,
+          "said": "8:30AM (intentions Mon Nov 16 - Fri Nov 20)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9ecaeb40",
+          "page": 1,
+          "said": "MONDAY through FRIDAY 8:30 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the St. John schedule box and in the dated intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-lambertville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2794ae5c",
+          "page": 1,
+          "said": "ST JOHN WEEKDAYS MONDAY through FRIDAY 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2794ae5c",
+          "page": 3,
+          "said": "8:30AM (intentions Mon Nov 16 - Fri Nov 20)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9ecaeb40",
+          "page": 1,
+          "said": "MONDAY through FRIDAY 8:30 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the St. John schedule box and in the dated intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-lambertville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2794ae5c",
+          "page": 1,
+          "said": "ST JOHN WEEKENDS SATURDAY EVENING 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2794ae5c",
+          "page": 3,
+          "said": "Saturday, November 21, 2026 5:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9ecaeb40",
+          "page": 1,
+          "said": "SATURDAY EVENING 5:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the St. John schedule box and intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-lambertville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2794ae5c",
+          "page": 1,
+          "said": "ST JOHN SUNDAY 8:00 am, 9:30 am, 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9ecaeb40",
+          "page": 1,
+          "said": "SUNDAY 8:00 am, 9:30 am, 11:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the St. John schedule box and intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-lambertville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2794ae5c",
+          "page": 1,
+          "said": "ST JOHN SUNDAY 8:00 am, 9:30 am, 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9ecaeb40",
+          "page": 1,
+          "said": "SUNDAY 8:00 am, 9:30 am, 11:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the St. John schedule box and intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-lambertville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2794ae5c",
+          "page": 1,
+          "said": "ST JOHN SUNDAY 8:00 am, 9:30 am, 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9ecaeb40",
+          "page": 1,
+          "said": "SUNDAY 8:00 am, 9:30 am, 11:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the St. John schedule box and intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-stockton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2794ae5c",
+          "page": 1,
+          "said": "ST AGNES SUNDAY ENGLISH 9:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2794ae5c",
+          "page": 6,
+          "said": "HORARIO DE MISA—St. Agnes en Stockton Misa en Inglés ~ Domingos—9:30 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9ecaeb40",
+          "page": 1,
+          "said": "SUNDAY ENGLISH 9:30 am"
+        }
+      ],
+      "rationale": "R1: printed under the St. Agnes heading in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-stockton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2794ae5c",
+          "page": 1,
+          "said": "ST AGNES DOMINGO MISA EN ESPANOL 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2794ae5c",
+          "page": 6,
+          "said": "Misa en Español ~ Domingos—11:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9ecaeb40",
+          "page": 1,
+          "said": "DOMINGO MISA EN ESPANOL 11:00 am"
+        }
+      ],
+      "rationale": "R1: printed under the St. Agnes heading in both bulletins read; note gives the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-lambertville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2794ae5c",
+          "page": 1,
+          "said": "CONFESSIONS SATURDAY 3:30 pm—4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2794ae5c",
+          "page": 6,
+          "said": "St. John's ~ Saturday: 3:30- 4:30 P.M. or call the Parish Office for an appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9ecaeb40",
+          "page": 1,
+          "said": "SATURDAY 3:30 pm—4:30 pm"
+        }
+      ],
+      "rationale": "R1: the schedule box and the p6 sacraments column place Saturday confessions at St. John's; both bulletins agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2794ae5c",
+          "page": 1,
+          "said": "HOLY DAYS 7:00 am & 7:00 pm"
+        }
+      ],
+      "rationale": "R26, POLICY Dates: a generic holy-day line with no date; no holy day falls in the bulletin's week, and no date may be projected.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2794ae5c",
+          "page": 5,
+          "said": "8:00AM Perpetual Novena"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2794ae5c",
+          "page": 2,
+          "said": "Every Monday morning at 8:00am (Novena in honor of Our Lady of the Miraculous Medal)"
+        }
+      ],
+      "rationale": "R24: a novena is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2794ae5c",
+          "page": 2,
+          "said": "First Friday following the 8:30AM Mass for meditation prayers in devotion to our Blessed Mother and the Sacred Heart of Jesus."
+        }
+      ],
+      "rationale": "R24: meditation prayers, not called Adoration or exposition; also 'Prayers for the sick after Mass' on Wednesdays (p5) is a devotion.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

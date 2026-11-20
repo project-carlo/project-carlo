@@ -1,0 +1,716 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-augustine-of-canterbury-kendall-park",
+  "status": "approved",
+  "as_of": "2026-11-15T16:05:26Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T03:07:04Z",
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:56:43Z",
+  "summary": "One church. The bulletins print no schedule box: the newest issue's intentions (Sat 5 PM; Sun 8, 10, 12, 5; Mon-Fri 9 AM) and Mass Count agree with the parish's current Mass and Confession Times pages, which also supply the Saturday 11:30-12:30 confession end. The older issue (Nov 8) is a pilgrimage letter with no schedule. Monday 7-8 PM Adoration runs 'through May' (no season recorded, R15). Open: whether the Dec 17 penance service confessions in the school count at the church.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "30c30584e328692fa9bf17a66516702cbddf847e311f27d7d52769291f281763",
+      "fetched_at": "2026-11-15T16:05:26Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "117824d0e49d8964ad3ec9069ddd1e9d0532c3197f46356f1ad7370cc766151f",
+      "fetched_at": "2026-11-08T15:32:17Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-of-canterbury-kendall-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "30c30584",
+          "page": 7,
+          "said": "SATURDAY, November 14 5:00 PM ... SATURDAY, November 21 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "30c30584",
+          "page": 9,
+          "said": "Mass Times 2026 2025 Saturday, 5PM"
+        },
+        {
+          "source": "website",
+          "url": "https://parish.staugustinenj.org/mass-times",
+          "said": "Saturday : 5:00 PM English"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 4: the intentions print the Saturday 5:00 PM Mass in both weeks they cover (Nov 14 and Nov 21), the Mass Count lists it, and the parish's Mass times page gives it. The bulletins carry no schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-of-canterbury-kendall-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "30c30584",
+          "page": 7,
+          "said": "SUNDAY, November 15 8:00 AM ... 10:00 AM ... 12 Noon ... 5:00 PM ... SUNDAY, November 22 8:00 AM ... 10:00 AM ... 12 Noon ... 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "30c30584",
+          "page": 9,
+          "said": "Sunday, 8AM 10AM 12Noon 5PM"
+        },
+        {
+          "source": "website",
+          "url": "https://parish.staugustinenj.org/mass-times",
+          "said": "Sunday : 8:00 AM English 10:00 AM English 12:00 PM English 5:00 PM English"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 4: the intentions print each Sunday Mass in both weeks they cover (Nov 15 and Nov 22), the Mass Count lists them, and the parish's Mass times page gives the same four times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-of-canterbury-kendall-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "30c30584",
+          "page": 7,
+          "said": "SUNDAY, November 15 8:00 AM ... 10:00 AM ... 12 Noon ... 5:00 PM ... SUNDAY, November 22 8:00 AM ... 10:00 AM ... 12 Noon ... 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "30c30584",
+          "page": 9,
+          "said": "Sunday, 8AM 10AM 12Noon 5PM"
+        },
+        {
+          "source": "website",
+          "url": "https://parish.staugustinenj.org/mass-times",
+          "said": "Sunday : 8:00 AM English 10:00 AM English 12:00 PM English 5:00 PM English"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 4: the intentions print each Sunday Mass in both weeks they cover (Nov 15 and Nov 22), the Mass Count lists them, and the parish's Mass times page gives the same four times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-of-canterbury-kendall-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "30c30584",
+          "page": 7,
+          "said": "SUNDAY, November 15 8:00 AM ... 10:00 AM ... 12 Noon ... 5:00 PM ... SUNDAY, November 22 8:00 AM ... 10:00 AM ... 12 Noon ... 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "30c30584",
+          "page": 9,
+          "said": "Sunday, 8AM 10AM 12Noon 5PM"
+        },
+        {
+          "source": "website",
+          "url": "https://parish.staugustinenj.org/mass-times",
+          "said": "Sunday : 8:00 AM English 10:00 AM English 12:00 PM English 5:00 PM English"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 4: the intentions print each Sunday Mass in both weeks they cover (Nov 15 and Nov 22), the Mass Count lists them, and the parish's Mass times page gives the same four times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-of-canterbury-kendall-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "30c30584",
+          "page": 7,
+          "said": "SUNDAY, November 15 8:00 AM ... 10:00 AM ... 12 Noon ... 5:00 PM ... SUNDAY, November 22 8:00 AM ... 10:00 AM ... 12 Noon ... 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "30c30584",
+          "page": 9,
+          "said": "Sunday, 8AM 10AM 12Noon 5PM"
+        },
+        {
+          "source": "website",
+          "url": "https://parish.staugustinenj.org/mass-times",
+          "said": "Sunday : 8:00 AM English 10:00 AM English 12:00 PM English 5:00 PM English"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 4: the intentions print each Sunday Mass in both weeks they cover (Nov 15 and Nov 22), the Mass Count lists them, and the parish's Mass times page gives the same four times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-of-canterbury-kendall-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "30c30584",
+          "page": 7,
+          "said": "MONDAY, November 16 9:00 AM ... TUESDAY ... WEDNESDAY ... THURSDAY ... FRIDAY, November 20 9:00 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://parish.staugustinenj.org/mass-times",
+          "said": "Daily Mass Schedule Mon Fri 9:00 AM English",
+          "schedule_check": {
+            "checked_at": "2026-11-20T03:10:28Z",
+            "current_because": "Checked 2026-11-19; the same site's homepage announces the bishop's November 21, 2026 visit, so it is maintained this season; the weekend times match the bulletin exactly.",
+            "bulletin": "30c30584",
+            "fits_because": "The newest bulletin's intentions (p7) list a 9:00 AM Mass on each weekday Mon Nov 16 - Fri Nov 20 and none on Saturday morning, exactly the site's Mon-Fri 9:00 AM schedule."
+          }
+        }
+      ],
+      "rationale": "R1, R6: the newest bulletin's intentions print a 9:00 AM Mass every weekday of the week; the bulletin has no schedule box, and the parish's current Mass times page gives Mon-Fri 9:00 AM as the regular daily schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-of-canterbury-kendall-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "30c30584",
+          "page": 7,
+          "said": "MONDAY, November 16 9:00 AM ... TUESDAY ... WEDNESDAY ... THURSDAY ... FRIDAY, November 20 9:00 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://parish.staugustinenj.org/mass-times",
+          "said": "Daily Mass Schedule Mon Fri 9:00 AM English",
+          "schedule_check": {
+            "checked_at": "2026-11-20T03:10:28Z",
+            "current_because": "Checked 2026-11-19; the same site's homepage announces the bishop's November 21, 2026 visit, so it is maintained this season; the weekend times match the bulletin exactly.",
+            "bulletin": "30c30584",
+            "fits_because": "The newest bulletin's intentions (p7) list a 9:00 AM Mass on each weekday Mon Nov 16 - Fri Nov 20 and none on Saturday morning, exactly the site's Mon-Fri 9:00 AM schedule."
+          }
+        }
+      ],
+      "rationale": "R1, R6: the newest bulletin's intentions print a 9:00 AM Mass every weekday of the week; the bulletin has no schedule box, and the parish's current Mass times page gives Mon-Fri 9:00 AM as the regular daily schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-of-canterbury-kendall-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "30c30584",
+          "page": 7,
+          "said": "MONDAY, November 16 9:00 AM ... TUESDAY ... WEDNESDAY ... THURSDAY ... FRIDAY, November 20 9:00 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://parish.staugustinenj.org/mass-times",
+          "said": "Daily Mass Schedule Mon Fri 9:00 AM English",
+          "schedule_check": {
+            "checked_at": "2026-11-20T03:10:28Z",
+            "current_because": "Checked 2026-11-19; the same site's homepage announces the bishop's November 21, 2026 visit, so it is maintained this season; the weekend times match the bulletin exactly.",
+            "bulletin": "30c30584",
+            "fits_because": "The newest bulletin's intentions (p7) list a 9:00 AM Mass on each weekday Mon Nov 16 - Fri Nov 20 and none on Saturday morning, exactly the site's Mon-Fri 9:00 AM schedule."
+          }
+        }
+      ],
+      "rationale": "R1, R6: the newest bulletin's intentions print a 9:00 AM Mass every weekday of the week; the bulletin has no schedule box, and the parish's current Mass times page gives Mon-Fri 9:00 AM as the regular daily schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-of-canterbury-kendall-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "30c30584",
+          "page": 7,
+          "said": "MONDAY, November 16 9:00 AM ... TUESDAY ... WEDNESDAY ... THURSDAY ... FRIDAY, November 20 9:00 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://parish.staugustinenj.org/mass-times",
+          "said": "Daily Mass Schedule Mon Fri 9:00 AM English",
+          "schedule_check": {
+            "checked_at": "2026-11-20T03:10:28Z",
+            "current_because": "Checked 2026-11-19; the same site's homepage announces the bishop's November 21, 2026 visit, so it is maintained this season; the weekend times match the bulletin exactly.",
+            "bulletin": "30c30584",
+            "fits_because": "The newest bulletin's intentions (p7) list a 9:00 AM Mass on each weekday Mon Nov 16 - Fri Nov 20 and none on Saturday morning, exactly the site's Mon-Fri 9:00 AM schedule."
+          }
+        }
+      ],
+      "rationale": "R1, R6: the newest bulletin's intentions print a 9:00 AM Mass every weekday of the week; the bulletin has no schedule box, and the parish's current Mass times page gives Mon-Fri 9:00 AM as the regular daily schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-of-canterbury-kendall-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "30c30584",
+          "page": 7,
+          "said": "MONDAY, November 16 9:00 AM ... TUESDAY ... WEDNESDAY ... THURSDAY ... FRIDAY, November 20 9:00 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://parish.staugustinenj.org/mass-times",
+          "said": "Daily Mass Schedule Mon Fri 9:00 AM English",
+          "schedule_check": {
+            "checked_at": "2026-11-20T03:10:28Z",
+            "current_because": "Checked 2026-11-19; the same site's homepage announces the bishop's November 21, 2026 visit, so it is maintained this season; the weekend times match the bulletin exactly.",
+            "bulletin": "30c30584",
+            "fits_because": "The newest bulletin's intentions (p7) list a 9:00 AM Mass on each weekday Mon Nov 16 - Fri Nov 20 and none on Saturday morning, exactly the site's Mon-Fri 9:00 AM schedule."
+          }
+        }
+      ],
+      "rationale": "R1, R6: the newest bulletin's intentions print a 9:00 AM Mass every weekday of the week; the bulletin has no schedule box, and the parish's current Mass times page gives Mon-Fri 9:00 AM as the regular daily schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-of-canterbury-kendall-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://parish.staugustinenj.org/mass-times",
+          "said": "The Liturgy of the Hours is prayed Monday through Saturday at 8:45 a.m. prior to Mass ... Novena ... is prayed on Saturday following the 9:00 a.m. Mass in the Chapel."
+        },
+        {
+          "source": "agent",
+          "bulletin": "30c30584",
+          "page": 7,
+          "said": "SATURDAY, November 21 5:00 PM Dorothy C. Lynam"
+        }
+      ],
+      "rationale": "R6, R40: only the site's devotions paragraph mentions a Saturday 9:00 AM Mass in passing; the site's own schedule gives daily Mass Mon-Fri, and the newest bulletin's intentions list no Saturday morning Mass. Treated as stale devotional text.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-of-canterbury-kendall-park",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": "12:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel of the Saints"
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "30c30584",
+          "page": 8,
+          "said": "Confessions will be heard beginning at 11:30AM in the Chapel of the Saints each Saturday. To confirm, please call the Parish Office."
+        },
+        {
+          "source": "agent",
+          "bulletin": "30c30584",
+          "page": 9,
+          "said": "Saturday, November 14 11:30 AM Confessions"
+        },
+        {
+          "source": "website",
+          "url": "https://parish.staugustinenj.org/confession-times",
+          "said": "Saturday : 11:30 AM to 12:30 PM",
+          "schedule_check": {
+            "checked_at": "2026-11-20T03:10:28Z",
+            "current_because": "Checked 2026-11-19; the site's homepage announces the November 21, 2026 bishop's visit, and its start time matches the newest bulletin.",
+            "bulletin": "30c30584",
+            "fits_because": "The newest bulletin (p8) gives Saturday confessions beginning at 11:30 AM with no end; the site's Saturday 11:30 AM - 12:30 PM supplies the end and agrees on day and start."
+          }
+        }
+      ],
+      "rationale": "R1, R6: the newest bulletin prints the weekly Saturday 11:30 AM start in the Chapel of the Saints (a chapel of the church, POLICY Churches and chapels); the current Confession Times page gives the 12:30 PM end. 'To confirm, please call' does not make it by-appointment.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-of-canterbury-kendall-park",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "30c30584",
+          "page": 9,
+          "said": "Eucharistic Adoration continues... Adoration takes from 7-8 PM in the Church each Monday—except National Holidays and major feast days—through the month of May."
+        },
+        {
+          "source": "agent",
+          "bulletin": "30c30584",
+          "page": 9,
+          "said": "Monday, November 9 7:00 PM Eucharistic Adoration"
+        },
+        {
+          "source": "website",
+          "url": "https://parish.staugustinenj.org/mass-times",
+          "said": "Eucharistic Adoration/Devotion is held Monday at 7:00 p.m. (not on national holidays or during the summer)"
+        }
+      ],
+      "rationale": "R1, R15: the newest bulletin gives weekly Monday 7-8 PM Adoration in the church 'through the month of May'; only the season's end is printed, so no season is recorded (update mode will see it stop). Holiday exceptions are unnamed dates and are not recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "30c30584",
+          "page": 2,
+          "said": "EUCHARISTIC ADORATION WILL BE CELEBRATED SUNDAY, NOVEMBER 22, UNTIL 5PM MASS"
+        }
+      ],
+      "rationale": "R26, POLICY Times: the Christ the King Adoration on Sunday Nov 22 gives only an end (until the 5 PM Mass), no start time, so it cannot be recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-of-canterbury-kendall-park",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-17",
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Penance Service, in the parish school"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "30c30584",
+          "page": 3,
+          "said": "ADVENT PENANCE SERVICE ... Thursday, December 17th, from 6PM to 7PM, we will be blessed with 20 priests throughout the school to hear confessions. Adoration of the Blessed Sacrament will also be held in the Church."
+        }
+      ],
+      "rationale": "R32: the confessions are heard in the parish school, which is not on the church list and whose address the bulletin does not give. The bulletin holds the parish breakfast 'in the School Cafeteria after the 8AM and 10AM Masses' (p10), suggesting the school shares the 45 Henderson Road campus, so I lean to recording it at the church with a note.",
+      "question": "Record the Advent Penance Service confessions (Thu Dec 17, 6-7 PM, 'throughout the school') at St. Augustine's?",
+      "options": [
+        {
+          "label": "Dec 17 6-7 PM at the church, note In the school",
+          "entry": {
+            "church_slug": "st-augustine-of-canterbury-kendall-park",
+            "event_type": "confession",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-17",
+            "start_time": "18:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Advent Penance Service, in the parish school"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@05f8a0474956",
+        "at": "2026-11-20T06:56:43Z"
+      }
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "30c30584",
+          "page": 3,
+          "said": "Adoration of the Blessed Sacrament will also be held in the Church."
+        }
+      ],
+      "rationale": "POLICY Final source checks, R24: the Dec 17 Adoration during the penance service gives no timing of its own; the service's 6-7 PM hours are not copied onto it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-of-canterbury-kendall-park",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2027-01-13",
+        "start_time": "10:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "School Mass with Bishop Saporito"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://parish.staugustinenj.org/",
+          "said": "Saint Augustine of Canterbury School welcomes Bishop Saporito for the school Mass on Wednesday, January 13, 2027, 10:15 AM"
+        }
+      ],
+      "rationale": "R24, POLICY What to extract: a school Mass announced only on the website, with no invitation to the public and no venue; update mode will read the bulletin if it is announced there.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

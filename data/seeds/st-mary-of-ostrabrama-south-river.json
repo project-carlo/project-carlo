@@ -1,0 +1,550 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-mary-of-ostrabrama-south-river",
+  "status": "approved",
+  "as_of": "2026-11-15T16:07:48Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T04:43:51Z",
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:57:48Z",
+  "summary": "One church; weekday Masses are in its St. Ann's Chapel. Weekend, weekday and Saturday Confession times agree in both bulletins read and on the parish website. Also a First Saturday 8:00 AM Polish Remembrance Mass (R12, seen in the Nov 8 issue) and a dated Nov 21 St. Monica Ministry Holy Hour. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "392b18afe175080b81fd512f1aae30e904930020395f712401b0a2c9900abc9f",
+      "fetched_at": "2026-11-15T16:07:48Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "37bd3d0ac556f7615ebcf0f9bef17967cf5536d03ebe99a46263bb23b9ee1f5f",
+      "fetched_at": "2026-11-08T15:34:01Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-ostrabrama-south-river",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "392b18af",
+          "page": 1,
+          "said": "Saturday: Vigil Mass 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "37bd3d0a",
+          "page": 1,
+          "said": "Saturday: Vigil Mass 4:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the week's intentions list it; the website's Mass Times page agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-ostrabrama-south-river",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "392b18af",
+          "page": 1,
+          "said": "Sunday: 8:30 AM, 10:30 AM, 12 Noon (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "37bd3d0a",
+          "page": 1,
+          "said": "Sunday: 8:30 AM, 10:30 AM, 12 Noon (Polish)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-ostrabrama-south-river",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "392b18af",
+          "page": 1,
+          "said": "Sunday: 8:30 AM, 10:30 AM, 12 Noon (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "37bd3d0a",
+          "page": 1,
+          "said": "Sunday: 8:30 AM, 10:30 AM, 12 Noon (Polish)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-ostrabrama-south-river",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "392b18af",
+          "page": 1,
+          "said": "Sunday: 8:30 AM, 10:30 AM, 12 Noon (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "37bd3d0a",
+          "page": 1,
+          "said": "Sunday: 8:30 AM, 10:30 AM, 12 Noon (Polish)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-ostrabrama-south-river",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Ann's Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "392b18af",
+          "page": 1,
+          "said": "Mon., Tues., Wed., Fri.: 8:00 AM / Thurs: 6:30 PM {Weekday Masses are in St. Ann's Chapel}"
+        },
+        {
+          "source": "agent",
+          "bulletin": "37bd3d0a",
+          "page": 1,
+          "said": "Mon., Tues., Wed., Fri.: 8:00 AM / Thurs: 6:30 PM {Weekday Masses are in St. Ann's Chapel}"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in each week's intentions. St. Ann's Chapel is a chapel of the church itself (candle intentions list 'Sanctuary Candle ~ St. Ann's Chapel' among the church's own), so POLICY places it at the church with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-ostrabrama-south-river",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Ann's Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "392b18af",
+          "page": 1,
+          "said": "Mon., Tues., Wed., Fri.: 8:00 AM / Thurs: 6:30 PM {Weekday Masses are in St. Ann's Chapel}"
+        },
+        {
+          "source": "agent",
+          "bulletin": "37bd3d0a",
+          "page": 1,
+          "said": "Mon., Tues., Wed., Fri.: 8:00 AM / Thurs: 6:30 PM {Weekday Masses are in St. Ann's Chapel}"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in each week's intentions. St. Ann's Chapel is a chapel of the church itself (candle intentions list 'Sanctuary Candle ~ St. Ann's Chapel' among the church's own), so POLICY places it at the church with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-ostrabrama-south-river",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Ann's Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "392b18af",
+          "page": 1,
+          "said": "Mon., Tues., Wed., Fri.: 8:00 AM / Thurs: 6:30 PM {Weekday Masses are in St. Ann's Chapel}"
+        },
+        {
+          "source": "agent",
+          "bulletin": "37bd3d0a",
+          "page": 1,
+          "said": "Mon., Tues., Wed., Fri.: 8:00 AM / Thurs: 6:30 PM {Weekday Masses are in St. Ann's Chapel}"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in each week's intentions. St. Ann's Chapel is a chapel of the church itself (candle intentions list 'Sanctuary Candle ~ St. Ann's Chapel' among the church's own), so POLICY places it at the church with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-ostrabrama-south-river",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Ann's Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "392b18af",
+          "page": 1,
+          "said": "Mon., Tues., Wed., Fri.: 8:00 AM / Thurs: 6:30 PM {Weekday Masses are in St. Ann's Chapel}"
+        },
+        {
+          "source": "agent",
+          "bulletin": "37bd3d0a",
+          "page": 1,
+          "said": "Mon., Tues., Wed., Fri.: 8:00 AM / Thurs: 6:30 PM {Weekday Masses are in St. Ann's Chapel}"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in each week's intentions. St. Ann's Chapel is a chapel of the church itself (candle intentions list 'Sanctuary Candle ~ St. Ann's Chapel' among the church's own), so POLICY places it at the church with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-ostrabrama-south-river",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Ann's Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "392b18af",
+          "page": 1,
+          "said": "Mon., Tues., Wed., Fri.: 8:00 AM / Thurs: 6:30 PM {Weekday Masses are in St. Ann's Chapel}"
+        },
+        {
+          "source": "agent",
+          "bulletin": "37bd3d0a",
+          "page": 1,
+          "said": "Mon., Tues., Wed., Fri.: 8:00 AM / Thurs: 6:30 PM {Weekday Masses are in St. Ann's Chapel}"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in each week's intentions (Thursday 6:30PM).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-ostrabrama-south-river",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "392b18af",
+          "page": 1,
+          "said": "CONFESSIONS: Saturdays 11:00 AM-12:00 Noon or by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "37bd3d0a",
+          "page": 1,
+          "said": "CONFESSIONS: Saturdays 11:00 AM-12:00 Noon or by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "392b18af",
+          "page": 4,
+          "said": "11:00AM Confession"
+        },
+        {
+          "source": "agent",
+          "bulletin": "37bd3d0a",
+          "page": 4,
+          "said": "11:00AM Confession"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in each week-at-a-glance.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-ostrabrama-south-river",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Remembrance Mass for the Deceased, Polish"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37bd3d0a",
+          "page": 3,
+          "said": "Saturday (Sobota) November 7 ... 8:00AM First Saturday Remembrance Mass for the Deceased/Polish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "392b18af",
+          "page": 2,
+          "said": "First Saturday Remembrance Mass for the Deceased/Polish November 7, 2026"
+        }
+      ],
+      "rationale": "R12, POLICY Weekly or dated rule 2: named 'First Saturday Remembrance Mass', so a weeks-of-the-month slot; the newest bulletin's week (Nov 15-22) holds only a third Saturday, so it cites the Nov 8 issue, whose week holds the first Saturday and prints it at 8:00 AM. The newest issue's page 2 lists that Mass's remembered names, consistent with a monthly remembrance.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "392b18af",
+          "page": 2,
+          "said": "First Friday Remembrance Mass for the Deceased/English November 6, 2026"
+        }
+      ],
+      "rationale": "R26, POLICY Weekly or dated rule 7: no time printed; the Nov 6 date is before as_of (R16), and if it is at the usual Friday 8:00 AM Mass it is covered by that weekly slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-ostrabrama-south-river",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "10:00",
+        "end_time": "11:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Monica Ministry Holy Hour, St. Ann's Chapel"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "392b18af",
+          "page": 4,
+          "said": "Saturday November 21 10:00AM-11:00AM St. Monica Ministry Holy Hour - St. Anne's Chapel"
+        }
+      ],
+      "rationale": "R1, R16, POLICY What to extract: a Holy Hour is Adoration; dated, on or after as_of, in the church's own chapel. Not limited to a group (the ministry says it is open to all parishioners, p5).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "392b18af",
+          "page": 1,
+          "said": "Holy Days of Obligation: 8:00 AM, 12:15 PM, 7:00 PM"
+        }
+      ],
+      "rationale": "R16, POLICY Dates: no holy day is dated in the bulletins read, so no dated entry can be recorded; update mode will read the issues that date them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "392b18af",
+          "page": 1,
+          "said": "ROSARY: Prayed before daily Mass ... MIRACULOUS MEDAL NOVENA: Every Monday following the 8:00 AM Mass. DIVINE MERCY CHAPLET"
+        }
+      ],
+      "rationale": "R24: devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

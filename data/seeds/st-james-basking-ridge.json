@@ -1,0 +1,1137 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-james-basking-ridge",
+  "status": "approved",
+  "as_of": "2026-11-15T16:06:29Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T03:45:11Z",
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:57:09Z",
+  "summary": "One church, St. James. Weekend, weekday, Saturday Confession and Thursday Adoration times agree in both bulletins (Nov 8, Nov 15) and on the website. Dated: Blue Mass Nov 25 and the website's Immaculate Conception Masses Dec 8. Open: the Sunday 10:30 AM Mass printed '- GYM'.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "20553ec5bba712bcd4ba02e783f4557a99d5e6e988334433cdf436792dc89ab0",
+      "fetched_at": "2026-11-15T16:06:29Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "cdc09e6b1778d8ba503057abcad945c70c5768d166e10a8ee66a8fe219789e41",
+      "fetched_at": "2026-11-08T15:33:08Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-basking-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "20553ec5",
+          "page": 1,
+          "said": "Saturday Evening: 5:30 PM (Vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cdc09e6b",
+          "page": 1,
+          "said": "Saturday Evening: 5:30 PM (Vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20553ec5",
+          "page": 2,
+          "said": "SATURDAY, November 21 ... 5:30pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintjamesbr.org/",
+          "said": "Saturday : 5:30 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins and in the newest intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-basking-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "20553ec5",
+          "page": 1,
+          "said": "Sundays: 7:30 AM 9:00 AM ... 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cdc09e6b",
+          "page": 1,
+          "said": "Sundays: 7:30 AM 9:00 AM ... 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20553ec5",
+          "page": 2,
+          "said": "SUNDAY, November 22 7:30am 9:00am 10:30am 12:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintjamesbr.org/",
+          "said": "Sunday : 7:30 AM 9:00 AM 10:30 AM 12:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins and in the newest intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-basking-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "20553ec5",
+          "page": 1,
+          "said": "Sundays: 7:30 AM 9:00 AM ... 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cdc09e6b",
+          "page": 1,
+          "said": "Sundays: 7:30 AM 9:00 AM ... 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20553ec5",
+          "page": 2,
+          "said": "SUNDAY, November 22 7:30am 9:00am 10:30am 12:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintjamesbr.org/",
+          "said": "Sunday : 7:30 AM 9:00 AM 10:30 AM 12:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins and in the newest intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-basking-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "20553ec5",
+          "page": 1,
+          "said": "Sundays: 7:30 AM 9:00 AM ... 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cdc09e6b",
+          "page": 1,
+          "said": "Sundays: 7:30 AM 9:00 AM ... 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20553ec5",
+          "page": 2,
+          "said": "SUNDAY, November 22 7:30am 9:00am 10:30am 12:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintjamesbr.org/",
+          "said": "Sunday : 7:30 AM 9:00 AM 10:30 AM 12:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins and in the newest intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-basking-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the gym"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "20553ec5",
+          "page": 1,
+          "said": "10:30 AM - GYM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cdc09e6b",
+          "page": 1,
+          "said": "10:30 AM - GYM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20553ec5",
+          "page": 2,
+          "said": "SUNDAY, November 22 ... 10:30am Joseph and Doris Madaio"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintjamesbr.org/",
+          "said": "Sunday : ... 10:30 AM English"
+        }
+      ],
+      "rationale": "R32/R30: both bulletins place the 10:30 AM Mass in the 'GYM', which no bulletin locates. It is presumably the St. James School gym on the parish campus (school at 200 S. Finley Ave, church at 184; the Blue Mass flyer calls 200 S. Finley 'Church of St. James'), i.e. the same grounds, and the website lists it as a regular Sunday Mass. Leaning include with a note; leave out if the gym counts as a separate building.",
+      "question": "The Sunday 10:30 AM Mass is printed '10:30 AM - GYM'. Include it at St. James, noting the gym?",
+      "options": [
+        {
+          "label": "Include, note In the gym",
+          "entry": {
+            "church_slug": "st-james-basking-ridge",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "10:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the gym"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@05f8a0474956",
+        "at": "2026-11-20T06:57:09Z"
+      }
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-basking-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "20553ec5",
+          "page": 1,
+          "said": "Monday - Friday 7:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cdc09e6b",
+          "page": 1,
+          "said": "Monday - Friday 7:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20553ec5",
+          "page": 2,
+          "said": "MONDAY, November 16 7:00am ... FRIDAY, November 20 7:00am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintjamesbr.org/",
+          "said": "Mon Fri 7:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins and in the newest intentions for each weekday; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-basking-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "20553ec5",
+          "page": 1,
+          "said": "Monday - Friday 7:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cdc09e6b",
+          "page": 1,
+          "said": "Monday - Friday 7:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20553ec5",
+          "page": 2,
+          "said": "MONDAY, November 16 7:00am ... FRIDAY, November 20 7:00am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintjamesbr.org/",
+          "said": "Mon Fri 7:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins and in the newest intentions for each weekday; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-basking-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "20553ec5",
+          "page": 1,
+          "said": "Monday - Friday 7:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cdc09e6b",
+          "page": 1,
+          "said": "Monday - Friday 7:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20553ec5",
+          "page": 2,
+          "said": "MONDAY, November 16 7:00am ... FRIDAY, November 20 7:00am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintjamesbr.org/",
+          "said": "Mon Fri 7:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins and in the newest intentions for each weekday; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-basking-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "20553ec5",
+          "page": 1,
+          "said": "Monday - Friday 7:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cdc09e6b",
+          "page": 1,
+          "said": "Monday - Friday 7:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20553ec5",
+          "page": 2,
+          "said": "MONDAY, November 16 7:00am ... FRIDAY, November 20 7:00am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintjamesbr.org/",
+          "said": "Mon Fri 7:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins and in the newest intentions for each weekday; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-basking-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "20553ec5",
+          "page": 1,
+          "said": "Monday - Friday 7:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cdc09e6b",
+          "page": 1,
+          "said": "Monday - Friday 7:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20553ec5",
+          "page": 2,
+          "said": "MONDAY, November 16 7:00am ... FRIDAY, November 20 7:00am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintjamesbr.org/",
+          "said": "Mon Fri 7:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins and in the newest intentions for each weekday; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-basking-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "20553ec5",
+          "page": 1,
+          "said": "Tuesday - Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cdc09e6b",
+          "page": 1,
+          "said": "Tuesday - Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20553ec5",
+          "page": 2,
+          "said": "TUESDAY, November 17 ... 8:00am ... SATURDAY, November 21 8:00am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintjamesbr.org/",
+          "said": "Tue Sat 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins and in the newest intentions for each day; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-basking-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "20553ec5",
+          "page": 1,
+          "said": "Tuesday - Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cdc09e6b",
+          "page": 1,
+          "said": "Tuesday - Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20553ec5",
+          "page": 2,
+          "said": "TUESDAY, November 17 ... 8:00am ... SATURDAY, November 21 8:00am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintjamesbr.org/",
+          "said": "Tue Sat 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins and in the newest intentions for each day; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-basking-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "20553ec5",
+          "page": 1,
+          "said": "Tuesday - Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cdc09e6b",
+          "page": 1,
+          "said": "Tuesday - Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20553ec5",
+          "page": 2,
+          "said": "TUESDAY, November 17 ... 8:00am ... SATURDAY, November 21 8:00am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintjamesbr.org/",
+          "said": "Tue Sat 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins and in the newest intentions for each day; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-basking-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "20553ec5",
+          "page": 1,
+          "said": "Tuesday - Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cdc09e6b",
+          "page": 1,
+          "said": "Tuesday - Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20553ec5",
+          "page": 2,
+          "said": "TUESDAY, November 17 ... 8:00am ... SATURDAY, November 21 8:00am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintjamesbr.org/",
+          "said": "Tue Sat 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins and in the newest intentions for each day; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-basking-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "20553ec5",
+          "page": 1,
+          "said": "Tuesday - Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cdc09e6b",
+          "page": 1,
+          "said": "Tuesday - Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20553ec5",
+          "page": 2,
+          "said": "TUESDAY, November 17 ... 8:00am ... SATURDAY, November 21 8:00am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintjamesbr.org/",
+          "said": "Tue Sat 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins and in the newest intentions for each day; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-basking-ridge",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "20553ec5",
+          "page": 1,
+          "said": "Saturdays 8:30 AM in the chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cdc09e6b",
+          "page": 1,
+          "said": "Saturdays 8:30 AM in the chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintjamesbr.org/",
+          "said": "Saturday : 8:30 AM (Chapel)"
+        }
+      ],
+      "rationale": "R1: printed under Sacrament of Reconciliation in both bulletins; no end time given (POLICY, Times). The chapel is part of St. James.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-basking-ridge",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "20553ec5",
+          "page": 1,
+          "said": "Saturdays 4:00 - 5:00 PM in the chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cdc09e6b",
+          "page": 1,
+          "said": "Saturdays 4:00 - 5:00 PM in the chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintjamesbr.org/",
+          "said": "4:00 PM (Church)"
+        }
+      ],
+      "rationale": "R1: printed under Sacrament of Reconciliation in both bulletins. The website says '(Church)' rather than chapel; both are St. James, and the newest bulletin's 'in the chapel' is kept in the note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-basking-ridge",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "20553ec5",
+          "page": 3,
+          "said": "Eucharistic Adoration Thursdays, 8:30 am to 3:00 pm in the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20553ec5",
+          "page": 3,
+          "said": "November 19: Eucharistic Adoration 8:30 am - 3:00 pm in the Chapel. November 26: Eucharistic Adoration 8:30 am - 3:00 pm in the Chapel."
+        },
+        {
+          "source": "agent",
+          "bulletin": "cdc09e6b",
+          "page": 5,
+          "said": "Thursdays, 8:30 am to 3:00 pm in the Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintjamesbr.org/",
+          "said": "Thursday : 8:30 AM to 3:00 PM in the chapel"
+        }
+      ],
+      "rationale": "R1: weekly Adoration box in both bulletins; the dated calendar lines are the same weekly slot (POLICY, Weekly or dated, rule 6). Website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-basking-ridge",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-25",
+        "start_time": "10:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Blue Mass for those who serve in public safety"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "20553ec5",
+          "page": 6,
+          "said": "Join us at our Blue Mass ... Wednesday, November 25, 2026, 10:15 AM Church of St. James"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20553ec5",
+          "page": 3,
+          "said": "November 25: Join us at our Blue Mass to honor those who serve in Public Safety at 10:15 am."
+        }
+      ],
+      "rationale": "R1, R16: a dated special Mass outside the weekly schedule, on or after as_of; the calendar invites everyone ('Join us'), so it is open (POLICY, What to extract). The RSVP to the school principal does not limit it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-basking-ridge",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.saintjamesbr.org/",
+          "said": "Upcoming Holy Days Immaculate Conception December 8 : 6:30 AM 8:00 AM 10:30 AM 12:15 PM 7:00 PM",
+          "schedule_check": {
+            "checked_at": "2026-11-20T03:48:11Z",
+            "current_because": "The homepage's 'Upcoming Holy Days' block lists December 8 alongside the calendar for November 19, 2026, and its weekend/daily schedule matches the November 15, 2026 bulletin exactly.",
+            "bulletin": "20553ec5",
+            "fits_because": "The newest bulletin (Nov 15) prints no holy-day schedule; these extra Masses at the parish's only church fit its regular schedule. The 8:00 AM is the weekly Tuesday 8:00 AM Mass and is not duplicated."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish's own current website gives the Immaculate Conception schedule; the 8:00 AM listed there is the weekly Tuesday Mass (POLICY, Weekly or dated, rule 6). No bulletin read mentions the holy day yet.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-basking-ridge",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.saintjamesbr.org/",
+          "said": "Upcoming Holy Days Immaculate Conception December 8 : 6:30 AM 8:00 AM 10:30 AM 12:15 PM 7:00 PM",
+          "schedule_check": {
+            "checked_at": "2026-11-20T03:48:11Z",
+            "current_because": "The homepage's 'Upcoming Holy Days' block lists December 8 alongside the calendar for November 19, 2026, and its weekend/daily schedule matches the November 15, 2026 bulletin exactly.",
+            "bulletin": "20553ec5",
+            "fits_because": "The newest bulletin (Nov 15) prints no holy-day schedule; these extra Masses at the parish's only church fit its regular schedule. The 8:00 AM is the weekly Tuesday 8:00 AM Mass and is not duplicated."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish's own current website gives the Immaculate Conception schedule; the 8:00 AM listed there is the weekly Tuesday Mass (POLICY, Weekly or dated, rule 6). No bulletin read mentions the holy day yet.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-basking-ridge",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.saintjamesbr.org/",
+          "said": "Upcoming Holy Days Immaculate Conception December 8 : 6:30 AM 8:00 AM 10:30 AM 12:15 PM 7:00 PM",
+          "schedule_check": {
+            "checked_at": "2026-11-20T03:48:11Z",
+            "current_because": "The homepage's 'Upcoming Holy Days' block lists December 8 alongside the calendar for November 19, 2026, and its weekend/daily schedule matches the November 15, 2026 bulletin exactly.",
+            "bulletin": "20553ec5",
+            "fits_because": "The newest bulletin (Nov 15) prints no holy-day schedule; these extra Masses at the parish's only church fit its regular schedule. The 8:00 AM is the weekly Tuesday 8:00 AM Mass and is not duplicated."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish's own current website gives the Immaculate Conception schedule; the 8:00 AM listed there is the weekly Tuesday Mass (POLICY, Weekly or dated, rule 6). No bulletin read mentions the holy day yet.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-basking-ridge",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.saintjamesbr.org/",
+          "said": "Upcoming Holy Days Immaculate Conception December 8 : 6:30 AM 8:00 AM 10:30 AM 12:15 PM 7:00 PM",
+          "schedule_check": {
+            "checked_at": "2026-11-20T03:48:11Z",
+            "current_because": "The homepage's 'Upcoming Holy Days' block lists December 8 alongside the calendar for November 19, 2026, and its weekend/daily schedule matches the November 15, 2026 bulletin exactly.",
+            "bulletin": "20553ec5",
+            "fits_because": "The newest bulletin (Nov 15) prints no holy-day schedule; these extra Masses at the parish's only church fit its regular schedule. The 8:00 AM is the weekly Tuesday 8:00 AM Mass and is not duplicated."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish's own current website gives the Immaculate Conception schedule; the 8:00 AM listed there is the weekly Tuesday Mass (POLICY, Weekly or dated, rule 6). No bulletin read mentions the holy day yet.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "20553ec5",
+          "page": 2,
+          "said": "The Rosary is prayed weekdays before the 7:00 am Mass and after the 8:00 am Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "20553ec5",
+          "page": 3,
+          "said": "Rosary for Peace at 3:00 pm; Rosary for Life at 5pm in the Chapel"
+        }
+      ],
+      "rationale": "R24: Rosary devotions are not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

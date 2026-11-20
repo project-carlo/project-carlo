@@ -1,0 +1,692 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-ann-hampton",
+  "status": "approved",
+  "as_of": "2026-11-15T16:50:52Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T23:36:28Z",
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:56:37Z",
+  "summary": "One church, St. Ann, Hampton. Weekend (Sat 4 PM; Sun 8, 9:30, 11), weekday 8 AM Masses, Friday and Saturday confessions, Tue/Thu/Fri exposition 8:30-4 and a First Saturday 9 AM confession / 9:30 AM Mass agree in both bulletins read (Nov 1 and Nov 15, 2026). No open questions; no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "563845fd7d7f30a777acbd3a8dbcdd84eee415be2984b87392e7a87b034f028e",
+      "fetched_at": "2026-11-15T16:50:52Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "3f95112d08833395eb4dc6abd8c9e9db768d81798d5843b243e1abf5edc5ce2c",
+      "fetched_at": "2026-11-08T15:59:25Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-hampton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "563845fd",
+          "page": 1,
+          "said": "Saturday Vigil Mass at 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f95112d",
+          "page": 1,
+          "said": "Saturday Vigil Mass at 4:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the intentions on p2 list a 4:00 PM vigil every Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-hampton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "563845fd",
+          "page": 1,
+          "said": "Sunday at 8:00, 9:30 & 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f95112d",
+          "page": 1,
+          "said": "Sunday at 8:00, 9:30 & 11:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the p2 intentions list all three Sunday Masses each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-hampton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "563845fd",
+          "page": 1,
+          "said": "Sunday at 8:00, 9:30 & 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f95112d",
+          "page": 1,
+          "said": "Sunday at 8:00, 9:30 & 11:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the p2 intentions list all three Sunday Masses each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-hampton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "563845fd",
+          "page": 1,
+          "said": "Sunday at 8:00, 9:30 & 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f95112d",
+          "page": 1,
+          "said": "Sunday at 8:00, 9:30 & 11:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the p2 intentions list all three Sunday Masses each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-hampton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "563845fd",
+          "page": 1,
+          "said": "Daily Monday – Friday at 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f95112d",
+          "page": 1,
+          "said": "Daily Monday – Friday at 8:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the p2 intentions list an 8:00 AM Mass every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-hampton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "563845fd",
+          "page": 1,
+          "said": "Daily Monday – Friday at 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f95112d",
+          "page": 1,
+          "said": "Daily Monday – Friday at 8:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the p2 intentions list an 8:00 AM Mass every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-hampton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "563845fd",
+          "page": 1,
+          "said": "Daily Monday – Friday at 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f95112d",
+          "page": 1,
+          "said": "Daily Monday – Friday at 8:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the p2 intentions list an 8:00 AM Mass every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-hampton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "563845fd",
+          "page": 1,
+          "said": "Daily Monday – Friday at 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f95112d",
+          "page": 1,
+          "said": "Daily Monday – Friday at 8:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the p2 intentions list an 8:00 AM Mass every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-hampton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "563845fd",
+          "page": 1,
+          "said": "Daily Monday – Friday at 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f95112d",
+          "page": 1,
+          "said": "Daily Monday – Friday at 8:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the p2 intentions list an 8:00 AM Mass every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-hampton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "563845fd",
+          "page": 1,
+          "said": "CONFESSIONS Friday Morning after 8:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f95112d",
+          "page": 1,
+          "said": "CONFESSIONS Friday Morning after 8:00 am Mass"
+        }
+      ],
+      "rationale": "R1, R10: 'after' a weekday Mass with no clock time starts 30 minutes after the 8:00 AM Mass; no end given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-hampton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "563845fd",
+          "page": 1,
+          "said": "CONFESSIONS ... and Saturday at 3:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f95112d",
+          "page": 1,
+          "said": "CONFESSIONS ... and Saturday at 3:30 pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; no end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-hampton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "563845fd",
+          "page": 1,
+          "said": "EXPOSITION OF THE MOST BLESSED SACRAMENT Tuesday, Thursday & Friday from 8:30 am to 4:00 pm; weather and/or circumstances permitting. No formal exposition on Holy Days."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f95112d",
+          "page": 1,
+          "said": "EXPOSITION OF THE MOST BLESSED SACRAMENT Tuesday, Thursday & Friday from 8:30 am to 4:00 pm; weather and/or circumstances permitting. No formal exposition on Holy Days."
+        }
+      ],
+      "rationale": "R1: the standing exposition schedule in both bulletins. 'Weather and/or circumstances permitting' is a general caveat, not a hedge on which weeks; the holy-day exception is undated, so no dated cancellation is projected (POLICY, Dates). Reviewer: Dec 8 (Immaculate Conception) falls on a Tuesday in 2026; update mode should pick up any notice.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-hampton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "563845fd",
+          "page": 1,
+          "said": "EXPOSITION OF THE MOST BLESSED SACRAMENT Tuesday, Thursday & Friday from 8:30 am to 4:00 pm; weather and/or circumstances permitting. No formal exposition on Holy Days."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f95112d",
+          "page": 1,
+          "said": "EXPOSITION OF THE MOST BLESSED SACRAMENT Tuesday, Thursday & Friday from 8:30 am to 4:00 pm; weather and/or circumstances permitting. No formal exposition on Holy Days."
+        }
+      ],
+      "rationale": "R1: the standing exposition schedule in both bulletins. 'Weather and/or circumstances permitting' is a general caveat, not a hedge on which weeks; the holy-day exception is undated, so no dated cancellation is projected (POLICY, Dates). Reviewer: Dec 8 (Immaculate Conception) falls on a Tuesday in 2026; update mode should pick up any notice.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-hampton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "563845fd",
+          "page": 1,
+          "said": "EXPOSITION OF THE MOST BLESSED SACRAMENT Tuesday, Thursday & Friday from 8:30 am to 4:00 pm; weather and/or circumstances permitting. No formal exposition on Holy Days."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f95112d",
+          "page": 1,
+          "said": "EXPOSITION OF THE MOST BLESSED SACRAMENT Tuesday, Thursday & Friday from 8:30 am to 4:00 pm; weather and/or circumstances permitting. No formal exposition on Holy Days."
+        }
+      ],
+      "rationale": "R1: the standing exposition schedule in both bulletins. 'Weather and/or circumstances permitting' is a general caveat, not a hedge on which weeks; the holy-day exception is undated, so no dated cancellation is projected (POLICY, Dates). Reviewer: Dec 8 (Immaculate Conception) falls on a Tuesday in 2026; update mode should pick up any notice.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-hampton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "563845fd",
+          "page": 5,
+          "said": "FIRST SATURDAY MASS AND DEVOTIONS ... 9:00 am – Confession 9:30 am – Holy Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f95112d",
+          "page": 5,
+          "said": "NO FIRST SATURDAY MASS NOVEMBER 7, 2026 ... 9:30 am – Holy Mass"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 2: the standing First Saturday notice on p5 of the newest bulletin names the week. The Nov 7 cancellation in the older issue is before as_of (R16) and confirms the series continues otherwise.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-hampton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 9:30 AM First Saturday Mass"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "563845fd",
+          "page": 5,
+          "said": "FIRST SATURDAY MASS AND DEVOTIONS ... 9:00 am – Confession 9:30 am – Holy Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f95112d",
+          "page": 5,
+          "said": "9:00 am – Confession 9:30 am – Holy Mass"
+        }
+      ],
+      "rationale": "R1, POLICY Times: a clock time running up to a Mass with no end of its own has no end_time and a note naming the Mass. The Nov 7 notice cancelled the Mass; it is before as_of (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-hampton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f95112d",
+          "page": 2,
+          "said": "Monday, November 2 ... 7:00 PM All Souls"
+        }
+      ],
+      "rationale": "R16: a dated All Souls Mass before as_of; out of seed scope.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "563845fd",
+          "page": 1,
+          "said": "BAPTISM: Celebrated every Sunday at 12:00 noon"
+        }
+      ],
+      "rationale": "R24: baptisms and novenas, rosaries (Mon-Fri 8:30 AM novenas, rosary gatherings) are not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

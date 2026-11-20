@@ -1,0 +1,558 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-peace-north-brunswick",
+  "status": "approved",
+  "as_of": "2026-11-15T16:19:19Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T23:16:06Z",
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:56:21Z",
+  "summary": "One church. Weekend (Sat 5 PM; Sun 8:30, 11 AM), weekday 8 AM Mass, Saturday 11-12 Confession and second-Monday 5-7 PM Adoration agree in both bulletins (Nov 8, Nov 22 issues) and the website. Dated Advent Adoration Nov 29 after the 11 AM Mass. Open: a Dec 7 Adoration flyer that falls on a first Monday, possibly a misprint for Dec 14.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "f1e353a1dd40e69dd54239e1ce49c9195efbef246d5ab29419a1f35d02a5789a",
+      "fetched_at": "2026-11-15T16:19:19Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "2629f8f248bf9d7b1143201d670c243107ac2ccc1359b2d8ca237565465b0500",
+      "fetched_at": "2026-11-08T15:44:08Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-north-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f1e353a1",
+          "page": 1,
+          "said": "Saturday Vigil Mass - 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2629f8f2",
+          "page": 1,
+          "said": "Saturday Vigil Mass - 5:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass Schedule box of both bulletins (Nov 8 and Nov 22 issues); intentions list a 5:00 pm Saturday Mass each week; the website's Mass Times agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-north-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f1e353a1",
+          "page": 1,
+          "said": "Sunday Masses - 8:30 and 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2629f8f2",
+          "page": 1,
+          "said": "Sunday Masses - 8:30 and 11:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass Schedule box of both bulletins; intentions and the website's Mass Times agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-north-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f1e353a1",
+          "page": 1,
+          "said": "Sunday Masses - 8:30 and 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2629f8f2",
+          "page": 1,
+          "said": "Sunday Masses - 8:30 and 11:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass Schedule box of both bulletins; intentions and the website's Mass Times agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-north-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f1e353a1",
+          "page": 1,
+          "said": "Daily Masses (M-F) - 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2629f8f2",
+          "page": 1,
+          "said": "Daily Masses (M-F) - 8:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass Schedule box of both bulletins; each weekday has an 8:00 am intention on p3. Thanksgiving (Nov 26) Mass is at the usual 8:00 AM, so no dated slot (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-north-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f1e353a1",
+          "page": 1,
+          "said": "Daily Masses (M-F) - 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2629f8f2",
+          "page": 1,
+          "said": "Daily Masses (M-F) - 8:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass Schedule box of both bulletins; each weekday has an 8:00 am intention on p3. Thanksgiving (Nov 26) Mass is at the usual 8:00 AM, so no dated slot (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-north-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f1e353a1",
+          "page": 1,
+          "said": "Daily Masses (M-F) - 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2629f8f2",
+          "page": 1,
+          "said": "Daily Masses (M-F) - 8:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass Schedule box of both bulletins; each weekday has an 8:00 am intention on p3. Thanksgiving (Nov 26) Mass is at the usual 8:00 AM, so no dated slot (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-north-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f1e353a1",
+          "page": 1,
+          "said": "Daily Masses (M-F) - 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2629f8f2",
+          "page": 1,
+          "said": "Daily Masses (M-F) - 8:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass Schedule box of both bulletins; each weekday has an 8:00 am intention on p3. Thanksgiving (Nov 26) Mass is at the usual 8:00 AM, so no dated slot (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-north-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f1e353a1",
+          "page": 1,
+          "said": "Daily Masses (M-F) - 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2629f8f2",
+          "page": 1,
+          "said": "Daily Masses (M-F) - 8:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass Schedule box of both bulletins; each weekday has an 8:00 am intention on p3. Thanksgiving (Nov 26) Mass is at the usual 8:00 AM, so no dated slot (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-north-brunswick",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f1e353a1",
+          "page": 1,
+          "said": "Confessions: Saturday; 11:00 AM - 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2629f8f2",
+          "page": 1,
+          "said": "Confessions: Saturday; 11:00 AM - 12:00 Noon"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins; the website's Confession Times agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-north-brunswick",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "second"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f1e353a1",
+          "page": 1,
+          "said": "Eucharistic Adoration: 5:00 - 7:00 PM the second Monday of each month"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2629f8f2",
+          "page": 1,
+          "said": "Eucharistic Adoration: 5:00 - 7:00 PM the second Monday of each month"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2629f8f2",
+          "page": 6,
+          "said": "Eucharistic Adoration ... November 9th 2026 5:00pm - 7:00 pm"
+        }
+      ],
+      "rationale": "R1: the page-1 schedule box of the newest bulletin prints it (a standing line, though its week holds no second Monday); Nov 9, 2026, announced in the older issue, was a second Monday. The website also says Second Monday of the Month, 5:00 PM to 7:00 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-north-brunswick",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-29",
+        "start_time": "12:00",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Chapel, following the 11:00 AM Mass; Evening Prayer and Benediction"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f1e353a1",
+          "page": 4,
+          "said": "Next Sunday, November 29th, the First Sunday of Advent, we will have a Eucharistic Adoration in the Chapel following the 11:AM Mass, ending with Evening Prayer and Benediction at 3:30 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f1e353a1",
+          "page": 3,
+          "said": "Prayer Intentioned Eucharistic Adoration on; Sunday Nov. 29th, Following the 11am Mass ... ending with Evening Prayer and Benediction at 3:30 PM."
+        }
+      ],
+      "rationale": "R1, R10, R16: a dated special Adoration after as_of; it starts an hour after the 11:00 AM Sunday Mass per POLICY, Times, and ends at the printed 3:30 PM. Only this Sunday is announced, so it is dated, not weekly.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-north-brunswick",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "17:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f1e353a1",
+          "page": 6,
+          "said": "Eucharistic Adoration Come, experience something new December 7th 2026 5:00pm - 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f1e353a1",
+          "page": 1,
+          "said": "5:00 - 7:00 PM the second Monday of each month"
+        }
+      ],
+      "rationale": "R40 would record a specific dated notice as a one-date exception, keeping the second-Monday slot (no cancellation of Dec 14 is printed, R17). But Dec 7, 2026 is the first Monday, and the same flyer in the Nov 8 issue gave Nov 9, a second Monday, so Dec 7 may be a misprint for Dec 14. Leaning to include it because the date is printed plainly.",
+      "question": "Add Eucharistic Adoration on Monday, December 7, 5-7 PM (a first Monday, while the standing schedule says second Mondays)?",
+      "options": [
+        {
+          "label": "Dec 7, 5-7 PM",
+          "entry": {
+            "church_slug": "our-lady-of-peace-north-brunswick",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-07",
+            "start_time": "17:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@05f8a0474956",
+        "at": "2026-11-20T06:56:21Z"
+      }
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-north-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "United Tamil Catholic Association monthly Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f1e353a1",
+          "page": 2,
+          "said": "United Tamil Catholic Association (UTC) Monthly Mass Sunday, 3pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2629f8f2",
+          "page": 2,
+          "said": "United Tamil Catholic Association (UTC) Monthly Mass Sunday, 3pm"
+        }
+      ],
+      "rationale": "R33: a monthly Sunday Mass whose week of the month is not printed in either bulletin or on the website; it can't be written as a weekly slot without inventing the week, and no date is printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

@@ -1,0 +1,647 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-lawrence-laurence-harbor",
+  "status": "approved",
+  "as_of": "2026-11-15T16:19:59Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T04:30:38Z",
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:57:39Z",
+  "summary": "One church, St. Lawrence. Both bulletins read (Nov 8 and Nov 15, 2026) print the same schedule: Sat 4:30 PM vigil, Sun 8 and 11 AM, Mon-Sat 8 AM; Confession Sat 3:30-4, Sun 9-10 AM with Adoration, Wed 7-8 PM with a Holy Hour. No history stored; no open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "4c3e2dddd99979f50835a2227e6e3dba2ee20c360d22d62015422f36e79e1dc2",
+      "fetched_at": "2026-11-15T16:19:59Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "3d2e6ca1351afce95ea90bb39dc3f77bf6292af925eb573d7c531bf0f4475a7e",
+      "fetched_at": "2026-11-08T15:44:37Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-laurence-harbor",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4c3e2ddd",
+          "page": 1,
+          "said": "Saturday Vigil: 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d2e6ca1",
+          "page": 1,
+          "said": "Saturday Vigil: 4:30 PM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read; the intentions list a 4:30 PM Mass every Saturday in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-laurence-harbor",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4c3e2ddd",
+          "page": 1,
+          "said": "Sunday: 8:00 AM & 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d2e6ca1",
+          "page": 1,
+          "said": "Sunday: 8:00 AM & 11:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-laurence-harbor",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4c3e2ddd",
+          "page": 1,
+          "said": "Sunday: 8:00 AM & 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d2e6ca1",
+          "page": 1,
+          "said": "Sunday: 8:00 AM & 11:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-laurence-harbor",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4c3e2ddd",
+          "page": 1,
+          "said": "Weekdays and Saturdays: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d2e6ca1",
+          "page": 1,
+          "said": "Weekdays and Saturdays: 8:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins; the intentions list an 8:00 AM Mass Monday to Saturday in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-laurence-harbor",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4c3e2ddd",
+          "page": 1,
+          "said": "Weekdays and Saturdays: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d2e6ca1",
+          "page": 1,
+          "said": "Weekdays and Saturdays: 8:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins; the intentions list an 8:00 AM Mass Monday to Saturday in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-laurence-harbor",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4c3e2ddd",
+          "page": 1,
+          "said": "Weekdays and Saturdays: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d2e6ca1",
+          "page": 1,
+          "said": "Weekdays and Saturdays: 8:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins; the intentions list an 8:00 AM Mass Monday to Saturday in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-laurence-harbor",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4c3e2ddd",
+          "page": 1,
+          "said": "Weekdays and Saturdays: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d2e6ca1",
+          "page": 1,
+          "said": "Weekdays and Saturdays: 8:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins; the intentions list an 8:00 AM Mass Monday to Saturday in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-laurence-harbor",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4c3e2ddd",
+          "page": 1,
+          "said": "Weekdays and Saturdays: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d2e6ca1",
+          "page": 1,
+          "said": "Weekdays and Saturdays: 8:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins; the intentions list an 8:00 AM Mass Monday to Saturday in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-laurence-harbor",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4c3e2ddd",
+          "page": 1,
+          "said": "Weekdays and Saturdays: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d2e6ca1",
+          "page": 1,
+          "said": "Weekdays and Saturdays: 8:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins; the intentions list an 8:00 AM Mass Monday to Saturday in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-laurence-harbor",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4c3e2ddd",
+          "page": 1,
+          "said": "Confessions are heard each Saturday from 3:30 PM – 4:00 PM, or any time by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d2e6ca1",
+          "page": 1,
+          "said": "Confessions are heard each Saturday from 3:30 PM – 4:00 PM, or any time by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4c3e2ddd",
+          "page": 2,
+          "said": "Confession Times Saturday 3:30-4 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d2e6ca1",
+          "page": 2,
+          "said": "Confession Times Saturday 3:30-4 PM"
+        }
+      ],
+      "rationale": "R1: printed on pages 1 and 2 of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-laurence-harbor",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4c3e2ddd",
+          "page": 2,
+          "said": "Confession Times ... Sunday 9-10 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d2e6ca1",
+          "page": 2,
+          "said": "Confession Times ... Sunday 9-10 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4c3e2ddd",
+          "page": 2,
+          "said": "Sunday ... Eucharistic Adoration & Confessions 9:00 AM to 10:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d2e6ca1",
+          "page": 2,
+          "said": "Sunday ... Eucharistic Adoration & Confessions 9:00 AM to 10:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: the standing Confession Times box on page 2 of both bulletins gives Sunday 9-10 AM, and each week's intentions list it under Sunday. Page 1's Reconciliation paragraph names only Saturday, but the page 2 box is the more specific, current list; no conflict.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-laurence-harbor",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4c3e2ddd",
+          "page": 2,
+          "said": "Sunday ... Eucharistic Adoration & Confessions 9:00 AM to 10:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d2e6ca1",
+          "page": 2,
+          "said": "Sunday ... Eucharistic Adoration & Confessions 9:00 AM to 10:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed under Sunday in the intentions of both bulletins (Nov 15 and Nov 22), with the matching Sunday 9-10 AM line in the standing Confession Times box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-laurence-harbor",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4c3e2ddd",
+          "page": 2,
+          "said": "Confession Times ... Wednesday 7-8 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d2e6ca1",
+          "page": 2,
+          "said": "Confession Times ... Wednesday 7-8 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4c3e2ddd",
+          "page": 2,
+          "said": "Wednesday ... 7 PM HOLY HOUR & CONFESSION"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d2e6ca1",
+          "page": 2,
+          "said": "Wednesday ... 7 PM HOLY HOUR & CONFESSION"
+        }
+      ],
+      "rationale": "R1, R35: the Confession Times box of both bulletins gives Wednesday 7-8 PM, and each week's intentions list the 7 PM Holy Hour & Confession under Wednesday (Nov 11 and Nov 18).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-laurence-harbor",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4c3e2ddd",
+          "page": 2,
+          "said": "Wednesday ... 7 PM HOLY HOUR & CONFESSION"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d2e6ca1",
+          "page": 2,
+          "said": "Wednesday ... 7 PM HOLY HOUR & CONFESSION"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4c3e2ddd",
+          "page": 2,
+          "said": "Confession Times ... Wednesday 7-8 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d2e6ca1",
+          "page": 2,
+          "said": "Confession Times ... Wednesday 7-8 PM"
+        }
+      ],
+      "rationale": "R1, R35, POLICY What to extract: a Holy Hour is Adoration; listed under Wednesday in both weeks' intentions. It ends at 8 PM: a Holy Hour is one hour (POLICY, Times: a duration gives the end), matching the box's Wednesday 7-8 PM for the Confession heard with it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4c3e2ddd",
+          "page": 1,
+          "said": "Holy Days of Obligation: On the Holy Day: 8:00 AM, 12 Noon, 7:00 PM"
+        }
+      ],
+      "rationale": "POLICY, Dates; R16: a generic holy-day pattern with no date the bulletin pins down; holy-day Masses are dated and none is dated here. Update mode will record them when a bulletin dates one.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4c3e2ddd",
+          "page": 1,
+          "said": "Confessions are heard each Saturday ... or any time by appointment."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

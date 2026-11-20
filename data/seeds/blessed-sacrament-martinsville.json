@@ -1,0 +1,703 @@
+{
+  "schema_version": 1,
+  "parish_slug": "blessed-sacrament-martinsville",
+  "status": "approved",
+  "as_of": "2026-11-15T16:02:57Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T22:33:30Z",
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:55:45Z",
+  "summary": "One church. The Mass Times box and weekly calendar agree in both bulletins read (Nov 8 and Nov 15, 2026): Mass Mon-Sat 9am, Wed 12pm, Sat 4pm, Sun 7:30/10/12; Wednesday Adoration from 9:30am until the noon Mass; Saturday Confession 11am; First Friday Holy Hour 7pm. 12:10 pm weekday Masses were discontinued; no history stored. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "c01a97dc8b58ccdf315e1b4d2016e01a05afb975e1aed72afe0ec2fa11bdac40",
+      "fetched_at": "2026-11-15T16:02:57Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "7ffde00ae4ec92c37f18e9beab0193a1e3c4ec7fbd1145d28153e9b458b18dfa",
+      "fetched_at": "2026-11-08T15:30:33Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-martinsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c01a97dc",
+          "page": 1,
+          "said": "Daily Mass 9am Monday through Saturday (live streamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ffde00a",
+          "page": 1,
+          "said": "Daily Mass 9am Monday through Saturday (live streamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c01a97dc",
+          "page": 2,
+          "said": "Mass Intentions list a 9am Mass each day Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ffde00a",
+          "page": 2,
+          "said": "Mass Intentions list a 9am Mass each day Monday-Saturday"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read and confirmed by each day's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-martinsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c01a97dc",
+          "page": 1,
+          "said": "Daily Mass 9am Monday through Saturday (live streamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ffde00a",
+          "page": 1,
+          "said": "Daily Mass 9am Monday through Saturday (live streamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c01a97dc",
+          "page": 2,
+          "said": "Mass Intentions list a 9am Mass each day Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ffde00a",
+          "page": 2,
+          "said": "Mass Intentions list a 9am Mass each day Monday-Saturday"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read and confirmed by each day's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-martinsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c01a97dc",
+          "page": 1,
+          "said": "Daily Mass 9am Monday through Saturday (live streamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ffde00a",
+          "page": 1,
+          "said": "Daily Mass 9am Monday through Saturday (live streamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c01a97dc",
+          "page": 2,
+          "said": "Mass Intentions list a 9am Mass each day Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ffde00a",
+          "page": 2,
+          "said": "Mass Intentions list a 9am Mass each day Monday-Saturday"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read and confirmed by each day's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-martinsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c01a97dc",
+          "page": 1,
+          "said": "Daily Mass 9am Monday through Saturday (live streamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ffde00a",
+          "page": 1,
+          "said": "Daily Mass 9am Monday through Saturday (live streamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c01a97dc",
+          "page": 2,
+          "said": "Mass Intentions list a 9am Mass each day Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ffde00a",
+          "page": 2,
+          "said": "Mass Intentions list a 9am Mass each day Monday-Saturday"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read and confirmed by each day's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-martinsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c01a97dc",
+          "page": 1,
+          "said": "Daily Mass 9am Monday through Saturday (live streamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ffde00a",
+          "page": 1,
+          "said": "Daily Mass 9am Monday through Saturday (live streamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c01a97dc",
+          "page": 2,
+          "said": "Mass Intentions list a 9am Mass each day Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ffde00a",
+          "page": 2,
+          "said": "Mass Intentions list a 9am Mass each day Monday-Saturday"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read and confirmed by each day's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-martinsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c01a97dc",
+          "page": 1,
+          "said": "Daily Mass 9am Monday through Saturday (live streamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ffde00a",
+          "page": 1,
+          "said": "Daily Mass 9am Monday through Saturday (live streamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c01a97dc",
+          "page": 2,
+          "said": "Mass Intentions list a 9am Mass each day Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ffde00a",
+          "page": 2,
+          "said": "Mass Intentions list a 9am Mass each day Monday-Saturday"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read and confirmed by each day's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-martinsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c01a97dc",
+          "page": 1,
+          "said": "Weekend Masses 4pm Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ffde00a",
+          "page": 1,
+          "said": "Weekend Masses 4pm Saturday"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-martinsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c01a97dc",
+          "page": 1,
+          "said": "7:30am, 10am and 12 noon on Sunday (10am Mass is live streamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ffde00a",
+          "page": 1,
+          "said": "7:30am, 10am and 12 noon on Sunday (10am Mass is live streamed)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-martinsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c01a97dc",
+          "page": 1,
+          "said": "7:30am, 10am and 12 noon on Sunday (10am Mass is live streamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ffde00a",
+          "page": 1,
+          "said": "7:30am, 10am and 12 noon on Sunday (10am Mass is live streamed)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-martinsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c01a97dc",
+          "page": 1,
+          "said": "7:30am, 10am and 12 noon on Sunday (10am Mass is live streamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ffde00a",
+          "page": 1,
+          "said": "7:30am, 10am and 12 noon on Sunday (10am Mass is live streamed)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-martinsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c01a97dc",
+          "page": 1,
+          "said": "Mass after Adoration 12pm on Wednesday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ffde00a",
+          "page": 1,
+          "said": "Mass after Adoration 12pm on Wednesday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c01a97dc",
+          "page": 2,
+          "said": "Wednesday – 9am Mass / 9:30am Adoration / 12pm Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ffde00a",
+          "page": 2,
+          "said": "Wednesday – 9am Mass / 9:30am Adoration / 12pm Mass"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box and the weekly calendar of both bulletins. The note that 12:10 pm weekday Masses are no longer held concerns a different, discontinued time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-martinsville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:00 AM Mass, until the 12:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c01a97dc",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament after the 9am Mass on Wednesday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ffde00a",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament after the 9am Mass on Wednesday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c01a97dc",
+          "page": 2,
+          "said": "Wednesday – 9am Mass / 9:30am Adoration / 12pm Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ffde00a",
+          "page": 2,
+          "said": "Wednesday – 9am Mass / 9:30am Adoration / 12pm Mass"
+        }
+      ],
+      "rationale": "R1, POLICY Times: the weekly calendar of both bulletins gives the clock time 9:30am (also 30 minutes after the weekday 9am Mass, R10). No end time is printed; it precedes the 12pm 'Mass after Adoration', so per POLICY end_time stays null with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-martinsville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c01a97dc",
+          "page": 1,
+          "said": "Confession 11am on Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ffde00a",
+          "page": 1,
+          "said": "Confession 11am on Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c01a97dc",
+          "page": 2,
+          "said": "Saturday - 11am Confession"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ffde00a",
+          "page": 2,
+          "said": "Saturday - 11am Confession"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box and the weekly calendar of both bulletins; no end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-martinsville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c01a97dc",
+          "page": 1,
+          "said": "Holy Hour 7pm the First Friday of every Month"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ffde00a",
+          "page": 1,
+          "said": "Holy Hour 7pm the First Friday of every Month"
+        }
+      ],
+      "rationale": "R1: the newest bulletin's standing Mass Times box prints it (as does the Nov 8 issue); POLICY counts a Holy Hour as Adoration; weeks_of_month first per POLICY Weekly or dated rule 2. No end time is printed, so end_time stays null.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-martinsville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-14",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Memorial Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7ffde00a",
+          "page": 2,
+          "said": "Saturday 11/14 12pm Memorial Mass"
+        }
+      ],
+      "rationale": "R16, R24: a dated memorial Mass before as_of, not open-invitation and out of seed scope.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

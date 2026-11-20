@@ -1,0 +1,1071 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-peter-the-apostle-new-brunswick",
+  "status": "approved",
+  "as_of": "2026-11-15T16:08:28Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T04:58:31Z",
+  "reviewer": "agent:seed-review@0f5bc0bb74a6",
+  "approved_at": "2026-11-20T08:36:15Z",
+  "summary": "One church, St. Peter the Apostle. The schedule box (Masses, weekday and Saturday confessions, Saturday Adoration) is identical in both bulletins read; Thanksgiving week changes are recorded as dated entries. Thursday Adoration in the Catholic Center Chapel is excluded as a church-list issue (R23).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "136cc29d40b2bdced358ce57e38a6da37d034a8d69d619295c37ba83240028e4",
+      "fetched_at": "2026-11-15T16:08:28Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "119db8afd9a87b0f0f8662734f706926ee25fd178d777f2ff91db9e2cca6a18c",
+      "fetched_at": "2026-11-08T15:34:39Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "136cc29d",
+          "page": 1,
+          "said": "SUNDAY MASSES Sat | 5pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "119db8af",
+          "page": 1,
+          "said": "SUNDAY MASSES Sat | 5pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list it too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "136cc29d",
+          "page": 1,
+          "said": "Sun | 9am, 11:30am, 6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "119db8af",
+          "page": 1,
+          "said": "Sun | 9am, 11:30am, 6pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list it too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "136cc29d",
+          "page": 1,
+          "said": "Sun | 9am, 11:30am, 6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "119db8af",
+          "page": 1,
+          "said": "Sun | 9am, 11:30am, 6pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list it too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "136cc29d",
+          "page": 1,
+          "said": "Sun | 9am, 11:30am, 6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "119db8af",
+          "page": 1,
+          "said": "Sun | 9am, 11:30am, 6pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list it too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "136cc29d",
+          "page": 1,
+          "said": "WEEKDAY MASSES Mon-Fri | 7:30am, 12:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "119db8af",
+          "page": 1,
+          "said": "WEEKDAY MASSES Mon-Fri | 7:30am, 12:15pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list it too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "136cc29d",
+          "page": 1,
+          "said": "WEEKDAY MASSES Mon-Fri | 7:30am, 12:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "119db8af",
+          "page": 1,
+          "said": "WEEKDAY MASSES Mon-Fri | 7:30am, 12:15pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list it too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "136cc29d",
+          "page": 1,
+          "said": "WEEKDAY MASSES Mon-Fri | 7:30am, 12:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "119db8af",
+          "page": 1,
+          "said": "WEEKDAY MASSES Mon-Fri | 7:30am, 12:15pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list it too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "136cc29d",
+          "page": 1,
+          "said": "WEEKDAY MASSES Mon-Fri | 7:30am, 12:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "119db8af",
+          "page": 1,
+          "said": "WEEKDAY MASSES Mon-Fri | 7:30am, 12:15pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list it too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "136cc29d",
+          "page": 1,
+          "said": "WEEKDAY MASSES Mon-Fri | 7:30am, 12:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "119db8af",
+          "page": 1,
+          "said": "WEEKDAY MASSES Mon-Fri | 7:30am, 12:15pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list it too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "136cc29d",
+          "page": 1,
+          "said": "WEEKDAY MASSES Mon-Fri | 7:30am, 12:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "119db8af",
+          "page": 1,
+          "said": "WEEKDAY MASSES Mon-Fri | 7:30am, 12:15pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list it too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "136cc29d",
+          "page": 1,
+          "said": "WEEKDAY MASSES Mon-Fri | 7:30am, 12:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "119db8af",
+          "page": 1,
+          "said": "WEEKDAY MASSES Mon-Fri | 7:30am, 12:15pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list it too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "136cc29d",
+          "page": 1,
+          "said": "WEEKDAY MASSES Mon-Fri | 7:30am, 12:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "119db8af",
+          "page": 1,
+          "said": "WEEKDAY MASSES Mon-Fri | 7:30am, 12:15pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list it too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "136cc29d",
+          "page": 1,
+          "said": "WEEKDAY MASSES Mon-Fri | 7:30am, 12:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "119db8af",
+          "page": 1,
+          "said": "WEEKDAY MASSES Mon-Fri | 7:30am, 12:15pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list it too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "136cc29d",
+          "page": 1,
+          "said": "WEEKDAY MASSES Mon-Fri | 7:30am, 12:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "119db8af",
+          "page": 1,
+          "said": "WEEKDAY MASSES Mon-Fri | 7:30am, 12:15pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list it too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "136cc29d",
+          "page": 1,
+          "said": "WEEKDAY MASSES ... Sat | 9am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "119db8af",
+          "page": 1,
+          "said": "WEEKDAY MASSES ... Sat | 9am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-new-brunswick",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "136cc29d",
+          "page": 1,
+          "said": "CONFESSION Sat | 11:30am ... All confessions are in the church."
+        },
+        {
+          "source": "agent",
+          "bulletin": "119db8af",
+          "page": 1,
+          "said": "CONFESSION Sat | 11:30am ... All confessions are in the church."
+        }
+      ],
+      "rationale": "R1: printed in both bulletins' schedule box; no end time given, so none recorded (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-new-brunswick",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "136cc29d",
+          "page": 1,
+          "said": "CONFESSION ... Mon-Fri | 11:30am-12pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "119db8af",
+          "page": 1,
+          "said": "CONFESSION ... Mon-Fri | 11:30am-12pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-new-brunswick",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "136cc29d",
+          "page": 1,
+          "said": "CONFESSION ... Mon-Fri | 11:30am-12pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "119db8af",
+          "page": 1,
+          "said": "CONFESSION ... Mon-Fri | 11:30am-12pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-new-brunswick",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "136cc29d",
+          "page": 1,
+          "said": "CONFESSION ... Mon-Fri | 11:30am-12pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "119db8af",
+          "page": 1,
+          "said": "CONFESSION ... Mon-Fri | 11:30am-12pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-new-brunswick",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "136cc29d",
+          "page": 1,
+          "said": "CONFESSION ... Mon-Fri | 11:30am-12pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "119db8af",
+          "page": 1,
+          "said": "CONFESSION ... Mon-Fri | 11:30am-12pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-new-brunswick",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "136cc29d",
+          "page": 1,
+          "said": "CONFESSION ... Mon-Fri | 11:30am-12pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "119db8af",
+          "page": 1,
+          "said": "CONFESSION ... Mon-Fri | 11:30am-12pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-new-brunswick",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Rosary at 8:30 AM"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "136cc29d",
+          "page": 1,
+          "said": "ADORATION ... Sat | 8am-9am (in the Church) Rosary begins at 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "119db8af",
+          "page": 1,
+          "said": "ADORATION ... Sat | 8am-9am (in the Church) Rosary begins at 8:30am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read, in the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-new-brunswick",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Catholic Center Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "136cc29d",
+          "page": 1,
+          "said": "ADORATION Thur | 1pm-7pm (in the Catholic Center Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "119db8af",
+          "page": 1,
+          "said": "ADORATION Thur | 1pm-7pm (in the Catholic Center Chapel)"
+        }
+      ],
+      "rationale": "R23: the Catholic Center (Rutgers Catholic Center) chapel is not on the church list and the bulletin gives no address placing it at the church; listed as a church-list issue.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "136cc29d",
+          "page": 2,
+          "said": "Thursday, November 27 - Mass is at 9am (no 7:30am or 12:15pm)."
+        }
+      ],
+      "rationale": "R1, R16, POLICY Dates: the notice's printed dates are last year's (Nov 27, 2026 is a Friday); the Thanksgiving heading and printed weekdays pin the days to Thanksgiving Thu 2026-11-26 and Fri 2026-11-27.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "136cc29d",
+          "page": 2,
+          "said": "Thursday, November 27 - Mass is at 9am (no 7:30am or 12:15pm)."
+        }
+      ],
+      "rationale": "R1, R16, POLICY Dates: the notice's printed dates are last year's (Nov 27, 2026 is a Friday); the Thanksgiving heading and printed weekdays pin the days to Thanksgiving Thu 2026-11-26 and Fri 2026-11-27.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "136cc29d",
+          "page": 2,
+          "said": "Thursday, November 27 - Mass is at 9am (no 7:30am or 12:15pm)."
+        }
+      ],
+      "rationale": "R1, R16, POLICY Dates: the notice's printed dates are last year's (Nov 27, 2026 is a Friday); the Thanksgiving heading and printed weekdays pin the days to Thanksgiving Thu 2026-11-26 and Fri 2026-11-27.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Day after Thanksgiving"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "136cc29d",
+          "page": 2,
+          "said": "Friday, November 28 - Mass is only at 7:30am (no 12:15pm mass)."
+        }
+      ],
+      "rationale": "R1, R16, POLICY Dates: the notice's printed dates are last year's (Nov 27, 2026 is a Friday); the Thanksgiving heading and printed weekdays pin the days to Thanksgiving Thu 2026-11-26 and Fri 2026-11-27. The Friday 7:30 AM Mass stands; only 12:15 PM is cancelled.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "119db8af",
+          "page": 2,
+          "said": "On Monday, November 2, 2026, there will be a special 7:30pm mass."
+        }
+      ],
+      "rationale": "R16: dated before as_of, out of seed scope.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "church_list_issues": [
+    {
+      "church": "Catholic Center Chapel (Rutgers Catholic Center)",
+      "said": "ADORATION Thur | 1pm-7pm (in the Catholic Center Chapel)",
+      "bulletin": "136cc29d",
+      "page": 1
+    }
+  ]
+}

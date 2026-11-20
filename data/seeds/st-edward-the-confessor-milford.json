@@ -1,0 +1,963 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-edward-the-confessor-milford",
+  "status": "approved",
+  "as_of": "2026-11-15T16:51:03Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T03:33:46Z",
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:56:58Z",
+  "summary": "Two churches, St. Edward the Confessor (Milford) and Our Lady of Victories (Frenchtown), with separate schedule boxes on page 1 that are identical in the Nov 8 and Nov 15, 2026 bulletins and match both weeks' intentions. Friday services at both are Communion Services and are excluded; OLV's Saturday confession 'after the 5:15pm Mass' is timed 6:15 PM by POLICY. No open questions and no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "6d435614bcd4aebb05f2d984e3d01d000734ad3d53d1a395a63ef81f91feb0eb",
+      "fetched_at": "2026-11-15T16:51:03Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "f29ab313fa9a2f65d0cd4732b1ab7f42bb833e18ca6c7e31e658ff9ebc91471b",
+      "fetched_at": "2026-11-08T15:59:35Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-edward-the-confessor-milford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d435614",
+          "page": 1,
+          "said": "St. Edward the Confessor Mass Schedule: Saturday at 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f29ab313",
+          "page": 1,
+          "said": "St. Edward the Confessor Mass Schedule: Saturday at 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d435614",
+          "page": 2,
+          "said": "Sat, Nov 14 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f29ab313",
+          "page": 2,
+          "said": "Sat, Nov 14 4:00pm"
+        }
+      ],
+      "rationale": "R1: printed in St. Edward's Mass schedule box in both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-edward-the-confessor-milford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d435614",
+          "page": 1,
+          "said": "St. Edward the Confessor Mass Schedule: Sunday at 8:00 & 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f29ab313",
+          "page": 1,
+          "said": "St. Edward the Confessor Mass Schedule: Sunday at 8:00 & 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d435614",
+          "page": 2,
+          "said": "Sun, Nov 15 8:00am ... 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f29ab313",
+          "page": 2,
+          "said": "Sun, Nov 15 8:00am ... 10:00am"
+        }
+      ],
+      "rationale": "R1: printed in St. Edward's Mass schedule box in both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-edward-the-confessor-milford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d435614",
+          "page": 1,
+          "said": "St. Edward the Confessor Mass Schedule: Sunday at 8:00 & 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f29ab313",
+          "page": 1,
+          "said": "St. Edward the Confessor Mass Schedule: Sunday at 8:00 & 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d435614",
+          "page": 2,
+          "said": "Sun, Nov 15 8:00am ... 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f29ab313",
+          "page": 2,
+          "said": "Sun, Nov 15 8:00am ... 10:00am"
+        }
+      ],
+      "rationale": "R1: printed in St. Edward's Mass schedule box in both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-edward-the-confessor-milford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d435614",
+          "page": 1,
+          "said": "St. Edward the Confessor Mass Schedule: Monday - Thursday at 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f29ab313",
+          "page": 1,
+          "said": "St. Edward the Confessor Mass Schedule: Monday - Thursday at 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d435614",
+          "page": 2,
+          "said": "Mon, Nov 16 9:00am ... Thu, Nov 19 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in St. Edward's Mass schedule box in both bulletins read; the intentions list a 9:00am Mass each Monday-Thursday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-edward-the-confessor-milford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d435614",
+          "page": 1,
+          "said": "St. Edward the Confessor Mass Schedule: Monday - Thursday at 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f29ab313",
+          "page": 1,
+          "said": "St. Edward the Confessor Mass Schedule: Monday - Thursday at 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d435614",
+          "page": 2,
+          "said": "Mon, Nov 16 9:00am ... Thu, Nov 19 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in St. Edward's Mass schedule box in both bulletins read; the intentions list a 9:00am Mass each Monday-Thursday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-edward-the-confessor-milford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d435614",
+          "page": 1,
+          "said": "St. Edward the Confessor Mass Schedule: Monday - Thursday at 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f29ab313",
+          "page": 1,
+          "said": "St. Edward the Confessor Mass Schedule: Monday - Thursday at 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d435614",
+          "page": 2,
+          "said": "Mon, Nov 16 9:00am ... Thu, Nov 19 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in St. Edward's Mass schedule box in both bulletins read; the intentions list a 9:00am Mass each Monday-Thursday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-edward-the-confessor-milford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d435614",
+          "page": 1,
+          "said": "St. Edward the Confessor Mass Schedule: Monday - Thursday at 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f29ab313",
+          "page": 1,
+          "said": "St. Edward the Confessor Mass Schedule: Monday - Thursday at 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d435614",
+          "page": 2,
+          "said": "Mon, Nov 16 9:00am ... Thu, Nov 19 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in St. Edward's Mass schedule box in both bulletins read; the intentions list a 9:00am Mass each Monday-Thursday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-edward-the-confessor-milford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Communion Service"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d435614",
+          "page": 1,
+          "said": "Friday at 9:00am (Communion Service)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f29ab313",
+          "page": 1,
+          "said": "Friday at 9:00am (Communion Service)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d435614",
+          "page": 2,
+          "said": "Fri, Nov 20 9:00am Communion Service"
+        }
+      ],
+      "rationale": "R24, R25 (POLICY, What to extract): the Friday 9:00am service is a Communion Service, not a Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-edward-the-confessor-milford",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "before the 4:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d435614",
+          "page": 1,
+          "said": "Saturday Confessions at 3:30pm before Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f29ab313",
+          "page": 1,
+          "said": "Saturday Confessions at 3:30pm before Mass"
+        }
+      ],
+      "rationale": "R1, POLICY Times: a clock time running until the 4:00pm Mass with no end of its own starts at 3:30 with no end_time and a note naming the Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-edward-the-confessor-milford",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "10:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d435614",
+          "page": 1,
+          "said": "Eucharistic Adoration on the First Friday of the Month from 9:30am to 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f29ab313",
+          "page": 1,
+          "said": "Eucharistic Adoration on the First Friday of the Month from 9:30am to 10:30am"
+        }
+      ],
+      "rationale": "R1: printed in St. Edward's schedule box of both bulletins; POLICY rule 2 makes a named first Friday weekly with weeks_of_month first.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-frenchtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d435614",
+          "page": 1,
+          "said": "Our Lady of Victories Mass Schedule: Saturday at 5:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f29ab313",
+          "page": 1,
+          "said": "Our Lady of Victories Mass Schedule: Saturday at 5:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d435614",
+          "page": 4,
+          "said": "Sat, Nov 14 5:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f29ab313",
+          "page": 4,
+          "said": "Sat, Nov 14 5:15pm"
+        }
+      ],
+      "rationale": "R1: printed in Our Lady of Victories' Mass schedule box in both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-frenchtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d435614",
+          "page": 1,
+          "said": "Our Lady of Victories Mass Schedule: Sunday at 9:00 & 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f29ab313",
+          "page": 1,
+          "said": "Our Lady of Victories Mass Schedule: Sunday at 9:00 & 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d435614",
+          "page": 4,
+          "said": "Sun, Nov 15 9:00am ... 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f29ab313",
+          "page": 4,
+          "said": "Sun, Nov 15 9:00am ... 11:00am"
+        }
+      ],
+      "rationale": "R1: printed in Our Lady of Victories' Mass schedule box in both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-frenchtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d435614",
+          "page": 1,
+          "said": "Our Lady of Victories Mass Schedule: Sunday at 9:00 & 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f29ab313",
+          "page": 1,
+          "said": "Our Lady of Victories Mass Schedule: Sunday at 9:00 & 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d435614",
+          "page": 4,
+          "said": "Sun, Nov 15 9:00am ... 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f29ab313",
+          "page": 4,
+          "said": "Sun, Nov 15 9:00am ... 11:00am"
+        }
+      ],
+      "rationale": "R1: printed in Our Lady of Victories' Mass schedule box in both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-frenchtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d435614",
+          "page": 1,
+          "said": "Our Lady of Victories Mass Schedule: Monday - Thursday at 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f29ab313",
+          "page": 1,
+          "said": "Our Lady of Victories Mass Schedule: Monday - Thursday at 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d435614",
+          "page": 4,
+          "said": "Mon, Nov 16 8:00am ... Thu, Nov 19 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in Our Lady of Victories' Mass schedule box in both bulletins read; the intentions list an 8:00am Mass each Monday-Thursday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-frenchtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d435614",
+          "page": 1,
+          "said": "Our Lady of Victories Mass Schedule: Monday - Thursday at 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f29ab313",
+          "page": 1,
+          "said": "Our Lady of Victories Mass Schedule: Monday - Thursday at 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d435614",
+          "page": 4,
+          "said": "Mon, Nov 16 8:00am ... Thu, Nov 19 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in Our Lady of Victories' Mass schedule box in both bulletins read; the intentions list an 8:00am Mass each Monday-Thursday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-frenchtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d435614",
+          "page": 1,
+          "said": "Our Lady of Victories Mass Schedule: Monday - Thursday at 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f29ab313",
+          "page": 1,
+          "said": "Our Lady of Victories Mass Schedule: Monday - Thursday at 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d435614",
+          "page": 4,
+          "said": "Mon, Nov 16 8:00am ... Thu, Nov 19 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in Our Lady of Victories' Mass schedule box in both bulletins read; the intentions list an 8:00am Mass each Monday-Thursday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-frenchtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d435614",
+          "page": 1,
+          "said": "Our Lady of Victories Mass Schedule: Monday - Thursday at 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f29ab313",
+          "page": 1,
+          "said": "Our Lady of Victories Mass Schedule: Monday - Thursday at 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d435614",
+          "page": 4,
+          "said": "Mon, Nov 16 8:00am ... Thu, Nov 19 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in Our Lady of Victories' Mass schedule box in both bulletins read; the intentions list an 8:00am Mass each Monday-Thursday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-frenchtown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Communion Service"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d435614",
+          "page": 1,
+          "said": "Friday at 8:00am (Communion Service)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f29ab313",
+          "page": 1,
+          "said": "Friday at 8:00am (Communion Service)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d435614",
+          "page": 4,
+          "said": "Fri, Nov 20 8:00am Communion Service"
+        }
+      ],
+      "rationale": "R24, R25 (POLICY, What to extract): the Friday 8:00am service is a Communion Service, not a Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-frenchtown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "after the 5:15 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d435614",
+          "page": 1,
+          "said": "Saturday Confessions after the 5:15pm Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f29ab313",
+          "page": 1,
+          "said": "Saturday Confessions after the 5:15pm Mass"
+        }
+      ],
+      "rationale": "R1, R10: no clock time is given, so POLICY times confession after a weekend Mass at one hour after it starts: 6:15 PM, no end.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-frenchtown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "second"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d435614",
+          "page": 1,
+          "said": "Eucharistic Adoration on Second Sunday of the Month from 4:00pm to 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f29ab313",
+          "page": 1,
+          "said": "Eucharistic Adoration on Second Sunday of the Month from 4:00pm to 5:00pm"
+        }
+      ],
+      "rationale": "R1: printed in Our Lady of Victories' schedule box of both bulletins; POLICY rule 2 makes a named second Sunday weekly with weeks_of_month second.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d435614",
+          "page": 1,
+          "said": "Rosary Altar Society - Praying of the Rosary ... Miraculous Medal Novena - Is prayed Monday each week after the 9am Mass. Knights of Columbus - Praying of the Rosary"
+        }
+      ],
+      "rationale": "R24: Rosary and Miraculous Medal Novena at both churches are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d435614",
+          "page": 1,
+          "said": "Sacraments of Baptism, Anointing of the Sick & Marriage - please call your Parish Office."
+        }
+      ],
+      "rationale": "R24, R26: no definite time; Anointing is not a recorded service.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

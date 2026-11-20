@@ -1,0 +1,1252 @@
+{
+  "schema_version": 1,
+  "parish_slug": "sts-joseph-and-luke-north-plainfield",
+  "status": "approved",
+  "as_of": "2026-11-15T16:51:22Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T05:10:40Z",
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:58:05Z",
+  "summary": "Two churches. St. Joseph has the full Mass, Confession, Holy Hour and Adoration schedule (English and Spanish); St. Luke has Saturday 5:00 PM and Sunday 10:00 AM Masses, confession by appointment. The schedule box and intentions agree in both bulletins read (Nov 8 and Nov 15, 2026); dated Thanksgiving and Guadalupe services added. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "5ab631a8e761a09eee979ae49b9de8ee9282556e5560a21c58d35d9c86c4ff6c",
+      "fetched_at": "2026-11-15T16:51:22Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "a657dded8be9865a0f8801b91015f1f876414c1b718f2618a5a7b867c564396c",
+      "fetched_at": "2026-11-08T15:59:55Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-north-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ab631a8",
+          "page": 1,
+          "said": "St. Joseph Church Mass Saturday 8:00am (Daily Mass-English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a657dded",
+          "page": 1,
+          "said": "St. Joseph Church Mass Saturday 8:00am (Daily Mass-English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ab631a8",
+          "page": 2,
+          "said": "SATURDAY, November 21 8:00am"
+        }
+      ],
+      "rationale": "R1: St. Joseph schedule box of both bulletins; intentions list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-north-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ab631a8",
+          "page": 1,
+          "said": "Saturday 4:00pm (Vigil Mass -English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a657dded",
+          "page": 1,
+          "said": "Saturday 4:00pm (Vigil Mass -English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ab631a8",
+          "page": 2,
+          "said": "4:00pm"
+        }
+      ],
+      "rationale": "R1: St. Joseph schedule box of both bulletins; intentions list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-north-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ab631a8",
+          "page": 1,
+          "said": "Sunday 8:00am Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a657dded",
+          "page": 1,
+          "said": "Sunday 8:00am Spanish"
+        }
+      ],
+      "rationale": "R1: St. Joseph schedule box of both bulletins; intentions list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-north-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ab631a8",
+          "page": 1,
+          "said": "Sunday 10:00am English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a657dded",
+          "page": 1,
+          "said": "Sunday 10:00am English"
+        }
+      ],
+      "rationale": "R1: St. Joseph schedule box of both bulletins; intentions list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-north-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ab631a8",
+          "page": 1,
+          "said": "Sunday 12:00pm Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a657dded",
+          "page": 1,
+          "said": "Sunday 12:00pm Spanish"
+        }
+      ],
+      "rationale": "R1: St. Joseph schedule box of both bulletins; intentions list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-north-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ab631a8",
+          "page": 1,
+          "said": "Sunday 1:45pm Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a657dded",
+          "page": 1,
+          "said": "Sunday 1:45pm Spanish"
+        }
+      ],
+      "rationale": "R1: St. Joseph schedule box of both bulletins; intentions list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-north-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ab631a8",
+          "page": 1,
+          "said": "Weekdays Mon-Fri 12:10pm English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a657dded",
+          "page": 1,
+          "said": "Weekdays Mon-Fri 12:10pm English"
+        }
+      ],
+      "rationale": "R1: St. Joseph schedule box of both bulletins; the intentions list a 12:10pm Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-north-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ab631a8",
+          "page": 1,
+          "said": "Weekdays Mon-Fri 12:10pm English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a657dded",
+          "page": 1,
+          "said": "Weekdays Mon-Fri 12:10pm English"
+        }
+      ],
+      "rationale": "R1: St. Joseph schedule box of both bulletins; the intentions list a 12:10pm Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-north-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ab631a8",
+          "page": 1,
+          "said": "Weekdays Mon-Fri 12:10pm English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a657dded",
+          "page": 1,
+          "said": "Weekdays Mon-Fri 12:10pm English"
+        }
+      ],
+      "rationale": "R1: St. Joseph schedule box of both bulletins; the intentions list a 12:10pm Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-north-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ab631a8",
+          "page": 1,
+          "said": "Weekdays Mon-Fri 12:10pm English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a657dded",
+          "page": 1,
+          "said": "Weekdays Mon-Fri 12:10pm English"
+        }
+      ],
+      "rationale": "R1: St. Joseph schedule box of both bulletins; the intentions list a 12:10pm Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-north-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ab631a8",
+          "page": 1,
+          "said": "Weekdays Mon-Fri 12:10pm English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a657dded",
+          "page": 1,
+          "said": "Weekdays Mon-Fri 12:10pm English"
+        }
+      ],
+      "rationale": "R1: St. Joseph schedule box of both bulletins; the intentions list a 12:10pm Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-north-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ab631a8",
+          "page": 1,
+          "said": "Weekdays Mon-Fri 7:00pm Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a657dded",
+          "page": 1,
+          "said": "Weekdays Mon-Fri 7:00pm Spanish"
+        }
+      ],
+      "rationale": "R1: St. Joseph schedule box of both bulletins; the intentions list a 7:00pm Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-north-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ab631a8",
+          "page": 1,
+          "said": "Weekdays Mon-Fri 7:00pm Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a657dded",
+          "page": 1,
+          "said": "Weekdays Mon-Fri 7:00pm Spanish"
+        }
+      ],
+      "rationale": "R1: St. Joseph schedule box of both bulletins; the intentions list a 7:00pm Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-north-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ab631a8",
+          "page": 1,
+          "said": "Weekdays Mon-Fri 7:00pm Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a657dded",
+          "page": 1,
+          "said": "Weekdays Mon-Fri 7:00pm Spanish"
+        }
+      ],
+      "rationale": "R1: St. Joseph schedule box of both bulletins; the intentions list a 7:00pm Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-north-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ab631a8",
+          "page": 1,
+          "said": "Weekdays Mon-Fri 7:00pm Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a657dded",
+          "page": 1,
+          "said": "Weekdays Mon-Fri 7:00pm Spanish"
+        }
+      ],
+      "rationale": "R1: St. Joseph schedule box of both bulletins; the intentions list a 7:00pm Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-north-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ab631a8",
+          "page": 1,
+          "said": "Weekdays Mon-Fri 7:00pm Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a657dded",
+          "page": 1,
+          "said": "Weekdays Mon-Fri 7:00pm Spanish"
+        }
+      ],
+      "rationale": "R1: St. Joseph schedule box of both bulletins; the intentions list a 7:00pm Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-north-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ab631a8",
+          "page": 1,
+          "said": "St. Luke Church Holy Mass Saturday Vigil (5:00pm)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a657dded",
+          "page": 1,
+          "said": "St. Luke Church Holy Mass Saturday Vigil (5:00pm)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ab631a8",
+          "page": 2,
+          "said": "St. Luke SATURDAY, November 21 5:00pm"
+        }
+      ],
+      "rationale": "R1: St. Luke box of both bulletins; St. Luke intentions list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-luke-north-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ab631a8",
+          "page": 1,
+          "said": "Sunday (10:00am)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a657dded",
+          "page": 1,
+          "said": "Sunday (10:00am)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ab631a8",
+          "page": 2,
+          "said": "St. Luke SUNDAY, November 22 10:00am"
+        }
+      ],
+      "rationale": "R1: St. Luke box of both bulletins; St. Luke intentions list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-north-plainfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour after the 7:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ab631a8",
+          "page": 1,
+          "said": "Holy Hour First Friday after 7:00pm Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a657dded",
+          "page": 1,
+          "said": "Holy Hour First Friday after 7:00pm Mass"
+        }
+      ],
+      "rationale": "R1, R10: printed in the St. Joseph box of both bulletins; after a weekday Mass is 30 minutes after it starts. No end time is printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-north-plainfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ab631a8",
+          "page": 1,
+          "said": "Holy Hour Wednesday 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a657dded",
+          "page": 1,
+          "said": "Holy Hour Wednesday 6:00pm"
+        }
+      ],
+      "rationale": "R1: Holy Hour is Adoration (POLICY); St. Joseph box of both bulletins. No end time printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-north-plainfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ab631a8",
+          "page": 1,
+          "said": "Adoration & Benediction Thursday 1:00 - 3:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a657dded",
+          "page": 1,
+          "said": "Adoration & Benediction Thursday 1:00 - 3:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ab631a8",
+          "page": 2,
+          "said": "November 19 Adoration & Benediction after the 12:10pm Mass until 3:00pm"
+        }
+      ],
+      "rationale": "R1: the schedule box gives the clock time 1:00-3:00 pm, which wins over the calendar's 'after the 12:10pm Mass' (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-north-plainfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction; after the 7:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ab631a8",
+          "page": 1,
+          "said": "Thursday after 7:00pm Mass - 9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a657dded",
+          "page": 1,
+          "said": "Thursday after 7:00pm Mass - 9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5ab631a8",
+          "page": 2,
+          "said": "Adoration after the 7:00pm Mass & Benediction at 9:00pm"
+        }
+      ],
+      "rationale": "R1, R10: after a weekday Mass is 30 minutes after it starts; ends 9:00 pm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-north-plainfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "18:55",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ab631a8",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Monday 6:30pm-6:55pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a657dded",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Monday 6:30pm-6:55pm"
+        }
+      ],
+      "rationale": "R1: St. Joseph box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-north-plainfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ab631a8",
+          "page": 1,
+          "said": "Tuesday 11:30am-12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a657dded",
+          "page": 1,
+          "said": "Tuesday 11:30am-12:00pm"
+        }
+      ],
+      "rationale": "R1: St. Joseph box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-north-plainfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "18:55",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ab631a8",
+          "page": 1,
+          "said": "Wednesday 6:00pm-6:55pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a657dded",
+          "page": 1,
+          "said": "Wednesday 6:00pm-6:55pm"
+        }
+      ],
+      "rationale": "R1: St. Joseph box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-north-plainfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ab631a8",
+          "page": 1,
+          "said": "Thursday 11:30am-12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a657dded",
+          "page": 1,
+          "said": "Thursday 11:30am-12:00pm"
+        }
+      ],
+      "rationale": "R1: St. Joseph box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-north-plainfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ab631a8",
+          "page": 1,
+          "said": "Saturday 3:00pm-3:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a657dded",
+          "page": 1,
+          "said": "Saturday 3:00pm-3:45pm"
+        }
+      ],
+      "rationale": "R1: St. Joseph box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ab631a8",
+          "page": 1,
+          "said": "St. Luke Church Reconciliation by appointment"
+        }
+      ],
+      "rationale": "R26: by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-north-plainfield",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ab631a8",
+          "page": 2,
+          "said": "November 26 Thanksgiving Mass 9:00AM at St. Joseph"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a657dded",
+          "page": 2,
+          "said": "November 26 Thanksgiving Mass 9:00AM at St. Joseph"
+        }
+      ],
+      "rationale": "R1, R16: dated special Mass after as_of. R17: no cancellation of the weekday Masses is stated, so the weekly slots stand.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-north-plainfield",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-12",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Guadalupe"
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ab631a8",
+          "page": 10,
+          "said": "The Guadalupano Group of St. Joseph Parish in North Plainfield ... SATURDAY DECEMBER 12 2026 7:00 PM HOLY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a657dded",
+          "page": 8,
+          "said": "SATURDAY DECEMBER 12 2026 7:00 PM HOLY MASS"
+        }
+      ],
+      "rationale": "R1, R16: dated feast Mass outside the weekly schedule. The flyer is the St. Joseph (San José) Guadalupano group's, with a reception in the church basement; St. Joseph is the parish's Spanish-language church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-north-plainfield",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-11",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "During the serenade to Our Lady of Guadalupe, before the 7:00 PM Mass"
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ab631a8",
+          "page": 10,
+          "said": "FRIDAY DECEMBER 11 2026 6:00 PM SERENADE TO OUR LADY OF GUADALUPE ... There will be confessions during this time; 7:00 PM HOLY MASS"
+        }
+      ],
+      "rationale": "R1, R16: dated Confession during the 6:00 PM serenade; it runs until the Mass with no end time of its own, so no end_time (POLICY, Times). The 7:00 PM Mass that day is the weekly Friday Mass (POLICY, Weekly or dated 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-north-plainfield",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-11",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Guadalupe"
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ab631a8",
+          "page": 10,
+          "said": "FRIDAY DECEMBER 11 2026 7:00 PM HOLY MASS"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated 6-7: the regular Friday 7:00 PM Spanish Mass; not duplicated as a dated entry.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

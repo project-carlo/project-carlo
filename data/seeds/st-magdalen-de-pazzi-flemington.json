@@ -1,0 +1,1200 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-magdalen-de-pazzi-flemington",
+  "status": "approved",
+  "as_of": "2026-11-15T16:07:37Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T04:32:30Z",
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:57:41Z",
+  "summary": "One church. Weekend, weekday and Saturday confession times match in both bulletins (8 and 15 November 2026); Adoration chapel hours and confession end times come from the parish's current website (R6). Dated Thanksgiving and Advent Masses and the Thanksgiving Thursday cancellation are recorded. Open: whether the Wednesday 7:30 PM Spanish Mass carries the website's Labor Day-Memorial Day season.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "23e89640c726080b3219441c6de9173a0210c36ccfaff11f2f1f6c03d252406c",
+      "fetched_at": "2026-11-15T16:07:37Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "8a075d5a9dc7ff22a614da0cd67949a44fdbb1cac121917e281d087195a06c4a",
+      "fetched_at": "2026-11-08T15:33:47Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-magdalen-de-pazzi-flemington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23e89640",
+          "page": 1,
+          "said": "Saturday | 4:00 p.m. (Vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8a075d5a",
+          "page": 1,
+          "said": "Saturday | 4:00 p.m. (Vigil)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list it each Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-magdalen-de-pazzi-flemington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23e89640",
+          "page": 1,
+          "said": "Sunday | 7:30 a.m., 9:00 a.m., 10:30 a.m., 12 Noon (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8a075d5a",
+          "page": 1,
+          "said": "Sunday | 7:30 a.m., 9:00 a.m., 10:30 a.m., 12 Noon (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-magdalen-de-pazzi-flemington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23e89640",
+          "page": 1,
+          "said": "Sunday | 7:30 a.m., 9:00 a.m., 10:30 a.m., 12 Noon (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8a075d5a",
+          "page": 1,
+          "said": "Sunday | 7:30 a.m., 9:00 a.m., 10:30 a.m., 12 Noon (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-magdalen-de-pazzi-flemington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23e89640",
+          "page": 1,
+          "said": "Sunday | 7:30 a.m., 9:00 a.m., 10:30 a.m., 12 Noon (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8a075d5a",
+          "page": 1,
+          "said": "Sunday | 7:30 a.m., 9:00 a.m., 10:30 a.m., 12 Noon (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-magdalen-de-pazzi-flemington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23e89640",
+          "page": 1,
+          "said": "Sunday | ... 12 Noon (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8a075d5a",
+          "page": 1,
+          "said": "Sunday | ... 12 Noon (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-magdalen-de-pazzi-flemington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23e89640",
+          "page": 1,
+          "said": "Monday | 8:00 a.m. Tuesday | 8:00 a.m. Wednesday | 8:00 a.m., Noon, Thursday | 8:00 a.m. Friday | 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8a075d5a",
+          "page": 1,
+          "said": "Monday | 8:00 a.m. Tuesday | 8:00 a.m. Wednesday | 8:00 a.m., Noon, Thursday | 8:00 a.m. Friday | 8:00 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass schedule of both bulletins read. R39: the intentions page prints Thursday as '8:00 P.M.' in both weeks, a reused template typo contradicting the schedule box (and the website, Thursday 8:00 AM), so Thursday stays at 8:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-magdalen-de-pazzi-flemington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23e89640",
+          "page": 1,
+          "said": "Monday | 8:00 a.m. Tuesday | 8:00 a.m. Wednesday | 8:00 a.m., Noon, Thursday | 8:00 a.m. Friday | 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8a075d5a",
+          "page": 1,
+          "said": "Monday | 8:00 a.m. Tuesday | 8:00 a.m. Wednesday | 8:00 a.m., Noon, Thursday | 8:00 a.m. Friday | 8:00 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass schedule of both bulletins read. R39: the intentions page prints Thursday as '8:00 P.M.' in both weeks, a reused template typo contradicting the schedule box (and the website, Thursday 8:00 AM), so Thursday stays at 8:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-magdalen-de-pazzi-flemington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23e89640",
+          "page": 1,
+          "said": "Monday | 8:00 a.m. Tuesday | 8:00 a.m. Wednesday | 8:00 a.m., Noon, Thursday | 8:00 a.m. Friday | 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8a075d5a",
+          "page": 1,
+          "said": "Monday | 8:00 a.m. Tuesday | 8:00 a.m. Wednesday | 8:00 a.m., Noon, Thursday | 8:00 a.m. Friday | 8:00 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass schedule of both bulletins read. R39: the intentions page prints Thursday as '8:00 P.M.' in both weeks, a reused template typo contradicting the schedule box (and the website, Thursday 8:00 AM), so Thursday stays at 8:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-magdalen-de-pazzi-flemington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23e89640",
+          "page": 1,
+          "said": "Monday | 8:00 a.m. Tuesday | 8:00 a.m. Wednesday | 8:00 a.m., Noon, Thursday | 8:00 a.m. Friday | 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8a075d5a",
+          "page": 1,
+          "said": "Monday | 8:00 a.m. Tuesday | 8:00 a.m. Wednesday | 8:00 a.m., Noon, Thursday | 8:00 a.m. Friday | 8:00 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass schedule of both bulletins read. R39: the intentions page prints Thursday as '8:00 P.M.' in both weeks, a reused template typo contradicting the schedule box (and the website, Thursday 8:00 AM), so Thursday stays at 8:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-magdalen-de-pazzi-flemington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23e89640",
+          "page": 1,
+          "said": "Monday | 8:00 a.m. Tuesday | 8:00 a.m. Wednesday | 8:00 a.m., Noon, Thursday | 8:00 a.m. Friday | 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8a075d5a",
+          "page": 1,
+          "said": "Monday | 8:00 a.m. Tuesday | 8:00 a.m. Wednesday | 8:00 a.m., Noon, Thursday | 8:00 a.m. Friday | 8:00 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass schedule of both bulletins read. R39: the intentions page prints Thursday as '8:00 P.M.' in both weeks, a reused template typo contradicting the schedule box (and the website, Thursday 8:00 AM), so Thursday stays at 8:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-magdalen-de-pazzi-flemington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23e89640",
+          "page": 1,
+          "said": "Saturday | 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8a075d5a",
+          "page": 1,
+          "said": "Saturday | 9:00 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass schedule of both bulletins read; the intentions list a Saturday 9:00 a.m. Mass in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-magdalen-de-pazzi-flemington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23e89640",
+          "page": 1,
+          "said": "Wednesday | 8:00 a.m., Noon, 7:30 p.m. (SP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8a075d5a",
+          "page": 1,
+          "said": "Wednesday | 8:00 a.m., Noon, 7:30 p.m. (SP)"
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass schedule of both bulletins read; the intentions list a 12:00 p.m. Wednesday Mass in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-magdalen-de-pazzi-flemington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "20:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23e89640",
+          "page": 3,
+          "said": "Thursday, 19 November 8:00 P.M. | Gloria Rionda"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8a075d5a",
+          "page": 3,
+          "said": "Thursday, 12 November 8:00 P.M. | Francesco Lettieri"
+        }
+      ],
+      "rationale": "R39: the intentions line reads 8:00 P.M. for Thursday in both weeks, while every other weekday line and the schedule box (Thursday | 8:00 a.m.) and the website give 8:00 AM; a reused template typo, not an evening Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-magdalen-de-pazzi-flemington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 5,
+          "end_day": null
+        },
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23e89640",
+          "page": 1,
+          "said": "Wednesday | 8:00 a.m., Noon, 7:30 p.m. (SP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8a075d5a",
+          "page": 1,
+          "said": "Wednesday | 8:00 a.m., Noon, 7:30 p.m. (SP)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stmagdalen.org/mass-times",
+          "said": "Wednesday : ... Labor Day - Memorial Day 7:30 PM Spanish"
+        }
+      ],
+      "rationale": "R1 prints it weekly in both bulletins, and both weeks' intentions list a 7:30 p.m. Wednesday Mass; but the website, whose Mass times otherwise match the bulletin exactly, limits it to Labor Day - Memorial Day. The format cannot express movable holiday bounds (R33), so September-May is an approximation off by a few days at each end; leaning to it since year-round would be wrong all summer. Update mode will see the summer bulletins.",
+      "question": "Wednesday 7:30 PM Spanish Mass: the bulletin lists it with no season, the website says Labor Day - Memorial Day. Record it with a September-May season?",
+      "options": [
+        {
+          "label": "Wednesdays 7:30 PM, September-May",
+          "entry": {
+            "church_slug": "st-magdalen-de-pazzi-flemington",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "19:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": null,
+              "end_month": 5,
+              "end_day": null
+            },
+            "note": "Spanish"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Every Wednesday, year-round",
+          "entry": {
+            "church_slug": "st-magdalen-de-pazzi-flemington",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "19:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Spanish"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@05f8a0474956",
+        "at": "2026-11-20T06:57:41Z"
+      }
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-magdalen-de-pazzi-flemington",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23e89640",
+          "page": 1,
+          "said": "Confession Saturday | 9:30 a.m. & 2:45 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8a075d5a",
+          "page": 1,
+          "said": "Confession Saturday | 9:30 a.m. & 2:45 p.m."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stmagdalen.org/mass-times",
+          "said": "Saturday 9:30 AM to 10:00 AM Following the 9:00 a.m. Mass",
+          "schedule_check": {
+            "checked_at": "2026-11-20T04:36:03Z",
+            "current_because": "Checked 2026-11-19; its Mass, weekday and confession start times match the 15 November 2026 bulletin exactly, and the site's news lists this Advent's events (Bishop Saporito welcome, Simbang Gabi).",
+            "bulletin": "23e89640",
+            "fits_because": "The bulletin prints Saturday confession starting 9:30 a.m. with no end; the website supplies the 10:00 AM end for the same session."
+          }
+        }
+      ],
+      "rationale": "R1: the start is printed in the schedule box of both bulletins; R6: the end time comes from the parish's current Mass times page, which fits the bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-magdalen-de-pazzi-flemington",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "14:45",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23e89640",
+          "page": 1,
+          "said": "Confession Saturday | 9:30 a.m. & 2:45 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8a075d5a",
+          "page": 1,
+          "said": "Confession Saturday | 9:30 a.m. & 2:45 p.m."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stmagdalen.org/mass-times",
+          "said": "Saturday ... 2:45 PM to 3:45 PM",
+          "schedule_check": {
+            "checked_at": "2026-11-20T04:36:03Z",
+            "current_because": "Checked 2026-11-19; its Mass, weekday and confession start times match the 15 November 2026 bulletin exactly, and the site's news lists this Advent's events.",
+            "bulletin": "23e89640",
+            "fits_because": "The bulletin prints Saturday confession starting 2:45 p.m. with no end; the website supplies the 3:45 PM end, before the 4:00 p.m. Vigil."
+          }
+        }
+      ],
+      "rationale": "R1: the start is printed in the schedule box of both bulletins; R6: the end time comes from the parish's current Mass times page, which fits the bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-magdalen-de-pazzi-flemington",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel of the Most Blessed Sacrament"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stmagdalen.org/mass-times",
+          "said": "Monday thru Friday Adoration for the public is from 8:30 a.m. until 8:00 p.m. For committed adorers it is until 11:00 p.m.",
+          "schedule_check": {
+            "checked_at": "2026-11-20T04:36:03Z",
+            "current_because": "Checked 2026-11-19; the Mass times page matching the 15 November 2026 bulletin exactly also carries these Adoration hours, and the Eucharistic Adoration page gives the same hours.",
+            "bulletin": "23e89640",
+            "fits_because": "The 8 November bulletin's Veterans Day notice says 'Eucharistic Adoration Chapel: Regular Hours' and the newest asks for committed adorers; the website supplies those regular hours."
+          }
+        }
+      ],
+      "rationale": "R6, R38: the parish's own site says the Blessed Sacrament is exposed in its Chapel of the Most Blessed Sacrament at the church during these hours; the bulletins refer to the chapel's regular hours without printing them. The 8-11 PM and Friday overnight hours are for committed adorers with a door code only, so they are left out as not public.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-magdalen-de-pazzi-flemington",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel of the Most Blessed Sacrament"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stmagdalen.org/mass-times",
+          "said": "Monday thru Friday Adoration for the public is from 8:30 a.m. until 8:00 p.m. For committed adorers it is until 11:00 p.m.",
+          "schedule_check": {
+            "checked_at": "2026-11-20T04:36:03Z",
+            "current_because": "Checked 2026-11-19; the Mass times page matching the 15 November 2026 bulletin exactly also carries these Adoration hours, and the Eucharistic Adoration page gives the same hours.",
+            "bulletin": "23e89640",
+            "fits_because": "The 8 November bulletin's Veterans Day notice says 'Eucharistic Adoration Chapel: Regular Hours' and the newest asks for committed adorers; the website supplies those regular hours."
+          }
+        }
+      ],
+      "rationale": "R6, R38: the parish's own site says the Blessed Sacrament is exposed in its Chapel of the Most Blessed Sacrament at the church during these hours; the bulletins refer to the chapel's regular hours without printing them. The 8-11 PM and Friday overnight hours are for committed adorers with a door code only, so they are left out as not public.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-magdalen-de-pazzi-flemington",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel of the Most Blessed Sacrament"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stmagdalen.org/mass-times",
+          "said": "Monday thru Friday Adoration for the public is from 8:30 a.m. until 8:00 p.m. For committed adorers it is until 11:00 p.m.",
+          "schedule_check": {
+            "checked_at": "2026-11-20T04:36:03Z",
+            "current_because": "Checked 2026-11-19; the Mass times page matching the 15 November 2026 bulletin exactly also carries these Adoration hours, and the Eucharistic Adoration page gives the same hours.",
+            "bulletin": "23e89640",
+            "fits_because": "The 8 November bulletin's Veterans Day notice says 'Eucharistic Adoration Chapel: Regular Hours' and the newest asks for committed adorers; the website supplies those regular hours."
+          }
+        }
+      ],
+      "rationale": "R6, R38: the parish's own site says the Blessed Sacrament is exposed in its Chapel of the Most Blessed Sacrament at the church during these hours; the bulletins refer to the chapel's regular hours without printing them. The 8-11 PM and Friday overnight hours are for committed adorers with a door code only, so they are left out as not public.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-magdalen-de-pazzi-flemington",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel of the Most Blessed Sacrament"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stmagdalen.org/mass-times",
+          "said": "Monday thru Friday Adoration for the public is from 8:30 a.m. until 8:00 p.m. For committed adorers it is until 11:00 p.m.",
+          "schedule_check": {
+            "checked_at": "2026-11-20T04:36:03Z",
+            "current_because": "Checked 2026-11-19; the Mass times page matching the 15 November 2026 bulletin exactly also carries these Adoration hours, and the Eucharistic Adoration page gives the same hours.",
+            "bulletin": "23e89640",
+            "fits_because": "The 8 November bulletin's Veterans Day notice says 'Eucharistic Adoration Chapel: Regular Hours' and the newest asks for committed adorers; the website supplies those regular hours."
+          }
+        }
+      ],
+      "rationale": "R6, R38: the parish's own site says the Blessed Sacrament is exposed in its Chapel of the Most Blessed Sacrament at the church during these hours; the bulletins refer to the chapel's regular hours without printing them. The 8-11 PM and Friday overnight hours are for committed adorers with a door code only, so they are left out as not public.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-magdalen-de-pazzi-flemington",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel of the Most Blessed Sacrament"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stmagdalen.org/mass-times",
+          "said": "Monday thru Friday Adoration for the public is from 8:30 a.m. until 8:00 p.m. For committed adorers it is until 11:00 p.m.",
+          "schedule_check": {
+            "checked_at": "2026-11-20T04:36:03Z",
+            "current_because": "Checked 2026-11-19; the Mass times page matching the 15 November 2026 bulletin exactly also carries these Adoration hours, and the Eucharistic Adoration page gives the same hours.",
+            "bulletin": "23e89640",
+            "fits_because": "The 8 November bulletin's Veterans Day notice says 'Eucharistic Adoration Chapel: Regular Hours' and the newest asks for committed adorers; the website supplies those regular hours."
+          }
+        }
+      ],
+      "rationale": "R6, R38: the parish's own site says the Blessed Sacrament is exposed in its Chapel of the Most Blessed Sacrament at the church during these hours; the bulletins refer to the chapel's regular hours without printing them. The 8-11 PM and Friday overnight hours are for committed adorers with a door code only, so they are left out as not public.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-magdalen-de-pazzi-flemington",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel of the Most Blessed Sacrament"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stmagdalen.org/eucharistic-adoration",
+          "said": "Saturday 9:30 a.m. to Noon.",
+          "schedule_check": {
+            "checked_at": "2026-11-20T04:36:03Z",
+            "current_because": "Checked 2026-11-19; the Mass times page, matching the 15 November 2026 bulletin exactly, lists Saturday Adoration 9:30 AM to 12:00 PM too.",
+            "bulletin": "23e89640",
+            "fits_because": "The 8 November bulletin says 'Eucharistic Adoration Chapel: Regular Hours'; the website supplies them."
+          }
+        }
+      ],
+      "rationale": "R6, R38: the parish's chapel schedule, with the Blessed Sacrament exposed during public hours; the bulletins refer to these regular hours without printing them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-magdalen-de-pazzi-flemington",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "14:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel of the Most Blessed Sacrament"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stmagdalen.org/eucharistic-adoration",
+          "said": "Sunday 2:00 p.m. to 8:00 p.m.",
+          "schedule_check": {
+            "checked_at": "2026-11-20T04:36:03Z",
+            "current_because": "Checked 2026-11-19; the Mass times page, matching the 15 November 2026 bulletin exactly, lists Sunday Adoration 2:00 PM to 8:00 PM too.",
+            "bulletin": "23e89640",
+            "fits_because": "The 8 November bulletin says 'Eucharistic Adoration Chapel: Regular Hours'; the website supplies them."
+          }
+        }
+      ],
+      "rationale": "R6, R38: the parish's chapel schedule, with the Blessed Sacrament exposed during public hours; the bulletins refer to these regular hours without printing them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-magdalen-de-pazzi-flemington",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-25",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Mass"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23e89640",
+          "page": 6,
+          "said": "Thanksgiving Mass Wednesday, November 25 7:00 PM"
+        }
+      ],
+      "rationale": "R1, R16: a dated Thanksgiving Mass after as_of, outside the weekly schedule. The weekly 7:30 PM Spanish Mass that evening is left alone (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-magdalen-de-pazzi-flemington",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23e89640",
+          "page": 6,
+          "said": "There will be no Mass on Thursday, November 26 (Thanksgiving)."
+        }
+      ],
+      "rationale": "R1, R16, R18: the bulletin cancels the weekly Thursday 8:00 AM Mass on Thanksgiving.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-magdalen-de-pazzi-flemington",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23e89640",
+          "page": 8,
+          "said": "Solemnity of the Immaculate Conception Tuesday, December 8 Masses: 8:00 AM | 12:00 Noon | 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8a075d5a",
+          "page": 10,
+          "said": "Tuesday, 8 December 2026 ... 7:00 p.m.—Mass"
+        }
+      ],
+      "rationale": "R1, R16: holy-day Masses outside the weekly schedule; the 8:00 AM one is the weekly Tuesday Mass (POLICY, Weekly or dated, rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-magdalen-de-pazzi-flemington",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23e89640",
+          "page": 8,
+          "said": "Solemnity of the Immaculate Conception Tuesday, December 8 Masses: 8:00 AM | 12:00 Noon | 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8a075d5a",
+          "page": 10,
+          "said": "Tuesday, 8 December 2026 ... 7:00 p.m.—Mass"
+        }
+      ],
+      "rationale": "R1, R16: holy-day Masses outside the weekly schedule; the 8:00 AM one is the weekly Tuesday Mass (POLICY, Weekly or dated, rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-magdalen-de-pazzi-flemington",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-11",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Guadalupe"
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23e89640",
+          "page": 8,
+          "said": "Feast of Our Lady of Guadalupe Friday, December 11 | 7:00 PM Mass followed by a fiesta in the Parish Center."
+        }
+      ],
+      "rationale": "R1, R16: a dated feast-day Mass after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-magdalen-de-pazzi-flemington",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-15",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Simbang Gabi"
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23e89640",
+          "page": 8,
+          "said": "Simbang Gabi Tuesday, December 15 | 7:00 PM Mass followed by a celebration in the Parish Center."
+        }
+      ],
+      "rationale": "R1, R16: a dated Mass after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23e89640",
+          "page": 8,
+          "said": "Sacrament of Reconciliation Sunday, December 13 | Following Evening Prayer. Multiple priests will be available to hear confessions."
+        }
+      ],
+      "rationale": "R26, POLICY Times: confession after the 6:00 PM Advent Evening Prayer, which is not a Mass, so it has no clock time or permitted relative anchor.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

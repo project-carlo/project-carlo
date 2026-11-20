@@ -1,0 +1,702 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-stanislaus-kostka-sayreville",
+  "status": "approved",
+  "as_of": "2026-11-15T16:08:34Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T05:04:28Z",
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:58:01Z",
+  "summary": "One church. Mass and confession times come from the Mass intentions (p2) and Confessions box (p3) of the Nov 8 and Nov 15, 2026 bulletins, which agree with each other and with the parish website line for line. Dec 8 holy-day Masses come from the website; open: whether the 9:00 AM Dec 8 'School Mass' is public.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "10e6deb13165140da1e8682b8ec2d107b699baa858abf82a69ba0d795b331723",
+      "fetched_at": "2026-11-15T16:08:34Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "541d6b20158c59e6c3ffb81eb081a0758d3802d5c9c02606da5135d3502c01b6",
+      "fetched_at": "2026-11-08T15:34:44Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-sayreville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10e6deb1",
+          "page": 2,
+          "said": "SATURDAY, 11/14/2026 5:00 pm ...; SATURDAY, 11/21/2026 ... 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "541d6b20",
+          "page": 2,
+          "said": "SATURDAY, 11/07/2026 5:00 pm; SATURDAY, 11/14/2026 5:00 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://sskparish.org/",
+          "said": "Saturday : 5:00 PM English"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 4: the Mass intentions print Saturday 5:00 pm in both weeks of each bulletin read; the website's schedule agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-sayreville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10e6deb1",
+          "page": 2,
+          "said": "SUNDAY, 11/15/2026 7:30 am, 9:00 am, 12:00 pm; SUNDAY, 11/22/2026 7:30 am, 9:00 am, 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "541d6b20",
+          "page": 2,
+          "said": "SUNDAY, 11/08/2026 7:30 am, 9:00 am, 12:00 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://sskparish.org/",
+          "said": "Sunday : 7:30 AM English 9:00 AM English 12:00 PM English"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 4: printed in the intentions for both Sundays of the newest bulletin and in the older one (R35); the p3 offering table lists the same Masses; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-sayreville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10e6deb1",
+          "page": 2,
+          "said": "SUNDAY, 11/15/2026 7:30 am, 9:00 am, 12:00 pm; SUNDAY, 11/22/2026 7:30 am, 9:00 am, 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "541d6b20",
+          "page": 2,
+          "said": "SUNDAY, 11/08/2026 7:30 am, 9:00 am, 12:00 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://sskparish.org/",
+          "said": "Sunday : 7:30 AM English 9:00 AM English 12:00 PM English"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 4: printed in the intentions for both Sundays of the newest bulletin and in the older one (R35); the p3 offering table lists the same Masses; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-sayreville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10e6deb1",
+          "page": 2,
+          "said": "SUNDAY, 11/15/2026 7:30 am, 9:00 am, 12:00 pm; SUNDAY, 11/22/2026 7:30 am, 9:00 am, 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "541d6b20",
+          "page": 2,
+          "said": "SUNDAY, 11/08/2026 7:30 am, 9:00 am, 12:00 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://sskparish.org/",
+          "said": "Sunday : 7:30 AM English 9:00 AM English 12:00 PM English"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 4: printed in the intentions for both Sundays of the newest bulletin and in the older one (R35); the p3 offering table lists the same Masses; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-sayreville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10e6deb1",
+          "page": 2,
+          "said": "SUNDAY, 11/15/2026 10:30 am; SUNDAY, 11/22/2026 10:30 am O Boże błogosławieństwo dla Egan & Lewczuk families"
+        },
+        {
+          "source": "agent",
+          "bulletin": "541d6b20",
+          "page": 2,
+          "said": "SUNDAY, 11/08/2026 10:30 am"
+        },
+        {
+          "source": "website",
+          "url": "https://sskparish.org/",
+          "said": "10:30 AM Polish Polski PL"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 4: printed for both Sundays of the newest bulletin and in the older one; the language note comes from the website's schedule (R6), which the bulletin's Polish intention and 'Organist - Polish Mass' fit.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-sayreville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10e6deb1",
+          "page": 2,
+          "said": "MONDAY-FRIDAY 11/16-11/20/2026 7:00 am (one intention each day)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "541d6b20",
+          "page": 2,
+          "said": "MONDAY-FRIDAY 11/09-11/13/2026 7:00 am (one intention each day)"
+        },
+        {
+          "source": "website",
+          "url": "https://sskparish.org/",
+          "said": "Daily Mass Schedule Mon Fri 7:00 AM English"
+        }
+      ],
+      "rationale": "R35: each weekday 7:00 am Mass is printed in the intentions of two bulletins covering different weeks; the website's daily schedule agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-sayreville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10e6deb1",
+          "page": 2,
+          "said": "MONDAY-FRIDAY 11/16-11/20/2026 7:00 am (one intention each day)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "541d6b20",
+          "page": 2,
+          "said": "MONDAY-FRIDAY 11/09-11/13/2026 7:00 am (one intention each day)"
+        },
+        {
+          "source": "website",
+          "url": "https://sskparish.org/",
+          "said": "Daily Mass Schedule Mon Fri 7:00 AM English"
+        }
+      ],
+      "rationale": "R35: each weekday 7:00 am Mass is printed in the intentions of two bulletins covering different weeks; the website's daily schedule agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-sayreville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10e6deb1",
+          "page": 2,
+          "said": "MONDAY-FRIDAY 11/16-11/20/2026 7:00 am (one intention each day)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "541d6b20",
+          "page": 2,
+          "said": "MONDAY-FRIDAY 11/09-11/13/2026 7:00 am (one intention each day)"
+        },
+        {
+          "source": "website",
+          "url": "https://sskparish.org/",
+          "said": "Daily Mass Schedule Mon Fri 7:00 AM English"
+        }
+      ],
+      "rationale": "R35: each weekday 7:00 am Mass is printed in the intentions of two bulletins covering different weeks; the website's daily schedule agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-sayreville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10e6deb1",
+          "page": 2,
+          "said": "MONDAY-FRIDAY 11/16-11/20/2026 7:00 am (one intention each day)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "541d6b20",
+          "page": 2,
+          "said": "MONDAY-FRIDAY 11/09-11/13/2026 7:00 am (one intention each day)"
+        },
+        {
+          "source": "website",
+          "url": "https://sskparish.org/",
+          "said": "Daily Mass Schedule Mon Fri 7:00 AM English"
+        }
+      ],
+      "rationale": "R35: each weekday 7:00 am Mass is printed in the intentions of two bulletins covering different weeks; the website's daily schedule agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-sayreville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10e6deb1",
+          "page": 2,
+          "said": "MONDAY-FRIDAY 11/16-11/20/2026 7:00 am (one intention each day)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "541d6b20",
+          "page": 2,
+          "said": "MONDAY-FRIDAY 11/09-11/13/2026 7:00 am (one intention each day)"
+        },
+        {
+          "source": "website",
+          "url": "https://sskparish.org/",
+          "said": "Daily Mass Schedule Mon Fri 7:00 AM English"
+        }
+      ],
+      "rationale": "R35: each weekday 7:00 am Mass is printed in the intentions of two bulletins covering different weeks; the website's daily schedule agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-sayreville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10e6deb1",
+          "page": 2,
+          "said": "SATURDAY, 11/21/2026 The Presentation of the Blessed Virgin Mary 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "541d6b20",
+          "page": 2,
+          "said": "SATURDAY, 11/14/2026 7:30 am +Jaroslaw Pacert r/o family"
+        },
+        {
+          "source": "website",
+          "url": "https://sskparish.org/",
+          "said": "Saturday : 7:30 AM English"
+        }
+      ],
+      "rationale": "R35: Saturday 7:30 am is in the intentions of both bulletins (11/14 and 11/21); the website's daily schedule lists it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-sayreville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 7:30 AM Mass and Novena"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10e6deb1",
+          "page": 3,
+          "said": "CONFESSIONS Saturdays 8 am and 4-4:45 pm in English and Polish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "541d6b20",
+          "page": 3,
+          "said": "CONFESSIONS Saturdays 8 am and 4-4:45 pm in English and Polish"
+        },
+        {
+          "source": "website",
+          "url": "https://sskparish.org/",
+          "said": "Saturday 8:00 AM Following the 7:30 Mass and Novena"
+        }
+      ],
+      "rationale": "R1, POLICY Times: the clock time 8 am is given with no end, so end_time is null; the website places it after the 7:30 Mass and Novena.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-sayreville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English and Polish"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10e6deb1",
+          "page": 3,
+          "said": "CONFESSIONS Saturdays 8 am and 4-4:45 pm in English and Polish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "541d6b20",
+          "page": 3,
+          "said": "CONFESSIONS Saturdays 8 am and 4-4:45 pm in English and Polish"
+        },
+        {
+          "source": "website",
+          "url": "https://sskparish.org/",
+          "said": "4:00 PM to 4:45 PM English and Polish"
+        }
+      ],
+      "rationale": "R1: printed in the Confessions box of both bulletins; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "10e6deb1",
+          "page": 3,
+          "said": "ROSARY Wednesdays 6 pm in the chapel"
+        }
+      ],
+      "rationale": "R24: a Rosary is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-sayreville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://sskparish.org/",
+          "said": "Upcoming Holy Days Immaculate Conception December 8 : 7:00 AM English 9:00 AM English School Mass 7:00 PM English",
+          "schedule_check": {
+            "checked_at": "2026-11-20T05:06:53Z",
+            "current_because": "Checked 2026-11-20: the 'Upcoming Holy Days' heading lists the next December 8, and the site's regular Mass and confession schedule matches the November 2026 bulletins line for line.",
+            "bulletin": "10e6deb1",
+            "fits_because": "The newest bulletin (Nov 15) prints only through Nov 22 and has no holy-day notice yet; an evening holy-day Mass beside the usual 7:00 AM weekday Mass fits it."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish website's current schedule gives a 7:00 PM Immaculate Conception Mass on December 8 (after as_of); the 7:00 AM listed there is the regular Tuesday Mass and needs no dated entry (POLICY rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-sayreville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception, School Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://sskparish.org/",
+          "said": "Immaculate Conception December 8 : 7:00 AM English 9:00 AM English School Mass 7:00 PM English"
+        }
+      ],
+      "rationale": "R30: POLICY leaves out a school Mass for students only but keeps one merely held with a school. The website's text puts 'School Mass' between the 9:00 AM and 7:00 PM lines; a school Mass at 9 AM on a school day is the likely reading, and nothing says it is closed. Leaning include. The 7:00 PM Mass (s15) is settled separately.",
+      "question": "Add the website's 9:00 AM December 8 Mass labelled 'School Mass'?",
+      "options": [
+        {
+          "label": "Include Dec 8 9:00 AM",
+          "entry": {
+            "church_slug": "st-stanislaus-kostka-sayreville",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception, School Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@05f8a0474956",
+        "at": "2026-11-20T06:58:01Z"
+      }
+    }
+  ]
+}

@@ -1,0 +1,971 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-mary-star-of-the-sea-south-amboy",
+  "status": "approved",
+  "as_of": "2026-11-15T16:51:14Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T04:46:17Z",
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:57:50Z",
+  "summary": "One church. Weekend, weekday (Tue-Fri 8 AM, Mon 7 PM Mass Association/Novena Mass) and Saturday/Monday Confession agree in both bulletins and on the website. Dated: Thanksgiving-week and Nov 30/Dec 1 cancellations, Nov 30 Advent Adoration, and a Dec 6-7 24-hour Adoration split over two days. Monday Advent/Lent Adoration is excluded as a weekly slot (R33).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "2b98220e1b0cc63da4bb2aca94db05d54b7c10d0ee707d7fcabcfd4f36707fd6",
+      "fetched_at": "2026-11-15T16:51:14Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "5baefaddecdaa7134b5912e701d6577462261d4cc4a1acc1d7b17a33ff7bbdc2",
+      "fetched_at": "2026-11-08T15:59:48Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-south-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2b98220e",
+          "page": 1,
+          "said": "Masses Saturday ...........4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5baefadd",
+          "page": 1,
+          "said": "Masses Saturday ...........4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b98220e",
+          "page": 2,
+          "said": "Saturday ~ November 21, 2026 4 p.m. ~ Kenneth Miller"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharist schedule box of both bulletins read and in the intentions; the website's Mass Times agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-south-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2b98220e",
+          "page": 1,
+          "said": "Sunday ...............9:00 AM 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5baefadd",
+          "page": 1,
+          "said": "Sunday ...............9:00 AM 11:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharist schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-south-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2b98220e",
+          "page": 1,
+          "said": "Sunday ...............9:00 AM 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5baefadd",
+          "page": 1,
+          "said": "Sunday ...............9:00 AM 11:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Eucharist schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-south-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2b98220e",
+          "page": 1,
+          "said": "Weekdays .......Tuesday through Friday, 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5baefadd",
+          "page": 1,
+          "said": "Weekdays .......Tuesday through Friday, 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in each week's intentions (8 a.m.).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-south-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2b98220e",
+          "page": 1,
+          "said": "Weekdays .......Tuesday through Friday, 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5baefadd",
+          "page": 1,
+          "said": "Weekdays .......Tuesday through Friday, 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in each week's intentions (8 a.m.).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-south-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2b98220e",
+          "page": 1,
+          "said": "Weekdays .......Tuesday through Friday, 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5baefadd",
+          "page": 1,
+          "said": "Weekdays .......Tuesday through Friday, 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in each week's intentions (8 a.m.).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-south-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2b98220e",
+          "page": 1,
+          "said": "Weekdays .......Tuesday through Friday, 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5baefadd",
+          "page": 1,
+          "said": "Weekdays .......Tuesday through Friday, 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in each week's intentions (8 a.m.).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-south-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2b98220e",
+          "page": 1,
+          "said": "Monday .............Mass Association, 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5baefadd",
+          "page": 1,
+          "said": "Monday .............Mass Association, 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b98220e",
+          "page": 2,
+          "said": "7 p.m. ~ Novena and Mass Association"
+        }
+      ],
+      "rationale": "R1: the schedule box lists it under Masses; a public Mass with the Miraculous Medal Novena, open to all (website Mass Times: Mon 7:00 PM).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-south-amboy",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "18:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2b98220e",
+          "page": 1,
+          "said": "RECONCILIATION Monday .........6:30-6:50 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5baefadd",
+          "page": 1,
+          "said": "RECONCILIATION Monday .........6:30-6:50 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation box of both bulletins; the website's Confession Times agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-south-amboy",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2b98220e",
+          "page": 1,
+          "said": "Saturday ...........3:00-3:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5baefadd",
+          "page": 1,
+          "said": "Saturday ...........3:00-3:45 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-south-amboy",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-23",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2b98220e",
+          "page": 3,
+          "said": "There will be no Mass or Confessions on Monday evening, November 23"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5baefadd",
+          "page": 3,
+          "said": "There will be no Mass or Confessions on Monday evening, November 23"
+        }
+      ],
+      "rationale": "R1, R16: both bulletins cancel this date of the weekly Monday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-south-amboy",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-23",
+        "start_time": "18:30",
+        "end_time": "18:50",
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2b98220e",
+          "page": 3,
+          "said": "There will be no Mass or Confessions on Monday evening, November 23"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5baefadd",
+          "page": 3,
+          "said": "There will be no Mass or Confessions on Monday evening, November 23"
+        }
+      ],
+      "rationale": "R1, R16: both bulletins cancel this date of the weekly Monday Confession.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-south-amboy",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-24",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2b98220e",
+          "page": 3,
+          "said": "no morning Mass Tuesday through Friday, November 24 – 27"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5baefadd",
+          "page": 3,
+          "said": "no morning Mass Tuesday through Friday, November 24 – 27"
+        }
+      ],
+      "rationale": "R1, R16: cancels this date of the weekly 8 AM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-south-amboy",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-25",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2b98220e",
+          "page": 3,
+          "said": "no morning Mass Tuesday through Friday, November 24 – 27"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5baefadd",
+          "page": 3,
+          "said": "no morning Mass Tuesday through Friday, November 24 – 27"
+        }
+      ],
+      "rationale": "R1, R16: cancels this date of the weekly 8 AM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-south-amboy",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2b98220e",
+          "page": 3,
+          "said": "no morning Mass Tuesday through Friday, November 24 – 27"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5baefadd",
+          "page": 3,
+          "said": "no morning Mass Tuesday through Friday, November 24 – 27"
+        }
+      ],
+      "rationale": "R1, R16: cancels this date of the weekly 8 AM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-south-amboy",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2b98220e",
+          "page": 3,
+          "said": "no morning Mass Tuesday through Friday, November 24 – 27"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5baefadd",
+          "page": 3,
+          "said": "no morning Mass Tuesday through Friday, November 24 – 27"
+        }
+      ],
+      "rationale": "R1, R16: cancels this date of the weekly 8 AM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-south-amboy",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-28",
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2b98220e",
+          "page": 3,
+          "said": "There will be no Confessions on Saturday, November 28"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5baefadd",
+          "page": 3,
+          "said": "There will be no Confessions on Saturday, November 28"
+        }
+      ],
+      "rationale": "R1, R16: cancels this date of the weekly Saturday Confession; the weekend Masses stay.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-south-amboy",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-30",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2b98220e",
+          "page": 3,
+          "said": "There will be no Confessions or evening Mass on Monday, November 30"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5baefadd",
+          "page": 3,
+          "said": "There will be no Adoration, Confessions or evening Mass on Monday, November 30"
+        }
+      ],
+      "rationale": "R1, R16: both bulletins cancel the Monday evening Mass this date.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-south-amboy",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-30",
+        "start_time": "18:30",
+        "end_time": "18:50",
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2b98220e",
+          "page": 3,
+          "said": "There will be no Confessions or evening Mass on Monday, November 30"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5baefadd",
+          "page": 3,
+          "said": "There will be no Adoration, Confessions or evening Mass on Monday, November 30"
+        }
+      ],
+      "rationale": "R1, R16: both bulletins cancel the Monday Confession this date.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-south-amboy",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-01",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2b98220e",
+          "page": 3,
+          "said": "no morning Mass on Tuesday, December 1. Our regular schedule resumes on Wednesday, December 2"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5baefadd",
+          "page": 3,
+          "said": "no morning Mass on Tuesday, December 1. Our regular schedule resumes on Wednesday, December 2"
+        }
+      ],
+      "rationale": "R1, R16: cancels this date of the weekly 8 AM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-south-amboy",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-30",
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2b98220e",
+          "page": 3,
+          "said": "no Confessions or evening Mass on Monday, November 30 (we will still have Adoration at 3 p.m.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5baefadd",
+          "page": 3,
+          "said": "There will be no Adoration, Confessions or evening Mass on Monday, November 30"
+        },
+        {
+          "source": "website",
+          "url": "https://saintmarysa.org/adoration-times",
+          "said": "Monday : 3:00 PM to 7:00 PM *During Advent & Lent only*"
+        }
+      ],
+      "rationale": "R1, R40: the newest bulletin explicitly corrects the Nov 8 notice and keeps Adoration at 3 p.m. on Nov 30 (first Monday of Advent, matching the website's Advent/Lent Monday Adoration). No end time is printed for this date and the evening Mass is cancelled, so end_time is left null.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-south-amboy",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://saintmarysa.org/adoration-times",
+          "said": "Monday : 3:00 PM to 7:00 PM *During Advent & Lent only*"
+        }
+      ],
+      "rationale": "R33: weekly Monday Adoration runs only during Advent and Lent, moveable seasons the season field cannot express; only the occurrence the bulletin prints (Nov 30) is recorded. Update mode will pick up later Advent Mondays as bulletins print them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-south-amboy",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-06",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "24-hour Exposition and Adoration, continuing until the 7 PM Mass on Monday, December 7"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2b98220e",
+          "page": 6,
+          "said": "24-hour Exposition and Adoration of the Blessed Sacrament in the Church beginning at 7 p.m. on Sunday, December 6, and ending with Mass at 7 p.m. on Monday, December 7"
+        }
+      ],
+      "rationale": "R1, R16: a dated special Adoration in the church; it runs overnight, so this first day has no end time and the next day is its own slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-south-amboy",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "00:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Continuation of the 24-hour Adoration begun at 7 PM Sunday"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2b98220e",
+          "page": 6,
+          "said": "24-hour Adoration of the Blessed Sacrament December 6 - 7, from 7 p.m. - 7 p.m. ... ending with Mass at 7 p.m. on Monday, December 7"
+        }
+      ],
+      "rationale": "R1, R16: second day of the dated 24-hour Adoration, ending at the regular Monday 7 PM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-south-amboy",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Padre Pio Mass at Saint Ambrose, Old Bridge"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2b98220e",
+          "page": 3,
+          "said": "Saint Ambrose Parish (83 Throckmorton Lane) in Old Bridge invites you ... Mass in honor of St. Padre Pio ... next Saturday, November 21, at 9 a.m."
+        }
+      ],
+      "rationale": "R22: another parish's church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

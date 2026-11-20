@@ -1,0 +1,431 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-peace-fords",
+  "status": "approved",
+  "as_of": "2026-11-15T16:50:46Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-19T23:14:27Z",
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:56:19Z",
+  "summary": "One church, Our Lady of Peace in Fords. The page 1 Mass Schedule box is identical in both bulletins read (Nov 8 and Nov 15, 2026): Saturday 5:15pm vigil, Sunday 9:00 and 11:00am, Monday-Friday 8:00am, and Saturday 4:00pm Reconciliation; the intentions and activity calendars agree. No Adoration, holy-day or cancellation notices, and no open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "4cba0af52cd6610dd860072f24bb80f7d91376c7497f8308e787e18e78925329",
+      "fetched_at": "2026-11-15T16:50:46Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "1591f45aa854be4b1ca550c555c384a5565b926e8fb09f9818740381c8838abc",
+      "fetched_at": "2026-11-08T15:59:18Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-fords",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4cba0af5",
+          "page": 1,
+          "said": "MASS SCHEDULE Weekend Mass Saturday Vigil | 5:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1591f45a",
+          "page": 1,
+          "said": "MASS SCHEDULE Weekend Mass Saturday Vigil | 5:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4cba0af5",
+          "page": 3,
+          "said": "November 21, Saturday 5:15pm"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass Schedule box of both bulletins read (Nov 8 and Nov 15, 2026) and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-fords",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4cba0af5",
+          "page": 1,
+          "said": "Sunday | 9:00am & 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1591f45a",
+          "page": 1,
+          "said": "Sunday | 9:00am & 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4cba0af5",
+          "page": 3,
+          "said": "November 15, Sunday 9:00am ... 11:00am"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass Schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-fords",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4cba0af5",
+          "page": 1,
+          "said": "Sunday | 9:00am & 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1591f45a",
+          "page": 1,
+          "said": "Sunday | 9:00am & 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4cba0af5",
+          "page": 3,
+          "said": "November 15, Sunday 9:00am ... 11:00am"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass Schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-fords",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4cba0af5",
+          "page": 1,
+          "said": "Weekday Mass Monday - Friday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1591f45a",
+          "page": 1,
+          "said": "Weekday Mass Monday - Friday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4cba0af5",
+          "page": 3,
+          "said": "November 16, Monday 8:00am ... November 20, Friday 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass Schedule box of both bulletins read; the intentions list an 8:00am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-fords",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4cba0af5",
+          "page": 1,
+          "said": "Weekday Mass Monday - Friday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1591f45a",
+          "page": 1,
+          "said": "Weekday Mass Monday - Friday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4cba0af5",
+          "page": 3,
+          "said": "November 16, Monday 8:00am ... November 20, Friday 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass Schedule box of both bulletins read; the intentions list an 8:00am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-fords",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4cba0af5",
+          "page": 1,
+          "said": "Weekday Mass Monday - Friday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1591f45a",
+          "page": 1,
+          "said": "Weekday Mass Monday - Friday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4cba0af5",
+          "page": 3,
+          "said": "November 16, Monday 8:00am ... November 20, Friday 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass Schedule box of both bulletins read; the intentions list an 8:00am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-fords",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4cba0af5",
+          "page": 1,
+          "said": "Weekday Mass Monday - Friday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1591f45a",
+          "page": 1,
+          "said": "Weekday Mass Monday - Friday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4cba0af5",
+          "page": 3,
+          "said": "November 16, Monday 8:00am ... November 20, Friday 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass Schedule box of both bulletins read; the intentions list an 8:00am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-fords",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4cba0af5",
+          "page": 1,
+          "said": "Weekday Mass Monday - Friday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1591f45a",
+          "page": 1,
+          "said": "Weekday Mass Monday - Friday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4cba0af5",
+          "page": 3,
+          "said": "November 16, Monday 8:00am ... November 20, Friday 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass Schedule box of both bulletins read; the intentions list an 8:00am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-fords",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4cba0af5",
+          "page": 1,
+          "said": "Reconciliation Saturday | 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1591f45a",
+          "page": 1,
+          "said": "Reconciliation Saturday | 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4cba0af5",
+          "page": 3,
+          "said": "Saturday ... 4:00pm Confessions - Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1591f45a",
+          "page": 3,
+          "said": "Saturday ... 4:00pm Confessions - Church"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass Schedule box and the weekly activities calendar of both bulletins; no end time is given, so end_time stays null (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
