@@ -1,0 +1,955 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-james-woodbridge",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:06:53Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T03:51:32Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend, weekday, Wednesday Adoration and Saturday Confession times agree in the front-page box and intentions of both bulletins read (Nov 8 and 15); dated Thanksgiving changes, a Nov 24 memorial Mass and a Nov 17 Spanish Mass are recorded. Open: whether to add a separate first-Saturday Spanish Confession slot.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "055be5acf125d59c0057a0a42ae5fffb4e1bafdfb7bc9098dd610394b528df9e",
+      "fetched_at": "2026-11-15T16:06:53Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "e4d29983ea8a2af1a1e1c9f04720b6fc5b792cb97b136516dcce894136c6deba",
+      "fetched_at": "2026-11-08T15:33:12Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-woodbridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "055be5ac",
+          "page": 1,
+          "said": "Saturday Vigil ~ 4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d29983",
+          "page": 1,
+          "said": "Saturday Vigil ~ 4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "055be5ac",
+          "page": 3,
+          "said": "Vigil ~ ... 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d29983",
+          "page": 3,
+          "said": "Vigil ~ ... 4:30pm"
+        }
+      ],
+      "rationale": "R1: printed in the front-page Mass Schedule box and the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-woodbridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "055be5ac",
+          "page": 1,
+          "said": "Sunday ~ 7:30, 10:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d29983",
+          "page": 1,
+          "said": "Sunday ~ 7:30, 10:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "055be5ac",
+          "page": 3,
+          "said": "Sunday 7:30am 10:00am 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d29983",
+          "page": 3,
+          "said": "Sunday 7:30am 10:00am 12:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box and the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-woodbridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "055be5ac",
+          "page": 1,
+          "said": "Sunday ~ 7:30, 10:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d29983",
+          "page": 1,
+          "said": "Sunday ~ 7:30, 10:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "055be5ac",
+          "page": 3,
+          "said": "Sunday 7:30am 10:00am 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d29983",
+          "page": 3,
+          "said": "Sunday 7:30am 10:00am 12:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box and the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-woodbridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "055be5ac",
+          "page": 1,
+          "said": "Sunday ~ 7:30, 10:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d29983",
+          "page": 1,
+          "said": "Sunday ~ 7:30, 10:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "055be5ac",
+          "page": 3,
+          "said": "Sunday 7:30am 10:00am 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d29983",
+          "page": 3,
+          "said": "Sunday 7:30am 10:00am 12:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box and the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-woodbridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "055be5ac",
+          "page": 1,
+          "said": "Sunday ~ 5:30pm ~ Spanish Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d29983",
+          "page": 1,
+          "said": "Sunday ~ 5:30pm ~ Spanish Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "055be5ac",
+          "page": 3,
+          "said": "Spanish Mass 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d29983",
+          "page": 3,
+          "said": "Spanish Mass 5:30pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box and the intentions of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-woodbridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "055be5ac",
+          "page": 1,
+          "said": "Monday - Friday ~ 12:10pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d29983",
+          "page": 1,
+          "said": "Monday - Friday ~ 12:10pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "055be5ac",
+          "page": 3,
+          "said": "12:10pm (each weekday's intention)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d29983",
+          "page": 3,
+          "said": "12:10pm (each weekday's intention)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box and each weekday's intentions in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-woodbridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "055be5ac",
+          "page": 1,
+          "said": "Monday - Friday ~ 12:10pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d29983",
+          "page": 1,
+          "said": "Monday - Friday ~ 12:10pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "055be5ac",
+          "page": 3,
+          "said": "12:10pm (each weekday's intention)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d29983",
+          "page": 3,
+          "said": "12:10pm (each weekday's intention)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box and each weekday's intentions in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-woodbridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "055be5ac",
+          "page": 1,
+          "said": "Monday - Friday ~ 12:10pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d29983",
+          "page": 1,
+          "said": "Monday - Friday ~ 12:10pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "055be5ac",
+          "page": 3,
+          "said": "12:10pm (each weekday's intention)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d29983",
+          "page": 3,
+          "said": "12:10pm (each weekday's intention)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box and each weekday's intentions in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-woodbridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "055be5ac",
+          "page": 1,
+          "said": "Monday - Friday ~ 12:10pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d29983",
+          "page": 1,
+          "said": "Monday - Friday ~ 12:10pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "055be5ac",
+          "page": 3,
+          "said": "12:10pm (each weekday's intention)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d29983",
+          "page": 3,
+          "said": "12:10pm (each weekday's intention)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box and each weekday's intentions in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-woodbridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "055be5ac",
+          "page": 1,
+          "said": "Monday - Friday ~ 12:10pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d29983",
+          "page": 1,
+          "said": "Monday - Friday ~ 12:10pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "055be5ac",
+          "page": 3,
+          "said": "12:10pm (each weekday's intention)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d29983",
+          "page": 3,
+          "said": "12:10pm (each weekday's intention)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box and each weekday's intentions in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-woodbridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "055be5ac",
+          "page": 1,
+          "said": "Saturdays ~ 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d29983",
+          "page": 1,
+          "said": "Saturdays ~ 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "055be5ac",
+          "page": 3,
+          "said": "Saturday, 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d29983",
+          "page": 3,
+          "said": "Saturday, 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box and the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-woodbridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Purgatorial Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "055be5ac",
+          "page": 1,
+          "said": "First Saturday of the Month 9:00am ~ Purgatorial Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d29983",
+          "page": 1,
+          "said": "First Saturday of the Month 9:00am ~ Purgatorial Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d29983",
+          "page": 3,
+          "said": "Saturday, November 7, 9:00am Mass of Remembrance (Purgatorial Society)"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7: the first-Saturday Purgatorial Mass is the regular Saturday 9:00 AM Mass with a special intention; only the weekly slot is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-woodbridge",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:45",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "055be5ac",
+          "page": 1,
+          "said": "Eucharistic Adoration Wednesdays ~ 12:45pm Benediction ~ 3:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d29983",
+          "page": 1,
+          "said": "Eucharistic Adoration Wednesdays ~ 12:45pm Benediction ~ 3:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the front-page box of both bulletins read; POLICY records Benediction as the Adoration's note, its 3:00 PM time ending the period.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-woodbridge",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "055be5ac",
+          "page": 1,
+          "said": "Sacrament of Reconciliation 11:00am - 12:00pm ~ Saturdays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d29983",
+          "page": 1,
+          "said": "Sacrament of Reconciliation 11:00am - 12:00pm ~ Saturdays"
+        }
+      ],
+      "rationale": "R1: printed in the front-page box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "055be5ac",
+          "page": 1,
+          "said": "The first Saturday of each month Confession will be offered in Spanish ~ 11:00am - 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d29983",
+          "page": 1,
+          "said": "The first Saturday of each month Confession will be offered in Spanish ~ 11:00am - 12:00pm"
+        }
+      ],
+      "rationale": "R30: the box gives Saturdays 11-12 and says first-Saturday confession is offered in Spanish at the same hour; unclear whether English is also offered then. Leaning to add the Spanish slot so the language is shown; the alternative is to rely on the weekly slot.",
+      "question": "Add a separate first-Saturday 11:00-12:00 Confession in Spanish, alongside the every-Saturday 11:00-12:00 slot?",
+      "options": [
+        {
+          "label": "First Saturdays 11:00-12:00, note Spanish",
+          "entry": {
+            "church_slug": "st-james-woodbridge",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "11:00",
+            "end_time": "12:00",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Spanish"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out (the weekly slot covers the time)",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-woodbridge",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "055be5ac",
+          "page": 8,
+          "said": "on Thanksgiving Day, November 26th, we will have 9AM Mass only"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d29983",
+          "page": 7,
+          "said": "Thanksgiving Mass Schedule ... 9AM Mass only"
+        }
+      ],
+      "rationale": "R1, R16, R17: a dated holiday Mass on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-woodbridge",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "055be5ac",
+          "page": 8,
+          "said": "there will be no 12:10PM Mass"
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin cancels the Thursday 12:10 PM Mass on Thanksgiving.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-woodbridge",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-25",
+        "start_time": "12:45",
+        "end_time": "15:00",
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "055be5ac",
+          "page": 8,
+          "said": "There will be no Adoration on Wednesday, November 25"
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin cancels one Wednesday of the weekly Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-woodbridge",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-24",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Memorial Mass for Mariam Devasia Naduviledathu, Bishop Saporito presiding"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "055be5ac",
+          "page": 9,
+          "said": "You are warmly invited to participate in the Memorial Mass for Fr. Thomas' mother ... Date: Tuesday, November 24, 2026 Time: 6:00 pm Location: St. James Church, Woodbridge"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4d29983",
+          "page": 9,
+          "said": "You are warmly invited to participate in the Memorial Mass for Fr. Thomas' mother ... Date: Tuesday, November 24, 2026 Time: 6:00 pm Location: St. James Church, Woodbridge"
+        }
+      ],
+      "rationale": "R1, R16, POLICY What to extract: a memorial Mass for one person, but the full-page notice invites all readers, so it is open; dated after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-woodbridge",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-17",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "055be5ac",
+          "page": 3,
+          "said": "Tuesday, November 17 ... 7:00-9:00pm Misa en Español/Spanish Mass, Itza Michelle Rodriguez Cruz"
+        }
+      ],
+      "rationale": "R1, R16, POLICY Weekly or dated rule 3: a dated Mass with an intention in the newest bulletin's intentions, on or after as_of. The older bulletin's same Tuesday 7-9 PM line was the Spanish prayer group, not a Mass, so it is not weekly.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-woodbridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Circulo de Oracion, Charismatic Spanish Prayer Group"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e4d29983",
+          "page": 3,
+          "said": "Tuesday, November 10 ... 7:00-9:00pm Círculo de Oración - St. James Charismatic Spanish Prayer Group"
+        }
+      ],
+      "rationale": "R24: the Tuesday evening prayer group is not a Mass, Confession or Adoration; only the Nov 17 meeting was billed as a Mass (dated slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
