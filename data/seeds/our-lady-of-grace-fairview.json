@@ -1,0 +1,883 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-grace-fairview",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:53:06Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T13:57:15Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both bulletins read (Nov 8 and Nov 15, 2026) print the same schedule: weekday Masses 7:00 and 8:30, Saturday 8:00 and 5:00 PM, Sunday 7:30, 9:00 (children), 11:00, 12:30 Spanish and a first-Sunday 5:00 PM Italian Mass; Saturday Penance 4:00-4:45; Adoration Thursday 5-7 PM and Saturday 4-5 PM. Open: whether the Nov 21 10 AM anniversary Memorial Mass for Fr. Peter Sticco is public.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "95dd7b1a2f72e8a559b444cfc2b2ad773879387e093f35616577ad627ac6aed0",
+      "fetched_at": "2026-11-15T16:53:06Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "d89b090c400e3fc46f34098a66137df34aab7df886e28f8023ea049f1aaa6901",
+      "fetched_at": "2026-11-08T22:05:10Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-fairview",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95dd7b1a",
+          "page": 1,
+          "said": "DAILY MASS SCHEDULE English Masses Monday - Friday 7:00am & 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d89b090c",
+          "page": 1,
+          "said": "DAILY MASS SCHEDULE English Masses Monday - Friday 7:00am & 8:30am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; the dated intentions on page 2 list 7:00 and 8:30 each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-fairview",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95dd7b1a",
+          "page": 1,
+          "said": "DAILY MASS SCHEDULE English Masses Monday - Friday 7:00am & 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d89b090c",
+          "page": 1,
+          "said": "DAILY MASS SCHEDULE English Masses Monday - Friday 7:00am & 8:30am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; the dated intentions on page 2 list 7:00 and 8:30 each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-fairview",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95dd7b1a",
+          "page": 1,
+          "said": "DAILY MASS SCHEDULE English Masses Monday - Friday 7:00am & 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d89b090c",
+          "page": 1,
+          "said": "DAILY MASS SCHEDULE English Masses Monday - Friday 7:00am & 8:30am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; the dated intentions on page 2 list 7:00 and 8:30 each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-fairview",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95dd7b1a",
+          "page": 1,
+          "said": "DAILY MASS SCHEDULE English Masses Monday - Friday 7:00am & 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d89b090c",
+          "page": 1,
+          "said": "DAILY MASS SCHEDULE English Masses Monday - Friday 7:00am & 8:30am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; the dated intentions on page 2 list 7:00 and 8:30 each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-fairview",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95dd7b1a",
+          "page": 1,
+          "said": "DAILY MASS SCHEDULE English Masses Monday - Friday 7:00am & 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d89b090c",
+          "page": 1,
+          "said": "DAILY MASS SCHEDULE English Masses Monday - Friday 7:00am & 8:30am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; the dated intentions on page 2 list 7:00 and 8:30 each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-fairview",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95dd7b1a",
+          "page": 1,
+          "said": "DAILY MASS SCHEDULE English Masses Monday - Friday 7:00am & 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d89b090c",
+          "page": 1,
+          "said": "DAILY MASS SCHEDULE English Masses Monday - Friday 7:00am & 8:30am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; the dated intentions on page 2 list 7:00 and 8:30 each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-fairview",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95dd7b1a",
+          "page": 1,
+          "said": "DAILY MASS SCHEDULE English Masses Monday - Friday 7:00am & 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d89b090c",
+          "page": 1,
+          "said": "DAILY MASS SCHEDULE English Masses Monday - Friday 7:00am & 8:30am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; the dated intentions on page 2 list 7:00 and 8:30 each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-fairview",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95dd7b1a",
+          "page": 1,
+          "said": "DAILY MASS SCHEDULE English Masses Monday - Friday 7:00am & 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d89b090c",
+          "page": 1,
+          "said": "DAILY MASS SCHEDULE English Masses Monday - Friday 7:00am & 8:30am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; the dated intentions on page 2 list 7:00 and 8:30 each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-fairview",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95dd7b1a",
+          "page": 1,
+          "said": "DAILY MASS SCHEDULE English Masses Monday - Friday 7:00am & 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d89b090c",
+          "page": 1,
+          "said": "DAILY MASS SCHEDULE English Masses Monday - Friday 7:00am & 8:30am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; the dated intentions on page 2 list 7:00 and 8:30 each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-fairview",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95dd7b1a",
+          "page": 1,
+          "said": "DAILY MASS SCHEDULE English Masses Monday - Friday 7:00am & 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d89b090c",
+          "page": 1,
+          "said": "DAILY MASS SCHEDULE English Masses Monday - Friday 7:00am & 8:30am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; the dated intentions on page 2 list 7:00 and 8:30 each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-fairview",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95dd7b1a",
+          "page": 1,
+          "said": "Saturday / Sábado 8:00am & 5:00pm (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d89b090c",
+          "page": 1,
+          "said": "Saturday / Sábado 8:00am & 5:00pm (English)"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 weekend schedule box of both bulletins read; the page-2 intentions list both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-fairview",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95dd7b1a",
+          "page": 1,
+          "said": "Saturday / Sábado 8:00am & 5:00pm (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d89b090c",
+          "page": 1,
+          "said": "Saturday / Sábado 8:00am & 5:00pm (English)"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 weekend schedule box of both bulletins read; the page-2 intentions list both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-fairview",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95dd7b1a",
+          "page": 1,
+          "said": "Sunday / Domingo 7:30am - English ... 11:00am - English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d89b090c",
+          "page": 1,
+          "said": "Sunday / Domingo 7:30am - English ... 11:00am - English"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 weekend schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-fairview",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95dd7b1a",
+          "page": 1,
+          "said": "Sunday / Domingo 7:30am - English ... 11:00am - English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d89b090c",
+          "page": 1,
+          "said": "Sunday / Domingo 7:30am - English ... 11:00am - English"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 weekend schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-fairview",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Children's Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95dd7b1a",
+          "page": 1,
+          "said": "9:00am-Children Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d89b090c",
+          "page": 1,
+          "said": "9:00am-Children Mass"
+        }
+      ],
+      "rationale": "R1: printed in the regular weekend schedule box of both bulletins; POLICY, Churches: a Mass listed 'with' or for children in the regular schedule is open, not limited.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-fairview",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95dd7b1a",
+          "page": 1,
+          "said": "12:30pm - Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d89b090c",
+          "page": 1,
+          "said": "12:30pm - Español"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 weekend schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-fairview",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Italian"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95dd7b1a",
+          "page": 1,
+          "said": "5:00pm - Italian Mass ONLY the 1st Sunday of the Month"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d89b090c",
+          "page": 1,
+          "said": "5:00pm - Italian Mass ONLY the 1st Sunday of the Month"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly qualifiers: the schedule box names the first Sunday, so weeks_of_month first. Neither bulletin's week holds a first Sunday (R11), so the intentions can't show it; the standing schedule box prints it in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-fairview",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95dd7b1a",
+          "page": 2,
+          "said": "SACRAMENTS ... PENANCE Saturday from 4:00 - 4:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d89b090c",
+          "page": 2,
+          "said": "SACRAMENTS ... PENANCE Saturday from 4:00 - 4:45pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-2 Sacraments box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-fairview",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95dd7b1a",
+          "page": 2,
+          "said": "EUCHARISTIC ADORATION / ADORACIÓN AL SANTISIMO Thursdays / Jueves 5:00pm - 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d89b090c",
+          "page": 2,
+          "said": "EUCHARISTIC ADORATION / ADORACIÓN AL SANTISIMO Thursdays / Jueves 5:00pm - 7:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-2 'Join us in prayer' box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-fairview",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95dd7b1a",
+          "page": 2,
+          "said": "EUCHARISTIC ADORATION ... Saturdays / Sábados 4:00pm - 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d89b090c",
+          "page": 2,
+          "said": "EUCHARISTIC ADORATION ... Saturdays / Sábados 4:00pm - 5:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-2 'Join us in prayer' box of both bulletins read. It overlaps the 4:00-4:45 Penance, which keeps its own printed times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95dd7b1a",
+          "page": 2,
+          "said": "Saturday, November 21, 2026 ... 10:00am: Memorial Mass in Honor of Fr. Peter Sticco, S.A.C. on the First Anniversary of His Passing"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95dd7b1a",
+          "page": 7,
+          "said": "As we prepare to celebrate the anniversary Mass in memory of Father Peter, we have an opportunity to reflect with gratitude on the gift of a priest's life ... May this occasion deepen our love for the priesthood."
+        }
+      ],
+      "rationale": "R30: POLICY treats a memorial or anniversary Mass for one person as closed unless the bulletin invites everyone. This one is for a late parish priest, listed in the public intentions outside the regular times, and the pastor's page-7 article addresses the whole parish ('As we prepare to celebrate'), but no explicit invitation is printed. Leaning include because the article treats it as a parish celebration. It is on or after as_of (R16).",
+      "question": "Include the November 21, 10:00 AM anniversary Memorial Mass for Fr. Peter Sticco?",
+      "options": [
+        {
+          "label": "Include as a dated Mass",
+          "entry": {
+            "church_slug": "our-lady-of-grace-fairview",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-21",
+            "start_time": "10:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Memorial Mass for Fr. Peter Sticco, S.A.C., first anniversary"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95dd7b1a",
+          "page": 6,
+          "said": "Retiro de Adviento Diciembre 4, 5 y 6, 2026 ... Misa a cargo del Padre Fernando Gálvez ... Cupos limitados Inscríbete pronto ... \\$60 por persona"
+        }
+      ],
+      "rationale": "R24, R26: the paid, registration-only Advent retreat mentions a Mass but gives it no time, so there is nothing to record.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95dd7b1a",
+          "page": 2,
+          "said": "ST. ANTHONY & ST. JUDE NOVENA Tuesdays at 7:15pm; THE DIVINE MERCY NOVENA Sundays after the Spanish Mass; HOLY ROSARY / SANTO ROSARIO Thursdays/ Jueves at 7:15 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d89b090c",
+          "page": 2,
+          "said": "ST. ANTHONY & ST. JUDE NOVENA Tuesdays at 7:15pm; THE DIVINE MERCY NOVENA Sundays after the Spanish Mass; HOLY ROSARY / SANTO ROSARIO Thursdays/ Jueves at 7:15 PM"
+        }
+      ],
+      "rationale": "R24: novenas and the Rosary are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
