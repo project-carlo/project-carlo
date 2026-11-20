@@ -1,0 +1,512 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-raritan",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:07:20Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T04:22:18Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (St. Joseph, Raritan), sharing a bulletin schedule box with the Oratory's St. Ann, Holy Trinity and Shrine Chapel, whose times are excluded as other parishes'. Weekend Masses, Saturday and Spanish Wednesday Confession and Wednesday Adoration agree in both bulletins read (Nov 8, Nov 15) and on the website. Open: the Immaculate Conception (Dec 8) English Mass time, where the bulletin's generic Holy Days line (7:00 pm vigil) and the website (Dec 8 7:00 AM) differ.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "722b21ab2da22a852f34b538d0ca1c18cc5f2700b3b639c241f1abf91cca061e",
+      "fetched_at": "2026-11-15T16:07:20Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "b1c81bf84638451e4141422df4e615884159845a7f6b199169d0ba8f379b2c01",
+      "fetched_at": "2026-11-08T15:33:32Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-raritan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "722b21ab",
+          "page": 1,
+          "said": "Saturday…St. Joseph 4 pm English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b1c81bf8",
+          "page": 1,
+          "said": "Saturday…St. Joseph 4 pm English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "722b21ab",
+          "page": 2,
+          "said": "Saturday, Nov. 14 4:00 pm Pro Populo"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b1c81bf8",
+          "page": 2,
+          "said": "Saturday, Nov. 14 4:00 pm Pro Populo"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Lord's Day schedule box and the intentions of both bulletins read (Nov 8, Nov 15); the website gives Saturday 4:00 PM English.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-raritan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "722b21ab",
+          "page": 1,
+          "said": "Sunday… St. Joseph 7:30 am Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b1c81bf8",
+          "page": 1,
+          "said": "Sunday… St. Joseph 7:30 am Spanish"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read, with intentions on p2; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-raritan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "722b21ab",
+          "page": 1,
+          "said": "St. Joseph 9 am English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b1c81bf8",
+          "page": 1,
+          "said": "St. Joseph 9 am English"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read, with intentions on p2; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-raritan",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "722b21ab",
+          "page": 1,
+          "said": "St. Joseph 12:00 pm Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b1c81bf8",
+          "page": 1,
+          "said": "St. Joseph 12:00 pm Spanish"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read, with intentions on p2; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-raritan",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "722b21ab",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Saturday… St. Joseph 3:00 –3:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b1c81bf8",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Saturday… St. Joseph 3:00 –3:30 pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Reconciliation box of both bulletins read; the website gives Saturday 3:00 PM to 3:30 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-raritan",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:45",
+        "end_time": "19:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "722b21ab",
+          "page": 6,
+          "said": "ADORACION EUCARISTICA Todos los Miercoles 6:45-7:30 pm Confesiones"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b1c81bf8",
+          "page": 7,
+          "said": "Todos los Miercoles 6:45-7:30 pm Confesiones"
+        },
+        {
+          "source": "website",
+          "url": "https://sjraritan.org/",
+          "said": "CONFESIONES EN ESPAÑOL: MIERCOLES, 6:45-7:30 pm, SAN JOSE (Sacrament of Reconciliation in Spanish, Wed. 6:45-7:30 pm, St. Joseph)"
+        }
+      ],
+      "rationale": "R1, R35, R5: the Spanish box in both bulletins gives the time but no church; the parish's own website places it at St. Joseph (SAN JOSE), and the parish has only this church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-raritan",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "722b21ab",
+          "page": 6,
+          "said": "Todos los Miercoles … 7:00-9:00 pm Adoracion Eucaristica"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b1c81bf8",
+          "page": 7,
+          "said": "Todos los Miercoles 7:00-9:00 pm Adoracion Eucaristica"
+        },
+        {
+          "source": "website",
+          "url": "https://sjraritan.org/",
+          "said": "Adoracion eucaristica MIERCOLES: 7:00-9:00 PM Con rezo del Santo Rosario, Confesiones, y charla."
+        }
+      ],
+      "rationale": "R1, R35, R5: both bulletins' Spanish box gives Wednesday 7:00-9:00 PM; the website's St. Joseph schedule lists it at this church. One website widget says 'Wednesday 7:30 PM to 9:30 PM Rosario, Confesiones, Adoracion y Charla', but both bulletins and the site's main Mass Times block say 7:00-9:00, so the bulletin time stands. The Rosary (7:00-7:30) is not recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "722b21ab",
+          "page": 1,
+          "said": "St. Ann 7:30 am, St. Ann 10:30 am, St. Ann 12:00 pm, St. Ann 5 pm; Mon-Fri 8 am St. Ann; Saturday 9 am St. Ann (E); Reconciliation Saturday St. Ann after the 9 am Mass; Holy Days 8am, 7:00 pm St. Ann"
+        },
+        {
+          "source": "agent",
+          "bulletin": "722b21ab",
+          "page": 5,
+          "said": "Monthly Holy Hour … 3:30-4:30 PM Repeats every third Sunday of the month. Location: St. Ann Church, Raritan"
+        }
+      ],
+      "rationale": "R22: St. Ann, Raritan (st-ann-raritan) is another parish's listed church in the Oratory grouping; its times belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "722b21ab",
+          "page": 1,
+          "said": "Holy Trinity 5 pm (Sat); Holy Trinity 10:30 am (Sun); Friday 7 pm Holy Trinity (E); Wednesday Holy Trinity 11 am –12 pm (Reconciliation); Holy Days 12:15pm Holy Trinity"
+        }
+      ],
+      "rationale": "R22: Holy Trinity, Bridgewater (holy-trinity-bridgewater) is another parish's listed church; its times belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "722b21ab",
+          "page": 1,
+          "said": "Shrine of the Blessed Sacrament 10:30 am (Latin EF); Mon-Fri 12:15 pm Shrine (E); First Saturdays 9 am Shrine (Latin); Friday Shrine of the Blessed Sacrament 11 am –12 pm (Reconciliation); Holy Days 12:15pm, 7:00 pm Shrine Chapel"
+        }
+      ],
+      "rationale": "R22: the Shrine Chapel of the Blessed Sacrament, Raritan (shrine-chapel-of-the-blessed-sacrament-raritan) is listed under another parish; its times belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "722b21ab",
+          "page": 1,
+          "said": "or by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-raritan",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception; Spanish"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://sjraritan.org/",
+          "said": "Upcoming Holy Days Immaculate Conception December 8 : 7:00 AM English 7:30 PM Spanish",
+          "schedule_check": {
+            "checked_at": "2026-11-20T04:25:24Z",
+            "current_because": "The homepage's Mass Times block lists 'Upcoming Holy Days: Immaculate Conception December 8', the next holy day after today (2026-11-19), and its weekend and confession times match the November 2026 bulletins.",
+            "bulletin": "722b21ab",
+            "fits_because": "The Nov 15 bulletin's standing Holy Days line gives 7:30 pm St. Joseph (Spa.) without a date; the website dates it December 8, which agrees."
+          }
+        },
+        {
+          "source": "agent",
+          "bulletin": "722b21ab",
+          "page": 1,
+          "said": "Holy Days … 7:30 pm St. Joseph (Spa.)"
+        }
+      ],
+      "rationale": "R6, R16: the bulletin's Holy Days line gives a 7:30 pm Spanish Mass at St. Joseph but pins no date; the parish website dates it to Immaculate Conception, December 8, at the same time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "722b21ab",
+          "page": 1,
+          "said": "Holy Days 7:00 pm Vigil Mass—St. Joseph (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b1c81bf8",
+          "page": 1,
+          "said": "Holy Days 7:00 pm Vigil Mass—St. Joseph (English)"
+        },
+        {
+          "source": "website",
+          "url": "https://sjraritan.org/",
+          "said": "Immaculate Conception December 8 : 7:00 AM English"
+        }
+      ],
+      "rationale": "R28/R6: the bulletin's standing Holy Days line (both issues) gives a 7:00 pm English vigil at St. Joseph but no date; the website dates the holy day (Dec 8) but gives 7:00 AM English, perhaps the same Mass with AM/PM or the day confused, perhaps a separate morning Mass. Leaning to the vigil both bulletins print; choose Dec 8 7:00 AM if the website is right. If both happen, include the vigil and add the 7:00 AM.",
+      "question": "Immaculate Conception English Mass at St. Joseph: the bulletin's Holy Days line says '7:00 pm Vigil Mass'; the website says December 8, 7:00 AM. Which, if either?",
+      "options": [
+        {
+          "label": "Dec 7 7:00 PM vigil",
+          "entry": {
+            "church_slug": "st-joseph-raritan",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-07",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception vigil"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Dec 8 7:00 AM",
+          "entry": {
+            "church_slug": "st-joseph-raritan",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "07:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    }
+  ]
+}
