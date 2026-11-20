@@ -1,0 +1,719 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-sorrows-south-orange",
+  "status": "ready",
+  "as_of": "2026-11-15T16:53:14Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T21:39:05Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend Masses (Sat 5:30 PM vigil; Sun 8, 10, 11:30), weekday Masses (Mon-Fri 7 AM and noon; Sat 8:30 AM and noon) and Saturday 12:45-2 PM Confession agree in the schedule box and intentions of both bulletins read (Nov 8 and Nov 15, 2026). Neither bulletin lists Adoration, holy-day or Thanksgiving Masses; no history is stored. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "c57c4a2272aa39a12421b6e875ac4e69e0d857cb1509e94b84c44089819e2f49",
+      "fetched_at": "2026-11-15T16:53:14Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "57f5e0720b7dc87b8b7da0b4bca20c4d226b658ff7a46181fea8f55eef5bf89d",
+      "fetched_at": "2026-11-08T16:02:12Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-south-orange",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c57c4a22",
+          "page": 1,
+          "said": "MASSES: Saturday Vigil: 5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57f5e072",
+          "page": 1,
+          "said": "MASSES: Saturday Vigil: 5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c57c4a22",
+          "page": 5,
+          "said": "VIGIL SATURDAY, NOVEMBER 21, 2026 5:30 PM People of the Parish"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read and in the Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-south-orange",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c57c4a22",
+          "page": 1,
+          "said": "Sunday 8:00 am, 10:00 am and 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57f5e072",
+          "page": 1,
+          "said": "Sunday 8:00 am, 10:00 am and 11:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read and in the Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-south-orange",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c57c4a22",
+          "page": 1,
+          "said": "Sunday 8:00 am, 10:00 am and 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57f5e072",
+          "page": 1,
+          "said": "Sunday 8:00 am, 10:00 am and 11:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read and in the Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-south-orange",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c57c4a22",
+          "page": 1,
+          "said": "Sunday 8:00 am, 10:00 am and 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57f5e072",
+          "page": 1,
+          "said": "Sunday 8:00 am, 10:00 am and 11:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read and in the Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-south-orange",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c57c4a22",
+          "page": 1,
+          "said": "Monday-Friday 7:00 am and 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57f5e072",
+          "page": 1,
+          "said": "Monday-Friday 7:00 am and 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; the intentions list 7:00 AM and 12:00 PM every weekday of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-south-orange",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c57c4a22",
+          "page": 1,
+          "said": "Monday-Friday 7:00 am and 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57f5e072",
+          "page": 1,
+          "said": "Monday-Friday 7:00 am and 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; the intentions list 7:00 AM and 12:00 PM every weekday of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-south-orange",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c57c4a22",
+          "page": 1,
+          "said": "Monday-Friday 7:00 am and 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57f5e072",
+          "page": 1,
+          "said": "Monday-Friday 7:00 am and 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; the intentions list 7:00 AM and 12:00 PM every weekday of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-south-orange",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c57c4a22",
+          "page": 1,
+          "said": "Monday-Friday 7:00 am and 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57f5e072",
+          "page": 1,
+          "said": "Monday-Friday 7:00 am and 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; the intentions list 7:00 AM and 12:00 PM every weekday of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-south-orange",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c57c4a22",
+          "page": 1,
+          "said": "Monday-Friday 7:00 am and 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57f5e072",
+          "page": 1,
+          "said": "Monday-Friday 7:00 am and 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; the intentions list 7:00 AM and 12:00 PM every weekday of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-south-orange",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c57c4a22",
+          "page": 1,
+          "said": "Monday-Friday 7:00 am and 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57f5e072",
+          "page": 1,
+          "said": "Monday-Friday 7:00 am and 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; the intentions list 7:00 AM and 12:00 PM every weekday of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-south-orange",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c57c4a22",
+          "page": 1,
+          "said": "Monday-Friday 7:00 am and 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57f5e072",
+          "page": 1,
+          "said": "Monday-Friday 7:00 am and 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; the intentions list 7:00 AM and 12:00 PM every weekday of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-south-orange",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c57c4a22",
+          "page": 1,
+          "said": "Monday-Friday 7:00 am and 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57f5e072",
+          "page": 1,
+          "said": "Monday-Friday 7:00 am and 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; the intentions list 7:00 AM and 12:00 PM every weekday of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-south-orange",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c57c4a22",
+          "page": 1,
+          "said": "Monday-Friday 7:00 am and 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57f5e072",
+          "page": 1,
+          "said": "Monday-Friday 7:00 am and 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; the intentions list 7:00 AM and 12:00 PM every weekday of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-south-orange",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c57c4a22",
+          "page": 1,
+          "said": "Monday-Friday 7:00 am and 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57f5e072",
+          "page": 1,
+          "said": "Monday-Friday 7:00 am and 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; the intentions list 7:00 AM and 12:00 PM every weekday of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-south-orange",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c57c4a22",
+          "page": 1,
+          "said": "Saturday 8:30 am and 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57f5e072",
+          "page": 1,
+          "said": "Saturday 8:30 am and 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read and in the Saturday intentions of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-south-orange",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c57c4a22",
+          "page": 1,
+          "said": "Saturday 8:30 am and 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57f5e072",
+          "page": 1,
+          "said": "Saturday 8:30 am and 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read and in the Saturday intentions of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-sorrows-south-orange",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "12:45",
+        "end_time": "14:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c57c4a22",
+          "page": 1,
+          "said": "Penance: Confessions Saturday 12:45 pm – 2:00 pm or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57f5e072",
+          "page": 1,
+          "said": "Penance: Confessions Saturday 12:45 pm – 2:00 pm or by appointment"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c57c4a22",
+          "page": 1,
+          "said": "Confessions ... or by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "57f5e072",
+          "page": 5,
+          "said": "FRIDAY, NOVEMBER 13, 2026 ... 9:30 AM OLS School Mass"
+        }
+      ],
+      "rationale": "R16, R25: a dated school Mass on November 13, before as_of, printed only in the older bulletin's intentions; out of seed scope.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
