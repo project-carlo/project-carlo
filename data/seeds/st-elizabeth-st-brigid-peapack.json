@@ -1,0 +1,631 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-elizabeth-st-brigid-peapack",
+  "status": "ready",
+  "as_of": "2026-11-15T16:06:14Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T03:39:25Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches. St. Brigid: weekday 9 AM, Saturday 4:30 PM vigil, Sunday 7:30/9:30/11:30, Saturday 3:30-4:15 PM confession and Wednesday Adoration after the 9 AM Mass until 10:30. St. Elizabeth: Sunday 8:30 and 10:30, plus a 1st-Saturday noon Mass newly added to the newest bulletin's schedule box. Both bulletins and the website agree otherwise; no open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "3bcac8b2a40e575504d4c87a30d1f699ccc56aedb547bff18bd944c9e7929585",
+      "fetched_at": "2026-11-15T16:06:14Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "60a5782931c8a041943da5cb13bf15bd83ef8c73cfc29f932b415c74c794b0a2",
+      "fetched_at": "2026-11-08T15:32:46Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-brigid-peapack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3bcac8b2",
+          "page": 1,
+          "said": "St. Brigid Daily Mass (Monday - Friday) --------- 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3bcac8b2",
+          "page": 2,
+          "said": "9:00 AM (St. Brigid) Mass (Mon Nov 16 - Fri Nov 20)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "60a57829",
+          "page": 2,
+          "said": "9:00 AM (St. Brigid) Mass (Mon Nov 9 - Fri Nov 13)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box and in the dated liturgical schedule of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-brigid-peapack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3bcac8b2",
+          "page": 1,
+          "said": "St. Brigid Daily Mass (Monday - Friday) --------- 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3bcac8b2",
+          "page": 2,
+          "said": "9:00 AM (St. Brigid) Mass (Mon Nov 16 - Fri Nov 20)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "60a57829",
+          "page": 2,
+          "said": "9:00 AM (St. Brigid) Mass (Mon Nov 9 - Fri Nov 13)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box and in the dated liturgical schedule of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-brigid-peapack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3bcac8b2",
+          "page": 1,
+          "said": "St. Brigid Daily Mass (Monday - Friday) --------- 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3bcac8b2",
+          "page": 2,
+          "said": "9:00 AM (St. Brigid) Mass (Mon Nov 16 - Fri Nov 20)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "60a57829",
+          "page": 2,
+          "said": "9:00 AM (St. Brigid) Mass (Mon Nov 9 - Fri Nov 13)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box and in the dated liturgical schedule of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-brigid-peapack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3bcac8b2",
+          "page": 1,
+          "said": "St. Brigid Daily Mass (Monday - Friday) --------- 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3bcac8b2",
+          "page": 2,
+          "said": "9:00 AM (St. Brigid) Mass (Mon Nov 16 - Fri Nov 20)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "60a57829",
+          "page": 2,
+          "said": "9:00 AM (St. Brigid) Mass (Mon Nov 9 - Fri Nov 13)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box and in the dated liturgical schedule of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-brigid-peapack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3bcac8b2",
+          "page": 1,
+          "said": "St. Brigid Daily Mass (Monday - Friday) --------- 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3bcac8b2",
+          "page": 2,
+          "said": "9:00 AM (St. Brigid) Mass (Mon Nov 16 - Fri Nov 20)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "60a57829",
+          "page": 2,
+          "said": "9:00 AM (St. Brigid) Mass (Mon Nov 9 - Fri Nov 13)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box and in the dated liturgical schedule of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-brigid-peapack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3bcac8b2",
+          "page": 1,
+          "said": "St. Brigid Saturday ---- 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3bcac8b2",
+          "page": 2,
+          "said": "Saturday, November 21 ~ 4:30 PM (St. Brigid) Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "60a57829",
+          "page": 2,
+          "said": "Saturday, November 14 ~ 4:30 PM (St. Brigid) Mass"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box and liturgical schedule of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-brigid-peapack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3bcac8b2",
+          "page": 1,
+          "said": "St. Brigid Sunday ---------7:30 AM, 9:30 AM & 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "60a57829",
+          "page": 2,
+          "said": "7:30 AM (St. Brigid) Mass; 9:30 AM (St. Brigid) Mass; 11:30 AM (St. Brigid) Mass"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box and liturgical schedule of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-brigid-peapack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3bcac8b2",
+          "page": 1,
+          "said": "St. Brigid Sunday ---------7:30 AM, 9:30 AM & 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "60a57829",
+          "page": 2,
+          "said": "7:30 AM (St. Brigid) Mass; 9:30 AM (St. Brigid) Mass; 11:30 AM (St. Brigid) Mass"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box and liturgical schedule of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-brigid-peapack",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3bcac8b2",
+          "page": 1,
+          "said": "St. Brigid Sunday ---------7:30 AM, 9:30 AM & 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "60a57829",
+          "page": 2,
+          "said": "7:30 AM (St. Brigid) Mass; 9:30 AM (St. Brigid) Mass; 11:30 AM (St. Brigid) Mass"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box and liturgical schedule of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-far-hills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3bcac8b2",
+          "page": 1,
+          "said": "St. Elizabeth Sunday ---- 8:30 AM & 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "60a57829",
+          "page": 2,
+          "said": "8:30 AM (St. Elizabeth) Mass; 10:30 AM (St. Elizabeth) Mass"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box and liturgical schedule of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-far-hills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3bcac8b2",
+          "page": 1,
+          "said": "St. Elizabeth Sunday ---- 8:30 AM & 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "60a57829",
+          "page": 2,
+          "said": "8:30 AM (St. Elizabeth) Mass; 10:30 AM (St. Elizabeth) Mass"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box and liturgical schedule of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-far-hills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3bcac8b2",
+          "page": 1,
+          "said": "St. Elizabeth 1st Saturday of the month ------------12:00 PM"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 2: the newest bulletin's standing Mass Schedule box names a 1st-Saturday noon Mass at St. Elizabeth. It is newly added (the Nov 8 issue's box lists only the Sunday Masses there, and the website doesn't mention it; a missing mention is not a conflict, R6). Neither issue's week holds a first Saturday, so no dated listing could show it (R11).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-brigid-peapack",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3bcac8b2",
+          "page": 1,
+          "said": "Sacrament of Penance St. Brigid Saturday 3:30 PM - 4:15 PM in St. Brigid Church or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "60a57829",
+          "page": 1,
+          "said": "Saturday 3:30 PM - 4:15 PM in St. Brigid Church or by appointment"
+        }
+      ],
+      "rationale": "R1: printed in the Sacrament of Penance box of both bulletins; the website agrees (Saturday afternoons from 3:30 PM to 4:15 PM).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3bcac8b2",
+          "page": 1,
+          "said": "or by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-brigid-peapack",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "10:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:00 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3bcac8b2",
+          "page": 2,
+          "said": "ADORATION OF THE BLESSED SACRAMENT Wednesday mornings following the 9 AM Mass in St. Brigid Church until 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "60a57829",
+          "page": 2,
+          "said": "Wednesday mornings following the 9 AM Mass in St. Brigid Church until 10:30 AM"
+        }
+      ],
+      "rationale": "R1, R10: printed in both bulletins; no clock start is given, so POLICY starts it 30 minutes after the weekday 9 AM Mass, ending at the printed 10:30 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3bcac8b2",
+          "page": 2,
+          "said": "8:30 AM (St. Brigid) Rosary (Mon-Fri)"
+        }
+      ],
+      "rationale": "R24: a Rosary is not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
