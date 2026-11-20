@@ -1,0 +1,698 @@
+{
+  "schema_version": 1,
+  "parish_slug": "assumption-of-our-blessed-lady-wood-ridge",
+  "status": "ready",
+  "as_of": "2026-11-15T16:52:32Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T08:45:01Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. The Mass, Saturday 4 PM Confession and first-Friday Holy Hour schedule box is identical in both bulletins read (Nov 8 and Nov 15, 2026), and the daily intentions agree. Dated Thanksgiving, Immaculate Conception and Christmas Eve 4 PM Masses are included; no open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "0615c84106aea31e5c7a05accbb804fa6cc878c56f7b8f0fd1db9144d528def5",
+      "fetched_at": "2026-11-15T16:52:32Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "317956ff0a45919431895bc580151a1d0920ec2f2b689a3622c68bfde2e2e19b",
+      "fetched_at": "2026-11-08T16:01:33Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-our-blessed-lady-wood-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0615c841",
+          "page": 1,
+          "said": "ASSUMPTION PARISH MASS SCHEDULE MONDAY - SATURDAY 7:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "317956ff",
+          "page": 1,
+          "said": "MONDAY - SATURDAY 7:30AM"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins read; the intentions list a 7:30am Mass each day Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-our-blessed-lady-wood-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0615c841",
+          "page": 1,
+          "said": "ASSUMPTION PARISH MASS SCHEDULE MONDAY - SATURDAY 7:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "317956ff",
+          "page": 1,
+          "said": "MONDAY - SATURDAY 7:30AM"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins read; the intentions list a 7:30am Mass each day Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-our-blessed-lady-wood-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0615c841",
+          "page": 1,
+          "said": "ASSUMPTION PARISH MASS SCHEDULE MONDAY - SATURDAY 7:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "317956ff",
+          "page": 1,
+          "said": "MONDAY - SATURDAY 7:30AM"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins read; the intentions list a 7:30am Mass each day Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-our-blessed-lady-wood-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0615c841",
+          "page": 1,
+          "said": "ASSUMPTION PARISH MASS SCHEDULE MONDAY - SATURDAY 7:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "317956ff",
+          "page": 1,
+          "said": "MONDAY - SATURDAY 7:30AM"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins read; the intentions list a 7:30am Mass each day Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-our-blessed-lady-wood-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0615c841",
+          "page": 1,
+          "said": "ASSUMPTION PARISH MASS SCHEDULE MONDAY - SATURDAY 7:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "317956ff",
+          "page": 1,
+          "said": "MONDAY - SATURDAY 7:30AM"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins read; the intentions list a 7:30am Mass each day Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-our-blessed-lady-wood-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0615c841",
+          "page": 1,
+          "said": "ASSUMPTION PARISH MASS SCHEDULE MONDAY - SATURDAY 7:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "317956ff",
+          "page": 1,
+          "said": "MONDAY - SATURDAY 7:30AM"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins read; the intentions list a 7:30am Mass each day Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-our-blessed-lady-wood-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0615c841",
+          "page": 1,
+          "said": "SATURDAY VIGIL 5:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "317956ff",
+          "page": 1,
+          "said": "SATURDAY VIGIL 5:30PM"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-our-blessed-lady-wood-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0615c841",
+          "page": 1,
+          "said": "SUNDAY MASSES 8:00AM, 9:30AM & 11:00AM (LIVESTREAM)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "317956ff",
+          "page": 1,
+          "said": "SUNDAY MASSES 8:00AM, 9:30AM & 11:00AM (LIVESTREAM)"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-our-blessed-lady-wood-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0615c841",
+          "page": 1,
+          "said": "SUNDAY MASSES 8:00AM, 9:30AM & 11:00AM (LIVESTREAM)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "317956ff",
+          "page": 1,
+          "said": "SUNDAY MASSES 8:00AM, 9:30AM & 11:00AM (LIVESTREAM)"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-our-blessed-lady-wood-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0615c841",
+          "page": 1,
+          "said": "SUNDAY MASSES 8:00AM, 9:30AM & 11:00AM (LIVESTREAM)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "317956ff",
+          "page": 1,
+          "said": "SUNDAY MASSES 8:00AM, 9:30AM & 11:00AM (LIVESTREAM)"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-our-blessed-lady-wood-ridge",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0615c841",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION SATURDAYS 4:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "317956ff",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION SATURDAYS 4:00PM"
+        }
+      ],
+      "rationale": "R1: in the schedule box of both bulletins; no end time is printed, so none is recorded (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-our-blessed-lady-wood-ridge",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour after the 7:30 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0615c841",
+          "page": 1,
+          "said": "HOLY HOUR FIRST FRIDAYS AFTER THE 7:30AM MASS IN CHURCH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "317956ff",
+          "page": 1,
+          "said": "HOLY HOUR FIRST FRIDAYS AFTER THE 7:30AM MASS IN CHURCH"
+        }
+      ],
+      "rationale": "R10, R1: a named first-Friday Holy Hour in the standing schedule box of both bulletins; after a weekday 7:30 AM Mass POLICY starts it at 8:00 AM. No end time is printed, so none is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-our-blessed-lady-wood-ridge",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0615c841",
+          "page": 2,
+          "said": "THANKSGIVING MASS NOVEMBER 26TH 9:00AM"
+        }
+      ],
+      "rationale": "R1, R16, R17: a dated holiday Mass after as_of; the weekly Thursday 7:30 AM slot is left alone since no cancellation is stated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-our-blessed-lady-wood-ridge",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vigil of the Immaculate Conception"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0615c841",
+          "page": 2,
+          "said": "FEAST OF THE IMMACULATE CONCEPTION MONDAY DECEMBER 7TH 7:30PM VIGIL MASS"
+        }
+      ],
+      "rationale": "R1, R16: dated holy-day vigil Mass outside the weekly schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-our-blessed-lady-wood-ridge",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0615c841",
+          "page": 2,
+          "said": "FEAST DAY MASSES TUESDAY DECEMBER 8TH 7:30AM MASS 12:10PM MASS"
+        }
+      ],
+      "rationale": "R1, R16: dated holy-day Mass. The 7:30 AM Mass that day is the weekly Tuesday slot and is not duplicated (POLICY, Weekly or dated, rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-our-blessed-lady-wood-ridge",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0615c841",
+          "page": 3,
+          "said": "the youngest parishioners help begin the first Mass on Christmas Eve (4:00pm)"
+        }
+      ],
+      "rationale": "R1, R16: a dated Christmas Eve Mass with a clear time at the parish church; the other Christmas times are not yet printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-our-blessed-lady-wood-ridge",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-19",
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Simbang Gabi"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0615c841",
+          "page": 2,
+          "said": "SIMBANG GABI CHRISTMAS NOVENA MASS AND CELEBRATION SATURDAY DECEMBER 19TH 5:30PM MASS"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated, rule 7: a special occasion at the regular Saturday 5:30 PM Mass; only the weekly slot is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-our-blessed-lady-wood-ridge",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-02",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent retreat"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0615c841",
+          "page": 2,
+          "said": "ADVENT RETREAT ... WEDNESDAY DECEMBER 2ND 7:00PM - 8:30PM WITH CONFESSIONS"
+        }
+      ],
+      "rationale": "POLICY, Final source checks: confessions are part of a retreat whose hours do not give the confessions' own start or end.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0615c841",
+          "page": 1,
+          "said": "FOR ANOINTING OF THE SICK PLEASE CALL THE RECTORY"
+        }
+      ],
+      "rationale": "R24, R26: not Mass, Confession or Adoration, and has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
