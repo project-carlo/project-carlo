@@ -1,0 +1,799 @@
+{
+  "schema_version": 1,
+  "parish_slug": "corpus-christi-hasbrouck-heights",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:21:38Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T08:58:25Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (Corpus Christi, Hasbrouck Heights). Both bulletins read (Nov 8 and Nov 15, 2026) and the website agree: Sat 5 PM Vigil, Sun 8/10/12, Mon-Sat 8 AM, Confession Sat 4-4:45 PM; plus Thanksgiving 9 AM Mass and the Dec 7 Advent Penance Service. Open: whether the Mother of Mercy Adoration Chapel (Mon/Tue/Thu 1-11 PM) is on the church grounds.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "a36ebeef91ac2033da652e2c6e2328554633a68200f33f27e0a07fa8d958a507",
+      "fetched_at": "2026-11-15T16:21:38Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "a5e3b4601f1c4a04be5245114fd08f743694c67b58f5973c6b9787c1b6cc04a0",
+      "fetched_at": "2026-11-08T15:45:59Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-hasbrouck-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a36ebeef",
+          "page": 1,
+          "said": "Saturday Vigil: 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5e3b460",
+          "page": 1,
+          "said": "Saturday Vigil: 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a36ebeef",
+          "page": 4,
+          "said": "SATURDAY, NOVEMBER 21 ... ANTICIPATED MASS 5:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-hasbrouck-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a36ebeef",
+          "page": 1,
+          "said": "Sundays: 8:00 AM, 10:00 AM, 12 NN"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5e3b460",
+          "page": 1,
+          "said": "Sundays: 8:00 AM, 10:00 AM, 12 NN"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a36ebeef",
+          "page": 4,
+          "said": "SUNDAY, NOVEMBER 22 8:00 AM ... 10:00 AM ... 12:00 NN"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in the intentions; 12 NN is 12:00 PM (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-hasbrouck-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a36ebeef",
+          "page": 1,
+          "said": "Sundays: 8:00 AM, 10:00 AM, 12 NN"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5e3b460",
+          "page": 1,
+          "said": "Sundays: 8:00 AM, 10:00 AM, 12 NN"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a36ebeef",
+          "page": 4,
+          "said": "SUNDAY, NOVEMBER 22 8:00 AM ... 10:00 AM ... 12:00 NN"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in the intentions; 12 NN is 12:00 PM (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-hasbrouck-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a36ebeef",
+          "page": 1,
+          "said": "Sundays: 8:00 AM, 10:00 AM, 12 NN"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5e3b460",
+          "page": 1,
+          "said": "Sundays: 8:00 AM, 10:00 AM, 12 NN"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a36ebeef",
+          "page": 4,
+          "said": "SUNDAY, NOVEMBER 22 8:00 AM ... 10:00 AM ... 12:00 NN"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in the intentions; 12 NN is 12:00 PM (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-hasbrouck-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a36ebeef",
+          "page": 1,
+          "said": "Daily: 8:00 AM Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5e3b460",
+          "page": 1,
+          "said": "Daily: 8:00 AM Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a36ebeef",
+          "page": 4,
+          "said": "MONDAY, NOVEMBER 16 8:00 AM ... SATURDAY, NOVEMBER 21 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in each day's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-hasbrouck-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a36ebeef",
+          "page": 1,
+          "said": "Daily: 8:00 AM Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5e3b460",
+          "page": 1,
+          "said": "Daily: 8:00 AM Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a36ebeef",
+          "page": 4,
+          "said": "MONDAY, NOVEMBER 16 8:00 AM ... SATURDAY, NOVEMBER 21 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in each day's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-hasbrouck-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a36ebeef",
+          "page": 1,
+          "said": "Daily: 8:00 AM Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5e3b460",
+          "page": 1,
+          "said": "Daily: 8:00 AM Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a36ebeef",
+          "page": 4,
+          "said": "MONDAY, NOVEMBER 16 8:00 AM ... SATURDAY, NOVEMBER 21 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in each day's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-hasbrouck-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a36ebeef",
+          "page": 1,
+          "said": "Daily: 8:00 AM Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5e3b460",
+          "page": 1,
+          "said": "Daily: 8:00 AM Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a36ebeef",
+          "page": 4,
+          "said": "MONDAY, NOVEMBER 16 8:00 AM ... SATURDAY, NOVEMBER 21 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in each day's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-hasbrouck-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a36ebeef",
+          "page": 1,
+          "said": "Daily: 8:00 AM Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5e3b460",
+          "page": 1,
+          "said": "Daily: 8:00 AM Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a36ebeef",
+          "page": 4,
+          "said": "MONDAY, NOVEMBER 16 8:00 AM ... SATURDAY, NOVEMBER 21 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in each day's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-hasbrouck-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a36ebeef",
+          "page": 1,
+          "said": "Daily: 8:00 AM Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5e3b460",
+          "page": 1,
+          "said": "Daily: 8:00 AM Monday-Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a36ebeef",
+          "page": 4,
+          "said": "MONDAY, NOVEMBER 16 8:00 AM ... SATURDAY, NOVEMBER 21 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in each day's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-hasbrouck-heights",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a36ebeef",
+          "page": 1,
+          "said": "Sacrament of Penance Saturdays 4:00-4:45"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5e3b460",
+          "page": 1,
+          "said": "Sacrament of Penance Saturdays 4:00-4:45"
+        },
+        {
+          "source": "website",
+          "url": "https://www.corpuschristihh.org/ccp/",
+          "said": "CONFESSION Every Saturday, 4pm-4:45pm in the Church"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins' schedule box; PM follows from the 5:00 PM Vigil that follows it, and the website gives 4pm-4:45pm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-hasbrouck-heights",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a36ebeef",
+          "page": 3,
+          "said": "All are invited to join us on Thanksgiving Day for Mass at 9am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a36ebeef",
+          "page": 2,
+          "said": "Thanksgiving Day ... Mass will be celebrated at 9am."
+        }
+      ],
+      "rationale": "R1, R16: a dated holiday Mass after as_of. R17: the bulletin states no cancellation of the usual 8:00 AM weekday Mass, so none is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-hasbrouck-heights",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Penance Service"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a36ebeef",
+          "page": 3,
+          "said": "Our parish Advent Penance Service will be held on Monday, December 7, at 7pm in the Church."
+        },
+        {
+          "source": "website",
+          "url": "https://www.corpuschristihh.org/ccp/",
+          "said": "Mon Dec 7 7:00 PM Advent Penance Svc-Church"
+        }
+      ],
+      "rationale": "R1, R16: POLICY counts Penance as Confession; a dated service in the Church after as_of, no end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a36ebeef",
+          "page": 3,
+          "said": "Adoration is held in the Mother of Mercy Adoration Chapel. Adoration will be held on Mondays, Tuesdays and Thursdays from 1pm to 11pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5e3b460",
+          "page": 3,
+          "said": "Adoration is held in the Mother of Mercy Adoration Chapel. Adoration will be held on Mondays, Tuesdays and Thursdays from 1pm to 11pm."
+        },
+        {
+          "source": "website",
+          "url": "https://www.corpuschristihh.org/ccp/",
+          "said": "Eucharistic Adoration- Mother of Mercy Chapel: Monday, Tuesday & Thursday - 1pm until 11pm"
+        }
+      ],
+      "rationale": "R32/POLICY, Churches and chapels: neither bulletin nor website says where the Mother of Mercy Chapel is. The website lists a separate 'Corpus Christi Chapel, 215 Kipp Avenue (main entrance through school)' and places the parish on one block ('Boulevard, between Kipp Avenue & Washington Place'; church at 260 Boulevard, corner of Kipp), so the chapel is most likely on the parish campus. Leaning include per R38 since the parish calls it Eucharistic Adoration with fixed hours; leave out if it is off the church grounds.",
+      "question": "Is the Mother of Mercy Adoration Chapel at the Corpus Christi church grounds (record its Adoration there)?",
+      "options": [
+        {
+          "label": "Include Mon, Tue, Thu 1-11 PM at Corpus Christi",
+          "entry": {
+            "church_slug": "corpus-christi-hasbrouck-heights",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "13:00",
+            "end_time": "23:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Mother of Mercy Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "adoration"
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a36ebeef",
+          "page": 3,
+          "said": "Adoration is held in the Mother of Mercy Adoration Chapel. Adoration will be held on Mondays, Tuesdays and Thursdays from 1pm to 11pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5e3b460",
+          "page": 3,
+          "said": "Adoration is held in the Mother of Mercy Adoration Chapel. Adoration will be held on Mondays, Tuesdays and Thursdays from 1pm to 11pm."
+        },
+        {
+          "source": "website",
+          "url": "https://www.corpuschristihh.org/ccp/",
+          "said": "Eucharistic Adoration- Mother of Mercy Chapel: Monday, Tuesday & Thursday - 1pm until 11pm"
+        }
+      ],
+      "rationale": "R32/POLICY, Churches and chapels: neither bulletin nor website says where the Mother of Mercy Chapel is. The website lists a separate 'Corpus Christi Chapel, 215 Kipp Avenue (main entrance through school)' and places the parish on one block ('Boulevard, between Kipp Avenue & Washington Place'; church at 260 Boulevard, corner of Kipp), so the chapel is most likely on the parish campus. Leaning include per R38 since the parish calls it Eucharistic Adoration with fixed hours; leave out if it is off the church grounds.",
+      "question": "Is the Mother of Mercy Adoration Chapel at the Corpus Christi church grounds (record its Adoration there)?",
+      "options": [
+        {
+          "label": "Include Mon, Tue, Thu 1-11 PM at Corpus Christi",
+          "entry": {
+            "church_slug": "corpus-christi-hasbrouck-heights",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "13:00",
+            "end_time": "23:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Mother of Mercy Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "adoration"
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a36ebeef",
+          "page": 3,
+          "said": "Adoration is held in the Mother of Mercy Adoration Chapel. Adoration will be held on Mondays, Tuesdays and Thursdays from 1pm to 11pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5e3b460",
+          "page": 3,
+          "said": "Adoration is held in the Mother of Mercy Adoration Chapel. Adoration will be held on Mondays, Tuesdays and Thursdays from 1pm to 11pm."
+        },
+        {
+          "source": "website",
+          "url": "https://www.corpuschristihh.org/ccp/",
+          "said": "Eucharistic Adoration- Mother of Mercy Chapel: Monday, Tuesday & Thursday - 1pm until 11pm"
+        }
+      ],
+      "rationale": "R32/POLICY, Churches and chapels: neither bulletin nor website says where the Mother of Mercy Chapel is. The website lists a separate 'Corpus Christi Chapel, 215 Kipp Avenue (main entrance through school)' and places the parish on one block ('Boulevard, between Kipp Avenue & Washington Place'; church at 260 Boulevard, corner of Kipp), so the chapel is most likely on the parish campus. Leaning include per R38 since the parish calls it Eucharistic Adoration with fixed hours; leave out if it is off the church grounds.",
+      "question": "Is the Mother of Mercy Adoration Chapel at the Corpus Christi church grounds (record its Adoration there)?",
+      "options": [
+        {
+          "label": "Include Mon, Tue, Thu 1-11 PM at Corpus Christi",
+          "entry": {
+            "church_slug": "corpus-christi-hasbrouck-heights",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "13:00",
+            "end_time": "23:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Mother of Mercy Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "adoration"
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-hasbrouck-heights",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Fridays during Lent, Mother of Mercy Chapel"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.corpuschristihh.org/ccp/",
+          "said": "Fridays during Lent: 1-5pm"
+        }
+      ],
+      "rationale": "R33: Lent has no fixed months, so a season field cannot express it; website-only, not in either bulletin. Update mode can pick up Lenten dates from bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a36ebeef",
+          "page": 2,
+          "said": "All are welcomed to join in the recitation of the Rosary beginning at 7:30am, Monday-Friday, before the 8am Mass."
+        }
+      ],
+      "rationale": "R24: the Rosary is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
