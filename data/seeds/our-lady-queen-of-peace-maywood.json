@@ -1,0 +1,523 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-queen-of-peace-maywood",
+  "status": "ready",
+  "as_of": "2026-11-15T16:23:24Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T22:07:08Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both bulletins read (Nov 8 and Nov 15, 2026) print the same schedule box: Saturday 5 PM vigil, Sunday 8, 10 and noon, Monday-Saturday 8:30 AM, Saturday confession at 1 PM. Added the dated November 22 3 PM Confirmation Mass; no Adoration is listed. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "270093f9d9513aa0ea13a6f3687d8cdd415419c8135619ea14103b0362184211",
+      "fetched_at": "2026-11-15T16:23:24Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "2ce901157038184f4fa7a3e77d7ff77a695cebed1d16175cd99e0c43445d0e8b",
+      "fetched_at": "2026-11-08T15:47:28Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-maywood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "270093f9",
+          "page": 1,
+          "said": "Mass Schedule Saturday - 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ce90115",
+          "page": 1,
+          "said": "Mass Schedule Saturday - 5:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; intentions list 5:00pm Saturday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-maywood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "270093f9",
+          "page": 1,
+          "said": "Sunday - 8:00,10:00 AM* and 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ce90115",
+          "page": 1,
+          "said": "Sunday - 8:00,10:00 AM* and 12:00 Noon"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; intentions list 8:00am, 10:00am, 12:00pm Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-maywood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "270093f9",
+          "page": 1,
+          "said": "Sunday - 8:00,10:00 AM* and 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ce90115",
+          "page": 1,
+          "said": "Sunday - 8:00,10:00 AM* and 12:00 Noon"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; intentions list 8:00am, 10:00am, 12:00pm Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-maywood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "270093f9",
+          "page": 1,
+          "said": "Sunday - 8:00,10:00 AM* and 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ce90115",
+          "page": 1,
+          "said": "Sunday - 8:00,10:00 AM* and 12:00 Noon"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; intentions list 8:00am, 10:00am, 12:00pm Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-maywood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "270093f9",
+          "page": 1,
+          "said": "Monday-Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ce90115",
+          "page": 1,
+          "said": "Monday-Saturday 8:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the intentions list an 8:30am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-maywood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "270093f9",
+          "page": 1,
+          "said": "Monday-Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ce90115",
+          "page": 1,
+          "said": "Monday-Saturday 8:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the intentions list an 8:30am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-maywood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "270093f9",
+          "page": 1,
+          "said": "Monday-Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ce90115",
+          "page": 1,
+          "said": "Monday-Saturday 8:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the intentions list an 8:30am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-maywood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "270093f9",
+          "page": 1,
+          "said": "Monday-Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ce90115",
+          "page": 1,
+          "said": "Monday-Saturday 8:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the intentions list an 8:30am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-maywood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "270093f9",
+          "page": 1,
+          "said": "Monday-Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ce90115",
+          "page": 1,
+          "said": "Monday-Saturday 8:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the intentions list an 8:30am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-maywood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "270093f9",
+          "page": 1,
+          "said": "Monday-Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ce90115",
+          "page": 1,
+          "said": "Monday-Saturday 8:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the intentions list an 8:30am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-maywood",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "270093f9",
+          "page": 1,
+          "said": "Reconciliation Saturday - 1:00 PM or by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ce90115",
+          "page": 1,
+          "said": "Reconciliation Saturday - 1:00 PM or by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "270093f9",
+          "page": 6,
+          "said": "Sat., 11/21 Confessions, 1pm, CH"
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation box of both bulletins and in the parish calendar; no end time given, so none recorded (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-maywood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-22",
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Confirmation Mass with Bishop Elias Lorenzo"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "270093f9",
+          "page": 6,
+          "said": "November 22 ... CONFIRMATION MASS, 3pm Celebrants: Most Rev. Elias R. Lorenzo, O.S.B."
+        }
+      ],
+      "rationale": "R1, R16: a dated special Mass outside the weekly schedule, on or after as_of, in the church (calendar: Confirmation, 3pm). POLICY, Churches and chapels: the bulletin does not limit attendance, so it is open.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "270093f9",
+          "page": 1,
+          "said": "Holy Days - TBA"
+        }
+      ],
+      "rationale": "R26: holy-day Masses are 'TBA', no time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "270093f9",
+          "page": 1,
+          "said": "Reconciliation Saturday - 1:00 PM or by appointment."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
