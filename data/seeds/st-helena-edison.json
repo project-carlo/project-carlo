@@ -1,0 +1,522 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-helena-edison",
+  "status": "ready",
+  "as_of": "2026-11-15T16:06:20Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T03:43:41Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, St. Helena, Edison. The page 1 schedule box and the weekly intentions agree in both bulletins read (Nov 8 and Nov 15, 2026): weekday and Saturday 8:30 AM, Saturday 4 PM vigil, Sunday 8, 10:30 and 12; Saturday 9-10 AM Confession and Adoration for Vocations. No open questions; no history stored and no model calls.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "edf2baea329853f3bbc9a2c6f0703c64bc8fcc8e888df3ded651751caf7d1e88",
+      "fetched_at": "2026-11-15T16:06:20Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "944b06d295d9696c3ce4b9e0c2500f5790411fa84e84bbcad23dfc54ea1742ed",
+      "fetched_at": "2026-11-08T15:33:01Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-helena-edison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "edf2baea",
+          "page": 1,
+          "said": "Masses: Weekdays: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "944b06d2",
+          "page": 1,
+          "said": "Masses: Weekdays: 8:30 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page 1 schedule box of both bulletins read, and each day's 8:30 AM Mass is in both weeks' intentions (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-helena-edison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "edf2baea",
+          "page": 1,
+          "said": "Masses: Weekdays: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "944b06d2",
+          "page": 1,
+          "said": "Masses: Weekdays: 8:30 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page 1 schedule box of both bulletins read, and each day's 8:30 AM Mass is in both weeks' intentions (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-helena-edison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "edf2baea",
+          "page": 1,
+          "said": "Masses: Weekdays: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "944b06d2",
+          "page": 1,
+          "said": "Masses: Weekdays: 8:30 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page 1 schedule box of both bulletins read, and each day's 8:30 AM Mass is in both weeks' intentions (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-helena-edison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "edf2baea",
+          "page": 1,
+          "said": "Masses: Weekdays: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "944b06d2",
+          "page": 1,
+          "said": "Masses: Weekdays: 8:30 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page 1 schedule box of both bulletins read, and each day's 8:30 AM Mass is in both weeks' intentions (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-helena-edison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "edf2baea",
+          "page": 1,
+          "said": "Masses: Weekdays: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "944b06d2",
+          "page": 1,
+          "said": "Masses: Weekdays: 8:30 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page 1 schedule box of both bulletins read, and each day's 8:30 AM Mass is in both weeks' intentions (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-helena-edison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "edf2baea",
+          "page": 1,
+          "said": "Saturday Morning Mass: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "944b06d2",
+          "page": 1,
+          "said": "Saturday Morning Mass: 8:30 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page 1 schedule box of both bulletins read; Saturday 8:30 AM Purgatorial Society Mass in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-helena-edison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "edf2baea",
+          "page": 1,
+          "said": "Saturday: 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "944b06d2",
+          "page": 1,
+          "said": "Saturday: 4:00 PM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page 1 schedule box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-helena-edison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "edf2baea",
+          "page": 1,
+          "said": "Sunday: 8:00 & 10:30 AM, 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "944b06d2",
+          "page": 1,
+          "said": "Sunday: 8:00 & 10:30 AM, 12:00 PM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page 1 schedule box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-helena-edison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "edf2baea",
+          "page": 1,
+          "said": "Sunday: 8:00 & 10:30 AM, 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "944b06d2",
+          "page": 1,
+          "said": "Sunday: 8:00 & 10:30 AM, 12:00 PM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page 1 schedule box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-helena-edison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "edf2baea",
+          "page": 1,
+          "said": "Sunday: 8:00 & 10:30 AM, 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "944b06d2",
+          "page": 1,
+          "said": "Sunday: 8:00 & 10:30 AM, 12:00 PM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page 1 schedule box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-helena-edison",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "edf2baea",
+          "page": 1,
+          "said": "Confessions: Saturday Morning: 9:00 AM to 10:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "944b06d2",
+          "page": 1,
+          "said": "Confessions: Saturday Morning: 9:00 AM to 10:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "edf2baea",
+          "page": 3,
+          "said": "Reconciliation Saturday mornings at 9 AM ."
+        },
+        {
+          "source": "agent",
+          "bulletin": "944b06d2",
+          "page": 3,
+          "said": "Reconciliation Saturday mornings at 9 AM ."
+        }
+      ],
+      "rationale": "R1, R35: the page 1 schedule box of both bulletins gives 9:00-10:00 AM; page 3 agrees on the 9 AM start.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-helena-edison",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "edf2baea",
+          "page": 3,
+          "said": "Please join us on Saturday mornings from 9-10 AM for Eucharistic Adoration for Vocations ."
+        },
+        {
+          "source": "agent",
+          "bulletin": "944b06d2",
+          "page": 3,
+          "said": "Please join us on Saturday mornings from 9-10 AM for Eucharistic Adoration for Vocations ."
+        }
+      ],
+      "rationale": "R1, R35: a standing weekly notice on page 3 of both bulletins read; at St. Helena (the parish's only church).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "edf2baea",
+          "page": 1,
+          "said": "Vigils of Eves of Holy days: TBA; Holy Days: 8:30 AM & TBA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "944b06d2",
+          "page": 1,
+          "said": "Vigils of Eves of Holy days: TBA; Holy Days: 8:30 AM & TBA"
+        }
+      ],
+      "rationale": "R26, POLICY Weekly or dated: holy-day Masses are dated and no date is printed; the evening times are TBA. No holy day of obligation falls in the newest bulletin's week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
