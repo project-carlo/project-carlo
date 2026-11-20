@@ -1,0 +1,815 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-jude-blairstown",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:07:33Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T04:28:07Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, St. Jude (street address in Columbia, NJ). Weekend, Mon-Thu 9 AM, Saturday confession and Wednesday Holy Hour agree in both bulletins and the website; first-Friday Mass and Adoration come from the bulletin and website. Open: whether non-first Fridays get a weekly 9 AM Mass (parish says to check the bulletin).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "4ad515af0b83d7531f7cf960e32d6035090dfad64ed3483e0c58f464386b19e9",
+      "fetched_at": "2026-11-15T16:07:33Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "720a7d7354d287f49a4c620c1a43451ca36ef8c78eb2be4d1f13fd7d13bc2526",
+      "fetched_at": "2026-11-08T15:33:38Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-blairstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ad515af",
+          "page": 1,
+          "said": "Saturday Vigil ---- 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "720a7d73",
+          "page": 1,
+          "said": "Saturday Vigil ---- 5:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-blairstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ad515af",
+          "page": 1,
+          "said": "Sunday ---- 8:15 &10:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "720a7d73",
+          "page": 1,
+          "said": "Sunday ---- 8:15 &10:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-blairstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ad515af",
+          "page": 1,
+          "said": "Sunday ---- 8:15 &10:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "720a7d73",
+          "page": 1,
+          "said": "Sunday ---- 8:15 &10:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-blairstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ad515af",
+          "page": 1,
+          "said": "Monday through Thursday ---- 9:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "720a7d73",
+          "page": 1,
+          "said": "Monday through Thursday ---- 9:00 am Mass"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-blairstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ad515af",
+          "page": 1,
+          "said": "Monday through Thursday ---- 9:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "720a7d73",
+          "page": 1,
+          "said": "Monday through Thursday ---- 9:00 am Mass"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-blairstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ad515af",
+          "page": 1,
+          "said": "Monday through Thursday ---- 9:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "720a7d73",
+          "page": 1,
+          "said": "Monday through Thursday ---- 9:00 am Mass"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-blairstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ad515af",
+          "page": 1,
+          "said": "Monday through Thursday ---- 9:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "720a7d73",
+          "page": 1,
+          "said": "Monday through Thursday ---- 9:00 am Mass"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-blairstown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ad515af",
+          "page": 1,
+          "said": "Confessions ----Saturday, 4:00 to 4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "720a7d73",
+          "page": 1,
+          "said": "Confessions ----Saturday, 4:00 to 4:30 pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and weekly calendar of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-blairstown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "10:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ad515af",
+          "page": 2,
+          "said": "A Holy Hour is held on Wednesdays after 9 AM Mass in St. Jude Church, followed by Exposition of the Blessed Sacrament, Adoration, Prayer, Silence, Confessions, & Benediction."
+        },
+        {
+          "source": "agent",
+          "bulletin": "720a7d73",
+          "page": 2,
+          "said": "A Holy Hour is held on Wednesdays after 9 AM Mass in St. Jude Church, followed by Exposition of the Blessed Sacrament, Adoration, Prayer, Silence, Confessions, & Benediction."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjudech.org/",
+          "said": "Adoration Times Wednesday : 9:30 AM to 10:30 AM Holy Hour begins after 9 AM Mass",
+          "schedule_check": {
+            "checked_at": "2026-11-20T04:29:40Z",
+            "current_because": "Homepage schedule matches both November 2026 bulletins' Mass, confession and Holy Hour times; no stale clues.",
+            "bulletin": "4ad515af",
+            "fits_because": "The newest bulletin prints the Wednesday Holy Hour after the 9 AM Mass; the site gives its clock times."
+          }
+        }
+      ],
+      "rationale": "R1, R10: the bulletin's Holy Hour after the weekday 9 AM Mass starts at 9:30 (POLICY, Times); R6: the parish website gives 9:30-10:30, matching a Holy Hour.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-blairstown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "10:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "During Adoration"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ad515af",
+          "page": 2,
+          "said": "Holy Hour ... Exposition of the Blessed Sacrament, Adoration, Prayer, Silence, Confessions, & Benediction."
+        },
+        {
+          "source": "agent",
+          "bulletin": "720a7d73",
+          "page": 2,
+          "said": "Holy Hour ... Exposition of the Blessed Sacrament, Adoration, Prayer, Silence, Confessions, & Benediction."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjudech.org/",
+          "said": "Confessions Saturdays 4 to 4:30 PM Wednesdays during 9:30 AM Holy Hour",
+          "schedule_check": {
+            "checked_at": "2026-11-20T04:29:40Z",
+            "current_because": "Homepage schedule matches both November 2026 bulletins' Mass, confession and Holy Hour times; no stale clues.",
+            "bulletin": "4ad515af",
+            "fits_because": "The newest bulletin lists confessions within the Wednesday Holy Hour after the 9 AM Mass."
+          }
+        }
+      ],
+      "rationale": "R10: Confession during Adoration takes the Adoration's hours (POLICY, Times); the website says confessions are during the 9:30 AM Holy Hour.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-blairstown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ad515af",
+          "page": 3,
+          "said": "December 4: 9:30 AM to 7:00 PM 1st Friday Exposition of the Blessed Sacrament for Eucharistic Adoration of our Lord"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjudech.org/",
+          "said": "1st Friday : 9:30 AM to 7:00 PM Adoration is held in the Chapel",
+          "schedule_check": {
+            "checked_at": "2026-11-20T04:29:40Z",
+            "current_because": "Homepage schedule matches both November 2026 bulletins' Mass, confession and Holy Hour times; no stale clues.",
+            "bulletin": "4ad515af",
+            "fits_because": "The newest bulletin announces the December 4 1st Friday Exposition at the same hours."
+          }
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 2: named '1st Friday', so weekly first Fridays; R11: the older bulletin's week (Nov 8-14) holds no first Friday. The website confirms the hours and places it in the parish chapel (R38).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-blairstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stjudech.org/",
+          "said": "Weekday Masses: Monday to Thursday: 9 AM First Friday of Month: 9 AM For other Fridays check bulletin.",
+          "schedule_check": {
+            "checked_at": "2026-11-20T04:29:40Z",
+            "current_because": "Homepage schedule matches both November 2026 bulletins' Mass, confession and Holy Hour times; no stale clues.",
+            "bulletin": "4ad515af",
+            "fits_because": "The newest bulletin's box says 'Please check the schedule for Friday Masses' and lists a Friday 9:00 AM Mass; the first Friday Mass at 9 AM fits that."
+          }
+        }
+      ],
+      "rationale": "R6: the parish website names a First Friday 9 AM Mass; neither bulletin's week holds a first Friday, and both show Friday Masses at 9 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-blairstown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-20",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ad515af",
+          "page": 2,
+          "said": "FRIDAY, NOV. 20 9:00 AM Fr. Dan Sloan r/o Rosanne & Kevin McPartland"
+        }
+      ],
+      "rationale": "R1, R16: dated Friday Mass in the newest intentions, on or after as_of; the box says to check the schedule for Friday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "720a7d73",
+          "page": 2,
+          "said": "FRIDAY, NOV. 13 9:00 AM Sheila O'Neill r/o her daughter Mary McCrone"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4ad515af",
+          "page": 2,
+          "said": "FRIDAY, NOV. 20 9:00 AM Fr. Dan Sloan"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4ad515af",
+          "page": 1,
+          "said": "Please check the schedule for Friday Masses"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjudech.org/",
+          "said": "For other Fridays check bulletin."
+        }
+      ],
+      "rationale": "R30/R35: intentions show a 9 AM Friday Mass on Nov 13 and Nov 20, which R35 would make weekly, but the box and website say Friday Masses vary ('check bulletin'). Leaning leave out: a wrong weekly time is worse than a missing one, and update mode records each dated Friday Mass.",
+      "question": "Add a weekly Friday 9 AM Mass on Fridays other than the first?",
+      "options": [
+        {
+          "label": "Fridays 9 AM except first",
+          "entry": {
+            "church_slug": "st-jude-blairstown",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "second",
+              "third",
+              "fourth",
+              "fifth"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out (dated Friday Masses come from each bulletin)",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-blairstown",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-22",
+        "start_time": "11:30",
+        "end_time": "14:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction; Solemnity of Christ the King"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ad515af",
+          "page": 5,
+          "said": "Sunday, November 22, 11:30 to 2:00 PM ... after the 10:30 AM Mass exposition of the blessed Sacrament will be held till 2 PM, closing with benediction at St. Jude Church"
+        }
+      ],
+      "rationale": "R1, R16: dated Exposition on or after as_of; the clock time 11:30 is printed (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-blairstown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-23",
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Memorial Mass for the deceased, especially Knights of Columbus and their families"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ad515af",
+          "page": 3,
+          "said": "November 23, 7:30 PM: Memorial Mass for the deceased, especially of the Knights of Columbus and their families."
+        }
+      ],
+      "rationale": "R1, R16: dated Mass under Upcoming Events, for the deceased generally, not one person (POLICY), so open.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-blairstown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ad515af",
+          "page": 3,
+          "said": "November 26, Thanksgiving Day Mass at 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "720a7d73",
+          "page": 3,
+          "said": "November 26, Thanksgiving Day Mass at 9:00 AM"
+        }
+      ],
+      "rationale": "POLICY Weekly or dated rule 7: Thanksgiving is Thursday, at the regular weekly Thursday 9:00 AM Mass, so only the weekly slot is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-blairstown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-12",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Guadalupe"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ad515af",
+          "page": 3,
+          "said": "Dec. 12, Feast of Our Lady of Guadalupe, 10 AM Mass"
+        }
+      ],
+      "rationale": "R1, R16: dated feast Mass on a Saturday, outside the weekly schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ad515af",
+          "page": 3,
+          "said": "December 8, Immaculate Conception Holy Day of Obligation"
+        }
+      ],
+      "rationale": "R26: no Mass times printed for the holy day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ad515af",
+          "page": 1,
+          "said": "Confessions ... or by appointment"
+        }
+      ],
+      "rationale": "R26: by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-blairstown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Guadalupe Rosary Prayer Group"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ad515af",
+          "page": 5,
+          "said": "Our Lady of Guadalupe Rosary Prayer Group Tuesdays 6 - 7 pm, in the chapel"
+        }
+      ],
+      "rationale": "R24: a Rosary group, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
