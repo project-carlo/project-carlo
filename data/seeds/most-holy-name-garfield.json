@@ -1,0 +1,1031 @@
+{
+  "schema_version": 1,
+  "parish_slug": "most-holy-name-garfield",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:52:59Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T10:16:07Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. The schedule box (identical in both November bulletins and matching the website) gives Mon-Sat noon Mass except Thursday, Thursday 7 PM Spanish Mass, Saturday 5 PM, Sunday 8/10/12, Thursday and First Friday Adoration and Confession; plus a Thanksgiving 9 AM Mass. Open: a First Friday 7 PM Mass seen only in intentions, and whether the Eucharistic Chapel's 7 AM-7 PM hours count as Adoration.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "46fe23432c35a6b92a8a9fbf684288f8293f7f69a39bf6839a409e3366ecaa26",
+      "fetched_at": "2026-11-15T16:52:59Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "ee7f471115d1b528b13aead816c8cb6454dd24db2665005207e3e0e598d27649",
+      "fetched_at": "2026-11-08T16:01:57Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-holy-name-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46fe2343",
+          "page": 1,
+          "said": "WEEKDAY MASS / MISA DIARIA Monday - Saturday (except Thursday) ... 12:00 PM English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee7f4711",
+          "page": 1,
+          "said": "WEEKDAY MASS / MISA DIARIA Monday - Saturday (except Thursday) ... 12:00 PM English"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read, and the intentions list a 12:00 PM Mass on each of these days in both weeks. The website omits 'except Thursday'; the bulletin is newer and specific.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-holy-name-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46fe2343",
+          "page": 1,
+          "said": "WEEKDAY MASS / MISA DIARIA Monday - Saturday (except Thursday) ... 12:00 PM English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee7f4711",
+          "page": 1,
+          "said": "WEEKDAY MASS / MISA DIARIA Monday - Saturday (except Thursday) ... 12:00 PM English"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read, and the intentions list a 12:00 PM Mass on each of these days in both weeks. The website omits 'except Thursday'; the bulletin is newer and specific.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-holy-name-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46fe2343",
+          "page": 1,
+          "said": "WEEKDAY MASS / MISA DIARIA Monday - Saturday (except Thursday) ... 12:00 PM English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee7f4711",
+          "page": 1,
+          "said": "WEEKDAY MASS / MISA DIARIA Monday - Saturday (except Thursday) ... 12:00 PM English"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read, and the intentions list a 12:00 PM Mass on each of these days in both weeks. The website omits 'except Thursday'; the bulletin is newer and specific.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-holy-name-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46fe2343",
+          "page": 1,
+          "said": "WEEKDAY MASS / MISA DIARIA Monday - Saturday (except Thursday) ... 12:00 PM English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee7f4711",
+          "page": 1,
+          "said": "WEEKDAY MASS / MISA DIARIA Monday - Saturday (except Thursday) ... 12:00 PM English"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read, and the intentions list a 12:00 PM Mass on each of these days in both weeks. The website omits 'except Thursday'; the bulletin is newer and specific.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-holy-name-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46fe2343",
+          "page": 1,
+          "said": "WEEKDAY MASS / MISA DIARIA Monday - Saturday (except Thursday) ... 12:00 PM English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee7f4711",
+          "page": 1,
+          "said": "WEEKDAY MASS / MISA DIARIA Monday - Saturday (except Thursday) ... 12:00 PM English"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read, and the intentions list a 12:00 PM Mass on each of these days in both weeks. The website omits 'except Thursday'; the bulletin is newer and specific.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-holy-name-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46fe2343",
+          "page": 1,
+          "said": "Thursdays / Jueves 7:00 PM Misa en Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee7f4711",
+          "page": 1,
+          "said": "Thursdays / Jueves 7:00 PM Misa en Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "46fe2343",
+          "page": 2,
+          "said": "THURSDAY NOVEMBER 19 7:00 PM+ Maria La Marche"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in the newest intentions. The Nov 1-8 intentions list Thursday Nov 5 at 12:00 PM instead; that is a past dated listing (R16, R40) and does not change the standing schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-holy-name-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Bilingual"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46fe2343",
+          "page": 1,
+          "said": "SATURDAY ANTICIPATED MASS 5:00 PM Bilingual / Bilingue"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee7f4711",
+          "page": 1,
+          "said": "SATURDAY ANTICIPATED MASS 5:00 PM Bilingual / Bilingue"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-holy-name-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46fe2343",
+          "page": 1,
+          "said": "SUNDAY MASS 8:00 AM Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee7f4711",
+          "page": 1,
+          "said": "SUNDAY MASS 8:00 AM Español"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-holy-name-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46fe2343",
+          "page": 1,
+          "said": "SUNDAY MASS 10:00 AM English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee7f4711",
+          "page": 1,
+          "said": "SUNDAY MASS 10:00 AM English"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-holy-name-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46fe2343",
+          "page": 1,
+          "said": "SUNDAY MASS 12:00 PM Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee7f4711",
+          "page": 1,
+          "said": "SUNDAY MASS 12:00 PM Español"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-holy-name-garfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46fe2343",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION Thursday / Jueves 6:00 - 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee7f4711",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION Thursday / Jueves 6:00 - 7:00 PM"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-holy-name-garfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": "18:50",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee7f4711",
+          "page": 1,
+          "said": "First Friday of the month / Primer Viernes del mes 12:30 - 6:50 PM"
+        }
+      ],
+      "rationale": "R12: a first-Friday service; the newest bulletin's week (Nov 15-22) holds no first Friday. The Nov 1-8 issue, whose week holds First Friday Nov 6, prints it (the newest prints the same box too).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-holy-name-garfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "18:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46fe2343",
+          "page": 1,
+          "said": "Jueves / Thursday: 6:00 - 6:50 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee7f4711",
+          "page": 1,
+          "said": "Jueves / Thursday: 6:00 - 6:50 pm"
+        }
+      ],
+      "rationale": "R1: confession schedule in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-holy-name-garfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46fe2343",
+          "page": 1,
+          "said": "Sabado / Saturday: 4:00 - 4:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee7f4711",
+          "page": 1,
+          "said": "Sabado / Saturday: 4:00 - 4:45 pm"
+        }
+      ],
+      "rationale": "R1: confession schedule in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-holy-name-garfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": "13:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee7f4711",
+          "page": 1,
+          "said": "First Friday of the month: 12:30 - 1:30 and 6:00 - 6:50 pm."
+        }
+      ],
+      "rationale": "R12: first-Friday confessions; the newest week holds no first Friday, so the Nov 1-8 issue (First Friday Nov 6) is cited.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-holy-name-garfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "18:50",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee7f4711",
+          "page": 1,
+          "said": "First Friday of the month: 12:30 - 1:30 and 6:00 - 6:50 pm."
+        }
+      ],
+      "rationale": "R12: first-Friday confessions; the newest week holds no first Friday, so the Nov 1-8 issue (First Friday Nov 6) is cited.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-holy-name-garfield",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46fe2343",
+          "page": 5,
+          "said": "Thanksgiving Mass ... November 26, 2026 | 9:00 AM"
+        }
+      ],
+      "rationale": "R1, R16: dated special Mass on Thanksgiving, after as_of. The flyer does not cancel the Thursday 7 PM Mass, so that slot is left alone (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee7f4711",
+          "page": 2,
+          "said": "FIRST FRIDAY NOVEMBER 6 12:00 PM ... 7:00 PM 7:00 PM"
+        }
+      ],
+      "rationale": "R29, R11: only the Nov 1-8 intentions list a 7:00 PM Mass under 'FIRST FRIDAY NOVEMBER 6'; the schedule box and website don't list it. It fits the box: First Friday Adoration ends 6:50 PM and confession runs 6:00-6:50 PM. Seen in one first-Friday week only (the newest week holds none). Leaning include; C1 does not apply since nothing contradicts it.",
+      "question": "Add a First Friday 7:00 PM Mass?",
+      "options": [
+        {
+          "label": "First Fridays 7 PM",
+          "entry": {
+            "church_slug": "most-holy-name-garfield",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46fe2343",
+          "page": 2,
+          "said": "EUCHARISTIC CHAPEL/ CAPILLA MONDAY -SATURDAY 7:00am- 7:00pm When there is a service in the Church, the chapel will be closed. Cuando haya adoración en la Iglesia, la capilla estará cerrada."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee7f4711",
+          "page": 2,
+          "said": "EUCHARISTIC CHAPEL/ CAPILLA MONDAY -SATURDAY 7:00am- 7:00pm When there is a service in the Church, the chapel will be closed. Cuando haya adoración en la Iglesia, la capilla estará cerrada."
+        },
+        {
+          "source": "website",
+          "url": "https://www.mostholynamegarfield.org/",
+          "said": "Eucharistic Chapel Monday - Saturday / Lunes a Sábado 7:00 am - 7:00 pm When there is a service in the Church, the chapel will be closed."
+        }
+      ],
+      "rationale": "R30, R38: the chapel's hours are listed separately from 'Eucharistic Adoration' and neither the bulletin nor the website calls them Adoration or says where the chapel is; POLICY says a chapel merely open for prayer is not an Adoration schedule. Leaning leave out. Include only if the chapel is on site and its hours are prayer before the Blessed Sacrament.",
+      "question": "Record the Eucharistic Chapel's Mon-Sat 7 AM-7 PM hours as Adoration?",
+      "options": [
+        {
+          "label": "Mon-Sat 7 AM-7 PM Adoration",
+          "entry": {
+            "church_slug": "most-holy-name-garfield",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Eucharistic Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46fe2343",
+          "page": 2,
+          "said": "EUCHARISTIC CHAPEL/ CAPILLA MONDAY -SATURDAY 7:00am- 7:00pm When there is a service in the Church, the chapel will be closed. Cuando haya adoración en la Iglesia, la capilla estará cerrada."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee7f4711",
+          "page": 2,
+          "said": "EUCHARISTIC CHAPEL/ CAPILLA MONDAY -SATURDAY 7:00am- 7:00pm When there is a service in the Church, the chapel will be closed. Cuando haya adoración en la Iglesia, la capilla estará cerrada."
+        },
+        {
+          "source": "website",
+          "url": "https://www.mostholynamegarfield.org/",
+          "said": "Eucharistic Chapel Monday - Saturday / Lunes a Sábado 7:00 am - 7:00 pm When there is a service in the Church, the chapel will be closed."
+        }
+      ],
+      "rationale": "R30, R38: the chapel's hours are listed separately from 'Eucharistic Adoration' and neither the bulletin nor the website calls them Adoration or says where the chapel is; POLICY says a chapel merely open for prayer is not an Adoration schedule. Leaning leave out. Include only if the chapel is on site and its hours are prayer before the Blessed Sacrament.",
+      "question": "Record the Eucharistic Chapel's Mon-Sat 7 AM-7 PM hours as Adoration?",
+      "options": [
+        {
+          "label": "Mon-Sat 7 AM-7 PM Adoration",
+          "entry": {
+            "church_slug": "most-holy-name-garfield",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Eucharistic Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46fe2343",
+          "page": 2,
+          "said": "EUCHARISTIC CHAPEL/ CAPILLA MONDAY -SATURDAY 7:00am- 7:00pm When there is a service in the Church, the chapel will be closed. Cuando haya adoración en la Iglesia, la capilla estará cerrada."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee7f4711",
+          "page": 2,
+          "said": "EUCHARISTIC CHAPEL/ CAPILLA MONDAY -SATURDAY 7:00am- 7:00pm When there is a service in the Church, the chapel will be closed. Cuando haya adoración en la Iglesia, la capilla estará cerrada."
+        },
+        {
+          "source": "website",
+          "url": "https://www.mostholynamegarfield.org/",
+          "said": "Eucharistic Chapel Monday - Saturday / Lunes a Sábado 7:00 am - 7:00 pm When there is a service in the Church, the chapel will be closed."
+        }
+      ],
+      "rationale": "R30, R38: the chapel's hours are listed separately from 'Eucharistic Adoration' and neither the bulletin nor the website calls them Adoration or says where the chapel is; POLICY says a chapel merely open for prayer is not an Adoration schedule. Leaning leave out. Include only if the chapel is on site and its hours are prayer before the Blessed Sacrament.",
+      "question": "Record the Eucharistic Chapel's Mon-Sat 7 AM-7 PM hours as Adoration?",
+      "options": [
+        {
+          "label": "Mon-Sat 7 AM-7 PM Adoration",
+          "entry": {
+            "church_slug": "most-holy-name-garfield",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Eucharistic Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s22",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46fe2343",
+          "page": 2,
+          "said": "EUCHARISTIC CHAPEL/ CAPILLA MONDAY -SATURDAY 7:00am- 7:00pm When there is a service in the Church, the chapel will be closed. Cuando haya adoración en la Iglesia, la capilla estará cerrada."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee7f4711",
+          "page": 2,
+          "said": "EUCHARISTIC CHAPEL/ CAPILLA MONDAY -SATURDAY 7:00am- 7:00pm When there is a service in the Church, the chapel will be closed. Cuando haya adoración en la Iglesia, la capilla estará cerrada."
+        },
+        {
+          "source": "website",
+          "url": "https://www.mostholynamegarfield.org/",
+          "said": "Eucharistic Chapel Monday - Saturday / Lunes a Sábado 7:00 am - 7:00 pm When there is a service in the Church, the chapel will be closed."
+        }
+      ],
+      "rationale": "R30, R38: the chapel's hours are listed separately from 'Eucharistic Adoration' and neither the bulletin nor the website calls them Adoration or says where the chapel is; POLICY says a chapel merely open for prayer is not an Adoration schedule. Leaning leave out. Include only if the chapel is on site and its hours are prayer before the Blessed Sacrament.",
+      "question": "Record the Eucharistic Chapel's Mon-Sat 7 AM-7 PM hours as Adoration?",
+      "options": [
+        {
+          "label": "Mon-Sat 7 AM-7 PM Adoration",
+          "entry": {
+            "church_slug": "most-holy-name-garfield",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Eucharistic Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s23",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46fe2343",
+          "page": 2,
+          "said": "EUCHARISTIC CHAPEL/ CAPILLA MONDAY -SATURDAY 7:00am- 7:00pm When there is a service in the Church, the chapel will be closed. Cuando haya adoración en la Iglesia, la capilla estará cerrada."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee7f4711",
+          "page": 2,
+          "said": "EUCHARISTIC CHAPEL/ CAPILLA MONDAY -SATURDAY 7:00am- 7:00pm When there is a service in the Church, the chapel will be closed. Cuando haya adoración en la Iglesia, la capilla estará cerrada."
+        },
+        {
+          "source": "website",
+          "url": "https://www.mostholynamegarfield.org/",
+          "said": "Eucharistic Chapel Monday - Saturday / Lunes a Sábado 7:00 am - 7:00 pm When there is a service in the Church, the chapel will be closed."
+        }
+      ],
+      "rationale": "R30, R38: the chapel's hours are listed separately from 'Eucharistic Adoration' and neither the bulletin nor the website calls them Adoration or says where the chapel is; POLICY says a chapel merely open for prayer is not an Adoration schedule. Leaning leave out. Include only if the chapel is on site and its hours are prayer before the Blessed Sacrament.",
+      "question": "Record the Eucharistic Chapel's Mon-Sat 7 AM-7 PM hours as Adoration?",
+      "options": [
+        {
+          "label": "Mon-Sat 7 AM-7 PM Adoration",
+          "entry": {
+            "church_slug": "most-holy-name-garfield",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Eucharistic Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s24",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46fe2343",
+          "page": 2,
+          "said": "EUCHARISTIC CHAPEL/ CAPILLA MONDAY -SATURDAY 7:00am- 7:00pm When there is a service in the Church, the chapel will be closed. Cuando haya adoración en la Iglesia, la capilla estará cerrada."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee7f4711",
+          "page": 2,
+          "said": "EUCHARISTIC CHAPEL/ CAPILLA MONDAY -SATURDAY 7:00am- 7:00pm When there is a service in the Church, the chapel will be closed. Cuando haya adoración en la Iglesia, la capilla estará cerrada."
+        },
+        {
+          "source": "website",
+          "url": "https://www.mostholynamegarfield.org/",
+          "said": "Eucharistic Chapel Monday - Saturday / Lunes a Sábado 7:00 am - 7:00 pm When there is a service in the Church, the chapel will be closed."
+        }
+      ],
+      "rationale": "R30, R38: the chapel's hours are listed separately from 'Eucharistic Adoration' and neither the bulletin nor the website calls them Adoration or says where the chapel is; POLICY says a chapel merely open for prayer is not an Adoration schedule. Leaning leave out. Include only if the chapel is on site and its hours are prayer before the Blessed Sacrament.",
+      "question": "Record the Eucharistic Chapel's Mon-Sat 7 AM-7 PM hours as Adoration?",
+      "options": [
+        {
+          "label": "Mon-Sat 7 AM-7 PM Adoration",
+          "entry": {
+            "church_slug": "most-holy-name-garfield",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Eucharistic Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    }
+  ]
+}
