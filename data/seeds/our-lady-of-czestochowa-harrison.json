@@ -1,0 +1,1172 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-czestochowa-harrison",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:22:41Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T13:37:34Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, bilingual (English/Polish). The schedule box and intentions agree in both bulletins read (Nov 8 and Nov 15, 2026): Sat 5 PM vigil; Sun 8 & 11 (Polish), 9:30 and 7 PM; Mon-Sat 7 AM; Wed 7 PM Polish Mass with 6-7 PM Adoration and confession; Sat 4-5 PM Adoration and confession; first Friday 6-9 PM Adoration, confession 6-8:45 and a 9 PM Mass. Open: whether 'Confessions after Mass' means Mon-Sat 7:30 AM.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "bf62a5d34c9dc34be891348ec53e4fdfcd465241532881772adfe4c97e415897",
+      "fetched_at": "2026-11-15T16:22:41Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "417d1cc4f51eb7e446d9e8467a4ffe12c513e03c67acac713a14b21b4ef37f0f",
+      "fetched_at": "2026-11-08T15:46:53Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-harrison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bf62a5d3",
+          "page": 1,
+          "said": "Saturday Vigil Mass/ Sobota wieczór Msza Św.: 5:00PM (English )"
+        },
+        {
+          "source": "agent",
+          "bulletin": "417d1cc4",
+          "page": 1,
+          "said": "Saturday Vigil Mass/ Sobota wieczór Msza Św.: 5:00PM (English )"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf62a5d3",
+          "page": 2,
+          "said": "5:00PM (Saturday) Vigil Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "417d1cc4",
+          "page": 2,
+          "said": "5:00PM (Saturday) Vigil Mass"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-harrison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bf62a5d3",
+          "page": 1,
+          "said": "Sunday Masses / Msze Niedzielne: 8:00AM & 11:00AM (Polish / w języku polskim)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "417d1cc4",
+          "page": 1,
+          "said": "Sunday Masses / Msze Niedzielne: 8:00AM & 11:00AM (Polish / w języku polskim)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and the Sunday intentions of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-harrison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bf62a5d3",
+          "page": 1,
+          "said": "Sunday Masses / Msze Niedzielne: 8:00AM & 11:00AM (Polish / w języku polskim)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "417d1cc4",
+          "page": 1,
+          "said": "Sunday Masses / Msze Niedzielne: 8:00AM & 11:00AM (Polish / w języku polskim)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and the Sunday intentions of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-harrison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Children-focused"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bf62a5d3",
+          "page": 1,
+          "said": "9:30AM [Children-focused] (English / w języku angielskim)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "417d1cc4",
+          "page": 1,
+          "said": "9:30AM [Children-focused] (English / w języku angielskim)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf62a5d3",
+          "page": 2,
+          "said": "9:30AM Children Focused Mass & CCD Classes 'til 12:00PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and the Sunday intentions of both bulletins read; open to all (POLICY: a Mass listed with a group is open unless limited).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-harrison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bf62a5d3",
+          "page": 1,
+          "said": "7:00PM (English / w języku angielskim)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "417d1cc4",
+          "page": 1,
+          "said": "7:00PM (English / w języku angielskim)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf62a5d3",
+          "page": 2,
+          "said": "7:00PM +Anne Martuci & deceased members of FOSS"
+        }
+      ],
+      "rationale": "R1: printed under Sunday Masses in the schedule box and in the Sunday intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-harrison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bf62a5d3",
+          "page": 1,
+          "said": "EUCHARIST & RECONCILIATION ... 7:00AM (English / w języku angielskim)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "417d1cc4",
+          "page": 1,
+          "said": "EUCHARIST & RECONCILIATION ... 7:00AM (English / w języku angielskim)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf62a5d3",
+          "page": 2,
+          "said": "Monday – November 16 7:00AM ... Saturday – Sobota – November 21 7:00AM In memory of +Stanley Szostek"
+        },
+        {
+          "source": "agent",
+          "bulletin": "417d1cc4",
+          "page": 2,
+          "said": "Monday – November 9 7:00AM ... Saturday – Sobota – November 14 7:00AM + Steven Komalski"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box gives a 7:00 AM English Mass without naming days; the intentions of both weeks read (Nov 9-14 and Nov 16-21) list a 7:00 AM Mass every Monday through Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-harrison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bf62a5d3",
+          "page": 1,
+          "said": "EUCHARIST & RECONCILIATION ... 7:00AM (English / w języku angielskim)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "417d1cc4",
+          "page": 1,
+          "said": "EUCHARIST & RECONCILIATION ... 7:00AM (English / w języku angielskim)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf62a5d3",
+          "page": 2,
+          "said": "Monday – November 16 7:00AM ... Saturday – Sobota – November 21 7:00AM In memory of +Stanley Szostek"
+        },
+        {
+          "source": "agent",
+          "bulletin": "417d1cc4",
+          "page": 2,
+          "said": "Monday – November 9 7:00AM ... Saturday – Sobota – November 14 7:00AM + Steven Komalski"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box gives a 7:00 AM English Mass without naming days; the intentions of both weeks read (Nov 9-14 and Nov 16-21) list a 7:00 AM Mass every Monday through Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-harrison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bf62a5d3",
+          "page": 1,
+          "said": "EUCHARIST & RECONCILIATION ... 7:00AM (English / w języku angielskim)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "417d1cc4",
+          "page": 1,
+          "said": "EUCHARIST & RECONCILIATION ... 7:00AM (English / w języku angielskim)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf62a5d3",
+          "page": 2,
+          "said": "Monday – November 16 7:00AM ... Saturday – Sobota – November 21 7:00AM In memory of +Stanley Szostek"
+        },
+        {
+          "source": "agent",
+          "bulletin": "417d1cc4",
+          "page": 2,
+          "said": "Monday – November 9 7:00AM ... Saturday – Sobota – November 14 7:00AM + Steven Komalski"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box gives a 7:00 AM English Mass without naming days; the intentions of both weeks read (Nov 9-14 and Nov 16-21) list a 7:00 AM Mass every Monday through Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-harrison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bf62a5d3",
+          "page": 1,
+          "said": "EUCHARIST & RECONCILIATION ... 7:00AM (English / w języku angielskim)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "417d1cc4",
+          "page": 1,
+          "said": "EUCHARIST & RECONCILIATION ... 7:00AM (English / w języku angielskim)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf62a5d3",
+          "page": 2,
+          "said": "Monday – November 16 7:00AM ... Saturday – Sobota – November 21 7:00AM In memory of +Stanley Szostek"
+        },
+        {
+          "source": "agent",
+          "bulletin": "417d1cc4",
+          "page": 2,
+          "said": "Monday – November 9 7:00AM ... Saturday – Sobota – November 14 7:00AM + Steven Komalski"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box gives a 7:00 AM English Mass without naming days; the intentions of both weeks read (Nov 9-14 and Nov 16-21) list a 7:00 AM Mass every Monday through Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-harrison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bf62a5d3",
+          "page": 1,
+          "said": "EUCHARIST & RECONCILIATION ... 7:00AM (English / w języku angielskim)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "417d1cc4",
+          "page": 1,
+          "said": "EUCHARIST & RECONCILIATION ... 7:00AM (English / w języku angielskim)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf62a5d3",
+          "page": 2,
+          "said": "Monday – November 16 7:00AM ... Saturday – Sobota – November 21 7:00AM In memory of +Stanley Szostek"
+        },
+        {
+          "source": "agent",
+          "bulletin": "417d1cc4",
+          "page": 2,
+          "said": "Monday – November 9 7:00AM ... Saturday – Sobota – November 14 7:00AM + Steven Komalski"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box gives a 7:00 AM English Mass without naming days; the intentions of both weeks read (Nov 9-14 and Nov 16-21) list a 7:00 AM Mass every Monday through Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-harrison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bf62a5d3",
+          "page": 1,
+          "said": "EUCHARIST & RECONCILIATION ... 7:00AM (English / w języku angielskim)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "417d1cc4",
+          "page": 1,
+          "said": "EUCHARIST & RECONCILIATION ... 7:00AM (English / w języku angielskim)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf62a5d3",
+          "page": 2,
+          "said": "Monday – November 16 7:00AM ... Saturday – Sobota – November 21 7:00AM In memory of +Stanley Szostek"
+        },
+        {
+          "source": "agent",
+          "bulletin": "417d1cc4",
+          "page": 2,
+          "said": "Monday – November 9 7:00AM ... Saturday – Sobota – November 14 7:00AM + Steven Komalski"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box gives a 7:00 AM English Mass without naming days; the intentions of both weeks read (Nov 9-14 and Nov 16-21) list a 7:00 AM Mass every Monday through Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-harrison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bf62a5d3",
+          "page": 1,
+          "said": "Every Wednesday / Każda środa: 6:00PM - 7:00PM Adoration of the Most Blessed Sacrament, confessions, Rosary & Chaplet of Divine Mercy, Novena to Our Blessed Lady & Mass at 7:00PM (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "417d1cc4",
+          "page": 1,
+          "said": "Every Wednesday / Każda środa: 6:00PM - 7:00PM Adoration of the Most Blessed Sacrament, confessions, Rosary & Chaplet of Divine Mercy, Novena to Our Blessed Lady & Mass at 7:00PM (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "417d1cc4",
+          "page": 2,
+          "said": "7:00PM Novena Msza Święta za Ojczyznę Polską"
+        }
+      ],
+      "rationale": "R1: 'Every Wednesday ... Mass at 7:00PM (Polish)' in the box of both bulletins; the intentions list the 7 PM Novena Mass each Wednesday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-harrison",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bf62a5d3",
+          "page": 1,
+          "said": "Every Wednesday / Każda środa: 6:00PM - 7:00PM Adoration of the Most Blessed Sacrament, confessions, Rosary & Chaplet of Divine Mercy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "417d1cc4",
+          "page": 1,
+          "said": "Every Wednesday / Każda środa: 6:00PM - 7:00PM Adoration of the Most Blessed Sacrament, confessions, Rosary & Chaplet of Divine Mercy"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-harrison",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "During Adoration"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bf62a5d3",
+          "page": 1,
+          "said": "6:00PM - 7:00PM Adoration of the Most Blessed Sacrament, confessions, Rosary & Chaplet of Divine Mercy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "417d1cc4",
+          "page": 1,
+          "said": "6:00PM - 7:00PM Adoration of the Most Blessed Sacrament, confessions, Rosary & Chaplet of Divine Mercy"
+        }
+      ],
+      "rationale": "R10, POLICY Times: confessions are offered during the 6-7 PM Wednesday Adoration, so they take its hours.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-harrison",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bf62a5d3",
+          "page": 1,
+          "said": "Every Saturday / Każda sobota: 4:00PM - 5:00PM Adoration of the Most Blessed Sacrament, confessions & Mass at 5:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "417d1cc4",
+          "page": 1,
+          "said": "Every Saturday / Każda sobota: 4:00PM - 5:00PM Adoration of the Most Blessed Sacrament, confessions & Mass at 5:00PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-harrison",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "During Adoration"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bf62a5d3",
+          "page": 1,
+          "said": "Every Saturday / Każda sobota: 4:00PM - 5:00PM Adoration of the Most Blessed Sacrament, confessions & Mass at 5:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "417d1cc4",
+          "page": 1,
+          "said": "Every Saturday / Każda sobota: 4:00PM - 5:00PM Adoration of the Most Blessed Sacrament, confessions & Mass at 5:00PM"
+        }
+      ],
+      "rationale": "R10, POLICY Times: confessions are offered during the 4-5 PM Saturday Adoration, so they take its hours.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-harrison",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "20:45",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bf62a5d3",
+          "page": 1,
+          "said": "First Friday confession / Spowiedź w pierwsze piątki 6PM– 8:45PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "417d1cc4",
+          "page": 1,
+          "said": "First Friday confession / Spowiedź w pierwsze piątki 6PM– 8:45PM"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 2: the standing schedule box of the newest bulletin names first Fridays.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-harrison",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bf62a5d3",
+          "page": 1,
+          "said": "First Friday / Pierwszy piątek miesiąca …& added 9:00PM Mass & 6:00 PM to 9:00PM Adoration of the Most Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "417d1cc4",
+          "page": 1,
+          "said": "First Friday / Pierwszy piątek miesiąca …& added 9:00PM Mass & 6:00 PM to 9:00PM Adoration of the Most Blessed Sacrament"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 2: the standing schedule box of the newest bulletin names first Fridays.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-harrison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "21:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bf62a5d3",
+          "page": 1,
+          "said": "First Friday / Pierwszy piątek miesiąca …& added 9:00PM Mass & 6:00 PM to 9:00PM Adoration"
+        },
+        {
+          "source": "agent",
+          "bulletin": "417d1cc4",
+          "page": 1,
+          "said": "First Friday / Pierwszy piątek miesiąca …& added 9:00PM Mass & 6:00 PM to 9:00PM Adoration"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 2: an added first-Friday 9 PM Mass in the standing schedule box of the newest bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bf62a5d3",
+          "page": 1,
+          "said": "7:00AM (English / w języku angielskim) Confessions after Mass / Spowiedź po Mszy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "417d1cc4",
+          "page": 1,
+          "said": "7:00AM (English / w języku angielskim) Confessions after Mass / Spowiedź po Mszy"
+        }
+      ],
+      "rationale": "R30, R10: the line sits directly under the 7:00 AM Mass, so R10 would time it 7:30 AM, but the box names no days and it could mean after any Mass. Leaning to include on the six days the 7 AM Mass is held.",
+      "question": "The box prints 'Confessions after Mass' under the 7:00 AM weekday Mass. Add Mon-Sat confession at 7:30 AM (POLICY: 30 min after a weekday Mass)?",
+      "options": [
+        {
+          "label": "Mon-Sat 7:30 AM, after the 7:00 AM Mass",
+          "entry": {
+            "church_slug": "our-lady-of-czestochowa-harrison",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 7:00 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "after-mass"
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bf62a5d3",
+          "page": 1,
+          "said": "7:00AM (English / w języku angielskim) Confessions after Mass / Spowiedź po Mszy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "417d1cc4",
+          "page": 1,
+          "said": "7:00AM (English / w języku angielskim) Confessions after Mass / Spowiedź po Mszy"
+        }
+      ],
+      "rationale": "R30, R10: the line sits directly under the 7:00 AM Mass, so R10 would time it 7:30 AM, but the box names no days and it could mean after any Mass. Leaning to include on the six days the 7 AM Mass is held.",
+      "question": "The box prints 'Confessions after Mass' under the 7:00 AM weekday Mass. Add Mon-Sat confession at 7:30 AM (POLICY: 30 min after a weekday Mass)?",
+      "options": [
+        {
+          "label": "Mon-Sat 7:30 AM, after the 7:00 AM Mass",
+          "entry": {
+            "church_slug": "our-lady-of-czestochowa-harrison",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 7:00 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "after-mass"
+    },
+    {
+      "id": "s22",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bf62a5d3",
+          "page": 1,
+          "said": "7:00AM (English / w języku angielskim) Confessions after Mass / Spowiedź po Mszy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "417d1cc4",
+          "page": 1,
+          "said": "7:00AM (English / w języku angielskim) Confessions after Mass / Spowiedź po Mszy"
+        }
+      ],
+      "rationale": "R30, R10: the line sits directly under the 7:00 AM Mass, so R10 would time it 7:30 AM, but the box names no days and it could mean after any Mass. Leaning to include on the six days the 7 AM Mass is held.",
+      "question": "The box prints 'Confessions after Mass' under the 7:00 AM weekday Mass. Add Mon-Sat confession at 7:30 AM (POLICY: 30 min after a weekday Mass)?",
+      "options": [
+        {
+          "label": "Mon-Sat 7:30 AM, after the 7:00 AM Mass",
+          "entry": {
+            "church_slug": "our-lady-of-czestochowa-harrison",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 7:00 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "after-mass"
+    },
+    {
+      "id": "s23",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bf62a5d3",
+          "page": 1,
+          "said": "7:00AM (English / w języku angielskim) Confessions after Mass / Spowiedź po Mszy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "417d1cc4",
+          "page": 1,
+          "said": "7:00AM (English / w języku angielskim) Confessions after Mass / Spowiedź po Mszy"
+        }
+      ],
+      "rationale": "R30, R10: the line sits directly under the 7:00 AM Mass, so R10 would time it 7:30 AM, but the box names no days and it could mean after any Mass. Leaning to include on the six days the 7 AM Mass is held.",
+      "question": "The box prints 'Confessions after Mass' under the 7:00 AM weekday Mass. Add Mon-Sat confession at 7:30 AM (POLICY: 30 min after a weekday Mass)?",
+      "options": [
+        {
+          "label": "Mon-Sat 7:30 AM, after the 7:00 AM Mass",
+          "entry": {
+            "church_slug": "our-lady-of-czestochowa-harrison",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 7:00 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "after-mass"
+    },
+    {
+      "id": "s24",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bf62a5d3",
+          "page": 1,
+          "said": "7:00AM (English / w języku angielskim) Confessions after Mass / Spowiedź po Mszy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "417d1cc4",
+          "page": 1,
+          "said": "7:00AM (English / w języku angielskim) Confessions after Mass / Spowiedź po Mszy"
+        }
+      ],
+      "rationale": "R30, R10: the line sits directly under the 7:00 AM Mass, so R10 would time it 7:30 AM, but the box names no days and it could mean after any Mass. Leaning to include on the six days the 7 AM Mass is held.",
+      "question": "The box prints 'Confessions after Mass' under the 7:00 AM weekday Mass. Add Mon-Sat confession at 7:30 AM (POLICY: 30 min after a weekday Mass)?",
+      "options": [
+        {
+          "label": "Mon-Sat 7:30 AM, after the 7:00 AM Mass",
+          "entry": {
+            "church_slug": "our-lady-of-czestochowa-harrison",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 7:00 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "after-mass"
+    },
+    {
+      "id": "s25",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bf62a5d3",
+          "page": 1,
+          "said": "7:00AM (English / w języku angielskim) Confessions after Mass / Spowiedź po Mszy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "417d1cc4",
+          "page": 1,
+          "said": "7:00AM (English / w języku angielskim) Confessions after Mass / Spowiedź po Mszy"
+        }
+      ],
+      "rationale": "R30, R10: the line sits directly under the 7:00 AM Mass, so R10 would time it 7:30 AM, but the box names no days and it could mean after any Mass. Leaning to include on the six days the 7 AM Mass is held.",
+      "question": "The box prints 'Confessions after Mass' under the 7:00 AM weekday Mass. Add Mon-Sat confession at 7:30 AM (POLICY: 30 min after a weekday Mass)?",
+      "options": [
+        {
+          "label": "Mon-Sat 7:30 AM, after the 7:00 AM Mass",
+          "entry": {
+            "church_slug": "our-lady-of-czestochowa-harrison",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 7:00 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "after-mass"
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bf62a5d3",
+          "page": 1,
+          "said": "Annual Eucharistic Devotions after Labor Day / Doroczne Nabożeństwo 40-to godzinne po Labor Day"
+        }
+      ],
+      "rationale": "R26: the annual Forty Hours devotion gives no dates or times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
