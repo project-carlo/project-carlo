@@ -1,0 +1,547 @@
+{
+  "schema_version": 1,
+  "parish_slug": "sacred-heart-rochelle-park",
+  "status": "ready",
+  "as_of": "2026-11-15T16:23:37Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T22:22:42Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, Sacred Heart (12 Terrace Ave). Weekend Masses Sat 4 & 5:30 PM, Sun 10 AM & 12 PM agree in both bulletins and on the website; Thanksgiving 9 AM Mass dated. Weekday 8 AM Masses are in the chapel at the Parish Center, 15 Forest Place, which the church list lacks, so they are excluded (R23) and listed as a church-list issue; confession is by appointment only.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "e56c19fe3405caccb3d043e33d30d19b8655003bb658438c1e67a973c55c785a",
+      "fetched_at": "2026-11-15T16:23:37Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "3e1a130dedba58417cf6734e619af476f40910957492e279f9ef67be555120df",
+      "fetched_at": "2026-11-08T15:47:44Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-rochelle-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e56c19fe",
+          "page": 1,
+          "said": "Weekend Masses Saturday 4PM & 5:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e1a130d",
+          "page": 1,
+          "said": "Weekend Masses Saturday 4PM & 5:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e56c19fe",
+          "page": 4,
+          "said": "Saturday 4:00 PM, 5:30 PM (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e1a130d",
+          "page": 4,
+          "said": "Saturday 4:00 PM, 5:30 PM (Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box and the Mass intentions of both bulletins read; the website's Mass Times page agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-rochelle-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e56c19fe",
+          "page": 1,
+          "said": "Weekend Masses Saturday 4PM & 5:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e1a130d",
+          "page": 1,
+          "said": "Weekend Masses Saturday 4PM & 5:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e56c19fe",
+          "page": 4,
+          "said": "Saturday 4:00 PM, 5:30 PM (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e1a130d",
+          "page": 4,
+          "said": "Saturday 4:00 PM, 5:30 PM (Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box and the Mass intentions of both bulletins read; the website's Mass Times page agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-rochelle-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e56c19fe",
+          "page": 1,
+          "said": "Weekend Masses Sunday 10AM & 12PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e1a130d",
+          "page": 1,
+          "said": "Weekend Masses Sunday 10AM & 12PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e56c19fe",
+          "page": 4,
+          "said": "Sunday 10:00 AM, 12:00 PM (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e1a130d",
+          "page": 4,
+          "said": "Sunday 10:00 AM, 12:00 PM (Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box and the Mass intentions of both bulletins read; the website's Mass Times page agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-rochelle-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e56c19fe",
+          "page": 1,
+          "said": "Weekend Masses Sunday 10AM & 12PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e1a130d",
+          "page": 1,
+          "said": "Weekend Masses Sunday 10AM & 12PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e56c19fe",
+          "page": 4,
+          "said": "Sunday 10:00 AM, 12:00 PM (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e1a130d",
+          "page": 4,
+          "said": "Sunday 10:00 AM, 12:00 PM (Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box and the Mass intentions of both bulletins read; the website's Mass Times page agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-rochelle-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel at the Parish Center, 15 Forest Place"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e56c19fe",
+          "page": 1,
+          "said": "Weekday Masses (In Chapel) Monday-Friday 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e1a130d",
+          "page": 1,
+          "said": "Weekday Masses (In Chapel) Monday-Friday 8AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.wearesacredheart.org/mass-times.html",
+          "said": "Daily Mass in the Chapel 15 Forest Place, Rochelle Park Monday-Friday 8:00am"
+        }
+      ],
+      "rationale": "R23: the weekday chapel is at the Parish Center, 15 Forest Place, a different address from the church (12 Terrace Ave), and data/churches.csv lacks it; listed in church_list_issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-rochelle-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel at the Parish Center, 15 Forest Place"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e56c19fe",
+          "page": 1,
+          "said": "Weekday Masses (In Chapel) Monday-Friday 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e1a130d",
+          "page": 1,
+          "said": "Weekday Masses (In Chapel) Monday-Friday 8AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.wearesacredheart.org/mass-times.html",
+          "said": "Daily Mass in the Chapel 15 Forest Place, Rochelle Park Monday-Friday 8:00am"
+        }
+      ],
+      "rationale": "R23: the weekday chapel is at the Parish Center, 15 Forest Place, a different address from the church (12 Terrace Ave), and data/churches.csv lacks it; listed in church_list_issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-rochelle-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel at the Parish Center, 15 Forest Place"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e56c19fe",
+          "page": 1,
+          "said": "Weekday Masses (In Chapel) Monday-Friday 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e1a130d",
+          "page": 1,
+          "said": "Weekday Masses (In Chapel) Monday-Friday 8AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.wearesacredheart.org/mass-times.html",
+          "said": "Daily Mass in the Chapel 15 Forest Place, Rochelle Park Monday-Friday 8:00am"
+        }
+      ],
+      "rationale": "R23: the weekday chapel is at the Parish Center, 15 Forest Place, a different address from the church (12 Terrace Ave), and data/churches.csv lacks it; listed in church_list_issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-rochelle-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel at the Parish Center, 15 Forest Place"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e56c19fe",
+          "page": 1,
+          "said": "Weekday Masses (In Chapel) Monday-Friday 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e1a130d",
+          "page": 1,
+          "said": "Weekday Masses (In Chapel) Monday-Friday 8AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.wearesacredheart.org/mass-times.html",
+          "said": "Daily Mass in the Chapel 15 Forest Place, Rochelle Park Monday-Friday 8:00am"
+        }
+      ],
+      "rationale": "R23: the weekday chapel is at the Parish Center, 15 Forest Place, a different address from the church (12 Terrace Ave), and data/churches.csv lacks it; listed in church_list_issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-rochelle-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel at the Parish Center, 15 Forest Place"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e56c19fe",
+          "page": 1,
+          "said": "Weekday Masses (In Chapel) Monday-Friday 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e1a130d",
+          "page": 1,
+          "said": "Weekday Masses (In Chapel) Monday-Friday 8AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.wearesacredheart.org/mass-times.html",
+          "said": "Daily Mass in the Chapel 15 Forest Place, Rochelle Park Monday-Friday 8:00am"
+        }
+      ],
+      "rationale": "R23: the weekday chapel is at the Parish Center, 15 Forest Place, a different address from the church (12 Terrace Ave), and data/churches.csv lacks it; listed in church_list_issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-rochelle-park",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel at the Parish Center, 15 Forest Place"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e56c19fe",
+          "page": 4,
+          "said": "Friday, November 27 NO MASS"
+        }
+      ],
+      "rationale": "R23: cancels one date of the weekday chapel Mass, which is excluded because its chapel is not on the church list.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-rochelle-park",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e56c19fe",
+          "page": 3,
+          "said": "26 THANKSGIVING MASS 9 AM; Come, join your parish family at 9 am for Mass in the Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e56c19fe",
+          "page": 4,
+          "said": "Thursday, November 26 ... 9:00 AM"
+        }
+      ],
+      "rationale": "R1, R16: dated Thanksgiving Mass in the church, on or after as_of. R17: the 8 AM weekday chapel Mass is excluded anyway, so no cancellation is inferred.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e56c19fe",
+          "page": 1,
+          "said": "Reconciliation By appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e1a130d",
+          "page": 1,
+          "said": "Reconciliation By appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment only has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "church_list_issues": [
+    {
+      "church": "Chapel at the Parish Center, 15 Forest Place, Rochelle Park",
+      "said": "Weekday Masses (In Chapel) Monday-Friday 8AM; website: Daily Mass in the Chapel 15 Forest Place",
+      "bulletin": "e56c19fe",
+      "page": 1
+    }
+  ]
+}
