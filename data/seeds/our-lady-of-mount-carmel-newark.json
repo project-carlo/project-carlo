@@ -1,0 +1,1006 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-mount-carmel-newark",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:53:09Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T21:13:37Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both bulletins (Nov 8, Nov 15) print the same page 1 schedule: Mon-Sat 8:30 AM, Sat 5:00 PM and 7:15 PM Spanish, Sun 8:30, 10:00 Italian and 12:00; Sat confession 4-5 PM; first-Friday Adoration 9-12. Dated: Christ the King Benediction, Immaculate Conception Masses, Rorate Mass with the 8:30 cancelled on Dec 12. Open: the 40 Hours Adoration hours, Nov 18-21.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "4051794c18908e73a317273642839b3275867c78829125a4bd63f065485bac68",
+      "fetched_at": "2026-11-15T16:53:09Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "c962b50de34fbdfe54d32f4201858fd4e0c8325ebe975d102b90aeb44a4d74b4",
+      "fetched_at": "2026-11-08T16:02:06Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4051794c",
+          "page": 1,
+          "said": "Weekdays: 8:30AM (Monday – through Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c962b50d",
+          "page": 1,
+          "said": "Weekdays: 8:30AM (Monday – through Saturday)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass schedule of both bulletins; the intentions list an 8:30 Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4051794c",
+          "page": 1,
+          "said": "Weekdays: 8:30AM (Monday – through Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c962b50d",
+          "page": 1,
+          "said": "Weekdays: 8:30AM (Monday – through Saturday)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass schedule of both bulletins; the intentions list an 8:30 Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4051794c",
+          "page": 1,
+          "said": "Weekdays: 8:30AM (Monday – through Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c962b50d",
+          "page": 1,
+          "said": "Weekdays: 8:30AM (Monday – through Saturday)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass schedule of both bulletins; the intentions list an 8:30 Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4051794c",
+          "page": 1,
+          "said": "Weekdays: 8:30AM (Monday – through Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c962b50d",
+          "page": 1,
+          "said": "Weekdays: 8:30AM (Monday – through Saturday)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass schedule of both bulletins; the intentions list an 8:30 Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4051794c",
+          "page": 1,
+          "said": "Weekdays: 8:30AM (Monday – through Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c962b50d",
+          "page": 1,
+          "said": "Weekdays: 8:30AM (Monday – through Saturday)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass schedule of both bulletins; the intentions list an 8:30 Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4051794c",
+          "page": 1,
+          "said": "Weekdays: 8:30AM (Monday – through Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c962b50d",
+          "page": 1,
+          "said": "Weekdays: 8:30AM (Monday – through Saturday)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass schedule of both bulletins; the intentions list an 8:30 Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4051794c",
+          "page": 1,
+          "said": "Saturday: 5:00PM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c962b50d",
+          "page": 1,
+          "said": "Saturday: 5:00PM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass schedule of both bulletins and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4051794c",
+          "page": 1,
+          "said": "Saturday: ... 7:15PM (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c962b50d",
+          "page": 1,
+          "said": "Saturday: ... 7:15PM (Español)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass schedule of both bulletins; the intentions list a 7:15 Mass in Spanish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4051794c",
+          "page": 1,
+          "said": "Sunday: 8:30AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c962b50d",
+          "page": 1,
+          "said": "Sunday: 8:30AM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass schedule of both bulletins and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Italian"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4051794c",
+          "page": 1,
+          "said": "Sunday: ... 10:00AM (Italiano)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c962b50d",
+          "page": 1,
+          "said": "Sunday: ... 10:00AM (Italiano)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass schedule of both bulletins and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4051794c",
+          "page": 1,
+          "said": "Sunday: ... 12 Noon (English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c962b50d",
+          "page": 1,
+          "said": "Sunday: ... 12 Noon (English"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass schedule of both bulletins and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-newark",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4051794c",
+          "page": 1,
+          "said": "CONFESSIONS Every Saturday: 4:00Pm – 5:00PM, or upon request at any time."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c962b50d",
+          "page": 1,
+          "said": "CONFESSIONS Every Saturday: 4:00Pm – 5:00PM, or upon request at any time."
+        }
+      ],
+      "rationale": "R1: printed in the page 1 sacraments column of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4051794c",
+          "page": 1,
+          "said": "or upon request at any time. Call the rectory."
+        }
+      ],
+      "rationale": "R26: confession on request has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-newark",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4051794c",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament: 1st Fridays of every month: After the daily Mass. From 9:00AM – 12 Noon."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c962b50d",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament: 1st Fridays of every month: After the daily Mass. From 9:00AM – 12 Noon."
+        }
+      ],
+      "rationale": "R1, POLICY Times: the standing schedule on page 1 of both bulletins names first Fridays and gives the clock times, which win over 'after the daily Mass'. Neither bulletin's week holds a first Friday, but the newest prints the standing line itself.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4051794c",
+          "page": 1,
+          "said": "NOVENAS: daily after 8:30AM Mass ROSARY: daily recitation (Portuguese)"
+        }
+      ],
+      "rationale": "R24: novenas and the rosary are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-newark",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-22",
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction after the 12:00 PM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4051794c",
+          "page": 2,
+          "said": "SUNDAY NOVEMBER 22, 2026 – CHRIST THE KING ... 12:00 In honor of Our Lard and Savior Christ the King Bendiction following Mass"
+        }
+      ],
+      "rationale": "R1, R10, R16: Benediction is Adoration (POLICY); following a Sunday Mass it starts an hour after the 12:00 Mass. The date is after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-newark",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4051794c",
+          "page": 3,
+          "said": "Feast of Immaculate Conception December 8, 2026 Mass Schedule: 8:30am (English) 12:00 noon (English) 7:00pm (Bilingual)"
+        }
+      ],
+      "rationale": "R1, R16: holy-day Mass outside the weekly schedule. The 8:30 is the weekly Tuesday Mass and gets no dated slot (POLICY rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-newark",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception; bilingual"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4051794c",
+          "page": 3,
+          "said": "Feast of Immaculate Conception December 8, 2026 Mass Schedule: ... 7:00pm (Bilingual)"
+        }
+      ],
+      "rationale": "R1, R16: holy-day Mass outside the weekly schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-newark",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-12",
+        "start_time": "06:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Rorate Caeli Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4051794c",
+          "page": 3,
+          "said": "RORATE CELI MASS Votive Mass in honor of the Blessed Virgin Mary SATURDAY DECEMBER 12, 2026 6:00AM"
+        }
+      ],
+      "rationale": "R1, R16: a dated special Mass after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-newark",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-12",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Rorate Caeli Mass at 6:00 AM"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4051794c",
+          "page": 3,
+          "said": "**There will be NO 8:30am mass this morning."
+        }
+      ],
+      "rationale": "R1, R16: the bulletin cancels the weekly Saturday 8:30 Mass on December 12.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c962b50d",
+          "page": 3,
+          "said": "visit of the Heart Relic of ST. CARLO ACUTIS ... to Our Lady of Mount Carmel Parish in Nutley, NJ. NOVEMBER 15-17, 2026 ... 10:00am Holy Mass ... 12:00 Solemn Holy Mass"
+        }
+      ],
+      "rationale": "R22: these Masses, confessions and Holy Hour are at another parish (Nutley).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4051794c",
+          "page": 3,
+          "said": "The 40 Hours adoration of the Most Blessed Sacrament will take place from November 18th through November 21st, followed by the daily 8:30am morning Mass. Benediction of the Most Blessed Sacrament will be imparted at 12:00 noon. Church will be open for private prayer and adoration from Wednesday through Saturday until 6:00pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4051794c",
+          "page": 2,
+          "said": "40 HOURS DEVOTION 8:30 ... *Church will be open until 6pm"
+        }
+      ],
+      "rationale": "R30: the notice gives no clock start (POLICY puts 'after' the 8:30 weekday Mass at 9:00) and it is unclear whether exposition runs to 6:00 PM or ends at the noon Benediction with the church merely open (R40: building access vs. service hours). Leaning 9-6 because the notice says 'open for private prayer and adoration ... until 6:00pm' and a 40 Hours is continuous exposition; but Saturday's 5:00 PM Mass falls inside that window.",
+      "question": "During the 40 Hours Devotion (Nov 18-21), what Adoration hours should be listed?",
+      "options": [
+        {
+          "label": "9:00 AM - 6:00 PM",
+          "entry": {
+            "church_slug": "our-lady-of-mount-carmel-newark",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-18",
+            "start_time": "09:00",
+            "end_time": "18:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "40 Hours Devotion"
+          },
+          "leaning": true
+        },
+        {
+          "label": "9:00 AM - 12:00 PM",
+          "entry": {
+            "church_slug": "our-lady-of-mount-carmel-newark",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-18",
+            "start_time": "09:00",
+            "end_time": "12:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "40 Hours Devotion; Benediction at noon"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "forty-hours"
+    },
+    {
+      "id": "s23",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4051794c",
+          "page": 3,
+          "said": "The 40 Hours adoration of the Most Blessed Sacrament will take place from November 18th through November 21st, followed by the daily 8:30am morning Mass. Benediction of the Most Blessed Sacrament will be imparted at 12:00 noon. Church will be open for private prayer and adoration from Wednesday through Saturday until 6:00pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4051794c",
+          "page": 2,
+          "said": "40 HOURS DEVOTION 8:30 ... *Church will be open until 6pm"
+        }
+      ],
+      "rationale": "R30: the notice gives no clock start (POLICY puts 'after' the 8:30 weekday Mass at 9:00) and it is unclear whether exposition runs to 6:00 PM or ends at the noon Benediction with the church merely open (R40: building access vs. service hours). Leaning 9-6 because the notice says 'open for private prayer and adoration ... until 6:00pm' and a 40 Hours is continuous exposition; but Saturday's 5:00 PM Mass falls inside that window.",
+      "question": "During the 40 Hours Devotion (Nov 18-21), what Adoration hours should be listed?",
+      "options": [
+        {
+          "label": "9:00 AM - 6:00 PM",
+          "entry": {
+            "church_slug": "our-lady-of-mount-carmel-newark",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-19",
+            "start_time": "09:00",
+            "end_time": "18:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "40 Hours Devotion"
+          },
+          "leaning": true
+        },
+        {
+          "label": "9:00 AM - 12:00 PM",
+          "entry": {
+            "church_slug": "our-lady-of-mount-carmel-newark",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-19",
+            "start_time": "09:00",
+            "end_time": "12:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "40 Hours Devotion; Benediction at noon"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "forty-hours"
+    },
+    {
+      "id": "s24",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4051794c",
+          "page": 3,
+          "said": "The 40 Hours adoration of the Most Blessed Sacrament will take place from November 18th through November 21st, followed by the daily 8:30am morning Mass. Benediction of the Most Blessed Sacrament will be imparted at 12:00 noon. Church will be open for private prayer and adoration from Wednesday through Saturday until 6:00pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4051794c",
+          "page": 2,
+          "said": "40 HOURS DEVOTION 8:30 ... *Church will be open until 6pm"
+        }
+      ],
+      "rationale": "R30: the notice gives no clock start (POLICY puts 'after' the 8:30 weekday Mass at 9:00) and it is unclear whether exposition runs to 6:00 PM or ends at the noon Benediction with the church merely open (R40: building access vs. service hours). Leaning 9-6 because the notice says 'open for private prayer and adoration ... until 6:00pm' and a 40 Hours is continuous exposition; but Saturday's 5:00 PM Mass falls inside that window.",
+      "question": "During the 40 Hours Devotion (Nov 18-21), what Adoration hours should be listed?",
+      "options": [
+        {
+          "label": "9:00 AM - 6:00 PM",
+          "entry": {
+            "church_slug": "our-lady-of-mount-carmel-newark",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-20",
+            "start_time": "09:00",
+            "end_time": "18:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "40 Hours Devotion"
+          },
+          "leaning": true
+        },
+        {
+          "label": "9:00 AM - 12:00 PM",
+          "entry": {
+            "church_slug": "our-lady-of-mount-carmel-newark",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-20",
+            "start_time": "09:00",
+            "end_time": "12:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "40 Hours Devotion; Benediction at noon"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "forty-hours"
+    },
+    {
+      "id": "s25",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4051794c",
+          "page": 3,
+          "said": "The 40 Hours adoration of the Most Blessed Sacrament will take place from November 18th through November 21st, followed by the daily 8:30am morning Mass. Benediction of the Most Blessed Sacrament will be imparted at 12:00 noon. Church will be open for private prayer and adoration from Wednesday through Saturday until 6:00pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4051794c",
+          "page": 2,
+          "said": "40 HOURS DEVOTION 8:30 ... *Church will be open until 6pm"
+        }
+      ],
+      "rationale": "R30: the notice gives no clock start (POLICY puts 'after' the 8:30 weekday Mass at 9:00) and it is unclear whether exposition runs to 6:00 PM or ends at the noon Benediction with the church merely open (R40: building access vs. service hours). Leaning 9-6 because the notice says 'open for private prayer and adoration ... until 6:00pm' and a 40 Hours is continuous exposition; but Saturday's 5:00 PM Mass falls inside that window.",
+      "question": "During the 40 Hours Devotion (Nov 18-21), what Adoration hours should be listed?",
+      "options": [
+        {
+          "label": "9:00 AM - 6:00 PM",
+          "entry": {
+            "church_slug": "our-lady-of-mount-carmel-newark",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-21",
+            "start_time": "09:00",
+            "end_time": "18:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "40 Hours Devotion"
+          },
+          "leaning": true
+        },
+        {
+          "label": "9:00 AM - 12:00 PM",
+          "entry": {
+            "church_slug": "our-lady-of-mount-carmel-newark",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-21",
+            "start_time": "09:00",
+            "end_time": "12:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "40 Hours Devotion; Benediction at noon"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "forty-hours"
+    }
+  ]
+}
