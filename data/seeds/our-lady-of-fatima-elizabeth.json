@@ -1,0 +1,675 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-fatima-elizabeth",
+  "status": "ready",
+  "as_of": "2026-11-15T15:49:00Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T13:43:00Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, schedule printed as an image in the same page-1 box in both bulletins read (Nov 8 and Nov 15, 2026), and matched by the Mass intentions. Saturday 5:30 PM vigil; Sunday 7:30, 9:00 and 12:00 Portuguese and 10:30 English; Mon-Fri 7:30 PM; Saturday Confession and Exposition 4:15-5:00; first-Friday Exposition 9-7:15 and last-Sunday Exposition 5-7. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "956148ca991767e077cdee38116a3c9adc7c841daef3cca5f321b30bf5bb2666",
+      "fetched_at": "2026-11-15T15:49:00Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "b2387daf50ce045b7398e1af54de630e290bb0ab64ed892904781095f98c8266",
+      "fetched_at": "2026-11-08T15:19:13Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "956148ca",
+          "page": 1,
+          "said": "Missa Dominical/Sunday Mass Sábado: 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2387daf",
+          "page": 1,
+          "said": "Missa Dominical/Sunday Mass Sábado: 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "956148ca",
+          "page": 6,
+          "said": "Sábado / Saturday, 21 (5:30PM)"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; the intentions list it too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Portuguese"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "956148ca",
+          "page": 1,
+          "said": "Domingo Português: 7:30am, 9:00am & 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2387daf",
+          "page": 1,
+          "said": "Domingo Português: 7:30am, 9:00am & 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "956148ca",
+          "page": 6,
+          "said": "Domingo / Sunday, 22 (7:30AM) (9:00AM) (12:00PM)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read as the Portuguese Sunday Masses; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Portuguese"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "956148ca",
+          "page": 1,
+          "said": "Domingo Português: 7:30am, 9:00am & 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2387daf",
+          "page": 1,
+          "said": "Domingo Português: 7:30am, 9:00am & 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "956148ca",
+          "page": 6,
+          "said": "Domingo / Sunday, 22 (7:30AM) (9:00AM) (12:00PM)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read as the Portuguese Sunday Masses; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Portuguese"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "956148ca",
+          "page": 1,
+          "said": "Domingo Português: 7:30am, 9:00am & 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2387daf",
+          "page": 1,
+          "said": "Domingo Português: 7:30am, 9:00am & 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "956148ca",
+          "page": 6,
+          "said": "Domingo / Sunday, 22 (7:30AM) (9:00AM) (12:00PM)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read as the Portuguese Sunday Masses; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "956148ca",
+          "page": 1,
+          "said": "Sunday English: 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2387daf",
+          "page": 1,
+          "said": "Sunday English: 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "956148ca",
+          "page": 6,
+          "said": "Domingo / Sunday, 22 (10:30AM)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "956148ca",
+          "page": 1,
+          "said": "Missa Ferial Segunda a Sexta-feira às 7:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2387daf",
+          "page": 1,
+          "said": "Missa Ferial Segunda a Sexta-feira às 7:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "956148ca",
+          "page": 6,
+          "said": "Segunda-Feira / Monday, 16 (7:30PM) ... Sexta-Feira / Friday, 20 (7:30PM)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in the weekday intentions. The first-Friday Sacred Heart Mass (1º Sexta-feira do mês: 7:30pm) is this same Friday 7:30 PM Mass (POLICY, Weekly or dated rule 7), so it gets no slot of its own.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "956148ca",
+          "page": 1,
+          "said": "Missa Ferial Segunda a Sexta-feira às 7:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2387daf",
+          "page": 1,
+          "said": "Missa Ferial Segunda a Sexta-feira às 7:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "956148ca",
+          "page": 6,
+          "said": "Segunda-Feira / Monday, 16 (7:30PM) ... Sexta-Feira / Friday, 20 (7:30PM)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in the weekday intentions. The first-Friday Sacred Heart Mass (1º Sexta-feira do mês: 7:30pm) is this same Friday 7:30 PM Mass (POLICY, Weekly or dated rule 7), so it gets no slot of its own.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "956148ca",
+          "page": 1,
+          "said": "Missa Ferial Segunda a Sexta-feira às 7:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2387daf",
+          "page": 1,
+          "said": "Missa Ferial Segunda a Sexta-feira às 7:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "956148ca",
+          "page": 6,
+          "said": "Segunda-Feira / Monday, 16 (7:30PM) ... Sexta-Feira / Friday, 20 (7:30PM)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in the weekday intentions. The first-Friday Sacred Heart Mass (1º Sexta-feira do mês: 7:30pm) is this same Friday 7:30 PM Mass (POLICY, Weekly or dated rule 7), so it gets no slot of its own.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "956148ca",
+          "page": 1,
+          "said": "Missa Ferial Segunda a Sexta-feira às 7:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2387daf",
+          "page": 1,
+          "said": "Missa Ferial Segunda a Sexta-feira às 7:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "956148ca",
+          "page": 6,
+          "said": "Segunda-Feira / Monday, 16 (7:30PM) ... Sexta-Feira / Friday, 20 (7:30PM)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in the weekday intentions. The first-Friday Sacred Heart Mass (1º Sexta-feira do mês: 7:30pm) is this same Friday 7:30 PM Mass (POLICY, Weekly or dated rule 7), so it gets no slot of its own.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "956148ca",
+          "page": 1,
+          "said": "Missa Ferial Segunda a Sexta-feira às 7:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2387daf",
+          "page": 1,
+          "said": "Missa Ferial Segunda a Sexta-feira às 7:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "956148ca",
+          "page": 6,
+          "said": "Segunda-Feira / Monday, 16 (7:30PM) ... Sexta-Feira / Friday, 20 (7:30PM)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in the weekday intentions. The first-Friday Sacred Heart Mass (1º Sexta-feira do mês: 7:30pm) is this same Friday 7:30 PM Mass (POLICY, Weekly or dated rule 7), so it gets no slot of its own.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-elizabeth",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "956148ca",
+          "page": 1,
+          "said": "Confissões/Confessions Sábado/Saturday: 4:15pm-5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2387daf",
+          "page": 1,
+          "said": "Confissões/Confessions Sábado/Saturday: 4:15pm-5:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-elizabeth",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "19:15",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "956148ca",
+          "page": 1,
+          "said": "Exposição do SS. Sacramento/Benediction 1º Sexta-Feira do Mês: 9am-7:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2387daf",
+          "page": 1,
+          "said": "Exposição do SS. Sacramento/Benediction 1º Sexta-Feira do Mês: 9am-7:15pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of the newest bulletin (and the older one) under Exposition/Benediction; POLICY, Weekly qualifiers makes it a first-Friday slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-elizabeth",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "956148ca",
+          "page": 1,
+          "said": "Exposição do SS. Sacramento/Benediction ... Sábados (Saturdays): 4:15pm-5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2387daf",
+          "page": 1,
+          "said": "Exposição do SS. Sacramento/Benediction ... Sábados (Saturdays): 4:15pm-5:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read. It runs alongside Saturday Confession at the same hours; the box gives each its own time, so both are kept.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-elizabeth",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "last"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "956148ca",
+          "page": 1,
+          "said": "Exposição do SS. Sacramento/Benediction ... Último Domingo do Mês: 5:00pm-7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2387daf",
+          "page": 1,
+          "said": "Exposição do SS. Sacramento/Benediction ... Último Domingo do Mês: 5:00pm-7:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; POLICY, Weekly qualifiers: last is not fourth.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "956148ca",
+          "page": 1,
+          "said": "Dia Santo: 7:30pm; Horário da Missa em Dia Santo de Guarda ou Feriado: conforme anunciado"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2387daf",
+          "page": 1,
+          "said": "Dia Santo: 7:30pm; Horário da Missa em Dia Santo de Guarda ou Feriado: conforme anunciado"
+        }
+      ],
+      "rationale": "R26, POLICY Dates: a holy-day time with no date pins down no day; holy-day Masses are dated and none falls in the week printed. Update mode records them when announced.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "956148ca",
+          "page": 1,
+          "said": "Oração do Rosário/Rosary Semana (weekdays): 6:45pm • Sábado (Saturdays): 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2387daf",
+          "page": 1,
+          "said": "Oração do Rosário/Rosary Semana (weekdays): 6:45pm • Sábado (Saturdays): 4:30pm"
+        }
+      ],
+      "rationale": "R24: the Rosary is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
