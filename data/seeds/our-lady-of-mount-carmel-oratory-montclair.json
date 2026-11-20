@@ -1,0 +1,565 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-mount-carmel-oratory-montclair",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:53:10Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T21:20:53Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (Mount Carmel Oratory, Montclair). Both read bulletins (Nov 8 and Nov 15, image-only) print the same schedule box: weekday 8:30 AM Mon/Wed/Thu/Fri (closed Tuesdays), Sat 4:30 PM vigil, Sun 11 AM English and 6 PM Spanish, Sat 3:30 PM Confession, last-Friday 7 PM Exposition; dated Masses Nov 23 7 PM (Jubilee of Mercy) and Dec 12 8:30 PM (Guadalupe). Open: whether the Saturday 6:30 PM Neocatechumenal Mass in the Church Hall is public.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "4ced92ae6f9bb82839504445bf38ecec97479e67fff63c8afb41b083c0da72fd",
+      "fetched_at": "2026-11-15T16:53:10Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "8c8519cb268a733b2f8f2fc6a0cfb0a5a1eb8949ad49670b8658556a301baeb2",
+      "fetched_at": "2026-11-08T16:02:08Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-montclair",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ced92ae",
+          "page": 1,
+          "said": "WEEKDAY MASS 08:30 AM | M, W, TH, F"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8c8519cb",
+          "page": 1,
+          "said": "WEEKDAY MASS 08:30 AM | M, W, TH, F"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4ced92ae",
+          "page": 2,
+          "said": "CLOSED ON TUESDAYS - NO MASS"
+        }
+      ],
+      "rationale": "R1: Mass Schedule box on page 1 of both bulletins; the intentions (p2) list 8:30 am on Mon, Wed, Thu, Fri, and Tuesday is closed with no Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-montclair",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ced92ae",
+          "page": 1,
+          "said": "WEEKDAY MASS 08:30 AM | M, W, TH, F"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8c8519cb",
+          "page": 1,
+          "said": "WEEKDAY MASS 08:30 AM | M, W, TH, F"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4ced92ae",
+          "page": 2,
+          "said": "CLOSED ON TUESDAYS - NO MASS"
+        }
+      ],
+      "rationale": "R1: Mass Schedule box on page 1 of both bulletins; the intentions (p2) list 8:30 am on Mon, Wed, Thu, Fri, and Tuesday is closed with no Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-montclair",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ced92ae",
+          "page": 1,
+          "said": "WEEKDAY MASS 08:30 AM | M, W, TH, F"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8c8519cb",
+          "page": 1,
+          "said": "WEEKDAY MASS 08:30 AM | M, W, TH, F"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4ced92ae",
+          "page": 2,
+          "said": "CLOSED ON TUESDAYS - NO MASS"
+        }
+      ],
+      "rationale": "R1: Mass Schedule box on page 1 of both bulletins; the intentions (p2) list 8:30 am on Mon, Wed, Thu, Fri, and Tuesday is closed with no Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-montclair",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ced92ae",
+          "page": 1,
+          "said": "WEEKDAY MASS 08:30 AM | M, W, TH, F"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8c8519cb",
+          "page": 1,
+          "said": "WEEKDAY MASS 08:30 AM | M, W, TH, F"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4ced92ae",
+          "page": 2,
+          "said": "CLOSED ON TUESDAYS - NO MASS"
+        }
+      ],
+      "rationale": "R1: Mass Schedule box on page 1 of both bulletins; the intentions (p2) list 8:30 am on Mon, Wed, Thu, Fri, and Tuesday is closed with no Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-montclair",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ced92ae",
+          "page": 1,
+          "said": "SATURDAY 04:30 PM | Sunday Vigil in English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8c8519cb",
+          "page": 1,
+          "said": "SATURDAY 04:30 PM | Sunday Vigil in English"
+        }
+      ],
+      "rationale": "R1: Mass Schedule box of both bulletins; intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-montclair",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ced92ae",
+          "page": 1,
+          "said": "SUNDAY 11:00 AM | English Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8c8519cb",
+          "page": 1,
+          "said": "SUNDAY 11:00 AM | English Mass"
+        }
+      ],
+      "rationale": "R1: Mass Schedule box of both bulletins; intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-montclair",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ced92ae",
+          "page": 1,
+          "said": "SUNDAY 06:00 PM | Spanish Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8c8519cb",
+          "page": 1,
+          "said": "SUNDAY 06:00 PM | Spanish Mass"
+        }
+      ],
+      "rationale": "R1: Mass Schedule box of both bulletins; intentions agree. POLICY, Notes: language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-montclair",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ced92ae",
+          "page": 1,
+          "said": "CONFESSIONS 03:30 PM | SATURDAYS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8c8519cb",
+          "page": 1,
+          "said": "CONFESSIONS 03:30 PM | SATURDAYS"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; no end time is given, so end_time stays null (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-montclair",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "last"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8c8519cb",
+          "page": 1,
+          "said": "EXPOSITION OF THE BLESSED SACRAMENT 07:00 PM | Last Friday of every month"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4ced92ae",
+          "page": 1,
+          "said": "EXPOSITION OF THE BLESSED SACRAMENT 07:00 PM | Last Friday of every month"
+        }
+      ],
+      "rationale": "R12: a last-Friday service; neither read bulletin's week holds a last Friday, so page is null, though both schedule boxes print it as standing. No end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ced92ae",
+          "page": 1,
+          "said": "06:30 PM | Neocatechumenal Mass in Church Hall"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8c8519cb",
+          "page": 1,
+          "said": "06:30 PM | Neocatechumenal Mass in Church Hall"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4ced92ae",
+          "page": 3,
+          "said": "Saturday 6:30 PM Neocatechumenal Mass $270 (Sunday Donations)"
+        }
+      ],
+      "rationale": "R30: it is printed in the public Mass Schedule box and its collection is reported with the parish's, and the bulletin does not limit it to a group; but Neocatechumenal Way Masses are usually celebrated for community members. The Church Hall is in the church's lower level (same building). Leaning include since nothing in the bulletin restricts it.",
+      "question": "Include the Saturday 6:30 PM Neocatechumenal Mass in the Church Hall?",
+      "options": [
+        {
+          "label": "Saturdays 6:30 PM",
+          "entry": {
+            "church_slug": "our-lady-of-mount-carmel-montclair",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "18:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Neocatechumenal Mass in the Church Hall"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-montclair",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-23",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Itinerant Jubilee of Mercy; Mass in English and Italian"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ced92ae",
+          "page": 5,
+          "said": "MONDAY NOVEMBER 23RD, 2026 ... 7:00 - pm Mass (Mass in English and Italian)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4ced92ae",
+          "page": 4,
+          "said": "There will be a Mass at 7 pm"
+        }
+      ],
+      "rationale": "R1, R16: dated special Mass after as_of, marked NEW DATE. The older bulletin (8c8519cb p5) had it at the Sunday Nov 22 11:00 AM Mass, which is the weekly slot; nothing to record for the old date.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ced92ae",
+          "page": 5,
+          "said": "6:00 pm - Prayer Hour before Mass with Icon displayed"
+        }
+      ],
+      "rationale": "R24: a prayer hour before the Icon of Mercy, not Adoration or Exposition of the Blessed Sacrament.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-montclair",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-12",
+        "start_time": "20:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Guadalupe"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ced92ae",
+          "page": 3,
+          "said": "DEC 12 Special Mass for Our Lady of Guadelupe at 8:30 pm in Church"
+        }
+      ],
+      "rationale": "R1, R16: dated special Mass outside the weekly schedule, after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ced92ae",
+          "page": 1,
+          "said": "HOLY DAY MASSES 08:30 AM, 12:30 PM & 06:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8c8519cb",
+          "page": 1,
+          "said": "HOLY DAY MASSES 08:30 AM, 12:30 PM & 06:30 PM"
+        }
+      ],
+      "rationale": "POLICY, Dates: holy-day times with no holy day dated in the bulletin; they cannot be projected onto dates (the next, Dec 8, is not named). Update mode will pick them up when a bulletin dates them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
