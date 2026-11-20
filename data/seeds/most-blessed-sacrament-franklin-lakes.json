@@ -1,0 +1,536 @@
+{
+  "schema_version": 1,
+  "parish_slug": "most-blessed-sacrament-franklin-lakes",
+  "status": "ready",
+  "as_of": "2026-11-15T16:22:15Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T10:13:32Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. The Mass schedule box (Sat 5:30 pm; Sun 8, 10, 12; Mon and Sat 9:00 am; Tue-Fri 7:30 am) and Saturday 4:30-5:00 pm confession are identical in both bulletins (Nov 8 and Nov 15, 2026) and match the weekly intentions. Dated: Thanksgiving Mass Nov 26 at 9:00 am and a Holy Hour with Benediction Nov 23 at 6:00 pm. No open questions; no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "98237b51f893cac0923f3984a3542caaf6f3f179e36c3861686341b04213d7e1",
+      "fetched_at": "2026-11-15T16:22:15Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "48abe0c54b44d490dc1ecfd915392b04ed2af71fd748813358a3dc22ffbe7140",
+      "fetched_at": "2026-11-08T15:45:46Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-blessed-sacrament-franklin-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "98237b51",
+          "page": 2,
+          "said": "MASS SCHEDULE: SATURDAY: 5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48abe0c5",
+          "page": 2,
+          "said": "MASS SCHEDULE: SATURDAY: 5:30 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list a 5:30 pm Saturday Mass each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-blessed-sacrament-franklin-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "98237b51",
+          "page": 2,
+          "said": "SUNDAY: 8:00 am, 10:00 am, 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48abe0c5",
+          "page": 2,
+          "said": "SUNDAY: 8:00 am, 10:00 am, 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and matched by the weekly intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-blessed-sacrament-franklin-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "98237b51",
+          "page": 2,
+          "said": "SUNDAY: 8:00 am, 10:00 am, 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48abe0c5",
+          "page": 2,
+          "said": "SUNDAY: 8:00 am, 10:00 am, 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and matched by the weekly intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-blessed-sacrament-franklin-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "98237b51",
+          "page": 2,
+          "said": "SUNDAY: 8:00 am, 10:00 am, 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48abe0c5",
+          "page": 2,
+          "said": "SUNDAY: 8:00 am, 10:00 am, 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and matched by the weekly intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-blessed-sacrament-franklin-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "98237b51",
+          "page": 2,
+          "said": "WEEKDAYS: Monday and Saturday: 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48abe0c5",
+          "page": 2,
+          "said": "WEEKDAYS: Monday and Saturday: 9:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list 9:00 am on Monday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-blessed-sacrament-franklin-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "98237b51",
+          "page": 2,
+          "said": "WEEKDAYS: Monday and Saturday: 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48abe0c5",
+          "page": 2,
+          "said": "WEEKDAYS: Monday and Saturday: 9:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list 9:00 am on Monday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-blessed-sacrament-franklin-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "98237b51",
+          "page": 2,
+          "said": "Tuesday - Friday: 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48abe0c5",
+          "page": 2,
+          "said": "Tuesday - Friday: 7:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list 7:30 am Tuesday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-blessed-sacrament-franklin-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "98237b51",
+          "page": 2,
+          "said": "Tuesday - Friday: 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48abe0c5",
+          "page": 2,
+          "said": "Tuesday - Friday: 7:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list 7:30 am Tuesday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-blessed-sacrament-franklin-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "98237b51",
+          "page": 2,
+          "said": "Tuesday - Friday: 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48abe0c5",
+          "page": 2,
+          "said": "Tuesday - Friday: 7:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list 7:30 am Tuesday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-blessed-sacrament-franklin-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "98237b51",
+          "page": 2,
+          "said": "Tuesday - Friday: 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48abe0c5",
+          "page": 2,
+          "said": "Tuesday - Friday: 7:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list 7:30 am Tuesday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-blessed-sacrament-franklin-lakes",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "98237b51",
+          "page": 2,
+          "said": "THE SACRAMENT OF RECONCILIATION 4:30-5:00 pm on Saturday. Other times by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "48abe0c5",
+          "page": 2,
+          "said": "THE SACRAMENT OF RECONCILIATION 4:30-5:00 pm on Saturday. Other times by appointment."
+        }
+      ],
+      "rationale": "R1: printed in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "98237b51",
+          "page": 2,
+          "said": "Other times by appointment. Contact Father John at ext. 280."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-blessed-sacrament-franklin-lakes",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "98237b51",
+          "page": 6,
+          "said": "SPECIAL THANKSGIVING MORNING MASS Come and celebrate Thanksgiving Mass at 9:00am, on Thursday, November 26."
+        },
+        {
+          "source": "agent",
+          "bulletin": "48abe0c5",
+          "page": 6,
+          "said": "SPECIAL THANKSGIVING MORNING MASS Come and celebrate Thanksgiving Mass at 9:00am, on Thursday, November 26."
+        }
+      ],
+      "rationale": "R1, R16: dated special Mass on or after as_of (POLICY, Weekly or dated rule 7). R17: no cancellation of the weekly Thursday 7:30 am Mass is stated, so the weekly slot is left alone.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-blessed-sacrament-franklin-lakes",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-23",
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "98237b51",
+          "page": 6,
+          "said": "Our next Holy Hour with Exposition and Benediction of the Blessed Sacrament will take place on Monday, November 23rd at 6:00 pm. Join us for an hour of Eucharistic Adoration"
+        }
+      ],
+      "rationale": "R1, R16: dated Holy Hour on or after as_of; 'an hour' gives the 7:00 pm end (POLICY, Times); Benediction note per POLICY. Called 'our next' monthly Holy Hour but no week-of-month pattern is named, so it stays dated (R13).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
