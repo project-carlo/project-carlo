@@ -1,0 +1,619 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-mount-virgin-garfield",
+  "status": "ready",
+  "as_of": "2026-11-15T16:22:46Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T21:28:49Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both bulletins read (Nov 1 and Nov 8, 2026 issues; the newest fetched issue is dated Nov 8) print the same schedule box: Sat 5 PM, Sun 8, 9:45 (Italian), 11:30; Mon-Thu 8 AM; Fri 7 PM (Italian on 1st & 3rd Fridays); Sat 4:30 PM Confession; Thu 2-3 PM and first-Friday 5-7 PM Exposition. No open questions; no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "519bde1deacb8c42f780e3b3f3b1e303ab066cda883f515de77283a4c696190e",
+      "fetched_at": "2026-11-15T16:22:46Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "4d3e8d96207a6c81135e5c981a08acfd698e1fc544cc7549895fe5db56fe3675",
+      "fetched_at": "2026-11-08T15:46:21Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-virgin-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "519bde1d",
+          "page": 1,
+          "said": "Saturday: 5:00 PM Vigil Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d3e8d96",
+          "page": 1,
+          "said": "Saturday: 5:00 PM Vigil Mass"
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Mass box of both bulletins read (Nov 1 and Nov 8 issues), and in each week's calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-virgin-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "519bde1d",
+          "page": 1,
+          "said": "Sunday: 8:00 AM, 9:45 AM (Italian), 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d3e8d96",
+          "page": 1,
+          "said": "Sunday: 8:00 AM, 9:45 AM (Italian), 11:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Mass box of both bulletins read and in each week's calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-virgin-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "519bde1d",
+          "page": 1,
+          "said": "Sunday: 8:00 AM, 9:45 AM (Italian), 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d3e8d96",
+          "page": 1,
+          "said": "Sunday: 8:00 AM, 9:45 AM (Italian), 11:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Mass box of both bulletins read and in each week's calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-virgin-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Italian"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "519bde1d",
+          "page": 1,
+          "said": "Sunday: 8:00 AM, 9:45 AM (Italian), 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d3e8d96",
+          "page": 1,
+          "said": "Sunday: 8:00 AM, 9:45 AM (Italian), 11:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Mass box of both bulletins; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-virgin-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "519bde1d",
+          "page": 1,
+          "said": "Monday - Thursday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d3e8d96",
+          "page": 1,
+          "said": "Monday - Thursday 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Mass box of both bulletins and the calendars. The Nov 2 'NO 8:00 AM MASS' (All Souls) is before as_of (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-virgin-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "519bde1d",
+          "page": 1,
+          "said": "Monday - Thursday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d3e8d96",
+          "page": 1,
+          "said": "Monday - Thursday 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Mass box of both bulletins and the calendars. The Nov 2 'NO 8:00 AM MASS' (All Souls) is before as_of (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-virgin-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "519bde1d",
+          "page": 1,
+          "said": "Monday - Thursday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d3e8d96",
+          "page": 1,
+          "said": "Monday - Thursday 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Mass box of both bulletins and the calendars. The Nov 2 'NO 8:00 AM MASS' (All Souls) is before as_of (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-virgin-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "519bde1d",
+          "page": 1,
+          "said": "Monday - Thursday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d3e8d96",
+          "page": 1,
+          "said": "Monday - Thursday 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Mass box of both bulletins and the calendars. The Nov 2 'NO 8:00 AM MASS' (All Souls) is before as_of (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-virgin-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first",
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Italian"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "519bde1d",
+          "page": 1,
+          "said": "Friday 7:00 PM / 1st & 3rd Friday: 7:00 PM (Italian)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d3e8d96",
+          "page": 1,
+          "said": "Friday 7:00 PM / 1st & 3rd Friday: 7:00 PM (Italian)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "519bde1d",
+          "page": 3,
+          "said": "1st Friday: 7:00 PM Sacred Heart (Italian); 3rd Friday: 7:00 PM San Pio (Italian)"
+        }
+      ],
+      "rationale": "R1: the Weekday Mass box gives a 7 PM Mass every Friday, in Italian on the 1st and 3rd Fridays; split by weeks so the language note is only on those weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-virgin-garfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second",
+          "fourth",
+          "fifth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "519bde1d",
+          "page": 1,
+          "said": "Friday 7:00 PM / 4th Friday: 7:00 PM (Memorial Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d3e8d96",
+          "page": 1,
+          "said": "Friday 7:00 PM / 4th Friday: 7:00 PM (Memorial Mass)"
+        }
+      ],
+      "rationale": "R1: the Weekday Mass box gives a 7 PM Mass every Friday; the other weeks (1st, 3rd) are the Italian slot. The 4th Friday Memorial Mass is a parish Mass at the same time, not limited to a group.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-virgin-garfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "519bde1d",
+          "page": 3,
+          "said": "SACRAMENT OF RECONCILIATION Saturday: 4:30 PM and any day upon request."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d3e8d96",
+          "page": 3,
+          "said": "SACRAMENT OF RECONCILIATION Saturday: 4:30 PM and any day upon request."
+        },
+        {
+          "source": "agent",
+          "bulletin": "519bde1d",
+          "page": 2,
+          "said": "Saturday, November 14th 4:30 pm—Confessions"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins; no end time given, so none recorded (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "519bde1d",
+          "page": 3,
+          "said": "and any day upon request."
+        }
+      ],
+      "rationale": "R26: confession on request has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-virgin-garfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "14:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "519bde1d",
+          "page": 3,
+          "said": "Thursday: 2:00—3:00 PM Exposition of the Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d3e8d96",
+          "page": 3,
+          "said": "Thursday: 2:00—3:00 PM Exposition of the Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "519bde1d",
+          "page": 2,
+          "said": "Eucharistic Adoration is held every Thursday from 2:00pm-3:00pm."
+        }
+      ],
+      "rationale": "R1: printed in both bulletins' devotions list and calendars, and in the newest's Eucharist Adoration notice.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-virgin-garfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "519bde1d",
+          "page": 3,
+          "said": "1st Friday: 5:00 - 7:00 PM Exposition of the Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d3e8d96",
+          "page": 3,
+          "said": "1st Friday: 5:00 - 7:00 PM Exposition of the Blessed Sacrament"
+        }
+      ],
+      "rationale": "R1: printed in the standing devotions list of both bulletins; a weeks-of-the-month slot (POLICY, Weekly or dated rule 2). The Nov 1 issue's calendar for Fri Nov 6 lists only the Mass, which is a missing listing, not a change (R40).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "519bde1d",
+          "page": 1,
+          "said": "Holy Days of Obligation 8:00 AM, 7:00 PM (Bi-Lingual)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d3e8d96",
+          "page": 1,
+          "said": "Holy Days of Obligation 8:00 AM, 7:00 PM (Bi-Lingual)"
+        }
+      ],
+      "rationale": "POLICY, Dates: holy-day times with no date printed; no date is projected. Update mode records holy days when a bulletin dates them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "519bde1d",
+          "page": 3,
+          "said": "Monday: 8:00 AM St. Jude Novena / Wednesday: 8:00 AM St. Rita Novena"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d3e8d96",
+          "page": 3,
+          "said": "Monday: 8:00 AM St. Jude Novena / Wednesday: 8:00 AM St. Rita Novena"
+        }
+      ],
+      "rationale": "R24: novenas are devotions, not Mass, Confession or Adoration; the Mass at that time is already recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
