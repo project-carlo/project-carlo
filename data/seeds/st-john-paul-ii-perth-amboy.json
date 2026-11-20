@@ -1,0 +1,1724 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-john-paul-ii-perth-amboy",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:51:09Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T03:58:07Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches: St. Stephen (unmarked times in the p1 box) and Our Lady of the Rosary of Fatima (times marked OLRF). Weekend, weekday, Polish Wed/1st-3rd Fri/First Sat Masses and confessions agree across both issues read (Nov 8, Nov 15) and the website. Open: OLRF Thursday confession, 8:30-9:00 PM in the p1 box vs 7:00-7:20 PM on the Portuguese page.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "e7d367307547cff665700fd9fadfdf063d5e395315b277f8e75fae67610d0e77",
+      "fetched_at": "2026-11-15T16:51:09Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "adec15aceefb6408d41c6aa33a5452e50d6e225a8461f2f25f8378d49b7a43e5",
+      "fetched_at": "2026-11-08T22:03:08Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-perth-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 1,
+          "said": "Saturday Vigil Mass 5:00 PM (English); 7:00 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 1,
+          "said": "Saturday Vigil Mass 5:00 PM (English); 7:00 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: weekend schedule box on p1 of both issues; times without the OLRF: prefix are at St. Stephen, the parish's main church (OLRF times are marked).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-perth-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 1,
+          "said": "Saturday Vigil Mass 5:00 PM (English); 7:00 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 1,
+          "said": "Saturday Vigil Mass 5:00 PM (English); 7:00 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: weekend schedule box on p1 of both issues; unmarked times are at St. Stephen.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-perth-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 1,
+          "said": "Sunday 7:00 AM (Polish); 9:00 AM (English) 11:00 AM (Polish); 1:00 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 1,
+          "said": "Sunday 7:00 AM (Polish); 9:00 AM (English) 11:00 AM (Polish); 1:00 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: weekend schedule box on p1 of both issues; unmarked times are at St. Stephen.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-perth-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 1,
+          "said": "Sunday 7:00 AM (Polish); 9:00 AM (English) 11:00 AM (Polish); 1:00 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 1,
+          "said": "Sunday 7:00 AM (Polish); 9:00 AM (English) 11:00 AM (Polish); 1:00 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: weekend schedule box on p1 of both issues; unmarked times are at St. Stephen.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-perth-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 1,
+          "said": "Sunday 7:00 AM (Polish); 9:00 AM (English) 11:00 AM (Polish); 1:00 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 1,
+          "said": "Sunday 7:00 AM (Polish); 9:00 AM (English) 11:00 AM (Polish); 1:00 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: weekend schedule box on p1 of both issues; unmarked times are at St. Stephen.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-perth-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 1,
+          "said": "Sunday 7:00 AM (Polish); 9:00 AM (English) 11:00 AM (Polish); 1:00 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 1,
+          "said": "Sunday 7:00 AM (Polish); 9:00 AM (English) 11:00 AM (Polish); 1:00 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: weekend schedule box on p1 of both issues; unmarked times are at St. Stephen.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-rosary-of-fatima-perth-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Portuguese"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 1,
+          "said": "OLRF: 9:30 AM (Portuguese)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 1,
+          "said": "OLRF: 9:30 AM (Portuguese)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 8,
+          "said": "Missa Dominical - às 9h30"
+        }
+      ],
+      "rationale": "R1: OLRF (Our Lady of the Rosary of Fatima) Sunday Mass in the p1 box and the Portuguese page of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-perth-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 1,
+          "said": "Monday - Friday 8:00 AM (English); 7:30 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 1,
+          "said": "Monday - Friday 8:00 AM (English); 7:30 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: weekday box on p1 of both issues; the intentions (p2) list an 8:00 am Mass every weekday of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-perth-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 1,
+          "said": "Monday - Friday 8:00 AM (English); 7:30 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 1,
+          "said": "Monday - Friday 8:00 AM (English); 7:30 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: weekday box on p1 of both issues; the intentions (p2) list an 8:00 am Mass every weekday of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-perth-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 1,
+          "said": "Monday - Friday 8:00 AM (English); 7:30 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 1,
+          "said": "Monday - Friday 8:00 AM (English); 7:30 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: weekday box on p1 of both issues; the intentions (p2) list an 8:00 am Mass every weekday of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-perth-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 1,
+          "said": "Monday - Friday 8:00 AM (English); 7:30 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 1,
+          "said": "Monday - Friday 8:00 AM (English); 7:30 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: weekday box on p1 of both issues; the intentions (p2) list an 8:00 am Mass every weekday of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-perth-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 1,
+          "said": "Monday - Friday 8:00 AM (English); 7:30 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 1,
+          "said": "Monday - Friday 8:00 AM (English); 7:30 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: weekday box on p1 of both issues; the intentions (p2) list an 8:00 am Mass every weekday of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-perth-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 1,
+          "said": "Monday - Friday 8:00 AM (English); 7:30 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 1,
+          "said": "Monday - Friday 8:00 AM (English); 7:30 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: weekday box on p1 of both issues; the intentions (p2) list a 7:30 pm Mass every weekday of both weeks. Distinct from the OLRF Thursday 7:30 PM Portuguese Mass, a different church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-perth-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 1,
+          "said": "Monday - Friday 8:00 AM (English); 7:30 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 1,
+          "said": "Monday - Friday 8:00 AM (English); 7:30 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: weekday box on p1 of both issues; the intentions (p2) list a 7:30 pm Mass every weekday of both weeks. Distinct from the OLRF Thursday 7:30 PM Portuguese Mass, a different church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-perth-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 1,
+          "said": "Monday - Friday 8:00 AM (English); 7:30 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 1,
+          "said": "Monday - Friday 8:00 AM (English); 7:30 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: weekday box on p1 of both issues; the intentions (p2) list a 7:30 pm Mass every weekday of both weeks. Distinct from the OLRF Thursday 7:30 PM Portuguese Mass, a different church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-perth-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 1,
+          "said": "Monday - Friday 8:00 AM (English); 7:30 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 1,
+          "said": "Monday - Friday 8:00 AM (English); 7:30 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: weekday box on p1 of both issues; the intentions (p2) list a 7:30 pm Mass every weekday of both weeks. Distinct from the OLRF Thursday 7:30 PM Portuguese Mass, a different church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-perth-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 1,
+          "said": "Monday - Friday 8:00 AM (English); 7:30 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 1,
+          "said": "Monday - Friday 8:00 AM (English); 7:30 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: weekday box on p1 of both issues; the intentions (p2) list a 7:30 pm Mass every weekday of both weeks. Distinct from the OLRF Thursday 7:30 PM Portuguese Mass, a different church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-perth-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 1,
+          "said": "Wednesday & Fridays, 1st & 3rd 6:00 PM (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 2,
+          "said": "Wednesday, November 18th ... 6:00 pm † Stanisława Gnojek"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 6,
+          "said": "NOWENNA I MSZA ŚW. 18 listopada 2026 r. — 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 2,
+          "said": "Wednesday, November 11th ... 6:00 pm No intentions for this Mass"
+        }
+      ],
+      "rationale": "R1, R35: the box reads 'Wednesday & Fridays, 1st & 3rd'; the 6 PM Wednesday Mass appears on the 2nd (Nov 11) and 3rd (Nov 18) Wednesdays, so the 1st & 3rd limit applies to Fridays only. The weekly Wednesday Novena ('As usual, on Wednesday', p3) goes with it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-perth-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first",
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 1,
+          "said": "Wednesday & Fridays, 1st & 3rd 6:00 PM (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 2,
+          "said": "Friday, November 20th ... 6:00 pm † Zmarli z rodzin"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 2,
+          "said": "Friday, November 13th St Frances Xavier Cabrini 8:00 am † Kuzma Milnicsuk ... 7:30 pm † Manuel Antonio Abreu"
+        }
+      ],
+      "rationale": "R1: box gives Fridays 1st & 3rd; the 3rd Friday (Nov 20) lists 6:00 pm and the 2nd Friday (Nov 13) does not, which fits.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-perth-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "20:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 1,
+          "said": "First Saturday: 8:30 PM (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 1,
+          "said": "First Saturday: 8:30 PM (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 2,
+          "said": "Saturday, November 7th ... 8:30 pm W intencji wynagradzającej Matce Bożej"
+        }
+      ],
+      "rationale": "R1, R11: printed in the p1 weekday box of both issues; the Nov 7 (first Saturday) intentions confirm the 8:30 pm Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-perth-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 1,
+          "said": "Saturday: 8:00 AM (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 1,
+          "said": "Saturday: 8:00 AM (Polish)"
+        }
+      ],
+      "rationale": "R1: p1 box in both issues; intentions list Saturday 8:00 am both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-rosary-of-fatima-perth-amboy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Portuguese"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 1,
+          "said": "OLRF: Thursday, 7:30 PM (Portuguese)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 1,
+          "said": "OLRF: Thursday, 7:30 PM (Portuguese)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 8,
+          "said": "QUINTAS - FEIRAS NA IGREJA DE NOSSA SENHORA DO ROSARIO DE FATIMA ... SANTA MISSA - 7:30PM"
+        }
+      ],
+      "rationale": "R1: p1 box of both issues and the Portuguese page.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-rosary-of-fatima-perth-amboy",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "20:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 8,
+          "said": "Missa e Adoração - Quintas às 7:30pm e Adoração as 8:00pm; ADORACAO AO SANTISSIMO SACRAMENTO - 8:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 8,
+          "said": "Missa e Adoração ~ Quintas às 7:30pm e Adoração as"
+        }
+      ],
+      "rationale": "R1: OLRF's Thursday Adoration at 8:00 PM on the Portuguese page (header in both issues, cut off in the older one). No end time is given (a prayer group follows at 8:30), so end_time is null per POLICY, Times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-perth-amboy",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "07:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 1,
+          "said": "Confessions Monday - Friday 7:30 - 7:50 AM (English); 7:00 - 7:20 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 1,
+          "said": "Confessions Monday - Friday 7:30 - 7:50 AM (English); 7:00 - 7:20 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: Confessions box on p1 of both issues; unmarked times are at St. Stephen.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-perth-amboy",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "07:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 1,
+          "said": "Confessions Monday - Friday 7:30 - 7:50 AM (English); 7:00 - 7:20 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 1,
+          "said": "Confessions Monday - Friday 7:30 - 7:50 AM (English); 7:00 - 7:20 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: Confessions box on p1 of both issues; unmarked times are at St. Stephen.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-perth-amboy",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "07:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 1,
+          "said": "Confessions Monday - Friday 7:30 - 7:50 AM (English); 7:00 - 7:20 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 1,
+          "said": "Confessions Monday - Friday 7:30 - 7:50 AM (English); 7:00 - 7:20 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: Confessions box on p1 of both issues; unmarked times are at St. Stephen.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-perth-amboy",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "07:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 1,
+          "said": "Confessions Monday - Friday 7:30 - 7:50 AM (English); 7:00 - 7:20 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 1,
+          "said": "Confessions Monday - Friday 7:30 - 7:50 AM (English); 7:00 - 7:20 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: Confessions box on p1 of both issues; unmarked times are at St. Stephen.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-perth-amboy",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "07:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 1,
+          "said": "Confessions Monday - Friday 7:30 - 7:50 AM (English); 7:00 - 7:20 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 1,
+          "said": "Confessions Monday - Friday 7:30 - 7:50 AM (English); 7:00 - 7:20 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: Confessions box on p1 of both issues; unmarked times are at St. Stephen.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-perth-amboy",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "19:20",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 1,
+          "said": "Confessions Monday - Friday 7:30 - 7:50 AM (English); 7:00 - 7:20 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 1,
+          "said": "Confessions Monday - Friday 7:30 - 7:50 AM (English); 7:00 - 7:20 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: Confessions box on p1 of both issues; unmarked times are at St. Stephen.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-perth-amboy",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "19:20",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 1,
+          "said": "Confessions Monday - Friday 7:30 - 7:50 AM (English); 7:00 - 7:20 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 1,
+          "said": "Confessions Monday - Friday 7:30 - 7:50 AM (English); 7:00 - 7:20 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: Confessions box on p1 of both issues; unmarked times are at St. Stephen.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-perth-amboy",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "19:20",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 1,
+          "said": "Confessions Monday - Friday 7:30 - 7:50 AM (English); 7:00 - 7:20 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 1,
+          "said": "Confessions Monday - Friday 7:30 - 7:50 AM (English); 7:00 - 7:20 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: Confessions box on p1 of both issues; unmarked times are at St. Stephen.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-perth-amboy",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "19:20",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 1,
+          "said": "Confessions Monday - Friday 7:30 - 7:50 AM (English); 7:00 - 7:20 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 1,
+          "said": "Confessions Monday - Friday 7:30 - 7:50 AM (English); 7:00 - 7:20 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: Confessions box on p1 of both issues; unmarked times are at St. Stephen.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-perth-amboy",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "19:20",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 1,
+          "said": "Confessions Monday - Friday 7:30 - 7:50 AM (English); 7:00 - 7:20 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 1,
+          "said": "Confessions Monday - Friday 7:30 - 7:50 AM (English); 7:00 - 7:20 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: Confessions box on p1 of both issues; unmarked times are at St. Stephen.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-perth-amboy",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "07:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 1,
+          "said": "Saturday 7:30 - 7:50 AM; 4:30 - 4:50 PM; 6:30 - 6:50 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 1,
+          "said": "Saturday 7:30 - 7:50 AM; 4:30 - 4:50 PM; 6:30 - 6:50 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: Confessions box on p1 of both issues; unmarked times are at St. Stephen.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s35",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-perth-amboy",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": "16:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 1,
+          "said": "Saturday 7:30 - 7:50 AM; 4:30 - 4:50 PM; 6:30 - 6:50 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 1,
+          "said": "Saturday 7:30 - 7:50 AM; 4:30 - 4:50 PM; 6:30 - 6:50 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: Confessions box on p1 of both issues; unmarked times are at St. Stephen.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s36",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-perth-amboy",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "18:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 1,
+          "said": "Saturday 7:30 - 7:50 AM; 4:30 - 4:50 PM; 6:30 - 6:50 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 1,
+          "said": "Saturday 7:30 - 7:50 AM; 4:30 - 4:50 PM; 6:30 - 6:50 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: Confessions box on p1 of both issues; unmarked times are at St. Stephen.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s37",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-perth-amboy",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": "06:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 1,
+          "said": "Sunday 6:30 - 6:50 AM; 8:30 - 8:50 AM; 10:30 - 10:50 AM; 12:30 - 12:50 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 1,
+          "said": "Sunday 6:30 - 6:50 AM; 8:30 - 8:50 AM; 10:30 - 10:50 AM; 12:30 - 12:50 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: Confessions box on p1 of both issues; unmarked times are at St. Stephen.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s38",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-perth-amboy",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "08:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 1,
+          "said": "Sunday 6:30 - 6:50 AM; 8:30 - 8:50 AM; 10:30 - 10:50 AM; 12:30 - 12:50 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 1,
+          "said": "Sunday 6:30 - 6:50 AM; 8:30 - 8:50 AM; 10:30 - 10:50 AM; 12:30 - 12:50 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: Confessions box on p1 of both issues; unmarked times are at St. Stephen.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s39",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-perth-amboy",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": "10:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 1,
+          "said": "Sunday 6:30 - 6:50 AM; 8:30 - 8:50 AM; 10:30 - 10:50 AM; 12:30 - 12:50 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 1,
+          "said": "Sunday 6:30 - 6:50 AM; 8:30 - 8:50 AM; 10:30 - 10:50 AM; 12:30 - 12:50 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: Confessions box on p1 of both issues; unmarked times are at St. Stephen.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s40",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-perth-amboy",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": "12:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 1,
+          "said": "Sunday 6:30 - 6:50 AM; 8:30 - 8:50 AM; 10:30 - 10:50 AM; 12:30 - 12:50 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 1,
+          "said": "Sunday 6:30 - 6:50 AM; 8:30 - 8:50 AM; 10:30 - 10:50 AM; 12:30 - 12:50 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: Confessions box on p1 of both issues; unmarked times are at St. Stephen.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s41",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-rosary-of-fatima-perth-amboy",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "09:20",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Portuguese"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 1,
+          "said": "OLRF: Sunday, 9:00 - 9:20 AM (Portuguese)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 1,
+          "said": "OLRF: Sunday, 9:00 - 9:20 AM (Portuguese)"
+        }
+      ],
+      "rationale": "R1: Confessions box on p1 of both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s42",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 1,
+          "said": "OLRF: Thursday, 8:30 - 9:00 PM (Portuguese)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 1,
+          "said": "OLRF: Thursday, 8:30 - 9:00 PM (Portuguese)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 8,
+          "said": "QUINTAS - FEIRAS NA IGREJA DE NOSSA SENHORA DO ROSARIO DE FATIMA CONFISSOES - 7:00 - 7:20PM SANTA MISSA - 7:30PM"
+        }
+      ],
+      "rationale": "R28, leaning per C8: the p1 box (both issues) says 8:30-9:00 PM; the newest issue's Portuguese page, OLRF's own Thursday notice, says 7:00-7:20 PM before the 7:30 Mass. I lean to 7:00-7:20: it is the newer, service-specific notice, it fits the parish's pattern of confession just before each Mass, and 8:30 is when the prayer group starts. The website lists no OLRF Thursday times. If both are real, the reviewer can edit in the second.",
+      "question": "OLRF Thursday confession: which time?",
+      "options": [
+        {
+          "label": "7:00-7:20 PM",
+          "entry": {
+            "church_slug": "our-lady-of-the-rosary-of-fatima-perth-amboy",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": "19:20",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Portuguese"
+          },
+          "leaning": true
+        },
+        {
+          "label": "8:30-9:00 PM",
+          "entry": {
+            "church_slug": "our-lady-of-the-rosary-of-fatima-perth-amboy",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "20:30",
+            "end_time": "21:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Portuguese"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s43",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e7d36730",
+          "page": 5,
+          "said": "ADORATION OF THE BLESSED SACRAMENT November 19, 2026"
+        },
+        {
+          "source": "agent",
+          "bulletin": "adec15ac",
+          "page": 5,
+          "said": "ADORATION OF THE BLESSED SACRAMENT ALL DAY November 12, 2026"
+        }
+      ],
+      "rationale": "R26: Thursday all-day Adoration (St. Stephen's community pages, both issues) gives no start or end time, so POLICY leaves it out; OLRF's 8:00 PM Thursday Adoration is a separate slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
