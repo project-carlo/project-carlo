@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "parish_slug": "st-james-woodbridge",
-  "status": "needs_review",
+  "status": "ready",
   "as_of": "2026-11-15T16:06:53Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-20T03:51:32Z",
   "reviewer": null,
   "approved_at": null,
-  "summary": "One church. Weekend, weekday, Wednesday Adoration and Saturday Confession times agree in the front-page box and intentions of both bulletins read (Nov 8 and 15); dated Thanksgiving changes, a Nov 24 memorial Mass and a Nov 17 Spanish Mass are recorded. Open: whether to add a separate first-Saturday Spanish Confession slot.",
+  "summary": "One church. Weekend, weekday, Wednesday Adoration and Saturday Confession times agree in the front-page box and intentions of both bulletins read (Nov 8 and 15); dated Thanksgiving changes, a Nov 24 memorial Mass and a Nov 17 Spanish Mass are recorded. Saturday 11-12 Confession is split into weeks 2-5 plus a first-Saturday slot noted Spanish, per seed-review's choice and the format's ban on overlapping slots.",
   "blocked_reason": null,
   "bulletins": [
     {
@@ -672,7 +672,12 @@
         "start_time": "11:00",
         "end_time": "12:00",
         "cancelled": false,
-        "weeks_of_month": [],
+        "weeks_of_month": [
+          "second",
+          "third",
+          "fourth",
+          "fifth"
+        ],
         "exclude_weeks": false,
         "season": null,
         "note": null
@@ -692,16 +697,31 @@
           "said": "Sacrament of Reconciliation 11:00am - 12:00pm ~ Saturdays"
         }
       ],
-      "rationale": "R1: printed in the front-page box of both bulletins read.",
+      "rationale": "R1: Saturdays 11:00am-12:00pm, printed in the front-page box of both bulletins read. It skips the first week only because s15 holds the first Saturday at the same hour (in Spanish) and the format rejects overlapping slots: approval refused 'every Saturday' + 'first Saturday'. Confession 11-12 is still shown every Saturday.",
       "question": null,
       "options": null,
       "answer": null
     },
     {
       "id": "s15",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-woodbridge",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
       "page": 1,
       "sources": [
         {
@@ -717,34 +737,9 @@
           "said": "The first Saturday of each month Confession will be offered in Spanish ~ 11:00am - 12:00pm"
         }
       ],
-      "rationale": "R30: the box gives Saturdays 11-12 and says first-Saturday confession is offered in Spanish at the same hour; unclear whether English is also offered then. Leaning to add the Spanish slot so the language is shown; the alternative is to rely on the weekly slot.",
-      "question": "Add a separate first-Saturday 11:00-12:00 Confession in Spanish, alongside the every-Saturday 11:00-12:00 slot?",
-      "options": [
-        {
-          "label": "First Saturdays 11:00-12:00, note Spanish",
-          "entry": {
-            "church_slug": "st-james-woodbridge",
-            "event_type": "confession",
-            "event_kind": "weekly",
-            "day_of_week": "Saturday",
-            "date": null,
-            "start_time": "11:00",
-            "end_time": "12:00",
-            "cancelled": false,
-            "weeks_of_month": [
-              "first"
-            ],
-            "exclude_weeks": false,
-            "season": null,
-            "note": "Spanish"
-          },
-          "leaning": true
-        },
-        {
-          "label": "Leave out (the weekly slot covers the time)",
-          "entry": null
-        }
-      ],
+      "rationale": "R1, R30: the box says the first Saturday's confession is offered in Spanish 11:00am-12:00pm. seed-review chose to add this slot (its answer: 'Spanish first-Saturday slot added, as leaned'); s14 skips the first week so the two don't overlap, which the format requires.",
+      "question": null,
+      "options": null,
       "answer": null
     },
     {
