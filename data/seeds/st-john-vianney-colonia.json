@@ -1,0 +1,1000 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-john-vianney-colonia",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:07:02Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T04:06:11Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekday (7:00, 8:30 AM), Saturday (8 AM, 5 PM) and Sunday (8, 10, 12) Masses and Saturday/Friday Confessions agree in both bulletins read and on the website. Two dated Latin Masses (Nov 27, Dec 12) are included. Open: website-only Saturday Adoration after the 8 AM Mass, on a page that looks stale.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "111b4479d2b36442319c0b7e6a5dbe93e3a76aa3e4d6cfb79072a9db51291549",
+      "fetched_at": "2026-11-15T16:07:02Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "e57b1b768439dd1124163fd3348de154e30359800cdbf5bfb711c9b6d08162ec",
+      "fetched_at": "2026-11-08T15:33:19Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-vianney-colonia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "111b4479",
+          "page": 2,
+          "said": "Mass Schedule Monday-Friday 7am – 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e57b1b76",
+          "page": 2,
+          "said": "Mass Schedule Monday-Friday 7am – 8:30am"
+        },
+        {
+          "source": "website",
+          "url": "https://parish.sjvianney.com/mass-schedule",
+          "said": "7:00 AM, 8:30 AM - Monday Through Friday"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the dated intentions list 7:00 and 8:30 AM every weekday, and the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-vianney-colonia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "111b4479",
+          "page": 2,
+          "said": "Mass Schedule Monday-Friday 7am – 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e57b1b76",
+          "page": 2,
+          "said": "Mass Schedule Monday-Friday 7am – 8:30am"
+        },
+        {
+          "source": "website",
+          "url": "https://parish.sjvianney.com/mass-schedule",
+          "said": "7:00 AM, 8:30 AM - Monday Through Friday"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the dated intentions list 7:00 and 8:30 AM every weekday, and the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-vianney-colonia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "111b4479",
+          "page": 2,
+          "said": "Mass Schedule Monday-Friday 7am – 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e57b1b76",
+          "page": 2,
+          "said": "Mass Schedule Monday-Friday 7am – 8:30am"
+        },
+        {
+          "source": "website",
+          "url": "https://parish.sjvianney.com/mass-schedule",
+          "said": "7:00 AM, 8:30 AM - Monday Through Friday"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the dated intentions list 7:00 and 8:30 AM every weekday, and the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-vianney-colonia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "111b4479",
+          "page": 2,
+          "said": "Mass Schedule Monday-Friday 7am – 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e57b1b76",
+          "page": 2,
+          "said": "Mass Schedule Monday-Friday 7am – 8:30am"
+        },
+        {
+          "source": "website",
+          "url": "https://parish.sjvianney.com/mass-schedule",
+          "said": "7:00 AM, 8:30 AM - Monday Through Friday"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the dated intentions list 7:00 and 8:30 AM every weekday, and the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-vianney-colonia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "111b4479",
+          "page": 2,
+          "said": "Mass Schedule Monday-Friday 7am – 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e57b1b76",
+          "page": 2,
+          "said": "Mass Schedule Monday-Friday 7am – 8:30am"
+        },
+        {
+          "source": "website",
+          "url": "https://parish.sjvianney.com/mass-schedule",
+          "said": "7:00 AM, 8:30 AM - Monday Through Friday"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the dated intentions list 7:00 and 8:30 AM every weekday, and the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-vianney-colonia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "111b4479",
+          "page": 2,
+          "said": "Mass Schedule Monday-Friday 7am – 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e57b1b76",
+          "page": 2,
+          "said": "Mass Schedule Monday-Friday 7am – 8:30am"
+        },
+        {
+          "source": "website",
+          "url": "https://parish.sjvianney.com/mass-schedule",
+          "said": "7:00 AM, 8:30 AM - Monday Through Friday"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the dated intentions list 7:00 and 8:30 AM every weekday, and the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-vianney-colonia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "111b4479",
+          "page": 2,
+          "said": "Mass Schedule Monday-Friday 7am – 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e57b1b76",
+          "page": 2,
+          "said": "Mass Schedule Monday-Friday 7am – 8:30am"
+        },
+        {
+          "source": "website",
+          "url": "https://parish.sjvianney.com/mass-schedule",
+          "said": "7:00 AM, 8:30 AM - Monday Through Friday"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the dated intentions list 7:00 and 8:30 AM every weekday, and the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-vianney-colonia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "111b4479",
+          "page": 2,
+          "said": "Mass Schedule Monday-Friday 7am – 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e57b1b76",
+          "page": 2,
+          "said": "Mass Schedule Monday-Friday 7am – 8:30am"
+        },
+        {
+          "source": "website",
+          "url": "https://parish.sjvianney.com/mass-schedule",
+          "said": "7:00 AM, 8:30 AM - Monday Through Friday"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the dated intentions list 7:00 and 8:30 AM every weekday, and the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-vianney-colonia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "111b4479",
+          "page": 2,
+          "said": "Mass Schedule Monday-Friday 7am – 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e57b1b76",
+          "page": 2,
+          "said": "Mass Schedule Monday-Friday 7am – 8:30am"
+        },
+        {
+          "source": "website",
+          "url": "https://parish.sjvianney.com/mass-schedule",
+          "said": "7:00 AM, 8:30 AM - Monday Through Friday"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the dated intentions list 7:00 and 8:30 AM every weekday, and the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-vianney-colonia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "111b4479",
+          "page": 2,
+          "said": "Mass Schedule Monday-Friday 7am – 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e57b1b76",
+          "page": 2,
+          "said": "Mass Schedule Monday-Friday 7am – 8:30am"
+        },
+        {
+          "source": "website",
+          "url": "https://parish.sjvianney.com/mass-schedule",
+          "said": "7:00 AM, 8:30 AM - Monday Through Friday"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the dated intentions list 7:00 and 8:30 AM every weekday, and the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-vianney-colonia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "111b4479",
+          "page": 2,
+          "said": "Saturday 8am - 5pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e57b1b76",
+          "page": 2,
+          "said": "Saturday 8am - 5pm"
+        },
+        {
+          "source": "website",
+          "url": "https://parish.sjvianney.com/mass-schedule",
+          "said": "Saturday Vigil 5:00 PM ... 8:00 AM Saturday"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read (8 AM and 5 PM, confirmed by the Saturday intentions); the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-vianney-colonia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "111b4479",
+          "page": 2,
+          "said": "Saturday 8am - 5pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e57b1b76",
+          "page": 2,
+          "said": "Saturday 8am - 5pm"
+        },
+        {
+          "source": "website",
+          "url": "https://parish.sjvianney.com/mass-schedule",
+          "said": "Saturday Vigil 5:00 PM ... 8:00 AM Saturday"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read (8 AM and 5 PM, confirmed by the Saturday intentions); the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-vianney-colonia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "111b4479",
+          "page": 2,
+          "said": "Sunday 8am - 10am - 12pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e57b1b76",
+          "page": 2,
+          "said": "Sunday 8am - 10am - 12pm"
+        },
+        {
+          "source": "website",
+          "url": "https://parish.sjvianney.com/mass-schedule",
+          "said": "Sunday 8:00 AM, 10:00 AM, 12:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-vianney-colonia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "111b4479",
+          "page": 2,
+          "said": "Sunday 8am - 10am - 12pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e57b1b76",
+          "page": 2,
+          "said": "Sunday 8am - 10am - 12pm"
+        },
+        {
+          "source": "website",
+          "url": "https://parish.sjvianney.com/mass-schedule",
+          "said": "Sunday 8:00 AM, 10:00 AM, 12:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-vianney-colonia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "111b4479",
+          "page": 2,
+          "said": "Sunday 8am - 10am - 12pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e57b1b76",
+          "page": 2,
+          "said": "Sunday 8am - 10am - 12pm"
+        },
+        {
+          "source": "website",
+          "url": "https://parish.sjvianney.com/mass-schedule",
+          "said": "Sunday 8:00 AM, 10:00 AM, 12:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-vianney-colonia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "111b4479",
+          "page": 2,
+          "said": "Confessions: Saturdays 8:30 – 9:30 AM, 4:15 - 4:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e57b1b76",
+          "page": 2,
+          "said": "Confessions: Saturdays 8:30 – 9:30 AM, 4:15 - 4:45 PM"
+        }
+      ],
+      "rationale": "R1: Sacramental Schedule in both bulletins read; the website's Reconciliation page gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-vianney-colonia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "111b4479",
+          "page": 2,
+          "said": "Confessions: Saturdays 8:30 – 9:30 AM, 4:15 - 4:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e57b1b76",
+          "page": 2,
+          "said": "Confessions: Saturdays 8:30 – 9:30 AM, 4:15 - 4:45 PM"
+        }
+      ],
+      "rationale": "R1: Sacramental Schedule in both bulletins read; the website gives it as before the 5 PM Mass (4:15-4:45 PM).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-vianney-colonia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:35",
+        "end_time": "08:20",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "111b4479",
+          "page": 2,
+          "said": "Fridays from 7:35 am - 8:20 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e57b1b76",
+          "page": 2,
+          "said": "Fridays from 7:35 am - 8:20 am"
+        }
+      ],
+      "rationale": "R1: Sacramental Schedule in both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "111b4479",
+          "page": 2,
+          "said": "and following Stations of the Cross during Lent."
+        }
+      ],
+      "rationale": "R26, R24: Lenten confession after Stations has no clock time in the bulletin and is out of season now.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-vianney-colonia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Latin Mass, Our Lady of the Miraculous Medal"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "111b4479",
+          "page": 4,
+          "said": "UPCOMING LATIN MASSES Nov. 27th at 7 PM – Our Lady of the Miraculous Medal"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e57b1b76",
+          "page": 4,
+          "said": "UPCOMING LATIN MASSES Nov. 27th at 7 PM – Our Lady of the Miraculous Medal"
+        }
+      ],
+      "rationale": "R1, R16, POLICY Weekly or dated rule 3: a dated special Mass after as_of, announced in both bulletins in the parish's own notices; the parish has one church and the notice names no other venue.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-vianney-colonia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-12",
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Latin Mass, Our Lady of Guadalupe"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "111b4479",
+          "page": 4,
+          "said": "Dec. 12th at 1 PM – Our Lady of Guadalupe"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e57b1b76",
+          "page": 4,
+          "said": "Dec. 12th at 1 PM – Our Lady of Guadalupe"
+        }
+      ],
+      "rationale": "R1, R16, POLICY Weekly or dated rule 3: a dated special Mass after as_of under UPCOMING LATIN MASSES in both bulletins; one-church parish, no other venue named.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-vianney-colonia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-04",
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Purgatorial Society Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "111b4479",
+          "page": 3,
+          "said": "The next Mass for Purgatorial Society will be held December 4th at 7:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e57b1b76",
+          "page": 3,
+          "said": "The next Mass for Purgatorial Society will be held December 4th at 7:00 AM"
+        }
+      ],
+      "rationale": "POLICY Weekly or dated rule 7: the intention is offered at the regular Friday 7:00 AM Mass, already a weekly slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-vianney-colonia",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-01",
+        "start_time": "18:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Youth Group Holy Hour"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "111b4479",
+          "page": 9,
+          "said": "MONTHLY ACTIVITIES Holy Hour SUN 1 NOV 6:00 PM - 8:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e57b1b76",
+          "page": 5,
+          "said": "Although sponsored by the Youth Group, the Holy Hours are open to everyone ... Watch the bulletin for the next one."
+        }
+      ],
+      "rationale": "R16: the only dated Holy Hour (Nov 1) is before as_of; the pastor says to watch the bulletin for the next one, so no recurrence is stated (R33).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://parish.sjvianney.com/other-worship-opportunities",
+          "said": "Eucharistic Adoration Saturday mornings after the 8 AM Mass"
+        }
+      ],
+      "rationale": "R29, R6: neither bulletin read mentions Adoration. The same website page lists a 'Novena Tuesday mornings after the 8:45 AM Mass', but no 8:45 AM Mass exists now (weekday Masses are 7:00 and 8:30), so the page looks stale; no end time is given. Leaning leave out.",
+      "question": "Add Saturday Adoration after the 8 AM Mass, given only by the website?",
+      "options": [
+        {
+          "label": "Saturdays 8:30 AM (POLICY: 30 min after a morning Mass)",
+          "entry": {
+            "church_slug": "st-john-vianney-colonia",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 8:00 AM Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    }
+  ]
+}
