@@ -1,0 +1,498 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-john-neumann-califon",
+  "status": "ready",
+  "as_of": "2026-11-15T16:51:03Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T03:55:51Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, St. John Neumann, Califon. Both bulletins read (Nov 8 and Nov 15, 2026) print the same schedule box: Sat 5:30 PM vigil, Sun 9:30 AM & 5:30 PM, Tue-Thu 9:00 AM, Reconciliation Sat 5 PM. Dated: Communion Services replace the Nov 17 and 18 weekday Masses, Thanksgiving Mass Nov 26 10 AM, Advent Confessions Dec 9 7-8 PM. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "7800d7eecc713a9f90bd3f0d90a8317fa74089d41c44e3802cdf5c980c275150",
+      "fetched_at": "2026-11-15T16:51:03Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "a28a7cabfbb1fc98030c69f628e5187c34e36b2665639a568563ca213f111e9c",
+      "fetched_at": "2026-11-08T15:59:39Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-neumann-califon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7800d7ee",
+          "page": 1,
+          "said": "Weekend Masses Saturday Vigil 5:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a28a7cab",
+          "page": 1,
+          "said": "Weekend Masses Saturday Vigil 5:30 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read, and in both weeks' calendars.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-neumann-califon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7800d7ee",
+          "page": 1,
+          "said": "Sunday 9:30 a.m. & 5:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a28a7cab",
+          "page": 1,
+          "said": "Sunday 9:30 a.m. & 5:30 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read, and in both weeks' calendars.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-neumann-califon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7800d7ee",
+          "page": 1,
+          "said": "Sunday 9:30 a.m. & 5:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a28a7cab",
+          "page": 1,
+          "said": "Sunday 9:30 a.m. & 5:30 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read, and in both weeks' calendars.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-neumann-califon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7800d7ee",
+          "page": 1,
+          "said": "Weekday Masses Tuesday-Thursday 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a28a7cab",
+          "page": 1,
+          "said": "Weekday Masses Tuesday-Thursday 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a28a7cab",
+          "page": 2,
+          "said": "Tuesday, November 10 ... 9:00 a.m. Mass; Wednesday, November 11 ... 9:00 a.m. Mass; Thursday, November 12 ... 9:00 a.m. Mass"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read; the November 8 calendar shows Mass Tue-Thu 9:00. The newest week's Tue/Wed Communion Services are dated replacements (separate cancellation slots).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-neumann-califon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7800d7ee",
+          "page": 1,
+          "said": "Weekday Masses Tuesday-Thursday 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a28a7cab",
+          "page": 1,
+          "said": "Weekday Masses Tuesday-Thursday 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a28a7cab",
+          "page": 2,
+          "said": "Tuesday, November 10 ... 9:00 a.m. Mass; Wednesday, November 11 ... 9:00 a.m. Mass; Thursday, November 12 ... 9:00 a.m. Mass"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read; the November 8 calendar shows Mass Tue-Thu 9:00. The newest week's Tue/Wed Communion Services are dated replacements (separate cancellation slots).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-neumann-califon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7800d7ee",
+          "page": 1,
+          "said": "Weekday Masses Tuesday-Thursday 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a28a7cab",
+          "page": 1,
+          "said": "Weekday Masses Tuesday-Thursday 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a28a7cab",
+          "page": 2,
+          "said": "Tuesday, November 10 ... 9:00 a.m. Mass; Wednesday, November 11 ... 9:00 a.m. Mass; Thursday, November 12 ... 9:00 a.m. Mass"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read; the November 8 calendar shows Mass Tue-Thu 9:00. The newest week's Tue/Wed Communion Services are dated replacements (separate cancellation slots).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-neumann-califon",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7800d7ee",
+          "page": 1,
+          "said": "Reconciliation Saturday at 5 p.m. or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a28a7cab",
+          "page": 1,
+          "said": "Reconciliation Saturday at 5 p.m. or by appointment"
+        }
+      ],
+      "rationale": "R1, POLICY Times: printed in the schedule box of both bulletins; no end time given, so end_time null. 'By appointment' has no time (R26).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-neumann-califon",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-17",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Communion Service instead of Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7800d7ee",
+          "page": 2,
+          "said": "Tuesday, November 17 ... 9:00 a.m. Communion Service"
+        }
+      ],
+      "rationale": "R1, R16, POLICY (Communion Service): the newest calendar puts a Communion Service in place of the 9:00 Tuesday Mass on a date after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-neumann-califon",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-18",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Communion Service instead of Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7800d7ee",
+          "page": 2,
+          "said": "Wednesday, November 18 ... 9:00 a.m. Communion Service"
+        }
+      ],
+      "rationale": "R1, R16, POLICY (Communion Service): the newest calendar puts a Communion Service in place of the 9:00 Wednesday Mass on a date after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-neumann-califon",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7800d7ee",
+          "page": 4,
+          "said": "Thanksgiving Day Mass Thursday, November 26th 10am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a28a7cab",
+          "page": 2,
+          "said": "Thanksgiving Day Mass Thursday, November 26th 10am"
+        }
+      ],
+      "rationale": "R1, R16: dated holiday Mass after as_of, in both bulletins. R17: no cancellation of the weekly Thursday 9:00 Mass is stated, so none is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-neumann-califon",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-09",
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Confessions, guest priests"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7800d7ee",
+          "page": 4,
+          "said": "ADVENT CONFESSIONS Wednesday, December 9th 7-8pm"
+        }
+      ],
+      "rationale": "R1, R16: dated Advent penance service after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-neumann-califon",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-12",
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Guadalupe Celebration Mass"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7800d7ee",
+          "page": 5,
+          "said": "Guadalupe Celebration Join us for Mass and Fiesta Saturday, December 12 at 5:30pm"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7: a special occasion at the regular Saturday 5:30 PM vigil, already covered by the weekly slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7800d7ee",
+          "page": 4,
+          "said": "ADVENT NIGHT OF REFLECTION Monday, November 30th at 7 pm ... A Holy Hour will follow for prayer and contemplation."
+        }
+      ],
+      "rationale": "R26, POLICY Times: the Holy Hour follows a talk and has no definite start time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
