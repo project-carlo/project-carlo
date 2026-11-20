@@ -1,0 +1,713 @@
+{
+  "schema_version": 1,
+  "parish_slug": "little-flower-berkeley-heights",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:52:53Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T10:06:52Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, two bulletins read (Nov 8 and Nov 15, 2026) with identical schedules: Sat 5:30 PM vigil, Sun 8:30 and 11:30 AM, daily Mass 9 AM Monday-Saturday (from the intentions), Saturday confession 4-5 PM, and First Friday Adoration after the 9 AM Mass (9:30 AM). No history stored. Open: whether to add the Dec 4 6:30 AM men's-gathering Mass (leaning leave out).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "b7edc3beafe370c9e654adda598f77eb9be72ddf2de556284cff376945156909",
+      "fetched_at": "2026-11-15T16:52:53Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "d30c08f37d123f971b6e16bf71e9bab8281ff403de87409bc082d2d06b2759f0",
+      "fetched_at": "2026-11-08T22:04:33Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "little-flower-berkeley-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b7edc3be",
+          "page": 1,
+          "said": "Mass Schedule: Saturday 5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d30c08f3",
+          "page": 1,
+          "said": "Mass Schedule: Saturday 5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b7edc3be",
+          "page": 3,
+          "said": "November 14 - 5:30 pm: Frances A. Capone"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass Schedule of both bulletins read, and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "little-flower-berkeley-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b7edc3be",
+          "page": 1,
+          "said": "Sunday 8:30 am, 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d30c08f3",
+          "page": 1,
+          "said": "Sunday 8:30 am, 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b7edc3be",
+          "page": 3,
+          "said": "November 15 - 8:30 am ... November 15 - 11:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass Schedule of both bulletins read, and in the intentions. The Children's Mass on Family Mass weekends is this same Sunday 11:30 AM Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "little-flower-berkeley-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b7edc3be",
+          "page": 1,
+          "said": "Sunday 8:30 am, 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d30c08f3",
+          "page": 1,
+          "said": "Sunday 8:30 am, 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b7edc3be",
+          "page": 3,
+          "said": "November 15 - 8:30 am ... November 15 - 11:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass Schedule of both bulletins read, and in the intentions. The Children's Mass on Family Mass weekends is this same Sunday 11:30 AM Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "little-flower-berkeley-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b7edc3be",
+          "page": 1,
+          "said": "Daily Mass 9 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d30c08f3",
+          "page": 1,
+          "said": "Daily Mass 9 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b7edc3be",
+          "page": 3,
+          "said": "November 16 - 9 am ... November 21 - 9 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d30c08f3",
+          "page": 4,
+          "said": "November 9 - 9 am ... November 14 - 9 am"
+        }
+      ],
+      "rationale": "R1, R35: 'Daily Mass 9 am' in the schedule of both bulletins; the intentions of both weeks list a 9 am Mass Monday through Saturday (none on Sunday), so daily means Monday-Saturday. The Dec 5 retreat flyer (latest p8) also says 'Following 9:00 am Mass' on a Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "little-flower-berkeley-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b7edc3be",
+          "page": 1,
+          "said": "Daily Mass 9 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d30c08f3",
+          "page": 1,
+          "said": "Daily Mass 9 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b7edc3be",
+          "page": 3,
+          "said": "November 16 - 9 am ... November 21 - 9 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d30c08f3",
+          "page": 4,
+          "said": "November 9 - 9 am ... November 14 - 9 am"
+        }
+      ],
+      "rationale": "R1, R35: 'Daily Mass 9 am' in the schedule of both bulletins; the intentions of both weeks list a 9 am Mass Monday through Saturday (none on Sunday), so daily means Monday-Saturday. The Dec 5 retreat flyer (latest p8) also says 'Following 9:00 am Mass' on a Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "little-flower-berkeley-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b7edc3be",
+          "page": 1,
+          "said": "Daily Mass 9 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d30c08f3",
+          "page": 1,
+          "said": "Daily Mass 9 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b7edc3be",
+          "page": 3,
+          "said": "November 16 - 9 am ... November 21 - 9 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d30c08f3",
+          "page": 4,
+          "said": "November 9 - 9 am ... November 14 - 9 am"
+        }
+      ],
+      "rationale": "R1, R35: 'Daily Mass 9 am' in the schedule of both bulletins; the intentions of both weeks list a 9 am Mass Monday through Saturday (none on Sunday), so daily means Monday-Saturday. The Dec 5 retreat flyer (latest p8) also says 'Following 9:00 am Mass' on a Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "little-flower-berkeley-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b7edc3be",
+          "page": 1,
+          "said": "Daily Mass 9 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d30c08f3",
+          "page": 1,
+          "said": "Daily Mass 9 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b7edc3be",
+          "page": 3,
+          "said": "November 16 - 9 am ... November 21 - 9 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d30c08f3",
+          "page": 4,
+          "said": "November 9 - 9 am ... November 14 - 9 am"
+        }
+      ],
+      "rationale": "R1, R35: 'Daily Mass 9 am' in the schedule of both bulletins; the intentions of both weeks list a 9 am Mass Monday through Saturday (none on Sunday), so daily means Monday-Saturday. The Dec 5 retreat flyer (latest p8) also says 'Following 9:00 am Mass' on a Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "little-flower-berkeley-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b7edc3be",
+          "page": 1,
+          "said": "Daily Mass 9 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d30c08f3",
+          "page": 1,
+          "said": "Daily Mass 9 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b7edc3be",
+          "page": 3,
+          "said": "November 16 - 9 am ... November 21 - 9 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d30c08f3",
+          "page": 4,
+          "said": "November 9 - 9 am ... November 14 - 9 am"
+        }
+      ],
+      "rationale": "R1, R35: 'Daily Mass 9 am' in the schedule of both bulletins; the intentions of both weeks list a 9 am Mass Monday through Saturday (none on Sunday), so daily means Monday-Saturday. The Dec 5 retreat flyer (latest p8) also says 'Following 9:00 am Mass' on a Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "little-flower-berkeley-heights",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b7edc3be",
+          "page": 1,
+          "said": "Daily Mass 9 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d30c08f3",
+          "page": 1,
+          "said": "Daily Mass 9 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b7edc3be",
+          "page": 3,
+          "said": "November 16 - 9 am ... November 21 - 9 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d30c08f3",
+          "page": 4,
+          "said": "November 9 - 9 am ... November 14 - 9 am"
+        }
+      ],
+      "rationale": "R1, R35: 'Daily Mass 9 am' in the schedule of both bulletins; the intentions of both weeks list a 9 am Mass Monday through Saturday (none on Sunday), so daily means Monday-Saturday. The Dec 5 retreat flyer (latest p8) also says 'Following 9:00 am Mass' on a Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "little-flower-berkeley-heights",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b7edc3be",
+          "page": 1,
+          "said": "Confession: Saturday 4 – 5 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d30c08f3",
+          "page": 1,
+          "said": "Confession: Saturday 4 – 5 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "little-flower-berkeley-heights",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:00 AM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b7edc3be",
+          "page": 3,
+          "said": "Devotions Adoration First Fridays of the month After 9 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d30c08f3",
+          "page": 4,
+          "said": "Adoration First Fridays of the month After 9 am Mass"
+        }
+      ],
+      "rationale": "R1, R10: the Devotions box of both bulletins names First Friday Adoration after the 9 am weekday Mass, so it starts 30 minutes after, at 9:30 AM, with no end time given. Printed as a standing devotion even though neither week holds a first Friday (R11).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b7edc3be",
+          "page": 1,
+          "said": "Confession: ... Or by appointment"
+        }
+      ],
+      "rationale": "R26: by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b7edc3be",
+          "page": 1,
+          "said": "The Church is open for private prayer Monday – Thursday from 9:30 am – 4:30 pm."
+        }
+      ],
+      "rationale": "R38: the church being open for private prayer is not an Adoration schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "little-flower-berkeley-heights",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b7edc3be",
+          "page": 4,
+          "said": "Thanksgiving Mass November 26th 9 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d30c08f3",
+          "page": 3,
+          "said": "Thanksgiving Mass"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated, rules 6-7: the Thanksgiving Mass is at the usual Thursday 9 am daily Mass time, so the weekly slot covers it; no separate dated entry.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b7edc3be",
+          "page": 3,
+          "said": "Miraculous Medal Novena Mondays after 9 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b7edc3be",
+          "page": 5,
+          "said": "Afternoon Prayer for Our Beloved Dead ... every weekday afternoon in November at 4 PM ... Vespers"
+        }
+      ],
+      "rationale": "R24: a novena and Vespers are not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b7edc3be",
+          "page": 9,
+          "said": "First Friday Fellowship Men's Gathering December 4 6:30 – 7:30 am ... Confessions available."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d30c08f3",
+          "page": 9,
+          "said": "First Friday Fellowship Men's Gathering December 4 6:30 – 7:30 am ... Confessions available."
+        }
+      ],
+      "rationale": "POLICY, Final source checks; R26: 'Confessions available' during the men's gathering has no timing of its own, so the event's hours are not copied onto it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b7edc3be",
+          "page": 9,
+          "said": "First Friday Fellowship Men's Gathering December 4 6:30 – 7:30 am Meet at the church for Mass, coffee/donuts, and discussions in the spirit of St. Josemaria Escriva."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d30c08f3",
+          "page": 9,
+          "said": "First Friday Fellowship Men's Gathering December 4 6:30 – 7:30 am Meet at the church for Mass, coffee/donuts, and discussions in the spirit of St. Josemaria Escriva."
+        }
+      ],
+      "rationale": "R30: the men's gathering (6:30-7:30 am) includes Mass, but the bulletin gives no Mass start time of its own and frames it as a men's group event, so it may be closed to the public (POLICY, What to extract). Leaning leave out: a wrong time is worse than a missing one, and the 9 am First Friday Mass is already weekly.",
+      "question": "Add a dated Mass on Friday Dec 4 at 6:30 AM (First Friday Fellowship men's gathering)?",
+      "options": [
+        {
+          "label": "Dec 4 6:30 AM Mass",
+          "entry": {
+            "church_slug": "little-flower-berkeley-heights",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-04",
+            "start_time": "06:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "First Friday Fellowship Men's Gathering"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    }
+  ]
+}
