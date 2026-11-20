@@ -1,0 +1,737 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-bartholomew-east-brunswick",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:05:53Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T03:11:41Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend (Sat 4 PM; Sun 8, 10, 12), weekday 8:30 AM, Saturday 10 AM confession and First Friday Adoration (Oct-May) agree in both image/text bulletins (Nov 8, Nov 15). Website adds a First Friday 7 PM Mass (Oct-May), the confession end time and Dec 8 holy-day Masses. Open: the website's Sunday 1 PM Adoration, absent from the bulletins.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "bfb31847cf99e28ecd31d986da82dcd8304fead386e1bd09965bd7b864a0bea6",
+      "fetched_at": "2026-11-15T16:05:53Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "66f59d5716f5295face99302d6b151beabf9954f19efbaeb9a451bf2e9d084bd",
+      "fetched_at": "2026-11-08T15:32:26Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-east-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bfb31847",
+          "page": 1,
+          "said": "Vigil Mass: Saturday – 4 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66f59d57",
+          "page": 1,
+          "said": "Vigil Mass: Saturday – 4 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bfb31847",
+          "page": 3,
+          "said": "SATURDAY, 21 November 4:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Sunday Eucharist box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-east-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bfb31847",
+          "page": 1,
+          "said": "Sunday: 8 am, 10 am and 12 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66f59d57",
+          "page": 1,
+          "said": "Sunday: 8 am, 10 am and 12 noon"
+        }
+      ],
+      "rationale": "R1: printed in the Sunday Eucharist box of both bulletins read and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-east-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bfb31847",
+          "page": 1,
+          "said": "Sunday: 8 am, 10 am and 12 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66f59d57",
+          "page": 1,
+          "said": "Sunday: 8 am, 10 am and 12 noon"
+        }
+      ],
+      "rationale": "R1: printed in the Sunday Eucharist box of both bulletins read and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-east-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bfb31847",
+          "page": 1,
+          "said": "Sunday: 8 am, 10 am and 12 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66f59d57",
+          "page": 1,
+          "said": "Sunday: 8 am, 10 am and 12 noon"
+        }
+      ],
+      "rationale": "R1: printed in the Sunday Eucharist box of both bulletins read and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-east-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bfb31847",
+          "page": 1,
+          "said": "DAILY EUCHARIST Monday-Friday: 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66f59d57",
+          "page": 1,
+          "said": "DAILY EUCHARIST Monday-Friday: 8:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; each weekday's 8:30 am Mass is in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-east-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bfb31847",
+          "page": 1,
+          "said": "DAILY EUCHARIST Monday-Friday: 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66f59d57",
+          "page": 1,
+          "said": "DAILY EUCHARIST Monday-Friday: 8:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; each weekday's 8:30 am Mass is in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-east-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bfb31847",
+          "page": 1,
+          "said": "DAILY EUCHARIST Monday-Friday: 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66f59d57",
+          "page": 1,
+          "said": "DAILY EUCHARIST Monday-Friday: 8:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; each weekday's 8:30 am Mass is in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-east-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bfb31847",
+          "page": 1,
+          "said": "DAILY EUCHARIST Monday-Friday: 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66f59d57",
+          "page": 1,
+          "said": "DAILY EUCHARIST Monday-Friday: 8:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; each weekday's 8:30 am Mass is in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-east-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bfb31847",
+          "page": 1,
+          "said": "DAILY EUCHARIST Monday-Friday: 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66f59d57",
+          "page": 1,
+          "said": "DAILY EUCHARIST Monday-Friday: 8:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; each weekday's 8:30 am Mass is in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-east-brunswick",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": "11:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Guadalupe Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bfb31847",
+          "page": 1,
+          "said": "CONFESSIONS Saturday: 10 am in the Guadalupe Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66f59d57",
+          "page": 1,
+          "said": "CONFESSIONS Saturday: 10 am in the Guadalupe Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stbartseb.org/mass-times",
+          "said": "Saturday 10:00 AM to 11:00 AM and by appointment",
+          "schedule_check": {
+            "checked_at": "2026-11-20T03:15:13Z",
+            "current_because": "Checked 2026-11-19; the page lists the upcoming Dec 8, 2026 holy day and today's readings, and its Mass times match the bulletin exactly.",
+            "bulletin": "bfb31847",
+            "fits_because": "The newest bulletin prints Saturday 10 am confessions with no end; the site's 10-11 AM gives the same start and only adds the end."
+          }
+        }
+      ],
+      "rationale": "R1, R6: the bulletin prints the start; the parish site, whose schedule matches the bulletin, gives the 11:00 end. The Guadalupe Chapel is the parish's own chapel at 470 Ryders Lane (it also hosts weekday Morning Prayer and parish meetings), so it belongs to the church (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-east-brunswick",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "15:45",
+        "end_time": "18:45",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 10,
+          "start_day": null,
+          "end_month": 5,
+          "end_day": null
+        },
+        "note": "Guadalupe Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bfb31847",
+          "page": 1,
+          "said": "ADORATION OF THE BLESSED SACRAMENT IN THE GUADALUPE CHAPEL First Friday: 3:45-6:45 pm (October-May)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66f59d57",
+          "page": 1,
+          "said": "First Friday: 3:45-6:45 pm (October-May)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins with its months, which POLICY keeps as the season. The chapel is the parish's own on-site chapel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-east-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 10,
+          "start_day": null,
+          "end_month": 5,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stbartseb.org/mass-times",
+          "said": "1st Friday : 7:00 PM English (Oct-May)",
+          "schedule_check": {
+            "checked_at": "2026-11-20T03:15:13Z",
+            "current_because": "Checked 2026-11-19; the page lists the upcoming Dec 8, 2026 holy day and today's readings, and every other Mass time on it matches the newest bulletin.",
+            "bulletin": "bfb31847",
+            "fits_because": "The newest bulletin's First Friday Adoration (3:45-6:45 pm, October-May) ends just before a 7 PM Mass with the same season; neither bulletin read covers a first Friday in its intentions."
+          }
+        }
+      ],
+      "rationale": "R6: the parish's Mass times page gives a First Friday 7 PM Mass, October-May. It fits the bulletin's First Friday Adoration ending at 6:45 in the same months; the bulletin's box lists only the regular daily Mass, and neither read issue's intentions holds a first Friday (Nov 8-15 and Nov 14-22), so its absence is not a conflict.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-east-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Lent"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stbartseb.org/mass-times",
+          "said": "Friday : 7:00 PM English During Lent, and is followed by the stations of the Cross."
+        }
+      ],
+      "rationale": "R33: a Lent-only Friday Mass; Lent's dates move each year and a month season would be false. Update mode will read Lent bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-east-brunswick",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-16",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Novena Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bfb31847",
+          "page": 3,
+          "said": "MONDAY, 16 November ... 5th Novena Mass 7:00 pm"
+        }
+      ],
+      "rationale": "R1, R16: a dated Mass in the newest intentions, on or after as_of. POLICY, Weekly or dated: dated, as a numbered novena series.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-east-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Novena Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bfb31847",
+          "page": 3,
+          "said": "5th Novena Mass 7:00 pm (Monday 16 November)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66f59d57",
+          "page": 3,
+          "said": "MONDAY, 9 November ... 4th Novena Mass 7:00 pm"
+        }
+      ],
+      "rationale": "R35 exception: two weeks match, but the bulletins number it (4th, 5th) as a novena series, i.e. marked special and finite, not the regular schedule; the schedule box omits it. Its dated occurrences come from each week's intentions in update mode.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-east-brunswick",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stbartseb.org/mass-times",
+          "said": "Upcoming Holy Days Immaculate Conception December 8 : 8:30 AM 12:00 PM 7:00 PM",
+          "schedule_check": {
+            "checked_at": "2026-11-20T03:15:13Z",
+            "current_because": "Checked 2026-11-19; listed under Upcoming Holy Days on a page showing today's readings; its regular times match the newest bulletin.",
+            "bulletin": "bfb31847",
+            "fits_because": "Dec 8, 2026 is a Tuesday after the newest bulletin's week; the 8:30 AM matches the bulletin's weekday Mass, and the extra noon and 7 PM Masses are the holy-day additions."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish site lists this year's holy-day Masses, after as_of. The 8:30 AM is the weekly Tuesday Mass and is not duplicated (POLICY rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-east-brunswick",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stbartseb.org/mass-times",
+          "said": "Upcoming Holy Days Immaculate Conception December 8 : 8:30 AM 12:00 PM 7:00 PM",
+          "schedule_check": {
+            "checked_at": "2026-11-20T03:15:13Z",
+            "current_because": "Checked 2026-11-19; listed under Upcoming Holy Days on a page showing today's readings; its regular times match the newest bulletin.",
+            "bulletin": "bfb31847",
+            "fits_because": "Dec 8, 2026 is a Tuesday after the newest bulletin's week; the 8:30 AM matches the bulletin's weekday Mass, and the extra noon and 7 PM Masses are the holy-day additions."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish site lists this year's holy-day Masses, after as_of. The 8:30 AM is the weekly Tuesday Mass and is not duplicated (POLICY rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stbartseb.org/mass-times",
+          "said": "Adoration Times Sunday : 1:00 PM 1st Friday : 3:45 PM to 6:45 PM (Oct-May)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bfb31847",
+          "page": 1,
+          "said": "ADORATION OF THE BLESSED SACRAMENT IN THE GUADALUPE CHAPEL First Friday: 3:45-6:45 pm (October-May)"
+        }
+      ],
+      "rationale": "R29/R6: only the website gives it. Both bulletins' Adoration heading lists only First Friday, so the site's Sunday 1 PM (no end, no place) may be stale; leaning leave out until a bulletin prints it.",
+      "question": "Add the website's Sunday 1:00 PM Adoration (no end time)?",
+      "options": [
+        {
+          "label": "Weekly Sundays 1 PM",
+          "entry": {
+            "church_slug": "st-bartholomew-east-brunswick",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "13:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    }
+  ]
+}
