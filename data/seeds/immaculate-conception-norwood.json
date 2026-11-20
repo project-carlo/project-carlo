@@ -1,0 +1,904 @@
+{
+  "schema_version": 1,
+  "parish_slug": "immaculate-conception-norwood",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:22:00Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T09:46:19Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Saturday 5pm, Sunday 8am and 12pm, weekday 8am Mon/Tue/Wed/Fri and first-Tuesday Holy Hour with Confessions 7-8 PM agree in both bulletins (issues of Oct 25 and Nov 8; the newest was fetched Nov 15). Open: the Sunday mid-morning Mass (box says 11am, website, calendar and most listings say 10am), the Thanksgiving Mass date (Wed Nov 25 vs Thu), and the Dec 6-8 Triduum times (bulletin 7pm vs website).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "d71ee55897b2e39ffe6b5e4fd8fff54dcb02fe4e62ed9f0439bf2f440825a81b",
+      "fetched_at": "2026-11-15T16:22:00Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "85a960e0a7c81dc273dc1874b12b52844604ae83fa67ab2533463eeed5097be0",
+      "fetched_at": "2026-11-08T15:45:17Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-norwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d71ee558",
+          "page": 7,
+          "said": "Schedule of Masses Weekends: Saturday 5pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "85a960e0",
+          "page": 7,
+          "said": "Schedule of Masses Weekends: Saturday 5pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d71ee558",
+          "page": 2,
+          "said": "SATURDAY November 14, 2026 5:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://iccnorwood.org/",
+          "said": "Saturday : 5:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Schedule of Masses box of both bulletins read and in every Saturday of their intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-norwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d71ee558",
+          "page": 7,
+          "said": "Sundays 8am, 11am, 12pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "85a960e0",
+          "page": 7,
+          "said": "Sundays 8am, 11am, 12pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d71ee558",
+          "page": 2,
+          "said": "SUNDAY November 15, 2026 8:00am"
+        },
+        {
+          "source": "website",
+          "url": "https://iccnorwood.org/",
+          "said": "Sunday : 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Schedule of Masses box of both bulletins and every Sunday of the intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-norwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d71ee558",
+          "page": 7,
+          "said": "Sundays 8am, 11am, 12pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "85a960e0",
+          "page": 7,
+          "said": "Sundays 8am, 11am, 12pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d71ee558",
+          "page": 2,
+          "said": "SUNDAY November 15, 2026 ... 12:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://iccnorwood.org/",
+          "said": "12:00 PM ... Beginning Memorial Day and through Labor Day, there will be no 12 noon Mass on Sunday"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and every Sunday of both bulletins' intentions. The website drops it only Memorial Day to Labor Day, a season given by holidays not months; it is November and both bulletins print it, so no season is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d71ee558",
+          "page": 7,
+          "said": "Schedule of Masses ... Sundays 8am, 11am, 12pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "85a960e0",
+          "page": 7,
+          "said": "Sundays 8am, 11am, 12pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d71ee558",
+          "page": 2,
+          "said": "November 8, 2026 ... 10:00am Alex & Ofelia Balderama; November 15, 2026 ... 11:00am Florentino Jr. & Enrico Cabreza"
+        },
+        {
+          "source": "agent",
+          "bulletin": "85a960e0",
+          "page": 2,
+          "said": "October 25, 2026 ... 10:00am; November 1, 2026 ... 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d71ee558",
+          "page": 7,
+          "said": "November 22 Advent Wreath Social after 10am Mass; November 29 Blessing of candles ... following 10am Mass; Ministers' schedule Nov. 14-15 10:0am"
+        },
+        {
+          "source": "website",
+          "url": "https://iccnorwood.org/",
+          "said": "10:00 AM ... Beginning Memorial Day and through Labor Day, this Mass will be at 11am"
+        }
+      ],
+      "rationale": "R28: the bulletins contradict each other. Both schedule boxes say 11am, and the intentions alternate (Oct 25 10am, Nov 1 11am, Nov 8 10am, Nov 15 11am). The ministers' schedules (Oct 24-Nov 15), the calendar (socials after the 10am Mass on Nov 22 and 29) and the website (10:00 AM, at 11am only Memorial Day-Labor Day; its Advent Wreath Social is listed Nov 22 at 11:00 AM, i.e. after a 10am Mass) say 10am. Leaning 10:00 AM: the box's 11am looks like the summer schedule left in place. The 11am intentions on Nov 1 and 15 are unexplained.",
+      "question": "Is the Sunday mid-morning Mass at 10:00 AM or 11:00 AM?",
+      "options": [
+        {
+          "label": "Sundays 10:00 AM",
+          "entry": {
+            "church_slug": "immaculate-conception-norwood",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "10:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Sundays 11:00 AM",
+          "entry": {
+            "church_slug": "immaculate-conception-norwood",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "11:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-norwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d71ee558",
+          "page": 7,
+          "said": "Weekdays: Mon., Tues., Wed., and Fri.:8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "85a960e0",
+          "page": 7,
+          "said": "Weekdays: Mon., Tues., Wed., and Fri.:8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d71ee558",
+          "page": 2,
+          "said": "MONDAY ... TUESDAY ... WEDNESDAY ... FRIDAY 8:00am; THURSDAY November 12, 2026 8:00am NO SERVICE"
+        },
+        {
+          "source": "website",
+          "url": "https://iccnorwood.org/",
+          "said": "Daily Mass Schedule M W F 8:00 AM"
+        }
+      ],
+      "rationale": "R1: the schedule box of both bulletins and both weeks' intentions give 8am Monday, Tuesday, Wednesday and Friday (there is no Thursday Mass). The website lists only M W F; a missing mention is not a conflict (R6), and both bulletins print Tuesday 8am with intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-norwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d71ee558",
+          "page": 7,
+          "said": "Weekdays: Mon., Tues., Wed., and Fri.:8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "85a960e0",
+          "page": 7,
+          "said": "Weekdays: Mon., Tues., Wed., and Fri.:8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d71ee558",
+          "page": 2,
+          "said": "MONDAY ... TUESDAY ... WEDNESDAY ... FRIDAY 8:00am; THURSDAY November 12, 2026 8:00am NO SERVICE"
+        },
+        {
+          "source": "website",
+          "url": "https://iccnorwood.org/",
+          "said": "Daily Mass Schedule M W F 8:00 AM"
+        }
+      ],
+      "rationale": "R1: the schedule box of both bulletins and both weeks' intentions give 8am Monday, Tuesday, Wednesday and Friday (there is no Thursday Mass). The website lists only M W F; a missing mention is not a conflict (R6), and both bulletins print Tuesday 8am with intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-norwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d71ee558",
+          "page": 7,
+          "said": "Weekdays: Mon., Tues., Wed., and Fri.:8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "85a960e0",
+          "page": 7,
+          "said": "Weekdays: Mon., Tues., Wed., and Fri.:8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d71ee558",
+          "page": 2,
+          "said": "MONDAY ... TUESDAY ... WEDNESDAY ... FRIDAY 8:00am; THURSDAY November 12, 2026 8:00am NO SERVICE"
+        },
+        {
+          "source": "website",
+          "url": "https://iccnorwood.org/",
+          "said": "Daily Mass Schedule M W F 8:00 AM"
+        }
+      ],
+      "rationale": "R1: the schedule box of both bulletins and both weeks' intentions give 8am Monday, Tuesday, Wednesday and Friday (there is no Thursday Mass). The website lists only M W F; a missing mention is not a conflict (R6), and both bulletins print Tuesday 8am with intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-norwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d71ee558",
+          "page": 7,
+          "said": "Weekdays: Mon., Tues., Wed., and Fri.:8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "85a960e0",
+          "page": 7,
+          "said": "Weekdays: Mon., Tues., Wed., and Fri.:8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d71ee558",
+          "page": 2,
+          "said": "MONDAY ... TUESDAY ... WEDNESDAY ... FRIDAY 8:00am; THURSDAY November 12, 2026 8:00am NO SERVICE"
+        },
+        {
+          "source": "website",
+          "url": "https://iccnorwood.org/",
+          "said": "Daily Mass Schedule M W F 8:00 AM"
+        }
+      ],
+      "rationale": "R1: the schedule box of both bulletins and both weeks' intentions give 8am Monday, Tuesday, Wednesday and Friday (there is no Thursday Mass). The website lists only M W F; a missing mention is not a conflict (R6), and both bulletins print Tuesday 8am with intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-norwood",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d71ee558",
+          "page": 7,
+          "said": "Holy Hour: 1st Tuesday of Month 7-8PM with Confessions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "85a960e0",
+          "page": 7,
+          "said": "Holy Hour: 1st Tuesday of Month 7-8PM with Confessions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d71ee558",
+          "page": 7,
+          "said": "December 1 Holy Hour & Confessions, 7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "85a960e0",
+          "page": 7,
+          "said": "November 3 Holy Hour and Confessions, 7pm"
+        },
+        {
+          "source": "website",
+          "url": "https://iccnorwood.org/",
+          "said": "Tuesday 7:00 PM to 8:00 PM Only First Tuesday of the Month"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; POLICY counts a Holy Hour as Adoration. The calendars date it Nov 3 and Dec 1 (first Tuesdays) and the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-norwood",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "During Holy Hour"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d71ee558",
+          "page": 7,
+          "said": "Holy Hour: 1st Tuesday of Month 7-8PM with Confessions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "85a960e0",
+          "page": 7,
+          "said": "Holy Hour: 1st Tuesday of Month 7-8PM with Confessions"
+        },
+        {
+          "source": "website",
+          "url": "https://iccnorwood.org/",
+          "said": "Tuesday 7:00 PM to 8:00 PM First Tuesday with of the month with Adoration or by appointment"
+        }
+      ],
+      "rationale": "R1, R10: confessions offered with the first-Tuesday Holy Hour take its 7-8 PM hours (POLICY, Times); the website gives the same window.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://iccnorwood.org/",
+          "said": "First Tuesday with of the month with Adoration or by appointment. Call 201-768-1600"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d71ee558",
+          "page": 6,
+          "said": "THANKSGIVING MASS CELEBRATION THURSDAY NOVEMBER 25, 2026, 7:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d71ee558",
+          "page": 6,
+          "said": "Thanksgiving Celebration, Wednesday, November 25 @ 7pm"
+        }
+      ],
+      "rationale": "R28/R31: November 25, 2026 is a Wednesday; Thanksgiving Day is Thursday, November 26. The poster says Thursday November 25, the Available Masses list says Wednesday November 25. Leaning Wednesday Nov 25: both notices give the date 25 and the list's weekday agrees with it.",
+      "question": "Is the Thanksgiving Mass Wednesday Nov 25 or Thursday Nov 26 at 7 PM?",
+      "options": [
+        {
+          "label": "Wednesday, November 25, 7:00 PM",
+          "entry": {
+            "church_slug": "immaculate-conception-norwood",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-25",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Thanksgiving Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Thursday, November 26, 7:00 PM",
+          "entry": {
+            "church_slug": "immaculate-conception-norwood",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-26",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Thanksgiving Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d71ee558",
+          "page": 6,
+          "said": "TRIDUUM MASSES IN HONOR OF THE IMMACULATE CONCEPTION ... 7:00pm Sunday, December 6, Monday, December 7, & Tuesday, December 8."
+        },
+        {
+          "source": "website",
+          "url": "https://iccnorwood.org/",
+          "said": "Triduum December 6 at 12pm and December 7 and 8 at 6pm"
+        }
+      ],
+      "rationale": "R6/R28: the newest bulletin's notice says 7pm on all three days; the website's Upcoming Holy Days says Dec 6 at 12pm and Dec 7 and 8 at 6pm. Leaning the bulletin: it is the newer, dated parish notice for 2026; the website box may be last year's. The Dec 6 12pm website time coincides with the regular Sunday noon Mass.",
+      "question": "Are the Immaculate Conception Triduum Masses at 7 PM, as the bulletin says?",
+      "options": [
+        {
+          "label": "7:00 PM (bulletin)",
+          "entry": {
+            "church_slug": "immaculate-conception-norwood",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-06",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Triduum Mass in honor of the Immaculate Conception"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Website times",
+          "entry": {
+            "church_slug": "immaculate-conception-norwood",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-06",
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Triduum Mass in honor of the Immaculate Conception"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "triduum"
+    },
+    {
+      "id": "s14",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d71ee558",
+          "page": 6,
+          "said": "7:00pm Sunday, December 6, Monday, December 7, & Tuesday, December 8."
+        },
+        {
+          "source": "website",
+          "url": "https://iccnorwood.org/",
+          "said": "Triduum December 6 at 12pm and December 7 and 8 at 6pm"
+        }
+      ],
+      "rationale": "R6/R28: bulletin 7pm vs website 6pm for December 7; see the December 6 slot. Leaning the newer dated bulletin notice.",
+      "question": "Are the Immaculate Conception Triduum Masses at 7 PM, as the bulletin says?",
+      "options": [
+        {
+          "label": "7:00 PM (bulletin)",
+          "entry": {
+            "church_slug": "immaculate-conception-norwood",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-07",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Triduum Mass in honor of the Immaculate Conception"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Website times",
+          "entry": {
+            "church_slug": "immaculate-conception-norwood",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-07",
+            "start_time": "18:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Triduum Mass in honor of the Immaculate Conception"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "triduum"
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d71ee558",
+          "page": 6,
+          "said": "7:00pm ... Tuesday, December 8. Following Mass on December 8, refreshments in vestibule of church"
+        },
+        {
+          "source": "website",
+          "url": "https://iccnorwood.org/",
+          "said": "Triduum December 6 at 12pm and December 7 and 8 at 6pm"
+        }
+      ],
+      "rationale": "R6/R28: bulletin 7pm vs website 6pm for December 8; see the December 6 slot. The regular Tuesday 8am Mass (and the website's December 8 8:00 AM) covers the morning.",
+      "question": "Are the Immaculate Conception Triduum Masses at 7 PM, as the bulletin says?",
+      "options": [
+        {
+          "label": "7:00 PM (bulletin)",
+          "entry": {
+            "church_slug": "immaculate-conception-norwood",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Triduum Mass, Immaculate Conception"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Website times",
+          "entry": {
+            "church_slug": "immaculate-conception-norwood",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "18:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Triduum Mass, Immaculate Conception"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "triduum"
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-northvale",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-30",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Deanery Advent Reconciliation"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d71ee558",
+          "page": 7,
+          "said": "November 30 Deanery Advent Reconciliation, 7pm, St. Anthony, Northvale"
+        }
+      ],
+      "rationale": "R22: held at St. Anthony, Northvale, another parish's church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-norwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d71ee558",
+          "page": 2,
+          "said": "THURSDAY November 12, 2026 8:00am NO SERVICE"
+        }
+      ],
+      "rationale": "R1/R39: the schedule box lists no Thursday Mass; the intentions' 'NO SERVICE' line confirms there is none.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
