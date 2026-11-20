@@ -1,0 +1,857 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-peace-new-providence",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:53:14Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T21:31:04Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both November bulletins print the same Mass Times box (Sat 8:30 AM and 5 PM vigil, Sun 7:30/10/12, weekdays 7:30 AM and 12:10 PM) and Saturday confession 4:00-4:30, and the intentions and website agree. Dated: Thanksgiving Mass Nov 26 8:30 AM and Advent confessions Nov 28 9:30-10:30. Open: whether the Nov 21 11 AM Anointing of the Sick, called a Mass only on the website, should be added.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "ed20b0987d55c0e4b4b5be23efd5230f80aad5d2f6c6dadb8c69dad532213c6f",
+      "fetched_at": "2026-11-15T16:53:14Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "3eae930b8b7b60347ea0411fd198da2c292d04075e47d2c1725fdc82e00d5ef2",
+      "fetched_at": "2026-11-08T22:05:04Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-new-providence",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ed20b098",
+          "page": 3,
+          "said": "Saturdays · 8:30AM and Vigil Mass at 5:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eae930b",
+          "page": 3,
+          "said": "Saturdays · 8:30AM and Vigil Mass at 5:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ed20b098",
+          "page": 2,
+          "said": "Saturday, November 21 8:30 a.m. Memorial Mass"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-new-providence",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ed20b098",
+          "page": 3,
+          "said": "Saturdays · 8:30AM and Vigil Mass at 5:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eae930b",
+          "page": 3,
+          "said": "Saturdays · 8:30AM and Vigil Mass at 5:00PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-new-providence",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ed20b098",
+          "page": 3,
+          "said": "Sundays · 7:30AM, 10:00AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eae930b",
+          "page": 3,
+          "said": "Sundays · 7:30AM, 10:00AM, 12:00PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-new-providence",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ed20b098",
+          "page": 3,
+          "said": "Sundays · 7:30AM, 10:00AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eae930b",
+          "page": 3,
+          "said": "Sundays · 7:30AM, 10:00AM, 12:00PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-new-providence",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ed20b098",
+          "page": 3,
+          "said": "Sundays · 7:30AM, 10:00AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eae930b",
+          "page": 3,
+          "said": "Sundays · 7:30AM, 10:00AM, 12:00PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-new-providence",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ed20b098",
+          "page": 3,
+          "said": "Weekday Mass · 7:30AM and 12:10PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eae930b",
+          "page": 3,
+          "said": "Weekday Mass · 7:30AM and 12:10PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ed20b098",
+          "page": 2,
+          "said": "Monday-Friday intentions at 7:30 a.m. and 12:10 p.m."
+        }
+      ],
+      "rationale": "R1: the Mass Times box of both bulletins gives weekday Mass at 7:30 AM and 12:10 PM; each week's intentions list both times Monday to Friday (the Tuesday heading is misprinted 'Wednesday, November 17').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-new-providence",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ed20b098",
+          "page": 3,
+          "said": "Weekday Mass · 7:30AM and 12:10PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eae930b",
+          "page": 3,
+          "said": "Weekday Mass · 7:30AM and 12:10PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ed20b098",
+          "page": 2,
+          "said": "Monday-Friday intentions at 7:30 a.m. and 12:10 p.m."
+        }
+      ],
+      "rationale": "R1: the Mass Times box of both bulletins gives weekday Mass at 7:30 AM and 12:10 PM; each week's intentions list both times Monday to Friday (the Tuesday heading is misprinted 'Wednesday, November 17').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-new-providence",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ed20b098",
+          "page": 3,
+          "said": "Weekday Mass · 7:30AM and 12:10PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eae930b",
+          "page": 3,
+          "said": "Weekday Mass · 7:30AM and 12:10PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ed20b098",
+          "page": 2,
+          "said": "Monday-Friday intentions at 7:30 a.m. and 12:10 p.m."
+        }
+      ],
+      "rationale": "R1: the Mass Times box of both bulletins gives weekday Mass at 7:30 AM and 12:10 PM; each week's intentions list both times Monday to Friday (the Tuesday heading is misprinted 'Wednesday, November 17').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-new-providence",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ed20b098",
+          "page": 3,
+          "said": "Weekday Mass · 7:30AM and 12:10PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eae930b",
+          "page": 3,
+          "said": "Weekday Mass · 7:30AM and 12:10PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ed20b098",
+          "page": 2,
+          "said": "Monday-Friday intentions at 7:30 a.m. and 12:10 p.m."
+        }
+      ],
+      "rationale": "R1: the Mass Times box of both bulletins gives weekday Mass at 7:30 AM and 12:10 PM; each week's intentions list both times Monday to Friday (the Tuesday heading is misprinted 'Wednesday, November 17').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-new-providence",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ed20b098",
+          "page": 3,
+          "said": "Weekday Mass · 7:30AM and 12:10PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eae930b",
+          "page": 3,
+          "said": "Weekday Mass · 7:30AM and 12:10PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ed20b098",
+          "page": 2,
+          "said": "Monday-Friday intentions at 7:30 a.m. and 12:10 p.m."
+        }
+      ],
+      "rationale": "R1: the Mass Times box of both bulletins gives weekday Mass at 7:30 AM and 12:10 PM; each week's intentions list both times Monday to Friday (the Tuesday heading is misprinted 'Wednesday, November 17').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-new-providence",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ed20b098",
+          "page": 3,
+          "said": "Weekday Mass · 7:30AM and 12:10PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eae930b",
+          "page": 3,
+          "said": "Weekday Mass · 7:30AM and 12:10PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ed20b098",
+          "page": 2,
+          "said": "Monday-Friday intentions at 7:30 a.m. and 12:10 p.m."
+        }
+      ],
+      "rationale": "R1: the Mass Times box of both bulletins gives weekday Mass at 7:30 AM and 12:10 PM; each week's intentions list both times Monday to Friday (the Tuesday heading is misprinted 'Wednesday, November 17').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-new-providence",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ed20b098",
+          "page": 3,
+          "said": "Weekday Mass · 7:30AM and 12:10PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eae930b",
+          "page": 3,
+          "said": "Weekday Mass · 7:30AM and 12:10PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ed20b098",
+          "page": 2,
+          "said": "Monday-Friday intentions at 7:30 a.m. and 12:10 p.m."
+        }
+      ],
+      "rationale": "R1: the Mass Times box of both bulletins gives weekday Mass at 7:30 AM and 12:10 PM; each week's intentions list both times Monday to Friday (the Tuesday heading is misprinted 'Wednesday, November 17').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-new-providence",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ed20b098",
+          "page": 3,
+          "said": "Weekday Mass · 7:30AM and 12:10PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eae930b",
+          "page": 3,
+          "said": "Weekday Mass · 7:30AM and 12:10PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ed20b098",
+          "page": 2,
+          "said": "Monday-Friday intentions at 7:30 a.m. and 12:10 p.m."
+        }
+      ],
+      "rationale": "R1: the Mass Times box of both bulletins gives weekday Mass at 7:30 AM and 12:10 PM; each week's intentions list both times Monday to Friday (the Tuesday heading is misprinted 'Wednesday, November 17').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-new-providence",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ed20b098",
+          "page": 3,
+          "said": "Weekday Mass · 7:30AM and 12:10PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eae930b",
+          "page": 3,
+          "said": "Weekday Mass · 7:30AM and 12:10PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ed20b098",
+          "page": 2,
+          "said": "Monday-Friday intentions at 7:30 a.m. and 12:10 p.m."
+        }
+      ],
+      "rationale": "R1: the Mass Times box of both bulletins gives weekday Mass at 7:30 AM and 12:10 PM; each week's intentions list both times Monday to Friday (the Tuesday heading is misprinted 'Wednesday, November 17').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-new-providence",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ed20b098",
+          "page": 3,
+          "said": "Weekday Mass · 7:30AM and 12:10PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eae930b",
+          "page": 3,
+          "said": "Weekday Mass · 7:30AM and 12:10PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ed20b098",
+          "page": 2,
+          "said": "Monday-Friday intentions at 7:30 a.m. and 12:10 p.m."
+        }
+      ],
+      "rationale": "R1: the Mass Times box of both bulletins gives weekday Mass at 7:30 AM and 12:10 PM; each week's intentions list both times Monday to Friday (the Tuesday heading is misprinted 'Wednesday, November 17').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-new-providence",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ed20b098",
+          "page": 3,
+          "said": "Saturdays · 4:00-4:30PM in the Church or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eae930b",
+          "page": 3,
+          "said": "Saturdays · 4:00-4:30PM in the Church or by appointment"
+        },
+        {
+          "source": "website",
+          "url": "https://olpnp.org/sacraments/",
+          "said": "Individual confession is offered on Saturdays from 4:00 p.m. to 4:30 p.m. in the Church."
+        }
+      ],
+      "rationale": "R1: printed in the Confession box of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ed20b098",
+          "page": 3,
+          "said": "or by appointment. Call the office"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-new-providence",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ed20b098",
+          "page": 2,
+          "said": "Thanksgiving Mass 8:30 a.m."
+        }
+      ],
+      "rationale": "R1, R16: POLICY, Dates: the bulletin's 'Thanksgiving Mass' names one day, Thursday, November 26, 2026, after as_of; a holiday Mass outside the weekly times is dated. R17: no cancellation of the usual weekday Masses is stated, so they are left alone.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-new-providence",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-28",
+        "start_time": "09:30",
+        "end_time": "10:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Confessions, Parish Day of Service"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ed20b098",
+          "page": 7,
+          "said": "ADVENT CONFESSIONS November 28 9:30 a.m. - 10:30 a.m. ... All are welcome!"
+        }
+      ],
+      "rationale": "R1, R16: a dated Advent confession on the Parish Day of Service, after as_of. No venue is printed, but the parish has one church and its confessions are heard in the church; another venue would have been named.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ed20b098",
+          "page": 4,
+          "said": "ANOINTING OF THE SICK NOVEMBER 21 Saturday, November 21 at 11:00 a.m. An RSVP is Requested for Catering"
+        },
+        {
+          "source": "website",
+          "url": "https://olpnp.org/",
+          "said": "We invite you to join us for a mass of anointing of the sick on Saturday, November 21 at 11am. All are welcome"
+        }
+      ],
+      "rationale": "R30: POLICY leaves out Anointing of the Sick unless it is called a Mass. The bulletin does not call it one; the parish website's homepage post (checked 2026-11-20) calls it 'a mass of anointing of the sick' and says all are welcome. The RSVP is for the luncheon only. Leaning include because the parish's own current page names it a Mass open to all.",
+      "question": "Add the November 21, 11 AM Anointing of the Sick as a Mass?",
+      "options": [
+        {
+          "label": "Mass on November 21 at 11:00 AM",
+          "entry": {
+            "church_slug": "our-lady-of-peace-new-providence",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-21",
+            "start_time": "11:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Mass of Anointing of the Sick"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3eae930b",
+          "page": 2,
+          "said": "NOTE: There will be NO Confessions or Exposition on November 7."
+        }
+      ],
+      "rationale": "R26: this note implies Exposition on some Saturdays, but no read bulletin or website page gives an Adoration time, so there is nothing to record. Update mode will pick it up if a time is printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
