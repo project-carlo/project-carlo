@@ -1,0 +1,771 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-lourdes-mountainside",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:23:00Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T21:00:42Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend (Sat 8:30 AM and 5 PM, Sun 9:30, 11:30, 6:30), weekday 8:30 AM Masses, Sunday and first-Friday confession and Mon/Thu 12-9 PM Adoration agree in both bulletins (Nov 8, Nov 15) and on the website. Open: whether the Dec 4 7 PM First Friday Healing Mass (with Adoration after) is monthly, and the website calendar's Thanksgiving 'no Adoration'.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "751b596e77f590cd7f433718abf5c2587fc21db7b63a8d8ad988eb657cc33aa8",
+      "fetched_at": "2026-11-15T16:23:00Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "7fa24bfe47010e033a6aeddaf4de3add168de32dad7dcd7b93f2de13080903bc",
+      "fetched_at": "2026-11-08T15:47:09Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-mountainside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "751b596e",
+          "page": 1,
+          "said": "Weekend Masses Saturday 8:30 am, 5:00 pm Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fa24bfe",
+          "page": 1,
+          "said": "Weekend Masses Saturday 8:30 am, 5:00 pm Vigil"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass Schedule box of both bulletins read (Nov 8 and Nov 15); the Saturday intentions list 8:30 am and 5:00 pm in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-mountainside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "751b596e",
+          "page": 1,
+          "said": "Weekend Masses Saturday 8:30 am, 5:00 pm Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fa24bfe",
+          "page": 1,
+          "said": "Weekend Masses Saturday 8:30 am, 5:00 pm Vigil"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass Schedule box of both bulletins read (Nov 8 and Nov 15); the Saturday intentions list 8:30 am and 5:00 pm in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-mountainside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "751b596e",
+          "page": 1,
+          "said": "Sunday 9:30am, 11:30am, 6:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fa24bfe",
+          "page": 1,
+          "said": "Sunday 9:30am, 11:30am, 6:30 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass Schedule box of both bulletins read; the Sunday intentions list all three times in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-mountainside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "751b596e",
+          "page": 1,
+          "said": "Sunday 9:30am, 11:30am, 6:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fa24bfe",
+          "page": 1,
+          "said": "Sunday 9:30am, 11:30am, 6:30 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass Schedule box of both bulletins read; the Sunday intentions list all three times in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-mountainside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "751b596e",
+          "page": 1,
+          "said": "Sunday 9:30am, 11:30am, 6:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fa24bfe",
+          "page": 1,
+          "said": "Sunday 9:30am, 11:30am, 6:30 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass Schedule box of both bulletins read; the Sunday intentions list all three times in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-mountainside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "751b596e",
+          "page": 1,
+          "said": "Weekday Masses Monday thru Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fa24bfe",
+          "page": 1,
+          "said": "Weekday Masses Monday thru Friday 8:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass Schedule box of both bulletins read; each weekday's intentions list 8:30 am in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-mountainside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "751b596e",
+          "page": 1,
+          "said": "Weekday Masses Monday thru Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fa24bfe",
+          "page": 1,
+          "said": "Weekday Masses Monday thru Friday 8:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass Schedule box of both bulletins read; each weekday's intentions list 8:30 am in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-mountainside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "751b596e",
+          "page": 1,
+          "said": "Weekday Masses Monday thru Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fa24bfe",
+          "page": 1,
+          "said": "Weekday Masses Monday thru Friday 8:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass Schedule box of both bulletins read; each weekday's intentions list 8:30 am in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-mountainside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "751b596e",
+          "page": 1,
+          "said": "Weekday Masses Monday thru Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fa24bfe",
+          "page": 1,
+          "said": "Weekday Masses Monday thru Friday 8:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass Schedule box of both bulletins read; each weekday's intentions list 8:30 am in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-mountainside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "751b596e",
+          "page": 1,
+          "said": "Weekday Masses Monday thru Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fa24bfe",
+          "page": 1,
+          "said": "Weekday Masses Monday thru Friday 8:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass Schedule box of both bulletins read; each weekday's intentions list 8:30 am in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-mountainside",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:30 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "751b596e",
+          "page": 1,
+          "said": "Confession Sunday after 9:30 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fa24bfe",
+          "page": 1,
+          "said": "Confession Sunday after 9:30 am Mass"
+        }
+      ],
+      "rationale": "R1, R10: printed in the page-1 box of both bulletins; after a weekend Mass POLICY times it one hour after the 9:30 AM start, with no end time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-mountainside",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "751b596e",
+          "page": 1,
+          "said": "Confession ... First Fridays at 6:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fa24bfe",
+          "page": 1,
+          "said": "Confession ... First Fridays at 6:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "751b596e",
+          "page": 5,
+          "said": "First Friday Healing Mass ... Friday December 4, 2026 ... 6:00PM - Confessions and Spiritual Direction"
+        }
+      ],
+      "rationale": "R1, R12: the page-1 box of both bulletins names First Fridays at 6:00 pm (POLICY, Weekly or dated rule 2); the Dec 4 flyer agrees. No end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-mountainside",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "751b596e",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION Mondays and Thursdays 12:00 pm to 9:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fa24bfe",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION Mondays and Thursdays 12:00 pm to 9:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "751b596e",
+          "page": 5,
+          "said": "Eucharistic Adoration Every Mon & Thurs at OLL 12PM to 9PM"
+        }
+      ],
+      "rationale": "R1: printed on page 4 of both bulletins, and again on the newest's page-5 flyer, at OLL.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-mountainside",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "751b596e",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION Mondays and Thursdays 12:00 pm to 9:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fa24bfe",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION Mondays and Thursdays 12:00 pm to 9:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "751b596e",
+          "page": 5,
+          "said": "Eucharistic Adoration Every Mon & Thurs at OLL 12PM to 9PM"
+        }
+      ],
+      "rationale": "R1: printed on page 4 of both bulletins, and again on the newest's page-5 flyer, at OLL.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "751b596e",
+          "page": 1,
+          "said": "Confession ... Holydays as announced"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fa24bfe",
+          "page": 1,
+          "said": "Confession ... Holydays as announced"
+        }
+      ],
+      "rationale": "R26: holy-day confessions have no time until announced.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "751b596e",
+          "page": 5,
+          "said": "First Friday Healing Mass In Honor Of The Sacred Heart of Jesus ... Friday December 4, 2026 ... 7:00PM - Mass Celebrant: Fr. Jeivi Hercules"
+        }
+      ],
+      "rationale": "Leaning per POLICY, Weekly or dated rule 2 (a named first-Friday service is weekly with weeks_of_month even when this month's date is given). Asked because it is printed only once, as an event flyer with a guest Encounter prayer team, and the website and page-1 box list only first-Friday 6 PM confession, not this Mass; the Nov 8 issue's week holds no first Friday (R11).",
+      "question": "Is the 7:00 PM First Friday Healing Mass (Dec 4) a monthly first-Friday Mass, or one date?",
+      "options": [
+        {
+          "label": "Monthly, first Fridays",
+          "entry": {
+            "church_slug": "our-lady-of-lourdes-mountainside",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "First Friday Healing Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Only Friday, December 4",
+          "entry": {
+            "church_slug": "our-lady-of-lourdes-mountainside",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-04",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "First Friday Healing Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "ffhealing"
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "751b596e",
+          "page": 5,
+          "said": "7:00PM - Mass ... Following Mass: Eucharistic Adoration, Praise & Worship, Prophetic Healing Ministry"
+        }
+      ],
+      "rationale": "Same decision as the Mass. R10: 'following' a weekday Mass with no clock time is 30 minutes after its 7:00 PM start, with no end time.",
+      "question": "Is the 7:00 PM First Friday Healing Mass (Dec 4) a monthly first-Friday Mass, or one date?",
+      "options": [
+        {
+          "label": "Monthly, first Fridays",
+          "entry": {
+            "church_slug": "our-lady-of-lourdes-mountainside",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "19:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 7:00 PM First Friday Healing Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Only Friday, December 4",
+          "entry": {
+            "church_slug": "our-lady-of-lourdes-mountainside",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-04",
+            "start_time": "19:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 7:00 PM First Friday Healing Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "ffhealing"
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.ollmountainside.org/calendar",
+          "said": "November 2026 ... 26 ADORATION - NO ADORATION"
+        }
+      ],
+      "rationale": "R16 would keep a cancellation on or after as_of, but only the parish website's calendar (read 2026-11-20) states it; the bulletins don't mention it, and R17 records cancellations the bulletin states. The calendar otherwise shows 12pm ADORATION - CH every Monday and Thursday, matching the bulletin, so it looks current; leaning to record it.",
+      "question": "Record the website calendar's 'NO ADORATION' on Thursday, November 26 (Thanksgiving)?",
+      "options": [
+        {
+          "label": "Cancel Nov 26 Adoration",
+          "entry": {
+            "church_slug": "our-lady-of-lourdes-mountainside",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-26",
+            "start_time": "12:00",
+            "end_time": "21:00",
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Thanksgiving"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    }
+  ]
+}
