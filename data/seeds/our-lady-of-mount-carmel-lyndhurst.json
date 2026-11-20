@@ -1,0 +1,633 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-mount-carmel-lyndhurst",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:53:11Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T21:11:26Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. The page 1 schedule box (Sat 4:30pm vigil; Sun 8:30, 10:30, 12; weekdays 8:30am; Sat confession 3:30-4:15; Wednesday 7pm Holy Hour with Adoration) is identical in both bulletins and matches both weeks' intentions, including Saturday 8:30am. No history stored. Open: whether the Dec 7 7pm Mass announced with the Rosary Society meeting (eve of the Immaculate Conception) is included.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "8443614fe763a9c4d72bbe42719012470259d6b928ae1a4735ce0daa0ebfee8f",
+      "fetched_at": "2026-11-15T16:53:11Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "de732cd383dde7b87176b69dc50292975970d43b38d33d4d2f7c51bd13bf3442",
+      "fetched_at": "2026-11-08T22:04:43Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-lyndhurst",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8443614f",
+          "page": 1,
+          "said": "THE EUCHARIST Saturday Vigil 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "de732cd3",
+          "page": 1,
+          "said": "THE EUCHARIST Saturday Vigil 4:30pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box (The Eucharist) on page 1 of both bulletins read, and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-lyndhurst",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8443614f",
+          "page": 1,
+          "said": "Sunday 8:30am, 10:30am & 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "de732cd3",
+          "page": 1,
+          "said": "Sunday 8:30am, 10:30am & 12:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read; every week's intentions list the three Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-lyndhurst",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8443614f",
+          "page": 1,
+          "said": "Sunday 8:30am, 10:30am & 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "de732cd3",
+          "page": 1,
+          "said": "Sunday 8:30am, 10:30am & 12:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read; every week's intentions list the three Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-lyndhurst",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8443614f",
+          "page": 1,
+          "said": "Sunday 8:30am, 10:30am & 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "de732cd3",
+          "page": 1,
+          "said": "Sunday 8:30am, 10:30am & 12:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read; every week's intentions list the three Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-lyndhurst",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8443614f",
+          "page": 1,
+          "said": "Weekdays 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "de732cd3",
+          "page": 1,
+          "said": "Weekdays 8:30am"
+        }
+      ],
+      "rationale": "R1: page 1 schedule box of both bulletins; the intentions list an 8:30am Mass every weekday in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-lyndhurst",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8443614f",
+          "page": 1,
+          "said": "Weekdays 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "de732cd3",
+          "page": 1,
+          "said": "Weekdays 8:30am"
+        }
+      ],
+      "rationale": "R1: page 1 schedule box of both bulletins; the intentions list an 8:30am Mass every weekday in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-lyndhurst",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8443614f",
+          "page": 1,
+          "said": "Weekdays 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "de732cd3",
+          "page": 1,
+          "said": "Weekdays 8:30am"
+        }
+      ],
+      "rationale": "R1: page 1 schedule box of both bulletins; the intentions list an 8:30am Mass every weekday in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-lyndhurst",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8443614f",
+          "page": 1,
+          "said": "Weekdays 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "de732cd3",
+          "page": 1,
+          "said": "Weekdays 8:30am"
+        }
+      ],
+      "rationale": "R1: page 1 schedule box of both bulletins; the intentions list an 8:30am Mass every weekday in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-lyndhurst",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8443614f",
+          "page": 1,
+          "said": "Weekdays 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "de732cd3",
+          "page": 1,
+          "said": "Weekdays 8:30am"
+        }
+      ],
+      "rationale": "R1: page 1 schedule box of both bulletins; the intentions list an 8:30am Mass every weekday in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-lyndhurst",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8443614f",
+          "page": 2,
+          "said": "Saturday, November 14 8:30am ... Saturday, November 21 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "de732cd3",
+          "page": 2,
+          "said": "Saturday, November 7 8:30am ... Saturday, November 14 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8443614f",
+          "page": 1,
+          "said": "Weekdays 8:30am"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 4 / R35: the schedule box gives Weekdays 8:30am and the intentions of both bulletins list a Saturday 8:30am Mass in every week shown (Nov 7, 14, 21).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-lyndhurst",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8443614f",
+          "page": 1,
+          "said": "Reconciliation is every Saturday from 3:30pm - 4:15pm, or anytime upon request - call the rectory."
+        },
+        {
+          "source": "agent",
+          "bulletin": "de732cd3",
+          "page": 1,
+          "said": "Reconciliation is every Saturday from 3:30pm - 4:15pm, or anytime upon request - call the rectory."
+        }
+      ],
+      "rationale": "R1: printed in the Sacraments section on page 1 of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-lyndhurst",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour with Rosary"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8443614f",
+          "page": 2,
+          "said": "HOLY HOUR Join us on Wednesdays, at 7:00pm, in Church to pray the Rosary and Adoration of the Blessed Sacrament."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8443614f",
+          "page": 1,
+          "said": "HOLY HOUR & ROSARY Recitation and Adoration is on Wednesday at 7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "de732cd3",
+          "page": 1,
+          "said": "HOLY HOUR & ROSARY Recitation and Adoration is on Wednesday at 7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "de732cd3",
+          "page": 2,
+          "said": "Join us on Wednesdays, at 7:00pm, in Church to pray the Rosary and Adoration of the Blessed Sacrament."
+        }
+      ],
+      "rationale": "R1, POLICY What to extract: a weekly Holy Hour with Adoration of the Blessed Sacrament in church, in both bulletins. No end time is printed, so none is given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8443614f",
+          "page": 3,
+          "said": "We invite all women of the parish to join us on Monday, December 7th. The evening will begin with the recitation of the Rosary at 6:40PM, followed by Mass at 7:00PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8443614f",
+          "page": 1,
+          "said": "Holy Days Vigil at 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "de732cd3",
+          "page": 3,
+          "said": "join us on Monday, December 7th. ... followed by Mass at 7:00PM."
+        }
+      ],
+      "rationale": "R30: the Mass is announced within the Rosary Society's meeting invitation to the parish's women, which POLICY could read as a group Mass. Leaning include: December 8, 2026 (Tuesday) is the Immaculate Conception, and the schedule box gives Holy Day vigil Masses at 7:00pm, so this is very likely the public vigil Mass. The bulletin does not print the holy-day Masses for December 8 itself.",
+      "question": "Include the Monday, December 7, 7:00 PM Mass (Rosary Society meeting Mass, eve of the Immaculate Conception)?",
+      "options": [
+        {
+          "label": "Include Dec 7 7:00 PM Mass",
+          "entry": {
+            "church_slug": "our-lady-of-mount-carmel-lyndhurst",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-07",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Vigil of the Immaculate Conception"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8443614f",
+          "page": 1,
+          "said": "Holy Days Vigil at 7:00pm Holy Day at 8:30am & 7:00pm"
+        }
+      ],
+      "rationale": "POLICY Dates / Weekly or dated rule 7: the generic holy-day schedule names no date, so no dated holy-day Mass is recorded from it (December 8 is not printed); update mode will read the bulletins that announce it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8443614f",
+          "page": 1,
+          "said": "DEVOTION TO ST. JUDE Tuesdays after 8:30am mass"
+        }
+      ],
+      "rationale": "R24: a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8443614f",
+          "page": 1,
+          "said": "or anytime upon request - call the rectory."
+        }
+      ],
+      "rationale": "R26: confession on request has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "de732cd3",
+          "page": 2,
+          "said": "St. Michael's The Archangel Church HEALING MASS ... Saturday, November 14th. Confession at 10am and Healing Mass at 11am. Exposition of the Blessed Sacrament."
+        }
+      ],
+      "rationale": "R22, R16: at another parish's church, and dated before as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
