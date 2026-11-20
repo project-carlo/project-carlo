@@ -1,0 +1,1484 @@
+{
+  "schema_version": 1,
+  "parish_slug": "madonna-fort-lee",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:22:22Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T10:09:39Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Church of the Madonna, Fort Lee: main church plus Church on the Hill (Sunday 11 AM only). English and Korean weekend, weekday and Confession times agree in both bulletins read (Nov 8, Nov 15); dated Thanksgiving, Immaculate Conception, Advent Reconciliation (Dec 15, 3-6 PM per newest poster correcting 3-5) and Christmas Masses recorded. Open: the Dec 8 10 AM School Mass.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "382897faab7a66c86da485f42c4b1c739af28ac668299a8c3b83d0cf3485f0ca",
+      "fetched_at": "2026-11-15T16:22:22Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "80eb1ceb87bc4c59523713c0b2f7ac2fc76ab8eaa7f2bfa6bcb25c118049b7b3",
+      "fetched_at": "2026-11-08T15:46:35Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "madonna-fort-lee",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 1,
+          "said": "Mass Schedule: Saturday Evenings: 5:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80eb1ceb",
+          "page": 1,
+          "said": "Mass Schedule: Saturday Evenings: 5:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 3,
+          "said": "Saturday - November 21 ... 5:30 - RUTH KANE"
+        }
+      ],
+      "rationale": "R1, R35: printed in the cover schedule box of both bulletins and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "madonna-fort-lee",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 1,
+          "said": "Sundays: 7:30AM, 10:30AM, 12PM & 11AM at Church on the Hill"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80eb1ceb",
+          "page": 1,
+          "said": "Sundays: 7:30AM, 10:30AM, 12PM & 11AM at Church on the Hill"
+        },
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 3,
+          "said": "Sunday - November 22: 7:30 ... 10:30 ... 12:00"
+        }
+      ],
+      "rationale": "R1, R35: the cover schedule box of both bulletins; only the 11 AM is at Church on the Hill, so these are at the main church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "madonna-fort-lee",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 1,
+          "said": "Sundays: 7:30AM, 10:30AM, 12PM & 11AM at Church on the Hill"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80eb1ceb",
+          "page": 1,
+          "said": "Sundays: 7:30AM, 10:30AM, 12PM & 11AM at Church on the Hill"
+        },
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 3,
+          "said": "Sunday - November 22: 7:30 ... 10:30 ... 12:00"
+        }
+      ],
+      "rationale": "R1, R35: the cover schedule box of both bulletins; only the 11 AM is at Church on the Hill, so these are at the main church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "madonna-fort-lee",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 1,
+          "said": "Sundays: 7:30AM, 10:30AM, 12PM & 11AM at Church on the Hill"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80eb1ceb",
+          "page": 1,
+          "said": "Sundays: 7:30AM, 10:30AM, 12PM & 11AM at Church on the Hill"
+        },
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 3,
+          "said": "Sunday - November 22: 7:30 ... 10:30 ... 12:00"
+        }
+      ],
+      "rationale": "R1, R35: the cover schedule box of both bulletins; only the 11 AM is at Church on the Hill, so these are at the main church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "church-on-the-hill-fort-lee",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 1,
+          "said": "Sundays: 7:30AM, 10:30AM, 12PM & 11AM at Church on the Hill"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80eb1ceb",
+          "page": 1,
+          "said": "Sundays: 7:30AM, 10:30AM, 12PM & 11AM at Church on the Hill"
+        },
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 3,
+          "said": "Sunday - November 22 ... 11:00 - FOR OUR PARISHIONERS (Church on the Hill column)"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box of both bulletins places the 11 AM Sunday Mass at Church on the Hill.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "madonna-fort-lee",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 1,
+          "said": "Daily Masses: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80eb1ceb",
+          "page": 1,
+          "said": "Daily Masses: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 3,
+          "said": "Monday - November 16 ... Saturday - November 21: 8:30 intentions each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80eb1ceb",
+          "page": 3,
+          "said": "Monday - November 9 ... Saturday - November 14: 8:30 intentions each day"
+        }
+      ],
+      "rationale": "R1, R35: the box gives Daily Masses 8:30 AM and both weeks' intentions list an 8:30 Mass Monday through Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "madonna-fort-lee",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 1,
+          "said": "Daily Masses: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80eb1ceb",
+          "page": 1,
+          "said": "Daily Masses: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 3,
+          "said": "Monday - November 16 ... Saturday - November 21: 8:30 intentions each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80eb1ceb",
+          "page": 3,
+          "said": "Monday - November 9 ... Saturday - November 14: 8:30 intentions each day"
+        }
+      ],
+      "rationale": "R1, R35: the box gives Daily Masses 8:30 AM and both weeks' intentions list an 8:30 Mass Monday through Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "madonna-fort-lee",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 1,
+          "said": "Daily Masses: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80eb1ceb",
+          "page": 1,
+          "said": "Daily Masses: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 3,
+          "said": "Monday - November 16 ... Saturday - November 21: 8:30 intentions each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80eb1ceb",
+          "page": 3,
+          "said": "Monday - November 9 ... Saturday - November 14: 8:30 intentions each day"
+        }
+      ],
+      "rationale": "R1, R35: the box gives Daily Masses 8:30 AM and both weeks' intentions list an 8:30 Mass Monday through Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "madonna-fort-lee",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 1,
+          "said": "Daily Masses: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80eb1ceb",
+          "page": 1,
+          "said": "Daily Masses: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 3,
+          "said": "Monday - November 16 ... Saturday - November 21: 8:30 intentions each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80eb1ceb",
+          "page": 3,
+          "said": "Monday - November 9 ... Saturday - November 14: 8:30 intentions each day"
+        }
+      ],
+      "rationale": "R1, R35: the box gives Daily Masses 8:30 AM and both weeks' intentions list an 8:30 Mass Monday through Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "madonna-fort-lee",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 1,
+          "said": "Daily Masses: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80eb1ceb",
+          "page": 1,
+          "said": "Daily Masses: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 3,
+          "said": "Monday - November 16 ... Saturday - November 21: 8:30 intentions each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80eb1ceb",
+          "page": 3,
+          "said": "Monday - November 9 ... Saturday - November 14: 8:30 intentions each day"
+        }
+      ],
+      "rationale": "R1, R35: the box gives Daily Masses 8:30 AM and both weeks' intentions list an 8:30 Mass Monday through Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "madonna-fort-lee",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 1,
+          "said": "Daily Masses: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80eb1ceb",
+          "page": 1,
+          "said": "Daily Masses: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 3,
+          "said": "Monday - November 16 ... Saturday - November 21: 8:30 intentions each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80eb1ceb",
+          "page": 3,
+          "said": "Monday - November 9 ... Saturday - November 14: 8:30 intentions each day"
+        }
+      ],
+      "rationale": "R1, R35: the box gives Daily Masses 8:30 AM and both weeks' intentions list an 8:30 Mass Monday through Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "madonna-fort-lee",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "20:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Korean"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 1,
+          "said": "한국어 미사시간 (Masses in Korean) 토요일 (Saturday): 8PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80eb1ceb",
+          "page": 1,
+          "said": "한국어 미사시간 (Masses in Korean) 토요일 (Saturday): 8PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 5,
+          "said": "11/14/26 (토) 오후 8시 토요특전"
+        }
+      ],
+      "rationale": "R1, R35: the Korean schedule box of both bulletins. No other church is named; the parish's Korean Masses are held in the main church (대성전 in the holy day tables, p6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "madonna-fort-lee",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Korean"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 1,
+          "said": "주일미사 (Sunday): 9AM, 1:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80eb1ceb",
+          "page": 1,
+          "said": "주일미사 (Sunday): 9AM, 1:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 5,
+          "said": "(주일) 오전 9시 주일오전; (주일) 오후 1시 30분 주일오후"
+        }
+      ],
+      "rationale": "R1, R35: the Korean schedule box of both bulletins and the Korean intentions; main church as for the other Korean Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "madonna-fort-lee",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Korean"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 1,
+          "said": "주일미사 (Sunday): 9AM, 1:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80eb1ceb",
+          "page": 1,
+          "said": "주일미사 (Sunday): 9AM, 1:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 5,
+          "said": "(주일) 오전 9시 주일오전; (주일) 오후 1시 30분 주일오후"
+        }
+      ],
+      "rationale": "R1, R35: the Korean schedule box of both bulletins and the Korean intentions; main church as for the other Korean Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "madonna-fort-lee",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "20:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Korean"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 1,
+          "said": "평일미사: 수요일 & 금요일 저녁 8시"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80eb1ceb",
+          "page": 1,
+          "said": "평일미사: 수요일 & 금요일 저녁 8시"
+        },
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 5,
+          "said": "11/18/26 (수) 오후 8시; 11/20/26 (금) 오후 8시"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80eb1ceb",
+          "page": 6,
+          "said": "성령기도회 시간: 매주 수요일 저녁 8시 미사 후 장소: 대성전"
+        }
+      ],
+      "rationale": "R1, R35: Korean weekday Masses Wednesday and Friday 8 PM in the box of both bulletins; the prayer meeting after the Wednesday 8 PM Mass is in the main church (대성전).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "madonna-fort-lee",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "20:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Korean"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 1,
+          "said": "평일미사: 수요일 & 금요일 저녁 8시"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80eb1ceb",
+          "page": 1,
+          "said": "평일미사: 수요일 & 금요일 저녁 8시"
+        },
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 5,
+          "said": "11/18/26 (수) 오후 8시; 11/20/26 (금) 오후 8시"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80eb1ceb",
+          "page": 6,
+          "said": "성령기도회 시간: 매주 수요일 저녁 8시 미사 후 장소: 대성전"
+        }
+      ],
+      "rationale": "R1, R35: Korean weekday Masses Wednesday and Friday 8 PM in the box of both bulletins; the prayer meeting after the Wednesday 8 PM Mass is in the main church (대성전).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "madonna-fort-lee",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 1,
+          "said": "Sacrament of Reconciliation: Mondays 9AM-9:30AM & Saturdays 4:45PM-5:15PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80eb1ceb",
+          "page": 1,
+          "said": "Sacrament of Reconciliation: Mondays 9AM-9:30AM & Saturdays 4:45PM-5:15PM"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "madonna-fort-lee",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:45",
+        "end_time": "17:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 1,
+          "said": "Sacrament of Reconciliation: Mondays 9AM-9:30AM & Saturdays 4:45PM-5:15PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80eb1ceb",
+          "page": 1,
+          "said": "Sacrament of Reconciliation: Mondays 9AM-9:30AM & Saturdays 4:45PM-5:15PM"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "madonna-fort-lee",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Korean"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 1,
+          "said": "고해성사: 토요일 저녁 7시30분- 저녁 8시"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80eb1ceb",
+          "page": 1,
+          "said": "고해성사: 토요일 저녁 7시30분- 저녁 8시"
+        }
+      ],
+      "rationale": "R1, R35: the Korean column of the schedule box of both bulletins (Saturday 7:30-8 PM, before the 8 PM Korean Mass).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "madonna-fort-lee",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 4,
+          "said": "On November 26, 2026 we will celebrate Thanksgiving Mass at 9:00am in the Main Church."
+        }
+      ],
+      "rationale": "R1, R16, R17: a dated holiday Mass after as_of; no cancellation of the weekday 8:30 is stated, so the weekly slot is left alone.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "madonna-fort-lee",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 4,
+          "said": "Immaculate Conception Mass Schedule December 7th 5:30pm Main Church English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 6,
+          "said": "12월 7일 5:30 pm English 대성전"
+        }
+      ],
+      "rationale": "R1, R16: holy day vigil Mass at a time outside the weekly schedule (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "madonna-fort-lee",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "20:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception; Korean"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 4,
+          "said": "December 7th 8:00pm Main Church Korean"
+        },
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 6,
+          "said": "12월 7일 8 pm Korean 대성전"
+        }
+      ],
+      "rationale": "R1, R16: holy day vigil Mass in Korean, dated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "madonna-fort-lee",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 4,
+          "said": "December 8th ... 6:30pm English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 6,
+          "said": "12월 8일 6:30 pm English"
+        }
+      ],
+      "rationale": "R1, R16: holy day Mass outside the weekly schedule. The 8:30 AM Mass that day is the weekly Tuesday 8:30 and is not duplicated (POLICY, Weekly or dated, rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "madonna-fort-lee",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "20:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception; Korean"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 4,
+          "said": "December 8th ... 8:00pm Korean"
+        },
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 6,
+          "said": "12월 8일 8 pm Korean"
+        }
+      ],
+      "rationale": "R1, R16: holy day Mass in Korean, dated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 6,
+          "said": "12월 8일 10 am School Mass 대성전"
+        }
+      ],
+      "rationale": "R30: printed only in the Korean holy day table (p6), placed in the main church (대성전) with no limit to students; the English table (p4) omits it, which may mean it is the school's own Mass. POLICY opens a Mass with a school unless the bulletin limits it, hence the leaning.",
+      "question": "Include the 10 AM School Mass on December 8 (Immaculate Conception) in the main church?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "madonna-fort-lee",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "10:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception; School Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "madonna-fort-lee",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-15",
+        "start_time": "15:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Reconciliation Service"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 2,
+          "said": "Advent Reconciliation Service TUESDAY, DECEMBER 15 Confession Times 3:00 PM - 6:00 PM 7:00 PM - 10:30 PM Location: Main Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 4,
+          "said": "Penance Service December 15th 3:00pm - 6:00pm Main Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "80eb1ceb",
+          "page": 2,
+          "said": "3:00 PM - 5:00 PM"
+        }
+      ],
+      "rationale": "R1, R16, R40: the newest issue's poster (both languages) and its English table give 3-6 PM, correcting the 3-5 PM of the Nov 8 poster; the Korean notice on newest p6 still says 오후 3~5시 but is text carried over unchanged from the Nov 8 issue.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "madonna-fort-lee",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-15",
+        "start_time": "19:00",
+        "end_time": "22:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Reconciliation Service"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 2,
+          "said": "7:00 PM - 10:30 PM Location: Main Church (Main Sanctuary)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 4,
+          "said": "Penance Service December 15th 7:00pm - 10:30pm Main Church"
+        }
+      ],
+      "rationale": "R1, R16: the evening session, the same in every notice.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "church-on-the-hill-fort-lee",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 6,
+          "said": "Christmas 12월 24일 4 pm English Church on the Hill"
+        }
+      ],
+      "rationale": "R1, R16: Christmas Mass schedule table in the newest bulletin; dated special Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "madonna-fort-lee",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 6,
+          "said": "12월 24일 5:30 pm English 대성전"
+        }
+      ],
+      "rationale": "R1, R16: Christmas table, main church (대성전).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "madonna-fort-lee",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "21:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve; Bilingual"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 6,
+          "said": "12월 24일 9 pm Bilingual 대성전"
+        }
+      ],
+      "rationale": "R1, R16: Christmas table, main church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "madonna-fort-lee",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 6,
+          "said": "12월 25일 7:30 am English 대성전"
+        }
+      ],
+      "rationale": "R1, R16: Christmas Day table, main church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "madonna-fort-lee",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas; Bilingual"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 6,
+          "said": "12월 25일 9 am Bilingual 대성전"
+        }
+      ],
+      "rationale": "R1, R16: Christmas Day table, main church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "madonna-fort-lee",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 6,
+          "said": "12월 25일 11 am English 대성전"
+        }
+      ],
+      "rationale": "R1, R16: Christmas Day table, main church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "madonna-fort-lee",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas; Korean"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 6,
+          "said": "12월 25일 1 pm Korean 대성전"
+        }
+      ],
+      "rationale": "R1, R16: Christmas Day table, main church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s35",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 1,
+          "said": "Rosary after daily 8:30AM Masses & Miraculous Medal Novena Wednesdays after 8:30AM Mass."
+        }
+      ],
+      "rationale": "R24: Rosary and Novena are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s36",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 1,
+          "said": "Holy Days of Obligation: please consult bulletin"
+        }
+      ],
+      "rationale": "R26: no time; the holy day Masses printed elsewhere are recorded as dated slots.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s37",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "382897fa",
+          "page": 1,
+          "said": "Ministry to the Sick & Homebound: ... Please contact the office for details."
+        }
+      ],
+      "rationale": "R24, R26: Communion to the homebound by arrangement, no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
