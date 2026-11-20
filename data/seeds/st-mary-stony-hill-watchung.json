@@ -1,0 +1,563 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-mary-stony-hill-watchung",
+  "status": "ready",
+  "as_of": "2026-11-15T16:08:13Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T04:49:59Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, St. Mary-Stony Hill. The schedule box is identical in both bulletins read (Nov 8 and Nov 15, 2026): Sat 4 PM vigil, Sun 7:30/9/11:15, weekday 8 AM Mass, Confession Thu after the 8 AM Mass and Sat 3-3:45, Adoration Wed & Fri 8:20-8:30 and first Wednesdays 7-8 PM. No open questions; no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "2902ae1016283d3ebfdd6d3a2beb72c04c029423339f349a1f8c028bfd2c52bc",
+      "fetched_at": "2026-11-15T16:08:13Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "e1e5b3c71b9b73a593005f55a0bab6cbf9fd148c8feae149ed4285aa526d9ee4",
+      "fetched_at": "2026-11-08T15:34:11Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-stony-hill-watchung",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2902ae10",
+          "page": 3,
+          "said": "MASS : Saturday Vigil | 4 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1e5b3c7",
+          "page": 1,
+          "said": "Saturday Vigil | 4 pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list the 4:00 p.m. Vigil Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-stony-hill-watchung",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2902ae10",
+          "page": 3,
+          "said": "Sunday | 7:30 am, 9 am, 11:15 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1e5b3c7",
+          "page": 1,
+          "said": "Sunday | 7:30 am, 9 am, 11:15 am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-stony-hill-watchung",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2902ae10",
+          "page": 3,
+          "said": "Sunday | 7:30 am, 9 am, 11:15 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1e5b3c7",
+          "page": 1,
+          "said": "Sunday | 7:30 am, 9 am, 11:15 am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-stony-hill-watchung",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2902ae10",
+          "page": 3,
+          "said": "Sunday | 7:30 am, 9 am, 11:15 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1e5b3c7",
+          "page": 1,
+          "said": "Sunday | 7:30 am, 9 am, 11:15 am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-stony-hill-watchung",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2902ae10",
+          "page": 3,
+          "said": "DAILY MASS: Monday - Friday | 8 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1e5b3c7",
+          "page": 1,
+          "said": "DAILY MASS Monday - Friday | 8 am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; each weekday's intentions list 8:00 a.m.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-stony-hill-watchung",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2902ae10",
+          "page": 3,
+          "said": "DAILY MASS: Monday - Friday | 8 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1e5b3c7",
+          "page": 1,
+          "said": "DAILY MASS Monday - Friday | 8 am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; each weekday's intentions list 8:00 a.m.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-stony-hill-watchung",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2902ae10",
+          "page": 3,
+          "said": "DAILY MASS: Monday - Friday | 8 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1e5b3c7",
+          "page": 1,
+          "said": "DAILY MASS Monday - Friday | 8 am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; each weekday's intentions list 8:00 a.m.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-stony-hill-watchung",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2902ae10",
+          "page": 3,
+          "said": "DAILY MASS: Monday - Friday | 8 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1e5b3c7",
+          "page": 1,
+          "said": "DAILY MASS Monday - Friday | 8 am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; each weekday's intentions list 8:00 a.m.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-stony-hill-watchung",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2902ae10",
+          "page": 3,
+          "said": "DAILY MASS: Monday - Friday | 8 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1e5b3c7",
+          "page": 1,
+          "said": "DAILY MASS Monday - Friday | 8 am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; each weekday's intentions list 8:00 a.m.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-stony-hill-watchung",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "after the 8:00 AM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2902ae10",
+          "page": 3,
+          "said": "RECONCILIATION: Thursday | after 8 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1e5b3c7",
+          "page": 1,
+          "said": "RECONCILIATION Thursday | after 8 am Mass"
+        }
+      ],
+      "rationale": "R1, R10: no clock time; after a weekday Mass POLICY starts it 30 minutes after the 8:00 AM Mass, with no end time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-stony-hill-watchung",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2902ae10",
+          "page": 3,
+          "said": "Saturday | 3:00 - 3:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1e5b3c7",
+          "page": 1,
+          "said": "Saturday | 3:00 - 3:45 pm"
+        }
+      ],
+      "rationale": "R1: printed under RECONCILIATION in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-stony-hill-watchung",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:20",
+        "end_time": "08:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2902ae10",
+          "page": 3,
+          "said": "ADORATION: Wed. & Fri. | 8:20 - 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1e5b3c7",
+          "page": 1,
+          "said": "Wednesday & Friday | 8:20 - 8:30 am"
+        }
+      ],
+      "rationale": "R1: printed under ADORATION in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-stony-hill-watchung",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:20",
+        "end_time": "08:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2902ae10",
+          "page": 3,
+          "said": "ADORATION: Wed. & Fri. | 8:20 - 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1e5b3c7",
+          "page": 1,
+          "said": "Wednesday & Friday | 8:20 - 8:30 am"
+        }
+      ],
+      "rationale": "R1: printed under ADORATION in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-stony-hill-watchung",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2902ae10",
+          "page": 3,
+          "said": "1st Wednesday of each Month | 7 - 8 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e1e5b3c7",
+          "page": 1,
+          "said": "1st Wednesday of Month | 7 - 8 pm"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 2: the schedule box names the week; printed in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
