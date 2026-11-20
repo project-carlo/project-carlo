@@ -1,0 +1,509 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-washington",
+  "status": "ready",
+  "as_of": "2026-11-15T16:19:53Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T04:26:35Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, St. Joseph, Washington. Both bulletins read (Nov 8 and Nov 15, 2026) print the same schedule: Sat 5pm Vigil; Sun 7:30, 9:00 (Spanish), 11; Mon-Fri 9am; Sat confession 4-4:45pm; Friday Adoration 9:30am-noon with Benediction. No open questions; the undated holy-day Mass line is left out.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "3bebac489dc63893cc2aa2c67561b07c4f679d41b14a39f0eb6e7d1f17d5deb4",
+      "fetched_at": "2026-11-15T16:19:53Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "91c7f0e6257c92f538ba61051d4d5b577bc8486f5d59200abef350594d2974f1",
+      "fetched_at": "2026-11-08T15:44:33Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-washington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3bebac48",
+          "page": 1,
+          "said": "Weekend Mass Schedule Saturday: Vigil Mass at 5pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91c7f0e6",
+          "page": 1,
+          "said": "Weekend Mass Schedule Saturday: Vigil Mass at 5pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; the intentions on p2 list the 5pm Vigil too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-washington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3bebac48",
+          "page": 1,
+          "said": "Sunday Mass: 7:30am (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91c7f0e6",
+          "page": 1,
+          "said": "Sunday Mass: 7:30am (English)"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-washington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3bebac48",
+          "page": 1,
+          "said": "Sunday Mass: 9:00am (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91c7f0e6",
+          "page": 1,
+          "said": "Sunday Mass: 9:00am (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-washington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3bebac48",
+          "page": 1,
+          "said": "Sunday Mass: 11am (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91c7f0e6",
+          "page": 1,
+          "said": "Sunday Mass: 11am (English)"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-washington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3bebac48",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday-Friday: 9am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91c7f0e6",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday-Friday: 9am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; each weekday's 9:00 am intention on p2 agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-washington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3bebac48",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday-Friday: 9am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91c7f0e6",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday-Friday: 9am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; each weekday's 9:00 am intention on p2 agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-washington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3bebac48",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday-Friday: 9am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91c7f0e6",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday-Friday: 9am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; each weekday's 9:00 am intention on p2 agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-washington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3bebac48",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday-Friday: 9am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91c7f0e6",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday-Friday: 9am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; each weekday's 9:00 am intention on p2 agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-washington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3bebac48",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday-Friday: 9am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91c7f0e6",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday-Friday: 9am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; each weekday's 9:00 am intention on p2 agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-washington",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3bebac48",
+          "page": 1,
+          "said": "Confession Saturday: 4pm-4:45pm & by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91c7f0e6",
+          "page": 1,
+          "said": "Confession Saturday: 4pm-4:45pm & by appointment"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; 'by appointment' has no time (R26) and adds no slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-washington",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3bebac48",
+          "page": 1,
+          "said": "Eucharistic Adoration Every Friday following the 9am Mass with Benediction at 12noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91c7f0e6",
+          "page": 1,
+          "said": "Eucharistic Adoration Every Friday following the 9am Mass with Benediction at 12noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3bebac48",
+          "page": 3,
+          "said": "Eucharistic Adoration: 9:30am-12noon, Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91c7f0e6",
+          "page": 3,
+          "said": "Eucharistic Adoration: 9:30am-12noon, Church"
+        }
+      ],
+      "rationale": "R1, POLICY Times: page 1 says every Friday after the 9am Mass with Benediction at noon; the p3 weekly calendar of both bulletins gives the clock time 9:30am-12noon, which wins; Benediction becomes the note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3bebac48",
+          "page": 1,
+          "said": "Holy Days of Obligation Mass at 9am & 7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91c7f0e6",
+          "page": 1,
+          "said": "Holy Days of Obligation Mass at 9am & 7pm"
+        }
+      ],
+      "rationale": "POLICY, Dates; R16: a generic holy-day line with no date; neither bulletin names a holy day's date, so no dated entry can be pinned down.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3bebac48",
+          "page": 3,
+          "said": "Miraculous Medal Novena 9:30am; The Rosary in Spanish: 8pm, Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91c7f0e6",
+          "page": 3,
+          "said": "Miraculous Medal Novena 9:30am; The Rosary in Spanish: 8pm, Church"
+        }
+      ],
+      "rationale": "R24: devotions that are not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
