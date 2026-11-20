@@ -1,0 +1,845 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-carteret",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:07:13Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T04:12:40Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. The bulletin's schedule box (same in both issues read, Oct 25 and Nov 8) and the website agree on weekend Masses, Mon-Wed and Saturday weekday Masses, Thursday 7 PM Spanish Mass, Saturday 11 AM Confession and Thursday 11:30-12:30 chapel Adoration; a Thanksgiving 9 AM Mass is dated. Open: Thursday's daytime Mass (12 PM per website and intentions vs box's 8 AM), Friday's Mass (box 8 AM vs website 12 PM), and a Thursday 6-7 PM Holy Hour only in older intentions and the website calendar. Note the newest PDF (fetched Nov 15) is the Nov 8 issue.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "a9db8e4c171ad45967654640e3800d7baf48ca12abb051c2d6f0f2d8abb07798",
+      "fetched_at": "2026-11-15T16:07:13Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "f34e48d9eb983b7994ef2f0ff2a2e362984738f65f5cebb913654a1e09905279",
+      "fetched_at": "2026-11-08T15:33:26Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-carteret",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9db8e4c",
+          "page": 2,
+          "said": "MASS SCHEDULE 5:00 PM (Saturday evening Vigil Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f34e48d9",
+          "page": 2,
+          "said": "MASS SCHEDULE 5:00 PM (Saturday evening Vigil Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9db8e4c",
+          "page": 7,
+          "said": "SATURDAY November 14th ... 5:00 PM+ Anthoney Abello"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in both weeks' intentions; the website gives Saturday 5:00 PM Vigil too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-carteret",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9db8e4c",
+          "page": 2,
+          "said": "Sunday: 8:00 AM, 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f34e48d9",
+          "page": 2,
+          "said": "Sunday: 8:00 AM, 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9db8e4c",
+          "page": 7,
+          "said": "SUNDAY November 15th 8:00 AM+ Diane Nelson 10:30 AM+ Alice Benson"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-carteret",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9db8e4c",
+          "page": 2,
+          "said": "Sunday: 8:00 AM, 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f34e48d9",
+          "page": 2,
+          "said": "Sunday: 8:00 AM, 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9db8e4c",
+          "page": 7,
+          "said": "SUNDAY November 15th 8:00 AM+ Diane Nelson 10:30 AM+ Alice Benson"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-carteret",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9db8e4c",
+          "page": 2,
+          "said": "12:30 PM - Spanish Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f34e48d9",
+          "page": 2,
+          "said": "12:30 PM - Spanish Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9db8e4c",
+          "page": 7,
+          "said": "12:30 PM+ Edith Gonzalez"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-carteret",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9db8e4c",
+          "page": 2,
+          "said": "Monday to Friday: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f34e48d9",
+          "page": 2,
+          "said": "Monday to Friday: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f34e48d9",
+          "page": 7,
+          "said": "MONDAY October 26th 8:00 AM+ James O'Donnell; TUESDAY 8:00 AM+ Anthony Abello; WEDNESDAY 8:00 AM+ Deceased members of the Legion of Mary"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and the October 25 week's intentions; the website agrees. The newest week's 7:00 AM times were a one-week change (Nov 9-13, pastor's jury duty), before as_of (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-carteret",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9db8e4c",
+          "page": 2,
+          "said": "Monday to Friday: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f34e48d9",
+          "page": 2,
+          "said": "Monday to Friday: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f34e48d9",
+          "page": 7,
+          "said": "MONDAY October 26th 8:00 AM+ James O'Donnell; TUESDAY 8:00 AM+ Anthony Abello; WEDNESDAY 8:00 AM+ Deceased members of the Legion of Mary"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and the October 25 week's intentions; the website agrees. The newest week's 7:00 AM times were a one-week change (Nov 9-13, pastor's jury duty), before as_of (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-carteret",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9db8e4c",
+          "page": 2,
+          "said": "Monday to Friday: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f34e48d9",
+          "page": 2,
+          "said": "Monday to Friday: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f34e48d9",
+          "page": 7,
+          "said": "MONDAY October 26th 8:00 AM+ James O'Donnell; TUESDAY 8:00 AM+ Anthony Abello; WEDNESDAY 8:00 AM+ Deceased members of the Legion of Mary"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and the October 25 week's intentions; the website agrees. The newest week's 7:00 AM times were a one-week change (Nov 9-13, pastor's jury duty), before as_of (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-carteret",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9db8e4c",
+          "page": 2,
+          "said": "Saturday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f34e48d9",
+          "page": 2,
+          "said": "Saturday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9db8e4c",
+          "page": 7,
+          "said": "SATURDAY November 14th 8:30 AM+ James Britton"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and both weeks' intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-carteret",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9db8e4c",
+          "page": 2,
+          "said": "Thursday: 7:00 PM - Spanish Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f34e48d9",
+          "page": 2,
+          "said": "Thursday: 7:00 PM - Spanish Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9db8e4c",
+          "page": 7,
+          "said": "THURSDAY November 12th 7:00 PM+ Deceased member of the Confraternity of lord of Miracles"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and both weeks' intentions (October 29's was marked Bilingual for an anniversary); the website lists Thursday 7:00 PM Spanish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-carteret",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Peregrine Mass for the Sick"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9db8e4c",
+          "page": 2,
+          "said": "St. Peregrine Mass for the Sick Second Thursday of the month - 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f34e48d9",
+          "page": 2,
+          "said": "St. Peregrine Mass for the Sick Second Thursday of the month - 7:00 PM"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7: the St. Peregrine Mass is the occasion of the regular Thursday 7:00 PM Mass already recorded weekly; a second slot would duplicate it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-carteret",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9db8e4c",
+          "page": 2,
+          "said": "CONFESSIONS Saturday: 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f34e48d9",
+          "page": 2,
+          "said": "CONFESSIONS Saturday: 11:00 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://sjps.net/",
+          "said": "Confession Saturday : 11:00 AM to 12:00 PM"
+        }
+      ],
+      "rationale": "R1, R6: both bulletins' schedule box print Saturday 11:00 AM; the parish website's current schedule (calendar showing November 19, 2026 events) gives the same start and the 12:00 PM end.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-carteret",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": "12:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Church Chapel"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9db8e4c",
+          "page": 7,
+          "said": "EUCHARISTIC ADORATION Thursdays in the Church Chapel 11:30 AM - 12:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f34e48d9",
+          "page": 7,
+          "said": "THURSDAY October 29th 11:30AM Adoration"
+        },
+        {
+          "source": "website",
+          "url": "https://sjps.net/",
+          "said": "Eucharistic Adoration Thursday : 11:30 AM to 12:30 PM (held in the chapel)"
+        }
+      ],
+      "rationale": "R1, R38: the newest bulletin's Adoration box gives the weekly hours in the church's chapel; October 29's intentions and the website agree. The November 12 intentions' 11:00 AM Holy Hour was a dated variation in the jury-duty week, before as_of (R16, R40).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-carteret",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day; bilingual"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9db8e4c",
+          "page": 3,
+          "said": "Thursday November 26th at 9:00am Bilingual Mass Thanksgiving Day Mass"
+        }
+      ],
+      "rationale": "R1, R16: a dated holiday Mass after as_of; no cancellation of another Mass is stated (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-carteret",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-09",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Remembrance Mass for All Souls"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9db8e4c",
+          "page": 7,
+          "said": "MONDAY November 9th 7:00 PM + Remembrance Mass for All Souls"
+        }
+      ],
+      "rationale": "R16: dated before as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9db8e4c",
+          "page": 7,
+          "said": "Please Note: Monday Nov 9 until Friday Nove 13th daily mass will be 7am due to jury duty for the pastor."
+        }
+      ],
+      "rationale": "R16: a one-week change (Nov 9-13) before as_of; the weekday slots stay at their standing times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9db8e4c",
+          "page": 2,
+          "said": "Monday to Friday: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f34e48d9",
+          "page": 2,
+          "said": "Monday to Friday: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f34e48d9",
+          "page": 7,
+          "said": "THURSDAY October 29th 11:30AM Adoration 12:00 PM+ Eusebio Guerra 6:00 PM Holy Hour 7:00 PM+ Sally Labios"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9db8e4c",
+          "page": 7,
+          "said": "THURSDAY November 12th 11:00AM Holy Hour 7:00 PM+ Deceased member of the Confraternity"
+        },
+        {
+          "source": "website",
+          "url": "https://sjps.net/",
+          "said": "Thursday : 12:00 PM English 7:00 PM Spanish"
+        }
+      ],
+      "rationale": "R28: the schedule box says Monday to Friday 8:00 AM, but neither week's intentions has a Thursday 8:00 AM Mass; October 29 lists 12:00 PM, matching the website's current Mass Schedule. November 12 (jury-duty week, other days at 7 AM) lists no daytime Mass. Leaning to 12:00 PM as two sources agree; note it falls inside the 11:30-12:30 chapel Adoration.",
+      "question": "Is the Thursday morning/midday Mass at 12:00 PM, 8:00 AM, or none?",
+      "options": [
+        {
+          "label": "Thursdays 12:00 PM",
+          "entry": {
+            "church_slug": "st-joseph-carteret",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Thursdays 8:00 AM",
+          "entry": {
+            "church_slug": "st-joseph-carteret",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9db8e4c",
+          "page": 2,
+          "said": "Monday to Friday: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f34e48d9",
+          "page": 2,
+          "said": "Monday to Friday: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f34e48d9",
+          "page": 7,
+          "said": "FRIDAY October 30th 8:00 AM+ Claudina Cerna, +Catherine Gordon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9db8e4c",
+          "page": 7,
+          "said": "FRIDAY November 13th 7:00 AM+ Thomas Stephen"
+        },
+        {
+          "source": "website",
+          "url": "https://sjps.net/",
+          "said": "Friday : 12:00 PM English"
+        }
+      ],
+      "rationale": "R6, R28: the website's Mass Schedule gives Friday 12:00 PM, conflicting with both bulletins' box (8:00 AM) and the October 30 intentions (8:00 AM); November 13 was 7 AM for jury duty, consistent with a morning Mass. Leaning to 8:00 AM, the bulletin's intentions confirming it.",
+      "question": "Is the Friday weekday Mass at 8:00 AM (bulletin) or 12:00 PM (website)?",
+      "options": [
+        {
+          "label": "Fridays 8:00 AM",
+          "entry": {
+            "church_slug": "st-joseph-carteret",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Fridays 12:00 PM",
+          "entry": {
+            "church_slug": "st-joseph-carteret",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f34e48d9",
+          "page": 7,
+          "said": "THURSDAY October 29th 6:00 PM Holy Hour"
+        },
+        {
+          "source": "website",
+          "url": "https://sjps.net/events/holy-hour/20261119",
+          "said": "Holy Hour Thursday , November 19 , 2026 , 6:00 PM - 7:00 PM Repeats every Thursday Location: St. Joseph Church"
+        }
+      ],
+      "rationale": "R29: the newest bulletin doesn't print it (its November 12 intentions and Adoration box omit it); October 29's intentions and the website's recurring calendar event (every Thursday, St. Joseph Church) give it. Leaning include, as the website states weekly recurrence and fits the older bulletin.",
+      "question": "Add the weekly Thursday 6:00-7:00 PM Holy Hour?",
+      "options": [
+        {
+          "label": "Thursdays 6:00-7:00 PM",
+          "entry": {
+            "church_slug": "st-joseph-carteret",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "18:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Holy Hour"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    }
+  ]
+}
