@@ -1,0 +1,647 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-elizabeth-ann-seton-three-bridges",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:50:59Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T03:36:17Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend (Sat 5 PM; Sun 8, 9:30, 11:30) and weekday (Mon 6:15 PM; Tue-Fri 9 AM) Masses and Saturday 4 PM Confession agree in both bulletins read and on the website; First Friday Adoration comes from the website (R6). Open: whether the 'MOST Mondays' 5 PM Confession is recorded as weekly.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "5537af85126f0e85cd2864dbd8896cc3a01d2befd1286c1d70d49a913d3619c9",
+      "fetched_at": "2026-11-15T16:50:59Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "a5f93f1c73a0cb500bcf3bf56bbf8929d2b33b8a48bff882744262ea905d26a3",
+      "fetched_at": "2026-11-08T22:03:24Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-three-bridges",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5537af85",
+          "page": 1,
+          "said": "Regular Weekend Mass Schedule Saturday: 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5f93f1c",
+          "page": 3,
+          "said": "Regular Weekend Mass Schedule Saturday: 5:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; intentions on p5 list 5:00 PM vigils; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-three-bridges",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5537af85",
+          "page": 1,
+          "said": "Sunday: 8:00 AM, 9:30 AM, 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5f93f1c",
+          "page": 3,
+          "said": "Sunday: 8:00 AM, 9:30 AM, 11:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in both weeks' intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-three-bridges",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5537af85",
+          "page": 1,
+          "said": "Sunday: 8:00 AM, 9:30 AM, 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5f93f1c",
+          "page": 3,
+          "said": "Sunday: 8:00 AM, 9:30 AM, 11:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in both weeks' intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-three-bridges",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5537af85",
+          "page": 1,
+          "said": "Sunday: 8:00 AM, 9:30 AM, 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5f93f1c",
+          "page": 3,
+          "said": "Sunday: 8:00 AM, 9:30 AM, 11:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in both weeks' intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-three-bridges",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5537af85",
+          "page": 1,
+          "said": "Daily Mass Schedule* Monday - 6:15 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5f93f1c",
+          "page": 3,
+          "said": "Monday - 6:15 PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins, and the intentions (p5) list Monday 6:15 PM Masses both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-three-bridges",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5537af85",
+          "page": 1,
+          "said": "Tuesday - Friday: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5f93f1c",
+          "page": 3,
+          "said": "Tuesday - Friday: 9:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins, and the intentions (p5) list 9:00 AM Masses Tuesday to Friday both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-three-bridges",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5537af85",
+          "page": 1,
+          "said": "Tuesday - Friday: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5f93f1c",
+          "page": 3,
+          "said": "Tuesday - Friday: 9:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins, and the intentions (p5) list 9:00 AM Masses Tuesday to Friday both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-three-bridges",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5537af85",
+          "page": 1,
+          "said": "Tuesday - Friday: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5f93f1c",
+          "page": 3,
+          "said": "Tuesday - Friday: 9:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins, and the intentions (p5) list 9:00 AM Masses Tuesday to Friday both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-three-bridges",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5537af85",
+          "page": 1,
+          "said": "Tuesday - Friday: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5f93f1c",
+          "page": 3,
+          "said": "Tuesday - Friday: 9:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins, and the intentions (p5) list 9:00 AM Masses Tuesday to Friday both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-three-bridges",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5537af85",
+          "page": 1,
+          "said": "Reconciliation [Penance/Confession] Saturday at 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5f93f1c",
+          "page": 3,
+          "said": "Saturday at 4:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; no end time given, so none recorded (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5537af85",
+          "page": 1,
+          "said": "Saturday at 4:00 PM and MOST Mondays at 5:00 PM [see inside for this Monday's schedule]"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5537af85",
+          "page": 5,
+          "said": "Monday confessions will be held on Monday, November 16 at 5 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a5f93f1c",
+          "page": 5,
+          "said": "Monday confessions will be held on Monday, November 9 at 5 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://easeton.net/reconciliation-confession-schedule/",
+          "said": "Confessions are heard on Saturday at 4:00 PM and on MOST Mondays at 5:00 PM"
+        }
+      ],
+      "rationale": "Hedged availability ('MOST Mondays') needs a human decision (rules.md, closing note). Leaning include: both bulletins (Nov 9 and Nov 16) held it, the website states it as the regular schedule, and each bulletin prints that week's Monday, so update mode can track it.",
+      "question": "Add Monday 5:00 PM Confession as weekly, given the bulletin says 'MOST Mondays'?",
+      "options": [
+        {
+          "label": "Every Monday 5:00 PM",
+          "entry": {
+            "church_slug": "st-elizabeth-ann-seton-three-bridges",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "17:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Most Mondays; see the bulletin"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out the weekly slot",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-three-bridges",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-16",
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5537af85",
+          "page": 5,
+          "said": "Monday confessions will be held on Monday, November 16 at 5 PM"
+        }
+      ],
+      "rationale": "R1, R16: dated confession printed in the newest bulletin, on or after as_of (fetched Nov 15). Redundant if the weekly Monday slot is approved.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-three-bridges",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "10:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:00 AM Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://easeton.net/",
+          "said": "Eucharistic Adoration is held on the First Friday of each month from the end of 9 AM Mass until 10:30 AM.",
+          "schedule_check": {
+            "checked_at": "2026-11-20T03:38:33Z",
+            "current_because": "Checked 2026-11-19: the homepage's Mass and Confession schedule matches the Nov 15, 2026 bulletin exactly and links a 2026 Ministry Fair slideshow; nothing on it points to an earlier period.",
+            "bulletin": "5537af85",
+            "fits_because": "The newest bulletin (Nov 15-22) and the Nov 8 one cover only third and second weeks, so neither would print a First Friday service; both print the Friday 9:00 AM Mass it follows."
+          }
+        }
+      ],
+      "rationale": "R6, R10: the parish website gives First Friday Adoration from the end of the 9 AM weekday Mass to 10:30 AM; POLICY times 'after a weekday Mass' 30 minutes after it starts, so 9:30-10:30. R11: neither read bulletin's week holds a first Friday, so their silence is no conflict.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5537af85",
+          "page": 7,
+          "said": "Eucharistic Adoration During RF Classes: Nov. 30, Dec. 1, 2, 2026"
+        }
+      ],
+      "rationale": "R26: dated Adoration during Religious Formation classes with no time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-three-bridges",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-22",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "First Penance Celebration"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5537af85",
+          "page": 7,
+          "said": "Attention First Holy Communion Candidates ... First Penance Celebration Next Sunday November 22, 2026 at 4:00pm"
+        }
+      ],
+      "rationale": "R24/POLICY: a First Penance celebration for First Communion candidates, limited to that group, not open Confession.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5537af85",
+          "page": 7,
+          "said": "****** Mass Events ****** Offered Sat., 4-6pm Registration required for all Mass events! Thanksgiving/Saints/Souls November 21"
+        }
+      ],
+      "rationale": "R24/R25: Summer Religious Formation program events requiring registration; the Mass in them is the regular Saturday 5:00 PM vigil, already recorded, so nothing separate to add.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5537af85",
+          "page": 1,
+          "said": "or by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5537af85",
+          "page": 5,
+          "said": "All are welcome to pray the rosary on Sundays at 11 AM"
+        }
+      ],
+      "rationale": "R24: a Rosary is not Mass, Confession or Adoration. Likewise the Nov 25 Thanksgiving Ecumenical Service at TBRC (p7) is off-site and not a Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
