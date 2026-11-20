@@ -1,0 +1,677 @@
+{
+  "schema_version": 1,
+  "parish_slug": "blessed-sacrament-elizabeth",
+  "status": "ready",
+  "as_of": "2026-11-15T16:21:34Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T08:51:49Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, Blessed Sacrament, Elizabeth. Both bulletins read (Nov 8 and Nov 15, 2026) print the same page 1 schedule box: Sat 7 PM (Spanish), Sun 8:30 (English), 10:00 and noon (Spanish), Mon-Sat 8:30 AM (English), Tue-Thu 7 PM (Spanish), Sat confession 4-5 PM, and first-Friday Exposition 2-7 PM; the intentions agree. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "482ddb30016b63ab5b0b94c565550275baba7f03ce68c30fc7c582b084390aac",
+      "fetched_at": "2026-11-15T16:21:34Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "7053968468354d9fed66db7b0205018ea1837f87c5c3ecf37c39ceb465734f39",
+      "fetched_at": "2026-11-08T15:45:53Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "482ddb30",
+          "page": 1,
+          "said": "Mass Schedule: Saturday: 7:00PM Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "70539684",
+          "page": 1,
+          "said": "Mass Schedule: Saturday: 7:00PM Español"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read (language label beside the time); the intentions list a Saturday 7:00PM Mass in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "482ddb30",
+          "page": 1,
+          "said": "Sunday: 8:30 AM. English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "70539684",
+          "page": 1,
+          "said": "Sunday: 8:30 AM. English"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read; the intentions list it both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "482ddb30",
+          "page": 1,
+          "said": "10:00 A M. Español / 12:00 Noon Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "70539684",
+          "page": 1,
+          "said": "10:00 A M. Español / 12:00 Noon Español"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read. The intentions misprint the noon Mass as '12:00AM'; the box says 12:00 Noon.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "482ddb30",
+          "page": 1,
+          "said": "10:00 A M. Español / 12:00 Noon Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "70539684",
+          "page": 1,
+          "said": "10:00 A M. Español / 12:00 Noon Español"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read. The intentions misprint the noon Mass as '12:00AM'; the box says 12:00 Noon.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "482ddb30",
+          "page": 1,
+          "said": "Weekdays: Mon. thru Sat.: 8:30 AM. English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "70539684",
+          "page": 1,
+          "said": "Weekdays: Mon. thru Sat.: 8:30 AM. English"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read; each weekday 8:30AM appears in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "482ddb30",
+          "page": 1,
+          "said": "Weekdays: Mon. thru Sat.: 8:30 AM. English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "70539684",
+          "page": 1,
+          "said": "Weekdays: Mon. thru Sat.: 8:30 AM. English"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read; each weekday 8:30AM appears in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "482ddb30",
+          "page": 1,
+          "said": "Weekdays: Mon. thru Sat.: 8:30 AM. English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "70539684",
+          "page": 1,
+          "said": "Weekdays: Mon. thru Sat.: 8:30 AM. English"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read; each weekday 8:30AM appears in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "482ddb30",
+          "page": 1,
+          "said": "Weekdays: Mon. thru Sat.: 8:30 AM. English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "70539684",
+          "page": 1,
+          "said": "Weekdays: Mon. thru Sat.: 8:30 AM. English"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read; each weekday 8:30AM appears in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "482ddb30",
+          "page": 1,
+          "said": "Weekdays: Mon. thru Sat.: 8:30 AM. English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "70539684",
+          "page": 1,
+          "said": "Weekdays: Mon. thru Sat.: 8:30 AM. English"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read; each weekday 8:30AM appears in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "482ddb30",
+          "page": 1,
+          "said": "Weekdays: Mon. thru Sat.: 8:30 AM. English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "70539684",
+          "page": 1,
+          "said": "Weekdays: Mon. thru Sat.: 8:30 AM. English"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read; each weekday 8:30AM appears in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "482ddb30",
+          "page": 1,
+          "said": "Tues, Wed. & Thu. 7:00 PM. Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "70539684",
+          "page": 1,
+          "said": "Tues, Wed. & Thu. 7:00 PM. Español"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read; the intentions list 7:00PM Tue-Thu in both weeks. The Wednesday one is also the Divino Niño Mass (70539684 p3: 'Misa y devoción al Divino Niño: Miércoles a las 7:00p.m.').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "482ddb30",
+          "page": 1,
+          "said": "Tues, Wed. & Thu. 7:00 PM. Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "70539684",
+          "page": 1,
+          "said": "Tues, Wed. & Thu. 7:00 PM. Español"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read; the intentions list 7:00PM Tue-Thu in both weeks. The Wednesday one is also the Divino Niño Mass (70539684 p3: 'Misa y devoción al Divino Niño: Miércoles a las 7:00p.m.').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "482ddb30",
+          "page": 1,
+          "said": "Tues, Wed. & Thu. 7:00 PM. Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "70539684",
+          "page": 1,
+          "said": "Tues, Wed. & Thu. 7:00 PM. Español"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read; the intentions list 7:00PM Tue-Thu in both weeks. The Wednesday one is also the Divino Niño Mass (70539684 p3: 'Misa y devoción al Divino Niño: Miércoles a las 7:00p.m.').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-elizabeth",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "482ddb30",
+          "page": 1,
+          "said": "CONFESSIONS/CONFESIONES Saturday/Sábado: 4:00 PM-5:00 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "70539684",
+          "page": 1,
+          "said": "CONFESSIONS/CONFESIONES Saturday/Sábado: 4:00 PM-5:00 PM."
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-elizabeth",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "14:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "70539684",
+          "page": 1,
+          "said": "Exposition and Adoration of the Blessed Sacrament: First Friday of every month from 2:00 PM to 7:00 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "482ddb30",
+          "page": 1,
+          "said": "Exposition and Adoration of the Blessed Sacrament: First Friday of every month from 2:00 PM to 7:00 PM."
+        }
+      ],
+      "rationale": "R12: a first-Friday service; neither read bulletin's week (Nov 8-14 second, Nov 15-22 third) holds a first Friday, so page is null. Both schedule boxes print it identically.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "482ddb30",
+          "page": 1,
+          "said": "Holy Rosary: Weekdays before and after 8:30 AM Mass."
+        }
+      ],
+      "rationale": "R24: the Rosary is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "482ddb30",
+          "page": 1,
+          "said": "Saint Anthony: Wednesdays at 8:30 AM English."
+        }
+      ],
+      "rationale": "R24: a devotion to St. Anthony; the Wednesday 8:30 AM Mass itself is already included.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "482ddb30",
+          "page": 1,
+          "said": "DivinoNiño: Miércoles a las 7:00 PM Español."
+        }
+      ],
+      "rationale": "R24: the Divino Niño devotion is not Mass, Confession or Adoration; the Wednesday 7:00 PM Mass it accompanies is already included.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "482ddb30",
+          "page": 1,
+          "said": "Holy Days: As announced in the bulletin"
+        }
+      ],
+      "rationale": "R26: no holy day times printed in either bulletin; nothing to record.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
