@@ -1,0 +1,1598 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-redeemer-west-new-york",
+  "status": "ready",
+  "as_of": "2026-11-15T16:52:42Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T09:14:14Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Three churches; St. Mary's in the bulletin and website is Our Lady Help of Christians (65th St and Jackson St). The newest issue (Nov 15) covers its page-1 schedule box with an Advent retreat image, so Masses rest on its visible intentions (pp3-4) plus the Nov 8 box; Confession and Adoration rest on the parish homepage (R6) and the Nov 8 box. No open questions; no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "b2e5e5e059bb4c20ea7cdab0d93cfb5d4da1194137012549ea501ab2c0bf3266",
+      "fetched_at": "2026-11-15T16:52:42Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "218ca67ed2e929b180be8ba25e82bdf31cd68eb5c63a1e50726021adcd24dc37",
+      "fetched_at": "2026-11-08T16:01:46Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-nepomucene-guttenberg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 3,
+          "said": "St. John's ~ S. Juan / Monday November 16 7.30 ... Friday November 20 7.30"
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 1,
+          "said": "St. John Nepomuceno Monday Through Friday 7:30am English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 3,
+          "said": "St. John's ~ S. Juan / Monday November 9 7.30 ... Friday November 13 7.30"
+        }
+      ],
+      "rationale": "R1, R35: the newest bulletin's St. John's intentions list 7.30 each weekday; the Nov 8 issue's schedule box and intentions give the same Mon-Fri 7:30am Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-nepomucene-guttenberg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 3,
+          "said": "St. John's ~ S. Juan / Monday November 16 7.30 ... Friday November 20 7.30"
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 1,
+          "said": "St. John Nepomuceno Monday Through Friday 7:30am English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 3,
+          "said": "St. John's ~ S. Juan / Monday November 9 7.30 ... Friday November 13 7.30"
+        }
+      ],
+      "rationale": "R1, R35: the newest bulletin's St. John's intentions list 7.30 each weekday; the Nov 8 issue's schedule box and intentions give the same Mon-Fri 7:30am Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-nepomucene-guttenberg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 3,
+          "said": "St. John's ~ S. Juan / Monday November 16 7.30 ... Friday November 20 7.30"
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 1,
+          "said": "St. John Nepomuceno Monday Through Friday 7:30am English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 3,
+          "said": "St. John's ~ S. Juan / Monday November 9 7.30 ... Friday November 13 7.30"
+        }
+      ],
+      "rationale": "R1, R35: the newest bulletin's St. John's intentions list 7.30 each weekday; the Nov 8 issue's schedule box and intentions give the same Mon-Fri 7:30am Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-nepomucene-guttenberg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 3,
+          "said": "St. John's ~ S. Juan / Monday November 16 7.30 ... Friday November 20 7.30"
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 1,
+          "said": "St. John Nepomuceno Monday Through Friday 7:30am English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 3,
+          "said": "St. John's ~ S. Juan / Monday November 9 7.30 ... Friday November 13 7.30"
+        }
+      ],
+      "rationale": "R1, R35: the newest bulletin's St. John's intentions list 7.30 each weekday; the Nov 8 issue's schedule box and intentions give the same Mon-Fri 7:30am Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-nepomucene-guttenberg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 3,
+          "said": "St. John's ~ S. Juan / Monday November 16 7.30 ... Friday November 20 7.30"
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 1,
+          "said": "St. John Nepomuceno Monday Through Friday 7:30am English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 3,
+          "said": "St. John's ~ S. Juan / Monday November 9 7.30 ... Friday November 13 7.30"
+        }
+      ],
+      "rationale": "R1, R35: the newest bulletin's St. John's intentions list 7.30 each weekday; the Nov 8 issue's schedule box and intentions give the same Mon-Fri 7:30am Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-nepomucene-guttenberg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 3,
+          "said": "St. John's / Saturday November 14 8.00 ... Saturday November 21 8.00 Our Lady of Health"
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 1,
+          "said": "St. John Nepomuceno Saturday 8:00am English"
+        }
+      ],
+      "rationale": "R1, R35: printed at 8.00 for both Saturdays in the newest intentions and in the Nov 8 schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 3,
+          "said": "St. Mary's ~ Sta Maria / Monday November 16 8.00 ... Friday November 20 8.00"
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 1,
+          "said": "Our Lady Help of Christians Monday through Friday 8:00am English"
+        },
+        {
+          "source": "website",
+          "url": "https://www.holyredeemer-wny.org/",
+          "said": "St. Mary's church 6502 Jackson St. W.N.Y"
+        }
+      ],
+      "rationale": "R1, R35: St. Mary's intentions list 8.00 each weekday in both issues; the Nov 8 schedule box gives the same Mass under Our Lady Help of Christians. St. Mary's is that church (corner of 65th St and Jackson St; its schedule matches the box), so R32 does not arise.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 3,
+          "said": "St. Mary's ~ Sta Maria / Monday November 16 8.00 ... Friday November 20 8.00"
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 1,
+          "said": "Our Lady Help of Christians Monday through Friday 8:00am English"
+        },
+        {
+          "source": "website",
+          "url": "https://www.holyredeemer-wny.org/",
+          "said": "St. Mary's church 6502 Jackson St. W.N.Y"
+        }
+      ],
+      "rationale": "R1, R35: St. Mary's intentions list 8.00 each weekday in both issues; the Nov 8 schedule box gives the same Mass under Our Lady Help of Christians. St. Mary's is that church (corner of 65th St and Jackson St; its schedule matches the box), so R32 does not arise.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 3,
+          "said": "St. Mary's ~ Sta Maria / Monday November 16 8.00 ... Friday November 20 8.00"
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 1,
+          "said": "Our Lady Help of Christians Monday through Friday 8:00am English"
+        },
+        {
+          "source": "website",
+          "url": "https://www.holyredeemer-wny.org/",
+          "said": "St. Mary's church 6502 Jackson St. W.N.Y"
+        }
+      ],
+      "rationale": "R1, R35: St. Mary's intentions list 8.00 each weekday in both issues; the Nov 8 schedule box gives the same Mass under Our Lady Help of Christians. St. Mary's is that church (corner of 65th St and Jackson St; its schedule matches the box), so R32 does not arise.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 3,
+          "said": "St. Mary's ~ Sta Maria / Monday November 16 8.00 ... Friday November 20 8.00"
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 1,
+          "said": "Our Lady Help of Christians Monday through Friday 8:00am English"
+        },
+        {
+          "source": "website",
+          "url": "https://www.holyredeemer-wny.org/",
+          "said": "St. Mary's church 6502 Jackson St. W.N.Y"
+        }
+      ],
+      "rationale": "R1, R35: St. Mary's intentions list 8.00 each weekday in both issues; the Nov 8 schedule box gives the same Mass under Our Lady Help of Christians. St. Mary's is that church (corner of 65th St and Jackson St; its schedule matches the box), so R32 does not arise.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 3,
+          "said": "St. Mary's ~ Sta Maria / Monday November 16 8.00 ... Friday November 20 8.00"
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 1,
+          "said": "Our Lady Help of Christians Monday through Friday 8:00am English"
+        },
+        {
+          "source": "website",
+          "url": "https://www.holyredeemer-wny.org/",
+          "said": "St. Mary's church 6502 Jackson St. W.N.Y"
+        }
+      ],
+      "rationale": "R1, R35: St. Mary's intentions list 8.00 each weekday in both issues; the Nov 8 schedule box gives the same Mass under Our Lady Help of Christians. St. Mary's is that church (corner of 65th St and Jackson St; its schedule matches the box), so R32 does not arise.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 3,
+          "said": "St. Mary's ~ Sta Maria / Monday November 16 7.00 Zenaida Seo ... Friday November 20 7.00 Olga Renjifo"
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 1,
+          "said": "Our Lady Help of Christians Lunes a, Viernes 7:00pm Español"
+        }
+      ],
+      "rationale": "R1, R35: St. Mary's (Our Lady Help of Christians) intentions list 7.00 every weekday in both issues; the Nov 8 schedule box gives Mon-Fri 7:00pm in Spanish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 3,
+          "said": "St. Mary's ~ Sta Maria / Monday November 16 7.00 Zenaida Seo ... Friday November 20 7.00 Olga Renjifo"
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 1,
+          "said": "Our Lady Help of Christians Lunes a, Viernes 7:00pm Español"
+        }
+      ],
+      "rationale": "R1, R35: St. Mary's (Our Lady Help of Christians) intentions list 7.00 every weekday in both issues; the Nov 8 schedule box gives Mon-Fri 7:00pm in Spanish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 3,
+          "said": "St. Mary's ~ Sta Maria / Monday November 16 7.00 Zenaida Seo ... Friday November 20 7.00 Olga Renjifo"
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 1,
+          "said": "Our Lady Help of Christians Lunes a, Viernes 7:00pm Español"
+        }
+      ],
+      "rationale": "R1, R35: St. Mary's (Our Lady Help of Christians) intentions list 7.00 every weekday in both issues; the Nov 8 schedule box gives Mon-Fri 7:00pm in Spanish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 3,
+          "said": "St. Mary's ~ Sta Maria / Monday November 16 7.00 Zenaida Seo ... Friday November 20 7.00 Olga Renjifo"
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 1,
+          "said": "Our Lady Help of Christians Lunes a, Viernes 7:00pm Español"
+        }
+      ],
+      "rationale": "R1, R35: St. Mary's (Our Lady Help of Christians) intentions list 7.00 every weekday in both issues; the Nov 8 schedule box gives Mon-Fri 7:00pm in Spanish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 3,
+          "said": "St. Mary's ~ Sta Maria / Monday November 16 7.00 Zenaida Seo ... Friday November 20 7.00 Olga Renjifo"
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 1,
+          "said": "Our Lady Help of Christians Lunes a, Viernes 7:00pm Español"
+        }
+      ],
+      "rationale": "R1, R35: St. Mary's (Our Lady Help of Christians) intentions list 7.00 every weekday in both issues; the Nov 8 schedule box gives Mon-Fri 7:00pm in Spanish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-libera-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 4,
+          "said": "Our Lady of Libera / Monday November 16 9.00 ... Friday November 20 9.00"
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 1,
+          "said": "Our Lady of Libera, En Español Lunes, a Viernes 9:00am"
+        }
+      ],
+      "rationale": "R1, R35: Libera's intentions list 9.00 each weekday in both issues (some intentions blank, R39); the Nov 8 schedule box gives Mon-Fri 9:00am in Spanish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-libera-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 4,
+          "said": "Our Lady of Libera / Monday November 16 9.00 ... Friday November 20 9.00"
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 1,
+          "said": "Our Lady of Libera, En Español Lunes, a Viernes 9:00am"
+        }
+      ],
+      "rationale": "R1, R35: Libera's intentions list 9.00 each weekday in both issues (some intentions blank, R39); the Nov 8 schedule box gives Mon-Fri 9:00am in Spanish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-libera-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 4,
+          "said": "Our Lady of Libera / Monday November 16 9.00 ... Friday November 20 9.00"
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 1,
+          "said": "Our Lady of Libera, En Español Lunes, a Viernes 9:00am"
+        }
+      ],
+      "rationale": "R1, R35: Libera's intentions list 9.00 each weekday in both issues (some intentions blank, R39); the Nov 8 schedule box gives Mon-Fri 9:00am in Spanish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-libera-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 4,
+          "said": "Our Lady of Libera / Monday November 16 9.00 ... Friday November 20 9.00"
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 1,
+          "said": "Our Lady of Libera, En Español Lunes, a Viernes 9:00am"
+        }
+      ],
+      "rationale": "R1, R35: Libera's intentions list 9.00 each weekday in both issues (some intentions blank, R39); the Nov 8 schedule box gives Mon-Fri 9:00am in Spanish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-libera-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 4,
+          "said": "Our Lady of Libera / Monday November 16 9.00 ... Friday November 20 9.00"
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 1,
+          "said": "Our Lady of Libera, En Español Lunes, a Viernes 9:00am"
+        }
+      ],
+      "rationale": "R1, R35: Libera's intentions list 9.00 each weekday in both issues (some intentions blank, R39); the Nov 8 schedule box gives Mon-Fri 9:00am in Spanish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-nepomucene-guttenberg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 3,
+          "said": "St. John's / Saturday November 14 4.30 ... Saturday November 21 4.30"
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 1,
+          "said": "4:30pm St. John Nepomuceno, English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 4,
+          "said": "4.30pm St John's, English"
+        }
+      ],
+      "rationale": "R1, R35: vigil printed in the newest intentions for both Saturdays, its giving list, and the Nov 8 schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-nepomucene-guttenberg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 3,
+          "said": "St. John's / Saturday November 14 7.00 ... Saturday November 21 7.00"
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 1,
+          "said": "7:00pm St. John, Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 4,
+          "said": "7:00pm St. John's, spanish"
+        }
+      ],
+      "rationale": "R1, R35: printed in the newest intentions for both Saturdays, its giving list, and the Nov 8 schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 3,
+          "said": "St. Mary's / Saturday November 14 6.00 ... Saturday November 21 6.00"
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 1,
+          "said": "6:00pm St. Mary , English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 4,
+          "said": "6.00pm St. Mary's ,English"
+        }
+      ],
+      "rationale": "R1, R35: printed in the newest intentions for both Saturdays, its giving list, and the Nov 8 schedule box; St. Mary's is Our Lady Help of Christians.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-libera-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 4,
+          "said": "Our Lady of Libera / Saturday November 14 6.00 ... Saturday November 21 6.00"
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 1,
+          "said": "6:00pm N.S. de la Libera , Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 4,
+          "said": "6:00pm N.S. Libera Español"
+        }
+      ],
+      "rationale": "R1, R35: printed in the newest intentions for both Saturdays, its giving list, and the Nov 8 schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 3,
+          "said": "St. Mary's / Sunday November 15 8:00 ... Sunday November 22 8.00"
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 1,
+          "said": "Sunday Masses in English 8:00 ~ St. Mary"
+        }
+      ],
+      "rationale": "R1, R35: printed for both Sundays in the newest intentions and in the Nov 8 schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 3,
+          "said": "St. Mary's / Sunday November 15 9:00 ... Sunday November 22 9.00"
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 1,
+          "said": "Misas Dominicales en Español 9:00am ~12:30pm ~ 6:00pm Sta María"
+        }
+      ],
+      "rationale": "R1, R35: printed for both Sundays in the newest intentions and in the Nov 8 schedule box (Spanish).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 3,
+          "said": "St. Mary's / Sunday November 15 11:00 ... Sunday November 22 11.00"
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 1,
+          "said": "11:00am English , St. Mary"
+        }
+      ],
+      "rationale": "R1, R35: printed for both Sundays in the newest intentions and in the Nov 8 schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 3,
+          "said": "St. Mary's / Sunday November 15 12:30 ... Sunday November 22 12.30"
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 1,
+          "said": "Misas Dominicales en Español 9:00am ~12:30pm ~ 6:00pm Sta María"
+        }
+      ],
+      "rationale": "R1, R35: printed for both Sundays in the newest intentions and in the Nov 8 schedule box (Spanish).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 3,
+          "said": "St. Mary's / Sunday November 15 6.00 ... Sunday November 22 6.00"
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 1,
+          "said": "Misas Dominicales en Español 9:00am ~12:30pm ~ 6:00pm Sta María"
+        }
+      ],
+      "rationale": "R1, R35: printed for both Sundays in the newest intentions and in the Nov 8 schedule box (Spanish).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-nepomucene-guttenberg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 3,
+          "said": "St. John's / Sunday November 15 9:00 ... Sunday November 22 9:00"
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 1,
+          "said": "Sunday Masses in English 9:00am~ , St. John"
+        }
+      ],
+      "rationale": "R1, R35: printed for both Sundays in the newest intentions and in the Nov 8 schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-nepomucene-guttenberg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Croatian"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 3,
+          "said": "St. John's / Sunday November 15 10.15 ... Sunday November 22 10:15"
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 1,
+          "said": "10:15am CROATIAN St. John"
+        }
+      ],
+      "rationale": "R1, R35: printed for both Sundays in the newest intentions and in the Nov 8 schedule box, in Croatian.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-nepomucene-guttenberg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "14:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 3,
+          "said": "St. John's / Sunday November 15 2.00 ... Sunday November 22 2.00"
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 1,
+          "said": "2:00pm St. Juan Nepomuceno"
+        }
+      ],
+      "rationale": "R1, R35: printed for both Sundays in the newest intentions and in the Nov 8 Spanish Sunday schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-libera-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 4,
+          "said": "Our Lady of Libera / Sunday November 15 10:00"
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 1,
+          "said": "Sunday Masses in English 10:00am ~Our Lady of Libera"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 4,
+          "said": "10:00am O.L. Libera, English"
+        }
+      ],
+      "rationale": "R1, R35: in the newest Libera intentions and giving list and the Nov 8 schedule box and intentions (Sunday November 8 10:00).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s35",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-libera-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 4,
+          "said": "Our Lady of Libera / Sunday November 15 12:00"
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 1,
+          "said": "12:00pm , Nuestra Señora de la Libera"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 4,
+          "said": "12:00noon O.L. Libera, Español"
+        }
+      ],
+      "rationale": "R1, R35: in the newest Libera intentions and giving list and the Nov 8 schedule box and intentions (Sunday November 8 12:00).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s36",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-west-new-york",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "17:45",
+        "end_time": "18:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.holyredeemer-wny.org/",
+          "said": "Confessions Fridays/Viernes: 5:45 PM -6:45 PM, St Mary's",
+          "schedule_check": {
+            "checked_at": "2026-11-20T09:17:42Z",
+            "current_because": "Homepage fetched 2026-11-20 gives the same pastor-era schedule as the Nov 8, 2026 bulletin's printed box word for word; the 2021 copyright is only the footer.",
+            "bulletin": "b2e5e5e0",
+            "fits_because": "The newest bulletin (Nov 15) carries the identical schedule box in its page-1 text layer, hidden under an Advent retreat cover image, and announces no change; its visible intentions confirm the rest of the box unchanged."
+          }
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 1,
+          "said": "Confessions~Confesiones St. Mary's Fridays~Viernes 5.45pm - 6.45pm"
+        }
+      ],
+      "rationale": "R6: the newest issue's visible pages omit the schedule box (its cover image covers page 1); the parish homepage gives Fridays 5:45-6:45 PM at St. Mary's (Our Lady Help of Christians), matching the Nov 8 bulletin's box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s37",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-libera-west-new-york",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "14:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.holyredeemer-wny.org/",
+          "said": "Saturdays/Sabados: 1:00 PM - 2:00 PM, Our Lady of Libera",
+          "schedule_check": {
+            "checked_at": "2026-11-20T09:17:42Z",
+            "current_because": "Homepage fetched 2026-11-20 gives the same pastor-era schedule as the Nov 8, 2026 bulletin's printed box word for word; the 2021 copyright is only the footer.",
+            "bulletin": "b2e5e5e0",
+            "fits_because": "The newest bulletin (Nov 15) carries the identical schedule box in its page-1 text layer, hidden under an Advent retreat cover image, and announces no change; its visible intentions confirm the rest of the box unchanged."
+          }
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 1,
+          "said": "Libera Saturdays ~ Sabados 1.00pm ~2.00pm"
+        }
+      ],
+      "rationale": "R6: the newest issue's visible pages omit the schedule box; the parish homepage gives Saturdays 1-2 PM at Our Lady of Libera, matching the Nov 8 bulletin's box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s38",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-west-new-york",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "18:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.holyredeemer-wny.org/",
+          "said": "Thursday/Jueves: 3:00 PM - 6:45 PM, St. Mary's",
+          "schedule_check": {
+            "checked_at": "2026-11-20T09:17:42Z",
+            "current_because": "Homepage fetched 2026-11-20 gives the same pastor-era schedule as the Nov 8, 2026 bulletin's printed box word for word; the 2021 copyright is only the footer.",
+            "bulletin": "b2e5e5e0",
+            "fits_because": "The newest bulletin (Nov 15) carries the identical schedule box in its page-1 text layer, hidden under an Advent retreat cover image, and announces no change; its visible intentions confirm the rest of the box unchanged."
+          }
+        },
+        {
+          "source": "agent",
+          "bulletin": "218ca67e",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament every Thursday from 3.00pm till 6.45pm , St. Mary's"
+        }
+      ],
+      "rationale": "R6: the newest issue's visible pages omit the page-1 Adoration banner; the parish homepage gives Thursday 3:00-6:45 PM at St. Mary's (Our Lady Help of Christians), matching the Nov 8 bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s39",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b2e5e5e0",
+          "page": 4,
+          "said": "Morning Prayer. Starting Monday November 23rd at 6.00am in St Mary's"
+        }
+      ],
+      "rationale": "R24: Advent Morning Prayer is not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
