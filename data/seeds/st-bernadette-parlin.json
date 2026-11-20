@@ -1,0 +1,479 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-bernadette-parlin",
+  "status": "ready",
+  "as_of": "2026-11-15T16:19:34Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T03:16:10Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, St. Bernadette, Parlin. Saturday 5 PM vigil, Sunday 8:30/10/11:30, weekdays Mon-Fri 8:30 AM and Saturday confession 4-4:30 PM agree in both bulletins read (Nov 8 and Nov 15, 2026); plus a dated 7 PM Immaculate Conception Mass on Dec 8. No open questions; no stored history.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "5306eb440666caa15dddaeb1b785ded45b2516ed09a413ae980d61c5bc7b280d",
+      "fetched_at": "2026-11-15T16:19:34Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "6da9c3ec822bce3c74455c7d24185186f717b1400e986b9faf01d8c35ec160b1",
+      "fetched_at": "2026-11-08T15:44:18Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-parlin",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5306eb44",
+          "page": 1,
+          "said": "WEEKEND MASSES Saturday | 5:00pm Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6da9c3ec",
+          "page": 1,
+          "said": "WEEKEND MASSES Saturday | 5:00pm Vigil"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read; the intentions list a 5:00 pm Mass each weekend.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-parlin",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5306eb44",
+          "page": 1,
+          "said": "WEEKEND MASSES Sunday | 8:30am, 10:00am, 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6da9c3ec",
+          "page": 1,
+          "said": "WEEKEND MASSES Sunday | 8:30am, 10:00am, 11:30am"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read and matched by the weekend intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-parlin",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5306eb44",
+          "page": 1,
+          "said": "WEEKEND MASSES Sunday | 8:30am, 10:00am, 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6da9c3ec",
+          "page": 1,
+          "said": "WEEKEND MASSES Sunday | 8:30am, 10:00am, 11:30am"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read and matched by the weekend intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-parlin",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5306eb44",
+          "page": 1,
+          "said": "WEEKEND MASSES Sunday | 8:30am, 10:00am, 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6da9c3ec",
+          "page": 1,
+          "said": "WEEKEND MASSES Sunday | 8:30am, 10:00am, 11:30am"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read and matched by the weekend intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-parlin",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5306eb44",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday | 8:30am (Mass and Novena)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6da9c3ec",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday | 8:30am (Mass and Novena)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the Novena that follows is a devotion POLICY leaves out (R24), so no note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-parlin",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5306eb44",
+          "page": 1,
+          "said": "WEEKDAY MASSES Tuesday- Friday | 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6da9c3ec",
+          "page": 1,
+          "said": "WEEKDAY MASSES Tuesday- Friday | 8:30am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and matched by the weekday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-parlin",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5306eb44",
+          "page": 1,
+          "said": "WEEKDAY MASSES Tuesday- Friday | 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6da9c3ec",
+          "page": 1,
+          "said": "WEEKDAY MASSES Tuesday- Friday | 8:30am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and matched by the weekday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-parlin",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5306eb44",
+          "page": 1,
+          "said": "WEEKDAY MASSES Tuesday- Friday | 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6da9c3ec",
+          "page": 1,
+          "said": "WEEKDAY MASSES Tuesday- Friday | 8:30am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and matched by the weekday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-parlin",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5306eb44",
+          "page": 1,
+          "said": "WEEKDAY MASSES Tuesday- Friday | 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6da9c3ec",
+          "page": 1,
+          "said": "WEEKDAY MASSES Tuesday- Friday | 8:30am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and matched by the weekday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-parlin",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5306eb44",
+          "page": 1,
+          "said": "RECONCILIATION Saturday | 4:00pm - 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6da9c3ec",
+          "page": 1,
+          "said": "RECONCILIATION Saturday | 4:00pm - 4:30pm"
+        }
+      ],
+      "rationale": "R1: the schedule box lists RECONCILIATION as its third heading, and its third group of lines is 'Saturday | 4:00pm - 4:30pm / Other | Upon request', the same in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5306eb44",
+          "page": 1,
+          "said": "RECONCILIATION Other | Upon request"
+        }
+      ],
+      "rationale": "R26: confession on request has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-parlin",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception, Holy Day of Obligation"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5306eb44",
+          "page": 3,
+          "said": "Masses for the Feast of the Immaculate Conception will be celebrated on Tuesday, December 8th at 8:30am and 7:00pm."
+        }
+      ],
+      "rationale": "R1, R16: a dated holy-day Mass outside the weekly schedule, after as_of. The 8:30am Mass that day is the weekly Tuesday 8:30 slot and is not duplicated (POLICY, Weekly or dated, rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5306eb44",
+          "page": 2,
+          "said": "Sat., Nov. 21 (The Presentation of the Blessed Virgin Mary) No 8:30 am Mass"
+        }
+      ],
+      "rationale": "R17, R39: the parish has no Saturday 8:30 Mass (schedule box: weekday Masses Monday-Friday); the same 'No 8:30 am Mass' line appears for Saturday Nov. 15 in the Nov. 8 issue, so it is a template note in the intentions, and there is no weekly slot to cancel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
