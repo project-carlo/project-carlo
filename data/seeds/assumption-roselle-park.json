@@ -1,0 +1,669 @@
+{
+  "schema_version": 1,
+  "parish_slug": "assumption-roselle-park",
+  "status": "ready",
+  "as_of": "2026-11-15T16:52:32Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T08:47:20Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. The page 1 SACRAMENTS box gives the same Mass and Confession schedule in both bulletins read (Nov 8 and Nov 15, 2026), matched by the weekly intentions. The only dated item is Nocturnal Adoration on Nov 21-22 (Christ the King) after the Saturday 5:00 PM Mass. No history stored; no open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "ff7e098e106b3a0ccbca2041d413c2ef39a574a8ee94daeacf6c5e382c7e1bc1",
+      "fetched_at": "2026-11-15T16:52:32Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "27d07d05211adda7cc3d9302f1fcf2e2a0d293e76dfe3f6ecc0b94e10f71207f",
+      "fetched_at": "2026-11-08T16:01:34Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-roselle-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ff7e098e",
+          "page": 1,
+          "said": "Saturday (anticipated): 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27d07d05",
+          "page": 1,
+          "said": "Saturday (anticipated): 5:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 SACRAMENTS box of both bulletins read; the intentions (p2) list the 5:00 PM anticipated Mass each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-roselle-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ff7e098e",
+          "page": 1,
+          "said": "Sunday: 8:00 AM; 10:30 AM; 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27d07d05",
+          "page": 1,
+          "said": "Sunday: 8:00 AM; 10:30 AM; 12:00PM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 SACRAMENTS box of both bulletins read; the intentions (p2) list all three Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-roselle-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ff7e098e",
+          "page": 1,
+          "said": "Sunday: 8:00 AM; 10:30 AM; 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27d07d05",
+          "page": 1,
+          "said": "Sunday: 8:00 AM; 10:30 AM; 12:00PM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 SACRAMENTS box of both bulletins read; the intentions (p2) list all three Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-roselle-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ff7e098e",
+          "page": 1,
+          "said": "Sunday: 8:00 AM; 10:30 AM; 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27d07d05",
+          "page": 1,
+          "said": "Sunday: 8:00 AM; 10:30 AM; 12:00PM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 SACRAMENTS box of both bulletins read; the intentions (p2) list all three Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-roselle-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ff7e098e",
+          "page": 1,
+          "said": "Monday-Saturday: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27d07d05",
+          "page": 1,
+          "said": "Monday-Saturday: 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 SACRAMENTS box of both bulletins read; the intentions (p2) list an 8:00 AM Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-roselle-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ff7e098e",
+          "page": 1,
+          "said": "Monday-Saturday: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27d07d05",
+          "page": 1,
+          "said": "Monday-Saturday: 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 SACRAMENTS box of both bulletins read; the intentions (p2) list an 8:00 AM Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-roselle-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ff7e098e",
+          "page": 1,
+          "said": "Monday-Saturday: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27d07d05",
+          "page": 1,
+          "said": "Monday-Saturday: 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 SACRAMENTS box of both bulletins read; the intentions (p2) list an 8:00 AM Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-roselle-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ff7e098e",
+          "page": 1,
+          "said": "Monday-Saturday: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27d07d05",
+          "page": 1,
+          "said": "Monday-Saturday: 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 SACRAMENTS box of both bulletins read; the intentions (p2) list an 8:00 AM Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-roselle-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ff7e098e",
+          "page": 1,
+          "said": "Monday-Saturday: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27d07d05",
+          "page": 1,
+          "said": "Monday-Saturday: 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 SACRAMENTS box of both bulletins read; the intentions (p2) list an 8:00 AM Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-roselle-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ff7e098e",
+          "page": 1,
+          "said": "Monday-Saturday: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27d07d05",
+          "page": 1,
+          "said": "Monday-Saturday: 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 SACRAMENTS box of both bulletins read; the intentions (p2) list an 8:00 AM Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-roselle-park",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "07:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ff7e098e",
+          "page": 1,
+          "said": "PENANCE & RECONCILIATION: Monday-Thursday & Saturday: 7:30-7:50 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27d07d05",
+          "page": 1,
+          "said": "PENANCE & RECONCILIATION: Monday-Thursday & Saturday: 7:30-7:50 AM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 SACRAMENTS box of both bulletins read. No Friday morning confession is listed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-roselle-park",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "07:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ff7e098e",
+          "page": 1,
+          "said": "PENANCE & RECONCILIATION: Monday-Thursday & Saturday: 7:30-7:50 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27d07d05",
+          "page": 1,
+          "said": "PENANCE & RECONCILIATION: Monday-Thursday & Saturday: 7:30-7:50 AM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 SACRAMENTS box of both bulletins read. No Friday morning confession is listed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-roselle-park",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "07:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ff7e098e",
+          "page": 1,
+          "said": "PENANCE & RECONCILIATION: Monday-Thursday & Saturday: 7:30-7:50 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27d07d05",
+          "page": 1,
+          "said": "PENANCE & RECONCILIATION: Monday-Thursday & Saturday: 7:30-7:50 AM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 SACRAMENTS box of both bulletins read. No Friday morning confession is listed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-roselle-park",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "07:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ff7e098e",
+          "page": 1,
+          "said": "PENANCE & RECONCILIATION: Monday-Thursday & Saturday: 7:30-7:50 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27d07d05",
+          "page": 1,
+          "said": "PENANCE & RECONCILIATION: Monday-Thursday & Saturday: 7:30-7:50 AM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 SACRAMENTS box of both bulletins read. No Friday morning confession is listed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-roselle-park",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "07:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ff7e098e",
+          "page": 1,
+          "said": "PENANCE & RECONCILIATION: Monday-Thursday & Saturday: 7:30-7:50 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27d07d05",
+          "page": 1,
+          "said": "PENANCE & RECONCILIATION: Monday-Thursday & Saturday: 7:30-7:50 AM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 SACRAMENTS box of both bulletins read. No Friday morning confession is listed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-roselle-park",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:40",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ff7e098e",
+          "page": 1,
+          "said": "Saturday afternoon: 4:00-4:40 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27d07d05",
+          "page": 1,
+          "said": "Saturday afternoon: 4:00-4:40 PM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 SACRAMENTS box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-roselle-park",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Nocturnal Adoration overnight, ends with Benediction at 7:30 AM Sunday"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ff7e098e",
+          "page": 5,
+          "said": "NOCTURNAL ADORATION November 21-22 – Feast of Christ the King. Adoration begins after the 5:00 PM Mass on Saturday evening. Adoration ends with Benediction at 7:30 AM"
+        }
+      ],
+      "rationale": "R1, R10, R16: a dated overnight Adoration after the Saturday 5:00 PM Mass; POLICY, Times puts 'after' a weekend Mass at 1 hour after its start, 6:00 PM. It ends at 7:30 AM the next morning, which a same-date end_time cannot express, so end_time is null and the note gives the end and the Benediction. Date is after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
