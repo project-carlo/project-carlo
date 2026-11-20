@@ -1,0 +1,990 @@
+{
+  "schema_version": 1,
+  "parish_slug": "sacred-heart-bloomfield",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:23:30Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T22:13:32Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (Sacred Heart, Bloomfield). Both bulletins read (Nov 8 and Nov 15, 2026) print the same standing schedule: daily 8 AM Mon-Sat, Mon/Wed 12:10 PM, Sat 5 PM vigil, Sun 8:30, 10:30, 12:30 Spanish, Sat confession 11-12, and Holy Hours on 1st Fri 7 PM, 2nd Sun 1:30 PM, 3rd Tue 7 PM (Spanish). Thanksgiving dated Masses included; open: whether the Nov 27 8 AM Mass is replaced by the listed 9 AM Mass.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "bc295a1df1152c0f126dfe5f9ae1c7cbe0bf6de82857a1f82c108c65e6608df1",
+      "fetched_at": "2026-11-15T16:23:30Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "655a53e9318ec883de892797e4422e5f667a7c0a4bacc91732126e76c405fab0",
+      "fetched_at": "2026-11-08T15:47:37Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-bloomfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc295a1d",
+          "page": 6,
+          "said": "Daily Mon-Sat 8:00am except Holidays 9am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "655a53e9",
+          "page": 6,
+          "said": "Daily Mon-Sat 8:00am except Holidays 9am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "bc295a1d",
+          "page": 1,
+          "said": "Daily Mass Mon-Sat 8:00am except Holidays 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "655a53e9",
+          "page": 1,
+          "said": "Daily Mass Mon-Sat 8:00am except Holidays 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Regular Mass Times box (p6) and the masthead (p1) of both bulletins read; the intentions list 8:00 am every weekday. Holiday 9 AM Masses are dated (below).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-bloomfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc295a1d",
+          "page": 6,
+          "said": "Daily Mon-Sat 8:00am except Holidays 9am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "655a53e9",
+          "page": 6,
+          "said": "Daily Mon-Sat 8:00am except Holidays 9am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "bc295a1d",
+          "page": 1,
+          "said": "Daily Mass Mon-Sat 8:00am except Holidays 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "655a53e9",
+          "page": 1,
+          "said": "Daily Mass Mon-Sat 8:00am except Holidays 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Regular Mass Times box (p6) and the masthead (p1) of both bulletins read; the intentions list 8:00 am every weekday. Holiday 9 AM Masses are dated (below).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-bloomfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc295a1d",
+          "page": 6,
+          "said": "Daily Mon-Sat 8:00am except Holidays 9am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "655a53e9",
+          "page": 6,
+          "said": "Daily Mon-Sat 8:00am except Holidays 9am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "bc295a1d",
+          "page": 1,
+          "said": "Daily Mass Mon-Sat 8:00am except Holidays 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "655a53e9",
+          "page": 1,
+          "said": "Daily Mass Mon-Sat 8:00am except Holidays 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Regular Mass Times box (p6) and the masthead (p1) of both bulletins read; the intentions list 8:00 am every weekday. Holiday 9 AM Masses are dated (below).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-bloomfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc295a1d",
+          "page": 6,
+          "said": "Daily Mon-Sat 8:00am except Holidays 9am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "655a53e9",
+          "page": 6,
+          "said": "Daily Mon-Sat 8:00am except Holidays 9am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "bc295a1d",
+          "page": 1,
+          "said": "Daily Mass Mon-Sat 8:00am except Holidays 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "655a53e9",
+          "page": 1,
+          "said": "Daily Mass Mon-Sat 8:00am except Holidays 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Regular Mass Times box (p6) and the masthead (p1) of both bulletins read; the intentions list 8:00 am every weekday. Holiday 9 AM Masses are dated (below).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-bloomfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc295a1d",
+          "page": 6,
+          "said": "Daily Mon-Sat 8:00am except Holidays 9am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "655a53e9",
+          "page": 6,
+          "said": "Daily Mon-Sat 8:00am except Holidays 9am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "bc295a1d",
+          "page": 1,
+          "said": "Daily Mass Mon-Sat 8:00am except Holidays 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "655a53e9",
+          "page": 1,
+          "said": "Daily Mass Mon-Sat 8:00am except Holidays 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Regular Mass Times box (p6) and the masthead (p1) of both bulletins read; the intentions list 8:00 am every weekday. Holiday 9 AM Masses are dated (below).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-bloomfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc295a1d",
+          "page": 6,
+          "said": "Daily Mon-Sat 8:00am except Holidays 9am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "655a53e9",
+          "page": 6,
+          "said": "Daily Mon-Sat 8:00am except Holidays 9am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "bc295a1d",
+          "page": 1,
+          "said": "Daily Mass Mon-Sat 8:00am except Holidays 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "655a53e9",
+          "page": 1,
+          "said": "Daily Mass Mon-Sat 8:00am except Holidays 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Regular Mass Times box (p6) and the masthead (p1) of both bulletins read; the intentions list 8:00 am every weekday. Holiday 9 AM Masses are dated (below).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-bloomfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc295a1d",
+          "page": 6,
+          "said": "Mon. & Wed. 12:10pm excluding Holidays."
+        },
+        {
+          "source": "agent",
+          "bulletin": "655a53e9",
+          "page": 6,
+          "said": "Mon. & Wed. 12:10pm excluding Holidays."
+        },
+        {
+          "source": "agent",
+          "bulletin": "bc295a1d",
+          "page": 2,
+          "said": "Monday, November 16 ... 12:10 pm: Kathleen Lynch; Wednesday, November 18 ... 12:10 pm: Arceli Cortez"
+        }
+      ],
+      "rationale": "R1: printed in the Regular Mass Times box of both bulletins and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-bloomfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc295a1d",
+          "page": 6,
+          "said": "Mon. & Wed. 12:10pm excluding Holidays."
+        },
+        {
+          "source": "agent",
+          "bulletin": "655a53e9",
+          "page": 6,
+          "said": "Mon. & Wed. 12:10pm excluding Holidays."
+        },
+        {
+          "source": "agent",
+          "bulletin": "bc295a1d",
+          "page": 2,
+          "said": "Monday, November 16 ... 12:10 pm: Kathleen Lynch; Wednesday, November 18 ... 12:10 pm: Arceli Cortez"
+        }
+      ],
+      "rationale": "R1: printed in the Regular Mass Times box of both bulletins and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-bloomfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc295a1d",
+          "page": 6,
+          "said": "Saturday Vigil 5pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "655a53e9",
+          "page": 6,
+          "said": "Saturday Vigil 5pm."
+        }
+      ],
+      "rationale": "R1: printed in the Regular Mass Times box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-bloomfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc295a1d",
+          "page": 6,
+          "said": "Sundays 8:30am; 10:30am; 12:30pm Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "655a53e9",
+          "page": 6,
+          "said": "Sundays 8:30am; 10:30am; 12:30pm Spanish"
+        }
+      ],
+      "rationale": "R1: printed in the Regular Mass Times box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-bloomfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc295a1d",
+          "page": 6,
+          "said": "Sundays 8:30am; 10:30am; 12:30pm Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "655a53e9",
+          "page": 6,
+          "said": "Sundays 8:30am; 10:30am; 12:30pm Spanish"
+        }
+      ],
+      "rationale": "R1: printed in the Regular Mass Times box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-bloomfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc295a1d",
+          "page": 6,
+          "said": "Sundays 8:30am; 10:30am; 12:30pm Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "655a53e9",
+          "page": 6,
+          "said": "Sundays 8:30am; 10:30am; 12:30pm Spanish"
+        }
+      ],
+      "rationale": "R1: printed in the Regular Mass Times box of both bulletins; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-bloomfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc295a1d",
+          "page": 6,
+          "said": "Reconciliations: Saturdays 11am-12pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "655a53e9",
+          "page": 6,
+          "said": "Reconciliations: Saturdays 11am-12pm"
+        }
+      ],
+      "rationale": "R1: printed in the Regular Mass Times box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-bloomfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour, Sacred Heart devotion"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc295a1d",
+          "page": 6,
+          "said": "Holy Hour / Hora Santa 1st Friday of the month 7:00pm SH devotion"
+        },
+        {
+          "source": "agent",
+          "bulletin": "655a53e9",
+          "page": 6,
+          "said": "Holy Hour / Hora Santa 1st Friday of the month 7:00pm SH devotion"
+        }
+      ],
+      "rationale": "R1: the standing Holy Hour box in both bulletins names the week; POLICY counts a Holy Hour as Adoration (no end time given). One-church parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-bloomfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc295a1d",
+          "page": 6,
+          "said": "Holy Hour / Hora Santa ... 2nd Sunday 1:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "655a53e9",
+          "page": 6,
+          "said": "Holy Hour / Hora Santa ... 2nd Sunday 1:30pm"
+        }
+      ],
+      "rationale": "R1: the standing Holy Hour box in both bulletins names the week; POLICY counts a Holy Hour as Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-bloomfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour, Spanish"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc295a1d",
+          "page": 6,
+          "said": "Holy Hour / Hora Santa ... 3rd Tuesday 7pm Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "655a53e9",
+          "page": 6,
+          "said": "Holy Hour / Hora Santa ... 3rd Tuesday 7pm Spanish"
+        }
+      ],
+      "rationale": "R1: the standing Holy Hour box in both bulletins names the week; POLICY counts a Holy Hour as Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-bloomfield",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-25",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Vigil"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc295a1d",
+          "page": 6,
+          "said": "Nov 25: Vigil Mass for Thanksgiving 7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "655a53e9",
+          "page": 6,
+          "said": "Nov 25: Vigil Mass for Thanksgiving 7pm"
+        }
+      ],
+      "rationale": "R1, R16: dated Mass on or after as_of, printed in both bulletins' calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-bloomfield",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc295a1d",
+          "page": 6,
+          "said": "Nov 26: Thanksgiving Day 9am Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "655a53e9",
+          "page": 6,
+          "said": "Nov 26: Thanksgiving Day 9am Mass."
+        }
+      ],
+      "rationale": "R1, R16: dated holiday Mass on or after as_of; the regular schedule says holidays have 9am instead of 8am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-bloomfield",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc295a1d",
+          "page": 6,
+          "said": "Daily Mon-Sat 8:00am except Holidays 9am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "bc295a1d",
+          "page": 6,
+          "said": "Nov 26: Thanksgiving Day 9am Mass."
+        }
+      ],
+      "rationale": "R16, R40: the standing line itself moves the 8am Mass to 9am on holidays, and Thanksgiving is a holiday, so the 8:00 AM occurrence is replaced by the dated 9:00 AM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-bloomfield",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Day after Thanksgiving"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc295a1d",
+          "page": 6,
+          "said": "Nov 27: Day after Thanksgiving, 9am Mass. The office is closed."
+        }
+      ],
+      "rationale": "R1, R16: dated Mass on or after as_of, printed only in the newest bulletin's calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc295a1d",
+          "page": 6,
+          "said": "Nov 27: Day after Thanksgiving, 9am Mass. The office is closed."
+        },
+        {
+          "source": "agent",
+          "bulletin": "bc295a1d",
+          "page": 6,
+          "said": "Daily Mon-Sat 8:00am except Holidays 9am."
+        }
+      ],
+      "rationale": "R17 vs R40: the bulletin does not say the 8am is cancelled, but its standing rule moves 8am to 9am on holidays and it treats Nov 27 like one (9am Mass, office closed). Veterans Day (Nov 11) kept 8:00 in the intentions, so 'holiday' is not every civic day. Leaning cancel, as two weekday Masses an hour apart is unlikely.",
+      "question": "Cancel the regular Friday 8:00 AM Mass on Nov 27 (day after Thanksgiving), when the bulletin lists a 9am Mass?",
+      "options": [
+        {
+          "label": "Cancel 8 AM on Nov 27",
+          "entry": {
+            "church_slug": "sacred-heart-bloomfield",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-27",
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Day after Thanksgiving"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Keep it (no cancellation)",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc295a1d",
+          "page": 6,
+          "said": "Rosary OLPH Devotion Wednesday after the 8:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "655a53e9",
+          "page": 6,
+          "said": "Rosary OLPH Devotion Wednesday after the 8:00 am Mass"
+        }
+      ],
+      "rationale": "R24: a Rosary / Our Lady of Perpetual Help devotion is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc295a1d",
+          "page": 4,
+          "said": "We meet on the First Saturday of each month Immediately after 8:00 a.m. Mass ... we recite the Holy Rosary"
+        }
+      ],
+      "rationale": "R24: the Rosary Society's First Saturday rosary is a devotion.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc295a1d",
+          "page": 6,
+          "said": "Church is open daily for prayer until 3pm Excluding Holidays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "655a53e9",
+          "page": 6,
+          "said": "Church is open daily for prayer until 3pm Excluding Holidays"
+        }
+      ],
+      "rationale": "R38: a church open for prayer is not an Adoration schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
