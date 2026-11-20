@@ -1,0 +1,654 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-anthony-of-padua-port-reading",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:50:54Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T03:04:08Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches (St. Anthony, Port Reading; Our Lady of Mount Carmel, Woodbridge). Mass and Confession times are identical in the page-1 schedule box of both bulletins (Nov 8 and Nov 15, 2026) and match the homepage; Thursday 2:30-6:00 PM Adoration in St. Anthony's chapel is in both weeks' calendars and on the homepage. Open: a website-only 8:30 AM Mass on Friday Nov 27.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "bfd1d0364c32ec180356a7a44083994bfa785ba51db4ae1fc2a2f8bd5183cb24",
+      "fetched_at": "2026-11-15T16:50:54Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "34443e65a6bb15113671a2eea3e660a2c5668ae21707c80f3abbc465407b0050",
+      "fetched_at": "2026-11-08T15:59:25Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-port-reading",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bfd1d036",
+          "page": 1,
+          "said": "Monday - Friday | 7:30am (St. Anthony)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "34443e65",
+          "page": 1,
+          "said": "Monday - Friday | 7:30am (St. Anthony)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bfd1d036",
+          "page": 2,
+          "said": "Monday - November 16 ... 7:30am (and each weekday Nov 16-20)"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass schedule box of both bulletins read; the intentions list a 7:30am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-port-reading",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bfd1d036",
+          "page": 1,
+          "said": "Monday - Friday | 7:30am (St. Anthony)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "34443e65",
+          "page": 1,
+          "said": "Monday - Friday | 7:30am (St. Anthony)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bfd1d036",
+          "page": 2,
+          "said": "Monday - November 16 ... 7:30am (and each weekday Nov 16-20)"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass schedule box of both bulletins read; the intentions list a 7:30am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-port-reading",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bfd1d036",
+          "page": 1,
+          "said": "Monday - Friday | 7:30am (St. Anthony)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "34443e65",
+          "page": 1,
+          "said": "Monday - Friday | 7:30am (St. Anthony)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bfd1d036",
+          "page": 2,
+          "said": "Monday - November 16 ... 7:30am (and each weekday Nov 16-20)"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass schedule box of both bulletins read; the intentions list a 7:30am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-port-reading",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bfd1d036",
+          "page": 1,
+          "said": "Monday - Friday | 7:30am (St. Anthony)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "34443e65",
+          "page": 1,
+          "said": "Monday - Friday | 7:30am (St. Anthony)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bfd1d036",
+          "page": 2,
+          "said": "Monday - November 16 ... 7:30am (and each weekday Nov 16-20)"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass schedule box of both bulletins read; the intentions list a 7:30am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-port-reading",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bfd1d036",
+          "page": 1,
+          "said": "Monday - Friday | 7:30am (St. Anthony)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "34443e65",
+          "page": 1,
+          "said": "Monday - Friday | 7:30am (St. Anthony)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bfd1d036",
+          "page": 2,
+          "said": "Monday - November 16 ... 7:30am (and each weekday Nov 16-20)"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass schedule box of both bulletins read; the intentions list a 7:30am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-woodbridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bfd1d036",
+          "page": 1,
+          "said": "Saturday | 8:30am (OLMC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "34443e65",
+          "page": 1,
+          "said": "Saturday | 8:30am (OLMC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bfd1d036",
+          "page": 2,
+          "said": "Saturday -November 21 8:30am ... (OLMC Mass)"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-port-reading",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bfd1d036",
+          "page": 1,
+          "said": "Saturday | 4:00pm (St. Anthony)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "34443e65",
+          "page": 1,
+          "said": "Saturday | 4:00pm (St. Anthony)"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-port-reading",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bfd1d036",
+          "page": 1,
+          "said": "Sunday | 8:30am, 11:30am (St. Anthony)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "34443e65",
+          "page": 1,
+          "said": "Sunday | 8:30am, 11:30am (St. Anthony)"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-port-reading",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bfd1d036",
+          "page": 1,
+          "said": "Sunday | 8:30am, 11:30am (St. Anthony)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "34443e65",
+          "page": 1,
+          "said": "Sunday | 8:30am, 11:30am (St. Anthony)"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-woodbridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bfd1d036",
+          "page": 1,
+          "said": "Sunday |10:00am (OLMC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "34443e65",
+          "page": 1,
+          "said": "Sunday |10:00am (OLMC)"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-woodbridge",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bfd1d036",
+          "page": 1,
+          "said": "CONFESSION Saturday | 9:00am - 9:30am (OLMC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "34443e65",
+          "page": 1,
+          "said": "CONFESSION Saturday | 9:00am - 9:30am (OLMC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bfd1d036",
+          "page": 7,
+          "said": "Saturday - November 21 9:00am | Confession |OMLC"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Confession box of both bulletins read; the week-ahead calendar agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-port-reading",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bfd1d036",
+          "page": 1,
+          "said": "CONFESSION Saturday | 3:00pm - 3:30pm (St. Anthony)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "34443e65",
+          "page": 1,
+          "said": "CONFESSION Saturday | 3:00pm - 3:30pm (St. Anthony)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bfd1d036",
+          "page": 7,
+          "said": "Saturday - November 21 3:00pm | Confession |Church"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Confession box of both bulletins read; the week-ahead calendar agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-port-reading",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "14:30",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bfd1d036",
+          "page": 7,
+          "said": "Thursday - November 19 2:30pm - 6:00pm| Eucharist Adoration |Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "34443e65",
+          "page": 7,
+          "said": "Thursday - November 12 2:30pm - 6:00pm| Eucharist Adoration |Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintanthonypadua.org/",
+          "said": "Saint Anthony of Padua Church ... Eucharistic Adoration: Thursdays 2:30pm - 6pm"
+        }
+      ],
+      "rationale": "R35: the same Thursday 2:30-6:00pm Adoration is in the week-ahead calendar of two consecutive weeks, not marked special. R6/R21: the homepage lists it weekly under Saint Anthony of Padua Church, whose chapel also holds the daily Mass ('Daily: 7:30am in Chapel'), so the 'Chapel' is St. Anthony's own.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bfd1d036",
+          "page": 1,
+          "said": "Other | By Appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.saintanthonypadua.org/",
+          "said": "Daily: 7:30am in Chapel (8:30am on Civil Holidays"
+        }
+      ],
+      "rationale": "R17, POLICY Dates: the homepage's civil-holiday 8:30am rule names no date and neither bulletin prints a Thanksgiving (Nov 26) time; no dated Mass is projected. Update mode will read the next bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.saintanthonypadua.org/",
+          "said": "Monthly Rosary- Friday, November 27 following 8:30am Mass note time change"
+        }
+      ],
+      "rationale": "R29/R43-style: the time is only mentioned in passing on the homepage, and neither bulletin prints a November 27 Mass time. Leaning leave out: a wrong time is worse than a missing one, and the Nov 22 bulletin, which update mode reads, should print it. R17: no cancellation of the 7:30 Mass is stated either way.",
+      "question": "Add a dated 8:30 AM Mass at St. Anthony on Friday, November 27 (website only)?",
+      "options": [
+        {
+          "label": "Friday Nov 27 8:30 AM",
+          "entry": {
+            "church_slug": "st-anthony-of-padua-port-reading",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-27",
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    }
+  ]
+}
