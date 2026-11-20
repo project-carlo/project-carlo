@@ -1,0 +1,1054 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-mount-carmel-jersey-city",
+  "status": "ready",
+  "as_of": "2026-11-15T16:53:06Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T21:09:04Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (99 Broadway); since May 10, 2026 all Masses are held in the Parish Hall during church repairs. Both bulletins read (Nov 8 and Nov 15, 2026, image-only) print the same schedule: Sat 5 PM, Sun 9 AM and 11:15 AM Spanish, Mon-Sat 8:30 AM, Tue/Thu 6:30 PM Spanish, daily Adoration 9-11 AM, and Confession after weekday Masses and Saturday 4:30 PM. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "bacca1ba934f9ff33f566743db71625e0dd7cb3fe04c12e8b259a98c46d8dea8",
+      "fetched_at": "2026-11-15T16:53:06Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "73759c42601721effb9e62fe61eae91a85d0dc50cf35dfe63e74ace3a8f1c07d",
+      "fetched_at": "2026-11-08T16:02:04Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Parish Hall during church repairs"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bacca1ba",
+          "page": 1,
+          "said": "Saturday Vigil: 5 PM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73759c42",
+          "page": 1,
+          "said": "Saturday Vigil: 5 PM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bacca1ba",
+          "page": 3,
+          "said": "Due to necessary repairs in the church building, all Masses will be held in the Parish Hall beginning: Sunday, May 10, 2026 ... Saturday (English) 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73759c42",
+          "page": 3,
+          "said": "Due to necessary repairs in the church building, all Masses will be held in the Parish Hall beginning: Sunday, May 10, 2026 ... Saturday (English) 5:00 PM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the p1 Mass Schedule box and p3 notice of both bulletins read, and in each week's intentions (p2). The p3 notice moves all Masses to the Parish Hall at the same address.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Parish Hall during church repairs"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bacca1ba",
+          "page": 1,
+          "said": "Sunday: 9:00 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73759c42",
+          "page": 1,
+          "said": "Sunday: 9:00 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bacca1ba",
+          "page": 3,
+          "said": "Sunday (English) 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73759c42",
+          "page": 3,
+          "said": "Sunday (English) 9:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the p1 Mass Schedule box, p3 notice and p2 intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish; in the Parish Hall during church repairs"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bacca1ba",
+          "page": 1,
+          "said": "11:15 AM (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73759c42",
+          "page": 1,
+          "said": "11:15 AM (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bacca1ba",
+          "page": 3,
+          "said": "Domingo (Español) 11:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73759c42",
+          "page": 3,
+          "said": "Domingo (Español) 11:15 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the p1 Mass Schedule box, p3 notice and p2 intentions (marked Spanish) of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bacca1ba",
+          "page": 1,
+          "said": "Daily Mass 8:30 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73759c42",
+          "page": 1,
+          "said": "Daily Mass 8:30 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bacca1ba",
+          "page": 2,
+          "said": "intentions list 8:30 AM Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73759c42",
+          "page": 2,
+          "said": "intentions list 8:30 AM Monday through Saturday"
+        }
+      ],
+      "rationale": "R1, R35: 'Daily Mass 8:30 AM' in the p1 box; the p2 intentions of both weeks list an 8:30 AM Mass Monday through Saturday and none on Sunday, so 'daily' means Mon-Sat.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bacca1ba",
+          "page": 1,
+          "said": "Daily Mass 8:30 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73759c42",
+          "page": 1,
+          "said": "Daily Mass 8:30 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bacca1ba",
+          "page": 2,
+          "said": "intentions list 8:30 AM Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73759c42",
+          "page": 2,
+          "said": "intentions list 8:30 AM Monday through Saturday"
+        }
+      ],
+      "rationale": "R1, R35: 'Daily Mass 8:30 AM' in the p1 box; the p2 intentions of both weeks list an 8:30 AM Mass Monday through Saturday and none on Sunday, so 'daily' means Mon-Sat.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bacca1ba",
+          "page": 1,
+          "said": "Daily Mass 8:30 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73759c42",
+          "page": 1,
+          "said": "Daily Mass 8:30 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bacca1ba",
+          "page": 2,
+          "said": "intentions list 8:30 AM Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73759c42",
+          "page": 2,
+          "said": "intentions list 8:30 AM Monday through Saturday"
+        }
+      ],
+      "rationale": "R1, R35: 'Daily Mass 8:30 AM' in the p1 box; the p2 intentions of both weeks list an 8:30 AM Mass Monday through Saturday and none on Sunday, so 'daily' means Mon-Sat.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bacca1ba",
+          "page": 1,
+          "said": "Daily Mass 8:30 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73759c42",
+          "page": 1,
+          "said": "Daily Mass 8:30 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bacca1ba",
+          "page": 2,
+          "said": "intentions list 8:30 AM Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73759c42",
+          "page": 2,
+          "said": "intentions list 8:30 AM Monday through Saturday"
+        }
+      ],
+      "rationale": "R1, R35: 'Daily Mass 8:30 AM' in the p1 box; the p2 intentions of both weeks list an 8:30 AM Mass Monday through Saturday and none on Sunday, so 'daily' means Mon-Sat.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bacca1ba",
+          "page": 1,
+          "said": "Daily Mass 8:30 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73759c42",
+          "page": 1,
+          "said": "Daily Mass 8:30 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bacca1ba",
+          "page": 2,
+          "said": "intentions list 8:30 AM Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73759c42",
+          "page": 2,
+          "said": "intentions list 8:30 AM Monday through Saturday"
+        }
+      ],
+      "rationale": "R1, R35: 'Daily Mass 8:30 AM' in the p1 box; the p2 intentions of both weeks list an 8:30 AM Mass Monday through Saturday and none on Sunday, so 'daily' means Mon-Sat.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bacca1ba",
+          "page": 1,
+          "said": "Daily Mass 8:30 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73759c42",
+          "page": 1,
+          "said": "Daily Mass 8:30 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bacca1ba",
+          "page": 2,
+          "said": "intentions list 8:30 AM Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73759c42",
+          "page": 2,
+          "said": "intentions list 8:30 AM Monday through Saturday"
+        }
+      ],
+      "rationale": "R1, R35: 'Daily Mass 8:30 AM' in the p1 box; the p2 intentions of both weeks list an 8:30 AM Mass Monday through Saturday and none on Sunday, so 'daily' means Mon-Sat.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bacca1ba",
+          "page": 1,
+          "said": "Tuesdays & Thursdays 6:30 PM (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73759c42",
+          "page": 1,
+          "said": "Tuesdays & Thursdays 6:30 PM (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bacca1ba",
+          "page": 2,
+          "said": "6:30 PM (Spanish) intentions on Tuesday and Thursday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73759c42",
+          "page": 2,
+          "said": "6:30 PM (Spanish) intentions on Tuesday and Thursday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the p1 box and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bacca1ba",
+          "page": 1,
+          "said": "Tuesdays & Thursdays 6:30 PM (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73759c42",
+          "page": 1,
+          "said": "Tuesdays & Thursdays 6:30 PM (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bacca1ba",
+          "page": 2,
+          "said": "6:30 PM (Spanish) intentions on Tuesday and Thursday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73759c42",
+          "page": 2,
+          "said": "6:30 PM (Spanish) intentions on Tuesday and Thursday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the p1 box and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-jersey-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "11:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bacca1ba",
+          "page": 1,
+          "said": "Daily Adoration to the Blessed Sacrament: 9 AM to 11 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73759c42",
+          "page": 1,
+          "said": "Daily Adoration to the Blessed Sacrament: 9 AM to 11 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both bulletins. 'Daily' read as Mon-Sat, as for the Daily Mass on the same box (intentions show daily Mass Mon-Sat); on Sunday the 9:00 AM Mass occupies the same hours, since all Masses are in the Parish Hall.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-jersey-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "11:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bacca1ba",
+          "page": 1,
+          "said": "Daily Adoration to the Blessed Sacrament: 9 AM to 11 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73759c42",
+          "page": 1,
+          "said": "Daily Adoration to the Blessed Sacrament: 9 AM to 11 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both bulletins. 'Daily' read as Mon-Sat, as for the Daily Mass on the same box (intentions show daily Mass Mon-Sat); on Sunday the 9:00 AM Mass occupies the same hours, since all Masses are in the Parish Hall.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-jersey-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "11:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bacca1ba",
+          "page": 1,
+          "said": "Daily Adoration to the Blessed Sacrament: 9 AM to 11 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73759c42",
+          "page": 1,
+          "said": "Daily Adoration to the Blessed Sacrament: 9 AM to 11 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both bulletins. 'Daily' read as Mon-Sat, as for the Daily Mass on the same box (intentions show daily Mass Mon-Sat); on Sunday the 9:00 AM Mass occupies the same hours, since all Masses are in the Parish Hall.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-jersey-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "11:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bacca1ba",
+          "page": 1,
+          "said": "Daily Adoration to the Blessed Sacrament: 9 AM to 11 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73759c42",
+          "page": 1,
+          "said": "Daily Adoration to the Blessed Sacrament: 9 AM to 11 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both bulletins. 'Daily' read as Mon-Sat, as for the Daily Mass on the same box (intentions show daily Mass Mon-Sat); on Sunday the 9:00 AM Mass occupies the same hours, since all Masses are in the Parish Hall.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-jersey-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "11:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bacca1ba",
+          "page": 1,
+          "said": "Daily Adoration to the Blessed Sacrament: 9 AM to 11 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73759c42",
+          "page": 1,
+          "said": "Daily Adoration to the Blessed Sacrament: 9 AM to 11 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both bulletins. 'Daily' read as Mon-Sat, as for the Daily Mass on the same box (intentions show daily Mass Mon-Sat); on Sunday the 9:00 AM Mass occupies the same hours, since all Masses are in the Parish Hall.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-jersey-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "11:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bacca1ba",
+          "page": 1,
+          "said": "Daily Adoration to the Blessed Sacrament: 9 AM to 11 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73759c42",
+          "page": 1,
+          "said": "Daily Adoration to the Blessed Sacrament: 9 AM to 11 AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both bulletins. 'Daily' read as Mon-Sat, as for the Daily Mass on the same box (intentions show daily Mass Mon-Sat); on Sunday the 9:00 AM Mass occupies the same hours, since all Masses are in the Parish Hall.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-jersey-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:30 AM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bacca1ba",
+          "page": 3,
+          "said": "English: Mon, Tues, & Wed after 8:30 AM Masses"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73759c42",
+          "page": 3,
+          "said": "English: Mon, Tues, & Wed after 8:30 AM Masses"
+        }
+      ],
+      "rationale": "R1, R10: printed in the p3 Reconciliation list of both bulletins; after a weekday Mass is 30 minutes after it starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-jersey-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:30 AM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bacca1ba",
+          "page": 3,
+          "said": "English: Mon, Tues, & Wed after 8:30 AM Masses"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73759c42",
+          "page": 3,
+          "said": "English: Mon, Tues, & Wed after 8:30 AM Masses"
+        }
+      ],
+      "rationale": "R1, R10: printed in the p3 Reconciliation list of both bulletins; after a weekday Mass is 30 minutes after it starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-jersey-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:30 AM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bacca1ba",
+          "page": 3,
+          "said": "English: Mon, Tues, & Wed after 8:30 AM Masses"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73759c42",
+          "page": 3,
+          "said": "English: Mon, Tues, & Wed after 8:30 AM Masses"
+        }
+      ],
+      "rationale": "R1, R10: printed in the p3 Reconciliation list of both bulletins; after a weekday Mass is 30 minutes after it starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-jersey-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish; after the 6:30 PM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bacca1ba",
+          "page": 3,
+          "said": "Spanish: Tuesdays & Thursdays after the 6:30 PM Masses"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73759c42",
+          "page": 3,
+          "said": "Spanish: Tuesdays & Thursdays after the 6:30 PM Masses"
+        }
+      ],
+      "rationale": "R1, R10: printed in the p3 Reconciliation list of both bulletins; after a weekday Mass is 30 minutes after it starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-jersey-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish; after the 6:30 PM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bacca1ba",
+          "page": 3,
+          "said": "Spanish: Tuesdays & Thursdays after the 6:30 PM Masses"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73759c42",
+          "page": 3,
+          "said": "Spanish: Tuesdays & Thursdays after the 6:30 PM Masses"
+        }
+      ],
+      "rationale": "R1, R10: printed in the p3 Reconciliation list of both bulletins; after a weekday Mass is 30 minutes after it starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-jersey-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the confessional"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bacca1ba",
+          "page": 3,
+          "said": "Saturdays at 4:30pm in the Confessionary"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73759c42",
+          "page": 3,
+          "said": "Saturdays at 4:30pm in the Confessionary"
+        }
+      ],
+      "rationale": "R1: printed in the p3 Reconciliation list of both bulletins; no end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bacca1ba",
+          "page": 3,
+          "said": "Appointments are welcome."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
