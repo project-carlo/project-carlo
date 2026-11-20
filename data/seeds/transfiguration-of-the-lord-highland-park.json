@@ -1,0 +1,768 @@
+{
+  "schema_version": 1,
+  "parish_slug": "transfiguration-of-the-lord-highland-park",
+  "status": "ready",
+  "as_of": "2026-11-15T16:20:18Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T05:13:54Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches: St. Paul the Apostle (Sunday 9:30 and 12:30 Spanish, Mon/Wed/Fri 8:00) and Guardian Angels (Sat 4:00 vigil, Sunday 8:00 and 11:00, Tue/Thu/Sat 9:00, Saturday Confession 3:00-3:30 and Adoration 9:30-noon). Both bulletins read (Nov 8 and 15, 2026) print the identical schedule box and matching intentions; no history is stored. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "4274be0b4fec4437563d8b6079b904679c3cd773238d3b879e9570d52417b04f",
+      "fetched_at": "2026-11-15T16:20:18Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "3c8b39414ea196184a444d1e23557a5fdc35678dcb2b9d5d8d74f8b8035a41d1",
+      "fetched_at": "2026-11-08T15:44:49Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-the-apostle-highland-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4274be0b",
+          "page": 1,
+          "said": "St. Paul the Apostle Church Sunday 9:30 a.m. & 12:30 p.m. (Spanish Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c8b3941",
+          "page": 1,
+          "said": "St. Paul the Apostle Church Sunday 9:30 a.m. & 12:30 p.m. (Spanish Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4274be0b",
+          "page": 2,
+          "said": "Mass intentions list 9:30 a.m. at St. Paul the Apostle Church each Sunday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c8b3941",
+          "page": 2,
+          "said": "Mass intentions list 9:30 a.m. at St. Paul the Apostle Church each Sunday"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box and intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-the-apostle-highland-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4274be0b",
+          "page": 1,
+          "said": "St. Paul the Apostle Church Sunday 9:30 a.m. & 12:30 p.m. (Spanish Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c8b3941",
+          "page": 1,
+          "said": "St. Paul the Apostle Church Sunday 9:30 a.m. & 12:30 p.m. (Spanish Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4274be0b",
+          "page": 2,
+          "said": "Mass intentions list 12:30 p.m. at St. Paul the Apostle Church each Sunday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c8b3941",
+          "page": 2,
+          "said": "Mass intentions list 12:30 p.m. at St. Paul the Apostle Church each Sunday"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box and intentions of both bulletins read; the box marks it Spanish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-the-apostle-highland-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4274be0b",
+          "page": 1,
+          "said": "St. Paul the Apostle Church ... Daily Mass: Monday, Wednesday & Friday - 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c8b3941",
+          "page": 1,
+          "said": "St. Paul the Apostle Church ... Daily Mass: Monday, Wednesday & Friday - 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4274be0b",
+          "page": 2,
+          "said": "Mass intentions: Monday, Wednesday, Friday, St. Paul the Apostle Church, 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c8b3941",
+          "page": 2,
+          "said": "Mass intentions: Monday, Wednesday, Friday, St. Paul the Apostle Church, 8:00 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-the-apostle-highland-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4274be0b",
+          "page": 1,
+          "said": "St. Paul the Apostle Church ... Daily Mass: Monday, Wednesday & Friday - 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c8b3941",
+          "page": 1,
+          "said": "St. Paul the Apostle Church ... Daily Mass: Monday, Wednesday & Friday - 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4274be0b",
+          "page": 2,
+          "said": "Mass intentions: Monday, Wednesday, Friday, St. Paul the Apostle Church, 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c8b3941",
+          "page": 2,
+          "said": "Mass intentions: Monday, Wednesday, Friday, St. Paul the Apostle Church, 8:00 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-the-apostle-highland-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4274be0b",
+          "page": 1,
+          "said": "St. Paul the Apostle Church ... Daily Mass: Monday, Wednesday & Friday - 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c8b3941",
+          "page": 1,
+          "said": "St. Paul the Apostle Church ... Daily Mass: Monday, Wednesday & Friday - 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4274be0b",
+          "page": 2,
+          "said": "Mass intentions: Monday, Wednesday, Friday, St. Paul the Apostle Church, 8:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c8b3941",
+          "page": 2,
+          "said": "Mass intentions: Monday, Wednesday, Friday, St. Paul the Apostle Church, 8:00 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "guardian-angels-edison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4274be0b",
+          "page": 1,
+          "said": "Guardian Angels Church Saturday Vigil 4:00 p.m. and Sunday 8:00 & 11:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c8b3941",
+          "page": 1,
+          "said": "Guardian Angels Church Saturday Vigil 4:00 p.m. and Sunday 8:00 & 11:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4274be0b",
+          "page": 2,
+          "said": "Mass intentions: Saturday, Guardian Angels Church, 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c8b3941",
+          "page": 2,
+          "said": "Mass intentions: Saturday, Guardian Angels Church, 4:00 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "guardian-angels-edison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4274be0b",
+          "page": 1,
+          "said": "Guardian Angels Church Saturday Vigil 4:00 p.m. and Sunday 8:00 & 11:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c8b3941",
+          "page": 1,
+          "said": "Guardian Angels Church Saturday Vigil 4:00 p.m. and Sunday 8:00 & 11:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4274be0b",
+          "page": 2,
+          "said": "Mass intentions: Sunday, Guardian Angels Church, 8:00 a.m. ... 11:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c8b3941",
+          "page": 2,
+          "said": "Mass intentions: Sunday, Guardian Angels Church, 8:00 a.m. ... 11:00 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "guardian-angels-edison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4274be0b",
+          "page": 1,
+          "said": "Guardian Angels Church Saturday Vigil 4:00 p.m. and Sunday 8:00 & 11:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c8b3941",
+          "page": 1,
+          "said": "Guardian Angels Church Saturday Vigil 4:00 p.m. and Sunday 8:00 & 11:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4274be0b",
+          "page": 2,
+          "said": "Mass intentions: Sunday, Guardian Angels Church, 8:00 a.m. ... 11:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c8b3941",
+          "page": 2,
+          "said": "Mass intentions: Sunday, Guardian Angels Church, 8:00 a.m. ... 11:00 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "guardian-angels-edison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4274be0b",
+          "page": 1,
+          "said": "Guardian Angels Church ... Daily Mass: Tuesday, Thursday & Saturday - 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c8b3941",
+          "page": 1,
+          "said": "Guardian Angels Church ... Daily Mass: Tuesday, Thursday & Saturday - 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4274be0b",
+          "page": 2,
+          "said": "Mass intentions: Tuesday, Thursday, Saturday, Guardian Angels Church, 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c8b3941",
+          "page": 2,
+          "said": "Mass intentions: Tuesday, Thursday, Saturday, Guardian Angels Church, 9:00 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "guardian-angels-edison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4274be0b",
+          "page": 1,
+          "said": "Guardian Angels Church ... Daily Mass: Tuesday, Thursday & Saturday - 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c8b3941",
+          "page": 1,
+          "said": "Guardian Angels Church ... Daily Mass: Tuesday, Thursday & Saturday - 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4274be0b",
+          "page": 2,
+          "said": "Mass intentions: Tuesday, Thursday, Saturday, Guardian Angels Church, 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c8b3941",
+          "page": 2,
+          "said": "Mass intentions: Tuesday, Thursday, Saturday, Guardian Angels Church, 9:00 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "guardian-angels-edison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4274be0b",
+          "page": 1,
+          "said": "Guardian Angels Church ... Daily Mass: Tuesday, Thursday & Saturday - 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c8b3941",
+          "page": 1,
+          "said": "Guardian Angels Church ... Daily Mass: Tuesday, Thursday & Saturday - 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4274be0b",
+          "page": 2,
+          "said": "Mass intentions: Tuesday, Thursday, Saturday, Guardian Angels Church, 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c8b3941",
+          "page": 2,
+          "said": "Mass intentions: Tuesday, Thursday, Saturday, Guardian Angels Church, 9:00 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "guardian-angels-edison",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4274be0b",
+          "page": 1,
+          "said": "Guardian Angels Church ... Sacrament of Penance: Saturday 3:00 - 3:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c8b3941",
+          "page": 1,
+          "said": "Guardian Angels Church ... Sacrament of Penance: Saturday 3:00 - 3:30 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "guardian-angels-edison",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4274be0b",
+          "page": 1,
+          "said": "Eucharistic Adoration: Saturday 9:30 a.m. to 12:00 noon at Guardian Angels Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c8b3941",
+          "page": 1,
+          "said": "Eucharistic Adoration: Saturday 9:30 a.m. to 12:00 noon at Guardian Angels Church"
+        }
+      ],
+      "rationale": "R1: printed under the schedule box of both bulletins read. It overlaps the Saturday 9:00 AM Mass as printed; the bulletin gives these hours, so they are kept as stated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4274be0b",
+          "page": 1,
+          "said": "St. Paul the Apostle Church ... Sacrament of Penance by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c8b3941",
+          "page": 1,
+          "said": "St. Paul the Apostle Church ... Sacrament of Penance by appointment"
+        }
+      ],
+      "rationale": "R26: confession at St. Paul's is by appointment only, with no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4274be0b",
+          "page": 4,
+          "said": "LE INVITAMOS A REZAR EL ROSARIO TODOS LOS DOMINGOS A LAS 11:30 A.M."
+        }
+      ],
+      "rationale": "R24: a Rosary is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4274be0b",
+          "page": 4,
+          "said": "Retiro de Adviento, 5 de diciembre de 9 AM a 3 PM, 146 Metlars Ln, Piscataway ... Adoración y confesiones"
+        }
+      ],
+      "rationale": "R22, R24: a diocesan Advent retreat at another address in Piscataway, with no times for its Adoration or confessions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4274be0b",
+          "page": 1,
+          "said": "Devotions to Our Lady of Perpetual Help: after the 8:00 a.m. Mass, Wednesday, St. Paul the Apostle Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c8b3941",
+          "page": 1,
+          "said": "Devotions to Our Lady of Perpetual Help: after the 8:00 a.m. Mass, Wednesday, St. Paul the Apostle Church"
+        }
+      ],
+      "rationale": "R24: a Marian devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4274be0b",
+          "page": 1,
+          "said": "Novenas for Miraculous Medal and St. Jude: Tuesday after 9:00 a.m. Mass, Guardian Angels Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c8b3941",
+          "page": 1,
+          "said": "Novenas for Miraculous Medal and St. Jude: Tuesday after 9:00 a.m. Mass, Guardian Angels Church"
+        }
+      ],
+      "rationale": "R24: novenas are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
