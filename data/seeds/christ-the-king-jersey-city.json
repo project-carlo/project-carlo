@@ -1,0 +1,409 @@
+{
+  "schema_version": 1,
+  "parish_slug": "christ-the-king-jersey-city",
+  "status": "ready",
+  "as_of": "2026-11-15T16:52:39Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T08:56:34Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. The page-1 schedule box is identical in both bulletins (Nov 8 and Nov 15, 2026): Sunday 8 and 10 AM, Mon/Wed/Thu/Fri 9 AM Mass, Thursday 7 PM Confession and Adoration; the website's Mass Times page agrees. Sunday confession 'before Mass' has no time and is left out. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "0df655338ef207cf9744b3c6b007c7e8712e671ca97f6d0e346eaa8869adb6cd",
+      "fetched_at": "2026-11-15T16:52:39Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "b810bcc514d3d6bfc43beacca069dcf4600efd5ce03ece139188786037aeb95b",
+      "fetched_at": "2026-11-08T16:01:39Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0df65533",
+          "page": 1,
+          "said": "Mass Times Sunday: 8AM and 10AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b810bcc5",
+          "page": 1,
+          "said": "Mass Times Sunday: 8AM and 10AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box on page 1 of both bulletins; the parish website's Mass Times page agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0df65533",
+          "page": 1,
+          "said": "Mass Times Sunday: 8AM and 10AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b810bcc5",
+          "page": 1,
+          "said": "Mass Times Sunday: 8AM and 10AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box on page 1 of both bulletins; the parish website's Mass Times page agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0df65533",
+          "page": 1,
+          "said": "Monday/Wednesday/Thursday/Friday: 9AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b810bcc5",
+          "page": 1,
+          "said": "Monday/Wednesday/Thursday/Friday: 9AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box on page 1 of both bulletins (no Tuesday or Saturday Mass); the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0df65533",
+          "page": 1,
+          "said": "Monday/Wednesday/Thursday/Friday: 9AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b810bcc5",
+          "page": 1,
+          "said": "Monday/Wednesday/Thursday/Friday: 9AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box on page 1 of both bulletins (no Tuesday or Saturday Mass); the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0df65533",
+          "page": 1,
+          "said": "Monday/Wednesday/Thursday/Friday: 9AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b810bcc5",
+          "page": 1,
+          "said": "Monday/Wednesday/Thursday/Friday: 9AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box on page 1 of both bulletins (no Tuesday or Saturday Mass); the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0df65533",
+          "page": 1,
+          "said": "Monday/Wednesday/Thursday/Friday: 9AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b810bcc5",
+          "page": 1,
+          "said": "Monday/Wednesday/Thursday/Friday: 9AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box on page 1 of both bulletins (no Tuesday or Saturday Mass); the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-jersey-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0df65533",
+          "page": 1,
+          "said": "Confession ... Thursday: 7PM or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b810bcc5",
+          "page": 1,
+          "said": "Confession ... Thursday: 7PM or by appointment"
+        }
+      ],
+      "rationale": "R1: printed in the Confession box of both bulletins; no end time given (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-jersey-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0df65533",
+          "page": 1,
+          "said": "Eucharistic Adoration Thursday: 7:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b810bcc5",
+          "page": 1,
+          "said": "Eucharistic Adoration Thursday: 7:00PM"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins; no end time given. The bulletin does not say confession is heard during Adoration, so the two keep their own printed start.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0df65533",
+          "page": 1,
+          "said": "Confession Before 8AM & 10AM mass on Sunday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b810bcc5",
+          "page": 1,
+          "said": "Confession Before 8AM & 10AM mass on Sunday"
+        }
+      ],
+      "rationale": "R26, POLICY Times: 'before Mass' with no minutes or clock time gives no definite start time; by appointment likewise has none.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-jersey-city",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b810bcc5",
+          "page": 1,
+          "said": "There will be a 9:00 a.m. Mass on Thanksgiving Day, Thu. 11/26/26."
+        }
+      ],
+      "rationale": "R25, POLICY Weekly or dated rule 6: the Thanksgiving Mass is at the weekly Thursday 9 AM time, so the weekly slot already covers it; not duplicated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0df65533",
+          "page": 1,
+          "said": "Pray the Rosary Sunday: 9:30AM"
+        }
+      ],
+      "rationale": "R24: the Rosary is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
