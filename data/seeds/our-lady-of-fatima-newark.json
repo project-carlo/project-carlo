@@ -1,0 +1,732 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-fatima-newark",
+  "status": "ready",
+  "as_of": "2026-11-15T16:22:46Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T13:45:20Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both bulletins (Nov 8, Nov 15) print the same schedule box: weekdays 9:00 AM and 7:30 PM, Saturday 9:00 AM and 5:30 PM, Sunday 7:30, 9:00, 10:15 (English) and 11:30 AM, Saturday confession 4:30-5:00 PM; Thanksgiving evening Mass cancelled. Both announce weekday Masses moving to 8:30 AM and 7:00 PM from November 30; per R20 the current times are kept for update mode to change. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "08315e6f7dc966259831a91404d4fb9705a1f585504ca2af413c98e0d75b7d5c",
+      "fetched_at": "2026-11-15T16:22:46Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "68728b3908c9b9cf11d8c276ba509ac1d28249d0b67078cf823eaaf2d4bf8ebd",
+      "fetched_at": "2026-11-08T15:46:57Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Portuguese"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08315e6f",
+          "page": 1,
+          "said": "Weekdays: 9:00 a.m. (Port) & 7.30 p.m. (Port)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "68728b39",
+          "page": 1,
+          "said": "Weekdays: 9:00 a.m. (Port) & 7.30 p.m. (Port)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in each weekday's intentions. R20: from November 30 the morning weekday Mass moves to 8:30 AM (p3 notice); the current time is kept for update mode to change.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Portuguese"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08315e6f",
+          "page": 1,
+          "said": "Weekdays: 9:00 a.m. (Port) & 7.30 p.m. (Port)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "68728b39",
+          "page": 1,
+          "said": "Weekdays: 9:00 a.m. (Port) & 7.30 p.m. (Port)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in each weekday's intentions. R20: from November 30 the morning weekday Mass moves to 8:30 AM (p3 notice); the current time is kept for update mode to change.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Portuguese"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08315e6f",
+          "page": 1,
+          "said": "Weekdays: 9:00 a.m. (Port) & 7.30 p.m. (Port)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "68728b39",
+          "page": 1,
+          "said": "Weekdays: 9:00 a.m. (Port) & 7.30 p.m. (Port)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in each weekday's intentions. R20: from November 30 the morning weekday Mass moves to 8:30 AM (p3 notice); the current time is kept for update mode to change.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Portuguese"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08315e6f",
+          "page": 1,
+          "said": "Weekdays: 9:00 a.m. (Port) & 7.30 p.m. (Port)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "68728b39",
+          "page": 1,
+          "said": "Weekdays: 9:00 a.m. (Port) & 7.30 p.m. (Port)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in each weekday's intentions. R20: from November 30 the morning weekday Mass moves to 8:30 AM (p3 notice); the current time is kept for update mode to change.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Portuguese"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08315e6f",
+          "page": 1,
+          "said": "Weekdays: 9:00 a.m. (Port) & 7.30 p.m. (Port)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "68728b39",
+          "page": 1,
+          "said": "Weekdays: 9:00 a.m. (Port) & 7.30 p.m. (Port)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in each weekday's intentions. R20: from November 30 the morning weekday Mass moves to 8:30 AM (p3 notice); the current time is kept for update mode to change.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Portuguese"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08315e6f",
+          "page": 1,
+          "said": "Weekdays: 9:00 a.m. (Port) & 7.30 p.m. (Port)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "68728b39",
+          "page": 1,
+          "said": "Weekdays: 9:00 a.m. (Port) & 7.30 p.m. (Port)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in each weekday's intentions. R20: from November 30 the evening weekday Mass moves to 7:00 PM (p3 notice); the current time is kept for update mode to change.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Portuguese"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08315e6f",
+          "page": 1,
+          "said": "Weekdays: 9:00 a.m. (Port) & 7.30 p.m. (Port)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "68728b39",
+          "page": 1,
+          "said": "Weekdays: 9:00 a.m. (Port) & 7.30 p.m. (Port)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in each weekday's intentions. R20: from November 30 the evening weekday Mass moves to 7:00 PM (p3 notice); the current time is kept for update mode to change.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Portuguese"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08315e6f",
+          "page": 1,
+          "said": "Weekdays: 9:00 a.m. (Port) & 7.30 p.m. (Port)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "68728b39",
+          "page": 1,
+          "said": "Weekdays: 9:00 a.m. (Port) & 7.30 p.m. (Port)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in each weekday's intentions. R20: from November 30 the evening weekday Mass moves to 7:00 PM (p3 notice); the current time is kept for update mode to change.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Portuguese"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08315e6f",
+          "page": 1,
+          "said": "Weekdays: 9:00 a.m. (Port) & 7.30 p.m. (Port)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "68728b39",
+          "page": 1,
+          "said": "Weekdays: 9:00 a.m. (Port) & 7.30 p.m. (Port)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in each weekday's intentions. R20: from November 30 the evening weekday Mass moves to 7:00 PM (p3 notice); the current time is kept for update mode to change.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Portuguese"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08315e6f",
+          "page": 1,
+          "said": "Weekdays: 9:00 a.m. (Port) & 7.30 p.m. (Port)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "68728b39",
+          "page": 1,
+          "said": "Weekdays: 9:00 a.m. (Port) & 7.30 p.m. (Port)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in each weekday's intentions. R20: from November 30 the evening weekday Mass moves to 7:00 PM (p3 notice); the current time is kept for update mode to change.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Portuguese"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08315e6f",
+          "page": 1,
+          "said": "Saturday: 9:00 a.m. (Port) & 5:30 p.m. (bilingual)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "68728b39",
+          "page": 1,
+          "said": "Saturday: 9:00 a.m. (Port) & 5:30 p.m. (bilingual)"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; Saturday intentions list 9:00 AM. R20: the November 30 change to weekday ('semanais') Mass times may also move it to 8:30; current time kept.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Bilingual"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08315e6f",
+          "page": 1,
+          "said": "Saturday: 9:00 a.m. (Port) & 5:30 p.m. (bilingual)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "68728b39",
+          "page": 1,
+          "said": "Saturday: 9:00 a.m. (Port) & 5:30 p.m. (bilingual)"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; Saturday intentions list 5:30 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08315e6f",
+          "page": 1,
+          "said": "Domingo: 7:30 a.m., 9:00 a.m. e 11:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "68728b39",
+          "page": 1,
+          "said": "Domingo: 7:30 a.m., 9:00 a.m. e 11:30 a.m."
+        }
+      ],
+      "rationale": "R1: schedule box (Portuguese column) of both bulletins; Sunday intentions list 7:30 and 9:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08315e6f",
+          "page": 1,
+          "said": "Domingo: 7:30 a.m., 9:00 a.m. e 11:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "68728b39",
+          "page": 1,
+          "said": "Domingo: 7:30 a.m., 9:00 a.m. e 11:30 a.m."
+        }
+      ],
+      "rationale": "R1: schedule box (Portuguese column) of both bulletins; Sunday intentions list 7:30 and 9:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08315e6f",
+          "page": 1,
+          "said": "Sunday: 10:15 a.m. (English) (Port) 11:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "68728b39",
+          "page": 1,
+          "said": "Sunday: 10:15 a.m. (English) (Port) 11:30 a.m."
+        }
+      ],
+      "rationale": "R1: schedule box (English column) of both bulletins; Sunday intentions list 10:15 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Portuguese"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08315e6f",
+          "page": 1,
+          "said": "Sunday: 10:15 a.m. (English) (Port) 11:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "68728b39",
+          "page": 1,
+          "said": "Sunday: 10:15 a.m. (English) (Port) 11:30 a.m."
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins. The December 13 Solemn anniversary Mass at 11:30 AM (p3) is this weekly Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-newark",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08315e6f",
+          "page": 1,
+          "said": "Saturday: from 4:30 p.m. to 5:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "68728b39",
+          "page": 1,
+          "said": "Saturday: from 4:30 p.m. to 5:00 p.m."
+        }
+      ],
+      "rationale": "R1: Sacrament of Confession in the schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-newark",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08315e6f",
+          "page": 4,
+          "said": "A missa de Ação de Graças será às 9h00 da manhã. Não haverá missa à noite."
+        },
+        {
+          "source": "agent",
+          "bulletin": "68728b39",
+          "page": 4,
+          "said": "Não haverá missa à noite."
+        }
+      ],
+      "rationale": "R1, R16: no evening Mass on Thanksgiving, November 26 (Thursday), after as_of. The 9:00 AM Thanksgiving Mass is the regular weekday Mass (POLICY rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "08315e6f",
+          "page": 1,
+          "said": "Holy Rosary Devotion: Weekdays: 8:30 a.m. & 6:45 p.m. Saturday: 4:45PM"
+        }
+      ],
+      "rationale": "R24: the Rosary is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
