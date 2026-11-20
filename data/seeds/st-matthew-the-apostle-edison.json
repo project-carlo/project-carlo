@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-matthew-the-apostle-edison",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:20:08Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-20T04:52:19Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:57:54Z",
   "summary": "One church, St. Matthew the Apostle, Edison. The Mass schedule box (p1) gives Sat 5 PM, 2nd-Saturday 7 PM Tagalog, Sunday 7:30/9/10:30/12 and 1:30 PM Spanish, Mon-Sat 8:30 AM, and Saturday confessions 11-11:30 AM and after the 5 PM Mass; both weeks' intentions agree. Open: Spanish Sunday confession 'after the Sunday Mass' on request.",
   "blocked_reason": null,
   "bulletins": [
@@ -593,9 +593,22 @@
     },
     {
       "id": "s16",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-the-apostle-edison",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "14:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish; after the 1:30 PM Mass, contact the priest"
+      },
       "page": 2,
       "sources": [
         {
@@ -631,7 +644,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@05f8a0474956",
+        "at": "2026-11-20T06:57:54Z"
+      }
     },
     {
       "id": "s17",

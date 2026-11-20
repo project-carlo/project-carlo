@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-anthony-of-padua-port-reading",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:50:54Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-20T03:04:08Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:56:41Z",
   "summary": "Two churches (St. Anthony, Port Reading; Our Lady of Mount Carmel, Woodbridge). Mass and Confession times are identical in the page-1 schedule box of both bulletins (Nov 8 and Nov 15, 2026) and match the homepage; Thursday 2:30-6:00 PM Adoration in St. Anthony's chapel is in both weeks' calendars and on the homepage. Open: a website-only 8:30 AM Mass on Friday Nov 27.",
   "blocked_reason": null,
   "bulletins": [
@@ -611,9 +611,22 @@
     },
     {
       "id": "s16",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-port-reading",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -648,7 +661,11 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@05f8a0474956",
+        "at": "2026-11-20T06:56:41Z"
+      }
     }
   ]
 }

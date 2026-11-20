@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-augustine-of-canterbury-kendall-park",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:05:26Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-20T03:07:04Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:56:43Z",
   "summary": "One church. The bulletins print no schedule box: the newest issue's intentions (Sat 5 PM; Sun 8, 10, 12, 5; Mon-Fri 9 AM) and Mass Count agree with the parish's current Mass and Confession Times pages, which also supply the Saturday 11:30-12:30 confession end. The older issue (Nov 8) is a pilgrimage letter with no schedule. Monday 7-8 PM Adoration runs 'through May' (no season recorded, R15). Open: whether the Dec 17 penance service confessions in the school count at the church.",
   "blocked_reason": null,
   "bulletins": [
@@ -605,9 +605,22 @@
     },
     {
       "id": "s15",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-of-canterbury-kendall-park",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-17",
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Penance Service, in the parish school"
+      },
       "page": 3,
       "sources": [
         {
@@ -643,7 +656,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@05f8a0474956",
+        "at": "2026-11-20T06:56:43Z"
+      }
     },
     {
       "id": "s16",

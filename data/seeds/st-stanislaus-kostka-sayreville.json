@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-stanislaus-kostka-sayreville",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:08:34Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-20T05:04:28Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:58:01Z",
   "summary": "One church. Mass and confession times come from the Mass intentions (p2) and Confessions box (p3) of the Nov 8 and Nov 15, 2026 bulletins, which agree with each other and with the parish website line for line. Dec 8 holy-day Masses come from the website; open: whether the 9:00 AM Dec 8 'School Mass' is public.",
   "blocked_reason": null,
   "bulletins": [
@@ -642,9 +642,22 @@
     },
     {
       "id": "s16",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-sayreville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception, School Mass"
+      },
       "page": null,
       "sources": [
         {
@@ -679,7 +692,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@05f8a0474956",
+        "at": "2026-11-20T06:58:01Z"
+      }
     }
   ]
 }

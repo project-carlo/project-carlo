@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-joseph-raritan",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:07:20Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-20T04:22:18Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:57:33Z",
   "summary": "One church (St. Joseph, Raritan), sharing a bulletin schedule box with the Oratory's St. Ann, Holy Trinity and Shrine Chapel, whose times are excluded as other parishes'. Weekend Masses, Saturday and Spanish Wednesday Confession and Wednesday Adoration agree in both bulletins read (Nov 8, Nov 15) and on the website. Open: the Immaculate Conception (Dec 8) English Mass time, where the bulletin's generic Holy Days line (7:00 pm vigil) and the website (Dec 8 7:00 AM) differ.",
   "blocked_reason": null,
   "bulletins": [
@@ -440,9 +440,22 @@
     },
     {
       "id": "s13",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-raritan",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception vigil"
+      },
       "page": 1,
       "sources": [
         {
@@ -506,7 +519,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@05f8a0474956",
+        "at": "2026-11-20T06:57:33Z"
+      }
     }
   ]
 }

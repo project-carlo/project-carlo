@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "our-lady-of-peace-north-brunswick",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:19:19Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-19T23:16:06Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:56:21Z",
   "summary": "One church. Weekend (Sat 5 PM; Sun 8:30, 11 AM), weekday 8 AM Mass, Saturday 11-12 Confession and second-Monday 5-7 PM Adoration agree in both bulletins (Nov 8, Nov 22 issues) and the website. Dated Advent Adoration Nov 29 after the 11 AM Mass. Open: a Dec 7 Adoration flyer that falls on a first Monday, possibly a misprint for Dec 14.",
   "blocked_reason": null,
   "bulletins": [
@@ -453,9 +453,22 @@
     },
     {
       "id": "s12",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-north-brunswick",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "17:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 6,
       "sources": [
         {
@@ -497,7 +510,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@05f8a0474956",
+        "at": "2026-11-20T06:56:21Z"
+      }
     },
     {
       "id": "s13",

@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-elizabeth-ann-seton-three-bridges",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:50:59Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-20T03:36:17Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:57:00Z",
   "summary": "One church. Weekend (Sat 5 PM; Sun 8, 9:30, 11:30) and weekday (Mon 6:15 PM; Tue-Fri 9 AM) Masses and Saturday 4 PM Confession agree in both bulletins read and on the website; First Friday Adoration comes from the website (R6). Open: whether the 'MOST Mondays' 5 PM Confession is recorded as weekly.",
   "blocked_reason": null,
   "bulletins": [
@@ -407,9 +407,22 @@
     },
     {
       "id": "s11",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-three-bridges",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Most Mondays; see the bulletin"
+      },
       "page": 1,
       "sources": [
         {
@@ -462,7 +475,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@05f8a0474956",
+        "at": "2026-11-20T06:57:00Z"
+      }
     },
     {
       "id": "s12",

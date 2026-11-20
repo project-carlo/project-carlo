@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-ambrose-old-bridge",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:50:47Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-19T23:31:23Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:56:32Z",
   "summary": "One church. Mass, Saturday Confession and Friday-evening Adoration agree in both bulletins read (Nov 8 and 15, 2026; image-only pages, read rendered). Open: the hours of the First Friday All Night Vigil's Exposition, printed as 9:00PM-2:30AM in one box and 8PM-2AM in another.",
   "blocked_reason": null,
   "bulletins": [
@@ -749,9 +749,24 @@
     },
     {
       "id": "s20",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ambrose-old-bridge",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "21:00",
+        "end_time": "02:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Night Vigil"
+      },
       "page": 4,
       "sources": [
         {
@@ -826,7 +841,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 2,
+        "by": "agent:seed-review@05f8a0474956",
+        "at": "2026-11-20T06:56:32Z"
+      }
     }
   ]
 }

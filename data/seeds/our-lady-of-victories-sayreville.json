@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "our-lady-of-victories-sayreville",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:04:41Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-19T23:21:50Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:56:26Z",
   "summary": "One church, Our Lady of Victories. Two issues were read (Oct 25 and Nov 8; the Nov 15 fetch is the Nov 8 issue). Their intentions and the Oct 25 cover box agree on Sat 5 PM; Sun 7:30, 9:30 and 12:00; Mon-Fri 6:45 AM; Mon 7 PM; Sat 9 AM; and confession Sat 11-12 and Mon 6-6:45 PM. The cover box's Sunday 11:30 is stale (the intentions and the website say 12:00). The Immaculate Conception Masses come from the website. Open: First Friday Adoration (website only).",
   "blocked_reason": null,
   "bulletins": [
@@ -788,9 +788,24 @@
     },
     {
       "id": "s21",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-sayreville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
       "page": null,
       "sources": [
         {
@@ -832,7 +847,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@05f8a0474956",
+        "at": "2026-11-20T06:56:26Z"
+      }
     }
   ]
 }

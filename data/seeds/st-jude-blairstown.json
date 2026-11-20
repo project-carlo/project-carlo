@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-jude-blairstown",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:07:33Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-20T04:28:07Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:57:37Z",
   "summary": "One church, St. Jude (street address in Columbia, NJ). Weekend, Mon-Thu 9 AM, Saturday confession and Wednesday Holy Hour agree in both bulletins and the website; first-Friday Mass and Adoration come from the bulletin and website. Open: whether non-first Fridays get a weekly 9 AM Mass (parish says to check the bulletin).",
   "blocked_reason": null,
   "bulletins": [
@@ -545,9 +545,27 @@
     },
     {
       "id": "s14",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-blairstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second",
+          "third",
+          "fourth",
+          "fifth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -605,7 +623,11 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@05f8a0474956",
+        "at": "2026-11-20T06:57:37Z"
+      }
     },
     {
       "id": "s15",

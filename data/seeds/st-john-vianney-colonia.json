@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-john-vianney-colonia",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:07:02Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-20T04:06:11Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:57:22Z",
   "summary": "One church. Weekday (7:00, 8:30 AM), Saturday (8 AM, 5 PM) and Sunday (8, 10, 12) Masses and Saturday/Friday Confessions agree in both bulletins read and on the website. Two dated Latin Masses (Nov 27, Dec 12) are included. Open: website-only Saturday Adoration after the 8 AM Mass, on a page that looks stale.",
   "blocked_reason": null,
   "bulletins": [
@@ -957,9 +957,22 @@
     },
     {
       "id": "s24",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-vianney-colonia",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
       "page": null,
       "sources": [
         {
@@ -994,7 +1007,11 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@05f8a0474956",
+        "at": "2026-11-20T06:57:22Z"
+      }
     }
   ]
 }

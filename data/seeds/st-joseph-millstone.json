@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-joseph-millstone",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:51:18Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-20T04:19:40Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:57:31Z",
   "summary": "One church, St. Joseph, Hillsborough. Both bulletins read (Nov 8 and 15) print the same schedule box and intentions: Sat 4:45 PM, Sun 8:00/9:30/11:30 AM, Mon-Fri 8:35 AM, matching the website; plus a dated Thanksgiving Mass Nov 26 9:30 AM. Open: Saturday drive-up confessions, offered 'typically' 10-11 AM.",
   "blocked_reason": null,
   "bulletins": [
@@ -461,9 +461,22 @@
     },
     {
       "id": "s11",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-millstone",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": "11:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Drive-up"
+      },
       "page": 1,
       "sources": [
         {
@@ -510,7 +523,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@05f8a0474956",
+        "at": "2026-11-20T06:57:31Z"
+      }
     },
     {
       "id": "s12",

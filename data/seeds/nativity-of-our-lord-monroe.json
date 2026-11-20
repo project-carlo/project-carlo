@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "nativity-of-our-lord-monroe",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:50:39Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-19T23:00:24Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:56:06Z",
   "summary": "One church. Weekend Masses (Sat 4 PM; Sun 7:30, 9, 11), weekday Mass Mon-Fri 8:30 AM and Saturday confession 3-3:30 PM agree in the page 1 schedule box of both bulletins read (Nov 8 and Nov 15). Holy-day times are undated and left out. Open: Confession at the Nov 16 men's worship night (leaning leave out).",
   "blocked_reason": null,
   "bulletins": [
@@ -495,9 +495,22 @@
     },
     {
       "id": "s15",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-monroe",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-16",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Brothers of Nativity Men's Worship Night"
+      },
       "page": 4,
       "sources": [
         {
@@ -533,7 +546,11 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@05f8a0474956",
+        "at": "2026-11-20T06:56:06Z"
+      }
     }
   ]
 }

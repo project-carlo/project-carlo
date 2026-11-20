@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-bartholomew-east-brunswick",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:05:53Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-20T03:11:41Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:56:45Z",
   "summary": "One church. Weekend (Sat 4 PM; Sun 8, 10, 12), weekday 8:30 AM, Saturday 10 AM confession and First Friday Adoration (Oct-May) agree in both image/text bulletins (Nov 8, Nov 15). Website adds a First Friday 7 PM Mass (Oct-May), the confession end time and Dec 8 holy-day Masses. Open: the website's Sunday 1 PM Adoration, absent from the bulletins.",
   "blocked_reason": null,
   "bulletins": [
@@ -688,9 +688,22 @@
     },
     {
       "id": "s18",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-east-brunswick",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -731,7 +744,11 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@05f8a0474956",
+        "at": "2026-11-20T06:56:45Z"
+      }
     }
   ]
 }

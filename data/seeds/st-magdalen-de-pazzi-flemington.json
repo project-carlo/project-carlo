@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-magdalen-de-pazzi-flemington",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:07:37Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-20T04:32:30Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:57:41Z",
   "summary": "One church. Weekend, weekday and Saturday confession times match in both bulletins (8 and 15 November 2026); Adoration chapel hours and confession end times come from the parish's current website (R6). Dated Thanksgiving and Advent Masses and the Thanksgiving Thursday cancellation are recorded. Open: whether the Wednesday 7:30 PM Spanish Mass carries the website's Labor Day-Memorial Day season.",
   "blocked_reason": null,
   "bulletins": [
@@ -521,9 +521,27 @@
     },
     {
       "id": "s14",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-magdalen-de-pazzi-flemington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 5,
+          "end_day": null
+        },
+        "note": "Spanish"
+      },
       "page": 1,
       "sources": [
         {
@@ -592,7 +610,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@05f8a0474956",
+        "at": "2026-11-20T06:57:41Z"
+      }
     },
     {
       "id": "s15",

@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "visitation-new-brunswick",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:51:22Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-20T05:16:36Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:58:10Z",
   "summary": "Two listed churches: St. Mary of Mount Virgin (New Brunswick) and St. Theresa (Edison); the bulletin also names St. John the Baptist (now a soup kitchen), which the website gives as the place of the Sunday 9:30 Spanish Mass but which is not on the church list. Both bulletins (Nov 8, Nov 15) print the same schedule box. Open: the Sunday Spanish Mass's time and church, Friday Adoration's end (5:30 or 6:00), the first-Tuesday Latin Mass, and website-only Adoration after the Friday 7 PM Mass.",
   "blocked_reason": null,
   "bulletins": [
@@ -255,9 +255,22 @@
     },
     {
       "id": "s7",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-mount-virgin-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
       "page": 1,
       "sources": [
         {
@@ -333,7 +346,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@05f8a0474956",
+        "at": "2026-11-20T06:58:10Z"
+      }
     },
     {
       "id": "s8",
@@ -1040,9 +1057,24 @@
     },
     {
       "id": "s27",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-mount-virgin-new-brunswick",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Latin"
+      },
       "page": 1,
       "sources": [
         {
@@ -1086,7 +1118,11 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@05f8a0474956",
+        "at": "2026-11-20T06:58:10Z"
+      }
     },
     {
       "id": "s28",
@@ -1177,9 +1213,22 @@
     },
     {
       "id": "s30",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-mount-virgin-new-brunswick",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "17:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Mary's Chapel"
+      },
       "page": 1,
       "sources": [
         {
@@ -1250,13 +1299,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@05f8a0474956",
+        "at": "2026-11-20T06:58:10Z"
+      }
     },
     {
       "id": "s31",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-mount-virgin-new-brunswick",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 7:00 PM Mass"
+      },
       "page": null,
       "sources": [
         {
@@ -1291,7 +1357,11 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@05f8a0474956",
+        "at": "2026-11-20T06:58:10Z"
+      }
     },
     {
       "id": "s32",

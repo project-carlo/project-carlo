@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "assumption-of-the-blessed-virgin-mary-hackettstown",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:50:29Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-19T22:30:33Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@05f8a0474956",
+  "approved_at": "2026-11-20T06:55:43Z",
   "summary": "One church. The schedule box (Mon-Sat 8 AM; Fri 7 PM Spanish; Sat 4:30 PM and 7 PM Spanish; Sun 8 and 10 AM; Sat 8:30 AM Confession; Wed & Sat 8:30-noon Adoration) is identical in both bulletins read; dated Masses come from the holiday calendar on p7. Open: whether the Faith Formation early Advent Penance session is public.",
   "blocked_reason": null,
   "bulletins": [
@@ -725,9 +725,22 @@
     },
     {
       "id": "s20",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-of-the-blessed-virgin-mary-hackettstown",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-09",
+        "start_time": "16:30",
+        "end_time": "17:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Faith Formation Advent Penance Service"
+      },
       "page": 7,
       "sources": [
         {
@@ -763,7 +776,11 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@05f8a0474956",
+        "at": "2026-11-20T06:55:43Z"
+      }
     },
     {
       "id": "s21",
