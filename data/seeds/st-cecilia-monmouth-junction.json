@@ -1,0 +1,571 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-cecilia-monmouth-junction",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:50:58Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T03:29:24Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Mass times agree between the newest bulletin's schedule box and both weeks' intentions; Saturday Confession and Friday Adoration come from the schedule box and match the parish website, which also adds Tuesday 7:30-8 PM Adoration (R6). Open: whether to record the website calendar's 'No Mass Today' for Friday, Nov 27 as a cancellation.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "ceff45c24312da335f78001c34c050c863079eda64c5729a4a3bb1dddfc84e5d",
+      "fetched_at": "2026-11-15T16:50:58Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "15907939f0dc9e9d3bb394fa2fa9e5d94f44e44d6fcee28be559071fafc5e803",
+      "fetched_at": "2026-11-08T22:03:26Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-monmouth-junction",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ceff45c2",
+          "page": 1,
+          "said": "Mass Schedule Saturday ---- 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ceff45c2",
+          "page": 4,
+          "said": "SATURDAY Vigil Mass ... 5:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "15907939",
+          "page": 4,
+          "said": "SATURDAY Vigil Mass ... 5:00 P.M."
+        }
+      ],
+      "rationale": "R1, R35: in the newest bulletin's Mass Schedule box, and in the intentions of both weeks read (Nov 9 and Nov 16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-monmouth-junction",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ceff45c2",
+          "page": 1,
+          "said": "Sunday ---- 8:30 & 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ceff45c2",
+          "page": 4,
+          "said": "SUNDAY ... 8:30 A.M. ... 11:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "15907939",
+          "page": 4,
+          "said": "SUNDAY ... 8:30 A.M. ... 11:00 A.M."
+        }
+      ],
+      "rationale": "R1, R35: in the newest bulletin's Mass Schedule box, and in the intentions of both weeks read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-monmouth-junction",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ceff45c2",
+          "page": 1,
+          "said": "Sunday ---- 8:30 & 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ceff45c2",
+          "page": 4,
+          "said": "SUNDAY ... 8:30 A.M. ... 11:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "15907939",
+          "page": 4,
+          "said": "SUNDAY ... 8:30 A.M. ... 11:00 A.M."
+        }
+      ],
+      "rationale": "R1, R35: in the newest bulletin's Mass Schedule box, and in the intentions of both weeks read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-monmouth-junction",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ceff45c2",
+          "page": 1,
+          "said": "Monday, Wednesday, Thursday & Friday ---- 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ceff45c2",
+          "page": 4,
+          "said": "MONDAY/WEDNESDAY/THURSDAY/FRIDAY Weekday ... 8:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "15907939",
+          "page": 4,
+          "said": "MONDAY/WEDNESDAY/THURSDAY/FRIDAY Weekday ... 8:00 A.M."
+        }
+      ],
+      "rationale": "R1, R35: in the newest bulletin's Mass Schedule box, and in the intentions of both weeks read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-monmouth-junction",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ceff45c2",
+          "page": 1,
+          "said": "Monday, Wednesday, Thursday & Friday ---- 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ceff45c2",
+          "page": 4,
+          "said": "MONDAY/WEDNESDAY/THURSDAY/FRIDAY Weekday ... 8:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "15907939",
+          "page": 4,
+          "said": "MONDAY/WEDNESDAY/THURSDAY/FRIDAY Weekday ... 8:00 A.M."
+        }
+      ],
+      "rationale": "R1, R35: in the newest bulletin's Mass Schedule box, and in the intentions of both weeks read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-monmouth-junction",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ceff45c2",
+          "page": 1,
+          "said": "Monday, Wednesday, Thursday & Friday ---- 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ceff45c2",
+          "page": 4,
+          "said": "MONDAY/WEDNESDAY/THURSDAY/FRIDAY Weekday ... 8:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "15907939",
+          "page": 4,
+          "said": "MONDAY/WEDNESDAY/THURSDAY/FRIDAY Weekday ... 8:00 A.M."
+        }
+      ],
+      "rationale": "R1, R35: in the newest bulletin's Mass Schedule box, and in the intentions of both weeks read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-monmouth-junction",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ceff45c2",
+          "page": 1,
+          "said": "Monday, Wednesday, Thursday & Friday ---- 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ceff45c2",
+          "page": 4,
+          "said": "MONDAY/WEDNESDAY/THURSDAY/FRIDAY Weekday ... 8:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "15907939",
+          "page": 4,
+          "said": "MONDAY/WEDNESDAY/THURSDAY/FRIDAY Weekday ... 8:00 A.M."
+        }
+      ],
+      "rationale": "R1, R35: in the newest bulletin's Mass Schedule box, and in the intentions of both weeks read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-monmouth-junction",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ceff45c2",
+          "page": 1,
+          "said": "Tuesday ---- 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ceff45c2",
+          "page": 4,
+          "said": "TUESDAY Weekday ... 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "15907939",
+          "page": 4,
+          "said": "TUESDAY Weekday ... 7:00 P.M."
+        }
+      ],
+      "rationale": "R1, R35: in the newest bulletin's Mass Schedule box, and in the intentions of both weeks read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-monmouth-junction",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:45",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ceff45c2",
+          "page": 1,
+          "said": "Confessions (Sacrament of Reconciliation) Saturdays ---- 3:45 - 4:30 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stceciliaparish.net/mass-times",
+          "said": "Saturdays from 3:45PM until 4:30PM"
+        }
+      ],
+      "rationale": "R1: the newest bulletin's schedule box; the older issue (Nov 8) has a cover page and no schedule box, so nothing contradicts it, and the parish website gives the same window.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-monmouth-junction",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ceff45c2",
+          "page": 1,
+          "said": "Eucharistic Adoration for Respect Life Intentions is held every Fridays from 8:30 - 9:30 am in the Church. Benediction takes place at 9:30 am."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stceciliaparish.net/mass-times",
+          "said": "Friday Mornings from 8:30AM to 9:30AM - Benediction at 9:30AM"
+        }
+      ],
+      "rationale": "R1, POLICY (Benediction): the newest bulletin's Adoration notice; the website agrees. The website's '*Except on Holy Days of Obligation' footnote cannot be written as a weekly field and no holy day is dated in the bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ceff45c2",
+          "page": 1,
+          "said": "Holy Days ---- 8:00 am, 12:15 & 7:00 pm"
+        }
+      ],
+      "rationale": "POLICY (Dates), R16: holy-day Mass times with no holy day dated in the bulletin; nothing pins a date, so nothing to record.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ceff45c2",
+          "page": 1,
+          "said": "Baptisms are typically held on the 4th Sunday of the month, during the 11:00 AM Mass"
+        }
+      ],
+      "rationale": "R24: a baptism during the regular 11:00 AM Mass is not a separate service.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-monmouth-junction",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stceciliaparish.net/mass-times",
+          "said": "Adoration of the Blessed Sacrament *Tuesday Evenings from 7:30PM to 8PM (No Benediction, just a period of Adoration.)",
+          "schedule_check": {
+            "checked_at": "2026-11-20T03:32:42Z",
+            "current_because": "Checked 2026-11-19: the same Mass/Confession/Adoration page gives exactly the newest bulletin's Mass times, holy-day times, Saturday 3:45-4:30 Confession and Friday 8:30-9:30 Adoration with 9:30 Benediction; the site's calendar runs through November 2026 and names the current pastor's events.",
+            "bulletin": "ceff45c2",
+            "fits_because": "The newest bulletin (Nov 15) prints a Tuesday 7:00 PM Mass in the church, so a half hour of Adoration at 7:30 follows it; the bulletin's Adoration notice only describes the Friday Respect Life hour and does not say it is the only Adoration, so this is a missing mention, not a conflict."
+          }
+        }
+      ],
+      "rationale": "R6: the parish's own schedule page, matching the bulletin in every other line, gives Tuesday 7:30-8 PM Adoration; the bulletins read do not mention it. Its '*Except on Holy Days of Obligation' footnote cannot be expressed and no holy day is dated in the bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stceciliaparish.net/events/-no-mass-today-",
+          "said": "- No Mass Today - Friday , November 27 , 2026"
+        }
+      ],
+      "rationale": "R30/R17: only the parish website's calendar (checked 2026-11-19) says it; the bulletins read (Nov 8, Nov 15) don't mention it, and R17 records a cancellation the bulletin states. Leaning to record it: it is the parish's own dated notice, after as_of, and showing a Mass that won't happen is worse than missing one; a later bulletin may confirm it.",
+      "question": "Record the website calendar's 'No Mass Today' for Friday, Nov 27 (day after Thanksgiving) as a cancellation of the 8:00 AM Mass?",
+      "options": [
+        {
+          "label": "Cancel Fri Nov 27 8:00 AM Mass",
+          "entry": {
+            "church_slug": "st-cecilia-monmouth-junction",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-27",
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    }
+  ]
+}
