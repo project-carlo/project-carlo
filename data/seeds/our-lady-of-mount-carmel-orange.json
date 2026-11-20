@@ -1,0 +1,995 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-mount-carmel-orange",
+  "status": "ready",
+  "as_of": "2026-11-15T16:22:32Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T21:18:30Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church run by the Brothers of St. John. The schedule boxes of the Nov 8 and Nov 15, 2026 bulletins are identical: weekend Masses in English, Spanish and a 1st-Sunday Creole/French Mass, Mon-Sat 8 am, Friday 7:30 pm Spanish, 4th-Monday 8 pm French, Adoration and three Confession times, plus a Thanksgiving 10 am Mass. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "6cfedba509c3cc7138abafe7a03bbe41dfe2d6a17d7b8c635bfb0c43bd8ac199",
+      "fetched_at": "2026-11-15T16:22:32Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "cc79c41d8aec597ab25f35c091e84f76acf16760bc9f79a8431530a110d4294c",
+      "fetched_at": "2026-11-08T15:46:09Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-orange",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cfedba5",
+          "page": 1,
+          "said": "Saturday Vigil: 5:00 pm (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc79c41d",
+          "page": 1,
+          "said": "Saturday Vigil: 5:00 pm (English)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; intentions list it each Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-orange",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cfedba5",
+          "page": 1,
+          "said": "Sunday: 9:00 am (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc79c41d",
+          "page": 1,
+          "said": "Sunday: 9:00 am (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-orange",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cfedba5",
+          "page": 1,
+          "said": "10:30 am (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc79c41d",
+          "page": 1,
+          "said": "10:30 am (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-orange",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cfedba5",
+          "page": 1,
+          "said": "12:00 pm (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc79c41d",
+          "page": 1,
+          "said": "12:00 pm (English)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-orange",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English-Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cfedba5",
+          "page": 1,
+          "said": "6:00 pm (English-Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc79c41d",
+          "page": 1,
+          "said": "6:00 pm (English-Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-orange",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Creole/French"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cfedba5",
+          "page": 1,
+          "said": "4:00 pm (Creole/French: 1st Sunday of the month)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc79c41d",
+          "page": 1,
+          "said": "4:00 pm (Creole/French: 1st Sunday of the month)"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly qualifiers: the schedule box of both bulletins names it as a 1st-Sunday Mass, so weeks_of_month first.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-orange",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cfedba5",
+          "page": 1,
+          "said": "Weekdays: 8:00 am (English), Mon-Sat"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc79c41d",
+          "page": 1,
+          "said": "Weekdays: 8:00 am (English), Mon-Sat"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the intentions list an 8:00am Mass every weekday and Saturday in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-orange",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cfedba5",
+          "page": 1,
+          "said": "Weekdays: 8:00 am (English), Mon-Sat"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc79c41d",
+          "page": 1,
+          "said": "Weekdays: 8:00 am (English), Mon-Sat"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the intentions list an 8:00am Mass every weekday and Saturday in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-orange",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cfedba5",
+          "page": 1,
+          "said": "Weekdays: 8:00 am (English), Mon-Sat"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc79c41d",
+          "page": 1,
+          "said": "Weekdays: 8:00 am (English), Mon-Sat"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the intentions list an 8:00am Mass every weekday and Saturday in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-orange",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cfedba5",
+          "page": 1,
+          "said": "Weekdays: 8:00 am (English), Mon-Sat"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc79c41d",
+          "page": 1,
+          "said": "Weekdays: 8:00 am (English), Mon-Sat"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the intentions list an 8:00am Mass every weekday and Saturday in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-orange",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cfedba5",
+          "page": 1,
+          "said": "Weekdays: 8:00 am (English), Mon-Sat"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc79c41d",
+          "page": 1,
+          "said": "Weekdays: 8:00 am (English), Mon-Sat"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the intentions list an 8:00am Mass every weekday and Saturday in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-orange",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cfedba5",
+          "page": 1,
+          "said": "Weekdays: 8:00 am (English), Mon-Sat"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc79c41d",
+          "page": 1,
+          "said": "Weekdays: 8:00 am (English), Mon-Sat"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the intentions list an 8:00am Mass every weekday and Saturday in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-orange",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cfedba5",
+          "page": 1,
+          "said": "7:30 pm (Spanish), Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc79c41d",
+          "page": 1,
+          "said": "7:30 pm (Spanish), Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6cfedba5",
+          "page": 2,
+          "said": "Friday— November 20 ... 7:30pm In Honor of Our Lady of Guadalupe"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-orange",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "20:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "fourth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "French"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cfedba5",
+          "page": 1,
+          "said": "8:00 pm (French) 4th Monday of the Month"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc79c41d",
+          "page": 1,
+          "said": "8:00 pm (French) 4th Monday of the Month"
+        }
+      ],
+      "rationale": "R1, R11: the schedule box of both bulletins names a 4th-Monday 8:00 pm French Mass; neither bulletin's week holds a fourth Monday, so its absence from the intentions is expected.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-orange",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cfedba5",
+          "page": 1,
+          "said": "ADORATION: 5pm in the Chapel (Sun, Mon, Tues, Fri, Sat)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc79c41d",
+          "page": 1,
+          "said": "ADORATION: 5pm in the Chapel (Sun, Mon, Tues, Fri, Sat)"
+        }
+      ],
+      "rationale": "R1, POLICY Churches and chapels: the schedule box of both bulletins lists 5pm Adoration in the chapel of the church on these days; no end time is printed, so end_time is null.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-orange",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cfedba5",
+          "page": 1,
+          "said": "ADORATION: 5pm in the Chapel (Sun, Mon, Tues, Fri, Sat)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc79c41d",
+          "page": 1,
+          "said": "ADORATION: 5pm in the Chapel (Sun, Mon, Tues, Fri, Sat)"
+        }
+      ],
+      "rationale": "R1, POLICY Churches and chapels: the schedule box of both bulletins lists 5pm Adoration in the chapel of the church on these days; no end time is printed, so end_time is null.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-orange",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cfedba5",
+          "page": 1,
+          "said": "ADORATION: 5pm in the Chapel (Sun, Mon, Tues, Fri, Sat)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc79c41d",
+          "page": 1,
+          "said": "ADORATION: 5pm in the Chapel (Sun, Mon, Tues, Fri, Sat)"
+        }
+      ],
+      "rationale": "R1, POLICY Churches and chapels: the schedule box of both bulletins lists 5pm Adoration in the chapel of the church on these days; no end time is printed, so end_time is null.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-orange",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cfedba5",
+          "page": 1,
+          "said": "ADORATION: 5pm in the Chapel (Sun, Mon, Tues, Fri, Sat)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc79c41d",
+          "page": 1,
+          "said": "ADORATION: 5pm in the Chapel (Sun, Mon, Tues, Fri, Sat)"
+        }
+      ],
+      "rationale": "R1, POLICY Churches and chapels: the schedule box of both bulletins lists 5pm Adoration in the chapel of the church on these days; no end time is printed, so end_time is null.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-orange",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cfedba5",
+          "page": 1,
+          "said": "ADORATION: 5pm in the Chapel (Sun, Mon, Tues, Fri, Sat)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc79c41d",
+          "page": 1,
+          "said": "ADORATION: 5pm in the Chapel (Sun, Mon, Tues, Fri, Sat)"
+        }
+      ],
+      "rationale": "R1, POLICY Churches and chapels: the schedule box of both bulletins lists 5pm Adoration in the chapel of the church on these days; no end time is printed, so end_time is null.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-orange",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cfedba5",
+          "page": 1,
+          "said": "7pm in the church (Thurs)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc79c41d",
+          "page": 1,
+          "said": "7pm in the church (Thurs)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6cfedba5",
+          "page": 3,
+          "said": "Every Thursday, between 7pm and 9 pm, come and spend a moment with the Lord truly present in our midst in the Blessed Sacrament"
+        }
+      ],
+      "rationale": "R1: the schedule box of both bulletins gives Thursday 7pm Adoration in the church; the newest bulletin's page 3 notice gives its 9 pm end.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-orange",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cfedba5",
+          "page": 1,
+          "said": "Thursdays (Ju) 8:30 am - 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc79c41d",
+          "page": 1,
+          "said": "Thursdays (Ju) 8:30 am - 9:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the Confession box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-orange",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "20:15",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cfedba5",
+          "page": 1,
+          "said": "Fridays (Vi) 8:15 pm - 9:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc79c41d",
+          "page": 1,
+          "said": "Fridays (Vi) 8:15 pm - 9:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Confession box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-orange",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cfedba5",
+          "page": 1,
+          "said": "Saturdays (Sa) 4:00 pm - 4:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc79c41d",
+          "page": 1,
+          "said": "Saturdays (Sa) 4:00 pm - 4:45 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Confession box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cfedba5",
+          "page": 1,
+          "said": "Also available by appointment, request at https://olmcorange.com/request-an-appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-orange",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cfedba5",
+          "page": 3,
+          "said": "Thanksgiving Day Thursday, November 26th Mass at 10am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc79c41d",
+          "page": 3,
+          "said": "Thanksgiving Day Thursday, November 26th Mass at 10am"
+        }
+      ],
+      "rationale": "R1, R16, R17: a dated holiday Mass after as_of; the bulletin states no cancellation of the weekly Thursday 8:00 am Mass, so that slot is left alone.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6cfedba5",
+          "page": 3,
+          "said": "The Parish of Our Lady of Mt Carmel in Nutley NJ ... will be hosting the visit of the heart relic of St. Carlo Acutis from November 15th to November 17th. There will be time for adoration, confession"
+        }
+      ],
+      "rationale": "R22, R24: held at another parish (Nutley) and gives no times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
