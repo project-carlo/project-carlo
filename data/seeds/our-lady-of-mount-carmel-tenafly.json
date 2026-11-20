@@ -1,0 +1,534 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-mount-carmel-tenafly",
+  "status": "ready",
+  "as_of": "2026-11-15T16:22:37Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-20T21:25:48Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Daily Mass Mon-Sat 8:30 AM, Saturday 5 PM vigil, Sunday 8, 10 and 12, and Saturday Confession 4:00-4:30 PM, identical in the Nov 8 and Nov 15 bulletins. No open questions; the Third Saturday Recovery Mass is at St. Mary, Closter and is left out.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "9ffe524443008ec354efb16371512e19fcefb48ccaf1738fed9cdcbb04374040",
+      "fetched_at": "2026-11-15T16:22:37Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "395ce74fec2de8923cb12819af184dec4687717298a40f03e6d4b47dd7de932a",
+      "fetched_at": "2026-11-08T15:46:17Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-tenafly",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ffe5244",
+          "page": 2,
+          "said": "Masses Daily Monday – Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "395ce74f",
+          "page": 2,
+          "said": "Masses Daily Monday – Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9ffe5244",
+          "page": 3,
+          "said": "MASSES FOR THE WEEK 8:30 each day Monday November 16 to Saturday November 21"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Masses box and the week's Mass list of both bulletins read (Nov 8 and Nov 15).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-tenafly",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ffe5244",
+          "page": 2,
+          "said": "Masses Daily Monday – Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "395ce74f",
+          "page": 2,
+          "said": "Masses Daily Monday – Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9ffe5244",
+          "page": 3,
+          "said": "MASSES FOR THE WEEK 8:30 each day Monday November 16 to Saturday November 21"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Masses box and the week's Mass list of both bulletins read (Nov 8 and Nov 15).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-tenafly",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ffe5244",
+          "page": 2,
+          "said": "Masses Daily Monday – Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "395ce74f",
+          "page": 2,
+          "said": "Masses Daily Monday – Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9ffe5244",
+          "page": 3,
+          "said": "MASSES FOR THE WEEK 8:30 each day Monday November 16 to Saturday November 21"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Masses box and the week's Mass list of both bulletins read (Nov 8 and Nov 15).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-tenafly",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ffe5244",
+          "page": 2,
+          "said": "Masses Daily Monday – Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "395ce74f",
+          "page": 2,
+          "said": "Masses Daily Monday – Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9ffe5244",
+          "page": 3,
+          "said": "MASSES FOR THE WEEK 8:30 each day Monday November 16 to Saturday November 21"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Masses box and the week's Mass list of both bulletins read (Nov 8 and Nov 15).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-tenafly",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ffe5244",
+          "page": 2,
+          "said": "Masses Daily Monday – Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "395ce74f",
+          "page": 2,
+          "said": "Masses Daily Monday – Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9ffe5244",
+          "page": 3,
+          "said": "MASSES FOR THE WEEK 8:30 each day Monday November 16 to Saturday November 21"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Masses box and the week's Mass list of both bulletins read (Nov 8 and Nov 15).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-tenafly",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ffe5244",
+          "page": 2,
+          "said": "Masses Daily Monday – Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "395ce74f",
+          "page": 2,
+          "said": "Masses Daily Monday – Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9ffe5244",
+          "page": 3,
+          "said": "MASSES FOR THE WEEK 8:30 each day Monday November 16 to Saturday November 21"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Masses box and the week's Mass list of both bulletins read (Nov 8 and Nov 15).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-tenafly",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ffe5244",
+          "page": 2,
+          "said": "Weekends Saturday 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "395ce74f",
+          "page": 2,
+          "said": "Weekends Saturday 5:00 PM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Masses box and the Mass list of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-tenafly",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ffe5244",
+          "page": 2,
+          "said": "Sunday 8:00 AM, 10:00 AM, 12:00 NOON"
+        },
+        {
+          "source": "agent",
+          "bulletin": "395ce74f",
+          "page": 2,
+          "said": "Sunday 8:00 AM, 10:00 AM, 12:00 NOON"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Masses box and the Mass list of both bulletins read. The Nov 22 10 AM Family Mass is this weekly Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-tenafly",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ffe5244",
+          "page": 2,
+          "said": "Sunday 8:00 AM, 10:00 AM, 12:00 NOON"
+        },
+        {
+          "source": "agent",
+          "bulletin": "395ce74f",
+          "page": 2,
+          "said": "Sunday 8:00 AM, 10:00 AM, 12:00 NOON"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Masses box and the Mass list of both bulletins read. The Nov 22 10 AM Family Mass is this weekly Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-tenafly",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ffe5244",
+          "page": 2,
+          "said": "Sunday 8:00 AM, 10:00 AM, 12:00 NOON"
+        },
+        {
+          "source": "agent",
+          "bulletin": "395ce74f",
+          "page": 2,
+          "said": "Sunday 8:00 AM, 10:00 AM, 12:00 NOON"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Masses box and the Mass list of both bulletins read. The Nov 22 10 AM Family Mass is this weekly Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-tenafly",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ffe5244",
+          "page": 2,
+          "said": "The Sacrament of Reconciliation Saturday 4:00 – 4:30 PM, or by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "395ce74f",
+          "page": 2,
+          "said": "The Sacrament of Reconciliation Saturday 4:00 – 4:30 PM, or by appointment."
+        }
+      ],
+      "rationale": "R1: printed in the Sacraments box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ffe5244",
+          "page": 2,
+          "said": "Holy Days As announced."
+        }
+      ],
+      "rationale": "R26: no holy-day times given; none announced in either bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-closter",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Third Saturday Recovery Mass"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ffe5244",
+          "page": 6,
+          "said": "The next Third Saturday Recovery Mass begins at 12 NOON on November 21st at the Church of St. Mary, 20 Legion Place, Closter."
+        }
+      ],
+      "rationale": "R22: held at St. Mary, Closter, another parish's listed church (seed church: st-mary-closter); its events belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
