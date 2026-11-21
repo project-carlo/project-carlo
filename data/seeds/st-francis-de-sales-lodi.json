@@ -1,0 +1,785 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-francis-de-sales-lodi",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:24:28Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-21T03:22:28Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, St. Francis de Sales, Lodi. Weekend, weekday, Saturday Confession and Thursday Exposition (12:30-6 PM) agree in both bulletins read (Nov 8, Nov 15), and the website agrees; a Thanksgiving 9 AM Mass is dated. Open: the Saturday 8:30 AM Mass, which the website places in the convent chapel, and the Saturday 8:30 PM Neocatechumenal Way Mass.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "f328d30f26b397eb872dd8d444ab78df8bff020ad1f75f7f010250444a4bce63",
+      "fetched_at": "2026-11-15T16:24:28Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "e6956d7c068e5d0004a917063b1a57401fc29e63206e83046ca9ce7759e71662",
+      "fetched_at": "2026-11-08T15:48:37Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-lodi",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f328d30f",
+          "page": 2,
+          "said": "Saturday — 5:00pm (Eng)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6956d7c",
+          "page": 2,
+          "said": "Saturday — 5:00pm (Eng)"
+        }
+      ],
+      "rationale": "R1: printed in the Sunday Mass Schedule box of both bulletins read; the intentions list it each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-lodi",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f328d30f",
+          "page": 2,
+          "said": "Saturday — ... 7:00pm (Span)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6956d7c",
+          "page": 2,
+          "said": "Saturday — ... 7:00pm (Span)"
+        }
+      ],
+      "rationale": "R1: printed in the Sunday Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-lodi",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f328d30f",
+          "page": 2,
+          "said": "Sunday — 7:30am (Eng)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6956d7c",
+          "page": 2,
+          "said": "Sunday — 7:30am (Eng)"
+        }
+      ],
+      "rationale": "R1: printed in the Sunday Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-lodi",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Portuguese"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f328d30f",
+          "page": 2,
+          "said": "Sunday — ... 9:00am (Port)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6956d7c",
+          "page": 2,
+          "said": "Sunday — ... 9:00am (Port)"
+        }
+      ],
+      "rationale": "R1: printed in the Sunday Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-lodi",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f328d30f",
+          "page": 2,
+          "said": "Sunday — ... 10:30am (Eng)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6956d7c",
+          "page": 2,
+          "said": "Sunday — ... 10:30am (Eng)"
+        }
+      ],
+      "rationale": "R1: printed in the Sunday Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-lodi",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f328d30f",
+          "page": 2,
+          "said": "Sunday — ... 12:00pm (Span)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6956d7c",
+          "page": 2,
+          "said": "Sunday — ... 12:00pm (Span)"
+        }
+      ],
+      "rationale": "R1: printed in the Sunday Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-lodi",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f328d30f",
+          "page": 2,
+          "said": "Mon., Wed., Thurs. — 12:00pm (Eng)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6956d7c",
+          "page": 2,
+          "said": "Mon., Wed., Thurs. — 12:00pm (Eng)"
+        }
+      ],
+      "rationale": "R1: Daily Mass Schedule box of both bulletins; the newest's intentions list each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-lodi",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f328d30f",
+          "page": 2,
+          "said": "Mon., Wed., Thurs. — 12:00pm (Eng)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6956d7c",
+          "page": 2,
+          "said": "Mon., Wed., Thurs. — 12:00pm (Eng)"
+        }
+      ],
+      "rationale": "R1: Daily Mass Schedule box of both bulletins; the newest's intentions list each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-lodi",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f328d30f",
+          "page": 2,
+          "said": "Mon., Wed., Thurs. — 12:00pm (Eng)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6956d7c",
+          "page": 2,
+          "said": "Mon., Wed., Thurs. — 12:00pm (Eng)"
+        }
+      ],
+      "rationale": "R1: Daily Mass Schedule box of both bulletins; the newest's intentions list each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-lodi",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f328d30f",
+          "page": 2,
+          "said": "Tues. — 7:30 am (Eng)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6956d7c",
+          "page": 2,
+          "said": "Tues. — 7:30 am (Eng)"
+        }
+      ],
+      "rationale": "R1: Daily Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-lodi",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f328d30f",
+          "page": 2,
+          "said": "Fri. — 12:00pm (Eng), 7:00pm (Span)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6956d7c",
+          "page": 2,
+          "said": "Fri. — 12:00pm (Eng), 7:00pm (Span)"
+        }
+      ],
+      "rationale": "R1: Daily Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-lodi",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f328d30f",
+          "page": 2,
+          "said": "Fri. — 12:00pm (Eng), 7:00pm (Span)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6956d7c",
+          "page": 2,
+          "said": "Fri. — 12:00pm (Eng), 7:00pm (Span)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f328d30f",
+          "page": 4,
+          "said": "7:00pm – Daily Mass in Spanish (Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6956d7c",
+          "page": 4,
+          "said": "7:00pm – Daily Mass in Spanish (Church)"
+        }
+      ],
+      "rationale": "R1: Daily Mass Schedule box of both bulletins; the Weekly Events list it in the church. The website's weekday table omits it, which is not a conflict (R6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-lodi",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f328d30f",
+          "page": 4,
+          "said": "SACRAMENT OF RECONCILIATION (CONFESSION) Saturday, 11:00am-12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6956d7c",
+          "page": 4,
+          "said": "SACRAMENT OF RECONCILIATION (CONFESSION) Saturday, 11:00am-12:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintfrancisdesaleslodinj.org/mass-schedule",
+          "said": "SATURDAY: 11:00 AM - 12:00 PM or by appointment"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins and in each week's Weekly Events; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-lodi",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f328d30f",
+          "page": 4,
+          "said": "12:30pm – Exposition of the Blessed Sacrament & Rosary ... 6:00pm – Reposition of the Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6956d7c",
+          "page": 4,
+          "said": "12:30pm – Exposition of the Blessed Sacrament & Rosary ... 6:00pm – Reposition of the Blessed Sacrament"
+        }
+      ],
+      "rationale": "R35: the Weekly Events of both bulletins (Thursday Nov 12 and Nov 19) give Exposition at 12:30 PM and Reposition at 6:00 PM, after the 12:00 Mass; same church, day and times in two weeks, so weekly.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-lodi",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f328d30f",
+          "page": 5,
+          "said": "Drawing on Thanksgiving Day THURSDAY NOVEMBER 26, 2026 AFTER 9:00 AM MASS"
+        }
+      ],
+      "rationale": "R1, R16, R17: the raffle flyer pins a 9:00 AM Mass on Thanksgiving, after as_of; dated (POLICY, Weekly or dated rule 7). No cancellation of the weekly Thursday 12:00 Mass is stated, so it stays.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f328d30f",
+          "page": 4,
+          "said": "Feel free to approach a priest after any mass or make an appointment"
+        }
+      ],
+      "rationale": "R26: confession after any Mass on approach or by appointment has no definite time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f328d30f",
+          "page": 4,
+          "said": "7:00am-7:00pm – Chapel is open for prayer"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6956d7c",
+          "page": 4,
+          "said": "7:00am-7:00pm – Chapel is open for prayer"
+        }
+      ],
+      "rationale": "R38, POLICY Churches and chapels: a chapel open for prayer is building access, not an Adoration schedule; no exposition is stated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f328d30f",
+          "page": 4,
+          "said": "8:30pm – NCW I Community Celebration; 8:30pm – NCW III Community Celebration (Tue); 8:30pm – NCW II Community Celebration (Wed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6956d7c",
+          "page": 4,
+          "said": "8:30pm – NCW I Community Celebration; 8:30pm – NCW III Community Celebration (Tue); 8:30pm – NCW II Community Celebration (Wed)"
+        }
+      ],
+      "rationale": "R24: Neocatechumenal community celebrations are not called a Mass and are for the communities.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f328d30f",
+          "page": 2,
+          "said": "Sat. — 8:30am (Eng)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6956d7c",
+          "page": 2,
+          "said": "Sat. — 8:30am (Eng)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintfrancisdesaleslodinj.org/mass-schedule",
+          "said": "SATURDAY: 8:30 AM ENGLISH (CONVENT-CHAPEL)"
+        }
+      ],
+      "rationale": "R32: the bulletins list it under Daily Mass Schedule with no place, and the intentions list it each Saturday, but the website says it is in the convent chapel. The church list has only the church at 125 Union St; the convent is the parish's own (Building Fund note: 'roof of the convent & rectory/office', and the parish's Felician sisters are on staff) and is probably on the same grounds, but no source gives its address. Leaning include with the note, because it is clearly a public parish Mass; leave out if the convent is off site (POLICY, Churches and chapels).",
+      "question": "Include the Saturday 8:30 AM Mass, which the website places in the convent chapel?",
+      "options": [
+        {
+          "label": "Saturdays 8:30 AM, convent chapel",
+          "entry": {
+            "church_slug": "st-francis-de-sales-lodi",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Convent chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f328d30f",
+          "page": 2,
+          "said": "Saturday — ... 8:30pm Neocatechumenal Way"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6956d7c",
+          "page": 2,
+          "said": "Saturday — ... 8:30pm Neocatechumenal Way"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saintfrancisdesaleslodinj.org/mass-schedule",
+          "said": "SATURDAY: 8:30 PM NEOCATECHUMENAL WAY"
+        }
+      ],
+      "rationale": "R30: it is printed in the Sunday Mass Schedule box and on the website, with no stated restriction (POLICY: a Mass listed with a group is open unless limited). But it is the Neocatechumenal communities' own Eucharist, unlike the other weekend Masses the intentions never list it, and the parish's other NCW 'Community Celebrations' are for the communities. Leaning leave out as a closed group celebration.",
+      "question": "Include the Saturday 8:30 PM Neocatechumenal Way Mass?",
+      "options": [
+        {
+          "label": "Saturdays 8:30 PM",
+          "entry": {
+            "church_slug": "st-francis-de-sales-lodi",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "20:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Neocatechumenal Way"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    }
+  ]
+}
