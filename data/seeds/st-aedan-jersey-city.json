@@ -1,0 +1,1234 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-aedan-jersey-city",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:53:27Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-21T02:09:30Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches: St. Aedan's Church and the Parish Center Chapel (39 Tuers Ave). Weekend, weekday (12:10 PM), Friday Spanish 7 PM chapel Mass, Friday 12:45 Confession and first-Friday Adoration agree in both image-only bulletins (Nov 8, Nov 15) and the website; Simbang Gabi Dec 15-23 settled. Open: the place of the Dec 11-12 Guadalupe Exposition and Masses.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "17c5d72df987fd890c6c536eb8aa2616252b4ddf1091f2a05cb9f64f9c5b85c7",
+      "fetched_at": "2026-11-15T16:53:27Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "4933ab4768f3b86d975ef39ab5e8d7a7ebd03e5f2ff9513615cec69e0afecb0d",
+      "fetched_at": "2026-11-08T16:02:22Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aedan-parish-center-chapel-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Parish Center Chapel, 39 Tuers Ave"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17c5d72d",
+          "page": 1,
+          "said": "SATURDAY| SABADO 9:00am (Chapel, 39 Tuers Ave)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4933ab47",
+          "page": 1,
+          "said": "SATURDAY| SABADO 9:00am (Chapel, 39 Tuers Ave)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17c5d72d",
+          "page": 2,
+          "said": "Saturday ... 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4933ab47",
+          "page": 2,
+          "said": "Saturday ... 9:00 am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.staedans.org/",
+          "said": "SATURDAY 9:00 AM (English) at the Parish Center Chapel"
+        }
+      ],
+      "rationale": "R1: Mass Times box of both bulletins read places it at the Chapel, 39 Tuers Ave (the parish center chapel on the church list); intentions and website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aedan-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17c5d72d",
+          "page": 1,
+          "said": "Evening Vigil 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4933ab47",
+          "page": 1,
+          "said": "Evening Vigil 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17c5d72d",
+          "page": 2,
+          "said": "5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4933ab47",
+          "page": 2,
+          "said": "5:00 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.staedans.org/",
+          "said": "SATURDAY 5:00 PM (English)"
+        }
+      ],
+      "rationale": "R1: Mass Times box and intentions of both bulletins; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aedan-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17c5d72d",
+          "page": 1,
+          "said": "Sunday 9:00am* (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4933ab47",
+          "page": 1,
+          "said": "Sunday 9:00am* (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17c5d72d",
+          "page": 2,
+          "said": "Sunday ... 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4933ab47",
+          "page": 2,
+          "said": "Sunday ... 9:00 am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.staedans.org/",
+          "said": "SUNDAY 9 AM (English)"
+        }
+      ],
+      "rationale": "R1: Mass Times box and intentions of both bulletins; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aedan-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17c5d72d",
+          "page": 1,
+          "said": "Domingo 11:00am* (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4933ab47",
+          "page": 1,
+          "said": "Domingo 11:00am* (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17c5d72d",
+          "page": 2,
+          "said": "11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4933ab47",
+          "page": 2,
+          "said": "11:00 am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.staedans.org/",
+          "said": "11 AM (Spanish)"
+        }
+      ],
+      "rationale": "R1: Mass Times box and intentions of both bulletins; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aedan-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17c5d72d",
+          "page": 1,
+          "said": "Sunday 1:00pm (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4933ab47",
+          "page": 1,
+          "said": "Sunday 1:00pm (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17c5d72d",
+          "page": 2,
+          "said": "1:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4933ab47",
+          "page": 2,
+          "said": "1:00 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.staedans.org/",
+          "said": "SUNDAY ... 1 PM (English)"
+        }
+      ],
+      "rationale": "R1: Mass Times box and intentions of both bulletins; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aedan-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17c5d72d",
+          "page": 1,
+          "said": "WEEKDAYS | MISA DIARIA 12:10pm*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4933ab47",
+          "page": 1,
+          "said": "WEEKDAYS | MISA DIARIA 12:10pm*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17c5d72d",
+          "page": 2,
+          "said": "Monday ... Friday 12:10 pm (intentions each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4933ab47",
+          "page": 2,
+          "said": "Monday ... Friday 12:10 pm (intentions each weekday)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.staedans.org/",
+          "said": "MONDAY to FRIDAY 12:10 PM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box and in every weekday's intentions in both bulletins. Place: the box and the website name the chapel only for the Saturday 9 AM and Friday 7 PM Masses ('7:00 PM (Spanish) on Friday at the Parish Center Chapel'), so the 12:10 PM Mass is at the church (R5).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aedan-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17c5d72d",
+          "page": 1,
+          "said": "WEEKDAYS | MISA DIARIA 12:10pm*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4933ab47",
+          "page": 1,
+          "said": "WEEKDAYS | MISA DIARIA 12:10pm*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17c5d72d",
+          "page": 2,
+          "said": "Monday ... Friday 12:10 pm (intentions each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4933ab47",
+          "page": 2,
+          "said": "Monday ... Friday 12:10 pm (intentions each weekday)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.staedans.org/",
+          "said": "MONDAY to FRIDAY 12:10 PM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box and in every weekday's intentions in both bulletins. Place: the box and the website name the chapel only for the Saturday 9 AM and Friday 7 PM Masses ('7:00 PM (Spanish) on Friday at the Parish Center Chapel'), so the 12:10 PM Mass is at the church (R5).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aedan-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17c5d72d",
+          "page": 1,
+          "said": "WEEKDAYS | MISA DIARIA 12:10pm*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4933ab47",
+          "page": 1,
+          "said": "WEEKDAYS | MISA DIARIA 12:10pm*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17c5d72d",
+          "page": 2,
+          "said": "Monday ... Friday 12:10 pm (intentions each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4933ab47",
+          "page": 2,
+          "said": "Monday ... Friday 12:10 pm (intentions each weekday)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.staedans.org/",
+          "said": "MONDAY to FRIDAY 12:10 PM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box and in every weekday's intentions in both bulletins. Place: the box and the website name the chapel only for the Saturday 9 AM and Friday 7 PM Masses ('7:00 PM (Spanish) on Friday at the Parish Center Chapel'), so the 12:10 PM Mass is at the church (R5).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aedan-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17c5d72d",
+          "page": 1,
+          "said": "WEEKDAYS | MISA DIARIA 12:10pm*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4933ab47",
+          "page": 1,
+          "said": "WEEKDAYS | MISA DIARIA 12:10pm*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17c5d72d",
+          "page": 2,
+          "said": "Monday ... Friday 12:10 pm (intentions each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4933ab47",
+          "page": 2,
+          "said": "Monday ... Friday 12:10 pm (intentions each weekday)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.staedans.org/",
+          "said": "MONDAY to FRIDAY 12:10 PM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box and in every weekday's intentions in both bulletins. Place: the box and the website name the chapel only for the Saturday 9 AM and Friday 7 PM Masses ('7:00 PM (Spanish) on Friday at the Parish Center Chapel'), so the 12:10 PM Mass is at the church (R5).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aedan-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17c5d72d",
+          "page": 1,
+          "said": "WEEKDAYS | MISA DIARIA 12:10pm*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4933ab47",
+          "page": 1,
+          "said": "WEEKDAYS | MISA DIARIA 12:10pm*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17c5d72d",
+          "page": 2,
+          "said": "Monday ... Friday 12:10 pm (intentions each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4933ab47",
+          "page": 2,
+          "said": "Monday ... Friday 12:10 pm (intentions each weekday)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.staedans.org/",
+          "said": "MONDAY to FRIDAY 12:10 PM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box and in every weekday's intentions in both bulletins. Place: the box and the website name the chapel only for the Saturday 9 AM and Friday 7 PM Masses ('7:00 PM (Spanish) on Friday at the Parish Center Chapel'), so the 12:10 PM Mass is at the church (R5).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aedan-parish-center-chapel-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish; Parish Center Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17c5d72d",
+          "page": 1,
+          "said": "Viernes, 7pm*(Español) en el Centro Parroquial"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4933ab47",
+          "page": 1,
+          "said": "Viernes, 7pm*(Español) en el Centro Parroquial"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17c5d72d",
+          "page": 4,
+          "said": "Friday 20-Nov 6:30 PM Mass & Spanish Prayer Group, Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4933ab47",
+          "page": 4,
+          "said": "Friday 13-Nov 6:30 PM Mass & Spanish Prayer Group, Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://www.staedans.org/",
+          "said": "7:00 PM (Spanish) on Friday at the Parish Center Chapel."
+        }
+      ],
+      "rationale": "R1: the Mass Times box of both bulletins and the website give 7 PM at the parish center. The calendar's 6:30 PM 'Mass & Spanish Prayer Group' is the start of the evening: the box says '*Rosary half hour prior to Mass', so the Mass is 7 PM (POLICY, Times: the clock time stated for the Mass wins).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aedan-jersey-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17c5d72d",
+          "page": 1,
+          "said": "CONFESSION | CONFESIÓN Fridays at 12:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4933ab47",
+          "page": 1,
+          "said": "CONFESSION | CONFESIÓN Fridays at 12:45pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.staedans.org/",
+          "said": "CONFESSION FRIDAY at 12:45 PM"
+        }
+      ],
+      "rationale": "R1: Mass Times box of both bulletins; website agrees. No end given, so none (POLICY, Times). Place: right after the 12:10 PM weekday Mass at the church; the parish names the chapel explicitly for its chapel services and does not here.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aedan-jersey-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:45",
+        "end_time": "13:45",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4933ab47",
+          "page": 2,
+          "said": "Eucharistic Adoration 1st Friday of every Month from 12:45pm - 1:45pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.staedans.org/",
+          "said": "EUCHARISTIC ADORATION FIRST FRIDAY of every month, 12:45 to 1:45 PM"
+        }
+      ],
+      "rationale": "R12: a first-Friday service; the newest bulletin's week (Nov 15-22) holds only a third Friday, and the Nov 8 issue prints it. Website agrees. Place: follows the 12:10 PM Mass at the church; no chapel named.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17c5d72d",
+          "page": 1,
+          "said": "*Rosary half hour prior to Mass"
+        }
+      ],
+      "rationale": "R24: the Rosary is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aedan-parish-center-chapel-jersey-city",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-03",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Novena to Our Lady of Guadalupe"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17c5d72d",
+          "page": 5,
+          "said": "Acompáñanos al Novenario del 3 al 10 de Diciembre a las 7:00 p.m. en la Capilla del Centro Parroquial, 39 Tuers Ave."
+        }
+      ],
+      "rationale": "R24: a novena; the flyer does not call it a Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aedan-jersey-city",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-15",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Simbang Gabi"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17c5d72d",
+          "page": 5,
+          "said": "Simbang Gabi 2026 ... A nine-day series of Masses ... DEC 15 - 23 7:00 P.M 800 BERGEN AVE. JERSEY CITY"
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin's flyer gives nine dated Masses Dec 15-23 at 7 PM at 800 Bergen Ave (the church), on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aedan-jersey-city",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-16",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Simbang Gabi"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17c5d72d",
+          "page": 5,
+          "said": "Simbang Gabi 2026 ... A nine-day series of Masses ... DEC 15 - 23 7:00 P.M 800 BERGEN AVE. JERSEY CITY"
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin's flyer gives nine dated Masses Dec 15-23 at 7 PM at 800 Bergen Ave (the church), on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aedan-jersey-city",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-17",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Simbang Gabi"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17c5d72d",
+          "page": 5,
+          "said": "Simbang Gabi 2026 ... A nine-day series of Masses ... DEC 15 - 23 7:00 P.M 800 BERGEN AVE. JERSEY CITY"
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin's flyer gives nine dated Masses Dec 15-23 at 7 PM at 800 Bergen Ave (the church), on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aedan-jersey-city",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-18",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Simbang Gabi"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17c5d72d",
+          "page": 5,
+          "said": "Simbang Gabi 2026 ... A nine-day series of Masses ... DEC 15 - 23 7:00 P.M 800 BERGEN AVE. JERSEY CITY"
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin's flyer gives nine dated Masses Dec 15-23 at 7 PM at 800 Bergen Ave (the church), on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aedan-jersey-city",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-19",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Simbang Gabi"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17c5d72d",
+          "page": 5,
+          "said": "Simbang Gabi 2026 ... A nine-day series of Masses ... DEC 15 - 23 7:00 P.M 800 BERGEN AVE. JERSEY CITY"
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin's flyer gives nine dated Masses Dec 15-23 at 7 PM at 800 Bergen Ave (the church), on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aedan-jersey-city",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-20",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Simbang Gabi"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17c5d72d",
+          "page": 5,
+          "said": "Simbang Gabi 2026 ... A nine-day series of Masses ... DEC 15 - 23 7:00 P.M 800 BERGEN AVE. JERSEY CITY"
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin's flyer gives nine dated Masses Dec 15-23 at 7 PM at 800 Bergen Ave (the church), on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aedan-jersey-city",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-21",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Simbang Gabi"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17c5d72d",
+          "page": 5,
+          "said": "Simbang Gabi 2026 ... A nine-day series of Masses ... DEC 15 - 23 7:00 P.M 800 BERGEN AVE. JERSEY CITY"
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin's flyer gives nine dated Masses Dec 15-23 at 7 PM at 800 Bergen Ave (the church), on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aedan-jersey-city",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-22",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Simbang Gabi"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17c5d72d",
+          "page": 5,
+          "said": "Simbang Gabi 2026 ... A nine-day series of Masses ... DEC 15 - 23 7:00 P.M 800 BERGEN AVE. JERSEY CITY"
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin's flyer gives nine dated Masses Dec 15-23 at 7 PM at 800 Bergen Ave (the church), on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aedan-jersey-city",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-23",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Simbang Gabi"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17c5d72d",
+          "page": 5,
+          "said": "Simbang Gabi 2026 ... A nine-day series of Masses ... DEC 15 - 23 7:00 P.M 800 BERGEN AVE. JERSEY CITY"
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin's flyer gives nine dated Masses Dec 15-23 at 7 PM at 800 Bergen Ave (the church), on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17c5d72d",
+          "page": 5,
+          "said": "11 DE DICIEMBRE | A PARTIR DE LAS 8 P.M. 8:00 P.M. – EXPOSICIÓN DEL SANTÍSIMO, SANTO ROSARIO Y ÚLTIMO DÍA DE LA NOVENA"
+        }
+      ],
+      "rationale": "R32: the program gives no place. The novena (Dec 3-10) is in the parish center chapel, but a vigil Mass with mariachis until midnight suggests the church. No end time for the Exposition (POLICY, Times).",
+      "question": "Where are the Dec 11 Guadalupe Exposition (8 PM) and Vigil Mass (9 PM)?",
+      "options": [
+        {
+          "label": "St. Aedan's Church",
+          "entry": {
+            "church_slug": "st-aedan-jersey-city",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-11",
+            "start_time": "20:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Our Lady of Guadalupe; with Rosary"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Parish Center Chapel",
+          "entry": {
+            "church_slug": "st-aedan-parish-center-chapel-jersey-city",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-11",
+            "start_time": "20:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Our Lady of Guadalupe; with Rosary"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "guadalupe-dec11"
+    },
+    {
+      "id": "s26",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17c5d72d",
+          "page": 5,
+          "said": "9:00 P.M. – MISA DE VIGILIA"
+        }
+      ],
+      "rationale": "R32: the program gives no place. The novena (Dec 3-10) is in the parish center chapel, but a vigil Mass with mariachis until midnight suggests the church.",
+      "question": "Where are the Dec 11 Guadalupe Exposition (8 PM) and Vigil Mass (9 PM)?",
+      "options": [
+        {
+          "label": "St. Aedan's Church",
+          "entry": {
+            "church_slug": "st-aedan-jersey-city",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-11",
+            "start_time": "21:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Our Lady of Guadalupe vigil"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Parish Center Chapel",
+          "entry": {
+            "church_slug": "st-aedan-parish-center-chapel-jersey-city",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-11",
+            "start_time": "21:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Our Lady of Guadalupe vigil"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "guadalupe-dec11"
+    },
+    {
+      "id": "s27",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17c5d72d",
+          "page": 5,
+          "said": "12 DE DICIEMBRE ... PEREGRINACIÓN DE LAS PARROQUIAS ... 7:00 P.M. – SANTA MISA. FIESTA DE LA VIRGEN (CAFETERÍA DE LA ESCUELA HUDSON CATHOLIC)"
+        }
+      ],
+      "rationale": "R32: the program places only the fiesta (Hudson Catholic cafeteria, not a church); a five-parish pilgrimage Mass most likely fills the church.",
+      "question": "Where is the Dec 12 Guadalupe 7 PM Mass (after the parishes' pilgrimage)?",
+      "options": [
+        {
+          "label": "St. Aedan's Church",
+          "entry": {
+            "church_slug": "st-aedan-jersey-city",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-12",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Our Lady of Guadalupe"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Parish Center Chapel",
+          "entry": {
+            "church_slug": "st-aedan-parish-center-chapel-jersey-city",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-12",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Our Lady of Guadalupe"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    }
+  ]
+}
