@@ -1,0 +1,1063 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-john-the-evangelist-leonia",
+  "status": "ready",
+  "as_of": "2026-11-15T16:24:50Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-21T04:17:44Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend, weekday, First Friday, Third Saturday healing Mass, confession and Wednesday Holy Hour times are printed identically in the schedule box of both bulletins (Nov 8 and Nov 15, 2026); the website places the 1:30pm Spanish Mass on Sunday. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "150d2011c559fb2050dd573ab12ebac0a2cabc8a1f80ac41c56a6ee3c4189584",
+      "fetched_at": "2026-11-15T16:24:50Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "95da09f918b523194f095881704c3ea758b6b25f0e5742c77ce42c470ebfed45",
+      "fetched_at": "2026-11-08T15:48:50Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-leonia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "150d2011",
+          "page": 1,
+          "said": "Mass Schedule Saturday: 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95da09f9",
+          "page": 1,
+          "said": "Mass Schedule Saturday: 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "150d2011",
+          "page": 2,
+          "said": "11/14 SAT Confessions 4:00pm Vigil Mass at 5:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-leonia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "150d2011",
+          "page": 1,
+          "said": "Sunday 7:30am, 9:30am, 11:30am & 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95da09f9",
+          "page": 1,
+          "said": "Sunday 7:30am, 9:30am, 11:30am & 6:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-leonia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "150d2011",
+          "page": 1,
+          "said": "Sunday 7:30am, 9:30am, 11:30am & 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95da09f9",
+          "page": 1,
+          "said": "Sunday 7:30am, 9:30am, 11:30am & 6:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-leonia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "150d2011",
+          "page": 1,
+          "said": "Sunday 7:30am, 9:30am, 11:30am & 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95da09f9",
+          "page": 1,
+          "said": "Sunday 7:30am, 9:30am, 11:30am & 6:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-leonia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "150d2011",
+          "page": 1,
+          "said": "Sunday 7:30am, 9:30am, 11:30am & 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95da09f9",
+          "page": 1,
+          "said": "Sunday 7:30am, 9:30am, 11:30am & 6:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-leonia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "150d2011",
+          "page": 1,
+          "said": "Mass in Spanish: 1:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95da09f9",
+          "page": 1,
+          "said": "Mass in Spanish: 1:30pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjohnleonia.org/",
+          "said": "Sunday 7:30, 9:30 a.m., 11:30 a.m. 1:30 p.m. (Spanish) & 6:00 p.m."
+        }
+      ],
+      "rationale": "R1, R5: the box lists 'Mass in Spanish 1:30pm' on the line after Sunday without its own day; the parish website (checked 2026-11-20, its calendar lists the Sunday November 22 Masses) places it on Sunday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-leonia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "150d2011",
+          "page": 1,
+          "said": "Weekdays: 9:00am Mon-Sat"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95da09f9",
+          "page": 1,
+          "said": "Weekdays: 9:00am Mon-Sat"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins; the First Saturday 9:00am Mass of the Immaculate Heart of Mary is this same Saturday 9:00 Mass, so it gets no slot of its own.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-leonia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "150d2011",
+          "page": 1,
+          "said": "Weekdays: 9:00am Mon-Sat"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95da09f9",
+          "page": 1,
+          "said": "Weekdays: 9:00am Mon-Sat"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins; the First Saturday 9:00am Mass of the Immaculate Heart of Mary is this same Saturday 9:00 Mass, so it gets no slot of its own.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-leonia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "150d2011",
+          "page": 1,
+          "said": "Weekdays: 9:00am Mon-Sat"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95da09f9",
+          "page": 1,
+          "said": "Weekdays: 9:00am Mon-Sat"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins; the First Saturday 9:00am Mass of the Immaculate Heart of Mary is this same Saturday 9:00 Mass, so it gets no slot of its own.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-leonia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "150d2011",
+          "page": 1,
+          "said": "Weekdays: 9:00am Mon-Sat"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95da09f9",
+          "page": 1,
+          "said": "Weekdays: 9:00am Mon-Sat"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins; the First Saturday 9:00am Mass of the Immaculate Heart of Mary is this same Saturday 9:00 Mass, so it gets no slot of its own.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-leonia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "150d2011",
+          "page": 1,
+          "said": "Weekdays: 9:00am Mon-Sat"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95da09f9",
+          "page": 1,
+          "said": "Weekdays: 9:00am Mon-Sat"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins; the First Saturday 9:00am Mass of the Immaculate Heart of Mary is this same Saturday 9:00 Mass, so it gets no slot of its own.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-leonia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "150d2011",
+          "page": 1,
+          "said": "Weekdays: 9:00am Mon-Sat"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95da09f9",
+          "page": 1,
+          "said": "Weekdays: 9:00am Mon-Sat"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins; the First Saturday 9:00am Mass of the Immaculate Heart of Mary is this same Saturday 9:00 Mass, so it gets no slot of its own.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-leonia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass of the Sacred Heart"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "150d2011",
+          "page": 1,
+          "said": "First Friday: 7:00pm, Mass of Sacred Heart & Devotions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95da09f9",
+          "page": 1,
+          "said": "First Friday: 7:00pm, Mass of Sacred Heart & Devotions"
+        }
+      ],
+      "rationale": "R1: the standing schedule box of both bulletins names the First Friday 7:00pm Mass (POLICY, Weekly or dated, rule 2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-leonia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass of Healing and Anointing"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "150d2011",
+          "page": 1,
+          "said": "Third Saturday: 12 Noon, Mass of Healing and Anointing"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95da09f9",
+          "page": 1,
+          "said": "Third Saturday: 12 Noon, Mass of Healing and Anointing"
+        },
+        {
+          "source": "agent",
+          "bulletin": "150d2011",
+          "page": 2,
+          "said": "11/21 SAT Healing & Anointing Mass - 12noon"
+        }
+      ],
+      "rationale": "R1: standing schedule box of both bulletins; the newest issue's week holds the third Saturday (Nov 21) and announces it, 'All are welcome'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-leonia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "08:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "150d2011",
+          "page": 1,
+          "said": "THE SACRAMENT OF PENANCE/CONFESSION: Monday - Friday 8:30am-8:50am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "95da09f9",
+          "page": 1,
+          "said": "THE SACRAMENT OF PENANCE/CONFESSION: Monday - Friday 8:30am-8:50am."
+        }
+      ],
+      "rationale": "R1: printed in the sacraments column of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-leonia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "08:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "150d2011",
+          "page": 1,
+          "said": "THE SACRAMENT OF PENANCE/CONFESSION: Monday - Friday 8:30am-8:50am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "95da09f9",
+          "page": 1,
+          "said": "THE SACRAMENT OF PENANCE/CONFESSION: Monday - Friday 8:30am-8:50am."
+        }
+      ],
+      "rationale": "R1: printed in the sacraments column of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-leonia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "08:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "150d2011",
+          "page": 1,
+          "said": "THE SACRAMENT OF PENANCE/CONFESSION: Monday - Friday 8:30am-8:50am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "95da09f9",
+          "page": 1,
+          "said": "THE SACRAMENT OF PENANCE/CONFESSION: Monday - Friday 8:30am-8:50am."
+        }
+      ],
+      "rationale": "R1: printed in the sacraments column of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-leonia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "08:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "150d2011",
+          "page": 1,
+          "said": "THE SACRAMENT OF PENANCE/CONFESSION: Monday - Friday 8:30am-8:50am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "95da09f9",
+          "page": 1,
+          "said": "THE SACRAMENT OF PENANCE/CONFESSION: Monday - Friday 8:30am-8:50am."
+        }
+      ],
+      "rationale": "R1: printed in the sacraments column of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-leonia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "08:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "150d2011",
+          "page": 1,
+          "said": "THE SACRAMENT OF PENANCE/CONFESSION: Monday - Friday 8:30am-8:50am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "95da09f9",
+          "page": 1,
+          "said": "THE SACRAMENT OF PENANCE/CONFESSION: Monday - Friday 8:30am-8:50am."
+        }
+      ],
+      "rationale": "R1: printed in the sacraments column of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-leonia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "08:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "150d2011",
+          "page": 1,
+          "said": "Saturday at 8:30-8:50am and 4:00pm-4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95da09f9",
+          "page": 1,
+          "said": "Saturday at 8:30-8:50am and 4:00pm-4:30pm"
+        }
+      ],
+      "rationale": "R1: printed in the sacraments column of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-leonia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "150d2011",
+          "page": 1,
+          "said": "Saturday at 8:30-8:50am and 4:00pm-4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95da09f9",
+          "page": 1,
+          "said": "Saturday at 8:30-8:50am and 4:00pm-4:30pm"
+        }
+      ],
+      "rationale": "R1: printed in the sacraments column of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-leonia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "150d2011",
+          "page": 1,
+          "said": "First Friday at 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95da09f9",
+          "page": 1,
+          "said": "First Friday at 6:30pm"
+        }
+      ],
+      "rationale": "R1: the confession schedule in both bulletins names First Friday 6:30pm; no end time is given (POLICY, Times), it precedes the 7:00pm First Friday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-leonia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 7:00 PM Holy Hour"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "150d2011",
+          "page": 2,
+          "said": "11/18 WED Holy Hour & Rosary 7pm, Confessions at 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95da09f9",
+          "page": 2,
+          "said": "11/11 WED Holy Hour & Rosary 7pm, Confessions at 6:30pm"
+        }
+      ],
+      "rationale": "R35: the same Wednesday 6:30pm Confessions appear in the calendars of two consecutive weeks, unmarked as special, alongside the standing Wednesday Holy Hour; no end time given (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-leonia",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "150d2011",
+          "page": 1,
+          "said": "Holy Hour: Wednesday at 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95da09f9",
+          "page": 1,
+          "said": "Holy Hour: Wednesday at 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "150d2011",
+          "page": 2,
+          "said": "11/18 WED Holy Hour & Rosary 7pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjohnleonia.org/mass-times",
+          "said": "Wednesday 7:00 PM to 8:00 PM"
+        }
+      ],
+      "rationale": "R1, POLICY (a Holy Hour is Adoration): the standing box of both bulletins gives Wednesday 7:00pm; a Holy Hour is one hour, and the parish website lists Wednesday 7:00 PM to 8:00 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-leonia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-16",
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Confirmation Class Demonstration Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "150d2011",
+          "page": 2,
+          "said": "11/16 MON Confirmation Class Demonstration Mass 7:30pm in Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "150d2011",
+          "page": 5,
+          "said": "Confirmation candidates: Monday Nov 16th is our next Session: Demonstration Mass with Fr Bryan."
+        }
+      ],
+      "rationale": "POLICY, What to extract / R24: a teaching Mass that is a session of the Confirmation class, limited to that group.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "150d2011",
+          "page": 1,
+          "said": "Novenas prayed after 9:00 a.m. Mass ... Rosary: Recited Saturday after 9:00am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "150d2011",
+          "page": 4,
+          "said": "Each day we pray the Divine Mercy at 3:00 p.m., followed by the Rosary of the Day ... Join Zoom Meeting"
+        }
+      ],
+      "rationale": "R24: novenas, Rosary, Divine Mercy and Holy Face chaplets (on Zoom) are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "150d2011",
+          "page": 3,
+          "said": "Our Lady of Mt. Carmel located at 120 Prospect St., Nutley ... a Mass at 9:15 a.m. ... a welcome Mass with Msgr. Anthony Figueiredo at 12:15 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "95da09f9",
+          "page": 4,
+          "said": "The 2026 Blue Mass ... Thursday, November 12, 2026, at 10 a.m. at the Cathedral Basilica of the Sacred Heart in Newark."
+        }
+      ],
+      "rationale": "R22: Masses at another parish (Nutley relic visit) and the Cathedral, not this parish's church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
