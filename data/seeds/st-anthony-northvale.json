@@ -1,0 +1,662 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-anthony-northvale",
+  "status": "ready",
+  "as_of": "2026-11-15T16:53:34Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-21T02:32:14Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend, weekday, Tuesday Adoration and Saturday confession times are identical on page 1 of both bulletins (Nov 8 and Nov 15, 2026) and match the Mass intentions. Dated: Thanksgiving Mass Nov 26 9 AM and the Deanery Advent Penance Service Nov 30 7 PM. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "999ec9d281adf6ee17d9f52b5e24c6b79d0199b2d6bef91c9977eff65ecb855d",
+      "fetched_at": "2026-11-15T16:53:34Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "4b043de731cb3509f23dff6aa4b65bea4d98420b9e5f39690d567df57c3450a0",
+      "fetched_at": "2026-11-08T22:05:24Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-northvale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "999ec9d2",
+          "page": 1,
+          "said": "Saturday: 5:00 pm & 6:15 pm (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b043de7",
+          "page": 1,
+          "said": "Saturday: 5:00 pm & 6:15 pm (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "999ec9d2",
+          "page": 3,
+          "said": "5PM + Thomas Schneider, Sr."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b043de7",
+          "page": 3,
+          "said": "5PM + Thomas Schneider, Sr."
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Masses box of both bulletins read, with matching Saturday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-northvale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "999ec9d2",
+          "page": 1,
+          "said": "Saturday: 5:00 pm & 6:15 pm (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b043de7",
+          "page": 1,
+          "said": "Saturday: 5:00 pm & 6:15 pm (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "999ec9d2",
+          "page": 3,
+          "said": "6:15PM People of the Parish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b043de7",
+          "page": 3,
+          "said": "6:15PM People of the Parish"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Masses box of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-northvale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "999ec9d2",
+          "page": 1,
+          "said": "Sunday: 8:00 am, 10:00 am, 12 noon & 4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b043de7",
+          "page": 1,
+          "said": "Sunday: 8:00 am, 10:00 am, 12 noon & 4:30 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Masses box of both bulletins read; the Sunday intentions list 8AM, 10AM, 12NOON and 4:30PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-northvale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "999ec9d2",
+          "page": 1,
+          "said": "Sunday: 8:00 am, 10:00 am, 12 noon & 4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b043de7",
+          "page": 1,
+          "said": "Sunday: 8:00 am, 10:00 am, 12 noon & 4:30 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Masses box of both bulletins read; the Sunday intentions list 8AM, 10AM, 12NOON and 4:30PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-northvale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "999ec9d2",
+          "page": 1,
+          "said": "Sunday: 8:00 am, 10:00 am, 12 noon & 4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b043de7",
+          "page": 1,
+          "said": "Sunday: 8:00 am, 10:00 am, 12 noon & 4:30 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Masses box of both bulletins read; the Sunday intentions list 8AM, 10AM, 12NOON and 4:30PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-northvale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "999ec9d2",
+          "page": 1,
+          "said": "Sunday: 8:00 am, 10:00 am, 12 noon & 4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b043de7",
+          "page": 1,
+          "said": "Sunday: 8:00 am, 10:00 am, 12 noon & 4:30 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Masses box of both bulletins read; the Sunday intentions list 8AM, 10AM, 12NOON and 4:30PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-northvale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "999ec9d2",
+          "page": 1,
+          "said": "Weekday: Monday, Wednesday & Friday: 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b043de7",
+          "page": 1,
+          "said": "Weekday: Monday, Wednesday & Friday: 8:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Masses box of both bulletins read, with matching 8AM intentions on those days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-northvale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "999ec9d2",
+          "page": 1,
+          "said": "Weekday: Monday, Wednesday & Friday: 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b043de7",
+          "page": 1,
+          "said": "Weekday: Monday, Wednesday & Friday: 8:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Masses box of both bulletins read, with matching 8AM intentions on those days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-northvale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "999ec9d2",
+          "page": 1,
+          "said": "Weekday: Monday, Wednesday & Friday: 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b043de7",
+          "page": 1,
+          "said": "Weekday: Monday, Wednesday & Friday: 8:00 am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Masses box of both bulletins read, with matching 8AM intentions on those days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-northvale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "999ec9d2",
+          "page": 1,
+          "said": "Tuesday & Thursday: 5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b043de7",
+          "page": 1,
+          "said": "Tuesday & Thursday: 5:30 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Masses box of both bulletins read, with matching 5:30PM intentions on those days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-northvale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "999ec9d2",
+          "page": 1,
+          "said": "Tuesday & Thursday: 5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b043de7",
+          "page": 1,
+          "said": "Tuesday & Thursday: 5:30 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Masses box of both bulletins read, with matching 5:30PM intentions on those days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-northvale",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "17:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "999ec9d2",
+          "page": 1,
+          "said": "Eucharistic Adoration -Tuesdays: 9:00 am - 5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b043de7",
+          "page": 1,
+          "said": "Eucharistic Adoration -Tuesdays: 9:00 am - 5:30 pm"
+        }
+      ],
+      "rationale": "R1: printed on page 1 of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-northvale",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "999ec9d2",
+          "page": 1,
+          "said": "Reconciliation: Saturday 4:00 pm or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b043de7",
+          "page": 1,
+          "said": "Reconciliation: Saturday 4:00 pm or by appointment"
+        }
+      ],
+      "rationale": "R1: printed on page 1 of both bulletins read; no end time is given, so POLICY, Times leaves end_time null.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "999ec9d2",
+          "page": 1,
+          "said": "Reconciliation: Saturday 4:00 pm or by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-northvale",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "999ec9d2",
+          "page": 4,
+          "said": "Join us at St. Anthony Church on Thursday, November 26, at 9:00 AM as we gather as a parish family to celebrate Thanksgiving Mass."
+        }
+      ],
+      "rationale": "R1, R16: a dated holiday Mass after as_of, open to everyone. R17: the bulletin does not say the Thursday 5:30 PM Mass is cancelled, so the weekly slot is left alone.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-northvale",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-30",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Deanery Advent Penance Service"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "999ec9d2",
+          "page": 4,
+          "said": "Deanery Penance Service at St. Anthony Church on Monday, November 30, at 7:00 PM. Several priests will be available to hear confessions."
+        }
+      ],
+      "rationale": "R1, R16: a dated confession service at the parish church after as_of; no end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-northvale",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-14",
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Anointing of the Sick Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b043de7",
+          "page": 3,
+          "said": "Anointing of the Sick Mass Saturday, November 14, 2026, at 11:00 AM"
+        }
+      ],
+      "rationale": "R16: a dated Mass before as_of (2026-11-15), out of seed scope.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
