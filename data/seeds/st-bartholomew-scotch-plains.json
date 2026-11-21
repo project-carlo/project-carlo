@@ -1,0 +1,1000 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-bartholomew-scotch-plains",
+  "status": "ready",
+  "as_of": "2026-11-15T16:53:32Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-21T02:45:08Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend (Sat 5 PM; Sun 7:30, 9, 10:30, 12), weekday (Mon-Fri 6:30 & 8:30, Sat 8:30) Masses and Saturday 4 PM Confession agree in the schedule box and intentions of both bulletins (Nov 8, Nov 15 2026). Dated: Nov 25 11 AM Thanksgiving Mass and Dec 24 3:30 PM Children's Mass in the academy gym on the church grounds. No Adoration printed; no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "6fceb22cb2b9f394e213d57edc78f4c15f5fdd24e2b29241e462a1e643e49d4a",
+      "fetched_at": "2026-11-15T16:53:32Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "f4b98d695f778c47314b113315912a181b6241c0d80807c3d12f3b12bec06125",
+      "fetched_at": "2026-11-08T16:02:30Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-scotch-plains",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6fceb22c",
+          "page": 1,
+          "said": "Mass Schedule Saturday: 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4b98d69",
+          "page": 1,
+          "said": "Mass Schedule Saturday: 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fceb22c",
+          "page": 2,
+          "said": "SATURDAY ... 5:00PM (Mass Intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4b98d69",
+          "page": 2,
+          "said": "SATURDAY ... 5:00PM (Mass Intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box and the p2 intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-scotch-plains",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6fceb22c",
+          "page": 1,
+          "said": "Mass Schedule Sunday: 7:30 AM 9:00 AM 10:30 AM 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4b98d69",
+          "page": 1,
+          "said": "Mass Schedule Sunday: 7:30 AM 9:00 AM 10:30 AM 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fceb22c",
+          "page": 2,
+          "said": "SUNDAY ... 7:30AM, 9:00AM, 10:30AM, 12:00PM (Mass Intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4b98d69",
+          "page": 2,
+          "said": "SUNDAY ... 7:30AM, 9:00AM, 10:30AM, 12:00PM (Mass Intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box and the p2 intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-scotch-plains",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6fceb22c",
+          "page": 1,
+          "said": "Mass Schedule Sunday: 7:30 AM 9:00 AM 10:30 AM 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4b98d69",
+          "page": 1,
+          "said": "Mass Schedule Sunday: 7:30 AM 9:00 AM 10:30 AM 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fceb22c",
+          "page": 2,
+          "said": "SUNDAY ... 7:30AM, 9:00AM, 10:30AM, 12:00PM (Mass Intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4b98d69",
+          "page": 2,
+          "said": "SUNDAY ... 7:30AM, 9:00AM, 10:30AM, 12:00PM (Mass Intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box and the p2 intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-scotch-plains",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6fceb22c",
+          "page": 1,
+          "said": "Mass Schedule Sunday: 7:30 AM 9:00 AM 10:30 AM 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4b98d69",
+          "page": 1,
+          "said": "Mass Schedule Sunday: 7:30 AM 9:00 AM 10:30 AM 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fceb22c",
+          "page": 2,
+          "said": "SUNDAY ... 7:30AM, 9:00AM, 10:30AM, 12:00PM (Mass Intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4b98d69",
+          "page": 2,
+          "said": "SUNDAY ... 7:30AM, 9:00AM, 10:30AM, 12:00PM (Mass Intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box and the p2 intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-scotch-plains",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6fceb22c",
+          "page": 1,
+          "said": "Mass Schedule Sunday: 7:30 AM 9:00 AM 10:30 AM 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4b98d69",
+          "page": 1,
+          "said": "Mass Schedule Sunday: 7:30 AM 9:00 AM 10:30 AM 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fceb22c",
+          "page": 2,
+          "said": "SUNDAY ... 7:30AM, 9:00AM, 10:30AM, 12:00PM (Mass Intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4b98d69",
+          "page": 2,
+          "said": "SUNDAY ... 7:30AM, 9:00AM, 10:30AM, 12:00PM (Mass Intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box and the p2 intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-scotch-plains",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6fceb22c",
+          "page": 1,
+          "said": "Weekdays: Monday to Friday 6:30 AM 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4b98d69",
+          "page": 1,
+          "said": "Weekdays: Monday to Friday 6:30 AM 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fceb22c",
+          "page": 2,
+          "said": "6:30AM / 8:30AM intentions each weekday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4b98d69",
+          "page": 2,
+          "said": "6:30AM / 8:30AM intentions each weekday"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box and the p2 intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-scotch-plains",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6fceb22c",
+          "page": 1,
+          "said": "Weekdays: Monday to Friday 6:30 AM 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4b98d69",
+          "page": 1,
+          "said": "Weekdays: Monday to Friday 6:30 AM 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fceb22c",
+          "page": 2,
+          "said": "6:30AM / 8:30AM intentions each weekday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4b98d69",
+          "page": 2,
+          "said": "6:30AM / 8:30AM intentions each weekday"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box and the p2 intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-scotch-plains",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6fceb22c",
+          "page": 1,
+          "said": "Weekdays: Monday to Friday 6:30 AM 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4b98d69",
+          "page": 1,
+          "said": "Weekdays: Monday to Friday 6:30 AM 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fceb22c",
+          "page": 2,
+          "said": "6:30AM / 8:30AM intentions each weekday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4b98d69",
+          "page": 2,
+          "said": "6:30AM / 8:30AM intentions each weekday"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box and the p2 intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-scotch-plains",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6fceb22c",
+          "page": 1,
+          "said": "Weekdays: Monday to Friday 6:30 AM 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4b98d69",
+          "page": 1,
+          "said": "Weekdays: Monday to Friday 6:30 AM 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fceb22c",
+          "page": 2,
+          "said": "6:30AM / 8:30AM intentions each weekday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4b98d69",
+          "page": 2,
+          "said": "6:30AM / 8:30AM intentions each weekday"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box and the p2 intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-scotch-plains",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6fceb22c",
+          "page": 1,
+          "said": "Weekdays: Monday to Friday 6:30 AM 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4b98d69",
+          "page": 1,
+          "said": "Weekdays: Monday to Friday 6:30 AM 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fceb22c",
+          "page": 2,
+          "said": "6:30AM / 8:30AM intentions each weekday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4b98d69",
+          "page": 2,
+          "said": "6:30AM / 8:30AM intentions each weekday"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box and the p2 intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-scotch-plains",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6fceb22c",
+          "page": 1,
+          "said": "Weekdays: Monday to Friday 6:30 AM 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4b98d69",
+          "page": 1,
+          "said": "Weekdays: Monday to Friday 6:30 AM 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fceb22c",
+          "page": 2,
+          "said": "6:30AM / 8:30AM intentions each weekday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4b98d69",
+          "page": 2,
+          "said": "6:30AM / 8:30AM intentions each weekday"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box and the p2 intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-scotch-plains",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6fceb22c",
+          "page": 1,
+          "said": "Weekdays: Monday to Friday 6:30 AM 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4b98d69",
+          "page": 1,
+          "said": "Weekdays: Monday to Friday 6:30 AM 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fceb22c",
+          "page": 2,
+          "said": "6:30AM / 8:30AM intentions each weekday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4b98d69",
+          "page": 2,
+          "said": "6:30AM / 8:30AM intentions each weekday"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box and the p2 intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-scotch-plains",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6fceb22c",
+          "page": 1,
+          "said": "Weekdays: Monday to Friday 6:30 AM 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4b98d69",
+          "page": 1,
+          "said": "Weekdays: Monday to Friday 6:30 AM 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fceb22c",
+          "page": 2,
+          "said": "6:30AM / 8:30AM intentions each weekday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4b98d69",
+          "page": 2,
+          "said": "6:30AM / 8:30AM intentions each weekday"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box and the p2 intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-scotch-plains",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6fceb22c",
+          "page": 1,
+          "said": "Weekdays: Monday to Friday 6:30 AM 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4b98d69",
+          "page": 1,
+          "said": "Weekdays: Monday to Friday 6:30 AM 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fceb22c",
+          "page": 2,
+          "said": "6:30AM / 8:30AM intentions each weekday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4b98d69",
+          "page": 2,
+          "said": "6:30AM / 8:30AM intentions each weekday"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box and the p2 intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-scotch-plains",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6fceb22c",
+          "page": 1,
+          "said": "Weekdays: Monday to Friday 6:30 AM 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4b98d69",
+          "page": 1,
+          "said": "Weekdays: Monday to Friday 6:30 AM 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fceb22c",
+          "page": 2,
+          "said": "6:30AM / 8:30AM intentions each weekday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4b98d69",
+          "page": 2,
+          "said": "6:30AM / 8:30AM intentions each weekday"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box and the p2 intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-scotch-plains",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6fceb22c",
+          "page": 1,
+          "said": "Weekdays: ... Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4b98d69",
+          "page": 1,
+          "said": "Weekdays: ... Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fceb22c",
+          "page": 2,
+          "said": "SATURDAY ... 8:30AM (Mass Intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4b98d69",
+          "page": 2,
+          "said": "SATURDAY ... 8:30AM (Mass Intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box and the p2 intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-scotch-plains",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6fceb22c",
+          "page": 1,
+          "said": "Confessions Saturdays at 4:00 PM or by appointment: (908) 322-5192"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4b98d69",
+          "page": 1,
+          "said": "Confessions Saturdays at 4:00 PM or by appointment: (908) 322-5192"
+        }
+      ],
+      "rationale": "R1, POLICY Times: Saturdays at 4:00 PM in both bulletins; no end time given, so end_time null.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6fceb22c",
+          "page": 1,
+          "said": "Confessions ... or by appointment: (908) 322-5192"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-scotch-plains",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-25",
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass of Thanksgiving (Prime Timers)"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6fceb22c",
+          "page": 9,
+          "said": "Prime Timers Friendsgiving Wednesday, November 25th. Get your gobble on! Join us for a Mass of Thanksgiving at 11:00 AM in the Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4b98d69",
+          "page": 9,
+          "said": "Prime Timers Friendsgiving Wednesday, November 25th ... Mass of Thanksgiving at 11:00 AM in the Church"
+        }
+      ],
+      "rationale": "R1, R16, POLICY Weekly or dated rule 3: a dated Mass in the Church on or after as_of, announced in both bulletins; 'Join us' with no limit to the group, and p9 of Nov 8 says 'All are welcome', so it is open.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-scotch-plains",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "15:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Children's Mass, in the school gym"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6fceb22c",
+          "page": 7,
+          "said": "Performance is on Christmas Eve at 3:00 pm, before the 3:30 pm Children's Mass in the Gym."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4b98d69",
+          "page": 6,
+          "said": "Performance is on Christmas Eve at 3:00 pm, before the 3:30 pm Children's Mass in the Gym."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4b98d69",
+          "page": 8,
+          "said": "St. Bartholomew Academy 2032 Westfield Avenue Scotch Plains NJ 07076"
+        }
+      ],
+      "rationale": "R1, R16, POLICY Churches and chapels: dated Christmas Eve Mass on or after as_of. The gym is St. Bartholomew Academy's, which the Nov 8 bulletin p8 gives the church's own address (2032 Westfield Ave), so it is on the church's grounds and belongs to the church like a church hall. Other Christmas Masses are not yet printed (R45-style gap; update mode will read them).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bartholomew-scotch-plains",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "TV Mass on Comcast/Verizon"
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6fceb22c",
+          "page": 10,
+          "said": "For our homebound parishioners: tune in on Sundays at 10am to watch Mass at St. Bartholomew, Comcast Channel 34 or Verizon Channel 22"
+        }
+      ],
+      "rationale": "R24/R25: a broadcast for the homebound, not an extra Mass time at the church; the livestream line (Saturdays 5pm, Sundays 9am) matches scheduled Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
