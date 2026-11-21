@@ -1,0 +1,1428 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-anthony-of-padua-oratory-west-orange",
+  "status": "ready",
+  "as_of": "2026-11-15T15:54:10Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-21T02:42:18Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, the ICKSP Latin Mass oratory. Sunday 7:30, 9:00, 11:00 and Mon-Sat 9:00 Masses, First Friday 7 PM Mass, Thursday 7 PM Holy Hour, second-Sunday Benediction and Saturday 5-6 PM plus half-hour-before-Mass confessions agree in both bulletins (Nov 8, Nov 15). Dated: Immaculate Conception novena 7 PM Masses and Dec 8 Masses. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "36eb27b2051aeba4137881f47575c6a785a5494f6c92fb3294d36b88e0c3c836",
+      "fetched_at": "2026-11-15T15:54:10Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "e070525c4f96a00151f5d13bd33b59b85a8efbb2128b0593bef32a69172ec05b",
+      "fetched_at": "2026-11-08T15:51:58Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-oratory-west-orange",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 1,
+          "said": "Sunday: 7:30 AM & 9:00 AM (Low Masses) 11:00 AM (High Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e070525c",
+          "page": 1,
+          "said": "Sunday: 7:30 AM & 9:00 AM (Low Masses) 11:00 AM (High Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 2,
+          "said": "7:30 AM Low Mass / 9:00 AM Low Mass / 11:00 AM High Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e070525c",
+          "page": 2,
+          "said": "7:30 AM Low Mass / 9:00 AM Low Mass / 11:00 AM High Mass"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box and the liturgical calendar of both bulletins read (Nov 8 and Nov 15).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-oratory-west-orange",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 1,
+          "said": "Sunday: 7:30 AM & 9:00 AM (Low Masses) 11:00 AM (High Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e070525c",
+          "page": 1,
+          "said": "Sunday: 7:30 AM & 9:00 AM (Low Masses) 11:00 AM (High Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 2,
+          "said": "7:30 AM Low Mass / 9:00 AM Low Mass / 11:00 AM High Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e070525c",
+          "page": 2,
+          "said": "7:30 AM Low Mass / 9:00 AM Low Mass / 11:00 AM High Mass"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box and the liturgical calendar of both bulletins read (Nov 8 and Nov 15).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-oratory-west-orange",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 1,
+          "said": "Sunday: 7:30 AM & 9:00 AM (Low Masses) 11:00 AM (High Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e070525c",
+          "page": 1,
+          "said": "Sunday: 7:30 AM & 9:00 AM (Low Masses) 11:00 AM (High Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 2,
+          "said": "7:30 AM Low Mass / 9:00 AM Low Mass / 11:00 AM High Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e070525c",
+          "page": 2,
+          "said": "7:30 AM Low Mass / 9:00 AM Low Mass / 11:00 AM High Mass"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box and the liturgical calendar of both bulletins read (Nov 8 and Nov 15).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-oratory-west-orange",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 1,
+          "said": "Monday - Saturday: 9:00 AM (Low Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e070525c",
+          "page": 1,
+          "said": "Monday - Saturday: 9:00 AM (Low Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 2,
+          "said": "9:00 AM Low Mass (each weekday in the liturgical calendar)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e070525c",
+          "page": 2,
+          "said": "9:00 AM Low Mass (each weekday in the liturgical calendar)"
+        }
+      ],
+      "rationale": "R1, R35: schedule box and calendar of both bulletins. The Immaculate Conception novena page (p4) lists only 7 PM Masses on Nov 30-Dec 4 and Dec 7, but it lists novena Masses only and says nothing cancels the 9 AM; R17/R40 keep the weekly slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-oratory-west-orange",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 1,
+          "said": "Monday - Saturday: 9:00 AM (Low Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e070525c",
+          "page": 1,
+          "said": "Monday - Saturday: 9:00 AM (Low Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 2,
+          "said": "9:00 AM Low Mass (each weekday in the liturgical calendar)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e070525c",
+          "page": 2,
+          "said": "9:00 AM Low Mass (each weekday in the liturgical calendar)"
+        }
+      ],
+      "rationale": "R1, R35: schedule box and calendar of both bulletins. The Immaculate Conception novena page (p4) lists only 7 PM Masses on Nov 30-Dec 4 and Dec 7, but it lists novena Masses only and says nothing cancels the 9 AM; R17/R40 keep the weekly slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-oratory-west-orange",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 1,
+          "said": "Monday - Saturday: 9:00 AM (Low Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e070525c",
+          "page": 1,
+          "said": "Monday - Saturday: 9:00 AM (Low Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 2,
+          "said": "9:00 AM Low Mass (each weekday in the liturgical calendar)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e070525c",
+          "page": 2,
+          "said": "9:00 AM Low Mass (each weekday in the liturgical calendar)"
+        }
+      ],
+      "rationale": "R1, R35: schedule box and calendar of both bulletins. The Immaculate Conception novena page (p4) lists only 7 PM Masses on Nov 30-Dec 4 and Dec 7, but it lists novena Masses only and says nothing cancels the 9 AM; R17/R40 keep the weekly slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-oratory-west-orange",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 1,
+          "said": "Monday - Saturday: 9:00 AM (Low Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e070525c",
+          "page": 1,
+          "said": "Monday - Saturday: 9:00 AM (Low Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 2,
+          "said": "9:00 AM Low Mass (each weekday in the liturgical calendar)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e070525c",
+          "page": 2,
+          "said": "9:00 AM Low Mass (each weekday in the liturgical calendar)"
+        }
+      ],
+      "rationale": "R1, R35: schedule box and calendar of both bulletins. The Immaculate Conception novena page (p4) lists only 7 PM Masses on Nov 30-Dec 4 and Dec 7, but it lists novena Masses only and says nothing cancels the 9 AM; R17/R40 keep the weekly slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-oratory-west-orange",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 1,
+          "said": "Monday - Saturday: 9:00 AM (Low Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e070525c",
+          "page": 1,
+          "said": "Monday - Saturday: 9:00 AM (Low Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 2,
+          "said": "9:00 AM Low Mass (each weekday in the liturgical calendar)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e070525c",
+          "page": 2,
+          "said": "9:00 AM Low Mass (each weekday in the liturgical calendar)"
+        }
+      ],
+      "rationale": "R1, R35: schedule box and calendar of both bulletins. The Immaculate Conception novena page (p4) lists only 7 PM Masses on Nov 30-Dec 4 and Dec 7, but it lists novena Masses only and says nothing cancels the 9 AM; R17/R40 keep the weekly slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-oratory-west-orange",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 1,
+          "said": "Monday - Saturday: 9:00 AM (Low Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e070525c",
+          "page": 1,
+          "said": "Monday - Saturday: 9:00 AM (Low Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 2,
+          "said": "9:00 AM Low Mass (each weekday in the liturgical calendar)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e070525c",
+          "page": 2,
+          "said": "9:00 AM Low Mass (each weekday in the liturgical calendar)"
+        }
+      ],
+      "rationale": "R1, R35: schedule box and calendar of both bulletins. The Immaculate Conception novena page (p4) lists only 7 PM Masses on Nov 30-Dec 4 and Dec 7, but it lists novena Masses only and says nothing cancels the 9 AM; R17/R40 keep the weekly slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-oratory-west-orange",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 1,
+          "said": "First Friday: Additional Mass at 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e070525c",
+          "page": 1,
+          "said": "First Friday: Additional Mass at 7:00 PM"
+        }
+      ],
+      "rationale": "R1: the Regular Devotions box of both bulletins names it by its week; POLICY rule 2 makes it weekly with weeks_of_month. The novena page also prints First Friday, December 4, 7:00 PM Low Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-oratory-west-orange",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 1,
+          "said": "Confessions Saturday 5:00 PM - 6:00 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e070525c",
+          "page": 1,
+          "said": "Confessions Saturday 5:00 PM - 6:00 PM."
+        }
+      ],
+      "rationale": "R1: Confessions box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-oratory-west-orange",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "07:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 7:30 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 1,
+          "said": "Half an hour before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e070525c",
+          "page": 1,
+          "said": "Half an hour before each Mass"
+        }
+      ],
+      "rationale": "R1, R10: half an hour before each regular Mass, ending when it starts (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-oratory-west-orange",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 1,
+          "said": "Half an hour before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e070525c",
+          "page": 1,
+          "said": "Half an hour before each Mass"
+        }
+      ],
+      "rationale": "R1, R10: half an hour before each regular Mass, ending when it starts (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-oratory-west-orange",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": "11:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 11:00 AM High Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 1,
+          "said": "Half an hour before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e070525c",
+          "page": 1,
+          "said": "Half an hour before each Mass"
+        }
+      ],
+      "rationale": "R1, R10: half an hour before each regular Mass, ending when it starts (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-oratory-west-orange",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 1,
+          "said": "Half an hour before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e070525c",
+          "page": 1,
+          "said": "Half an hour before each Mass"
+        }
+      ],
+      "rationale": "R1, R10: half an hour before each regular Mass, ending when it starts (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-oratory-west-orange",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 1,
+          "said": "Half an hour before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e070525c",
+          "page": 1,
+          "said": "Half an hour before each Mass"
+        }
+      ],
+      "rationale": "R1, R10: half an hour before each regular Mass, ending when it starts (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-oratory-west-orange",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 1,
+          "said": "Half an hour before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e070525c",
+          "page": 1,
+          "said": "Half an hour before each Mass"
+        }
+      ],
+      "rationale": "R1, R10: half an hour before each regular Mass, ending when it starts (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-oratory-west-orange",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 1,
+          "said": "Half an hour before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e070525c",
+          "page": 1,
+          "said": "Half an hour before each Mass"
+        }
+      ],
+      "rationale": "R1, R10: half an hour before each regular Mass, ending when it starts (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-oratory-west-orange",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 1,
+          "said": "Half an hour before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e070525c",
+          "page": 1,
+          "said": "Half an hour before each Mass"
+        }
+      ],
+      "rationale": "R1, R10: half an hour before each regular Mass, ending when it starts (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-oratory-west-orange",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 1,
+          "said": "Half an hour before each Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e070525c",
+          "page": 1,
+          "said": "Half an hour before each Mass"
+        }
+      ],
+      "rationale": "R1, R10: half an hour before each regular Mass, ending when it starts (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-oratory-west-orange",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the First Friday 7:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 1,
+          "said": "Half an hour before each Mass ... First Friday: Additional Mass at 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e070525c",
+          "page": 1,
+          "said": "Half an hour before each Mass ... First Friday: Additional Mass at 7:00 PM"
+        }
+      ],
+      "rationale": "R1, R10: the First Friday 7 PM Mass is part of the regular schedule, so the half-hour-before line covers it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-oratory-west-orange",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 1,
+          "said": "Holy Hour of Adoration: Every Thursday at 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e070525c",
+          "page": 1,
+          "said": "Holy Hour of Adoration: Every Thursday at 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 2,
+          "said": "Thursday, November 19 ... 7:00 PM Holy Hour"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 3,
+          "said": "Thu Nov 19 Holy Hour at 7:00 PM. Thu Nov 26 Holy Hour at 7:00 PM. Thu Dec 10 Holy Hour at 7:00 PM."
+        }
+      ],
+      "rationale": "R1: Regular Devotions box and calendars of both bulletins. No end time is printed, so none is given. The p3 calendar skips Thu Dec 3, when the novena page has a 7:00 PM Mass, but nothing says the Holy Hour is cancelled (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-oratory-west-orange",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "During Adoration"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 1,
+          "said": "Confessions will be available during Holy Hour"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e070525c",
+          "page": 1,
+          "said": "Confessions will be available during Holy Hour"
+        }
+      ],
+      "rationale": "R10, POLICY Times: Confession during the Thursday Holy Hour takes its times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-oratory-west-orange",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction, after the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 1,
+          "said": "Benediction of the Most Blessed Sacrament: Second Sunday after 9:00 AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e070525c",
+          "page": 1,
+          "said": "Benediction of the Most Blessed Sacrament: Second Sunday after 9:00 AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e070525c",
+          "page": 2,
+          "said": "Sunday Nov 8: 9:00 AM Low Mass & Benediction"
+        }
+      ],
+      "rationale": "R1, R10: Benediction is Adoration (POLICY); after a Sunday Mass is an hour after it starts. The Nov 8 (second Sunday) calendar confirms it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-oratory-west-orange",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 2,
+          "said": "Tue Dec 8 Feast of the Immaculate Conception. Plenary Indulgence. Low Masses 9:00AM and 12 NOON, High Mass at 7:00PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 4,
+          "said": "Tuesday, December 8 | 12:00 NOON Low Mass with Homily"
+        }
+      ],
+      "rationale": "R1, R16: dated holy-day Mass after as_of. The 9:00 AM is the weekly Tuesday Mass (POLICY rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-oratory-west-orange",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception, High Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 2,
+          "said": "Tue Dec 8 ... High Mass at 7:00PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 4,
+          "said": "Tuesday, December 8 | 7:00 PM High Mass with Homily"
+        }
+      ],
+      "rationale": "R1, R16: dated holy-day Mass after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-oratory-west-orange",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-30",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception Novena"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 4,
+          "said": "Monday, November 30 ... Monday, December 7: 7:00 PM Low Mass with Homily. Novena devotions before the Blessed Sacrament."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e070525c",
+          "page": 4,
+          "said": "Monday, November 30 ... Monday, December 7: 7:00 PM Low Mass with Homily. Novena devotions before the Blessed Sacrament."
+        }
+      ],
+      "rationale": "R1, R16: dated novena Masses printed with their dates; Dec 4 is the weekly First Friday 7 PM Mass and is not duplicated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-oratory-west-orange",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-01",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception Novena"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 4,
+          "said": "Monday, November 30 ... Monday, December 7: 7:00 PM Low Mass with Homily. Novena devotions before the Blessed Sacrament."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e070525c",
+          "page": 4,
+          "said": "Monday, November 30 ... Monday, December 7: 7:00 PM Low Mass with Homily. Novena devotions before the Blessed Sacrament."
+        }
+      ],
+      "rationale": "R1, R16: dated novena Masses printed with their dates; Dec 4 is the weekly First Friday 7 PM Mass and is not duplicated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-oratory-west-orange",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-02",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception Novena"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 4,
+          "said": "Monday, November 30 ... Monday, December 7: 7:00 PM Low Mass with Homily. Novena devotions before the Blessed Sacrament."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e070525c",
+          "page": 4,
+          "said": "Monday, November 30 ... Monday, December 7: 7:00 PM Low Mass with Homily. Novena devotions before the Blessed Sacrament."
+        }
+      ],
+      "rationale": "R1, R16: dated novena Masses printed with their dates; Dec 4 is the weekly First Friday 7 PM Mass and is not duplicated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-oratory-west-orange",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-03",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception Novena"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 4,
+          "said": "Monday, November 30 ... Monday, December 7: 7:00 PM Low Mass with Homily. Novena devotions before the Blessed Sacrament."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e070525c",
+          "page": 4,
+          "said": "Monday, November 30 ... Monday, December 7: 7:00 PM Low Mass with Homily. Novena devotions before the Blessed Sacrament."
+        }
+      ],
+      "rationale": "R1, R16: dated novena Masses printed with their dates; Dec 4 is the weekly First Friday 7 PM Mass and is not duplicated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-oratory-west-orange",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception Novena"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 4,
+          "said": "Monday, November 30 ... Monday, December 7: 7:00 PM Low Mass with Homily. Novena devotions before the Blessed Sacrament."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e070525c",
+          "page": 4,
+          "said": "Monday, November 30 ... Monday, December 7: 7:00 PM Low Mass with Homily. Novena devotions before the Blessed Sacrament."
+        }
+      ],
+      "rationale": "R1, R16: dated novena Masses printed with their dates; Dec 4 is the weekly First Friday 7 PM Mass and is not duplicated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-oratory-west-orange",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "11:30",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 1,
+          "said": "Half an hour before each Mass"
+        }
+      ],
+      "rationale": "POLICY, Times: a general before-Mass line covers the regular weekly Masses, not dated special Masses (Dec 8 noon and 7 PM, the novena's 7 PM Masses).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 1,
+          "said": "Holy Days of Obligation: 9:00 AM & 7:00 PM (Please consult the bulletin or website.)"
+        }
+      ],
+      "rationale": "POLICY, Dates: a holy-day line with no date pins down no day; the next holy day, Dec 8, is recorded from its own dated listing.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 1,
+          "said": "Confessions ... upon request ... available during ... Stations of the Cross. Fridays in Lent: Stations of the Cross at 7:00 PM"
+        }
+      ],
+      "rationale": "R26/R33: confession upon request has no time; Lent-only Friday confession is a moving season the format can't express and is outside the current season.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s35",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36eb27b2",
+          "page": 1,
+          "said": "Procession in honor of Our Lady: First Sunday before 11:00 AM Mass; Infant of Prague; St. Anthony Tuesdays; p4 Novena devotions before the Blessed Sacrament"
+        }
+      ],
+      "rationale": "R24: devotions that are not Mass, Confession or Adoration, or without a definite time of their own (the novena devotions follow Mass with no time).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
