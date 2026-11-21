@@ -1,0 +1,962 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-catherine-of-siena-hillside",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:53:41Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-21T03:03:54Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church; most weekday services are in the parish's Pastoral Center chapel at 25 King Street, which the church list lacks, so its Mon-Fri 7:30 AM Mass, Wednesday 7 PM Portuguese Mass and Saturday Adoration are excluded (church_list_issues). Weekend Masses, Mon/Tue/Fri 7 PM Spanish Mass and 6-6:45 PM Confession, and Thursday 6-8 PM Adoration agree in both bulletins and the website. Open: Saturday 5-6 PM Confession, on the website only.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "ce8ed7641f911c75ede9bbc600e85b1caca374a0df0cd407f3a75f285375a457",
+      "fetched_at": "2026-11-15T16:53:41Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "b8681ce17f20781c24774497075e1d83deab1a1c1b248228ad061fdf8ea4d833",
+      "fetched_at": "2026-11-08T16:02:40Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-hillside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce8ed764",
+          "page": 2,
+          "said": "Saturday 4:00 pm Mass in English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b8681ce1",
+          "page": 2,
+          "said": "Saturday 4:00 pm Mass in English"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Weekend Masses box of both bulletins read (Nov 8 and Nov 15) and in both weeks' intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-hillside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce8ed764",
+          "page": 2,
+          "said": "Saturday 6:30pm Mass in Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b8681ce1",
+          "page": 2,
+          "said": "Saturday 6:30pm Mass in Spanish"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Weekend Masses box of both bulletins read and in both weeks' intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-hillside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Portuguese"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce8ed764",
+          "page": 2,
+          "said": "Sunday 8:30 am Mass in Portuguese"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b8681ce1",
+          "page": 2,
+          "said": "Sunday 8:30 am Mass in Portuguese"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Weekend Masses box of both bulletins read and in their intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-hillside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce8ed764",
+          "page": 2,
+          "said": "Sunday 10:30 am Mass in Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b8681ce1",
+          "page": 2,
+          "said": "Sunday 10:30 am Mass in Spanish"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Weekend Masses box of both bulletins read and in their intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-hillside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce8ed764",
+          "page": 2,
+          "said": "Sunday 12:30 pm Mass in English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b8681ce1",
+          "page": 2,
+          "said": "Sunday 12:30 pm Mass in English"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Weekend Masses box of both bulletins read and in their intentions; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-hillside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce8ed764",
+          "page": 2,
+          "said": "Mass in Spanish Monday, Tuesday, Friday 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b8681ce1",
+          "page": 2,
+          "said": "Mass in Spanish Monday, Tuesday, Friday 7:00 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stcatherinehillside.com/",
+          "said": "Monday, Tuesday and Friday : 7:00 pm Spanish (Church) 1000 N. Broad Street"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Weekdays box of both bulletins; the website places it in the Church. R39: the Friday intentions list only 7:30 am, but a missing intention proves no cancellation against the standing schedule printed in both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-hillside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce8ed764",
+          "page": 2,
+          "said": "Mass in Spanish Monday, Tuesday, Friday 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b8681ce1",
+          "page": 2,
+          "said": "Mass in Spanish Monday, Tuesday, Friday 7:00 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stcatherinehillside.com/",
+          "said": "Monday, Tuesday and Friday : 7:00 pm Spanish (Church) 1000 N. Broad Street"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Weekdays box of both bulletins; the website places it in the Church. R39: the Friday intentions list only 7:30 am, but a missing intention proves no cancellation against the standing schedule printed in both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-hillside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce8ed764",
+          "page": 2,
+          "said": "Mass in Spanish Monday, Tuesday, Friday 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b8681ce1",
+          "page": 2,
+          "said": "Mass in Spanish Monday, Tuesday, Friday 7:00 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stcatherinehillside.com/",
+          "said": "Monday, Tuesday and Friday : 7:00 pm Spanish (Church) 1000 N. Broad Street"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Weekdays box of both bulletins; the website places it in the Church. R39: the Friday intentions list only 7:30 am, but a missing intention proves no cancellation against the standing schedule printed in both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-hillside",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "18:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce8ed764",
+          "page": 4,
+          "said": "Confessions Monday, Tuesday Friday 6:00 pm - 6:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b8681ce1",
+          "page": 4,
+          "said": "Confessions Monday, Tuesday Friday 6:00 pm - 6:45 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stcatherinehillside.com/",
+          "said": "Monday, Tuesday and Friday : 7:00 pm Spanish (Church) ... Confessions: 6:00 pm to 6:45 pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in both bulletins' sacrament box; the website places it with the 7 PM Mass in the Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-hillside",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "18:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce8ed764",
+          "page": 4,
+          "said": "Confessions Monday, Tuesday Friday 6:00 pm - 6:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b8681ce1",
+          "page": 4,
+          "said": "Confessions Monday, Tuesday Friday 6:00 pm - 6:45 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stcatherinehillside.com/",
+          "said": "Monday, Tuesday and Friday : 7:00 pm Spanish (Church) ... Confessions: 6:00 pm to 6:45 pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in both bulletins' sacrament box; the website places it with the 7 PM Mass in the Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-hillside",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "18:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce8ed764",
+          "page": 4,
+          "said": "Confessions Monday, Tuesday Friday 6:00 pm - 6:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b8681ce1",
+          "page": 4,
+          "said": "Confessions Monday, Tuesday Friday 6:00 pm - 6:45 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stcatherinehillside.com/",
+          "said": "Monday, Tuesday and Friday : 7:00 pm Spanish (Church) ... Confessions: 6:00 pm to 6:45 pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in both bulletins' sacrament box; the website places it with the 7 PM Mass in the Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-hillside",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce8ed764",
+          "page": 4,
+          "said": "Adoration of the Blessed sacrament Thursdays 6:00 - 8:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b8681ce1",
+          "page": 4,
+          "said": "Adoration of the Blessed sacrament Thursdays 6:00 - 8:00 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stcatherinehillside.com/pastoral-center",
+          "said": "Exposition of the Blessed Sacrament Thursdays 6:00 P.M. - 8:00 P.M. (Church)"
+        }
+      ],
+      "rationale": "R1, R35: printed in both bulletins; the website places it in the Church, not the Pastoral Center.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-hillside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Pastoral Center, 25 King Street"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce8ed764",
+          "page": 2,
+          "said": "Monday through Friday 7:30 am English Mass (Pastoral Center)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b8681ce1",
+          "page": 2,
+          "said": "Monday through Friday 7:30 am English Mass (Pastoral Center)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stcatherinehillside.com/",
+          "said": "7:30 am English ( Pastoral Center) 25 King Street, Hillside, New Jersey, 07205"
+        }
+      ],
+      "rationale": "R23, POLICY Churches and chapels: the Pastoral Center chapel is at 25 King Street, a different address from the church (1000 North Broad Street), and data/churches.csv lacks it; it cannot be placed on the church's grounds from the sources. Listed in church_list_issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-hillside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Pastoral Center, 25 King Street"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce8ed764",
+          "page": 2,
+          "said": "Monday through Friday 7:30 am English Mass (Pastoral Center)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b8681ce1",
+          "page": 2,
+          "said": "Monday through Friday 7:30 am English Mass (Pastoral Center)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stcatherinehillside.com/",
+          "said": "7:30 am English ( Pastoral Center) 25 King Street, Hillside, New Jersey, 07205"
+        }
+      ],
+      "rationale": "R23, POLICY Churches and chapels: the Pastoral Center chapel is at 25 King Street, a different address from the church (1000 North Broad Street), and data/churches.csv lacks it; it cannot be placed on the church's grounds from the sources. Listed in church_list_issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-hillside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Pastoral Center, 25 King Street"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce8ed764",
+          "page": 2,
+          "said": "Monday through Friday 7:30 am English Mass (Pastoral Center)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b8681ce1",
+          "page": 2,
+          "said": "Monday through Friday 7:30 am English Mass (Pastoral Center)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stcatherinehillside.com/",
+          "said": "7:30 am English ( Pastoral Center) 25 King Street, Hillside, New Jersey, 07205"
+        }
+      ],
+      "rationale": "R23, POLICY Churches and chapels: the Pastoral Center chapel is at 25 King Street, a different address from the church (1000 North Broad Street), and data/churches.csv lacks it; it cannot be placed on the church's grounds from the sources. Listed in church_list_issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-hillside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Pastoral Center, 25 King Street"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce8ed764",
+          "page": 2,
+          "said": "Monday through Friday 7:30 am English Mass (Pastoral Center)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b8681ce1",
+          "page": 2,
+          "said": "Monday through Friday 7:30 am English Mass (Pastoral Center)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stcatherinehillside.com/",
+          "said": "7:30 am English ( Pastoral Center) 25 King Street, Hillside, New Jersey, 07205"
+        }
+      ],
+      "rationale": "R23, POLICY Churches and chapels: the Pastoral Center chapel is at 25 King Street, a different address from the church (1000 North Broad Street), and data/churches.csv lacks it; it cannot be placed on the church's grounds from the sources. Listed in church_list_issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-hillside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Pastoral Center, 25 King Street"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce8ed764",
+          "page": 2,
+          "said": "Monday through Friday 7:30 am English Mass (Pastoral Center)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b8681ce1",
+          "page": 2,
+          "said": "Monday through Friday 7:30 am English Mass (Pastoral Center)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stcatherinehillside.com/",
+          "said": "7:30 am English ( Pastoral Center) 25 King Street, Hillside, New Jersey, 07205"
+        }
+      ],
+      "rationale": "R23, POLICY Churches and chapels: the Pastoral Center chapel is at 25 King Street, a different address from the church (1000 North Broad Street), and data/churches.csv lacks it; it cannot be placed on the church's grounds from the sources. Listed in church_list_issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-hillside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Portuguese; Pastoral Center, 25 King Street"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce8ed764",
+          "page": 2,
+          "said": "Portuguese Mass Wednesday 7:00 PM (Pastoral Center)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b8681ce1",
+          "page": 2,
+          "said": "Portuguese Mass Wednesday 7:00 PM (Pastoral Center)"
+        }
+      ],
+      "rationale": "R23: at the Pastoral Center chapel (25 King Street), which data/churches.csv lacks. Listed in church_list_issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-hillside",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "18:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Portuguese; Pastoral Center"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stcatherinehillside.com/",
+          "said": "Wednesday : 7:00 pm Portuguese (Pastoral Center) Confessions: 6:00 pm to 6:45 pm In Portuguese"
+        }
+      ],
+      "rationale": "R23: website-only, listed under the Pastoral Center's Wednesday Mass, a chapel data/churches.csv lacks; neither bulletin lists Wednesday confessions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-hillside",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "11:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Pastoral Center"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stcatherinehillside.com/pastoral-center",
+          "said": "Exposition of the Blessed Sacrament ... Saturdays 9:00 A.M. - 11:45 A.M. (PC)"
+        }
+      ],
+      "rationale": "R23: website-only, at the Pastoral Center (PC), a chapel data/churches.csv lacks; neither bulletin prints it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-hillside",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Healing Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce8ed764",
+          "page": 2,
+          "said": "*Healing Mass First Friday of the Month 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b8681ce1",
+          "page": 2,
+          "said": "*Healing Mass First Friday of the Month 7:00 PM"
+        }
+      ],
+      "rationale": "POLICY Weekly or dated rule 7: the first-Friday Healing Mass is at 7:00 PM, the time of the weekly Friday 7 PM Mass already included; it is that Mass's monthly occasion, not a second Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce8ed764",
+          "page": 5,
+          "said": "Rosary is recited daily in the chapel immediately following the 7:30 Mass Monday through Friday"
+        }
+      ],
+      "rationale": "R24: the Rosary is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce8ed764",
+          "page": 2,
+          "said": "For the Anointing of the Sick ... Call to schedule a priest visit"
+        }
+      ],
+      "rationale": "R24, R26: Anointing by arrangement; no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stcatherinehillside.com/",
+          "said": "Saturday : 4:00 pm English Confessions: 5:00 pm to 6:00 pm 6:30 pm Spanish"
+        }
+      ],
+      "rationale": "R6, R29: the website's schedule matches every Mass time in the Nov 15 bulletin, so it looks current, and the slot falls between the 4:00 and 6:30 PM Masses at the church. But both bulletins print a confession box naming only Monday, Tuesday and Friday, so I ask rather than settle. Leaning include: R6 says a missing mention alone is not a conflict.",
+      "question": "Add Saturday 5:00-6:00 PM Confession at the church (website only)?",
+      "options": [
+        {
+          "label": "Saturdays 5:00-6:00 PM",
+          "entry": {
+            "church_slug": "st-catherine-of-siena-hillside",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "17:00",
+            "end_time": "18:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    }
+  ],
+  "church_list_issues": [
+    {
+      "church": "St. Catherine of Siena Pastoral Center chapel, 25 King Street, Hillside",
+      "said": "Monday through Friday 7:30 am English Mass (Pastoral Center); Portuguese Mass Wednesday 7:00 PM (Pastoral Center)",
+      "bulletin": "ce8ed764",
+      "page": 2
+    }
+  ]
+}
