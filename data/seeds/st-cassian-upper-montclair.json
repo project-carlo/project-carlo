@@ -1,0 +1,596 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-cassian-upper-montclair",
+  "status": "ready",
+  "as_of": "2026-11-15T16:53:39Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-21T02:55:05Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both bulletins read (Nov 8 and Nov 15, 2026; all pages are images) print the same schedule: Sat 5:30 PM vigil, Sun 7:30/9:00/11:30 AM, Tue-Sat 8:15 AM, Sat confession 4:15-5:00 PM. Monday Mass is private and excluded; adoration at OLMC Nutley (another parish) excluded. No open questions; no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "0e42e231b68ddf8a20228926b580d33efed15709b44d23f05fc76220bf11acfb",
+      "fetched_at": "2026-11-15T16:53:39Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "fa602476ac58fd88f150e3e3ae2be9019f84716a0d62514104da9086d087eca6",
+      "fetched_at": "2026-11-08T16:02:38Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cassian-upper-montclair",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0e42e231",
+          "page": 1,
+          "said": "Mass Schedule, Lord's Day: Saturday: 5:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fa602476",
+          "page": 1,
+          "said": "Mass Schedule, Lord's Day: Saturday: 5:30PM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both bulletins read (Nov 8 and Nov 15); the p2 intentions list 5:30PM for each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cassian-upper-montclair",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0e42e231",
+          "page": 1,
+          "said": "Sunday: 7:30AM; 9:00AM; 11:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fa602476",
+          "page": 1,
+          "said": "Sunday: 7:30AM; 9:00AM; 11:30AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both bulletins read; the p2 intentions list the same three Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cassian-upper-montclair",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0e42e231",
+          "page": 1,
+          "said": "Sunday: 7:30AM; 9:00AM; 11:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fa602476",
+          "page": 1,
+          "said": "Sunday: 7:30AM; 9:00AM; 11:30AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both bulletins read; the p2 intentions list the same three Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cassian-upper-montclair",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0e42e231",
+          "page": 1,
+          "said": "Sunday: 7:30AM; 9:00AM; 11:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fa602476",
+          "page": 1,
+          "said": "Sunday: 7:30AM; 9:00AM; 11:30AM"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both bulletins read; the p2 intentions list the same three Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cassian-upper-montclair",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0e42e231",
+          "page": 1,
+          "said": "Weekdays: Tuesday through Saturday: 8:15AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fa602476",
+          "page": 1,
+          "said": "Weekdays: Tuesday through Saturday: 8:15AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0e42e231",
+          "page": 2,
+          "said": "Tuesday-Saturday morning Masses are celebrated at 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fa602476",
+          "page": 2,
+          "said": "Tuesday-Saturday morning Masses are celebrated at 8:15 AM"
+        }
+      ],
+      "rationale": "R1: the p1 schedule box and the p2 intentions header both give Tuesday-Saturday 8:15 AM in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cassian-upper-montclair",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0e42e231",
+          "page": 1,
+          "said": "Weekdays: Tuesday through Saturday: 8:15AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fa602476",
+          "page": 1,
+          "said": "Weekdays: Tuesday through Saturday: 8:15AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0e42e231",
+          "page": 2,
+          "said": "Tuesday-Saturday morning Masses are celebrated at 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fa602476",
+          "page": 2,
+          "said": "Tuesday-Saturday morning Masses are celebrated at 8:15 AM"
+        }
+      ],
+      "rationale": "R1: the p1 schedule box and the p2 intentions header both give Tuesday-Saturday 8:15 AM in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cassian-upper-montclair",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0e42e231",
+          "page": 1,
+          "said": "Weekdays: Tuesday through Saturday: 8:15AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fa602476",
+          "page": 1,
+          "said": "Weekdays: Tuesday through Saturday: 8:15AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0e42e231",
+          "page": 2,
+          "said": "Tuesday-Saturday morning Masses are celebrated at 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fa602476",
+          "page": 2,
+          "said": "Tuesday-Saturday morning Masses are celebrated at 8:15 AM"
+        }
+      ],
+      "rationale": "R1: the p1 schedule box and the p2 intentions header both give Tuesday-Saturday 8:15 AM in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cassian-upper-montclair",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0e42e231",
+          "page": 1,
+          "said": "Weekdays: Tuesday through Saturday: 8:15AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fa602476",
+          "page": 1,
+          "said": "Weekdays: Tuesday through Saturday: 8:15AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0e42e231",
+          "page": 2,
+          "said": "Tuesday-Saturday morning Masses are celebrated at 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fa602476",
+          "page": 2,
+          "said": "Tuesday-Saturday morning Masses are celebrated at 8:15 AM"
+        }
+      ],
+      "rationale": "R1: the p1 schedule box and the p2 intentions header both give Tuesday-Saturday 8:15 AM in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cassian-upper-montclair",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0e42e231",
+          "page": 1,
+          "said": "Weekdays: Tuesday through Saturday: 8:15AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fa602476",
+          "page": 1,
+          "said": "Weekdays: Tuesday through Saturday: 8:15AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0e42e231",
+          "page": 2,
+          "said": "Tuesday-Saturday morning Masses are celebrated at 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fa602476",
+          "page": 2,
+          "said": "Tuesday-Saturday morning Masses are celebrated at 8:15 AM"
+        }
+      ],
+      "rationale": "R1: the p1 schedule box and the p2 intentions header both give Tuesday-Saturday 8:15 AM in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cassian-upper-montclair",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0e42e231",
+          "page": 1,
+          "said": "Confessions are heard every Saturday between 4:15PM-5:00PM in church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fa602476",
+          "page": 1,
+          "said": "Confessions are heard every Saturday between 4:15PM-5:00PM in church"
+        }
+      ],
+      "rationale": "R1: printed on p1 of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cassian-upper-montclair",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0e42e231",
+          "page": 2,
+          "said": "Monday morning Mass is private"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fa602476",
+          "page": 2,
+          "said": "Monday morning Mass is private"
+        }
+      ],
+      "rationale": "R24, POLICY What to extract: the Monday morning Mass is stated to be private, so it is closed to the public (both bulletins).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0e42e231",
+          "page": 1,
+          "said": "Holydays: 8:15AM and as announced"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fa602476",
+          "page": 1,
+          "said": "Holydays: 8:15AM and as announced"
+        }
+      ],
+      "rationale": "R26: the holy-day line names no date; no holy day falls in the weeks read, so there is nothing dated to record. Update mode will read the announced holy-day times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-nutley",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-16",
+        "start_time": "11:45",
+        "end_time": "14:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Relic of St. Carlo Acutis"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0e42e231",
+          "page": 5,
+          "said": "Public Adoration at Our Lady of Mount Carmel Church in Nutley NJ ... Monday Nov 16th from 11:45AM-2:45PM & 7:30-9PM"
+        }
+      ],
+      "rationale": "R22: held at Our Lady of Mount Carmel, Nutley, another parish's church; its events belong to that parish. (The Nov 15 2:15-3:30 PM and Nov 17 8:00-11:30 AM times in the same box are excluded for the same reason.)",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-nutley",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-16",
+        "start_time": "19:30",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Relic of St. Carlo Acutis"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0e42e231",
+          "page": 5,
+          "said": "Public Adoration at Our Lady of Mount Carmel Church in Nutley NJ ... Monday Nov 16th from 11:45AM-2:45PM & 7:30-9PM"
+        }
+      ],
+      "rationale": "R22: held at Our Lady of Mount Carmel, Nutley, another parish's church; its events belong to that parish. (The Nov 15 2:15-3:30 PM and Nov 17 8:00-11:30 AM times in the same box are excluded for the same reason.)",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
