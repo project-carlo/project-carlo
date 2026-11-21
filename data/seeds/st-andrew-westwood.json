@@ -1,0 +1,796 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-andrew-westwood",
+  "status": "ready",
+  "as_of": "2026-11-15T16:23:52Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-21T02:21:44Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. The weekend, weekday, Confession and Adoration schedule box is identical in both bulletins read (Nov 8 and Nov 15, 2026). Relative times (Thursday Confession, Wednesday/Thursday Adoration after Mass) are worked out per POLICY; one dated bilingual Mass on Nov 30 (patronal feast). No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "0d36bf613a44f52d64769887ec371f7516ef1fe2f87526e319a6248dce9b0ee6",
+      "fetched_at": "2026-11-15T16:23:52Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "f4557da4aeaedc312cbbf6455f815131bf2af2038def94f06cd21251487773e3",
+      "fetched_at": "2026-11-08T15:47:57Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-westwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0d36bf61",
+          "page": 2,
+          "said": "Saturday 5:00 PM (Live streamed on YouTube)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4557da4",
+          "page": 2,
+          "said": "Saturday 5:00 PM (Live streamed on YouTube)"
+        }
+      ],
+      "rationale": "R1: printed in The Lord's Day Mass Schedule box of both bulletins read; the intentions list it too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-westwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0d36bf61",
+          "page": 2,
+          "said": "Sunday 8 AM, 10:30 AM, 12:15 PM, & 2 PM in Spanish (Live-Streamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4557da4",
+          "page": 2,
+          "said": "Sunday 8 AM, 10:30 AM, 12:15 PM, & 2 PM in Spanish (Live-Streamed)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list each.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-westwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0d36bf61",
+          "page": 2,
+          "said": "Sunday 8 AM, 10:30 AM, 12:15 PM, & 2 PM in Spanish (Live-Streamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4557da4",
+          "page": 2,
+          "said": "Sunday 8 AM, 10:30 AM, 12:15 PM, & 2 PM in Spanish (Live-Streamed)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list each.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-westwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0d36bf61",
+          "page": 2,
+          "said": "Sunday 8 AM, 10:30 AM, 12:15 PM, & 2 PM in Spanish (Live-Streamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4557da4",
+          "page": 2,
+          "said": "Sunday 8 AM, 10:30 AM, 12:15 PM, & 2 PM in Spanish (Live-Streamed)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list each.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-westwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "14:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0d36bf61",
+          "page": 2,
+          "said": "Sunday 8 AM, 10:30 AM, 12:15 PM, & 2 PM in Spanish (Live-Streamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4557da4",
+          "page": 2,
+          "said": "Sunday 8 AM, 10:30 AM, 12:15 PM, & 2 PM in Spanish (Live-Streamed)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-westwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0d36bf61",
+          "page": 2,
+          "said": "Daily Monday-Saturday 9 AM & Wednesday 7 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4557da4",
+          "page": 2,
+          "said": "Daily Monday-Saturday 9 AM & Wednesday 7 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list 9:00AM each weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-westwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0d36bf61",
+          "page": 2,
+          "said": "Daily Monday-Saturday 9 AM & Wednesday 7 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4557da4",
+          "page": 2,
+          "said": "Daily Monday-Saturday 9 AM & Wednesday 7 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list 9:00AM each weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-westwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0d36bf61",
+          "page": 2,
+          "said": "Daily Monday-Saturday 9 AM & Wednesday 7 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4557da4",
+          "page": 2,
+          "said": "Daily Monday-Saturday 9 AM & Wednesday 7 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list 9:00AM each weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-westwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0d36bf61",
+          "page": 2,
+          "said": "Daily Monday-Saturday 9 AM & Wednesday 7 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4557da4",
+          "page": 2,
+          "said": "Daily Monday-Saturday 9 AM & Wednesday 7 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list 9:00AM each weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-westwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0d36bf61",
+          "page": 2,
+          "said": "Daily Monday-Saturday 9 AM & Wednesday 7 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4557da4",
+          "page": 2,
+          "said": "Daily Monday-Saturday 9 AM & Wednesday 7 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list 9:00AM each weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-westwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0d36bf61",
+          "page": 2,
+          "said": "Daily Monday-Saturday 9 AM & Wednesday 7 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4557da4",
+          "page": 2,
+          "said": "Daily Monday-Saturday 9 AM & Wednesday 7 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list 9:00AM each weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-westwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0d36bf61",
+          "page": 2,
+          "said": "Daily Monday-Saturday 9 AM & Wednesday 7 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4557da4",
+          "page": 2,
+          "said": "Daily Monday-Saturday 9 AM & Wednesday 7 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list Wednesday 7:00PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-westwood",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:00 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0d36bf61",
+          "page": 2,
+          "said": "Thursday After 9 AM Mass- 10:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4557da4",
+          "page": 2,
+          "said": "Thursday After 9 AM Mass- 10:00 AM"
+        }
+      ],
+      "rationale": "R1, R10: printed in both bulletins; the start is relative to a weekday Mass, so 30 minutes after it starts (POLICY, Times), and the end is the printed 10:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-westwood",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0d36bf61",
+          "page": 2,
+          "said": "Saturday 4:00 PM—4:45 PM, Anytime upon request. Call the Parish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4557da4",
+          "page": 2,
+          "said": "Saturday 4:00 PM—4:45 PM, Anytime upon request. Call the Parish"
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0d36bf61",
+          "page": 2,
+          "said": "Anytime upon request. Call the Parish"
+        }
+      ],
+      "rationale": "R26: confession on request has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-westwood",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel; after the 7:00 PM Spanish Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0d36bf61",
+          "page": 2,
+          "said": "Wednesday following the 7 PM Spanish Mass until 9 PM, Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4557da4",
+          "page": 2,
+          "said": "Wednesday following the 7 PM Spanish Mass until 9 PM, Chapel"
+        }
+      ],
+      "rationale": "R1, R10: printed in both bulletins; start 30 minutes after the weekday 7 PM Mass (POLICY, Times), end the printed 9 PM; the chapel is in the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-westwood",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel; after the 9:00 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0d36bf61",
+          "page": 2,
+          "said": "Thursday following the 9 AM Mass - 3 PM, Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4557da4",
+          "page": 2,
+          "said": "Thursday following the 9 AM Mass - 3 PM, Chapel"
+        }
+      ],
+      "rationale": "R1, R10: printed in both bulletins; start 30 minutes after the weekday 9 AM Mass (POLICY, Times), end the printed 3 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-westwood",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour, Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0d36bf61",
+          "page": 2,
+          "said": "Thursday Evening 7 PM Rosary, 7:30 PM Holy Hour, Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4557da4",
+          "page": 2,
+          "said": "Thursday Evening 7 PM Rosary, 7:30 PM Holy Hour, Chapel"
+        }
+      ],
+      "rationale": "R1: printed in the Adoration box of both bulletins; a Holy Hour is Adoration (POLICY). No end time printed, so none given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-westwood",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Rosary"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0d36bf61",
+          "page": 2,
+          "said": "Thursday Evening 7 PM Rosary"
+        }
+      ],
+      "rationale": "R24: a Rosary is a devotion, not Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-westwood",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-30",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Bilingual Mass, Feast of St. Andrew"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0d36bf61",
+          "page": 4,
+          "said": "NOVEMBER 30 | CELEBRATE OUR PATRON, ST. ANDREW Monday • 9:00 AM Mass & Planned 7:00 PM Bilingual Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f4557da4",
+          "page": 4,
+          "said": "Monday, November 30 | Feast of St. Andrew, Our Patron Saint Masses: 9:00 AM & 7:00 PM | Church"
+        }
+      ],
+      "rationale": "R1, R16: a dated Mass outside the weekly schedule, after as_of, announced in both bulletins; the 9 AM is the weekly Monday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-andrew-westwood",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-14",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Reconciliation Service with neighboring parishes"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0d36bf61",
+          "page": 4,
+          "said": "December 14 • 7:00 PM: Advent Reconciliation Service with neighboring parishes."
+        }
+      ],
+      "rationale": "R22: the place is not given and the service is shared with neighboring parishes, so it may be at another parish's church (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
