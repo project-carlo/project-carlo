@@ -1,0 +1,909 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-bernard-st-stanislaus-plainfield",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:53:34Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-21T02:48:55Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (1235 George St). Both bulletins (Nov 1 and Nov 15, 2026) print the same schedule: Sat 5 PM vigil; Sun 9 AM English, 10:30 Polish, 12:30 Spanish; Mon-Sat 9 AM; Sat confession 4:15 PM; Thursday exposition after the 9 AM Mass to Benediction at 10:45. Open: whether to include confession 'by request, after Mass' on mornings (C5).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "b07d3f8a6c45b3773279031854e694402791675531b1b828a82d8c47ff5073ad",
+      "fetched_at": "2026-11-15T16:53:34Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "f6ce8854130f6d0bfe8e24e9cf68ee51bb7b7a5c0d0a22bedac413e25555b465",
+      "fetched_at": "2026-11-08T16:02:33Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-st-stanislaus-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b07d3f8a",
+          "page": 1,
+          "said": "Saturday Mass of Anticipation 5:00PM- English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f6ce8854",
+          "page": 1,
+          "said": "Saturday Mass of Anticipation 5:00PM- English"
+        }
+      ],
+      "rationale": "R1: in the Mass Schedule box of both bulletins read, and in both weeks' intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-st-stanislaus-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b07d3f8a",
+          "page": 1,
+          "said": "Sunday 9:00AM - English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f6ce8854",
+          "page": 1,
+          "said": "Sunday 9:00AM - English"
+        }
+      ],
+      "rationale": "R1: in the Mass Schedule box of both bulletins read, and in both weeks' intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-st-stanislaus-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b07d3f8a",
+          "page": 1,
+          "said": "Sunday 10:30AM - Polish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f6ce8854",
+          "page": 1,
+          "said": "Sunday 10:30AM - Polish"
+        }
+      ],
+      "rationale": "R1: in the Mass Schedule box of both bulletins read, and in both weeks' intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-st-stanislaus-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b07d3f8a",
+          "page": 1,
+          "said": "Sunday 12:30PM - Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f6ce8854",
+          "page": 1,
+          "said": "Sunday 12:30PM - Spanish"
+        }
+      ],
+      "rationale": "R1: in the Mass Schedule box of both bulletins read, and in both weeks' intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-st-stanislaus-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b07d3f8a",
+          "page": 1,
+          "said": "Weekday Monday - Saturday 9:00AM - English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f6ce8854",
+          "page": 1,
+          "said": "Weekday Monday - Saturday 9:00AM - English"
+        }
+      ],
+      "rationale": "R1: in the Mass Schedule box of both bulletins read; every weekday's intentions (p2) list 9:00AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-st-stanislaus-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b07d3f8a",
+          "page": 1,
+          "said": "Weekday Monday - Saturday 9:00AM - English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f6ce8854",
+          "page": 1,
+          "said": "Weekday Monday - Saturday 9:00AM - English"
+        }
+      ],
+      "rationale": "R1: in the Mass Schedule box of both bulletins read; every weekday's intentions (p2) list 9:00AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-st-stanislaus-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b07d3f8a",
+          "page": 1,
+          "said": "Weekday Monday - Saturday 9:00AM - English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f6ce8854",
+          "page": 1,
+          "said": "Weekday Monday - Saturday 9:00AM - English"
+        }
+      ],
+      "rationale": "R1: in the Mass Schedule box of both bulletins read; every weekday's intentions (p2) list 9:00AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-st-stanislaus-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b07d3f8a",
+          "page": 1,
+          "said": "Weekday Monday - Saturday 9:00AM - English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f6ce8854",
+          "page": 1,
+          "said": "Weekday Monday - Saturday 9:00AM - English"
+        }
+      ],
+      "rationale": "R1: in the Mass Schedule box of both bulletins read; every weekday's intentions (p2) list 9:00AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-st-stanislaus-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b07d3f8a",
+          "page": 1,
+          "said": "Weekday Monday - Saturday 9:00AM - English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f6ce8854",
+          "page": 1,
+          "said": "Weekday Monday - Saturday 9:00AM - English"
+        }
+      ],
+      "rationale": "R1: in the Mass Schedule box of both bulletins read; every weekday's intentions (p2) list 9:00AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-st-stanislaus-plainfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b07d3f8a",
+          "page": 1,
+          "said": "Weekday Monday - Saturday 9:00AM - English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f6ce8854",
+          "page": 1,
+          "said": "Weekday Monday - Saturday 9:00AM - English"
+        }
+      ],
+      "rationale": "R1: in the Mass Schedule box of both bulletins read; every weekday's intentions (p2) list 9:00AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-st-stanislaus-plainfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b07d3f8a",
+          "page": 1,
+          "said": "Sacrament of Reconciliations Saturday: 4:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f6ce8854",
+          "page": 1,
+          "said": "Sacrament of Reconciliations Saturday: 4:15 pm"
+        }
+      ],
+      "rationale": "R1: in the Reconciliation box of both bulletins read; no end time is given, so none is recorded (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-st-stanislaus-plainfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "10:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b07d3f8a",
+          "page": 3,
+          "said": "The Blessed Sacrament is exposed on Thursdays after the Mass concluding with Benediction at 10:45AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f6ce8854",
+          "page": 3,
+          "said": "The Blessed Sacrament is exposed on Thursdays after the Mass concluding with Benediction at 10:45AM"
+        }
+      ],
+      "rationale": "R1, R10: printed in both bulletins; exposition follows the 9:00 AM weekday Mass, so it starts 30 minutes after it (9:30) and ends at the printed 10:45 Benediction.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b07d3f8a",
+          "page": 1,
+          "said": "Sacrament of Reconciliations ... By request: After Mass / Sunday - Saturday: Mornings"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f6ce8854",
+          "page": 1,
+          "said": "Sacrament of Reconciliations ... By request: After Mass / Sunday - Saturday: Mornings"
+        }
+      ],
+      "rationale": "Leaning per C5 (confession after Mass on request): R10 puts it 30 minutes after the 9:00 AM weekday Mass. The box gives no clock time and 'Mornings' is loose, so a reviewer should decide.",
+      "question": "Include confession 'by request, after Mass' on mornings (Sun-Sat) at the times POLICY works out?",
+      "options": [
+        {
+          "label": "Include, by request after the morning Mass",
+          "entry": {
+            "church_slug": "st-bernard-st-stanislaus-plainfield",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "By request, after the 9:00 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "by-request"
+    },
+    {
+      "id": "s14",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b07d3f8a",
+          "page": 1,
+          "said": "Sacrament of Reconciliations ... By request: After Mass / Sunday - Saturday: Mornings"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f6ce8854",
+          "page": 1,
+          "said": "Sacrament of Reconciliations ... By request: After Mass / Sunday - Saturday: Mornings"
+        }
+      ],
+      "rationale": "Leaning per C5 (confession after Mass on request): R10 puts it 30 minutes after the 9:00 AM weekday Mass. The box gives no clock time and 'Mornings' is loose, so a reviewer should decide.",
+      "question": "Include confession 'by request, after Mass' on mornings (Sun-Sat) at the times POLICY works out?",
+      "options": [
+        {
+          "label": "Include, by request after the morning Mass",
+          "entry": {
+            "church_slug": "st-bernard-st-stanislaus-plainfield",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "By request, after the 9:00 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "by-request"
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b07d3f8a",
+          "page": 1,
+          "said": "Sacrament of Reconciliations ... By request: After Mass / Sunday - Saturday: Mornings"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f6ce8854",
+          "page": 1,
+          "said": "Sacrament of Reconciliations ... By request: After Mass / Sunday - Saturday: Mornings"
+        }
+      ],
+      "rationale": "Leaning per C5 (confession after Mass on request): R10 puts it 30 minutes after the 9:00 AM weekday Mass. The box gives no clock time and 'Mornings' is loose, so a reviewer should decide.",
+      "question": "Include confession 'by request, after Mass' on mornings (Sun-Sat) at the times POLICY works out?",
+      "options": [
+        {
+          "label": "Include, by request after the morning Mass",
+          "entry": {
+            "church_slug": "st-bernard-st-stanislaus-plainfield",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "By request, after the 9:00 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "by-request"
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b07d3f8a",
+          "page": 1,
+          "said": "Sacrament of Reconciliations ... By request: After Mass / Sunday - Saturday: Mornings"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f6ce8854",
+          "page": 1,
+          "said": "Sacrament of Reconciliations ... By request: After Mass / Sunday - Saturday: Mornings"
+        }
+      ],
+      "rationale": "Leaning per C5 (confession after Mass on request): R10 puts it 30 minutes after the 9:00 AM weekday Mass. The box gives no clock time and 'Mornings' is loose, so a reviewer should decide.",
+      "question": "Include confession 'by request, after Mass' on mornings (Sun-Sat) at the times POLICY works out?",
+      "options": [
+        {
+          "label": "Include, by request after the morning Mass",
+          "entry": {
+            "church_slug": "st-bernard-st-stanislaus-plainfield",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "By request, after the 9:00 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "by-request"
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b07d3f8a",
+          "page": 1,
+          "said": "Sacrament of Reconciliations ... By request: After Mass / Sunday - Saturday: Mornings"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f6ce8854",
+          "page": 1,
+          "said": "Sacrament of Reconciliations ... By request: After Mass / Sunday - Saturday: Mornings"
+        }
+      ],
+      "rationale": "Leaning per C5 (confession after Mass on request): R10 puts it 30 minutes after the 9:00 AM weekday Mass. The box gives no clock time and 'Mornings' is loose, so a reviewer should decide.",
+      "question": "Include confession 'by request, after Mass' on mornings (Sun-Sat) at the times POLICY works out?",
+      "options": [
+        {
+          "label": "Include, by request after the morning Mass",
+          "entry": {
+            "church_slug": "st-bernard-st-stanislaus-plainfield",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "By request, after the 9:00 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "by-request"
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b07d3f8a",
+          "page": 1,
+          "said": "Sacrament of Reconciliations ... By request: After Mass / Sunday - Saturday: Mornings"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f6ce8854",
+          "page": 1,
+          "said": "Sacrament of Reconciliations ... By request: After Mass / Sunday - Saturday: Mornings"
+        }
+      ],
+      "rationale": "Leaning per C5 (confession after Mass on request): R10 puts it 30 minutes after the 9:00 AM weekday Mass. The box gives no clock time and 'Mornings' is loose, so a reviewer should decide.",
+      "question": "Include confession 'by request, after Mass' on mornings (Sun-Sat) at the times POLICY works out?",
+      "options": [
+        {
+          "label": "Include, by request after the morning Mass",
+          "entry": {
+            "church_slug": "st-bernard-st-stanislaus-plainfield",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "By request, after the 9:00 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "by-request"
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b07d3f8a",
+          "page": 1,
+          "said": "Sacrament of Reconciliations ... By request: After Mass / Sunday - Saturday: Mornings"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f6ce8854",
+          "page": 1,
+          "said": "Sacrament of Reconciliations ... By request: After Mass / Sunday - Saturday: Mornings"
+        }
+      ],
+      "rationale": "Leaning per C5: R10 puts it one hour after the Sunday 9:00 AM Mass. The box gives no clock time and 'Mornings' is loose, so a reviewer should decide.",
+      "question": "Include confession 'by request, after Mass' on mornings (Sun-Sat) at the times POLICY works out?",
+      "options": [
+        {
+          "label": "Include, by request after the morning Mass",
+          "entry": {
+            "church_slug": "st-bernard-st-stanislaus-plainfield",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "10:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "By request, after the 9:00 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "by-request"
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b07d3f8a",
+          "page": 1,
+          "said": "Sacrament of Reconciliations ... By request: After Mass / Sunday - Saturday: Mornings"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f6ce8854",
+          "page": 1,
+          "said": "Sacrament of Reconciliations ... By request: After Mass / Sunday - Saturday: Mornings"
+        }
+      ],
+      "rationale": "Leaning per C5: R10 puts it one hour after the Sunday 10:30 AM (Polish) Mass, the other morning Mass. The box gives no clock time and 'Mornings' is loose, so a reviewer should decide.",
+      "question": "Include confession 'by request, after Mass' on mornings (Sun-Sat) at the times POLICY works out?",
+      "options": [
+        {
+          "label": "Include, by request after the morning Mass",
+          "entry": {
+            "church_slug": "st-bernard-st-stanislaus-plainfield",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "11:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "By request, after the 10:30 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "by-request"
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-st-stanislaus-plainfield",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-06",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f6ce8854",
+          "page": 2,
+          "said": "Friday - November 6 Weekday ... 7:00PM (Pol.) +All Souls"
+        }
+      ],
+      "rationale": "R13, R16: printed only as a dated intention in the November 1 issue (it falls on a first Friday, but the bulletin never says 'First Friday'); its date is before as_of, and the newest issue's Friday shows only 9:00AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
