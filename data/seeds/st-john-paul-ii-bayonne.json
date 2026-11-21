@@ -1,0 +1,1020 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-john-paul-ii-bayonne",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:53:57Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-21T03:54:09Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, Our Lady of Mount Carmel. Weekend and weekday Mass times agree in the schedule box and intentions of both bulletins (Nov 8 and 15, 2026); the parish website lists an older evening-Mass schedule and is not relied on. Open: Wednesday Adoration's end (6:30 PM in the weekly announcements vs 5 PM in the box) and a Christmas Midnight Mass without a printed time.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "effa48c6c1f72e39239e8bffb068d8d9a0ec6fe0c91801a48d3c1372579fffcb",
+      "fetched_at": "2026-11-15T16:53:57Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "50f51934d3d3aec699aca5aae671a61dae154fb7612f3b80f0710ee0765c6d01",
+      "fetched_at": "2026-11-08T16:02:54Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "effa48c6",
+          "page": 1,
+          "said": "WEEKEND MASSES Saturday Vigil: 4:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50f51934",
+          "page": 1,
+          "said": "WEEKEND MASSES Saturday Vigil: 4:30PM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read, and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "effa48c6",
+          "page": 1,
+          "said": "Sunday: 7:30AM; 8:30AM (Italian) 9:45AM; 11:00AM (Polish); 12:30PM;"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50f51934",
+          "page": 1,
+          "said": "Sunday: 7:30AM; 8:30AM (Italian) 9:45AM; 11:00AM (Polish); 12:30PM;"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read, and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "effa48c6",
+          "page": 1,
+          "said": "Sunday: 7:30AM; 8:30AM (Italian) 9:45AM; 11:00AM (Polish); 12:30PM;"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50f51934",
+          "page": 1,
+          "said": "Sunday: 7:30AM; 8:30AM (Italian) 9:45AM; 11:00AM (Polish); 12:30PM;"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read, and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "effa48c6",
+          "page": 1,
+          "said": "Sunday: 7:30AM; 8:30AM (Italian) 9:45AM; 11:00AM (Polish); 12:30PM;"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50f51934",
+          "page": 1,
+          "said": "Sunday: 7:30AM; 8:30AM (Italian) 9:45AM; 11:00AM (Polish); 12:30PM;"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read, and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Italian"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "effa48c6",
+          "page": 1,
+          "said": "Sunday: ... 8:30AM (Italian)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50f51934",
+          "page": 1,
+          "said": "Sunday: ... 8:30AM (Italian)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "effa48c6",
+          "page": 1,
+          "said": "Sunday: ... 11:00AM (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50f51934",
+          "page": 1,
+          "said": "Sunday: ... 11:00AM (Polish)"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "effa48c6",
+          "page": 1,
+          "said": "Monday – Saturday: 8:00AM, (Polish) [except Wednesday]"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50f51934",
+          "page": 1,
+          "said": "Monday – Saturday: 8:00AM, (Polish) [except Wednesday]"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions of both weeks list 8:00 AM on every weekday but Wednesday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "effa48c6",
+          "page": 1,
+          "said": "Monday – Saturday: 8:00AM, (Polish) [except Wednesday]"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50f51934",
+          "page": 1,
+          "said": "Monday – Saturday: 8:00AM, (Polish) [except Wednesday]"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions of both weeks list 8:00 AM on every weekday but Wednesday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "effa48c6",
+          "page": 1,
+          "said": "Monday – Saturday: 8:00AM, (Polish) [except Wednesday]"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50f51934",
+          "page": 1,
+          "said": "Monday – Saturday: 8:00AM, (Polish) [except Wednesday]"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions of both weeks list 8:00 AM on every weekday but Wednesday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "effa48c6",
+          "page": 1,
+          "said": "Monday – Saturday: 8:00AM, (Polish) [except Wednesday]"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50f51934",
+          "page": 1,
+          "said": "Monday – Saturday: 8:00AM, (Polish) [except Wednesday]"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions of both weeks list 8:00 AM on every weekday but Wednesday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "effa48c6",
+          "page": 1,
+          "said": "Monday – Saturday: 8:00AM, (Polish) [except Wednesday]"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50f51934",
+          "page": 1,
+          "said": "Monday – Saturday: 8:00AM, (Polish) [except Wednesday]"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions of both weeks list 8:00 AM on every weekday but Wednesday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "effa48c6",
+          "page": 1,
+          "said": "Monday – Saturday: ... & 9:30AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50f51934",
+          "page": 1,
+          "said": "Monday – Saturday: ... & 9:30AM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read. Both weeks' intentions list 9:30 Mon-Sat; Tuesday's line reads '9:30 PM' in both, a reused template typo (see the excluded Tuesday 9:30 PM slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "effa48c6",
+          "page": 1,
+          "said": "Monday – Saturday: ... & 9:30AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50f51934",
+          "page": 1,
+          "said": "Monday – Saturday: ... & 9:30AM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read. Both weeks' intentions list 9:30 Mon-Sat; Tuesday's line reads '9:30 PM' in both, a reused template typo (see the excluded Tuesday 9:30 PM slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "effa48c6",
+          "page": 1,
+          "said": "Monday – Saturday: ... & 9:30AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50f51934",
+          "page": 1,
+          "said": "Monday – Saturday: ... & 9:30AM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read. Both weeks' intentions list 9:30 Mon-Sat; Tuesday's line reads '9:30 PM' in both, a reused template typo (see the excluded Tuesday 9:30 PM slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "effa48c6",
+          "page": 1,
+          "said": "Monday – Saturday: ... & 9:30AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50f51934",
+          "page": 1,
+          "said": "Monday – Saturday: ... & 9:30AM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read. Both weeks' intentions list 9:30 Mon-Sat; Tuesday's line reads '9:30 PM' in both, a reused template typo (see the excluded Tuesday 9:30 PM slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "effa48c6",
+          "page": 1,
+          "said": "Monday – Saturday: ... & 9:30AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50f51934",
+          "page": 1,
+          "said": "Monday – Saturday: ... & 9:30AM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read. Both weeks' intentions list 9:30 Mon-Sat; Tuesday's line reads '9:30 PM' in both, a reused template typo (see the excluded Tuesday 9:30 PM slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "effa48c6",
+          "page": 1,
+          "said": "Monday – Saturday: ... & 9:30AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50f51934",
+          "page": 1,
+          "said": "Monday – Saturday: ... & 9:30AM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read. Both weeks' intentions list 9:30 Mon-Sat; Tuesday's line reads '9:30 PM' in both, a reused template typo (see the excluded Tuesday 9:30 PM slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "effa48c6",
+          "page": 1,
+          "said": "Wednesday: 7:00PM (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50f51934",
+          "page": 1,
+          "said": "Wednesday: 7:00PM (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "effa48c6",
+          "page": 2,
+          "said": "WEDNESDAY, November 18, 2026 ... 7:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in both weeks' intentions. The parish website's Tuesday 6 PM / Thursday 7 PM evening Masses are an older schedule (see summary).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "21:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "effa48c6",
+          "page": 2,
+          "said": "TUESDAY, November 17, 2026 ... 9:30 PM † Giuseppe Mastrella"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50f51934",
+          "page": 2,
+          "said": "TUESDAY, November 10, 2026 ... 9:30 PM † Maryann Stabile"
+        }
+      ],
+      "rationale": "R39: a reused intentions template typo. The schedule box gives Mon-Sat 9:30 AM, every other weekday's line reads 9:30 AM, and a 9:30 PM Mass appears nowhere else; the Tuesday 9:30 AM slot covers it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-bayonne",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 4:30 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "effa48c6",
+          "page": 1,
+          "said": "CONFESSIONS: ... Saturday from 4:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50f51934",
+          "page": 1,
+          "said": "CONFESSIONS: ... Saturday from 4:00PM"
+        }
+      ],
+      "rationale": "R1, POLICY Times: a clock start running up to the 4:30 PM Vigil, so no end time and a note naming the Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "effa48c6",
+          "page": 1,
+          "said": "CONFESSIONS: Monday to Saturday before morning Masses"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50f51934",
+          "page": 1,
+          "said": "CONFESSIONS: Monday to Saturday before morning Masses"
+        }
+      ],
+      "rationale": "R26, POLICY Times: 'before morning Masses' gives no clock time and no number of minutes, so no time can be worked out. The website's Mon-Fri 7:30-8:00 and 9:00-9:30 / Sat 10:00-10:30 windows come from a stale page (its evening Masses are Tuesday 6 PM and Thursday 7 PM, not the bulletins' Wednesday 7 PM; its Saturday window fits neither morning Mass), so R6 cannot supply them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "effa48c6",
+          "page": 3,
+          "said": "Wednesday, November 18, 2026 Eucharistic Adoration After 9:30 AM Mass to 6:30PM; 6:30 PM The Chaplet of the Divine Mercy in Polish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50f51934",
+          "page": 3,
+          "said": "Wednesday, November 11, 2026 Eucharistic Adoration After 9:30 AM Mass to 6:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "effa48c6",
+          "page": 1,
+          "said": "Perpetual Novena in Honor of the Miraculous Medal and Eucharistic Adoration - Wednesday from 10AM to 5PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50f51934",
+          "page": 1,
+          "said": "Perpetual Novena in Honor of the Miraculous Medal and Eucharistic Adoration - Wednesday from 10AM to 5PM"
+        },
+        {
+          "source": "website",
+          "url": "https://johnpaul2parish.com/liturgy-schedule",
+          "said": "Adoration takes place on Wednesdays from 10:00 AM to 5:00 PM"
+        }
+      ],
+      "rationale": "C8/R28: two standing statements disagree on the end. Both start at 10:00 (after a weekday 9:30 Mass is 10:00, R10). Leaning 6:30 PM: the dated weekly announcement repeats it in both issues (R35) and ties it to the 6:30 PM Divine Mercy chaplet before the 7 PM Mass, while the 5 PM box matches the website, whose Mass schedule is stale.",
+      "question": "Wednesday Adoration: the schedule box says 10 AM-5 PM, the weekly announcements say after the 9:30 AM Mass to 6:30 PM. Which hours?",
+      "options": [
+        {
+          "label": "Wednesdays 10:00 AM-6:30 PM",
+          "entry": {
+            "church_slug": "our-lady-of-mount-carmel-bayonne",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "10:00",
+            "end_time": "18:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Wednesdays 10:00 AM-5:00 PM",
+          "entry": {
+            "church_slug": "our-lady-of-mount-carmel-bayonne",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "10:00",
+            "end_time": "17:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "effa48c6",
+          "page": 3,
+          "said": "Many people would like to have their loved ones remembered at Christmas Midnight Mass."
+        }
+      ],
+      "rationale": "R30: the bulletin names the Mass only in an envelope appeal and prints no clock time or Christmas schedule; 'Midnight Mass' is sometimes held earlier. Leaning leave out: update mode will read the printed Christmas schedule.",
+      "question": "Add a Christmas 'Midnight Mass' on December 25 at 12:00 AM?",
+      "options": [
+        {
+          "label": "Dec 25 12:00 AM",
+          "entry": {
+            "church_slug": "our-lady-of-mount-carmel-bayonne",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-25",
+            "start_time": "00:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Christmas Midnight Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-bayonne",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-13",
+        "start_time": "20:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Italian"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "50f51934",
+          "page": 2,
+          "said": "FRIDAY, November 13, 2026 ... 8:00 PM (It.) † Rev. Gerardo Mongiaro"
+        }
+      ],
+      "rationale": "R16: a dated Mass before as_of, so out of seed scope; seen only in the November 8 intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "effa48c6",
+          "page": 1,
+          "said": "Perpetual Novena in Honor of St Ann - Tuesday after Mass at 7:00PM; Perpetual Novena of the Divine Mercy - Wednesday before Mass at 7:00PM (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50f51934",
+          "page": 1,
+          "said": "Perpetual Novena in Honor of St Ann - Tuesday after Mass at 7:00PM; Perpetual Novena of the Divine Mercy - Wednesday before Mass at 7:00PM (Polish)"
+        }
+      ],
+      "rationale": "R24: novenas are devotions, not Mass, Confession or Adoration. The 'Tuesday after Mass at 7:00PM' wording echoes the website's former Tuesday evening Mass; no Tuesday evening Mass is printed in either week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "50f51934",
+          "page": 4,
+          "said": "All Souls Prayer Service ... November 8th at 1:30 PM"
+        }
+      ],
+      "rationale": "R24, R16: a prayer service, not Mass, and dated before as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
