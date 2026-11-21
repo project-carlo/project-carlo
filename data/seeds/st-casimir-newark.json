@@ -1,0 +1,1391 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-casimir-newark",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:53:37Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-21T02:51:48Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. The Mass Schedule box is identical in both bulletins (Nov 8 and 15) and matches the parish website; Saturday 8 AM Mass comes from both weeks' intentions (R35), and the website names the First Friday 8-11 PM line as Adoration and gives Sunday confession 8 AM-12 PM during every Mass. Open: confession on request after weekday Masses (C5).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "f197ba99e5e4222b1cbfea21e4b65822bf4038a9363197345b6aa68f1ce1c282",
+      "fetched_at": "2026-11-15T16:53:37Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "84be5183f2e7c1bbd2d5c72ddf77e29c3a608fb94de7eaac0fe70a0cbd38b53c",
+      "fetched_at": "2026-11-08T16:02:36Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-casimir-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f197ba99",
+          "page": 1,
+          "said": "Saturday 5:00 PM (English), Vigil Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "84be5183",
+          "page": 1,
+          "said": "Saturday 5:00 PM (English), Vigil Mass"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read, and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-casimir-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English/Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f197ba99",
+          "page": 1,
+          "said": "Sunday 8:00 AM (English/Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "84be5183",
+          "page": 1,
+          "said": "Sunday 8:00 AM (English/Polish)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-casimir-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f197ba99",
+          "page": 1,
+          "said": "Sunday ... 9:30 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "84be5183",
+          "page": 1,
+          "said": "Sunday ... 9:30 AM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-casimir-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f197ba99",
+          "page": 1,
+          "said": "Sunday ... 11:00 AM (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "84be5183",
+          "page": 1,
+          "said": "Sunday ... 11:00 AM (Polish)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-casimir-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f197ba99",
+          "page": 1,
+          "said": "Weekdays 7:00 AM (English) 8:00 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "84be5183",
+          "page": 1,
+          "said": "Weekdays 7:00 AM (English) 8:00 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f197ba99",
+          "page": 2,
+          "said": "Mass intentions list 7:00 AM and 8:00 AM Monday through Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "84be5183",
+          "page": 2,
+          "said": "Mass intentions list 7:00 AM and 8:00 AM Monday through Friday"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins; both weeks' intentions list 7 and 8 AM Monday-Friday, and the website lists them M-F.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-casimir-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f197ba99",
+          "page": 1,
+          "said": "Weekdays 7:00 AM (English) 8:00 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "84be5183",
+          "page": 1,
+          "said": "Weekdays 7:00 AM (English) 8:00 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f197ba99",
+          "page": 2,
+          "said": "Mass intentions list 7:00 AM and 8:00 AM Monday through Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "84be5183",
+          "page": 2,
+          "said": "Mass intentions list 7:00 AM and 8:00 AM Monday through Friday"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins; both weeks' intentions list 7 and 8 AM Monday-Friday, and the website lists them M-F.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-casimir-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f197ba99",
+          "page": 1,
+          "said": "Weekdays 7:00 AM (English) 8:00 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "84be5183",
+          "page": 1,
+          "said": "Weekdays 7:00 AM (English) 8:00 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f197ba99",
+          "page": 2,
+          "said": "Mass intentions list 7:00 AM and 8:00 AM Monday through Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "84be5183",
+          "page": 2,
+          "said": "Mass intentions list 7:00 AM and 8:00 AM Monday through Friday"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins; both weeks' intentions list 7 and 8 AM Monday-Friday, and the website lists them M-F.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-casimir-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f197ba99",
+          "page": 1,
+          "said": "Weekdays 7:00 AM (English) 8:00 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "84be5183",
+          "page": 1,
+          "said": "Weekdays 7:00 AM (English) 8:00 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f197ba99",
+          "page": 2,
+          "said": "Mass intentions list 7:00 AM and 8:00 AM Monday through Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "84be5183",
+          "page": 2,
+          "said": "Mass intentions list 7:00 AM and 8:00 AM Monday through Friday"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins; both weeks' intentions list 7 and 8 AM Monday-Friday, and the website lists them M-F.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-casimir-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f197ba99",
+          "page": 1,
+          "said": "Weekdays 7:00 AM (English) 8:00 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "84be5183",
+          "page": 1,
+          "said": "Weekdays 7:00 AM (English) 8:00 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f197ba99",
+          "page": 2,
+          "said": "Mass intentions list 7:00 AM and 8:00 AM Monday through Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "84be5183",
+          "page": 2,
+          "said": "Mass intentions list 7:00 AM and 8:00 AM Monday through Friday"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins; both weeks' intentions list 7 and 8 AM Monday-Friday, and the website lists them M-F.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-casimir-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f197ba99",
+          "page": 1,
+          "said": "Weekdays 7:00 AM (English) 8:00 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "84be5183",
+          "page": 1,
+          "said": "Weekdays 7:00 AM (English) 8:00 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f197ba99",
+          "page": 2,
+          "said": "Mass intentions list 7:00 AM and 8:00 AM Monday through Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "84be5183",
+          "page": 2,
+          "said": "Mass intentions list 7:00 AM and 8:00 AM Monday through Friday"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins; both weeks' intentions list 7 and 8 AM Monday-Friday, and the website lists them M-F.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-casimir-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f197ba99",
+          "page": 1,
+          "said": "Weekdays 7:00 AM (English) 8:00 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "84be5183",
+          "page": 1,
+          "said": "Weekdays 7:00 AM (English) 8:00 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f197ba99",
+          "page": 2,
+          "said": "Mass intentions list 7:00 AM and 8:00 AM Monday through Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "84be5183",
+          "page": 2,
+          "said": "Mass intentions list 7:00 AM and 8:00 AM Monday through Friday"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins; both weeks' intentions list 7 and 8 AM Monday-Friday, and the website lists them M-F.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-casimir-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f197ba99",
+          "page": 1,
+          "said": "Weekdays 7:00 AM (English) 8:00 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "84be5183",
+          "page": 1,
+          "said": "Weekdays 7:00 AM (English) 8:00 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f197ba99",
+          "page": 2,
+          "said": "Mass intentions list 7:00 AM and 8:00 AM Monday through Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "84be5183",
+          "page": 2,
+          "said": "Mass intentions list 7:00 AM and 8:00 AM Monday through Friday"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins; both weeks' intentions list 7 and 8 AM Monday-Friday, and the website lists them M-F.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-casimir-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f197ba99",
+          "page": 1,
+          "said": "Weekdays 7:00 AM (English) 8:00 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "84be5183",
+          "page": 1,
+          "said": "Weekdays 7:00 AM (English) 8:00 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f197ba99",
+          "page": 2,
+          "said": "Mass intentions list 7:00 AM and 8:00 AM Monday through Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "84be5183",
+          "page": 2,
+          "said": "Mass intentions list 7:00 AM and 8:00 AM Monday through Friday"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins; both weeks' intentions list 7 and 8 AM Monday-Friday, and the website lists them M-F.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-casimir-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f197ba99",
+          "page": 1,
+          "said": "Weekdays 7:00 AM (English) 8:00 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "84be5183",
+          "page": 1,
+          "said": "Weekdays 7:00 AM (English) 8:00 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f197ba99",
+          "page": 2,
+          "said": "Mass intentions list 7:00 AM and 8:00 AM Monday through Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "84be5183",
+          "page": 2,
+          "said": "Mass intentions list 7:00 AM and 8:00 AM Monday through Friday"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins; both weeks' intentions list 7 and 8 AM Monday-Friday, and the website lists them M-F.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-casimir-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f197ba99",
+          "page": 2,
+          "said": "Saturday—Sobota—November 21, 2026 8:00 AM For Parishioners"
+        },
+        {
+          "source": "agent",
+          "bulletin": "84be5183",
+          "page": 2,
+          "said": "Saturday—Sobota—November 14, 2026 8:00 AM God's blessings, health and Blessed Mother's protection"
+        }
+      ],
+      "rationale": "R35: both bulletins' intentions list a Saturday 8:00 AM Mass in different weeks (Nov 14 with a named intention, Nov 21). The schedule box's 'Weekdays 8:00 AM' fits it; the website's M-F line merely omits it, which is no conflict (C1 does not apply).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-casimir-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f197ba99",
+          "page": 1,
+          "said": "Wednesday 7:00 PM (Polish) Novena to Our Lady of Perpetual Help"
+        },
+        {
+          "source": "agent",
+          "bulletin": "84be5183",
+          "page": 1,
+          "said": "Wednesday 7:00 PM (Polish) Novena to Our Lady of Perpetual Help"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f197ba99",
+          "page": 2,
+          "said": "Wednesday 7:00 PM Mass intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "84be5183",
+          "page": 2,
+          "said": "Wednesday 7:00 PM Mass intention"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins, and both weeks' intentions list a Wednesday 7:00 PM Mass; the novena itself is not recorded (R24).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-casimir-newark",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f197ba99",
+          "page": 1,
+          "said": "Confession Saturdays 4:30 PM to 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "84be5183",
+          "page": 1,
+          "said": "Confession Saturdays 4:30 PM to 5:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-casimir-newark",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "20:00",
+        "end_time": "23:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f197ba99",
+          "page": 1,
+          "said": "First Friday 8:00 PM to 11:00 PM (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "84be5183",
+          "page": 1,
+          "said": "First Friday 8:00 PM to 11:00 PM (Polish)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stcasimirnewark.com/",
+          "said": "Adoration Times 1st Friday : 8:00 PM to 11:00 PM"
+        }
+      ],
+      "rationale": "R1, R6: the schedule box of both bulletins prints this standing First Friday line without naming the service; the parish website's Mass & Confession Times panel lists it under 'Adoration Times', matching the time exactly. R12: neither read week holds a first Friday, but the line is printed every week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-casimir-newark",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "During every Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stcasimirnewark.com/",
+          "said": "Confession Times Sunday : 8:00 AM to 12:00 PM During every mass",
+          "schedule_check": {
+            "checked_at": "2026-11-21T02:53:41Z",
+            "current_because": "Checked 2026-11-20: the site's panel shows today's daily reflection (Friday, November 20, 2026) and its Mass times match the November 2026 bulletins exactly, including the current Wednesday Polish novena Mass.",
+            "bulletin": "f197ba99",
+            "fits_because": "The newest bulletin (Nov 15, 2026) says 'Confession ... Sundays during every mass'; the website gives the clock span of those Sunday Masses (8:00 AM to 12:00 PM), which fits the 8:00, 9:30 and 11:00 AM Masses."
+          }
+        },
+        {
+          "source": "agent",
+          "bulletin": "f197ba99",
+          "page": 1,
+          "said": "Confession ... Sundays during every mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "84be5183",
+          "page": 1,
+          "said": "Confession ... Sundays during every mass."
+        }
+      ],
+      "rationale": "R6: the bulletin says confessions are heard during every Sunday Mass but gives no clock time; the parish's current website gives Sunday 8:00 AM to 12:00 PM during every Mass, which fits the bulletin's Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f197ba99",
+          "page": 1,
+          "said": "Confession ... Upon request, following weekday masses. W dni powszednie po Mszy Świętej."
+        },
+        {
+          "source": "agent",
+          "bulletin": "84be5183",
+          "page": 1,
+          "said": "Confession ... Upon request, following weekday masses. W dni powszednie po Mszy Świętej."
+        }
+      ],
+      "rationale": "C5 leaning include: confession after Mass on request; POLICY/R10 time it 30 minutes after each 7:00 and 8:00 AM weekday Mass. The website's Confession Times panel omits it. Saturday's 8:00 AM Mass (known only from the intentions) is not in the options.",
+      "question": "Add confession on request after each weekday Mass (Mon-Fri 7:30 and 8:30 AM)?",
+      "options": [
+        {
+          "label": "After weekday Masses, on request",
+          "entry": {
+            "church_slug": "st-casimir-newark",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "On request, after the weekday Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekday-confession"
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f197ba99",
+          "page": 1,
+          "said": "Confession ... Upon request, following weekday masses. W dni powszednie po Mszy Świętej."
+        },
+        {
+          "source": "agent",
+          "bulletin": "84be5183",
+          "page": 1,
+          "said": "Confession ... Upon request, following weekday masses. W dni powszednie po Mszy Świętej."
+        }
+      ],
+      "rationale": "C5 leaning include: confession after Mass on request; POLICY/R10 time it 30 minutes after each 7:00 and 8:00 AM weekday Mass. The website's Confession Times panel omits it. Saturday's 8:00 AM Mass (known only from the intentions) is not in the options.",
+      "question": "Add confession on request after each weekday Mass (Mon-Fri 7:30 and 8:30 AM)?",
+      "options": [
+        {
+          "label": "After weekday Masses, on request",
+          "entry": {
+            "church_slug": "st-casimir-newark",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "On request, after the weekday Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekday-confession"
+    },
+    {
+      "id": "s22",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f197ba99",
+          "page": 1,
+          "said": "Confession ... Upon request, following weekday masses. W dni powszednie po Mszy Świętej."
+        },
+        {
+          "source": "agent",
+          "bulletin": "84be5183",
+          "page": 1,
+          "said": "Confession ... Upon request, following weekday masses. W dni powszednie po Mszy Świętej."
+        }
+      ],
+      "rationale": "C5 leaning include: confession after Mass on request; POLICY/R10 time it 30 minutes after each 7:00 and 8:00 AM weekday Mass. The website's Confession Times panel omits it. Saturday's 8:00 AM Mass (known only from the intentions) is not in the options.",
+      "question": "Add confession on request after each weekday Mass (Mon-Fri 7:30 and 8:30 AM)?",
+      "options": [
+        {
+          "label": "After weekday Masses, on request",
+          "entry": {
+            "church_slug": "st-casimir-newark",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "On request, after the weekday Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekday-confession"
+    },
+    {
+      "id": "s23",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f197ba99",
+          "page": 1,
+          "said": "Confession ... Upon request, following weekday masses. W dni powszednie po Mszy Świętej."
+        },
+        {
+          "source": "agent",
+          "bulletin": "84be5183",
+          "page": 1,
+          "said": "Confession ... Upon request, following weekday masses. W dni powszednie po Mszy Świętej."
+        }
+      ],
+      "rationale": "C5 leaning include: confession after Mass on request; POLICY/R10 time it 30 minutes after each 7:00 and 8:00 AM weekday Mass. The website's Confession Times panel omits it. Saturday's 8:00 AM Mass (known only from the intentions) is not in the options.",
+      "question": "Add confession on request after each weekday Mass (Mon-Fri 7:30 and 8:30 AM)?",
+      "options": [
+        {
+          "label": "After weekday Masses, on request",
+          "entry": {
+            "church_slug": "st-casimir-newark",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "On request, after the weekday Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekday-confession"
+    },
+    {
+      "id": "s24",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f197ba99",
+          "page": 1,
+          "said": "Confession ... Upon request, following weekday masses. W dni powszednie po Mszy Świętej."
+        },
+        {
+          "source": "agent",
+          "bulletin": "84be5183",
+          "page": 1,
+          "said": "Confession ... Upon request, following weekday masses. W dni powszednie po Mszy Świętej."
+        }
+      ],
+      "rationale": "C5 leaning include: confession after Mass on request; POLICY/R10 time it 30 minutes after each 7:00 and 8:00 AM weekday Mass. The website's Confession Times panel omits it. Saturday's 8:00 AM Mass (known only from the intentions) is not in the options.",
+      "question": "Add confession on request after each weekday Mass (Mon-Fri 7:30 and 8:30 AM)?",
+      "options": [
+        {
+          "label": "After weekday Masses, on request",
+          "entry": {
+            "church_slug": "st-casimir-newark",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "On request, after the weekday Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekday-confession"
+    },
+    {
+      "id": "s25",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f197ba99",
+          "page": 1,
+          "said": "Confession ... Upon request, following weekday masses. W dni powszednie po Mszy Świętej."
+        },
+        {
+          "source": "agent",
+          "bulletin": "84be5183",
+          "page": 1,
+          "said": "Confession ... Upon request, following weekday masses. W dni powszednie po Mszy Świętej."
+        }
+      ],
+      "rationale": "C5 leaning include: confession after Mass on request; POLICY/R10 time it 30 minutes after each 7:00 and 8:00 AM weekday Mass. The website's Confession Times panel omits it. Saturday's 8:00 AM Mass (known only from the intentions) is not in the options.",
+      "question": "Add confession on request after each weekday Mass (Mon-Fri 7:30 and 8:30 AM)?",
+      "options": [
+        {
+          "label": "After weekday Masses, on request",
+          "entry": {
+            "church_slug": "st-casimir-newark",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "On request, after the weekday Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekday-confession"
+    },
+    {
+      "id": "s26",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f197ba99",
+          "page": 1,
+          "said": "Confession ... Upon request, following weekday masses. W dni powszednie po Mszy Świętej."
+        },
+        {
+          "source": "agent",
+          "bulletin": "84be5183",
+          "page": 1,
+          "said": "Confession ... Upon request, following weekday masses. W dni powszednie po Mszy Świętej."
+        }
+      ],
+      "rationale": "C5 leaning include: confession after Mass on request; POLICY/R10 time it 30 minutes after each 7:00 and 8:00 AM weekday Mass. The website's Confession Times panel omits it. Saturday's 8:00 AM Mass (known only from the intentions) is not in the options.",
+      "question": "Add confession on request after each weekday Mass (Mon-Fri 7:30 and 8:30 AM)?",
+      "options": [
+        {
+          "label": "After weekday Masses, on request",
+          "entry": {
+            "church_slug": "st-casimir-newark",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "On request, after the weekday Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekday-confession"
+    },
+    {
+      "id": "s27",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f197ba99",
+          "page": 1,
+          "said": "Confession ... Upon request, following weekday masses. W dni powszednie po Mszy Świętej."
+        },
+        {
+          "source": "agent",
+          "bulletin": "84be5183",
+          "page": 1,
+          "said": "Confession ... Upon request, following weekday masses. W dni powszednie po Mszy Świętej."
+        }
+      ],
+      "rationale": "C5 leaning include: confession after Mass on request; POLICY/R10 time it 30 minutes after each 7:00 and 8:00 AM weekday Mass. The website's Confession Times panel omits it. Saturday's 8:00 AM Mass (known only from the intentions) is not in the options.",
+      "question": "Add confession on request after each weekday Mass (Mon-Fri 7:30 and 8:30 AM)?",
+      "options": [
+        {
+          "label": "After weekday Masses, on request",
+          "entry": {
+            "church_slug": "st-casimir-newark",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "On request, after the weekday Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekday-confession"
+    },
+    {
+      "id": "s28",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f197ba99",
+          "page": 1,
+          "said": "Confession ... Upon request, following weekday masses. W dni powszednie po Mszy Świętej."
+        },
+        {
+          "source": "agent",
+          "bulletin": "84be5183",
+          "page": 1,
+          "said": "Confession ... Upon request, following weekday masses. W dni powszednie po Mszy Świętej."
+        }
+      ],
+      "rationale": "C5 leaning include: confession after Mass on request; POLICY/R10 time it 30 minutes after each 7:00 and 8:00 AM weekday Mass. The website's Confession Times panel omits it. Saturday's 8:00 AM Mass (known only from the intentions) is not in the options.",
+      "question": "Add confession on request after each weekday Mass (Mon-Fri 7:30 and 8:30 AM)?",
+      "options": [
+        {
+          "label": "After weekday Masses, on request",
+          "entry": {
+            "church_slug": "st-casimir-newark",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "On request, after the weekday Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekday-confession"
+    },
+    {
+      "id": "s29",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f197ba99",
+          "page": 1,
+          "said": "Confession ... Upon request, following weekday masses. W dni powszednie po Mszy Świętej."
+        },
+        {
+          "source": "agent",
+          "bulletin": "84be5183",
+          "page": 1,
+          "said": "Confession ... Upon request, following weekday masses. W dni powszednie po Mszy Świętej."
+        }
+      ],
+      "rationale": "C5 leaning include: confession after Mass on request; POLICY/R10 time it 30 minutes after each 7:00 and 8:00 AM weekday Mass. The website's Confession Times panel omits it. Saturday's 8:00 AM Mass (known only from the intentions) is not in the options.",
+      "question": "Add confession on request after each weekday Mass (Mon-Fri 7:30 and 8:30 AM)?",
+      "options": [
+        {
+          "label": "After weekday Masses, on request",
+          "entry": {
+            "church_slug": "st-casimir-newark",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "On request, after the weekday Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekday-confession"
+    }
+  ]
+}
