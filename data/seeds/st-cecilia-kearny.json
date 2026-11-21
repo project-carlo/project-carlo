@@ -1,0 +1,755 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-cecilia-kearny",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:53:41Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-21T03:12:44Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One parish with St. Cecilia Church and its Parish Center Chapel. Both November bulletins print the same schedule box (weekend Masses in Portuguese, English and Spanish; weekday noon; Tue Spanish, Wed Portuguese in the chapel; first-Friday and first-Saturday Spanish Masses), matching the website; Friday 6:30 PM Adoration is in both weeks' calendars. Dated: Thanksgiving 9 AM Mass and the cancelled Friday Nov 27 noon Mass. Open: whether Saturday confession is in the church or the chapel.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "77dfd4d28cb8b76cbdab74f902710a40df93f9c769a4991b29c1f5db4408311a",
+      "fetched_at": "2026-11-15T16:53:41Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "aaa6a8b7e36237ebead9331f11a3e0627643b723fd68312e5bd812f445df6eec",
+      "fetched_at": "2026-11-08T16:02:40Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-kearny",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "77dfd4d2",
+          "page": 1,
+          "said": "Saturday Evening Mass of Anticipation: 5:00 PM English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaa6a8b7",
+          "page": 1,
+          "said": "Saturday Evening Mass of Anticipation: 5:00 PM English"
+        }
+      ],
+      "rationale": "R1: printed in the Holy Mass Schedule box of both bulletins read; the intentions list it each week. The box marks every chapel service 'Chapel', the chapel is in the Parish Center, and the weekend Masses carry no chapel label, so they are at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-kearny",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Portuguese"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "77dfd4d2",
+          "page": 1,
+          "said": "Sunday Mass 9:00 AM Português"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaa6a8b7",
+          "page": 1,
+          "said": "Sunday Mass 9:00 AM Português"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; at the church, as the box labels only chapel services 'Chapel' and the website says the Parish Center (where the chapel is) is closed on Sunday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-kearny",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "77dfd4d2",
+          "page": 1,
+          "said": "Sunday Mass ... 10:30 AM English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaa6a8b7",
+          "page": 1,
+          "said": "Sunday Mass ... 10:30 AM English"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; at the church, as the box labels only chapel services 'Chapel' and the website says the Parish Center (where the chapel is) is closed on Sunday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-kearny",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "77dfd4d2",
+          "page": 1,
+          "said": "Sunday Mass ... 12:00 PM Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaa6a8b7",
+          "page": 1,
+          "said": "Sunday Mass ... 12:00 PM Español"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; at the church, as the box labels only chapel services 'Chapel' and the website says the Parish Center (where the chapel is) is closed on Sunday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-kearny",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "77dfd4d2",
+          "page": 1,
+          "said": "Daily Mass Schedule: Monday-Friday 12:00 PM English | Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaa6a8b7",
+          "page": 1,
+          "said": "Daily Mass Schedule: Monday-Friday 12:00 PM English | Church"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read, at the Church; the intentions list a 12:00 PM Mass every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-kearny",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "77dfd4d2",
+          "page": 1,
+          "said": "Daily Mass Schedule: Monday-Friday 12:00 PM English | Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaa6a8b7",
+          "page": 1,
+          "said": "Daily Mass Schedule: Monday-Friday 12:00 PM English | Church"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read, at the Church; the intentions list a 12:00 PM Mass every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-kearny",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "77dfd4d2",
+          "page": 1,
+          "said": "Daily Mass Schedule: Monday-Friday 12:00 PM English | Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaa6a8b7",
+          "page": 1,
+          "said": "Daily Mass Schedule: Monday-Friday 12:00 PM English | Church"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read, at the Church; the intentions list a 12:00 PM Mass every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-kearny",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "77dfd4d2",
+          "page": 1,
+          "said": "Daily Mass Schedule: Monday-Friday 12:00 PM English | Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaa6a8b7",
+          "page": 1,
+          "said": "Daily Mass Schedule: Monday-Friday 12:00 PM English | Church"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read, at the Church; the intentions list a 12:00 PM Mass every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-kearny",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "77dfd4d2",
+          "page": 1,
+          "said": "Daily Mass Schedule: Monday-Friday 12:00 PM English | Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaa6a8b7",
+          "page": 1,
+          "said": "Daily Mass Schedule: Monday-Friday 12:00 PM English | Church"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read, at the Church; the intentions list a 12:00 PM Mass every weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-kearny",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "77dfd4d2",
+          "page": 1,
+          "said": "Tuesday: 7:00 PM Español | Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaa6a8b7",
+          "page": 1,
+          "said": "Tuesday: 7:00 PM Español | Church"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; intentions list it each Tuesday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-parish-center-chapel-kearny",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Portuguese; Parish Center Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "77dfd4d2",
+          "page": 1,
+          "said": "Wednesday: 7:30 PM Português | Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaa6a8b7",
+          "page": 1,
+          "said": "Wednesday: 7:30 PM Português | Chapel"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read, at the Chapel, which the website places in the Parish Center, 119 Chestnut Street (the listed chapel).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-kearny",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "77dfd4d2",
+          "page": 1,
+          "said": "First Friday of every month: 7:30 PM Español | Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaa6a8b7",
+          "page": 1,
+          "said": "First Friday of every month: 7:30 PM Español | Church"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly qualifiers: the schedule box of both bulletins names it a first-Friday Mass at the Church; the website's schedule agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-parish-center-chapel-kearny",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "77dfd4d2",
+          "page": 1,
+          "said": "First Saturday of every month: 10:00 AM Español | Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaa6a8b7",
+          "page": 1,
+          "said": "First Saturday of every month: 10:00 AM Español | Chapel"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly qualifiers: the schedule box of both bulletins and the website give 10:00 AM in the Chapel. The Nov 8 issue's intentions list a dated 'Saturday November 7 10:30 AM (S)' Mass; per R40 that one past date does not change the standing time, and it is before as_of (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "77dfd4d2",
+          "page": 1,
+          "said": "Sacrament of Reconciliation: Saturdays 4:00 PM-5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaa6a8b7",
+          "page": 1,
+          "said": "Sacrament of Reconciliation: Saturdays 4:00 PM-5:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://stceciliakearny.org/sacraments/",
+          "said": "Sacrament of Reconciliation Saturday at 4PM."
+        }
+      ],
+      "rationale": "R32: the time is clear in both bulletins and the website, but no source names the place, and the parish has a church and a Parish Center chapel. Leaning church: it runs up to the 5:00 PM vigil, which is at the church, and the schedule box labels chapel services 'Chapel'.",
+      "question": "Where are the Saturday 4:00-5:00 PM confessions: the church or the Parish Center chapel?",
+      "options": [
+        {
+          "label": "St. Cecilia Church",
+          "entry": {
+            "church_slug": "st-cecilia-kearny",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:00",
+            "end_time": "17:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Parish Center Chapel",
+          "entry": {
+            "church_slug": "st-cecilia-parish-center-chapel-kearny",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:00",
+            "end_time": "17:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-kearny",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "77dfd4d2",
+          "page": 3,
+          "said": "Friday Nov 20 6:30 PM Adoration of the Blessed Sacrament Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aaa6a8b7",
+          "page": 3,
+          "said": "Friday Nov 13 6:30 PM Adoration of the Blessed Sacrament Church"
+        }
+      ],
+      "rationale": "R35: the church calendar lists Friday 6:30 PM Adoration at the Church in two issues covering different weeks, not marked special. No end time is given, so none is recorded (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-kearny",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "77dfd4d2",
+          "page": 4,
+          "said": "Thanksgiving Day Mass 9:00 AM ... The Parish Center will be Closed Thanksgiving Day and Friday 27"
+        }
+      ],
+      "rationale": "R1, R16, POLICY Weekly or dated rule 7: a dated holiday Mass after as_of. No place is printed; the Parish Center (home of the chapel) is closed that day, so it is at the church. R17: the weekly Thursday noon Mass is left alone, as no cancellation is stated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-kearny",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "77dfd4d2",
+          "page": 4,
+          "said": "Please note: Mass will not be celebrated on Friday, November 27th."
+        }
+      ],
+      "rationale": "R1, R16, R18: the newest bulletin cancels the Friday noon Mass on Nov 27; the weekly slot stands. Nov 27 is not a first Friday, so only the noon Mass is affected; Adoration is not cancelled by a Mass cancellation (R36).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "77dfd4d2",
+          "page": 2,
+          "said": "Sacrament of Baptism ... 1o sabado ... 11:00 AM; Anointing of the Sick: Anytime upon request"
+        }
+      ],
+      "rationale": "R24: Baptism and Anointing of the Sick are not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "77dfd4d2",
+          "page": 3,
+          "said": "Friday 7:30 PM Grupo Divina Misericordia, Church Basement; Saturday 11:45 AM Grupo Maria Inmaculada Concepción, Rosario y Reflexión, Chapel; Wednesday 7:00 PM Spanish Prayer Group"
+        }
+      ],
+      "rationale": "R24: prayer groups and a Rosary are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stceciliakearny.org/",
+          "said": "The Chapel will be open for personal prayer during office hours only."
+        }
+      ],
+      "rationale": "R38, R26: the Parish Center chapel being open for personal prayer during office hours is not an Adoration schedule and gives no service time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
