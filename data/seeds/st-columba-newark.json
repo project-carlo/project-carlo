@@ -1,0 +1,519 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-columba-newark",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:53:55Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-21T03:16:54Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches: St. Columba (Sat 5 PM, Sun 8 and 11 AM, weekday Masses Mon-Wed/Fri 6 PM and Thu 7:30 AM) and St. Augustine (Sun 9:30 AM), identical in both bulletins read. Confession is by appointment only. Open: whether the Neocatechumenal Way's Saturday 6 and 8 PM Eucharists are public Masses (leaning leave out). The website is an unreadable Wix page.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "7466175e1ebc89c120a01a2afc5012a99c61111b50bfbf2e75d6f6136ad46072",
+      "fetched_at": "2026-11-15T16:53:55Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "c75e3d4164bd8c0c41f5ee5857b7854a6807042985ad40fdbaa0980917575fb2",
+      "fetched_at": "2026-11-08T16:02:48Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-columba-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English & Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7466175e",
+          "page": 1,
+          "said": "SUNDAY MASS/ MISA DOMINICAL Saturday: 5:00 PM (English & Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c75e3d41",
+          "page": 1,
+          "said": "SUNDAY MASS/ MISA DOMINICAL Saturday: 5:00 PM (English & Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions (p2) list 5:00 PM each Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-columba-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7466175e",
+          "page": 1,
+          "said": "Sunday: 8:00 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c75e3d41",
+          "page": 1,
+          "said": "Sunday: 8:00 AM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-columba-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7466175e",
+          "page": 1,
+          "said": "Domingo: 11:00 AM (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c75e3d41",
+          "page": 1,
+          "said": "Domingo: 11:00 AM (Español)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English & Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7466175e",
+          "page": 1,
+          "said": "AT SAINT AUGUSTINE CHURCH Sunday: 9:30 AM (Eng & Spa) 170 Sussex Ave. Newark, NJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c75e3d41",
+          "page": 1,
+          "said": "AT SAINT AUGUSTINE CHURCH Sunday: 9:30 AM (Eng & Spa) 170 Sussex Ave. Newark, NJ"
+        }
+      ],
+      "rationale": "R1: printed under its own St. Augustine heading in the schedule box of both bulletins; St. Augustine is one of the parish's listed churches.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-columba-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7466175e",
+          "page": 1,
+          "said": "DAILY MASS/ MISA DIARIA 6:00 PM Lunes(Sp), Martes (Eng), Miercoles(Sp) y Viernes(Sp)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c75e3d41",
+          "page": 1,
+          "said": "DAILY MASS/ MISA DIARIA 6:00 PM Lunes(Sp), Martes (Eng), Miercoles(Sp) y Viernes(Sp)"
+        }
+      ],
+      "rationale": "R1: printed in the Daily Mass box of both bulletins (a section separate from the St. Augustine Sunday line) and matched by the 6:00 PM intentions on p2.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-columba-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7466175e",
+          "page": 1,
+          "said": "DAILY MASS/ MISA DIARIA 6:00 PM Lunes(Sp), Martes (Eng), Miercoles(Sp) y Viernes(Sp)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c75e3d41",
+          "page": 1,
+          "said": "DAILY MASS/ MISA DIARIA 6:00 PM Lunes(Sp), Martes (Eng), Miercoles(Sp) y Viernes(Sp)"
+        }
+      ],
+      "rationale": "R1: printed in the Daily Mass box of both bulletins (a section separate from the St. Augustine Sunday line) and matched by the 6:00 PM intentions on p2.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-columba-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7466175e",
+          "page": 1,
+          "said": "DAILY MASS/ MISA DIARIA 6:00 PM Lunes(Sp), Martes (Eng), Miercoles(Sp) y Viernes(Sp)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c75e3d41",
+          "page": 1,
+          "said": "DAILY MASS/ MISA DIARIA 6:00 PM Lunes(Sp), Martes (Eng), Miercoles(Sp) y Viernes(Sp)"
+        }
+      ],
+      "rationale": "R1: printed in the Daily Mass box of both bulletins (a section separate from the St. Augustine Sunday line) and matched by the 6:00 PM intentions on p2.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-columba-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7466175e",
+          "page": 1,
+          "said": "DAILY MASS/ MISA DIARIA 6:00 PM Lunes(Sp), Martes (Eng), Miercoles(Sp) y Viernes(Sp)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c75e3d41",
+          "page": 1,
+          "said": "DAILY MASS/ MISA DIARIA 6:00 PM Lunes(Sp), Martes (Eng), Miercoles(Sp) y Viernes(Sp)"
+        }
+      ],
+      "rationale": "R1: printed in the Daily Mass box of both bulletins and matched by the Tuesday 6:00 PM intentions on p2.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-columba-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7466175e",
+          "page": 1,
+          "said": "7:30 AM Thursday (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c75e3d41",
+          "page": 1,
+          "said": "7:30 AM Thursday (English)"
+        }
+      ],
+      "rationale": "R1: printed in the Daily Mass box of both bulletins and matched by the Thursday 7:30 AM intentions on p2.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7466175e",
+          "page": 1,
+          "said": "NEOCATECHUMENAL WAY Eucharistic Liturgy: Saturday 6:00 PM & 8:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c75e3d41",
+          "page": 1,
+          "said": "NEOCATECHUMENAL WAY Eucharistic Liturgy: Saturday 6:00 PM & 8:00 PM"
+        }
+      ],
+      "rationale": "R30: printed in both bulletins under a Neocatechumenal Way heading, with no stated limit and no church named; the intentions never list them. These Eucharists are normally the Way's communities' own celebrations (POLICY, What to extract: a Mass limited to a group is left out). The website could not be read (empty Wix page). Leaning leave out, since a wrong time is worse than a missing one; matches the leaning in holy-family-nutley and our-lady-mother-of-the-church-woodcliff-lake.",
+      "question": "Include the Neocatechumenal Way's Saturday 6:00 PM and 8:00 PM Eucharistic Liturgies as public Masses at St. Columba?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-columba-newark",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "18:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Neocatechumenal Way"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "neocat"
+    },
+    {
+      "id": "s11",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7466175e",
+          "page": 1,
+          "said": "NEOCATECHUMENAL WAY Eucharistic Liturgy: Saturday 6:00 PM & 8:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c75e3d41",
+          "page": 1,
+          "said": "NEOCATECHUMENAL WAY Eucharistic Liturgy: Saturday 6:00 PM & 8:00 PM"
+        }
+      ],
+      "rationale": "R30: printed in both bulletins under a Neocatechumenal Way heading, with no stated limit and no church named; the intentions never list them. These Eucharists are normally the Way's communities' own celebrations (POLICY, What to extract: a Mass limited to a group is left out). The website could not be read (empty Wix page). Leaning leave out, since a wrong time is worse than a missing one; matches the leaning in holy-family-nutley and our-lady-mother-of-the-church-woodcliff-lake.",
+      "question": "Include the Neocatechumenal Way's Saturday 6:00 PM and 8:00 PM Eucharistic Liturgies as public Masses at St. Columba?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-columba-newark",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "20:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Neocatechumenal Way"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "neocat"
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7466175e",
+          "page": 1,
+          "said": "Liturgy of the Word: Tuesday & Wednesday 8:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c75e3d41",
+          "page": 1,
+          "said": "Liturgy of the Word: Tuesday & Wednesday 8:00 PM"
+        }
+      ],
+      "rationale": "R24, R25: a Neocatechumenal Liturgy of the Word is not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7466175e",
+          "page": 1,
+          "said": "CONFESSIONS By appointment Confesiones diarias por cita previa."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c75e3d41",
+          "page": 1,
+          "said": "CONFESSIONS By appointment Confesiones diarias por cita previa."
+        }
+      ],
+      "rationale": "R26: confession only by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
