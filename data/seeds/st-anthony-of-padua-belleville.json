@@ -1,0 +1,984 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-anthony-of-padua-belleville",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:53:32Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-21T02:34:30Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend (Sat 5:30 PM vigil; Sun 8, 10:30, 12:15), weekday (Mon-Thu 7 & 8 AM, Fri-Sat 8 AM), 2nd-Sunday Spanish and last-Sunday Filipino 5:30 PM Masses and Saturday confession agree in both bulletins and on the website. First-Friday Holy Hour comes from the website. Open: Tuesday Adoration at the unlocated 'Little House'.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "54dbb231e36a372e3c70e2fd7674fa952e64e027b0702aeead46c41279346149",
+      "fetched_at": "2026-11-15T16:53:32Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "94517ec20a4af453307cb420c3d22ab169820670f03fe08609a24add9d3fe36a",
+      "fetched_at": "2026-11-08T16:02:27Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-belleville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "54dbb231",
+          "page": 1,
+          "said": "Saturday 5:30PM (Sunday Vigil Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "94517ec2",
+          "page": 1,
+          "said": "Saturday 5:30PM (Sunday Vigil Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "54dbb231",
+          "page": 2,
+          "said": "5:30 pm (Saturday intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "94517ec2",
+          "page": 2,
+          "said": "5:30 pm (Saturday intentions)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-belleville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "54dbb231",
+          "page": 1,
+          "said": "Sunday 8AM, 10:30AM & 12:15PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "94517ec2",
+          "page": 1,
+          "said": "Sunday 8AM, 10:30AM & 12:15PM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins; intentions list each Sunday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-belleville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "54dbb231",
+          "page": 1,
+          "said": "Sunday 8AM, 10:30AM & 12:15PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "94517ec2",
+          "page": 1,
+          "said": "Sunday 8AM, 10:30AM & 12:15PM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins; intentions list each Sunday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-belleville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "54dbb231",
+          "page": 1,
+          "said": "Sunday 8AM, 10:30AM & 12:15PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "94517ec2",
+          "page": 1,
+          "said": "Sunday 8AM, 10:30AM & 12:15PM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins; intentions list each Sunday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-belleville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "54dbb231",
+          "page": 1,
+          "said": "Weekday Monday - Thursday 7AM & 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "94517ec2",
+          "page": 1,
+          "said": "Weekday Monday - Thursday 7AM & 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "54dbb231",
+          "page": 2,
+          "said": "7:00 am / 8:00 am intentions each Monday-Thursday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "94517ec2",
+          "page": 2,
+          "said": "7:00 am / 8:00 am intentions each Monday-Thursday"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins, matched by the intentions of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-belleville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "54dbb231",
+          "page": 1,
+          "said": "Weekday Monday - Thursday 7AM & 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "94517ec2",
+          "page": 1,
+          "said": "Weekday Monday - Thursday 7AM & 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "54dbb231",
+          "page": 2,
+          "said": "7:00 am / 8:00 am intentions each Monday-Thursday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "94517ec2",
+          "page": 2,
+          "said": "7:00 am / 8:00 am intentions each Monday-Thursday"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins, matched by the intentions of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-belleville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "54dbb231",
+          "page": 1,
+          "said": "Weekday Monday - Thursday 7AM & 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "94517ec2",
+          "page": 1,
+          "said": "Weekday Monday - Thursday 7AM & 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "54dbb231",
+          "page": 2,
+          "said": "7:00 am / 8:00 am intentions each Monday-Thursday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "94517ec2",
+          "page": 2,
+          "said": "7:00 am / 8:00 am intentions each Monday-Thursday"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins, matched by the intentions of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-belleville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "54dbb231",
+          "page": 1,
+          "said": "Weekday Monday - Thursday 7AM & 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "94517ec2",
+          "page": 1,
+          "said": "Weekday Monday - Thursday 7AM & 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "54dbb231",
+          "page": 2,
+          "said": "7:00 am / 8:00 am intentions each Monday-Thursday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "94517ec2",
+          "page": 2,
+          "said": "7:00 am / 8:00 am intentions each Monday-Thursday"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins, matched by the intentions of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-belleville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "54dbb231",
+          "page": 1,
+          "said": "Weekday Monday - Thursday 7AM & 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "94517ec2",
+          "page": 1,
+          "said": "Weekday Monday - Thursday 7AM & 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "54dbb231",
+          "page": 2,
+          "said": "7:00 am / 8:00 am intentions each Monday-Thursday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "94517ec2",
+          "page": 2,
+          "said": "7:00 am / 8:00 am intentions each Monday-Thursday"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins, matched by the intentions of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-belleville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "54dbb231",
+          "page": 1,
+          "said": "Weekday Monday - Thursday 7AM & 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "94517ec2",
+          "page": 1,
+          "said": "Weekday Monday - Thursday 7AM & 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "54dbb231",
+          "page": 2,
+          "said": "7:00 am / 8:00 am intentions each Monday-Thursday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "94517ec2",
+          "page": 2,
+          "said": "7:00 am / 8:00 am intentions each Monday-Thursday"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins, matched by the intentions of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-belleville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "54dbb231",
+          "page": 1,
+          "said": "Weekday Monday - Thursday 7AM & 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "94517ec2",
+          "page": 1,
+          "said": "Weekday Monday - Thursday 7AM & 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "54dbb231",
+          "page": 2,
+          "said": "7:00 am / 8:00 am intentions each Monday-Thursday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "94517ec2",
+          "page": 2,
+          "said": "7:00 am / 8:00 am intentions each Monday-Thursday"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins, matched by the intentions of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-belleville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "54dbb231",
+          "page": 1,
+          "said": "Weekday Monday - Thursday 7AM & 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "94517ec2",
+          "page": 1,
+          "said": "Weekday Monday - Thursday 7AM & 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "54dbb231",
+          "page": 2,
+          "said": "7:00 am / 8:00 am intentions each Monday-Thursday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "94517ec2",
+          "page": 2,
+          "said": "7:00 am / 8:00 am intentions each Monday-Thursday"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins, matched by the intentions of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-belleville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "54dbb231",
+          "page": 1,
+          "said": "Friday & Saturday 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "94517ec2",
+          "page": 1,
+          "said": "Friday & Saturday 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "54dbb231",
+          "page": 2,
+          "said": "8:00 am intentions each Friday and Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "94517ec2",
+          "page": 2,
+          "said": "8:00 am intentions each Friday and Saturday"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins, matched by the intentions of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-belleville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "54dbb231",
+          "page": 1,
+          "said": "Friday & Saturday 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "94517ec2",
+          "page": 1,
+          "said": "Friday & Saturday 8AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "54dbb231",
+          "page": 2,
+          "said": "8:00 am intentions each Friday and Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "94517ec2",
+          "page": 2,
+          "said": "8:00 am intentions each Friday and Saturday"
+        }
+      ],
+      "rationale": "R1, R35: schedule box of both bulletins, matched by the intentions of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-belleville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "54dbb231",
+          "page": 1,
+          "said": "Every 2nd Sunday at 5:30 PM Spanish Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "94517ec2",
+          "page": 1,
+          "said": "Every 2nd Sunday at 5:30 PM Spanish Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "94517ec2",
+          "page": 2,
+          "said": "SUNDAY, November 8, 2026 5:30 pm People of the Parish (Spanish Mass)"
+        }
+      ],
+      "rationale": "R1: the schedule box names the week; POLICY, Weekly or dated rule 2. The Nov 8 issue (a second Sunday) lists it in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-belleville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "last"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Filipino"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "54dbb231",
+          "page": 1,
+          "said": "Every Last Sunday at 5:30 PM Filipino Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "94517ec2",
+          "page": 1,
+          "said": "Every Last Sunday at 5:30 PM Filipino Mass"
+        }
+      ],
+      "rationale": "R1: the schedule box of both bulletins names the week; POLICY, Weekly or dated rule 2.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-belleville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": "17:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "54dbb231",
+          "page": 1,
+          "said": "Confession: Saturday 4:30-5:15 PM and by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "94517ec2",
+          "page": 1,
+          "said": "Confession: Saturday 4:30-5:15 PM and by appointment"
+        }
+      ],
+      "rationale": "R1: printed in the Sacraments box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "54dbb231",
+          "page": 1,
+          "said": "Confession ... and by appointment"
+        }
+      ],
+      "rationale": "R26: by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-belleville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-13",
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Guadalupe"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "54dbb231",
+          "page": 5,
+          "said": "Sunday, December 13, 2026 - Mass at 5:30 PM St. Anthony of Padua Church"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7: December 13 is the second Sunday, so this feast is celebrated at the weekly second-Sunday 5:30 PM Spanish Mass, already a slot; not recorded separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "54dbb231",
+          "page": 3,
+          "said": "We will celebrate ... Simbang Gabi on December 17 ... the Solemnity of Mary, Mother of God, on January 1"
+        }
+      ],
+      "rationale": "R24/R26: the pastor's letter names these celebrations without a time; no time to record.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-belleville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour after the 8:00 AM Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stantbell.org/home",
+          "said": "Friday 8:00 AM Every First Friday of the Month - Holy Hour after the Mass",
+          "schedule_check": {
+            "checked_at": "2026-11-21T02:37:08Z",
+            "current_because": "Checked 2026-11-20: the homepage's schedule matches both November 2026 bulletins time for time (Masses, 2nd/last Sunday 5:30 PM, Saturday confession) and its events list runs to late November 2026; site celebrates the 125th anniversary the bulletins mention.",
+            "bulletin": "54dbb231",
+            "fits_because": "The newest bulletin (Nov 15, third week) and the Nov 8 issue (second week) hold no first Friday, so neither would print it; its Friday 8 AM Mass is in both bulletins' schedule box."
+          }
+        }
+      ],
+      "rationale": "R6, R10, R12: website-only monthly Holy Hour (POLICY: a Holy Hour is Adoration); no read bulletin's week holds a first Friday. 'After the Mass' following the weekday 8:00 AM Mass starts 8:30 (POLICY, Times); no end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "54dbb231",
+          "page": 3,
+          "said": "TUESDAY 8:00 AM-12:30 PM St. Anthony of Padua Novena within the Mass; Adoration and Benediction at the Little House"
+        },
+        {
+          "source": "agent",
+          "bulletin": "94517ec2",
+          "page": 3,
+          "said": "TUESDAY 8:00 AM-12:30 PM St. Anthony of Padua Novena within the Mass; Adoration and Benediction at the Little House"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stantbell.org/home",
+          "said": "Tuesday 7:00 AM 8:00 AM St. Anthony Novena Eucharistic Adoration: 8:30 AM - 12:00 PM (with Benediction)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stantbell.org/events",
+          "said": "Tue, Nov 24: 08:00 AM St. Anthony of Padua Novena within the Mass; Adoration with Benediction follows"
+        }
+      ],
+      "rationale": "R32 / POLICY, Churches and chapels: both bulletins put the Tuesday Adoration 'at the Little House', which is not on the church list and whose location no source states. The bulletin's 8:00-12:30 block covers the Mass and Adoration together (POLICY, Final source checks), so the Adoration's own times come from the website's church schedule (8:30-12:00, R6), which fits it. Leaning include: the website lists it in the church's weekday schedule and the events page says it 'follows' the 8 AM Mass, suggesting it is on the church grounds.",
+      "question": "Include Tuesday Adoration 8:30 AM-12:00 PM with Benediction at the 'Little House'?",
+      "options": [
+        {
+          "label": "Tuesdays 8:30 AM-12:00 PM at the church",
+          "entry": {
+            "church_slug": "st-anthony-of-padua-belleville",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "12:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Little House; Benediction"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    }
+  ]
+}
