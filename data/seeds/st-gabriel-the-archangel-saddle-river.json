@@ -1,0 +1,730 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-gabriel-the-archangel-saddle-river",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:54:06Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-21T03:37:48Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend, weekday and Saturday Confession times agree in both November 2026 bulletins; the parish website supplies the summer months for the 6 PM Sunday (Sep-May) and Tue-Thu 6:30 AM (Sep-Jun) Masses. Open: the Knights' men-only Mass on Nov 21 at 8 AM.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "4b0e02ff04857a90f798161ef8ec6ae96da3b296488bd550441441492e98a54f",
+      "fetched_at": "2026-11-15T16:54:06Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "efb74d87382068c3b2f6f39aa33f7a6667dc6be40632ffb69d9ceb3cc0111524",
+      "fetched_at": "2026-11-08T16:02:54Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-the-archangel-saddle-river",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b0e02ff",
+          "page": 1,
+          "said": "Saturday | 5:00pm (Vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "efb74d87",
+          "page": 1,
+          "said": "Saturday | 5:00pm (Vigil)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read (Nov 8 and Nov 15) and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-the-archangel-saddle-river",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b0e02ff",
+          "page": 1,
+          "said": "Sunday | 8:00am, 10:00am, 11:30am, 6:00pm*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "efb74d87",
+          "page": 1,
+          "said": "Sunday | 8:00am, 10:00am, 11:30am, 6:00pm*"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read and in their intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-the-archangel-saddle-river",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b0e02ff",
+          "page": 1,
+          "said": "Sunday | 8:00am, 10:00am, 11:30am, 6:00pm*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "efb74d87",
+          "page": 1,
+          "said": "Sunday | 8:00am, 10:00am, 11:30am, 6:00pm*"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read and in their intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-the-archangel-saddle-river",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b0e02ff",
+          "page": 1,
+          "said": "Sunday | 8:00am, 10:00am, 11:30am, 6:00pm*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "efb74d87",
+          "page": 1,
+          "said": "Sunday | 8:00am, 10:00am, 11:30am, 6:00pm*"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read and in their intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-the-archangel-saddle-river",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 5,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b0e02ff",
+          "page": 1,
+          "said": "Sunday | ... 6:00pm* / *6:00pm Mass is not celebrated during the summer months"
+        },
+        {
+          "source": "agent",
+          "bulletin": "efb74d87",
+          "page": 1,
+          "said": "Sunday | ... 6:00pm* / *6:00pm Mass is not celebrated during the summer months"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stgabrielsr.org/index.php?page=mass",
+          "said": "Sunday 8:00 am, 10:00 am, 11:30 am, 6:00 pm (Sep-May)",
+          "schedule_check": {
+            "checked_at": "2026-11-21T03:40:14Z",
+            "current_because": "Mass Times page checked 2026-11-21; it lists bulletins through 2026-11-22 and its times match both November 2026 bulletins exactly.",
+            "bulletin": "4b0e02ff",
+            "fits_because": "The bulletin says the 6:00pm Mass is not celebrated in the summer months without naming them; the site gives the months as Sep-May."
+          }
+        }
+      ],
+      "rationale": "R1, R6: the bulletin box prints the 6 PM Sunday Mass with a summer exception; the parish website names the season Sep-May, which POLICY records as the season.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-the-archangel-saddle-river",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b0e02ff",
+          "page": 1,
+          "said": "Monday | 9:00am ... Saturday | 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "efb74d87",
+          "page": 1,
+          "said": "Monday | 9:00am ... Saturday | 9:00am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the weekday schedule box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-the-archangel-saddle-river",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b0e02ff",
+          "page": 1,
+          "said": "Monday | 9:00am ... Saturday | 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "efb74d87",
+          "page": 1,
+          "said": "Monday | 9:00am ... Saturday | 9:00am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the weekday schedule box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-the-archangel-saddle-river",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b0e02ff",
+          "page": 1,
+          "said": "Monday | 9:00am ... Saturday | 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "efb74d87",
+          "page": 1,
+          "said": "Monday | 9:00am ... Saturday | 9:00am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the weekday schedule box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-the-archangel-saddle-river",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b0e02ff",
+          "page": 1,
+          "said": "Monday | 9:00am ... Saturday | 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "efb74d87",
+          "page": 1,
+          "said": "Monday | 9:00am ... Saturday | 9:00am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the weekday schedule box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-the-archangel-saddle-river",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b0e02ff",
+          "page": 1,
+          "said": "Monday | 9:00am ... Saturday | 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "efb74d87",
+          "page": 1,
+          "said": "Monday | 9:00am ... Saturday | 9:00am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the weekday schedule box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-the-archangel-saddle-river",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b0e02ff",
+          "page": 1,
+          "said": "Monday | 9:00am ... Saturday | 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "efb74d87",
+          "page": 1,
+          "said": "Monday | 9:00am ... Saturday | 9:00am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the weekday schedule box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-the-archangel-saddle-river",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b0e02ff",
+          "page": 1,
+          "said": "Tuesday | 6:30am*, 9:00am (also Wed, Thu) / *6:30am Mass is not celebrated during the summer months"
+        },
+        {
+          "source": "agent",
+          "bulletin": "efb74d87",
+          "page": 1,
+          "said": "Tuesday | 6:30am*, 9:00am (also Wed, Thu) / *6:30am Mass is not celebrated during the summer months"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stgabrielsr.org/index.php?page=mass",
+          "said": "Summer Schedule - There is only one weekday Mass during July, and August at 9:00 AM.",
+          "schedule_check": {
+            "checked_at": "2026-11-21T03:40:14Z",
+            "current_because": "Mass Times page checked 2026-11-21; it lists bulletins through 2026-11-22 and its times match both November 2026 bulletins exactly.",
+            "bulletin": "4b0e02ff",
+            "fits_because": "The bulletin says the 6:30am Mass is not celebrated in the summer months without naming them; the site says only the 9:00 AM weekday Mass runs in July and August, so the 6:30 runs September through June."
+          }
+        }
+      ],
+      "rationale": "R1, R6: the bulletin box prints Tue-Thu 6:30 AM with a summer exception; the parish website defines summer as July and August, so the season is September-June.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-the-archangel-saddle-river",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b0e02ff",
+          "page": 1,
+          "said": "Tuesday | 6:30am*, 9:00am (also Wed, Thu) / *6:30am Mass is not celebrated during the summer months"
+        },
+        {
+          "source": "agent",
+          "bulletin": "efb74d87",
+          "page": 1,
+          "said": "Tuesday | 6:30am*, 9:00am (also Wed, Thu) / *6:30am Mass is not celebrated during the summer months"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stgabrielsr.org/index.php?page=mass",
+          "said": "Summer Schedule - There is only one weekday Mass during July, and August at 9:00 AM.",
+          "schedule_check": {
+            "checked_at": "2026-11-21T03:40:14Z",
+            "current_because": "Mass Times page checked 2026-11-21; it lists bulletins through 2026-11-22 and its times match both November 2026 bulletins exactly.",
+            "bulletin": "4b0e02ff",
+            "fits_because": "The bulletin says the 6:30am Mass is not celebrated in the summer months without naming them; the site says only the 9:00 AM weekday Mass runs in July and August, so the 6:30 runs September through June."
+          }
+        }
+      ],
+      "rationale": "R1, R6: the bulletin box prints Tue-Thu 6:30 AM with a summer exception; the parish website defines summer as July and August, so the season is September-June.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-the-archangel-saddle-river",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b0e02ff",
+          "page": 1,
+          "said": "Tuesday | 6:30am*, 9:00am (also Wed, Thu) / *6:30am Mass is not celebrated during the summer months"
+        },
+        {
+          "source": "agent",
+          "bulletin": "efb74d87",
+          "page": 1,
+          "said": "Tuesday | 6:30am*, 9:00am (also Wed, Thu) / *6:30am Mass is not celebrated during the summer months"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stgabrielsr.org/index.php?page=mass",
+          "said": "Summer Schedule - There is only one weekday Mass during July, and August at 9:00 AM.",
+          "schedule_check": {
+            "checked_at": "2026-11-21T03:40:14Z",
+            "current_because": "Mass Times page checked 2026-11-21; it lists bulletins through 2026-11-22 and its times match both November 2026 bulletins exactly.",
+            "bulletin": "4b0e02ff",
+            "fits_because": "The bulletin says the 6:30am Mass is not celebrated in the summer months without naming them; the site says only the 9:00 AM weekday Mass runs in July and August, so the 6:30 runs September through June."
+          }
+        }
+      ],
+      "rationale": "R1, R6: the bulletin box prints Tue-Thu 6:30 AM with a summer exception; the parish website defines summer as July and August, so the season is September-June.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-the-archangel-saddle-river",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b0e02ff",
+          "page": 3,
+          "said": "The Sacrament of Reconciliation Saturdays 4:00-4:45 PM, or by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "efb74d87",
+          "page": 3,
+          "said": "The Sacrament of Reconciliation Saturdays 4:00-4:45 PM, or by appointment."
+        }
+      ],
+      "rationale": "R1, R35: printed in the sacraments box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b0e02ff",
+          "page": 1,
+          "said": "Holy Days | See bulletin for schedule"
+        }
+      ],
+      "rationale": "R26: no holy-day times are printed in either bulletin read; update mode will read them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b0e02ff",
+          "page": 3,
+          "said": "this month's Men's Mass, hosted by the Knights on November 21 at 8:00am ... they are open to all men of the parish and beyond. Please join us for the Mass even if you can't stay"
+        },
+        {
+          "source": "agent",
+          "bulletin": "efb74d87",
+          "page": 3,
+          "said": "this month's Men's Mass, hosted by the Knights on November 21 at 8:00am ... they are open to all men of the parish and beyond. Please join us for the Mass even if you can't stay"
+        }
+      ],
+      "rationale": "R30: POLICY leaves out a Mass the bulletin limits to a group; this one is open to all men but not to everyone, and it is not in the Nov 21 intentions (9:00am and 5:00pm only). Leaning leave out since it is limited to men; include if a men-only invitation counts as public.",
+      "question": "Add the Knights' Men's Mass on Saturday, November 21 at 8:00 AM?",
+      "options": [
+        {
+          "label": "Include Nov 21 8:00 AM",
+          "entry": {
+            "church_slug": "st-gabriel-the-archangel-saddle-river",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-21",
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Men's Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    }
+  ]
+}
