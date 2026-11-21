@@ -1,0 +1,1272 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-john-the-apostle-linden",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:53:58Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-21T03:58:05Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend (Sat 5:30 PM; Sun 8, 10, 12), weekday (Mon-Fri 7:00 and 8:30 AM) Masses and Saturday 1-2 PM Confession agree in both bulletins; Saturday 8:30 AM Mass rests on two weeks of intentions plus the website. Open: whether to record the Perpetual Adoration Chapel (24/7 per the website) at the church.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "d5bcfbb1552a28a4f14e58c8bd58916e61b1e7095d5b89112de3028ba58285f9",
+      "fetched_at": "2026-11-15T16:53:58Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "8810630803dce62a326f1f27ce87bdaca969cc0b839b47e6974d19233a35870a",
+      "fetched_at": "2026-11-08T16:02:57Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-apostle-linden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d5bcfbb1",
+          "page": 2,
+          "said": "Sunday Mass Schedule Saturday 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88106308",
+          "page": 2,
+          "said": "Sunday Mass Schedule Saturday 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5bcfbb1",
+          "page": 6,
+          "said": "SATURDAY NOVEMBER 14,2026 5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88106308",
+          "page": 6,
+          "said": "SATURDAY NOVEMBER 14,2026 5:30 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box (p2) and the Mass intentions (p6) of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-apostle-linden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d5bcfbb1",
+          "page": 2,
+          "said": "Sunday 8:00am, 10:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88106308",
+          "page": 2,
+          "said": "Sunday 8:00am, 10:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5bcfbb1",
+          "page": 6,
+          "said": "SUNDAY NOVEMBER 15, 2026 8:00 am ... 10:00am ... 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88106308",
+          "page": 6,
+          "said": "SUNDAY NOVEMBER 15, 2026 8:00 am ... 10:00am ... 12:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box (p2) and the Mass intentions (p6) of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-apostle-linden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d5bcfbb1",
+          "page": 2,
+          "said": "Sunday 8:00am, 10:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88106308",
+          "page": 2,
+          "said": "Sunday 8:00am, 10:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5bcfbb1",
+          "page": 6,
+          "said": "SUNDAY NOVEMBER 15, 2026 8:00 am ... 10:00am ... 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88106308",
+          "page": 6,
+          "said": "SUNDAY NOVEMBER 15, 2026 8:00 am ... 10:00am ... 12:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box (p2) and the Mass intentions (p6) of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-apostle-linden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d5bcfbb1",
+          "page": 2,
+          "said": "Sunday 8:00am, 10:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88106308",
+          "page": 2,
+          "said": "Sunday 8:00am, 10:00am, 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5bcfbb1",
+          "page": 6,
+          "said": "SUNDAY NOVEMBER 15, 2026 8:00 am ... 10:00am ... 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88106308",
+          "page": 6,
+          "said": "SUNDAY NOVEMBER 15, 2026 8:00 am ... 10:00am ... 12:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box (p2) and the Mass intentions (p6) of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-apostle-linden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d5bcfbb1",
+          "page": 2,
+          "said": "Daily Mass Schedule Monday - Friday 7:00am & 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88106308",
+          "page": 2,
+          "said": "Daily Mass Schedule Monday - Friday 7:00am & 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5bcfbb1",
+          "page": 6,
+          "said": "7:00 am ... 8:30 am (each weekday in the Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88106308",
+          "page": 6,
+          "said": "7:00 am ... 8:30 am (each weekday in the Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the Daily Mass Schedule box (p2) and in each weekday's Mass intentions (p6) of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-apostle-linden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d5bcfbb1",
+          "page": 2,
+          "said": "Daily Mass Schedule Monday - Friday 7:00am & 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88106308",
+          "page": 2,
+          "said": "Daily Mass Schedule Monday - Friday 7:00am & 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5bcfbb1",
+          "page": 6,
+          "said": "7:00 am ... 8:30 am (each weekday in the Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88106308",
+          "page": 6,
+          "said": "7:00 am ... 8:30 am (each weekday in the Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the Daily Mass Schedule box (p2) and in each weekday's Mass intentions (p6) of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-apostle-linden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d5bcfbb1",
+          "page": 2,
+          "said": "Daily Mass Schedule Monday - Friday 7:00am & 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88106308",
+          "page": 2,
+          "said": "Daily Mass Schedule Monday - Friday 7:00am & 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5bcfbb1",
+          "page": 6,
+          "said": "7:00 am ... 8:30 am (each weekday in the Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88106308",
+          "page": 6,
+          "said": "7:00 am ... 8:30 am (each weekday in the Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the Daily Mass Schedule box (p2) and in each weekday's Mass intentions (p6) of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-apostle-linden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d5bcfbb1",
+          "page": 2,
+          "said": "Daily Mass Schedule Monday - Friday 7:00am & 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88106308",
+          "page": 2,
+          "said": "Daily Mass Schedule Monday - Friday 7:00am & 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5bcfbb1",
+          "page": 6,
+          "said": "7:00 am ... 8:30 am (each weekday in the Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88106308",
+          "page": 6,
+          "said": "7:00 am ... 8:30 am (each weekday in the Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the Daily Mass Schedule box (p2) and in each weekday's Mass intentions (p6) of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-apostle-linden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d5bcfbb1",
+          "page": 2,
+          "said": "Daily Mass Schedule Monday - Friday 7:00am & 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88106308",
+          "page": 2,
+          "said": "Daily Mass Schedule Monday - Friday 7:00am & 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5bcfbb1",
+          "page": 6,
+          "said": "7:00 am ... 8:30 am (each weekday in the Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88106308",
+          "page": 6,
+          "said": "7:00 am ... 8:30 am (each weekday in the Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the Daily Mass Schedule box (p2) and in each weekday's Mass intentions (p6) of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-apostle-linden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d5bcfbb1",
+          "page": 2,
+          "said": "Daily Mass Schedule Monday - Friday 7:00am & 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88106308",
+          "page": 2,
+          "said": "Daily Mass Schedule Monday - Friday 7:00am & 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5bcfbb1",
+          "page": 6,
+          "said": "7:00 am ... 8:30 am (each weekday in the Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88106308",
+          "page": 6,
+          "said": "7:00 am ... 8:30 am (each weekday in the Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the Daily Mass Schedule box (p2) and in each weekday's Mass intentions (p6) of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-apostle-linden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d5bcfbb1",
+          "page": 2,
+          "said": "Daily Mass Schedule Monday - Friday 7:00am & 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88106308",
+          "page": 2,
+          "said": "Daily Mass Schedule Monday - Friday 7:00am & 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5bcfbb1",
+          "page": 6,
+          "said": "7:00 am ... 8:30 am (each weekday in the Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88106308",
+          "page": 6,
+          "said": "7:00 am ... 8:30 am (each weekday in the Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the Daily Mass Schedule box (p2) and in each weekday's Mass intentions (p6) of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-apostle-linden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d5bcfbb1",
+          "page": 2,
+          "said": "Daily Mass Schedule Monday - Friday 7:00am & 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88106308",
+          "page": 2,
+          "said": "Daily Mass Schedule Monday - Friday 7:00am & 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5bcfbb1",
+          "page": 6,
+          "said": "7:00 am ... 8:30 am (each weekday in the Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88106308",
+          "page": 6,
+          "said": "7:00 am ... 8:30 am (each weekday in the Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the Daily Mass Schedule box (p2) and in each weekday's Mass intentions (p6) of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-apostle-linden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d5bcfbb1",
+          "page": 2,
+          "said": "Daily Mass Schedule Monday - Friday 7:00am & 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88106308",
+          "page": 2,
+          "said": "Daily Mass Schedule Monday - Friday 7:00am & 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5bcfbb1",
+          "page": 6,
+          "said": "7:00 am ... 8:30 am (each weekday in the Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88106308",
+          "page": 6,
+          "said": "7:00 am ... 8:30 am (each weekday in the Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the Daily Mass Schedule box (p2) and in each weekday's Mass intentions (p6) of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-apostle-linden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d5bcfbb1",
+          "page": 2,
+          "said": "Daily Mass Schedule Monday - Friday 7:00am & 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88106308",
+          "page": 2,
+          "said": "Daily Mass Schedule Monday - Friday 7:00am & 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5bcfbb1",
+          "page": 6,
+          "said": "7:00 am ... 8:30 am (each weekday in the Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88106308",
+          "page": 6,
+          "said": "7:00 am ... 8:30 am (each weekday in the Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the Daily Mass Schedule box (p2) and in each weekday's Mass intentions (p6) of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-apostle-linden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d5bcfbb1",
+          "page": 6,
+          "said": "SATURDAY NOVEMBER 21, 2026 8:30 am Intention of all Souls"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88106308",
+          "page": 6,
+          "said": "SATURDAY NOVEMBER 14, 2026 8:30 am Intention of all Souls"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sjanj.net/liturgies/",
+          "said": "Daily Mass Schedule Monday – Friday 7a | 8:30a || Saturday 8:30a"
+        }
+      ],
+      "rationale": "R35, R6: the Mass intentions print a Saturday 8:30 AM Mass in two different weeks (Nov 14 and Nov 21), and the parish website's daily Mass schedule lists Saturday 8:30a. The bulletin's box lists only Mon-Fri daily Masses, but the website explains it rather than conflicting (C1 needs an unresolved conflict). History is empty.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-apostle-linden",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "14:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d5bcfbb1",
+          "page": 6,
+          "said": "SACRAMENT OF RECONCILIATION (CONFESSION) Saturday, 1:00-2:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88106308",
+          "page": 6,
+          "said": "SACRAMENT OF RECONCILIATION (CONFESSION) Saturday, 1:00-2:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sjanj.net/liturgies/",
+          "said": "Sacrament of Reconciliation (Confession) Saturday 1:00 pm to 2:00 pm"
+        }
+      ],
+      "rationale": "R1: printed on p6 of both bulletins; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d5bcfbb1",
+          "page": 6,
+          "said": "Feel free to approach a priest after any mass or make an appointment by calling the rectory"
+        }
+      ],
+      "rationale": "R26: confession on approach after any Mass or by appointment has no definite time (as st-francis-de-sales-lodi settled it).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d5bcfbb1",
+          "page": 3,
+          "said": "Spiritual Warfare ... Mondays & Thursdays 8 PM In The CHURCH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88106308",
+          "page": 3,
+          "said": "Spiritual Warfare ... Mondays & Thursdays 8 PM In The CHURCH"
+        }
+      ],
+      "rationale": "R24: a prayer/teaching program, not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d5bcfbb1",
+          "page": 5,
+          "said": "PERPETUAL EUCHARISTIC ADORATION CHAPEL Email: Adoration@sjanj.net Visit: sjanj.net/pea"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88106308",
+          "page": 5,
+          "said": "PERPETUAL EUCHARISTIC ADORATION CHAPEL Email: Adoration@sjanj.net Visit: sjanj.net/pea"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sjanj.net/liturgies/",
+          "said": "Perpetual Adoration 24 hours a day"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sjanj.net/pea/",
+          "said": "Our Perpetual Adoration Chapel has been in operation non-stop since December 8, 1996"
+        }
+      ],
+      "rationale": "R30, R38, R6: both bulletins advertise the parish's Perpetual Eucharistic Adoration Chapel (sign up for a weekly holy hour) but print no hours or location; the parish website says 'Perpetual Adoration 24 hours a day', 'non-stop since December 8, 1996', with a sign-up list updated 9/17/2026, and calls it 'St. John the Apostle's Adoration Chapel'. This one-church parish gives only 1805 Penbrook Terrace, but no source says outright that the chapel is at the church. Leaning include, 00:00-23:59 each day as other 24/7 chapels are recorded.",
+      "question": "Record the Perpetual Eucharistic Adoration Chapel as Adoration all day, every day (00:00-23:59) at St. John the Apostle Church?",
+      "options": [
+        {
+          "label": "Every day 12:00 AM-11:59 PM",
+          "entry": {
+            "church_slug": "st-john-the-apostle-linden",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual Eucharistic Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "pea"
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d5bcfbb1",
+          "page": 5,
+          "said": "PERPETUAL EUCHARISTIC ADORATION CHAPEL Email: Adoration@sjanj.net Visit: sjanj.net/pea"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88106308",
+          "page": 5,
+          "said": "PERPETUAL EUCHARISTIC ADORATION CHAPEL Email: Adoration@sjanj.net Visit: sjanj.net/pea"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sjanj.net/liturgies/",
+          "said": "Perpetual Adoration 24 hours a day"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sjanj.net/pea/",
+          "said": "Our Perpetual Adoration Chapel has been in operation non-stop since December 8, 1996"
+        }
+      ],
+      "rationale": "R30, R38, R6: both bulletins advertise the parish's Perpetual Eucharistic Adoration Chapel (sign up for a weekly holy hour) but print no hours or location; the parish website says 'Perpetual Adoration 24 hours a day', 'non-stop since December 8, 1996', with a sign-up list updated 9/17/2026, and calls it 'St. John the Apostle's Adoration Chapel'. This one-church parish gives only 1805 Penbrook Terrace, but no source says outright that the chapel is at the church. Leaning include, 00:00-23:59 each day as other 24/7 chapels are recorded.",
+      "question": "Record the Perpetual Eucharistic Adoration Chapel as Adoration all day, every day (00:00-23:59) at St. John the Apostle Church?",
+      "options": [
+        {
+          "label": "Every day 12:00 AM-11:59 PM",
+          "entry": {
+            "church_slug": "st-john-the-apostle-linden",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual Eucharistic Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "pea"
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d5bcfbb1",
+          "page": 5,
+          "said": "PERPETUAL EUCHARISTIC ADORATION CHAPEL Email: Adoration@sjanj.net Visit: sjanj.net/pea"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88106308",
+          "page": 5,
+          "said": "PERPETUAL EUCHARISTIC ADORATION CHAPEL Email: Adoration@sjanj.net Visit: sjanj.net/pea"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sjanj.net/liturgies/",
+          "said": "Perpetual Adoration 24 hours a day"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sjanj.net/pea/",
+          "said": "Our Perpetual Adoration Chapel has been in operation non-stop since December 8, 1996"
+        }
+      ],
+      "rationale": "R30, R38, R6: both bulletins advertise the parish's Perpetual Eucharistic Adoration Chapel (sign up for a weekly holy hour) but print no hours or location; the parish website says 'Perpetual Adoration 24 hours a day', 'non-stop since December 8, 1996', with a sign-up list updated 9/17/2026, and calls it 'St. John the Apostle's Adoration Chapel'. This one-church parish gives only 1805 Penbrook Terrace, but no source says outright that the chapel is at the church. Leaning include, 00:00-23:59 each day as other 24/7 chapels are recorded.",
+      "question": "Record the Perpetual Eucharistic Adoration Chapel as Adoration all day, every day (00:00-23:59) at St. John the Apostle Church?",
+      "options": [
+        {
+          "label": "Every day 12:00 AM-11:59 PM",
+          "entry": {
+            "church_slug": "st-john-the-apostle-linden",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual Eucharistic Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "pea"
+    },
+    {
+      "id": "s22",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d5bcfbb1",
+          "page": 5,
+          "said": "PERPETUAL EUCHARISTIC ADORATION CHAPEL Email: Adoration@sjanj.net Visit: sjanj.net/pea"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88106308",
+          "page": 5,
+          "said": "PERPETUAL EUCHARISTIC ADORATION CHAPEL Email: Adoration@sjanj.net Visit: sjanj.net/pea"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sjanj.net/liturgies/",
+          "said": "Perpetual Adoration 24 hours a day"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sjanj.net/pea/",
+          "said": "Our Perpetual Adoration Chapel has been in operation non-stop since December 8, 1996"
+        }
+      ],
+      "rationale": "R30, R38, R6: both bulletins advertise the parish's Perpetual Eucharistic Adoration Chapel (sign up for a weekly holy hour) but print no hours or location; the parish website says 'Perpetual Adoration 24 hours a day', 'non-stop since December 8, 1996', with a sign-up list updated 9/17/2026, and calls it 'St. John the Apostle's Adoration Chapel'. This one-church parish gives only 1805 Penbrook Terrace, but no source says outright that the chapel is at the church. Leaning include, 00:00-23:59 each day as other 24/7 chapels are recorded.",
+      "question": "Record the Perpetual Eucharistic Adoration Chapel as Adoration all day, every day (00:00-23:59) at St. John the Apostle Church?",
+      "options": [
+        {
+          "label": "Every day 12:00 AM-11:59 PM",
+          "entry": {
+            "church_slug": "st-john-the-apostle-linden",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual Eucharistic Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "pea"
+    },
+    {
+      "id": "s23",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d5bcfbb1",
+          "page": 5,
+          "said": "PERPETUAL EUCHARISTIC ADORATION CHAPEL Email: Adoration@sjanj.net Visit: sjanj.net/pea"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88106308",
+          "page": 5,
+          "said": "PERPETUAL EUCHARISTIC ADORATION CHAPEL Email: Adoration@sjanj.net Visit: sjanj.net/pea"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sjanj.net/liturgies/",
+          "said": "Perpetual Adoration 24 hours a day"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sjanj.net/pea/",
+          "said": "Our Perpetual Adoration Chapel has been in operation non-stop since December 8, 1996"
+        }
+      ],
+      "rationale": "R30, R38, R6: both bulletins advertise the parish's Perpetual Eucharistic Adoration Chapel (sign up for a weekly holy hour) but print no hours or location; the parish website says 'Perpetual Adoration 24 hours a day', 'non-stop since December 8, 1996', with a sign-up list updated 9/17/2026, and calls it 'St. John the Apostle's Adoration Chapel'. This one-church parish gives only 1805 Penbrook Terrace, but no source says outright that the chapel is at the church. Leaning include, 00:00-23:59 each day as other 24/7 chapels are recorded.",
+      "question": "Record the Perpetual Eucharistic Adoration Chapel as Adoration all day, every day (00:00-23:59) at St. John the Apostle Church?",
+      "options": [
+        {
+          "label": "Every day 12:00 AM-11:59 PM",
+          "entry": {
+            "church_slug": "st-john-the-apostle-linden",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual Eucharistic Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "pea"
+    },
+    {
+      "id": "s24",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d5bcfbb1",
+          "page": 5,
+          "said": "PERPETUAL EUCHARISTIC ADORATION CHAPEL Email: Adoration@sjanj.net Visit: sjanj.net/pea"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88106308",
+          "page": 5,
+          "said": "PERPETUAL EUCHARISTIC ADORATION CHAPEL Email: Adoration@sjanj.net Visit: sjanj.net/pea"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sjanj.net/liturgies/",
+          "said": "Perpetual Adoration 24 hours a day"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sjanj.net/pea/",
+          "said": "Our Perpetual Adoration Chapel has been in operation non-stop since December 8, 1996"
+        }
+      ],
+      "rationale": "R30, R38, R6: both bulletins advertise the parish's Perpetual Eucharistic Adoration Chapel (sign up for a weekly holy hour) but print no hours or location; the parish website says 'Perpetual Adoration 24 hours a day', 'non-stop since December 8, 1996', with a sign-up list updated 9/17/2026, and calls it 'St. John the Apostle's Adoration Chapel'. This one-church parish gives only 1805 Penbrook Terrace, but no source says outright that the chapel is at the church. Leaning include, 00:00-23:59 each day as other 24/7 chapels are recorded.",
+      "question": "Record the Perpetual Eucharistic Adoration Chapel as Adoration all day, every day (00:00-23:59) at St. John the Apostle Church?",
+      "options": [
+        {
+          "label": "Every day 12:00 AM-11:59 PM",
+          "entry": {
+            "church_slug": "st-john-the-apostle-linden",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual Eucharistic Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "pea"
+    },
+    {
+      "id": "s25",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d5bcfbb1",
+          "page": 5,
+          "said": "PERPETUAL EUCHARISTIC ADORATION CHAPEL Email: Adoration@sjanj.net Visit: sjanj.net/pea"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88106308",
+          "page": 5,
+          "said": "PERPETUAL EUCHARISTIC ADORATION CHAPEL Email: Adoration@sjanj.net Visit: sjanj.net/pea"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sjanj.net/liturgies/",
+          "said": "Perpetual Adoration 24 hours a day"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sjanj.net/pea/",
+          "said": "Our Perpetual Adoration Chapel has been in operation non-stop since December 8, 1996"
+        }
+      ],
+      "rationale": "R30, R38, R6: both bulletins advertise the parish's Perpetual Eucharistic Adoration Chapel (sign up for a weekly holy hour) but print no hours or location; the parish website says 'Perpetual Adoration 24 hours a day', 'non-stop since December 8, 1996', with a sign-up list updated 9/17/2026, and calls it 'St. John the Apostle's Adoration Chapel'. This one-church parish gives only 1805 Penbrook Terrace, but no source says outright that the chapel is at the church. Leaning include, 00:00-23:59 each day as other 24/7 chapels are recorded.",
+      "question": "Record the Perpetual Eucharistic Adoration Chapel as Adoration all day, every day (00:00-23:59) at St. John the Apostle Church?",
+      "options": [
+        {
+          "label": "Every day 12:00 AM-11:59 PM",
+          "entry": {
+            "church_slug": "st-john-the-apostle-linden",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual Eucharistic Adoration Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "pea"
+    }
+  ]
+}
