@@ -1,0 +1,1082 @@
+{
+  "schema_version": 1,
+  "parish_slug": "ss-joseph-and-michael-union-city",
+  "status": "ready",
+  "as_of": "2026-11-15T16:23:41Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-21T02:00:32Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. The schedule box, the dated intentions in both bulletins (Nov 8 and Nov 15) and the website agree: weekdays 8:30 AM (English) and 7 PM (Spanish), Sat 8:30 AM first Saturdays only, Sat 5:30/7 PM, Sun 9/11/1, Confession Sat 1-2 PM, plus a Thanksgiving 9 AM Mass. The Saturday 4 PM Spanish Mass at 'Bella Vista' is excluded as an off-list venue (R23). No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "6683a3684b7e52afe4581c7b20cd8f52645148b157ec51c5e2fbe27ef4577749",
+      "fetched_at": "2026-11-15T16:23:41Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "6326d8067b8cc2aa722e9d9ac6f4ed4144b86b85d909948b171029dd90bb50b7",
+      "fetched_at": "2026-11-08T15:47:47Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-joseph-and-michael-union-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6683a368",
+          "page": 1,
+          "said": "Monday to Friday / Lunes a Viernes 8:30AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6326d806",
+          "page": 1,
+          "said": "Monday to Friday / Lunes a Viernes 8:30AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6683a368",
+          "page": 2,
+          "said": "Monday ... Friday (Eng.) 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6326d806",
+          "page": 2,
+          "said": "Monday ... Friday (Eng.) 8:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ssjmnj.org/",
+          "said": "Monday–Friday 8:30 am in English"
+        }
+      ],
+      "rationale": "R1, R35: in the schedule box and every weekday of the intentions in both bulletins (Nov 8 and Nov 15); the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-joseph-and-michael-union-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6683a368",
+          "page": 1,
+          "said": "Monday to Friday / Lunes a Viernes 8:30AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6326d806",
+          "page": 1,
+          "said": "Monday to Friday / Lunes a Viernes 8:30AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6683a368",
+          "page": 2,
+          "said": "Monday ... Friday (Eng.) 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6326d806",
+          "page": 2,
+          "said": "Monday ... Friday (Eng.) 8:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ssjmnj.org/",
+          "said": "Monday–Friday 8:30 am in English"
+        }
+      ],
+      "rationale": "R1, R35: in the schedule box and every weekday of the intentions in both bulletins (Nov 8 and Nov 15); the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-joseph-and-michael-union-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6683a368",
+          "page": 1,
+          "said": "Monday to Friday / Lunes a Viernes 8:30AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6326d806",
+          "page": 1,
+          "said": "Monday to Friday / Lunes a Viernes 8:30AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6683a368",
+          "page": 2,
+          "said": "Monday ... Friday (Eng.) 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6326d806",
+          "page": 2,
+          "said": "Monday ... Friday (Eng.) 8:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ssjmnj.org/",
+          "said": "Monday–Friday 8:30 am in English"
+        }
+      ],
+      "rationale": "R1, R35: in the schedule box and every weekday of the intentions in both bulletins (Nov 8 and Nov 15); the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-joseph-and-michael-union-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6683a368",
+          "page": 1,
+          "said": "Monday to Friday / Lunes a Viernes 8:30AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6326d806",
+          "page": 1,
+          "said": "Monday to Friday / Lunes a Viernes 8:30AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6683a368",
+          "page": 2,
+          "said": "Monday ... Friday (Eng.) 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6326d806",
+          "page": 2,
+          "said": "Monday ... Friday (Eng.) 8:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ssjmnj.org/",
+          "said": "Monday–Friday 8:30 am in English"
+        }
+      ],
+      "rationale": "R1, R35: in the schedule box and every weekday of the intentions in both bulletins (Nov 8 and Nov 15); the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-joseph-and-michael-union-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6683a368",
+          "page": 1,
+          "said": "Monday to Friday / Lunes a Viernes 8:30AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6326d806",
+          "page": 1,
+          "said": "Monday to Friday / Lunes a Viernes 8:30AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6683a368",
+          "page": 2,
+          "said": "Monday ... Friday (Eng.) 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6326d806",
+          "page": 2,
+          "said": "Monday ... Friday (Eng.) 8:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ssjmnj.org/",
+          "said": "Monday–Friday 8:30 am in English"
+        }
+      ],
+      "rationale": "R1, R35: in the schedule box and every weekday of the intentions in both bulletins (Nov 8 and Nov 15); the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-joseph-and-michael-union-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6683a368",
+          "page": 1,
+          "said": "Monday to Friday / Lunes a Viernes 7:00PM (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6326d806",
+          "page": 1,
+          "said": "Monday to Friday / Lunes a Viernes 7:00PM (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6683a368",
+          "page": 2,
+          "said": "(Esp.) 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6326d806",
+          "page": 2,
+          "said": "(Esp.) 7:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ssjmnj.org/",
+          "said": "Monday, Tuesday, Thursday & Friday 7:00 pm in Spanish"
+        }
+      ],
+      "rationale": "R1, R35: in the schedule box and every weekday of the intentions in both bulletins; the website agrees. The Nov 20 7 PM Anointing Mass is this Friday Mass (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-joseph-and-michael-union-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6683a368",
+          "page": 1,
+          "said": "Monday to Friday / Lunes a Viernes 7:00PM (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6326d806",
+          "page": 1,
+          "said": "Monday to Friday / Lunes a Viernes 7:00PM (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6683a368",
+          "page": 2,
+          "said": "(Esp.) 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6326d806",
+          "page": 2,
+          "said": "(Esp.) 7:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ssjmnj.org/",
+          "said": "Monday, Tuesday, Thursday & Friday 7:00 pm in Spanish"
+        }
+      ],
+      "rationale": "R1, R35: in the schedule box and every weekday of the intentions in both bulletins; the website agrees. The Nov 20 7 PM Anointing Mass is this Friday Mass (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-joseph-and-michael-union-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6683a368",
+          "page": 1,
+          "said": "Monday to Friday / Lunes a Viernes 7:00PM (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6326d806",
+          "page": 1,
+          "said": "Monday to Friday / Lunes a Viernes 7:00PM (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6683a368",
+          "page": 2,
+          "said": "(Esp.) 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6326d806",
+          "page": 2,
+          "said": "(Esp.) 7:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ssjmnj.org/",
+          "said": "Monday, Tuesday, Thursday & Friday 7:00 pm in Spanish"
+        }
+      ],
+      "rationale": "R1, R35: in the schedule box and every weekday of the intentions in both bulletins; the website agrees. The Nov 20 7 PM Anointing Mass is this Friday Mass (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-joseph-and-michael-union-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6683a368",
+          "page": 1,
+          "said": "Monday to Friday / Lunes a Viernes 7:00PM (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6326d806",
+          "page": 1,
+          "said": "Monday to Friday / Lunes a Viernes 7:00PM (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6683a368",
+          "page": 2,
+          "said": "(Esp.) 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6326d806",
+          "page": 2,
+          "said": "(Esp.) 7:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ssjmnj.org/",
+          "said": "Monday, Tuesday, Thursday & Friday 7:00 pm in Spanish"
+        }
+      ],
+      "rationale": "R1, R35: in the schedule box and every weekday of the intentions in both bulletins; the website agrees. The Nov 20 7 PM Anointing Mass is this Friday Mass (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-joseph-and-michael-union-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6683a368",
+          "page": 1,
+          "said": "Monday to Friday / Lunes a Viernes 7:00PM (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6326d806",
+          "page": 1,
+          "said": "Monday to Friday / Lunes a Viernes 7:00PM (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6683a368",
+          "page": 2,
+          "said": "Wednesday, November 18 (Eng.) 8:30 AM (Esp.) 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6326d806",
+          "page": 2,
+          "said": "Wednesday, November 18 (Eng.) 8:30 AM (Esp.) 7:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ssjmnj.org/",
+          "said": "Wednesday 7:00 pm in English"
+        }
+      ],
+      "rationale": "R1, R35: time printed in the box and in both weeks' intentions. Only the language differs: the website says English on Wednesday, but both bulletins' schedule box and dated Wednesday listings say Español, so the note follows the newer, issue-specific bulletin (R40).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-joseph-and-michael-union-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6683a368",
+          "page": 1,
+          "said": "Saturday / Sábado 8:30AM (English - First Saturday of the Month)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6326d806",
+          "page": 1,
+          "said": "Saturday / Sábado 8:30AM (English - First Saturday of the Month)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ssjmnj.org/",
+          "said": "Saturday 8:30 am & 5:30 pm in English"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly qualifiers: the schedule box of both bulletins names the first Saturday; the intentions for Sat Nov 14 and Nov 21 (2nd and 3rd) list no 8:30 AM, which fits. The website's every-Saturday line is less specific than the bulletin (R40).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-joseph-and-michael-union-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6683a368",
+          "page": 1,
+          "said": "5:30PM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6326d806",
+          "page": 1,
+          "said": "5:30PM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6683a368",
+          "page": 2,
+          "said": "(Eng.) 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6326d806",
+          "page": 2,
+          "said": "(Eng.) 5:30 PM"
+        }
+      ],
+      "rationale": "R1, R35: schedule box and Saturday intentions in both bulletins; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-joseph-and-michael-union-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6683a368",
+          "page": 1,
+          "said": "7:00PM (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6326d806",
+          "page": 1,
+          "said": "7:00PM (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6683a368",
+          "page": 2,
+          "said": "(Esp.) 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6326d806",
+          "page": 2,
+          "said": "(Esp.) 7:00 PM"
+        }
+      ],
+      "rationale": "R1, R35: schedule box and Saturday intentions in both bulletins; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-joseph-and-michael-union-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6683a368",
+          "page": 1,
+          "said": "Sunday / Domingo 9:00AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6326d806",
+          "page": 1,
+          "said": "Sunday / Domingo 9:00AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6683a368",
+          "page": 2,
+          "said": "(Eng.) 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6326d806",
+          "page": 2,
+          "said": "(Eng.) 9:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: schedule box and Sunday intentions in both bulletins; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-joseph-and-michael-union-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6683a368",
+          "page": 1,
+          "said": "11:00AM (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6326d806",
+          "page": 1,
+          "said": "11:00AM (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6683a368",
+          "page": 2,
+          "said": "(Esp.) 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6326d806",
+          "page": 2,
+          "said": "(Esp.) 11:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: schedule box and Sunday intentions in both bulletins; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-joseph-and-michael-union-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6683a368",
+          "page": 1,
+          "said": "1:00PM (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6326d806",
+          "page": 1,
+          "said": "1:00PM (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6683a368",
+          "page": 2,
+          "said": "(Esp.) 1:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6326d806",
+          "page": 2,
+          "said": "(Esp.) 1:00 PM"
+        }
+      ],
+      "rationale": "R1, R35: schedule box and Sunday intentions in both bulletins; website agrees. The Nov 29 1 PM birthday Mass for Mons. Corrales is this Mass (POLICY rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-joseph-and-michael-union-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "14:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6683a368",
+          "page": 1,
+          "said": "Confessions: Saturdays 1:00 pm - 2:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6326d806",
+          "page": 1,
+          "said": "Confessions: Saturdays 1:00 pm - 2:00 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ssjmnj.org/",
+          "said": "Confession Times Saturday 1:00 pm–2:00 pm"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-joseph-and-michael-union-city",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day, bilingual"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6683a368",
+          "page": 5,
+          "said": "celebrate Thanksgiving Day on Thursday, November 26, 2026, with a special bilingual Mass at 9:00am"
+        }
+      ],
+      "rationale": "R1, R16: a dated special Mass after as_of at a time outside the weekly schedule. No cancellation of the Thursday 8:30 AM or 7 PM Mass is stated, so the weekly slots stay (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-joseph-and-michael-union-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish, at Bella Vista"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6683a368",
+          "page": 1,
+          "said": "4:00PM (Español - Bella Vista)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6326d806",
+          "page": 1,
+          "said": "4:00PM (Español - Bella Vista)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6683a368",
+          "page": 2,
+          "said": "(Esp.) 4:00 PM (BV)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6326d806",
+          "page": 2,
+          "said": "(Esp.) 4:00 PM (BV)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ssjmnj.org/",
+          "said": "Saturday ... 4:00 pm & 7:00 pm in Spanish"
+        }
+      ],
+      "rationale": "R23: the bulletins place this Mass at 'Bella Vista', which seed church does not find in Union City and is not the parish church at 1314 Central Ave (the collection report lists it separately as '4:00PM (BELLA VISTA)'). The website lists 4 PM without a place, which doesn't override the bulletin's explicit venue.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-joseph-and-michael-union-city",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-20",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Anointing of the Sick"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6683a368",
+          "page": 4,
+          "said": "Misa Especial Unción de los Enfermos ... Viernes 20 de Noviembre 2026 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6326d806",
+          "page": 4,
+          "said": "Misa Especial Unción de los Enfermos ... Viernes 20 de Noviembre 2026 7:00pm"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7: a special occasion at the regular Friday 7:00 PM Mass is not recorded separately; the anointing itself is not a schedule event (R24).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-joseph-and-michael-union-city",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-29",
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "80th birthday of Mons. Orlando Corrales García"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6326d806",
+          "page": 5,
+          "said": "Domingo, 29 de Noviembre de 2026 Santa Misa Especial 1:00PM en la Iglesia San José y San Miguel"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7: a special occasion at the regular Sunday 1:00 PM Mass; recorded only as the weekly slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "church_list_issues": [
+    {
+      "church": "Bella Vista (Union City)",
+      "said": "Saturday 4:00PM (Español - Bella Vista)",
+      "bulletin": "6683a368",
+      "page": 1
+    }
+  ]
+}
