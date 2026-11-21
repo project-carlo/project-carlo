@@ -1,0 +1,571 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-henry-bayonne",
+  "status": "ready",
+  "as_of": "2026-11-15T16:53:55Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-21T03:44:59Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both bulletins read (Nov 8 and Nov 15, 2026) agree: Sat 5:30 PM vigil, Sun 8/10/12, Sat 8:30 AM, weekdays 12:00 PM, Saturday Confession 9:00-9:30 AM and 4:30-5:15 PM. No Adoration printed; generic holiday and holy-day lines left out. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "a0af102e186b0dfa88806ec8fef1968904e8c6699458df0664247272d1def33c",
+      "fetched_at": "2026-11-15T16:53:55Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "d88db51789392df5b658ec00778f0413f94907847c8bca2e42b116a608806587",
+      "fetched_at": "2026-11-08T16:02:51Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-henry-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0af102e",
+          "page": 1,
+          "said": "Saturday Eve: 5:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0af102e",
+          "page": 2,
+          "said": "Saturday, November 14th 5:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d88db517",
+          "page": 2,
+          "said": "Saturday, November 14th 5:30PM"
+        }
+      ],
+      "rationale": "R1: in the page 1 Mass Schedule box; the intentions of both bulletins list a 5:30PM Saturday Mass each week (R35).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-henry-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0af102e",
+          "page": 1,
+          "said": "Sunday: 8:00AM, 10:00AM & 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0af102e",
+          "page": 2,
+          "said": "Sunday, November 15th 8:00AM ... 10:00AM ... 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d88db517",
+          "page": 2,
+          "said": "Sunday, November 15th 8:00AM ... 10:00AM ... 12:00PM"
+        }
+      ],
+      "rationale": "R1: in the page 1 Mass Schedule box (zoomed: 10:00AM); matching Sunday intentions in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-henry-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0af102e",
+          "page": 1,
+          "said": "Sunday: 8:00AM, 10:00AM & 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0af102e",
+          "page": 2,
+          "said": "Sunday, November 15th 8:00AM ... 10:00AM ... 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d88db517",
+          "page": 2,
+          "said": "Sunday, November 15th 8:00AM ... 10:00AM ... 12:00PM"
+        }
+      ],
+      "rationale": "R1: in the page 1 Mass Schedule box (zoomed: 10:00AM); matching Sunday intentions in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-henry-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0af102e",
+          "page": 1,
+          "said": "Sunday: 8:00AM, 10:00AM & 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0af102e",
+          "page": 2,
+          "said": "Sunday, November 15th 8:00AM ... 10:00AM ... 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d88db517",
+          "page": 2,
+          "said": "Sunday, November 15th 8:00AM ... 10:00AM ... 12:00PM"
+        }
+      ],
+      "rationale": "R1: in the page 1 Mass Schedule box (zoomed: 10:00AM); matching Sunday intentions in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-henry-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0af102e",
+          "page": 1,
+          "said": "Saturdays: 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0af102e",
+          "page": 2,
+          "said": "Saturday, November 14th 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d88db517",
+          "page": 2,
+          "said": "Saturday, November 14th 8:30AM"
+        }
+      ],
+      "rationale": "R1: in the page 1 Mass Schedule box; matching Saturday intentions in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-henry-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0af102e",
+          "page": 1,
+          "said": "Weekdays: 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0af102e",
+          "page": 2,
+          "said": "Monday ... Friday 12:00PM (intentions each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d88db517",
+          "page": 2,
+          "said": "Monday ... Friday 12:00PM (intentions each weekday)"
+        }
+      ],
+      "rationale": "R1: 'Weekdays: 12:00PM' in the schedule box; intentions in both bulletins list a 12:00PM Mass Monday through Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-henry-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0af102e",
+          "page": 1,
+          "said": "Weekdays: 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0af102e",
+          "page": 2,
+          "said": "Monday ... Friday 12:00PM (intentions each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d88db517",
+          "page": 2,
+          "said": "Monday ... Friday 12:00PM (intentions each weekday)"
+        }
+      ],
+      "rationale": "R1: 'Weekdays: 12:00PM' in the schedule box; intentions in both bulletins list a 12:00PM Mass Monday through Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-henry-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0af102e",
+          "page": 1,
+          "said": "Weekdays: 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0af102e",
+          "page": 2,
+          "said": "Monday ... Friday 12:00PM (intentions each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d88db517",
+          "page": 2,
+          "said": "Monday ... Friday 12:00PM (intentions each weekday)"
+        }
+      ],
+      "rationale": "R1: 'Weekdays: 12:00PM' in the schedule box; intentions in both bulletins list a 12:00PM Mass Monday through Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-henry-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0af102e",
+          "page": 1,
+          "said": "Weekdays: 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0af102e",
+          "page": 2,
+          "said": "Monday ... Friday 12:00PM (intentions each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d88db517",
+          "page": 2,
+          "said": "Monday ... Friday 12:00PM (intentions each weekday)"
+        }
+      ],
+      "rationale": "R1: 'Weekdays: 12:00PM' in the schedule box; intentions in both bulletins list a 12:00PM Mass Monday through Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-henry-bayonne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0af102e",
+          "page": 1,
+          "said": "Weekdays: 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0af102e",
+          "page": 2,
+          "said": "Monday ... Friday 12:00PM (intentions each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d88db517",
+          "page": 2,
+          "said": "Monday ... Friday 12:00PM (intentions each weekday)"
+        }
+      ],
+      "rationale": "R1: 'Weekdays: 12:00PM' in the schedule box; intentions in both bulletins list a 12:00PM Mass Monday through Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-henry-bayonne",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0af102e",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Saturdays: 9:00AM - 9:30AM & 4:30PM - 5:15PM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Reconciliation box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-henry-bayonne",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": "17:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0af102e",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Saturdays: 9:00AM - 9:30AM & 4:30PM - 5:15PM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Reconciliation box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0af102e",
+          "page": 1,
+          "said": "National Holidays: 9:00AM"
+        }
+      ],
+      "rationale": "POLICY, Dates; R16/R17: a generic holiday time with no holiday or date named; projecting it onto Thanksgiving would be inventing a date. Update mode will read a dated holiday notice.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0af102e",
+          "page": 1,
+          "said": "Holy Days: see inside bulletin for Mass times"
+        }
+      ],
+      "rationale": "R26: no holy-day times are printed in either bulletin read (Nov 8, Nov 15); nothing to record.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
