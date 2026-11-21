@@ -1,0 +1,625 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-james-newark",
+  "status": "needs_review",
+  "as_of": "2026-11-15T15:52:47Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-21T03:47:16Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (St. James, 143 Madison St / 142 Jefferson St). Weekly Masses Wed 7:30 PM (Port.), Thu 8 PM, Sat 4 PM (Eng.) and 7 PM (Port.), Sun 7:30, 9, 10:45 (Port.), 12 noon (Eng.), 6 PM (Port.), and third-Saturday Adoration 8 AM-noon agree in both stored issues (Nov 8, Nov 15); Thanksgiving Mass Nov 26 9 AM. Open: a first-Friday Holy Hour 'after the 8 pm Mass' and whether that implied first-Friday 8 PM Mass exists.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "bee90891070b1323a76e33909a21cbf06c261133309d358b6184fe6d28637b44",
+      "fetched_at": "2026-11-15T15:52:47Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "27147e6f1489c3e211334aa8c1c485fa822fcd162a8a7d6c6e82e36c22aa6164",
+      "fetched_at": "2026-11-08T15:22:33Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Portuguese"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bee90891",
+          "page": 1,
+          "said": "Quarta-feira/ Wednesday 7:30 p.m. (Port)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27147e6f",
+          "page": 1,
+          "said": "Quarta-feira/ Wednesday 7:30 p.m. (Port)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read (Nov 8 and Nov 15); the p3 Novena notice and the Nov 8 Parish Schedule (p5) also give Wednesday 7:30 PM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "20:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bee90891",
+          "page": 1,
+          "said": "Quinta-feira / Thursday 8:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "27147e6f",
+          "page": 1,
+          "said": "Quinta-feira / Thursday 8:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "bee90891",
+          "page": 3,
+          "said": "Missa e Adoração ao Santíssimo Sacramento Todas as quintas-feiras às 8 p.m"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the Nov 8 Parish Schedule (p5) says Thursday, 8:00 PM - Mass of the Blessed Sacrament.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bee90891",
+          "page": 1,
+          "said": "Sábado / Saturday 4:00 p.m. (Engl.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27147e6f",
+          "page": 1,
+          "said": "Sábado / Saturday 4:00 p.m. (Engl.)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Portuguese"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bee90891",
+          "page": 1,
+          "said": "Sábado / Saturday 7:00 p.m. (Port.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27147e6f",
+          "page": 1,
+          "said": "Sábado / Saturday 7:00 p.m. (Port.)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Portuguese"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bee90891",
+          "page": 1,
+          "said": "Domingo / Sunday 07:30 a.m. (Port.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27147e6f",
+          "page": 1,
+          "said": "Domingo / Sunday 07:30 a.m. (Port.)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Portuguese"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bee90891",
+          "page": 1,
+          "said": "Domingo / Sunday 09:00 a.m. (Port.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27147e6f",
+          "page": 1,
+          "said": "Domingo / Sunday 09:00 a.m. (Port.)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Portuguese"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bee90891",
+          "page": 1,
+          "said": "Domingo / Sunday 10:45 a.m. (Port.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27147e6f",
+          "page": 1,
+          "said": "Domingo / Sunday 10:45 a.m. (Port.)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bee90891",
+          "page": 1,
+          "said": "Domingo / Sunday 12:00 a.m. (Engl.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27147e6f",
+          "page": 1,
+          "said": "Domingo / Sunday 12:00 a.m. (Engl.)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read as '12:00 a.m.', between the 10:45 a.m. and 6:00 p.m. Masses; a midnight Sunday Mass is not plausible in that sequence, so it is the noon Mass (POLICY, Times: noon is 12:00 PM).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Portuguese"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bee90891",
+          "page": 1,
+          "said": "Domingo / Sunday 06:00 p.m. (Port.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27147e6f",
+          "page": 1,
+          "said": "Domingo / Sunday 06:00 p.m. (Port.)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-newark",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bee90891",
+          "page": 1,
+          "said": "Adoração ao Santíssimo/ Adoration: 3º Sábado: 8 às 12 pm/ 3th Saturday of the month from 8 am to 12 pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "27147e6f",
+          "page": 1,
+          "said": "Adoração ao Santíssimo/ Adoration: 3º Sábado: 8 às 12 pm/ 3th Saturday of the month from 8 am to 12 pm."
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 2: printed in the Devotions box of both bulletins as a third-Saturday slot; the newest bulletin's week holds the third Saturday (Nov 21). '12 pm' is noon.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-newark",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bee90891",
+          "page": 5,
+          "said": "Thanksgiving MASS / MISSA ... NOVEMBER 26 AT 9AM SAINT JAMES CHURCH 143 MADISON ST / NEWARK NJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27147e6f",
+          "page": 5,
+          "said": "Thanksgiving MASS / MISSA NOVEMBER 26 AT 9AM SAINT JAMES CHURCH"
+        }
+      ],
+      "rationale": "R1, R16: a dated Thanksgiving Mass outside the weekly schedule, on or after as_of, at the parish church (143 Madison St is the parish's address).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-newark",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "20:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bee90891",
+          "page": 3,
+          "said": "Missa e Adoração ao Santíssimo Sacramento Todas as quintas-feiras às 8 p.m"
+        }
+      ],
+      "rationale": "POLICY, Final source checks (former C6): the Thursday 8 PM 'Mass and Adoration' gives Adoration no start or end time of its own, so only the Mass is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bee90891",
+          "page": 1,
+          "said": "Confissão e direção / Confession: Agendamento na Secretaria paroquial. During weekdays by appointment."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bee90891",
+          "page": 3,
+          "said": "Novena à Nossa Senhora do Perpétuo Socorro Todas as Quartas-feiras após a missa as 7:30 p.m."
+        }
+      ],
+      "rationale": "R24: a Novena is a devotion, not Mass, Confession or Adoration; rosaries and prayer groups on p1 likewise left out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bee90891",
+          "page": 1,
+          "said": "Hora Santa/ Holy Hour: 1ª Sexta-feira após a missa das 8:00 p.m. 1st Friday after 8 pm Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "27147e6f",
+          "page": 1,
+          "said": "Hora Santa/ Holy Hour: 1ª Sexta-feira após a missa das 8:00 p.m. 1st Friday after 8 pm Mass."
+        }
+      ],
+      "rationale": "R10, R12, R30: printed in both issues as a standing first-Friday Holy Hour, timed only relative to an '8 pm Mass'; POLICY puts it 30 minutes after a weekday Mass (8:30 PM). But the Mass Schedule box lists no Friday Mass (Friday 8 PM is the Marian Rosary in the Nov 8 Parish Schedule, p5), and neither stored issue's week holds a first Friday, so the anchor Mass and the time are unconfirmed. Leaning include because the line is repeated as a standing schedule; leave out if the 8 PM anchor is doubted.",
+      "question": "Add a first-Friday Holy Hour after the 8 PM Mass (8:30 PM by POLICY)?",
+      "options": [
+        {
+          "label": "First Fridays 8:30 PM",
+          "entry": {
+            "church_slug": "st-james-newark",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "20:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Holy Hour after the 8:00 PM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bee90891",
+          "page": 1,
+          "said": "Hora Santa/ Holy Hour: 1ª Sexta-feira após a missa das 8:00 p.m. 1st Friday after 8 pm Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "27147e6f",
+          "page": 1,
+          "said": "Hora Santa/ Holy Hour: 1ª Sexta-feira após a missa das 8:00 p.m. 1st Friday after 8 pm Mass."
+        }
+      ],
+      "rationale": "R29, R30: no bulletin prints a Friday Mass in its Mass Schedule box; the Holy Hour line implies one on first Fridays at 8 PM. Neither stored issue covers a first Friday, and the website (church-bulletin.org host page) has no schedule. Leaning leave out: a wrong time is worse than a missing one, and the Mass is only implied.",
+      "question": "Add a first-Friday 8 PM Mass, implied only by the Holy Hour line?",
+      "options": [
+        {
+          "label": "First Fridays 8 PM",
+          "entry": {
+            "church_slug": "st-james-newark",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "20:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    }
+  ]
+}
