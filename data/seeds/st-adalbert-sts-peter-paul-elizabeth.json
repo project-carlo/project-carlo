@@ -1,0 +1,1080 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-adalbert-sts-peter-paul-elizabeth",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:23:38Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-21T02:04:16Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches; the November 8 and 15 bulletins have no schedule box, so weekly Masses come from two weeks of Mass intentions (R35), matching the website exactly: St. Adalbert Sat 5:30 PM, Sun 8/10/12, Mon-Sat 8 AM; Sts. Peter & Paul Sun 9:30 AM. Saturday 9:00-9:30 confession is placed at St. Adalbert by the website. Open: website-only confession 20 minutes before weekend Masses (lean out), a first-Friday 7 PM Mass (lean in), and seasonal October/May/June Benediction (lean in).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "6e8496c0274251fa4f189a5e973c7d13726b86722594380d2175619c38da5af3",
+      "fetched_at": "2026-11-15T16:23:38Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "f7de6bdebffd6f4f3584a795bd8d5449890a5b5ac95ca74774de0203030c646f",
+      "fetched_at": "2026-11-08T15:46:45Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-adalbert-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6e8496c0",
+          "page": 4,
+          "said": "St. Adalbert Church ... SATURDAY (14th) 5:30 PM + Walter & Mary Skrupskis; SATURDAY (21st) 5:30 PM + Walter & Natalie Zagorski"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7de6bde",
+          "page": 4,
+          "said": "SATURDAY (7th) 5:30 PM + Josephine Zglobicka; SATURDAY (14th) 5:30 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stadalbert.us/mass-schedule",
+          "said": "Saturday Evening Vigil 5:30 PM (english)"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 4: the St. Adalbert intentions print it on two Saturdays in the newest bulletin and again in the Nov 8 one (R35); the website's schedule agrees. The bulletins have no schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-adalbert-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6e8496c0",
+          "page": 4,
+          "said": "St. Adalbert Church ... Sunday (November 15th) 8:00 AM, 10:00 AM, 12:00 PM; Sunday (November 22nd) 8:00 AM, 10:00 AM, 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7de6bde",
+          "page": 4,
+          "said": "Sunday (November 8th) 8:00 AM, 10:00 AM, 12:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stadalbert.us/mass-schedule",
+          "said": "Sunday Masses 8:00 a.m. (po polsku) 10:00 a.m. (po polsku) 12:00 noon (english)"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 4: the St. Adalbert intentions print these Sunday Masses for two Sundays in the newest bulletin and in the Nov 8 one (R35); the lectors list and website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-adalbert-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6e8496c0",
+          "page": 4,
+          "said": "St. Adalbert Church ... Sunday (November 15th) 8:00 AM, 10:00 AM, 12:00 PM; Sunday (November 22nd) 8:00 AM, 10:00 AM, 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7de6bde",
+          "page": 4,
+          "said": "Sunday (November 8th) 8:00 AM, 10:00 AM, 12:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stadalbert.us/mass-schedule",
+          "said": "Sunday Masses 8:00 a.m. (po polsku) 10:00 a.m. (po polsku) 12:00 noon (english)"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 4: the St. Adalbert intentions print these Sunday Masses for two Sundays in the newest bulletin and in the Nov 8 one (R35); the lectors list and website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-adalbert-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6e8496c0",
+          "page": 4,
+          "said": "St. Adalbert Church ... Sunday (November 15th) 8:00 AM, 10:00 AM, 12:00 PM; Sunday (November 22nd) 8:00 AM, 10:00 AM, 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7de6bde",
+          "page": 4,
+          "said": "Sunday (November 8th) 8:00 AM, 10:00 AM, 12:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stadalbert.us/mass-schedule",
+          "said": "Sunday Masses 8:00 a.m. (po polsku) 10:00 a.m. (po polsku) 12:00 noon (english)"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 4: the St. Adalbert intentions print these Sunday Masses for two Sundays in the newest bulletin and in the Nov 8 one (R35); the lectors list and website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-adalbert-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6e8496c0",
+          "page": 4,
+          "said": "St. Adalbert Church ... MONDAY (16th) ... SATURDAY (21st) 8:00 AM intentions each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7de6bde",
+          "page": 4,
+          "said": "MONDAY (9th) ... SATURDAY (14th) 8:00 AM intentions each day"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stadalbert.us/mass-schedule",
+          "said": "Weekday Masses Monday to Saturday: 8:00 a.m. (po polsku / english)"
+        }
+      ],
+      "rationale": "R35: the St. Adalbert intentions print an 8:00 AM Mass every day Monday to Saturday in two consecutive weeks (Nov 8 and Nov 15 issues); the website lists the same weekday schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-adalbert-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6e8496c0",
+          "page": 4,
+          "said": "St. Adalbert Church ... MONDAY (16th) ... SATURDAY (21st) 8:00 AM intentions each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7de6bde",
+          "page": 4,
+          "said": "MONDAY (9th) ... SATURDAY (14th) 8:00 AM intentions each day"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stadalbert.us/mass-schedule",
+          "said": "Weekday Masses Monday to Saturday: 8:00 a.m. (po polsku / english)"
+        }
+      ],
+      "rationale": "R35: the St. Adalbert intentions print an 8:00 AM Mass every day Monday to Saturday in two consecutive weeks (Nov 8 and Nov 15 issues); the website lists the same weekday schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-adalbert-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6e8496c0",
+          "page": 4,
+          "said": "St. Adalbert Church ... MONDAY (16th) ... SATURDAY (21st) 8:00 AM intentions each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7de6bde",
+          "page": 4,
+          "said": "MONDAY (9th) ... SATURDAY (14th) 8:00 AM intentions each day"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stadalbert.us/mass-schedule",
+          "said": "Weekday Masses Monday to Saturday: 8:00 a.m. (po polsku / english)"
+        }
+      ],
+      "rationale": "R35: the St. Adalbert intentions print an 8:00 AM Mass every day Monday to Saturday in two consecutive weeks (Nov 8 and Nov 15 issues); the website lists the same weekday schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-adalbert-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6e8496c0",
+          "page": 4,
+          "said": "St. Adalbert Church ... MONDAY (16th) ... SATURDAY (21st) 8:00 AM intentions each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7de6bde",
+          "page": 4,
+          "said": "MONDAY (9th) ... SATURDAY (14th) 8:00 AM intentions each day"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stadalbert.us/mass-schedule",
+          "said": "Weekday Masses Monday to Saturday: 8:00 a.m. (po polsku / english)"
+        }
+      ],
+      "rationale": "R35: the St. Adalbert intentions print an 8:00 AM Mass every day Monday to Saturday in two consecutive weeks (Nov 8 and Nov 15 issues); the website lists the same weekday schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-adalbert-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6e8496c0",
+          "page": 4,
+          "said": "St. Adalbert Church ... MONDAY (16th) ... SATURDAY (21st) 8:00 AM intentions each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7de6bde",
+          "page": 4,
+          "said": "MONDAY (9th) ... SATURDAY (14th) 8:00 AM intentions each day"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stadalbert.us/mass-schedule",
+          "said": "Weekday Masses Monday to Saturday: 8:00 a.m. (po polsku / english)"
+        }
+      ],
+      "rationale": "R35: the St. Adalbert intentions print an 8:00 AM Mass every day Monday to Saturday in two consecutive weeks (Nov 8 and Nov 15 issues); the website lists the same weekday schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-adalbert-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6e8496c0",
+          "page": 4,
+          "said": "St. Adalbert Church ... MONDAY (16th) ... SATURDAY (21st) 8:00 AM intentions each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7de6bde",
+          "page": 4,
+          "said": "MONDAY (9th) ... SATURDAY (14th) 8:00 AM intentions each day"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stadalbert.us/mass-schedule",
+          "said": "Weekday Masses Monday to Saturday: 8:00 a.m. (po polsku / english)"
+        }
+      ],
+      "rationale": "R35: the St. Adalbert intentions print an 8:00 AM Mass every day Monday to Saturday in two consecutive weeks (Nov 8 and Nov 15 issues); the website lists the same weekday schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-peter-paul-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6e8496c0",
+          "page": 4,
+          "said": "Ss. Peter & Paul Church ... November 15th, 2026 9:30 AM; November 22nd, 2026 9:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7de6bde",
+          "page": 4,
+          "said": "Ss. Peter & Paul Church November 8th, 2026 9:30 AM; November 15th, 2026 9:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stadalbert.us/mass-scuedule",
+          "said": "Sunday Mass : 9:30 am (English)"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 4: the Sts. Peter & Paul intentions print a 9:30 AM Sunday Mass for two Sundays in each bulletin; the church's own website page agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-adalbert-elizabeth",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6e8496c0",
+          "page": 3,
+          "said": "Saturday - November 14th ... * 9:00 - 9:30 AM - Confession - Spowiedź Św.; Saturday - November 21st ... * 9:00 - 9:30 AM - Confession"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7de6bde",
+          "page": 3,
+          "said": "Saturday - November 7th, 2026 * 9:00 - 9:30 AM - Confession; Saturday - November 14th * 9:00 - 9:30 AM - Confession"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stadalbert.us/mass-scuedule",
+          "said": "Every Saturday 9:00 to 9:30 am at St. Adalbert Church.",
+          "schedule_check": {
+            "checked_at": "2026-11-21T02:08:06Z",
+            "current_because": "Checked 2026-11-20: its Mass times (Sat 5:30 PM; Sun 8, 10, 12 at St. Adalbert; Sun 9:30 at Sts. Peter & Paul; Mon-Sat 8 AM) match both November 2026 bulletins exactly; no old dates or former clergy on the page",
+            "bulletin": "6e8496c0",
+            "fits_because": "The Nov 15 2026 bulletin lists Confession Sat Nov 14 and Nov 21 9:00-9:30 AM without naming a church; the page places it at St. Adalbert, where the Sat 8:00 AM Mass precedes it"
+          }
+        }
+      ],
+      "rationale": "R1, R35, R6: the Schedule of Events prints Saturday 9:00-9:30 AM Confession on four Saturdays across two issues but names no church; the parish website places it at St. Adalbert Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stadalbert.us/mass-scuedule",
+          "said": "20 min. before all the weekend Masses. Any other time based upon request."
+        }
+      ],
+      "rationale": "R6/R29: website only. Neither bulletin mentions it, though their Schedule of Events lists each Saturday's 9:00-9:30 confession; the line is undated on a page whose footer is copyright 2015, and it is unclear whether 'all the weekend Masses' includes Sts. Peter & Paul. A wrong time is worse than a missing one, so I lean to leave out.",
+      "question": "Add confession 20 minutes before each weekend Mass, which only the website gives?",
+      "options": [
+        {
+          "label": "Include, 20 minutes before each weekend Mass",
+          "entry": {
+            "church_slug": "st-adalbert-elizabeth",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "17:10",
+            "end_time": "17:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Before the 5:30 PM Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "pre-mass-confession"
+    },
+    {
+      "id": "s14",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stadalbert.us/mass-scuedule",
+          "said": "20 min. before all the weekend Masses. Any other time based upon request."
+        }
+      ],
+      "rationale": "R6/R29: website only. Neither bulletin mentions it, though their Schedule of Events lists each Saturday's 9:00-9:30 confession; the line is undated on a page whose footer is copyright 2015, and it is unclear whether 'all the weekend Masses' includes Sts. Peter & Paul. A wrong time is worse than a missing one, so I lean to leave out.",
+      "question": "Add confession 20 minutes before each weekend Mass, which only the website gives?",
+      "options": [
+        {
+          "label": "Include, 20 minutes before each weekend Mass",
+          "entry": {
+            "church_slug": "st-adalbert-elizabeth",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "07:40",
+            "end_time": "08:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Before the 8:00 AM Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "pre-mass-confession"
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stadalbert.us/mass-scuedule",
+          "said": "20 min. before all the weekend Masses. Any other time based upon request."
+        }
+      ],
+      "rationale": "R6/R29: website only. Neither bulletin mentions it, though their Schedule of Events lists each Saturday's 9:00-9:30 confession; the line is undated on a page whose footer is copyright 2015, and it is unclear whether 'all the weekend Masses' includes Sts. Peter & Paul. A wrong time is worse than a missing one, so I lean to leave out.",
+      "question": "Add confession 20 minutes before each weekend Mass, which only the website gives?",
+      "options": [
+        {
+          "label": "Include, 20 minutes before each weekend Mass",
+          "entry": {
+            "church_slug": "st-adalbert-elizabeth",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "09:40",
+            "end_time": "10:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Before the 10:00 AM Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "pre-mass-confession"
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stadalbert.us/mass-scuedule",
+          "said": "20 min. before all the weekend Masses. Any other time based upon request."
+        }
+      ],
+      "rationale": "R6/R29: website only. Neither bulletin mentions it, though their Schedule of Events lists each Saturday's 9:00-9:30 confession; the line is undated on a page whose footer is copyright 2015, and it is unclear whether 'all the weekend Masses' includes Sts. Peter & Paul. A wrong time is worse than a missing one, so I lean to leave out.",
+      "question": "Add confession 20 minutes before each weekend Mass, which only the website gives?",
+      "options": [
+        {
+          "label": "Include, 20 minutes before each weekend Mass",
+          "entry": {
+            "church_slug": "st-adalbert-elizabeth",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "11:40",
+            "end_time": "12:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Before the 12:00 PM Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "pre-mass-confession"
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stadalbert.us/mass-scuedule",
+          "said": "20 min. before all the weekend Masses. Any other time based upon request."
+        }
+      ],
+      "rationale": "R6/R29: website only. Neither bulletin mentions it, though their Schedule of Events lists each Saturday's 9:00-9:30 confession; the line is undated on a page whose footer is copyright 2015, and it is unclear whether 'all the weekend Masses' includes Sts. Peter & Paul. A wrong time is worse than a missing one, so I lean to leave out.",
+      "question": "Add confession 20 minutes before each weekend Mass, which only the website gives?",
+      "options": [
+        {
+          "label": "Include, 20 minutes before each weekend Mass",
+          "entry": {
+            "church_slug": "sts-peter-paul-elizabeth",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "09:10",
+            "end_time": "09:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Before the 9:30 AM Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "pre-mass-confession"
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stadalbert.us/mass-scuedule",
+          "said": "Eucharistic Adoration and Devotion: (at St. Adalbert Church) Mass & Benediction First Fridays of the Month – 7:00 pm – (Polish)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stadalbert.us/devotion-adoration",
+          "said": "Mass & Benediction First Fridays of the Month – 7:00 PM (Polish)"
+        }
+      ],
+      "rationale": "R6/R11: neither read issue covers a first Friday (their weeks hold the second and third Fridays), so the bulletins can neither show nor contradict it. The website's other times match both bulletins exactly, so I lean to include; asked because nothing dated confirms it still runs. Benediction has no time of its own (POLICY, Final source checks), so it is only noted.",
+      "question": "Add a first-Friday 7:00 PM Mass at St. Adalbert, which only the website gives?",
+      "options": [
+        {
+          "label": "First Fridays 7:00 PM",
+          "entry": {
+            "church_slug": "st-adalbert-elizabeth",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Polish; Mass & Benediction"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stadalbert.us/mass-scuedule",
+          "said": "The Rosary & Benediction Saturdays of October – 12:00 noon (English)"
+        }
+      ],
+      "rationale": "R6, POLICY (Benediction implies Adoration): website only and out of season now, so no November bulletin can confirm it. Its Mass times match the bulletins, so I lean to include with the months as season; asked because it is unconfirmed by any bulletin.",
+      "question": "Add the website's seasonal Benediction devotions (October, May, June) at St. Adalbert?",
+      "options": [
+        {
+          "label": "Include as seasonal Adoration",
+          "entry": {
+            "church_slug": "st-adalbert-elizabeth",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 10,
+              "start_day": null,
+              "end_month": 10,
+              "end_day": null
+            },
+            "note": "Rosary & Benediction (English)"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "seasonal-benediction"
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stadalbert.us/mass-scuedule",
+          "said": "The Rosary & Benediction ... Sundays of October – 11:00 am (Polish)"
+        }
+      ],
+      "rationale": "R6, POLICY (Benediction implies Adoration): website only and out of season now, so no November bulletin can confirm it. Its Mass times match the bulletins, so I lean to include with the months as season; asked because it is unconfirmed by any bulletin.",
+      "question": "Add the website's seasonal Benediction devotions (October, May, June) at St. Adalbert?",
+      "options": [
+        {
+          "label": "Include as seasonal Adoration",
+          "entry": {
+            "church_slug": "st-adalbert-elizabeth",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "11:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 10,
+              "start_day": null,
+              "end_month": 10,
+              "end_day": null
+            },
+            "note": "Rosary & Benediction (Polish)"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "seasonal-benediction"
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stadalbert.us/mass-scuedule",
+          "said": "Marian Dev. & Benediction Sundays of May – 11:00 am (Polish)"
+        }
+      ],
+      "rationale": "R6, POLICY (Benediction implies Adoration): website only and out of season now, so no November bulletin can confirm it. Its Mass times match the bulletins, so I lean to include with the months as season; asked because it is unconfirmed by any bulletin.",
+      "question": "Add the website's seasonal Benediction devotions (October, May, June) at St. Adalbert?",
+      "options": [
+        {
+          "label": "Include as seasonal Adoration",
+          "entry": {
+            "church_slug": "st-adalbert-elizabeth",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "11:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 5,
+              "start_day": null,
+              "end_month": 5,
+              "end_day": null
+            },
+            "note": "Marian Devotion & Benediction (Polish)"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "seasonal-benediction"
+    },
+    {
+      "id": "s22",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stadalbert.us/mass-scuedule",
+          "said": "Marian Dev. & Benediction ... Saturdays of May – 12:00 noon (English)"
+        }
+      ],
+      "rationale": "R6, POLICY (Benediction implies Adoration): website only and out of season now, so no November bulletin can confirm it. Its Mass times match the bulletins, so I lean to include with the months as season; asked because it is unconfirmed by any bulletin. The devotion-adoration page omits this May Saturday line.",
+      "question": "Add the website's seasonal Benediction devotions (October, May, June) at St. Adalbert?",
+      "options": [
+        {
+          "label": "Include as seasonal Adoration",
+          "entry": {
+            "church_slug": "st-adalbert-elizabeth",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 5,
+              "start_day": null,
+              "end_month": 5,
+              "end_day": null
+            },
+            "note": "Marian Devotion & Benediction (English)"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "seasonal-benediction"
+    },
+    {
+      "id": "s23",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stadalbert.us/mass-scuedule",
+          "said": "Sacred Heart Dev. & Benediction Saturdays of June – 12:00 noon (English)"
+        }
+      ],
+      "rationale": "R6, POLICY (Benediction implies Adoration): website only and out of season now, so no November bulletin can confirm it. Its Mass times match the bulletins, so I lean to include with the months as season; asked because it is unconfirmed by any bulletin. The devotion-adoration page lists Sacred Heart Benediction without a day or time.",
+      "question": "Add the website's seasonal Benediction devotions (October, May, June) at St. Adalbert?",
+      "options": [
+        {
+          "label": "Include as seasonal Adoration",
+          "entry": {
+            "church_slug": "st-adalbert-elizabeth",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 6,
+              "start_day": null,
+              "end_month": 6,
+              "end_day": null
+            },
+            "note": "Sacred Heart Devotion & Benediction (English)"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "seasonal-benediction"
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stadalbert.us/mass-scuedule",
+          "said": "Stations of the Cross Fridays of Lent – 7:00 pm (Polish) Saturdays of Lent – 12:00 noon (English) Lamentations Sundays of Lent – 11:00 am (Polish)"
+        }
+      ],
+      "rationale": "R24: Stations of the Cross and Lamentations (Gorzkie Żale) are devotions, not Mass, Confession or Adoration; Lent also can't be written as a month season (R33).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stadalbert.us/mass-scuedule",
+          "said": "Any other time based upon request."
+        }
+      ],
+      "rationale": "R26: confession on request has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
