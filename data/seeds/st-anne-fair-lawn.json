@@ -1,0 +1,812 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-anne-fair-lawn",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:53:35Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-21T02:26:38Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both bulletins read (Nov 8 and Nov 15, 2026) print the same Masses box: weekday 7:30 & 8:45 (July-August reduced to one per day, recorded as seasons), Saturday 8:45 & 5:15, Sunday 7:30/9:30/11:30 and 6:00 pm Oct-June, Saturday Reconciliation 1-2 pm; intentions confirm it. Open: first-Friday Adoration 1-2 pm, printed as 'Generally the 1st Friday'.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "d755a9425368902d1d866cbf1ea8941eb1fc4a9937a14b38304a7ab8a2c6c8d4",
+      "fetched_at": "2026-11-15T16:53:35Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "64a4bd26439ede0f61528a9d05357e88d3df7cd30654938b5632824f1c0b1db5",
+      "fetched_at": "2026-11-08T22:05:12Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-fair-lawn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d755a942",
+          "page": 1,
+          "said": "Saturday .......................... 8:45 am & 5:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "64a4bd26",
+          "page": 1,
+          "said": "Saturday .......................... 8:45 am & 5:15 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box of both bulletins read; the intentions list a 5:15 Mass each Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-fair-lawn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d755a942",
+          "page": 1,
+          "said": "Saturday .......................... 8:45 am & 5:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "64a4bd26",
+          "page": 1,
+          "said": "Saturday .......................... 8:45 am & 5:15 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box of both bulletins read; the intentions list an 8:45 Mass each Saturday. The July & August line changes only weekday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-fair-lawn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d755a942",
+          "page": 1,
+          "said": "Sunday.......................................... 7:30, 9:30, &11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "64a4bd26",
+          "page": 1,
+          "said": "Sunday.......................................... 7:30, 9:30, &11:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box of both bulletins read and in the Sunday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-fair-lawn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d755a942",
+          "page": 1,
+          "said": "Sunday.......................................... 7:30, 9:30, &11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "64a4bd26",
+          "page": 1,
+          "said": "Sunday.......................................... 7:30, 9:30, &11:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box of both bulletins read and in the Sunday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-fair-lawn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d755a942",
+          "page": 1,
+          "said": "Sunday.......................................... 7:30, 9:30, &11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "64a4bd26",
+          "page": 1,
+          "said": "Sunday.......................................... 7:30, 9:30, &11:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box of both bulletins read and in the Sunday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-fair-lawn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 10,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d755a942",
+          "page": 1,
+          "said": "6:00 pm Oct. - June Only"
+        },
+        {
+          "source": "agent",
+          "bulletin": "64a4bd26",
+          "page": 1,
+          "said": "6:00 pm Oct. - June Only"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly qualifiers: the Masses box limits the Sunday 6:00 pm Mass to October through June; both bulletins' intentions list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-fair-lawn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d755a942",
+          "page": 1,
+          "said": "Weekday Masses - 7:30 & 8:45 am / July & August Daily Masses: Monday - Wednesday - Friday at 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "64a4bd26",
+          "page": 1,
+          "said": "Weekday Masses - 7:30 & 8:45 am / July & August Daily Masses: Monday - Wednesday - Friday at 7:30 am"
+        }
+      ],
+      "rationale": "R1: weekday 7:30 Mass all year (July & August keeps 7:30 on Mon/Wed/Fri); intentions of both bulletins list it Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-fair-lawn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d755a942",
+          "page": 1,
+          "said": "Weekday Masses - 7:30 & 8:45 am / July & August Daily Masses: Monday - Wednesday - Friday at 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "64a4bd26",
+          "page": 1,
+          "said": "Weekday Masses - 7:30 & 8:45 am / July & August Daily Masses: Monday - Wednesday - Friday at 7:30 am"
+        }
+      ],
+      "rationale": "R1: weekday 7:30 Mass all year (July & August keeps 7:30 on Mon/Wed/Fri); intentions of both bulletins list it Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-fair-lawn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d755a942",
+          "page": 1,
+          "said": "Weekday Masses - 7:30 & 8:45 am / July & August Daily Masses: Monday - Wednesday - Friday at 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "64a4bd26",
+          "page": 1,
+          "said": "Weekday Masses - 7:30 & 8:45 am / July & August Daily Masses: Monday - Wednesday - Friday at 7:30 am"
+        }
+      ],
+      "rationale": "R1: weekday 7:30 Mass all year (July & August keeps 7:30 on Mon/Wed/Fri); intentions of both bulletins list it Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-fair-lawn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d755a942",
+          "page": 1,
+          "said": "Weekday Masses - 7:30 & 8:45 am / July & August Daily Masses: ... Tuesday & Thursday at 8:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "64a4bd26",
+          "page": 1,
+          "said": "Weekday Masses - 7:30 & 8:45 am / July & August Daily Masses: ... Tuesday & Thursday at 8:45 am"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly qualifiers: in July & August Tuesday and Thursday have only the 8:45 Mass, so the 7:30 runs September through June.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-fair-lawn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d755a942",
+          "page": 1,
+          "said": "Weekday Masses - 7:30 & 8:45 am / July & August Daily Masses: ... Tuesday & Thursday at 8:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "64a4bd26",
+          "page": 1,
+          "said": "Weekday Masses - 7:30 & 8:45 am / July & August Daily Masses: ... Tuesday & Thursday at 8:45 am"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly qualifiers: in July & August Tuesday and Thursday have only the 8:45 Mass, so the 7:30 runs September through June.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-fair-lawn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d755a942",
+          "page": 1,
+          "said": "Weekday Masses - 7:30 & 8:45 am / July & August Daily Masses: Tuesday & Thursday at 8:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "64a4bd26",
+          "page": 1,
+          "said": "Weekday Masses - 7:30 & 8:45 am / July & August Daily Masses: Tuesday & Thursday at 8:45 am"
+        }
+      ],
+      "rationale": "R1: weekday 8:45 Mass all year on Tuesday and Thursday; intentions of both bulletins list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-fair-lawn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d755a942",
+          "page": 1,
+          "said": "Weekday Masses - 7:30 & 8:45 am / July & August Daily Masses: Tuesday & Thursday at 8:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "64a4bd26",
+          "page": 1,
+          "said": "Weekday Masses - 7:30 & 8:45 am / July & August Daily Masses: Tuesday & Thursday at 8:45 am"
+        }
+      ],
+      "rationale": "R1: weekday 8:45 Mass all year on Tuesday and Thursday; intentions of both bulletins list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-fair-lawn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d755a942",
+          "page": 1,
+          "said": "Weekday Masses - 7:30 & 8:45 am / July & August Daily Masses: Monday - Wednesday - Friday at 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "64a4bd26",
+          "page": 1,
+          "said": "Weekday Masses - 7:30 & 8:45 am / July & August Daily Masses: Monday - Wednesday - Friday at 7:30 am"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly qualifiers: in July & August Mon/Wed/Fri have only the 7:30 Mass, so the 8:45 runs September through June.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-fair-lawn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d755a942",
+          "page": 1,
+          "said": "Weekday Masses - 7:30 & 8:45 am / July & August Daily Masses: Monday - Wednesday - Friday at 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "64a4bd26",
+          "page": 1,
+          "said": "Weekday Masses - 7:30 & 8:45 am / July & August Daily Masses: Monday - Wednesday - Friday at 7:30 am"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly qualifiers: in July & August Mon/Wed/Fri have only the 7:30 Mass, so the 8:45 runs September through June.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-fair-lawn",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d755a942",
+          "page": 1,
+          "said": "Weekday Masses - 7:30 & 8:45 am / July & August Daily Masses: Monday - Wednesday - Friday at 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "64a4bd26",
+          "page": 1,
+          "said": "Weekday Masses - 7:30 & 8:45 am / July & August Daily Masses: Monday - Wednesday - Friday at 7:30 am"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly qualifiers: in July & August Mon/Wed/Fri have only the 7:30 Mass, so the 8:45 runs September through June.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anne-fair-lawn",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "14:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d755a942",
+          "page": 1,
+          "said": "Reconciliation Saturday from 1:00 - 2:00 pm in Church. Upon request, at any other time."
+        },
+        {
+          "source": "agent",
+          "bulletin": "64a4bd26",
+          "page": 1,
+          "said": "Reconciliation Saturday from 1:00 - 2:00 pm in Church. Upon request, at any other time."
+        }
+      ],
+      "rationale": "R1: printed in both bulletins read. 'Upon request' has no time (R26).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d755a942",
+          "page": 1,
+          "said": "Eucharistic Adoration, Generally the 1st Friday of every month from 1:00- 2:00 pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "64a4bd26",
+          "page": 1,
+          "said": "Eucharistic Adoration, Generally the 1st Friday of every month from 1:00- 2:00 pm."
+        }
+      ],
+      "rationale": "R30: hedged availability ('Generally') is left to a human (rules.md, closing note). Neither read week holds a first Friday (R11); the website's Mass page does not mention Adoration. Leaning include: a standing, timed monthly line printed in both issues.",
+      "question": "Include first-Friday Adoration 1:00-2:00 PM, which the bulletin says is 'generally' held?",
+      "options": [
+        {
+          "label": "First Fridays 1:00-2:00 PM",
+          "entry": {
+            "church_slug": "st-anne-fair-lawn",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "13:00",
+            "end_time": "14:00",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d755a942",
+          "page": 1,
+          "said": "Holydays ......... Announced the Sunday before"
+        }
+      ],
+      "rationale": "R26: holy-day times are not given; update mode will read them when announced.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d755a942",
+          "page": 1,
+          "said": "In honor of St. Anne & St. Anthony of Padua, Tuesday, after 8:45 am Mass."
+        }
+      ],
+      "rationale": "R24: a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d755a942",
+          "page": 7,
+          "said": "Our next monthly meeting is Monday, Nov. 16th at 7:00 pm in the Church Hall. A joint meeting with the Most Holy Name Fraternity and a Mass of Remembrance for Deceased Fraternity members will be celebrated."
+        }
+      ],
+      "rationale": "R24, POLICY: a Mass for a fraternity's own meeting with no definite Mass time; not an open public Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
