@@ -1,0 +1,1143 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-the-carpenter-roselle",
+  "status": "ready",
+  "as_of": "2026-11-15T16:25:26Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T16:34:58Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both bulletins read (Nov 8 and Nov 15, 2026) print the same Mass Schedule box: daily 7:30 AM Mon-Sat, Saturday vigils 5 PM and 7 PM Spanish, Sunday 7:30, 9 Spanish, 10:30, 12; confessions Mon-Fri 8 AM and Saturday 4-4:30 PM; First Friday Adoration 8 AM. The newest lists dated Thanksgiving, Christmas and New Year Masses. No open questions; no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "3f6273ec3d34d0af343cbb815695efc057c3e0bb93a5248a9adfdf3994e18c56",
+      "fetched_at": "2026-11-15T16:25:26Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "28b7d1e9ede5c231d61860a459857827f0f18301c750f5652665d1334103aa4f",
+      "fetched_at": "2026-11-08T15:49:12Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-carpenter-roselle",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f6273ec",
+          "page": 1,
+          "said": "Daily Mass (Monday to Saturday): 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28b7d1e9",
+          "page": 1,
+          "said": "Daily Mass (Monday to Saturday): 7:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the intentions list a 7:30 am Mass each weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-carpenter-roselle",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f6273ec",
+          "page": 1,
+          "said": "Daily Mass (Monday to Saturday): 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28b7d1e9",
+          "page": 1,
+          "said": "Daily Mass (Monday to Saturday): 7:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the intentions list a 7:30 am Mass each weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-carpenter-roselle",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f6273ec",
+          "page": 1,
+          "said": "Daily Mass (Monday to Saturday): 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28b7d1e9",
+          "page": 1,
+          "said": "Daily Mass (Monday to Saturday): 7:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the intentions list a 7:30 am Mass each weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-carpenter-roselle",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f6273ec",
+          "page": 1,
+          "said": "Daily Mass (Monday to Saturday): 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28b7d1e9",
+          "page": 1,
+          "said": "Daily Mass (Monday to Saturday): 7:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the intentions list a 7:30 am Mass each weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-carpenter-roselle",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f6273ec",
+          "page": 1,
+          "said": "Daily Mass (Monday to Saturday): 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28b7d1e9",
+          "page": 1,
+          "said": "Daily Mass (Monday to Saturday): 7:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the intentions list a 7:30 am Mass each weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-carpenter-roselle",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f6273ec",
+          "page": 1,
+          "said": "Daily Mass (Monday to Saturday): 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28b7d1e9",
+          "page": 1,
+          "said": "Daily Mass (Monday to Saturday): 7:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the intentions list a 7:30 am Mass each weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-carpenter-roselle",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f6273ec",
+          "page": 1,
+          "said": "Saturday Vigil Masses: 5:00 PM, 7:00 PM in Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28b7d1e9",
+          "page": 1,
+          "said": "Saturday Vigil Masses: 5:00 PM, 7:00 PM in Spanish"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-carpenter-roselle",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f6273ec",
+          "page": 1,
+          "said": "Saturday Vigil Masses: 5:00 PM, 7:00 PM in Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28b7d1e9",
+          "page": 1,
+          "said": "Saturday Vigil Masses: 5:00 PM, 7:00 PM in Spanish"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-carpenter-roselle",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f6273ec",
+          "page": 1,
+          "said": "Sunday Mass: 7:30 AM, 9:00 AM in Spanish, 10:30 AM & 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28b7d1e9",
+          "page": 1,
+          "said": "Sunday Mass: 7:30 AM, 9:00 AM in Spanish, 10:30 AM & 12:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-carpenter-roselle",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f6273ec",
+          "page": 1,
+          "said": "Sunday Mass: 7:30 AM, 9:00 AM in Spanish, 10:30 AM & 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28b7d1e9",
+          "page": 1,
+          "said": "Sunday Mass: 7:30 AM, 9:00 AM in Spanish, 10:30 AM & 12:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-carpenter-roselle",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f6273ec",
+          "page": 1,
+          "said": "Sunday Mass: 7:30 AM, 9:00 AM in Spanish, 10:30 AM & 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28b7d1e9",
+          "page": 1,
+          "said": "Sunday Mass: 7:30 AM, 9:00 AM in Spanish, 10:30 AM & 12:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-carpenter-roselle",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f6273ec",
+          "page": 1,
+          "said": "Sunday Mass: 7:30 AM, 9:00 AM in Spanish, 10:30 AM & 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28b7d1e9",
+          "page": 1,
+          "said": "Sunday Mass: 7:30 AM, 9:00 AM in Spanish, 10:30 AM & 12:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-carpenter-roselle",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f6273ec",
+          "page": 1,
+          "said": "First Friday Adoration: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28b7d1e9",
+          "page": 1,
+          "said": "First Friday Adoration: 8:00 AM"
+        }
+      ],
+      "rationale": "R1, R11: the standing Mass Schedule box of both bulletins prints it (neither week holds a first Friday, but the box is the regular schedule). No end time given (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-carpenter-roselle",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f6273ec",
+          "page": 1,
+          "said": "Confessions Daily (Monday to Friday): 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28b7d1e9",
+          "page": 1,
+          "said": "Confessions Daily (Monday to Friday): 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; no end time given (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-carpenter-roselle",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f6273ec",
+          "page": 1,
+          "said": "Confessions Daily (Monday to Friday): 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28b7d1e9",
+          "page": 1,
+          "said": "Confessions Daily (Monday to Friday): 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; no end time given (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-carpenter-roselle",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f6273ec",
+          "page": 1,
+          "said": "Confessions Daily (Monday to Friday): 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28b7d1e9",
+          "page": 1,
+          "said": "Confessions Daily (Monday to Friday): 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; no end time given (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-carpenter-roselle",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f6273ec",
+          "page": 1,
+          "said": "Confessions Daily (Monday to Friday): 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28b7d1e9",
+          "page": 1,
+          "said": "Confessions Daily (Monday to Friday): 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; no end time given (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-carpenter-roselle",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f6273ec",
+          "page": 1,
+          "said": "Confessions Daily (Monday to Friday): 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28b7d1e9",
+          "page": 1,
+          "said": "Confessions Daily (Monday to Friday): 8:00 AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; no end time given (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-carpenter-roselle",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f6273ec",
+          "page": 1,
+          "said": "Saturday 4:00-4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28b7d1e9",
+          "page": 1,
+          "said": "Saturday 4:00-4:30 PM"
+        }
+      ],
+      "rationale": "R1: printed under Confessions in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f6273ec",
+          "page": 1,
+          "said": "First Saturday Devotion: 8:00 AM"
+        }
+      ],
+      "rationale": "R24: a devotion the bulletin does not call Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f6273ec",
+          "page": 1,
+          "said": "Holy Days - As Announced"
+        }
+      ],
+      "rationale": "R26: no time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-carpenter-roselle",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f6273ec",
+          "page": 2,
+          "said": "Thanksgiving Day - 9:00AM"
+        }
+      ],
+      "rationale": "R1, R16: dated holiday Mass after as_of. R17: no cancellation of the 7:30 AM Mass is stated, so the weekly slot is left alone.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-carpenter-roselle",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f6273ec",
+          "page": 2,
+          "said": "Christmas Eve - 5:00PM, 7:00PM(Spanish), 12:00 Midnight"
+        }
+      ],
+      "rationale": "R1, R16: dated holiday Masses (Thursday) after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-carpenter-roselle",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve, Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f6273ec",
+          "page": 2,
+          "said": "Christmas Eve - 5:00PM, 7:00PM(Spanish), 12:00 Midnight"
+        }
+      ],
+      "rationale": "R1, R16: dated holiday Mass (Thursday) after as_of; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-carpenter-roselle",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "00:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Midnight Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f6273ec",
+          "page": 2,
+          "said": "Christmas Eve - 5:00PM, 7:00PM(Spanish), 12:00 Midnight"
+        }
+      ],
+      "rationale": "R1, R16: dated holiday Mass; midnight of Christmas Eve is recorded as 00:00 on December 25.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-carpenter-roselle",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Day"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f6273ec",
+          "page": 2,
+          "said": "Christmas Day - 8:00AM, 10:00AM(Spanish), 12:00PM"
+        }
+      ],
+      "rationale": "R1, R16: dated holiday Masses after as_of. R17: no cancellation of the Friday 7:30 AM Mass is stated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-carpenter-roselle",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Day"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f6273ec",
+          "page": 2,
+          "said": "Christmas Day - 8:00AM, 10:00AM(Spanish), 12:00PM"
+        }
+      ],
+      "rationale": "R1, R16: dated holiday Masses after as_of. R17: no cancellation of the Friday 7:30 AM Mass is stated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-carpenter-roselle",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Day, Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f6273ec",
+          "page": 2,
+          "said": "Christmas Day - 8:00AM, 10:00AM(Spanish), 12:00PM"
+        }
+      ],
+      "rationale": "R1, R16: dated holiday Mass after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-carpenter-roselle",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-31",
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "New Year's Eve"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f6273ec",
+          "page": 2,
+          "said": "New Years Eve – 5:00PM, 7:00PM(Spanish)"
+        }
+      ],
+      "rationale": "R1, R16: dated holiday Mass (Thursday) after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-carpenter-roselle",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-31",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "New Year's Eve, Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f6273ec",
+          "page": 2,
+          "said": "New Years Eve – 5:00PM, 7:00PM(Spanish)"
+        }
+      ],
+      "rationale": "R1, R16: dated holiday Mass (Thursday) after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-carpenter-roselle",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2027-01-01",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "New Year's Day"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f6273ec",
+          "page": 2,
+          "said": "New Years Day – 10:00AM, 12:00PM(Spanish)"
+        }
+      ],
+      "rationale": "R1, R16: dated holy day Mass after as_of. R17: no cancellation of the Friday 7:30 AM Mass is stated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-carpenter-roselle",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2027-01-01",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "New Year's Day, Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f6273ec",
+          "page": 2,
+          "said": "New Years Day – 10:00AM, 12:00PM(Spanish)"
+        }
+      ],
+      "rationale": "R1, R16: dated holy day Mass after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
