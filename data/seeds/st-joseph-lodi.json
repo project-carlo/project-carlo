@@ -1,0 +1,1423 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-lodi",
+  "status": "ready",
+  "as_of": "2026-11-15T16:25:06Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T16:18:34Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. The Mass, confession and 24-hour Adoration times are the same in the schedule box of both bulletins (Nov 8 and Nov 15) and on the website; a weekly Wednesday 7 PM Mass with the Perpetual Help novena comes from both weeks' intentions and the website. Day-of-month devotions (19th, 23rd) can't be expressed and are left out apart from the dated Nov 23 Padre Pio Mass; the second-Monday Mass after the Rosary has no definite time. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "9c02b0dd9d40bebcda71b07c22b2ef70ddbea7e126dbbb5c9aaf695256a7f2e3",
+      "fetched_at": "2026-11-15T16:25:06Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "73db4cc58e865b1b357ae86797572e57f1d85a8c59517b9153882c6d9a24a116",
+      "fetched_at": "2026-11-08T15:48:58Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lodi",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c02b0dd",
+          "page": 2,
+          "said": "MASS SCHEDULE WEEKEND Saturday 7:30am | 5:00pm (anticipated Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73db4cc5",
+          "page": 2,
+          "said": "MASS SCHEDULE WEEKEND Saturday 7:30am | 5:00pm (anticipated Mass)"
+        },
+        {
+          "source": "website",
+          "url": "https://stjosephchurchlodi.org/",
+          "said": "Saturday: 7:30 am and 5:00 pm (anticipated Mass for Sunday)"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins and on the website. Both issues' intentions print the Saturday line as '7:30pm', a typo for 7:30am given the box and the 5:00pm vigil listed after it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lodi",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c02b0dd",
+          "page": 2,
+          "said": "Saturday 7:30am | 5:00pm (anticipated Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73db4cc5",
+          "page": 2,
+          "said": "Saturday 7:30am | 5:00pm (anticipated Mass)"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lodi",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c02b0dd",
+          "page": 2,
+          "said": "Sunday 7:30am | 9:30am (Italian) | 11:30am | 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73db4cc5",
+          "page": 2,
+          "said": "Sunday 7:30am | 9:30am (Italian) | 11:30am | 5:00pm"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lodi",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c02b0dd",
+          "page": 2,
+          "said": "Sunday 7:30am | 9:30am (Italian) | 11:30am | 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73db4cc5",
+          "page": 2,
+          "said": "Sunday 7:30am | 9:30am (Italian) | 11:30am | 5:00pm"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lodi",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c02b0dd",
+          "page": 2,
+          "said": "Sunday 7:30am | 9:30am (Italian) | 11:30am | 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73db4cc5",
+          "page": 2,
+          "said": "Sunday 7:30am | 9:30am (Italian) | 11:30am | 5:00pm"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lodi",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Italian"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c02b0dd",
+          "page": 2,
+          "said": "Sunday 7:30am | 9:30am (Italian)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73db4cc5",
+          "page": 2,
+          "said": "Sunday 7:30am | 9:30am (Italian)"
+        },
+        {
+          "source": "website",
+          "url": "https://stjosephchurchlodi.org/",
+          "said": "Sunday: 7:30 am, 9:30 am (Bilingual English - Italian), 11:30 am and 5:00 pm"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lodi",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c02b0dd",
+          "page": 2,
+          "said": "WEEKDAY Monday to Friday 7:00am & 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73db4cc5",
+          "page": 2,
+          "said": "WEEKDAY Monday to Friday 7:00am & 12:00 pm"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins, and both weeks' intentions list 7:00am and 12:00pm Masses each weekday. The monthly St. Joseph devotion on the 19th (Novena followed by Mass at 12:00pm) is this noon Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lodi",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c02b0dd",
+          "page": 2,
+          "said": "WEEKDAY Monday to Friday 7:00am & 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73db4cc5",
+          "page": 2,
+          "said": "WEEKDAY Monday to Friday 7:00am & 12:00 pm"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins, and both weeks' intentions list 7:00am and 12:00pm Masses each weekday. The monthly St. Joseph devotion on the 19th (Novena followed by Mass at 12:00pm) is this noon Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lodi",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c02b0dd",
+          "page": 2,
+          "said": "WEEKDAY Monday to Friday 7:00am & 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73db4cc5",
+          "page": 2,
+          "said": "WEEKDAY Monday to Friday 7:00am & 12:00 pm"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins, and both weeks' intentions list 7:00am and 12:00pm Masses each weekday. The monthly St. Joseph devotion on the 19th (Novena followed by Mass at 12:00pm) is this noon Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lodi",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c02b0dd",
+          "page": 2,
+          "said": "WEEKDAY Monday to Friday 7:00am & 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73db4cc5",
+          "page": 2,
+          "said": "WEEKDAY Monday to Friday 7:00am & 12:00 pm"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins, and both weeks' intentions list 7:00am and 12:00pm Masses each weekday. The monthly St. Joseph devotion on the 19th (Novena followed by Mass at 12:00pm) is this noon Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lodi",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c02b0dd",
+          "page": 2,
+          "said": "WEEKDAY Monday to Friday 7:00am & 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73db4cc5",
+          "page": 2,
+          "said": "WEEKDAY Monday to Friday 7:00am & 12:00 pm"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins, and both weeks' intentions list 7:00am and 12:00pm Masses each weekday. The monthly St. Joseph devotion on the 19th (Novena followed by Mass at 12:00pm) is this noon Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lodi",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c02b0dd",
+          "page": 2,
+          "said": "WEEKDAY Monday to Friday 7:00am & 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73db4cc5",
+          "page": 2,
+          "said": "WEEKDAY Monday to Friday 7:00am & 12:00 pm"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins, and both weeks' intentions list 7:00am and 12:00pm Masses each weekday. The monthly St. Joseph devotion on the 19th (Novena followed by Mass at 12:00pm) is this noon Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lodi",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c02b0dd",
+          "page": 2,
+          "said": "WEEKDAY Monday to Friday 7:00am & 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73db4cc5",
+          "page": 2,
+          "said": "WEEKDAY Monday to Friday 7:00am & 12:00 pm"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins, and both weeks' intentions list 7:00am and 12:00pm Masses each weekday. The monthly St. Joseph devotion on the 19th (Novena followed by Mass at 12:00pm) is this noon Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lodi",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c02b0dd",
+          "page": 2,
+          "said": "WEEKDAY Monday to Friday 7:00am & 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73db4cc5",
+          "page": 2,
+          "said": "WEEKDAY Monday to Friday 7:00am & 12:00 pm"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins, and both weeks' intentions list 7:00am and 12:00pm Masses each weekday. The monthly St. Joseph devotion on the 19th (Novena followed by Mass at 12:00pm) is this noon Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lodi",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c02b0dd",
+          "page": 2,
+          "said": "WEEKDAY Monday to Friday 7:00am & 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73db4cc5",
+          "page": 2,
+          "said": "WEEKDAY Monday to Friday 7:00am & 12:00 pm"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins, and both weeks' intentions list 7:00am and 12:00pm Masses each weekday. The monthly St. Joseph devotion on the 19th (Novena followed by Mass at 12:00pm) is this noon Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lodi",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c02b0dd",
+          "page": 2,
+          "said": "WEEKDAY Monday to Friday 7:00am & 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73db4cc5",
+          "page": 2,
+          "said": "WEEKDAY Monday to Friday 7:00am & 12:00 pm"
+        }
+      ],
+      "rationale": "R1: in the Mass schedule box of both bulletins, and both weeks' intentions list 7:00am and 12:00pm Masses each weekday. The monthly St. Joseph devotion on the 19th (Novena followed by Mass at 12:00pm) is this noon Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lodi",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "With Novena to Our Mother of Perpetual Help"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c02b0dd",
+          "page": 3,
+          "said": "WEDNESDAY, NOVEMBER 18 ... 7:00pm †Joseph Pedone r/b Joanne Costa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73db4cc5",
+          "page": 3,
+          "said": "WEDNESDAY, NOVEMBER 11 ... 7:00pm †Jesus Cruz r/b Cesar Perez & family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c02b0dd",
+          "page": 2,
+          "said": "Novena to Mother of Perpetual Help Wednesdays | 7:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://stjosephchurchlodi.org/",
+          "said": "MOTHER OF PERPETUAL HELP Wednesday, 7:00 pm (Novena with Mass)"
+        }
+      ],
+      "rationale": "R35: a 7:00pm Wednesday Mass intention in both weeks read, matching the weekly Wednesday 7:00pm Novena in the box; the website calls it 'Novena with Mass'. Not a C1 case: no schedule contradicts it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lodi",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Filipino Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c02b0dd",
+          "page": 2,
+          "said": "Filipino Mass 3rd Sunday of the Month | 1:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c02b0dd",
+          "page": 3,
+          "said": "SUNDAY, NOVEMBER 15 ... 1:00pm Filipino Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://stjosephchurchlodi.org/",
+          "said": "FILIPINO MASS Every 3rd Sunday of the month, 1:00 pm"
+        }
+      ],
+      "rationale": "R1: the box names the third Sunday (POLICY, Weekly or dated, rule 2); the newest issue's week holds the third Sunday and its intentions list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lodi",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c02b0dd",
+          "page": 2,
+          "said": "CONFESSION Saturday 4:00 to 4:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73db4cc5",
+          "page": 2,
+          "said": "CONFESSION Saturday 4:00 to 4:45pm"
+        }
+      ],
+      "rationale": "R1: in the box of both bulletins and on the website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lodi",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": "11:45",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "During Holy Hour"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c02b0dd",
+          "page": 2,
+          "said": "First Friday 11:00am during Holy Hour"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73db4cc5",
+          "page": 2,
+          "said": "First Friday 11:00am during Holy Hour"
+        },
+        {
+          "source": "website",
+          "url": "https://stjosephchurchlodi.org/",
+          "said": "First Friday: 11:00 am - 11:45 am (during Holy Hour)"
+        }
+      ],
+      "rationale": "R1, R6: the box gives the first-Friday 11:00am start; the parish website gives the end, 11:45 am, which fits the Friday 11:00am Holy Hour before the noon Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lodi",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel, open 24 hours; call the office for the door code at night"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c02b0dd",
+          "page": 2,
+          "said": "ADORATION 24 Hours Daily For late-night visits, call the parish office prior to your visit for instructions on how to obtain the door code."
+        },
+        {
+          "source": "agent",
+          "bulletin": "73db4cc5",
+          "page": 2,
+          "said": "ADORATION 24 Hours Daily For late-night visits, call the parish office prior to your visit for instructions on how to obtain the door code."
+        },
+        {
+          "source": "website",
+          "url": "https://stjosephchurchlodi.org/",
+          "said": "24-hour Daily: private devotion to the Blessed Sacrament (in the Adoration Chapel)"
+        }
+      ],
+      "rationale": "R38, R1: the box lists Adoration 24 hours daily, and the website places it in the parish's Adoration Chapel; the door code from the parish office shows it is on site at 40 Spring St. Seven 00:00-23:59 slots, as other seeds do for 24-hour Adoration. Exposition is not claimed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lodi",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel, open 24 hours; call the office for the door code at night"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c02b0dd",
+          "page": 2,
+          "said": "ADORATION 24 Hours Daily For late-night visits, call the parish office prior to your visit for instructions on how to obtain the door code."
+        },
+        {
+          "source": "agent",
+          "bulletin": "73db4cc5",
+          "page": 2,
+          "said": "ADORATION 24 Hours Daily For late-night visits, call the parish office prior to your visit for instructions on how to obtain the door code."
+        },
+        {
+          "source": "website",
+          "url": "https://stjosephchurchlodi.org/",
+          "said": "24-hour Daily: private devotion to the Blessed Sacrament (in the Adoration Chapel)"
+        }
+      ],
+      "rationale": "R38, R1: the box lists Adoration 24 hours daily, and the website places it in the parish's Adoration Chapel; the door code from the parish office shows it is on site at 40 Spring St. Seven 00:00-23:59 slots, as other seeds do for 24-hour Adoration. Exposition is not claimed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lodi",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel, open 24 hours; call the office for the door code at night"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c02b0dd",
+          "page": 2,
+          "said": "ADORATION 24 Hours Daily For late-night visits, call the parish office prior to your visit for instructions on how to obtain the door code."
+        },
+        {
+          "source": "agent",
+          "bulletin": "73db4cc5",
+          "page": 2,
+          "said": "ADORATION 24 Hours Daily For late-night visits, call the parish office prior to your visit for instructions on how to obtain the door code."
+        },
+        {
+          "source": "website",
+          "url": "https://stjosephchurchlodi.org/",
+          "said": "24-hour Daily: private devotion to the Blessed Sacrament (in the Adoration Chapel)"
+        }
+      ],
+      "rationale": "R38, R1: the box lists Adoration 24 hours daily, and the website places it in the parish's Adoration Chapel; the door code from the parish office shows it is on site at 40 Spring St. Seven 00:00-23:59 slots, as other seeds do for 24-hour Adoration. Exposition is not claimed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lodi",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel, open 24 hours; call the office for the door code at night"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c02b0dd",
+          "page": 2,
+          "said": "ADORATION 24 Hours Daily For late-night visits, call the parish office prior to your visit for instructions on how to obtain the door code."
+        },
+        {
+          "source": "agent",
+          "bulletin": "73db4cc5",
+          "page": 2,
+          "said": "ADORATION 24 Hours Daily For late-night visits, call the parish office prior to your visit for instructions on how to obtain the door code."
+        },
+        {
+          "source": "website",
+          "url": "https://stjosephchurchlodi.org/",
+          "said": "24-hour Daily: private devotion to the Blessed Sacrament (in the Adoration Chapel)"
+        }
+      ],
+      "rationale": "R38, R1: the box lists Adoration 24 hours daily, and the website places it in the parish's Adoration Chapel; the door code from the parish office shows it is on site at 40 Spring St. Seven 00:00-23:59 slots, as other seeds do for 24-hour Adoration. Exposition is not claimed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lodi",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel, open 24 hours; call the office for the door code at night"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c02b0dd",
+          "page": 2,
+          "said": "ADORATION 24 Hours Daily For late-night visits, call the parish office prior to your visit for instructions on how to obtain the door code."
+        },
+        {
+          "source": "agent",
+          "bulletin": "73db4cc5",
+          "page": 2,
+          "said": "ADORATION 24 Hours Daily For late-night visits, call the parish office prior to your visit for instructions on how to obtain the door code."
+        },
+        {
+          "source": "website",
+          "url": "https://stjosephchurchlodi.org/",
+          "said": "24-hour Daily: private devotion to the Blessed Sacrament (in the Adoration Chapel)"
+        }
+      ],
+      "rationale": "R38, R1: the box lists Adoration 24 hours daily, and the website places it in the parish's Adoration Chapel; the door code from the parish office shows it is on site at 40 Spring St. Seven 00:00-23:59 slots, as other seeds do for 24-hour Adoration. Exposition is not claimed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lodi",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel, open 24 hours; call the office for the door code at night"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c02b0dd",
+          "page": 2,
+          "said": "ADORATION 24 Hours Daily For late-night visits, call the parish office prior to your visit for instructions on how to obtain the door code."
+        },
+        {
+          "source": "agent",
+          "bulletin": "73db4cc5",
+          "page": 2,
+          "said": "ADORATION 24 Hours Daily For late-night visits, call the parish office prior to your visit for instructions on how to obtain the door code."
+        },
+        {
+          "source": "website",
+          "url": "https://stjosephchurchlodi.org/",
+          "said": "24-hour Daily: private devotion to the Blessed Sacrament (in the Adoration Chapel)"
+        }
+      ],
+      "rationale": "R38, R1: the box lists Adoration 24 hours daily, and the website places it in the parish's Adoration Chapel; the door code from the parish office shows it is on site at 40 Spring St. Seven 00:00-23:59 slots, as other seeds do for 24-hour Adoration. Exposition is not claimed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lodi",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel, open 24 hours; call the office for the door code at night"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c02b0dd",
+          "page": 2,
+          "said": "ADORATION 24 Hours Daily For late-night visits, call the parish office prior to your visit for instructions on how to obtain the door code."
+        },
+        {
+          "source": "agent",
+          "bulletin": "73db4cc5",
+          "page": 2,
+          "said": "ADORATION 24 Hours Daily For late-night visits, call the parish office prior to your visit for instructions on how to obtain the door code."
+        },
+        {
+          "source": "website",
+          "url": "https://stjosephchurchlodi.org/",
+          "said": "24-hour Daily: private devotion to the Blessed Sacrament (in the Adoration Chapel)"
+        }
+      ],
+      "rationale": "R38, R1: the box lists Adoration 24 hours daily, and the website places it in the parish's Adoration Chapel; the door code from the parish office shows it is on site at 40 Spring St. Seven 00:00-23:59 slots, as other seeds do for 24-hour Adoration. Exposition is not claimed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lodi",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour (Spanish)"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c02b0dd",
+          "page": 2,
+          "said": "Holy Hour Thursdays | 7:00pm (Spanish)"
+        }
+      ],
+      "rationale": "R37: inside the 24-hour daily Adoration already recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lodi",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c02b0dd",
+          "page": 2,
+          "said": "Holy Hour Fridays | 11:00am (English)"
+        }
+      ],
+      "rationale": "R37: inside the 24-hour daily Adoration already recorded. The first-Friday Most Sacred Heart devotion at 11:00am is this Holy Hour.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lodi",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour in the Chapel"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stjosephchurchlodi.org/",
+          "said": "2nd Tuesday of the month: 7:00 pm (in the Chapel)"
+        }
+      ],
+      "rationale": "R37: website-only Holy Hour inside the 24-hour daily Adoration already recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lodi",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Rosary followed by Mass in Italian"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "73db4cc5",
+          "page": 5,
+          "said": "MONDAY, NOVEMBER 9, 7:00 PM and every second Monday of the month, join us in praying the Holy Rosary followed by a Mass in Italian."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9c02b0dd",
+          "page": 2,
+          "said": "Immaculate Conception 2nd Monday of the Month | 7:00pm"
+        }
+      ],
+      "rationale": "POLICY, What to extract / Times, R24: 7:00pm is the Rosary's start; the Mass follows it with no clock time of its own, and it is not timed relative to a Mass, so it has no definite start time. No 7:00pm Mass intention appears for Monday, November 9.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c02b0dd",
+          "page": 2,
+          "said": "Padre Pio Healing Service 23rd of the Month | 7:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://stjosephchurchlodi.org/",
+          "said": "Every 23rd of the month, 7:00 pm (Mass & Healing Service)"
+        },
+        {
+          "source": "website",
+          "url": "https://stjosephchurchlodi.org/",
+          "said": "23rd of the month: 6:30 pm (before Padre Pio Mass)"
+        }
+      ],
+      "rationale": "R33: a day-of-the-month pattern (the 23rd) the format cannot express; only the printed November 23 Mass is recorded as dated. The 6:30 pm confession before it is website-only, and POLICY, Dates forbids projecting it onto November 23.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c02b0dd",
+          "page": 2,
+          "said": "Devotion to St. Joseph 19th of the Month | 12:00pm"
+        }
+      ],
+      "rationale": "R33, POLICY Weekly or dated rule 7: a day-of-the-month devotion with Mass at the regular weekday 12:00pm Mass; nothing separate to record.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lodi",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-23",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Padre Pio Mass and Healing Service"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c02b0dd",
+          "page": 5,
+          "said": "Devotion to SAINT PIUS OF PIETRELCINA MASS AND HEALING SERVICE in honor of Padre Pio MONDAY, NOVEMBER 23 AT 7:00 PM"
+        }
+      ],
+      "rationale": "R1, R16: a dated Mass outside the weekly schedule, after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s35",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lodi",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-18",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "50th anniversary of the dedication of the church"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c02b0dd",
+          "page": 6,
+          "said": "Celebrating the 50th Anniversary of the Dedication of the New St. Joseph's Church Friday, December 18, 2026 7:00 pm Mass Presider: Very Rev. Teodoro Kalaw, CRM ... All are warmly welcome!"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73db4cc5",
+          "page": 6,
+          "said": "Celebrating the 50th Anniversary of the Dedication of the New St. Joseph's Church Friday, December 18, 2026 7:00 pm Mass Presider: Very Rev. Teodoro Kalaw, CRM ... All are warmly welcome!"
+        }
+      ],
+      "rationale": "R1, R16: a dated public Mass outside the weekly schedule, printed in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s36",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c02b0dd",
+          "page": 6,
+          "said": "Viernes 11 de diciembre de 2026 Rosario Guadalupano · 6 pm Serenata Misa"
+        }
+      ],
+      "rationale": "POLICY, What to extract, R24: the Guadalupe Mass follows the 6 pm Rosary and serenade with no time of its own.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s37",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9c02b0dd",
+          "page": 2,
+          "said": "or by appointment"
+        },
+        {
+          "source": "website",
+          "url": "https://stjosephchurchlodi.org/",
+          "said": "Fridays of Lent: 11:00 - 11.45 am ... or anytime upon request"
+        }
+      ],
+      "rationale": "R26: confession by appointment or on request has no time. The website's Lenten Friday confession is out of season and Lent cannot be written as a season (R33).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
