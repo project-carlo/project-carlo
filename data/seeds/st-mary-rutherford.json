@@ -1,0 +1,613 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-mary-rutherford",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:54:27Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T17:07:29Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, St. Mary, Rutherford. Weekend (Sat 5 PM; Sun 8, 10, 12), weekday (Mon-Fri 8:30 AM) Masses and Saturday 4:15 PM Confession agree in both bulletins' schedule box and intentions; no Adoration is printed. Open: the Dec 8 Immaculate Conception 12 noon and 7 PM Masses, whose box misdates the day.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "36d595f457dc08cbfef58253fd1165859be850b6c7a00e8b1c0637596e6757af",
+      "fetched_at": "2026-11-15T16:54:27Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "78111f1b30efefd0cdc621b78de742dd983f3c3e7ab321bdb25684a880fd8378",
+      "fetched_at": "2026-11-08T22:05:30Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-rutherford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36d595f4",
+          "page": 1,
+          "said": "Saturday ---- 5:00 pm (Sunday obligation)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "78111f1b",
+          "page": 4,
+          "said": "Saturday ---- 5:00 pm (Sunday obligation)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36d595f4",
+          "page": 2,
+          "said": "SATURDAY, NOVEMBER 21, 2026 5:00 pm Carnevale and Stella Family +"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Sacramental Life schedule box and the intentions of both bulletins read. The installation Mass for Fr. Charlie at this 5 PM Mass is a special occasion at a regular Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-rutherford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36d595f4",
+          "page": 1,
+          "said": "Sunday ---- 8:00, 10:00, & 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "78111f1b",
+          "page": 4,
+          "said": "Sunday ---- 8:00, 10:00, & 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36d595f4",
+          "page": 2,
+          "said": "SUNDAY, NOVEMBER 22, 2026 8:00 am / 10:00 am / 12 noon"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box and the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-rutherford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36d595f4",
+          "page": 1,
+          "said": "Sunday ---- 8:00, 10:00, & 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "78111f1b",
+          "page": 4,
+          "said": "Sunday ---- 8:00, 10:00, & 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36d595f4",
+          "page": 2,
+          "said": "SUNDAY, NOVEMBER 22, 2026 8:00 am / 10:00 am / 12 noon"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box and the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-rutherford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36d595f4",
+          "page": 1,
+          "said": "Sunday ---- 8:00, 10:00, & 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "78111f1b",
+          "page": 4,
+          "said": "Sunday ---- 8:00, 10:00, & 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36d595f4",
+          "page": 2,
+          "said": "SUNDAY, NOVEMBER 22, 2026 8:00 am / 10:00 am / 12 noon"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box and the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-rutherford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36d595f4",
+          "page": 1,
+          "said": "Monday - Friday ---- 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "78111f1b",
+          "page": 4,
+          "said": "Monday - Friday ---- 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36d595f4",
+          "page": 2,
+          "said": "MONDAY-FRIDAY, NOVEMBER 16-20, 2026 8:30 am (intentions each day)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box and every weekday's intentions in both bulletins. Thanksgiving (Thu Nov 26) is 'our ONE DAILY MASS' at the usual 8:30 AM (latest p4), so nothing dated is needed (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-rutherford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36d595f4",
+          "page": 1,
+          "said": "Monday - Friday ---- 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "78111f1b",
+          "page": 4,
+          "said": "Monday - Friday ---- 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36d595f4",
+          "page": 2,
+          "said": "MONDAY-FRIDAY, NOVEMBER 16-20, 2026 8:30 am (intentions each day)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box and every weekday's intentions in both bulletins. Thanksgiving (Thu Nov 26) is 'our ONE DAILY MASS' at the usual 8:30 AM (latest p4), so nothing dated is needed (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-rutherford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36d595f4",
+          "page": 1,
+          "said": "Monday - Friday ---- 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "78111f1b",
+          "page": 4,
+          "said": "Monday - Friday ---- 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36d595f4",
+          "page": 2,
+          "said": "MONDAY-FRIDAY, NOVEMBER 16-20, 2026 8:30 am (intentions each day)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box and every weekday's intentions in both bulletins. Thanksgiving (Thu Nov 26) is 'our ONE DAILY MASS' at the usual 8:30 AM (latest p4), so nothing dated is needed (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-rutherford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36d595f4",
+          "page": 1,
+          "said": "Monday - Friday ---- 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "78111f1b",
+          "page": 4,
+          "said": "Monday - Friday ---- 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36d595f4",
+          "page": 2,
+          "said": "MONDAY-FRIDAY, NOVEMBER 16-20, 2026 8:30 am (intentions each day)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box and every weekday's intentions in both bulletins. Thanksgiving (Thu Nov 26) is 'our ONE DAILY MASS' at the usual 8:30 AM (latest p4), so nothing dated is needed (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-rutherford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36d595f4",
+          "page": 1,
+          "said": "Monday - Friday ---- 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "78111f1b",
+          "page": 4,
+          "said": "Monday - Friday ---- 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36d595f4",
+          "page": 2,
+          "said": "MONDAY-FRIDAY, NOVEMBER 16-20, 2026 8:30 am (intentions each day)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box and every weekday's intentions in both bulletins. Thanksgiving (Thu Nov 26) is 'our ONE DAILY MASS' at the usual 8:30 AM (latest p4), so nothing dated is needed (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-rutherford",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36d595f4",
+          "page": 1,
+          "said": "Confessions will be heard at 4:15 pm Saturday evenings."
+        },
+        {
+          "source": "agent",
+          "bulletin": "78111f1b",
+          "page": 4,
+          "said": "Confessions will be heard at 4:15 pm Saturday evenings."
+        }
+      ],
+      "rationale": "R1: printed in both bulletins; no end time given, so end_time is null (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-rutherford",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-07",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "78111f1b",
+          "page": 5,
+          "said": "SATURDAY, NOVEMBER 7, 2026 8:30 am The people of the parish +"
+        }
+      ],
+      "rationale": "R13, R16: a dated Saturday morning Mass printed only in the Nov 8 issue's intentions (it fell on a first Saturday but is not named as one); the Nov 21 Saturday has no 8:30 Mass. Dated before as_of, so out of scope.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-rutherford",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-10",
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Rosary Society Mass of Remembrance, in the chapel"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "78111f1b",
+          "page": 8,
+          "said": "The Rosary Society will have their Mass of Remembrance for Rosarians who passed away this year on Tuesday, November 10 at 5:00 PM in the chapel."
+        }
+      ],
+      "rationale": "R16: dated before as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36d595f4",
+          "page": 6,
+          "said": "Masses for The Immaculate Conception are: Monday, December 8 at 8:30am / Tuesday, 8:30 am; 12 noon; 7:00 pm"
+        }
+      ],
+      "rationale": "R31/R30: the box's first line says 'Monday, December 8' but Dec 8, 2026 is a Tuesday (the line looks carried over from 2025, when Dec 8 was a Monday); the second line 'Tuesday' has no date. The box is for the Dec 8 holy day, so 'Tuesday' most likely means Dec 8. The 8:30 AM Mass on either day is the regular weekday Mass. Website unreadable (HTTP 403).",
+      "question": "Add the Immaculate Conception (Tue Dec 8) Masses at 12 noon and 7 PM?",
+      "options": [
+        {
+          "label": "Dec 8 at 12 noon and 7 PM",
+          "entry": {
+            "church_slug": "st-mary-rutherford",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "immaculate"
+    },
+    {
+      "id": "s14",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "36d595f4",
+          "page": 6,
+          "said": "Masses for The Immaculate Conception are: Monday, December 8 at 8:30am / Tuesday, 8:30 am; 12 noon; 7:00 pm"
+        }
+      ],
+      "rationale": "R31/R30: the box's first line says 'Monday, December 8' but Dec 8, 2026 is a Tuesday (the line looks carried over from 2025, when Dec 8 was a Monday); the second line 'Tuesday' has no date. The box is for the Dec 8 holy day, so 'Tuesday' most likely means Dec 8. The 8:30 AM Mass on either day is the regular weekday Mass. Website unreadable (HTTP 403).",
+      "question": "Add the Immaculate Conception (Tue Dec 8) Masses at 12 noon and 7 PM?",
+      "options": [
+        {
+          "label": "Dec 8 at 12 noon and 7 PM",
+          "entry": {
+            "church_slug": "st-mary-rutherford",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "immaculate"
+    }
+  ]
+}
