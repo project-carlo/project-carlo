@@ -1,0 +1,573 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-raphael-livingston",
+  "status": "ready",
+  "as_of": "2026-11-15T16:54:36Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T17:58:53Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. The page 1 schedule box is the same in both bulletins (Nov 8 and Nov 15, 2026): Mass Mon-Sat 8am, Sat 4pm, Sun 8/10/12/6pm, and Thursday Adoration with Benediction 6-8pm with a 7:30pm Mass; Saturday confession 3-3:45pm. The intentions agree. No open questions and no dated items within scope.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "e4b6bc115ca460e7860f50f964dcf604c1f805803baa201257cdd0a3cb9997ed",
+      "fetched_at": "2026-11-15T16:54:36Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "26f3bfa5104b8087cf24b5f2556d546be118e726ea44d51734d8d44c466523ce",
+      "fetched_at": "2026-11-08T16:03:26Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-raphael-livingston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e4b6bc11",
+          "page": 1,
+          "said": "Weekend Mass: Saturday: 4:00pm*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26f3bfa5",
+          "page": 1,
+          "said": "Weekend Mass: Saturday: 4:00pm*"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read; the intentions list 4:00pm each weekend.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-raphael-livingston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e4b6bc11",
+          "page": 1,
+          "said": "Sunday: 8:00am, 10:00am*, 12:00pm, and 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26f3bfa5",
+          "page": 1,
+          "said": "Sunday: 8:00am, 10:00am*, 12:00pm, and 6:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read; the intentions list each time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-raphael-livingston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e4b6bc11",
+          "page": 1,
+          "said": "Sunday: 8:00am, 10:00am*, 12:00pm, and 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26f3bfa5",
+          "page": 1,
+          "said": "Sunday: 8:00am, 10:00am*, 12:00pm, and 6:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read; the intentions list each time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-raphael-livingston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e4b6bc11",
+          "page": 1,
+          "said": "Sunday: 8:00am, 10:00am*, 12:00pm, and 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26f3bfa5",
+          "page": 1,
+          "said": "Sunday: 8:00am, 10:00am*, 12:00pm, and 6:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read; the intentions list each time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-raphael-livingston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e4b6bc11",
+          "page": 1,
+          "said": "Sunday: 8:00am, 10:00am*, 12:00pm, and 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26f3bfa5",
+          "page": 1,
+          "said": "Sunday: 8:00am, 10:00am*, 12:00pm, and 6:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read; the intentions list each time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-raphael-livingston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e4b6bc11",
+          "page": 1,
+          "said": "Daily Mass: Monday- Saturday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26f3bfa5",
+          "page": 1,
+          "said": "Daily Mass: Monday- Saturday: 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read; the intentions list 8:00am Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-raphael-livingston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e4b6bc11",
+          "page": 1,
+          "said": "Daily Mass: Monday- Saturday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26f3bfa5",
+          "page": 1,
+          "said": "Daily Mass: Monday- Saturday: 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read; the intentions list 8:00am Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-raphael-livingston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e4b6bc11",
+          "page": 1,
+          "said": "Daily Mass: Monday- Saturday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26f3bfa5",
+          "page": 1,
+          "said": "Daily Mass: Monday- Saturday: 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read; the intentions list 8:00am Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-raphael-livingston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e4b6bc11",
+          "page": 1,
+          "said": "Daily Mass: Monday- Saturday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26f3bfa5",
+          "page": 1,
+          "said": "Daily Mass: Monday- Saturday: 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read; the intentions list 8:00am Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-raphael-livingston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e4b6bc11",
+          "page": 1,
+          "said": "Daily Mass: Monday- Saturday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26f3bfa5",
+          "page": 1,
+          "said": "Daily Mass: Monday- Saturday: 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read; the intentions list 8:00am Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-raphael-livingston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e4b6bc11",
+          "page": 1,
+          "said": "Daily Mass: Monday- Saturday: 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26f3bfa5",
+          "page": 1,
+          "said": "Daily Mass: Monday- Saturday: 8:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read; the intentions list 8:00am Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-raphael-livingston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e4b6bc11",
+          "page": 1,
+          "said": "Weekly Adoration & Benediction: Thursday: 6:00 - 8:00pm Mass: 7:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26f3bfa5",
+          "page": 1,
+          "said": "Weekly Adoration & Benediction: Thursday: 6:00 - 8:00pm Mass: 7:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e4b6bc11",
+          "page": 2,
+          "said": "7:30pm (Thursday intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26f3bfa5",
+          "page": 2,
+          "said": "7:30pm (Thursday intentions)"
+        }
+      ],
+      "rationale": "R1, R35: printed under the weekly Adoration heading on page 1 and in the Thursday intentions of both bulletins (Nov 12 and Nov 19).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-raphael-livingston",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e4b6bc11",
+          "page": 1,
+          "said": "Weekly Adoration & Benediction: Thursday: 6:00 - 8:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26f3bfa5",
+          "page": 1,
+          "said": "Weekly Adoration & Benediction: Thursday: 6:00 - 8:00pm"
+        }
+      ],
+      "rationale": "R1, POLICY (Benediction implies Adoration): printed in the page 1 schedule box of both bulletins. The 7:30pm Mass falls inside the stated window; recorded as printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-raphael-livingston",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e4b6bc11",
+          "page": 1,
+          "said": "Confessions: Saturday: 3:00-3:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26f3bfa5",
+          "page": 1,
+          "said": "Confessions: Saturday: 3:00-3:45pm"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
