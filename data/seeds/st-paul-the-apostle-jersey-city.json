@@ -1,0 +1,1150 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-paul-the-apostle-jersey-city",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:26:10Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T17:37:04Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two listed churches: St. Paul the Apostle and St. Ann's Peace Care Chapel (Sunday 11 AM). Weekend Masses, Thursday 7 PM Adoration and 'Confession 30 minutes before every Mass' agree in both bulletins (Nov 7, Nov 15) and the website. Open: whether the Mon–Sat 8 AM Mass in the 'Convent Chapel' (address not given) belongs at St. Paul's.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "eb87d395fc8a757adbfe532dfd2d34f5f56e94265b311de3a2a498b16dd8284d",
+      "fetched_at": "2026-11-15T16:26:10Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "f0389b3c37098f801c1ff3edb4864a94c5502dceabd204114348e23275b70b0b",
+      "fetched_at": "2026-11-08T15:49:44Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-the-apostle-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eb87d395",
+          "page": 1,
+          "said": "Saturday Vigil 4PM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0389b3c",
+          "page": 1,
+          "said": "Saturday Vigil 4PM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read (Nov 15 and Nov 7); the intentions list Saturday 4:00PM both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-the-apostle-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eb87d395",
+          "page": 1,
+          "said": "SUNDAY MASS 8AM (English) ... 12PM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0389b3c",
+          "page": 1,
+          "said": "SUNDAY MASS 8AM (English) ... 12PM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read; the intentions list Sunday 8:00AM and 12:00PM both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-the-apostle-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eb87d395",
+          "page": 1,
+          "said": "SUNDAY MASS 8AM (English) ... 12PM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0389b3c",
+          "page": 1,
+          "said": "SUNDAY MASS 8AM (English) ... 12PM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read; the intentions list Sunday 8:00AM and 12:00PM both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-the-apostle-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eb87d395",
+          "page": 1,
+          "said": "SUNDAY MASS ... 10AM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0389b3c",
+          "page": 1,
+          "said": "SUNDAY MASS ... 10AM (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read; the intentions list Sunday 10:00AM both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anns-peace-care-chapel-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eb87d395",
+          "page": 1,
+          "said": "SUNDAY MASS ... 11AM at St. Ann's Peace Care Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0389b3c",
+          "page": 1,
+          "said": "SUNDAY MASS ... 11AM at St. Ann's Peace Care Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stpaulrcc.com/",
+          "said": "Sunday 11:00am at St. Ann's Nursing Home"
+        }
+      ],
+      "rationale": "R1: printed in the parish's own Mass Times box in both bulletins; St. Ann's Peace Care Chapel is one of the parish's listed churches and neither the bulletin nor the website limits the Mass to residents (POLICY, What to extract).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-the-apostle-jersey-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 4:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eb87d395",
+          "page": 1,
+          "said": "Confessions 30 minutes before every mass (including daily mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0389b3c",
+          "page": 1,
+          "said": "Confessions 30 minutes before every mass (including daily mass)"
+        }
+      ],
+      "rationale": "R10, POLICY Times: 'before every mass' is one entry per regular Mass, 30 minutes before it, ending at its start.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-the-apostle-jersey-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "08:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 8:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eb87d395",
+          "page": 1,
+          "said": "Confessions 30 minutes before every mass (including daily mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0389b3c",
+          "page": 1,
+          "said": "Confessions 30 minutes before every mass (including daily mass)"
+        }
+      ],
+      "rationale": "R10, POLICY Times: 'before every mass' is one entry per regular Mass, 30 minutes before it, ending at its start.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-the-apostle-jersey-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 10:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eb87d395",
+          "page": 1,
+          "said": "Confessions 30 minutes before every mass (including daily mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0389b3c",
+          "page": 1,
+          "said": "Confessions 30 minutes before every mass (including daily mass)"
+        }
+      ],
+      "rationale": "R10, POLICY Times: 'before every mass' is one entry per regular Mass, 30 minutes before it, ending at its start.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-the-apostle-jersey-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 12:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eb87d395",
+          "page": 1,
+          "said": "Confessions 30 minutes before every mass (including daily mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0389b3c",
+          "page": 1,
+          "said": "Confessions 30 minutes before every mass (including daily mass)"
+        }
+      ],
+      "rationale": "R10, POLICY Times: 'before every mass' is one entry per regular Mass, 30 minutes before it, ending at its start.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anns-peace-care-chapel-jersey-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": "11:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 11:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eb87d395",
+          "page": 1,
+          "said": "Confessions 30 minutes before every mass (including daily mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0389b3c",
+          "page": 1,
+          "said": "Confessions 30 minutes before every mass (including daily mass)"
+        }
+      ],
+      "rationale": "R10, POLICY Times: 'before every mass' covers each regular weekly Mass, including the parish's Sunday 11 AM Mass at St. Ann's Peace Care Chapel (a listed church).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-the-apostle-jersey-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eb87d395",
+          "page": 3,
+          "said": "Thursday Night Adoration at 7 PM in the Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0389b3c",
+          "page": 3,
+          "said": "Thursday Night Adoration at 7 PM in the Church"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stpaulrcc.com/",
+          "said": "Adoration Thursday 7:00 PM (Main Church)"
+        }
+      ],
+      "rationale": "R1: printed under Weekly Events in both bulletins (newest p3, Nov 7 issue p2); no end time given, so end_time is null (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-the-apostle-jersey-city",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-19",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Feast of Our Lady of Divine Providence, 25th anniversary Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eb87d395",
+          "page": 2,
+          "said": "Feast of Our Lady of Divine Providence November 19 at 7:00 PM ... con la Misa del 25.º Aniversario. Después tendremos una pequeña convivencia en nuestro Centro Social"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0389b3c",
+          "page": 2,
+          "said": "Feast of Our Lady of Divine Providence November 19 at 7:00 PM"
+        }
+      ],
+      "rationale": "R1, R16: a dated special Mass after as_of, open to all; the Spanish text calls it a Mass, and the gathering after in 'our Social Center' places it at St. Paul's. Thursday Adoration is not stated as cancelled, so it is left alone (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eb87d395",
+          "page": 1,
+          "said": "DAILY MASS Monday to Saturday 8AM (English) at Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0389b3c",
+          "page": 1,
+          "said": "DAILY MASS Monday to Saturday 8AM (English) at Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stpaulrcc.com/",
+          "said": "Mass Monday - Saturday 8:00 AM (Convent Chapel)"
+        }
+      ],
+      "rationale": "R32/POLICY Churches and chapels: the website names it the Convent Chapel and no source gives its address; a convent at another address would be left out. Leaning include: the bulletin treats 'the Chapel' as a parish venue beside 'the Church' and the Social Center (Weekly Events, p3), and the intentions list 8:00AM daily both weeks.",
+      "question": "Include the Mon–Sat 8 AM Mass in the parish's (convent) chapel, and Confession 7:30 before it, at St. Paul the Apostle?",
+      "options": [
+        {
+          "label": "Include at St. Paul the Apostle",
+          "entry": {
+            "church_slug": "st-paul-the-apostle-jersey-city",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Convent Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s14",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eb87d395",
+          "page": 1,
+          "said": "DAILY MASS Monday to Saturday 8AM (English) at Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0389b3c",
+          "page": 1,
+          "said": "DAILY MASS Monday to Saturday 8AM (English) at Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stpaulrcc.com/",
+          "said": "Mass Monday - Saturday 8:00 AM (Convent Chapel)"
+        }
+      ],
+      "rationale": "R32/POLICY Churches and chapels: the website names it the Convent Chapel and no source gives its address; a convent at another address would be left out. Leaning include: the bulletin treats 'the Chapel' as a parish venue beside 'the Church' and the Social Center (Weekly Events, p3), and the intentions list 8:00AM daily both weeks.",
+      "question": "Include the Mon–Sat 8 AM Mass in the parish's (convent) chapel, and Confession 7:30 before it, at St. Paul the Apostle?",
+      "options": [
+        {
+          "label": "Include at St. Paul the Apostle",
+          "entry": {
+            "church_slug": "st-paul-the-apostle-jersey-city",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Convent Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eb87d395",
+          "page": 1,
+          "said": "DAILY MASS Monday to Saturday 8AM (English) at Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0389b3c",
+          "page": 1,
+          "said": "DAILY MASS Monday to Saturday 8AM (English) at Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stpaulrcc.com/",
+          "said": "Mass Monday - Saturday 8:00 AM (Convent Chapel)"
+        }
+      ],
+      "rationale": "R32/POLICY Churches and chapels: the website names it the Convent Chapel and no source gives its address; a convent at another address would be left out. Leaning include: the bulletin treats 'the Chapel' as a parish venue beside 'the Church' and the Social Center (Weekly Events, p3), and the intentions list 8:00AM daily both weeks.",
+      "question": "Include the Mon–Sat 8 AM Mass in the parish's (convent) chapel, and Confession 7:30 before it, at St. Paul the Apostle?",
+      "options": [
+        {
+          "label": "Include at St. Paul the Apostle",
+          "entry": {
+            "church_slug": "st-paul-the-apostle-jersey-city",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Convent Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eb87d395",
+          "page": 1,
+          "said": "DAILY MASS Monday to Saturday 8AM (English) at Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0389b3c",
+          "page": 1,
+          "said": "DAILY MASS Monday to Saturday 8AM (English) at Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stpaulrcc.com/",
+          "said": "Mass Monday - Saturday 8:00 AM (Convent Chapel)"
+        }
+      ],
+      "rationale": "R32/POLICY Churches and chapels: the website names it the Convent Chapel and no source gives its address; a convent at another address would be left out. Leaning include: the bulletin treats 'the Chapel' as a parish venue beside 'the Church' and the Social Center (Weekly Events, p3), and the intentions list 8:00AM daily both weeks.",
+      "question": "Include the Mon–Sat 8 AM Mass in the parish's (convent) chapel, and Confession 7:30 before it, at St. Paul the Apostle?",
+      "options": [
+        {
+          "label": "Include at St. Paul the Apostle",
+          "entry": {
+            "church_slug": "st-paul-the-apostle-jersey-city",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Convent Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eb87d395",
+          "page": 1,
+          "said": "DAILY MASS Monday to Saturday 8AM (English) at Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0389b3c",
+          "page": 1,
+          "said": "DAILY MASS Monday to Saturday 8AM (English) at Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stpaulrcc.com/",
+          "said": "Mass Monday - Saturday 8:00 AM (Convent Chapel)"
+        }
+      ],
+      "rationale": "R32/POLICY Churches and chapels: the website names it the Convent Chapel and no source gives its address; a convent at another address would be left out. Leaning include: the bulletin treats 'the Chapel' as a parish venue beside 'the Church' and the Social Center (Weekly Events, p3), and the intentions list 8:00AM daily both weeks.",
+      "question": "Include the Mon–Sat 8 AM Mass in the parish's (convent) chapel, and Confession 7:30 before it, at St. Paul the Apostle?",
+      "options": [
+        {
+          "label": "Include at St. Paul the Apostle",
+          "entry": {
+            "church_slug": "st-paul-the-apostle-jersey-city",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Convent Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eb87d395",
+          "page": 1,
+          "said": "DAILY MASS Monday to Saturday 8AM (English) at Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0389b3c",
+          "page": 1,
+          "said": "DAILY MASS Monday to Saturday 8AM (English) at Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stpaulrcc.com/",
+          "said": "Mass Monday - Saturday 8:00 AM (Convent Chapel)"
+        }
+      ],
+      "rationale": "R32/POLICY Churches and chapels: the website names it the Convent Chapel and no source gives its address; a convent at another address would be left out. Leaning include: the bulletin treats 'the Chapel' as a parish venue beside 'the Church' and the Social Center (Weekly Events, p3), and the intentions list 8:00AM daily both weeks.",
+      "question": "Include the Mon–Sat 8 AM Mass in the parish's (convent) chapel, and Confession 7:30 before it, at St. Paul the Apostle?",
+      "options": [
+        {
+          "label": "Include at St. Paul the Apostle",
+          "entry": {
+            "church_slug": "st-paul-the-apostle-jersey-city",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Convent Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eb87d395",
+          "page": 1,
+          "said": "Confessions 30 minutes before every mass (including daily mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0389b3c",
+          "page": 1,
+          "said": "Confessions 30 minutes before every mass (including daily mass)"
+        }
+      ],
+      "rationale": "R10 gives 7:30-8:00 before the daily Mass; it follows the same location question as the daily Mass (R27).",
+      "question": "Include the Mon–Sat 8 AM Mass in the parish's (convent) chapel, and Confession 7:30 before it, at St. Paul the Apostle?",
+      "options": [
+        {
+          "label": "Include at St. Paul the Apostle",
+          "entry": {
+            "church_slug": "st-paul-the-apostle-jersey-city",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": "08:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Convent Chapel, before the 8:00 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eb87d395",
+          "page": 1,
+          "said": "Confessions 30 minutes before every mass (including daily mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0389b3c",
+          "page": 1,
+          "said": "Confessions 30 minutes before every mass (including daily mass)"
+        }
+      ],
+      "rationale": "R10 gives 7:30-8:00 before the daily Mass; it follows the same location question as the daily Mass (R27).",
+      "question": "Include the Mon–Sat 8 AM Mass in the parish's (convent) chapel, and Confession 7:30 before it, at St. Paul the Apostle?",
+      "options": [
+        {
+          "label": "Include at St. Paul the Apostle",
+          "entry": {
+            "church_slug": "st-paul-the-apostle-jersey-city",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": "08:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Convent Chapel, before the 8:00 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eb87d395",
+          "page": 1,
+          "said": "Confessions 30 minutes before every mass (including daily mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0389b3c",
+          "page": 1,
+          "said": "Confessions 30 minutes before every mass (including daily mass)"
+        }
+      ],
+      "rationale": "R10 gives 7:30-8:00 before the daily Mass; it follows the same location question as the daily Mass (R27).",
+      "question": "Include the Mon–Sat 8 AM Mass in the parish's (convent) chapel, and Confession 7:30 before it, at St. Paul the Apostle?",
+      "options": [
+        {
+          "label": "Include at St. Paul the Apostle",
+          "entry": {
+            "church_slug": "st-paul-the-apostle-jersey-city",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": "08:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Convent Chapel, before the 8:00 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s22",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eb87d395",
+          "page": 1,
+          "said": "Confessions 30 minutes before every mass (including daily mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0389b3c",
+          "page": 1,
+          "said": "Confessions 30 minutes before every mass (including daily mass)"
+        }
+      ],
+      "rationale": "R10 gives 7:30-8:00 before the daily Mass; it follows the same location question as the daily Mass (R27).",
+      "question": "Include the Mon–Sat 8 AM Mass in the parish's (convent) chapel, and Confession 7:30 before it, at St. Paul the Apostle?",
+      "options": [
+        {
+          "label": "Include at St. Paul the Apostle",
+          "entry": {
+            "church_slug": "st-paul-the-apostle-jersey-city",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": "08:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Convent Chapel, before the 8:00 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s23",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eb87d395",
+          "page": 1,
+          "said": "Confessions 30 minutes before every mass (including daily mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0389b3c",
+          "page": 1,
+          "said": "Confessions 30 minutes before every mass (including daily mass)"
+        }
+      ],
+      "rationale": "R10 gives 7:30-8:00 before the daily Mass; it follows the same location question as the daily Mass (R27).",
+      "question": "Include the Mon–Sat 8 AM Mass in the parish's (convent) chapel, and Confession 7:30 before it, at St. Paul the Apostle?",
+      "options": [
+        {
+          "label": "Include at St. Paul the Apostle",
+          "entry": {
+            "church_slug": "st-paul-the-apostle-jersey-city",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": "08:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Convent Chapel, before the 8:00 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s24",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eb87d395",
+          "page": 1,
+          "said": "Confessions 30 minutes before every mass (including daily mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f0389b3c",
+          "page": 1,
+          "said": "Confessions 30 minutes before every mass (including daily mass)"
+        }
+      ],
+      "rationale": "R10 gives 7:30-8:00 before the daily Mass; it follows the same location question as the daily Mass (R27).",
+      "question": "Include the Mon–Sat 8 AM Mass in the parish's (convent) chapel, and Confession 7:30 before it, at St. Paul the Apostle?",
+      "options": [
+        {
+          "label": "Include at St. Paul the Apostle",
+          "entry": {
+            "church_slug": "st-paul-the-apostle-jersey-city",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": "08:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Convent Chapel, before the 8:00 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "eb87d395",
+          "page": 3,
+          "said": "Monday Night Rosary at 7 PM in the Chapel; Tuesday 6:30 PM Novena to Divine Child"
+        }
+      ],
+      "rationale": "R24: Rosary and Novena are devotions POLICY leaves out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stpaulrcc.com/",
+          "said": "Confessions ... Any time by appointment."
+        }
+      ],
+      "rationale": "R26: by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
