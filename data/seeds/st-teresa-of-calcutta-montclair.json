@@ -1,0 +1,508 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-teresa-of-calcutta-montclair",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:54:46Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T18:25:28Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, Immaculate Conception, Montclair. Weekend Masses (Sat 5 PM; Sun 8, 10:30, 6 PM) and Saturday 4:30 PM Confession agree in both bulletins (Nov 8, Nov 15) and the website. Open: the Mon-Fri noon Mass in Pope Francis Hall, below the parish office at 1 Munn St (different address from the church).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "3b9e740ae576ec0e3ff62cf995443ccb579f5df4a1b0df7fa6e52ed520f8594d",
+      "fetched_at": "2026-11-15T16:54:46Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "20e46d2f9fb613b44294884d2ab157e4c7caff1b7beb0b58e626c596cc87a222",
+      "fetched_at": "2026-11-08T16:03:37Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-montclair",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3b9e740a",
+          "page": 2,
+          "said": "Weekend Mass Schedule Saturday: 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20e46d2f",
+          "page": 2,
+          "said": "Weekend Mass Schedule Saturday: 5:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Fall Mass Schedule box of both bulletins (Nov 8, Nov 15); the website gives the same. R15: 'Fall Mass Schedule is in Effect' names no end, so no season.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-montclair",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3b9e740a",
+          "page": 2,
+          "said": "Sunday: 8:00 am | 10:30 am | 6:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20e46d2f",
+          "page": 2,
+          "said": "Sunday: 8:00 am | 10:30 am | 6:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Fall Mass Schedule box of both bulletins and matched by the Mass intentions and the website. R15: no season.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-montclair",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3b9e740a",
+          "page": 2,
+          "said": "Sunday: 8:00 am | 10:30 am | 6:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20e46d2f",
+          "page": 2,
+          "said": "Sunday: 8:00 am | 10:30 am | 6:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Fall Mass Schedule box of both bulletins and matched by the Mass intentions and the website. R15: no season.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-montclair",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3b9e740a",
+          "page": 2,
+          "said": "Sunday: 8:00 am | 10:30 am | 6:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20e46d2f",
+          "page": 2,
+          "said": "Sunday: 8:00 am | 10:30 am | 6:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Fall Mass Schedule box of both bulletins and matched by the Mass intentions and the website. R15: no season.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-montclair",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3b9e740a",
+          "page": 2,
+          "said": "Confession: Saturday 4:30 pm (or by appointment)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20e46d2f",
+          "page": 2,
+          "said": "Confession: Saturday 4:30 pm (or by appointment)"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins' schedule box; no end time given (POLICY, Times). Website: 'Saturdays at 4:30 PM or by appointment'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3b9e740a",
+          "page": 2,
+          "said": "(or by appointment)"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3b9e740a",
+          "page": 2,
+          "said": "Weekday Mass Schedule: Monday - Friday at 12:00 pm in Pope Francis Hall"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20e46d2f",
+          "page": 2,
+          "said": "Weekday Mass Schedule: Monday - Friday at 12:00 pm in Pope Francis Hall"
+        },
+        {
+          "source": "website",
+          "url": "https://www.iccmontclair.org/",
+          "said": "Daily Mass will be celebrated at noon (12:00 PM) in Pope Francis Hall, located below the Parish Office."
+        }
+      ],
+      "rationale": "R32/POLICY Churches and chapels: the time is clear in both bulletins and the website, and the intentions list a 12:00 pm Mass every weekday, but the hall is under the parish office at 1 Munn Street, a different address from the church. Leaning include: it is the parish's own daily Mass on what appears to be the church campus (Munn St adjoins N Fullerton Ave), named in a note; leave out if the parish center is a separate site.",
+      "question": "Pope Francis Hall is 'below the Parish Office' at 1 Munn Street, not the church's 30 N Fullerton Ave address. Include the Mon-Fri 12:00 PM daily Mass at Immaculate Conception?",
+      "options": [
+        {
+          "label": "Include at Immaculate Conception, note Pope Francis Hall",
+          "entry": {
+            "church_slug": "immaculate-conception-montclair",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Pope Francis Hall"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "popefrancishall"
+    },
+    {
+      "id": "s8",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3b9e740a",
+          "page": 2,
+          "said": "Weekday Mass Schedule: Monday - Friday at 12:00 pm in Pope Francis Hall"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20e46d2f",
+          "page": 2,
+          "said": "Weekday Mass Schedule: Monday - Friday at 12:00 pm in Pope Francis Hall"
+        },
+        {
+          "source": "website",
+          "url": "https://www.iccmontclair.org/",
+          "said": "Daily Mass will be celebrated at noon (12:00 PM) in Pope Francis Hall, located below the Parish Office."
+        }
+      ],
+      "rationale": "R32/POLICY Churches and chapels: the time is clear in both bulletins and the website, and the intentions list a 12:00 pm Mass every weekday, but the hall is under the parish office at 1 Munn Street, a different address from the church. Leaning include: it is the parish's own daily Mass on what appears to be the church campus (Munn St adjoins N Fullerton Ave), named in a note; leave out if the parish center is a separate site.",
+      "question": "Pope Francis Hall is 'below the Parish Office' at 1 Munn Street, not the church's 30 N Fullerton Ave address. Include the Mon-Fri 12:00 PM daily Mass at Immaculate Conception?",
+      "options": [
+        {
+          "label": "Include at Immaculate Conception, note Pope Francis Hall",
+          "entry": {
+            "church_slug": "immaculate-conception-montclair",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Pope Francis Hall"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "popefrancishall"
+    },
+    {
+      "id": "s9",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3b9e740a",
+          "page": 2,
+          "said": "Weekday Mass Schedule: Monday - Friday at 12:00 pm in Pope Francis Hall"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20e46d2f",
+          "page": 2,
+          "said": "Weekday Mass Schedule: Monday - Friday at 12:00 pm in Pope Francis Hall"
+        },
+        {
+          "source": "website",
+          "url": "https://www.iccmontclair.org/",
+          "said": "Daily Mass will be celebrated at noon (12:00 PM) in Pope Francis Hall, located below the Parish Office."
+        }
+      ],
+      "rationale": "R32/POLICY Churches and chapels: the time is clear in both bulletins and the website, and the intentions list a 12:00 pm Mass every weekday, but the hall is under the parish office at 1 Munn Street, a different address from the church. Leaning include: it is the parish's own daily Mass on what appears to be the church campus (Munn St adjoins N Fullerton Ave), named in a note; leave out if the parish center is a separate site.",
+      "question": "Pope Francis Hall is 'below the Parish Office' at 1 Munn Street, not the church's 30 N Fullerton Ave address. Include the Mon-Fri 12:00 PM daily Mass at Immaculate Conception?",
+      "options": [
+        {
+          "label": "Include at Immaculate Conception, note Pope Francis Hall",
+          "entry": {
+            "church_slug": "immaculate-conception-montclair",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Pope Francis Hall"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "popefrancishall"
+    },
+    {
+      "id": "s10",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3b9e740a",
+          "page": 2,
+          "said": "Weekday Mass Schedule: Monday - Friday at 12:00 pm in Pope Francis Hall"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20e46d2f",
+          "page": 2,
+          "said": "Weekday Mass Schedule: Monday - Friday at 12:00 pm in Pope Francis Hall"
+        },
+        {
+          "source": "website",
+          "url": "https://www.iccmontclair.org/",
+          "said": "Daily Mass will be celebrated at noon (12:00 PM) in Pope Francis Hall, located below the Parish Office."
+        }
+      ],
+      "rationale": "R32/POLICY Churches and chapels: the time is clear in both bulletins and the website, and the intentions list a 12:00 pm Mass every weekday, but the hall is under the parish office at 1 Munn Street, a different address from the church. Leaning include: it is the parish's own daily Mass on what appears to be the church campus (Munn St adjoins N Fullerton Ave), named in a note; leave out if the parish center is a separate site.",
+      "question": "Pope Francis Hall is 'below the Parish Office' at 1 Munn Street, not the church's 30 N Fullerton Ave address. Include the Mon-Fri 12:00 PM daily Mass at Immaculate Conception?",
+      "options": [
+        {
+          "label": "Include at Immaculate Conception, note Pope Francis Hall",
+          "entry": {
+            "church_slug": "immaculate-conception-montclair",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Pope Francis Hall"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "popefrancishall"
+    },
+    {
+      "id": "s11",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3b9e740a",
+          "page": 2,
+          "said": "Weekday Mass Schedule: Monday - Friday at 12:00 pm in Pope Francis Hall"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20e46d2f",
+          "page": 2,
+          "said": "Weekday Mass Schedule: Monday - Friday at 12:00 pm in Pope Francis Hall"
+        },
+        {
+          "source": "website",
+          "url": "https://www.iccmontclair.org/",
+          "said": "Daily Mass will be celebrated at noon (12:00 PM) in Pope Francis Hall, located below the Parish Office."
+        }
+      ],
+      "rationale": "R32/POLICY Churches and chapels: the time is clear in both bulletins and the website, and the intentions list a 12:00 pm Mass every weekday, but the hall is under the parish office at 1 Munn Street, a different address from the church. Leaning include: it is the parish's own daily Mass on what appears to be the church campus (Munn St adjoins N Fullerton Ave), named in a note; leave out if the parish center is a separate site.",
+      "question": "Pope Francis Hall is 'below the Parish Office' at 1 Munn Street, not the church's 30 N Fullerton Ave address. Include the Mon-Fri 12:00 PM daily Mass at Immaculate Conception?",
+      "options": [
+        {
+          "label": "Include at Immaculate Conception, note Pope Francis Hall",
+          "entry": {
+            "church_slug": "immaculate-conception-montclair",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Pope Francis Hall"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "popefrancishall"
+    }
+  ]
+}
