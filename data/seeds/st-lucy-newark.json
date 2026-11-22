@@ -1,0 +1,979 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-lucy-newark",
+  "status": "ready",
+  "as_of": "2026-11-15T16:25:39Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T16:49:22Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (St. Lucy's, National Shrine of St. Gerard). The Nov 8 and Nov 15 bulletins print an identical schedule box: Saturday 6 PM vigil; Sunday 8 (Italian), 9 (Spanish), 11, 12:30, 5:30; weekdays 7 and 9 AM plus 5:30 PM Mon-Thu (Wed 9 AM in Spanish); Saturday confession 5:30-6 PM; Friday Adoration 5:30-7 PM from a poster. No history stored; no open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "56a18741593c04bf322b5bdb21493b4d2a590ebceb2e89b4492baf372e464727",
+      "fetched_at": "2026-11-15T16:25:39Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "f68d03bb951c65764309f8a22177ee7d76c01456aa5c773604cf8f812ee03f55",
+      "fetched_at": "2026-11-08T15:49:21Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lucy-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56a18741",
+          "page": 1,
+          "said": "Sunday Vigil | 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68d03bb",
+          "page": 1,
+          "said": "Sunday Vigil | 6:00pm"
+        }
+      ],
+      "rationale": "R1, R35: the Saturday vigil is printed in the Mass schedule box of both bulletins read (Nov 8 and Nov 15); the intentions list Saturday 6:00pm too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lucy-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Italian"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56a18741",
+          "page": 1,
+          "said": "Sunday | 8:00am (Ita), 9:00am (Spa), 11:00am, 12:30pm & 5:30pm (Eng)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68d03bb",
+          "page": 1,
+          "said": "Sunday | 8:00am (Ita), 9:00am (Spa), 11:00am, 12:30pm & 5:30pm (Eng)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lucy-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56a18741",
+          "page": 1,
+          "said": "Sunday | 8:00am (Ita), 9:00am (Spa), 11:00am, 12:30pm & 5:30pm (Eng)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68d03bb",
+          "page": 1,
+          "said": "Sunday | 8:00am (Ita), 9:00am (Spa), 11:00am, 12:30pm & 5:30pm (Eng)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lucy-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56a18741",
+          "page": 1,
+          "said": "Sunday | 8:00am (Ita), 9:00am (Spa), 11:00am, 12:30pm & 5:30pm (Eng)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68d03bb",
+          "page": 1,
+          "said": "Sunday | 8:00am (Ita), 9:00am (Spa), 11:00am, 12:30pm & 5:30pm (Eng)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read. The first-Sunday St. Gerard blessing at the 12:30 PM Mass (p5) is a special occasion at a weekly Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lucy-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56a18741",
+          "page": 1,
+          "said": "Sunday | 8:00am (Ita), 9:00am (Spa), 11:00am, 12:30pm & 5:30pm (Eng)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68d03bb",
+          "page": 1,
+          "said": "Sunday | 8:00am (Ita), 9:00am (Spa), 11:00am, 12:30pm & 5:30pm (Eng)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read. The first-Sunday St. Gerard blessing at the 12:30 PM Mass (p5) is a special occasion at a weekly Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lucy-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56a18741",
+          "page": 1,
+          "said": "Sunday | 8:00am (Ita), 9:00am (Spa), 11:00am, 12:30pm & 5:30pm (Eng)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68d03bb",
+          "page": 1,
+          "said": "Sunday | 8:00am (Ita), 9:00am (Spa), 11:00am, 12:30pm & 5:30pm (Eng)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read. The first-Sunday St. Gerard blessing at the 12:30 PM Mass (p5) is a special occasion at a weekly Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lucy-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56a18741",
+          "page": 1,
+          "said": "Mon | 7:00 am, 9:00am & 5:30pm / Tue | 7:00 am, 9:00am & 5:30pm / Thur | 7:00 am, 9:00am & 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68d03bb",
+          "page": 1,
+          "said": "Mon | 7:00 am, 9:00am & 5:30pm / Tue | 7:00 am, 9:00am & 5:30pm / Thur | 7:00 am, 9:00am & 5:30pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read; the intentions on p3 list the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lucy-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56a18741",
+          "page": 1,
+          "said": "Mon | 7:00 am, 9:00am & 5:30pm / Tue | 7:00 am, 9:00am & 5:30pm / Thur | 7:00 am, 9:00am & 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68d03bb",
+          "page": 1,
+          "said": "Mon | 7:00 am, 9:00am & 5:30pm / Tue | 7:00 am, 9:00am & 5:30pm / Thur | 7:00 am, 9:00am & 5:30pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read; the intentions on p3 list the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lucy-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56a18741",
+          "page": 1,
+          "said": "Mon | 7:00 am, 9:00am & 5:30pm / Tue | 7:00 am, 9:00am & 5:30pm / Thur | 7:00 am, 9:00am & 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68d03bb",
+          "page": 1,
+          "said": "Mon | 7:00 am, 9:00am & 5:30pm / Tue | 7:00 am, 9:00am & 5:30pm / Thur | 7:00 am, 9:00am & 5:30pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read; the intentions on p3 list the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lucy-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56a18741",
+          "page": 1,
+          "said": "Mon | 7:00 am, 9:00am & 5:30pm / Tue | 7:00 am, 9:00am & 5:30pm / Thur | 7:00 am, 9:00am & 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68d03bb",
+          "page": 1,
+          "said": "Mon | 7:00 am, 9:00am & 5:30pm / Tue | 7:00 am, 9:00am & 5:30pm / Thur | 7:00 am, 9:00am & 5:30pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read; the intentions on p3 list the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lucy-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56a18741",
+          "page": 1,
+          "said": "Mon | 7:00 am, 9:00am & 5:30pm / Tue | 7:00 am, 9:00am & 5:30pm / Thur | 7:00 am, 9:00am & 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68d03bb",
+          "page": 1,
+          "said": "Mon | 7:00 am, 9:00am & 5:30pm / Tue | 7:00 am, 9:00am & 5:30pm / Thur | 7:00 am, 9:00am & 5:30pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read; the intentions on p3 list the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lucy-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56a18741",
+          "page": 1,
+          "said": "Mon | 7:00 am, 9:00am & 5:30pm / Tue | 7:00 am, 9:00am & 5:30pm / Thur | 7:00 am, 9:00am & 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68d03bb",
+          "page": 1,
+          "said": "Mon | 7:00 am, 9:00am & 5:30pm / Tue | 7:00 am, 9:00am & 5:30pm / Thur | 7:00 am, 9:00am & 5:30pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read; the intentions on p3 list the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lucy-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56a18741",
+          "page": 1,
+          "said": "Mon | 7:00 am, 9:00am & 5:30pm / Tue | 7:00 am, 9:00am & 5:30pm / Thur | 7:00 am, 9:00am & 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68d03bb",
+          "page": 1,
+          "said": "Mon | 7:00 am, 9:00am & 5:30pm / Tue | 7:00 am, 9:00am & 5:30pm / Thur | 7:00 am, 9:00am & 5:30pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read; the intentions on p3 list the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lucy-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56a18741",
+          "page": 1,
+          "said": "Mon | 7:00 am, 9:00am & 5:30pm / Tue | 7:00 am, 9:00am & 5:30pm / Thur | 7:00 am, 9:00am & 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68d03bb",
+          "page": 1,
+          "said": "Mon | 7:00 am, 9:00am & 5:30pm / Tue | 7:00 am, 9:00am & 5:30pm / Thur | 7:00 am, 9:00am & 5:30pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read; the intentions on p3 list the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lucy-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56a18741",
+          "page": 1,
+          "said": "Mon | 7:00 am, 9:00am & 5:30pm / Tue | 7:00 am, 9:00am & 5:30pm / Thur | 7:00 am, 9:00am & 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68d03bb",
+          "page": 1,
+          "said": "Mon | 7:00 am, 9:00am & 5:30pm / Tue | 7:00 am, 9:00am & 5:30pm / Thur | 7:00 am, 9:00am & 5:30pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read; the intentions on p3 list the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lucy-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56a18741",
+          "page": 1,
+          "said": "Wed | 7:00 am, 5:30pm (Eng), 9:00am (Spa)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68d03bb",
+          "page": 1,
+          "said": "Wed | 7:00 am, 5:30pm (Eng), 9:00am (Spa)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lucy-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56a18741",
+          "page": 1,
+          "said": "Wed | 7:00 am, 5:30pm (Eng), 9:00am (Spa)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68d03bb",
+          "page": 1,
+          "said": "Wed | 7:00 am, 5:30pm (Eng), 9:00am (Spa)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lucy-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56a18741",
+          "page": 1,
+          "said": "Wed | 7:00 am, 5:30pm (Eng), 9:00am (Spa)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68d03bb",
+          "page": 1,
+          "said": "Wed | 7:00 am, 5:30pm (Eng), 9:00am (Spa)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lucy-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56a18741",
+          "page": 1,
+          "said": "Fri | 7:00 am, 9:00am / Sat | 7:00 am, 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68d03bb",
+          "page": 1,
+          "said": "Fri | 7:00 am, 9:00am / Sat | 7:00 am, 9:00am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read; the intentions on p3 list the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lucy-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56a18741",
+          "page": 1,
+          "said": "Fri | 7:00 am, 9:00am / Sat | 7:00 am, 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68d03bb",
+          "page": 1,
+          "said": "Fri | 7:00 am, 9:00am / Sat | 7:00 am, 9:00am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read; the intentions on p3 list the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lucy-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56a18741",
+          "page": 1,
+          "said": "Fri | 7:00 am, 9:00am / Sat | 7:00 am, 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68d03bb",
+          "page": 1,
+          "said": "Fri | 7:00 am, 9:00am / Sat | 7:00 am, 9:00am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read; the intentions on p3 list the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lucy-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56a18741",
+          "page": 1,
+          "said": "Fri | 7:00 am, 9:00am / Sat | 7:00 am, 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68d03bb",
+          "page": 1,
+          "said": "Fri | 7:00 am, 9:00am / Sat | 7:00 am, 9:00am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of both bulletins read; the intentions on p3 list the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lucy-newark",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56a18741",
+          "page": 1,
+          "said": "Confessions Saturday | 5:30pm - 6:00pm or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68d03bb",
+          "page": 1,
+          "said": "Confessions Saturday | 5:30pm - 6:00pm or by appointment"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56a18741",
+          "page": 1,
+          "said": "Confessions ... or by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lucy-newark",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56a18741",
+          "page": 4,
+          "said": "Eucharistic Adoration. Date: Every Friday / Todos los Viernes. Time: 5:30pm - 7:00pm. Location: St. Lucy's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68d03bb",
+          "page": 4,
+          "said": "Eucharistic Adoration. Date: Every Friday / Todos los Viernes. Time: 5:30pm - 7:00pm. Location: St. Lucy's Church"
+        }
+      ],
+      "rationale": "R1, R35: the Adoration poster on p4 (an image, read zoomed) prints this in both bulletins read, at the parish church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56a18741",
+          "page": 5,
+          "said": "Retiro de Adviento, Sábado, 21 de noviembre 8:00 a.m. - 1:30 p.m. Iglesia Santa Lucía"
+        }
+      ],
+      "rationale": "R24: the Nov 21 Advent retreat is not Mass, Confession or Adoration, and no Mass or Confession time is announced with it. The Dec 13 3:00 PM Advent concert (p5) is likewise not a service.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
