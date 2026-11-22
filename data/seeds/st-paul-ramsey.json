@@ -1,0 +1,890 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-paul-ramsey",
+  "status": "ready",
+  "as_of": "2026-11-15T16:54:36Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T17:34:02Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, St. Paul, Ramsey. Both bulletins read (Nov 8 and Nov 15, 2026) print the same Mass Schedule box: weekdays 7:30am and Noon, Saturday 9am and 5pm, Sunday 8, 10, Noon, 1:30pm Spanish and 5pm; Confessions Mon 7:30-8:30pm, Fri 11:30-12, Sat 1-2pm; Monday Adoration 12:30-9pm listed for every Monday of November. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "b33988e76222fc84b046164179978426b44c4972827aea26c3abe87f89035720",
+      "fetched_at": "2026-11-15T16:54:36Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "6f673b25b1dd5171ddb5f830cfbe686f46caa1ced6f631ae3faed827aaf71539",
+      "fetched_at": "2026-11-08T22:05:20Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-ramsey",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b33988e7",
+          "page": 2,
+          "said": "Monday through Friday: 7:30am and Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f673b25",
+          "page": 2,
+          "said": "Monday through Friday: 7:30am and Noon"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read, and every weekday's 7:30am and Noon intentions are listed. The Monday December 7 Noon Mass for the Guadalupe Torch Run (newest p8) is this weekly Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-ramsey",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b33988e7",
+          "page": 2,
+          "said": "Monday through Friday: 7:30am and Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f673b25",
+          "page": 2,
+          "said": "Monday through Friday: 7:30am and Noon"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read, and every weekday's 7:30am and Noon intentions are listed. The Monday December 7 Noon Mass for the Guadalupe Torch Run (newest p8) is this weekly Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-ramsey",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b33988e7",
+          "page": 2,
+          "said": "Monday through Friday: 7:30am and Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f673b25",
+          "page": 2,
+          "said": "Monday through Friday: 7:30am and Noon"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read, and every weekday's 7:30am and Noon intentions are listed. The Monday December 7 Noon Mass for the Guadalupe Torch Run (newest p8) is this weekly Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-ramsey",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b33988e7",
+          "page": 2,
+          "said": "Monday through Friday: 7:30am and Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f673b25",
+          "page": 2,
+          "said": "Monday through Friday: 7:30am and Noon"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read, and every weekday's 7:30am and Noon intentions are listed. The Monday December 7 Noon Mass for the Guadalupe Torch Run (newest p8) is this weekly Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-ramsey",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b33988e7",
+          "page": 2,
+          "said": "Monday through Friday: 7:30am and Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f673b25",
+          "page": 2,
+          "said": "Monday through Friday: 7:30am and Noon"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read, and every weekday's 7:30am and Noon intentions are listed. The Monday December 7 Noon Mass for the Guadalupe Torch Run (newest p8) is this weekly Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-ramsey",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b33988e7",
+          "page": 2,
+          "said": "Monday through Friday: 7:30am and Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f673b25",
+          "page": 2,
+          "said": "Monday through Friday: 7:30am and Noon"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read, and every weekday's 7:30am and Noon intentions are listed. The Monday December 7 Noon Mass for the Guadalupe Torch Run (newest p8) is this weekly Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-ramsey",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b33988e7",
+          "page": 2,
+          "said": "Monday through Friday: 7:30am and Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f673b25",
+          "page": 2,
+          "said": "Monday through Friday: 7:30am and Noon"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read, and every weekday's 7:30am and Noon intentions are listed. The Monday December 7 Noon Mass for the Guadalupe Torch Run (newest p8) is this weekly Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-ramsey",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b33988e7",
+          "page": 2,
+          "said": "Monday through Friday: 7:30am and Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f673b25",
+          "page": 2,
+          "said": "Monday through Friday: 7:30am and Noon"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read, and every weekday's 7:30am and Noon intentions are listed. The Monday December 7 Noon Mass for the Guadalupe Torch Run (newest p8) is this weekly Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-ramsey",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b33988e7",
+          "page": 2,
+          "said": "Monday through Friday: 7:30am and Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f673b25",
+          "page": 2,
+          "said": "Monday through Friday: 7:30am and Noon"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read, and every weekday's 7:30am and Noon intentions are listed. The Monday December 7 Noon Mass for the Guadalupe Torch Run (newest p8) is this weekly Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-ramsey",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b33988e7",
+          "page": 2,
+          "said": "Monday through Friday: 7:30am and Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f673b25",
+          "page": 2,
+          "said": "Monday through Friday: 7:30am and Noon"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read, and every weekday's 7:30am and Noon intentions are listed. The Monday December 7 Noon Mass for the Guadalupe Torch Run (newest p8) is this weekly Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-ramsey",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b33988e7",
+          "page": 2,
+          "said": "Saturday: 9am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f673b25",
+          "page": 2,
+          "said": "Saturday: 9am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read, with Saturday 9:00am intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-ramsey",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b33988e7",
+          "page": 2,
+          "said": "Saturday: ... 5pm (Sunday Obligation)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f673b25",
+          "page": 2,
+          "said": "Saturday: ... 5pm (Sunday Obligation)"
+        }
+      ],
+      "rationale": "R1: the Saturday 5pm anticipated Mass is printed in the Mass Schedule box of both bulletins read, with intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-ramsey",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b33988e7",
+          "page": 2,
+          "said": "Sunday: 8am, 10am, 12 pm ... 5pm Sunday Evening"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f673b25",
+          "page": 2,
+          "said": "Sunday: 8am, 10am, 12 pm ... 5pm Sunday Evening"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read, with intentions at each time. The December 6 Noon Mass with Bishop Serratelli for the church's 60th anniversary (newest p7) is the regular Sunday Noon Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-ramsey",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b33988e7",
+          "page": 2,
+          "said": "Sunday: 8am, 10am, 12 pm ... 5pm Sunday Evening"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f673b25",
+          "page": 2,
+          "said": "Sunday: 8am, 10am, 12 pm ... 5pm Sunday Evening"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read, with intentions at each time. The December 6 Noon Mass with Bishop Serratelli for the church's 60th anniversary (newest p7) is the regular Sunday Noon Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-ramsey",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b33988e7",
+          "page": 2,
+          "said": "Sunday: 8am, 10am, 12 pm ... 5pm Sunday Evening"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f673b25",
+          "page": 2,
+          "said": "Sunday: 8am, 10am, 12 pm ... 5pm Sunday Evening"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read, with intentions at each time. The December 6 Noon Mass with Bishop Serratelli for the church's 60th anniversary (newest p7) is the regular Sunday Noon Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-ramsey",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b33988e7",
+          "page": 2,
+          "said": "Sunday: 8am, 10am, 12 pm ... 5pm Sunday Evening"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f673b25",
+          "page": 2,
+          "said": "Sunday: 8am, 10am, 12 pm ... 5pm Sunday Evening"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read, with intentions at each time. The December 6 Noon Mass with Bishop Serratelli for the church's 60th anniversary (newest p7) is the regular Sunday Noon Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-ramsey",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b33988e7",
+          "page": 2,
+          "said": "Sunday: ... 1:30pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f673b25",
+          "page": 2,
+          "said": "Sunday: ... 1:30pm (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; intentions list '1:30pm: Spanish Mass'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-ramsey",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": "20:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b33988e7",
+          "page": 2,
+          "said": "Confessions Monday 7:30pm-8:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f673b25",
+          "page": 2,
+          "said": "Confessions Monday 7:30pm-8:30pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; it has its own clock times, inside Monday Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-ramsey",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b33988e7",
+          "page": 2,
+          "said": "Confessions ... Fridays 11:30am-12pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f673b25",
+          "page": 2,
+          "said": "Confessions ... Fridays 11:30am-12pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-ramsey",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "14:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b33988e7",
+          "page": 2,
+          "said": "Confessions ... Saturdays 1pm-2 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f673b25",
+          "page": 2,
+          "said": "Confessions ... Saturdays 1pm-2 pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-ramsey",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b33988e7",
+          "page": 8,
+          "said": "Eucharistic Adoration Schedule Monday, November 16th -- 12:30pm – 9pm Monday, November 23rd -- 12:30pm – 9pm Monday, November 30th -- 12:30pm – 9pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f673b25",
+          "page": 8,
+          "said": "Monday, November 9th – 12:30pm – 9pm Monday, November 16th -- 12:30pm – 9pm"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 4, R35: the newest bulletin lists the same Monday 12:30pm-9pm Adoration in the church for three consecutive weeks, and the older one for four, none marked special.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-ramsey",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "19:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Respect Life Rosary and Divine Mercy Chaplet"
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b33988e7",
+          "page": 8,
+          "said": "All are invited to join the Respect Life Ministry in praying before the Blessed Sacrament the Rosary and Divine Mercy Chaplet for the protection of all life *Mondays from 7-7:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f673b25",
+          "page": 8,
+          "said": "All are invited to join the Respect Life Ministry in praying before the Blessed Sacrament the Rosary and Divine Mercy Chaplet for the protection of all life *Mondays from 7-7:30pm"
+        }
+      ],
+      "rationale": "R24, R37: a Rosary devotion held during the Monday Adoration already recorded; not a separate Adoration period.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b33988e7",
+          "page": 6,
+          "said": "Rooted ... We have Bible Study and Eucharistic Adoration ... meets in the church on the first Wednesday of each month, and in Mary's Cottage on the third Wednesday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6f673b25",
+          "page": 6,
+          "said": "Rooted ... We have Bible Study and Eucharistic Adoration ... meets in the church on the first Wednesday of each month, and in Mary's Cottage on the third Wednesday"
+        }
+      ],
+      "rationale": "R26: the young adult group's Adoration is given no time, so there is nothing to record.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
