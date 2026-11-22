@@ -1,0 +1,391 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-maplewood",
+  "status": "ready",
+  "as_of": "2026-11-15T16:54:10Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T16:23:28Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Neither bulletin (image-only, Nov 8 and Nov 15 issues) has a schedule box; the weekly Masses come from the Mass intentions of both weeks (R35), matching the website's Liturgy Schedule: Sat 5 PM, Sun 9 and 11:30 AM, Mon-Fri 8 AM. Confession is by appointment only; no Adoration is listed. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "1f1263fa76233de42d7c79c4e27055d5d4bd66200fa2a27d242b72464c573cc9",
+      "fetched_at": "2026-11-15T16:54:10Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "1b9ae1da08e08e2bdd27908419c041897fb1b4ed7a45b25e4b857ce976f03aa4",
+      "fetched_at": "2026-11-08T16:03:06Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-maplewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f1263fa",
+          "page": 3,
+          "said": "SATURDAY NOVEMBER 14, 2026 5:00pm Giuseppe Ciaccio"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1b9ae1da",
+          "page": 3,
+          "said": "SATURDAY NOVEMBER 7, 2026 5:00pm Lamercie Geffrard"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sjcmaplewoodnj.org/mass-sacraments/mass-schedule",
+          "said": "Saturday Vigil 5:00 PM Anticipated Liturgy for Sunday"
+        }
+      ],
+      "rationale": "R35: the same Saturday 5:00 PM Mass is in the Mass intentions of both bulletins read (Nov 7 and Nov 14 weeks), and the parish website's Liturgy Schedule gives it weekly. Neither bulletin has a schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-maplewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f1263fa",
+          "page": 3,
+          "said": "SUNDAY NOVEMBER 15, 2026 9:00am Pido Family 11:30am Rosa C. Triunfo"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1b9ae1da",
+          "page": 3,
+          "said": "SUNDAY NOVEMBER 8, 2026 9:00am Julia, Tai, Leenel & Ty Luu 11:30am Josie & Lorena Melgar"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sjcmaplewoodnj.org/mass-sacraments/mass-schedule",
+          "said": "Sunday 9:00 AM Family Liturgy; Sunday 11:30 AM Choir Liturgy"
+        }
+      ],
+      "rationale": "R35: both Sunday Masses are in the intentions of both bulletins read, and the website's weekly schedule lists them. The Nov 15 11:30 food-pantry anniversary Mass is the regular Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-maplewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f1263fa",
+          "page": 3,
+          "said": "SUNDAY NOVEMBER 15, 2026 9:00am Pido Family 11:30am Rosa C. Triunfo"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1b9ae1da",
+          "page": 3,
+          "said": "SUNDAY NOVEMBER 8, 2026 9:00am Julia, Tai, Leenel & Ty Luu 11:30am Josie & Lorena Melgar"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sjcmaplewoodnj.org/mass-sacraments/mass-schedule",
+          "said": "Sunday 9:00 AM Family Liturgy; Sunday 11:30 AM Choir Liturgy"
+        }
+      ],
+      "rationale": "R35: both Sunday Masses are in the intentions of both bulletins read, and the website's weekly schedule lists them. The Nov 15 11:30 food-pantry anniversary Mass is the regular Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-maplewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f1263fa",
+          "page": 3,
+          "said": "MONDAY NOVEMBER 16 ... FRIDAY NOVEMBER 20, 2026 8:00am (each day)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1b9ae1da",
+          "page": 3,
+          "said": "MONDAY NOVEMBER 9 ... FRIDAY NOVEMBER 13, 2026 8:00am (each day)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sjcmaplewoodnj.org/mass-sacraments/mass-schedule",
+          "said": "Monday – Friday 8:00 AM Daily Liturgy"
+        }
+      ],
+      "rationale": "R35: an 8:00 AM Mass on each weekday Monday to Friday in the intentions of both bulletins read, matching the website's weekly schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-maplewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f1263fa",
+          "page": 3,
+          "said": "MONDAY NOVEMBER 16 ... FRIDAY NOVEMBER 20, 2026 8:00am (each day)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1b9ae1da",
+          "page": 3,
+          "said": "MONDAY NOVEMBER 9 ... FRIDAY NOVEMBER 13, 2026 8:00am (each day)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sjcmaplewoodnj.org/mass-sacraments/mass-schedule",
+          "said": "Monday – Friday 8:00 AM Daily Liturgy"
+        }
+      ],
+      "rationale": "R35: an 8:00 AM Mass on each weekday Monday to Friday in the intentions of both bulletins read, matching the website's weekly schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-maplewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f1263fa",
+          "page": 3,
+          "said": "MONDAY NOVEMBER 16 ... FRIDAY NOVEMBER 20, 2026 8:00am (each day)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1b9ae1da",
+          "page": 3,
+          "said": "MONDAY NOVEMBER 9 ... FRIDAY NOVEMBER 13, 2026 8:00am (each day)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sjcmaplewoodnj.org/mass-sacraments/mass-schedule",
+          "said": "Monday – Friday 8:00 AM Daily Liturgy"
+        }
+      ],
+      "rationale": "R35: an 8:00 AM Mass on each weekday Monday to Friday in the intentions of both bulletins read, matching the website's weekly schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-maplewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f1263fa",
+          "page": 3,
+          "said": "MONDAY NOVEMBER 16 ... FRIDAY NOVEMBER 20, 2026 8:00am (each day)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1b9ae1da",
+          "page": 3,
+          "said": "MONDAY NOVEMBER 9 ... FRIDAY NOVEMBER 13, 2026 8:00am (each day)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sjcmaplewoodnj.org/mass-sacraments/mass-schedule",
+          "said": "Monday – Friday 8:00 AM Daily Liturgy"
+        }
+      ],
+      "rationale": "R35: an 8:00 AM Mass on each weekday Monday to Friday in the intentions of both bulletins read, matching the website's weekly schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-maplewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f1263fa",
+          "page": 3,
+          "said": "MONDAY NOVEMBER 16 ... FRIDAY NOVEMBER 20, 2026 8:00am (each day)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1b9ae1da",
+          "page": 3,
+          "said": "MONDAY NOVEMBER 9 ... FRIDAY NOVEMBER 13, 2026 8:00am (each day)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sjcmaplewoodnj.org/mass-sacraments/mass-schedule",
+          "said": "Monday – Friday 8:00 AM Daily Liturgy"
+        }
+      ],
+      "rationale": "R35: an 8:00 AM Mass on each weekday Monday to Friday in the intentions of both bulletins read, matching the website's weekly schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sjcmaplewoodnj.org/mass-sacraments/mass-schedule",
+          "said": "Reconciliation (Confessions) By appointment at your convenience — call the Rectory Office"
+        }
+      ],
+      "rationale": "R26: confession only by appointment has no time. Neither bulletin prints a Confession or Adoration time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
