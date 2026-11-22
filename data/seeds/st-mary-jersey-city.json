@@ -1,0 +1,1014 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-mary-jersey-city",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:54:27Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T17:00:14Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, St. Mary of the Immaculate Conception. Both bulletins read (Nov 8, Nov 15) and the website agree: weekday 7 AM, Tue/Thu 7 PM Spanish, Sat 9 AM and 5:30 PM, Sat confession 4-5, Sundays 8, 10 (Spanish), 12 and a first-Sunday 9 AM Tagalog Mass; first-Friday 7 PM Mass. Open: Monday and Wednesday 7 PM Adoration in St. Boniface Chapel, whose location is not given.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "413f692eb09cb1896c72fb9465975c3c715aec32c03160894d3fb145ab131abd",
+      "fetched_at": "2026-11-15T16:54:27Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "3f268e132d9846a236aa95ee68f0fdc7cdd7a26c6e588a6a6edc2593e79e1f8d",
+      "fetched_at": "2026-11-08T16:03:17Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "413f692e",
+          "page": 1,
+          "said": "DAILY MASSES Monday - Friday: 7am English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f268e13",
+          "page": 1,
+          "said": "DAILY MASSES Monday - Friday: 7am English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "413f692e",
+          "page": 2,
+          "said": "7:00 AM (intention listed Monday through Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f268e13",
+          "page": 2,
+          "said": "7:00 AM (intention listed Monday through Friday)"
+        }
+      ],
+      "rationale": "R1, R35: front-page schedule box in both bulletins read; intentions list a 7:00 AM Mass every weekday of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "413f692e",
+          "page": 1,
+          "said": "DAILY MASSES Monday - Friday: 7am English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f268e13",
+          "page": 1,
+          "said": "DAILY MASSES Monday - Friday: 7am English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "413f692e",
+          "page": 2,
+          "said": "7:00 AM (intention listed Monday through Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f268e13",
+          "page": 2,
+          "said": "7:00 AM (intention listed Monday through Friday)"
+        }
+      ],
+      "rationale": "R1, R35: front-page schedule box in both bulletins read; intentions list a 7:00 AM Mass every weekday of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "413f692e",
+          "page": 1,
+          "said": "DAILY MASSES Monday - Friday: 7am English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f268e13",
+          "page": 1,
+          "said": "DAILY MASSES Monday - Friday: 7am English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "413f692e",
+          "page": 2,
+          "said": "7:00 AM (intention listed Monday through Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f268e13",
+          "page": 2,
+          "said": "7:00 AM (intention listed Monday through Friday)"
+        }
+      ],
+      "rationale": "R1, R35: front-page schedule box in both bulletins read; intentions list a 7:00 AM Mass every weekday of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "413f692e",
+          "page": 1,
+          "said": "DAILY MASSES Monday - Friday: 7am English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f268e13",
+          "page": 1,
+          "said": "DAILY MASSES Monday - Friday: 7am English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "413f692e",
+          "page": 2,
+          "said": "7:00 AM (intention listed Monday through Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f268e13",
+          "page": 2,
+          "said": "7:00 AM (intention listed Monday through Friday)"
+        }
+      ],
+      "rationale": "R1, R35: front-page schedule box in both bulletins read; intentions list a 7:00 AM Mass every weekday of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "413f692e",
+          "page": 1,
+          "said": "DAILY MASSES Monday - Friday: 7am English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f268e13",
+          "page": 1,
+          "said": "DAILY MASSES Monday - Friday: 7am English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "413f692e",
+          "page": 2,
+          "said": "7:00 AM (intention listed Monday through Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f268e13",
+          "page": 2,
+          "said": "7:00 AM (intention listed Monday through Friday)"
+        }
+      ],
+      "rationale": "R1, R35: front-page schedule box in both bulletins read; intentions list a 7:00 AM Mass every weekday of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "413f692e",
+          "page": 1,
+          "said": "Tuesday & Thursday: 7pm Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f268e13",
+          "page": 1,
+          "said": "Tuesday & Thursday: 7pm Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "413f692e",
+          "page": 2,
+          "said": "TUESDAY ... 7:00 PM / THURSDAY ... 7:00 PM (intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f268e13",
+          "page": 2,
+          "said": "TUESDAY ... 7:00 PM / THURSDAY ... 7:00 PM (intentions)"
+        }
+      ],
+      "rationale": "R1, R35: schedule box and intentions of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "413f692e",
+          "page": 1,
+          "said": "Tuesday & Thursday: 7pm Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f268e13",
+          "page": 1,
+          "said": "Tuesday & Thursday: 7pm Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "413f692e",
+          "page": 2,
+          "said": "TUESDAY ... 7:00 PM / THURSDAY ... 7:00 PM (intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f268e13",
+          "page": 2,
+          "said": "TUESDAY ... 7:00 PM / THURSDAY ... 7:00 PM (intentions)"
+        }
+      ],
+      "rationale": "R1, R35: schedule box and intentions of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "413f692e",
+          "page": 1,
+          "said": "Saturday: 9:00am English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f268e13",
+          "page": 1,
+          "said": "Saturday: 9:00am English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "413f692e",
+          "page": 2,
+          "said": "SATURDAY ... 9:00 AM (intention)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f268e13",
+          "page": 2,
+          "said": "SATURDAY ... 9:00 AM (intention)"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "413f692e",
+          "page": 1,
+          "said": "Saturday Anticipated Mass: 5:30pm English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f268e13",
+          "page": 1,
+          "said": "Saturday Anticipated Mass: 5:30pm English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "413f692e",
+          "page": 2,
+          "said": "SATURDAY ... 5:30 PM (intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f268e13",
+          "page": 2,
+          "said": "SATURDAY ... 5:30 PM (intentions)"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-jersey-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "413f692e",
+          "page": 1,
+          "said": "Confessions: Saturday 4-5pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f268e13",
+          "page": 1,
+          "said": "Confessions: Saturday 4-5pm"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "413f692e",
+          "page": 1,
+          "said": "SUNDAY MASSES 8:00AM English / 12:00PM English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f268e13",
+          "page": 1,
+          "said": "SUNDAY MASSES 8:00AM English / 12:00PM English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "413f692e",
+          "page": 2,
+          "said": "SUNDAY ... 8:00 AM / 12:00 PM (intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f268e13",
+          "page": 2,
+          "said": "SUNDAY ... 8:00 AM / 12:00 PM (intentions)"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "413f692e",
+          "page": 1,
+          "said": "SUNDAY MASSES 8:00AM English / 12:00PM English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f268e13",
+          "page": 1,
+          "said": "SUNDAY MASSES 8:00AM English / 12:00PM English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "413f692e",
+          "page": 2,
+          "said": "SUNDAY ... 8:00 AM / 12:00 PM (intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f268e13",
+          "page": 2,
+          "said": "SUNDAY ... 8:00 AM / 12:00 PM (intentions)"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "413f692e",
+          "page": 1,
+          "said": "10:00AM Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f268e13",
+          "page": 1,
+          "said": "10:00AM Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "413f692e",
+          "page": 2,
+          "said": "SUNDAY ... 10:00 AM (intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f268e13",
+          "page": 2,
+          "said": "SUNDAY ... 10:00 AM (intentions)"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Tagalog"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "413f692e",
+          "page": 1,
+          "said": "9:00AM Tagalog [First Sunday]"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f268e13",
+          "page": 1,
+          "said": "9:00AM Tagalog [First Sunday]"
+        }
+      ],
+      "rationale": "R1, R11: the schedule box of both bulletins names it a First Sunday Mass; neither bulletin's intentions week holds a first Sunday, so its absence from the intentions is expected.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "413f692e",
+          "page": 2,
+          "said": "FIRST FRIDAY MASS & ADORATION: 7PM-9PM Main Church"
+        },
+        {
+          "source": "website",
+          "url": "https://stmarysparishjc.com/",
+          "said": "First Friday 7:00pm (English)"
+        }
+      ],
+      "rationale": "R1, R11: named First Friday Mass in the newest bulletin's devotions box at the main church; neither bulletin's week holds a first Friday. The website's service times agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-jersey-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After First Friday Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "413f692e",
+          "page": 2,
+          "said": "FIRST FRIDAY MASS & ADORATION: 7PM-9PM Main Church"
+        }
+      ],
+      "rationale": "POLICY, Final source checks (former C6): the 7-9 PM span covers the Mass and the Adoration together; the Adoration has no start time of its own, so its hours can't be taken from the combined event.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "413f692e",
+          "page": 2,
+          "said": "FIRST SATURDAY DEVOTION: 9:00am-10:30AM, Main Church"
+        }
+      ],
+      "rationale": "R24: a devotion, not called a Mass, Confession or Adoration; the regular Saturday 9 AM Mass is its own slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "413f692e",
+          "page": 1,
+          "said": "2000 Hail Mary's 8AM-6PM Last Saturday of the Month"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f268e13",
+          "page": 1,
+          "said": "2000 Hail Mary's 8AM-6PM Last Saturday of the Month"
+        }
+      ],
+      "rationale": "R24: a Rosary devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-jersey-city",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "413f692e",
+          "page": 3,
+          "said": "There will be 9am English Mass for Thanksgiving on November 26, 2026."
+        }
+      ],
+      "rationale": "R1, R16: dated holiday Mass after as_of, outside the weekly schedule (Thursday has 7 AM and 7 PM).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-jersey-city",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "11:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christ the King Adoration"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "413f692e",
+          "page": 4,
+          "said": "Our annual Christ The King Adoration will be on Saturday November 21, 2026 from11AM-4:30PM. All are invited to attend."
+        }
+      ],
+      "rationale": "R1, R16: dated, open-to-all Adoration after as_of. No venue is printed; it is put at the parish's only listed church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "413f692e",
+          "page": 1,
+          "said": "Monday - Adoration 7-8pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f268e13",
+          "page": 1,
+          "said": "Monday - Adoration 7-8pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "413f692e",
+          "page": 2,
+          "said": "SILENT ADORATION MONDAYS: 7PM St. Boniface Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "413f692e",
+          "page": 2,
+          "said": "MONDAY November 16, 2026 ... 7:00 PM Holy Hour"
+        },
+        {
+          "source": "website",
+          "url": "https://stmarysparishjc.com/",
+          "said": "Adoration (Holy Hour): 7:00 pm Monday"
+        }
+      ],
+      "rationale": "R32: the bulletin puts Monday Adoration in St. Boniface Chapel, which is not on the church list and whose address no bulletin or the website gives. Leaning include: it is listed under the church's address in the front-page DAILY MASSES box, a group meets there 'Wed. after 7AM Mass, St. Boniface' (so it is likely on site), and the sanctuary-candle notice says candles burn before the Blessed Sacrament 'at the church or in the chapel'.",
+      "question": "Is St. Boniface Chapel at St. Mary's church (254 Second St), so its Monday and Wednesday evening Adoration belongs there?",
+      "options": [
+        {
+          "label": "Include at St. Mary's",
+          "entry": {
+            "church_slug": "st-mary-jersey-city",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Boniface Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "boniface"
+    },
+    {
+      "id": "s22",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "413f692e",
+          "page": 1,
+          "said": "Wednesday: 7:00pm Adoration/Rosary/Divine Mercy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f268e13",
+          "page": 1,
+          "said": "Wednesday: 7:00pm Adoration/Rosary/Divine Mercy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "413f692e",
+          "page": 2,
+          "said": "ROSARY / DIVINE MERCY / ADORATION WEDNESDAYS: 7PM Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://stmarysparishjc.com/",
+          "said": "Adoration (Holy Hour): 7:00 pm Wednesday"
+        }
+      ],
+      "rationale": "R32: the devotions box puts Wednesday Adoration in 'Chapel', apparently the St. Boniface Chapel named for Monday, whose address is not given. No end time is printed (POLICY, Times). Leaning include for the same reasons as Monday.",
+      "question": "Is St. Boniface Chapel at St. Mary's church (254 Second St), so its Monday and Wednesday evening Adoration belongs there?",
+      "options": [
+        {
+          "label": "Include at St. Mary's",
+          "entry": {
+            "church_slug": "st-mary-jersey-city",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Boniface Chapel; with Rosary and Divine Mercy"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "boniface"
+    }
+  ]
+}
