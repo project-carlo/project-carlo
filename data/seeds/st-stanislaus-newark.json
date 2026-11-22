@@ -1,0 +1,1140 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-stanislaus-newark",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:54:45Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T18:12:43Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church; the bulletins print no schedule box, so the weekly Masses rest on the Mass intentions of two issues (Nov 15 and Oct 11, 2026) and match the website's schedule exactly. Adoration and Confession come from the website (R6). Open: Confession before the Monday/Friday 7 PM Masses, where the two website pages conflict.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "925a92c511f417b9304f6cbc8cb8e771f6cc8ad8f0ef0f81e84cebda763af98a",
+      "fetched_at": "2026-11-15T16:54:45Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "979d072eac94c9336310cd595dfb4d8d53b2977a6f066bf4c92fe24637c5dc61",
+      "fetched_at": "2026-11-08T16:03:35Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish and English"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "925a92c5",
+          "page": 4,
+          "said": "Sunday / Niedziela Nov 22, 2026 9:00 AM + Henryk Adamczyk"
+        },
+        {
+          "source": "agent",
+          "bulletin": "979d072e",
+          "page": 4,
+          "said": "Sunday / Niedziela Oct 11, 2026 9:00 AM ... Sunday / Niedziela Oct 18, 2026 9:00 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ststanislausnewark.com/",
+          "said": "Sunday: 9:00am (PL/EN)"
+        }
+      ],
+      "rationale": "R35, R1: Mass intentions in both bulletins (three Sundays: Oct 11, Oct 18, Nov 22) list this Mass; the website's Mass schedule gives it too. Nov 15 was the parish indulgence with a single 10:00 AM Mass (dated slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "925a92c5",
+          "page": 4,
+          "said": "Sunday / Niedziela Nov 22, 2026 ... 10:30 AM 1) + Helena Konopko"
+        },
+        {
+          "source": "agent",
+          "bulletin": "979d072e",
+          "page": 4,
+          "said": "Oct 11, 2026 ... 10: 30 AM 1) Zmarli z rodziny Psuj; Oct 18, 2026 ... 10: 30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ststanislausnewark.com/",
+          "said": "10:30am (PL)"
+        }
+      ],
+      "rationale": "R35, R1: in the intentions of three Sundays across both bulletins; matches the website schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "925a92c5",
+          "page": 4,
+          "said": "Sunday / Niedziela Nov 22, 2026 ... 12:00 PM + Kevin Collins"
+        },
+        {
+          "source": "agent",
+          "bulletin": "979d072e",
+          "page": 4,
+          "said": "Oct 11 and Oct 18, 2026: 12:00 PM + Julia Szuszkowski"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ststanislausnewark.com/",
+          "said": "12:00pm (EN)"
+        }
+      ],
+      "rationale": "R35, R1: in the intentions of three Sundays across both bulletins; matches the website schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "925a92c5",
+          "page": 4,
+          "said": "Monday / Poniedziałek Nov 16, 2026 7:00 PM W intencji Bogu wiadomej"
+        },
+        {
+          "source": "agent",
+          "bulletin": "979d072e",
+          "page": 4,
+          "said": "Monday / Poniedziałek Oct 12, 2026 7:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ststanislausnewark.com/",
+          "said": "Mon , Fri: 7:00pm (PL)"
+        }
+      ],
+      "rationale": "R35, R1: same time in the intentions of both bulletins' weeks; matches the website schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "925a92c5",
+          "page": 4,
+          "said": "Friday/ Piatek Nov 20, 2026 7:00 PM + Bernard i Anna"
+        },
+        {
+          "source": "agent",
+          "bulletin": "979d072e",
+          "page": 4,
+          "said": "Friday/ Piatek Oct 16, 2026 7:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ststanislausnewark.com/",
+          "said": "Mon , Fri: 7:00pm (PL)"
+        }
+      ],
+      "rationale": "R35, R1: same time in the intentions of both bulletins' weeks; matches the website schedule (which also lists the first-Friday 7:00pm Mass, the same slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "925a92c5",
+          "page": 4,
+          "said": "Tuesday / Wtorek Nov 17, 2026 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "979d072e",
+          "page": 4,
+          "said": "Tuesday / Wtorek Oct 13, 2026 7:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ststanislausnewark.com/",
+          "said": "Tue, Wed, Thu, Sat: 7:30am (EN)"
+        }
+      ],
+      "rationale": "R35, R1: same time in the intentions of both bulletins' weeks; matches the website schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "925a92c5",
+          "page": 4,
+          "said": "Wednesday / Środa Nov 18, 2026 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "979d072e",
+          "page": 4,
+          "said": "Wednesday / Środa Oct 14, 2026 7:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ststanislausnewark.com/",
+          "said": "Tue, Wed, Thu, Sat: 7:30am (EN)"
+        }
+      ],
+      "rationale": "R35, R1: same time in the intentions of both bulletins' weeks; matches the website schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "925a92c5",
+          "page": 4,
+          "said": "Thursday/ Czwartek Nov 19, 2026 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "979d072e",
+          "page": 4,
+          "said": "Thursday/ Czwartek Oct 15, 2026 7:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ststanislausnewark.com/",
+          "said": "Tue, Wed, Thu, Sat: 7:30am (EN)"
+        }
+      ],
+      "rationale": "R35, R1: same time in the intentions of both bulletins' weeks; matches the website schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "925a92c5",
+          "page": 4,
+          "said": "Saturday/ Sobota Nov 21, 2026 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "979d072e",
+          "page": 4,
+          "said": "Saturday/ Sobota Oct 17, 2026 7:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ststanislausnewark.com/",
+          "said": "Tue, Wed, Thu, Sat: 7:30am (EN)"
+        }
+      ],
+      "rationale": "R35, R1: same time in the intentions of both bulletins' weeks; matches the website schedule (first Saturdays in Polish).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-newark",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-15",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Parish indulgence"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "925a92c5",
+          "page": 4,
+          "said": "Sunday / Niedziela Nov 15, 2026 10: 00 AM 1) + Julia Szuszkowski"
+        },
+        {
+          "source": "agent",
+          "bulletin": "979d072e",
+          "page": 2,
+          "said": "The annual parish indulgence will be on November 15th."
+        }
+      ],
+      "rationale": "R1, R16: the indulgence Sunday had a single 10:00 AM Mass; its date is as_of's date. No cancellation of the usual Sunday Masses is stated, so none is recorded (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-newark",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-17",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Parish retreat"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "979d072e",
+          "page": 2,
+          "said": "W sobotę Msza o godz. 6PM i po Mszy Adoracja z modlitwą o uzdrowienie."
+        }
+      ],
+      "rationale": "R16: Oct 16-18 parish retreat Masses and Adoration are dated before as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-newark",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 7:00 PM Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.ststanislausnewark.com/",
+          "said": "Mon , Fri: 7:00pm (PL) 6:00pm Exposition and Adoration",
+          "schedule_check": {
+            "checked_at": "2026-11-22T18:15:13Z",
+            "current_because": "Checked 2026-11-22: its Mass schedule block (Mon, Fri 7:00pm; Tue, Wed, Thu, Sat 7:30am; Sunday 9:00, 10:30, 12:00) matches the Mass intentions of the Nov 15, 2026 and Oct 11, 2026 bulletins exactly; the stale banners (Nov 16, 2025 indulgence, summer notice) are announcements, not the schedule block.",
+            "bulletin": "925a92c5",
+            "fits_because": "The Nov 15, 2026 bulletin prints no schedule box, only Mass intentions at the same Mass times this page lists; nothing in it contradicts the page."
+          }
+        }
+      ],
+      "rationale": "R6: the parish's own Mass schedule block gives Exposition and Adoration at 6:00pm before the Monday and Friday 7:00pm Masses; no end time (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-newark",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": true,
+        "season": null,
+        "note": "Before the 7:00 PM Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.ststanislausnewark.com/",
+          "said": "Mon , Fri: 7:00pm (PL) 6:00pm Exposition and Adoration",
+          "schedule_check": {
+            "checked_at": "2026-11-22T18:15:13Z",
+            "current_because": "Checked 2026-11-22: its Mass schedule block (Mon, Fri 7:00pm; Tue, Wed, Thu, Sat 7:30am; Sunday 9:00, 10:30, 12:00) matches the Mass intentions of the Nov 15, 2026 and Oct 11, 2026 bulletins exactly; the stale banners (Nov 16, 2025 indulgence, summer notice) are announcements, not the schedule block.",
+            "bulletin": "925a92c5",
+            "fits_because": "The Nov 15, 2026 bulletin prints no schedule box, only Mass intentions at the same Mass times this page lists; nothing in it contradicts the page."
+          }
+        }
+      ],
+      "rationale": "R6: as Monday; on first Fridays Adoration starts at 5:30pm instead (separate slot), so this slot skips the first week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-newark",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 7:00 PM Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.ststanislausnewark.com/",
+          "said": "1st Friday of Each Month: 7:00pm (PL) Confession and Adoration before Mass (Starting at 5:30pm)",
+          "schedule_check": {
+            "checked_at": "2026-11-22T18:15:13Z",
+            "current_because": "Checked 2026-11-22: its Mass schedule block (Mon, Fri 7:00pm; Tue, Wed, Thu, Sat 7:30am; Sunday 9:00, 10:30, 12:00) matches the Mass intentions of the Nov 15, 2026 and Oct 11, 2026 bulletins exactly; the stale banners (Nov 16, 2025 indulgence, summer notice) are announcements, not the schedule block.",
+            "bulletin": "925a92c5",
+            "fits_because": "The Nov 15, 2026 bulletin prints no schedule box, only Mass intentions at the same Mass times this page lists; nothing in it contradicts the page."
+          }
+        }
+      ],
+      "rationale": "R6, R12: the website's first-Friday line; the bulletins read cover no first Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-newark",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.ststanislausnewark.com/sacraments",
+          "said": "1st Friday of Each Month: 5:30pm - 7:00pm",
+          "schedule_check": {
+            "checked_at": "2026-11-22T18:15:13Z",
+            "current_because": "Checked 2026-11-22: its Mass schedule block (Mon, Fri 7:00pm; Tue, Wed, Thu, Sat 7:30am; Sunday 9:00, 10:30, 12:00) matches the Mass intentions of the Nov 15, 2026 and Oct 11, 2026 bulletins exactly; the stale banners (Nov 16, 2025 indulgence, summer notice) are announcements, not the schedule block.",
+            "bulletin": "925a92c5",
+            "fits_because": "The Nov 15, 2026 bulletin prints no schedule box, only Mass intentions at the same Mass times this page lists; nothing in it contradicts the page."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.ststanislausnewark.com/",
+          "said": "1st Friday of Each Month: 5:30pm - 7:00pm",
+          "schedule_check": {
+            "checked_at": "2026-11-22T18:15:13Z",
+            "current_because": "Checked 2026-11-22: its Mass schedule block (Mon, Fri 7:00pm; Tue, Wed, Thu, Sat 7:30am; Sunday 9:00, 10:30, 12:00) matches the Mass intentions of the Nov 15, 2026 and Oct 11, 2026 bulletins exactly; the stale banners (Nov 16, 2025 indulgence, summer notice) are announcements, not the schedule block.",
+            "bulletin": "925a92c5",
+            "fits_because": "The Nov 15, 2026 bulletin prints no schedule box, only Mass intentions at the same Mass times this page lists; nothing in it contradicts the page."
+          }
+        }
+      ],
+      "rationale": "R6: both website pages give first-Friday Confession 5:30-7:00pm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-newark",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "With the Rosary, before the 7:30 AM Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.ststanislausnewark.com/",
+          "said": "1st Saturday of Each Month: Adoration and Rosary: 6:45am Mass: 7:30am (PL)",
+          "schedule_check": {
+            "checked_at": "2026-11-22T18:15:13Z",
+            "current_because": "Checked 2026-11-22: its Mass schedule block (Mon, Fri 7:00pm; Tue, Wed, Thu, Sat 7:30am; Sunday 9:00, 10:30, 12:00) matches the Mass intentions of the Nov 15, 2026 and Oct 11, 2026 bulletins exactly; the stale banners (Nov 16, 2025 indulgence, summer notice) are announcements, not the schedule block.",
+            "bulletin": "925a92c5",
+            "fits_because": "The Nov 15, 2026 bulletin prints no schedule box, only Mass intentions at the same Mass times this page lists; nothing in it contradicts the page."
+          }
+        }
+      ],
+      "rationale": "R6, R12: the website's first-Saturday line; no end time given (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-newark",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "07:25",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.ststanislausnewark.com/sacraments",
+          "said": "Mon - Sat: 7:00am - 7:25am",
+          "schedule_check": {
+            "checked_at": "2026-11-22T18:15:13Z",
+            "current_because": "Checked 2026-11-22: its Mass schedule block (Mon, Fri 7:00pm; Tue, Wed, Thu, Sat 7:30am; Sunday 9:00, 10:30, 12:00) matches the Mass intentions of the Nov 15, 2026 and Oct 11, 2026 bulletins exactly; the stale banners (Nov 16, 2025 indulgence, summer notice) are announcements, not the schedule block.",
+            "bulletin": "925a92c5",
+            "fits_because": "The Nov 15, 2026 bulletin prints no schedule box, only Mass intentions at the same Mass times this page lists; nothing in it contradicts the page."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.ststanislausnewark.com/",
+          "said": "Mon - Sun: Half hour before each Mass",
+          "schedule_check": {
+            "checked_at": "2026-11-22T18:15:13Z",
+            "current_because": "Checked 2026-11-22: its Mass schedule block (Mon, Fri 7:00pm; Tue, Wed, Thu, Sat 7:30am; Sunday 9:00, 10:30, 12:00) matches the Mass intentions of the Nov 15, 2026 and Oct 11, 2026 bulletins exactly; the stale banners (Nov 16, 2025 indulgence, summer notice) are announcements, not the schedule block.",
+            "bulletin": "925a92c5",
+            "fits_because": "The Nov 15, 2026 bulletin prints no schedule box, only Mass intentions at the same Mass times this page lists; nothing in it contradicts the page."
+          }
+        }
+      ],
+      "rationale": "R6: the sacraments page's clock times agree with the homepage's half hour before the 7:30am Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-newark",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "07:25",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.ststanislausnewark.com/sacraments",
+          "said": "Mon - Sat: 7:00am - 7:25am",
+          "schedule_check": {
+            "checked_at": "2026-11-22T18:15:13Z",
+            "current_because": "Checked 2026-11-22: its Mass schedule block (Mon, Fri 7:00pm; Tue, Wed, Thu, Sat 7:30am; Sunday 9:00, 10:30, 12:00) matches the Mass intentions of the Nov 15, 2026 and Oct 11, 2026 bulletins exactly; the stale banners (Nov 16, 2025 indulgence, summer notice) are announcements, not the schedule block.",
+            "bulletin": "925a92c5",
+            "fits_because": "The Nov 15, 2026 bulletin prints no schedule box, only Mass intentions at the same Mass times this page lists; nothing in it contradicts the page."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.ststanislausnewark.com/",
+          "said": "Mon - Sun: Half hour before each Mass",
+          "schedule_check": {
+            "checked_at": "2026-11-22T18:15:13Z",
+            "current_because": "Checked 2026-11-22: its Mass schedule block (Mon, Fri 7:00pm; Tue, Wed, Thu, Sat 7:30am; Sunday 9:00, 10:30, 12:00) matches the Mass intentions of the Nov 15, 2026 and Oct 11, 2026 bulletins exactly; the stale banners (Nov 16, 2025 indulgence, summer notice) are announcements, not the schedule block.",
+            "bulletin": "925a92c5",
+            "fits_because": "The Nov 15, 2026 bulletin prints no schedule box, only Mass intentions at the same Mass times this page lists; nothing in it contradicts the page."
+          }
+        }
+      ],
+      "rationale": "R6: the sacraments page's clock times agree with the homepage's half hour before the 7:30am Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-newark",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "07:25",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.ststanislausnewark.com/sacraments",
+          "said": "Mon - Sat: 7:00am - 7:25am",
+          "schedule_check": {
+            "checked_at": "2026-11-22T18:15:13Z",
+            "current_because": "Checked 2026-11-22: its Mass schedule block (Mon, Fri 7:00pm; Tue, Wed, Thu, Sat 7:30am; Sunday 9:00, 10:30, 12:00) matches the Mass intentions of the Nov 15, 2026 and Oct 11, 2026 bulletins exactly; the stale banners (Nov 16, 2025 indulgence, summer notice) are announcements, not the schedule block.",
+            "bulletin": "925a92c5",
+            "fits_because": "The Nov 15, 2026 bulletin prints no schedule box, only Mass intentions at the same Mass times this page lists; nothing in it contradicts the page."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.ststanislausnewark.com/",
+          "said": "Mon - Sun: Half hour before each Mass",
+          "schedule_check": {
+            "checked_at": "2026-11-22T18:15:13Z",
+            "current_because": "Checked 2026-11-22: its Mass schedule block (Mon, Fri 7:00pm; Tue, Wed, Thu, Sat 7:30am; Sunday 9:00, 10:30, 12:00) matches the Mass intentions of the Nov 15, 2026 and Oct 11, 2026 bulletins exactly; the stale banners (Nov 16, 2025 indulgence, summer notice) are announcements, not the schedule block.",
+            "bulletin": "925a92c5",
+            "fits_because": "The Nov 15, 2026 bulletin prints no schedule box, only Mass intentions at the same Mass times this page lists; nothing in it contradicts the page."
+          }
+        }
+      ],
+      "rationale": "R6: the sacraments page's clock times agree with the homepage's half hour before the 7:30am Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-newark",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "07:25",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.ststanislausnewark.com/sacraments",
+          "said": "Mon - Sat: 7:00am - 7:25am",
+          "schedule_check": {
+            "checked_at": "2026-11-22T18:15:13Z",
+            "current_because": "Checked 2026-11-22: its Mass schedule block (Mon, Fri 7:00pm; Tue, Wed, Thu, Sat 7:30am; Sunday 9:00, 10:30, 12:00) matches the Mass intentions of the Nov 15, 2026 and Oct 11, 2026 bulletins exactly; the stale banners (Nov 16, 2025 indulgence, summer notice) are announcements, not the schedule block.",
+            "bulletin": "925a92c5",
+            "fits_because": "The Nov 15, 2026 bulletin prints no schedule box, only Mass intentions at the same Mass times this page lists; nothing in it contradicts the page."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.ststanislausnewark.com/",
+          "said": "Mon - Sun: Half hour before each Mass",
+          "schedule_check": {
+            "checked_at": "2026-11-22T18:15:13Z",
+            "current_because": "Checked 2026-11-22: its Mass schedule block (Mon, Fri 7:00pm; Tue, Wed, Thu, Sat 7:30am; Sunday 9:00, 10:30, 12:00) matches the Mass intentions of the Nov 15, 2026 and Oct 11, 2026 bulletins exactly; the stale banners (Nov 16, 2025 indulgence, summer notice) are announcements, not the schedule block.",
+            "bulletin": "925a92c5",
+            "fits_because": "The Nov 15, 2026 bulletin prints no schedule box, only Mass intentions at the same Mass times this page lists; nothing in it contradicts the page."
+          }
+        }
+      ],
+      "rationale": "R6: the sacraments page's clock times agree with the homepage's half hour before the 7:30am Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-newark",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "08:55",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.ststanislausnewark.com/sacraments",
+          "said": "Sun: 8:30am - 8:55am",
+          "schedule_check": {
+            "checked_at": "2026-11-22T18:15:13Z",
+            "current_because": "Checked 2026-11-22: its Mass schedule block (Mon, Fri 7:00pm; Tue, Wed, Thu, Sat 7:30am; Sunday 9:00, 10:30, 12:00) matches the Mass intentions of the Nov 15, 2026 and Oct 11, 2026 bulletins exactly; the stale banners (Nov 16, 2025 indulgence, summer notice) are announcements, not the schedule block.",
+            "bulletin": "925a92c5",
+            "fits_because": "The Nov 15, 2026 bulletin prints no schedule box, only Mass intentions at the same Mass times this page lists; nothing in it contradicts the page."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.ststanislausnewark.com/",
+          "said": "Mon - Sun: Half hour before each Mass",
+          "schedule_check": {
+            "checked_at": "2026-11-22T18:15:13Z",
+            "current_because": "Checked 2026-11-22: its Mass schedule block (Mon, Fri 7:00pm; Tue, Wed, Thu, Sat 7:30am; Sunday 9:00, 10:30, 12:00) matches the Mass intentions of the Nov 15, 2026 and Oct 11, 2026 bulletins exactly; the stale banners (Nov 16, 2025 indulgence, summer notice) are announcements, not the schedule block.",
+            "bulletin": "925a92c5",
+            "fits_because": "The Nov 15, 2026 bulletin prints no schedule box, only Mass intentions at the same Mass times this page lists; nothing in it contradicts the page."
+          }
+        }
+      ],
+      "rationale": "R6: sacraments page clock times, before the 9:00am Mass; agrees with the homepage.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-newark",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": "10:25",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.ststanislausnewark.com/sacraments",
+          "said": "10:00am - 10:25am",
+          "schedule_check": {
+            "checked_at": "2026-11-22T18:15:13Z",
+            "current_because": "Checked 2026-11-22: its Mass schedule block (Mon, Fri 7:00pm; Tue, Wed, Thu, Sat 7:30am; Sunday 9:00, 10:30, 12:00) matches the Mass intentions of the Nov 15, 2026 and Oct 11, 2026 bulletins exactly; the stale banners (Nov 16, 2025 indulgence, summer notice) are announcements, not the schedule block.",
+            "bulletin": "925a92c5",
+            "fits_because": "The Nov 15, 2026 bulletin prints no schedule box, only Mass intentions at the same Mass times this page lists; nothing in it contradicts the page."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.ststanislausnewark.com/",
+          "said": "Mon - Sun: Half hour before each Mass",
+          "schedule_check": {
+            "checked_at": "2026-11-22T18:15:13Z",
+            "current_because": "Checked 2026-11-22: its Mass schedule block (Mon, Fri 7:00pm; Tue, Wed, Thu, Sat 7:30am; Sunday 9:00, 10:30, 12:00) matches the Mass intentions of the Nov 15, 2026 and Oct 11, 2026 bulletins exactly; the stale banners (Nov 16, 2025 indulgence, summer notice) are announcements, not the schedule block.",
+            "bulletin": "925a92c5",
+            "fits_because": "The Nov 15, 2026 bulletin prints no schedule box, only Mass intentions at the same Mass times this page lists; nothing in it contradicts the page."
+          }
+        }
+      ],
+      "rationale": "R6: sacraments page clock times, before the 10:30am Mass; agrees with the homepage.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-newark",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": "11:55",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.ststanislausnewark.com/sacraments",
+          "said": "11:30am - 11:55am",
+          "schedule_check": {
+            "checked_at": "2026-11-22T18:15:13Z",
+            "current_because": "Checked 2026-11-22: its Mass schedule block (Mon, Fri 7:00pm; Tue, Wed, Thu, Sat 7:30am; Sunday 9:00, 10:30, 12:00) matches the Mass intentions of the Nov 15, 2026 and Oct 11, 2026 bulletins exactly; the stale banners (Nov 16, 2025 indulgence, summer notice) are announcements, not the schedule block.",
+            "bulletin": "925a92c5",
+            "fits_because": "The Nov 15, 2026 bulletin prints no schedule box, only Mass intentions at the same Mass times this page lists; nothing in it contradicts the page."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.ststanislausnewark.com/",
+          "said": "Mon - Sun: Half hour before each Mass",
+          "schedule_check": {
+            "checked_at": "2026-11-22T18:15:13Z",
+            "current_because": "Checked 2026-11-22: its Mass schedule block (Mon, Fri 7:00pm; Tue, Wed, Thu, Sat 7:30am; Sunday 9:00, 10:30, 12:00) matches the Mass intentions of the Nov 15, 2026 and Oct 11, 2026 bulletins exactly; the stale banners (Nov 16, 2025 indulgence, summer notice) are announcements, not the schedule block.",
+            "bulletin": "925a92c5",
+            "fits_because": "The Nov 15, 2026 bulletin prints no schedule box, only Mass intentions at the same Mass times this page lists; nothing in it contradicts the page."
+          }
+        }
+      ],
+      "rationale": "R6: sacraments page clock times, before the 12:00pm Mass; agrees with the homepage.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.ststanislausnewark.com/",
+          "said": "Mon - Sun: Half hour before each Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ststanislausnewark.com/sacraments",
+          "said": "Mon - Sat: 7:00am - 7:25am"
+        }
+      ],
+      "rationale": "R28/R5: the two website pages conflict for Monday and Friday. Leaning to the homepage, whose Mass block matches the current bulletins' 7 PM Mon/Fri Masses; the sacraments page's 7 AM looks written for an all-morning weekday schedule.",
+      "question": "Confession before the Monday and Friday 7 PM Masses (6:30-7:00 PM)? The homepage says half hour before each Mass, Mon-Sun; the sacraments page says Mon-Sat 7:00-7:25am, when there is no Mon/Fri Mass.",
+      "options": [
+        {
+          "label": "6:30-7:00 PM",
+          "entry": {
+            "church_slug": "st-stanislaus-newark",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "18:30",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Before the 7:00 PM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "monfri-confession"
+    },
+    {
+      "id": "s25",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.ststanislausnewark.com/",
+          "said": "Mon - Sun: Half hour before each Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ststanislausnewark.com/sacraments",
+          "said": "Mon - Sat: 7:00am - 7:25am"
+        }
+      ],
+      "rationale": "R28/R5: the two website pages conflict for Monday and Friday. Leaning to the homepage, whose Mass block matches the current bulletins' 7 PM Mon/Fri Masses. First Fridays already have 5:30-7:00 PM Confession.",
+      "question": "Confession before the Monday and Friday 7 PM Masses (6:30-7:00 PM)? The homepage says half hour before each Mass, Mon-Sun; the sacraments page says Mon-Sat 7:00-7:25am, when there is no Mon/Fri Mass.",
+      "options": [
+        {
+          "label": "6:30-7:00 PM",
+          "entry": {
+            "church_slug": "st-stanislaus-newark",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "18:30",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": true,
+            "season": null,
+            "note": "Before the 7:00 PM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "monfri-confession"
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.ststanislausnewark.com/sacraments",
+          "said": "Call for appointment."
+        }
+      ],
+      "rationale": "R26: Confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
