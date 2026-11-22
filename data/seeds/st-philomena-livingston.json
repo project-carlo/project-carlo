@@ -1,0 +1,1024 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-philomena-livingston",
+  "status": "ready",
+  "as_of": "2026-11-15T16:25:00Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T17:53:34Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend, weekday, Monday Adoration and Saturday Reconciliation times are identical in the two bulletins read (Nov 1 and Nov 15, 2026 issues), on p2 and in the p8 weekly calendar. No history stored; no questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "02237193b951cb1611fcb15d02dfd85b9a53cdb4ee19551052219d4666f8d022",
+      "fetched_at": "2026-11-15T16:25:00Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "43232b196e880b0da4afcd100f099fa8acb98b487036a763809ebf4ebb397083",
+      "fetched_at": "2026-11-08T15:47:59Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philomena-livingston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02237193",
+          "page": 2,
+          "said": "Saturday: 8:30 AM, & 5:00 PM (Anticipated Sunday Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43232b19",
+          "page": 2,
+          "said": "Saturday: 8:30 AM, & 5:00 PM (Anticipated Sunday Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "02237193",
+          "page": 8,
+          "said": "Saturday ... Masses: 8:30 AM and 5:00 PM CH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43232b19",
+          "page": 8,
+          "said": "Saturday ... Masses: 8:30 AM and 5:00 PM CH"
+        }
+      ],
+      "rationale": "R1: printed in The Eucharist schedule on p2 and the week's calendar on p8 of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philomena-livingston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02237193",
+          "page": 2,
+          "said": "Sunday: 7:30 AM, 9:00 AM, 10:30 AM, and 12:00 NN"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43232b19",
+          "page": 2,
+          "said": "Sunday: 7:30 AM, 9:00 AM, 10:30 AM, and 12:00 NN"
+        },
+        {
+          "source": "agent",
+          "bulletin": "02237193",
+          "page": 8,
+          "said": "Masses: 7:30 AM, 9:00 AM, 10:30 AM and 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43232b19",
+          "page": 8,
+          "said": "Masses: 7:30 AM, 9:00 AM, 10:30 AM and 12:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in The Eucharist schedule on p2 and the week's calendar on p8 of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philomena-livingston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02237193",
+          "page": 2,
+          "said": "Sunday: 7:30 AM, 9:00 AM, 10:30 AM, and 12:00 NN"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43232b19",
+          "page": 2,
+          "said": "Sunday: 7:30 AM, 9:00 AM, 10:30 AM, and 12:00 NN"
+        },
+        {
+          "source": "agent",
+          "bulletin": "02237193",
+          "page": 8,
+          "said": "Masses: 7:30 AM, 9:00 AM, 10:30 AM and 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43232b19",
+          "page": 8,
+          "said": "Masses: 7:30 AM, 9:00 AM, 10:30 AM and 12:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in The Eucharist schedule on p2 and the week's calendar on p8 of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philomena-livingston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02237193",
+          "page": 2,
+          "said": "Sunday: 7:30 AM, 9:00 AM, 10:30 AM, and 12:00 NN"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43232b19",
+          "page": 2,
+          "said": "Sunday: 7:30 AM, 9:00 AM, 10:30 AM, and 12:00 NN"
+        },
+        {
+          "source": "agent",
+          "bulletin": "02237193",
+          "page": 8,
+          "said": "Masses: 7:30 AM, 9:00 AM, 10:30 AM and 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43232b19",
+          "page": 8,
+          "said": "Masses: 7:30 AM, 9:00 AM, 10:30 AM and 12:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in The Eucharist schedule on p2 and the week's calendar on p8 of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philomena-livingston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02237193",
+          "page": 2,
+          "said": "Sunday: 7:30 AM, 9:00 AM, 10:30 AM, and 12:00 NN"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43232b19",
+          "page": 2,
+          "said": "Sunday: 7:30 AM, 9:00 AM, 10:30 AM, and 12:00 NN"
+        },
+        {
+          "source": "agent",
+          "bulletin": "02237193",
+          "page": 8,
+          "said": "Masses: 7:30 AM, 9:00 AM, 10:30 AM and 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43232b19",
+          "page": 8,
+          "said": "Masses: 7:30 AM, 9:00 AM, 10:30 AM and 12:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in The Eucharist schedule on p2 and the week's calendar on p8 of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philomena-livingston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02237193",
+          "page": 2,
+          "said": "8:30 AM (Monday to Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43232b19",
+          "page": 2,
+          "said": "8:30 AM (Monday to Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "02237193",
+          "page": 8,
+          "said": "Masses: 7:00 AM, 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43232b19",
+          "page": 8,
+          "said": "Masses: 7:00 AM, 8:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in The Eucharist schedule on p2 and every day of the p8 calendar in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philomena-livingston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02237193",
+          "page": 2,
+          "said": "8:30 AM (Monday to Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43232b19",
+          "page": 2,
+          "said": "8:30 AM (Monday to Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "02237193",
+          "page": 8,
+          "said": "Masses: 7:00 AM, 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43232b19",
+          "page": 8,
+          "said": "Masses: 7:00 AM, 8:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in The Eucharist schedule on p2 and every day of the p8 calendar in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philomena-livingston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02237193",
+          "page": 2,
+          "said": "8:30 AM (Monday to Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43232b19",
+          "page": 2,
+          "said": "8:30 AM (Monday to Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "02237193",
+          "page": 8,
+          "said": "Masses: 7:00 AM, 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43232b19",
+          "page": 8,
+          "said": "Masses: 7:00 AM, 8:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in The Eucharist schedule on p2 and every day of the p8 calendar in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philomena-livingston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02237193",
+          "page": 2,
+          "said": "8:30 AM (Monday to Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43232b19",
+          "page": 2,
+          "said": "8:30 AM (Monday to Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "02237193",
+          "page": 8,
+          "said": "Masses: 7:00 AM, 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43232b19",
+          "page": 8,
+          "said": "Masses: 7:00 AM, 8:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in The Eucharist schedule on p2 and every day of the p8 calendar in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philomena-livingston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02237193",
+          "page": 2,
+          "said": "8:30 AM (Monday to Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43232b19",
+          "page": 2,
+          "said": "8:30 AM (Monday to Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "02237193",
+          "page": 8,
+          "said": "Masses: 7:00 AM, 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43232b19",
+          "page": 8,
+          "said": "Masses: 7:00 AM, 8:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in The Eucharist schedule on p2 and every day of the p8 calendar in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philomena-livingston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02237193",
+          "page": 2,
+          "said": "8:30 AM (Monday to Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43232b19",
+          "page": 2,
+          "said": "8:30 AM (Monday to Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "02237193",
+          "page": 8,
+          "said": "Masses: 7:00 AM, 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43232b19",
+          "page": 8,
+          "said": "Masses: 7:00 AM, 8:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in The Eucharist schedule on p2 and every day of the p8 calendar in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philomena-livingston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02237193",
+          "page": 2,
+          "said": "Weekdays: 7:00 AM and 12:10 PM (Monday only)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43232b19",
+          "page": 2,
+          "said": "Weekdays: 7:00 AM and 12:10 PM (Monday only)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "02237193",
+          "page": 8,
+          "said": "Masses: 7:00 AM, 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43232b19",
+          "page": 8,
+          "said": "Masses: 7:00 AM, 8:30 AM"
+        }
+      ],
+      "rationale": "R1: 'Weekdays: 7:00 AM'; the p8 calendar of both bulletins lists 7:00 AM Monday to Friday and not Saturday (Sat: 8:30 AM and 5:00 PM), so Monday to Friday. '(Monday only)' qualifies the 12:10 PM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philomena-livingston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02237193",
+          "page": 2,
+          "said": "Weekdays: 7:00 AM and 12:10 PM (Monday only)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43232b19",
+          "page": 2,
+          "said": "Weekdays: 7:00 AM and 12:10 PM (Monday only)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "02237193",
+          "page": 8,
+          "said": "Masses: 7:00 AM, 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43232b19",
+          "page": 8,
+          "said": "Masses: 7:00 AM, 8:30 AM"
+        }
+      ],
+      "rationale": "R1: 'Weekdays: 7:00 AM'; the p8 calendar of both bulletins lists 7:00 AM Monday to Friday and not Saturday (Sat: 8:30 AM and 5:00 PM), so Monday to Friday. '(Monday only)' qualifies the 12:10 PM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philomena-livingston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02237193",
+          "page": 2,
+          "said": "Weekdays: 7:00 AM and 12:10 PM (Monday only)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43232b19",
+          "page": 2,
+          "said": "Weekdays: 7:00 AM and 12:10 PM (Monday only)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "02237193",
+          "page": 8,
+          "said": "Masses: 7:00 AM, 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43232b19",
+          "page": 8,
+          "said": "Masses: 7:00 AM, 8:30 AM"
+        }
+      ],
+      "rationale": "R1: 'Weekdays: 7:00 AM'; the p8 calendar of both bulletins lists 7:00 AM Monday to Friday and not Saturday (Sat: 8:30 AM and 5:00 PM), so Monday to Friday. '(Monday only)' qualifies the 12:10 PM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philomena-livingston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02237193",
+          "page": 2,
+          "said": "Weekdays: 7:00 AM and 12:10 PM (Monday only)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43232b19",
+          "page": 2,
+          "said": "Weekdays: 7:00 AM and 12:10 PM (Monday only)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "02237193",
+          "page": 8,
+          "said": "Masses: 7:00 AM, 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43232b19",
+          "page": 8,
+          "said": "Masses: 7:00 AM, 8:30 AM"
+        }
+      ],
+      "rationale": "R1: 'Weekdays: 7:00 AM'; the p8 calendar of both bulletins lists 7:00 AM Monday to Friday and not Saturday (Sat: 8:30 AM and 5:00 PM), so Monday to Friday. '(Monday only)' qualifies the 12:10 PM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philomena-livingston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02237193",
+          "page": 2,
+          "said": "Weekdays: 7:00 AM and 12:10 PM (Monday only)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43232b19",
+          "page": 2,
+          "said": "Weekdays: 7:00 AM and 12:10 PM (Monday only)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "02237193",
+          "page": 8,
+          "said": "Masses: 7:00 AM, 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43232b19",
+          "page": 8,
+          "said": "Masses: 7:00 AM, 8:30 AM"
+        }
+      ],
+      "rationale": "R1: 'Weekdays: 7:00 AM'; the p8 calendar of both bulletins lists 7:00 AM Monday to Friday and not Saturday (Sat: 8:30 AM and 5:00 PM), so Monday to Friday. '(Monday only)' qualifies the 12:10 PM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philomena-livingston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02237193",
+          "page": 2,
+          "said": "Weekdays: 7:00 AM and 12:10 PM (Monday only)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43232b19",
+          "page": 2,
+          "said": "Weekdays: 7:00 AM and 12:10 PM (Monday only)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "02237193",
+          "page": 8,
+          "said": "Monday ... Masses: 7:00 AM, 8:30 AM and 12;10 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43232b19",
+          "page": 8,
+          "said": "Monday ... Masses: 7:00 AM, 8:30 AM and 12;10 PM"
+        }
+      ],
+      "rationale": "R1: printed on p2 and in the Monday entry of the p8 calendar in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philomena-livingston",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:40",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02237193",
+          "page": 2,
+          "said": "Eucharistic Adoration: Every Monday 12:40 to 6:30 PM Novena to St. Jude and Benediction 6:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "43232b19",
+          "page": 2,
+          "said": "Eucharistic Adoration: Every Monday 12:40 to 6:30 PM Novena to St. Jude and Benediction 6:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "02237193",
+          "page": 3,
+          "said": "Eucharistic Adoration takes place each Monday immediately following the 12:10 pm Mass and concludes at 6:30 pm with the Novena to St. Jude and Benediction."
+        },
+        {
+          "source": "agent",
+          "bulletin": "43232b19",
+          "page": 3,
+          "said": "Eucharistic Adoration takes place each Monday immediately following the 12:10 pm Mass and concludes at 6:30 pm with the Novena to St. Jude and Benediction."
+        }
+      ],
+      "rationale": "R1, POLICY (Benediction implies Adoration; one event with note Benediction): clock times 12:40-6:30 PM printed in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philomena-livingston",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02237193",
+          "page": 2,
+          "said": "Reconciliation: Saturday – 11:30 AM, 4:30 PM or anytime upon request."
+        },
+        {
+          "source": "agent",
+          "bulletin": "43232b19",
+          "page": 2,
+          "said": "Reconciliation: Saturday – 11:30 AM, 4:30 PM or anytime upon request."
+        }
+      ],
+      "rationale": "R1, POLICY Times: printed in both bulletins with no end time, so end_time null. 'Anytime upon request' has no time (R26).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philomena-livingston",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02237193",
+          "page": 2,
+          "said": "Reconciliation: Saturday – 11:30 AM, 4:30 PM or anytime upon request."
+        },
+        {
+          "source": "agent",
+          "bulletin": "43232b19",
+          "page": 2,
+          "said": "Reconciliation: Saturday – 11:30 AM, 4:30 PM or anytime upon request."
+        }
+      ],
+      "rationale": "R1, POLICY Times: printed in both bulletins with no end time, so end_time null. 'Anytime upon request' has no time (R26).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "02237193",
+          "page": 3,
+          "said": "Memorial Mass, November 21"
+        }
+      ],
+      "rationale": "POLICY rule 7 / R24: the parish Memorial Mass for the deceased is listed among the Mass intentions at a regular Mass time, not a separate service; the weekly slot covers it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
