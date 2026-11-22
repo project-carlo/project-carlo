@@ -1,0 +1,540 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-rose-of-lima-short-hills",
+  "status": "ready",
+  "as_of": "2026-11-15T16:54:47Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T18:06:35Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, St. Rose of Lima, Short Hills. Both bulletins read (Nov 8 and Nov 15, 2026) print the same Mass Times box: Saturday 5:30 PM anticipated, Sunday 7:30, 9:30, 11:30 AM, Mon-Sat 9:00 AM, and Saturday confessions 9:30-10:00 AM and 4:30-5:00 PM. No Adoration is printed; no open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "5cdb472d5b21f99e72d12636eae3ffc5b4ecee1d683f82c10f1278e312d90495",
+      "fetched_at": "2026-11-15T16:54:47Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "b222a371425ac8969a610d5119ecaa4c580578a330760cec31def1606bd5cc10",
+      "fetched_at": "2026-11-08T16:03:38Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-short-hills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5cdb472d",
+          "page": 1,
+          "said": "Mass Times Sunday 5:30 PM Anticipated"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b222a371",
+          "page": 1,
+          "said": "Mass Times Sunday 5:30 PM Anticipated"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cdb472d",
+          "page": 3,
+          "said": "Saturday, November 21 ... 5:30 pm Policarpio & Werner Families"
+        }
+      ],
+      "rationale": "R1, R35: the anticipated Sunday Mass is printed in the Mass Times box of both bulletins read; the intentions place it on Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-short-hills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5cdb472d",
+          "page": 1,
+          "said": "Mass Times Sunday ... 7:30 AM 9:30 AM 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b222a371",
+          "page": 1,
+          "said": "Mass Times Sunday ... 7:30 AM 9:30 AM 11:30 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box and the weekly calendar of both bulletins read, and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-short-hills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5cdb472d",
+          "page": 1,
+          "said": "Mass Times Sunday ... 7:30 AM 9:30 AM 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b222a371",
+          "page": 1,
+          "said": "Mass Times Sunday ... 7:30 AM 9:30 AM 11:30 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box and the weekly calendar of both bulletins read, and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-short-hills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5cdb472d",
+          "page": 1,
+          "said": "Mass Times Sunday ... 7:30 AM 9:30 AM 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b222a371",
+          "page": 1,
+          "said": "Mass Times Sunday ... 7:30 AM 9:30 AM 11:30 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box and the weekly calendar of both bulletins read, and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-short-hills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5cdb472d",
+          "page": 1,
+          "said": "Weekday Mon - Sat 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b222a371",
+          "page": 1,
+          "said": "Weekday Mon - Sat 9:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box of both bulletins read; the intentions list a 9:00 am Mass each weekday. The Thanksgiving Day Mass 9 AM (Thu Nov 26, p1) falls at the usual Thursday time, so it is not recorded separately (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-short-hills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5cdb472d",
+          "page": 1,
+          "said": "Weekday Mon - Sat 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b222a371",
+          "page": 1,
+          "said": "Weekday Mon - Sat 9:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box of both bulletins read; the intentions list a 9:00 am Mass each weekday. The Thanksgiving Day Mass 9 AM (Thu Nov 26, p1) falls at the usual Thursday time, so it is not recorded separately (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-short-hills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5cdb472d",
+          "page": 1,
+          "said": "Weekday Mon - Sat 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b222a371",
+          "page": 1,
+          "said": "Weekday Mon - Sat 9:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box of both bulletins read; the intentions list a 9:00 am Mass each weekday. The Thanksgiving Day Mass 9 AM (Thu Nov 26, p1) falls at the usual Thursday time, so it is not recorded separately (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-short-hills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5cdb472d",
+          "page": 1,
+          "said": "Weekday Mon - Sat 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b222a371",
+          "page": 1,
+          "said": "Weekday Mon - Sat 9:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box of both bulletins read; the intentions list a 9:00 am Mass each weekday. The Thanksgiving Day Mass 9 AM (Thu Nov 26, p1) falls at the usual Thursday time, so it is not recorded separately (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-short-hills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5cdb472d",
+          "page": 1,
+          "said": "Weekday Mon - Sat 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b222a371",
+          "page": 1,
+          "said": "Weekday Mon - Sat 9:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box of both bulletins read; the intentions list a 9:00 am Mass each weekday. The Thanksgiving Day Mass 9 AM (Thu Nov 26, p1) falls at the usual Thursday time, so it is not recorded separately (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-short-hills",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5cdb472d",
+          "page": 1,
+          "said": "Weekday Mon - Sat 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b222a371",
+          "page": 1,
+          "said": "Weekday Mon - Sat 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cdb472d",
+          "page": 3,
+          "said": "Saturday, November 21 9:00 am Mary V. Tobie"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-short-hills",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5cdb472d",
+          "page": 1,
+          "said": "Weekly Penance Saturday 9:30 AM - 10:00 AM 4:30 PM - 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b222a371",
+          "page": 1,
+          "said": "Weekly Penance Saturday 9:30 AM - 10:00 AM 4:30 PM - 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cdb472d",
+          "page": 2,
+          "said": "Reconciliation, Individual confessions Saturdays following 9:00am Mass and 4:30pm - 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b222a371",
+          "page": 2,
+          "said": "Reconciliation, Individual confessions Saturdays following 9:00am Mass and 4:30pm - 5:00pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Weekly Penance box of both bulletins read; the clock time 9:30-10:00 wins over 'following 9:00am Mass' (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-short-hills",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5cdb472d",
+          "page": 1,
+          "said": "Weekly Penance Saturday 9:30 AM - 10:00 AM 4:30 PM - 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b222a371",
+          "page": 1,
+          "said": "Weekly Penance Saturday 9:30 AM - 10:00 AM 4:30 PM - 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cdb472d",
+          "page": 2,
+          "said": "Reconciliation, Individual confessions Saturdays following 9:00am Mass and 4:30pm - 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b222a371",
+          "page": 2,
+          "said": "Reconciliation, Individual confessions Saturdays following 9:00am Mass and 4:30pm - 5:00pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Weekly Penance box of both bulletins read; the clock time 9:30-10:00 wins over 'following 9:00am Mass' (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5cdb472d",
+          "page": 2,
+          "said": "Sacrament of the Sick or Eucharist for Homebound Please call the Parish Office for assistance"
+        }
+      ],
+      "rationale": "R24, R26: anointing / homebound communion by arrangement is not a schedulable Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
