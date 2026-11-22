@@ -1,0 +1,791 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-lawrence-weehawken",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:54:12Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T16:40:02Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both bulletins read (Nov 8 and Nov 15, all pages are images) print the same schedule box and matching intentions: Sat 6 PM, Sun 8, 10:30 and 12, Tue-Thu 9:30 AM. Open: Confession 'may be requested after Mass' (C5), asked as one grouped question leaning include.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "fac2b34f14e430e7bb567f0272906902b1feeb06a0d0f2dd0daa6c520cd1441c",
+      "fetched_at": "2026-11-15T16:54:12Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "f68c3b79a6f4c58cfb862a83ca9ad6a7aea4af373d6959914f5fd106fbff54c2",
+      "fetched_at": "2026-11-08T16:03:07Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-weehawken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fac2b34f",
+          "page": 1,
+          "said": "WEEKEND MASS SCHEDULE SATURDAY 6 pm (no music)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68c3b79",
+          "page": 1,
+          "said": "WEEKEND MASS SCHEDULE SATURDAY 6 pm (no music)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fac2b34f",
+          "page": 3,
+          "said": "Saturday, November 14 6:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68c3b79",
+          "page": 3,
+          "said": "Saturday, November 14 6:00 pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the weekend schedule box of both bulletins read (Nov 8, Nov 15) and in each week's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-weehawken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fac2b34f",
+          "page": 1,
+          "said": "SUNDAY 8 am (no music) 10:30 am 12 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68c3b79",
+          "page": 1,
+          "said": "SUNDAY 8 am (no music) 10:30 am 12 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fac2b34f",
+          "page": 3,
+          "said": "Sunday, November 15 8:00 am / 10:30 am / 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68c3b79",
+          "page": 3,
+          "said": "Sunday, November 15 8:00 am / 10:30 am / 12:00 pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the weekend schedule box of both bulletins read and in each week's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-weehawken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fac2b34f",
+          "page": 1,
+          "said": "SUNDAY 8 am (no music) 10:30 am 12 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68c3b79",
+          "page": 1,
+          "said": "SUNDAY 8 am (no music) 10:30 am 12 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fac2b34f",
+          "page": 3,
+          "said": "Sunday, November 15 8:00 am / 10:30 am / 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68c3b79",
+          "page": 3,
+          "said": "Sunday, November 15 8:00 am / 10:30 am / 12:00 pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the weekend schedule box of both bulletins read and in each week's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-weehawken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fac2b34f",
+          "page": 1,
+          "said": "SUNDAY 8 am (no music) 10:30 am 12 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68c3b79",
+          "page": 1,
+          "said": "SUNDAY 8 am (no music) 10:30 am 12 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fac2b34f",
+          "page": 3,
+          "said": "Sunday, November 15 8:00 am / 10:30 am / 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68c3b79",
+          "page": 3,
+          "said": "Sunday, November 15 8:00 am / 10:30 am / 12:00 pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the weekend schedule box of both bulletins read and in each week's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-weehawken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fac2b34f",
+          "page": 1,
+          "said": "DAILY MASS SCHEDULE Tuesday > Thursday Mass 9:30 am ... No Daily Mass on Mondays, Fridays or Saturdays unless a funeral is requested."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68c3b79",
+          "page": 1,
+          "said": "DAILY MASS SCHEDULE Tuesday > Thursday Mass 9:30 am ... No Daily Mass on Mondays, Fridays or Saturdays unless a funeral is requested."
+        },
+        {
+          "source": "agent",
+          "bulletin": "fac2b34f",
+          "page": 3,
+          "said": "Tuesday, November 17 9:30 am; Wednesday, November 18 9:30 am; Thursday, November 19 9:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68c3b79",
+          "page": 3,
+          "said": "Tuesday, November 10 9:30 am; Wednesday, November 11 9:30 am; Thursday, November 12 9:30 am"
+        }
+      ],
+      "rationale": "R1, R35: the daily schedule box (Tuesday through Thursday, no Mass Mon/Fri/Sat) in both bulletins; the intentions list Tue, Wed and Thu 9:30 AM Masses in both weeks, confirming Wednesday is included.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-weehawken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fac2b34f",
+          "page": 1,
+          "said": "DAILY MASS SCHEDULE Tuesday > Thursday Mass 9:30 am ... No Daily Mass on Mondays, Fridays or Saturdays unless a funeral is requested."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68c3b79",
+          "page": 1,
+          "said": "DAILY MASS SCHEDULE Tuesday > Thursday Mass 9:30 am ... No Daily Mass on Mondays, Fridays or Saturdays unless a funeral is requested."
+        },
+        {
+          "source": "agent",
+          "bulletin": "fac2b34f",
+          "page": 3,
+          "said": "Tuesday, November 17 9:30 am; Wednesday, November 18 9:30 am; Thursday, November 19 9:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68c3b79",
+          "page": 3,
+          "said": "Tuesday, November 10 9:30 am; Wednesday, November 11 9:30 am; Thursday, November 12 9:30 am"
+        }
+      ],
+      "rationale": "R1, R35: the daily schedule box (Tuesday through Thursday, no Mass Mon/Fri/Sat) in both bulletins; the intentions list Tue, Wed and Thu 9:30 AM Masses in both weeks, confirming Wednesday is included.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-weehawken",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fac2b34f",
+          "page": 1,
+          "said": "DAILY MASS SCHEDULE Tuesday > Thursday Mass 9:30 am ... No Daily Mass on Mondays, Fridays or Saturdays unless a funeral is requested."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68c3b79",
+          "page": 1,
+          "said": "DAILY MASS SCHEDULE Tuesday > Thursday Mass 9:30 am ... No Daily Mass on Mondays, Fridays or Saturdays unless a funeral is requested."
+        },
+        {
+          "source": "agent",
+          "bulletin": "fac2b34f",
+          "page": 3,
+          "said": "Tuesday, November 17 9:30 am; Wednesday, November 18 9:30 am; Thursday, November 19 9:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68c3b79",
+          "page": 3,
+          "said": "Tuesday, November 10 9:30 am; Wednesday, November 11 9:30 am; Thursday, November 12 9:30 am"
+        }
+      ],
+      "rationale": "R1, R35: the daily schedule box (Tuesday through Thursday, no Mass Mon/Fri/Sat) in both bulletins; the intentions list Tue, Wed and Thu 9:30 AM Masses in both weeks, confirming Wednesday is included.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fac2b34f",
+          "page": 1,
+          "said": "No Daily Mass on Mondays, Fridays or Saturdays unless a funeral is requested."
+        }
+      ],
+      "rationale": "R24, R26: funeral Masses are for one person and have no set time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fac2b34f",
+          "page": 2,
+          "said": "Monthly Rosary Devotion First Saturday of each month at 10 am in the church."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68c3b79",
+          "page": 2,
+          "said": "Monthly Rosary Devotion First Saturday of each month at 10 am in the church."
+        }
+      ],
+      "rationale": "R24: a Rosary devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fac2b34f",
+          "page": 2,
+          "said": "Confession Confessions are available by appointment with Fr. Rolando or may be requested after Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68c3b79",
+          "page": 2,
+          "said": "Confession Confessions are available by appointment with Fr. Rolando or may be requested after Mass."
+        }
+      ],
+      "rationale": "Leaning per C5: confession after Mass on request gets POLICY's time (R10: 1 hour after a weekend Mass starts, 30 minutes after a weekday Mass). Unlike C5's evidence, no particular Mass is named, so this would cover every Mass; leave out if 'may be requested' is read as on-request like 'by appointment' (R26).",
+      "question": "Add Confession after each Mass, which the bulletin says 'may be requested after Mass'?",
+      "options": [
+        {
+          "label": "After each Mass on request (POLICY timing)",
+          "entry": {
+            "church_slug": "st-lawrence-weehawken",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "On request after the 6:00 PM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out (on request only)",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "confession-after-mass"
+    },
+    {
+      "id": "s14",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fac2b34f",
+          "page": 2,
+          "said": "Confession Confessions are available by appointment with Fr. Rolando or may be requested after Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68c3b79",
+          "page": 2,
+          "said": "Confession Confessions are available by appointment with Fr. Rolando or may be requested after Mass."
+        }
+      ],
+      "rationale": "Leaning per C5; see the group's first slot. R10: 1 hour after the Sunday 8:00 AM Mass.",
+      "question": "Add Confession after each Mass, which the bulletin says 'may be requested after Mass'?",
+      "options": [
+        {
+          "label": "After each Mass on request (POLICY timing)",
+          "entry": {
+            "church_slug": "st-lawrence-weehawken",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "On request after the 8:00 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out (on request only)",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "confession-after-mass"
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fac2b34f",
+          "page": 2,
+          "said": "Confession Confessions are available by appointment with Fr. Rolando or may be requested after Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68c3b79",
+          "page": 2,
+          "said": "Confession Confessions are available by appointment with Fr. Rolando or may be requested after Mass."
+        }
+      ],
+      "rationale": "Leaning per C5; see the group's first slot. R10: 1 hour after the Sunday 10:30 AM Mass.",
+      "question": "Add Confession after each Mass, which the bulletin says 'may be requested after Mass'?",
+      "options": [
+        {
+          "label": "After each Mass on request (POLICY timing)",
+          "entry": {
+            "church_slug": "st-lawrence-weehawken",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "11:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "On request after the 10:30 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out (on request only)",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "confession-after-mass"
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fac2b34f",
+          "page": 2,
+          "said": "Confession Confessions are available by appointment with Fr. Rolando or may be requested after Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68c3b79",
+          "page": 2,
+          "said": "Confession Confessions are available by appointment with Fr. Rolando or may be requested after Mass."
+        }
+      ],
+      "rationale": "Leaning per C5; see the group's first slot. R10: 1 hour after the Sunday 12:00 PM Mass.",
+      "question": "Add Confession after each Mass, which the bulletin says 'may be requested after Mass'?",
+      "options": [
+        {
+          "label": "After each Mass on request (POLICY timing)",
+          "entry": {
+            "church_slug": "st-lawrence-weehawken",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "13:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "On request after the 12:00 PM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out (on request only)",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "confession-after-mass"
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fac2b34f",
+          "page": 2,
+          "said": "Confession Confessions are available by appointment with Fr. Rolando or may be requested after Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68c3b79",
+          "page": 2,
+          "said": "Confession Confessions are available by appointment with Fr. Rolando or may be requested after Mass."
+        }
+      ],
+      "rationale": "Leaning per C5; see the group's first slot. R10: 30 minutes after the weekday 9:30 AM Mass.",
+      "question": "Add Confession after each Mass, which the bulletin says 'may be requested after Mass'?",
+      "options": [
+        {
+          "label": "After each Mass on request (POLICY timing)",
+          "entry": {
+            "church_slug": "st-lawrence-weehawken",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "10:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "On request after the 9:30 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out (on request only)",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "confession-after-mass"
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fac2b34f",
+          "page": 2,
+          "said": "Confession Confessions are available by appointment with Fr. Rolando or may be requested after Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68c3b79",
+          "page": 2,
+          "said": "Confession Confessions are available by appointment with Fr. Rolando or may be requested after Mass."
+        }
+      ],
+      "rationale": "Leaning per C5; see the group's first slot. R10: 30 minutes after the weekday 9:30 AM Mass.",
+      "question": "Add Confession after each Mass, which the bulletin says 'may be requested after Mass'?",
+      "options": [
+        {
+          "label": "After each Mass on request (POLICY timing)",
+          "entry": {
+            "church_slug": "st-lawrence-weehawken",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "10:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "On request after the 9:30 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out (on request only)",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "confession-after-mass"
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fac2b34f",
+          "page": 2,
+          "said": "Confession Confessions are available by appointment with Fr. Rolando or may be requested after Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68c3b79",
+          "page": 2,
+          "said": "Confession Confessions are available by appointment with Fr. Rolando or may be requested after Mass."
+        }
+      ],
+      "rationale": "Leaning per C5; see the group's first slot. R10: 30 minutes after the weekday 9:30 AM Mass.",
+      "question": "Add Confession after each Mass, which the bulletin says 'may be requested after Mass'?",
+      "options": [
+        {
+          "label": "After each Mass on request (POLICY timing)",
+          "entry": {
+            "church_slug": "st-lawrence-weehawken",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "10:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "On request after the 9:30 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out (on request only)",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "confession-after-mass"
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fac2b34f",
+          "page": 1,
+          "said": "(Rosary is said at 9 am either together or in private)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f68c3b79",
+          "page": 1,
+          "said": "(Rosary is said at 9 am either together or in private)"
+        }
+      ],
+      "rationale": "R24: the weekday 9 AM Rosary before Mass is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
