@@ -1,0 +1,885 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-michael-union",
+  "status": "ready",
+  "as_of": "2026-11-15T16:54:31Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T17:24:28Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, St. Michael the Archangel, Union. Both bulletins (image-only) print the same schedule box: weekday Masses 8:30 AM and noon, Saturday 8:30 AM, Confession 1-2 PM and 5:30 PM vigil, Sunday 7:30, 9, 10:30 and noon. Dated: Adoration with St. Carlo Acutis relic veneration Nov 15 6 PM and the Blue & White Mass Nov 21 10 AM. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "a9a934695beff5693a7bad495927afd3b2823477cb97d0b19982576839cdf410",
+      "fetched_at": "2026-11-15T16:54:31Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "a56a04d156712a0557c9866c7003c615a18c5e503c63ad9196720745c4e82922",
+      "fetched_at": "2026-11-08T16:03:19Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-union",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9a93469",
+          "page": 1,
+          "said": "Daily Mass: Monday—Friday 8:30 am, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a56a04d1",
+          "page": 1,
+          "said": "Daily Mass: Monday—Friday 8:30 am, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9a93469",
+          "page": 4,
+          "said": "Mass intentions Mon Nov 16 - Fri Nov 20 at 8:30 am and 12:00n"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the newest issue's intentions list both weekday Masses every day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-union",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9a93469",
+          "page": 1,
+          "said": "Daily Mass: Monday—Friday 8:30 am, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a56a04d1",
+          "page": 1,
+          "said": "Daily Mass: Monday—Friday 8:30 am, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9a93469",
+          "page": 4,
+          "said": "Mass intentions Mon Nov 16 - Fri Nov 20 at 8:30 am and 12:00n"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the newest issue's intentions list both weekday Masses every day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-union",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9a93469",
+          "page": 1,
+          "said": "Daily Mass: Monday—Friday 8:30 am, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a56a04d1",
+          "page": 1,
+          "said": "Daily Mass: Monday—Friday 8:30 am, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9a93469",
+          "page": 4,
+          "said": "Mass intentions Mon Nov 16 - Fri Nov 20 at 8:30 am and 12:00n"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the newest issue's intentions list both weekday Masses every day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-union",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9a93469",
+          "page": 1,
+          "said": "Daily Mass: Monday—Friday 8:30 am, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a56a04d1",
+          "page": 1,
+          "said": "Daily Mass: Monday—Friday 8:30 am, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9a93469",
+          "page": 4,
+          "said": "Mass intentions Mon Nov 16 - Fri Nov 20 at 8:30 am and 12:00n"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the newest issue's intentions list both weekday Masses every day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-union",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9a93469",
+          "page": 1,
+          "said": "Daily Mass: Monday—Friday 8:30 am, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a56a04d1",
+          "page": 1,
+          "said": "Daily Mass: Monday—Friday 8:30 am, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9a93469",
+          "page": 4,
+          "said": "Mass intentions Mon Nov 16 - Fri Nov 20 at 8:30 am and 12:00n"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the newest issue's intentions list both weekday Masses every day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-union",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9a93469",
+          "page": 1,
+          "said": "Daily Mass: Monday—Friday 8:30 am, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a56a04d1",
+          "page": 1,
+          "said": "Daily Mass: Monday—Friday 8:30 am, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9a93469",
+          "page": 4,
+          "said": "Mass intentions Mon Nov 16 - Fri Nov 20 at 8:30 am and 12:00n"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the newest issue's intentions list both weekday Masses every day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-union",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9a93469",
+          "page": 1,
+          "said": "Daily Mass: Monday—Friday 8:30 am, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a56a04d1",
+          "page": 1,
+          "said": "Daily Mass: Monday—Friday 8:30 am, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9a93469",
+          "page": 4,
+          "said": "Mass intentions Mon Nov 16 - Fri Nov 20 at 8:30 am and 12:00n"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the newest issue's intentions list both weekday Masses every day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-union",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9a93469",
+          "page": 1,
+          "said": "Daily Mass: Monday—Friday 8:30 am, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a56a04d1",
+          "page": 1,
+          "said": "Daily Mass: Monday—Friday 8:30 am, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9a93469",
+          "page": 4,
+          "said": "Mass intentions Mon Nov 16 - Fri Nov 20 at 8:30 am and 12:00n"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the newest issue's intentions list both weekday Masses every day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-union",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9a93469",
+          "page": 1,
+          "said": "Daily Mass: Monday—Friday 8:30 am, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a56a04d1",
+          "page": 1,
+          "said": "Daily Mass: Monday—Friday 8:30 am, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9a93469",
+          "page": 4,
+          "said": "Mass intentions Mon Nov 16 - Fri Nov 20 at 8:30 am and 12:00n"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the newest issue's intentions list both weekday Masses every day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-union",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9a93469",
+          "page": 1,
+          "said": "Daily Mass: Monday—Friday 8:30 am, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a56a04d1",
+          "page": 1,
+          "said": "Daily Mass: Monday—Friday 8:30 am, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9a93469",
+          "page": 4,
+          "said": "Mass intentions Mon Nov 16 - Fri Nov 20 at 8:30 am and 12:00n"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the newest issue's intentions list both weekday Masses every day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-union",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9a93469",
+          "page": 1,
+          "said": "Saturday Mass: 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a56a04d1",
+          "page": 1,
+          "said": "Saturday Mass: 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9a93469",
+          "page": 4,
+          "said": "SATURDAY November 21 8:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-union",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "14:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9a93469",
+          "page": 1,
+          "said": "Saturday Confession: 1:00 pm—2:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a56a04d1",
+          "page": 1,
+          "said": "Saturday Confession: 1:00 pm—2:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-union",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9a93469",
+          "page": 1,
+          "said": "Saturday Vigil Mass—5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a56a04d1",
+          "page": 1,
+          "said": "Saturday Vigil Mass—5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9a93469",
+          "page": 4,
+          "said": "SATURDAY November 14 5:30 am [intentions; a misprint for the vigil]"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read. The intentions print the Saturday vigil as '5:30 am', a misprint the schedule box corrects; the Nov 21 intentions list only 8:30 am, which R39 says proves no cancellation.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-union",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9a93469",
+          "page": 1,
+          "said": "Sunday 7:30 am, 9:00 am, 10:30 am, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a56a04d1",
+          "page": 1,
+          "said": "Sunday 7:30 am, 9:00 am, 10:30 am, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9a93469",
+          "page": 4,
+          "said": "SUNDAY November 15 7:30 am, 9:00 am, 10:30 am, 12:00n"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in the newest intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-union",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9a93469",
+          "page": 1,
+          "said": "Sunday 7:30 am, 9:00 am, 10:30 am, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a56a04d1",
+          "page": 1,
+          "said": "Sunday 7:30 am, 9:00 am, 10:30 am, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9a93469",
+          "page": 4,
+          "said": "SUNDAY November 15 7:30 am, 9:00 am, 10:30 am, 12:00n"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in the newest intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-union",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9a93469",
+          "page": 1,
+          "said": "Sunday 7:30 am, 9:00 am, 10:30 am, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a56a04d1",
+          "page": 1,
+          "said": "Sunday 7:30 am, 9:00 am, 10:30 am, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9a93469",
+          "page": 4,
+          "said": "SUNDAY November 15 7:30 am, 9:00 am, 10:30 am, 12:00n"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in the newest intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-union",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9a93469",
+          "page": 1,
+          "said": "Sunday 7:30 am, 9:00 am, 10:30 am, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a56a04d1",
+          "page": 1,
+          "said": "Sunday 7:30 am, 9:00 am, 10:30 am, 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9a93469",
+          "page": 4,
+          "said": "SUNDAY November 15 7:30 am, 9:00 am, 10:30 am, 12:00n"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in the newest intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-union",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-15",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "With St. Carlo Acutis relic veneration"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9a93469",
+          "page": 6,
+          "said": "EUCHARISTIC ADORATION and ST. CARLO ACUTIS RELIC VENERATION ... ST. MICHAEL'S CHURCH 1212 Kelly St. Union, NJ SUNDAY, NOVEMBER 15 | 6PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9a93469",
+          "page": 5,
+          "said": "A Special Invitation to Parents and Children on Nov. 15,2026 (Sunday) at 6pm ... Eucharistic Adoration"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a56a04d1",
+          "page": 6,
+          "said": "Eucharistic Adoration and St. Carlo Acutis Relic Veneration, Sunday, November 15 | 6PM"
+        }
+      ],
+      "rationale": "R1, R16: a dated Adoration open to all ('All parishioners ... are invited'), at the parish church; its date is as_of's date and 6 PM is after the fetch time. No end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-union",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Blue & White Mass for first responders"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9a93469",
+          "page": 6,
+          "said": "BLUE & WHITE MASS Saturday 21 November @ 10 am ... Everyone is invited and welcome"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a56a04d1",
+          "page": 6,
+          "said": "Blue & White Mass Saturday 21 November @ 10 am"
+        }
+      ],
+      "rationale": "R1, R16: a dated special Mass outside the weekly schedule, open to everyone, after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-union",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-06",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Feast of Blessed Cyprian Michael Iwene Tansi"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9a93469",
+          "page": 6,
+          "said": "Sunday, December 6, 2026, 12:00 noon Mass ... Annual Feast of Blessed Cyprian Michael Iwene Tansi"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7: the feast is celebrated at the regular Sunday 12:00 Noon Mass, which the weekly slot covers; not recorded separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
