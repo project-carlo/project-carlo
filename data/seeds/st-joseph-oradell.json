@@ -1,0 +1,581 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-oradell",
+  "status": "ready",
+  "as_of": "2026-11-15T16:25:20Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T16:31:37Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend, daily (Mon-Sat 8:30) Masses, Saturday Confession and first-Wednesday Adoration agree in both bulletins (Nov 8 and Nov 15, 2026) and the parish website. No open questions; no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "0ee717dc2fa0cb4a9e356c234807059309041c541a2086a59087c5d20d8a097e",
+      "fetched_at": "2026-11-15T16:25:20Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "4de4a0501f5266a1f1af976328b049e8f170ac1797cf9593d65ab421cdfc28f2",
+      "fetched_at": "2026-11-08T15:49:08Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-oradell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0ee717dc",
+          "page": 1,
+          "said": "MASS SCHEDULE Saturday 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4de4a050",
+          "page": 1,
+          "said": "MASS SCHEDULE Saturday 5:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass schedule box of both bulletins read; the intentions on page 4 list Saturday 5:00 pm too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-oradell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0ee717dc",
+          "page": 1,
+          "said": "Sunday 7:30am, 9am, 10:30 am, 12 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4de4a050",
+          "page": 1,
+          "said": "Sunday 7:30am, 9am, 10:30 am, 12 noon"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass schedule box of both bulletins read; the website gives the same weekend Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-oradell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0ee717dc",
+          "page": 1,
+          "said": "Sunday 7:30am, 9am, 10:30 am, 12 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4de4a050",
+          "page": 1,
+          "said": "Sunday 7:30am, 9am, 10:30 am, 12 noon"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass schedule box of both bulletins read; the website gives the same weekend Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-oradell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0ee717dc",
+          "page": 1,
+          "said": "Sunday 7:30am, 9am, 10:30 am, 12 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4de4a050",
+          "page": 1,
+          "said": "Sunday 7:30am, 9am, 10:30 am, 12 noon"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass schedule box of both bulletins read; the website gives the same weekend Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-oradell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0ee717dc",
+          "page": 1,
+          "said": "Sunday 7:30am, 9am, 10:30 am, 12 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4de4a050",
+          "page": 1,
+          "said": "Sunday 7:30am, 9am, 10:30 am, 12 noon"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass schedule box of both bulletins read; the website gives the same weekend Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-oradell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0ee717dc",
+          "page": 1,
+          "said": "DAILY Monday - Saturday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4de4a050",
+          "page": 1,
+          "said": "DAILY Monday - Saturday 8:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass schedule box of both bulletins read; the page 4 intentions list 8:30 am Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-oradell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0ee717dc",
+          "page": 1,
+          "said": "DAILY Monday - Saturday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4de4a050",
+          "page": 1,
+          "said": "DAILY Monday - Saturday 8:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass schedule box of both bulletins read; the page 4 intentions list 8:30 am Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-oradell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0ee717dc",
+          "page": 1,
+          "said": "DAILY Monday - Saturday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4de4a050",
+          "page": 1,
+          "said": "DAILY Monday - Saturday 8:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass schedule box of both bulletins read; the page 4 intentions list 8:30 am Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-oradell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0ee717dc",
+          "page": 1,
+          "said": "DAILY Monday - Saturday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4de4a050",
+          "page": 1,
+          "said": "DAILY Monday - Saturday 8:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass schedule box of both bulletins read; the page 4 intentions list 8:30 am Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-oradell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0ee717dc",
+          "page": 1,
+          "said": "DAILY Monday - Saturday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4de4a050",
+          "page": 1,
+          "said": "DAILY Monday - Saturday 8:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass schedule box of both bulletins read; the page 4 intentions list 8:30 am Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-oradell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0ee717dc",
+          "page": 1,
+          "said": "DAILY Monday - Saturday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4de4a050",
+          "page": 1,
+          "said": "DAILY Monday - Saturday 8:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass schedule box of both bulletins read; the page 4 intentions list 8:30 am Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-oradell",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0ee717dc",
+          "page": 1,
+          "said": "Confession: Saturday, 4:00 pm - 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4de4a050",
+          "page": 1,
+          "said": "Confession: Saturday, 4:00 pm - 5:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Sacraments box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-oradell",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "16:15",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mary's Chapel (lower church)"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0ee717dc",
+          "page": 1,
+          "said": "Eucharistic Adoration First Wednesday of Month 9 am - 4:15 pm in MC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4de4a050",
+          "page": 1,
+          "said": "Eucharistic Adoration First Wednesday of Month 9 am - 4:15 pm in MC"
+        },
+        {
+          "source": "website",
+          "url": "https://sjcnj.org/masses-and-bulletin/",
+          "said": "Eucharistic Adoration: First Wednesday of the month (9am – 4:15pm) in Mary's Chapel (lower church)"
+        }
+      ],
+      "rationale": "R1, POLICY Churches and chapels: printed in the page 1 box of both bulletins; the parish website says MC is Mary's Chapel in the lower church, so it is at St. Joseph Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-closter",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Third Saturday Recovery Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4de4a050",
+          "page": 5,
+          "said": "Third Saturday Recovery Mass on Saturday, November 21, 2026, at 12 noon at the Church of St. Mary, 20 Legion Place, Closter, NJ."
+        }
+      ],
+      "rationale": "R22: held at St. Mary, Closter, another parish's church; its events belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0ee717dc",
+          "page": 1,
+          "said": "Miraculous Medal Novena Mondays, immediately following the 8:30 AM Mass"
+        }
+      ],
+      "rationale": "R24: a novena is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
