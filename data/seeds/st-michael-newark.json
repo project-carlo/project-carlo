@@ -1,0 +1,1385 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-michael-newark",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:54:30Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T17:16:56Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (St. Michael, 172 Broadway); both issues read (Nov 8, Nov 15) print the same schedule box: weekday 8 AM English and 7 PM Spanish in the chapel, Saturday 8 AM and 7 PM, Sunday 7, 8:30, 10, 11:30 and 1. Settled: Dec 11 Guadalupe 11 PM Mass; Advent Vigil Nov 28 excluded (no definite Mass/Exposition time). Open: weekday Confession hours (bulletin 9-12, 2-6 'suggest to call first' vs website 10-11:30, 3-6).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "1f8c8b3f3d5e8b9007279c9d6119106f99694a8ab5689312473f75e6c23b5b85",
+      "fetched_at": "2026-11-15T16:54:30Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "5cbc068b96f8de56cd6dc376b6b8b6eaca19195721fd640efd3a53002c4e76a7",
+      "fetched_at": "2026-11-08T16:03:19Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-newark-nj",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English, in the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f8c8b3f",
+          "page": 1,
+          "said": "Weekday Masses: 8:00 AM (English in Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbc068b",
+          "page": 1,
+          "said": "Weekday Masses: 8:00 AM (English in Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f8c8b3f",
+          "page": 2,
+          "said": "MONDAY ... FRIDAY 8:00AM intentions each day"
+        }
+      ],
+      "rationale": "R1, R35: weekday schedule box in both bulletins read; the intentions list an 8:00 AM Mass every weekday. POLICY, Churches and chapels: the chapel is the parish's own (the box contrasts 'in Chapel' with 'in Church'), so it belongs to St. Michael Church with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-newark-nj",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English, in the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f8c8b3f",
+          "page": 1,
+          "said": "Weekday Masses: 8:00 AM (English in Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbc068b",
+          "page": 1,
+          "said": "Weekday Masses: 8:00 AM (English in Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f8c8b3f",
+          "page": 2,
+          "said": "MONDAY ... FRIDAY 8:00AM intentions each day"
+        }
+      ],
+      "rationale": "R1, R35: weekday schedule box in both bulletins read; the intentions list an 8:00 AM Mass every weekday. POLICY, Churches and chapels: the chapel is the parish's own (the box contrasts 'in Chapel' with 'in Church'), so it belongs to St. Michael Church with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-newark-nj",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English, in the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f8c8b3f",
+          "page": 1,
+          "said": "Weekday Masses: 8:00 AM (English in Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbc068b",
+          "page": 1,
+          "said": "Weekday Masses: 8:00 AM (English in Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f8c8b3f",
+          "page": 2,
+          "said": "MONDAY ... FRIDAY 8:00AM intentions each day"
+        }
+      ],
+      "rationale": "R1, R35: weekday schedule box in both bulletins read; the intentions list an 8:00 AM Mass every weekday. POLICY, Churches and chapels: the chapel is the parish's own (the box contrasts 'in Chapel' with 'in Church'), so it belongs to St. Michael Church with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-newark-nj",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English, in the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f8c8b3f",
+          "page": 1,
+          "said": "Weekday Masses: 8:00 AM (English in Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbc068b",
+          "page": 1,
+          "said": "Weekday Masses: 8:00 AM (English in Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f8c8b3f",
+          "page": 2,
+          "said": "MONDAY ... FRIDAY 8:00AM intentions each day"
+        }
+      ],
+      "rationale": "R1, R35: weekday schedule box in both bulletins read; the intentions list an 8:00 AM Mass every weekday. POLICY, Churches and chapels: the chapel is the parish's own (the box contrasts 'in Chapel' with 'in Church'), so it belongs to St. Michael Church with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-newark-nj",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English, in the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f8c8b3f",
+          "page": 1,
+          "said": "Weekday Masses: 8:00 AM (English in Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbc068b",
+          "page": 1,
+          "said": "Weekday Masses: 8:00 AM (English in Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f8c8b3f",
+          "page": 2,
+          "said": "MONDAY ... FRIDAY 8:00AM intentions each day"
+        }
+      ],
+      "rationale": "R1, R35: weekday schedule box in both bulletins read; the intentions list an 8:00 AM Mass every weekday. POLICY, Churches and chapels: the chapel is the parish's own (the box contrasts 'in Chapel' with 'in Church'), so it belongs to St. Michael Church with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-newark-nj",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish, in the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f8c8b3f",
+          "page": 1,
+          "said": "Weekday Masses: 7:00 PM (Spanish in Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbc068b",
+          "page": 1,
+          "said": "Weekday Masses: 7:00 PM (Spanish in Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f8c8b3f",
+          "page": 2,
+          "said": "MONDAY ... FRIDAY 7:00PM intentions each day"
+        }
+      ],
+      "rationale": "R1, R35: weekday schedule box in both bulletins read; the intentions list a 7:00 PM Mass every weekday. Chapel is the parish's own (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-newark-nj",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish, in the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f8c8b3f",
+          "page": 1,
+          "said": "Weekday Masses: 7:00 PM (Spanish in Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbc068b",
+          "page": 1,
+          "said": "Weekday Masses: 7:00 PM (Spanish in Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f8c8b3f",
+          "page": 2,
+          "said": "MONDAY ... FRIDAY 7:00PM intentions each day"
+        }
+      ],
+      "rationale": "R1, R35: weekday schedule box in both bulletins read; the intentions list a 7:00 PM Mass every weekday. Chapel is the parish's own (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-newark-nj",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish, in the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f8c8b3f",
+          "page": 1,
+          "said": "Weekday Masses: 7:00 PM (Spanish in Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbc068b",
+          "page": 1,
+          "said": "Weekday Masses: 7:00 PM (Spanish in Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f8c8b3f",
+          "page": 2,
+          "said": "MONDAY ... FRIDAY 7:00PM intentions each day"
+        }
+      ],
+      "rationale": "R1, R35: weekday schedule box in both bulletins read; the intentions list a 7:00 PM Mass every weekday. Chapel is the parish's own (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-newark-nj",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish, in the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f8c8b3f",
+          "page": 1,
+          "said": "Weekday Masses: 7:00 PM (Spanish in Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbc068b",
+          "page": 1,
+          "said": "Weekday Masses: 7:00 PM (Spanish in Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f8c8b3f",
+          "page": 2,
+          "said": "MONDAY ... FRIDAY 7:00PM intentions each day"
+        }
+      ],
+      "rationale": "R1, R35: weekday schedule box in both bulletins read; the intentions list a 7:00 PM Mass every weekday. Chapel is the parish's own (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-newark-nj",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish, in the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f8c8b3f",
+          "page": 1,
+          "said": "Weekday Masses: 7:00 PM (Spanish in Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbc068b",
+          "page": 1,
+          "said": "Weekday Masses: 7:00 PM (Spanish in Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f8c8b3f",
+          "page": 2,
+          "said": "MONDAY ... FRIDAY 7:00PM intentions each day"
+        }
+      ],
+      "rationale": "R1, R35: weekday schedule box in both bulletins read; the intentions list a 7:00 PM Mass every weekday. Chapel is the parish's own (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-newark-nj",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English, in the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f8c8b3f",
+          "page": 1,
+          "said": "Saturday Masses: 8:00 AM (English in Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbc068b",
+          "page": 1,
+          "said": "Saturday Masses: 8:00 AM (English in Chapel)"
+        }
+      ],
+      "rationale": "R1: Saturday schedule box in both bulletins read; intentions list Saturday 8:00AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-newark-nj",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f8c8b3f",
+          "page": 1,
+          "said": "Saturday Masses: 7:00 PM (Spanish in Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbc068b",
+          "page": 1,
+          "said": "Saturday Masses: 7:00 PM (Spanish in Church)"
+        }
+      ],
+      "rationale": "R1: Saturday schedule box in both bulletins read; intentions list Saturday 7:00PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-newark-nj",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f8c8b3f",
+          "page": 1,
+          "said": "Sunday Masses: 7:00 AM, 10:00 AM & 1:00 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbc068b",
+          "page": 1,
+          "said": "Sunday Masses: 7:00 AM, 10:00 AM & 1:00 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: Sunday schedule box in both bulletins read; matches the website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-newark-nj",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f8c8b3f",
+          "page": 1,
+          "said": "Sunday Masses: 7:00 AM, 10:00 AM & 1:00 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbc068b",
+          "page": 1,
+          "said": "Sunday Masses: 7:00 AM, 10:00 AM & 1:00 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: Sunday schedule box in both bulletins read; matches the website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-newark-nj",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f8c8b3f",
+          "page": 1,
+          "said": "Sunday Masses: 7:00 AM, 10:00 AM & 1:00 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbc068b",
+          "page": 1,
+          "said": "Sunday Masses: 7:00 AM, 10:00 AM & 1:00 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: Sunday schedule box in both bulletins read; matches the website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-newark-nj",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f8c8b3f",
+          "page": 1,
+          "said": "Sunday Masses: 8:30 AM & 11:30AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbc068b",
+          "page": 1,
+          "said": "Sunday Masses: 8:30 AM & 11:30AM (English)"
+        }
+      ],
+      "rationale": "R1: Sunday schedule box in both bulletins read; matches the website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-newark-nj",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f8c8b3f",
+          "page": 1,
+          "said": "Sunday Masses: 8:30 AM & 11:30AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbc068b",
+          "page": 1,
+          "said": "Sunday Masses: 8:30 AM & 11:30AM (English)"
+        }
+      ],
+      "rationale": "R1: Sunday schedule box in both bulletins read; matches the website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-newark-nj",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-11",
+        "start_time": "23:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Feast of Our Lady of Guadalupe"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f8c8b3f",
+          "page": 3,
+          "said": "FEAST OF OUR LADY OF GUADALUPE Friday, December 11, 2026 ... 11:00pm - Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbc068b",
+          "page": 3,
+          "said": "FEAST OF OUR LADY OF GUADALUPE Friday, December 11, 2026 ... 11:00pm - Mass"
+        }
+      ],
+      "rationale": "R1, R16: dated special Mass outside the weekly schedule, after as_of; announced in both bulletins. The parish has one listed church; the reception is in the school cafeteria, the Mass at the parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f8c8b3f",
+          "page": 3,
+          "said": "ADVENT VIGIL Saturday, November 28, 2026 6:00pm - 10:00pm Mass and Exposition of the Blessed Sacrament in the Church."
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbc068b",
+          "page": 3,
+          "said": "ADVENT VIGIL Saturday, November 28, 2026 2:00pm - 8:00pm Mass and Exposition"
+        }
+      ],
+      "rationale": "R24, POLICY Final source checks: the 6-10 PM window is the whole event; it gives no definite start time for the Mass or for the Exposition, so neither component can be timed (the older issue gave 2-8 PM, newest changed it). Update mode may pick up a clock time from later issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5cbc068b",
+          "page": 3,
+          "said": "PARISH CHRISTMAS PARTY Saturday, December 12, 2026 7:00pm - Mass 7:30pm - Christmas Party"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7: the Dec 12 7:00 PM Mass is the regular Saturday 7:00 PM Mass on a special occasion; recorded only as the weekly slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f8c8b3f",
+          "page": 1,
+          "said": "Confessions: Monday, Tuesday, Thursday and Friday: 9:00AM to 12:00PM, 2:00PM to 6:00PM Suggest to call first"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbc068b",
+          "page": 1,
+          "said": "Confessions: Monday, Tuesday, Thursday and Friday: 9:00AM to 12:00PM, 2:00PM to 6:00PM Suggest to call first"
+        },
+        {
+          "source": "website",
+          "url": "https://stmichaelsparish.org/mass-schedule/",
+          "said": "CONFESSIONS Monday, Tuesday, Thursday, and Friday 10:00AM to 11:30AM, 3:00PM to 6:00PM Or by appointment"
+        }
+      ],
+      "rationale": "R28/C8, R30: the bulletin and website disagree on the hours, and 'Suggest to call first' hedges availability (rules.md: hedged availability needs a human decision). Leaning to the bulletin, printed identically in both read issues and newer than the undated web page; C5 leans to including confession offered with a request to contact a priest.",
+      "question": "Confessions Mon, Tue, Thu, Fri: the bulletin (both issues) gives 9-12 and 2-6 with 'Suggest to call first'; the website gives 10-11:30 and 3-6 'or by appointment'. Which hours?",
+      "options": [
+        {
+          "label": "Bulletin hours",
+          "entry": {
+            "church_slug": "st-michael-newark-nj",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "12:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Suggested to call first"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Website hours",
+          "entry": {
+            "church_slug": "st-michael-newark-nj",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "10:00",
+            "end_time": "11:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Suggested to call first"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "confessions"
+    },
+    {
+      "id": "s22",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f8c8b3f",
+          "page": 1,
+          "said": "Confessions: Monday, Tuesday, Thursday and Friday: 9:00AM to 12:00PM, 2:00PM to 6:00PM Suggest to call first"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbc068b",
+          "page": 1,
+          "said": "Confessions: Monday, Tuesday, Thursday and Friday: 9:00AM to 12:00PM, 2:00PM to 6:00PM Suggest to call first"
+        },
+        {
+          "source": "website",
+          "url": "https://stmichaelsparish.org/mass-schedule/",
+          "said": "CONFESSIONS Monday, Tuesday, Thursday, and Friday 10:00AM to 11:30AM, 3:00PM to 6:00PM Or by appointment"
+        }
+      ],
+      "rationale": "R28/C8, R30: the bulletin and website disagree on the hours, and 'Suggest to call first' hedges availability (rules.md: hedged availability needs a human decision). Leaning to the bulletin, printed identically in both read issues and newer than the undated web page; C5 leans to including confession offered with a request to contact a priest.",
+      "question": "Confessions Mon, Tue, Thu, Fri: the bulletin (both issues) gives 9-12 and 2-6 with 'Suggest to call first'; the website gives 10-11:30 and 3-6 'or by appointment'. Which hours?",
+      "options": [
+        {
+          "label": "Bulletin hours",
+          "entry": {
+            "church_slug": "st-michael-newark-nj",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "12:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Suggested to call first"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Website hours",
+          "entry": {
+            "church_slug": "st-michael-newark-nj",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "10:00",
+            "end_time": "11:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Suggested to call first"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "confessions"
+    },
+    {
+      "id": "s23",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f8c8b3f",
+          "page": 1,
+          "said": "Confessions: Monday, Tuesday, Thursday and Friday: 9:00AM to 12:00PM, 2:00PM to 6:00PM Suggest to call first"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbc068b",
+          "page": 1,
+          "said": "Confessions: Monday, Tuesday, Thursday and Friday: 9:00AM to 12:00PM, 2:00PM to 6:00PM Suggest to call first"
+        },
+        {
+          "source": "website",
+          "url": "https://stmichaelsparish.org/mass-schedule/",
+          "said": "CONFESSIONS Monday, Tuesday, Thursday, and Friday 10:00AM to 11:30AM, 3:00PM to 6:00PM Or by appointment"
+        }
+      ],
+      "rationale": "R28/C8, R30: the bulletin and website disagree on the hours, and 'Suggest to call first' hedges availability (rules.md: hedged availability needs a human decision). Leaning to the bulletin, printed identically in both read issues and newer than the undated web page; C5 leans to including confession offered with a request to contact a priest.",
+      "question": "Confessions Mon, Tue, Thu, Fri: the bulletin (both issues) gives 9-12 and 2-6 with 'Suggest to call first'; the website gives 10-11:30 and 3-6 'or by appointment'. Which hours?",
+      "options": [
+        {
+          "label": "Bulletin hours",
+          "entry": {
+            "church_slug": "st-michael-newark-nj",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "12:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Suggested to call first"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Website hours",
+          "entry": {
+            "church_slug": "st-michael-newark-nj",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "10:00",
+            "end_time": "11:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Suggested to call first"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "confessions"
+    },
+    {
+      "id": "s24",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f8c8b3f",
+          "page": 1,
+          "said": "Confessions: Monday, Tuesday, Thursday and Friday: 9:00AM to 12:00PM, 2:00PM to 6:00PM Suggest to call first"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbc068b",
+          "page": 1,
+          "said": "Confessions: Monday, Tuesday, Thursday and Friday: 9:00AM to 12:00PM, 2:00PM to 6:00PM Suggest to call first"
+        },
+        {
+          "source": "website",
+          "url": "https://stmichaelsparish.org/mass-schedule/",
+          "said": "CONFESSIONS Monday, Tuesday, Thursday, and Friday 10:00AM to 11:30AM, 3:00PM to 6:00PM Or by appointment"
+        }
+      ],
+      "rationale": "R28/C8, R30: the bulletin and website disagree on the hours, and 'Suggest to call first' hedges availability (rules.md: hedged availability needs a human decision). Leaning to the bulletin, printed identically in both read issues and newer than the undated web page; C5 leans to including confession offered with a request to contact a priest.",
+      "question": "Confessions Mon, Tue, Thu, Fri: the bulletin (both issues) gives 9-12 and 2-6 with 'Suggest to call first'; the website gives 10-11:30 and 3-6 'or by appointment'. Which hours?",
+      "options": [
+        {
+          "label": "Bulletin hours",
+          "entry": {
+            "church_slug": "st-michael-newark-nj",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "12:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Suggested to call first"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Website hours",
+          "entry": {
+            "church_slug": "st-michael-newark-nj",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "10:00",
+            "end_time": "11:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Suggested to call first"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "confessions"
+    },
+    {
+      "id": "s25",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f8c8b3f",
+          "page": 1,
+          "said": "Confessions: Monday, Tuesday, Thursday and Friday: 9:00AM to 12:00PM, 2:00PM to 6:00PM Suggest to call first"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbc068b",
+          "page": 1,
+          "said": "Confessions: Monday, Tuesday, Thursday and Friday: 9:00AM to 12:00PM, 2:00PM to 6:00PM Suggest to call first"
+        },
+        {
+          "source": "website",
+          "url": "https://stmichaelsparish.org/mass-schedule/",
+          "said": "CONFESSIONS Monday, Tuesday, Thursday, and Friday 10:00AM to 11:30AM, 3:00PM to 6:00PM Or by appointment"
+        }
+      ],
+      "rationale": "R28/C8, R30: the bulletin and website disagree on the hours, and 'Suggest to call first' hedges availability (rules.md: hedged availability needs a human decision). Leaning to the bulletin, printed identically in both read issues and newer than the undated web page; C5 leans to including confession offered with a request to contact a priest.",
+      "question": "Confessions Mon, Tue, Thu, Fri: the bulletin (both issues) gives 9-12 and 2-6 with 'Suggest to call first'; the website gives 10-11:30 and 3-6 'or by appointment'. Which hours?",
+      "options": [
+        {
+          "label": "Bulletin hours",
+          "entry": {
+            "church_slug": "st-michael-newark-nj",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "14:00",
+            "end_time": "18:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Suggested to call first"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Website hours",
+          "entry": {
+            "church_slug": "st-michael-newark-nj",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "15:00",
+            "end_time": "18:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Suggested to call first"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "confessions"
+    },
+    {
+      "id": "s26",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f8c8b3f",
+          "page": 1,
+          "said": "Confessions: Monday, Tuesday, Thursday and Friday: 9:00AM to 12:00PM, 2:00PM to 6:00PM Suggest to call first"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbc068b",
+          "page": 1,
+          "said": "Confessions: Monday, Tuesday, Thursday and Friday: 9:00AM to 12:00PM, 2:00PM to 6:00PM Suggest to call first"
+        },
+        {
+          "source": "website",
+          "url": "https://stmichaelsparish.org/mass-schedule/",
+          "said": "CONFESSIONS Monday, Tuesday, Thursday, and Friday 10:00AM to 11:30AM, 3:00PM to 6:00PM Or by appointment"
+        }
+      ],
+      "rationale": "R28/C8, R30: the bulletin and website disagree on the hours, and 'Suggest to call first' hedges availability (rules.md: hedged availability needs a human decision). Leaning to the bulletin, printed identically in both read issues and newer than the undated web page; C5 leans to including confession offered with a request to contact a priest.",
+      "question": "Confessions Mon, Tue, Thu, Fri: the bulletin (both issues) gives 9-12 and 2-6 with 'Suggest to call first'; the website gives 10-11:30 and 3-6 'or by appointment'. Which hours?",
+      "options": [
+        {
+          "label": "Bulletin hours",
+          "entry": {
+            "church_slug": "st-michael-newark-nj",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "14:00",
+            "end_time": "18:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Suggested to call first"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Website hours",
+          "entry": {
+            "church_slug": "st-michael-newark-nj",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "15:00",
+            "end_time": "18:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Suggested to call first"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "confessions"
+    },
+    {
+      "id": "s27",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f8c8b3f",
+          "page": 1,
+          "said": "Confessions: Monday, Tuesday, Thursday and Friday: 9:00AM to 12:00PM, 2:00PM to 6:00PM Suggest to call first"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbc068b",
+          "page": 1,
+          "said": "Confessions: Monday, Tuesday, Thursday and Friday: 9:00AM to 12:00PM, 2:00PM to 6:00PM Suggest to call first"
+        },
+        {
+          "source": "website",
+          "url": "https://stmichaelsparish.org/mass-schedule/",
+          "said": "CONFESSIONS Monday, Tuesday, Thursday, and Friday 10:00AM to 11:30AM, 3:00PM to 6:00PM Or by appointment"
+        }
+      ],
+      "rationale": "R28/C8, R30: the bulletin and website disagree on the hours, and 'Suggest to call first' hedges availability (rules.md: hedged availability needs a human decision). Leaning to the bulletin, printed identically in both read issues and newer than the undated web page; C5 leans to including confession offered with a request to contact a priest.",
+      "question": "Confessions Mon, Tue, Thu, Fri: the bulletin (both issues) gives 9-12 and 2-6 with 'Suggest to call first'; the website gives 10-11:30 and 3-6 'or by appointment'. Which hours?",
+      "options": [
+        {
+          "label": "Bulletin hours",
+          "entry": {
+            "church_slug": "st-michael-newark-nj",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "14:00",
+            "end_time": "18:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Suggested to call first"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Website hours",
+          "entry": {
+            "church_slug": "st-michael-newark-nj",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "15:00",
+            "end_time": "18:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Suggested to call first"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "confessions"
+    },
+    {
+      "id": "s28",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f8c8b3f",
+          "page": 1,
+          "said": "Confessions: Monday, Tuesday, Thursday and Friday: 9:00AM to 12:00PM, 2:00PM to 6:00PM Suggest to call first"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbc068b",
+          "page": 1,
+          "said": "Confessions: Monday, Tuesday, Thursday and Friday: 9:00AM to 12:00PM, 2:00PM to 6:00PM Suggest to call first"
+        },
+        {
+          "source": "website",
+          "url": "https://stmichaelsparish.org/mass-schedule/",
+          "said": "CONFESSIONS Monday, Tuesday, Thursday, and Friday 10:00AM to 11:30AM, 3:00PM to 6:00PM Or by appointment"
+        }
+      ],
+      "rationale": "R28/C8, R30: the bulletin and website disagree on the hours, and 'Suggest to call first' hedges availability (rules.md: hedged availability needs a human decision). Leaning to the bulletin, printed identically in both read issues and newer than the undated web page; C5 leans to including confession offered with a request to contact a priest.",
+      "question": "Confessions Mon, Tue, Thu, Fri: the bulletin (both issues) gives 9-12 and 2-6 with 'Suggest to call first'; the website gives 10-11:30 and 3-6 'or by appointment'. Which hours?",
+      "options": [
+        {
+          "label": "Bulletin hours",
+          "entry": {
+            "church_slug": "st-michael-newark-nj",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "14:00",
+            "end_time": "18:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Suggested to call first"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Website hours",
+          "entry": {
+            "church_slug": "st-michael-newark-nj",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "15:00",
+            "end_time": "18:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Suggested to call first"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "confessions"
+    }
+  ]
+}
