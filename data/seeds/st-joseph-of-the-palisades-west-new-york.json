@@ -1,0 +1,1529 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-of-the-palisades-west-new-york",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:25:14Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T16:26:30Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches: St. Joseph of the Palisades (Upper and Lower Church) and Immaculate Heart of Mary Chapel, North Bergen. The p1 schedule box is identical in both bulletins (Nov 8 and Nov 22 issues; all pages are images); weekday Exposition 9-6:45 in the Lower Church is from p7 of the newest. Saturday 9 AM Spanish Mass is from the intentions of both weeks (R35). Open: whether to cancel the 8:30 AM and 7 PM Masses on Fri Nov 27 ('One Mass will be celebrated at 9:00 a.m.').",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "ac6364b5673a151c539f2692623e3f643ef572ffe442533c0964e0ac7d427c19",
+      "fetched_at": "2026-11-15T16:25:14Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "2515520c58a7ee7d595483f06b6655762a0fd9d422330504041c99ede3e2c51a",
+      "fetched_at": "2026-11-08T15:49:02Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-of-the-palisades-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 1,
+          "said": "Weekend Masses - St. Joseph's: Saturday | Vigil 5pm, Eng.; 6:30pm Sp."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2515520c",
+          "page": 1,
+          "said": "Weekend Masses - St. Joseph's: Saturday | Vigil 5pm, Eng.; 6:30pm Sp."
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both bulletins read; intentions list it each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-of-the-palisades-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 1,
+          "said": "Weekend Masses - St. Joseph's: Saturday | Vigil 5pm, Eng.; 6:30pm Sp."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2515520c",
+          "page": 1,
+          "said": "Weekend Masses - St. Joseph's: Saturday | Vigil 5pm, Eng.; 6:30pm Sp."
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-of-the-palisades-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish, Upper Church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 1,
+          "said": "Sunday | Upper Church 8:30 am Sp, 10:30am Sp,, 12pm Eng., 1:30pm Sp., 5:00pm Sp."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2515520c",
+          "page": 1,
+          "said": "Sunday | Upper Church 8:30 am Sp, 10:30am Sp,, 12pm Eng., 1:30pm Sp., 5:00pm Sp."
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-of-the-palisades-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish, in both the Upper and Lower Church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 1,
+          "said": "Sunday | Upper Church 8:30 am Sp, 10:30am Sp,, 12pm Eng., 1:30pm Sp., 5:00pm Sp. Lower Church: 10:30am Sp., 12pm Sp."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2515520c",
+          "page": 1,
+          "said": "Sunday | Upper Church 8:30 am Sp, 10:30am Sp,, 12pm Eng., 1:30pm Sp., 5:00pm Sp. Lower Church: 10:30am Sp., 12pm Sp."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 3,
+          "said": "10:30am Sp UC ... 10:30am Sp LC"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both bulletins read: simultaneous Spanish Masses in the Upper and Lower Church, one slot since both are at the same church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-of-the-palisades-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English in the Upper Church; Spanish in the Lower Church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 1,
+          "said": "Sunday | Upper Church 8:30 am Sp, 10:30am Sp,, 12pm Eng., 1:30pm Sp., 5:00pm Sp. Lower Church: 10:30am Sp., 12pm Sp."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2515520c",
+          "page": 1,
+          "said": "Sunday | Upper Church 8:30 am Sp, 10:30am Sp,, 12pm Eng., 1:30pm Sp., 5:00pm Sp. Lower Church: 10:30am Sp., 12pm Sp."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 3,
+          "said": "12:00pm Eng UC ... 12:00pm Sp LC"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both bulletins read: simultaneous English (Upper) and Spanish (Lower) Masses, one slot since both are at the same church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-of-the-palisades-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish, Upper Church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 1,
+          "said": "Sunday | Upper Church 8:30 am Sp, 10:30am Sp,, 12pm Eng., 1:30pm Sp., 5:00pm Sp."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2515520c",
+          "page": 1,
+          "said": "Sunday | Upper Church 8:30 am Sp, 10:30am Sp,, 12pm Eng., 1:30pm Sp., 5:00pm Sp."
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-of-the-palisades-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish, Upper Church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 1,
+          "said": "Sunday | Upper Church 8:30 am Sp, 10:30am Sp,, 12pm Eng., 1:30pm Sp., 5:00pm Sp."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2515520c",
+          "page": 1,
+          "said": "Sunday | Upper Church 8:30 am Sp, 10:30am Sp,, 12pm Eng., 1:30pm Sp., 5:00pm Sp."
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-of-the-palisades-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 1,
+          "said": "Weekday Masses Monday to Friday: 8:30 a.m. Eng.; 7:00 p.m. Sp."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2515520c",
+          "page": 1,
+          "said": "Weekday Masses Monday to Friday: 8:30 a.m. Eng.; 7:00 p.m. Sp."
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both bulletins; the p3 intentions list it daily. The Thanksgiving-week changes are dated entries.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-of-the-palisades-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 1,
+          "said": "Weekday Masses Monday to Friday: 8:30 a.m. Eng.; 7:00 p.m. Sp."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2515520c",
+          "page": 1,
+          "said": "Weekday Masses Monday to Friday: 8:30 a.m. Eng.; 7:00 p.m. Sp."
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both bulletins; the p3 intentions list it daily. The Thanksgiving-week changes are dated entries.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-of-the-palisades-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 1,
+          "said": "Weekday Masses Monday to Friday: 8:30 a.m. Eng.; 7:00 p.m. Sp."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2515520c",
+          "page": 1,
+          "said": "Weekday Masses Monday to Friday: 8:30 a.m. Eng.; 7:00 p.m. Sp."
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both bulletins; the p3 intentions list it daily. The Thanksgiving-week changes are dated entries.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-of-the-palisades-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 1,
+          "said": "Weekday Masses Monday to Friday: 8:30 a.m. Eng.; 7:00 p.m. Sp."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2515520c",
+          "page": 1,
+          "said": "Weekday Masses Monday to Friday: 8:30 a.m. Eng.; 7:00 p.m. Sp."
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both bulletins; the p3 intentions list it daily. The Thanksgiving-week changes are dated entries.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-of-the-palisades-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 1,
+          "said": "Weekday Masses Monday to Friday: 8:30 a.m. Eng.; 7:00 p.m. Sp."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2515520c",
+          "page": 1,
+          "said": "Weekday Masses Monday to Friday: 8:30 a.m. Eng.; 7:00 p.m. Sp."
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both bulletins; the p3 intentions list it daily. The Thanksgiving-week changes are dated entries.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-of-the-palisades-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 1,
+          "said": "Weekday Masses Monday to Friday: 8:30 a.m. Eng.; 7:00 p.m. Sp."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2515520c",
+          "page": 1,
+          "said": "Weekday Masses Monday to Friday: 8:30 a.m. Eng.; 7:00 p.m. Sp."
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both bulletins. The Thanksgiving Eve 7 PM Mass and the 7 PM Guadalupe-novena Masses of Dec 8-11 (p5, p6) fall at this weekly time, so POLICY rule 7 records nothing extra.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-of-the-palisades-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 1,
+          "said": "Weekday Masses Monday to Friday: 8:30 a.m. Eng.; 7:00 p.m. Sp."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2515520c",
+          "page": 1,
+          "said": "Weekday Masses Monday to Friday: 8:30 a.m. Eng.; 7:00 p.m. Sp."
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both bulletins. The Thanksgiving Eve 7 PM Mass and the 7 PM Guadalupe-novena Masses of Dec 8-11 (p5, p6) fall at this weekly time, so POLICY rule 7 records nothing extra.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-of-the-palisades-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 1,
+          "said": "Weekday Masses Monday to Friday: 8:30 a.m. Eng.; 7:00 p.m. Sp."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2515520c",
+          "page": 1,
+          "said": "Weekday Masses Monday to Friday: 8:30 a.m. Eng.; 7:00 p.m. Sp."
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both bulletins. The Thanksgiving Eve 7 PM Mass and the 7 PM Guadalupe-novena Masses of Dec 8-11 (p5, p6) fall at this weekly time, so POLICY rule 7 records nothing extra.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-of-the-palisades-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 1,
+          "said": "Weekday Masses Monday to Friday: 8:30 a.m. Eng.; 7:00 p.m. Sp."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2515520c",
+          "page": 1,
+          "said": "Weekday Masses Monday to Friday: 8:30 a.m. Eng.; 7:00 p.m. Sp."
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both bulletins. The Thanksgiving Eve 7 PM Mass and the 7 PM Guadalupe-novena Masses of Dec 8-11 (p5, p6) fall at this weekly time, so POLICY rule 7 records nothing extra.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-of-the-palisades-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 1,
+          "said": "Weekday Masses Monday to Friday: 8:30 a.m. Eng.; 7:00 p.m. Sp."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2515520c",
+          "page": 1,
+          "said": "Weekday Masses Monday to Friday: 8:30 a.m. Eng.; 7:00 p.m. Sp."
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both bulletins. The Thanksgiving Eve 7 PM Mass and the 7 PM Guadalupe-novena Masses of Dec 8-11 (p5, p6) fall at this weekly time, so POLICY rule 7 records nothing extra.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-of-the-palisades-west-new-york",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 3,
+          "said": "Saturday, November 28 9:00am Sp Misa Comunitaria"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2515520c",
+          "page": 3,
+          "said": "Saturday, November 14 9:00am Sp Misa Comunitaria"
+        }
+      ],
+      "rationale": "R35: the same Saturday 9:00 AM Spanish Mass is in the St. Joseph intentions of both issue weeks (Nov 14 and Nov 28), not marked special. The p1 box lists only weekend and Mon-Fri Masses; a missing header mention is no conflict (C1 does not apply).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-of-the-palisades-west-new-york",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 1,
+          "said": "Reconciliation Monday to Friday:| 6:00pm Saturday | 4:00pm Other | By Appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2515520c",
+          "page": 1,
+          "said": "Reconciliation Monday to Friday:| 6:00pm Saturday | 4:00pm Other | By Appointment"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both bulletins; no end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-of-the-palisades-west-new-york",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 1,
+          "said": "Reconciliation Monday to Friday:| 6:00pm Saturday | 4:00pm Other | By Appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2515520c",
+          "page": 1,
+          "said": "Reconciliation Monday to Friday:| 6:00pm Saturday | 4:00pm Other | By Appointment"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both bulletins; no end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-of-the-palisades-west-new-york",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 1,
+          "said": "Reconciliation Monday to Friday:| 6:00pm Saturday | 4:00pm Other | By Appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2515520c",
+          "page": 1,
+          "said": "Reconciliation Monday to Friday:| 6:00pm Saturday | 4:00pm Other | By Appointment"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both bulletins; no end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-of-the-palisades-west-new-york",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 1,
+          "said": "Reconciliation Monday to Friday:| 6:00pm Saturday | 4:00pm Other | By Appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2515520c",
+          "page": 1,
+          "said": "Reconciliation Monday to Friday:| 6:00pm Saturday | 4:00pm Other | By Appointment"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both bulletins; no end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-of-the-palisades-west-new-york",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 1,
+          "said": "Reconciliation Monday to Friday:| 6:00pm Saturday | 4:00pm Other | By Appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2515520c",
+          "page": 1,
+          "said": "Reconciliation Monday to Friday:| 6:00pm Saturday | 4:00pm Other | By Appointment"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both bulletins; no end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-of-the-palisades-west-new-york",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 1,
+          "said": "Reconciliation Monday to Friday:| 6:00pm Saturday | 4:00pm Other | By Appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2515520c",
+          "page": 1,
+          "said": "Reconciliation Monday to Friday:| 6:00pm Saturday | 4:00pm Other | By Appointment"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both bulletins; no end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 1,
+          "said": "Reconciliation ... Other | By Appointment"
+        }
+      ],
+      "rationale": "R26: by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-of-the-palisades-west-new-york",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "18:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Lower Church"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 7,
+          "said": "Exposition of the Blessed Sacrament. Monday through Friday 9:00 a.m. - 6:45 p.m. Lower Church"
+        }
+      ],
+      "rationale": "R1: the p7 notice gives a standing weekday Exposition schedule in the Lower Church of St. Joseph's. Only the newest issue prints it (the older one's p7 is Installation photos); it is a regular schedule, not a dated event.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-of-the-palisades-west-new-york",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "18:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Lower Church"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 7,
+          "said": "Exposition of the Blessed Sacrament. Monday through Friday 9:00 a.m. - 6:45 p.m. Lower Church"
+        }
+      ],
+      "rationale": "R1: the p7 notice gives a standing weekday Exposition schedule in the Lower Church of St. Joseph's. Only the newest issue prints it (the older one's p7 is Installation photos); it is a regular schedule, not a dated event.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-of-the-palisades-west-new-york",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "18:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Lower Church"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 7,
+          "said": "Exposition of the Blessed Sacrament. Monday through Friday 9:00 a.m. - 6:45 p.m. Lower Church"
+        }
+      ],
+      "rationale": "R1: the p7 notice gives a standing weekday Exposition schedule in the Lower Church of St. Joseph's. Only the newest issue prints it (the older one's p7 is Installation photos); it is a regular schedule, not a dated event.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-of-the-palisades-west-new-york",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "18:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Lower Church"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 7,
+          "said": "Exposition of the Blessed Sacrament. Monday through Friday 9:00 a.m. - 6:45 p.m. Lower Church"
+        }
+      ],
+      "rationale": "R1: the p7 notice gives a standing weekday Exposition schedule in the Lower Church of St. Joseph's. Only the newest issue prints it (the older one's p7 is Installation photos); it is a regular schedule, not a dated event.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-of-the-palisades-west-new-york",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "18:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Lower Church"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 7,
+          "said": "Exposition of the Blessed Sacrament. Monday through Friday 9:00 a.m. - 6:45 p.m. Lower Church"
+        }
+      ],
+      "rationale": "R1: the p7 notice gives a standing weekday Exposition schedule in the Lower Church of St. Joseph's. Only the newest issue prints it (the older one's p7 is Installation photos); it is a regular schedule, not a dated event.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-chapel-north-bergen",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 1,
+          "said": "Immaculate Heart of Mary 7615 Broadway, North Bergen, NJ ... Sunday Masses |10am Eng., 12pm Sp."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2515520c",
+          "page": 1,
+          "said": "Immaculate Heart of Mary 7615 Broadway, North Bergen, NJ ... Sunday Masses |10am Eng., 12pm Sp."
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both bulletins; the p3 intentions list it under Immaculate Heart of Mary Chapel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-chapel-north-bergen",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 1,
+          "said": "Immaculate Heart of Mary 7615 Broadway, North Bergen, NJ ... Sunday Masses |10am Eng., 12pm Sp."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2515520c",
+          "page": 1,
+          "said": "Immaculate Heart of Mary 7615 Broadway, North Bergen, NJ ... Sunday Masses |10am Eng., 12pm Sp."
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both bulletins; the p3 intentions list it under Immaculate Heart of Mary Chapel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-chapel-north-bergen",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "14:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 1,
+          "said": "Immaculate Heart of Mary ... Saturday: * Divine Mercy Chapel 2:45pm * Meditation Hour 4pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2515520c",
+          "page": 1,
+          "said": "Immaculate Heart of Mary ... Saturday: * Divine Mercy Chapel 2:45pm * Meditation Hour 4pm"
+        }
+      ],
+      "rationale": "R24: a Divine Mercy Chaplet and a Meditation Hour are devotions, not Mass, Confession or Adoration (no exposition stated).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-chapel-north-bergen",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Meditation Hour"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 1,
+          "said": "Immaculate Heart of Mary ... Saturday: * Divine Mercy Chapel 2:45pm * Meditation Hour 4pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2515520c",
+          "page": 1,
+          "said": "Immaculate Heart of Mary ... Saturday: * Divine Mercy Chapel 2:45pm * Meditation Hour 4pm"
+        }
+      ],
+      "rationale": "R24: a Meditation Hour is a devotion; the bulletin does not call it Adoration or a Holy Hour.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s35",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-of-the-palisades-west-new-york",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 5,
+          "said": "Thanksgiving Day Thursday, November 26 at 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 3,
+          "said": "Thursday, November 26 - Thanksgiving Day 9:00am For the people of the Parish"
+        }
+      ],
+      "rationale": "R1, R16, R17: a dated holiday Mass outside the weekly times. The bulletin does not say the usual Thursday 8:30 AM and 7 PM Masses are cancelled (only the 9 AM is listed), so per R17 no cancellation is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s36",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-of-the-palisades-west-new-york",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 4,
+          "said": "One Mass will be celebrated at 9:00 a.m. on Friday, November 27."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 3,
+          "said": "Friday, November 27 9:00am + Giacomina Piccinich"
+        }
+      ],
+      "rationale": "R1, R16: dated Mass at a time outside the weekly schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s37",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 4,
+          "said": "The Parish Office will be closed on Thanksgiving Day, November 26, and Friday, November 27. One Mass will be celebrated at 9:00 a.m. on Friday, November 27."
+        }
+      ],
+      "rationale": "R17 asks for an explicit cancellation; 'One Mass will be celebrated' says only one Mass that day, and the p3 intentions list only 9:00am, which reads as a cancellation of the 8:30 and 7 PM. Leaning cancel.",
+      "question": "On Fri Nov 27 the bulletin says 'One Mass will be celebrated at 9:00 a.m.' Record the usual 8:30 AM and 7 PM Masses that day as cancelled?",
+      "options": [
+        {
+          "label": "Cancel that date",
+          "entry": {
+            "church_slug": "st-joseph-of-the-palisades-west-new-york",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-27",
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "nov27"
+    },
+    {
+      "id": "s38",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 4,
+          "said": "The Parish Office will be closed on Thanksgiving Day, November 26, and Friday, November 27. One Mass will be celebrated at 9:00 a.m. on Friday, November 27."
+        }
+      ],
+      "rationale": "R17 asks for an explicit cancellation; 'One Mass will be celebrated' says only one Mass that day, and the p3 intentions list only 9:00am, which reads as a cancellation of the 8:30 and 7 PM. Leaning cancel.",
+      "question": "On Fri Nov 27 the bulletin says 'One Mass will be celebrated at 9:00 a.m.' Record the usual 8:30 AM and 7 PM Masses that day as cancelled?",
+      "options": [
+        {
+          "label": "Cancel that date",
+          "entry": {
+            "church_slug": "st-joseph-of-the-palisades-west-new-york",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-27",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "nov27"
+    },
+    {
+      "id": "s39",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-of-the-palisades-west-new-york",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-05",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Healing Mass, Advent retreat (Spanish)"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 5,
+          "said": "Retiro de Adviento empezando con Misa de Sanación 10:00AM ... Sábado, 5 de diciembre (2026) Iglesia Principal San José de los Palisades"
+        }
+      ],
+      "rationale": "R1, R16: a dated Healing Mass opening the parish Advent retreat at the main church; also in the older issue's p4 upcoming events ('Dec. 5: Retiro de Adviento').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s40",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 5,
+          "said": "Después de la misa Almuerzo y café. Adoración del Santísimo Sacramento y Confesiones Hasta las 4:00PM. Sábado, 5 de diciembre"
+        }
+      ],
+      "rationale": "POLICY, What to extract (R26): the Dec 5 Adoration and Confessions give only an end time (4:00 PM), after a lunch following the 10 AM Mass; no definite start.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s41",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-of-the-palisades-west-new-york",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-12",
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Solemn Mass of Our Lady of Guadalupe, Spanish, Upper Church"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ac6364b5",
+          "page": 6,
+          "said": "on Saturday, December 12, the 5:00 p.m. English Mass will be celebrated in the Lower Church. At the same time, the Solemn Mass in Honor of Our Lady of Guadalupe will be celebrated in the Upper Church at 5:00 p.m."
+        }
+      ],
+      "rationale": "R1, R16: a dated special Mass in addition to the weekly Saturday 5 PM English Mass, which that day moves to the Lower Church of the same church (no cancellation).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
