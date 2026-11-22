@@ -1,0 +1,570 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-therese-of-lisieux-cresskill",
+  "status": "ready",
+  "as_of": "2026-11-15T16:25:27Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T18:36:27Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both bulletins read (Nov 8 and Nov 15, 2026) print the same schedule box: Sat 4:30 PM, Sun 7:30/9:30/11:30 AM, Mon-Fri 8:30 AM, Confession Sat 3:30-4:00 PM; the website agrees. Adds the dated Thanksgiving Mass Nov 26 at 9:00 AM; no open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "28853059229ae039a9cfd02cf7cd9f51090c42f1e07a4bda7d4c8cbfff4a71e1",
+      "fetched_at": "2026-11-15T16:25:27Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "b57fdf8cec54ebfca320bfede92a2000b1e2a7326a227623f6e5cc2e303e8089",
+      "fetched_at": "2026-11-08T15:48:24Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-therese-of-lisieux-cresskill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "28853059",
+          "page": 2,
+          "said": "Mass Schedule ... Saturday 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b57fdf8c",
+          "page": 2,
+          "said": "Mass Schedule ... Saturday 4:30pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the intentions list a Saturday 4:30 Mass each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-therese-of-lisieux-cresskill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "28853059",
+          "page": 2,
+          "said": "Sunday 7:30am 9:30am 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b57fdf8c",
+          "page": 2,
+          "said": "Sunday 7:30am 9:30am 11:30am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-therese-of-lisieux-cresskill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "28853059",
+          "page": 2,
+          "said": "Sunday 7:30am 9:30am 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b57fdf8c",
+          "page": 2,
+          "said": "Sunday 7:30am 9:30am 11:30am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-therese-of-lisieux-cresskill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "28853059",
+          "page": 2,
+          "said": "Sunday 7:30am 9:30am 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b57fdf8c",
+          "page": 2,
+          "said": "Sunday 7:30am 9:30am 11:30am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-therese-of-lisieux-cresskill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "28853059",
+          "page": 2,
+          "said": "Daily 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b57fdf8c",
+          "page": 2,
+          "said": "Daily 8:30am"
+        },
+        {
+          "source": "website",
+          "url": "https://sttheresecresskill.org/",
+          "said": "Monday - Friday 8:30am"
+        }
+      ],
+      "rationale": "R1: 'Daily 8:30am' in the Mass Schedule box of both bulletins; both weeks' intentions list 8:30 Monday to Friday and no Saturday morning Mass, and the parish website says 'Monday - Friday 8:30am' (R5), so Daily means Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-therese-of-lisieux-cresskill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "28853059",
+          "page": 2,
+          "said": "Daily 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b57fdf8c",
+          "page": 2,
+          "said": "Daily 8:30am"
+        },
+        {
+          "source": "website",
+          "url": "https://sttheresecresskill.org/",
+          "said": "Monday - Friday 8:30am"
+        }
+      ],
+      "rationale": "R1: 'Daily 8:30am' in the Mass Schedule box of both bulletins; both weeks' intentions list 8:30 Monday to Friday and no Saturday morning Mass, and the parish website says 'Monday - Friday 8:30am' (R5), so Daily means Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-therese-of-lisieux-cresskill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "28853059",
+          "page": 2,
+          "said": "Daily 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b57fdf8c",
+          "page": 2,
+          "said": "Daily 8:30am"
+        },
+        {
+          "source": "website",
+          "url": "https://sttheresecresskill.org/",
+          "said": "Monday - Friday 8:30am"
+        }
+      ],
+      "rationale": "R1: 'Daily 8:30am' in the Mass Schedule box of both bulletins; both weeks' intentions list 8:30 Monday to Friday and no Saturday morning Mass, and the parish website says 'Monday - Friday 8:30am' (R5), so Daily means Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-therese-of-lisieux-cresskill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "28853059",
+          "page": 2,
+          "said": "Daily 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b57fdf8c",
+          "page": 2,
+          "said": "Daily 8:30am"
+        },
+        {
+          "source": "website",
+          "url": "https://sttheresecresskill.org/",
+          "said": "Monday - Friday 8:30am"
+        }
+      ],
+      "rationale": "R1: 'Daily 8:30am' in the Mass Schedule box of both bulletins; both weeks' intentions list 8:30 Monday to Friday and no Saturday morning Mass, and the parish website says 'Monday - Friday 8:30am' (R5), so Daily means Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-therese-of-lisieux-cresskill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "28853059",
+          "page": 2,
+          "said": "Daily 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b57fdf8c",
+          "page": 2,
+          "said": "Daily 8:30am"
+        },
+        {
+          "source": "website",
+          "url": "https://sttheresecresskill.org/",
+          "said": "Monday - Friday 8:30am"
+        }
+      ],
+      "rationale": "R1: 'Daily 8:30am' in the Mass Schedule box of both bulletins; both weeks' intentions list 8:30 Monday to Friday and no Saturday morning Mass, and the parish website says 'Monday - Friday 8:30am' (R5), so Daily means Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-therese-of-lisieux-cresskill",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "28853059",
+          "page": 2,
+          "said": "Reconciliation Saturday 3:30-4:00pm or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b57fdf8c",
+          "page": 2,
+          "said": "Reconciliation Saturday 3:30-4:00pm or by appointment"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-therese-of-lisieux-cresskill",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "28853059",
+          "page": 3,
+          "said": "Thanksgiving Day Mass ... Thursday November 26th at 9:00am"
+        }
+      ],
+      "rationale": "R1, R16: dated Thanksgiving Mass after as_of, at the parish church (POLICY, Weekly or dated rule 7). Per R17 the weekly Thursday 8:30 Mass is left alone: the bulletin does not say it is cancelled.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-therese-of-lisieux-cresskill",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-13",
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "XLT Holy Hour"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b57fdf8c",
+          "page": 5,
+          "said": "A Holy Hour Eucharistic Adoration Friday evening, November 13 7-8:00pm"
+        }
+      ],
+      "rationale": "R16: a one-off dated Holy Hour before as_of; out of seed scope.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "28853059",
+          "page": 2,
+          "said": "or by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "28853059",
+          "page": 2,
+          "said": "Holy Days 7:00pm Vigil 8:30am"
+        }
+      ],
+      "rationale": "R24/POLICY, Dates: the generic holy-day times name no date; no holy day is dated in the bulletins read, so nothing is recorded. Update mode will pick up dated holy-day Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-closter",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Recovery Mass"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "28853059",
+          "page": 5,
+          "said": "Third Saturday Recovery Mass 12:00 Noon, Church of St. Mary, 20 Legion Place, Closter"
+        }
+      ],
+      "rationale": "R22: held at St. Mary, Closter, another parish's church; its events belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
