@@ -1,0 +1,1299 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-theresa-of-the-child-jesus-linden",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:54:49Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T18:32:54Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (Polish, English, Spanish). Mass, Confession and Adoration times come from the identical schedule boxes on p3 of both bulletins read (issues covering Nov 1 and Nov 8, 2026); first-Saturday Night Vigil Adoration and 10 PM Mass included. Open: how to record the First Friday all-night Adoration, which ends at 8 AM Saturday.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "1f306ea75cc015ad3037b6afba7da9a579c3b70c959690d4e11cf20127e64939",
+      "fetched_at": "2026-11-15T16:54:49Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "107ef15e74e74de658c461a89036087a69f67a490a31590d19555b0b875aa94a",
+      "fetched_at": "2026-11-08T16:03:40Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-of-the-child-jesus-linden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f306ea7",
+          "page": 3,
+          "said": "Saturday Vigil: 5:00 PM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "107ef15e",
+          "page": 3,
+          "said": "Saturday Vigil: 5:00 PM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the Sunday Masses box of both bulletins read; intentions list Sat 5:00 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-of-the-child-jesus-linden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f306ea7",
+          "page": 3,
+          "said": "Sunday: 7:30 AM (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "107ef15e",
+          "page": 3,
+          "said": "Sunday: 7:30 AM (Polish)"
+        }
+      ],
+      "rationale": "R1: printed in the Sunday Masses box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-of-the-child-jesus-linden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f306ea7",
+          "page": 3,
+          "said": "Sunday: ... 9:30 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "107ef15e",
+          "page": 3,
+          "said": "Sunday: ... 9:30 AM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the Sunday Masses box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-of-the-child-jesus-linden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f306ea7",
+          "page": 3,
+          "said": "Sunday: ... 11:00 AM (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "107ef15e",
+          "page": 3,
+          "said": "Sunday: ... 11:00 AM (Polish)"
+        }
+      ],
+      "rationale": "R1: printed in the Sunday Masses box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-of-the-child-jesus-linden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f306ea7",
+          "page": 3,
+          "said": "Sunday: ... 12:30 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "107ef15e",
+          "page": 3,
+          "said": "Sunday: ... 12:30 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the Sunday Masses box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-of-the-child-jesus-linden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f306ea7",
+          "page": 3,
+          "said": "Sunday: ... 7:00 PM (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "107ef15e",
+          "page": 3,
+          "said": "Sunday: ... 7:00 PM (Polish)"
+        }
+      ],
+      "rationale": "R1: printed in the Sunday Masses box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-of-the-child-jesus-linden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f306ea7",
+          "page": 3,
+          "said": "Monday & Thursday: 7:00 AM (Polish) & 7:00 PM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "107ef15e",
+          "page": 3,
+          "said": "Monday & Thursday: 7:00 AM (Polish) & 7:00 PM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Masses box of both bulletins read; intentions list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-of-the-child-jesus-linden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f306ea7",
+          "page": 3,
+          "said": "Monday & Thursday: 7:00 AM (Polish) & 7:00 PM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "107ef15e",
+          "page": 3,
+          "said": "Monday & Thursday: 7:00 AM (Polish) & 7:00 PM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Masses box of both bulletins read; intentions list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-of-the-child-jesus-linden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f306ea7",
+          "page": 3,
+          "said": "Monday & Thursday: 7:00 AM (Polish) & 7:00 PM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "107ef15e",
+          "page": 3,
+          "said": "Monday & Thursday: 7:00 AM (Polish) & 7:00 PM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Masses box of both bulletins read; intentions list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-of-the-child-jesus-linden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f306ea7",
+          "page": 3,
+          "said": "Monday & Thursday: 7:00 AM (Polish) & 7:00 PM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "107ef15e",
+          "page": 3,
+          "said": "Monday & Thursday: 7:00 AM (Polish) & 7:00 PM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Masses box of both bulletins read; intentions list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-of-the-child-jesus-linden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f306ea7",
+          "page": 3,
+          "said": "Tuesday: 7:00 AM (English) & 7:00 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "107ef15e",
+          "page": 3,
+          "said": "Tuesday: 7:00 AM (English) & 7:00 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Masses box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-of-the-child-jesus-linden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f306ea7",
+          "page": 3,
+          "said": "Tuesday: 7:00 AM (English) & 7:00 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "107ef15e",
+          "page": 3,
+          "said": "Tuesday: 7:00 AM (English) & 7:00 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Masses box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-of-the-child-jesus-linden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f306ea7",
+          "page": 3,
+          "said": "Wednesday & Friday: 7:00 AM (English) & 7:00 PM (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "107ef15e",
+          "page": 3,
+          "said": "Wednesday & Friday: 7:00 AM (English) & 7:00 PM (Polish)"
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Masses box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-of-the-child-jesus-linden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f306ea7",
+          "page": 3,
+          "said": "Wednesday & Friday: 7:00 AM (English) & 7:00 PM (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "107ef15e",
+          "page": 3,
+          "said": "Wednesday & Friday: 7:00 AM (English) & 7:00 PM (Polish)"
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Masses box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-of-the-child-jesus-linden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f306ea7",
+          "page": 3,
+          "said": "Wednesday & Friday: 7:00 AM (English) & 7:00 PM (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "107ef15e",
+          "page": 3,
+          "said": "Wednesday & Friday: 7:00 AM (English) & 7:00 PM (Polish)"
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Masses box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-of-the-child-jesus-linden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f306ea7",
+          "page": 3,
+          "said": "Wednesday & Friday: 7:00 AM (English) & 7:00 PM (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "107ef15e",
+          "page": 3,
+          "said": "Wednesday & Friday: 7:00 AM (English) & 7:00 PM (Polish)"
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Masses box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-of-the-child-jesus-linden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f306ea7",
+          "page": 3,
+          "said": "Saturday: 7:00 AM (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "107ef15e",
+          "page": 3,
+          "said": "Saturday: 7:00 AM (Polish)"
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Masses box of both bulletins read; intentions list Sat 7:00 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-of-the-child-jesus-linden",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f306ea7",
+          "page": 3,
+          "said": "CONFESSION / SPOWIEDŹ Monday – Saturday: 7:30 AM (chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "107ef15e",
+          "page": 3,
+          "said": "CONFESSION / SPOWIEDŹ Monday – Saturday: 7:30 AM (chapel)"
+        }
+      ],
+      "rationale": "R1, POLICY Churches and chapels: clock time printed in both bulletins; no end time given, so none recorded. The chapel is treated as part of the church (POLICY: 'in the chapel' belongs to the church; the box contrasts it with '(church)' and baptism classes are held 'in the chapel').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-of-the-child-jesus-linden",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f306ea7",
+          "page": 3,
+          "said": "CONFESSION / SPOWIEDŹ Monday – Saturday: 7:30 AM (chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "107ef15e",
+          "page": 3,
+          "said": "CONFESSION / SPOWIEDŹ Monday – Saturday: 7:30 AM (chapel)"
+        }
+      ],
+      "rationale": "R1, POLICY Churches and chapels: clock time printed in both bulletins; no end time given, so none recorded. The chapel is treated as part of the church (POLICY: 'in the chapel' belongs to the church; the box contrasts it with '(church)' and baptism classes are held 'in the chapel').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-of-the-child-jesus-linden",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f306ea7",
+          "page": 3,
+          "said": "CONFESSION / SPOWIEDŹ Monday – Saturday: 7:30 AM (chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "107ef15e",
+          "page": 3,
+          "said": "CONFESSION / SPOWIEDŹ Monday – Saturday: 7:30 AM (chapel)"
+        }
+      ],
+      "rationale": "R1, POLICY Churches and chapels: clock time printed in both bulletins; no end time given, so none recorded. The chapel is treated as part of the church (POLICY: 'in the chapel' belongs to the church; the box contrasts it with '(church)' and baptism classes are held 'in the chapel').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-of-the-child-jesus-linden",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f306ea7",
+          "page": 3,
+          "said": "CONFESSION / SPOWIEDŹ Monday – Saturday: 7:30 AM (chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "107ef15e",
+          "page": 3,
+          "said": "CONFESSION / SPOWIEDŹ Monday – Saturday: 7:30 AM (chapel)"
+        }
+      ],
+      "rationale": "R1, POLICY Churches and chapels: clock time printed in both bulletins; no end time given, so none recorded. The chapel is treated as part of the church (POLICY: 'in the chapel' belongs to the church; the box contrasts it with '(church)' and baptism classes are held 'in the chapel').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-of-the-child-jesus-linden",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f306ea7",
+          "page": 3,
+          "said": "CONFESSION / SPOWIEDŹ Monday – Saturday: 7:30 AM (chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "107ef15e",
+          "page": 3,
+          "said": "CONFESSION / SPOWIEDŹ Monday – Saturday: 7:30 AM (chapel)"
+        }
+      ],
+      "rationale": "R1, POLICY Churches and chapels: clock time printed in both bulletins; no end time given, so none recorded. The chapel is treated as part of the church (POLICY: 'in the chapel' belongs to the church; the box contrasts it with '(church)' and baptism classes are held 'in the chapel').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-of-the-child-jesus-linden",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f306ea7",
+          "page": 3,
+          "said": "CONFESSION / SPOWIEDŹ Monday – Saturday: 7:30 AM (chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "107ef15e",
+          "page": 3,
+          "said": "CONFESSION / SPOWIEDŹ Monday – Saturday: 7:30 AM (chapel)"
+        }
+      ],
+      "rationale": "R1, POLICY Churches and chapels: clock time printed in both bulletins; no end time given, so none recorded. The chapel is treated as part of the church (POLICY: 'in the chapel' belongs to the church; the box contrasts it with '(church)' and baptism classes are held 'in the chapel').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-of-the-child-jesus-linden",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f306ea7",
+          "page": 3,
+          "said": "Saturday: 4:00 PM (church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "107ef15e",
+          "page": 3,
+          "said": "Saturday: 4:00 PM (church)"
+        }
+      ],
+      "rationale": "R1: printed in the Confession box of both bulletins read; no end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-of-the-child-jesus-linden",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "17:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel; after the 7:00 AM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f306ea7",
+          "page": 3,
+          "said": "Friday after 7:00AM Holy Mass until 5:30PM in the chapel."
+        },
+        {
+          "source": "agent",
+          "bulletin": "107ef15e",
+          "page": 3,
+          "said": "Friday after 7:00AM Holy Mass until 5:30PM in the chapel."
+        }
+      ],
+      "rationale": "R1, R10: printed in both bulletins (English and Polish); start is 30 minutes after the weekday 7:00 AM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-of-the-child-jesus-linden",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 7:00 PM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f306ea7",
+          "page": 3,
+          "said": "Adoration of the Blessed Sacrament every Monday, Wednesday, and Friday, following the 7:00PM Mass until 9:00PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "107ef15e",
+          "page": 3,
+          "said": "Adoration of the Blessed Sacrament every Monday, Wednesday, and Friday, following the 7:00PM Mass until 9:00PM."
+        }
+      ],
+      "rationale": "R1, R10: printed in both bulletins; start is 30 minutes after the weekday 7:00 PM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-of-the-child-jesus-linden",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 7:00 PM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f306ea7",
+          "page": 3,
+          "said": "Adoration of the Blessed Sacrament every Monday, Wednesday, and Friday, following the 7:00PM Mass until 9:00PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "107ef15e",
+          "page": 3,
+          "said": "Adoration of the Blessed Sacrament every Monday, Wednesday, and Friday, following the 7:00PM Mass until 9:00PM."
+        }
+      ],
+      "rationale": "R1, R10: printed in both bulletins; start is 30 minutes after the weekday 7:00 PM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-of-the-child-jesus-linden",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 7:00 PM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f306ea7",
+          "page": 3,
+          "said": "Adoration of the Blessed Sacrament every Monday, Wednesday, and Friday, following the 7:00PM Mass until 9:00PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "107ef15e",
+          "page": 3,
+          "said": "Adoration of the Blessed Sacrament every Monday, Wednesday, and Friday, following the 7:00PM Mass until 9:00PM."
+        }
+      ],
+      "rationale": "R1, R10: printed in both bulletins; start is 30 minutes after the weekday 7:00 PM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-of-the-child-jesus-linden",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "20:00",
+        "end_time": "22:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Night Vigil, concluding with the 10:00 PM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f306ea7",
+          "page": 3,
+          "said": "Every First Saturday of the month, we invite you to a Night Vigil with Adoration of the Blessed Sacrament, beginning at 8:00PM and concluding with Holy Mass at 10:00PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "107ef15e",
+          "page": 3,
+          "said": "Every First Saturday of the month, we invite you to a Night Vigil with Adoration of the Blessed Sacrament, beginning at 8:00PM and concluding with Holy Mass at 10:00PM."
+        }
+      ],
+      "rationale": "R1, R12: a named first-Saturday service printed in both bulletins; the newest bulletin's week holds no first Saturday, but the standing notice is printed in it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-of-the-child-jesus-linden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "22:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Night Vigil"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f306ea7",
+          "page": 3,
+          "said": "Every First Saturday of the month ... Night Vigil ... concluding with Holy Mass at 10:00PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "107ef15e",
+          "page": 3,
+          "said": "Every First Saturday of the month ... Night Vigil ... concluding with Holy Mass at 10:00PM."
+        }
+      ],
+      "rationale": "R1: a named first-Saturday Mass, open ('we invite you'), printed in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-of-the-child-jesus-linden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Concludes the First Friday all-night Adoration"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f306ea7",
+          "page": 3,
+          "said": "Adoration begins following the 7:00PM Mass on Friday and concludes with Holy Mass at 8:00AM on Saturday."
+        },
+        {
+          "source": "agent",
+          "bulletin": "107ef15e",
+          "page": 3,
+          "said": "Adoration begins following the 7:00PM Mass on Friday and concludes with Holy Mass at 8:00AM on Saturday."
+        }
+      ],
+      "rationale": "R33: this Mass is on the Saturday after the first Friday, which is not always the first Saturday; the format cannot express it and no dated occurrence is printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f306ea7",
+          "page": 3,
+          "said": "HOLY DAYS OF OBLIGATION: Mass times will be announced in the bulletin."
+        }
+      ],
+      "rationale": "R26: no times given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f306ea7",
+          "page": 3,
+          "said": "BAPTISM On Saturdays: 12:30PM (English) & 1:30PM (Polish)"
+        }
+      ],
+      "rationale": "R24: baptisms are not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f306ea7",
+          "page": 3,
+          "said": "Every First Friday of the month, we invite you to all night Adoration of the Blessed Sacrament. Adoration begins following the 7:00PM Mass on Friday and concludes with Holy Mass at 8:00AM on Saturday."
+        },
+        {
+          "source": "agent",
+          "bulletin": "107ef15e",
+          "page": 3,
+          "said": "Every First Friday of the month, we invite you to all night Adoration of the Blessed Sacrament. Adoration begins following the 7:00PM Mass on Friday and concludes with Holy Mass at 8:00AM on Saturday."
+        }
+      ],
+      "rationale": "R30, R33: printed in both bulletins and representable as first Friday, but it ends the next morning; an end time of 08:00 on a Friday slot would read as before its start. It overlaps the weekly Friday 7:30-9:00 PM Adoration (s28), which it extends on first Fridays. Leaning to record the start with no end and a note, since the extended hours are real and public.",
+      "question": "First Friday all-night Adoration runs from after the 7 PM Mass to the 8 AM Saturday Mass. How should it be recorded?",
+      "options": [
+        {
+          "label": "First Fridays from 7:30 PM, no end time",
+          "entry": {
+            "church_slug": "st-theresa-of-the-child-jesus-linden",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "19:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "All night, until the 8:00 AM Mass on Saturday"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out (the weekly Fri 7:30-9 PM slot covers its start)",
+          "entry": null
+        }
+      ],
+      "answer": null
+    }
+  ]
+}
