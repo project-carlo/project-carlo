@@ -1,0 +1,790 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-rose-of-lima-newark",
+  "status": "needs_review",
+  "as_of": "2026-11-15T15:53:57Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T18:04:10Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. The Mass, Confession and Adoration schedule box is identical in both bulletins read (Nov 8 and Nov 15, 2026); a dated bilingual Thanksgiving Mass Nov 26 at 10 AM is added. Open: whether the Mon/Tue/Wed/Fri 6-7 PM Adoration 'in rectory chapel' is at the church's location (leaning include).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "484359d976d588e98a9140b5ffccc59390508227ed7abba78eac3768ac758eb5",
+      "fetched_at": "2026-11-15T15:53:57Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "7a80de4ae28b087f63f67b889220eeed99f792edf8efdccefab38451c4c73809",
+      "fetched_at": "2026-11-08T15:50:06Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "484359d9",
+          "page": 2,
+          "said": "Sunday Spanish Mass 8:00 AM & 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a80de4a",
+          "page": 2,
+          "said": "Sunday Spanish Mass 8:00 AM & 12:00 Noon"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read (English and Spanish columns agree).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "484359d9",
+          "page": 2,
+          "said": "Sunday Spanish Mass 8:00 AM & 12:00 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a80de4a",
+          "page": 2,
+          "said": "Sunday Spanish Mass 8:00 AM & 12:00 Noon"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read (English and Spanish columns agree).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "484359d9",
+          "page": 2,
+          "said": "Sunday 10:00 AM (English Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a80de4a",
+          "page": 2,
+          "said": "Sunday 10:00 AM (English Mass)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "484359d9",
+          "page": 2,
+          "said": "Monday-Saturday 7:30 AM (English Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a80de4a",
+          "page": 2,
+          "said": "Monday-Saturday 7:30 AM (English Mass)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read. The Dec 8 notice (latest p3) places a 7:30am Mass 'en la capilla'; which chapel is not said, so no location note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "484359d9",
+          "page": 2,
+          "said": "Monday-Saturday 7:30 AM (English Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a80de4a",
+          "page": 2,
+          "said": "Monday-Saturday 7:30 AM (English Mass)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read. The Dec 8 notice (latest p3) places a 7:30am Mass 'en la capilla'; which chapel is not said, so no location note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "484359d9",
+          "page": 2,
+          "said": "Monday-Saturday 7:30 AM (English Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a80de4a",
+          "page": 2,
+          "said": "Monday-Saturday 7:30 AM (English Mass)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read. The Dec 8 notice (latest p3) places a 7:30am Mass 'en la capilla'; which chapel is not said, so no location note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "484359d9",
+          "page": 2,
+          "said": "Monday-Saturday 7:30 AM (English Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a80de4a",
+          "page": 2,
+          "said": "Monday-Saturday 7:30 AM (English Mass)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read. The Dec 8 notice (latest p3) places a 7:30am Mass 'en la capilla'; which chapel is not said, so no location note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "484359d9",
+          "page": 2,
+          "said": "Monday-Saturday 7:30 AM (English Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a80de4a",
+          "page": 2,
+          "said": "Monday-Saturday 7:30 AM (English Mass)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read. The Dec 8 notice (latest p3) places a 7:30am Mass 'en la capilla'; which chapel is not said, so no location note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "484359d9",
+          "page": 2,
+          "said": "Monday-Saturday 7:30 AM (English Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a80de4a",
+          "page": 2,
+          "said": "Monday-Saturday 7:30 AM (English Mass)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read. The Dec 8 notice (latest p3) places a 7:30am Mass 'en la capilla'; which chapel is not said, so no location note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-newark",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "484359d9",
+          "page": 2,
+          "said": "Tuesday 7:00 PM (Spanish Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a80de4a",
+          "page": 2,
+          "said": "Tuesday 7:00 PM (Spanish Mass)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-newark",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "484359d9",
+          "page": 2,
+          "said": "CONFESSION Tuesday 6:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a80de4a",
+          "page": 2,
+          "said": "CONFESSION Tuesday 6:30 PM"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins; no end time given (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "484359d9",
+          "page": 2,
+          "said": "EUCHARISTIC ADORATION IN RECTORY CHAPEL Monday, Tuesday, Wednesday & Friday 6:00 PM - 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a80de4a",
+          "page": 2,
+          "said": "EUCHARISTIC ADORATION IN RECTORY CHAPEL Monday, Tuesday, Wednesday & Friday 6:00 PM - 7:00 PM"
+        }
+      ],
+      "rationale": "R32/POLICY, Churches and chapels: the adoration is in the rectory chapel, and no bulletin says where the rectory is. The bulletin gives only the parish address 11 Gray St. with the rectory phone beside it, and the parish's own website is only the church-bulletin.org archive page (no schedule or address for the rectory). Leaning include: a city parish's rectory is normally on the church grounds and the bulletin gives one address for both; leave out if the rectory is elsewhere.",
+      "question": "Include the Mon/Tue/Wed/Fri 6-7 PM Adoration 'in rectory chapel' at St. Rose of Lima church?",
+      "options": [
+        {
+          "label": "Include at the church, note Rectory chapel",
+          "entry": {
+            "church_slug": "st-rose-of-lima-newark",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "18:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Rectory chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "rectory-adoration"
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "484359d9",
+          "page": 2,
+          "said": "EUCHARISTIC ADORATION IN RECTORY CHAPEL Monday, Tuesday, Wednesday & Friday 6:00 PM - 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a80de4a",
+          "page": 2,
+          "said": "EUCHARISTIC ADORATION IN RECTORY CHAPEL Monday, Tuesday, Wednesday & Friday 6:00 PM - 7:00 PM"
+        }
+      ],
+      "rationale": "R32/POLICY, Churches and chapels: the adoration is in the rectory chapel, and no bulletin says where the rectory is. The bulletin gives only the parish address 11 Gray St. with the rectory phone beside it, and the parish's own website is only the church-bulletin.org archive page (no schedule or address for the rectory). Leaning include: a city parish's rectory is normally on the church grounds and the bulletin gives one address for both; leave out if the rectory is elsewhere.",
+      "question": "Include the Mon/Tue/Wed/Fri 6-7 PM Adoration 'in rectory chapel' at St. Rose of Lima church?",
+      "options": [
+        {
+          "label": "Include at the church, note Rectory chapel",
+          "entry": {
+            "church_slug": "st-rose-of-lima-newark",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "18:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Rectory chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "rectory-adoration"
+    },
+    {
+      "id": "s14",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "484359d9",
+          "page": 2,
+          "said": "EUCHARISTIC ADORATION IN RECTORY CHAPEL Monday, Tuesday, Wednesday & Friday 6:00 PM - 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a80de4a",
+          "page": 2,
+          "said": "EUCHARISTIC ADORATION IN RECTORY CHAPEL Monday, Tuesday, Wednesday & Friday 6:00 PM - 7:00 PM"
+        }
+      ],
+      "rationale": "R32/POLICY, Churches and chapels: the adoration is in the rectory chapel, and no bulletin says where the rectory is. The bulletin gives only the parish address 11 Gray St. with the rectory phone beside it, and the parish's own website is only the church-bulletin.org archive page (no schedule or address for the rectory). Leaning include: a city parish's rectory is normally on the church grounds and the bulletin gives one address for both; leave out if the rectory is elsewhere.",
+      "question": "Include the Mon/Tue/Wed/Fri 6-7 PM Adoration 'in rectory chapel' at St. Rose of Lima church?",
+      "options": [
+        {
+          "label": "Include at the church, note Rectory chapel",
+          "entry": {
+            "church_slug": "st-rose-of-lima-newark",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "18:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Rectory chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "rectory-adoration"
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "484359d9",
+          "page": 2,
+          "said": "EUCHARISTIC ADORATION IN RECTORY CHAPEL Monday, Tuesday, Wednesday & Friday 6:00 PM - 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a80de4a",
+          "page": 2,
+          "said": "EUCHARISTIC ADORATION IN RECTORY CHAPEL Monday, Tuesday, Wednesday & Friday 6:00 PM - 7:00 PM"
+        }
+      ],
+      "rationale": "R32/POLICY, Churches and chapels: the adoration is in the rectory chapel, and no bulletin says where the rectory is. The bulletin gives only the parish address 11 Gray St. with the rectory phone beside it, and the parish's own website is only the church-bulletin.org archive page (no schedule or address for the rectory). Leaning include: a city parish's rectory is normally on the church grounds and the bulletin gives one address for both; leave out if the rectory is elsewhere.",
+      "question": "Include the Mon/Tue/Wed/Fri 6-7 PM Adoration 'in rectory chapel' at St. Rose of Lima church?",
+      "options": [
+        {
+          "label": "Include at the church, note Rectory chapel",
+          "entry": {
+            "church_slug": "st-rose-of-lima-newark",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "18:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Rectory chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "rectory-adoration"
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-newark",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day, bilingual"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "484359d9",
+          "page": 3,
+          "said": "Please consider joining us at 10:00 am Mass on Thanksgiving Day. The mass will be bilingual."
+        }
+      ],
+      "rationale": "R1, R16, R17: a dated Thanksgiving Mass (Thursday November 26) outside the weekly schedule; the weekly Thursday 7:30 AM Mass is left alone since no cancellation is stated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-newark",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "484359d9",
+          "page": 3,
+          "said": "El Martes, 8 de Diciembre ... Las misas serán: 7:30am (Inglés) en la capilla y 7pm (Español) en la iglesia."
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rules 6-7: both holy-day Masses are the regular Tuesday 7:30 AM and 7:00 PM weekly Masses, so they are not recorded separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-newark",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "484359d9",
+          "page": 3,
+          "said": "El Martes, 8 de Diciembre ... Las misas serán: 7:30am (Inglés) en la capilla y 7pm (Español) en la iglesia."
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rules 6-7: both holy-day Masses are the regular Tuesday 7:30 AM and 7:00 PM weekly Masses, so they are not recorded separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-newark",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-13",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Guadalupe"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "484359d9",
+          "page": 3,
+          "said": "La misa a la Virgen de Guadalupe será el Domingo 13 de Diciembre a las 12 del mediodía."
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7: a feast celebrated at the regular Sunday 12:00 PM Mass is not recorded separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "484359d9",
+          "page": 2,
+          "said": "Baptism By Appointment; Ministry to the sick - Please call the Parish Office"
+        }
+      ],
+      "rationale": "R24/R26: no definite time; not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
