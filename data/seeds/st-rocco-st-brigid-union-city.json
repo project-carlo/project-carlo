@@ -1,0 +1,1164 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-rocco-st-brigid-union-city",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:54:37Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T18:01:10Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (St. Rocco; St. Brigid is only in the parish name). Weekend, daily 9 AM, confession and rectory Adoration Chapel times agree in both bulletins and on the website; Thanksgiving 10 AM Mass and Nov 22 Sunday Adoration are dated. Open: the irregular Tuesday 6 PM Mass and whether weekday confession after 9 AM Mass includes Saturday.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "0268061d23e63ad7f56e71ec9ac28cb459d1abc1875b7d1cd5ec02cd133c9534",
+      "fetched_at": "2026-11-15T16:54:37Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "71f5b1df1f6b4e73e4af5a6511b9d888fc4257f62172d3296f4c67817f2cc9e5",
+      "fetched_at": "2026-11-08T16:03:27Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rocco-union-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0268061d",
+          "page": 1,
+          "said": "Saturday Vigil: 4:00pm and 6:00pm (Sp.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71f5b1df",
+          "page": 1,
+          "said": "Saturday Vigil: 4:00pm and 6:00pm (Sp.)"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule of both bulletins and in each week's intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rocco-union-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0268061d",
+          "page": 1,
+          "said": "Saturday Vigil: 4:00pm and 6:00pm (Sp.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71f5b1df",
+          "page": 1,
+          "said": "Saturday Vigil: 4:00pm and 6:00pm (Sp.)"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule of both bulletins and in each week's intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rocco-union-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0268061d",
+          "page": 1,
+          "said": "Sunday: 8:45am, 10:30am (Spanish), 12:00pm and 6:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71f5b1df",
+          "page": 1,
+          "said": "Sunday: 8:45am, 10:30am (Spanish), 12:00pm and 6:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule of both bulletins and in each week's intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rocco-union-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0268061d",
+          "page": 1,
+          "said": "Sunday: 8:45am, 10:30am (Spanish), 12:00pm and 6:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71f5b1df",
+          "page": 1,
+          "said": "Sunday: 8:45am, 10:30am (Spanish), 12:00pm and 6:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule of both bulletins and in each week's intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rocco-union-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0268061d",
+          "page": 1,
+          "said": "Sunday: 8:45am, 10:30am (Spanish), 12:00pm and 6:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71f5b1df",
+          "page": 1,
+          "said": "Sunday: 8:45am, 10:30am (Spanish), 12:00pm and 6:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule of both bulletins and in each week's intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rocco-union-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0268061d",
+          "page": 1,
+          "said": "Sunday: 8:45am, 10:30am (Spanish), 12:00pm and 6:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71f5b1df",
+          "page": 1,
+          "said": "Sunday: 8:45am, 10:30am (Spanish), 12:00pm and 6:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule of both bulletins and in each week's intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rocco-union-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0268061d",
+          "page": 1,
+          "said": "Daily Mass Monday to Saturday: 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71f5b1df",
+          "page": 1,
+          "said": "Daily Mass Monday to Saturday: 9:00am"
+        }
+      ],
+      "rationale": "R1: page-1 schedule of both bulletins; a 9:00 am Mass is in the intentions for every day of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rocco-union-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0268061d",
+          "page": 1,
+          "said": "Daily Mass Monday to Saturday: 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71f5b1df",
+          "page": 1,
+          "said": "Daily Mass Monday to Saturday: 9:00am"
+        }
+      ],
+      "rationale": "R1: page-1 schedule of both bulletins; a 9:00 am Mass is in the intentions for every day of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rocco-union-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0268061d",
+          "page": 1,
+          "said": "Daily Mass Monday to Saturday: 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71f5b1df",
+          "page": 1,
+          "said": "Daily Mass Monday to Saturday: 9:00am"
+        }
+      ],
+      "rationale": "R1: page-1 schedule of both bulletins; a 9:00 am Mass is in the intentions for every day of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rocco-union-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0268061d",
+          "page": 1,
+          "said": "Daily Mass Monday to Saturday: 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71f5b1df",
+          "page": 1,
+          "said": "Daily Mass Monday to Saturday: 9:00am"
+        }
+      ],
+      "rationale": "R1: page-1 schedule of both bulletins; a 9:00 am Mass is in the intentions for every day of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rocco-union-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0268061d",
+          "page": 1,
+          "said": "Daily Mass Monday to Saturday: 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71f5b1df",
+          "page": 1,
+          "said": "Daily Mass Monday to Saturday: 9:00am"
+        }
+      ],
+      "rationale": "R1: page-1 schedule of both bulletins; a 9:00 am Mass is in the intentions for every day of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rocco-union-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0268061d",
+          "page": 1,
+          "said": "Daily Mass Monday to Saturday: 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71f5b1df",
+          "page": 1,
+          "said": "Daily Mass Monday to Saturday: 9:00am"
+        }
+      ],
+      "rationale": "R1: page-1 schedule of both bulletins; a 9:00 am Mass is in the intentions for every day of both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0268061d",
+          "page": 1,
+          "said": "Tuesday: 9:00am & 6:00pm (for 6pm Mass please check the Mass schedule at the next page)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0268061d",
+          "page": 2,
+          "said": "Tuesday, November 17 9:00 am Rita Mazza (no 6 pm listed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71f5b1df",
+          "page": 2,
+          "said": "Tuesday, November 10 9:00 am ... 6:00 pm De Vito Family"
+        },
+        {
+          "source": "website",
+          "url": "https://stroccounioncity.org/",
+          "said": "Tuesday (Only) 6:00 pm (Check schedule in the weekly bulletin)"
+        }
+      ],
+      "rationale": "R33/R30: both the bulletin and website say the Tuesday 6 PM Mass depends on the week's schedule; it was listed Nov 10 but not Nov 17, and no pattern (e.g. second Tuesdays) is stated. Leaning leave out rather than a false weekly slot.",
+      "question": "Tuesday 6:00 PM Mass: the schedule says to check the bulletin for it; Nov 10 had one, Nov 17 did not. Add it weekly?",
+      "options": [
+        {
+          "label": "Leave out (not every Tuesday; update mode records dated ones)",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Every Tuesday 6:00 PM",
+          "entry": {
+            "church_slug": "st-rocco-union-city",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "18:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rocco-union-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0268061d",
+          "page": 2,
+          "said": "Confessions Sat 3:30pm; after 9:00am weekdays or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71f5b1df",
+          "page": 2,
+          "said": "Confessions Sat 3:30pm; after 9:00am weekdays or by appointment"
+        }
+      ],
+      "rationale": "R1: Sacraments box of both bulletins; website agrees (Saturdays 3:30 pm). No end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rocco-union-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "after the 9:00 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0268061d",
+          "page": 2,
+          "said": "Confessions Sat 3:30pm; after 9:00am weekdays or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71f5b1df",
+          "page": 2,
+          "said": "Confessions Sat 3:30pm; after 9:00am weekdays or by appointment"
+        }
+      ],
+      "rationale": "R10: after a weekday Mass is 30 minutes after it starts; printed in both bulletins, website says daily after the 9 am Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rocco-union-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "after the 9:00 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0268061d",
+          "page": 2,
+          "said": "Confessions Sat 3:30pm; after 9:00am weekdays or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71f5b1df",
+          "page": 2,
+          "said": "Confessions Sat 3:30pm; after 9:00am weekdays or by appointment"
+        }
+      ],
+      "rationale": "R10: after a weekday Mass is 30 minutes after it starts; printed in both bulletins, website says daily after the 9 am Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rocco-union-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "after the 9:00 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0268061d",
+          "page": 2,
+          "said": "Confessions Sat 3:30pm; after 9:00am weekdays or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71f5b1df",
+          "page": 2,
+          "said": "Confessions Sat 3:30pm; after 9:00am weekdays or by appointment"
+        }
+      ],
+      "rationale": "R10: after a weekday Mass is 30 minutes after it starts; printed in both bulletins, website says daily after the 9 am Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rocco-union-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "after the 9:00 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0268061d",
+          "page": 2,
+          "said": "Confessions Sat 3:30pm; after 9:00am weekdays or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71f5b1df",
+          "page": 2,
+          "said": "Confessions Sat 3:30pm; after 9:00am weekdays or by appointment"
+        }
+      ],
+      "rationale": "R10: after a weekday Mass is 30 minutes after it starts; printed in both bulletins, website says daily after the 9 am Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rocco-union-city",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "after the 9:00 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0268061d",
+          "page": 2,
+          "said": "Confessions Sat 3:30pm; after 9:00am weekdays or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71f5b1df",
+          "page": 2,
+          "said": "Confessions Sat 3:30pm; after 9:00am weekdays or by appointment"
+        }
+      ],
+      "rationale": "R10: after a weekday Mass is 30 minutes after it starts; printed in both bulletins, website says daily after the 9 am Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0268061d",
+          "page": 2,
+          "said": "Confessions Sat 3:30pm; after 9:00am weekdays or by appointment"
+        },
+        {
+          "source": "website",
+          "url": "https://stroccounioncity.org/",
+          "said": "Confessions will be daily after the 9 am Mass, Saturdays 3:30 pm or call for an appointment."
+        }
+      ],
+      "rationale": "R30: 'weekdays' may or may not include Saturday, which has its own 9 AM Mass; the website's 'daily' suggests it does. Leaning include at 9:30 per R10.",
+      "question": "Confession after the Saturday 9:00 AM Mass? The bulletin says 'after 9:00am weekdays', the website 'daily after the 9 am Mass'.",
+      "options": [
+        {
+          "label": "Saturday 9:30 AM",
+          "entry": {
+            "church_slug": "st-rocco-union-city",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "after the 9:00 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0268061d",
+          "page": 2,
+          "said": "or by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rocco-union-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel in the rectory"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0268061d",
+          "page": 2,
+          "said": "EXPOSITION OF THE BLESSED SACRAMENT ... In Adoration Chapel (Rectory) Monday thru Friday 10:00 am to 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71f5b1df",
+          "page": 2,
+          "said": "EXPOSITION OF THE BLESSED SACRAMENT ... In Adoration Chapel (Rectory) Monday thru Friday 10:00 am to 4:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://stroccounioncity.org/",
+          "said": "RECTORY ADORATION CHAPEL is open DAILY. Limited time depending on attendance. Chapel hours are Monday through Friday from 10:00 am to 4pm."
+        }
+      ],
+      "rationale": "R1, R38: listed under the Exposition heading in both bulletins; the chapel is in the parish rectory, which shares the church's 4206 Kennedy Blvd address (POLICY, Churches and chapels: same grounds). Website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rocco-union-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel in the rectory"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0268061d",
+          "page": 2,
+          "said": "EXPOSITION OF THE BLESSED SACRAMENT ... In Adoration Chapel (Rectory) Monday thru Friday 10:00 am to 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71f5b1df",
+          "page": 2,
+          "said": "EXPOSITION OF THE BLESSED SACRAMENT ... In Adoration Chapel (Rectory) Monday thru Friday 10:00 am to 4:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://stroccounioncity.org/",
+          "said": "RECTORY ADORATION CHAPEL is open DAILY. Limited time depending on attendance. Chapel hours are Monday through Friday from 10:00 am to 4pm."
+        }
+      ],
+      "rationale": "R1, R38: listed under the Exposition heading in both bulletins; the chapel is in the parish rectory, which shares the church's 4206 Kennedy Blvd address (POLICY, Churches and chapels: same grounds). Website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rocco-union-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel in the rectory"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0268061d",
+          "page": 2,
+          "said": "EXPOSITION OF THE BLESSED SACRAMENT ... In Adoration Chapel (Rectory) Monday thru Friday 10:00 am to 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71f5b1df",
+          "page": 2,
+          "said": "EXPOSITION OF THE BLESSED SACRAMENT ... In Adoration Chapel (Rectory) Monday thru Friday 10:00 am to 4:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://stroccounioncity.org/",
+          "said": "RECTORY ADORATION CHAPEL is open DAILY. Limited time depending on attendance. Chapel hours are Monday through Friday from 10:00 am to 4pm."
+        }
+      ],
+      "rationale": "R1, R38: listed under the Exposition heading in both bulletins; the chapel is in the parish rectory, which shares the church's 4206 Kennedy Blvd address (POLICY, Churches and chapels: same grounds). Website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rocco-union-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel in the rectory"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0268061d",
+          "page": 2,
+          "said": "EXPOSITION OF THE BLESSED SACRAMENT ... In Adoration Chapel (Rectory) Monday thru Friday 10:00 am to 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71f5b1df",
+          "page": 2,
+          "said": "EXPOSITION OF THE BLESSED SACRAMENT ... In Adoration Chapel (Rectory) Monday thru Friday 10:00 am to 4:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://stroccounioncity.org/",
+          "said": "RECTORY ADORATION CHAPEL is open DAILY. Limited time depending on attendance. Chapel hours are Monday through Friday from 10:00 am to 4pm."
+        }
+      ],
+      "rationale": "R1, R38: listed under the Exposition heading in both bulletins; the chapel is in the parish rectory, which shares the church's 4206 Kennedy Blvd address (POLICY, Churches and chapels: same grounds). Website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rocco-union-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel in the rectory"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0268061d",
+          "page": 2,
+          "said": "EXPOSITION OF THE BLESSED SACRAMENT ... In Adoration Chapel (Rectory) Monday thru Friday 10:00 am to 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71f5b1df",
+          "page": 2,
+          "said": "EXPOSITION OF THE BLESSED SACRAMENT ... In Adoration Chapel (Rectory) Monday thru Friday 10:00 am to 4:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://stroccounioncity.org/",
+          "said": "RECTORY ADORATION CHAPEL is open DAILY. Limited time depending on attendance. Chapel hours are Monday through Friday from 10:00 am to 4pm."
+        }
+      ],
+      "rationale": "R1, R38: listed under the Exposition heading in both bulletins; the chapel is in the parish rectory, which shares the church's 4206 Kennedy Blvd address (POLICY, Churches and chapels: same grounds). Website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rocco-union-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second",
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "after the 12:00 PM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0268061d",
+          "page": 2,
+          "said": "EXPOSITION OF THE BLESSED SACRAMENT Second or Third Sunday of the month after the 12:00pm Mass (Church)."
+        },
+        {
+          "source": "agent",
+          "bulletin": "71f5b1df",
+          "page": 2,
+          "said": "EXPOSITION OF THE BLESSED SACRAMENT Second or Third Sunday of the month after the 12:00pm Mass (Church)."
+        }
+      ],
+      "rationale": "R33: 'second or third Sunday' is not a fixed weekly pattern the format can express (this month it falls on the fourth Sunday, Nov 22); the dated occurrence is recorded separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rocco-union-city",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-22",
+        "start_time": "13:00",
+        "end_time": "13:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "after the 12:00 PM Mass"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0268061d",
+          "page": 5,
+          "said": "ADORATION TO THE BLESSED SACRAMENT NEXT SUNDAY, NOVEMBER 22 AFTER THE 12PM MASS FINAL PRAYERS AT 1:30PM"
+        }
+      ],
+      "rationale": "R1, R16, POLICY Times: dated, on or after as_of; after a weekend Mass starts an hour after it (1:00 PM), ending with final prayers at 1:30 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rocco-union-city",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0268061d",
+          "page": 4,
+          "said": "our community mass on Thanksgiving Day at 10AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "71f5b1df",
+          "page": 3,
+          "said": "Join us for a special Mass on Thursday, Nov 26th at 10AM"
+        }
+      ],
+      "rationale": "R1, R16: dated special Mass on or after as_of, announced in both bulletins. R17: no cancellation of the weekday 9 AM Mass is stated, so the weekly slot is left alone.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
