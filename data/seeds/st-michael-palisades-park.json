@@ -1,0 +1,839 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-michael-palisades-park",
+  "status": "ready",
+  "as_of": "2026-11-15T16:26:00Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T17:20:17Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both bulletins read (Nov 8 and Nov 15, 2026) print the same schedule box: Sat 9:00 AM and 5:30 PM vigil; Sun 7:30, 9:30 Korean, 11:30, 1:30 Spanish, 5:30 PM Korean; Mon-Fri 7:30 and 11:00 AM; Tue 7:30 PM Korean; Wed 8:00 PM Spanish; Thu 8:00 PM Holy Hour; Saturday Reconciliation 5:00 PM. No history stored, no dated changes, no open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "7f0d1540266f307429826bbf294dc670aca3221736e7b73499fe1aed6aa1e37d",
+      "fetched_at": "2026-11-15T16:26:00Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "87d2e2a38151cb2f5dd470670c815c76ed218e76240ebaa739c8dba6ca1a7505",
+      "fetched_at": "2026-11-08T15:49:35Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-palisades-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7f0d1540",
+          "page": 1,
+          "said": "Saturday Vigil | 5:30 pm English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87d2e2a3",
+          "page": 1,
+          "said": "Saturday Vigil | 5:30 pm English"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass schedule box of both bulletins read, and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-palisades-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7f0d1540",
+          "page": 1,
+          "said": "Saturday: 9:00am, 5:30pm English (Sunday Vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87d2e2a3",
+          "page": 1,
+          "said": "Saturday: 9:00am, 5:30pm English (Sunday Vigil)"
+        }
+      ],
+      "rationale": "R1: printed under Weekday Mass in the schedule box of both bulletins; 9:00am Saturday intentions in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-palisades-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7f0d1540",
+          "page": 1,
+          "said": "Sunday | 7:30am, English, 9:30am Korean, 11:30am English,1:30pm Spanish, 5:30pm Korean"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87d2e2a3",
+          "page": 1,
+          "said": "Sunday | 7:30am, English, 9:30am Korean, 11:30am English,1:30pm Spanish, 5:30pm Korean"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; listed in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-palisades-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7f0d1540",
+          "page": 1,
+          "said": "Sunday | 7:30am, English, 9:30am Korean, 11:30am English,1:30pm Spanish, 5:30pm Korean"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87d2e2a3",
+          "page": 1,
+          "said": "Sunday | 7:30am, English, 9:30am Korean, 11:30am English,1:30pm Spanish, 5:30pm Korean"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; listed in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-palisades-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Korean"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7f0d1540",
+          "page": 1,
+          "said": "Sunday | 7:30am, English, 9:30am Korean, 11:30am English,1:30pm Spanish, 5:30pm Korean"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87d2e2a3",
+          "page": 1,
+          "said": "Sunday | 7:30am, English, 9:30am Korean, 11:30am English,1:30pm Spanish, 5:30pm Korean"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-palisades-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Korean"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7f0d1540",
+          "page": 1,
+          "said": "Sunday | 7:30am, English, 9:30am Korean, 11:30am English,1:30pm Spanish, 5:30pm Korean"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87d2e2a3",
+          "page": 1,
+          "said": "Sunday | 7:30am, English, 9:30am Korean, 11:30am English,1:30pm Spanish, 5:30pm Korean"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-palisades-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7f0d1540",
+          "page": 1,
+          "said": "Sunday | 7:30am, English, 9:30am Korean, 11:30am English,1:30pm Spanish, 5:30pm Korean"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87d2e2a3",
+          "page": 1,
+          "said": "Sunday | 7:30am, English, 9:30am Korean, 11:30am English,1:30pm Spanish, 5:30pm Korean"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-palisades-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7f0d1540",
+          "page": 1,
+          "said": "Monday-Friday: 7:30am & 11:00am English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87d2e2a3",
+          "page": 1,
+          "said": "Monday-Friday: 7:30am & 11:00am English"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; both times in every weekday's intentions in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-palisades-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7f0d1540",
+          "page": 1,
+          "said": "Monday-Friday: 7:30am & 11:00am English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87d2e2a3",
+          "page": 1,
+          "said": "Monday-Friday: 7:30am & 11:00am English"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; both times in every weekday's intentions in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-palisades-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7f0d1540",
+          "page": 1,
+          "said": "Monday-Friday: 7:30am & 11:00am English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87d2e2a3",
+          "page": 1,
+          "said": "Monday-Friday: 7:30am & 11:00am English"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; both times in every weekday's intentions in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-palisades-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7f0d1540",
+          "page": 1,
+          "said": "Monday-Friday: 7:30am & 11:00am English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87d2e2a3",
+          "page": 1,
+          "said": "Monday-Friday: 7:30am & 11:00am English"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; both times in every weekday's intentions in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-palisades-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7f0d1540",
+          "page": 1,
+          "said": "Monday-Friday: 7:30am & 11:00am English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87d2e2a3",
+          "page": 1,
+          "said": "Monday-Friday: 7:30am & 11:00am English"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; both times in every weekday's intentions in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-palisades-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7f0d1540",
+          "page": 1,
+          "said": "Monday-Friday: 7:30am & 11:00am English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87d2e2a3",
+          "page": 1,
+          "said": "Monday-Friday: 7:30am & 11:00am English"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; both times in every weekday's intentions in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-palisades-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7f0d1540",
+          "page": 1,
+          "said": "Monday-Friday: 7:30am & 11:00am English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87d2e2a3",
+          "page": 1,
+          "said": "Monday-Friday: 7:30am & 11:00am English"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; both times in every weekday's intentions in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-palisades-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7f0d1540",
+          "page": 1,
+          "said": "Monday-Friday: 7:30am & 11:00am English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87d2e2a3",
+          "page": 1,
+          "said": "Monday-Friday: 7:30am & 11:00am English"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; both times in every weekday's intentions in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-palisades-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7f0d1540",
+          "page": 1,
+          "said": "Monday-Friday: 7:30am & 11:00am English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87d2e2a3",
+          "page": 1,
+          "said": "Monday-Friday: 7:30am & 11:00am English"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; both times in every weekday's intentions in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-palisades-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7f0d1540",
+          "page": 1,
+          "said": "Monday-Friday: 7:30am & 11:00am English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87d2e2a3",
+          "page": 1,
+          "said": "Monday-Friday: 7:30am & 11:00am English"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; both times in every weekday's intentions in both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-palisades-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Korean"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7f0d1540",
+          "page": 1,
+          "said": "Each Tuesday we have a 7:30pm Korean mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87d2e2a3",
+          "page": 1,
+          "said": "Each Tuesday we have a 7:30pm Korean mass"
+        }
+      ],
+      "rationale": "R1: 'each Tuesday' in the schedule box of both bulletins; 7:30pm Korean in both weeks' Tuesday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-palisades-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "20:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7f0d1540",
+          "page": 1,
+          "said": "Each Wednesday we have an 8:00pm Spanish mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87d2e2a3",
+          "page": 1,
+          "said": "Each Wednesday we have an 8:00pm Spanish mass"
+        }
+      ],
+      "rationale": "R1: 'each Wednesday' in the schedule box of both bulletins; 8:00pm Spanish Mass in both weeks' Wednesday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-palisades-park",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "20:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7f0d1540",
+          "page": 1,
+          "said": "HOLY HOUR: THURSDAY 8:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87d2e2a3",
+          "page": 1,
+          "said": "HOLY HOUR: THURSDAY 8:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7f0d1540",
+          "page": 2,
+          "said": "8:00pm Holy Hour"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87d2e2a3",
+          "page": 2,
+          "said": "8:00pm Holy Hour"
+        }
+      ],
+      "rationale": "R1: POLICY, What to extract counts a Holy Hour as Adoration; printed in the schedule box and Thursday intentions of both bulletins. No end time printed, so none recorded (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-palisades-park",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7f0d1540",
+          "page": 1,
+          "said": "RECONCILIATION SATURDAY : 5:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87d2e2a3",
+          "page": 1,
+          "said": "RECONCILIATION SATURDAY : 5:00PM"
+        }
+      ],
+      "rationale": "R1: printed under Reconciliation in the schedule box of both bulletins (layout checked on the page 1 render). No end time printed, so none recorded (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
