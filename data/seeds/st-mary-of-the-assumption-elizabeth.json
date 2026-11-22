@@ -1,0 +1,555 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-mary-of-the-assumption-elizabeth",
+  "status": "ready",
+  "as_of": "2026-11-15T16:25:44Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T17:03:43Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Neither bulletin prints a Mass schedule box, so the weekly Masses (Sat 5 PM and 6 PM Spanish; Sun 9, 10:30 and 12 Spanish; Mon-Fri 7 AM) come from the Mass intentions of both read weeks (R35); Saturday 4-5 PM confession is printed on page 1 of both. Also a dated Nov 20 7 PM Spanish Mass for Our Lady of El Quinche. The website was unreadable (SSL error); an adoration chapel is mentioned (candle dedication) but no hours are given anywhere.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "538fbf5cfc35025e536b9056fca7d9e38606c31a34d388b3931df12082c63c85",
+      "fetched_at": "2026-11-15T16:25:44Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "6a55b2acb6a139cc2225fbca9794e7a7e11a01eb7d611192fa8956acfdd37021",
+      "fetched_at": "2026-11-08T15:49:26Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "538fbf5c",
+          "page": 2,
+          "said": "Saturday, November 14 5:00 PM + Susan Burke"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a55b2ac",
+          "page": 2,
+          "said": "Saturday, November 7 5:00 PM + All Souls"
+        }
+      ],
+      "rationale": "R35: the 5:00 PM Saturday Mass is in the Mass intentions of both read weeks (Nov 7 and Nov 14); neither bulletin prints a schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "538fbf5c",
+          "page": 2,
+          "said": "Saturday, November 14 ... 6:00 PM (Español) + Margarita Gonzalez"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a55b2ac",
+          "page": 2,
+          "said": "Saturday, November 7 ... 6:00 PM (Español) + All Souls"
+        }
+      ],
+      "rationale": "R35: the 6:00 PM Spanish Saturday Mass is in the intentions of both read weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "538fbf5c",
+          "page": 2,
+          "said": "Sunday, Nov. 15 ... 9:00 AM + Anthony Bodego"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a55b2ac",
+          "page": 2,
+          "said": "Sunday, Nov. 8 ... 9:00 AM + All Souls"
+        }
+      ],
+      "rationale": "R35: the 9:00 AM Sunday Mass is in the intentions of both read weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "538fbf5c",
+          "page": 2,
+          "said": "10:30 AM (Español) + Francisca Estevez"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a55b2ac",
+          "page": 2,
+          "said": "Sunday, Nov. 8 ... 10:30 AM + All Souls"
+        }
+      ],
+      "rationale": "R35: the 10:30 AM Sunday Mass is in the intentions of both read weeks. The newest marks it Español; the Nov 8 issue gives no language label, which does not contradict it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "538fbf5c",
+          "page": 2,
+          "said": "12:00 PM (Español) + Gladys Rueda"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a55b2ac",
+          "page": 2,
+          "said": "Sunday, Nov. 8 ... 12:00 PM + All Souls"
+        }
+      ],
+      "rationale": "R35: the 12:00 PM Sunday Mass is in the intentions of both read weeks. The newest marks it Español; the Nov 8 issue gives no language label, which does not contradict it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "538fbf5c",
+          "page": 2,
+          "said": "Monday, November 16 ... Friday, November 20: 7:00 AM intentions each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a55b2ac",
+          "page": 2,
+          "said": "Monday, Nov. 9 ... Friday, November 13: 7:00 AM intentions each day"
+        }
+      ],
+      "rationale": "R35: a 7:00 AM Mass is in the intentions every weekday Monday to Friday in both read weeks; no Saturday morning Mass is listed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "538fbf5c",
+          "page": 2,
+          "said": "Monday, November 16 ... Friday, November 20: 7:00 AM intentions each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a55b2ac",
+          "page": 2,
+          "said": "Monday, Nov. 9 ... Friday, November 13: 7:00 AM intentions each day"
+        }
+      ],
+      "rationale": "R35: a 7:00 AM Mass is in the intentions every weekday Monday to Friday in both read weeks; no Saturday morning Mass is listed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "538fbf5c",
+          "page": 2,
+          "said": "Monday, November 16 ... Friday, November 20: 7:00 AM intentions each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a55b2ac",
+          "page": 2,
+          "said": "Monday, Nov. 9 ... Friday, November 13: 7:00 AM intentions each day"
+        }
+      ],
+      "rationale": "R35: a 7:00 AM Mass is in the intentions every weekday Monday to Friday in both read weeks; no Saturday morning Mass is listed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "538fbf5c",
+          "page": 2,
+          "said": "Monday, November 16 ... Friday, November 20: 7:00 AM intentions each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a55b2ac",
+          "page": 2,
+          "said": "Monday, Nov. 9 ... Friday, November 13: 7:00 AM intentions each day"
+        }
+      ],
+      "rationale": "R35: a 7:00 AM Mass is in the intentions every weekday Monday to Friday in both read weeks; no Saturday morning Mass is listed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-elizabeth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "538fbf5c",
+          "page": 2,
+          "said": "Monday, November 16 ... Friday, November 20: 7:00 AM intentions each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a55b2ac",
+          "page": 2,
+          "said": "Monday, Nov. 9 ... Friday, November 13: 7:00 AM intentions each day"
+        }
+      ],
+      "rationale": "R35: a 7:00 AM Mass is in the intentions every weekday Monday to Friday in both read weeks; no Saturday morning Mass is listed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-elizabeth",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "538fbf5c",
+          "page": 1,
+          "said": "Confessions are available Saturdays from 4:00pm - 5:00pm, or by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a55b2ac",
+          "page": 1,
+          "said": "Confessions are available Saturdays from 4:00pm - 5:00pm, or by appointment."
+        }
+      ],
+      "rationale": "R1: printed in the parish information box on page 1 of both bulletins (English and Spanish).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "538fbf5c",
+          "page": 1,
+          "said": "Confessions are available ... or by appointment."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-elizabeth",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-20",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish; Mass in honor of Our Lady of El Quinche"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "538fbf5c",
+          "page": 2,
+          "said": "Friday, November 20 ... 7:00 PM (Español) N. S. del Quinche de la Paz"
+        },
+        {
+          "source": "agent",
+          "bulletin": "538fbf5c",
+          "page": 5,
+          "said": "Los invitamos a la Misa en honor a Nuestra Señora del Quinche ... Viernes 20 de Noviembre de 2026 a las 7:00 PM"
+        }
+      ],
+      "rationale": "R1, R16: a one-time dated Mass on Nov 20 (after as_of), outside the weekly schedule; POLICY, Weekly or dated rule 3/7.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-elizabeth",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-22",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christ the King; Fr. Rios 40th anniversary of ordination"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "538fbf5c",
+          "page": 2,
+          "said": "Feast of Christ the King Sunday, November 22, 2026 12:00 PM Mass"
+        }
+      ],
+      "rationale": "R25, POLICY Weekly or dated rule 7: the occasion is celebrated at the regular Sunday 12:00 PM Mass, which the weekly slot covers; not recorded separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "538fbf5c",
+          "page": 3,
+          "said": "Youth Retreat ... Sat. Dec. 5th 2026 9:00am-5:00pm ... St. Catherine of Siena Academy, 1003 North Broad Street, Hillside ... adoration, confession and mass"
+        }
+      ],
+      "rationale": "R22, R24: held off-site at a school in Hillside, and its Mass, Confession and Adoration have no times of their own (POLICY, Final source checks).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
