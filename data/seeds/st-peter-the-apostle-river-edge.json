@@ -1,0 +1,1665 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-peter-the-apostle-river-edge",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:26:20Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-22T17:44:49Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend (Sat 5 PM; Sun 8, 10, 12), Mon-Sat 9 AM Masses and Saturday 4 PM confession agree in both November 2026 bulletins; the website adds the third-Sunday 2 PM Special Needs Mass and the dated youth-led Sunday 6 PM Masses. Open: Advent-only confessions before Mass, the First Friday Adoration hours (website conflicts 10:00 vs 9:30 AM), and the Nov 17 55+ Mass.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "7a44281f3359d18ba9fb5667ad17fed43ba25f4d346f5464596f761a08705e7d",
+      "fetched_at": "2026-11-15T16:26:20Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "9f40c8e416ea2f4d1e46140888846c7eaeb6ce6659b8190bd7fa8053ef2d1cfc",
+      "fetched_at": "2026-11-08T15:49:52Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-river-edge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a44281f",
+          "page": 1,
+          "said": "Weekend Worship Saturday: 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f40c8e4",
+          "page": 1,
+          "said": "Weekend Worship Saturday: 5:00 PM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 Mass Schedule box of both bulletins read; the intentions list a 5:00 p.m. Saturday Mass each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-river-edge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a44281f",
+          "page": 1,
+          "said": "Sunday: 8:00 AM ~ 10:00 AM* ~ 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f40c8e4",
+          "page": 1,
+          "said": "Sunday: 8:00 AM ~ 10:00 AM* ~ 12:00 PM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-river-edge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a44281f",
+          "page": 1,
+          "said": "Sunday: 8:00 AM ~ 10:00 AM* ~ 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f40c8e4",
+          "page": 1,
+          "said": "Sunday: 8:00 AM ~ 10:00 AM* ~ 12:00 PM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-river-edge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Livestreamed"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a44281f",
+          "page": 1,
+          "said": "Sunday: 8:00 AM ~ 10:00 AM* ~ 12:00 PM *livestream available"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f40c8e4",
+          "page": 1,
+          "said": "Sunday: 8:00 AM ~ 10:00 AM* ~ 12:00 PM *livestream available"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 Mass Schedule box of both bulletins read; the asterisk marks the livestream.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-river-edge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a44281f",
+          "page": 1,
+          "said": "Daily Monday to Saturday: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f40c8e4",
+          "page": 1,
+          "said": "Daily Monday to Saturday: 9:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 Mass Schedule box of both bulletins; each day's intentions list a 9:00 a.m. Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-river-edge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a44281f",
+          "page": 1,
+          "said": "Daily Monday to Saturday: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f40c8e4",
+          "page": 1,
+          "said": "Daily Monday to Saturday: 9:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 Mass Schedule box of both bulletins; each day's intentions list a 9:00 a.m. Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-river-edge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a44281f",
+          "page": 1,
+          "said": "Daily Monday to Saturday: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f40c8e4",
+          "page": 1,
+          "said": "Daily Monday to Saturday: 9:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 Mass Schedule box of both bulletins; each day's intentions list a 9:00 a.m. Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-river-edge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a44281f",
+          "page": 1,
+          "said": "Daily Monday to Saturday: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f40c8e4",
+          "page": 1,
+          "said": "Daily Monday to Saturday: 9:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 Mass Schedule box of both bulletins; each day's intentions list a 9:00 a.m. Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-river-edge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a44281f",
+          "page": 1,
+          "said": "Daily Monday to Saturday: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f40c8e4",
+          "page": 1,
+          "said": "Daily Monday to Saturday: 9:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 Mass Schedule box of both bulletins; each day's intentions list a 9:00 a.m. Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-river-edge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a44281f",
+          "page": 1,
+          "said": "Daily Monday to Saturday: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f40c8e4",
+          "page": 1,
+          "said": "Daily Monday to Saturday: 9:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 Mass Schedule box of both bulletins; each day's intentions list a 9:00 a.m. Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-river-edge",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a44281f",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Saturdays at 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f40c8e4",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Saturdays at 4:00 PM"
+        }
+      ],
+      "rationale": "R1, R35: page-1 schedule box of both bulletins; no end time is given, so none is recorded (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a44281f",
+          "page": 1,
+          "said": "Before Any Mass (just ask a priest) and By Appointment (call the Parish Office at 201-261-3366)"
+        }
+      ],
+      "rationale": "R26: confession before Mass on request and by appointment has no definite time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-river-edge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "14:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Special Needs Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.saint-peter.org/masses",
+          "said": "MONTHLY SPECIAL NEEDS MASS (ASCPG) 2:00 PM every 3rd Sunday",
+          "schedule_check": {
+            "checked_at": "2026-11-22T17:48:04Z",
+            "current_because": "Checked 2026-11-22: the Masses page lists the same weekend, daily and confession times as the November 2026 bulletins, and the pastor-era details match; copyright 2026.",
+            "bulletin": "7a44281f",
+            "fits_because": "The newest bulletin (Nov 15, 2026) announces the Special Needs Mass for Sunday Nov 15 at 2:00 PM, which is the third Sunday of November, as the website's monthly pattern says."
+          }
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a44281f",
+          "page": 2,
+          "said": "Special Needs Mass Today! Sunday, November 15 | 2:00 PM A Welcoming Mass adapted for a variety of needs"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f40c8e4",
+          "page": 4,
+          "said": "Special Needs Mass Next Sunday, November 15 | 2:00 PM"
+        }
+      ],
+      "rationale": "R6: the parish's Masses page states the monthly third-Sunday pattern; both bulletins print the November 15 (third Sunday) 2:00 PM occurrence, open to all ('A Welcoming Mass').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-river-edge",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-13",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Youth-led Sunday evening Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.saint-peter.org/news-and-events/monthly-6pm-mass-12132026",
+          "said": "Our Sunday evening Mass is offered once a month on select Sundays. ... join us for Sunday evening Mass at 6:00 PM: September 13, 2026 October 4, 2026 November 1, 2026 December 13, 2026 January 10, 2027 February 7, 2027 March 7, 2027 April 4, 2027 April 25, 2027",
+          "schedule_check": {
+            "checked_at": "2026-11-22T17:48:35Z",
+            "current_because": "Checked 2026-11-22: a 2026-27 event page listed on the homepage's upcoming events, with dates running into April 2027; the Masses page lists the same regular times as the November 2026 bulletins.",
+            "bulletin": "7a44281f",
+            "fits_because": "The newest bulletin (Nov 15, 2026) does not mention it, but its week holds no listed date; the Sunday evening Mass adds to, and does not conflict with, the bulletin's weekend schedule."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.saint-peter.org/masses",
+          "said": "MONTHLY SUNDAY EVENING MASS 6:00 PM as scheduled (Youth-Led)",
+          "schedule_check": {
+            "checked_at": "2026-11-22T17:48:35Z",
+            "current_because": "Checked 2026-11-22: a 2026-27 event page listed on the homepage's upcoming events, with dates running into April 2027; the Masses page lists the same regular times as the November 2026 bulletins.",
+            "bulletin": "7a44281f",
+            "fits_because": "The newest bulletin (Nov 15, 2026) does not mention it, but its week holds no listed date; the Sunday evening Mass adds to, and does not conflict with, the bulletin's weekend schedule."
+          }
+        }
+      ],
+      "rationale": "R6, R14, R33: the Sunday 6 PM Mass falls on select Sundays with no weekly pattern, so only the printed dates on or after as_of are recorded; 'Everyone is welcome!'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-river-edge",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2027-01-10",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Youth-led Sunday evening Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.saint-peter.org/news-and-events/monthly-6pm-mass-12132026",
+          "said": "Our Sunday evening Mass is offered once a month on select Sundays. ... join us for Sunday evening Mass at 6:00 PM: September 13, 2026 October 4, 2026 November 1, 2026 December 13, 2026 January 10, 2027 February 7, 2027 March 7, 2027 April 4, 2027 April 25, 2027",
+          "schedule_check": {
+            "checked_at": "2026-11-22T17:48:35Z",
+            "current_because": "Checked 2026-11-22: a 2026-27 event page listed on the homepage's upcoming events, with dates running into April 2027; the Masses page lists the same regular times as the November 2026 bulletins.",
+            "bulletin": "7a44281f",
+            "fits_because": "The newest bulletin (Nov 15, 2026) does not mention it, but its week holds no listed date; the Sunday evening Mass adds to, and does not conflict with, the bulletin's weekend schedule."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.saint-peter.org/masses",
+          "said": "MONTHLY SUNDAY EVENING MASS 6:00 PM as scheduled (Youth-Led)",
+          "schedule_check": {
+            "checked_at": "2026-11-22T17:48:35Z",
+            "current_because": "Checked 2026-11-22: a 2026-27 event page listed on the homepage's upcoming events, with dates running into April 2027; the Masses page lists the same regular times as the November 2026 bulletins.",
+            "bulletin": "7a44281f",
+            "fits_because": "The newest bulletin (Nov 15, 2026) does not mention it, but its week holds no listed date; the Sunday evening Mass adds to, and does not conflict with, the bulletin's weekend schedule."
+          }
+        }
+      ],
+      "rationale": "R6, R14, R33: the Sunday 6 PM Mass falls on select Sundays with no weekly pattern, so only the printed dates on or after as_of are recorded; 'Everyone is welcome!'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-river-edge",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2027-02-07",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Youth-led Sunday evening Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.saint-peter.org/news-and-events/monthly-6pm-mass-12132026",
+          "said": "Our Sunday evening Mass is offered once a month on select Sundays. ... join us for Sunday evening Mass at 6:00 PM: September 13, 2026 October 4, 2026 November 1, 2026 December 13, 2026 January 10, 2027 February 7, 2027 March 7, 2027 April 4, 2027 April 25, 2027",
+          "schedule_check": {
+            "checked_at": "2026-11-22T17:48:35Z",
+            "current_because": "Checked 2026-11-22: a 2026-27 event page listed on the homepage's upcoming events, with dates running into April 2027; the Masses page lists the same regular times as the November 2026 bulletins.",
+            "bulletin": "7a44281f",
+            "fits_because": "The newest bulletin (Nov 15, 2026) does not mention it, but its week holds no listed date; the Sunday evening Mass adds to, and does not conflict with, the bulletin's weekend schedule."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.saint-peter.org/masses",
+          "said": "MONTHLY SUNDAY EVENING MASS 6:00 PM as scheduled (Youth-Led)",
+          "schedule_check": {
+            "checked_at": "2026-11-22T17:48:35Z",
+            "current_because": "Checked 2026-11-22: a 2026-27 event page listed on the homepage's upcoming events, with dates running into April 2027; the Masses page lists the same regular times as the November 2026 bulletins.",
+            "bulletin": "7a44281f",
+            "fits_because": "The newest bulletin (Nov 15, 2026) does not mention it, but its week holds no listed date; the Sunday evening Mass adds to, and does not conflict with, the bulletin's weekend schedule."
+          }
+        }
+      ],
+      "rationale": "R6, R14, R33: the Sunday 6 PM Mass falls on select Sundays with no weekly pattern, so only the printed dates on or after as_of are recorded; 'Everyone is welcome!'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-river-edge",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2027-03-07",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Youth-led Sunday evening Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.saint-peter.org/news-and-events/monthly-6pm-mass-12132026",
+          "said": "Our Sunday evening Mass is offered once a month on select Sundays. ... join us for Sunday evening Mass at 6:00 PM: September 13, 2026 October 4, 2026 November 1, 2026 December 13, 2026 January 10, 2027 February 7, 2027 March 7, 2027 April 4, 2027 April 25, 2027",
+          "schedule_check": {
+            "checked_at": "2026-11-22T17:48:35Z",
+            "current_because": "Checked 2026-11-22: a 2026-27 event page listed on the homepage's upcoming events, with dates running into April 2027; the Masses page lists the same regular times as the November 2026 bulletins.",
+            "bulletin": "7a44281f",
+            "fits_because": "The newest bulletin (Nov 15, 2026) does not mention it, but its week holds no listed date; the Sunday evening Mass adds to, and does not conflict with, the bulletin's weekend schedule."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.saint-peter.org/masses",
+          "said": "MONTHLY SUNDAY EVENING MASS 6:00 PM as scheduled (Youth-Led)",
+          "schedule_check": {
+            "checked_at": "2026-11-22T17:48:35Z",
+            "current_because": "Checked 2026-11-22: a 2026-27 event page listed on the homepage's upcoming events, with dates running into April 2027; the Masses page lists the same regular times as the November 2026 bulletins.",
+            "bulletin": "7a44281f",
+            "fits_because": "The newest bulletin (Nov 15, 2026) does not mention it, but its week holds no listed date; the Sunday evening Mass adds to, and does not conflict with, the bulletin's weekend schedule."
+          }
+        }
+      ],
+      "rationale": "R6, R14, R33: the Sunday 6 PM Mass falls on select Sundays with no weekly pattern, so only the printed dates on or after as_of are recorded; 'Everyone is welcome!'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-river-edge",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2027-04-04",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Youth-led Sunday evening Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.saint-peter.org/news-and-events/monthly-6pm-mass-12132026",
+          "said": "Our Sunday evening Mass is offered once a month on select Sundays. ... join us for Sunday evening Mass at 6:00 PM: September 13, 2026 October 4, 2026 November 1, 2026 December 13, 2026 January 10, 2027 February 7, 2027 March 7, 2027 April 4, 2027 April 25, 2027",
+          "schedule_check": {
+            "checked_at": "2026-11-22T17:48:35Z",
+            "current_because": "Checked 2026-11-22: a 2026-27 event page listed on the homepage's upcoming events, with dates running into April 2027; the Masses page lists the same regular times as the November 2026 bulletins.",
+            "bulletin": "7a44281f",
+            "fits_because": "The newest bulletin (Nov 15, 2026) does not mention it, but its week holds no listed date; the Sunday evening Mass adds to, and does not conflict with, the bulletin's weekend schedule."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.saint-peter.org/masses",
+          "said": "MONTHLY SUNDAY EVENING MASS 6:00 PM as scheduled (Youth-Led)",
+          "schedule_check": {
+            "checked_at": "2026-11-22T17:48:35Z",
+            "current_because": "Checked 2026-11-22: a 2026-27 event page listed on the homepage's upcoming events, with dates running into April 2027; the Masses page lists the same regular times as the November 2026 bulletins.",
+            "bulletin": "7a44281f",
+            "fits_because": "The newest bulletin (Nov 15, 2026) does not mention it, but its week holds no listed date; the Sunday evening Mass adds to, and does not conflict with, the bulletin's weekend schedule."
+          }
+        }
+      ],
+      "rationale": "R6, R14, R33: the Sunday 6 PM Mass falls on select Sundays with no weekly pattern, so only the printed dates on or after as_of are recorded; 'Everyone is welcome!'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-river-edge",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2027-04-25",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Youth-led Sunday evening Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.saint-peter.org/news-and-events/monthly-6pm-mass-12132026",
+          "said": "Our Sunday evening Mass is offered once a month on select Sundays. ... join us for Sunday evening Mass at 6:00 PM: September 13, 2026 October 4, 2026 November 1, 2026 December 13, 2026 January 10, 2027 February 7, 2027 March 7, 2027 April 4, 2027 April 25, 2027",
+          "schedule_check": {
+            "checked_at": "2026-11-22T17:48:35Z",
+            "current_because": "Checked 2026-11-22: a 2026-27 event page listed on the homepage's upcoming events, with dates running into April 2027; the Masses page lists the same regular times as the November 2026 bulletins.",
+            "bulletin": "7a44281f",
+            "fits_because": "The newest bulletin (Nov 15, 2026) does not mention it, but its week holds no listed date; the Sunday evening Mass adds to, and does not conflict with, the bulletin's weekend schedule."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.saint-peter.org/masses",
+          "said": "MONTHLY SUNDAY EVENING MASS 6:00 PM as scheduled (Youth-Led)",
+          "schedule_check": {
+            "checked_at": "2026-11-22T17:48:35Z",
+            "current_because": "Checked 2026-11-22: a 2026-27 event page listed on the homepage's upcoming events, with dates running into April 2027; the Masses page lists the same regular times as the November 2026 bulletins.",
+            "bulletin": "7a44281f",
+            "fits_because": "The newest bulletin (Nov 15, 2026) does not mention it, but its week holds no listed date; the Sunday evening Mass adds to, and does not conflict with, the bulletin's weekend schedule."
+          }
+        }
+      ],
+      "rationale": "R6, R14, R33: the Sunday 6 PM Mass falls on select Sundays with no weekly pattern, so only the printed dates on or after as_of are recorded; 'Everyone is welcome!'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-river-edge",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a44281f",
+          "page": 4,
+          "said": "SOLEMNITY OF THE IMMACULATE CONCEPTION ... HOLY DAY OF OBLIGATION December 8, 2026 Masses 9am & 7:30pm"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated 7: the holy day's 7:30 PM Mass is outside the weekly schedule; its 9 AM Mass is the weekly Tuesday 9:00 AM Mass and is not recorded again. Printed in an image on page 4.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-river-edge",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a44281f",
+          "page": 5,
+          "said": "Christmas Eve Thursday, December 24 ... 4:00 PM Mass (with Children's Choir) 5:30 PM Mass ... 10:00 PM Mass"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated 7: dated Christmas Eve Masses outside the weekly schedule. The 3:30 PM program and 9:30 PM carols are not Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-river-edge",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a44281f",
+          "page": 5,
+          "said": "Christmas Eve Thursday, December 24 ... 4:00 PM Mass (with Children's Choir) 5:30 PM Mass ... 10:00 PM Mass"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated 7: dated Christmas Eve Masses outside the weekly schedule. The 3:30 PM program and 9:30 PM carols are not Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-river-edge",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "22:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a44281f",
+          "page": 5,
+          "said": "Christmas Eve Thursday, December 24 ... 4:00 PM Mass (with Children's Choir) 5:30 PM Mass ... 10:00 PM Mass"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated 7: dated Christmas Eve Masses outside the weekly schedule. The 3:30 PM program and 9:30 PM carols are not Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-river-edge",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Day"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a44281f",
+          "page": 5,
+          "said": "Christmas Day Friday, December 25 8:00 AM | 10:00 AM | 12:00 PM"
+        }
+      ],
+      "rationale": "R1, R17: dated Christmas Day Masses; the bulletin does not say the Friday 9:00 AM Mass is cancelled, so the weekly slot is left alone.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-river-edge",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Day"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a44281f",
+          "page": 5,
+          "said": "Christmas Day Friday, December 25 8:00 AM | 10:00 AM | 12:00 PM"
+        }
+      ],
+      "rationale": "R1, R17: dated Christmas Day Masses; the bulletin does not say the Friday 9:00 AM Mass is cancelled, so the weekly slot is left alone.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-river-edge",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Day"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a44281f",
+          "page": 5,
+          "said": "Christmas Day Friday, December 25 8:00 AM | 10:00 AM | 12:00 PM"
+        }
+      ],
+      "rationale": "R1, R17: dated Christmas Day Masses; the bulletin does not say the Friday 9:00 AM Mass is cancelled, so the weekly slot is left alone.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-river-edge",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-04",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Deanery Penance Service at St. Joseph, Oradell"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a44281f",
+          "page": 4,
+          "said": "Deanery Penance Service ... Friday, December 4, 2026 at 7:00 PM at St. Joseph Church (305 Elm Street, Oradell)"
+        }
+      ],
+      "rationale": "R22: held at another parish's church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a44281f",
+          "page": 4,
+          "said": "Individual Reconciliation at St. Peter's 20 minutes before each Mass during Advent until December 23rd and Saturdays at 4:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saint-peter.org/advent-christmas-2026",
+          "said": "Reconciliation (individual confessions) will be offered 20 minutes before all Masses throughout Advent, November 29 - December 23."
+        }
+      ],
+      "rationale": "R30, R33: a definite time (POLICY, Times: N minutes before Mass) but only for Advent 2026. A fixed season of Nov 29 - Dec 23 is right this year but would repeat on those dates next year, when Advent starts Nov 28. Leaning include because the time is definite and update mode will re-read next year's bulletins. The Saturday 5 PM Mass is not given a 4:40 slot: the weekly Saturday 4:00 PM confession, with no end time, already covers it.",
+      "question": "Add the Advent confessions, 20 minutes before each Mass, November 29 - December 23?",
+      "options": [
+        {
+          "label": "Advent only (Nov 29 - Dec 23)",
+          "entry": {
+            "church_slug": "st-peter-the-apostle-river-edge",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "08:40",
+            "end_time": "09:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 11,
+              "start_day": 29,
+              "end_month": 12,
+              "end_day": 23
+            },
+            "note": "20 minutes before Mass during Advent"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "advent-confession"
+    },
+    {
+      "id": "s29",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a44281f",
+          "page": 4,
+          "said": "Individual Reconciliation at St. Peter's 20 minutes before each Mass during Advent until December 23rd and Saturdays at 4:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saint-peter.org/advent-christmas-2026",
+          "said": "Reconciliation (individual confessions) will be offered 20 minutes before all Masses throughout Advent, November 29 - December 23."
+        }
+      ],
+      "rationale": "R30, R33: a definite time (POLICY, Times: N minutes before Mass) but only for Advent 2026. A fixed season of Nov 29 - Dec 23 is right this year but would repeat on those dates next year, when Advent starts Nov 28. Leaning include because the time is definite and update mode will re-read next year's bulletins. The Saturday 5 PM Mass is not given a 4:40 slot: the weekly Saturday 4:00 PM confession, with no end time, already covers it.",
+      "question": "Add the Advent confessions, 20 minutes before each Mass, November 29 - December 23?",
+      "options": [
+        {
+          "label": "Advent only (Nov 29 - Dec 23)",
+          "entry": {
+            "church_slug": "st-peter-the-apostle-river-edge",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "08:40",
+            "end_time": "09:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 11,
+              "start_day": 29,
+              "end_month": 12,
+              "end_day": 23
+            },
+            "note": "20 minutes before Mass during Advent"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "advent-confession"
+    },
+    {
+      "id": "s30",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a44281f",
+          "page": 4,
+          "said": "Individual Reconciliation at St. Peter's 20 minutes before each Mass during Advent until December 23rd and Saturdays at 4:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saint-peter.org/advent-christmas-2026",
+          "said": "Reconciliation (individual confessions) will be offered 20 minutes before all Masses throughout Advent, November 29 - December 23."
+        }
+      ],
+      "rationale": "R30, R33: a definite time (POLICY, Times: N minutes before Mass) but only for Advent 2026. A fixed season of Nov 29 - Dec 23 is right this year but would repeat on those dates next year, when Advent starts Nov 28. Leaning include because the time is definite and update mode will re-read next year's bulletins. The Saturday 5 PM Mass is not given a 4:40 slot: the weekly Saturday 4:00 PM confession, with no end time, already covers it.",
+      "question": "Add the Advent confessions, 20 minutes before each Mass, November 29 - December 23?",
+      "options": [
+        {
+          "label": "Advent only (Nov 29 - Dec 23)",
+          "entry": {
+            "church_slug": "st-peter-the-apostle-river-edge",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "08:40",
+            "end_time": "09:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 11,
+              "start_day": 29,
+              "end_month": 12,
+              "end_day": 23
+            },
+            "note": "20 minutes before Mass during Advent"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "advent-confession"
+    },
+    {
+      "id": "s31",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a44281f",
+          "page": 4,
+          "said": "Individual Reconciliation at St. Peter's 20 minutes before each Mass during Advent until December 23rd and Saturdays at 4:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saint-peter.org/advent-christmas-2026",
+          "said": "Reconciliation (individual confessions) will be offered 20 minutes before all Masses throughout Advent, November 29 - December 23."
+        }
+      ],
+      "rationale": "R30, R33: a definite time (POLICY, Times: N minutes before Mass) but only for Advent 2026. A fixed season of Nov 29 - Dec 23 is right this year but would repeat on those dates next year, when Advent starts Nov 28. Leaning include because the time is definite and update mode will re-read next year's bulletins. The Saturday 5 PM Mass is not given a 4:40 slot: the weekly Saturday 4:00 PM confession, with no end time, already covers it.",
+      "question": "Add the Advent confessions, 20 minutes before each Mass, November 29 - December 23?",
+      "options": [
+        {
+          "label": "Advent only (Nov 29 - Dec 23)",
+          "entry": {
+            "church_slug": "st-peter-the-apostle-river-edge",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "08:40",
+            "end_time": "09:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 11,
+              "start_day": 29,
+              "end_month": 12,
+              "end_day": 23
+            },
+            "note": "20 minutes before Mass during Advent"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "advent-confession"
+    },
+    {
+      "id": "s32",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a44281f",
+          "page": 4,
+          "said": "Individual Reconciliation at St. Peter's 20 minutes before each Mass during Advent until December 23rd and Saturdays at 4:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saint-peter.org/advent-christmas-2026",
+          "said": "Reconciliation (individual confessions) will be offered 20 minutes before all Masses throughout Advent, November 29 - December 23."
+        }
+      ],
+      "rationale": "R30, R33: a definite time (POLICY, Times: N minutes before Mass) but only for Advent 2026. A fixed season of Nov 29 - Dec 23 is right this year but would repeat on those dates next year, when Advent starts Nov 28. Leaning include because the time is definite and update mode will re-read next year's bulletins. The Saturday 5 PM Mass is not given a 4:40 slot: the weekly Saturday 4:00 PM confession, with no end time, already covers it.",
+      "question": "Add the Advent confessions, 20 minutes before each Mass, November 29 - December 23?",
+      "options": [
+        {
+          "label": "Advent only (Nov 29 - Dec 23)",
+          "entry": {
+            "church_slug": "st-peter-the-apostle-river-edge",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:40",
+            "end_time": "09:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 11,
+              "start_day": 29,
+              "end_month": 12,
+              "end_day": 23
+            },
+            "note": "20 minutes before Mass during Advent"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "advent-confession"
+    },
+    {
+      "id": "s33",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a44281f",
+          "page": 4,
+          "said": "Individual Reconciliation at St. Peter's 20 minutes before each Mass during Advent until December 23rd and Saturdays at 4:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saint-peter.org/advent-christmas-2026",
+          "said": "Reconciliation (individual confessions) will be offered 20 minutes before all Masses throughout Advent, November 29 - December 23."
+        }
+      ],
+      "rationale": "R30, R33: a definite time (POLICY, Times: N minutes before Mass) but only for Advent 2026. A fixed season of Nov 29 - Dec 23 is right this year but would repeat on those dates next year, when Advent starts Nov 28. Leaning include because the time is definite and update mode will re-read next year's bulletins. The Saturday 5 PM Mass is not given a 4:40 slot: the weekly Saturday 4:00 PM confession, with no end time, already covers it.",
+      "question": "Add the Advent confessions, 20 minutes before each Mass, November 29 - December 23?",
+      "options": [
+        {
+          "label": "Advent only (Nov 29 - Dec 23)",
+          "entry": {
+            "church_slug": "st-peter-the-apostle-river-edge",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:40",
+            "end_time": "09:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 11,
+              "start_day": 29,
+              "end_month": 12,
+              "end_day": 23
+            },
+            "note": "20 minutes before Mass during Advent"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "advent-confession"
+    },
+    {
+      "id": "s34",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a44281f",
+          "page": 4,
+          "said": "Individual Reconciliation at St. Peter's 20 minutes before each Mass during Advent until December 23rd and Saturdays at 4:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saint-peter.org/advent-christmas-2026",
+          "said": "Reconciliation (individual confessions) will be offered 20 minutes before all Masses throughout Advent, November 29 - December 23."
+        }
+      ],
+      "rationale": "R30, R33: a definite time (POLICY, Times: N minutes before Mass) but only for Advent 2026. A fixed season of Nov 29 - Dec 23 is right this year but would repeat on those dates next year, when Advent starts Nov 28. Leaning include because the time is definite and update mode will re-read next year's bulletins. Covers the regular Sunday Masses, not the dated 6 PM or special Masses (POLICY, Times).",
+      "question": "Add the Advent confessions, 20 minutes before each Mass, November 29 - December 23?",
+      "options": [
+        {
+          "label": "Advent only (Nov 29 - Dec 23)",
+          "entry": {
+            "church_slug": "st-peter-the-apostle-river-edge",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "07:40",
+            "end_time": "08:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 11,
+              "start_day": 29,
+              "end_month": 12,
+              "end_day": 23
+            },
+            "note": "20 minutes before Mass during Advent"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "advent-confession"
+    },
+    {
+      "id": "s35",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a44281f",
+          "page": 4,
+          "said": "Individual Reconciliation at St. Peter's 20 minutes before each Mass during Advent until December 23rd and Saturdays at 4:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saint-peter.org/advent-christmas-2026",
+          "said": "Reconciliation (individual confessions) will be offered 20 minutes before all Masses throughout Advent, November 29 - December 23."
+        }
+      ],
+      "rationale": "R30, R33: a definite time (POLICY, Times: N minutes before Mass) but only for Advent 2026. A fixed season of Nov 29 - Dec 23 is right this year but would repeat on those dates next year, when Advent starts Nov 28. Leaning include because the time is definite and update mode will re-read next year's bulletins. Covers the regular Sunday Masses, not the dated 6 PM or special Masses (POLICY, Times).",
+      "question": "Add the Advent confessions, 20 minutes before each Mass, November 29 - December 23?",
+      "options": [
+        {
+          "label": "Advent only (Nov 29 - Dec 23)",
+          "entry": {
+            "church_slug": "st-peter-the-apostle-river-edge",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "09:40",
+            "end_time": "10:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 11,
+              "start_day": 29,
+              "end_month": 12,
+              "end_day": 23
+            },
+            "note": "20 minutes before Mass during Advent"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "advent-confession"
+    },
+    {
+      "id": "s36",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a44281f",
+          "page": 4,
+          "said": "Individual Reconciliation at St. Peter's 20 minutes before each Mass during Advent until December 23rd and Saturdays at 4:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saint-peter.org/advent-christmas-2026",
+          "said": "Reconciliation (individual confessions) will be offered 20 minutes before all Masses throughout Advent, November 29 - December 23."
+        }
+      ],
+      "rationale": "R30, R33: a definite time (POLICY, Times: N minutes before Mass) but only for Advent 2026. A fixed season of Nov 29 - Dec 23 is right this year but would repeat on those dates next year, when Advent starts Nov 28. Leaning include because the time is definite and update mode will re-read next year's bulletins. Covers the regular Sunday Masses, not the dated 6 PM or special Masses (POLICY, Times).",
+      "question": "Add the Advent confessions, 20 minutes before each Mass, November 29 - December 23?",
+      "options": [
+        {
+          "label": "Advent only (Nov 29 - Dec 23)",
+          "entry": {
+            "church_slug": "st-peter-the-apostle-river-edge",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "11:40",
+            "end_time": "12:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 11,
+              "start_day": 29,
+              "end_month": 12,
+              "end_day": 23
+            },
+            "note": "20 minutes before Mass during Advent"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "advent-confession"
+    },
+    {
+      "id": "s37",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a44281f",
+          "page": 1,
+          "said": "Eucharistic Adoration First Friday of the Month in the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f40c8e4",
+          "page": 1,
+          "said": "Eucharistic Adoration First Friday of the Month in the Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saint-peter.org/masses",
+          "said": "Eucharistic Adoration 10:00 AM - 3:00 PM every first Friday of the month (in the Chapel)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.saint-peter.org/news-and-events/first-friday-eucharistic-adoration-december2026",
+          "said": "St. Peter's monthly first Friday Eucharistic Adoration of the Blessed Sacrament takes place on the first Friday of every month in the chapel following the 9am Mass until 3pm"
+        }
+      ],
+      "rationale": "R12, R6, C8: the bulletins name the monthly service but give no hours (neither bulletin's week holds a first Friday). The website's Masses page says 10:00 AM - 3:00 PM; its Dec 4 event page says 'following the 9am Mass until 3pm' (POLICY makes that 9:30 AM) and its calendar shows 9:30 AM. Leaning 10:00 AM because it is the stated clock time on the standing schedule page.",
+      "question": "First Friday Adoration in the chapel: which hours?",
+      "options": [
+        {
+          "label": "10:00 AM - 3:00 PM",
+          "entry": {
+            "church_slug": "st-peter-the-apostle-river-edge",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "10:00",
+            "end_time": "15:00",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "9:30 AM - 3:00 PM (after the 9 AM Mass)",
+          "entry": {
+            "church_slug": "st-peter-the-apostle-river-edge",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": "15:00",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the Chapel, after the 9:00 AM Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s38",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a44281f",
+          "page": 6,
+          "said": "A Mass will be held for our 55+ Parishioners on Tuesday, November 17, 2026 at 11:30 a.m. followed by a bring-your-own-lunch with Father Paul."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9f40c8e4",
+          "page": 4,
+          "said": "Conversation 55+ Mass Tuesday, November 17 | 11:30 AM"
+        }
+      ],
+      "rationale": "R30, leaning per C7: POLICY leaves out a Mass limited to a group; this one is 'for our 55+ Parishioners' with a lunch, but nothing turns others away and it is announced publicly. Date is on or after as_of (R16).",
+      "question": "Add the 55+ parishioners' Mass on Tuesday, November 17 at 11:30 AM?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "st-peter-the-apostle-river-edge",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-17",
+            "start_time": "11:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "55+ Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    }
+  ]
+}
