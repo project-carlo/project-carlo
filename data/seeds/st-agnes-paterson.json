@@ -1,0 +1,918 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-agnes-paterson",
+  "status": "ready",
+  "as_of": "2026-11-15T16:14:38Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T13:54:57Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, bilingual. Weekend Masses Sat 7 PM, Sun 10 AM and 11:30 AM agree in both bulletins and the website; Tue-Fri 7 PM weekday Masses rest on both weeks' intentions and the website's standing schedule, with Monday 7 PM added for the Gregorian Masses Nov 2-Dec 1. Adoration (continuous exposition Sun 1:30 PM-Tue 6 PM, Wed 8-6, Thu 8 AM-Sat 6 PM) is printed only in the newest issue. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "a3148681a05f48f59545124038de827d6b6bbe943d25118e5237abf0edbf6b91",
+      "fetched_at": "2026-11-15T16:14:38Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "78ca3dda3b57c2cae97d79a2ac025d0e58222f5a56769bbbfb0a6fe3d32ae161",
+      "fetched_at": "2026-11-08T15:40:08Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a3148681",
+          "page": 5,
+          "said": "MISAS / MASSES Sáb 7:00 PM (Esp)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "78ca3dda",
+          "page": 5,
+          "said": "MISAS / MASSES Sáb 7:00 PM (Esp)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3148681",
+          "page": 2,
+          "said": "Saturday, November 14, 2026 ... 7:00 PM (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "78ca3dda",
+          "page": 2,
+          "said": "Saturday, November 14, 2026 ... 7:00 PM (Español)"
+        },
+        {
+          "source": "website",
+          "url": "https://saintagnesrcchurch.org/mass-misa",
+          "said": "Saturday · Vigil 7:00 PM ESP"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box and the Saturday intentions of both bulletins read; the website's Mass Times page agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a3148681",
+          "page": 5,
+          "said": "Dom 10:00 AM (Eng)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "78ca3dda",
+          "page": 5,
+          "said": "Dom 10:00 AM (Eng)"
+        },
+        {
+          "source": "website",
+          "url": "https://saintagnesrcchurch.org/mass-misa",
+          "said": "Sunday 10:00 AM ENG"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box and Sunday intentions of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a3148681",
+          "page": 5,
+          "said": "Dom ... 11:30 AM (Esp), seguida de la Coronilla de la Divina Misericordia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "78ca3dda",
+          "page": 5,
+          "said": "Dom ... 11:30 AM (Esp), seguida de la Coronilla de la Divina Misericordia"
+        },
+        {
+          "source": "website",
+          "url": "https://saintagnesrcchurch.org/mass-misa",
+          "said": "Sunday 11:30 AM ESP"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box and Sunday intentions of both bulletins read; the website agrees. The Divine Mercy Chaplet after it is a devotion (R24).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a3148681",
+          "page": 2,
+          "said": "Tuesday ... Friday, November 17-20, 2026 ... 7:00 PM (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "78ca3dda",
+          "page": 2,
+          "said": "Tuesday ... Friday, November 10-13, 2026 ... 7:00 PM (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3148681",
+          "page": 2,
+          "said": "Community Vespers: every Friday, 6:30 PM, before the 7:00 PM Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://saintagnesrcchurch.org/mass-misa",
+          "said": "Tuesday – Friday 7:00 PM ESP",
+          "schedule_check": {
+            "checked_at": "2026-11-23T13:57:43Z",
+            "current_because": "Checked 2026-11-23: the Mass Times page shows today's readings (Monday of the 34th Week in Ordinary Time) and its weekend and confession times match the November 15, 2026 bulletin exactly.",
+            "bulletin": "a3148681",
+            "fits_because": "The November 15 bulletin prints Tue-Fri 7:00 PM Masses in its intentions both weeks; its box frames Mon-Fri 7 PM as Nov 2-Dec 1 Gregorian Masses, which the site's standing Tue-Fri schedule explains as adding Monday for the season. Tue/Wed/Fri 6:45 PM confessions and the every-Friday Vespers before the 7 PM Mass are not seasonal."
+          }
+        }
+      ],
+      "rationale": "R35, R6: the Tue-Fri 7 PM Masses are printed in the intentions of both bulletin weeks; the bulletin box ties weekday Masses to the Gregorian Masses Nov 2-Dec 1, but the parish's current Mass Times page lists Tuesday-Friday 7 PM as the standing schedule, and the every-Friday Vespers 'before the 7:00 PM Mass' supports it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a3148681",
+          "page": 2,
+          "said": "Tuesday ... Friday, November 17-20, 2026 ... 7:00 PM (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "78ca3dda",
+          "page": 2,
+          "said": "Tuesday ... Friday, November 10-13, 2026 ... 7:00 PM (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3148681",
+          "page": 2,
+          "said": "Community Vespers: every Friday, 6:30 PM, before the 7:00 PM Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://saintagnesrcchurch.org/mass-misa",
+          "said": "Tuesday – Friday 7:00 PM ESP",
+          "schedule_check": {
+            "checked_at": "2026-11-23T13:57:43Z",
+            "current_because": "Checked 2026-11-23: the Mass Times page shows today's readings (Monday of the 34th Week in Ordinary Time) and its weekend and confession times match the November 15, 2026 bulletin exactly.",
+            "bulletin": "a3148681",
+            "fits_because": "The November 15 bulletin prints Tue-Fri 7:00 PM Masses in its intentions both weeks; its box frames Mon-Fri 7 PM as Nov 2-Dec 1 Gregorian Masses, which the site's standing Tue-Fri schedule explains as adding Monday for the season. Tue/Wed/Fri 6:45 PM confessions and the every-Friday Vespers before the 7 PM Mass are not seasonal."
+          }
+        }
+      ],
+      "rationale": "R35, R6: the Tue-Fri 7 PM Masses are printed in the intentions of both bulletin weeks; the bulletin box ties weekday Masses to the Gregorian Masses Nov 2-Dec 1, but the parish's current Mass Times page lists Tuesday-Friday 7 PM as the standing schedule, and the every-Friday Vespers 'before the 7:00 PM Mass' supports it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a3148681",
+          "page": 2,
+          "said": "Tuesday ... Friday, November 17-20, 2026 ... 7:00 PM (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "78ca3dda",
+          "page": 2,
+          "said": "Tuesday ... Friday, November 10-13, 2026 ... 7:00 PM (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3148681",
+          "page": 2,
+          "said": "Community Vespers: every Friday, 6:30 PM, before the 7:00 PM Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://saintagnesrcchurch.org/mass-misa",
+          "said": "Tuesday – Friday 7:00 PM ESP",
+          "schedule_check": {
+            "checked_at": "2026-11-23T13:57:43Z",
+            "current_because": "Checked 2026-11-23: the Mass Times page shows today's readings (Monday of the 34th Week in Ordinary Time) and its weekend and confession times match the November 15, 2026 bulletin exactly.",
+            "bulletin": "a3148681",
+            "fits_because": "The November 15 bulletin prints Tue-Fri 7:00 PM Masses in its intentions both weeks; its box frames Mon-Fri 7 PM as Nov 2-Dec 1 Gregorian Masses, which the site's standing Tue-Fri schedule explains as adding Monday for the season. Tue/Wed/Fri 6:45 PM confessions and the every-Friday Vespers before the 7 PM Mass are not seasonal."
+          }
+        }
+      ],
+      "rationale": "R35, R6: the Tue-Fri 7 PM Masses are printed in the intentions of both bulletin weeks; the bulletin box ties weekday Masses to the Gregorian Masses Nov 2-Dec 1, but the parish's current Mass Times page lists Tuesday-Friday 7 PM as the standing schedule, and the every-Friday Vespers 'before the 7:00 PM Mass' supports it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a3148681",
+          "page": 2,
+          "said": "Tuesday ... Friday, November 17-20, 2026 ... 7:00 PM (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "78ca3dda",
+          "page": 2,
+          "said": "Tuesday ... Friday, November 10-13, 2026 ... 7:00 PM (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3148681",
+          "page": 2,
+          "said": "Community Vespers: every Friday, 6:30 PM, before the 7:00 PM Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://saintagnesrcchurch.org/mass-misa",
+          "said": "Tuesday – Friday 7:00 PM ESP",
+          "schedule_check": {
+            "checked_at": "2026-11-23T13:57:43Z",
+            "current_because": "Checked 2026-11-23: the Mass Times page shows today's readings (Monday of the 34th Week in Ordinary Time) and its weekend and confession times match the November 15, 2026 bulletin exactly.",
+            "bulletin": "a3148681",
+            "fits_because": "The November 15 bulletin prints Tue-Fri 7:00 PM Masses in its intentions both weeks; its box frames Mon-Fri 7 PM as Nov 2-Dec 1 Gregorian Masses, which the site's standing Tue-Fri schedule explains as adding Monday for the season. Tue/Wed/Fri 6:45 PM confessions and the every-Friday Vespers before the 7 PM Mass are not seasonal."
+          }
+        }
+      ],
+      "rationale": "R35, R6: the Tue-Fri 7 PM Masses are printed in the intentions of both bulletin weeks; the bulletin box ties weekday Masses to the Gregorian Masses Nov 2-Dec 1, but the parish's current Mass Times page lists Tuesday-Friday 7 PM as the standing schedule, and the every-Friday Vespers 'before the 7:00 PM Mass' supports it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 11,
+          "start_day": 2,
+          "end_month": 12,
+          "end_day": 1
+        },
+        "note": "Spanish; Gregorian Masses"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a3148681",
+          "page": 5,
+          "said": "Lun–Vie 7:00 PM (Esp) del 2 nov al 1 dic (Gregorianas) / Mon–Fri 7 PM Nov 2–Dec 1"
+        },
+        {
+          "source": "agent",
+          "bulletin": "78ca3dda",
+          "page": 5,
+          "said": "Lun–Vie 7:00 PM (Esp) del 2 nov al 1 dic (Gregorianas) / Mon–Fri 7 PM Nov 2–Dec 1"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3148681",
+          "page": 2,
+          "said": "Monday, November 16, 2026 ... 7:00 PM (Español) — Misas Gregorianas / Gregorian Masses"
+        }
+      ],
+      "rationale": "R1: the schedule box limits Mon-Fri 7 PM to Nov 2-Dec 1 for the Gregorian Masses; the website's standing weekday schedule is Tue-Fri only, so the Monday Mass is the seasonal addition (POLICY, Weekly qualifiers: season).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-paterson",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a3148681",
+          "page": 5,
+          "said": "CONFESIONES / CONFESSION Mar, Mié, Vie 6:45 PM (Capilla / Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "78ca3dda",
+          "page": 5,
+          "said": "CONFESIONES / CONFESSION Mar, Mié, Vie 6:45 PM (Capilla / Chapel)"
+        },
+        {
+          "source": "website",
+          "url": "https://saintagnesrcchurch.org/mass-misa",
+          "said": "Tuesday, Wednesday & Friday, 6:45 PM, in the chapel"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins' schedule box; no end time is given, so end_time is null (POLICY, Times). The chapel is in the church at 681 Main St (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-paterson",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a3148681",
+          "page": 5,
+          "said": "CONFESIONES / CONFESSION Mar, Mié, Vie 6:45 PM (Capilla / Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "78ca3dda",
+          "page": 5,
+          "said": "CONFESIONES / CONFESSION Mar, Mié, Vie 6:45 PM (Capilla / Chapel)"
+        },
+        {
+          "source": "website",
+          "url": "https://saintagnesrcchurch.org/mass-misa",
+          "said": "Tuesday, Wednesday & Friday, 6:45 PM, in the chapel"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins' schedule box; no end time is given, so end_time is null (POLICY, Times). The chapel is in the church at 681 Main St (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-paterson",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a3148681",
+          "page": 5,
+          "said": "CONFESIONES / CONFESSION Mar, Mié, Vie 6:45 PM (Capilla / Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "78ca3dda",
+          "page": 5,
+          "said": "CONFESIONES / CONFESSION Mar, Mié, Vie 6:45 PM (Capilla / Chapel)"
+        },
+        {
+          "source": "website",
+          "url": "https://saintagnesrcchurch.org/mass-misa",
+          "said": "Tuesday, Wednesday & Friday, 6:45 PM, in the chapel"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins' schedule box; no end time is given, so end_time is null (POLICY, Times). The chapel is in the church at 681 Main St (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-paterson",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": "17:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a3148681",
+          "page": 5,
+          "said": "Sáb 4:30–5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "78ca3dda",
+          "page": 5,
+          "said": "Sáb 4:30–5:30 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://saintagnesrcchurch.org/mass-misa",
+          "said": "Saturday 4:30 – 5:30 PM"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins' schedule box; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a3148681",
+          "page": 5,
+          "said": "o con cita / by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-paterson",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:30",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Exposition continuous 24 hours, Sunday 1:30 PM to Tuesday 6:00 PM"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a3148681",
+          "page": 2,
+          "said": "Horario de Exposición del Santísimo CONTINUOUS · 24 HOURS Sunday 1:30 PM to Tuesday 6:00 PM"
+        }
+      ],
+      "rationale": "R1: the newest bulletin's Eucharistic Adoration box gives continuous exposition from Sunday 1:30 PM to Tuesday 6:00 PM, split into one slot per day. The box is not in the November 8 issue, the only other one stored, and nothing contradicts it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-paterson",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Exposition continuous 24 hours, Sunday 1:30 PM to Tuesday 6:00 PM"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a3148681",
+          "page": 2,
+          "said": "CONTINUOUS · 24 HOURS Sunday 1:30 PM to Tuesday 6:00 PM"
+        }
+      ],
+      "rationale": "R1: part of the continuous Sunday 1:30 PM to Tuesday 6:00 PM exposition in the newest bulletin's Adoration box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-paterson",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Exposition continuous 24 hours, Sunday 1:30 PM to Tuesday 6:00 PM"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a3148681",
+          "page": 2,
+          "said": "CONTINUOUS · 24 HOURS Sunday 1:30 PM to Tuesday 6:00 PM"
+        }
+      ],
+      "rationale": "R1: part of the continuous Sunday 1:30 PM to Tuesday 6:00 PM exposition in the newest bulletin's Adoration box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-paterson",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a3148681",
+          "page": 2,
+          "said": "WEDNESDAY · DAYTIME 8:00 AM to 6:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the newest bulletin's Adoration box (Horario de Exposición del Santísimo).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-paterson",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Exposition continuous 24 hours, Thursday 8:00 AM to Saturday 6:00 PM"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a3148681",
+          "page": 2,
+          "said": "CONTINUOUS · 24 HOURS Thursday 8:00 AM to Saturday 6:00 PM"
+        }
+      ],
+      "rationale": "R1: part of the continuous Thursday 8:00 AM to Saturday 6:00 PM exposition in the newest bulletin's Adoration box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-paterson",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Exposition continuous 24 hours, Thursday 8:00 AM to Saturday 6:00 PM"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a3148681",
+          "page": 2,
+          "said": "CONTINUOUS · 24 HOURS Thursday 8:00 AM to Saturday 6:00 PM"
+        }
+      ],
+      "rationale": "R1: part of the continuous Thursday 8:00 AM to Saturday 6:00 PM exposition in the newest bulletin's Adoration box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-paterson",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Exposition continuous 24 hours, Thursday 8:00 AM to Saturday 6:00 PM"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a3148681",
+          "page": 2,
+          "said": "CONTINUOUS · 24 HOURS Thursday 8:00 AM to Saturday 6:00 PM"
+        }
+      ],
+      "rationale": "R1: part of the continuous Thursday 8:00 AM to Saturday 6:00 PM exposition in the newest bulletin's Adoration box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-paterson",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Consecration Mass, Immaculate Conception"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a3148681",
+          "page": 4,
+          "said": "Misa de Consagración: martes 8 de diciembre, 7:00 PM. Consecration Mass: Tuesday, December 8, 7:00 PM."
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7: the Consecration Mass on the Immaculate Conception is celebrated at the regular Tuesday 7:00 PM Mass, so only the weekly slot is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agnes-paterson",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-19",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Divine Providence"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a3148681",
+          "page": 3,
+          "said": "On Thursday the 19th, at the same hour, we celebrate Our Lady of Divine Providence."
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7: the feast is kept at the regular Thursday 7:00 PM Mass; only the weekly slot is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
