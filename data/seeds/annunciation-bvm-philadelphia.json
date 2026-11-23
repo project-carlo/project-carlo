@@ -1,0 +1,595 @@
+{
+  "schema_version": 1,
+  "parish_slug": "annunciation-bvm-philadelphia",
+  "status": "ready",
+  "as_of": "2026-11-15T16:38:30Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T22:53:22Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Mass, Confession and Exposition times agree in the schedule boxes of both bulletins read (Nov 8 and Nov 15, 2026), including a fourth-Sunday 1 PM Spanish Mass. Dated items: Nov 19 penance service 6-8 PM with the 7 PM Mass cancelled, and a Nov 20 7 PM Memorial Mass. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "4707794593b6b505bd00954c0eaf627e72e9327c73f218b6bd3756565212b93c",
+      "fetched_at": "2026-11-15T16:38:30Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "c24d578e7b0fd3d45d460a91c960a8c5f1193341b56d851523933ebd5895f6a1",
+      "fetched_at": "2026-11-08T15:52:29Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "47077945",
+          "page": 2,
+          "said": "Sunday 9:00 AM (Spanish) & 11:00 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c24d578e",
+          "page": 2,
+          "said": "Sunday 9:00 AM (Spanish) & 11:00 AM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box (p2, Spanish p3) of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "47077945",
+          "page": 2,
+          "said": "Sunday 9:00 AM (Spanish) & 11:00 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c24d578e",
+          "page": 2,
+          "said": "Sunday 9:00 AM (Spanish) & 11:00 AM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box (p2, Spanish p3) of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "fourth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "47077945",
+          "page": 2,
+          "said": "On 4 th Sunday of Month 1:00 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c24d578e",
+          "page": 2,
+          "said": "On 4 th Sunday of Month 1:00 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; POLICY, Weekly or dated rule 2 makes it a fourth-Sunday weekly slot. The newest week holds the fourth Sunday (Nov 22).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "47077945",
+          "page": 2,
+          "said": "Weekday Monday & Thursday 7:00 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c24d578e",
+          "page": 2,
+          "said": "Weekday Monday & Thursday 7:00 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins. The intentions list Tue/Wed/Fri names without times; the bulletin says weekday intentions are given to other parishes, so no other weekday Mass is offered here.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "47077945",
+          "page": 2,
+          "said": "Weekday Monday & Thursday 7:00 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c24d578e",
+          "page": 2,
+          "said": "Weekday Monday & Thursday 7:00 PM (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins. The intentions list Tue/Wed/Fri names without times; the bulletin says weekday intentions are given to other parishes, so no other weekday Mass is offered here.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "47077945",
+          "page": 2,
+          "said": "Saturday 5:00 PM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c24d578e",
+          "page": 2,
+          "said": "Saturday 5:00 PM (English)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "47077945",
+          "page": 2,
+          "said": "Confessions from 4:00 to 4:45 PM on Saturdays, and 6:00 to 6:45 PM on Thursday."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c24d578e",
+          "page": 2,
+          "said": "Confessions from 4:00 to 4:45 PM on Saturdays, and 6:00 to 6:45 PM on Thursday."
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the clock times win (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "18:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "47077945",
+          "page": 2,
+          "said": "Confessions from 4:00 to 4:45 PM on Saturdays, and 6:00 to 6:45 PM on Thursday."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c24d578e",
+          "page": 2,
+          "said": "Confessions from 4:00 to 4:45 PM on Saturdays, and 6:00 to 6:45 PM on Thursday."
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "47077945",
+          "page": 2,
+          "said": "For a private confession time, please call the parish office."
+        }
+      ],
+      "rationale": "R26: by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-philadelphia",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "47077945",
+          "page": 2,
+          "said": "Exposition of Blessed Sacrament Thursdays from 6:00 to 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c24d578e",
+          "page": 2,
+          "said": "Exposition of Blessed Sacrament Thursdays from 6:00 to 7:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the devotional schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-philadelphia",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "47077945",
+          "page": 2,
+          "said": "Exposition of Blessed Sacrament ... Saturday from 4:00 to 5:00"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c24d578e",
+          "page": 2,
+          "said": "Exposition of Blessed Sacrament ... Saturday from 4:00 to 5:00"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47077945",
+          "page": 3,
+          "said": "Sábados de 4:00 a 5:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins; the English box omits PM but the Spanish box (p3) gives 4:00 a 5:00 PM, ending at the 5 PM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-philadelphia",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-19",
+        "start_time": "18:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Parish Reconciliation, various priests"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "47077945",
+          "page": 4,
+          "said": "This Thursday, November 19 from 6 to 8 PM, we will have various priests available for the Sacrament of Reconciliation."
+        }
+      ],
+      "rationale": "R1, R16: dated penance service on or after as_of; it is outside the weekly Thursday 6:00-6:45 window, so it is a single event (POLICY, Weekly or dated).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-19",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Parish Reconciliation"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "47077945",
+          "page": 5,
+          "said": "Este jueves, 19 de noviembre ... La misa de las 7:00 PM cancela."
+        },
+        {
+          "source": "agent",
+          "bulletin": "47077945",
+          "page": 6,
+          "said": "Jueves, 19 de Noviembre Hora: 6:00 PM Nota: se cancela la misa"
+        }
+      ],
+      "rationale": "R1, R16: the Spanish notice and flyer cancel the Thursday 7 PM Mass for the penance service; the weekly slot stands.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-20",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Memorial Mass for the deceased of the past year"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "47077945",
+          "page": 4,
+          "said": "This Friday, November 20th at 7 PM we will celebrate a Memorial Mass for all who lost a loved one this past year."
+        },
+        {
+          "source": "agent",
+          "bulletin": "47077945",
+          "page": 7,
+          "said": "FRIDAY, NOVEMBER 20 ... 7:00 PM - Memorial Mass Dec'd Parishioners"
+        }
+      ],
+      "rationale": "R1, R16: a dated parish Mass on or after as_of for all who lost a loved one, not one person's memorial; families are invited and anyone may add a name, so it is open (POLICY).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "47077945",
+          "page": 4,
+          "said": "We will have another opportunity on Tuesday, December 15."
+        }
+      ],
+      "rationale": "R26: the December 15 reconciliation opportunity gives no time; not inferred from the November 19 hours.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-aquinas-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-28",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Antorcha Guadalupana Mass"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "47077945",
+          "page": 6,
+          "said": "Iglesia Santo Thomas Aquino 1631 S 17th St -5:00 PM SANTA MISA A LAS 6:00 PM"
+        }
+      ],
+      "rationale": "R22: the torch-run flyer places the 6 PM Mass at its last stop, St. Thomas Aquinas, another parish's church; the procession only visits Annunciation at 3:30 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
