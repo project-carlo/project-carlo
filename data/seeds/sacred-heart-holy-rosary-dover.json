@@ -1,0 +1,1609 @@
+{
+  "schema_version": 1,
+  "parish_slug": "sacred-heart-holy-rosary-dover",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:14:26Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T13:52:02Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches; almost every Mass is at Sacred Heart, with only the Sunday 8 AM Spanish Mass at Holy Rosary. The Nov 8 and Nov 15 bulletins print identical Mass and Saturday confession times; the parish website matches them and supplies each church plus a Friday Holy Hour and first-Friday Exposition. Open: the website-only Monday 7-8 PM confessions, and the registration-only perpetual Adoration at Holy Rosary.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "b9ab31d973e84eff478aa05f00a4c7d670f00636e1f2484e55f01261a9fc3877",
+      "fetched_at": "2026-11-15T16:14:26Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "03e02641d8a3dacb71ff4ad2abd5994c8d8f1ce34caa2e7e60635dbd91f0f4a8",
+      "fetched_at": "2026-11-08T15:39:37Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-dover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 1,
+          "said": "Monday - Saturday ---- 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03e02641",
+          "page": 1,
+          "said": "Monday - Saturday ---- 8:30 am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sacredheart-dover.com/",
+          "said": "Daily Mass Schedule Mon Sat 8:30 AM English Sacred Heart"
+        }
+      ],
+      "rationale": "R1, R6: the schedule box of both bulletins gives the time; the parish website places it at Sacred Heart.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-dover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 1,
+          "said": "Monday - Saturday ---- 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03e02641",
+          "page": 1,
+          "said": "Monday - Saturday ---- 8:30 am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sacredheart-dover.com/",
+          "said": "Daily Mass Schedule Mon Sat 8:30 AM English Sacred Heart"
+        }
+      ],
+      "rationale": "R1, R6: the schedule box of both bulletins gives the time; the parish website places it at Sacred Heart.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-dover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 1,
+          "said": "Monday - Saturday ---- 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03e02641",
+          "page": 1,
+          "said": "Monday - Saturday ---- 8:30 am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sacredheart-dover.com/",
+          "said": "Daily Mass Schedule Mon Sat 8:30 AM English Sacred Heart"
+        }
+      ],
+      "rationale": "R1, R6: the schedule box of both bulletins gives the time; the parish website places it at Sacred Heart.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-dover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 1,
+          "said": "Monday - Saturday ---- 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03e02641",
+          "page": 1,
+          "said": "Monday - Saturday ---- 8:30 am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sacredheart-dover.com/",
+          "said": "Daily Mass Schedule Mon Sat 8:30 AM English Sacred Heart"
+        }
+      ],
+      "rationale": "R1, R6: the schedule box of both bulletins gives the time; the parish website places it at Sacred Heart.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-dover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 1,
+          "said": "Monday - Saturday ---- 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03e02641",
+          "page": 1,
+          "said": "Monday - Saturday ---- 8:30 am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sacredheart-dover.com/",
+          "said": "Daily Mass Schedule Mon Sat 8:30 AM English Sacred Heart"
+        }
+      ],
+      "rationale": "R1, R6: the schedule box of both bulletins gives the time; the parish website places it at Sacred Heart.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-dover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 1,
+          "said": "Monday - Saturday ---- 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03e02641",
+          "page": 1,
+          "said": "Monday - Saturday ---- 8:30 am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sacredheart-dover.com/",
+          "said": "Daily Mass Schedule Mon Sat 8:30 AM English Sacred Heart"
+        }
+      ],
+      "rationale": "R1, R6: the schedule box of both bulletins gives the time; the parish website places it at Sacred Heart.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-dover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 1,
+          "said": "Lunes - Viernes ---- 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03e02641",
+          "page": 1,
+          "said": "Lunes - Viernes ---- 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 2,
+          "said": "7:00 pm (S) (each weekday's intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03e02641",
+          "page": 2,
+          "said": "7:00 pm (S) (each weekday's intentions)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sacredheart-dover.com/",
+          "said": "Mon Fri 7:00 PM Spanish (Lunes a Viernes) Misa Diaria - Sagrado Corazón"
+        }
+      ],
+      "rationale": "R1, R6: schedule box and intentions of both bulletins; the website places it at Sacred Heart. The Nov 20 Mass in honor of the Virgen de la Providencia is this regular Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-dover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 1,
+          "said": "Lunes - Viernes ---- 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03e02641",
+          "page": 1,
+          "said": "Lunes - Viernes ---- 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 2,
+          "said": "7:00 pm (S) (each weekday's intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03e02641",
+          "page": 2,
+          "said": "7:00 pm (S) (each weekday's intentions)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sacredheart-dover.com/",
+          "said": "Mon Fri 7:00 PM Spanish (Lunes a Viernes) Misa Diaria - Sagrado Corazón"
+        }
+      ],
+      "rationale": "R1, R6: schedule box and intentions of both bulletins; the website places it at Sacred Heart. The Nov 20 Mass in honor of the Virgen de la Providencia is this regular Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-dover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 1,
+          "said": "Lunes - Viernes ---- 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03e02641",
+          "page": 1,
+          "said": "Lunes - Viernes ---- 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 2,
+          "said": "7:00 pm (S) (each weekday's intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03e02641",
+          "page": 2,
+          "said": "7:00 pm (S) (each weekday's intentions)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sacredheart-dover.com/",
+          "said": "Mon Fri 7:00 PM Spanish (Lunes a Viernes) Misa Diaria - Sagrado Corazón"
+        }
+      ],
+      "rationale": "R1, R6: schedule box and intentions of both bulletins; the website places it at Sacred Heart. The Nov 20 Mass in honor of the Virgen de la Providencia is this regular Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-dover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 1,
+          "said": "Lunes - Viernes ---- 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03e02641",
+          "page": 1,
+          "said": "Lunes - Viernes ---- 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 2,
+          "said": "7:00 pm (S) (each weekday's intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03e02641",
+          "page": 2,
+          "said": "7:00 pm (S) (each weekday's intentions)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sacredheart-dover.com/",
+          "said": "Mon Fri 7:00 PM Spanish (Lunes a Viernes) Misa Diaria - Sagrado Corazón"
+        }
+      ],
+      "rationale": "R1, R6: schedule box and intentions of both bulletins; the website places it at Sacred Heart. The Nov 20 Mass in honor of the Virgen de la Providencia is this regular Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-dover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 1,
+          "said": "Lunes - Viernes ---- 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03e02641",
+          "page": 1,
+          "said": "Lunes - Viernes ---- 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 2,
+          "said": "7:00 pm (S) (each weekday's intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03e02641",
+          "page": 2,
+          "said": "7:00 pm (S) (each weekday's intentions)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sacredheart-dover.com/",
+          "said": "Mon Fri 7:00 PM Spanish (Lunes a Viernes) Misa Diaria - Sagrado Corazón"
+        }
+      ],
+      "rationale": "R1, R6: schedule box and intentions of both bulletins; the website places it at Sacred Heart. The Nov 20 Mass in honor of the Virgen de la Providencia is this regular Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-dover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 1,
+          "said": "Saturday ---- 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03e02641",
+          "page": 1,
+          "said": "Saturday ---- 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 2,
+          "said": "5:00 pm SH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03e02641",
+          "page": 2,
+          "said": "5:00 pm SH"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sacredheart-dover.com/",
+          "said": "Saturday: 5:00 PM English Sacred Heart"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions (SH = Sacred Heart) of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-dover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 1,
+          "said": "Sábados ---- 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03e02641",
+          "page": 1,
+          "said": "Sábados ---- 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 2,
+          "said": "7:00 pm (S)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03e02641",
+          "page": 2,
+          "said": "7:00 pm (S)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sacredheart-dover.com/",
+          "said": "7:00 PM Spanish Español ES | Sagrado Corazón"
+        }
+      ],
+      "rationale": "R1, R6: schedule box and intentions of both bulletins; the website places it at Sagrado Corazón.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-dover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 1,
+          "said": "Sunday ---- 8:00, 11:30 am & 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03e02641",
+          "page": 1,
+          "said": "Sunday ---- 8:00, 11:30 am & 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 2,
+          "said": "8:00 am SH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03e02641",
+          "page": 2,
+          "said": "8:00 am SH"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sacredheart-dover.com/",
+          "said": "Sunday: 8:00 AM English Sacred Heart"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions (SH) of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-the-most-holy-rosary-dover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 1,
+          "said": "Domingos ---- 8:00 am (Santo Rosario)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03e02641",
+          "page": 1,
+          "said": "Domingos ---- 8:00 am (Santo Rosario)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 2,
+          "said": "8:00 am (S)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03e02641",
+          "page": 2,
+          "said": "8:00 am (S)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sacredheart-dover.com/",
+          "said": "8:00 AM Spanish Español ES | Holy Rosary (Santo Rosario)"
+        }
+      ],
+      "rationale": "R1: the schedule box of both bulletins places it at Santo Rosario (Our Lady Queen of the Most Holy Rosary).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-dover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 1,
+          "said": "Domingos ---- 9:30 am, 1:30 & 5:00 pm (Sagrado Corazón)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03e02641",
+          "page": 1,
+          "said": "Domingos ---- 9:30 am, 1:30 & 5:00 pm (Sagrado Corazón)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sacredheart-dover.com/",
+          "said": "9:30 AM / 1:30 PM / 5:00 PM Spanish Sagrado Corazón"
+        }
+      ],
+      "rationale": "R1: the schedule box of both bulletins places these at Sagrado Corazón; intentions list each with (S).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-dover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 1,
+          "said": "Domingos ---- 9:30 am, 1:30 & 5:00 pm (Sagrado Corazón)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03e02641",
+          "page": 1,
+          "said": "Domingos ---- 9:30 am, 1:30 & 5:00 pm (Sagrado Corazón)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sacredheart-dover.com/",
+          "said": "9:30 AM / 1:30 PM / 5:00 PM Spanish Sagrado Corazón"
+        }
+      ],
+      "rationale": "R1: the schedule box of both bulletins places these at Sagrado Corazón; intentions list each with (S).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-dover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 1,
+          "said": "Domingos ---- 9:30 am, 1:30 & 5:00 pm (Sagrado Corazón)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03e02641",
+          "page": 1,
+          "said": "Domingos ---- 9:30 am, 1:30 & 5:00 pm (Sagrado Corazón)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sacredheart-dover.com/",
+          "said": "9:30 AM / 1:30 PM / 5:00 PM Spanish Sagrado Corazón"
+        }
+      ],
+      "rationale": "R1: the schedule box of both bulletins places these at Sagrado Corazón; intentions list each with (S).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-dover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 1,
+          "said": "Sunday ---- 8:00, 11:30 am & 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03e02641",
+          "page": 1,
+          "said": "Sunday ---- 8:00, 11:30 am & 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 2,
+          "said": "11:30 am SH; 7:00 pm SH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03e02641",
+          "page": 2,
+          "said": "11:30 am SH; 7:00 pm SH"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sacredheart-dover.com/",
+          "said": "11:30 AM English Sacred Heart; 7:00 PM English Sacred Heart"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions (SH) of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-dover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 1,
+          "said": "Sunday ---- 8:00, 11:30 am & 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03e02641",
+          "page": 1,
+          "said": "Sunday ---- 8:00, 11:30 am & 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 2,
+          "said": "11:30 am SH; 7:00 pm SH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03e02641",
+          "page": 2,
+          "said": "11:30 am SH; 7:00 pm SH"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sacredheart-dover.com/",
+          "said": "11:30 AM English Sacred Heart; 7:00 PM English Sacred Heart"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions (SH) of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-dover",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 1,
+          "said": "Saturday/Sábado ---- 9:00 am. Other times by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03e02641",
+          "page": 1,
+          "said": "Saturday/Sábado ---- 9:00 am. Other times by appointment"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sacredheart-dover.com/",
+          "said": "Saturday 9:00 AM to 10:00 AM Sacred Heart / Confesiones - Sagrado Corazón"
+        }
+      ],
+      "rationale": "R1, R6: both bulletins give the 9:00 am start; the website gives the church and the 10:00 AM end.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-dover",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": "20:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Hora Santa (Spanish)"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sacredheart-dover.com/",
+          "said": "Friday 7:30 PM to 8:30 PM Hora Santa - Todos los Viernes en la Iglesia del Sagrado Corazón (Español)",
+          "schedule_check": {
+            "checked_at": "2026-11-23T13:53:56Z",
+            "current_because": "The live homepage schedule lists the upcoming Dec 8 2026 holy day and every Mass time matches the Nov 8 and Nov 15 2026 bulletins; current pastor era.",
+            "bulletin": "b9ab31d9",
+            "fits_because": "The newest bulletin prints the same Mass and Saturday confession times; this weekly service is simply not in its short sacraments box."
+          }
+        }
+      ],
+      "rationale": "R6, POLICY (a Holy Hour is Adoration): the parish's current website gives a weekly Friday Holy Hour at Sacred Heart; the bulletins do not mention it, which is not a conflict.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-dover",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sacredheart-dover.com/",
+          "said": "1st Friday 9:00 AM to 10:00 AM Exposition and Benediction of the Blessed Sacrament at Sacred Heart Parish (English)",
+          "schedule_check": {
+            "checked_at": "2026-11-23T13:53:56Z",
+            "current_because": "The live homepage schedule lists the upcoming Dec 8 2026 holy day and every Mass time matches the Nov 8 and Nov 15 2026 bulletins; current pastor era.",
+            "bulletin": "b9ab31d9",
+            "fits_because": "The newest bulletin prints the same Mass and Saturday confession times; this weekly service is simply not in its short sacraments box."
+          }
+        }
+      ],
+      "rationale": "R6: the current website gives a first-Friday exposition hour at Sacred Heart; neither bulletin's week holds a first Friday (R11), so their silence is no conflict.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sacredheart-dover.com/",
+          "said": "Monday 7:00 PM to 8:00 PM There will be no confessions Monday March 9th due to the Lenten Retreat."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 1,
+          "said": "CONFESSIONS Saturday 9:00 am. Other times by appointment/Otros días con cita."
+        },
+        {
+          "source": "agent",
+          "bulletin": "03e02641",
+          "page": 1,
+          "said": "CONFESSIONS Saturday 9:00 am. Other times by appointment/Otros días con cita."
+        }
+      ],
+      "rationale": "R6, R28: the website (current Mass times, Dec 8 2026 holy day) lists Monday 7-8 PM confessions with no church, carrying a stale March note; both bulletins list only Saturday and say other times by appointment. Leaning include at Sacred Heart, where the Monday 7 PM Mass is, since the March note shows the slot is maintained.",
+      "question": "Add the website's Monday 7-8 PM confessions?",
+      "options": [
+        {
+          "label": "Mondays 7-8 PM at Sacred Heart",
+          "entry": {
+            "church_slug": "sacred-heart-dover",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 1,
+          "said": "PERPETUAL ADORATION Held at Our Lady Queen of the Most Holy Rosary. Call to register"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03e02641",
+          "page": 1,
+          "said": "PERPETUAL ADORATION Held at Our Lady Queen of the Most Holy Rosary. Call to register"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sacredheart-dover.com/",
+          "said": "Held 24/7 at Holy Rosary Parish ( 38 Myrtle Ave Dover, NJ 07801). Call office to register and receive access code."
+        }
+      ],
+      "rationale": "R30: perpetual Adoration at the parish's own church, but entry needs registration and an access code, so it is not open to a walk-in visitor. Leaning leave out as limited to registered adorers.",
+      "question": "Add the perpetual Adoration chapel at Holy Rosary, which needs registration and an access code?",
+      "options": [
+        {
+          "label": "Every day, all day",
+          "entry": {
+            "church_slug": "our-lady-queen-of-the-most-holy-rosary-dover",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual Adoration; register with the office for the access code"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "s25"
+    },
+    {
+      "id": "s26",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 1,
+          "said": "PERPETUAL ADORATION Held at Our Lady Queen of the Most Holy Rosary. Call to register"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03e02641",
+          "page": 1,
+          "said": "PERPETUAL ADORATION Held at Our Lady Queen of the Most Holy Rosary. Call to register"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sacredheart-dover.com/",
+          "said": "Held 24/7 at Holy Rosary Parish ( 38 Myrtle Ave Dover, NJ 07801). Call office to register and receive access code."
+        }
+      ],
+      "rationale": "R30: perpetual Adoration at the parish's own church, but entry needs registration and an access code, so it is not open to a walk-in visitor. Leaning leave out as limited to registered adorers.",
+      "question": "Add the perpetual Adoration chapel at Holy Rosary, which needs registration and an access code?",
+      "options": [
+        {
+          "label": "Every day, all day",
+          "entry": {
+            "church_slug": "our-lady-queen-of-the-most-holy-rosary-dover",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual Adoration; register with the office for the access code"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "s25"
+    },
+    {
+      "id": "s27",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 1,
+          "said": "PERPETUAL ADORATION Held at Our Lady Queen of the Most Holy Rosary. Call to register"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03e02641",
+          "page": 1,
+          "said": "PERPETUAL ADORATION Held at Our Lady Queen of the Most Holy Rosary. Call to register"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sacredheart-dover.com/",
+          "said": "Held 24/7 at Holy Rosary Parish ( 38 Myrtle Ave Dover, NJ 07801). Call office to register and receive access code."
+        }
+      ],
+      "rationale": "R30: perpetual Adoration at the parish's own church, but entry needs registration and an access code, so it is not open to a walk-in visitor. Leaning leave out as limited to registered adorers.",
+      "question": "Add the perpetual Adoration chapel at Holy Rosary, which needs registration and an access code?",
+      "options": [
+        {
+          "label": "Every day, all day",
+          "entry": {
+            "church_slug": "our-lady-queen-of-the-most-holy-rosary-dover",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual Adoration; register with the office for the access code"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "s25"
+    },
+    {
+      "id": "s28",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 1,
+          "said": "PERPETUAL ADORATION Held at Our Lady Queen of the Most Holy Rosary. Call to register"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03e02641",
+          "page": 1,
+          "said": "PERPETUAL ADORATION Held at Our Lady Queen of the Most Holy Rosary. Call to register"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sacredheart-dover.com/",
+          "said": "Held 24/7 at Holy Rosary Parish ( 38 Myrtle Ave Dover, NJ 07801). Call office to register and receive access code."
+        }
+      ],
+      "rationale": "R30: perpetual Adoration at the parish's own church, but entry needs registration and an access code, so it is not open to a walk-in visitor. Leaning leave out as limited to registered adorers.",
+      "question": "Add the perpetual Adoration chapel at Holy Rosary, which needs registration and an access code?",
+      "options": [
+        {
+          "label": "Every day, all day",
+          "entry": {
+            "church_slug": "our-lady-queen-of-the-most-holy-rosary-dover",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual Adoration; register with the office for the access code"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "s25"
+    },
+    {
+      "id": "s29",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 1,
+          "said": "PERPETUAL ADORATION Held at Our Lady Queen of the Most Holy Rosary. Call to register"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03e02641",
+          "page": 1,
+          "said": "PERPETUAL ADORATION Held at Our Lady Queen of the Most Holy Rosary. Call to register"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sacredheart-dover.com/",
+          "said": "Held 24/7 at Holy Rosary Parish ( 38 Myrtle Ave Dover, NJ 07801). Call office to register and receive access code."
+        }
+      ],
+      "rationale": "R30: perpetual Adoration at the parish's own church, but entry needs registration and an access code, so it is not open to a walk-in visitor. Leaning leave out as limited to registered adorers.",
+      "question": "Add the perpetual Adoration chapel at Holy Rosary, which needs registration and an access code?",
+      "options": [
+        {
+          "label": "Every day, all day",
+          "entry": {
+            "church_slug": "our-lady-queen-of-the-most-holy-rosary-dover",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual Adoration; register with the office for the access code"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "s25"
+    },
+    {
+      "id": "s30",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 1,
+          "said": "PERPETUAL ADORATION Held at Our Lady Queen of the Most Holy Rosary. Call to register"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03e02641",
+          "page": 1,
+          "said": "PERPETUAL ADORATION Held at Our Lady Queen of the Most Holy Rosary. Call to register"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sacredheart-dover.com/",
+          "said": "Held 24/7 at Holy Rosary Parish ( 38 Myrtle Ave Dover, NJ 07801). Call office to register and receive access code."
+        }
+      ],
+      "rationale": "R30: perpetual Adoration at the parish's own church, but entry needs registration and an access code, so it is not open to a walk-in visitor. Leaning leave out as limited to registered adorers.",
+      "question": "Add the perpetual Adoration chapel at Holy Rosary, which needs registration and an access code?",
+      "options": [
+        {
+          "label": "Every day, all day",
+          "entry": {
+            "church_slug": "our-lady-queen-of-the-most-holy-rosary-dover",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual Adoration; register with the office for the access code"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "s25"
+    },
+    {
+      "id": "s31",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 1,
+          "said": "PERPETUAL ADORATION Held at Our Lady Queen of the Most Holy Rosary. Call to register"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03e02641",
+          "page": 1,
+          "said": "PERPETUAL ADORATION Held at Our Lady Queen of the Most Holy Rosary. Call to register"
+        },
+        {
+          "source": "website",
+          "url": "https://www.sacredheart-dover.com/",
+          "said": "Held 24/7 at Holy Rosary Parish ( 38 Myrtle Ave Dover, NJ 07801). Call office to register and receive access code."
+        }
+      ],
+      "rationale": "R30: perpetual Adoration at the parish's own church, but entry needs registration and an access code, so it is not open to a walk-in visitor. Leaning leave out as limited to registered adorers.",
+      "question": "Add the perpetual Adoration chapel at Holy Rosary, which needs registration and an access code?",
+      "options": [
+        {
+          "label": "Every day, all day",
+          "entry": {
+            "church_slug": "our-lady-queen-of-the-most-holy-rosary-dover",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual Adoration; register with the office for the access code"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "s25"
+    },
+    {
+      "id": "s32",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 4,
+          "said": "Retiro Parroquial de Adviento, Sábado 21 de Noviembre 10:00 a.m. - 12:00 m., Santa Eucaristía; Lugar: Gym de la Parroquia"
+        }
+      ],
+      "rationale": "R24: the Advent retreat's Eucharist has no definite Mass time, needs a ticket, and is in the parish gym.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b9ab31d9",
+          "page": 1,
+          "said": "Other times by appointment/Otros días con cita."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
