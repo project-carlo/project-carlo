@@ -1,0 +1,624 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-family-florham-park",
+  "status": "ready",
+  "as_of": "2026-11-15T16:51:26Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T12:43:45Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, Holy Family, Florham Park. Weekend, daily Mass, Saturday Confession and Thursday 8:45-9:00 AM Adoration agree in both bulletins read (Nov 8 and Nov 15, 2026). Dated: December 8 Adoration 6:30 PM and Immaculate Conception Mass 7:30 PM; generic holy-day times are not projected. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "765796159f63663078ceb845902e99a87e5ff043e4dddfcba85de0e525095a13",
+      "fetched_at": "2026-11-15T16:51:26Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "fb7cf5d1eca4109ebd96397c4a8a7fe853bb8fdeeb04a15b397cff2cc13b96a3",
+      "fetched_at": "2026-11-08T16:00:01Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-florham-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76579615",
+          "page": 1,
+          "said": "Weekend Mass Schedule Saturday 5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb7cf5d1",
+          "page": 1,
+          "said": "Weekend Mass Schedule Saturday 5:30 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass Schedule box of both bulletins read; the intentions list a 5:30 Saturday Mass both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-florham-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76579615",
+          "page": 1,
+          "said": "Sunday 7:30 am, 10:00 am, 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb7cf5d1",
+          "page": 1,
+          "said": "Sunday 7:30 am, 10:00 am, 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass Schedule box of both bulletins read; the intentions list all three Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-florham-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76579615",
+          "page": 1,
+          "said": "Sunday 7:30 am, 10:00 am, 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb7cf5d1",
+          "page": 1,
+          "said": "Sunday 7:30 am, 10:00 am, 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass Schedule box of both bulletins read; the intentions list all three Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-florham-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76579615",
+          "page": 1,
+          "said": "Sunday 7:30 am, 10:00 am, 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb7cf5d1",
+          "page": 1,
+          "said": "Sunday 7:30 am, 10:00 am, 12:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass Schedule box of both bulletins read; the intentions list all three Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-florham-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76579615",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday-Saturday 8:15 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb7cf5d1",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday-Saturday 8:15 am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass Schedule box of both bulletins read; the page-2 intentions list an 8:15 Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-florham-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76579615",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday-Saturday 8:15 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb7cf5d1",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday-Saturday 8:15 am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass Schedule box of both bulletins read; the page-2 intentions list an 8:15 Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-florham-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76579615",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday-Saturday 8:15 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb7cf5d1",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday-Saturday 8:15 am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass Schedule box of both bulletins read; the page-2 intentions list an 8:15 Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-florham-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76579615",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday-Saturday 8:15 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb7cf5d1",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday-Saturday 8:15 am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass Schedule box of both bulletins read; the page-2 intentions list an 8:15 Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-florham-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76579615",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday-Saturday 8:15 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb7cf5d1",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday-Saturday 8:15 am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass Schedule box of both bulletins read; the page-2 intentions list an 8:15 Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-florham-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76579615",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday-Saturday 8:15 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb7cf5d1",
+          "page": 1,
+          "said": "Daily Mass Schedule Monday-Saturday 8:15 am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass Schedule box of both bulletins read; the page-2 intentions list an 8:15 Mass every weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-florham-park",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": "17:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76579615",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Saturdays 4:30 pm to 5:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb7cf5d1",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Saturdays 4:30 pm to 5:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "76579615",
+          "page": 4,
+          "said": "Confession 4:30-5:15pm"
+        }
+      ],
+      "rationale": "R1: page-1 schedule box of both bulletins; the page-4 calendar repeats it every Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-florham-park",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:15 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76579615",
+          "page": 1,
+          "said": "Eucharistic Adoration -The Blessed Sacrament will be exposed for veneration every Thursday after 8:15am to 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb7cf5d1",
+          "page": 1,
+          "said": "Eucharistic Adoration -The Blessed Sacrament will be exposed for veneration every Thursday after 8:15am to 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "76579615",
+          "page": 4,
+          "said": "Eucharistic Adoration 8:45-9:00am"
+        }
+      ],
+      "rationale": "R1: the schedule box gives every Thursday after the 8:15 Mass to 9:00; the page-4 calendar prints the clock time 8:45-9:00am on each Thursday (POLICY, Times: a stated clock time wins).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-florham-park",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Solemnity of the Immaculate Conception"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76579615",
+          "page": 5,
+          "said": "Followed by Mass for the Solemnity of the Immaculate Conception at 7:30 pm ... Tuesday, December 8, 2026"
+        }
+      ],
+      "rationale": "R1, R16: dated holy-day Mass outside the weekly schedule, printed in the Rosary Fellowship flyer (image) on page 5; after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-florham-park",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "With the Rosary, before the 7:30 PM Mass"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76579615",
+          "page": 5,
+          "said": "prayerful meditation of the Rosary and Eucharistic Adoration in the Church at 6:30 pm ... Tuesday, December 8, 2026"
+        }
+      ],
+      "rationale": "R1, R16: dated Adoration in the church on page 5's flyer; POLICY, Times: a clock start running until a Mass has no end time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76579615",
+          "page": 1,
+          "said": "Holy Day Schedule 8:15 am, 12:10 pm, 7:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fb7cf5d1",
+          "page": 1,
+          "said": "Holy Day Schedule 8:15 am, 12:10 pm, 7:30 pm"
+        }
+      ],
+      "rationale": "POLICY, Dates: the generic holy-day times name no date, so no date is projected from them. The December 8 7:30 PM Mass is recorded from its own dated flyer; the 8:15 is the regular Tuesday Mass; the 12:10 PM is not tied to any printed date.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76579615",
+          "page": 1,
+          "said": "Rosary - Prayed @ 7:50 am/daily in church; Miraculous Medal Novena - Prayed on Mondays after the 8:15am Mass; Centering Prayer - Mondays @ 7:30 pm"
+        }
+      ],
+      "rationale": "R24: devotions that are not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76579615",
+          "page": 4,
+          "said": "Interfaith Prayer Service 7pm (Nov 23, Congregation Beth Torah, Madison)"
+        }
+      ],
+      "rationale": "R22, R24: an interfaith prayer service, not a Mass, held at another venue.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
