@@ -1,0 +1,786 @@
+{
+  "schema_version": 1,
+  "parish_slug": "corpus-christi-chatham-township",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:09:20Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T12:35:51Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, Corpus Christi. Weekend, weekday, Adoration and Confession times match in the page 1 schedule box of both bulletins read (Nov 8 and Nov 15, 2026), plus dated Thanksgiving and Immaculate Conception Masses. Open: the Dec 11 9 AM Mass at the Advent Celebration for Women.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "3a5d81653e623af98e85d7a574435dcd780f9f2f4123438d15faaa4b38969cae",
+      "fetched_at": "2026-11-15T16:09:20Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "0bc53b8f07f7c76550b2dd44d74f21403fc4dd71953dd7efe461e658a9d87eb6",
+      "fetched_at": "2026-11-08T15:35:22Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-chatham-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3a5d8165",
+          "page": 1,
+          "said": "Weekday Masses Monday - Friday: 7:30am*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0bc53b8f",
+          "page": 1,
+          "said": "Weekday Masses Monday - Friday: 7:30am*"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read, and each weekday has a 7:30am intention on page 3 of both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-chatham-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3a5d8165",
+          "page": 1,
+          "said": "Weekday Masses Monday - Friday: 7:30am*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0bc53b8f",
+          "page": 1,
+          "said": "Weekday Masses Monday - Friday: 7:30am*"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read, and each weekday has a 7:30am intention on page 3 of both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-chatham-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3a5d8165",
+          "page": 1,
+          "said": "Weekday Masses Monday - Friday: 7:30am*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0bc53b8f",
+          "page": 1,
+          "said": "Weekday Masses Monday - Friday: 7:30am*"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read, and each weekday has a 7:30am intention on page 3 of both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-chatham-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3a5d8165",
+          "page": 1,
+          "said": "Weekday Masses Monday - Friday: 7:30am*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0bc53b8f",
+          "page": 1,
+          "said": "Weekday Masses Monday - Friday: 7:30am*"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read, and each weekday has a 7:30am intention on page 3 of both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-chatham-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3a5d8165",
+          "page": 1,
+          "said": "Weekday Masses Monday - Friday: 7:30am*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0bc53b8f",
+          "page": 1,
+          "said": "Weekday Masses Monday - Friday: 7:30am*"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read, and each weekday has a 7:30am intention on page 3 of both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-chatham-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3a5d8165",
+          "page": 1,
+          "said": "Saturday 5:00pm*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0bc53b8f",
+          "page": 1,
+          "said": "Saturday 5:00pm*"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read; the presiders' schedule and intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-chatham-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3a5d8165",
+          "page": 1,
+          "said": "Sunday 7:30am, 8:45am, 11:00am*, 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0bc53b8f",
+          "page": 1,
+          "said": "Sunday 7:30am, 8:45am, 11:00am*, 6:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read; the presiders' schedule and intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-chatham-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3a5d8165",
+          "page": 1,
+          "said": "Sunday 7:30am, 8:45am, 11:00am*, 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0bc53b8f",
+          "page": 1,
+          "said": "Sunday 7:30am, 8:45am, 11:00am*, 6:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read; the presiders' schedule and intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-chatham-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3a5d8165",
+          "page": 1,
+          "said": "Sunday 7:30am, 8:45am, 11:00am*, 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0bc53b8f",
+          "page": 1,
+          "said": "Sunday 7:30am, 8:45am, 11:00am*, 6:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read; the presiders' schedule and intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-chatham-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3a5d8165",
+          "page": 1,
+          "said": "Sunday 7:30am, 8:45am, 11:00am*, 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0bc53b8f",
+          "page": 1,
+          "said": "Sunday 7:30am, 8:45am, 11:00am*, 6:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read; the presiders' schedule and intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-chatham-township",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3a5d8165",
+          "page": 1,
+          "said": "Adoration Mondays: 1:00pm - 3:00pm* & 6:30pm - 7:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0bc53b8f",
+          "page": 1,
+          "said": "Adoration Mondays: 1:00pm - 3:00pm* & 6:30pm - 7:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a5d8165",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16 1:00pm - 3:00pm | Adoration and Private Prayer"
+        }
+      ],
+      "rationale": "R1: Adoration box on page 1 of both bulletins; the page 2 calendar of both lists it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-chatham-township",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3a5d8165",
+          "page": 1,
+          "said": "Adoration Mondays: 1:00pm - 3:00pm* & 6:30pm - 7:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0bc53b8f",
+          "page": 1,
+          "said": "Adoration Mondays: 1:00pm - 3:00pm* & 6:30pm - 7:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a5d8165",
+          "page": 2,
+          "said": "6:30pm - 7:30pm | Adoration and Private Prayer"
+        }
+      ],
+      "rationale": "R1: Adoration box on page 1 of both bulletins; the page 2 calendar of both lists it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-chatham-township",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3a5d8165",
+          "page": 1,
+          "said": "Wednesdays: 1:00pm - 3:00pm*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0bc53b8f",
+          "page": 1,
+          "said": "Wednesdays: 1:00pm - 3:00pm*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a5d8165",
+          "page": 2,
+          "said": "WEDNESDAY, NOVEMBER 18 1:00pm - 3:00pm | Adoration and Private Prayer"
+        }
+      ],
+      "rationale": "R1: Adoration box on page 1 of both bulletins; the page 2 calendar of both lists it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-chatham-township",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3a5d8165",
+          "page": 1,
+          "said": "Confession Mondays: 6:30pm - 7:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0bc53b8f",
+          "page": 1,
+          "said": "Confession Mondays: 6:30pm - 7:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a5d8165",
+          "page": 2,
+          "said": "6:30pm - 7:15pm | Confession"
+        }
+      ],
+      "rationale": "R1: Confession box on page 1 of both bulletins, with its own clock times (POLICY, Times), inside the Monday evening Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-chatham-township",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3a5d8165",
+          "page": 8,
+          "said": "Nov 26 - Thanksgiving Day Mass at 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a5d8165",
+          "page": 1,
+          "said": "Federal Holidays: 9:00am*"
+        }
+      ],
+      "rationale": "R1, R16: dated Thanksgiving Mass after as_of. R17: no cancellation of the Thursday 7:30am Mass is stated, so the weekly slot stays.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-chatham-township",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception, Holy Day of Obligation"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3a5d8165",
+          "page": 7,
+          "said": "Immaculate Conception of the Blessed Virgin Mary Tuesday, December 8 Masses: 7:30am, 9:00am and 7:30pm Holy Day of Obligation"
+        }
+      ],
+      "rationale": "R1, R16: dated holy-day Masses after as_of; the 7:30am is the weekly Tuesday Mass and is not duplicated (POLICY, Weekly or dated, rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-chatham-township",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception, Holy Day of Obligation"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3a5d8165",
+          "page": 7,
+          "said": "Immaculate Conception of the Blessed Virgin Mary Tuesday, December 8 Masses: 7:30am, 9:00am and 7:30pm Holy Day of Obligation"
+        }
+      ],
+      "rationale": "R1, R16: dated holy-day Masses after as_of; the 7:30am is the weekly Tuesday Mass and is not duplicated (POLICY, Weekly or dated, rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3a5d8165",
+          "page": 10,
+          "said": "SENIORS' FIRST FRIDAY MASS & LUNCHEON On Friday, November 6, seniors of the parish enjoyed attending Mass"
+        }
+      ],
+      "rationale": "R16, R26: a past event with no time given; no weekly first-Friday seniors' Mass time is printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3a5d8165",
+          "page": 6,
+          "said": "Advent Celebration for Women ... Friday, December 11, 2026 9:00 AM - 2:00 PM $10 per person 9 AM MASS | BRUNCH TO FOLLOW Scan QR code to register online!"
+        }
+      ],
+      "rationale": "R30: POLICY leaves out a Mass limited to a group; this Mass opens a women's event with a fee and registration, and the flyer names no venue (the parish logo suggests Corpus Christi). Leaning leave out as likely not open to all; the weekly Friday 7:30am Mass is unaffected (R17).",
+      "question": "Include the 9 AM Mass on Friday, December 11, part of the parish's paid, registration Advent Celebration for Women?",
+      "options": [
+        {
+          "label": "Include Dec 11 9:00 AM Mass",
+          "entry": {
+            "church_slug": "corpus-christi-chatham-township",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-11",
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Advent Celebration for Women"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3a5d8165",
+          "page": 1,
+          "said": "Federal Holidays: 9:00am*"
+        }
+      ],
+      "rationale": "POLICY, Dates; R33: a generic federal-holiday time names no dates and can't be a weekly slot. Thanksgiving (Nov 26) is recorded as its dated Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3a5d8165",
+          "page": 1,
+          "said": "Holy Days of Obligation: 7:30am*, 9:00am, 7:30pm"
+        }
+      ],
+      "rationale": "POLICY, Dates; R33: generic holy-day times name no dates; Dec 8 is recorded from its dated notice on page 7.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
