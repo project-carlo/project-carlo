@@ -1,0 +1,853 @@
+{
+  "schema_version": 1,
+  "parish_slug": "assumption-morristown",
+  "status": "ready",
+  "as_of": "2026-11-15T16:09:02Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T12:28:25Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend (Sat 8:00 AM & 5:30 PM; Sun 7, 8, 10, 12 and 5:30 PM Sept-May), weekday 7:00 AM & 12:05 PM, and Saturday 4:15-5:00 PM Confession agree in both bulletins read (Nov 8 and 15, 2026) and on the parish website. First-Monday 7 PM and first-Saturday 8:30-9 AM Adoration come from the homepage only (R6); no open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "b4f0e053d569cf0d11e074eba63bc3e4b002571ba83512988a4f2880a4663f8b",
+      "fetched_at": "2026-11-15T16:09:02Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "9e0b9edb96c10ba8311933b2fc5461cb535dfad6e57e11a4938c0a4763446fa6",
+      "fetched_at": "2026-11-08T15:35:09Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-morristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4f0e053",
+          "page": 1,
+          "said": "Mass Schedule Saturday 8:00 a.m. 5:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e0b9edb",
+          "page": 1,
+          "said": "Mass Schedule Saturday 8:00 a.m. 5:30 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the front-page Mass Schedule box of both bulletins read, and the Saturday intentions on p3 list 8:00 a.m. and 5:30 p.m. each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-morristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4f0e053",
+          "page": 1,
+          "said": "Mass Schedule Saturday 8:00 a.m. 5:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e0b9edb",
+          "page": 1,
+          "said": "Mass Schedule Saturday 8:00 a.m. 5:30 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the front-page Mass Schedule box of both bulletins read, and the Saturday intentions on p3 list 8:00 a.m. and 5:30 p.m. each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-morristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4f0e053",
+          "page": 1,
+          "said": "Sunday 7:00, 8:00, 10:00 a.m. 12:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e0b9edb",
+          "page": 1,
+          "said": "Sunday 7:00, 8:00, 10:00 a.m. 12:00 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the front-page Mass Schedule box of both bulletins read and in each week's Sunday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-morristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4f0e053",
+          "page": 1,
+          "said": "Sunday 7:00, 8:00, 10:00 a.m. 12:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e0b9edb",
+          "page": 1,
+          "said": "Sunday 7:00, 8:00, 10:00 a.m. 12:00 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the front-page Mass Schedule box of both bulletins read and in each week's Sunday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-morristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4f0e053",
+          "page": 1,
+          "said": "Sunday 7:00, 8:00, 10:00 a.m. 12:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e0b9edb",
+          "page": 1,
+          "said": "Sunday 7:00, 8:00, 10:00 a.m. 12:00 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the front-page Mass Schedule box of both bulletins read and in each week's Sunday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-morristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4f0e053",
+          "page": 1,
+          "said": "Sunday 7:00, 8:00, 10:00 a.m. 12:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e0b9edb",
+          "page": 1,
+          "said": "Sunday 7:00, 8:00, 10:00 a.m. 12:00 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the front-page Mass Schedule box of both bulletins read and in each week's Sunday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-morristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 5,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4f0e053",
+          "page": 1,
+          "said": "Sunday ... 5:30 p.m. (Sept.-May)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e0b9edb",
+          "page": 1,
+          "said": "Sunday ... 5:30 p.m. (Sept.-May)"
+        }
+      ],
+      "rationale": "R1: the schedule box marks the Sunday 5:30 p.m. Mass Sept.-May; POLICY, Weekly qualifiers keeps it as the season. The website's Mass Times page agrees (5:30 PM Sept.-May).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-morristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4f0e053",
+          "page": 1,
+          "said": "Weekdays 7:00 a.m. 12:05 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e0b9edb",
+          "page": 1,
+          "said": "Weekdays 7:00 a.m. 12:05 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the front-page schedule box of both bulletins; the p3 intentions list 7:00 a.m. and 12:05 p.m. Mon-Fri (the Nov 8 issue shows only 9:00 a.m. on Veterans Day, the National Holidays time, a past date out of scope under R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-morristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4f0e053",
+          "page": 1,
+          "said": "Weekdays 7:00 a.m. 12:05 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e0b9edb",
+          "page": 1,
+          "said": "Weekdays 7:00 a.m. 12:05 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the front-page schedule box of both bulletins; the p3 intentions list 7:00 a.m. and 12:05 p.m. Mon-Fri (the Nov 8 issue shows only 9:00 a.m. on Veterans Day, the National Holidays time, a past date out of scope under R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-morristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4f0e053",
+          "page": 1,
+          "said": "Weekdays 7:00 a.m. 12:05 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e0b9edb",
+          "page": 1,
+          "said": "Weekdays 7:00 a.m. 12:05 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the front-page schedule box of both bulletins; the p3 intentions list 7:00 a.m. and 12:05 p.m. Mon-Fri (the Nov 8 issue shows only 9:00 a.m. on Veterans Day, the National Holidays time, a past date out of scope under R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-morristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4f0e053",
+          "page": 1,
+          "said": "Weekdays 7:00 a.m. 12:05 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e0b9edb",
+          "page": 1,
+          "said": "Weekdays 7:00 a.m. 12:05 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the front-page schedule box of both bulletins; the p3 intentions list 7:00 a.m. and 12:05 p.m. Mon-Fri (the Nov 8 issue shows only 9:00 a.m. on Veterans Day, the National Holidays time, a past date out of scope under R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-morristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4f0e053",
+          "page": 1,
+          "said": "Weekdays 7:00 a.m. 12:05 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e0b9edb",
+          "page": 1,
+          "said": "Weekdays 7:00 a.m. 12:05 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the front-page schedule box of both bulletins; the p3 intentions list 7:00 a.m. and 12:05 p.m. Mon-Fri (the Nov 8 issue shows only 9:00 a.m. on Veterans Day, the National Holidays time, a past date out of scope under R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-morristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4f0e053",
+          "page": 1,
+          "said": "Weekdays 7:00 a.m. 12:05 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e0b9edb",
+          "page": 1,
+          "said": "Weekdays 7:00 a.m. 12:05 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the front-page schedule box of both bulletins; the p3 intentions list 7:00 a.m. and 12:05 p.m. Mon-Fri (the Nov 8 issue shows only 9:00 a.m. on Veterans Day, the National Holidays time, a past date out of scope under R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-morristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4f0e053",
+          "page": 1,
+          "said": "Weekdays 7:00 a.m. 12:05 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e0b9edb",
+          "page": 1,
+          "said": "Weekdays 7:00 a.m. 12:05 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the front-page schedule box of both bulletins; the p3 intentions list 7:00 a.m. and 12:05 p.m. Mon-Fri (the Nov 8 issue shows only 9:00 a.m. on Veterans Day, the National Holidays time, a past date out of scope under R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-morristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4f0e053",
+          "page": 1,
+          "said": "Weekdays 7:00 a.m. 12:05 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e0b9edb",
+          "page": 1,
+          "said": "Weekdays 7:00 a.m. 12:05 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the front-page schedule box of both bulletins; the p3 intentions list 7:00 a.m. and 12:05 p.m. Mon-Fri (the Nov 8 issue shows only 9:00 a.m. on Veterans Day, the National Holidays time, a past date out of scope under R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-morristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4f0e053",
+          "page": 1,
+          "said": "Weekdays 7:00 a.m. 12:05 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e0b9edb",
+          "page": 1,
+          "said": "Weekdays 7:00 a.m. 12:05 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the front-page schedule box of both bulletins; the p3 intentions list 7:00 a.m. and 12:05 p.m. Mon-Fri (the Nov 8 issue shows only 9:00 a.m. on Veterans Day, the National Holidays time, a past date out of scope under R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-morristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4f0e053",
+          "page": 1,
+          "said": "Weekdays 7:00 a.m. 12:05 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e0b9edb",
+          "page": 1,
+          "said": "Weekdays 7:00 a.m. 12:05 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the front-page schedule box of both bulletins; the p3 intentions list 7:00 a.m. and 12:05 p.m. Mon-Fri (the Nov 8 issue shows only 9:00 a.m. on Veterans Day, the National Holidays time, a past date out of scope under R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-morristown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4f0e053",
+          "page": 2,
+          "said": "Sacrament of Reconciliation: Saturdays from 4:15 - 5:00 p.m. or by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e0b9edb",
+          "page": 2,
+          "said": "Sacrament of Reconciliation: Saturdays from 4:15 - 5:00 p.m. or by appointment."
+        }
+      ],
+      "rationale": "R1: printed on p2 of both bulletins; the website's homepage gives the same Saturday 4:15-5:00 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4f0e053",
+          "page": 1,
+          "said": "Holy Days 5:30 p.m. Vigil (Day Before) 7:00 a.m. & 12:05, 7:00 p.m."
+        }
+      ],
+      "rationale": "POLICY, Dates; R16: the standing Holy Day times name no date, and the bulletin pins no upcoming holy day; update mode will read the dated notice.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4f0e053",
+          "page": 1,
+          "said": "National Holidays 9:00 a.m."
+        }
+      ],
+      "rationale": "POLICY, Dates; R17: the National Holidays time names no date (Thanksgiving is not announced with a Mass time), so no dated entry or cancellation is recorded and the weekly slots stand.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b4f0e053",
+          "page": 3,
+          "said": "Pray the Rosary weekdays 20 minutes before the 12:05 p.m. Mass."
+        }
+      ],
+      "rationale": "R24: the Rosary is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-morristown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://assumptionparish.org/",
+          "said": "Adoration Times Monday : 7:00 PM 1st Monday of each month",
+          "schedule_check": {
+            "checked_at": "2026-11-23T12:31:56Z",
+            "current_because": "Checked 2026-11-23: the same homepage widget block gives Confession Saturday 4:15-5:00 PM exactly as the Nov 15, 2026 bulletin does, the Mass Times page matches the bulletin's schedule box line for line, and the site promotes the 2026 Giving Tree; no former clergy or past dates appear.",
+            "bulletin": "b4f0e053",
+            "fits_because": "Neither read bulletin covers a first Monday or first Saturday (Nov 8-14 and Nov 15-22 are second and third weeks), and the bulletins print no Adoration schedule at all, so their silence is no conflict; the time sits at the parish church."
+          }
+        }
+      ],
+      "rationale": "R6, R12: the parish homepage's Adoration Times gives first Mondays at 7:00 PM with no end time; it appears current and fits the bulletins, which show no first Monday week. Page null.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-morristown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://assumptionparish.org/",
+          "said": "Adoration Times ... 1st Saturday : 8:30 AM to 9:00 AM",
+          "schedule_check": {
+            "checked_at": "2026-11-23T12:32:00Z",
+            "current_because": "Checked 2026-11-23: the same homepage widget block gives Confession Saturday 4:15-5:00 PM exactly as the Nov 15, 2026 bulletin does, the Mass Times page matches the bulletin's schedule box line for line, and the site promotes the 2026 Giving Tree; no former clergy or past dates appear.",
+            "bulletin": "b4f0e053",
+            "fits_because": "Neither read bulletin covers a first Monday or first Saturday (Nov 8-14 and Nov 15-22 are second and third weeks), and the bulletins print no Adoration schedule at all, so their silence is no conflict; the time sits at the parish church. Follows the Saturday 8:00 a.m. Mass printed in the bulletin."
+          }
+        }
+      ],
+      "rationale": "R6, R12: the parish homepage's Adoration Times gives first Saturdays 8:30-9:00 AM, after the 8:00 AM Saturday Mass; it appears current and fits the bulletins, which show no first Saturday week. Page null.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
