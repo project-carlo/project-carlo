@@ -1,0 +1,869 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-brendan-st-george-clifton",
+  "status": "ready",
+  "as_of": "2026-11-15T16:51:41Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T16:47:11Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One listed church, St. Brendan (Clifton). Both bulletins read (Nov 8 and Nov 15, 2026) print the same weekly schedule: English and Spanish weekend and 6 PM weekday Masses, Saturday 4 PM confession, and Tuesday/Thursday Adoration 8 AM-5:45 PM. The newest issue's Upcoming Special Masses box adds dated Thanksgiving, Immaculate Conception and Christmas Masses. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "d63239e32eabd1aea4b35842e6a1da4102749316da011e596d31e4a43c45971a",
+      "fetched_at": "2026-11-15T16:51:41Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "3d8a298168841ebdecfec9917211f8349d9e668466f35b6b0040d806f746ea48",
+      "fetched_at": "2026-11-08T22:04:16Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-brendan-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d63239e3",
+          "page": 1,
+          "said": "Saturday ------5:30 pm (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d8a2981",
+          "page": 1,
+          "said": "Saturday ------5:30 pm (English)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Celebration of the Eucharist box of both bulletins read (Nov 8 and Nov 15), and in each week's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-brendan-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d63239e3",
+          "page": 1,
+          "said": "Saturday ... 7:00 pm (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d8a2981",
+          "page": 1,
+          "said": "Saturday ... 7:00 pm (Español)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass box of both bulletins read, and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-brendan-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d63239e3",
+          "page": 1,
+          "said": "Sunday ------ 9:30 am (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d8a2981",
+          "page": 1,
+          "said": "Sunday ------ 9:30 am (English)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass box of both bulletins read, and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-brendan-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d63239e3",
+          "page": 1,
+          "said": "Sunday ... 1:00 pm (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d8a2981",
+          "page": 1,
+          "said": "Sunday ... 1:00 pm (Español)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass box of both bulletins read, and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-brendan-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d63239e3",
+          "page": 1,
+          "said": "Monday, Wednesday, Friday ---- 6:00 pm (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d8a2981",
+          "page": 1,
+          "said": "Monday, Wednesday, Friday ---- 6:00 pm (English)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass box of both bulletins read; each week's intentions list 6:00PM Masses Monday-Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-brendan-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d63239e3",
+          "page": 1,
+          "said": "Monday, Wednesday, Friday ---- 6:00 pm (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d8a2981",
+          "page": 1,
+          "said": "Monday, Wednesday, Friday ---- 6:00 pm (English)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass box of both bulletins read; each week's intentions list 6:00PM Masses Monday-Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-brendan-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d63239e3",
+          "page": 1,
+          "said": "Monday, Wednesday, Friday ---- 6:00 pm (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d8a2981",
+          "page": 1,
+          "said": "Monday, Wednesday, Friday ---- 6:00 pm (English)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass box of both bulletins read; each week's intentions list 6:00PM Masses Monday-Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-brendan-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d63239e3",
+          "page": 1,
+          "said": "Tuesday & Thursday ------ 6:00 pm (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d8a2981",
+          "page": 1,
+          "said": "Tuesday & Thursday ------ 6:00 pm (Español)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass box of both bulletins read; each week's intentions list 6:00PM Masses Monday-Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-brendan-clifton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d63239e3",
+          "page": 1,
+          "said": "Tuesday & Thursday ------ 6:00 pm (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d8a2981",
+          "page": 1,
+          "said": "Tuesday & Thursday ------ 6:00 pm (Español)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass box of both bulletins read; each week's intentions list 6:00PM Masses Monday-Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-brendan-clifton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d63239e3",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION Saturday ------ 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d8a2981",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION Saturday ------ 4:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins; no end time is given, so end_time stays null (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-brendan-clifton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "17:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d63239e3",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION Tuesday & Thursday ----- 8:00 am - 5:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d8a2981",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION Tuesday & Thursday ----- 8:00 am - 5:45 pm"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins' schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-brendan-clifton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "17:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d63239e3",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION Tuesday & Thursday ----- 8:00 am - 5:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d8a2981",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION Tuesday & Thursday ----- 8:00 am - 5:45 pm"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins' schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-brendan-clifton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day, bilingual"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d63239e3",
+          "page": 3,
+          "said": "Upcoming Special Masses: Thanksgiving Day | Bilingual Mass 9:00 a.m."
+        }
+      ],
+      "rationale": "R1, R16: a holiday Mass outside the weekly schedule (POLICY, Weekly or dated, rule 7); Thanksgiving Day pins the date to Thursday, November 26, 2026. R17: no cancellation of the Thursday 6 PM Mass is stated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-brendan-clifton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception vigil, English"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d63239e3",
+          "page": 3,
+          "said": "Immaculate Conception: Monday, December 7 — 7:00 p.m. (English)"
+        }
+      ],
+      "rationale": "R1, R16: dated holy day Mass outside the weekly schedule, on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-brendan-clifton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception, English"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d63239e3",
+          "page": 3,
+          "said": "Tuesday, December 8 — 12:00 p.m. (English) | 7:00 p.m. (Spanish)"
+        }
+      ],
+      "rationale": "R1, R16: dated holy day Mass outside the weekly schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-brendan-clifton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception, Spanish"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d63239e3",
+          "page": 3,
+          "said": "Tuesday, December 8 — 12:00 p.m. (English) | 7:00 p.m. (Spanish)"
+        }
+      ],
+      "rationale": "R1, R16: dated holy day Mass outside the weekly schedule. R17: no cancellation of the Tuesday 6 PM Mass is stated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-brendan-clifton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve, English"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d63239e3",
+          "page": 3,
+          "said": "Christmas Eve: Thursday, December 24 4:00 p.m. (English) | 6:00 p.m. (Spanish)"
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Mass outside the weekly schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-brendan-clifton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve, Spanish"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d63239e3",
+          "page": 3,
+          "said": "Christmas Eve: Thursday, December 24 4:00 p.m. (English) | 6:00 p.m. (Spanish)"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated, rule 7: falls exactly on the weekly Thursday 6:00 PM Spanish Mass, so only the weekly slot is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-brendan-clifton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Day, English"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d63239e3",
+          "page": 3,
+          "said": "Christmas Day: Friday, December 25 9:30 a.m. (English) | 1:00 p.m. (Spanish)"
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Mass outside the weekly schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-brendan-clifton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Day, Spanish"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d63239e3",
+          "page": 3,
+          "said": "Christmas Day: Friday, December 25 9:30 a.m. (English) | 1:00 p.m. (Spanish)"
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Mass outside the weekly schedule. R17: no cancellation of the Friday 6 PM Mass is stated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-brendan-clifton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-31",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mary, Mother of God, Spanish"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d63239e3",
+          "page": 3,
+          "said": "Mary, Mother of God: Thursday, December 31 7:00 p.m. (Spanish)"
+        }
+      ],
+      "rationale": "R1, R16: dated holy day Mass outside the weekly schedule. R17: no cancellation of the Thursday 6 PM Mass is stated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-brendan-clifton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Providence"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d63239e3",
+          "page": 3,
+          "said": "Our Lady of Providence, Patroness of Puerto Rico: Saturday, November 21 7:00 p.m."
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated, rule 7: a feast celebrated at the regular Saturday 7:00 PM Spanish Mass; only the weekly slot is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-brendan-clifton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-12",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Guadalupe"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d63239e3",
+          "page": 3,
+          "said": "Our Lady of Guadalupe: Saturday, December 12 7:00 p.m."
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated, rule 7: a feast celebrated at the regular Saturday 7:00 PM Spanish Mass; only the weekly slot is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-brendan-clifton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Called to Community lecture, St. Paul Inside the Walls"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3d8a2981",
+          "page": 3,
+          "said": "Called to Community ... Saturday, November 21, 2026 Mass: 9:00 a.m. Session: 9:30 a.m. - 12:30 p.m. Price: \\$15"
+        }
+      ],
+      "rationale": "R22: a paid, registration-only lecture day under the St. Paul Inside the Walls (Madison) logo, not at St. Brendan; not a public parish Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
