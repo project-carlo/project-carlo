@@ -1,0 +1,650 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-kateri-tekakwitha-sparta",
+  "status": "ready",
+  "as_of": "2026-11-15T16:17:34Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T17:40:43Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (St. Kateri Tekakwitha, Sparta). Both bulletins read (Nov 8 and Nov 15, 2026) print the same schedule box: weekday 8:15 AM, Sat 5 PM, Sun 8, 9:30, 11:30 AM, 2 PM Spanish and 6 PM, Saturday confessions 3:45-4:30 PM and first-Friday Adoration 1-5 PM. Thanksgiving (Nov 26) has a 9 AM Mass in place of the 8:15 AM. No open questions; no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "553faf24d148e280bcc9bf97f326ed3593ff9b9e6d50432edecf853993332525",
+      "fetched_at": "2026-11-15T16:17:34Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "eca089dd5c338b2857edd27414337d59b02c89eb79d301202a4a2503f231710a",
+      "fetched_at": "2026-11-08T15:42:51Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kateri-tekakwitha-sparta",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "553faf24",
+          "page": 2,
+          "said": "Daily Mass at 8:15 AM (Monday ~ Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eca089dd",
+          "page": 2,
+          "said": "Daily Mass at 8:15 AM (Monday ~ Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "553faf24",
+          "page": 3,
+          "said": "Monday 11/16 8:15 am ... Friday 11/20 8:15 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the weekly intentions list each weekday at 8:15 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kateri-tekakwitha-sparta",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "553faf24",
+          "page": 2,
+          "said": "Daily Mass at 8:15 AM (Monday ~ Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eca089dd",
+          "page": 2,
+          "said": "Daily Mass at 8:15 AM (Monday ~ Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "553faf24",
+          "page": 3,
+          "said": "Monday 11/16 8:15 am ... Friday 11/20 8:15 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the weekly intentions list each weekday at 8:15 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kateri-tekakwitha-sparta",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "553faf24",
+          "page": 2,
+          "said": "Daily Mass at 8:15 AM (Monday ~ Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eca089dd",
+          "page": 2,
+          "said": "Daily Mass at 8:15 AM (Monday ~ Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "553faf24",
+          "page": 3,
+          "said": "Monday 11/16 8:15 am ... Friday 11/20 8:15 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the weekly intentions list each weekday at 8:15 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kateri-tekakwitha-sparta",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "553faf24",
+          "page": 2,
+          "said": "Daily Mass at 8:15 AM (Monday ~ Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eca089dd",
+          "page": 2,
+          "said": "Daily Mass at 8:15 AM (Monday ~ Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "553faf24",
+          "page": 3,
+          "said": "Monday 11/16 8:15 am ... Friday 11/20 8:15 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the weekly intentions list each weekday at 8:15 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kateri-tekakwitha-sparta",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "553faf24",
+          "page": 2,
+          "said": "Daily Mass at 8:15 AM (Monday ~ Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eca089dd",
+          "page": 2,
+          "said": "Daily Mass at 8:15 AM (Monday ~ Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "553faf24",
+          "page": 3,
+          "said": "Monday 11/16 8:15 am ... Friday 11/20 8:15 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the weekly intentions list each weekday at 8:15 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kateri-tekakwitha-sparta",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "553faf24",
+          "page": 2,
+          "said": "Saturday at 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eca089dd",
+          "page": 2,
+          "said": "Saturday at 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "553faf24",
+          "page": 3,
+          "said": "Saturday 11/21 5:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kateri-tekakwitha-sparta",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "553faf24",
+          "page": 2,
+          "said": "Sunday at 8:00 AM, 9:30 AM, 11:30 AM, 6:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eca089dd",
+          "page": 2,
+          "said": "Sunday at 8:00 AM, 9:30 AM, 11:30 AM, 6:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kateri-tekakwitha-sparta",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "553faf24",
+          "page": 2,
+          "said": "Sunday at 8:00 AM, 9:30 AM, 11:30 AM, 6:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eca089dd",
+          "page": 2,
+          "said": "Sunday at 8:00 AM, 9:30 AM, 11:30 AM, 6:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kateri-tekakwitha-sparta",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "553faf24",
+          "page": 2,
+          "said": "Sunday at 8:00 AM, 9:30 AM, 11:30 AM, 6:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eca089dd",
+          "page": 2,
+          "said": "Sunday at 8:00 AM, 9:30 AM, 11:30 AM, 6:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kateri-tekakwitha-sparta",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "553faf24",
+          "page": 2,
+          "said": "Sunday at 8:00 AM, 9:30 AM, 11:30 AM, 6:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eca089dd",
+          "page": 2,
+          "said": "Sunday at 8:00 AM, 9:30 AM, 11:30 AM, 6:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kateri-tekakwitha-sparta",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "14:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "553faf24",
+          "page": 2,
+          "said": "SPANISH MASS Sunday at 2:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eca089dd",
+          "page": 2,
+          "said": "SPANISH MASS Sunday at 2:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the parish has one church, so it is held there.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kateri-tekakwitha-sparta",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:45",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "553faf24",
+          "page": 2,
+          "said": "Confessions ~ Every Saturday 3:45 PM ~ 4:30 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "eca089dd",
+          "page": 2,
+          "said": "Confessions ~ Every Saturday 3:45 PM ~ 4:30 PM."
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kateri-tekakwitha-sparta",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "553faf24",
+          "page": 2,
+          "said": "ADORATION OF THE BLESSED SACRAMENT First Friday of the Month 1:00 PM ~ 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eca089dd",
+          "page": 2,
+          "said": "ADORATION OF THE BLESSED SACRAMENT First Friday of the Month 1:00 PM ~ 5:00 PM"
+        }
+      ],
+      "rationale": "R1: the standing schedule box of the newest bulletin prints it (as does the November 8 issue); POLICY rule 2 makes a first-Friday slot weekly with weeks_of_month.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kateri-tekakwitha-sparta",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "553faf24",
+          "page": 5,
+          "said": "BLESSING OF THE BASKETS WILL TAKE PLACE AFTER THE 9:00 AM THANKSGIVING DAY MASS, (THERE WILL BE NO 8:15 AM DAILY MASS)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eca089dd",
+          "page": 5,
+          "said": "9:00 AM THANKSGIVING DAY MASS"
+        }
+      ],
+      "rationale": "R1, R16: dated Thanksgiving Day (Thursday, November 26, 2026) Mass outside the weekly schedule, after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kateri-tekakwitha-sparta",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "553faf24",
+          "page": 5,
+          "said": "(THERE WILL BE NO 8:15 AM DAILY MASS)"
+        }
+      ],
+      "rationale": "R1, R16, R18: the bulletin cancels the Thursday 8:15 AM Mass on Thanksgiving, November 26, 2026; the weekly slot stays.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "553faf24",
+          "page": 2,
+          "said": "Holy Day ~ Vigil 7:30 PM Holy Day ~ 6:30 AM & 8:15 AM"
+        }
+      ],
+      "rationale": "POLICY, Dates; R16: a generic holy-day schedule pins down no date, so it is neither weekly nor dated. Update mode will pick up the dated holy-day Masses (e.g. December 8) when a bulletin names them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
