@@ -1,0 +1,462 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-anthony-of-padua-paterson",
+  "status": "ready",
+  "as_of": "2026-11-15T16:15:00Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T16:42:55Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Sunday 8:00 (English/Portuguese), 10:00 (Spanish), 11:30 (English/Italian); Mon/Tue/Thu 7:00 PM Spanish Mass; Thursday Adoration 6-7 PM; Confession after the Mon/Tue Mass. Both bulletins agree; the monthly 14th-of-month Buga Mass can't be expressed and is left out. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "97125bb24cba9b6b51f7781e889a57310cd14368ecb21fb1854ce4330d9248fa",
+      "fetched_at": "2026-11-15T16:15:00Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "14898b92e6c4a30f0d75a9307df981a98f818c267334a04359ce54475fb2b445",
+      "fetched_at": "2026-11-08T15:40:46Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English/Portuguese"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "97125bb2",
+          "page": 2,
+          "said": "Mass: Sunday: 8:00am English/Portuguese"
+        },
+        {
+          "source": "agent",
+          "bulletin": "14898b92",
+          "page": 2,
+          "said": "Mass: Sunday: 8:00am English/Portuguese"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list it too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "97125bb2",
+          "page": 2,
+          "said": "Sunday: 10:00am Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "14898b92",
+          "page": 2,
+          "said": "Sunday: 10:00am Español"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English/Italian"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "97125bb2",
+          "page": 2,
+          "said": "Sunday: 11:30am English/Italian"
+        },
+        {
+          "source": "agent",
+          "bulletin": "14898b92",
+          "page": 2,
+          "said": "Sunday: 11:30am English/Italian"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "97125bb2",
+          "page": 2,
+          "said": "Monday: 7:00pm Español / Tuesday: 7:00pm Español / Thursday: 7:00pm Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "14898b92",
+          "page": 2,
+          "said": "Monday: 7:00pm Español / Tuesday: 7:00pm Español / Thursday: 7:00pm Español"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins; the intentions list Mon, Tue and Thu 7:00pm Masses. No Wednesday, Friday or Saturday Mass is listed (Wed Rosary, Fri Via Crucis, Sat 8am Novena/Rosary are devotions, R24).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "97125bb2",
+          "page": 2,
+          "said": "Monday: 7:00pm Español / Tuesday: 7:00pm Español / Thursday: 7:00pm Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "14898b92",
+          "page": 2,
+          "said": "Monday: 7:00pm Español / Tuesday: 7:00pm Español / Thursday: 7:00pm Español"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins; the intentions list Mon, Tue and Thu 7:00pm Masses. No Wednesday, Friday or Saturday Mass is listed (Wed Rosary, Fri Via Crucis, Sat 8am Novena/Rosary are devotions, R24).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "97125bb2",
+          "page": 2,
+          "said": "Monday: 7:00pm Español / Tuesday: 7:00pm Español / Thursday: 7:00pm Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "14898b92",
+          "page": 2,
+          "said": "Monday: 7:00pm Español / Tuesday: 7:00pm Español / Thursday: 7:00pm Español"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins; the intentions list Mon, Tue and Thu 7:00pm Masses. No Wednesday, Friday or Saturday Mass is listed (Wed Rosary, Fri Via Crucis, Sat 8am Novena/Rosary are devotions, R24).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-paterson",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "97125bb2",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament Thursdays: 6:00pm to 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "14898b92",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament Thursdays: 6:00pm to 7:00pm"
+        }
+      ],
+      "rationale": "R1: printed under the Adoration heading of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-paterson",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 7:00 PM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "97125bb2",
+          "page": 2,
+          "said": "Reconciliation (Confession): Monday & Tuesday after Mass or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "14898b92",
+          "page": 2,
+          "said": "Reconciliation (Confession): Monday & Tuesday after Mass or by appointment"
+        }
+      ],
+      "rationale": "R10: 'after Mass' on Monday and Tuesday, whose only Mass is 7:00pm (weekday), so 30 minutes after it starts; no end time. By-appointment part has no time (R26).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-paterson",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 7:00 PM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "97125bb2",
+          "page": 2,
+          "said": "Reconciliation (Confession): Monday & Tuesday after Mass or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "14898b92",
+          "page": 2,
+          "said": "Reconciliation (Confession): Monday & Tuesday after Mass or by appointment"
+        }
+      ],
+      "rationale": "R10: 'after Mass' on Monday and Tuesday, whose only Mass is 7:00pm (weekday), so 30 minutes after it starts; no end time. By-appointment part has no time (R26).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Padre Pio Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "97125bb2",
+          "page": 2,
+          "said": "Padre Pio Mass: 7:00pm 3rd Tuesday of the Month"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7: the monthly Padre Pio Mass is the regular Tuesday 7:00pm Mass under a devotion (intentions: 'Tuesday 17 7:00pm Padre Pio'); the weekly Tuesday slot already covers it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-paterson",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-14",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass of Our Lord of the Miracles of Buga"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "14898b92",
+          "page": 2,
+          "said": "Sábado 14 de noviembre a las 9:00am Misa Devoción al Señor de los Milagros - de Buga"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97125bb2",
+          "page": 2,
+          "said": "14th of the month – Our Lord of the Miracles of Buga"
+        }
+      ],
+      "rationale": "R33, R16: a devotion on the 14th of each month (a day of the month, which the format can't express); the box gives no time, and the only printed occurrence (Sat Nov 14 9:00am) is before as_of. No later date is printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "97125bb2",
+          "page": 2,
+          "said": "Anointing of the Sick – el 14˚ de cada mes"
+        }
+      ],
+      "rationale": "R24: Anointing is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
