@@ -1,0 +1,542 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-patrick-chatham",
+  "status": "ready",
+  "as_of": "2026-11-15T16:52:01Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T18:12:32Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, St. Patrick, Chatham. Both bulletins read (Nov 8 and Nov 15, 2026; all schedule pages are images, read by rendering) print the same schedule: Saturday 5:00 PM vigil, Sunday 8:00/9:30/11:00 AM, Mon-Fri 8:15 AM, Saturday Confession 4:00-4:30 PM; the intentions match. No Adoration, holy-day or dated changes printed; no open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "e150a7047eea50fc3ebbf6c69072fc46feb418308cf54b4043a2ea351b71e047",
+      "fetched_at": "2026-11-15T16:52:01Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "8539aae36f13bfa82397b597419ae8fe856248c3150e9c9bd90d9e9f1fd1213f",
+      "fetched_at": "2026-11-08T22:04:09Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-chatham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e150a704",
+          "page": 1,
+          "said": "Mass Schedule: Saturday Vigil: 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8539aae3",
+          "page": 1,
+          "said": "Mass Schedule: Saturday Vigil: 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e150a704",
+          "page": 2,
+          "said": "Mass Intentions: Saturday ... 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8539aae3",
+          "page": 2,
+          "said": "Mass Intentions: Saturday ... 5:00 PM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the front-page Mass Schedule and in the Mass intentions of both bulletins read (Nov 8 and Nov 15).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-chatham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e150a704",
+          "page": 1,
+          "said": "Sunday: 8:00, 9:30, 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8539aae3",
+          "page": 1,
+          "said": "Sunday: 8:00, 9:30, 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e150a704",
+          "page": 2,
+          "said": "Mass Intentions: Sunday 8:00 AM, 9:30 AM, 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8539aae3",
+          "page": 2,
+          "said": "Mass Intentions: Sunday 8:00 AM, 9:30 AM, 11:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the front-page Mass Schedule and in the Mass intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-chatham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e150a704",
+          "page": 1,
+          "said": "Sunday: 8:00, 9:30, 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8539aae3",
+          "page": 1,
+          "said": "Sunday: 8:00, 9:30, 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e150a704",
+          "page": 2,
+          "said": "Mass Intentions: Sunday 8:00 AM, 9:30 AM, 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8539aae3",
+          "page": 2,
+          "said": "Mass Intentions: Sunday 8:00 AM, 9:30 AM, 11:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the front-page Mass Schedule and in the Mass intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-chatham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e150a704",
+          "page": 1,
+          "said": "Sunday: 8:00, 9:30, 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8539aae3",
+          "page": 1,
+          "said": "Sunday: 8:00, 9:30, 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e150a704",
+          "page": 2,
+          "said": "Mass Intentions: Sunday 8:00 AM, 9:30 AM, 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8539aae3",
+          "page": 2,
+          "said": "Mass Intentions: Sunday 8:00 AM, 9:30 AM, 11:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the front-page Mass Schedule and in the Mass intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-chatham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e150a704",
+          "page": 1,
+          "said": "Daily Masses Monday-Friday: 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8539aae3",
+          "page": 1,
+          "said": "Daily Masses Monday-Friday: 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e150a704",
+          "page": 2,
+          "said": "Mass Intentions: Monday-Friday 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8539aae3",
+          "page": 2,
+          "said": "Mass Intentions: Monday-Friday 8:15 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the front-page Mass Schedule and in each weekday's Mass intentions in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-chatham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e150a704",
+          "page": 1,
+          "said": "Daily Masses Monday-Friday: 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8539aae3",
+          "page": 1,
+          "said": "Daily Masses Monday-Friday: 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e150a704",
+          "page": 2,
+          "said": "Mass Intentions: Monday-Friday 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8539aae3",
+          "page": 2,
+          "said": "Mass Intentions: Monday-Friday 8:15 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the front-page Mass Schedule and in each weekday's Mass intentions in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-chatham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e150a704",
+          "page": 1,
+          "said": "Daily Masses Monday-Friday: 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8539aae3",
+          "page": 1,
+          "said": "Daily Masses Monday-Friday: 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e150a704",
+          "page": 2,
+          "said": "Mass Intentions: Monday-Friday 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8539aae3",
+          "page": 2,
+          "said": "Mass Intentions: Monday-Friday 8:15 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the front-page Mass Schedule and in each weekday's Mass intentions in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-chatham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e150a704",
+          "page": 1,
+          "said": "Daily Masses Monday-Friday: 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8539aae3",
+          "page": 1,
+          "said": "Daily Masses Monday-Friday: 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e150a704",
+          "page": 2,
+          "said": "Mass Intentions: Monday-Friday 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8539aae3",
+          "page": 2,
+          "said": "Mass Intentions: Monday-Friday 8:15 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the front-page Mass Schedule and in each weekday's Mass intentions in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-chatham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e150a704",
+          "page": 1,
+          "said": "Daily Masses Monday-Friday: 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8539aae3",
+          "page": 1,
+          "said": "Daily Masses Monday-Friday: 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e150a704",
+          "page": 2,
+          "said": "Mass Intentions: Monday-Friday 8:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8539aae3",
+          "page": 2,
+          "said": "Mass Intentions: Monday-Friday 8:15 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the front-page Mass Schedule and in each weekday's Mass intentions in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-chatham",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e150a704",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Saturday 4:00-4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8539aae3",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Saturday 4:00-4:30 PM"
+        }
+      ],
+      "rationale": "R1: printed in the front-page schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e150a704",
+          "page": 6,
+          "said": "join us in church at 7:55 A.M. Mondays through Fridays [to pray the rosary]"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8539aae3",
+          "page": 5,
+          "said": "join us in church at 8 A.M. Mondays through Fridays (before the 8:15 Mass)"
+        }
+      ],
+      "rationale": "R24: a weekday Rosary before the 8:15 Mass is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
