@@ -1,0 +1,1316 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-bernard-mount-hope",
+  "status": "ready",
+  "as_of": "2026-11-15T16:15:03Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T16:44:57Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, St. Bernard of Clairvaux, Wharton. Both bulletins (Nov 8 and Nov 15, 2026) print the same schedule box: Sat 4 PM vigil, Sun 9 and 10:30, Mon-Sat 8:30 AM, Mon 6:30 PM, third-Thursday 7 PM Healing Mass, confessions twice daily Mon-Sat plus Sat afternoon, Mon evening and first Friday, Monday evening and first-Friday Adoration. Christmas and New Year Masses are dated. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "1e14b6ea721ee5ba18a158ffc12615928b529c2e33dcbb8d8156a1ca1710df0d",
+      "fetched_at": "2026-11-15T16:15:03Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "c24fd317df9f16b87ae7dea9b570b209e2b085dc5a77aa003b50b73493a4ec14",
+      "fetched_at": "2026-11-08T15:40:49Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-mount-hope",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e14b6ea",
+          "page": 1,
+          "said": "Mass Schedule: Saturday Vigil: 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c24fd317",
+          "page": 1,
+          "said": "Mass Schedule: Saturday Vigil: 4:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-mount-hope",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e14b6ea",
+          "page": 1,
+          "said": "Sunday: 9:00 am & 10:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c24fd317",
+          "page": 1,
+          "said": "Sunday: 9:00 am & 10:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-mount-hope",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e14b6ea",
+          "page": 1,
+          "said": "Sunday: 9:00 am & 10:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c24fd317",
+          "page": 1,
+          "said": "Sunday: 9:00 am & 10:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-mount-hope",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e14b6ea",
+          "page": 1,
+          "said": "Daily Mass: Monday - Saturday at 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c24fd317",
+          "page": 1,
+          "said": "Daily Mass: Monday - Saturday at 8:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and every day of both weeks' intentions. The First Saturday outdoor Mass at 8:30 am is this same Saturday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-mount-hope",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e14b6ea",
+          "page": 1,
+          "said": "Daily Mass: Monday - Saturday at 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c24fd317",
+          "page": 1,
+          "said": "Daily Mass: Monday - Saturday at 8:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and every day of both weeks' intentions. The First Saturday outdoor Mass at 8:30 am is this same Saturday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-mount-hope",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e14b6ea",
+          "page": 1,
+          "said": "Daily Mass: Monday - Saturday at 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c24fd317",
+          "page": 1,
+          "said": "Daily Mass: Monday - Saturday at 8:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and every day of both weeks' intentions. The First Saturday outdoor Mass at 8:30 am is this same Saturday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-mount-hope",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e14b6ea",
+          "page": 1,
+          "said": "Daily Mass: Monday - Saturday at 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c24fd317",
+          "page": 1,
+          "said": "Daily Mass: Monday - Saturday at 8:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and every day of both weeks' intentions. The First Saturday outdoor Mass at 8:30 am is this same Saturday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-mount-hope",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e14b6ea",
+          "page": 1,
+          "said": "Daily Mass: Monday - Saturday at 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c24fd317",
+          "page": 1,
+          "said": "Daily Mass: Monday - Saturday at 8:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and every day of both weeks' intentions. The First Saturday outdoor Mass at 8:30 am is this same Saturday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-mount-hope",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e14b6ea",
+          "page": 1,
+          "said": "Daily Mass: Monday - Saturday at 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c24fd317",
+          "page": 1,
+          "said": "Daily Mass: Monday - Saturday at 8:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and every day of both weeks' intentions. The First Saturday outdoor Mass at 8:30 am is this same Saturday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-mount-hope",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e14b6ea",
+          "page": 1,
+          "said": "Daily Mass: Monday Evening at 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c24fd317",
+          "page": 1,
+          "said": "Daily Mass: Monday Evening at 6:30pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins and in both weeks' Monday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-mount-hope",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Healing Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e14b6ea",
+          "page": 1,
+          "said": "Monthly Healing Mass: Every Third Thursday of the Month, 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c24fd317",
+          "page": 1,
+          "said": "Monthly Healing Mass: Every Third Thursday of the Month, 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1e14b6ea",
+          "page": 2,
+          "said": "Thursday, November 19, 2026 St. Bernard's Church 7:00 pm Healing Mass (Every 3rd Thursday of the month)"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 2: a named third-Thursday Mass; the newest week holds the third Thursday and prints it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-mount-hope",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e14b6ea",
+          "page": 1,
+          "said": "Reconciliation: Saturday: 3:00 pm - 3:50 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c24fd317",
+          "page": 1,
+          "said": "Reconciliation: Saturday: 3:00 pm - 3:50 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation box of both bulletins and in the newest's Reconciliation Times (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-mount-hope",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:10",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e14b6ea",
+          "page": 1,
+          "said": "Reconciliation: Monday: 7:10 pm - 8:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c24fd317",
+          "page": 1,
+          "said": "Reconciliation: Monday: 7:10 pm - 8:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins; it has its own clock times, inside Monday Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-mount-hope",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "07:25",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e14b6ea",
+          "page": 1,
+          "said": "Reconciliation: Monday - Saturday: 7:00 am - 7:25 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c24fd317",
+          "page": 1,
+          "said": "Reconciliation: Monday - Saturday: 7:00 am - 7:25 am"
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation box of both bulletins and in the newest's p3 list (Mon - Sat: 7am to 7:25am).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-mount-hope",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "07:25",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e14b6ea",
+          "page": 1,
+          "said": "Reconciliation: Monday - Saturday: 7:00 am - 7:25 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c24fd317",
+          "page": 1,
+          "said": "Reconciliation: Monday - Saturday: 7:00 am - 7:25 am"
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation box of both bulletins and in the newest's p3 list (Mon - Sat: 7am to 7:25am).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-mount-hope",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "07:25",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e14b6ea",
+          "page": 1,
+          "said": "Reconciliation: Monday - Saturday: 7:00 am - 7:25 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c24fd317",
+          "page": 1,
+          "said": "Reconciliation: Monday - Saturday: 7:00 am - 7:25 am"
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation box of both bulletins and in the newest's p3 list (Mon - Sat: 7am to 7:25am).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-mount-hope",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "07:25",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e14b6ea",
+          "page": 1,
+          "said": "Reconciliation: Monday - Saturday: 7:00 am - 7:25 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c24fd317",
+          "page": 1,
+          "said": "Reconciliation: Monday - Saturday: 7:00 am - 7:25 am"
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation box of both bulletins and in the newest's p3 list (Mon - Sat: 7am to 7:25am).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-mount-hope",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "07:25",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e14b6ea",
+          "page": 1,
+          "said": "Reconciliation: Monday - Saturday: 7:00 am - 7:25 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c24fd317",
+          "page": 1,
+          "said": "Reconciliation: Monday - Saturday: 7:00 am - 7:25 am"
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation box of both bulletins and in the newest's p3 list (Mon - Sat: 7am to 7:25am).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-mount-hope",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "07:25",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e14b6ea",
+          "page": 1,
+          "said": "Reconciliation: Monday - Saturday: 7:00 am - 7:25 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c24fd317",
+          "page": 1,
+          "said": "Reconciliation: Monday - Saturday: 7:00 am - 7:25 am"
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation box of both bulletins and in the newest's p3 list (Mon - Sat: 7am to 7:25am).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-mount-hope",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:05",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e14b6ea",
+          "page": 1,
+          "said": "Reconciliation: Monday - Saturday: 9:05 am - 9:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c24fd317",
+          "page": 1,
+          "said": "Reconciliation: Monday - Saturday: 9:05 am - 9:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation box of both bulletins and in the newest's p3 list (Mon - Sat: 9:05am to 9:30am).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-mount-hope",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:05",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e14b6ea",
+          "page": 1,
+          "said": "Reconciliation: Monday - Saturday: 9:05 am - 9:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c24fd317",
+          "page": 1,
+          "said": "Reconciliation: Monday - Saturday: 9:05 am - 9:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation box of both bulletins and in the newest's p3 list (Mon - Sat: 9:05am to 9:30am).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-mount-hope",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:05",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e14b6ea",
+          "page": 1,
+          "said": "Reconciliation: Monday - Saturday: 9:05 am - 9:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c24fd317",
+          "page": 1,
+          "said": "Reconciliation: Monday - Saturday: 9:05 am - 9:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation box of both bulletins and in the newest's p3 list (Mon - Sat: 9:05am to 9:30am).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-mount-hope",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:05",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e14b6ea",
+          "page": 1,
+          "said": "Reconciliation: Monday - Saturday: 9:05 am - 9:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c24fd317",
+          "page": 1,
+          "said": "Reconciliation: Monday - Saturday: 9:05 am - 9:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation box of both bulletins and in the newest's p3 list (Mon - Sat: 9:05am to 9:30am).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-mount-hope",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:05",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e14b6ea",
+          "page": 1,
+          "said": "Reconciliation: Monday - Saturday: 9:05 am - 9:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c24fd317",
+          "page": 1,
+          "said": "Reconciliation: Monday - Saturday: 9:05 am - 9:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation box of both bulletins and in the newest's p3 list (Mon - Sat: 9:05am to 9:30am).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-mount-hope",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:05",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e14b6ea",
+          "page": 1,
+          "said": "Reconciliation: Monday - Saturday: 9:05 am - 9:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c24fd317",
+          "page": 1,
+          "said": "Reconciliation: Monday - Saturday: 9:05 am - 9:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation box of both bulletins and in the newest's p3 list (Mon - Sat: 9:05am to 9:30am).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-mount-hope",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:10",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c24fd317",
+          "page": 1,
+          "said": "Reconciliation: 1st Friday: 9:10 am - 10:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1e14b6ea",
+          "page": 1,
+          "said": "1st Friday: 9:10 am - 10:00 am"
+        }
+      ],
+      "rationale": "R12: a named first-Friday slot; neither read bulletin's week (Nov 8-14, Nov 15-22) holds a first Friday, so page null, though both schedule boxes print it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-mount-hope",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e14b6ea",
+          "page": 1,
+          "said": "Eucharistic Adoration & Benediction: Monday Evenings: 7:00 pm - 8:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c24fd317",
+          "page": 1,
+          "said": "Eucharistic Adoration & Benediction: Monday Evenings: 7:00 pm - 8:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins; POLICY records Benediction as an Adoration note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-mount-hope",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c24fd317",
+          "page": 1,
+          "said": "First Friday Devotion: 9:00 am - 10:00 am Eucharistic Adoration & Benediction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1e14b6ea",
+          "page": 1,
+          "said": "First Friday Devotion: 9:00 am - 10:00 am Eucharistic Adoration & Benediction"
+        }
+      ],
+      "rationale": "R12: a named first-Friday slot; neither read bulletin's week holds a first Friday, so page null, though both print it. The Sacred Heart novena with it is not recorded (R24).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-mount-hope",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e14b6ea",
+          "page": 3,
+          "said": "Christmas Mass Schedule Christmas Eve: 4:00 pm"
+        }
+      ],
+      "rationale": "R1, R16: a dated holiday Mass after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-mount-hope",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e14b6ea",
+          "page": 3,
+          "said": "Christmas Day: 9:00 am 10:30 am"
+        }
+      ],
+      "rationale": "R1, R16: dated holiday Masses after as_of. R17: no cancellation of the Friday 8:30 Mass is stated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-mount-hope",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e14b6ea",
+          "page": 3,
+          "said": "Christmas Day: 9:00 am 10:30 am"
+        }
+      ],
+      "rationale": "R1, R16: dated holiday Masses after as_of. R17: no cancellation of the Friday 8:30 Mass is stated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-mount-hope",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-31",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "New Year's Eve"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e14b6ea",
+          "page": 3,
+          "said": "New Year's Eve: 4:00 pm"
+        }
+      ],
+      "rationale": "R1, R16: a dated holiday Mass after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-mount-hope",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2027-01-01",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "New Year's Day"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e14b6ea",
+          "page": 3,
+          "said": "New Year's Day: 9:00 am"
+        }
+      ],
+      "rationale": "R1, R16: a dated holiday Mass after as_of. R17: no cancellation of the Friday 8:30 Mass is stated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-mount-hope",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e14b6ea",
+          "page": 3,
+          "said": "Thanksgiving Day Mass: 8:30 am"
+        }
+      ],
+      "rationale": "POLICY Weekly or dated rule 6/7: Thanksgiving (Thursday Nov 26) Mass at 8:30 am is the weekly Thursday 8:30 Mass; not duplicated as a dated entry.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s35",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1e14b6ea",
+          "page": 1,
+          "said": "Reconciliation: Or Call the Office for an Appointment"
+        }
+      ],
+      "rationale": "R26: by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
