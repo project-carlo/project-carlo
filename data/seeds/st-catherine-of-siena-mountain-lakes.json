@@ -1,0 +1,696 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-catherine-of-siena-mountain-lakes",
+  "status": "ready",
+  "as_of": "2026-11-15T16:15:26Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T16:52:14Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both bulletins read (Nov 8 and Nov 15, 2026) print the same schedule box: Sat 4:30 PM vigil, Sun 7:30/9:30/11:30 AM, weekdays 6:45 AM, Sat 8:00 AM, Friday Adoration noon-5:45 PM, Saturday Confession 3-4 PM; intentions agree. Christmas Eve 8 PM and Christmas Day 11:30 AM Masses come from a choir notice. No open questions; no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "8fff5e8657500b4c27bed9ed9d7fdce5bc7589e311325adc9f238af6b4ca87ff",
+      "fetched_at": "2026-11-15T16:15:26Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "b91962bcba32a092a45280aaff48ada80a01f71f431ee01873e5a63e2f3d38a2",
+      "fetched_at": "2026-11-08T15:41:00Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-mountain-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8fff5e86",
+          "page": 1,
+          "said": "MASSES Saturday evening ----- 4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b91962bc",
+          "page": 1,
+          "said": "MASSES Saturday evening ----- 4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8fff5e86",
+          "page": 2,
+          "said": "Saturday November 21 ... 4:30 pm Margaret Gurba and Domenico Festa"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-mountain-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8fff5e86",
+          "page": 1,
+          "said": "Sunday ------- 7:30, 9:30, 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b91962bc",
+          "page": 1,
+          "said": "Sunday ------- 7:30, 9:30, 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8fff5e86",
+          "page": 2,
+          "said": "Sunday November 22 7:30 am ... 9:30 am ... 11:30 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-mountain-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8fff5e86",
+          "page": 1,
+          "said": "Sunday ------- 7:30, 9:30, 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b91962bc",
+          "page": 1,
+          "said": "Sunday ------- 7:30, 9:30, 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8fff5e86",
+          "page": 2,
+          "said": "Sunday November 22 7:30 am ... 9:30 am ... 11:30 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-mountain-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8fff5e86",
+          "page": 1,
+          "said": "Sunday ------- 7:30, 9:30, 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b91962bc",
+          "page": 1,
+          "said": "Sunday ------- 7:30, 9:30, 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8fff5e86",
+          "page": 2,
+          "said": "Sunday November 22 7:30 am ... 9:30 am ... 11:30 am"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-mountain-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8fff5e86",
+          "page": 1,
+          "said": "Weekdays ---- 6:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b91962bc",
+          "page": 1,
+          "said": "Weekdays ---- 6:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8fff5e86",
+          "page": 2,
+          "said": "Monday November 16 6:45 am ... Friday November 20 6:45 am"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box gives weekdays 6:45 am, separate from Saturday morning 8:00 am; both weeks' intentions list 6:45 am Monday through Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-mountain-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8fff5e86",
+          "page": 1,
+          "said": "Weekdays ---- 6:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b91962bc",
+          "page": 1,
+          "said": "Weekdays ---- 6:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8fff5e86",
+          "page": 2,
+          "said": "Monday November 16 6:45 am ... Friday November 20 6:45 am"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box gives weekdays 6:45 am, separate from Saturday morning 8:00 am; both weeks' intentions list 6:45 am Monday through Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-mountain-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8fff5e86",
+          "page": 1,
+          "said": "Weekdays ---- 6:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b91962bc",
+          "page": 1,
+          "said": "Weekdays ---- 6:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8fff5e86",
+          "page": 2,
+          "said": "Monday November 16 6:45 am ... Friday November 20 6:45 am"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box gives weekdays 6:45 am, separate from Saturday morning 8:00 am; both weeks' intentions list 6:45 am Monday through Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-mountain-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8fff5e86",
+          "page": 1,
+          "said": "Weekdays ---- 6:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b91962bc",
+          "page": 1,
+          "said": "Weekdays ---- 6:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8fff5e86",
+          "page": 2,
+          "said": "Monday November 16 6:45 am ... Friday November 20 6:45 am"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box gives weekdays 6:45 am, separate from Saturday morning 8:00 am; both weeks' intentions list 6:45 am Monday through Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-mountain-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8fff5e86",
+          "page": 1,
+          "said": "Weekdays ---- 6:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b91962bc",
+          "page": 1,
+          "said": "Weekdays ---- 6:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8fff5e86",
+          "page": 2,
+          "said": "Monday November 16 6:45 am ... Friday November 20 6:45 am"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box gives weekdays 6:45 am, separate from Saturday morning 8:00 am; both weeks' intentions list 6:45 am Monday through Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-mountain-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8fff5e86",
+          "page": 1,
+          "said": "Saturday morning ---- 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b91962bc",
+          "page": 1,
+          "said": "Saturday morning ---- 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8fff5e86",
+          "page": 2,
+          "said": "Saturday November 21 ... 8:00 am Souls in Purgatory"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-mountain-lakes",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "17:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8fff5e86",
+          "page": 1,
+          "said": "ADORATION OF THE BLESSED SACRAMENT Friday ---- 12:00 pm - 5:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b91962bc",
+          "page": 1,
+          "said": "ADORATION OF THE BLESSED SACRAMENT Friday ---- 12:00 pm - 5:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8fff5e86",
+          "page": 2,
+          "said": "Adoration – Friday, 12:00 – 5:45 pm in church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b91962bc",
+          "page": 2,
+          "said": "Adoration – Friday, 12:00 – 5:45 pm in church"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and parish calendar of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-mountain-lakes",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8fff5e86",
+          "page": 1,
+          "said": "RECONCILIATION (Confession) Saturday ---- 3:00 - 4:00 pm (or by appointment)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b91962bc",
+          "page": 1,
+          "said": "RECONCILIATION (Confession) Saturday ---- 3:00 - 4:00 pm (or by appointment)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the by-appointment alternative has no time (R26).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-mountain-lakes",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "20:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8fff5e86",
+          "page": 2,
+          "said": "We will sing at the 8 pm Christmas Eve and 11:30 Christmas Day Masses."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b91962bc",
+          "page": 2,
+          "said": "We will sing at the 8 pm Christmas Eve and 11:30 Christmas Day Masses."
+        }
+      ],
+      "rationale": "R1, R16: a holy-day Mass outside the weekly schedule, dated (POLICY, Weekly or dated rule 7), after as_of; printed in both bulletins' choir notice. The bulletin's full Christmas schedule is not yet printed; update mode will add the rest.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-mountain-lakes",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Day"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8fff5e86",
+          "page": 2,
+          "said": "We will sing at the 8 pm Christmas Eve and 11:30 Christmas Day Masses."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b91962bc",
+          "page": 2,
+          "said": "We will sing at the 8 pm Christmas Eve and 11:30 Christmas Day Masses."
+        }
+      ],
+      "rationale": "R1, R16: Christmas Day (a Friday) Mass at 11:30, outside the weekly schedule, so dated; printed in both bulletins' choir notice.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8fff5e86",
+          "page": 1,
+          "said": "Holy Days ---- See Bulletin"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b91962bc",
+          "page": 1,
+          "said": "Holy Days ---- See Bulletin"
+        }
+      ],
+      "rationale": "R26: no holy-day times given in the schedule box; none printed for Dec 8 in either bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-mountain-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Therese Novena and Rosary; healing service Nov 17"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b91962bc",
+          "page": 2,
+          "said": "Join us every Tuesday at 1:00 pm to pray a novena to St. Therese, the Memorare, a prayer for our nation and the rosary."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8fff5e86",
+          "page": 3,
+          "said": "St. Therese Group Healing Service ... Tuesday, November 17 at 1:00 pm"
+        }
+      ],
+      "rationale": "R24: a novena, rosary and laying-on-of-hands healing service, not Mass, Confession or Adoration; recorded for the reviewer (R25).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
