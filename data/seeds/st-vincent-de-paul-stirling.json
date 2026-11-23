@@ -1,0 +1,595 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-vincent-de-paul-stirling",
+  "status": "ready",
+  "as_of": "2026-11-15T16:52:19Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T22:08:34Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. The page-1 Mass Schedule box and page-4 Adoration box agree in both bulletins read (Nov 8 and Nov 15, 2026): daily Mass Mon-Sat 8:30 AM, Saturday 4 PM vigil, Sunday 7, 9 and 11 AM, Saturday confession 3-3:45 PM, Thursday Adoration and Benediction 7:30-8:30 PM. The PDFs' text layer uses a shifted font with no digits, so every time was read from rendered pages. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "544461b78de1d02c79bc47a386b890840356ebd513f9ca49d1a0bae82d01bebf",
+      "fetched_at": "2026-11-15T16:52:19Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "d46330377b946a9b12b6effbe3b5e4b42665c6ac52586f010fd66131b7905fda",
+      "fetched_at": "2026-11-08T22:04:29Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-stirling",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "544461b7",
+          "page": 1,
+          "said": "Daily Mass Monday–Saturday: 8:30AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4633037",
+          "page": 1,
+          "said": "Daily Mass Monday–Saturday: 8:30AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "544461b7",
+          "page": 2,
+          "said": "Mass Intentions list 8:30AM each Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4633037",
+          "page": 2,
+          "said": "Mass Intentions list 8:30AM each Monday through Saturday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 Mass Schedule box of both bulletins read (Nov 8 and Nov 15), with matching 8:30 AM intentions each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-stirling",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "544461b7",
+          "page": 1,
+          "said": "Daily Mass Monday–Saturday: 8:30AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4633037",
+          "page": 1,
+          "said": "Daily Mass Monday–Saturday: 8:30AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "544461b7",
+          "page": 2,
+          "said": "Mass Intentions list 8:30AM each Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4633037",
+          "page": 2,
+          "said": "Mass Intentions list 8:30AM each Monday through Saturday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 Mass Schedule box of both bulletins read (Nov 8 and Nov 15), with matching 8:30 AM intentions each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-stirling",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "544461b7",
+          "page": 1,
+          "said": "Daily Mass Monday–Saturday: 8:30AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4633037",
+          "page": 1,
+          "said": "Daily Mass Monday–Saturday: 8:30AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "544461b7",
+          "page": 2,
+          "said": "Mass Intentions list 8:30AM each Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4633037",
+          "page": 2,
+          "said": "Mass Intentions list 8:30AM each Monday through Saturday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 Mass Schedule box of both bulletins read (Nov 8 and Nov 15), with matching 8:30 AM intentions each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-stirling",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "544461b7",
+          "page": 1,
+          "said": "Daily Mass Monday–Saturday: 8:30AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4633037",
+          "page": 1,
+          "said": "Daily Mass Monday–Saturday: 8:30AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "544461b7",
+          "page": 2,
+          "said": "Mass Intentions list 8:30AM each Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4633037",
+          "page": 2,
+          "said": "Mass Intentions list 8:30AM each Monday through Saturday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 Mass Schedule box of both bulletins read (Nov 8 and Nov 15), with matching 8:30 AM intentions each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-stirling",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "544461b7",
+          "page": 1,
+          "said": "Daily Mass Monday–Saturday: 8:30AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4633037",
+          "page": 1,
+          "said": "Daily Mass Monday–Saturday: 8:30AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "544461b7",
+          "page": 2,
+          "said": "Mass Intentions list 8:30AM each Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4633037",
+          "page": 2,
+          "said": "Mass Intentions list 8:30AM each Monday through Saturday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 Mass Schedule box of both bulletins read (Nov 8 and Nov 15), with matching 8:30 AM intentions each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-stirling",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "544461b7",
+          "page": 1,
+          "said": "Daily Mass Monday–Saturday: 8:30AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4633037",
+          "page": 1,
+          "said": "Daily Mass Monday–Saturday: 8:30AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "544461b7",
+          "page": 2,
+          "said": "Mass Intentions list 8:30AM each Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4633037",
+          "page": 2,
+          "said": "Mass Intentions list 8:30AM each Monday through Saturday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page-1 Mass Schedule box of both bulletins read (Nov 8 and Nov 15), with matching 8:30 AM intentions each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-stirling",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "544461b7",
+          "page": 1,
+          "said": "Mass on the Lord's Day Saturday: 4PM (Vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4633037",
+          "page": 1,
+          "said": "Mass on the Lord's Day Saturday: 4PM (Vigil)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the intentions list 4:00PM (Vigil).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-stirling",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "544461b7",
+          "page": 1,
+          "said": "Sunday: 7AM, 9AM* and 11AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4633037",
+          "page": 1,
+          "said": "Sunday: 7AM, 9AM* and 11AM*"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the intentions list 7:00, 9:00 and 11:00AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-stirling",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "544461b7",
+          "page": 1,
+          "said": "Sunday: 7AM, 9AM* and 11AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4633037",
+          "page": 1,
+          "said": "Sunday: 7AM, 9AM* and 11AM*"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the intentions list 7:00, 9:00 and 11:00AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-stirling",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "544461b7",
+          "page": 1,
+          "said": "Sunday: 7AM, 9AM* and 11AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4633037",
+          "page": 1,
+          "said": "Sunday: 7AM, 9AM* and 11AM*"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the intentions list 7:00, 9:00 and 11:00AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-stirling",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "544461b7",
+          "page": 1,
+          "said": "Confession: Saturday 3PM to 3:45PM or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4633037",
+          "page": 1,
+          "said": "Confession: Saturday 3PM to 3:45PM or by appointment"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-stirling",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": "20:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "544461b7",
+          "page": 4,
+          "said": "Adoration and Benediction of the Blessed Sacrament takes place on Thursdays from 7:30 to 8:30PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d4633037",
+          "page": 4,
+          "said": "Adoration and Benediction of the Blessed Sacrament takes place on Thursdays from 7:30 to 8:30PM."
+        }
+      ],
+      "rationale": "R1, POLICY (Benediction implies Adoration): the page-4 Adoration box gives the same weekly hours in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "544461b7",
+          "page": 1,
+          "said": "Confession ... or by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "544461b7",
+          "page": 1,
+          "said": "Morning Prayer: Monday through Saturday at 8AM"
+        }
+      ],
+      "rationale": "R24: Morning Prayer (Liturgy of the Hours) is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
