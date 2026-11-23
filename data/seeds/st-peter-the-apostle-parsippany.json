@@ -1,0 +1,828 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-peter-the-apostle-parsippany",
+  "status": "ready",
+  "as_of": "2026-11-15T16:52:04Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T21:42:52Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. The page-1 Regular Mass Schedule (Sat 5 PM, 7 PM Spanish; Sun 7:30, 10, 12; Mon-Fri 6:45 and 8 AM; Sat 8 AM; Sat confession 3:30-4:30) is identical in both bulletins (Nov 8 and Nov 15, 2026) and matches the intentions. Dated: a Nov 17 Rosary Society Mass and a Nov 18 Holy Hour of Thanksgiving. No open questions; no history stored.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "5ea09d1709e0ef7d5354561f207f4cc624904ecc1012a6949a97197e6687eb5a",
+      "fetched_at": "2026-11-15T16:52:04Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "ee2710de8464d2cb519be461a25595461e07c43f372856ab2a9416e0cf37375c",
+      "fetched_at": "2026-11-08T22:05:06Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-parsippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ea09d17",
+          "page": 1,
+          "said": "Saturday ---- 5:00 pm (English) & 7:00 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee2710de",
+          "page": 1,
+          "said": "Saturday ---- 5:00 pm (English) & 7:00 pm (Spanish)"
+        }
+      ],
+      "rationale": "R1, R35: Regular Mass Schedule box on page 1 of both bulletins; the intentions list a 5:00 PM Saturday Mass both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-parsippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ea09d17",
+          "page": 1,
+          "said": "Saturday ---- 5:00 pm (English) & 7:00 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee2710de",
+          "page": 1,
+          "said": "Saturday ---- 5:00 pm (English) & 7:00 pm (Spanish)"
+        }
+      ],
+      "rationale": "R1, R35: Regular Mass Schedule box on page 1 of both bulletins; POLICY, Notes keeps the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-parsippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ea09d17",
+          "page": 1,
+          "said": "Sunday ---- 7:30 am, 10:00 am, 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee2710de",
+          "page": 1,
+          "said": "Sunday ---- 7:30 am, 10:00 am, 12:00 pm"
+        }
+      ],
+      "rationale": "R1, R35: Regular Mass Schedule box on page 1 of both bulletins, matched by the Sunday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-parsippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ea09d17",
+          "page": 1,
+          "said": "Sunday ---- 7:30 am, 10:00 am, 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee2710de",
+          "page": 1,
+          "said": "Sunday ---- 7:30 am, 10:00 am, 12:00 pm"
+        }
+      ],
+      "rationale": "R1, R35: Regular Mass Schedule box on page 1 of both bulletins, matched by the Sunday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-parsippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ea09d17",
+          "page": 1,
+          "said": "Sunday ---- 7:30 am, 10:00 am, 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee2710de",
+          "page": 1,
+          "said": "Sunday ---- 7:30 am, 10:00 am, 12:00 pm"
+        }
+      ],
+      "rationale": "R1, R35: Regular Mass Schedule box on page 1 of both bulletins, matched by the Sunday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-parsippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ea09d17",
+          "page": 1,
+          "said": "Monday - Friday, 6:45 & 8:00 am, Saturday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee2710de",
+          "page": 1,
+          "said": "Monday - Friday, 6:45 & 8:00 am, Saturday 8:00 am"
+        }
+      ],
+      "rationale": "R1, R35: daily Mass line in the schedule box of both bulletins; the intentions list 6:45 and 8:00 AM each weekday both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-parsippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ea09d17",
+          "page": 1,
+          "said": "Monday - Friday, 6:45 & 8:00 am, Saturday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee2710de",
+          "page": 1,
+          "said": "Monday - Friday, 6:45 & 8:00 am, Saturday 8:00 am"
+        }
+      ],
+      "rationale": "R1, R35: daily Mass line in the schedule box of both bulletins; the intentions list 6:45 and 8:00 AM each weekday both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-parsippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ea09d17",
+          "page": 1,
+          "said": "Monday - Friday, 6:45 & 8:00 am, Saturday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee2710de",
+          "page": 1,
+          "said": "Monday - Friday, 6:45 & 8:00 am, Saturday 8:00 am"
+        }
+      ],
+      "rationale": "R1, R35: daily Mass line in the schedule box of both bulletins; the intentions list 6:45 and 8:00 AM each weekday both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-parsippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ea09d17",
+          "page": 1,
+          "said": "Monday - Friday, 6:45 & 8:00 am, Saturday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee2710de",
+          "page": 1,
+          "said": "Monday - Friday, 6:45 & 8:00 am, Saturday 8:00 am"
+        }
+      ],
+      "rationale": "R1, R35: daily Mass line in the schedule box of both bulletins; the intentions list 6:45 and 8:00 AM each weekday both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-parsippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ea09d17",
+          "page": 1,
+          "said": "Monday - Friday, 6:45 & 8:00 am, Saturday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee2710de",
+          "page": 1,
+          "said": "Monday - Friday, 6:45 & 8:00 am, Saturday 8:00 am"
+        }
+      ],
+      "rationale": "R1, R35: daily Mass line in the schedule box of both bulletins; the intentions list 6:45 and 8:00 AM each weekday both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-parsippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ea09d17",
+          "page": 1,
+          "said": "Monday - Friday, 6:45 & 8:00 am, Saturday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee2710de",
+          "page": 1,
+          "said": "Monday - Friday, 6:45 & 8:00 am, Saturday 8:00 am"
+        }
+      ],
+      "rationale": "R1, R35: daily Mass line in the schedule box of both bulletins; the intentions list 6:45 and 8:00 AM each weekday both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-parsippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ea09d17",
+          "page": 1,
+          "said": "Monday - Friday, 6:45 & 8:00 am, Saturday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee2710de",
+          "page": 1,
+          "said": "Monday - Friday, 6:45 & 8:00 am, Saturday 8:00 am"
+        }
+      ],
+      "rationale": "R1, R35: daily Mass line in the schedule box of both bulletins; the intentions list 6:45 and 8:00 AM each weekday both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-parsippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ea09d17",
+          "page": 1,
+          "said": "Monday - Friday, 6:45 & 8:00 am, Saturday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee2710de",
+          "page": 1,
+          "said": "Monday - Friday, 6:45 & 8:00 am, Saturday 8:00 am"
+        }
+      ],
+      "rationale": "R1, R35: daily Mass line in the schedule box of both bulletins; the intentions list 6:45 and 8:00 AM each weekday both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-parsippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ea09d17",
+          "page": 1,
+          "said": "Monday - Friday, 6:45 & 8:00 am, Saturday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee2710de",
+          "page": 1,
+          "said": "Monday - Friday, 6:45 & 8:00 am, Saturday 8:00 am"
+        }
+      ],
+      "rationale": "R1, R35: daily Mass line in the schedule box of both bulletins; the intentions list 6:45 and 8:00 AM each weekday both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-parsippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ea09d17",
+          "page": 1,
+          "said": "Monday - Friday, 6:45 & 8:00 am, Saturday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee2710de",
+          "page": 1,
+          "said": "Monday - Friday, 6:45 & 8:00 am, Saturday 8:00 am"
+        }
+      ],
+      "rationale": "R1, R35: daily Mass line in the schedule box of both bulletins; the intentions list 6:45 and 8:00 AM each weekday both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-parsippany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ea09d17",
+          "page": 1,
+          "said": "Monday - Friday, 6:45 & 8:00 am, Saturday 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee2710de",
+          "page": 1,
+          "said": "Monday - Friday, 6:45 & 8:00 am, Saturday 8:00 am"
+        }
+      ],
+      "rationale": "R1, R35: daily Mass line in the schedule box of both bulletins, matched by the Saturday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-parsippany",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ea09d17",
+          "page": 1,
+          "said": "Confessions: Saturday, 3:30 pm - 4:30 pm in Church, or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee2710de",
+          "page": 1,
+          "said": "Confessions: Saturday, 3:30 pm - 4:30 pm in Church, or by appointment"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins; the weekly calendar (p4) lists 3:30PM Confessions each Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ea09d17",
+          "page": 1,
+          "said": "or by appointment, call the Rectory"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-parsippany",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-18",
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour of Thanksgiving"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ea09d17",
+          "page": 9,
+          "said": "Encounter Jesus, A Holy Hour of Thanksgiving, Eucharistic Adoration, Wednesday, November 18, 2026, 7 - 8 PM, St. Peter the Apostle Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ee2710de",
+          "page": 9,
+          "said": "Wednesday, November 18, 2026"
+        }
+      ],
+      "rationale": "R1, R16: a dated Holy Hour with Eucharistic Adoration at the church, on or after as_of; POLICY counts a Holy Hour as Adoration. Also listed on p4 as '7:00PM - Thanksgiving Holy Hour - Church'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-parsippany",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-17",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Rosary Society Mass"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5ea09d17",
+          "page": 4,
+          "said": "TUESDAY, NOVEMBER 17 ... 7:00PM - Rosary Society Mass - Church"
+        }
+      ],
+      "rationale": "R1, R16, POLICY (Weekly or dated rule 3; a Mass 'with' a group is open unless limited): a dated Mass in the church, outside the weekly schedule, on or after as_of; nothing limits it to members. Not in the Nov 8 issue, so no recurrence is established.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-parsippany",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-08",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Indian Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee2710de",
+          "page": 4,
+          "said": "SUNDAY, NOVEMBER 8 ... 4:00PM - Indian Mass - Church"
+        }
+      ],
+      "rationale": "R16: a dated Mass before as_of, printed only in the Nov 8 issue's calendar with no stated recurrence; out of seed scope.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-the-apostle-parsippany",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-09",
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Troy Hills Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ee2710de",
+          "page": 4,
+          "said": "MONDAY, NOVEMBER 9 ... 10:30AM - Troy Hills Mass"
+        }
+      ],
+      "rationale": "R16, R22: dated before as_of, and held at 'Troy Hills', apparently an outside site not on the church list (seed church finds none).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
