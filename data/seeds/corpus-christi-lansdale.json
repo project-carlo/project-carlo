@@ -1,0 +1,801 @@
+{
+  "schema_version": 1,
+  "parish_slug": "corpus-christi-lansdale",
+  "status": "ready",
+  "as_of": "2026-11-15T16:38:47Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T23:16:25Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (Corpus Christi, Lansdale). The Nov 8 and Nov 15 bulletins print the same schedule: daily and Saturday 7:15 AM, Saturday 4:30 PM vigil, Sunday 7:30, 10:00, 11:30 AM and 6:00 PM; Saturday confession after the 7:15 AM Mass and 3-4 PM; Wednesday Adoration 7:45 AM to Benediction at 6:15 PM in the Parish Chapel. The parish homepage moves the Thanksgiving (Nov 26) Mass from 7:15 to 9 AM, recorded as a dated Mass plus a cancellation. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "a9bdffeb6470a759063c8aa9bcbf5b70b3481e85ba2f341f30f10c13357b6bfd",
+      "fetched_at": "2026-11-15T16:38:47Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "729b302653efe44a3f6e7889187f7bdd02f21c546796a4dd4dc365abd0e4e1e1",
+      "fetched_at": "2026-11-08T22:01:31Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-lansdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9bdffeb",
+          "page": 1,
+          "said": "Daily Masses: 7:15 AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "729b3026",
+          "page": 1,
+          "said": "Daily Masses: 7:15 AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9bdffeb",
+          "page": 3,
+          "said": "intentions list 7:15 AM each weekday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "729b3026",
+          "page": 3,
+          "said": "intentions list 7:15 AM each weekday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page 1 Mass schedule box of both bulletins read (Nov 8 and Nov 15) and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-lansdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9bdffeb",
+          "page": 1,
+          "said": "Daily Masses: 7:15 AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "729b3026",
+          "page": 1,
+          "said": "Daily Masses: 7:15 AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9bdffeb",
+          "page": 3,
+          "said": "intentions list 7:15 AM each weekday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "729b3026",
+          "page": 3,
+          "said": "intentions list 7:15 AM each weekday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page 1 Mass schedule box of both bulletins read (Nov 8 and Nov 15) and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-lansdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9bdffeb",
+          "page": 1,
+          "said": "Daily Masses: 7:15 AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "729b3026",
+          "page": 1,
+          "said": "Daily Masses: 7:15 AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9bdffeb",
+          "page": 3,
+          "said": "intentions list 7:15 AM each weekday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "729b3026",
+          "page": 3,
+          "said": "intentions list 7:15 AM each weekday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page 1 Mass schedule box of both bulletins read (Nov 8 and Nov 15) and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-lansdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9bdffeb",
+          "page": 1,
+          "said": "Daily Masses: 7:15 AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "729b3026",
+          "page": 1,
+          "said": "Daily Masses: 7:15 AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9bdffeb",
+          "page": 3,
+          "said": "intentions list 7:15 AM each weekday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "729b3026",
+          "page": 3,
+          "said": "intentions list 7:15 AM each weekday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page 1 Mass schedule box of both bulletins read (Nov 8 and Nov 15) and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-lansdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9bdffeb",
+          "page": 1,
+          "said": "Daily Masses: 7:15 AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "729b3026",
+          "page": 1,
+          "said": "Daily Masses: 7:15 AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9bdffeb",
+          "page": 3,
+          "said": "intentions list 7:15 AM each weekday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "729b3026",
+          "page": 3,
+          "said": "intentions list 7:15 AM each weekday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the page 1 Mass schedule box of both bulletins read (Nov 8 and Nov 15) and in each week's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-lansdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9bdffeb",
+          "page": 1,
+          "said": "Saturday Masses: 7:15 AM* ......... 4:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "729b3026",
+          "page": 1,
+          "said": "Saturday Masses: 7:15 AM* ......... 4:30PM"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box of both bulletins lists the Saturday 7:15 AM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-lansdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9bdffeb",
+          "page": 1,
+          "said": "Saturday Masses: 7:15 AM* ......... 4:30PM (Vigil Masses for Sunday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "729b3026",
+          "page": 1,
+          "said": "Saturday Masses: 7:15 AM* ......... 4:30PM (Vigil Masses for Sunday)"
+        }
+      ],
+      "rationale": "R1, R35: the Saturday vigil, printed in the schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-lansdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9bdffeb",
+          "page": 1,
+          "said": "SUNDAY MASSES: 7:30 AM, 10:00 AM*, 11:30 AM, and 6:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "729b3026",
+          "page": 1,
+          "said": "SUNDAY MASSES: 7:30 AM, 10:00 AM*, 11:30 AM, and 6:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://corpuschristilansdale.org/",
+          "said": "Sunday: 7:30am, 10:00am (livestreamed), 6:00pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins. The website's box, headed 'Mass Times (Summer)', omits 11:30 AM; it is a summer listing, and both current bulletins print the 11:30 AM (Nov 8 also announces a rite 'at the 11:30 AM Mass next Sunday'), so R7/R6: the bulletins win.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-lansdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9bdffeb",
+          "page": 1,
+          "said": "SUNDAY MASSES: 7:30 AM, 10:00 AM*, 11:30 AM, and 6:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "729b3026",
+          "page": 1,
+          "said": "SUNDAY MASSES: 7:30 AM, 10:00 AM*, 11:30 AM, and 6:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://corpuschristilansdale.org/",
+          "said": "Sunday: 7:30am, 10:00am (livestreamed), 6:00pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins. The website's box, headed 'Mass Times (Summer)', omits 11:30 AM; it is a summer listing, and both current bulletins print the 11:30 AM (Nov 8 also announces a rite 'at the 11:30 AM Mass next Sunday'), so R7/R6: the bulletins win.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-lansdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9bdffeb",
+          "page": 1,
+          "said": "SUNDAY MASSES: 7:30 AM, 10:00 AM*, 11:30 AM, and 6:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "729b3026",
+          "page": 1,
+          "said": "SUNDAY MASSES: 7:30 AM, 10:00 AM*, 11:30 AM, and 6:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://corpuschristilansdale.org/",
+          "said": "Sunday: 7:30am, 10:00am (livestreamed), 6:00pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins. The website's box, headed 'Mass Times (Summer)', omits 11:30 AM; it is a summer listing, and both current bulletins print the 11:30 AM (Nov 8 also announces a rite 'at the 11:30 AM Mass next Sunday'), so R7/R6: the bulletins win.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-lansdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9bdffeb",
+          "page": 1,
+          "said": "SUNDAY MASSES: 7:30 AM, 10:00 AM*, 11:30 AM, and 6:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "729b3026",
+          "page": 1,
+          "said": "SUNDAY MASSES: 7:30 AM, 10:00 AM*, 11:30 AM, and 6:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://corpuschristilansdale.org/",
+          "said": "Sunday: 7:30am, 10:00am (livestreamed), 6:00pm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins. The website's box, headed 'Mass Times (Summer)', omits 11:30 AM; it is a summer listing, and both current bulletins print the 11:30 AM (Nov 8 also announces a rite 'at the 11:30 AM Mass next Sunday'), so R7/R6: the bulletins win.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-lansdale",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 7:15 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9bdffeb",
+          "page": 1,
+          "said": "CONFESSIONS: Saturday after 7:15 AM Mass, 3:00 PM - 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "729b3026",
+          "page": 1,
+          "said": "CONFESSIONS: Saturday after 7:15 AM Mass, 3:00 PM - 4:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://corpuschristilansdale.org/",
+          "said": "Confession: Saturdays: after 7:15am mass and 3-4pm; upon request at the Parish house"
+        }
+      ],
+      "rationale": "R10, POLICY Times: the Saturday 7:15 AM Mass is a morning (non-vigil) Mass, so confession after it starts 30 minutes after it, 7:45 AM, with no end time. The bulletin's comma-separated line is two windows; the website's own wording ('after 7:15am mass and 3-4pm') confirms it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-lansdale",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9bdffeb",
+          "page": 1,
+          "said": "CONFESSIONS: Saturday after 7:15 AM Mass, 3:00 PM - 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "729b3026",
+          "page": 1,
+          "said": "CONFESSIONS: Saturday after 7:15 AM Mass, 3:00 PM - 4:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://corpuschristilansdale.org/",
+          "said": "Confession: Saturdays: after 7:15am mass and 3-4pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-lansdale",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:45",
+        "end_time": "18:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Parish Chapel; Benediction"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9bdffeb",
+          "page": 6,
+          "said": "ADORATION WEDNESDAYS Come spend time with Jesus every Wednesday in the Parish Chapel. Adoration of the Eucharist starts right after the daily Mass, about 7:45 AM and continues until Benediction at 6:15 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "729b3026",
+          "page": 6,
+          "said": "ADORATION WEDNESDAYS ... starts right after the daily Mass, about 7:45 AM and continues until Benediction at 6:15 PM"
+        }
+      ],
+      "rationale": "R1, R35, POLICY Times: the printed clock time (about 7:45 AM) wins over the relative one; it runs until Benediction at 6:15 PM. The Parish Chapel is at the parish's one campus (900 Sumneytown Pike), so it is recorded at the church with a note (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-lansdale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Wednesday Night Novena"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9bdffeb",
+          "page": 6,
+          "said": "WEDNESDAY NIGHT NOVENAS Come pray with us every Wednesday night from 6:30 PM—7:30 PM in the Chapel. We pray the Rosary and Novena prayers"
+        },
+        {
+          "source": "agent",
+          "bulletin": "729b3026",
+          "page": 6,
+          "said": "WEDNESDAY NIGHT NOVENAS Come pray with us every Wednesday night from 6:30 PM—7:30 PM in the Chapel. We pray the Rosary and Novena prayers"
+        }
+      ],
+      "rationale": "R24: a Rosary and novena, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9bdffeb",
+          "page": 1,
+          "said": "and upon request at the Parish House"
+        }
+      ],
+      "rationale": "R26: confession upon request has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a9bdffeb",
+          "page": 1,
+          "said": "HOLY DAY MASSES: 7:30 PM (Vigil), 7:15 AM*, and 12:05 PM"
+        }
+      ],
+      "rationale": "R25, POLICY Dates: a generic holy-day pattern with no dates; neither bulletin pins a holy day to a date, so no dated entries are projected (Dec 8 is not printed).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-lansdale",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://corpuschristilansdale.org/",
+          "said": "BULLETIN CORRECTION: Our Mass on Thursday November 26th (Thanksgiving) is at 9am , NOT 7:15am as listed in the bulletin. We apologize for the misprint!",
+          "schedule_check": {
+            "checked_at": "2026-11-23T23:18:44Z",
+            "current_because": "Checked 2026-11-23: a homepage notice correcting a bulletin misprint for this year's Thanksgiving (Thursday Nov 26, 2026, three days ahead); it names the date and weekday, which match 2026.",
+            "bulletin": "a9bdffeb",
+            "fits_because": "The newest read bulletin (Nov 15) gives the weekday 7:15 AM Mass and does not yet print Thanksgiving; the notice moves that one weekday Mass to 9 AM, which fits the parish's one church and weekday schedule."
+          }
+        }
+      ],
+      "rationale": "R6, R16, R40, POLICY Weekly or dated: the parish's own homepage moves the Thanksgiving Mass to 9 AM; a moved Mass is a dated Mass at the new time plus a cancellation of the old one, both after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-lansdale",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "07:15",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day; Mass moved to 9 AM"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://corpuschristilansdale.org/",
+          "said": "BULLETIN CORRECTION: Our Mass on Thursday November 26th (Thanksgiving) is at 9am , NOT 7:15am as listed in the bulletin. We apologize for the misprint!",
+          "schedule_check": {
+            "checked_at": "2026-11-23T23:18:50Z",
+            "current_because": "Checked 2026-11-23: a homepage notice correcting a bulletin misprint for this year's Thanksgiving (Thursday Nov 26, 2026, three days ahead); it names the date and weekday, which match 2026.",
+            "bulletin": "a9bdffeb",
+            "fits_because": "The newest read bulletin (Nov 15) gives the weekday 7:15 AM Mass and does not yet print Thanksgiving; the notice moves that one weekday Mass to 9 AM, which fits the parish's one church and weekday schedule."
+          }
+        }
+      ],
+      "rationale": "R6, R16, R40: the homepage says the Thanksgiving Mass is at 9am, NOT 7:15am, so the weekly Thursday 7:15 AM Mass does not take place on Nov 26.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
