@@ -1,0 +1,629 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-clement-rockaway-township",
+  "status": "ready",
+  "as_of": "2026-11-15T16:15:53Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T16:59:45Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. The p1 Masses box (Sat 4:30 & 7 PM Spanish; Sun 8:30, 10:30, 12:30 Spanish; Mon/Tue/Thu/Fri 9 AM; Tue/Thu 7 PM Spanish) matches the intentions of both bulletins read; Sunday 5:30 PM Spanish is only in the intentions (every Sunday of both issues) and on the parish website, so it is included. Thanksgiving Masses Nov 26 at 10 AM and 12 PM; confession by appointment only; no Adoration printed. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "8d96d79c94eff9a281c19e2b948fc366a3923673d38787d51e881f7764e0e0d0",
+      "fetched_at": "2026-11-15T16:15:53Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "96cf0c9ceb839d19d196dfca30cdc0212585952b32c2414965af3c0b694a81da",
+      "fetched_at": "2026-11-08T15:41:21Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clement-rockaway-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d96d79c",
+          "page": 1,
+          "said": "Saturday ---- 4:30 pm & 7:00 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8d96d79c",
+          "page": 2,
+          "said": "Saturday - November 14 4:30pm John A. Reilley"
+        },
+        {
+          "source": "agent",
+          "bulletin": "96cf0c9c",
+          "page": 2,
+          "said": "Saturday - October 31 4:30pm All the Dearly Departed"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box on p1 and in the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clement-rockaway-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d96d79c",
+          "page": 1,
+          "said": "Saturday ---- 4:30 pm & 7:00 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8d96d79c",
+          "page": 2,
+          "said": "7:00pm Liturgy in Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "96cf0c9c",
+          "page": 2,
+          "said": "Saturday - October 31 ... 7:00pm Liturgy in Spanish"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box on p1 and in the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clement-rockaway-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d96d79c",
+          "page": 1,
+          "said": "Sunday ---- 8:30 am, 10:30 am & 12:30 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "96cf0c9c",
+          "page": 2,
+          "said": "Sunday November 1 8:30am All the Dearly Departed"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box on p1 and in the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clement-rockaway-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d96d79c",
+          "page": 1,
+          "said": "Sunday ---- 8:30 am, 10:30 am & 12:30 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "96cf0c9c",
+          "page": 2,
+          "said": "Sunday November 1 10:30am All the Dearly Departed"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box on p1 and in the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clement-rockaway-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d96d79c",
+          "page": 1,
+          "said": "Sunday ---- 8:30 am, 10:30 am & 12:30 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "96cf0c9c",
+          "page": 2,
+          "said": "Sunday November 1 12:30pm Liturgy in Spanish"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box on p1 and in the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clement-rockaway-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d96d79c",
+          "page": 2,
+          "said": "Sunday November 15 ... 5:30pm Liturgy in Spanish; Sunday November 22 ... 5:30pm Liturgy in Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "96cf0c9c",
+          "page": 2,
+          "said": "Sunday November 1 ... 5:30pm Liturgy in Spanish; Sunday November 8 ... 5:30pm Liturgy in Spanish"
+        },
+        {
+          "source": "website",
+          "url": "https://stclement-rtwp.org/",
+          "said": "Sunday Mass Schedule ... Sunday : ... 5:30 PM Spanish Español"
+        }
+      ],
+      "rationale": "R35, R6: the p1 Masses box omits it, but the liturgical schedule lists a 5:30pm Spanish liturgy every Sunday in both bulletins (Nov 1, 8, 15, 22), and the parish website's Mass Times (otherwise identical to the box, current with the 33rd Sunday) lists Sunday 5:30 PM Spanish. A box omission alone is not a conflict (C1 does not apply).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clement-rockaway-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d96d79c",
+          "page": 1,
+          "said": "Monday ---- 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8d96d79c",
+          "page": 2,
+          "said": "Monday - November 16 9:000am Our Parishioners"
+        },
+        {
+          "source": "agent",
+          "bulletin": "96cf0c9c",
+          "page": 2,
+          "said": "Monday - November 2 9:000am Unborn Children"
+        }
+      ],
+      "rationale": "R1: printed in the weekday box on p1 and in the intentions of both bulletins read (the intentions' '9:000am' is a typo for 9:00).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clement-rockaway-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d96d79c",
+          "page": 1,
+          "said": "Tuesday ---- 9:00 am & 7:00 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "96cf0c9c",
+          "page": 2,
+          "said": "Tuesday - November 3 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the weekday box on p1 and in the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clement-rockaway-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d96d79c",
+          "page": 1,
+          "said": "Tuesday ---- 9:00 am & 7:00 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "96cf0c9c",
+          "page": 2,
+          "said": "Tuesday - November 3 ... 7:00pm Liturgy in Spanish"
+        }
+      ],
+      "rationale": "R1: printed in the weekday box on p1 and in the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clement-rockaway-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d96d79c",
+          "page": 1,
+          "said": "Thursday ---- 9:00 am & 7:00 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "96cf0c9c",
+          "page": 2,
+          "said": "Thursday - November 5 9:00am Fabio Rodriguez (Parish)"
+        }
+      ],
+      "rationale": "R1: printed in the weekday box on p1 and in the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clement-rockaway-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d96d79c",
+          "page": 1,
+          "said": "Thursday ---- 9:00 am & 7:00 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "96cf0c9c",
+          "page": 2,
+          "said": "Thursday - November 5 ... 7:00pm Liturgy in Spanish"
+        }
+      ],
+      "rationale": "R1: printed in the weekday box on p1 and in the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clement-rockaway-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d96d79c",
+          "page": 1,
+          "said": "Friday ---- 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "96cf0c9c",
+          "page": 2,
+          "said": "Friday - November 6 9:00am Joan Costello (Yocum)"
+        }
+      ],
+      "rationale": "R1: printed in the weekday box on p1 and in the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clement-rockaway-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d96d79c",
+          "page": 2,
+          "said": "Wednesday- November 18 9:00am No Liturgy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "96cf0c9c",
+          "page": 2,
+          "said": "Wednesday- November 4 9:00am No Liturgy"
+        }
+      ],
+      "rationale": "R39, R1: the weekday box lists no Wednesday Mass and the intentions mark Wednesday 9:00am 'No Liturgy' in both bulletins; a reused template line, no Wednesday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clement-rockaway-township",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day (English)"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d96d79c",
+          "page": 3,
+          "said": "THANKSGIVING MASS ... November 26th at 10:00am (English) 12:00pm (Spanish)"
+        }
+      ],
+      "rationale": "R1, R16: dated holiday Mass on or after as_of. The usual Thursday Masses are not cancelled by the bulletin, so they stay (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-clement-rockaway-township",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day (Spanish)"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d96d79c",
+          "page": 3,
+          "said": "THANKSGIVING MASS ... November 26th at 10:00am (English) 12:00pm (Spanish)"
+        }
+      ],
+      "rationale": "R1, R16: dated holiday Mass on or after as_of. The usual Thursday Masses are not cancelled by the bulletin, so they stay (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8d96d79c",
+          "page": 1,
+          "said": "RECONCILIATION ---- By appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
