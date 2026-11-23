@@ -1,0 +1,570 @@
+{
+  "schema_version": 1,
+  "parish_slug": "immaculate-heart-of-mary-wayne",
+  "status": "ready",
+  "as_of": "2026-11-15T16:51:29Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T12:56:43Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both bulletins read (Nov 8 and Nov 15, 2026; image-only pages) print the same schedule box: Sat 5 PM vigil, Sun 8, 10:30, 12, Mon-Fri 8:30 AM, Sat confession 4-4:30 PM; the Nov 15 intentions match. Adds the dated Thanksgiving Mass Nov 26 9 AM. No Adoration is printed. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "53f582fd9b9c8e640d5f7c848a8c0b326ae013ceb83420760962502b0d0b6755",
+      "fetched_at": "2026-11-15T16:51:29Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "3d3ce8bc7a560e791ba048a5e14076e11c0bee040c797040d1feb67953839bbf",
+      "fetched_at": "2026-11-08T22:03:22Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53f582fd",
+          "page": 10,
+          "said": "Saturday Vigil Mass: 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d3ce8bc",
+          "page": 10,
+          "said": "Saturday Vigil Mass: 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53f582fd",
+          "page": 2,
+          "said": "SATURDAY - November 21 5 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Celebration of the Eucharist box of both bulletins read, and in the newest issue's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53f582fd",
+          "page": 10,
+          "said": "Sunday Mass: 8:00 AM • 10:30 AM* • 12 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d3ce8bc",
+          "page": 10,
+          "said": "Sunday Mass: 8:00 AM • 10:30 AM* • 12 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53f582fd",
+          "page": 2,
+          "said": "SUNDAY - November 22 8 AM / 10:30 AM / 12:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Celebration of the Eucharist box of both bulletins read, and in the newest issue's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53f582fd",
+          "page": 10,
+          "said": "Sunday Mass: 8:00 AM • 10:30 AM* • 12 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d3ce8bc",
+          "page": 10,
+          "said": "Sunday Mass: 8:00 AM • 10:30 AM* • 12 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53f582fd",
+          "page": 2,
+          "said": "SUNDAY - November 22 8 AM / 10:30 AM / 12:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Celebration of the Eucharist box of both bulletins read, and in the newest issue's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53f582fd",
+          "page": 10,
+          "said": "Sunday Mass: 8:00 AM • 10:30 AM* • 12 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d3ce8bc",
+          "page": 10,
+          "said": "Sunday Mass: 8:00 AM • 10:30 AM* • 12 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53f582fd",
+          "page": 2,
+          "said": "SUNDAY - November 22 8 AM / 10:30 AM / 12:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Celebration of the Eucharist box of both bulletins read, and in the newest issue's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53f582fd",
+          "page": 10,
+          "said": "Daily Mass: Monday - Friday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d3ce8bc",
+          "page": 10,
+          "said": "Daily Mass: Monday - Friday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53f582fd",
+          "page": 2,
+          "said": "MONDAY - November 16 8:30 AM ... FRIDAY - November 20 8:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in each weekday of the newest issue's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53f582fd",
+          "page": 10,
+          "said": "Daily Mass: Monday - Friday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d3ce8bc",
+          "page": 10,
+          "said": "Daily Mass: Monday - Friday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53f582fd",
+          "page": 2,
+          "said": "MONDAY - November 16 8:30 AM ... FRIDAY - November 20 8:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in each weekday of the newest issue's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53f582fd",
+          "page": 10,
+          "said": "Daily Mass: Monday - Friday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d3ce8bc",
+          "page": 10,
+          "said": "Daily Mass: Monday - Friday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53f582fd",
+          "page": 2,
+          "said": "MONDAY - November 16 8:30 AM ... FRIDAY - November 20 8:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in each weekday of the newest issue's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53f582fd",
+          "page": 10,
+          "said": "Daily Mass: Monday - Friday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d3ce8bc",
+          "page": 10,
+          "said": "Daily Mass: Monday - Friday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53f582fd",
+          "page": 2,
+          "said": "MONDAY - November 16 8:30 AM ... FRIDAY - November 20 8:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in each weekday of the newest issue's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53f582fd",
+          "page": 10,
+          "said": "Daily Mass: Monday - Friday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d3ce8bc",
+          "page": 10,
+          "said": "Daily Mass: Monday - Friday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "53f582fd",
+          "page": 2,
+          "said": "MONDAY - November 16 8:30 AM ... FRIDAY - November 20 8:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read and in each weekday of the newest issue's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-wayne",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53f582fd",
+          "page": 10,
+          "said": "Saturday: 4:00 PM to 4:30 PM or by appointment, please call our office"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d3ce8bc",
+          "page": 10,
+          "said": "Saturday: 4:00 PM to 4:30 PM or by appointment, please call our office"
+        }
+      ],
+      "rationale": "R1: printed in the Celebration of the Reconciliation box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-wayne",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53f582fd",
+          "page": 3,
+          "said": "Thanksgiving Day Mass & Simple Breakfast Thursday, November 26, 2026 9 AM Mass ... Everyone is welcome"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d3ce8bc",
+          "page": 3,
+          "said": "Thanksgiving Day Mass & Simple Breakfast Thursday, November 26, 2026 9 AM Mass ... Everyone is welcome"
+        }
+      ],
+      "rationale": "R1, R16: a dated special Mass after as_of, open to all, printed in both bulletins. R17: no cancellation of the usual Thursday 8:30 AM Mass is stated, so the weekly slot stays.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53f582fd",
+          "page": 10,
+          "said": "Mass on Holy Days: 8:30 AM, 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d3ce8bc",
+          "page": 10,
+          "said": "Mass on Holy Days: 8:30 AM, 7:00 PM"
+        }
+      ],
+      "rationale": "POLICY, Dates: the holy-day times name no date, so no dated Mass can be projected (e.g. December 8); update mode will read the bulletins that date them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53f582fd",
+          "page": 10,
+          "said": "Reconciliation ... or by appointment, please call our office"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d3ce8bc",
+          "page": 10,
+          "said": "Reconciliation ... or by appointment, please call our office"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "53f582fd",
+          "page": 7,
+          "said": "Spiritual Guided Meditation Gratitude November 18 6:00 PM In Church"
+        }
+      ],
+      "rationale": "R24: a guided meditation is not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
