@@ -57,6 +57,7 @@ from pdf_extract.runs import (
     FETCH_CURRENT,
     FETCH_DOWNLOAD_FAILED,
     FETCH_NEW,
+    FETCH_PAUSED,
     FETCH_RECHECK_FAILED,
     FETCH_RESOLVE_FAILED,
     FETCH_SAVE_FAILED,
@@ -743,6 +744,24 @@ _UNLIMITED_SITES = frozenset({
 })
 
 
+# Sites the fetch sends no request to, for now: their parishes are reported
+# `paused` and keep their last bulletin. Bon Venture sent bulletins at a few
+# dozen KB/s on 2026-11-22 (one took 19 minutes), five of the six workers
+# waited on it, and the weekly run timed out (#262). Take it out once a
+# download has a deadline (#264).
+_PAUSED_SITES = frozenset({"bonventure.net"})
+_URL_IN_TEXT = re.compile(r"https?://\S+")
+
+
+def _paused_site(*texts: str) -> str | None:
+    """The paused site any URL in `texts` lands on, if one does."""
+    for text in texts:
+        for url in _URL_IN_TEXT.findall(text):
+            if (site := _site_for_url(url)) in _PAUSED_SITES:
+                return site
+    return None
+
+
 def _site_for_url(url: str) -> str:
     """The site a request to `url` lands on: its provider, else its domain.
 
@@ -1008,6 +1027,14 @@ def fetch_bulletins(
                     detail=f"already have the bulletin for {sunday.isoformat()}",
                 )
                 continue
+            # A recipe that reads a paused site's page: not even resolved.
+            if paused := _paused_site(fetch_source.provider_id, fetch_source.recipe):
+                LOGGER.info("Not fetching parish %s: %s is paused", slug, paused)
+                tally[FETCH_PAUSED] += 1
+                record_parish_result(
+                    conn, run_id, slug, "fetch", FETCH_PAUSED, detail=f"{paused} is paused",
+                )
+                continue
             jobs.append((
                 _site_for_source(fetch_source),
                 _FetchJob(parish=parish, source=fetch_source, stored=stored),
@@ -1038,6 +1065,7 @@ def fetch_bulletins(
         "already_current": tally[FETCH_CURRENT],
         "unchanged_bulletins": tally[FETCH_UNCHANGED],
         "recheck_failed": tally[FETCH_RECHECK_FAILED],
+        "paused_parishes": tally[FETCH_PAUSED],
         "failed_parishes": (
             tally[FETCH_RESOLVE_FAILED] + tally[FETCH_DOWNLOAD_FAILED]
             + tally[FETCH_SAVE_FAILED] + tally[FETCH_TOO_LARGE]
@@ -1172,6 +1200,11 @@ def _fetch_one(
             return _Fetched(job, FETCH_RESOLVE_FAILED, detail=f"{type(exc).__name__}: {exc}")
         finally:
             tab.park()
+
+        # A parish site that links its bulletin on a paused site.
+        if paused := _paused_site(link.fetch_url):
+            LOGGER.info("Not fetching parish %s: %s is paused", slug, paused)
+            return _Fetched(job, FETCH_PAUSED, detail=f"{paused} is paused", link=link)
 
         # The address is never taken to mean we have the bulletin: one
         # address can carry a new issue each week, and one issue can

@@ -29,6 +29,9 @@ FETCH_RECHECK_FAILED = "recheck_failed"
 FETCH_SAVE_FAILED = "save_failed"
 # Too big to store, even compacted: the parish keeps its last bulletin.
 FETCH_TOO_LARGE = "too_large"
+# Not fetched: its bulletin is on a site the fetch is not asking for now
+# (`fetch._PAUSED_SITES`). Not a failure: the parish keeps its last bulletin.
+FETCH_PAUSED = "paused"
 
 # Process outcomes (docs/schedule-state-plan.md).
 PROCESS_WRONG_BULLETIN = "wrong_bulletin"
