@@ -1,0 +1,643 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-the-magnificat-kinnelon",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:11:45Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T13:33:51Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (Our Lady of the Magnificat, Kinnelon) with an on-site chapel. Both bulletins (Nov. 8 and 15) print the same Mass schedule: Sat 8:15 AM (chapel) and 5 PM; Sun 7:30 AM (chapel), 9, 11 AM and 6 PM; Mon-Fri 8:15 AM (chapel). The bulletins give no Confession or Adoration; open questions on the website's Saturday confession time (two pages disagree) and First Friday Adoration.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "2871ef82a89a7d88f75cf15d468ed86afb4116af3eeeb57088528aa6da793bbf",
+      "fetched_at": "2026-11-15T16:11:45Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "637f426a4c4c24756c9da7ac8385e291314a9891ed51252010060447d0526ea9",
+      "fetched_at": "2026-11-08T15:37:42Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-magnificat-kinnelon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2871ef82",
+          "page": 1,
+          "said": "Mass Schedule Sunday 7:30 am (Chapel) 9:00, 11:00 am & 6:00 pm (Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "637f426a",
+          "page": 1,
+          "said": "Mass Schedule Sunday 7:30 am (Chapel) 9:00, 11:00 am & 6:00 pm (Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2871ef82",
+          "page": 2,
+          "said": "Sunday November 22, 2026 ... 9:00 AM ... 11:00 AM ... 6:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass schedule box of both bulletins read and in the intentions; the website's Mass times agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-magnificat-kinnelon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2871ef82",
+          "page": 1,
+          "said": "Mass Schedule Sunday 7:30 am (Chapel) 9:00, 11:00 am & 6:00 pm (Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "637f426a",
+          "page": 1,
+          "said": "Mass Schedule Sunday 7:30 am (Chapel) 9:00, 11:00 am & 6:00 pm (Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2871ef82",
+          "page": 2,
+          "said": "Sunday November 22, 2026 ... 9:00 AM ... 11:00 AM ... 6:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass schedule box of both bulletins read and in the intentions; the website's Mass times agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-magnificat-kinnelon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2871ef82",
+          "page": 1,
+          "said": "Mass Schedule Sunday 7:30 am (Chapel) 9:00, 11:00 am & 6:00 pm (Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "637f426a",
+          "page": 1,
+          "said": "Mass Schedule Sunday 7:30 am (Chapel) 9:00, 11:00 am & 6:00 pm (Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2871ef82",
+          "page": 2,
+          "said": "Sunday November 22, 2026 ... 9:00 AM ... 11:00 AM ... 6:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass schedule box of both bulletins read and in the intentions; the website's Mass times agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-magnificat-kinnelon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2871ef82",
+          "page": 1,
+          "said": "Saturday 8:15 am (Chapel) 5:00 pm (Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "637f426a",
+          "page": 1,
+          "said": "Saturday 8:15 am (Chapel) 5:00 pm (Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2871ef82",
+          "page": 2,
+          "said": "Saturday November 21, 2026 ... 5:00 PM Theresa Dispenza"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 Mass schedule box of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-magnificat-kinnelon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2871ef82",
+          "page": 1,
+          "said": "Sunday 7:30 am (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "637f426a",
+          "page": 1,
+          "said": "Sunday 7:30 am (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2871ef82",
+          "page": 2,
+          "said": "Sunday November 22, 2026 7:30 AM Carl Becker, Frank Gangano"
+        }
+      ],
+      "rationale": "R1, POLICY Churches and chapels: the chapel is the parish's own chapel at 2 Miller Road (one parish address; sign-up sheets 'in the church/chapel'; the website lists Chapel and Church under one location), so it belongs to the listed church with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-magnificat-kinnelon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2871ef82",
+          "page": 1,
+          "said": "Saturday 8:15 am (Chapel) ... Monday - Friday 8:15 am (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "637f426a",
+          "page": 1,
+          "said": "Saturday 8:15 am (Chapel) ... Monday - Friday 8:15 am (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2871ef82",
+          "page": 2,
+          "said": "Monday November 16, 2026 8:15 AM ... Saturday November 21, 2026 8:15 AM"
+        }
+      ],
+      "rationale": "R1, POLICY Churches and chapels: printed in the schedule box of both bulletins and in each day's intentions; the chapel is on the parish grounds at 2 Miller Road, so it belongs to the listed church with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-magnificat-kinnelon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2871ef82",
+          "page": 1,
+          "said": "Saturday 8:15 am (Chapel) ... Monday - Friday 8:15 am (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "637f426a",
+          "page": 1,
+          "said": "Saturday 8:15 am (Chapel) ... Monday - Friday 8:15 am (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2871ef82",
+          "page": 2,
+          "said": "Monday November 16, 2026 8:15 AM ... Saturday November 21, 2026 8:15 AM"
+        }
+      ],
+      "rationale": "R1, POLICY Churches and chapels: printed in the schedule box of both bulletins and in each day's intentions; the chapel is on the parish grounds at 2 Miller Road, so it belongs to the listed church with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-magnificat-kinnelon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2871ef82",
+          "page": 1,
+          "said": "Saturday 8:15 am (Chapel) ... Monday - Friday 8:15 am (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "637f426a",
+          "page": 1,
+          "said": "Saturday 8:15 am (Chapel) ... Monday - Friday 8:15 am (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2871ef82",
+          "page": 2,
+          "said": "Monday November 16, 2026 8:15 AM ... Saturday November 21, 2026 8:15 AM"
+        }
+      ],
+      "rationale": "R1, POLICY Churches and chapels: printed in the schedule box of both bulletins and in each day's intentions; the chapel is on the parish grounds at 2 Miller Road, so it belongs to the listed church with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-magnificat-kinnelon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2871ef82",
+          "page": 1,
+          "said": "Saturday 8:15 am (Chapel) ... Monday - Friday 8:15 am (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "637f426a",
+          "page": 1,
+          "said": "Saturday 8:15 am (Chapel) ... Monday - Friday 8:15 am (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2871ef82",
+          "page": 2,
+          "said": "Monday November 16, 2026 8:15 AM ... Saturday November 21, 2026 8:15 AM"
+        }
+      ],
+      "rationale": "R1, POLICY Churches and chapels: printed in the schedule box of both bulletins and in each day's intentions; the chapel is on the parish grounds at 2 Miller Road, so it belongs to the listed church with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-magnificat-kinnelon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2871ef82",
+          "page": 1,
+          "said": "Saturday 8:15 am (Chapel) ... Monday - Friday 8:15 am (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "637f426a",
+          "page": 1,
+          "said": "Saturday 8:15 am (Chapel) ... Monday - Friday 8:15 am (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2871ef82",
+          "page": 2,
+          "said": "Monday November 16, 2026 8:15 AM ... Saturday November 21, 2026 8:15 AM"
+        }
+      ],
+      "rationale": "R1, POLICY Churches and chapels: printed in the schedule box of both bulletins and in each day's intentions; the chapel is on the parish grounds at 2 Miller Road, so it belongs to the listed church with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-magnificat-kinnelon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2871ef82",
+          "page": 1,
+          "said": "Saturday 8:15 am (Chapel) ... Monday - Friday 8:15 am (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "637f426a",
+          "page": 1,
+          "said": "Saturday 8:15 am (Chapel) ... Monday - Friday 8:15 am (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2871ef82",
+          "page": 2,
+          "said": "Monday November 16, 2026 8:15 AM ... Saturday November 21, 2026 8:15 AM"
+        }
+      ],
+      "rationale": "R1, POLICY Churches and chapels: printed in the schedule box of both bulletins and in each day's intentions; the chapel is on the parish grounds at 2 Miller Road, so it belongs to the listed church with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://olmchurch.org/",
+          "said": "Reconciliation Times Saturday : 4:30 PM to 5:00 PM In the Church"
+        },
+        {
+          "source": "website",
+          "url": "https://olmchurch.org/sacrament-of-reconciliation",
+          "said": "the parish offers Reconciliation on Saturdays, in the Church from 4:15-4:45."
+        }
+      ],
+      "rationale": "R5, R6, C8: neither bulletin prints any Confession time. The website gives two different Saturday windows. Leaning to the homepage's 4:30-5:00 PM: the homepage carries this week's bulletin announcements (the Nov. 21 celebration) and Mass times matching the bulletin, while the 4:15-4:45 line sits in a religious-education note whose 12/7 and 12/14 dates may be from an earlier year.",
+      "question": "Saturday confession: 4:30-5:00 PM (homepage) or 4:15-4:45 PM (reconciliation page)?",
+      "options": [
+        {
+          "label": "Saturdays 4:30-5:00 PM",
+          "entry": {
+            "church_slug": "our-lady-of-the-magnificat-kinnelon",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:30",
+            "end_time": "17:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Saturdays 4:15-4:45 PM",
+          "entry": {
+            "church_slug": "our-lady-of-the-magnificat-kinnelon",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:15",
+            "end_time": "16:45",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://olmchurch.org/",
+          "said": "Adoration begins after the 8:15am Mass on the First Friday of the month and continues throughout the day, ending with Benediction at 5pm. ... Sign-up books are on the table in the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "637f426a",
+          "page": 2,
+          "said": "Friday November 6, 2026 8:15 AM Martha Shadwell"
+        }
+      ],
+      "rationale": "R6, R10, R29: only the website gives it; start worked out as 30 minutes after the weekday 8:15 AM Mass. Neither bulletin mentions it, though the older issue's intentions cover Friday Nov. 6, a first Friday, without any Adoration note (bulletins here list only Mass intentions, so that is a missing mention, not a conflict). The homepage section is undated and the site also has stale links (Pope Francis' Twitter feed), so whether it continues is a judgment; leaning include since the homepage's schedule and current events match the newest bulletin.",
+      "question": "Add First Friday Adoration in the chapel, 8:45 AM (after the 8:15 Mass) to 5:00 PM with Benediction?",
+      "options": [
+        {
+          "label": "First Fridays 8:45 AM-5:00 PM",
+          "entry": {
+            "church_slug": "our-lady-of-the-magnificat-kinnelon",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:45",
+            "end_time": "17:00",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Chapel; after the 8:15 AM Mass; Benediction"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://olmchurch.org/sacrament-of-reconciliation",
+          "said": "12/7 grades 3 + 6 come to the school at 4:45, for your child to receive the Sacrament of Reconciliation."
+        }
+      ],
+      "rationale": "R24, R25: Religious-education reconciliation for students only, at the school, is closed to the public.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
