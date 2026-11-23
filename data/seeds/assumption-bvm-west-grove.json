@@ -1,0 +1,942 @@
+{
+  "schema_version": 1,
+  "parish_slug": "assumption-bvm-west-grove",
+  "status": "needs_review",
+  "as_of": "2026-11-15T15:57:51Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T22:59:59Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both bulletins (Nov 8, Nov 15) print the same schedule: Sat 4:30 PM, Sun 8 and 10 AM, 8:15 AM Mon/Tue/Wed/Fri/Sat (no Thursday Mass since July 1), Sat 3:15-4:15 PM Confession, and weekday Adoration 9 AM-7 PM in the on-site Adoration Chapel. Dated: Thanksgiving 9 AM Mass and no Adoration Nov 26 (bulletin); Dec 8 and Christmas Masses from the parish's 2026 holy-day web list. Open: the web list's Dec 8 6:30 AM Mass, which conflicts with the dropped 6:30 AM Masses.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "28bc475c1622150e7e9ac0a2f4fd7490c912c73312acf44d34fe285ee5217643",
+      "fetched_at": "2026-11-15T15:57:51Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "6b667c698b5e5378adc578926e1c5ed41bd83e5f12cb8e423a2584c4cf9a62fd",
+      "fetched_at": "2026-11-08T15:26:57Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-west-grove",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "28bc475c",
+          "page": 1,
+          "said": "Weekend Mass Times Saturday: 4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b667c69",
+          "page": 1,
+          "said": "Weekend Mass Times Saturday: 4:30 pm"
+        }
+      ],
+      "rationale": "R1: printed in the front-page schedule of both bulletins read, and in the intentions (p4).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-west-grove",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "28bc475c",
+          "page": 1,
+          "said": "Sunday: 8:00 am and 10:00 am Masses"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b667c69",
+          "page": 1,
+          "said": "Sunday: 8:00 am and 10:00 am Masses"
+        }
+      ],
+      "rationale": "R1: printed in the front-page schedule of both bulletins read, and in the intentions (p4).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-west-grove",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "28bc475c",
+          "page": 1,
+          "said": "Sunday: 8:00 am and 10:00 am Masses"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b667c69",
+          "page": 1,
+          "said": "Sunday: 8:00 am and 10:00 am Masses"
+        }
+      ],
+      "rationale": "R1: printed in the front-page schedule of both bulletins read, and in the intentions (p4).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-west-grove",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "28bc475c",
+          "page": 1,
+          "said": "Daily Mass Schedule 8:15 am - Monday, Tuesday, Wednesday, Friday, Saturday (No Mass on Thursday mornings.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b667c69",
+          "page": 1,
+          "said": "Daily Mass Schedule 8:15 am - Monday, Tuesday, Wednesday, Friday, Saturday (No Mass on Thursday mornings.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28bc475c",
+          "page": 4,
+          "said": "New Mass Schedule - Effective July 1, 2026 Daily Masses will be offered at 8:15 am on Monday, Tuesday, Wednesday, Friday, and Saturday mornings."
+        }
+      ],
+      "rationale": "R1: printed in the front-page schedule of both bulletins and confirmed by the July 1 schedule notice and the week's intentions. No Thursday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-west-grove",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "28bc475c",
+          "page": 1,
+          "said": "Daily Mass Schedule 8:15 am - Monday, Tuesday, Wednesday, Friday, Saturday (No Mass on Thursday mornings.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b667c69",
+          "page": 1,
+          "said": "Daily Mass Schedule 8:15 am - Monday, Tuesday, Wednesday, Friday, Saturday (No Mass on Thursday mornings.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28bc475c",
+          "page": 4,
+          "said": "New Mass Schedule - Effective July 1, 2026 Daily Masses will be offered at 8:15 am on Monday, Tuesday, Wednesday, Friday, and Saturday mornings."
+        }
+      ],
+      "rationale": "R1: printed in the front-page schedule of both bulletins and confirmed by the July 1 schedule notice and the week's intentions. No Thursday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-west-grove",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "28bc475c",
+          "page": 1,
+          "said": "Daily Mass Schedule 8:15 am - Monday, Tuesday, Wednesday, Friday, Saturday (No Mass on Thursday mornings.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b667c69",
+          "page": 1,
+          "said": "Daily Mass Schedule 8:15 am - Monday, Tuesday, Wednesday, Friday, Saturday (No Mass on Thursday mornings.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28bc475c",
+          "page": 4,
+          "said": "New Mass Schedule - Effective July 1, 2026 Daily Masses will be offered at 8:15 am on Monday, Tuesday, Wednesday, Friday, and Saturday mornings."
+        }
+      ],
+      "rationale": "R1: printed in the front-page schedule of both bulletins and confirmed by the July 1 schedule notice and the week's intentions. No Thursday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-west-grove",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "28bc475c",
+          "page": 1,
+          "said": "Daily Mass Schedule 8:15 am - Monday, Tuesday, Wednesday, Friday, Saturday (No Mass on Thursday mornings.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b667c69",
+          "page": 1,
+          "said": "Daily Mass Schedule 8:15 am - Monday, Tuesday, Wednesday, Friday, Saturday (No Mass on Thursday mornings.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28bc475c",
+          "page": 4,
+          "said": "New Mass Schedule - Effective July 1, 2026 Daily Masses will be offered at 8:15 am on Monday, Tuesday, Wednesday, Friday, and Saturday mornings."
+        }
+      ],
+      "rationale": "R1: printed in the front-page schedule of both bulletins and confirmed by the July 1 schedule notice and the week's intentions. No Thursday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-west-grove",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "28bc475c",
+          "page": 1,
+          "said": "Daily Mass Schedule 8:15 am - Monday, Tuesday, Wednesday, Friday, Saturday (No Mass on Thursday mornings.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b667c69",
+          "page": 1,
+          "said": "Daily Mass Schedule 8:15 am - Monday, Tuesday, Wednesday, Friday, Saturday (No Mass on Thursday mornings.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28bc475c",
+          "page": 4,
+          "said": "New Mass Schedule - Effective July 1, 2026 Daily Masses will be offered at 8:15 am on Monday, Tuesday, Wednesday, Friday, and Saturday mornings."
+        }
+      ],
+      "rationale": "R1: printed in the front-page schedule of both bulletins and confirmed by the July 1 schedule notice and the week's intentions. No Thursday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-west-grove",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "16:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "28bc475c",
+          "page": 1,
+          "said": "Reconciliation: Saturdays, 3:15 pm-4:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b667c69",
+          "page": 1,
+          "said": "Reconciliation: Saturdays, 3:15 pm-4:15 pm"
+        }
+      ],
+      "rationale": "R1: printed under Sacraments and Devotions in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-west-grove",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "28bc475c",
+          "page": 1,
+          "said": "Eucharistic Adoration Monday through Friday, 9 am until 7 pm-Adoration Chapel No Adoration on public holidays or snow days."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b667c69",
+          "page": 1,
+          "said": "Eucharistic Adoration Monday through Friday, 9 am until 7 pm-Adoration Chapel No Adoration on public holidays or snow days."
+        },
+        {
+          "source": "agent",
+          "bulletin": "28bc475c",
+          "page": 5,
+          "said": "Eucharistic Adoration Weekdays, 9 am to 7 pm ABVM Adoration Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://www.assumptionbvmwestgrove.org/eucharistic-adoration",
+          "said": "EUCHARISTIC ADORATION AT ASSUMPTION BVM CHURCH Monday thru Friday, 9 am until 7 pm, Adoration Chapel"
+        }
+      ],
+      "rationale": "R1, R38: both bulletins print it; the website places the Adoration Chapel at Assumption BVM Church. The Thursday 6-7 pm Flame of Love Holy Hour in the chapel (website; 6b667c69 p6) lies inside this period (R37). The general 'no Adoration on public holidays' can't be projected to dates (POLICY, Dates); only the stated Thanksgiving date is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-west-grove",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "28bc475c",
+          "page": 1,
+          "said": "Eucharistic Adoration Monday through Friday, 9 am until 7 pm-Adoration Chapel No Adoration on public holidays or snow days."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b667c69",
+          "page": 1,
+          "said": "Eucharistic Adoration Monday through Friday, 9 am until 7 pm-Adoration Chapel No Adoration on public holidays or snow days."
+        },
+        {
+          "source": "agent",
+          "bulletin": "28bc475c",
+          "page": 5,
+          "said": "Eucharistic Adoration Weekdays, 9 am to 7 pm ABVM Adoration Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://www.assumptionbvmwestgrove.org/eucharistic-adoration",
+          "said": "EUCHARISTIC ADORATION AT ASSUMPTION BVM CHURCH Monday thru Friday, 9 am until 7 pm, Adoration Chapel"
+        }
+      ],
+      "rationale": "R1, R38: both bulletins print it; the website places the Adoration Chapel at Assumption BVM Church. The Thursday 6-7 pm Flame of Love Holy Hour in the chapel (website; 6b667c69 p6) lies inside this period (R37). The general 'no Adoration on public holidays' can't be projected to dates (POLICY, Dates); only the stated Thanksgiving date is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-west-grove",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "28bc475c",
+          "page": 1,
+          "said": "Eucharistic Adoration Monday through Friday, 9 am until 7 pm-Adoration Chapel No Adoration on public holidays or snow days."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b667c69",
+          "page": 1,
+          "said": "Eucharistic Adoration Monday through Friday, 9 am until 7 pm-Adoration Chapel No Adoration on public holidays or snow days."
+        },
+        {
+          "source": "agent",
+          "bulletin": "28bc475c",
+          "page": 5,
+          "said": "Eucharistic Adoration Weekdays, 9 am to 7 pm ABVM Adoration Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://www.assumptionbvmwestgrove.org/eucharistic-adoration",
+          "said": "EUCHARISTIC ADORATION AT ASSUMPTION BVM CHURCH Monday thru Friday, 9 am until 7 pm, Adoration Chapel"
+        }
+      ],
+      "rationale": "R1, R38: both bulletins print it; the website places the Adoration Chapel at Assumption BVM Church. The Thursday 6-7 pm Flame of Love Holy Hour in the chapel (website; 6b667c69 p6) lies inside this period (R37). The general 'no Adoration on public holidays' can't be projected to dates (POLICY, Dates); only the stated Thanksgiving date is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-west-grove",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "28bc475c",
+          "page": 1,
+          "said": "Eucharistic Adoration Monday through Friday, 9 am until 7 pm-Adoration Chapel No Adoration on public holidays or snow days."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b667c69",
+          "page": 1,
+          "said": "Eucharistic Adoration Monday through Friday, 9 am until 7 pm-Adoration Chapel No Adoration on public holidays or snow days."
+        },
+        {
+          "source": "agent",
+          "bulletin": "28bc475c",
+          "page": 5,
+          "said": "Eucharistic Adoration Weekdays, 9 am to 7 pm ABVM Adoration Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://www.assumptionbvmwestgrove.org/eucharistic-adoration",
+          "said": "EUCHARISTIC ADORATION AT ASSUMPTION BVM CHURCH Monday thru Friday, 9 am until 7 pm, Adoration Chapel"
+        }
+      ],
+      "rationale": "R1, R38: both bulletins print it; the website places the Adoration Chapel at Assumption BVM Church. The Thursday 6-7 pm Flame of Love Holy Hour in the chapel (website; 6b667c69 p6) lies inside this period (R37). The general 'no Adoration on public holidays' can't be projected to dates (POLICY, Dates); only the stated Thanksgiving date is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-west-grove",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "28bc475c",
+          "page": 1,
+          "said": "Eucharistic Adoration Monday through Friday, 9 am until 7 pm-Adoration Chapel No Adoration on public holidays or snow days."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6b667c69",
+          "page": 1,
+          "said": "Eucharistic Adoration Monday through Friday, 9 am until 7 pm-Adoration Chapel No Adoration on public holidays or snow days."
+        },
+        {
+          "source": "agent",
+          "bulletin": "28bc475c",
+          "page": 5,
+          "said": "Eucharistic Adoration Weekdays, 9 am to 7 pm ABVM Adoration Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://www.assumptionbvmwestgrove.org/eucharistic-adoration",
+          "said": "EUCHARISTIC ADORATION AT ASSUMPTION BVM CHURCH Monday thru Friday, 9 am until 7 pm, Adoration Chapel"
+        }
+      ],
+      "rationale": "R1, R38: both bulletins print it; the website places the Adoration Chapel at Assumption BVM Church. The Thursday 6-7 pm Flame of Love Holy Hour in the chapel (website; 6b667c69 p6) lies inside this period (R37). The general 'no Adoration on public holidays' can't be projected to dates (POLICY, Dates); only the stated Thanksgiving date is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-west-grove",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "28bc475c",
+          "page": 5,
+          "said": "Celebrate Thanksgiving Day Thursday, November 26th 9 am Mass"
+        }
+      ],
+      "rationale": "R1, R16: a dated Thanksgiving Mass after as_of; Thursday has no regular Mass to cancel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-west-grove",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": "19:00",
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "28bc475c",
+          "page": 5,
+          "said": "Note: There will be no Eucharistic Adoration on Thanksgiving Day, November 26. Adoration will resume on Friday, Nov. 27."
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin cancels Thursday Adoration on November 26.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-west-grove",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.assumptionbvmwestgrove.org/mass-confession-times",
+          "said": "Christmas Eve (Dec 24) – 4:00 pm & 7:00 pm",
+          "schedule_check": {
+            "checked_at": "2026-11-23T23:03:26Z",
+            "current_because": "Checked 2026-11-23: the page lists HOLY DAYS IN 2026 and Federal Holidays for 2026; its weekly times match the July 1, 2026 schedule, and its Thanksgiving line (Mass at 9 am) matches the newest bulletin.",
+            "bulletin": "28bc475c",
+            "fits_because": "The newest bulletin (Nov 15) prints the same weekend, daily and Adoration times and the Thanksgiving 9 am Mass; it does not yet reach December, and nothing in it contradicts these times."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish's current 2026 holy-day list gives the Christmas Masses; no bulletin read reaches Christmas yet.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-west-grove",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.assumptionbvmwestgrove.org/mass-confession-times",
+          "said": "Christmas Eve (Dec 24) – 4:00 pm & 7:00 pm",
+          "schedule_check": {
+            "checked_at": "2026-11-23T23:03:26Z",
+            "current_because": "Checked 2026-11-23: the page lists HOLY DAYS IN 2026 and Federal Holidays for 2026; its weekly times match the July 1, 2026 schedule, and its Thanksgiving line (Mass at 9 am) matches the newest bulletin.",
+            "bulletin": "28bc475c",
+            "fits_because": "The newest bulletin (Nov 15) prints the same weekend, daily and Adoration times and the Thanksgiving 9 am Mass; it does not yet reach December, and nothing in it contradicts these times."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish's current 2026 holy-day list gives the Christmas Masses; no bulletin read reaches Christmas yet.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-west-grove",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Day"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.assumptionbvmwestgrove.org/mass-confession-times",
+          "said": "Christmas Day (Dec 25) – 10 am",
+          "schedule_check": {
+            "checked_at": "2026-11-23T23:03:32Z",
+            "current_because": "Checked 2026-11-23: the page lists HOLY DAYS IN 2026 and Federal Holidays for 2026; its weekly times match the July 1, 2026 schedule, and its Thanksgiving line (Mass at 9 am) matches the newest bulletin.",
+            "bulletin": "28bc475c",
+            "fits_because": "The newest bulletin (Nov 15) prints the same weekend, daily and Adoration times and the Thanksgiving 9 am Mass; it does not yet reach December, and nothing in it contradicts these times."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish's current 2026 holy-day list gives the Christmas Day Mass. R17: no cancellation of the regular Friday 8:15 Mass is recorded since no source states one.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-west-grove",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.assumptionbvmwestgrove.org/mass-confession-times",
+          "said": "Immaculate Conception (Dec 8) - 6:30 am, 10 am, and 7 pm",
+          "schedule_check": {
+            "checked_at": "2026-11-23T23:03:37Z",
+            "current_because": "Checked 2026-11-23: the page lists HOLY DAYS IN 2026 and Federal Holidays for 2026; its weekly times match the July 1, 2026 schedule, and its Thanksgiving line (Mass at 9 am) matches the newest bulletin.",
+            "bulletin": "28bc475c",
+            "fits_because": "The newest bulletin (Nov 15) prints the same weekend, daily and Adoration times and the Thanksgiving 9 am Mass; it does not yet reach December, and nothing in it contradicts these times."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish's 2026 holy-day list gives the Immaculate Conception Masses; the 6:30 am Mass on that line is asked separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-west-grove",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.assumptionbvmwestgrove.org/mass-confession-times",
+          "said": "Immaculate Conception (Dec 8) - 6:30 am, 10 am, and 7 pm",
+          "schedule_check": {
+            "checked_at": "2026-11-23T23:03:37Z",
+            "current_because": "Checked 2026-11-23: the page lists HOLY DAYS IN 2026 and Federal Holidays for 2026; its weekly times match the July 1, 2026 schedule, and its Thanksgiving line (Mass at 9 am) matches the newest bulletin.",
+            "bulletin": "28bc475c",
+            "fits_because": "The newest bulletin (Nov 15) prints the same weekend, daily and Adoration times and the Thanksgiving 9 am Mass; it does not yet reach December, and nothing in it contradicts these times."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish's 2026 holy-day list gives the Immaculate Conception Masses; the 6:30 am Mass on that line is asked separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.assumptionbvmwestgrove.org/mass-confession-times",
+          "said": "Immaculate Conception (Dec 8) - 6:30 am, 10 am, and 7 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28bc475c",
+          "page": 4,
+          "said": "New Mass Schedule - Effective July 1, 2026 ... We will no longer offer 6:30 am Masses."
+        }
+      ],
+      "rationale": "R28/R6: the holy-day list appears written before the July 1 change (Ascension also lists 6:30 am), and the bulletin says 6:30 am Masses are no longer offered. Leaning leave out; the December bulletins will print the holy-day times.",
+      "question": "Keep the website's 6:30 AM Mass on December 8, given the parish dropped 6:30 AM Masses on July 1?",
+      "options": [
+        {
+          "label": "Dec 8 6:30 AM",
+          "entry": {
+            "church_slug": "assumption-bvm-west-grove",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "06:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    }
+  ]
+}
