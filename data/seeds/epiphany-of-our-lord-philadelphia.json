@@ -1,0 +1,708 @@
+{
+  "schema_version": 1,
+  "parish_slug": "epiphany-of-our-lord-philadelphia",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:38:54Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T23:19:57Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (Epiphany of Our Lord; all services in the Lower Church). Schedule box: Tue-Sat 8:30 AM Mass, Sat 5 PM vigil, Sun 8:30 and 11 AM, Sat confession 4-4:30; Monday 8-9 AM Adoration from the intentions and website. The newest week replaces Tue-Fri Masses with Communion Services (recorded as cancellations); open: whether Saturday Nov 21 8:30 ('NO COMMUNION SERVICE') is a cancelled Mass.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "4087631d218fc5095dfd53b00ed39fe7bdc1dd6e9b0c4a3d06dd198ecf8826e4",
+      "fetched_at": "2026-11-15T16:38:54Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "e86bd7bcf59d1b847c863d3e2b5611809d3889a78f7c83f37c3c189d8762bd66",
+      "fetched_at": "2026-11-08T15:52:35Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-of-our-lord-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Lower Church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4087631d",
+          "page": 1,
+          "said": "Saturday Vigil 5:00pm (Lower Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4087631d",
+          "page": 2,
+          "said": "SATURDAY, November 21 ... 5:00pm Verino Coletti"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e86bd7bc",
+          "page": 2,
+          "said": "SATURDAY, November 14 ... 5:00pm Mary Troiano"
+        }
+      ],
+      "rationale": "R1: printed in the newest bulletin's schedule box; the Nov 8 issue's intentions list it too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-of-our-lord-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Lower Church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4087631d",
+          "page": 1,
+          "said": "Sunday 8:30am (Lower Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e86bd7bc",
+          "page": 2,
+          "said": "SUNDAY, November 15 ... 8:30am Anthony Rotondaro"
+        }
+      ],
+      "rationale": "R1: printed in the newest bulletin's schedule box; the Nov 8 issue's intentions list it too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-of-our-lord-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Lower Church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4087631d",
+          "page": 1,
+          "said": "11:00am (Lower Church) Hearing Impaired Mass on the 4th Sunday of the month at the 11:00am Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e86bd7bc",
+          "page": 2,
+          "said": "SUNDAY, November 15 ... 11:00am Rita Lombardi Massey"
+        },
+        {
+          "source": "website",
+          "url": "https://epiphanychurch.church/",
+          "said": "11:00 am (Upper Church) ** ** Hearing Impaired Mass on the 2nd & 4th Sunday of the month."
+        }
+      ],
+      "rationale": "R1: printed in the newest bulletin's schedule box (zoomed: Lower Church; the website says Upper Church, one church either way). The hearing-impaired Mass is this same weekly Mass, so it adds no slot; bulletin says 4th Sunday, website 2nd & 4th, so no note is given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-of-our-lord-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Lower Church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4087631d",
+          "page": 1,
+          "said": "Daily Mass Tuesday-Saturday - 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e86bd7bc",
+          "page": 2,
+          "said": "TUESDAY, November 10 ... 8:00am Morning Prayer 8:30am Marie Rowello (intentions Tue-Sat 8:30am)"
+        },
+        {
+          "source": "website",
+          "url": "https://epiphanychurch.church/",
+          "said": "Daily Mass Tues-Sat 8:30 am (Lower Church)"
+        }
+      ],
+      "rationale": "R1: the newest schedule box prints daily Mass Tue-Sat 8:30; the Nov 8 issue's intentions and the website's Nov 24-28 intentions show Masses at 8:30. R40: this week's Communion Services are dated exceptions, recorded as cancellations.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-of-our-lord-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Lower Church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4087631d",
+          "page": 1,
+          "said": "Daily Mass Tuesday-Saturday - 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e86bd7bc",
+          "page": 2,
+          "said": "TUESDAY, November 10 ... 8:00am Morning Prayer 8:30am Marie Rowello (intentions Tue-Sat 8:30am)"
+        },
+        {
+          "source": "website",
+          "url": "https://epiphanychurch.church/",
+          "said": "Daily Mass Tues-Sat 8:30 am (Lower Church)"
+        }
+      ],
+      "rationale": "R1: the newest schedule box prints daily Mass Tue-Sat 8:30; the Nov 8 issue's intentions and the website's Nov 24-28 intentions show Masses at 8:30. R40: this week's Communion Services are dated exceptions, recorded as cancellations.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-of-our-lord-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Lower Church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4087631d",
+          "page": 1,
+          "said": "Daily Mass Tuesday-Saturday - 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e86bd7bc",
+          "page": 2,
+          "said": "TUESDAY, November 10 ... 8:00am Morning Prayer 8:30am Marie Rowello (intentions Tue-Sat 8:30am)"
+        },
+        {
+          "source": "website",
+          "url": "https://epiphanychurch.church/",
+          "said": "Daily Mass Tues-Sat 8:30 am (Lower Church)"
+        }
+      ],
+      "rationale": "R1: the newest schedule box prints daily Mass Tue-Sat 8:30; the Nov 8 issue's intentions and the website's Nov 24-28 intentions show Masses at 8:30. R40: this week's Communion Services are dated exceptions, recorded as cancellations.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-of-our-lord-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Lower Church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4087631d",
+          "page": 1,
+          "said": "Daily Mass Tuesday-Saturday - 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e86bd7bc",
+          "page": 2,
+          "said": "TUESDAY, November 10 ... 8:00am Morning Prayer 8:30am Marie Rowello (intentions Tue-Sat 8:30am)"
+        },
+        {
+          "source": "website",
+          "url": "https://epiphanychurch.church/",
+          "said": "Daily Mass Tues-Sat 8:30 am (Lower Church)"
+        }
+      ],
+      "rationale": "R1: the newest schedule box prints daily Mass Tue-Sat 8:30; the Nov 8 issue's intentions and the website's Nov 24-28 intentions show Masses at 8:30. R40: this week's Communion Services are dated exceptions, recorded as cancellations.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-of-our-lord-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Lower Church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4087631d",
+          "page": 1,
+          "said": "Daily Mass Tuesday-Saturday - 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e86bd7bc",
+          "page": 2,
+          "said": "TUESDAY, November 10 ... 8:00am Morning Prayer 8:30am Marie Rowello (intentions Tue-Sat 8:30am)"
+        },
+        {
+          "source": "website",
+          "url": "https://epiphanychurch.church/",
+          "said": "Daily Mass Tues-Sat 8:30 am (Lower Church)"
+        }
+      ],
+      "rationale": "R1: the newest schedule box prints daily Mass Tue-Sat 8:30; the Nov 8 issue's intentions and the website's Nov 24-28 intentions show Masses at 8:30. R40: this week's Communion Services are dated exceptions, recorded as cancellations.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-of-our-lord-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-17",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Communion Service instead of Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4087631d",
+          "page": 2,
+          "said": "TUESDAY, November 17 ... 8:30am Communion Service (same for Nov 18, 19, 20)"
+        }
+      ],
+      "rationale": "POLICY (Communion Service replaces a Mass), R16: dated on or after as_of, so recorded as cancellations of the weekly 8:30 Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-of-our-lord-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-18",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Communion Service instead of Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4087631d",
+          "page": 2,
+          "said": "TUESDAY, November 17 ... 8:30am Communion Service (same for Nov 18, 19, 20)"
+        }
+      ],
+      "rationale": "POLICY (Communion Service replaces a Mass), R16: dated on or after as_of, so recorded as cancellations of the weekly 8:30 Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-of-our-lord-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-19",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Communion Service instead of Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4087631d",
+          "page": 2,
+          "said": "TUESDAY, November 17 ... 8:30am Communion Service (same for Nov 18, 19, 20)"
+        }
+      ],
+      "rationale": "POLICY (Communion Service replaces a Mass), R16: dated on or after as_of, so recorded as cancellations of the weekly 8:30 Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-of-our-lord-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-20",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Communion Service instead of Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4087631d",
+          "page": 2,
+          "said": "TUESDAY, November 17 ... 8:30am Communion Service (same for Nov 18, 19, 20)"
+        }
+      ],
+      "rationale": "POLICY (Communion Service replaces a Mass), R16: dated on or after as_of, so recorded as cancellations of the weekly 8:30 Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4087631d",
+          "page": 2,
+          "said": "SATURDAY, November 21 ... 8:30am NO COMMUNION SERVICE"
+        }
+      ],
+      "rationale": "R30/R17: the bulletin doesn't say the Mass is cancelled, but Tue-Fri 8:30 are Communion Services that week and Saturday's 8:30 line says no service at all, so there is evidently no Mass either. Leaning cancelled.",
+      "question": "Cancel the Saturday Nov 21 8:30 AM Mass? The intentions say '8:30am NO COMMUNION SERVICE' in a week where Communion Services replaced the weekday Masses.",
+      "options": [
+        {
+          "label": "Cancelled Nov 21",
+          "entry": {
+            "church_slug": "epiphany-of-our-lord-philadelphia",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-21",
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-of-our-lord-philadelphia",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Lower Church"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4087631d",
+          "page": 2,
+          "said": "MONDAY, November 16 ... 8:00am Adoration of the Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e86bd7bc",
+          "page": 2,
+          "said": "MONDAY, November 9 ... 8:00am Adoration of the Blessed Sacrament"
+        },
+        {
+          "source": "website",
+          "url": "https://epiphanychurch.church/",
+          "said": "Eucharistic Adoration Mon 8:00 am – 9:00 am (Lower Church)"
+        }
+      ],
+      "rationale": "R35: Monday 8:00 Adoration appears in both bulletins' weeks; R6: the parish website's schedule gives Mon 8:00-9:00 in the Lower Church, matching both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-of-our-lord-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Lower Church"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4087631d",
+          "page": 1,
+          "said": "CONFESSIONS: Saturdays 4:00 to 4:30pm in the Lower Church and anytime by appointment in the rectory."
+        }
+      ],
+      "rationale": "R1: printed in the newest bulletin's Sacraments box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-of-our-lord-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://epiphanychurch.church/",
+          "said": "THURSDAY, November 26 Happy Thanksgiving 9:00 am Alfonso Cavaliere and Family, Joe Gerace",
+          "schedule_check": {
+            "checked_at": "2026-11-23T23:22:24Z",
+            "current_because": "The homepage shows the intentions for the week of Nov 23-29, 2026 (First Sunday of Advent), the week after the newest bulletin.",
+            "bulletin": "4087631d",
+            "fits_because": "The newest bulletin (Nov 15) lists daily 8:30 Masses Tue-Sat; a holiday Mass at 9:00 on Thanksgiving is a dated exception (R17), and the page's other days match the bulletin's 8:30 schedule."
+          }
+        }
+      ],
+      "rationale": "R6, R16, R17: the parish website's current intentions give a 9:00 AM Thanksgiving Mass; recorded as a dated Mass, weekly Thursday slot left alone.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4087631d",
+          "page": 1,
+          "said": "MORNING PRAYER Tues.-Sat. at 8:00am before Daily Mass in the Lower Church"
+        }
+      ],
+      "rationale": "R24: Morning Prayer is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4087631d",
+          "page": 2,
+          "said": "Miraculous Medal Novena; St. Therese of Lisieux Novena"
+        }
+      ],
+      "rationale": "R24/R26: novenas are devotions with no printed time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4087631d",
+          "page": 1,
+          "said": "and anytime by appointment in the rectory."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
