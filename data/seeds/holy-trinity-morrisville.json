@@ -1,0 +1,598 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-trinity-morrisville",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:40:53Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T23:51:16Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, Holy Trinity, Morrisville. Masses (daily, Tue/Thu evening, Saturday vigil, three Sunday) and Saturday confession agree in both November bulletins read (Nov 8, Nov 15). Open: Tuesday Exposition end time, 7:00 PM in the schedule box vs 6:45 PM in each week's Mass list. Generic holy-day times are left out (no dates).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "4ad7e277d1ec0198a03973a77491474396005ca2f8a589e12d1bd4266edac38e",
+      "fetched_at": "2026-11-15T16:40:53Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "af752eee48d2466dcf2f9f50e6681ad5debee43575af781eef0dea464a96178d",
+      "fetched_at": "2026-11-08T15:52:48Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-morrisville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ad7e277",
+          "page": 1,
+          "said": "Daily: Monday, Wednesday, Friday, and Saturday 9:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4ad7e277",
+          "page": 2,
+          "said": "9:00AM (Mon Nov 16, Wed Nov 18, Fri Nov 20, Sat Nov 21 intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "af752eee",
+          "page": 1,
+          "said": "Daily: Monday, Wednesday, Friday, and Saturday 9:00 A.M."
+        }
+      ],
+      "rationale": "R1, R35: printed in the Masses box of both bulletins read and in each week's announced Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-morrisville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ad7e277",
+          "page": 1,
+          "said": "Daily: Monday, Wednesday, Friday, and Saturday 9:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4ad7e277",
+          "page": 2,
+          "said": "9:00AM (Mon Nov 16, Wed Nov 18, Fri Nov 20, Sat Nov 21 intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "af752eee",
+          "page": 1,
+          "said": "Daily: Monday, Wednesday, Friday, and Saturday 9:00 A.M."
+        }
+      ],
+      "rationale": "R1, R35: printed in the Masses box of both bulletins read and in each week's announced Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-morrisville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ad7e277",
+          "page": 1,
+          "said": "Daily: Monday, Wednesday, Friday, and Saturday 9:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4ad7e277",
+          "page": 2,
+          "said": "9:00AM (Mon Nov 16, Wed Nov 18, Fri Nov 20, Sat Nov 21 intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "af752eee",
+          "page": 1,
+          "said": "Daily: Monday, Wednesday, Friday, and Saturday 9:00 A.M."
+        }
+      ],
+      "rationale": "R1, R35: printed in the Masses box of both bulletins read and in each week's announced Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-morrisville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ad7e277",
+          "page": 1,
+          "said": "Daily: Monday, Wednesday, Friday, and Saturday 9:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4ad7e277",
+          "page": 2,
+          "said": "9:00AM (Mon Nov 16, Wed Nov 18, Fri Nov 20, Sat Nov 21 intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "af752eee",
+          "page": 1,
+          "said": "Daily: Monday, Wednesday, Friday, and Saturday 9:00 A.M."
+        }
+      ],
+      "rationale": "R1, R35: printed in the Masses box of both bulletins read and in each week's announced Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-morrisville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ad7e277",
+          "page": 1,
+          "said": "Tuesday and Thursday 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4ad7e277",
+          "page": 2,
+          "said": "7:00PM (Tue Nov 17, Thu Nov 19 intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "af752eee",
+          "page": 1,
+          "said": "Tuesday and Thursday 7:00 P.M."
+        }
+      ],
+      "rationale": "R1, R35: printed in the Masses box of both bulletins read and in each week's announced Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-morrisville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ad7e277",
+          "page": 1,
+          "said": "Tuesday and Thursday 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4ad7e277",
+          "page": 2,
+          "said": "7:00PM (Tue Nov 17, Thu Nov 19 intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "af752eee",
+          "page": 1,
+          "said": "Tuesday and Thursday 7:00 P.M."
+        }
+      ],
+      "rationale": "R1, R35: printed in the Masses box of both bulletins read and in each week's announced Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-morrisville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ad7e277",
+          "page": 1,
+          "said": "Sunday: Vigil 5:30 P.M. Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "af752eee",
+          "page": 1,
+          "said": "Sunday: Vigil 5:30 P.M. Saturday"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box of both bulletins read; the announced Masses list 5:30PM each Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-morrisville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ad7e277",
+          "page": 1,
+          "said": "Sunday: 7:30, 9:30 and 11:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "af752eee",
+          "page": 1,
+          "said": "Sunday: 7:30, 9:30 and 11:00 A.M."
+        }
+      ],
+      "rationale": "R1: printed in the Masses box of both bulletins read and in the Sunday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-morrisville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ad7e277",
+          "page": 1,
+          "said": "Sunday: 7:30, 9:30 and 11:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "af752eee",
+          "page": 1,
+          "said": "Sunday: 7:30, 9:30 and 11:00 A.M."
+        }
+      ],
+      "rationale": "R1: printed in the Masses box of both bulletins read and in the Sunday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-morrisville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ad7e277",
+          "page": 1,
+          "said": "Sunday: 7:30, 9:30 and 11:00 A.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "af752eee",
+          "page": 1,
+          "said": "Sunday: 7:30, 9:30 and 11:00 A.M."
+        }
+      ],
+      "rationale": "R1: printed in the Masses box of both bulletins read and in the Sunday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-morrisville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ad7e277",
+          "page": 1,
+          "said": "CONFESSIONS Saturdays: 4:00 to 4:45 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "af752eee",
+          "page": 1,
+          "said": "CONFESSIONS Saturdays: 4:00 to 4:45 P.M."
+        }
+      ],
+      "rationale": "R1: printed in the Confessions box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ad7e277",
+          "page": 1,
+          "said": "EXPOSITION OF THE BLESSED SACRAMENT Every Tuesday 12:00 noon until 7:00 P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4ad7e277",
+          "page": 2,
+          "said": "TUESDAY, NOVEMBER 17, 2026 [Eucharistic Adoration Noon – 6:45pm] ... 7:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "af752eee",
+          "page": 2,
+          "said": "TUESDAY, NOVEMBER 10, 2026 [Eucharistic Adoration Noon – 6:45pm]"
+        },
+        {
+          "source": "agent",
+          "bulletin": "af752eee",
+          "page": 1,
+          "said": "Every Tuesday 12:00 noon until 7:00 P.M."
+        }
+      ],
+      "rationale": "R28/C8: the standing box says noon until 7:00 PM, while both weeks' announced-Masses list says Noon-6:45pm; neither is a dated exception (R40). Leaning 6:45 PM: it is repeated in each week's listing and ends before the Tuesday 7:00 PM Mass, so the box's 7:00 likely means 'until the Mass'.",
+      "question": "Tuesday Exposition ends at 7:00 PM (schedule box) or 6:45 PM (weekly Mass list)?",
+      "options": [
+        {
+          "label": "Tuesdays 12:00-6:45 PM",
+          "entry": {
+            "church_slug": "holy-trinity-morrisville",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": "18:45",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Tuesdays 12:00-7:00 PM",
+          "entry": {
+            "church_slug": "holy-trinity-morrisville",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ad7e277",
+          "page": 1,
+          "said": "Eves of Holydays: 5:30 P.M. Holydays: 9:00 A.M. and 7:00 P.M.* *Exceptions will be announced"
+        }
+      ],
+      "rationale": "POLICY, Dates: a generic holy-day schedule with no dates the bulletin pins down; neither bulletin names an upcoming holy day. Update mode will pick up dated holy-day Masses when announced.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4ad7e277",
+          "page": 1,
+          "said": "CONFESSIONS Eves of Holydays: 4:30 to 5:00 P.M."
+        }
+      ],
+      "rationale": "POLICY, Dates: generic holy-day-eve confession with no pinned date.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
