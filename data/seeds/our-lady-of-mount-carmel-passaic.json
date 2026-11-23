@@ -1,0 +1,738 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-mount-carmel-passaic",
+  "status": "ready",
+  "as_of": "2026-11-15T16:11:02Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T13:23:33Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both bulletins read (Nov 8 and Nov 15, 2026) print the same schedule box: weekday Noon Mass, Saturday 9AM, 4PM and 7PM Spanish, Sunday 8, 10, 12 Spanish and 4:30 Filipino; Saturday confession 2:30-3:30; Tuesday Adoration and First Friday Adoration with a 7PM Spanish Mass. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "0217c271a431850607be78260e2bff5b2f951f5415c1d410984153b898f90126",
+      "fetched_at": "2026-11-15T16:11:02Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "3d4e14bc68251110633f4beda5b4b201a946e23161a603fbb29de72cf4dd93b6",
+      "fetched_at": "2026-11-08T15:36:54Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0217c271",
+          "page": 1,
+          "said": "Mass Schedule Monday to Friday at 12 Noon in English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d4e14bc",
+          "page": 1,
+          "said": "Mass Schedule Monday to Friday at 12 Noon in English"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the intentions list a 12:00PM Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0217c271",
+          "page": 1,
+          "said": "Mass Schedule Monday to Friday at 12 Noon in English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d4e14bc",
+          "page": 1,
+          "said": "Mass Schedule Monday to Friday at 12 Noon in English"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the intentions list a 12:00PM Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0217c271",
+          "page": 1,
+          "said": "Mass Schedule Monday to Friday at 12 Noon in English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d4e14bc",
+          "page": 1,
+          "said": "Mass Schedule Monday to Friday at 12 Noon in English"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the intentions list a 12:00PM Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0217c271",
+          "page": 1,
+          "said": "Mass Schedule Monday to Friday at 12 Noon in English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d4e14bc",
+          "page": 1,
+          "said": "Mass Schedule Monday to Friday at 12 Noon in English"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the intentions list a 12:00PM Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0217c271",
+          "page": 1,
+          "said": "Mass Schedule Monday to Friday at 12 Noon in English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d4e14bc",
+          "page": 1,
+          "said": "Mass Schedule Monday to Friday at 12 Noon in English"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the intentions list a 12:00PM Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0217c271",
+          "page": 1,
+          "said": "Sat. - 9AM & Vigil 4PM in English & 7PM in Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d4e14bc",
+          "page": 1,
+          "said": "Sat. - 9AM & Vigil 4PM in English & 7PM in Spanish"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the intentions list 9:00AM each Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0217c271",
+          "page": 1,
+          "said": "Sat. - 9AM & Vigil 4PM in English & 7PM in Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d4e14bc",
+          "page": 1,
+          "said": "Sat. - 9AM & Vigil 4PM in English & 7PM in Spanish"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the intentions list a 4:00PM Vigil Mass - English each Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0217c271",
+          "page": 1,
+          "said": "Sat. - 9AM & Vigil 4PM in English & 7PM in Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d4e14bc",
+          "page": 1,
+          "said": "Sat. - 9AM & Vigil 4PM in English & 7PM in Spanish"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; the intentions list a 7:00PM Vigil Mass - Spanish each Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0217c271",
+          "page": 1,
+          "said": "Sunday - 8AM, 10AM in English & 12PM in Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d4e14bc",
+          "page": 1,
+          "said": "Sunday - 8AM, 10AM in English & 12PM in Spanish"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in every Sunday's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0217c271",
+          "page": 1,
+          "said": "Sunday - 8AM, 10AM in English & 12PM in Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d4e14bc",
+          "page": 1,
+          "said": "Sunday - 8AM, 10AM in English & 12PM in Spanish"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in every Sunday's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0217c271",
+          "page": 1,
+          "said": "Sunday - 8AM, 10AM in English & 12PM in Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d4e14bc",
+          "page": 1,
+          "said": "Sunday - 8AM, 10AM in English & 12PM in Spanish"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read and in every Sunday's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Filipino"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0217c271",
+          "page": 1,
+          "said": "Sunday - ... 4:30 PM in Filipino"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d4e14bc",
+          "page": 1,
+          "said": "Sunday - ... 4:30 PM in Filipino"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; every Sunday's intentions (Nov 8, 15, 22) list 4:30PM, so it is weekly, not monthly.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-passaic",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "14:30",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0217c271",
+          "page": 1,
+          "said": "Reconciliation 2:30-3:30PM on Saturdays & by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d4e14bc",
+          "page": 1,
+          "said": "Reconciliation 2:30-3:30PM on Saturdays & by appointment"
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0217c271",
+          "page": 1,
+          "said": "Reconciliation ... & by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-passaic",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": "11:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0217c271",
+          "page": 1,
+          "said": "Adoration & Benediction Tuesdays 10AM - 11:45AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d4e14bc",
+          "page": 1,
+          "said": "Adoration & Benediction Tuesdays 10AM - 11:45AM"
+        }
+      ],
+      "rationale": "R1: printed under Devotion to the Blessed Sacrament in both bulletins read; POLICY, Benediction is Adoration with the note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-passaic",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": "11:45",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0217c271",
+          "page": 1,
+          "said": "Adoration & Benediction ... First Fridays 10AM - 11:45AM in English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d4e14bc",
+          "page": 1,
+          "said": "Adoration & Benediction ... First Fridays 10AM - 11:45AM in English"
+        }
+      ],
+      "rationale": "R1, POLICY rule 2: the box names First Fridays, so weekly with weeks_of_month first. Printed in both bulletins; neither week holds a first Friday (R11), but the standing box prints it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-passaic",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "18:45",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish; Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0217c271",
+          "page": 1,
+          "said": "First Fridays ... & 5:30PM-6:45PM in Spanish followed by Mass in Spanish at 7PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d4e14bc",
+          "page": 1,
+          "said": "First Fridays ... & 5:30PM-6:45PM in Spanish followed by Mass in Spanish at 7PM"
+        }
+      ],
+      "rationale": "R1, POLICY rule 2: named First Friday service in the standing box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0217c271",
+          "page": 1,
+          "said": "First Fridays ... 5:30PM-6:45PM in Spanish followed by Mass in Spanish at 7PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d4e14bc",
+          "page": 1,
+          "said": "First Fridays ... 5:30PM-6:45PM in Spanish followed by Mass in Spanish at 7PM"
+        }
+      ],
+      "rationale": "R1, POLICY rule 2: a First Friday Spanish Mass at 7PM in the standing box of both bulletins. It is in addition to the daily 12 Noon Mass, which the box keeps Monday to Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0217c271",
+          "page": 1,
+          "said": "Holy Days: 12 Noon in English & 7PM in Spanish; Holidays: 12 Noon Mass in English"
+        }
+      ],
+      "rationale": "POLICY, Dates: no holy day or holiday is dated in either bulletin, so nothing can be recorded; the generic line is not a weekly slot. Thanksgiving (Thu Nov 26) at 12 Noon matches the weekly Thursday Mass anyway.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0217c271",
+          "page": 1,
+          "said": "Novenas to: St. Padre Pio on Mondays ... Stations of the Cross 7PM - Fridays during Lent"
+        }
+      ],
+      "rationale": "R24: novenas and Stations of the Cross are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
