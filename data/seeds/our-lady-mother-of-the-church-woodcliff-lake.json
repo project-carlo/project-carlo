@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "our-lady-mother-of-the-church-woodcliff-lake",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:22:36Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-20T13:35:12Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:16:32Z",
   "summary": "One church. Both bulletins read (Nov 8 and Nov 15, 2026) and the website give the same schedule: weekday 8:30 AM, Saturday 5:30 PM, Sunday 8:30 and 10:30 AM, Saturday 4:30-5:00 PM confession. Open: the Saturday 8 PM Neocatechumenal Way Eucharist (leaning leave out) and the sign-up Saturday 12:30-2:00 PM confession window (leaning include). No history stored.",
   "blocked_reason": null,
   "bulletins": [
@@ -429,9 +429,22 @@
     },
     {
       "id": "s10",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-mother-of-the-church-woodcliff-lake",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": "14:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Visiting Opus Dei priest; sign up on the parish website"
+      },
       "page": 1,
       "sources": [
         {
@@ -478,13 +491,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:16:32Z"
+      }
     },
     {
       "id": "s11",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-mother-of-the-church-woodcliff-lake",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "20:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Neocatechumenal Way Eucharist"
+      },
       "page": 1,
       "sources": [
         {
@@ -531,7 +561,11 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:16:32Z"
+      }
     },
     {
       "id": "s12",

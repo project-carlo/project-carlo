@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-john-paul-ii-bayonne",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:53:57Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-21T03:54:09Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:19:13Z",
   "summary": "One church, Our Lady of Mount Carmel. Weekend and weekday Mass times agree in the schedule box and intentions of both bulletins (Nov 8 and 15, 2026); the parish website lists an older evening-Mass schedule and is not relied on. Open: Wednesday Adoration's end (6:30 PM in the weekly announcements vs 5 PM in the box) and a Christmas Midnight Mass without a printed time.",
   "blocked_reason": null,
   "bulletins": [
@@ -818,9 +818,22 @@
     },
     {
       "id": "s22",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-bayonne",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 3,
       "sources": [
         {
@@ -896,13 +909,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:19:13Z"
+      }
     },
     {
       "id": "s23",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-bayonne",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "00:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Midnight Mass"
+      },
       "page": 3,
       "sources": [
         {
@@ -938,7 +968,11 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:19:13Z"
+      }
     },
     {
       "id": "s24",

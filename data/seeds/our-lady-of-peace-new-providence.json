@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "our-lady-of-peace-new-providence",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:53:14Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-20T21:31:04Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:17:16Z",
   "summary": "One church. Both November bulletins print the same Mass Times box (Sat 8:30 AM and 5 PM vigil, Sun 7:30/10/12, weekdays 7:30 AM and 12:10 PM) and Saturday confession 4:00-4:30, and the intentions and website agree. Dated: Thanksgiving Mass Nov 26 8:30 AM and Advent confessions Nov 28 9:30-10:30. Open: whether the Nov 21 11 AM Anointing of the Sick, called a Mass only on the website, should be added.",
   "blocked_reason": null,
   "bulletins": [
@@ -789,9 +789,22 @@
     },
     {
       "id": "s20",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-new-providence",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass of Anointing of the Sick"
+      },
       "page": 4,
       "sources": [
         {
@@ -832,7 +845,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:17:16Z"
+      }
     },
     {
       "id": "s21",

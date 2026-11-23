@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "holy-rosary-jersey-city",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:52:43Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-20T09:20:12Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:15:44Z",
   "summary": "One church. The page 1 schedule box and page 3 calendar agree in both bulletins read (Nov 8 and Nov 15, 2026): Sat 5 PM vigil, Sun 9 and 11:30 AM, Mon-Fri 8:30 AM in the chapel, Sat 4 PM confession, Mon/Thu/Fri 9 AM-2 PM exposition, plus a Dec 8 7 PM holy-day Mass. Open: whether the Rosary Altar Society's first-Monday 7 PM Mass is public.",
   "blocked_reason": null,
   "bulletins": [
@@ -630,9 +630,24 @@
     },
     {
       "id": "s15",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-rosary-jersey-city",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Rosary Altar Society"
+      },
       "page": 7,
       "sources": [
         {
@@ -682,7 +697,11 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:15:44Z"
+      }
     }
   ]
 }

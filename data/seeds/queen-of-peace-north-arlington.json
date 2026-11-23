@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "queen-of-peace-north-arlington",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:53:24Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-20T22:09:32Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:17:36Z",
   "summary": "One church. Both November bulletins print the same Regular Mass Schedule box (weekdays 7:30, 9:00, 5:30 PM; Sat 7:30, 9:00, 5:00 PM; Sun 7:30, 9:00 Spanish, 10:30, noon), matching the parish homepage, which also supplies Saturday 3:45-4:45 PM Confession and First Friday 6-8 PM Adoration (R6). Thanksgiving Nov 26 has the 9 AM Mass only. Open: whether the weekday 5:30 PM Mass gets the website's mid-May to mid-September summer break as a season.",
   "blocked_reason": null,
   "bulletins": [
@@ -919,9 +919,27 @@
     },
     {
       "id": "s23",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-north-arlington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": 15,
+          "end_month": 5,
+          "end_day": 15
+        },
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -996,14 +1014,36 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:17:36Z"
+      },
       "group": "weekday-530"
     },
     {
       "id": "s24",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-north-arlington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": 15,
+          "end_month": 5,
+          "end_day": 15
+        },
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -1078,14 +1118,36 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:17:36Z"
+      },
       "group": "weekday-530"
     },
     {
       "id": "s25",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-north-arlington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": 15,
+          "end_month": 5,
+          "end_day": 15
+        },
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -1160,14 +1222,36 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:17:36Z"
+      },
       "group": "weekday-530"
     },
     {
       "id": "s26",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-north-arlington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": 15,
+          "end_month": 5,
+          "end_day": 15
+        },
+        "note": "Spanish"
+      },
       "page": 1,
       "sources": [
         {
@@ -1242,14 +1326,36 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:17:36Z"
+      },
       "group": "weekday-530"
     },
     {
       "id": "s27",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-peace-north-arlington",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": 15,
+          "end_month": 5,
+          "end_day": 15
+        },
+        "note": "Spanish"
+      },
       "page": 1,
       "sources": [
         {
@@ -1324,7 +1430,11 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:17:36Z"
+      },
       "group": "weekday-530"
     },
     {

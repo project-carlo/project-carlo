@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "notre-dame-north-caldwell",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:22:31Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-20T13:32:46Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:16:30Z",
   "summary": "One church, Notre Dame, North Caldwell. Weekend Masses, weekday Masses in the on-site Parish Center Chapel and Saturday 4:00-4:30 confession agree in both bulletins (Nov 8, Nov 15) and on the website; the newest bulletin cancels three Saturday confessions and adds Monday, December 21 4-7 PM. Open: how to record the weekday 7 AM Mass, which stops in an undated summer.",
   "blocked_reason": null,
   "bulletins": [
@@ -394,9 +394,22 @@
     },
     {
       "id": "s10",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "notre-dame-north-caldwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Parish Center Chapel"
+      },
       "page": 1,
       "sources": [
         {
@@ -465,14 +478,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:16:30Z"
+      },
       "group": "weekday-7am"
     },
     {
       "id": "s11",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "notre-dame-north-caldwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Parish Center Chapel"
+      },
       "page": 1,
       "sources": [
         {
@@ -541,14 +571,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:16:30Z"
+      },
       "group": "weekday-7am"
     },
     {
       "id": "s12",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "notre-dame-north-caldwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Parish Center Chapel"
+      },
       "page": 1,
       "sources": [
         {
@@ -617,14 +664,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:16:30Z"
+      },
       "group": "weekday-7am"
     },
     {
       "id": "s13",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "notre-dame-north-caldwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Parish Center Chapel"
+      },
       "page": 1,
       "sources": [
         {
@@ -693,14 +757,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:16:30Z"
+      },
       "group": "weekday-7am"
     },
     {
       "id": "s14",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "notre-dame-north-caldwell",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Parish Center Chapel"
+      },
       "page": 1,
       "sources": [
         {
@@ -769,7 +850,11 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:16:30Z"
+      },
       "group": "weekday-7am"
     },
     {

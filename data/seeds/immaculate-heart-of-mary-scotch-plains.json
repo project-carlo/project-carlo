@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "immaculate-heart-of-mary-scotch-plains",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:52:49Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-20T10:00:40Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:16:12Z",
   "summary": "One church. Weekend, weekday (Mon-Sat 7 and 8:30 am) Masses, Saturday Reconciliation and Adoration Chapel hours agree in both stored bulletins (Nov 8 and Nov 15; the newest is images only, read from renders); no history is stored. Open: the Tue/Thu/Fri Adoration end time (bulletins 2 pm vs website 1 pm) and whether to list the Rosary Altar Society's Dec 1 Mass.",
   "blocked_reason": null,
   "bulletins": [
@@ -861,9 +861,22 @@
     },
     {
       "id": "s20",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-scotch-plains",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "14:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
       "page": 2,
       "sources": [
         {
@@ -927,14 +940,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:16:12Z"
+      },
       "group": "adoration-end"
     },
     {
       "id": "s21",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-scotch-plains",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "14:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
       "page": 2,
       "sources": [
         {
@@ -998,14 +1028,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:16:12Z"
+      },
       "group": "adoration-end"
     },
     {
       "id": "s22",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-scotch-plains",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "14:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
       "page": 2,
       "sources": [
         {
@@ -1069,14 +1116,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:16:12Z"
+      },
       "group": "adoration-end"
     },
     {
       "id": "s23",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-scotch-plains",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-01",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Rosary Altar Society annual Mass"
+      },
       "page": 5,
       "sources": [
         {
@@ -1118,7 +1182,11 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:16:12Z"
+      }
     },
     {
       "id": "s24",

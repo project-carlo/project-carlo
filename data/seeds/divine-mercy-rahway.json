@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "divine-mercy-rahway",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:21:06Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-20T09:01:01Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:15:29Z",
   "summary": "One church, Divine Mercy, Rahway. Both bulletins read (Nov 8 and Nov 15, all page images) print the same Mass, Confession and First Friday Adoration schedule; the website agrees. Open: Saturday Confession ends 3:45 (p1 box) or 4:00 (p3 Sacraments Schedule).",
   "blocked_reason": null,
   "bulletins": [
@@ -882,9 +882,22 @@
     },
     {
       "id": "s20",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "divine-mercy-rahway",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -973,7 +986,11 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:15:29Z"
+      }
     },
     {
       "id": "s21",

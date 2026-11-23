@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "holy-spirit-union",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:22:01Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-20T09:24:36Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:15:48Z",
   "summary": "One church. The weekend, daily Mass and Confession times are the same in both November bulletins' schedule boxes and on the website. The third-Wednesday OLPH Novena with Exposition and Benediction comes from the website plus the newest bulletin. Open: whether the website's First Friday and First Saturday 9:00 AM devotions are Adoration (leaning no).",
   "blocked_reason": null,
   "bulletins": [
@@ -806,9 +806,24 @@
     },
     {
       "id": "s22",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-union",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Sacred Heart devotion, after the 8:30 AM Mass"
+      },
       "page": null,
       "sources": [
         {
@@ -845,13 +860,32 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:15:48Z"
+      }
     },
     {
       "id": "s23",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-union",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Heart devotion, after the 8:30 AM Mass"
+      },
       "page": null,
       "sources": [
         {
@@ -888,7 +922,11 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:15:48Z"
+      }
     }
   ]
 }

@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-anthony-of-padua-belleville",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:53:32Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-21T02:34:30Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:18:14Z",
   "summary": "One church. Weekend (Sat 5:30 PM vigil; Sun 8, 10:30, 12:15), weekday (Mon-Thu 7 & 8 AM, Fri-Sat 8 AM), 2nd-Sunday Spanish and last-Sunday Filipino 5:30 PM Masses and Saturday confession agree in both bulletins and on the website. First-Friday Holy Hour comes from the website. Open: Tuesday Adoration at the unlocated 'Little House'.",
   "blocked_reason": null,
   "bulletins": [
@@ -924,9 +924,22 @@
     },
     {
       "id": "s22",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-belleville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Little House; Benediction"
+      },
       "page": 3,
       "sources": [
         {
@@ -978,7 +991,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:18:14Z"
+      }
     }
   ]
 }

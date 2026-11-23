@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-joseph-east-rutherford",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:24:58Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-22T16:09:36Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:19:31Z",
   "summary": "One church. Weekend (Sat 5 PM; Sun 8, 10, noon, Spanish 1:30 PM) and weekday Masses, Thursday Exposition 12:30-1 PM and Thursday/Saturday Confession agree across both bulletins and the website. Open: the Friday 7 AM Adoration and Confession end times, which the front page and page 2 print differently (7:25 vs 7:30).",
   "blocked_reason": null,
   "bulletins": [
@@ -692,9 +692,22 @@
     },
     {
       "id": "s14",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-east-rutherford",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "07:25",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -765,13 +778,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:19:31Z"
+      }
     },
     {
       "id": "s15",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-east-rutherford",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "07:25",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -847,7 +877,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:19:31Z"
+      }
     },
     {
       "id": "s16",

@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "our-lady-of-mount-carmel-oratory-montclair",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:53:10Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-20T21:20:53Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:17:07Z",
   "summary": "One church (Mount Carmel Oratory, Montclair). Both read bulletins (Nov 8 and Nov 15, image-only) print the same schedule box: weekday 8:30 AM Mon/Wed/Thu/Fri (closed Tuesdays), Sat 4:30 PM vigil, Sun 11 AM English and 6 PM Spanish, Sat 3:30 PM Confession, last-Friday 7 PM Exposition; dated Masses Nov 23 7 PM (Jubilee of Mercy) and Dec 12 8:30 PM (Guadalupe). Open: whether the Saturday 6:30 PM Neocatechumenal Mass in the Church Hall is public.",
   "blocked_reason": null,
   "bulletins": [
@@ -395,9 +395,22 @@
     },
     {
       "id": "s10",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-montclair",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Neocatechumenal Mass in the Church Hall"
+      },
       "page": 1,
       "sources": [
         {
@@ -445,7 +458,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:17:07Z"
+      }
     },
     {
       "id": "s11",

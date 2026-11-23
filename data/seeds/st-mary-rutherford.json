@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-mary-rutherford",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:54:27Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-22T17:07:29Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:20:11Z",
   "summary": "One church, St. Mary, Rutherford. Weekend (Sat 5 PM; Sun 8, 10, 12), weekday (Mon-Fri 8:30 AM) Masses and Saturday 4:15 PM Confession agree in both bulletins' schedule box and intentions; no Adoration is printed. Open: the Dec 8 Immaculate Conception 12 noon and 7 PM Masses, whose box misdates the day.",
   "blocked_reason": null,
   "bulletins": [
@@ -525,9 +525,22 @@
     },
     {
       "id": "s13",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-rutherford",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
       "page": 6,
       "sources": [
         {
@@ -563,14 +576,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:20:11Z"
+      },
       "group": "immaculate"
     },
     {
       "id": "s14",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-rutherford",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
       "page": 6,
       "sources": [
         {
@@ -606,7 +636,11 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:20:11Z"
+      },
       "group": "immaculate"
     }
   ]

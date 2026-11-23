@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "immaculate-heart-of-mary-st-patrick-elizabeth",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:52:52Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-20T10:04:03Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:16:14Z",
   "summary": "One church (St. Patrick, 215 Court St). Weekend, weekday and confession times agree in the schedule box of the Nov 8 and Nov 15 bulletins and on the website; a dated Thanksgiving Mass Nov 26 10:00 AM is included. Open: the start time of first-Friday Adoration, which 'begins with' the 7:00 PM Mass.",
   "blocked_reason": null,
   "bulletins": [
@@ -640,9 +640,24 @@
     },
     {
       "id": "s17",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-elizabeth",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 7:00 PM Mass"
+      },
       "page": 2,
       "sources": [
         {
@@ -705,7 +720,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:16:14Z"
+      }
     }
   ]
 }

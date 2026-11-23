@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "our-lady-of-victories-harrington-park",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:23:18Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-20T22:02:58Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:17:32Z",
   "summary": "One church. Weekend Masses from the schedule box, Mon-Sat 8:00 and 12:00 Masses from two weeks of intentions (R35), first-Friday/Saturday/Thursday specials, Tue/Thu Adoration and daily confessions all agree in the two bulletins read (Nov 8 and Nov 15, both image-only). Open: Saturday afternoon Confession ends 3:45 on page 1 but 3:40 on page 2.",
   "blocked_reason": null,
   "bulletins": [
@@ -1415,9 +1415,22 @@
     },
     {
       "id": "s31",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victories-harrington-park",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -1488,7 +1501,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:17:32Z"
+      }
     },
     {
       "id": "s32",

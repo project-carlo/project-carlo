@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-aedan-jersey-city",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:53:27Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-21T02:09:30Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:17:54Z",
   "summary": "Two churches: St. Aedan's Church and the Parish Center Chapel (39 Tuers Ave). Weekend, weekday (12:10 PM), Friday Spanish 7 PM chapel Mass, Friday 12:45 Confession and first-Friday Adoration agree in both image-only bulletins (Nov 8, Nov 15) and the website; Simbang Gabi Dec 15-23 settled. Open: the place of the Dec 11-12 Guadalupe Exposition and Masses.",
   "blocked_reason": null,
   "bulletins": [
@@ -1053,9 +1053,22 @@
     },
     {
       "id": "s25",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aedan-jersey-city",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-11",
+        "start_time": "20:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Guadalupe; with Rosary"
+      },
       "page": 5,
       "sources": [
         {
@@ -1108,14 +1121,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:17:54Z"
+      },
       "group": "guadalupe-dec11"
     },
     {
       "id": "s26",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aedan-jersey-city",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-11",
+        "start_time": "21:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Guadalupe vigil"
+      },
       "page": 5,
       "sources": [
         {
@@ -1168,14 +1198,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:17:54Z"
+      },
       "group": "guadalupe-dec11"
     },
     {
       "id": "s27",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aedan-jersey-city",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-12",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Guadalupe"
+      },
       "page": 5,
       "sources": [
         {
@@ -1228,7 +1275,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:17:54Z"
+      }
     }
   ]
 }

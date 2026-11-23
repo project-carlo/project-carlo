@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "our-lady-of-grace-fairview",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:53:06Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-20T13:57:15Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:16:50Z",
   "summary": "One church. Both bulletins read (Nov 8 and Nov 15, 2026) print the same schedule: weekday Masses 7:00 and 8:30, Saturday 8:00 and 5:00 PM, Sunday 7:30, 9:00 (children), 11:00, 12:30 Spanish and a first-Sunday 5:00 PM Italian Mass; Saturday Penance 4:00-4:45; Adoration Thursday 5-7 PM and Saturday 4-5 PM. Open: whether the Nov 21 10 AM anniversary Memorial Mass for Fr. Peter Sticco is public.",
   "blocked_reason": null,
   "bulletins": [
@@ -789,9 +789,22 @@
     },
     {
       "id": "s21",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-fairview",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Memorial Mass for Fr. Peter Sticco, S.A.C., first anniversary"
+      },
       "page": 2,
       "sources": [
         {
@@ -833,7 +846,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:16:50Z"
+      }
     },
     {
       "id": "s25",

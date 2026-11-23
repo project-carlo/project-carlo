@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "blessed-miriam-teresa-demjanovich-bayonne",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:21:24Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-20T08:49:28Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:15:18Z",
   "summary": "One church, St. Mary, Star of the Sea. The standing schedule box (weekday 6:30/9:00, Sat 9:00 and 4:00 vigil, Sun 8:30/10:00/11:30 Spanish, first-Friday 7 PM Spanish Mass, Sat 3-4 confession, Monday 7-8 PM and first-Saturday 3-4 PM Adoration) is identical in both bulletins read and matches the intentions. Dated: Forty Hours opening Mass Nov 20 7 PM and Guadalupe Mass Dec 12 6 PM. Open: whether to record the Nov 20-22 Forty Hours exposition.",
   "blocked_reason": null,
   "bulletins": [
@@ -950,9 +950,22 @@
     },
     {
       "id": "s23",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-star-of-the-sea-bayonne",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-20",
+        "start_time": "19:30",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Forty Hours"
+      },
       "page": 4,
       "sources": [
         {
@@ -994,7 +1007,11 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:15:18Z"
+      }
     },
     {
       "id": "s24",

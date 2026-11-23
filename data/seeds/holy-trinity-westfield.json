@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "holy-trinity-westfield",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:22:10Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-20T09:33:46Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:15:55Z",
   "summary": "One church. Weekend, weekday and Saturday confession times agree in both bulletins read (Nov 8 and Nov 15) and with the website, except the website's 4:30-5:00 confession end. Open: Saturday 8:00 AM Adoration, printed only in the Nov 8 issue.",
   "blocked_reason": null,
   "bulletins": [
@@ -538,9 +538,22 @@
     },
     {
       "id": "s14",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-westfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 8:30 AM Mass"
+      },
       "page": null,
       "sources": [
         {
@@ -576,7 +589,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:15:55Z"
+      }
     },
     {
       "id": "s15",

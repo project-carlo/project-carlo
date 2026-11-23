@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-rose-of-lima-newark",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T15:53:57Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-22T18:04:10Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:20:56Z",
   "summary": "One church. The Mass, Confession and Adoration schedule box is identical in both bulletins read (Nov 8 and Nov 15, 2026); a dated bilingual Thanksgiving Mass Nov 26 at 10 AM is added. Open: whether the Mon/Tue/Wed/Fri 6-7 PM Adoration 'in rectory chapel' is at the church's location (leaning include).",
   "blocked_reason": null,
   "bulletins": [
@@ -445,9 +445,22 @@
     },
     {
       "id": "s12",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-newark",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Rectory chapel"
+      },
       "page": 2,
       "sources": [
         {
@@ -489,14 +502,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:20:56Z"
+      },
       "group": "rectory-adoration"
     },
     {
       "id": "s13",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-newark",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Rectory chapel"
+      },
       "page": 2,
       "sources": [
         {
@@ -538,14 +568,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:20:56Z"
+      },
       "group": "rectory-adoration"
     },
     {
       "id": "s14",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-newark",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Rectory chapel"
+      },
       "page": 2,
       "sources": [
         {
@@ -587,14 +634,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:20:56Z"
+      },
       "group": "rectory-adoration"
     },
     {
       "id": "s15",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-newark",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Rectory chapel"
+      },
       "page": 2,
       "sources": [
         {
@@ -636,7 +700,11 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:20:56Z"
+      },
       "group": "rectory-adoration"
     },
     {

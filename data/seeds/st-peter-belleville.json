@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-peter-belleville",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:26:15Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-22T17:40:59Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:20:39Z",
   "summary": "One church, St. Peter, Belleville. Both bulletins read (Nov 8 and Nov 15, 2026) print the same schedule: Sat 6 PM vigil, five Sunday Masses (10 AM and 1 PM Spanish), Mon-Sat 8:30 AM, Sat 1-2 PM Confession, second-Saturday Holy Hour 7-8 PM, plus a dated Tue Nov 17 8 PM Spanish Mass. The Mon/Wed 7 PM Convent Chapel Masses are excluded (chapel not on the church list). Open: the unlocated First Friday Spanish Holy Hour and the Saturday NCW Eucharist.",
   "blocked_reason": null,
   "bulletins": [
@@ -580,9 +580,24 @@
     },
     {
       "id": "s16",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-belleville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
       "page": null,
       "sources": [
         {
@@ -626,7 +641,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:20:39Z"
+      }
     },
     {
       "id": "s17",
@@ -750,9 +769,22 @@
     },
     {
       "id": "s20",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-belleville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Neocatechumenal Way"
+      },
       "page": 4,
       "sources": [
         {
@@ -794,7 +826,11 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:20:39Z"
+      }
     },
     {
       "id": "s21",

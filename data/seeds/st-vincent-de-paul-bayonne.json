@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-vincent-de-paul-bayonne",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:26:30Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-22T21:00:41Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:21:24Z",
   "summary": "One church. Weekend, daily, Saturday confession, first-Wednesday Mass and weekday morning Adoration agree in the Nov 8 and Nov 22 bulletins. Dated: Thanksgiving 8am moved to 9am, Dec 8 Spanish 7pm. Open: whether the post-Mass Adoration includes Saturday.",
   "blocked_reason": null,
   "bulletins": [
@@ -687,9 +687,22 @@
     },
     {
       "id": "s18",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-bayonne",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -731,7 +744,11 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:21:24Z"
+      }
     },
     {
       "id": "s19",

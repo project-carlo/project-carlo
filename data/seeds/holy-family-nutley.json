@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "holy-family-nutley",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:21:43Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-20T09:10:47Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:15:38Z",
   "summary": "One church, Holy Family, Nutley. Weekend (Sat 5:30 PM; Sun 8, 10, 12), daily 8:45 AM Mon-Sat and Saturday 1 PM Confession agree in both bulletins (Nov 8 and Nov 15) and the website; plus the Nov 26 Thanksgiving Mass. Open: the DST-only Saturday 7 PM Italian Mass (leaning out), the 8:30 PM Neo-Catechumenate liturgy (leaning out), and two website-backed Adoration slots (First Friday 2-7 PM, third-Saturday Holy Hour) whose Mother Cabrini Chapel location is unconfirmed (leaning in). Advent/Lent 7 AM chapel Masses are excluded under R33.",
   "blocked_reason": null,
   "bulletins": [
@@ -549,9 +549,27 @@
     },
     {
       "id": "s13",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-nutley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 3,
+          "start_day": 14,
+          "end_month": 10,
+          "end_day": 31
+        },
+        "note": "Italian"
+      },
       "page": 1,
       "sources": [
         {
@@ -603,13 +621,30 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:15:38Z"
+      }
     },
     {
       "id": "s14",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-nutley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "20:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Neocatechumenal Way"
+      },
       "page": 1,
       "sources": [
         {
@@ -651,7 +686,11 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:15:38Z"
+      }
     },
     {
       "id": "s15",
@@ -870,9 +909,24 @@
     },
     {
       "id": "s20",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-nutley",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "14:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mother Cabrini Chapel, Parish Center"
+      },
       "page": null,
       "sources": [
         {
@@ -914,13 +968,32 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:15:38Z"
+      }
     },
     {
       "id": "s21",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-nutley",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "13:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour for Life"
+      },
       "page": 6,
       "sources": [
         {
@@ -974,7 +1047,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:15:38Z"
+      }
     },
     {
       "id": "s22",

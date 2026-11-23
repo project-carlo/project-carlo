@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-john-the-baptist-jersey-city",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:54:03Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-21T04:08:06Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:19:22Z",
   "summary": "One church with an on-site chapel for daily Mass and weekday Adoration; both image-only bulletins (Nov 8, Nov 15) print the same schedule, which the website matches. No 12:10 PM Mass on Wednesdays. Open: whether the Sunday 'Adoration & Masses in the Church 9 am-1 pm' line is an Adoration time (leaning no), and the passing Christmas Eve 10 PM Midnight Mass (leaning include).",
   "blocked_reason": null,
   "bulletins": [
@@ -972,9 +972,22 @@
     },
     {
       "id": "s22",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-jersey-city",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "13:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Church"
+      },
       "page": 1,
       "sources": [
         {
@@ -1021,7 +1034,11 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:19:22Z"
+      }
     },
     {
       "id": "s23",
@@ -1063,9 +1080,22 @@
     },
     {
       "id": "s24",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-jersey-city",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "22:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Midnight Mass"
+      },
       "page": 3,
       "sources": [
         {
@@ -1107,7 +1137,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:19:22Z"
+      }
     },
     {
       "id": "s25",

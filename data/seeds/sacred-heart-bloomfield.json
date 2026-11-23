@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "sacred-heart-bloomfield",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:23:30Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-20T22:13:32Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:17:38Z",
   "summary": "One church (Sacred Heart, Bloomfield). Both bulletins read (Nov 8 and Nov 15, 2026) print the same standing schedule: daily 8 AM Mon-Sat, Mon/Wed 12:10 PM, Sat 5 PM vigil, Sun 8:30, 10:30, 12:30 Spanish, Sat confession 11-12, and Holy Hours on 1st Fri 7 PM, 2nd Sun 1:30 PM, 3rd Tue 7 PM (Spanish). Thanksgiving dated Masses included; open: whether the Nov 27 8 AM Mass is replaced by the listed 9 AM Mass.",
   "blocked_reason": null,
   "bulletins": [
@@ -871,9 +871,22 @@
     },
     {
       "id": "s21",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-bloomfield",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Day after Thanksgiving"
+      },
       "page": 6,
       "sources": [
         {
@@ -915,7 +928,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:17:38Z"
+      }
     },
     {
       "id": "s22",

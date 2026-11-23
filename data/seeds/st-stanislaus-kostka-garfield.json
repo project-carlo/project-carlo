@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-stanislaus-kostka-garfield",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:26:26Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-22T18:09:18Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:21:00Z",
   "summary": "One church (St. Stanislaus Kostka, Garfield; Polish/English). Masses and Confession are printed identically in the schedule box of both bulletins read (Nov 8 and Nov 15) and on the website; intentions confirm Saturday 7 and 8 AM. Open: the convent Adoration Chapel (Mon-Sat 7 AM-7 PM, address not given) and whether first Thursday/Friday 6:30-7:30 PM Confession replaces the regular 6:30-6:55 PM window.",
   "blocked_reason": null,
   "bulletins": [
@@ -1493,9 +1493,24 @@
     },
     {
       "id": "s35",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "18:55",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": true,
+        "season": null,
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -1552,14 +1567,33 @@
           }
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:21:00Z"
+      },
       "group": "firstconf"
     },
     {
       "id": "s36",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "18:55",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": true,
+        "season": null,
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -1616,7 +1650,11 @@
           }
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:21:00Z"
+      },
       "group": "firstconf"
     },
     {
@@ -1701,9 +1739,22 @@
     },
     {
       "id": "s39",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel (Convent)"
+      },
       "page": 1,
       "sources": [
         {
@@ -1750,14 +1801,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:21:00Z"
+      },
       "group": "convent"
     },
     {
       "id": "s40",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel (Convent)"
+      },
       "page": 1,
       "sources": [
         {
@@ -1804,14 +1872,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:21:00Z"
+      },
       "group": "convent"
     },
     {
       "id": "s41",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel (Convent)"
+      },
       "page": 1,
       "sources": [
         {
@@ -1858,14 +1943,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:21:00Z"
+      },
       "group": "convent"
     },
     {
       "id": "s42",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel (Convent)"
+      },
       "page": 1,
       "sources": [
         {
@@ -1912,14 +2014,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:21:00Z"
+      },
       "group": "convent"
     },
     {
       "id": "s43",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel (Convent)"
+      },
       "page": 1,
       "sources": [
         {
@@ -1966,14 +2085,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:21:00Z"
+      },
       "group": "convent"
     },
     {
       "id": "s44",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-kostka-garfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel (Convent)"
+      },
       "page": 1,
       "sources": [
         {
@@ -2020,7 +2156,11 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:21:00Z"
+      },
       "group": "convent"
     },
     {

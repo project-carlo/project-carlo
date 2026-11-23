@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-stanislaus-newark",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:54:45Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-22T18:12:43Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:21:03Z",
   "summary": "One church; the bulletins print no schedule box, so the weekly Masses rest on the Mass intentions of two issues (Nov 15 and Oct 11, 2026) and match the website's schedule exactly. Adoration and Confession come from the website (R6). Open: Confession before the Monday/Friday 7 PM Masses, where the two website pages conflict.",
   "blocked_reason": null,
   "bulletins": [
@@ -1024,9 +1024,22 @@
     },
     {
       "id": "s24",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-newark",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 7:00 PM Mass"
+      },
       "page": null,
       "sources": [
         {
@@ -1066,14 +1079,33 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:21:03Z"
+      },
       "group": "monfri-confession"
     },
     {
       "id": "s25",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-newark",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": true,
+        "season": null,
+        "note": "Before the 7:00 PM Mass"
+      },
       "page": null,
       "sources": [
         {
@@ -1115,7 +1147,11 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:21:03Z"
+      },
       "group": "monfri-confession"
     },
     {

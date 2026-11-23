@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "our-lady-of-mount-carmel-newark",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:53:09Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-20T21:13:37Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:17:01Z",
   "summary": "One church. Both bulletins (Nov 8, Nov 15) print the same page 1 schedule: Mon-Sat 8:30 AM, Sat 5:00 PM and 7:15 PM Spanish, Sun 8:30, 10:00 Italian and 12:00; Sat confession 4-5 PM; first-Friday Adoration 9-12. Dated: Christ the King Benediction, Immaculate Conception Masses, Rorate Mass with the 8:30 cancelled on Dec 12. Open: the 40 Hours Adoration hours, Nov 18-21.",
   "blocked_reason": null,
   "bulletins": [
@@ -740,9 +740,22 @@
     },
     {
       "id": "s22",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-newark",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-18",
+        "start_time": "09:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "40 Hours Devotion"
+      },
       "page": 3,
       "sources": [
         {
@@ -801,14 +814,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:17:01Z"
+      },
       "group": "forty-hours"
     },
     {
       "id": "s23",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-newark",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-19",
+        "start_time": "09:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "40 Hours Devotion"
+      },
       "page": 3,
       "sources": [
         {
@@ -867,14 +897,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:17:01Z"
+      },
       "group": "forty-hours"
     },
     {
       "id": "s24",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-newark",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-20",
+        "start_time": "09:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "40 Hours Devotion"
+      },
       "page": 3,
       "sources": [
         {
@@ -933,14 +980,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:17:01Z"
+      },
       "group": "forty-hours"
     },
     {
       "id": "s25",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-newark",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "09:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "40 Hours Devotion"
+      },
       "page": 3,
       "sources": [
         {
@@ -999,7 +1063,11 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:17:01Z"
+      },
       "group": "forty-hours"
     }
   ]

@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-francis-of-assisi-hoboken",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:53:46Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-21T03:30:49Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:18:52Z",
   "summary": "One church. Both November bulletins print the same schedule box: daily Mass 8 AM Mon-Sat, Sat 5 PM vigil, Sunday 7:30, 9:30, 11:00 (Italian), 12:15 and 6 PM, Thursday Adoration 8 AM-7 PM with a 7 PM Novena Mass, and Saturday confession at 4 PM. Open: whether the Nov. 24 7 PM memorial Mass for the pastor's sister is public.",
   "blocked_reason": null,
   "bulletins": [
@@ -700,9 +700,22 @@
     },
     {
       "id": "s17",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-hoboken",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-24",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In memory of Fr. Chris' sister"
+      },
       "page": 2,
       "sources": [
         {
@@ -744,7 +757,11 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:18:52Z"
+      }
     }
   ]
 }

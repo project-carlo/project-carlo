@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-joseph-of-the-palisades-west-new-york",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:25:14Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-22T16:26:30Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:19:43Z",
   "summary": "Two churches: St. Joseph of the Palisades (Upper and Lower Church) and Immaculate Heart of Mary Chapel, North Bergen. The p1 schedule box is identical in both bulletins (Nov 8 and Nov 22 issues; all pages are images); weekday Exposition 9-6:45 in the Lower Church is from p7 of the newest. Saturday 9 AM Spanish Mass is from the intentions of both weeks (R35). Open: whether to cancel the 8:30 AM and 7 PM Masses on Fri Nov 27 ('One Mass will be celebrated at 9:00 a.m.').",
   "blocked_reason": null,
   "bulletins": [
@@ -1358,9 +1358,22 @@
     },
     {
       "id": "s37",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-of-the-palisades-west-new-york",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 4,
       "sources": [
         {
@@ -1396,14 +1409,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:19:43Z"
+      },
       "group": "nov27"
     },
     {
       "id": "s38",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-of-the-palisades-west-new-york",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 4,
       "sources": [
         {
@@ -1439,7 +1469,11 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:19:43Z"
+      },
       "group": "nov27"
     },
     {

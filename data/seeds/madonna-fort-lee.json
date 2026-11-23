@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "madonna-fort-lee",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:22:22Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-20T10:09:39Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:16:19Z",
   "summary": "Church of the Madonna, Fort Lee: main church plus Church on the Hill (Sunday 11 AM only). English and Korean weekend, weekday and Confession times agree in both bulletins read (Nov 8, Nov 15); dated Thanksgiving, Immaculate Conception, Advent Reconciliation (Dec 15, 3-6 PM per newest poster correcting 3-5) and Christmas Masses recorded. Open: the Dec 8 10 AM School Mass.",
   "blocked_reason": null,
   "bulletins": [
@@ -1077,9 +1077,22 @@
     },
     {
       "id": "s25",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "madonna-fort-lee",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception; School Mass"
+      },
       "page": 6,
       "sources": [
         {
@@ -1115,7 +1128,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:16:19Z"
+      }
     },
     {
       "id": "s26",

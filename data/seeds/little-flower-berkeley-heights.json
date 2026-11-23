@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "little-flower-berkeley-heights",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:52:53Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-20T10:06:52Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:16:17Z",
   "summary": "One church, two bulletins read (Nov 8 and Nov 15, 2026) with identical schedules: Sat 5:30 PM vigil, Sun 8:30 and 11:30 AM, daily Mass 9 AM Monday-Saturday (from the intentions), Saturday confession 4-5 PM, and First Friday Adoration after the 9 AM Mass (9:30 AM). No history stored. Open: whether to add the Dec 4 6:30 AM men's-gathering Mass (leaning leave out).",
   "blocked_reason": null,
   "bulletins": [
@@ -663,9 +663,22 @@
     },
     {
       "id": "s17",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "little-flower-berkeley-heights",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-04",
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "First Friday Fellowship Men's Gathering"
+      },
       "page": 9,
       "sources": [
         {
@@ -707,7 +720,11 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:16:17Z"
+      }
     }
   ]
 }

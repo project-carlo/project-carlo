@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "corpus-christi-hasbrouck-heights",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:21:38Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-20T08:58:25Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:15:27Z",
   "summary": "One church (Corpus Christi, Hasbrouck Heights). Both bulletins read (Nov 8 and Nov 15, 2026) and the website agree: Sat 5 PM Vigil, Sun 8/10/12, Mon-Sat 8 AM, Confession Sat 4-4:45 PM; plus Thanksgiving 9 AM Mass and the Dec 7 Advent Penance Service. Open: whether the Mother of Mercy Adoration Chapel (Mon/Tue/Thu 1-11 PM) is on the church grounds.",
   "blocked_reason": null,
   "bulletins": [
@@ -585,9 +585,22 @@
     },
     {
       "id": "s14",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-hasbrouck-heights",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "23:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mother of Mercy Adoration Chapel"
+      },
       "page": 3,
       "sources": [
         {
@@ -634,14 +647,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:15:27Z"
+      },
       "group": "adoration"
     },
     {
       "id": "s15",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-hasbrouck-heights",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "23:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mother of Mercy Adoration Chapel"
+      },
       "page": 3,
       "sources": [
         {
@@ -688,14 +718,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:15:27Z"
+      },
       "group": "adoration"
     },
     {
       "id": "s16",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-hasbrouck-heights",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "23:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mother of Mercy Adoration Chapel"
+      },
       "page": 3,
       "sources": [
         {
@@ -742,7 +789,11 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:15:27Z"
+      },
       "group": "adoration"
     },
     {

@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "our-lady-of-good-counsel-washington-township",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:53:02Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-20T13:50:41Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:16:45Z",
   "summary": "One church. Weekend (Sat 5 PM; Sun 8, 10:30, 12, 6 PM) and Mon-Sat 8:45 AM Masses agree in both bulletins read (Nov 8 and 15, all-image PDFs); the website's Sunday 11 AM schedule looks stale. Open: Sunday Confession is 5:30 PM in the front box but 5:00 PM in the weekly calendar.",
   "blocked_reason": null,
   "bulletins": [
@@ -577,9 +577,22 @@
     },
     {
       "id": "s12",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-washington-township",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 6:00 PM Mass"
+      },
       "page": 1,
       "sources": [
         {
@@ -650,7 +663,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:16:45Z"
+      }
     },
     {
       "id": "s13",

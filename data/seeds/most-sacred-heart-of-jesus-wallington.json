@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "most-sacred-heart-of-jesus-wallington",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:22:26Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-20T10:19:13Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:16:25Z",
   "summary": "One church; English and Polish Masses. Weekend, weekday (Mon–Sat 7 and 8 AM, Saturday per the intentions) and confession times agree in both bulletins' schedule box and the website homepage. Open: whether weekday 7:30 AM confession includes Saturday, and the website-only First Friday overnight Adoration (leaning leave out).",
   "blocked_reason": null,
   "bulletins": [
@@ -985,9 +985,22 @@
     },
     {
       "id": "s24",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-sacred-heart-of-jesus-wallington",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -1029,7 +1042,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:16:25Z"
+      }
     },
     {
       "id": "s25",
@@ -1149,9 +1166,24 @@
     },
     {
       "id": "s28",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-sacred-heart-of-jesus-wallington",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "07:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Overnight Adoration"
+      },
       "page": null,
       "sources": [
         {
@@ -1188,7 +1220,11 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:16:25Z"
+      }
     },
     {
       "id": "s29",

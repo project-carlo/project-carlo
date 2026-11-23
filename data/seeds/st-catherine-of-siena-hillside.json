@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-catherine-of-siena-hillside",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:53:41Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-21T03:03:54Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:18:37Z",
   "summary": "One church; most weekday services are in the parish's Pastoral Center chapel at 25 King Street, which the church list lacks, so its Mon-Fri 7:30 AM Mass, Wednesday 7 PM Portuguese Mass and Saturday Adoration are excluded (church_list_issues). Weekend Masses, Mon/Tue/Fri 7 PM Spanish Mass and 6-6:45 PM Confession, and Thursday 6-8 PM Adoration agree in both bulletins and the website. Open: Saturday 5-6 PM Confession, on the website only.",
   "blocked_reason": null,
   "bulletins": [
@@ -911,9 +911,22 @@
     },
     {
       "id": "s24",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-catherine-of-siena-hillside",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -948,7 +961,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:18:37Z"
+      }
     }
   ],
   "church_list_issues": [

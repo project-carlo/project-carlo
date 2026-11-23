@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "our-lady-of-grace-and-st-joseph-hoboken",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:53:02Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-20T13:54:06Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:16:47Z",
   "summary": "Two churches and the Parish Center chapel; both bulletins read (Nov 8 and Nov 15) print the same schedule box: OLG Sat 5 PM and Sun 9, 10:30, 1:30 (Spanish), 7:30; St. Joseph Sun 10 (Spanish) and noon; chapel weekdays 12:30 and Mon-Thu 7 PM; third-Friday Divino Niño Mass at St. Joseph; OLG Saturday confession 4:15-4:45. Dated: Thanksgiving 9 AM at OLG and Dec 8 7 PM at St. Joseph. Open: whether the undated Holy Days box's OLG 12:30 PM applies to Dec 8. No history stored.",
   "blocked_reason": null,
   "bulletins": [
@@ -856,9 +856,22 @@
     },
     {
       "id": "s22",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-hoboken",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
       "page": 1,
       "sources": [
         {
@@ -906,7 +919,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:16:47Z"
+      }
     }
   ]
 }

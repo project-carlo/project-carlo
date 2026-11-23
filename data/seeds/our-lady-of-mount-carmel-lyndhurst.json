@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "our-lady-of-mount-carmel-lyndhurst",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:53:11Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-20T21:11:26Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:16:58Z",
   "summary": "One church. The page 1 schedule box (Sat 4:30pm vigil; Sun 8:30, 10:30, 12; weekdays 8:30am; Sat confession 3:30-4:15; Wednesday 7pm Holy Hour with Adoration) is identical in both bulletins and matches both weeks' intentions, including Saturday 8:30am. No history stored. Open: whether the Dec 7 7pm Mass announced with the Rosary Society meeting (eve of the Immaculate Conception) is included.",
   "blocked_reason": null,
   "bulletins": [
@@ -501,9 +501,22 @@
     },
     {
       "id": "s13",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-lyndhurst",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vigil of the Immaculate Conception"
+      },
       "page": 3,
       "sources": [
         {
@@ -551,7 +564,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:16:58Z"
+      }
     },
     {
       "id": "s14",

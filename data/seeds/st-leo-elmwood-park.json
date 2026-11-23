@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-leo-elmwood-park",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:54:14Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-22T16:44:47Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:19:54Z",
   "summary": "One church. Both bulletins (Nov 8 and Nov 15, 2026, image-only) and the website agree: Sat 5 PM; Sun 8:30, 10:30, 12:30 PM Spanish; Mon–Fri 12:10 PM; Saturday confession 4–4:50 PM. Open: whether the Thursday 7 PM 'Grupo De Oración Hora Santa' is Adoration, and a Tuesday Nov 17 7 PM Mass mentioned only in a flyer.",
   "blocked_reason": null,
   "bulletins": [
@@ -491,9 +491,22 @@
     },
     {
       "id": "s11",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-leo-elmwood-park",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Hora Santa (Grupo de Oración), Spanish"
+      },
       "page": 3,
       "sources": [
         {
@@ -535,13 +548,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:19:54Z"
+      }
     },
     {
       "id": "s12",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-leo-elmwood-park",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-17",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 5,
       "sources": [
         {
@@ -589,7 +619,11 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:19:54Z"
+      }
     },
     {
       "id": "s20",

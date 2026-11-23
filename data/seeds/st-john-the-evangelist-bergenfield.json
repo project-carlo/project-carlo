@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-john-the-evangelist-bergenfield",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:54:04Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-21T04:11:13Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:19:24Z",
   "summary": "One church, St. John the Evangelist, Bergenfield. Weekend, weekday, Saturday confession, Tue-Thu and First Friday overnight Adoration agree across the Nov 8 and Nov 15, 2026 bulletins (the newest is all images, read by render); the monthly Inclusive Family Mass and last-Tuesday Spanish Holy Hour come from the parish website (R6). Open: the monthly Tagalog Mass, whose Sunday the website gives two ways.",
   "blocked_reason": null,
   "bulletins": [
@@ -1356,9 +1356,24 @@
     },
     {
       "id": "s36",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-bergenfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Tagalog"
+      },
       "page": null,
       "sources": [
         {
@@ -1425,7 +1440,11 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 2,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:19:24Z"
+      }
     }
   ],
   "church_list_issues": [

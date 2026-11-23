@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-francis-of-assisi-ridgefield-park",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:53:54Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-21T03:32:37Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@08c1db3c359c",
+  "approved_at": "2026-11-23T12:18:55Z",
   "summary": "One church. Weekend (Sat 5 PM; Sun 8, 10, 12 noon Spanish), weekday (Mon-Fri 7:30, Sat 8 AM) and Saturday 8:30 AM / 4 PM confession agree in the schedule box and intentions of both bulletins read (Nov 8 and Nov 15). Thanksgiving: 9 AM bilingual Mass Nov 26, and Friday Nov 27 Mass moved from 7:30 to 9 AM. Open: whether Thanksgiving's 7:30 AM Mass is cancelled. A one-off Adoration on Nov 8 (2:30-3:30 PM) is before as_of and left out (R16).",
   "blocked_reason": null,
   "bulletins": [
@@ -604,9 +604,22 @@
     },
     {
       "id": "s17",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-ridgefield-park",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day; 9:00 AM bilingual Mass instead"
+      },
       "page": 4,
       "sources": [
         {
@@ -642,7 +655,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@08c1db3c359c",
+        "at": "2026-11-23T12:18:55Z"
+      }
     }
   ]
 }
