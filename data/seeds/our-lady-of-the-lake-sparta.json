@@ -1,0 +1,997 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-the-lake-sparta",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:51:35Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T13:30:45Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend (Sat 5:30 PM; Sun 8, 10, noon), Mon-Sat 8:30 AM Masses, Saturday 4-5 PM Confession and Thursday 9 AM-7 PM Adoration agree in both bulletins and on the website. Open: a dated Wed Nov 18 7 PM Mass seen only in the intentions, and daily 8 AM-8 PM Adoration in the St. Carlo Acutis chapel (parish office), printed only in the Nov 8 bulletin and on the website.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "40961e3dc905a6595514584cc0f397e82d9174de745cf8e02f0e3549a93f10e2",
+      "fetched_at": "2026-11-15T16:51:35Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "e617f58da602e2a27ff29fe11dbcfb3a82eb8100a89f7cc4ef12938a9baacc99",
+      "fetched_at": "2026-11-08T22:04:27Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-sparta",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40961e3d",
+          "page": 1,
+          "said": "CELEBRATION OF THE EUCHARIST Saturday ........ 5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e617f58d",
+          "page": 1,
+          "said": "CELEBRATION OF THE EUCHARIST Saturday ........ 5:30 pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read, and in both weeks' intentions; the website's Mass Times agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-sparta",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40961e3d",
+          "page": 1,
+          "said": "Sunday ............ 8:00, 10:00 am & 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e617f58d",
+          "page": 1,
+          "said": "Sunday ............ 8:00, 10:00 am & 12:00 noon"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read, and in both weeks' intentions; the website's Mass Times agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-sparta",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40961e3d",
+          "page": 1,
+          "said": "Sunday ............ 8:00, 10:00 am & 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e617f58d",
+          "page": 1,
+          "said": "Sunday ............ 8:00, 10:00 am & 12:00 noon"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read, and in both weeks' intentions; the website's Mass Times agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-sparta",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40961e3d",
+          "page": 1,
+          "said": "Sunday ............ 8:00, 10:00 am & 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e617f58d",
+          "page": 1,
+          "said": "Sunday ............ 8:00, 10:00 am & 12:00 noon"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read, and in both weeks' intentions; the website's Mass Times agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-sparta",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40961e3d",
+          "page": 1,
+          "said": "Weekday Masses ........ 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e617f58d",
+          "page": 1,
+          "said": "Weekday Masses ........ 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40961e3d",
+          "page": 2,
+          "said": "intentions Mon-Sat 8:30"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e617f58d",
+          "page": 2,
+          "said": "intentions Mon-Sat 8:30"
+        }
+      ],
+      "rationale": "R1: weekday Masses 8:30 am in both schedule boxes; both weeks' intentions list 8:30 Monday through Saturday, the Saturday Novena is 'after 8:30 am Mass', and the website says 'Monday - Saturday: 8:30 AM'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-sparta",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40961e3d",
+          "page": 1,
+          "said": "Weekday Masses ........ 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e617f58d",
+          "page": 1,
+          "said": "Weekday Masses ........ 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40961e3d",
+          "page": 2,
+          "said": "intentions Mon-Sat 8:30"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e617f58d",
+          "page": 2,
+          "said": "intentions Mon-Sat 8:30"
+        }
+      ],
+      "rationale": "R1: weekday Masses 8:30 am in both schedule boxes; both weeks' intentions list 8:30 Monday through Saturday, the Saturday Novena is 'after 8:30 am Mass', and the website says 'Monday - Saturday: 8:30 AM'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-sparta",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40961e3d",
+          "page": 1,
+          "said": "Weekday Masses ........ 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e617f58d",
+          "page": 1,
+          "said": "Weekday Masses ........ 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40961e3d",
+          "page": 2,
+          "said": "intentions Mon-Sat 8:30"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e617f58d",
+          "page": 2,
+          "said": "intentions Mon-Sat 8:30"
+        }
+      ],
+      "rationale": "R1: weekday Masses 8:30 am in both schedule boxes; both weeks' intentions list 8:30 Monday through Saturday, the Saturday Novena is 'after 8:30 am Mass', and the website says 'Monday - Saturday: 8:30 AM'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-sparta",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40961e3d",
+          "page": 1,
+          "said": "Weekday Masses ........ 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e617f58d",
+          "page": 1,
+          "said": "Weekday Masses ........ 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40961e3d",
+          "page": 2,
+          "said": "intentions Mon-Sat 8:30"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e617f58d",
+          "page": 2,
+          "said": "intentions Mon-Sat 8:30"
+        }
+      ],
+      "rationale": "R1: weekday Masses 8:30 am in both schedule boxes; both weeks' intentions list 8:30 Monday through Saturday, the Saturday Novena is 'after 8:30 am Mass', and the website says 'Monday - Saturday: 8:30 AM'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-sparta",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40961e3d",
+          "page": 1,
+          "said": "Weekday Masses ........ 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e617f58d",
+          "page": 1,
+          "said": "Weekday Masses ........ 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40961e3d",
+          "page": 2,
+          "said": "intentions Mon-Sat 8:30"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e617f58d",
+          "page": 2,
+          "said": "intentions Mon-Sat 8:30"
+        }
+      ],
+      "rationale": "R1: weekday Masses 8:30 am in both schedule boxes; both weeks' intentions list 8:30 Monday through Saturday, the Saturday Novena is 'after 8:30 am Mass', and the website says 'Monday - Saturday: 8:30 AM'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-sparta",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40961e3d",
+          "page": 1,
+          "said": "Weekday Masses ........ 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e617f58d",
+          "page": 1,
+          "said": "Weekday Masses ........ 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40961e3d",
+          "page": 2,
+          "said": "intentions Mon-Sat 8:30"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e617f58d",
+          "page": 2,
+          "said": "intentions Mon-Sat 8:30"
+        }
+      ],
+      "rationale": "R1: weekday Masses 8:30 am in both schedule boxes; both weeks' intentions list 8:30 Monday through Saturday, the Saturday Novena is 'after 8:30 am Mass', and the website says 'Monday - Saturday: 8:30 AM'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-sparta",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40961e3d",
+          "page": 1,
+          "said": "Confessions Saturday ........ 4:00 - 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e617f58d",
+          "page": 1,
+          "said": "Confessions Saturday ........ 4:00 - 5:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-sparta",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the church; Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40961e3d",
+          "page": 1,
+          "said": "Eucharist Adoration Thursday ........ 9:00 am to 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e617f58d",
+          "page": 1,
+          "said": "Eucharist Adoration Thursday ........ 9:00 am to 7:00 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofthelake.org/",
+          "said": "Each Thursday in the church after 8:30 AM Mass ... 7 PM - Rosary concluding with Benediction of the Blessed Sacrament"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the bulletin's clock times win over the website's devotions page (9:00-6:30 PM), and the homepage confirms it runs to 7 PM and ends with Benediction. Thanksgiving (Thu Nov 26) 8:30 AM Mass is the weekly slot (POLICY, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40961e3d",
+          "page": 1,
+          "said": "Confessions ... or by appointment"
+        }
+      ],
+      "rationale": "R26: by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40961e3d",
+          "page": 1,
+          "said": "Novena Miraculous Medal Devotions Saturday ... after 8:30 am Mass"
+        }
+      ],
+      "rationale": "R24: a novena devotion is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40961e3d",
+          "page": 1,
+          "said": "Holy Day Masses .... as announced"
+        }
+      ],
+      "rationale": "R26: no time printed; update mode will read the announcements.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "40961e3d",
+          "page": 2,
+          "said": "Wed. 11/18 ... 7:00 Spec. Int. Ryan Peach / Deceased members of KOC Marquette 588"
+        }
+      ],
+      "rationale": "R30: a dated evening Mass after as_of printed only in the intentions, outside the weekly schedule; it carries several intentions (not a memorial for one person), so POLICY counts it as open, but it may be a Knights' memorial Mass. Leaning include as a dated Mass (POLICY, Weekly or dated rule 3).",
+      "question": "Is the Wednesday, November 18, 7:00 PM Mass (intentions only, incl. 'Deceased members of KOC Marquette 588') a public Mass to list?",
+      "options": [
+        {
+          "label": "Include the dated Mass",
+          "entry": {
+            "church_slug": "our-lady-of-the-lake-sparta",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-18",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e617f58d",
+          "page": 5,
+          "said": "Adoration Details Location: St. Carlo Acutis Adoration Chapel (2nd floor of the parish offices) Days: Monday through Sunday Hours: 8:00 AM-8:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofthelake.org/",
+          "said": "Adoration Times Each day in the St. Carlo Acutis Adoration Chapel on the 2nd floor of the parish office. ... Adoration Hours: Daily, 8 AM-8 PM"
+        }
+      ],
+      "rationale": "R29/R38: the newest bulletin doesn't print it; the Nov 8 bulletin (7 Intercessors Apostolate) and the website's homepage give daily 8 AM-8 PM in an on-site chapel (the parish office shares the parish's 294 Sparta Ave address), calling it Adoration but not saying the Sacrament is exposed. An older website event text says the chapel is 'open daily 7am-7pm'. Leaning include per R38 with the newer 8-8 hours; Thursday's church exposition (9-7) is a separate place.",
+      "question": "Add daily Adoration in the St. Carlo Acutis Adoration Chapel (2nd floor of the parish office), 8 AM-8 PM?",
+      "options": [
+        {
+          "label": "Daily 8 AM-8 PM in the chapel",
+          "entry": {
+            "church_slug": "our-lady-of-the-lake-sparta",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Carlo Acutis Adoration Chapel, 2nd floor of the parish office"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e617f58d",
+          "page": 5,
+          "said": "Adoration Details Location: St. Carlo Acutis Adoration Chapel (2nd floor of the parish offices) Days: Monday through Sunday Hours: 8:00 AM-8:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofthelake.org/",
+          "said": "Adoration Times Each day in the St. Carlo Acutis Adoration Chapel on the 2nd floor of the parish office. ... Adoration Hours: Daily, 8 AM-8 PM"
+        }
+      ],
+      "rationale": "R29/R38: the newest bulletin doesn't print it; the Nov 8 bulletin (7 Intercessors Apostolate) and the website's homepage give daily 8 AM-8 PM in an on-site chapel (the parish office shares the parish's 294 Sparta Ave address), calling it Adoration but not saying the Sacrament is exposed. An older website event text says the chapel is 'open daily 7am-7pm'. Leaning include per R38 with the newer 8-8 hours; Thursday's church exposition (9-7) is a separate place.",
+      "question": "Add daily Adoration in the St. Carlo Acutis Adoration Chapel (2nd floor of the parish office), 8 AM-8 PM?",
+      "options": [
+        {
+          "label": "Daily 8 AM-8 PM in the chapel",
+          "entry": {
+            "church_slug": "our-lady-of-the-lake-sparta",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Carlo Acutis Adoration Chapel, 2nd floor of the parish office"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e617f58d",
+          "page": 5,
+          "said": "Adoration Details Location: St. Carlo Acutis Adoration Chapel (2nd floor of the parish offices) Days: Monday through Sunday Hours: 8:00 AM-8:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofthelake.org/",
+          "said": "Adoration Times Each day in the St. Carlo Acutis Adoration Chapel on the 2nd floor of the parish office. ... Adoration Hours: Daily, 8 AM-8 PM"
+        }
+      ],
+      "rationale": "R29/R38: the newest bulletin doesn't print it; the Nov 8 bulletin (7 Intercessors Apostolate) and the website's homepage give daily 8 AM-8 PM in an on-site chapel (the parish office shares the parish's 294 Sparta Ave address), calling it Adoration but not saying the Sacrament is exposed. An older website event text says the chapel is 'open daily 7am-7pm'. Leaning include per R38 with the newer 8-8 hours; Thursday's church exposition (9-7) is a separate place.",
+      "question": "Add daily Adoration in the St. Carlo Acutis Adoration Chapel (2nd floor of the parish office), 8 AM-8 PM?",
+      "options": [
+        {
+          "label": "Daily 8 AM-8 PM in the chapel",
+          "entry": {
+            "church_slug": "our-lady-of-the-lake-sparta",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Carlo Acutis Adoration Chapel, 2nd floor of the parish office"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e617f58d",
+          "page": 5,
+          "said": "Adoration Details Location: St. Carlo Acutis Adoration Chapel (2nd floor of the parish offices) Days: Monday through Sunday Hours: 8:00 AM-8:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofthelake.org/",
+          "said": "Adoration Times Each day in the St. Carlo Acutis Adoration Chapel on the 2nd floor of the parish office. ... Adoration Hours: Daily, 8 AM-8 PM"
+        }
+      ],
+      "rationale": "R29/R38: the newest bulletin doesn't print it; the Nov 8 bulletin (7 Intercessors Apostolate) and the website's homepage give daily 8 AM-8 PM in an on-site chapel (the parish office shares the parish's 294 Sparta Ave address), calling it Adoration but not saying the Sacrament is exposed. An older website event text says the chapel is 'open daily 7am-7pm'. Leaning include per R38 with the newer 8-8 hours; Thursday's church exposition (9-7) is a separate place.",
+      "question": "Add daily Adoration in the St. Carlo Acutis Adoration Chapel (2nd floor of the parish office), 8 AM-8 PM?",
+      "options": [
+        {
+          "label": "Daily 8 AM-8 PM in the chapel",
+          "entry": {
+            "church_slug": "our-lady-of-the-lake-sparta",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Carlo Acutis Adoration Chapel, 2nd floor of the parish office"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e617f58d",
+          "page": 5,
+          "said": "Adoration Details Location: St. Carlo Acutis Adoration Chapel (2nd floor of the parish offices) Days: Monday through Sunday Hours: 8:00 AM-8:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofthelake.org/",
+          "said": "Adoration Times Each day in the St. Carlo Acutis Adoration Chapel on the 2nd floor of the parish office. ... Adoration Hours: Daily, 8 AM-8 PM"
+        }
+      ],
+      "rationale": "R29/R38: the newest bulletin doesn't print it; the Nov 8 bulletin (7 Intercessors Apostolate) and the website's homepage give daily 8 AM-8 PM in an on-site chapel (the parish office shares the parish's 294 Sparta Ave address), calling it Adoration but not saying the Sacrament is exposed. An older website event text says the chapel is 'open daily 7am-7pm'. Leaning include per R38 with the newer 8-8 hours; Thursday's church exposition (9-7) is a separate place.",
+      "question": "Add daily Adoration in the St. Carlo Acutis Adoration Chapel (2nd floor of the parish office), 8 AM-8 PM?",
+      "options": [
+        {
+          "label": "Daily 8 AM-8 PM in the chapel",
+          "entry": {
+            "church_slug": "our-lady-of-the-lake-sparta",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Carlo Acutis Adoration Chapel, 2nd floor of the parish office"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s22",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e617f58d",
+          "page": 5,
+          "said": "Adoration Details Location: St. Carlo Acutis Adoration Chapel (2nd floor of the parish offices) Days: Monday through Sunday Hours: 8:00 AM-8:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofthelake.org/",
+          "said": "Adoration Times Each day in the St. Carlo Acutis Adoration Chapel on the 2nd floor of the parish office. ... Adoration Hours: Daily, 8 AM-8 PM"
+        }
+      ],
+      "rationale": "R29/R38: the newest bulletin doesn't print it; the Nov 8 bulletin (7 Intercessors Apostolate) and the website's homepage give daily 8 AM-8 PM in an on-site chapel (the parish office shares the parish's 294 Sparta Ave address), calling it Adoration but not saying the Sacrament is exposed. An older website event text says the chapel is 'open daily 7am-7pm'. Leaning include per R38 with the newer 8-8 hours; Thursday's church exposition (9-7) is a separate place.",
+      "question": "Add daily Adoration in the St. Carlo Acutis Adoration Chapel (2nd floor of the parish office), 8 AM-8 PM?",
+      "options": [
+        {
+          "label": "Daily 8 AM-8 PM in the chapel",
+          "entry": {
+            "church_slug": "our-lady-of-the-lake-sparta",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Carlo Acutis Adoration Chapel, 2nd floor of the parish office"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    },
+    {
+      "id": "s23",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e617f58d",
+          "page": 5,
+          "said": "Adoration Details Location: St. Carlo Acutis Adoration Chapel (2nd floor of the parish offices) Days: Monday through Sunday Hours: 8:00 AM-8:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://ourladyofthelake.org/",
+          "said": "Adoration Times Each day in the St. Carlo Acutis Adoration Chapel on the 2nd floor of the parish office. ... Adoration Hours: Daily, 8 AM-8 PM"
+        }
+      ],
+      "rationale": "R29/R38: the newest bulletin doesn't print it; the Nov 8 bulletin (7 Intercessors Apostolate) and the website's homepage give daily 8 AM-8 PM in an on-site chapel (the parish office shares the parish's 294 Sparta Ave address), calling it Adoration but not saying the Sacrament is exposed. An older website event text says the chapel is 'open daily 7am-7pm'. Leaning include per R38 with the newer 8-8 hours; Thursday's church exposition (9-7) is a separate place.",
+      "question": "Add daily Adoration in the St. Carlo Acutis Adoration Chapel (2nd floor of the parish office), 8 AM-8 PM?",
+      "options": [
+        {
+          "label": "Daily 8 AM-8 PM in the chapel",
+          "entry": {
+            "church_slug": "our-lady-of-the-lake-sparta",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Carlo Acutis Adoration Chapel, 2nd floor of the parish office"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "chapel"
+    }
+  ]
+}
