@@ -1,0 +1,1232 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-lawrence-the-martyr-chester",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:17:48Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T17:43:19Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (Mass box identical in the Nov 8 and Nov 15 bulletins; no history stored). Weekend, weekday, Spanish Monday and 3rd-Tuesday Healing Masses and Monday confession are settled from the bulletins; Thursday 5 PM - Friday 5 PM Adoration and the Thanksgiving 8 AM cancellation come from the parish homepage (R6), corroborated by the bulletin's adorer appeal. Open: Saturday confession end (bulletin 4:45 vs website 4:30) and whether Adoration is cancelled in Thanksgiving week.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "0c9514fb50b113d50cfbab04a1a85749385f9d22b9413d3c57f1d925a7a6c856",
+      "fetched_at": "2026-11-15T16:17:48Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "be0b8a830b716693e7c5c09d4baea25ff13a1f1bf2c6f25ef52f4f15e683d21f",
+      "fetched_at": "2026-11-08T15:43:03Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-the-martyr-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0c9514fb",
+          "page": 1,
+          "said": "MASSES: Saturday: 5 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "be0b8a83",
+          "page": 1,
+          "said": "MASSES: Saturday: 5 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box of both bulletins read; intentions list Saturday 5:00 pm; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-the-martyr-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0c9514fb",
+          "page": 1,
+          "said": "Sunday: 7:30 am, 9 am, 11 am, 12:30 pm (Spanish), 6 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "be0b8a83",
+          "page": 1,
+          "said": "Sunday: 7:30 am, 9 am, 11 am, 12:30 pm (Spanish), 6 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box of both bulletins read and in the Sunday intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-the-martyr-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0c9514fb",
+          "page": 1,
+          "said": "Sunday: 7:30 am, 9 am, 11 am, 12:30 pm (Spanish), 6 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "be0b8a83",
+          "page": 1,
+          "said": "Sunday: 7:30 am, 9 am, 11 am, 12:30 pm (Spanish), 6 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box of both bulletins read and in the Sunday intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-the-martyr-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0c9514fb",
+          "page": 1,
+          "said": "Sunday: 7:30 am, 9 am, 11 am, 12:30 pm (Spanish), 6 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "be0b8a83",
+          "page": 1,
+          "said": "Sunday: 7:30 am, 9 am, 11 am, 12:30 pm (Spanish), 6 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box of both bulletins read and in the Sunday intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-the-martyr-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0c9514fb",
+          "page": 1,
+          "said": "Sunday: 7:30 am, 9 am, 11 am, 12:30 pm (Spanish), 6 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "be0b8a83",
+          "page": 1,
+          "said": "Sunday: 7:30 am, 9 am, 11 am, 12:30 pm (Spanish), 6 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box of both bulletins read and in the Sunday intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-the-martyr-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0c9514fb",
+          "page": 1,
+          "said": "Sunday: 7:30 am, 9 am, 11 am, 12:30 pm (Spanish), 6 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "be0b8a83",
+          "page": 1,
+          "said": "Sunday: 7:30 am, 9 am, 11 am, 12:30 pm (Spanish), 6 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-the-martyr-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0c9514fb",
+          "page": 1,
+          "said": "Daily Mass: M-F: 8 am & 9 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "be0b8a83",
+          "page": 1,
+          "said": "Daily Mass: M-F: 8 am & 9 am."
+        }
+      ],
+      "rationale": "R1: printed in the Masses box of both bulletins and in each weekday's intentions; the website places daily Mass in the chapel in the Parish Center, at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-the-martyr-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0c9514fb",
+          "page": 1,
+          "said": "Daily Mass: M-F: 8 am & 9 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "be0b8a83",
+          "page": 1,
+          "said": "Daily Mass: M-F: 8 am & 9 am."
+        }
+      ],
+      "rationale": "R1: printed in the Masses box of both bulletins and in each weekday's intentions; the website places daily Mass in the chapel in the Parish Center, at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-the-martyr-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0c9514fb",
+          "page": 1,
+          "said": "Daily Mass: M-F: 8 am & 9 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "be0b8a83",
+          "page": 1,
+          "said": "Daily Mass: M-F: 8 am & 9 am."
+        }
+      ],
+      "rationale": "R1: printed in the Masses box of both bulletins and in each weekday's intentions; the website places daily Mass in the chapel in the Parish Center, at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-the-martyr-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0c9514fb",
+          "page": 1,
+          "said": "Daily Mass: M-F: 8 am & 9 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "be0b8a83",
+          "page": 1,
+          "said": "Daily Mass: M-F: 8 am & 9 am."
+        }
+      ],
+      "rationale": "R1: printed in the Masses box of both bulletins and in each weekday's intentions; the website places daily Mass in the chapel in the Parish Center, at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-the-martyr-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0c9514fb",
+          "page": 1,
+          "said": "Daily Mass: M-F: 8 am & 9 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "be0b8a83",
+          "page": 1,
+          "said": "Daily Mass: M-F: 8 am & 9 am."
+        }
+      ],
+      "rationale": "R1: printed in the Masses box of both bulletins and in each weekday's intentions; the website places daily Mass in the chapel in the Parish Center, at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-the-martyr-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0c9514fb",
+          "page": 1,
+          "said": "Daily Mass: M-F: 8 am & 9 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "be0b8a83",
+          "page": 1,
+          "said": "Daily Mass: M-F: 8 am & 9 am."
+        }
+      ],
+      "rationale": "R1: printed in the Masses box of both bulletins and in each weekday's intentions; the website places daily Mass in the chapel in the Parish Center, at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-the-martyr-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0c9514fb",
+          "page": 1,
+          "said": "Daily Mass: M-F: 8 am & 9 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "be0b8a83",
+          "page": 1,
+          "said": "Daily Mass: M-F: 8 am & 9 am."
+        }
+      ],
+      "rationale": "R1: printed in the Masses box of both bulletins and in each weekday's intentions; the website places daily Mass in the chapel in the Parish Center, at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-the-martyr-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0c9514fb",
+          "page": 1,
+          "said": "Daily Mass: M-F: 8 am & 9 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "be0b8a83",
+          "page": 1,
+          "said": "Daily Mass: M-F: 8 am & 9 am."
+        }
+      ],
+      "rationale": "R1: printed in the Masses box of both bulletins and in each weekday's intentions; the website places daily Mass in the chapel in the Parish Center, at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-the-martyr-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0c9514fb",
+          "page": 1,
+          "said": "Daily Mass: M-F: 8 am & 9 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "be0b8a83",
+          "page": 1,
+          "said": "Daily Mass: M-F: 8 am & 9 am."
+        }
+      ],
+      "rationale": "R1: printed in the Masses box of both bulletins and in each weekday's intentions; the website places daily Mass in the chapel in the Parish Center, at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-the-martyr-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0c9514fb",
+          "page": 1,
+          "said": "Daily Mass: M-F: 8 am & 9 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "be0b8a83",
+          "page": 1,
+          "said": "Daily Mass: M-F: 8 am & 9 am."
+        }
+      ],
+      "rationale": "R1: printed in the Masses box of both bulletins and in each weekday's intentions; the website places daily Mass in the chapel in the Parish Center, at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-the-martyr-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0c9514fb",
+          "page": 1,
+          "said": "Daily Mass: ... Sat.: 9 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "be0b8a83",
+          "page": 1,
+          "said": "Daily Mass: ... Sat.: 9 am"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box of both bulletins and in the Saturday intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-the-martyr-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0c9514fb",
+          "page": 1,
+          "said": "Mon.: 7 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "be0b8a83",
+          "page": 1,
+          "said": "Mon.: 7 pm (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box of both bulletins; the website agrees. R39: the Monday intentions list only the morning Masses, which proves nothing against the schedule box. The Spanish Healing Mass on the 4th Monday is this same 7 pm Mass (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-the-martyr-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Healing Mass; Rosary at 6:30 PM"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0c9514fb",
+          "page": 1,
+          "said": "Healing Mass: 7 pm every 3rd Tues. of month. Rosary at 6:30 pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0c9514fb",
+          "page": 2,
+          "said": "NEXT HEALING MASS Tuesday November 17 at 7PM Begins with Rosary at 6:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "be0b8a83",
+          "page": 1,
+          "said": "Healing Mass: 7 pm every 3rd Tues. of month."
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 2: named by week of the month in both bulletins' Masses box; the newest bulletin's week holds the third Tuesday (Nov 17), and its intentions list Tuesday 7:00 pm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-the-martyr-chester",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "fourth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Healing Mass (Spanish)"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0c9514fb",
+          "page": 1,
+          "said": "Healing Mass (Spanish): 7 pm every 4th Mon. of month."
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7: the monthly Spanish Healing Mass is the regular Monday 7 pm Spanish Mass on its 4th week, already a weekly slot; not recorded separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-the-martyr-chester",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0c9514fb",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION: Saturday (4:00-4:45 pm), Monday (6:30 pm) and on request."
+        },
+        {
+          "source": "agent",
+          "bulletin": "be0b8a83",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION: Saturday (4:00-4:45 pm), Monday (6:30 pm) and on request."
+        }
+      ],
+      "rationale": "R1: printed in both bulletins; no end time given; the website agrees (Monday - 6:30 pm).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0c9514fb",
+          "page": 1,
+          "said": "Saturday (4:00-4:45 pm)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "be0b8a83",
+          "page": 1,
+          "said": "Saturday (4:00-4:45 pm)"
+        },
+        {
+          "source": "website",
+          "url": "https://stlchester.org/",
+          "said": "Confession Times: Monday - 6:30 pm Saturday - 4-4:30 pm"
+        }
+      ],
+      "rationale": "C8/R28: both bulletins print 4:00-4:45; the current homepage prints 4-4:30. Leaning to the bulletins, printed in both issues read and the parish's weekly publication; the start time is certain either way.",
+      "question": "Saturday confession: 4:00-4:45 PM (bulletins) or 4:00-4:30 PM (website)?",
+      "options": [
+        {
+          "label": "4:00-4:45 PM",
+          "entry": {
+            "church_slug": "st-lawrence-the-martyr-chester",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:00",
+            "end_time": "16:45",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "4:00-4:30 PM",
+          "entry": {
+            "church_slug": "st-lawrence-the-martyr-chester",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:00",
+            "end_time": "16:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0c9514fb",
+          "page": 1,
+          "said": "Holy Day Vigil: 7 pm (Spanish) Holy Day: 8 am, 9 am, 5:30 pm, 7 pm (Call office for latest changes.)"
+        }
+      ],
+      "rationale": "POLICY, Dates; R26: the generic holy day schedule pins no date and the bulletins name no holy day; update mode will read dated holy day notices.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0c9514fb",
+          "page": 1,
+          "said": "and on request"
+        }
+      ],
+      "rationale": "R26: confession on request has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-the-martyr-chester",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the church; continues overnight to Friday"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stlchester.org/",
+          "said": "Adoration: Thursday from 5 pm – Friday 10 am (in church)",
+          "schedule_check": {
+            "checked_at": "2026-11-23T17:47:06Z",
+            "current_because": "Checked 2026-11-23: the homepage schedule sits beside 2026 notices (Thanksgiving Day Mass Thursday, November 26; Spanish Healing Mass November 23; Healing Mass Dec. 15) and its Mass times match both bulletins exactly.",
+            "bulletin": "0c9514fb",
+            "fits_because": "The newest bulletin's schedule box omits Adoration, but the Nov 8 bulletin (be0b8a830b71 p3) recruits committed adorers for Friday 2 AM, 9 AM and 11 AM and captains for Friday 9 AM-1 PM and 1-5 PM, which fits Thursday 5 PM to Friday 5 PM Adoration."
+          }
+        },
+        {
+          "source": "agent",
+          "bulletin": "be0b8a83",
+          "page": 3,
+          "said": "Especially needed on Friday at: 2 AM — men encouraged; 9 AM; 11 AM"
+        }
+      ],
+      "rationale": "R6, R38: the parish homepage gives Adoration Thursday 5 pm to Friday 10 am in church; split at midnight into Thursday and Friday slots. Bulletin evidence of overnight Friday adorers corroborates it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-the-martyr-chester",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the church"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stlchester.org/",
+          "said": "Adoration: Thursday from 5 pm – Friday 10 am (in church)",
+          "schedule_check": {
+            "checked_at": "2026-11-23T17:47:10Z",
+            "current_because": "Checked 2026-11-23: the homepage schedule sits beside 2026 notices (Thanksgiving Day Mass Thursday, November 26; Spanish Healing Mass November 23; Healing Mass Dec. 15) and its Mass times match both bulletins exactly.",
+            "bulletin": "0c9514fb",
+            "fits_because": "The newest bulletin's schedule box omits Adoration, but the Nov 8 bulletin (be0b8a830b71 p3) recruits committed adorers for Friday 2 AM, 9 AM and 11 AM and captains for Friday 9 AM-1 PM and 1-5 PM, which fits Thursday 5 PM to Friday 5 PM Adoration."
+          }
+        },
+        {
+          "source": "agent",
+          "bulletin": "be0b8a83",
+          "page": 3,
+          "said": "Especially needed on Friday at: 2 AM — men encouraged; 9 AM"
+        }
+      ],
+      "rationale": "R6, R38: the overnight part of the homepage's Thursday 5 pm - Friday 10 am Adoration in church; the Nov 8 bulletin seeks Friday 2 AM and 9 AM adorers.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-the-martyr-chester",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel in the Parish Center"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stlchester.org/",
+          "said": "Friday 10 am – 5 pm (in chapel)",
+          "schedule_check": {
+            "checked_at": "2026-11-23T17:47:15Z",
+            "current_because": "Checked 2026-11-23: the homepage schedule sits beside 2026 notices (Thanksgiving Day Mass Thursday, November 26; Spanish Healing Mass November 23; Healing Mass Dec. 15) and its Mass times match both bulletins exactly.",
+            "bulletin": "0c9514fb",
+            "fits_because": "The newest bulletin's schedule box omits Adoration, but the Nov 8 bulletin (be0b8a830b71 p3) recruits committed adorers for Friday 2 AM, 9 AM and 11 AM and captains for Friday 9 AM-1 PM and 1-5 PM, which fits Thursday 5 PM to Friday 5 PM Adoration."
+          }
+        },
+        {
+          "source": "agent",
+          "bulletin": "be0b8a83",
+          "page": 3,
+          "said": "We have two captains for Friday 9 AM–1 PM and 1–5 PM"
+        }
+      ],
+      "rationale": "R6, R38: the homepage gives Friday 10 am - 5 pm Adoration in the chapel, which it places in the Parish Center at the church (daily Mass is there too); the Nov 8 bulletin's Friday 9 AM-5 PM captain blocks fit.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-the-martyr-chester",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stlchester.org/",
+          "said": "Thanksgiving Day Mass Thursday, November 26 9 AM in the Church Morning Prayer at 8:30 AM. No 8 AM Mass that day.",
+          "schedule_check": {
+            "checked_at": "2026-11-23T17:47:31Z",
+            "current_because": "Checked 2026-11-23: a dated notice for Thursday, November 26 (Thanksgiving 2026) on the parish's own homepage, beside a Mass schedule matching both bulletins.",
+            "bulletin": "0c9514fb",
+            "fits_because": "The newest bulletin (Nov 15) covers the week before Thanksgiving and prints the weekday 8 am & 9 am Masses; the homepage notice changes only that day."
+          }
+        }
+      ],
+      "rationale": "R6, R16, R40: the parish homepage cancels the 8 am Mass on Thanksgiving Day, on or after as_of; the 9 am Mass that day is the weekly Thursday 9 am slot (in the church), so no separate entry.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stlchester.org/",
+          "said": "There will be no adoration during the week of Thanksgiving."
+        },
+        {
+          "source": "website",
+          "url": "https://stlchester.org/",
+          "said": "The Chaplet of the Seven Sorrows of Mary Thursday, November 26, 7:00 PM We will Pray during Adoration"
+        }
+      ],
+      "rationale": "R28: the homepage's schedule says no Adoration in Thanksgiving week, but its event list has a chaplet 'during Adoration' Thursday, November 26 at 7 pm. Leaning to cancel: the notice is written into the schedule itself, while the chaplet listing looks like a recurring event template.",
+      "question": "Cancel Adoration in Thanksgiving week (Thu Nov 26 - Fri Nov 27)?",
+      "options": [
+        {
+          "label": "Cancel those dates",
+          "entry": {
+            "church_slug": "st-lawrence-the-martyr-chester",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-26",
+            "start_time": "17:00",
+            "end_time": "23:59",
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Thanksgiving week"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Keep Adoration",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "thanksgiving-adoration"
+    },
+    {
+      "id": "s30",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stlchester.org/",
+          "said": "There will be no adoration during the week of Thanksgiving."
+        }
+      ],
+      "rationale": "R28: same question as the Thursday slot; see its rationale.",
+      "question": "Cancel Adoration in Thanksgiving week (Thu Nov 26 - Fri Nov 27)?",
+      "options": [
+        {
+          "label": "Cancel those dates",
+          "entry": {
+            "church_slug": "st-lawrence-the-martyr-chester",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-27",
+            "start_time": "00:00",
+            "end_time": "10:00",
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Thanksgiving week"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Keep Adoration",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "thanksgiving-adoration"
+    },
+    {
+      "id": "s31",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stlchester.org/",
+          "said": "There will be no adoration during the week of Thanksgiving."
+        }
+      ],
+      "rationale": "R28: same question as the Thursday slot; see its rationale.",
+      "question": "Cancel Adoration in Thanksgiving week (Thu Nov 26 - Fri Nov 27)?",
+      "options": [
+        {
+          "label": "Cancel those dates",
+          "entry": {
+            "church_slug": "st-lawrence-the-martyr-chester",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-27",
+            "start_time": "10:00",
+            "end_time": "17:00",
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Thanksgiving week"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Keep Adoration",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "thanksgiving-adoration"
+    }
+  ]
+}
