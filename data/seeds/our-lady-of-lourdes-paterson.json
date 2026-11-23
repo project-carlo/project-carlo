@@ -1,0 +1,647 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-lourdes-paterson",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:10:53Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T13:13:46Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, Spanish and English. Weekend, weekday (Mon-Fri 7 PM, days from the website), Confession and Adoration times match in both bulletins read (Nov 8, Nov 15) and the website, plus a Thanksgiving 10:30 AM Mass. Open: Thursday Adoration ends 6:45 PM in the bulletins but 6:30 PM on the website.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "9f1afcede6b9ec14ca2b94bd25206f5c0fee01c1bce2392363e6913bcd360bba",
+      "fetched_at": "2026-11-15T16:10:53Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "930313970c8ba5dae1f74564bd73f6f851be30220cfd024ffcdca3eecf5366b3",
+      "fetched_at": "2026-11-08T15:36:49Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9f1afced",
+          "page": 1,
+          "said": "Sábado: 7:00 pm – Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "93031397",
+          "page": 1,
+          "said": "Sábado: 7:00 pm – Español"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read; the website's Mass Times page agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9f1afced",
+          "page": 1,
+          "said": "Domingos: 9:00 am – Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "93031397",
+          "page": 1,
+          "said": "Domingos: 9:00 am – Español"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9f1afced",
+          "page": 1,
+          "said": "Domingos: 11:00 am – English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "93031397",
+          "page": 1,
+          "said": "Domingos: 11:00 am – English"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9f1afced",
+          "page": 1,
+          "said": "Domingos: 12:30 pm – Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "93031397",
+          "page": 1,
+          "said": "Domingos: 12:30 pm – Español"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9f1afced",
+          "page": 1,
+          "said": "Misas Diarias / Daily Mass 7:00 pm – Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "93031397",
+          "page": 1,
+          "said": "Misas Diarias / Daily Mass 7:00 pm – Español"
+        },
+        {
+          "source": "website",
+          "url": "https://ollourdespaterson.org/mass-times",
+          "said": "Monday : 7:00 PM Spanish ... Friday : 7:00 PM Spanish"
+        }
+      ],
+      "rationale": "R1: the schedule box of both bulletins gives daily Mass at 7:00 pm without naming days; the parish's Mass Times page lists 7:00 PM Monday through Friday (its Saturday 7:00 PM is the vigil), so daily means Mon-Fri (R6 for the days only).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9f1afced",
+          "page": 1,
+          "said": "Misas Diarias / Daily Mass 7:00 pm – Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "93031397",
+          "page": 1,
+          "said": "Misas Diarias / Daily Mass 7:00 pm – Español"
+        },
+        {
+          "source": "website",
+          "url": "https://ollourdespaterson.org/mass-times",
+          "said": "Monday : 7:00 PM Spanish ... Friday : 7:00 PM Spanish"
+        }
+      ],
+      "rationale": "R1: the schedule box of both bulletins gives daily Mass at 7:00 pm without naming days; the parish's Mass Times page lists 7:00 PM Monday through Friday (its Saturday 7:00 PM is the vigil), so daily means Mon-Fri (R6 for the days only).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9f1afced",
+          "page": 1,
+          "said": "Misas Diarias / Daily Mass 7:00 pm – Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "93031397",
+          "page": 1,
+          "said": "Misas Diarias / Daily Mass 7:00 pm – Español"
+        },
+        {
+          "source": "website",
+          "url": "https://ollourdespaterson.org/mass-times",
+          "said": "Monday : 7:00 PM Spanish ... Friday : 7:00 PM Spanish"
+        }
+      ],
+      "rationale": "R1: the schedule box of both bulletins gives daily Mass at 7:00 pm without naming days; the parish's Mass Times page lists 7:00 PM Monday through Friday (its Saturday 7:00 PM is the vigil), so daily means Mon-Fri (R6 for the days only).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9f1afced",
+          "page": 1,
+          "said": "Misas Diarias / Daily Mass 7:00 pm – Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "93031397",
+          "page": 1,
+          "said": "Misas Diarias / Daily Mass 7:00 pm – Español"
+        },
+        {
+          "source": "website",
+          "url": "https://ollourdespaterson.org/mass-times",
+          "said": "Monday : 7:00 PM Spanish ... Friday : 7:00 PM Spanish"
+        }
+      ],
+      "rationale": "R1: the schedule box of both bulletins gives daily Mass at 7:00 pm without naming days; the parish's Mass Times page lists 7:00 PM Monday through Friday (its Saturday 7:00 PM is the vigil), so daily means Mon-Fri (R6 for the days only).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-paterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9f1afced",
+          "page": 1,
+          "said": "Misas Diarias / Daily Mass 7:00 pm – Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "93031397",
+          "page": 1,
+          "said": "Misas Diarias / Daily Mass 7:00 pm – Español"
+        },
+        {
+          "source": "website",
+          "url": "https://ollourdespaterson.org/mass-times",
+          "said": "Monday : 7:00 PM Spanish ... Friday : 7:00 PM Spanish"
+        }
+      ],
+      "rationale": "R1: the schedule box of both bulletins gives daily Mass at 7:00 pm without naming days; the parish's Mass Times page lists 7:00 PM Monday through Friday (its Saturday 7:00 PM is the vigil), so daily means Mon-Fri (R6 for the days only).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-paterson",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9f1afced",
+          "page": 1,
+          "said": "CONFESIONES / CONFESSIONS Lunes & Sábado / Monday & Saturday: 6:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "93031397",
+          "page": 1,
+          "said": "CONFESIONES / CONFESSIONS Lunes & Sábado / Monday & Saturday: 6:00 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://ollourdespaterson.org/confessions",
+          "said": "Monday : 6:00 PM to 7:00 PM; Saturday : 6:00 PM to 7:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins with a start time only; POLICY, Times leaves end_time null. The website's 6-7 PM end is not used since the bulletin gives none and a 7 PM Mass follows.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-paterson",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9f1afced",
+          "page": 1,
+          "said": "CONFESIONES / CONFESSIONS Lunes & Sábado / Monday & Saturday: 6:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "93031397",
+          "page": 1,
+          "said": "CONFESIONES / CONFESSIONS Lunes & Sábado / Monday & Saturday: 6:00 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://ollourdespaterson.org/confessions",
+          "said": "Monday : 6:00 PM to 7:00 PM; Saturday : 6:00 PM to 7:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins with a start time only; POLICY, Times leaves end_time null. The website's 6-7 PM end is not used since the bulletin gives none and a 7 PM Mass follows.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9f1afced",
+          "page": 1,
+          "said": "EXPOSICIÓN DEL SANTÍSIMO / ADORATION Jueves / Thursday: 8:00 am – 6:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "93031397",
+          "page": 1,
+          "said": "EXPOSICIÓN DEL SANTÍSIMO / ADORATION Jueves / Thursday: 8:00 am – 6:45 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://ollourdespaterson.org/adoration",
+          "said": "Adoration Times Thursday : 8:00 AM to 6:30 PM"
+        }
+      ],
+      "rationale": "R6/R28: both bulletins print 8:00 am – 6:45 pm; the parish's Adoration page says 8:00 AM to 6:30 PM. Leaning to the bulletin, the newer and repeated source; the start and day agree.",
+      "question": "Thursday Adoration ends at 6:45 PM (bulletin) or 6:30 PM (website)?",
+      "options": [
+        {
+          "label": "Thu 8:00 AM-6:45 PM",
+          "entry": {
+            "church_slug": "our-lady-of-lourdes-paterson",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": "18:45",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Thu 8:00 AM-6:30 PM",
+          "entry": {
+            "church_slug": "our-lady-of-lourdes-paterson",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": "18:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-paterson",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9f1afced",
+          "page": 3,
+          "said": "Thanksgiving Day Mass on Thursday, November 26, at 10:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "93031397",
+          "page": 3,
+          "said": "Thanksgiving Day Mass on Thursday, November 26, at 10:30 a.m."
+        }
+      ],
+      "rationale": "R1, R16: a dated special Mass after as_of, printed in both bulletins; the usual Thursday 7 PM Mass is left alone (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9f1afced",
+          "page": 3,
+          "said": "A penitential service will be held Friday, November 27, at 7:30 p.m."
+        }
+      ],
+      "rationale": "R24: part of the Spanish-only Advent retreat; the bulletin calls it a penitential service, not Confession, and registration is limited.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9f1afced",
+          "page": 3,
+          "said": "Solemnity of the Immaculate Conception ... Tuesday, December 8 ... Holy Mass at 7:00 p.m."
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7: the holy day Mass is at the regular Tuesday 7:00 PM daily Mass time, so only the weekly slot is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9f1afced",
+          "page": 3,
+          "said": "Feast of Our Lady of Guadalupe on Saturday, December 12. Join us for Holy Mass at 7:00 p.m."
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7: the feast is celebrated at the regular Saturday 7:00 PM Mass, so only the weekly slot is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
