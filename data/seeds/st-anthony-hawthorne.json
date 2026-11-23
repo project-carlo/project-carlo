@@ -1,0 +1,641 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-anthony-hawthorne",
+  "status": "ready",
+  "as_of": "2026-11-15T16:14:43Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T14:04:09Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, St. Anthony, Hawthorne. The page 1 schedule box is identical in both bulletins read (Nov 8 and Nov 15, 2026): Sat 5:30 PM vigil, Sunday 7, 8:30, 10 and 12, Mon-Sat 7:30 AM, Sat confession 4:30-5:15, First Friday confession and Adoration 7-8 PM; plus a dated Thanksgiving Mass Nov 26 at 8:30 AM. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "de4937b653ad8dc48d085873582c7b09af43f71788bf07c26f8aebe69abd807a",
+      "fetched_at": "2026-11-15T16:14:43Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "b70d1f230f9657b61205b02c052dd3fda81037327065413ded759debfa2b4d20",
+      "fetched_at": "2026-11-08T15:40:11Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-hawthorne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "de4937b6",
+          "page": 1,
+          "said": "Weekend Mass SATURDAY: 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b70d1f23",
+          "page": 1,
+          "said": "Weekend Mass SATURDAY: 5:30 PM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read; the intentions list a 5:30pm Mass each Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-hawthorne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "de4937b6",
+          "page": 1,
+          "said": "SUNDAY: 7:00 AM | 8:30 AM 10:00 AM| 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b70d1f23",
+          "page": 1,
+          "said": "SUNDAY: 7:00 AM | 8:30 AM 10:00 AM| 12:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read; matched by the Sunday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-hawthorne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "de4937b6",
+          "page": 1,
+          "said": "SUNDAY: 7:00 AM | 8:30 AM 10:00 AM| 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b70d1f23",
+          "page": 1,
+          "said": "SUNDAY: 7:00 AM | 8:30 AM 10:00 AM| 12:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read; matched by the Sunday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-hawthorne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "de4937b6",
+          "page": 1,
+          "said": "SUNDAY: 7:00 AM | 8:30 AM 10:00 AM| 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b70d1f23",
+          "page": 1,
+          "said": "SUNDAY: 7:00 AM | 8:30 AM 10:00 AM| 12:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read; matched by the Sunday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-hawthorne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "de4937b6",
+          "page": 1,
+          "said": "SUNDAY: 7:00 AM | 8:30 AM 10:00 AM| 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b70d1f23",
+          "page": 1,
+          "said": "SUNDAY: 7:00 AM | 8:30 AM 10:00 AM| 12:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read; matched by the Sunday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-hawthorne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "de4937b6",
+          "page": 1,
+          "said": "Daily Mass MONDAY - SATURDAY: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b70d1f23",
+          "page": 1,
+          "said": "Daily Mass MONDAY - SATURDAY: 7:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read; the intentions list a 7:30am Mass each weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-hawthorne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "de4937b6",
+          "page": 1,
+          "said": "Daily Mass MONDAY - SATURDAY: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b70d1f23",
+          "page": 1,
+          "said": "Daily Mass MONDAY - SATURDAY: 7:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read; the intentions list a 7:30am Mass each weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-hawthorne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "de4937b6",
+          "page": 1,
+          "said": "Daily Mass MONDAY - SATURDAY: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b70d1f23",
+          "page": 1,
+          "said": "Daily Mass MONDAY - SATURDAY: 7:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read; the intentions list a 7:30am Mass each weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-hawthorne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "de4937b6",
+          "page": 1,
+          "said": "Daily Mass MONDAY - SATURDAY: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b70d1f23",
+          "page": 1,
+          "said": "Daily Mass MONDAY - SATURDAY: 7:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read; the intentions list a 7:30am Mass each weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-hawthorne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "de4937b6",
+          "page": 1,
+          "said": "Daily Mass MONDAY - SATURDAY: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b70d1f23",
+          "page": 1,
+          "said": "Daily Mass MONDAY - SATURDAY: 7:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read; the intentions list a 7:30am Mass each weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-hawthorne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "de4937b6",
+          "page": 1,
+          "said": "Daily Mass MONDAY - SATURDAY: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b70d1f23",
+          "page": 1,
+          "said": "Daily Mass MONDAY - SATURDAY: 7:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read; the intentions list a 7:30am Mass each weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-hawthorne",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": "17:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "de4937b6",
+          "page": 1,
+          "said": "Sacrament of Reconciliation/Confession SATURDAY: 4:30 PM - 5:15 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b70d1f23",
+          "page": 1,
+          "said": "Sacrament of Reconciliation/Confession SATURDAY: 4:30 PM - 5:15 PM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-hawthorne",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "de4937b6",
+          "page": 1,
+          "said": "Sacrament of Reconciliation/Confession ... FIRST FRIDAY: 7:00 PM - 8:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b70d1f23",
+          "page": 1,
+          "said": "Sacrament of Reconciliation/Confession ... FIRST FRIDAY: 7:00 PM - 8:00 PM"
+        }
+      ],
+      "rationale": "R1: the standing schedule box of both bulletins names First Friday with clock times (POLICY, Weekly or dated rule 2); neither issue's week holds a first Friday (R11), but the box prints it every week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-hawthorne",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "de4937b6",
+          "page": 1,
+          "said": "Eucharistic Adoration FIRST FRIDAY: 7:00 PM - 8:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b70d1f23",
+          "page": 1,
+          "said": "Eucharistic Adoration FIRST FRIDAY: 7:00 PM - 8:00 PM"
+        }
+      ],
+      "rationale": "R1: the standing schedule box of both bulletins names First Friday Adoration with clock times (POLICY, Weekly or dated rule 2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-hawthorne",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "de4937b6",
+          "page": 3,
+          "said": "Thursday, November 26th 8:30AM Thanksgiving Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b70d1f23",
+          "page": 3,
+          "said": "Thursday, November 26th 8:30AM Thanksgiving Mass"
+        }
+      ],
+      "rationale": "R1, R16: a dated holiday Mass after as_of, at a time outside the weekly schedule. R17: no cancellation of the 7:30 AM Thursday Mass is stated, so none is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "de4937b6",
+          "page": 1,
+          "said": "Marian Devotions Rosary (M-S): After 7:30 AM Mass; Miraculous Medal: Saturday after 7:30am Mass"
+        }
+      ],
+      "rationale": "R24: Rosary and Miraculous Medal devotions are not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "de4937b6",
+          "page": 2,
+          "said": "Our Church is OPEN for private prayer every weekday 7am - 4pm"
+        }
+      ],
+      "rationale": "R38/POLICY, Churches: the church being open for private prayer is not an Adoration schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
