@@ -1,0 +1,993 @@
+{
+  "schema_version": 1,
+  "parish_slug": "epiphany-of-our-lord-plymouth-meeting",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:39:34Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T23:23:40Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend (Sat 5 PM; Sun 8, 10 AM, 4 PM), weekday 8:30 AM and Sunday 2:30-3:45 PM confession times agree in both bulletins read (Nov 8 and 15) and on the website. Open: how to record St. Joseph's perpetual Adoration Chapel (bulletin says only 'Open Daily'; website gives 24/7 with a door code after 8 PM).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "5b808cc63ad577f740ff1c071adffa5980ae2df5eca9817fea1dfb5231d49063",
+      "fetched_at": "2026-11-15T16:39:34Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "2ff7f673b292263406f657693969db248c2d7dd6564f6b0382580d4d2c5638c8",
+      "fetched_at": "2026-11-08T15:52:36Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-of-our-lord-church-plymouth-meeting",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b808cc6",
+          "page": 1,
+          "said": "Saturday Vigil 5 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ff7f673",
+          "page": 1,
+          "said": "Saturday Vigil 5 p.m."
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both bulletins read (Nov 15 and Nov 8); the website's Mass times agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-of-our-lord-church-plymouth-meeting",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b808cc6",
+          "page": 1,
+          "said": "Sunday 8 a.m. ,10 a.m. and 4p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ff7f673",
+          "page": 1,
+          "said": "Sunday 8 a.m. ,10 a.m. and 4p.m."
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both bulletins read; the website agrees. The CYO Mass (Nov 15) and Faith & Blue Mass (Nov 22) on p3 are at the regular 10 AM Mass, so POLICY (Weekly or dated, rule 7) records only the weekly slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-of-our-lord-church-plymouth-meeting",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b808cc6",
+          "page": 1,
+          "said": "Sunday 8 a.m. ,10 a.m. and 4p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ff7f673",
+          "page": 1,
+          "said": "Sunday 8 a.m. ,10 a.m. and 4p.m."
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both bulletins read; the website agrees. The CYO Mass (Nov 15) and Faith & Blue Mass (Nov 22) on p3 are at the regular 10 AM Mass, so POLICY (Weekly or dated, rule 7) records only the weekly slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-of-our-lord-church-plymouth-meeting",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b808cc6",
+          "page": 1,
+          "said": "Sunday 8 a.m. ,10 a.m. and 4p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ff7f673",
+          "page": 1,
+          "said": "Sunday 8 a.m. ,10 a.m. and 4p.m."
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both bulletins read; the website agrees. The CYO Mass (Nov 15) and Faith & Blue Mass (Nov 22) on p3 are at the regular 10 AM Mass, so POLICY (Weekly or dated, rule 7) records only the weekly slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-of-our-lord-church-plymouth-meeting",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b808cc6",
+          "page": 1,
+          "said": "Daily Monday to Friday 8:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ff7f673",
+          "page": 1,
+          "said": "Daily Monday to Friday 8:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b808cc6",
+          "page": 10,
+          "said": "Mass Intentions Monday-Friday Nov. 16-20, 8:30 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both bulletins; the p10 intentions list 8:30 a.m. each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-of-our-lord-church-plymouth-meeting",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b808cc6",
+          "page": 1,
+          "said": "Daily Monday to Friday 8:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ff7f673",
+          "page": 1,
+          "said": "Daily Monday to Friday 8:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b808cc6",
+          "page": 10,
+          "said": "Mass Intentions Monday-Friday Nov. 16-20, 8:30 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both bulletins; the p10 intentions list 8:30 a.m. each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-of-our-lord-church-plymouth-meeting",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b808cc6",
+          "page": 1,
+          "said": "Daily Monday to Friday 8:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ff7f673",
+          "page": 1,
+          "said": "Daily Monday to Friday 8:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b808cc6",
+          "page": 10,
+          "said": "Mass Intentions Monday-Friday Nov. 16-20, 8:30 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both bulletins; the p10 intentions list 8:30 a.m. each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-of-our-lord-church-plymouth-meeting",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b808cc6",
+          "page": 1,
+          "said": "Daily Monday to Friday 8:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ff7f673",
+          "page": 1,
+          "said": "Daily Monday to Friday 8:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b808cc6",
+          "page": 10,
+          "said": "Mass Intentions Monday-Friday Nov. 16-20, 8:30 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both bulletins; the p10 intentions list 8:30 a.m. each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-of-our-lord-church-plymouth-meeting",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b808cc6",
+          "page": 1,
+          "said": "Daily Monday to Friday 8:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ff7f673",
+          "page": 1,
+          "said": "Daily Monday to Friday 8:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b808cc6",
+          "page": 10,
+          "said": "Mass Intentions Monday-Friday Nov. 16-20, 8:30 a.m."
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both bulletins; the p10 intentions list 8:30 a.m. each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-of-our-lord-church-plymouth-meeting",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "14:30",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b808cc6",
+          "page": 1,
+          "said": "Confessions Sunday, 2:30-3:45 p.m. & by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ff7f673",
+          "page": 1,
+          "said": "Confessions Sunday, 2:30-3:45 p.m. & by appointment"
+        }
+      ],
+      "rationale": "R1: printed in the p1 schedule box of both bulletins; the website gives Sunday 2:30-3:45pm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b808cc6",
+          "page": 1,
+          "said": "Confessions ... & by appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b808cc6",
+          "page": 1,
+          "said": "Holydays of Obligation 8:30 a.m.,12:05 p.m., 7 p.m."
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7 and Dates: holy-day Masses are dated, and neither bulletin names a holy day's date (the next, Dec 8, is not printed). Update mode will pick them up from the bulletin that dates them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b808cc6",
+          "page": 2,
+          "said": "Join a group of parishioners who pray the Rosary Mondays-Fridays at 8:00 a.m."
+        }
+      ],
+      "rationale": "R24: the Rosary is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b808cc6",
+          "page": 1,
+          "said": "Adoration Chapel Open Daily"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ff7f673",
+          "page": 1,
+          "said": "Adoration Chapel Open Daily"
+        },
+        {
+          "source": "website",
+          "url": "https://www.epiphanyofourlord.com/",
+          "said": "St. Joseph's Adoration Chapel 24 hours~7 days a week~365 days a year 8:00 am - 8:00 pm: The coded-door is automatically unlocked. 8:00 pm onwards: A code is needed to enter. The Chapel is in the building on the campus hill"
+        }
+      ],
+      "rationale": "R38/R6/R30: the bulletin gives no hours (Open Daily); the parish website calls it an Adoration chapel, open 24/7, in a building on the parish campus (same grounds, so POLICY places it at the church). Exposition is not stated. Leaning to the unlocked hours because after 8 PM entry needs a code from the office (R40: access vs. service hours), so 24-hour availability is not open to the public; the format cannot say 'by code'.",
+      "question": "Add St. Joseph's Adoration Chapel (on the parish campus, open 24 hours; door unlocked 8 AM-8 PM, code needed after) as daily Adoration?",
+      "options": [
+        {
+          "label": "Daily 8 AM-8 PM (unlocked hours)",
+          "entry": {
+            "church_slug": "epiphany-of-our-lord-church-plymouth-meeting",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Joseph's Adoration Chapel; open 24 hours, door code needed after 8 PM"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Daily, all day",
+          "entry": {
+            "church_slug": "epiphany-of-our-lord-church-plymouth-meeting",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Joseph's Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "adoration-chapel"
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b808cc6",
+          "page": 1,
+          "said": "Adoration Chapel Open Daily"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ff7f673",
+          "page": 1,
+          "said": "Adoration Chapel Open Daily"
+        },
+        {
+          "source": "website",
+          "url": "https://www.epiphanyofourlord.com/",
+          "said": "St. Joseph's Adoration Chapel 24 hours~7 days a week~365 days a year 8:00 am - 8:00 pm: The coded-door is automatically unlocked. 8:00 pm onwards: A code is needed to enter. The Chapel is in the building on the campus hill"
+        }
+      ],
+      "rationale": "R38/R6/R30: the bulletin gives no hours (Open Daily); the parish website calls it an Adoration chapel, open 24/7, in a building on the parish campus (same grounds, so POLICY places it at the church). Exposition is not stated. Leaning to the unlocked hours because after 8 PM entry needs a code from the office (R40: access vs. service hours), so 24-hour availability is not open to the public; the format cannot say 'by code'.",
+      "question": "Add St. Joseph's Adoration Chapel (on the parish campus, open 24 hours; door unlocked 8 AM-8 PM, code needed after) as daily Adoration?",
+      "options": [
+        {
+          "label": "Daily 8 AM-8 PM (unlocked hours)",
+          "entry": {
+            "church_slug": "epiphany-of-our-lord-church-plymouth-meeting",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Joseph's Adoration Chapel; open 24 hours, door code needed after 8 PM"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Daily, all day",
+          "entry": {
+            "church_slug": "epiphany-of-our-lord-church-plymouth-meeting",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Joseph's Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "adoration-chapel"
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b808cc6",
+          "page": 1,
+          "said": "Adoration Chapel Open Daily"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ff7f673",
+          "page": 1,
+          "said": "Adoration Chapel Open Daily"
+        },
+        {
+          "source": "website",
+          "url": "https://www.epiphanyofourlord.com/",
+          "said": "St. Joseph's Adoration Chapel 24 hours~7 days a week~365 days a year 8:00 am - 8:00 pm: The coded-door is automatically unlocked. 8:00 pm onwards: A code is needed to enter. The Chapel is in the building on the campus hill"
+        }
+      ],
+      "rationale": "R38/R6/R30: the bulletin gives no hours (Open Daily); the parish website calls it an Adoration chapel, open 24/7, in a building on the parish campus (same grounds, so POLICY places it at the church). Exposition is not stated. Leaning to the unlocked hours because after 8 PM entry needs a code from the office (R40: access vs. service hours), so 24-hour availability is not open to the public; the format cannot say 'by code'.",
+      "question": "Add St. Joseph's Adoration Chapel (on the parish campus, open 24 hours; door unlocked 8 AM-8 PM, code needed after) as daily Adoration?",
+      "options": [
+        {
+          "label": "Daily 8 AM-8 PM (unlocked hours)",
+          "entry": {
+            "church_slug": "epiphany-of-our-lord-church-plymouth-meeting",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Joseph's Adoration Chapel; open 24 hours, door code needed after 8 PM"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Daily, all day",
+          "entry": {
+            "church_slug": "epiphany-of-our-lord-church-plymouth-meeting",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Joseph's Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "adoration-chapel"
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b808cc6",
+          "page": 1,
+          "said": "Adoration Chapel Open Daily"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ff7f673",
+          "page": 1,
+          "said": "Adoration Chapel Open Daily"
+        },
+        {
+          "source": "website",
+          "url": "https://www.epiphanyofourlord.com/",
+          "said": "St. Joseph's Adoration Chapel 24 hours~7 days a week~365 days a year 8:00 am - 8:00 pm: The coded-door is automatically unlocked. 8:00 pm onwards: A code is needed to enter. The Chapel is in the building on the campus hill"
+        }
+      ],
+      "rationale": "R38/R6/R30: the bulletin gives no hours (Open Daily); the parish website calls it an Adoration chapel, open 24/7, in a building on the parish campus (same grounds, so POLICY places it at the church). Exposition is not stated. Leaning to the unlocked hours because after 8 PM entry needs a code from the office (R40: access vs. service hours), so 24-hour availability is not open to the public; the format cannot say 'by code'.",
+      "question": "Add St. Joseph's Adoration Chapel (on the parish campus, open 24 hours; door unlocked 8 AM-8 PM, code needed after) as daily Adoration?",
+      "options": [
+        {
+          "label": "Daily 8 AM-8 PM (unlocked hours)",
+          "entry": {
+            "church_slug": "epiphany-of-our-lord-church-plymouth-meeting",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Joseph's Adoration Chapel; open 24 hours, door code needed after 8 PM"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Daily, all day",
+          "entry": {
+            "church_slug": "epiphany-of-our-lord-church-plymouth-meeting",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Joseph's Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "adoration-chapel"
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b808cc6",
+          "page": 1,
+          "said": "Adoration Chapel Open Daily"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ff7f673",
+          "page": 1,
+          "said": "Adoration Chapel Open Daily"
+        },
+        {
+          "source": "website",
+          "url": "https://www.epiphanyofourlord.com/",
+          "said": "St. Joseph's Adoration Chapel 24 hours~7 days a week~365 days a year 8:00 am - 8:00 pm: The coded-door is automatically unlocked. 8:00 pm onwards: A code is needed to enter. The Chapel is in the building on the campus hill"
+        }
+      ],
+      "rationale": "R38/R6/R30: the bulletin gives no hours (Open Daily); the parish website calls it an Adoration chapel, open 24/7, in a building on the parish campus (same grounds, so POLICY places it at the church). Exposition is not stated. Leaning to the unlocked hours because after 8 PM entry needs a code from the office (R40: access vs. service hours), so 24-hour availability is not open to the public; the format cannot say 'by code'.",
+      "question": "Add St. Joseph's Adoration Chapel (on the parish campus, open 24 hours; door unlocked 8 AM-8 PM, code needed after) as daily Adoration?",
+      "options": [
+        {
+          "label": "Daily 8 AM-8 PM (unlocked hours)",
+          "entry": {
+            "church_slug": "epiphany-of-our-lord-church-plymouth-meeting",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Joseph's Adoration Chapel; open 24 hours, door code needed after 8 PM"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Daily, all day",
+          "entry": {
+            "church_slug": "epiphany-of-our-lord-church-plymouth-meeting",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Joseph's Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "adoration-chapel"
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b808cc6",
+          "page": 1,
+          "said": "Adoration Chapel Open Daily"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ff7f673",
+          "page": 1,
+          "said": "Adoration Chapel Open Daily"
+        },
+        {
+          "source": "website",
+          "url": "https://www.epiphanyofourlord.com/",
+          "said": "St. Joseph's Adoration Chapel 24 hours~7 days a week~365 days a year 8:00 am - 8:00 pm: The coded-door is automatically unlocked. 8:00 pm onwards: A code is needed to enter. The Chapel is in the building on the campus hill"
+        }
+      ],
+      "rationale": "R38/R6/R30: the bulletin gives no hours (Open Daily); the parish website calls it an Adoration chapel, open 24/7, in a building on the parish campus (same grounds, so POLICY places it at the church). Exposition is not stated. Leaning to the unlocked hours because after 8 PM entry needs a code from the office (R40: access vs. service hours), so 24-hour availability is not open to the public; the format cannot say 'by code'.",
+      "question": "Add St. Joseph's Adoration Chapel (on the parish campus, open 24 hours; door unlocked 8 AM-8 PM, code needed after) as daily Adoration?",
+      "options": [
+        {
+          "label": "Daily 8 AM-8 PM (unlocked hours)",
+          "entry": {
+            "church_slug": "epiphany-of-our-lord-church-plymouth-meeting",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Joseph's Adoration Chapel; open 24 hours, door code needed after 8 PM"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Daily, all day",
+          "entry": {
+            "church_slug": "epiphany-of-our-lord-church-plymouth-meeting",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Joseph's Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "adoration-chapel"
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b808cc6",
+          "page": 1,
+          "said": "Adoration Chapel Open Daily"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ff7f673",
+          "page": 1,
+          "said": "Adoration Chapel Open Daily"
+        },
+        {
+          "source": "website",
+          "url": "https://www.epiphanyofourlord.com/",
+          "said": "St. Joseph's Adoration Chapel 24 hours~7 days a week~365 days a year 8:00 am - 8:00 pm: The coded-door is automatically unlocked. 8:00 pm onwards: A code is needed to enter. The Chapel is in the building on the campus hill"
+        }
+      ],
+      "rationale": "R38/R6/R30: the bulletin gives no hours (Open Daily); the parish website calls it an Adoration chapel, open 24/7, in a building on the parish campus (same grounds, so POLICY places it at the church). Exposition is not stated. Leaning to the unlocked hours because after 8 PM entry needs a code from the office (R40: access vs. service hours), so 24-hour availability is not open to the public; the format cannot say 'by code'.",
+      "question": "Add St. Joseph's Adoration Chapel (on the parish campus, open 24 hours; door unlocked 8 AM-8 PM, code needed after) as daily Adoration?",
+      "options": [
+        {
+          "label": "Daily 8 AM-8 PM (unlocked hours)",
+          "entry": {
+            "church_slug": "epiphany-of-our-lord-church-plymouth-meeting",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Joseph's Adoration Chapel; open 24 hours, door code needed after 8 PM"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Daily, all day",
+          "entry": {
+            "church_slug": "epiphany-of-our-lord-church-plymouth-meeting",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Joseph's Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "adoration-chapel"
+    }
+  ]
+}
