@@ -1,0 +1,560 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-trinity-passaic",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:20:27Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T12:51:41Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, Holy Trinity, Passaic. Weekend (Sat 7:30 PM Spanish; Sun 8:30 English, 10:00 German, 11:30/1:30/3:30 Spanish), Wed/Fri 7:30 PM, and Monday 7-8:30 PM Confession & Adoration agree in both bulletins and the website. Mon/Tue noon Masses come from both weeks' intentions plus the website (the page-1 box lists only Wed/Fri weekdays). Open: a Thursday noon Mass found only in the intentions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "50f8368db470e2b6afb4ec3d9d39503f3a829101c361722f11f96a1701bc5c04",
+      "fetched_at": "2026-11-15T16:20:27Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "edd641af95ff6b4c84acba3b54f56b920850b00908a8203d4eb75d0e227b8a59",
+      "fetched_at": "2026-11-08T15:44:53Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "50f8368d",
+          "page": 1,
+          "said": "MASS SCHEDULE Saturday: 7:30 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "edd641af",
+          "page": 1,
+          "said": "MASS SCHEDULE Saturday: 7:30 pm (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass schedule box of both bulletins; the intentions list Saturday 7:30 PM each week and the website's Mass Schedule agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "50f8368d",
+          "page": 1,
+          "said": "Sunday: 8:30 am (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "edd641af",
+          "page": 1,
+          "said": "Sunday: 8:30 am (English)"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass schedule box of both bulletins and in the Sunday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "German"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "50f8368d",
+          "page": 1,
+          "said": "Sunday: 10:00 am (German)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "edd641af",
+          "page": 1,
+          "said": "Sunday: 10:00 am (German)"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass schedule box of both bulletins and in the Sunday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "50f8368d",
+          "page": 1,
+          "said": "Sunday: 11:30 am (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "edd641af",
+          "page": 1,
+          "said": "Sunday: 11:30 am (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass schedule box of both bulletins and in the Sunday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "50f8368d",
+          "page": 1,
+          "said": "Sunday: 1:30 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "edd641af",
+          "page": 1,
+          "said": "Sunday: 1:30 pm (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass schedule box of both bulletins and in the Sunday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "50f8368d",
+          "page": 1,
+          "said": "Sunday: 3:30 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "edd641af",
+          "page": 1,
+          "said": "Sunday: 3:30 pm (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass schedule box of both bulletins and in the Sunday intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "50f8368d",
+          "page": 1,
+          "said": "Weekday: Wed / Fri: 7:30 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "edd641af",
+          "page": 1,
+          "said": "Weekday: Wed / Fri: 7:30 pm (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass schedule box of both bulletins; the intentions list Wednesday and Friday 7:30 PM in both weeks and the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "50f8368d",
+          "page": 1,
+          "said": "Weekday: Wed / Fri: 7:30 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "edd641af",
+          "page": 1,
+          "said": "Weekday: Wed / Fri: 7:30 pm (Spanish)"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass schedule box of both bulletins; the intentions list Wednesday and Friday 7:30 PM in both weeks and the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-passaic",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "50f8368d",
+          "page": 1,
+          "said": "CONFESSION & EUCHARISTIC ADORATION Monday: 7:00 pm — 8:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "edd641af",
+          "page": 1,
+          "said": "CONFESSION & EUCHARISTIC ADORATION Monday: 7:00 pm — 8:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50f8368d",
+          "page": 2,
+          "said": "Our Church will be open for Confession every Monday, from 7:00 PM — 8:30 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "edd641af",
+          "page": 2,
+          "said": "Our Church will be open for Confession every Monday, from 7:00 PM — 8:30 PM."
+        },
+        {
+          "source": "website",
+          "url": "https://holytrinitypassaic.com/",
+          "said": "Confession Times Monday 7:00 PM to 8:30 PM"
+        }
+      ],
+      "rationale": "R1: the page-1 box and the page-2 Reconciliation notice of both bulletins give Monday 7:00-8:30 PM; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-passaic",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "50f8368d",
+          "page": 1,
+          "said": "CONFESSION & EUCHARISTIC ADORATION Monday: 7:00 pm — 8:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "edd641af",
+          "page": 1,
+          "said": "CONFESSION & EUCHARISTIC ADORATION Monday: 7:00 pm — 8:30 PM"
+        }
+      ],
+      "rationale": "R1: the page-1 schedule box of both bulletins names Eucharistic Adoration with Confession on Mondays 7:00-8:30 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "50f8368d",
+          "page": 2,
+          "said": "Monday November 16, 2026 12:00 PM Parishioners of Holy Trinity / Tuesday November 17, 2026 12:00 PM Parishioners of Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "edd641af",
+          "page": 2,
+          "said": "Monday November 9, 2026 12:00 PM Parishioners of Holy Trinity / Tuesday November 10, 2026 12:00 PM Parishioners of Holy Trinity"
+        },
+        {
+          "source": "website",
+          "url": "https://holytrinitypassaic.com/",
+          "said": "Monday 12:00 PM Spanish Español ES Tuesday 12:00 PM Spanish Español ES"
+        }
+      ],
+      "rationale": "R35, R6: Monday and Tuesday noon Masses are in the dated intentions of both weeks read (Nov 9-10 and Nov 16-17), and the parish website's Mass Schedule lists Monday and Tuesday 12:00 PM Spanish alongside the bulletin's other times, so the page-1 box ('Weekday: Wed / Fri') reads as abbreviated rather than contradicting them. Reviewer may prefer to ask, since the box lists weekdays and omits these.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-passaic",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "50f8368d",
+          "page": 2,
+          "said": "Monday November 16, 2026 12:00 PM Parishioners of Holy Trinity / Tuesday November 17, 2026 12:00 PM Parishioners of Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "edd641af",
+          "page": 2,
+          "said": "Monday November 9, 2026 12:00 PM Parishioners of Holy Trinity / Tuesday November 10, 2026 12:00 PM Parishioners of Holy Trinity"
+        },
+        {
+          "source": "website",
+          "url": "https://holytrinitypassaic.com/",
+          "said": "Monday 12:00 PM Spanish Español ES Tuesday 12:00 PM Spanish Español ES"
+        }
+      ],
+      "rationale": "R35, R6: Monday and Tuesday noon Masses are in the dated intentions of both weeks read (Nov 9-10 and Nov 16-17), and the parish website's Mass Schedule lists Monday and Tuesday 12:00 PM Spanish alongside the bulletin's other times, so the page-1 box ('Weekday: Wed / Fri') reads as abbreviated rather than contradicting them. Reviewer may prefer to ask, since the box lists weekdays and omits these.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "50f8368d",
+          "page": 2,
+          "said": "Thursday November 19, 2026 12:00 PM Parishioners of Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "edd641af",
+          "page": 2,
+          "said": "Thursday November 12, 2026 12:00 PM Parishioners of Holy Trinity"
+        }
+      ],
+      "rationale": "C1, R39: Thursday noon appears in the intentions of both weeks (generic 'Parishioners of Holy Trinity'), but neither the page-1 schedule box (Wed/Fri only) nor the website's Mass Schedule (Mon, Tue noon; Wed, Fri 7:30 PM) lists Thursday. Leaning leave out per C1; the line may be a reused template.",
+      "question": "Add a Thursday 12:00 PM Mass, listed only in the intentions?",
+      "options": [
+        {
+          "label": "Thursdays 12:00 PM",
+          "entry": {
+            "church_slug": "holy-trinity-passaic",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    }
+  ]
+}
