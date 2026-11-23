@@ -1,0 +1,705 @@
+{
+  "schema_version": 1,
+  "parish_slug": "christ-the-king-philadelphia",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:38:43Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T23:13:35Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (Christ the King, Morrell Park). Sat 5 PM vigil, Sun 8 and 10 AM, weekdays 8 AM, Saturday confession 3:30-4:30 agree in both bulletins (Nov 8, Nov 15; image-only PDFs). Parish-feast Adoration and the Nov 22 8 AM cancellation are dated. Open: the box says Mass Mon-Sat 8 AM but both weeks' intentions list Wednesday 8 AM as a Communion Service.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "d5a3d979c9bf2132e7b54440f144046125be24220bf2e437b3034d309952f1fa",
+      "fetched_at": "2026-11-15T16:38:43Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "50586463ed4cd9a73bfdbe767abb2d8a7849facc37be8975c2edd42802d8b8a3",
+      "fetched_at": "2026-11-08T15:52:32Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d5a3d979",
+          "page": 1,
+          "said": "MASSES Saturday Vigil: 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50586463",
+          "page": 1,
+          "said": "MASSES Saturday Vigil: 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5a3d979",
+          "page": 3,
+          "said": "SATURDAY 5:00 PM (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50586463",
+          "page": 3,
+          "said": "SATURDAY 5:00 PM (Mass intentions)"
+        }
+      ],
+      "rationale": "R1, R35: printed in the p1 schedule box and the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d5a3d979",
+          "page": 1,
+          "said": "Sunday: 8:00 AM & 10:00 AM In-Person & Facebook Live"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50586463",
+          "page": 1,
+          "said": "Sunday: 8:00 AM & 10:00 AM In-Person & Facebook Live"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5a3d979",
+          "page": 4,
+          "said": "Priest Mass schedule: Sunday 8 AM, Sunday 10 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50586463",
+          "page": 4,
+          "said": "Priest Mass schedule: Sunday 8 AM, Sunday 10 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the p1 schedule box, the priest schedule and the intentions of both bulletins. The Nov 22 8 AM is cancelled separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d5a3d979",
+          "page": 1,
+          "said": "Sunday: 8:00 AM & 10:00 AM In-Person & Facebook Live"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50586463",
+          "page": 1,
+          "said": "Sunday: 8:00 AM & 10:00 AM In-Person & Facebook Live"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5a3d979",
+          "page": 4,
+          "said": "Priest Mass schedule: Sunday 8 AM, Sunday 10 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50586463",
+          "page": 4,
+          "said": "Priest Mass schedule: Sunday 8 AM, Sunday 10 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the p1 schedule box, the priest schedule and the intentions of both bulletins. The Nov 22 8 AM is cancelled separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d5a3d979",
+          "page": 1,
+          "said": "Weekdays: Monday - Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50586463",
+          "page": 1,
+          "said": "Weekdays: Monday - Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5a3d979",
+          "page": 3,
+          "said": "MONDAY/TUESDAY/THURSDAY/FRIDAY/SATURDAY 8:00 AM (Mass intentions with names)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50586463",
+          "page": 3,
+          "said": "MONDAY/TUESDAY/THURSDAY/FRIDAY/SATURDAY 8:00 AM (Mass intentions with names)"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box gives Monday-Saturday 8 AM and both weeks' intentions list each of these days at 8 AM with an intention.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d5a3d979",
+          "page": 1,
+          "said": "Weekdays: Monday - Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50586463",
+          "page": 1,
+          "said": "Weekdays: Monday - Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5a3d979",
+          "page": 3,
+          "said": "MONDAY/TUESDAY/THURSDAY/FRIDAY/SATURDAY 8:00 AM (Mass intentions with names)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50586463",
+          "page": 3,
+          "said": "MONDAY/TUESDAY/THURSDAY/FRIDAY/SATURDAY 8:00 AM (Mass intentions with names)"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box gives Monday-Saturday 8 AM and both weeks' intentions list each of these days at 8 AM with an intention.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d5a3d979",
+          "page": 1,
+          "said": "Weekdays: Monday - Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50586463",
+          "page": 1,
+          "said": "Weekdays: Monday - Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5a3d979",
+          "page": 3,
+          "said": "MONDAY/TUESDAY/THURSDAY/FRIDAY/SATURDAY 8:00 AM (Mass intentions with names)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50586463",
+          "page": 3,
+          "said": "MONDAY/TUESDAY/THURSDAY/FRIDAY/SATURDAY 8:00 AM (Mass intentions with names)"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box gives Monday-Saturday 8 AM and both weeks' intentions list each of these days at 8 AM with an intention.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d5a3d979",
+          "page": 1,
+          "said": "Weekdays: Monday - Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50586463",
+          "page": 1,
+          "said": "Weekdays: Monday - Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5a3d979",
+          "page": 3,
+          "said": "MONDAY/TUESDAY/THURSDAY/FRIDAY/SATURDAY 8:00 AM (Mass intentions with names)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50586463",
+          "page": 3,
+          "said": "MONDAY/TUESDAY/THURSDAY/FRIDAY/SATURDAY 8:00 AM (Mass intentions with names)"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box gives Monday-Saturday 8 AM and both weeks' intentions list each of these days at 8 AM with an intention.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d5a3d979",
+          "page": 1,
+          "said": "Weekdays: Monday - Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50586463",
+          "page": 1,
+          "said": "Weekdays: Monday - Saturday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5a3d979",
+          "page": 3,
+          "said": "MONDAY/TUESDAY/THURSDAY/FRIDAY/SATURDAY 8:00 AM (Mass intentions with names)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50586463",
+          "page": 3,
+          "said": "MONDAY/TUESDAY/THURSDAY/FRIDAY/SATURDAY 8:00 AM (Mass intentions with names)"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box gives Monday-Saturday 8 AM and both weeks' intentions list each of these days at 8 AM with an intention.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d5a3d979",
+          "page": 3,
+          "said": "WEDNESDAY 8:00 AM Communion Service"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50586463",
+          "page": 3,
+          "said": "WEDNESDAY 8:00 AM Communion Service"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5a3d979",
+          "page": 1,
+          "said": "Weekdays: Monday - Saturday 8:00 AM"
+        }
+      ],
+      "rationale": "R28/C8: the standing box and the intentions of two consecutive weeks (Nov 8 and Nov 15) disagree; neither explains it. Leaning leave out: the intentions are service-specific and repeat every week read, while the p1 box is a reused masthead; POLICY never records a Communion Service as Mass. The Nov 18 Communion Service is recorded as a dated cancellation separately (R27).",
+      "question": "Wednesday 8 AM: the schedule box says Mass Monday-Saturday, but both weeks' intentions list a Communion Service. Keep a weekly Wednesday 8 AM Mass?",
+      "options": [
+        {
+          "label": "Leave out (Wednesday 8 AM is a Communion Service)",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Weekly Wednesday 8 AM Mass",
+          "entry": {
+            "church_slug": "christ-the-king-philadelphia",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-18",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Communion Service"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d5a3d979",
+          "page": 3,
+          "said": "WEDNESDAY 8:00 AM Communion Service"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated; R16: the newest bulletin's intentions replace Wednesday Nov 18's 8 AM Mass with a Communion Service, on/after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-22",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Feast of Christ the King"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d5a3d979",
+          "page": 2,
+          "said": "Sunday, November 22 Feast of Christ the King NO 8 AM Mass ... 10AM - One Mass Only"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5a3d979",
+          "page": 5,
+          "said": "There will be NO 8 AM Mass on Sunday, November 22nd."
+        }
+      ],
+      "rationale": "R18, R16: the newest bulletin cancels one date of the weekly Sunday 8 AM Mass for the parish feast.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-philadelphia",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Feast of Christ the King"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d5a3d979",
+          "page": 5,
+          "said": "EXPOSITION OF BLESSED SACRAMENT AND ADORATION 6 PM TO 7 PM ... After the 5 PM Mass on Saturday there will be Eucharistic adoration until 7 PM."
+        }
+      ],
+      "rationale": "R1, R16: dated parish-feast Adoration Saturday Nov 21 with clock times, on/after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-philadelphia",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-22",
+        "start_time": "08:00",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Feast of Christ the King"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d5a3d979",
+          "page": 2,
+          "said": "EXPOSITION OF BLESSED SACRAMENT AND ADORATION 8 AM TO 9:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5a3d979",
+          "page": 5,
+          "said": "Sunday morning there will be Eucharistic adoration from 8 - 9:30 AM."
+        }
+      ],
+      "rationale": "R1, R16: dated parish-feast Adoration Sunday Nov 22, on/after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d5a3d979",
+          "page": 1,
+          "said": "Confessions every Saturday 3:30 to 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "50586463",
+          "page": 1,
+          "said": "Confessions every Saturday 3:30 to 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d5a3d979",
+          "page": 6,
+          "said": "SACRAMENT OF RECONCILIATION Confessions every Saturday 3:30 to 4:30 PM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of both bulletins and on p6.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d5a3d979",
+          "page": 1,
+          "said": "Holydays: Vigil Mass: 7:00 PM & 8:00 AM"
+        }
+      ],
+      "rationale": "R26, POLICY Dates: a generic holy-day pattern with no holy day dated in either bulletin; dates are not projected.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d5a3d979",
+          "page": 2,
+          "said": "Saturday, November 21 Following 8 AM Mass - Rosary, Miraculous Medal Novena"
+        }
+      ],
+      "rationale": "R24: Rosary and novena are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
