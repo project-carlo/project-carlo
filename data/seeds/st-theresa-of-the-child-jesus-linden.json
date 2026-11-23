@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-theresa-of-the-child-jesus-linden",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:54:49Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-22T18:32:54Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@83b1be5646eb",
+  "approved_at": "2026-11-23T12:24:50Z",
   "summary": "One church (Polish, English, Spanish). Mass, Confession and Adoration times come from the identical schedule boxes on p3 of both bulletins read (issues covering Nov 1 and Nov 8, 2026); first-Saturday Night Vigil Adoration and 10 PM Mass included. Open: how to record the First Friday all-night Adoration, which ends at 8 AM Saturday.",
   "blocked_reason": null,
   "bulletins": [
@@ -1252,9 +1252,24 @@
     },
     {
       "id": "s34",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-of-the-child-jesus-linden",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All night, until the 8:00 AM Mass on Saturday"
+      },
       "page": 3,
       "sources": [
         {
@@ -1298,7 +1313,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@83b1be5646eb",
+        "at": "2026-11-23T12:24:50Z"
+      }
     }
   ]
 }
