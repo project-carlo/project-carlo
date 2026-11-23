@@ -1,0 +1,596 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-cross-philadelphia",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:40:01Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T23:28:55Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (Holy Cross, Mt Airy). Two image-only bulletins (Nov 8, Nov 15) and the website agree: Sat 5pm, Sun 9/11/6pm, Tue-Fri 8am, Saturday confession 4pm (4:30 end from website), plus a dated Nov 20 Healing Mass. Open: the Tuesday Adoration Chapel at 148 E Mt Airy Ave (leaning include).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "9959cd5427d74b9102c5639ac402a0b18afa59efc094caa6bbe6dcafa5dfc299",
+      "fetched_at": "2026-11-15T16:40:01Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "1f49eb721582a86494360822765c7433a4c23fb3cd644b8382c029dad3e637e1",
+      "fetched_at": "2026-11-08T15:52:41Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9959cd54",
+          "page": 1,
+          "said": "Mass Schedule ... Saturday Vigil Mass 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f49eb72",
+          "page": 1,
+          "said": "Mass Schedule ... Saturday Vigil Mass 5:00 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://holycrossphl.org/",
+          "said": "Saturday: 5pm"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both bulletins read; intentions list Saturday 5:00pm; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9959cd54",
+          "page": 1,
+          "said": "Sundays 9:00am, 11:00 am, 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f49eb72",
+          "page": 1,
+          "said": "Sundays 9:00am, 11:00 am, 6:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://holycrossphl.org/",
+          "said": "Sunday: 9am, 11am, and 6pm"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both bulletins read; p3 intentions list 9:00, 11:00 and 6:00 pm; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9959cd54",
+          "page": 1,
+          "said": "Sundays 9:00am, 11:00 am, 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f49eb72",
+          "page": 1,
+          "said": "Sundays 9:00am, 11:00 am, 6:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://holycrossphl.org/",
+          "said": "Sunday: 9am, 11am, and 6pm"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both bulletins read; p3 intentions list 9:00, 11:00 and 6:00 pm; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9959cd54",
+          "page": 1,
+          "said": "Sundays 9:00am, 11:00 am, 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f49eb72",
+          "page": 1,
+          "said": "Sundays 9:00am, 11:00 am, 6:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://holycrossphl.org/",
+          "said": "Sunday: 9am, 11am, and 6pm"
+        }
+      ],
+      "rationale": "R1: printed in the p1 Mass Schedule box of both bulletins read; p3 intentions list 9:00, 11:00 and 6:00 pm; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9959cd54",
+          "page": 1,
+          "said": "Tuesday - Friday 8:00 AM in chapel for summer ( 148 E Mt Airy Ave)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f49eb72",
+          "page": 1,
+          "said": "Tuesday - Friday 8:00 AM in chapel for summer ( 148 E Mt Airy Ave)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9959cd54",
+          "page": 3,
+          "said": "Tuesday Novmber 17th - 8:00 am ... Friday November 20th - 8:00 am"
+        },
+        {
+          "source": "website",
+          "url": "https://holycrossphl.org/mass-times-confession/",
+          "said": "8am — Tuesday through Friday ... *During Summer Months, daily mass takes place in the convent chapel. Please enter through the side door facing the school*"
+        }
+      ],
+      "rationale": "R1: Tue-Fri 8 AM in the p1 schedule box of both bulletins and in both weeks' intentions. The box's 'in chapel for summer (148 E Mt Airy Ave)' only places it in the parish convent chapel during summer (website: convent chapel by the school in summer months); either way it is Holy Cross's Mass, so no note. 'No Daily Mass on Mondays' (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9959cd54",
+          "page": 1,
+          "said": "Tuesday - Friday 8:00 AM in chapel for summer ( 148 E Mt Airy Ave)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f49eb72",
+          "page": 1,
+          "said": "Tuesday - Friday 8:00 AM in chapel for summer ( 148 E Mt Airy Ave)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9959cd54",
+          "page": 3,
+          "said": "Tuesday Novmber 17th - 8:00 am ... Friday November 20th - 8:00 am"
+        },
+        {
+          "source": "website",
+          "url": "https://holycrossphl.org/mass-times-confession/",
+          "said": "8am — Tuesday through Friday ... *During Summer Months, daily mass takes place in the convent chapel. Please enter through the side door facing the school*"
+        }
+      ],
+      "rationale": "R1: Tue-Fri 8 AM in the p1 schedule box of both bulletins and in both weeks' intentions. The box's 'in chapel for summer (148 E Mt Airy Ave)' only places it in the parish convent chapel during summer (website: convent chapel by the school in summer months); either way it is Holy Cross's Mass, so no note. 'No Daily Mass on Mondays' (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9959cd54",
+          "page": 1,
+          "said": "Tuesday - Friday 8:00 AM in chapel for summer ( 148 E Mt Airy Ave)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f49eb72",
+          "page": 1,
+          "said": "Tuesday - Friday 8:00 AM in chapel for summer ( 148 E Mt Airy Ave)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9959cd54",
+          "page": 3,
+          "said": "Tuesday Novmber 17th - 8:00 am ... Friday November 20th - 8:00 am"
+        },
+        {
+          "source": "website",
+          "url": "https://holycrossphl.org/mass-times-confession/",
+          "said": "8am — Tuesday through Friday ... *During Summer Months, daily mass takes place in the convent chapel. Please enter through the side door facing the school*"
+        }
+      ],
+      "rationale": "R1: Tue-Fri 8 AM in the p1 schedule box of both bulletins and in both weeks' intentions. The box's 'in chapel for summer (148 E Mt Airy Ave)' only places it in the parish convent chapel during summer (website: convent chapel by the school in summer months); either way it is Holy Cross's Mass, so no note. 'No Daily Mass on Mondays' (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9959cd54",
+          "page": 1,
+          "said": "Tuesday - Friday 8:00 AM in chapel for summer ( 148 E Mt Airy Ave)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f49eb72",
+          "page": 1,
+          "said": "Tuesday - Friday 8:00 AM in chapel for summer ( 148 E Mt Airy Ave)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9959cd54",
+          "page": 3,
+          "said": "Tuesday Novmber 17th - 8:00 am ... Friday November 20th - 8:00 am"
+        },
+        {
+          "source": "website",
+          "url": "https://holycrossphl.org/mass-times-confession/",
+          "said": "8am — Tuesday through Friday ... *During Summer Months, daily mass takes place in the convent chapel. Please enter through the side door facing the school*"
+        }
+      ],
+      "rationale": "R1: Tue-Fri 8 AM in the p1 schedule box of both bulletins and in both weeks' intentions. The box's 'in chapel for summer (148 E Mt Airy Ave)' only places it in the parish convent chapel during summer (website: convent chapel by the school in summer months); either way it is Holy Cross's Mass, so no note. 'No Daily Mass on Mondays' (p3).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9959cd54",
+          "page": 1,
+          "said": "Reconciliation Saturdays at 4pm and by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f49eb72",
+          "page": 1,
+          "said": "Reconciliation Saturdays at 4pm and by appointment."
+        },
+        {
+          "source": "website",
+          "url": "https://holycrossphl.org/mass-times-confession/",
+          "said": "Celebrate the Sacrament of Reconciliation on Saturday afternoon in church from 4pm to 4:30 pm, or by appointment"
+        }
+      ],
+      "rationale": "R1: the p1 Sacraments box of both bulletins gives Saturday 4pm; R6: the parish's own Mass Times page gives the end, 4:30 pm, in church, matching the bulletin's start (current: its Mass times match the November 2026 bulletins exactly).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9959cd54",
+          "page": 1,
+          "said": "Reconciliation ... by appointment."
+        }
+      ],
+      "rationale": "R26: by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9959cd54",
+          "page": 2,
+          "said": "Adoration Chapel Join the Lord in prayer every Tuesday after the 8 AM Mass until 5pm. ... Enter the front door at 148 East Mt Airy Avenue. Walk down the hallway & enter the 2nd chapel door on your left."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f49eb72",
+          "page": 2,
+          "said": "Adoration Chapel Join the Lord in prayer every Tuesday after the 8 AM Mass until 5pm. ... Enter the front door at 148 East Mt Airy Avenue. Walk down the hallway & enter the 2nd chapel door on your left."
+        }
+      ],
+      "rationale": "R38/POLICY Churches and chapels: an on-site parish adoration chapel belongs to the church, but the chapel is at 148 E Mt Airy Ave, not the church's 140; it appears to be the parish convent on the same grounds (website: convent chapel entered by the side door facing the school), so leaning include. R10: after the weekday 8 AM Mass starts at 8:30. R32 if it is not on the church's grounds. Printed in both bulletins.",
+      "question": "Include the Tuesday Adoration in the Adoration Chapel at 148 E Mt Airy Ave (the convent beside the church at 140)?",
+      "options": [
+        {
+          "label": "Tuesdays 8:30 AM-5 PM at Holy Cross",
+          "entry": {
+            "church_slug": "holy-cross-philadelphia",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "17:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration Chapel, 148 E Mt Airy Ave"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-20",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Monthly Healing Mass (St. Therese Prayer Group)"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9959cd54",
+          "page": 4,
+          "said": "St Therese Prayer Group Monthly Healing Mass Holy Cross Catholic Church ... November 20, 2026 ... 7:00pm Healing Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1f49eb72",
+          "page": 5,
+          "said": "St Therese Prayer Group Monthly Healing Mass ... November 20, 2026 ... 7:00pm Healing Mass"
+        }
+      ],
+      "rationale": "R1, R16: a dated public Mass at Holy Cross after as_of, printed in both bulletins. 'Monthly' names no week of the month, so POLICY Weekly or dated rule 2 doesn't make it weekly (R33); the 6:30pm Rosary is left out (R24).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-14",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1f49eb72",
+          "page": 3,
+          "said": "Saturday November 14th - 8:00 am"
+        }
+      ],
+      "rationale": "R39: a blank intention line in the Nov 8 issue; the schedule box and website give no Saturday morning Mass and the newest intentions list only Saturday 5:00pm, so a reused template line. Also dated before as_of (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9959cd54",
+          "page": 1,
+          "said": "Holy Days of Obligation 8:00 AM and 7:00 PM"
+        }
+      ],
+      "rationale": "POLICY Dates, R45-like: holy-day Mass times with no dated holy day printed in the bulletins read; nothing to record.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
