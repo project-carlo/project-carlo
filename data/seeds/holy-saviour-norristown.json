@@ -1,0 +1,908 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-saviour-norristown",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:40:53Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T23:46:18Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches: Holy Saviour (weekday, Saturday and Sunday Masses, Saturday confessions) and Our Lady of Mount Carmel (first-Sunday 10 AM Mass October-May and the Sunday 11:30 Traditional Latin Mass). Both bulletins read (all-image newest, text older) and the website's schedule page agree. Open: whether Saturday's 9 AM Mass and confessions keep a summer break, from a website note dated 2022.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "571b0f5cee3ae72afe3e08ed92c5342bd3e476cf28abf98eca94fef766f892a3",
+      "fetched_at": "2026-11-15T16:40:53Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "fef0959c045b1b70666c52c60fcd1fbe696c64caf4a7032911d834a2d8ab90a4",
+      "fetched_at": "2026-11-08T15:52:47Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-saviour-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "571b0f5c",
+          "page": 1,
+          "said": "HOLY SAVIOUR CHURCH Weekdays: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fef0959c",
+          "page": 1,
+          "said": "HOLY SAVIOUR CHURCH Weekdays: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "571b0f5c",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16, 2026 7:30 AM ... FRIDAY, NOVEMBER 20, 2026 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fef0959c",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 9, 2026 7:30 AM ... FRIDAY, NOVEMBER 13, 2026 7:30 AM"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box of both bulletins read gives weekdays 7:30 AM at Holy Saviour, and each week's intentions list 7:30 AM Monday to Friday (Saturday has its own 9:00 AM).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-saviour-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "571b0f5c",
+          "page": 1,
+          "said": "HOLY SAVIOUR CHURCH Weekdays: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fef0959c",
+          "page": 1,
+          "said": "HOLY SAVIOUR CHURCH Weekdays: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "571b0f5c",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16, 2026 7:30 AM ... FRIDAY, NOVEMBER 20, 2026 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fef0959c",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 9, 2026 7:30 AM ... FRIDAY, NOVEMBER 13, 2026 7:30 AM"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box of both bulletins read gives weekdays 7:30 AM at Holy Saviour, and each week's intentions list 7:30 AM Monday to Friday (Saturday has its own 9:00 AM).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-saviour-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "571b0f5c",
+          "page": 1,
+          "said": "HOLY SAVIOUR CHURCH Weekdays: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fef0959c",
+          "page": 1,
+          "said": "HOLY SAVIOUR CHURCH Weekdays: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "571b0f5c",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16, 2026 7:30 AM ... FRIDAY, NOVEMBER 20, 2026 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fef0959c",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 9, 2026 7:30 AM ... FRIDAY, NOVEMBER 13, 2026 7:30 AM"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box of both bulletins read gives weekdays 7:30 AM at Holy Saviour, and each week's intentions list 7:30 AM Monday to Friday (Saturday has its own 9:00 AM).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-saviour-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "571b0f5c",
+          "page": 1,
+          "said": "HOLY SAVIOUR CHURCH Weekdays: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fef0959c",
+          "page": 1,
+          "said": "HOLY SAVIOUR CHURCH Weekdays: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "571b0f5c",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16, 2026 7:30 AM ... FRIDAY, NOVEMBER 20, 2026 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fef0959c",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 9, 2026 7:30 AM ... FRIDAY, NOVEMBER 13, 2026 7:30 AM"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box of both bulletins read gives weekdays 7:30 AM at Holy Saviour, and each week's intentions list 7:30 AM Monday to Friday (Saturday has its own 9:00 AM).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-saviour-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "571b0f5c",
+          "page": 1,
+          "said": "HOLY SAVIOUR CHURCH Weekdays: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fef0959c",
+          "page": 1,
+          "said": "HOLY SAVIOUR CHURCH Weekdays: 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "571b0f5c",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 16, 2026 7:30 AM ... FRIDAY, NOVEMBER 20, 2026 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fef0959c",
+          "page": 2,
+          "said": "MONDAY, NOVEMBER 9, 2026 7:30 AM ... FRIDAY, NOVEMBER 13, 2026 7:30 AM"
+        }
+      ],
+      "rationale": "R1, R35: the schedule box of both bulletins read gives weekdays 7:30 AM at Holy Saviour, and each week's intentions list 7:30 AM Monday to Friday (Saturday has its own 9:00 AM).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-saviour-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "571b0f5c",
+          "page": 1,
+          "said": "Sundays: 7:30, 9:30, 11:30 AM (Choir)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fef0959c",
+          "page": 1,
+          "said": "Sundays: 7:30, 9:30, 11:30 AM (Choir)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "571b0f5c",
+          "page": 2,
+          "said": "SUNDAY, NOVEMBER 15, 2026 7:30 AM ... 9:30 AM ... 1130 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fef0959c",
+          "page": 2,
+          "said": "SUNDAY, NOVEMBER 8, 2026 7:30 AM ... 9:30 AM ... 1130 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Holy Saviour schedule box of both bulletins and in each week's intentions ('1130 AM' is 11:30 AM).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-saviour-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "571b0f5c",
+          "page": 1,
+          "said": "Sundays: 7:30, 9:30, 11:30 AM (Choir)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fef0959c",
+          "page": 1,
+          "said": "Sundays: 7:30, 9:30, 11:30 AM (Choir)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "571b0f5c",
+          "page": 2,
+          "said": "SUNDAY, NOVEMBER 15, 2026 7:30 AM ... 9:30 AM ... 1130 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fef0959c",
+          "page": 2,
+          "said": "SUNDAY, NOVEMBER 8, 2026 7:30 AM ... 9:30 AM ... 1130 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Holy Saviour schedule box of both bulletins and in each week's intentions ('1130 AM' is 11:30 AM).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-saviour-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "571b0f5c",
+          "page": 1,
+          "said": "Sundays: 7:30, 9:30, 11:30 AM (Choir)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fef0959c",
+          "page": 1,
+          "said": "Sundays: 7:30, 9:30, 11:30 AM (Choir)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "571b0f5c",
+          "page": 2,
+          "said": "SUNDAY, NOVEMBER 15, 2026 7:30 AM ... 9:30 AM ... 1130 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fef0959c",
+          "page": 2,
+          "said": "SUNDAY, NOVEMBER 8, 2026 7:30 AM ... 9:30 AM ... 1130 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Holy Saviour schedule box of both bulletins and in each week's intentions ('1130 AM' is 11:30 AM).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-saviour-church-norristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "571b0f5c",
+          "page": 1,
+          "said": "Saturdays: 9:00 AM & 5:15 PM (Vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fef0959c",
+          "page": 1,
+          "said": "Saturdays: 9:00 AM & 5:15 PM (Vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "571b0f5c",
+          "page": 2,
+          "said": "ANTICIPATED MASS SATURDAY, NOVEMBER 21, 2026 5:15 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fef0959c",
+          "page": 2,
+          "said": "ANTICIPATED MASS SATURDAY, NOVEMBER 14, 2026 5:15 PM"
+        }
+      ],
+      "rationale": "R1, R35: the Saturday vigil at Holy Saviour in both schedule boxes and intentions. The website's old summer note changes only the 9 AM Mass and the confessions, not this Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "571b0f5c",
+          "page": 1,
+          "said": "Saturdays: 9:00 AM & 5:15 PM (Vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fef0959c",
+          "page": 1,
+          "said": "Saturdays: 9:00 AM & 5:15 PM (Vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "571b0f5c",
+          "page": 2,
+          "said": "SATURDAY, NOVEMBER 21, 2026 9:00 AM Special Intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fef0959c",
+          "page": 2,
+          "said": "SATURDAY, NOVEMBER 14, 2026 9:00 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.holysaviour.org/schedule/",
+          "said": "Please Note Summer Schedule, Beginning Saturday June 11: Saturdays, No Morning Confessions or 9am Mass until the Saturday after Labor Day."
+        }
+      ],
+      "rationale": "R1 prints it in both bulletins with no season, but the website's schedule page (read 2026-11-23) has a summer note: Saturday June 11 fell in 2022, so it may be stale, and its real limits (mid-June to the Saturday after Labor Day) vary by year and can't be written exactly (R33). Leaning year-round per R15: the current bulletin gives no season, and update mode will read a summer bulletin that announces any change.",
+      "question": "Keep Saturday's 9 AM Mass and Saturday confessions year-round, or drop them for the summer as the website's 2022-dated summer note says?",
+      "options": [
+        {
+          "label": "Year-round, as the bulletin prints",
+          "entry": {
+            "church_slug": "holy-saviour-church-norristown",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "September to May only",
+          "entry": {
+            "church_slug": "holy-saviour-church-norristown",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": null,
+              "end_month": 5,
+              "end_day": null
+            },
+            "note": null
+          }
+        }
+      ],
+      "answer": null,
+      "group": "summer-saturday"
+    },
+    {
+      "id": "s11",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "571b0f5c",
+          "page": 1,
+          "said": "CONFESSIONS Saturdays: 8:30 - 9:00 AM; 4:00 - 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fef0959c",
+          "page": 1,
+          "said": "CONFESSIONS Saturdays: 8:30 - 9:00 AM; 4:00 - 5:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.holysaviour.org/schedule/",
+          "said": "Holy Saviour Parish Mass and Confession Schedule ... Confessions Saturdays: 8:30 – 9:00 AM, 4:00 – 5:00 PM At Our Lady of Mount Carmel Mission Church"
+        },
+        {
+          "source": "website",
+          "url": "https://www.holysaviour.org/schedule/",
+          "said": "Please Note Summer Schedule, Beginning Saturday June 11: Saturdays, No Morning Confessions or 9am Mass until the Saturday after Labor Day."
+        }
+      ],
+      "rationale": "Church: the bulletin's CONFESSIONS heading is parish-wide, but the website lists these confessions under Holy Saviour's schedule, before the Our Lady of Mount Carmel section, and they precede Holy Saviour's Saturday 9:00 AM and 5:15 PM Masses (OLMC has no Saturday Mass) (R5, R6). Season: same question as the 9 AM Mass; leaning year-round per R15.",
+      "question": "Keep Saturday's 9 AM Mass and Saturday confessions year-round, or drop them for the summer as the website's 2022-dated summer note says?",
+      "options": [
+        {
+          "label": "Year-round, as the bulletin prints",
+          "entry": {
+            "church_slug": "holy-saviour-church-norristown",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "09:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "September to May only",
+          "entry": {
+            "church_slug": "holy-saviour-church-norristown",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "09:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": null,
+              "end_month": 5,
+              "end_day": null
+            },
+            "note": null
+          }
+        }
+      ],
+      "answer": null,
+      "group": "summer-saturday"
+    },
+    {
+      "id": "s12",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "571b0f5c",
+          "page": 1,
+          "said": "CONFESSIONS Saturdays: 8:30 - 9:00 AM; 4:00 - 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fef0959c",
+          "page": 1,
+          "said": "CONFESSIONS Saturdays: 8:30 - 9:00 AM; 4:00 - 5:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.holysaviour.org/schedule/",
+          "said": "Saturday Afternoon Confessions; 4:40-5:00pm."
+        }
+      ],
+      "rationale": "Church as for the 8:30 AM confession (website lists it under Holy Saviour). The website's old summer note shortens it to 4:40-5:00 PM in summer; the second option keeps 4:00-5:00 to September-May only (no summer slot is offered, since the summer dates and time come only from a 2022-dated note). Leaning year-round per R15.",
+      "question": "Keep Saturday's 9 AM Mass and Saturday confessions year-round, or drop them for the summer as the website's 2022-dated summer note says?",
+      "options": [
+        {
+          "label": "Year-round, as the bulletin prints",
+          "entry": {
+            "church_slug": "holy-saviour-church-norristown",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:00",
+            "end_time": "17:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "September to May only",
+          "entry": {
+            "church_slug": "holy-saviour-church-norristown",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:00",
+            "end_time": "17:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 9,
+              "start_day": null,
+              "end_month": 5,
+              "end_day": null
+            },
+            "note": null
+          }
+        }
+      ],
+      "answer": null,
+      "group": "summer-saturday"
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-plymouth-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 10,
+          "start_day": null,
+          "end_month": 5,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "571b0f5c",
+          "page": 1,
+          "said": "OUR LADY OF MOUNT CARMEL CHURCH Sundays: First Sunday 10:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fef0959c",
+          "page": 1,
+          "said": "OUR LADY OF MOUNT CARMEL CHURCH Sundays: First Sunday 10:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "571b0f5c",
+          "page": 3,
+          "said": "OLMC Cookie Social will be on Sunday, December 6th after the 10:00 AM Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://www.holysaviour.org/schedule/",
+          "said": "At Our Lady of Mount Carmel Mission Church Masses on the First Sunday of the month from October until May at 10AM"
+        }
+      ],
+      "rationale": "R1: the OLMC schedule box in both bulletins gives the First Sunday 10:00 AM Mass (neither bulletin's week holds a first Sunday; the newest announces the December 6 social after it). R6: the parish's own schedule page, which matches the bulletin's Mass times exactly, gives the months October to May, kept as the season; November fits it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-plymouth-township",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Traditional Latin Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "571b0f5c",
+          "page": 1,
+          "said": "Traditional Latin Mass Every Sunday: 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fef0959c",
+          "page": 1,
+          "said": "Traditional Latin Mass Every Sunday: 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "571b0f5c",
+          "page": 2,
+          "said": "MASSES AT OUR LADY OF MT. CARMEL CHURCH, BLACKHORSE SUNDAY, NOVEMBER 15, 2026 TRADITIONAL LATIN MASS 11:30 AM; NEXT, SUNDAY, NOVEMBER 22, 2026 TRADITIONAL LATIN MASS 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fef0959c",
+          "page": 2,
+          "said": "SUNDAY, NOVEMBER 8, 2026 TRADITIONAL LATIN MASS 11:30 AM"
+        }
+      ],
+      "rationale": "R1, R35: under the OLMC heading in both schedule boxes and in each week's OLMC intentions (Blackhorse is the Plymouth Township area of its Fairfield Rd. address).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "571b0f5c",
+          "page": 1,
+          "said": "Holy Days: See Bulletin Civil Holidays: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fef0959c",
+          "page": 1,
+          "said": "Holy Days: See Bulletin Civil Holidays: 9:00 AM"
+        }
+      ],
+      "rationale": "R33, POLICY Dates: 'Civil Holidays: 9:00 AM' names no dates and the bulletins print no dated holiday Mass (Thanksgiving is not mentioned), so no date can be projected; holy days are 'see bulletin' and neither issue lists one. Update mode will read the dated listings.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "571b0f5c",
+          "page": 5,
+          "said": "Typically, Mass is at 11AM Monday to Thursday, and Sunday Mass is usually at 2PM and sometimes earlier."
+        },
+        {
+          "source": "agent",
+          "bulletin": "fef0959c",
+          "page": 5,
+          "said": "Typically, Mass is at 11AM Monday to Thursday, and Sunday Mass is usually at 2PM and sometimes earlier."
+        }
+      ],
+      "rationale": "R22, R23: the St. John Neumann Center chaplain's notice; the center's chapel is elsewhere (a Philadelphia care center with a 215 number), not one of this parish's churches, and not on the church list. Its times are also hedged ('typically', 'usually').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-of-calcutta-limerick",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-24",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Flame of Love Rosary, St. Teresa of Calcutta, Schwenksville"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fef0959c",
+          "page": 5,
+          "said": "FLAME OF LOVE ROSARY - Tuesday, November 24, 2026; 6:15 PM Adoration, Flame of Love Rosary, Confessions ; 7:00 PM Procession, Holy Mass ... St. Teresa of Calcutta, 256 Swamp Pike, Schwenksville"
+        }
+      ],
+      "rationale": "R22: a community-news event at St. Teresa of Calcutta, Schwenksville, another parish's church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "church_list_issues": [
+    {
+      "church": "St. John Neumann Center (care center chapel, Philadelphia)",
+      "said": "Typically, Mass is at 11AM Monday to Thursday, and Sunday Mass is usually at 2PM and sometimes earlier. All masses are open to the public.",
+      "bulletin": "571b0f5c",
+      "page": 5
+    }
+  ]
+}
