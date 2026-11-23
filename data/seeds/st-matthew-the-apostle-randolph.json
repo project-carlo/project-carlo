@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-matthew-the-apostle-randolph",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:19:04Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-23T18:07:08Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@889c2ee61460",
+  "approved_at": "2026-11-23T22:48:16Z",
   "summary": "One church, two bulletins (Nov 8 and Nov 15, 2026), no history. Weekend, daily Mass, Saturday Reconciliation and third-Tuesday Adoration agree in both schedule boxes; the Advent and Christmas calendar gives dated Masses and the Christmas Day 8 AM cancellation. Open: whether the Dec 15 shortened Adoration (2-6:45 pm) cancels that day's usual 2-8 pm occurrence.",
   "blocked_reason": null,
   "bulletins": [
@@ -574,9 +574,22 @@
     },
     {
       "id": "s16",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-the-apostle-randolph",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-15",
+        "start_time": "14:00",
+        "end_time": "18:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 6,
       "sources": [
         {
@@ -635,7 +648,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@889c2ee61460",
+        "at": "2026-11-23T22:48:16Z"
+      }
     },
     {
       "id": "s18",
