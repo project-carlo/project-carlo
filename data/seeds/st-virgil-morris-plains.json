@@ -1,0 +1,678 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-virgil-morris-plains",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:52:21Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T22:14:24Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, St. Virgil. Weekend Masses, weekday 12:10 PM Masses and Saturday Reconciliation agree in both bulletins (Nov 8, Nov 15) and on the website; the website adds a first-Thursday Holy Hour and dated Thanksgiving, Healing and Immaculate Conception Masses. Open: whether Wednesday Mass is 12:10 PM (schedule box, website) or 9:00 AM (intentions both weeks).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "e57a5f3b0c36e9a7fc700450c95b8bde616eeb7aa77b408e149890a66ff6ecda",
+      "fetched_at": "2026-11-15T16:52:21Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "8251c14679ef51b43d43b45e3b22bd71ba1bdab445e909cb6c7537e3a9fa5bea",
+      "fetched_at": "2026-11-08T22:04:25Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-virgil-morris-plains",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e57a5f3b",
+          "page": 1,
+          "said": "Saturday | 5:00pm Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8251c146",
+          "page": 1,
+          "said": "Saturday | 5:00pm Vigil"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read (Nov 8 and Nov 15) and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-virgil-morris-plains",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e57a5f3b",
+          "page": 1,
+          "said": "Sunday | 7:30am, 9:00am, 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8251c146",
+          "page": 1,
+          "said": "Sunday | 7:30am, 9:00am, 11:30am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-virgil-morris-plains",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e57a5f3b",
+          "page": 1,
+          "said": "Sunday | 7:30am, 9:00am, 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8251c146",
+          "page": 1,
+          "said": "Sunday | 7:30am, 9:00am, 11:30am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-virgil-morris-plains",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e57a5f3b",
+          "page": 1,
+          "said": "Sunday | 7:30am, 9:00am, 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8251c146",
+          "page": 1,
+          "said": "Sunday | 7:30am, 9:00am, 11:30am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of both bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-virgil-morris-plains",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e57a5f3b",
+          "page": 1,
+          "said": "Weekday Masses ... 12:10pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8251c146",
+          "page": 1,
+          "said": "Weekday Masses ... 12:10pm"
+        }
+      ],
+      "rationale": "R1: Weekday Masses box on page 1 of both bulletins gives 12:10pm each weekday; the intentions agree (Monday's '12:10 am' is a typo for the same Mass); the website lists Mon-Fri 12:10 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-virgil-morris-plains",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e57a5f3b",
+          "page": 1,
+          "said": "Weekday Masses ... 12:10pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8251c146",
+          "page": 1,
+          "said": "Weekday Masses ... 12:10pm"
+        }
+      ],
+      "rationale": "R1: Weekday Masses box on page 1 of both bulletins gives 12:10pm each weekday; the intentions agree (Monday's '12:10 am' is a typo for the same Mass); the website lists Mon-Fri 12:10 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-virgil-morris-plains",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e57a5f3b",
+          "page": 1,
+          "said": "Weekday Masses ... 12:10pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8251c146",
+          "page": 1,
+          "said": "Weekday Masses ... 12:10pm"
+        }
+      ],
+      "rationale": "R1: Weekday Masses box on page 1 of both bulletins gives 12:10pm each weekday; the intentions agree (Monday's '12:10 am' is a typo for the same Mass); the website lists Mon-Fri 12:10 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-virgil-morris-plains",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e57a5f3b",
+          "page": 1,
+          "said": "Weekday Masses ... 12:10pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8251c146",
+          "page": 1,
+          "said": "Weekday Masses ... 12:10pm"
+        }
+      ],
+      "rationale": "R1: Weekday Masses box on page 1 of both bulletins gives 12:10pm each weekday; the intentions agree (Monday's '12:10 am' is a typo for the same Mass); the website lists Mon-Fri 12:10 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e57a5f3b",
+          "page": 1,
+          "said": "Wednesday | 12:10pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8251c146",
+          "page": 1,
+          "said": "Wednesday | 12:10pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e57a5f3b",
+          "page": 3,
+          "said": "Wednesday - November 18 9:00am | Kathy Gast"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8251c146",
+          "page": 3,
+          "said": "Wednesday - November 11 9:00am | Konrad - First Birthday"
+        },
+        {
+          "source": "website",
+          "url": "https://stvirgilparish.org/",
+          "said": "Daily Mass Schedule Mon Fri 12:10 PM"
+        }
+      ],
+      "rationale": "R28: the page-1 schedule box of both bulletins and the current website say Wednesday 12:10pm, but the Mass Intentions on page 3 of both bulletins list Wednesday's Mass at 9:00am. Neither explains the difference. Leaning 12:10 PM: the standing schedule and the website agree and the intentions are a reused template with other slips (Monday '12:10 am'); a 9:00 AM Wednesday Mass may be real, so a reviewer should decide.",
+      "question": "Wednesday weekday Mass: 12:10 PM (schedule box, website) or 9:00 AM (intentions both weeks)?",
+      "options": [
+        {
+          "label": "Wednesdays 12:10 PM",
+          "entry": {
+            "church_slug": "st-virgil-morris-plains",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "12:10",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Wednesdays 9:00 AM",
+          "entry": {
+            "church_slug": "st-virgil-morris-plains",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-virgil-morris-plains",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:45",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e57a5f3b",
+          "page": 1,
+          "said": "Reconciliation Saturday | 3:45pm - 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8251c146",
+          "page": 1,
+          "said": "Reconciliation Saturday | 3:45pm - 4:30pm"
+        }
+      ],
+      "rationale": "R1: Reconciliation box on page 1 of both bulletins; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e57a5f3b",
+          "page": 1,
+          "said": "Other | By Appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-virgil-morris-plains",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour in honor of the Body and Blood of Our Lord Jesus Christ"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stvirgilparish.org/",
+          "said": "Adoration Times Thursday 7:00 PM to 8:00 PM ONLY on First Thursdays: Holy Hour in honor of the Body and Blood of Our Lord Jesus Christ",
+          "schedule_check": {
+            "checked_at": "2026-11-23T22:17:12Z",
+            "current_because": "Checked 2026-11-23: the Mass Times widget on the homepage lists upcoming dated Masses (Thanksgiving November 26, Healing Mass December 4, Immaculate Conception December 8, 2026) and the homepage features current Advent 2026 items, so it is maintained.",
+            "bulletin": "e57a5f3b",
+            "fits_because": "Its weekend, Mon-Fri 12:10 PM and Saturday 3:45-4:30 PM Reconciliation times match the schedule box on page 1 of the November 15, 2026 bulletin exactly; the bulletin has no Adoration or holiday listing, so nothing contradicts it. Neither bulletin's week holds a first Thursday (Nov 8-14 is second, Nov 15-21 third), so its absence is expected (R11)."
+          }
+        }
+      ],
+      "rationale": "R6, R11: the parish website's Adoration Times give a first-Thursday 7-8 PM Holy Hour at the church; neither read bulletin covers a first-Thursday week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-virgil-morris-plains",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stvirgilparish.org/",
+          "said": "Thanksgiving Day November 26 : 9:00 AM ... No 12:10 PM Mass",
+          "schedule_check": {
+            "checked_at": "2026-11-23T22:17:12Z",
+            "current_because": "Checked 2026-11-23: the Mass Times widget on the homepage lists upcoming dated Masses (Thanksgiving November 26, Healing Mass December 4, Immaculate Conception December 8, 2026) and the homepage features current Advent 2026 items, so it is maintained.",
+            "bulletin": "e57a5f3b",
+            "fits_because": "Its weekend, Mon-Fri 12:10 PM and Saturday 3:45-4:30 PM Reconciliation times match the schedule box on page 1 of the November 15, 2026 bulletin exactly; the bulletin has no Adoration or holiday listing, so nothing contradicts it. The bulletin's intentions run only to November 22."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the website's Upcoming Holy Days & Special Masses list a 9:00 AM Thanksgiving Mass, after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-virgil-morris-plains",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stvirgilparish.org/",
+          "said": "Thanksgiving Day November 26 : 9:00 AM ... No 12:10 PM Mass",
+          "schedule_check": {
+            "checked_at": "2026-11-23T22:17:12Z",
+            "current_because": "Checked 2026-11-23: the Mass Times widget on the homepage lists upcoming dated Masses (Thanksgiving November 26, Healing Mass December 4, Immaculate Conception December 8, 2026) and the homepage features current Advent 2026 items, so it is maintained.",
+            "bulletin": "e57a5f3b",
+            "fits_because": "Its weekend, Mon-Fri 12:10 PM and Saturday 3:45-4:30 PM Reconciliation times match the schedule box on page 1 of the November 15, 2026 bulletin exactly; the bulletin has no Adoration or holiday listing, so nothing contradicts it. The bulletin's intentions run only to November 22."
+          }
+        }
+      ],
+      "rationale": "R6, R16, R40: the website says No 12:10 PM Mass on Thanksgiving; the weekly Thursday 12:10 is cancelled for that date.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-virgil-morris-plains",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-04",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Healing Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stvirgilparish.org/",
+          "said": "Healing Mass December 4 : 7:00 PM",
+          "schedule_check": {
+            "checked_at": "2026-11-23T22:17:12Z",
+            "current_because": "Checked 2026-11-23: the Mass Times widget on the homepage lists upcoming dated Masses (Thanksgiving November 26, Healing Mass December 4, Immaculate Conception December 8, 2026) and the homepage features current Advent 2026 items, so it is maintained.",
+            "bulletin": "e57a5f3b",
+            "fits_because": "Its weekend, Mon-Fri 12:10 PM and Saturday 3:45-4:30 PM Reconciliation times match the schedule box on page 1 of the November 15, 2026 bulletin exactly; the bulletin has no Adoration or holiday listing, so nothing contradicts it. The bulletin's intentions run only to November 22."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the website lists a public Healing Mass Friday December 4 at 7 PM (also a homepage news item), after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-virgil-morris-plains",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stvirgilparish.org/",
+          "said": "Immaculate Conception December 8 : 12:10 PM ... 7:00 PM",
+          "schedule_check": {
+            "checked_at": "2026-11-23T22:17:12Z",
+            "current_because": "Checked 2026-11-23: the Mass Times widget on the homepage lists upcoming dated Masses (Thanksgiving November 26, Healing Mass December 4, Immaculate Conception December 8, 2026) and the homepage features current Advent 2026 items, so it is maintained.",
+            "bulletin": "e57a5f3b",
+            "fits_because": "Its weekend, Mon-Fri 12:10 PM and Saturday 3:45-4:30 PM Reconciliation times match the schedule box on page 1 of the November 15, 2026 bulletin exactly; the bulletin has no Adoration or holiday listing, so nothing contradicts it. The bulletin's intentions run only to November 22."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the website lists an extra 7:00 PM Mass for the Immaculate Conception; the 12:10 PM that day is the regular Tuesday Mass (POLICY, Weekly or dated rule 7), so only 7 PM is dated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e57a5f3b",
+          "page": 4,
+          "said": "each Tuesday morning, we distribute Communion to the bed-bound and assist wheelchair-mobile residents to the chapel for Prayers or Mass"
+        }
+      ],
+      "rationale": "R24/R22: Morris View Nursing and Rehabilitation Facility ministry is Communion to residents at another address, not a public Mass at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
