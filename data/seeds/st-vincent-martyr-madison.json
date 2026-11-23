@@ -1,0 +1,671 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-vincent-martyr-madison",
+  "status": "ready",
+  "as_of": "2026-11-15T16:20:29Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T22:12:00Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. The Regular Mass & Liturgy Schedule box is identical in the Nov 8 and Nov 15 issues (all pages are images, read by rendering): Mon-Sat 8:30 AM, Sat 5 PM and 7 PM Spanish, Sun 7:15/9/10:30/12/5 PM, Saturday Confession 4:15-4:50 PM and 6 PM Spanish, First Friday Adoration 9 AM-6 PM. Plus a dated bilingual Thanksgiving Mass Nov 26 at 9:30 AM. No history stored; no open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "fa4c033f63ac6bfc30cf20ba7ea7914804b76a2846ed28c4e5c05ee779ad64e0",
+      "fetched_at": "2026-11-15T16:20:29Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "03bf3ebcda5a2852f7feb8a7b4e0ecbf65aacc9507340fabc8f134d7a76021e7",
+      "fetched_at": "2026-11-08T15:44:36Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-martyr-madison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fa4c033f",
+          "page": 3,
+          "said": "Daily Masses | Misas Diarias Monday - Saturday | Lunes - Sábado: 8:30 AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03bf3ebc",
+          "page": 3,
+          "said": "Daily Masses | Misas Diarias Monday - Saturday | Lunes - Sábado: 8:30 AM*"
+        }
+      ],
+      "rationale": "R1: printed in the Regular Mass & Liturgy Schedule box of both bulletins read; the intentions list 8:30 AM Monday-Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-martyr-madison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fa4c033f",
+          "page": 3,
+          "said": "Daily Masses | Misas Diarias Monday - Saturday | Lunes - Sábado: 8:30 AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03bf3ebc",
+          "page": 3,
+          "said": "Daily Masses | Misas Diarias Monday - Saturday | Lunes - Sábado: 8:30 AM*"
+        }
+      ],
+      "rationale": "R1: printed in the Regular Mass & Liturgy Schedule box of both bulletins read; the intentions list 8:30 AM Monday-Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-martyr-madison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fa4c033f",
+          "page": 3,
+          "said": "Daily Masses | Misas Diarias Monday - Saturday | Lunes - Sábado: 8:30 AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03bf3ebc",
+          "page": 3,
+          "said": "Daily Masses | Misas Diarias Monday - Saturday | Lunes - Sábado: 8:30 AM*"
+        }
+      ],
+      "rationale": "R1: printed in the Regular Mass & Liturgy Schedule box of both bulletins read; the intentions list 8:30 AM Monday-Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-martyr-madison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fa4c033f",
+          "page": 3,
+          "said": "Daily Masses | Misas Diarias Monday - Saturday | Lunes - Sábado: 8:30 AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03bf3ebc",
+          "page": 3,
+          "said": "Daily Masses | Misas Diarias Monday - Saturday | Lunes - Sábado: 8:30 AM*"
+        }
+      ],
+      "rationale": "R1: printed in the Regular Mass & Liturgy Schedule box of both bulletins read; the intentions list 8:30 AM Monday-Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-martyr-madison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fa4c033f",
+          "page": 3,
+          "said": "Daily Masses | Misas Diarias Monday - Saturday | Lunes - Sábado: 8:30 AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03bf3ebc",
+          "page": 3,
+          "said": "Daily Masses | Misas Diarias Monday - Saturday | Lunes - Sábado: 8:30 AM*"
+        }
+      ],
+      "rationale": "R1: printed in the Regular Mass & Liturgy Schedule box of both bulletins read; the intentions list 8:30 AM Monday-Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-martyr-madison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fa4c033f",
+          "page": 3,
+          "said": "Daily Masses | Misas Diarias Monday - Saturday | Lunes - Sábado: 8:30 AM*"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03bf3ebc",
+          "page": 3,
+          "said": "Daily Masses | Misas Diarias Monday - Saturday | Lunes - Sábado: 8:30 AM*"
+        }
+      ],
+      "rationale": "R1: printed in the Regular Mass & Liturgy Schedule box of both bulletins read; the intentions list 8:30 AM Monday-Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-martyr-madison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fa4c033f",
+          "page": 3,
+          "said": "Saturday | Sábado: 5 PM* | 7 PM* (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03bf3ebc",
+          "page": 3,
+          "said": "Saturday | Sábado: 5 PM* | 7 PM* (Español)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-martyr-madison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fa4c033f",
+          "page": 3,
+          "said": "Saturday | Sábado: 5 PM* | 7 PM* (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03bf3ebc",
+          "page": 3,
+          "said": "Saturday | Sábado: 5 PM* | 7 PM* (Español)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; POLICY, Notes: language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-martyr-madison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fa4c033f",
+          "page": 3,
+          "said": "Sunday | Domingo: 7:15 AM | 9 AM* | 10:30AM* | 12 PM | 5 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03bf3ebc",
+          "page": 3,
+          "said": "Sunday | Domingo: 7:15 AM | 9 AM* | 10:30AM* | 12 PM | 5 PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list each Sunday time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-martyr-madison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fa4c033f",
+          "page": 3,
+          "said": "Sunday | Domingo: 7:15 AM | 9 AM* | 10:30AM* | 12 PM | 5 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03bf3ebc",
+          "page": 3,
+          "said": "Sunday | Domingo: 7:15 AM | 9 AM* | 10:30AM* | 12 PM | 5 PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list each Sunday time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-martyr-madison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fa4c033f",
+          "page": 3,
+          "said": "Sunday | Domingo: 7:15 AM | 9 AM* | 10:30AM* | 12 PM | 5 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03bf3ebc",
+          "page": 3,
+          "said": "Sunday | Domingo: 7:15 AM | 9 AM* | 10:30AM* | 12 PM | 5 PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list each Sunday time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-martyr-madison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fa4c033f",
+          "page": 3,
+          "said": "Sunday | Domingo: 7:15 AM | 9 AM* | 10:30AM* | 12 PM | 5 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03bf3ebc",
+          "page": 3,
+          "said": "Sunday | Domingo: 7:15 AM | 9 AM* | 10:30AM* | 12 PM | 5 PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list each Sunday time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-martyr-madison",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fa4c033f",
+          "page": 3,
+          "said": "Sunday | Domingo: 7:15 AM | 9 AM* | 10:30AM* | 12 PM | 5 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03bf3ebc",
+          "page": 3,
+          "said": "Sunday | Domingo: 7:15 AM | 9 AM* | 10:30AM* | 12 PM | 5 PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; the intentions list each Sunday time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-martyr-madison",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": "16:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fa4c033f",
+          "page": 3,
+          "said": "Reconciliation (Confession) | Reconciliación (Confesión) Saturday | Sábado: 4:15 PM – 4:50PM | 6PM (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03bf3ebc",
+          "page": 3,
+          "said": "Reconciliation (Confession) | Reconciliación (Confesión) Saturday | Sábado: 4:15 PM – 4:50PM | 6PM (Español)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-martyr-madison",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fa4c033f",
+          "page": 3,
+          "said": "Reconciliation (Confession) | Reconciliación (Confesión) Saturday | Sábado: 4:15 PM – 4:50PM | 6PM (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03bf3ebc",
+          "page": 3,
+          "said": "Reconciliation (Confession) | Reconciliación (Confesión) Saturday | Sábado: 4:15 PM – 4:50PM | 6PM (Español)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins read; POLICY, Times: no end time is given, so end_time stays null.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-martyr-madison",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fa4c033f",
+          "page": 3,
+          "said": "Adoration First Friday: 9AM-6PM | Sign up svmnj.org/mass-times"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03bf3ebc",
+          "page": 3,
+          "said": "Adoration First Friday: 9AM-6PM | Sign up svmnj.org/mass-times"
+        }
+      ],
+      "rationale": "R1: the newest bulletin's schedule box prints First Friday Adoration (as does the Nov 8 issue); POLICY rule 2 makes it weekly with weeks_of_month first.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-martyr-madison",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day; bilingual"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fa4c033f",
+          "page": 4,
+          "said": "Join Us for Our Mass of Thanksgiving Thursday, November 26, 2026 at 9:30 am | Bilingual"
+        }
+      ],
+      "rationale": "R1, R16: a dated special Mass on or after as_of. R17: the bulletin does not say the 8:30 AM Thursday Mass is cancelled, so the weekly slot is left alone.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
