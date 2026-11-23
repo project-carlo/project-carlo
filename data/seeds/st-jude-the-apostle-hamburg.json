@@ -1,0 +1,549 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-jude-the-apostle-hamburg",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:17:20Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T17:38:32Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (St. Jude, Hardyston/Hamburg). Both bulletins read (Nov 8, Nov 15) print the same schedule box: Sat 5 PM, Sun 7:30/9:30/11:30, Mon 6:30 PM, Tue-Wed 8:30 AM, Sat confession 4:15-4:45, First Friday Adoration 9:15-10:30; intentions agree. Open: the Nov 15 intentions list Wed Nov 18 Mass at 8:00 AM against the box's 8:30. No history stored; no model calls.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "3fe81c1531a7c120b1ddc2b44da2cdba206e14aa89cd26f90250e7263e3fbd14",
+      "fetched_at": "2026-11-15T16:17:20Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "4b4f0c1ea3afd83d959d433e4ac702cd0daaf4e58037a92d5566d9b64b3b8cfe",
+      "fetched_at": "2026-11-08T15:42:43Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-the-apostle-hamburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3fe81c15",
+          "page": 1,
+          "said": "The Eucharist ... Saturday 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b4f0c1e",
+          "page": 1,
+          "said": "The Eucharist ... Saturday 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3fe81c15",
+          "page": 2,
+          "said": "SATURDAY ... 5:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b4f0c1e",
+          "page": 2,
+          "said": "SATURDAY ... 5:00PM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read, and in both weeks' Mass intentions (R35).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-the-apostle-hamburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3fe81c15",
+          "page": 1,
+          "said": "Sunday 7:30, 9:30 & 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b4f0c1e",
+          "page": 1,
+          "said": "Sunday 7:30, 9:30 & 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3fe81c15",
+          "page": 2,
+          "said": "SUNDAY ... 7:30AM ... 9:30AM ... 11:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b4f0c1e",
+          "page": 2,
+          "said": "SUNDAY ... 7:30AM ... 9:30AM ... 11:30AM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read, and in both weeks' Mass intentions (R35).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-the-apostle-hamburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3fe81c15",
+          "page": 1,
+          "said": "Sunday 7:30, 9:30 & 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b4f0c1e",
+          "page": 1,
+          "said": "Sunday 7:30, 9:30 & 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3fe81c15",
+          "page": 2,
+          "said": "SUNDAY ... 7:30AM ... 9:30AM ... 11:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b4f0c1e",
+          "page": 2,
+          "said": "SUNDAY ... 7:30AM ... 9:30AM ... 11:30AM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read, and in both weeks' Mass intentions (R35).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-the-apostle-hamburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3fe81c15",
+          "page": 1,
+          "said": "Sunday 7:30, 9:30 & 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b4f0c1e",
+          "page": 1,
+          "said": "Sunday 7:30, 9:30 & 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3fe81c15",
+          "page": 2,
+          "said": "SUNDAY ... 7:30AM ... 9:30AM ... 11:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b4f0c1e",
+          "page": 2,
+          "said": "SUNDAY ... 7:30AM ... 9:30AM ... 11:30AM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read, and in both weeks' Mass intentions (R35).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-the-apostle-hamburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3fe81c15",
+          "page": 1,
+          "said": "Monday 6:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b4f0c1e",
+          "page": 1,
+          "said": "Monday 6:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3fe81c15",
+          "page": 2,
+          "said": "MONDAY ... 6:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b4f0c1e",
+          "page": 2,
+          "said": "MONDAY ... 6:30PM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read, and in both weeks' Mass intentions (R35).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-the-apostle-hamburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3fe81c15",
+          "page": 1,
+          "said": "Tuesday and Wednesday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b4f0c1e",
+          "page": 1,
+          "said": "Tuesday and Wednesday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3fe81c15",
+          "page": 2,
+          "said": "TUESDAY ... 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b4f0c1e",
+          "page": 2,
+          "said": "TUESDAY ... 8:30AM"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read, and in both weeks' Mass intentions (R35).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-the-apostle-hamburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3fe81c15",
+          "page": 1,
+          "said": "Tuesday and Wednesday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b4f0c1e",
+          "page": 1,
+          "said": "Tuesday and Wednesday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b4f0c1e",
+          "page": 2,
+          "said": "WEDNESDAY, November 11, 2026 8:30AM-Rosemarie A. Festo"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read; the Nov 11 intention is at 8:30. The newest issue's Nov 18 intention says 8:00AM; that one date is asked separately (R40) and does not change the standing schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3fe81c15",
+          "page": 2,
+          "said": "WEDNESDAY, November 18, 2026 8:00AM-For the Living Intentions of Sr. Domitila"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3fe81c15",
+          "page": 1,
+          "said": "Tuesday and Wednesday 8:30 am"
+        }
+      ],
+      "rationale": "R28/R30: the same bulletin gives 8:30 in its standing schedule and 8:00 in one dated intention, with no note of a change; it may be a one-date change or a typo. Leaning per R17/R40: record the dated listing and keep the weekly 8:30; no cancellation of 8:30 is stated so none is recorded. Previous week's intention (Nov 11) was 8:30.",
+      "question": "The Nov 15 bulletin's intentions list Wednesday Nov 18 Mass at 8:00 AM, while its schedule box says Wednesdays 8:30 am. Add a dated 8:00 AM Mass on Nov 18?",
+      "options": [
+        {
+          "label": "Dated Mass Wed Nov 18 8:00 AM (weekly 8:30 kept)",
+          "entry": {
+            "church_slug": "st-jude-the-apostle-hamburg",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-18",
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out (intention-line typo)",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-the-apostle-hamburg",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3fe81c15",
+          "page": 1,
+          "said": "Rite of Reconciliation Saturday 4:15 to 4:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b4f0c1e",
+          "page": 1,
+          "said": "Rite of Reconciliation Saturday 4:15 to 4:45 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page 1 schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-the-apostle-hamburg",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:15",
+        "end_time": "10:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3fe81c15",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament First Friday 9:15 - 10:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b4f0c1e",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament First Friday 9:15 - 10:30 am"
+        }
+      ],
+      "rationale": "R1: the newest bulletin's standing schedule box prints First Friday Adoration (as does the Nov 8 issue); POLICY rule 2 makes it weekly with weeks_of_month first.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3fe81c15",
+          "page": 1,
+          "said": "Holy Days of Obligation 7:30 pm (Eve) & 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b4f0c1e",
+          "page": 1,
+          "said": "Holy Days of Obligation 7:30 pm (Eve) & 9:00 am"
+        }
+      ],
+      "rationale": "POLICY, Dates: holy-day times with no holy day or date named in either bulletin cannot be dated or made weekly; update mode will catch dated holy-day listings.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3fe81c15",
+          "page": 1,
+          "said": "Monday evenings during Lent & Advent. Penance Services will be announced or by personal appointments."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b4f0c1e",
+          "page": 1,
+          "said": "Monday evenings during Lent & Advent. Penance Services will be announced or by personal appointments."
+        }
+      ],
+      "rationale": "R26: Lent/Advent Monday-evening confession and penance services have no stated time; appointments have no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
