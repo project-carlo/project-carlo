@@ -1,0 +1,653 @@
+{
+  "schema_version": 1,
+  "parish_slug": "blessed-virgin-mary-darby",
+  "status": "ready",
+  "as_of": "2026-11-15T16:16:09Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T23:04:37Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches: Blessed Virgin Mary (Darby) holds every service except the Sunday 9:30 AM Mass at St. Louis (Yeadon). Both bulletins read (Nov 8 and Nov 15, 2026) print the same schedule box, and the website matches; Confession and Adoration (both Saturday 3:15-4:00 PM) and the daily Mass name no church but are placed at BVM because the bulletin is BVM Church's and St. Louis has only the one Sunday Mass. One dated entry: Thanksgiving Mass Nov 26 at 9 AM. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "5d1f9720fd1bc12543835b06cf52ffe4c18d221ba090d9657088fa31bef21a8a",
+      "fetched_at": "2026-11-15T16:16:09Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "a1386a5f2ebea1a0e1ca8316662eec09415173c2f11e4ae659e8a281f18808aa",
+      "fetched_at": "2026-11-08T15:41:21Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-virgin-mary-darby",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d1f9720",
+          "page": 1,
+          "said": "Vigil Mass: (Saturday evening) 4:30PM, BVM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1386a5f",
+          "page": 1,
+          "said": "Vigil Mass: (Saturday evening) 4:30PM, BVM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule of both bulletins read; the website agrees (Saturday: 4:30pm).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-virgin-mary-darby",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d1f9720",
+          "page": 1,
+          "said": "Sundays: 8:00 & 11:00 AM & 4:00 PM, BVM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1386a5f",
+          "page": 1,
+          "said": "Sundays: 8:00 & 11:00 AM & 4:00 PM, BVM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule of both bulletins read; the website agrees (Sunday: 8:00 am, 11:00am & 4:00pm).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-virgin-mary-darby",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d1f9720",
+          "page": 1,
+          "said": "Sundays: 8:00 & 11:00 AM & 4:00 PM, BVM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1386a5f",
+          "page": 1,
+          "said": "Sundays: 8:00 & 11:00 AM & 4:00 PM, BVM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule of both bulletins read; the website agrees (Sunday: 8:00 am, 11:00am & 4:00pm).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-virgin-mary-darby",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d1f9720",
+          "page": 1,
+          "said": "Sundays: 8:00 & 11:00 AM & 4:00 PM, BVM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1386a5f",
+          "page": 1,
+          "said": "Sundays: 8:00 & 11:00 AM & 4:00 PM, BVM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule of both bulletins read; the website agrees (Sunday: 8:00 am, 11:00am & 4:00pm).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-louis-yeadon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d1f9720",
+          "page": 1,
+          "said": "Sundays: 9:30 AM St. Louis, Yeadon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1386a5f",
+          "page": 1,
+          "said": "Sundays: 9:30 AM St. Louis, Yeadon"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule of both bulletins read; the website agrees (Sunday: 9:30 am mass at St. Louis).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-virgin-mary-darby",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d1f9720",
+          "page": 1,
+          "said": "Daily: 8:15 AM Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1386a5f",
+          "page": 1,
+          "said": "Daily: 8:15 AM Monday through Saturday"
+        },
+        {
+          "source": "website",
+          "url": "https://www.bvm-darby.com/",
+          "said": "Monday - Saturday: 8:15am No daily at St. Louis"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule of both bulletins read. The line names no church, but the bulletin is Blessed Virgin Mary Church's (masthead with its 1101 Main St address), the Monday-Saturday intentions run under it, and the website says 'No daily at St. Louis', so it is at BVM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-virgin-mary-darby",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d1f9720",
+          "page": 1,
+          "said": "Daily: 8:15 AM Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1386a5f",
+          "page": 1,
+          "said": "Daily: 8:15 AM Monday through Saturday"
+        },
+        {
+          "source": "website",
+          "url": "https://www.bvm-darby.com/",
+          "said": "Monday - Saturday: 8:15am No daily at St. Louis"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule of both bulletins read. The line names no church, but the bulletin is Blessed Virgin Mary Church's (masthead with its 1101 Main St address), the Monday-Saturday intentions run under it, and the website says 'No daily at St. Louis', so it is at BVM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-virgin-mary-darby",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d1f9720",
+          "page": 1,
+          "said": "Daily: 8:15 AM Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1386a5f",
+          "page": 1,
+          "said": "Daily: 8:15 AM Monday through Saturday"
+        },
+        {
+          "source": "website",
+          "url": "https://www.bvm-darby.com/",
+          "said": "Monday - Saturday: 8:15am No daily at St. Louis"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule of both bulletins read. The line names no church, but the bulletin is Blessed Virgin Mary Church's (masthead with its 1101 Main St address), the Monday-Saturday intentions run under it, and the website says 'No daily at St. Louis', so it is at BVM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-virgin-mary-darby",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d1f9720",
+          "page": 1,
+          "said": "Daily: 8:15 AM Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1386a5f",
+          "page": 1,
+          "said": "Daily: 8:15 AM Monday through Saturday"
+        },
+        {
+          "source": "website",
+          "url": "https://www.bvm-darby.com/",
+          "said": "Monday - Saturday: 8:15am No daily at St. Louis"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule of both bulletins read. The line names no church, but the bulletin is Blessed Virgin Mary Church's (masthead with its 1101 Main St address), the Monday-Saturday intentions run under it, and the website says 'No daily at St. Louis', so it is at BVM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-virgin-mary-darby",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d1f9720",
+          "page": 1,
+          "said": "Daily: 8:15 AM Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1386a5f",
+          "page": 1,
+          "said": "Daily: 8:15 AM Monday through Saturday"
+        },
+        {
+          "source": "website",
+          "url": "https://www.bvm-darby.com/",
+          "said": "Monday - Saturday: 8:15am No daily at St. Louis"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule of both bulletins read. The line names no church, but the bulletin is Blessed Virgin Mary Church's (masthead with its 1101 Main St address), the Monday-Saturday intentions run under it, and the website says 'No daily at St. Louis', so it is at BVM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-virgin-mary-darby",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d1f9720",
+          "page": 1,
+          "said": "Daily: 8:15 AM Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1386a5f",
+          "page": 1,
+          "said": "Daily: 8:15 AM Monday through Saturday"
+        },
+        {
+          "source": "website",
+          "url": "https://www.bvm-darby.com/",
+          "said": "Monday - Saturday: 8:15am No daily at St. Louis"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule of both bulletins read. The line names no church, but the bulletin is Blessed Virgin Mary Church's (masthead with its 1101 Main St address), the Monday-Saturday intentions run under it, and the website says 'No daily at St. Louis', so it is at BVM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-virgin-mary-darby",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d1f9720",
+          "page": 1,
+          "said": "RITE OF RECONCILIATION: Saturday 3:15 to 4:00 PM or call to schedule an appointment during the week."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1386a5f",
+          "page": 1,
+          "said": "RITE OF RECONCILIATION: Saturday 3:15 to 4:00 PM or call to schedule an appointment during the week."
+        },
+        {
+          "source": "website",
+          "url": "https://www.bvm-darby.com/reconciliation/penance",
+          "said": "Saturdays: 3:15 to 4:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins and on the website. No church is named, but the bulletin's masthead is Blessed Virgin Mary Church, 1101 Main Street, and St. Louis appears only for the one Sunday 9:30 Mass; the window runs up to the 4:30 PM Vigil at BVM. Appointments have no time (R26).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-virgin-mary-darby",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d1f9720",
+          "page": 1,
+          "said": "Adoration - 3:15 to 4:00 PM, every Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1386a5f",
+          "page": 1,
+          "said": "Adoration - 3:15 to 4:00 PM, every Saturday"
+        }
+      ],
+      "rationale": "R1: printed under Devotions in both bulletins. At BVM for the same reason as the Saturday Confession (the bulletin is BVM Church's; St. Louis has only the Sunday 9:30 Mass). Confession has its own printed clock time, so both are recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-virgin-mary-darby",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d1f9720",
+          "page": 3,
+          "said": "Thanksgiving Mass will be at 9 am on Thursday, November 26."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a1386a5f",
+          "page": 3,
+          "said": "THANKSGIVING mass is Thursday, November 26, at 9 a.m."
+        }
+      ],
+      "rationale": "R1, R16: dated Mass after as_of, announced in both bulletins in the BVM Church bulletin's Upcoming Events (St. Louis has no weekday Masses). R17: the bulletin does not cancel the 8:15 AM Thursday Mass, so the weekly slot is left alone.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d1f9720",
+          "page": 1,
+          "said": "Holy Days: 8:15 AM, 12:00 Noon & 7:30 PM, BVM"
+        }
+      ],
+      "rationale": "POLICY, Dates: a generic holy-day schedule names no date, and dates are not projected from the calendar; update mode records holy days as bulletins print them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d1f9720",
+          "page": 1,
+          "said": "Miraculous Medal Novena - Saturdays after the 8:15 AM Mass"
+        }
+      ],
+      "rationale": "R24: a novena is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5d1f9720",
+          "page": 3,
+          "said": "Men's Day of Formation on Saturday, November 28, 2026, from 9:00 AM to 1:00 PM at Our Lady of Perpetual Help in Morton ... The day begins with Holy Mass."
+        }
+      ],
+      "rationale": "R22: held at another parish's church (Our Lady of Perpetual Help, Morton), and the Mass has no definite time of its own.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
