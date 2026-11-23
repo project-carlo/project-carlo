@@ -1,0 +1,838 @@
+{
+  "schema_version": 1,
+  "parish_slug": "assumption-bvm-feasterville",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:38:38Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T22:56:30Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend, weekday, Confession, Tuesday Adoration and First Friday Night of Reparation times are identical in the standing schedule box of both bulletins (Nov 8 and Nov 15); no history stored. One question: the Thanksgiving 9:00 AM Mass named in the standing box without a date.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "a0529cec5329b11b04d0dd07c65e444ab74c02510ab7f9dcd4cc2e2f654edc96",
+      "fetched_at": "2026-11-15T16:38:38Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "b768406310d01163d5eb481c1c96f7d1707e819548df86244347758b20ed0132",
+      "fetched_at": "2026-11-08T15:52:30Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-feasterville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0529cec",
+          "page": 1,
+          "said": "Saturday Vigil 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b7684063",
+          "page": 1,
+          "said": "Saturday Vigil 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0529cec",
+          "page": 3,
+          "said": "November 21 5:00pm Saturday"
+        }
+      ],
+      "rationale": "R1: printed in the Schedule of Masses box of both bulletins read; the Mass intentions list it each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-feasterville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0529cec",
+          "page": 1,
+          "said": "Sundays 8:00 am and 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b7684063",
+          "page": 1,
+          "said": "Sundays 8:00 am and 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0529cec",
+          "page": 3,
+          "said": "November 22 8:00am Sunday ... 11:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Schedule of Masses box of both bulletins read; the Mass intentions list both each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-feasterville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0529cec",
+          "page": 1,
+          "said": "Sundays 8:00 am and 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b7684063",
+          "page": 1,
+          "said": "Sundays 8:00 am and 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0529cec",
+          "page": 3,
+          "said": "November 22 8:00am Sunday ... 11:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Schedule of Masses box of both bulletins read; the Mass intentions list both each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-feasterville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In Malayalam"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0529cec",
+          "page": 1,
+          "said": "Sundays ... 3:00 pm (In Malayalam)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b7684063",
+          "page": 1,
+          "said": "Sundays ... 3:00 pm (In Malayalam)"
+        }
+      ],
+      "rationale": "R1: printed in the parish Schedule of Masses box of both bulletins read; the staff list names a chaplain to the Indian Latin Catholic Community. POLICY, Notes: language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-feasterville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0529cec",
+          "page": 1,
+          "said": "Weekdays 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b7684063",
+          "page": 1,
+          "said": "Weekdays 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0529cec",
+          "page": 3,
+          "said": "November 16-20 8:30am Monday-Friday"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the intentions list an 8:30 AM Mass Monday to Friday and none on Saturday morning, so Weekdays means Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-feasterville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0529cec",
+          "page": 1,
+          "said": "Weekdays 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b7684063",
+          "page": 1,
+          "said": "Weekdays 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0529cec",
+          "page": 3,
+          "said": "November 16-20 8:30am Monday-Friday"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the intentions list an 8:30 AM Mass Monday to Friday and none on Saturday morning, so Weekdays means Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-feasterville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0529cec",
+          "page": 1,
+          "said": "Weekdays 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b7684063",
+          "page": 1,
+          "said": "Weekdays 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0529cec",
+          "page": 3,
+          "said": "November 16-20 8:30am Monday-Friday"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the intentions list an 8:30 AM Mass Monday to Friday and none on Saturday morning, so Weekdays means Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-feasterville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0529cec",
+          "page": 1,
+          "said": "Weekdays 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b7684063",
+          "page": 1,
+          "said": "Weekdays 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0529cec",
+          "page": 3,
+          "said": "November 16-20 8:30am Monday-Friday"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the intentions list an 8:30 AM Mass Monday to Friday and none on Saturday morning, so Weekdays means Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-feasterville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0529cec",
+          "page": 1,
+          "said": "Weekdays 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b7684063",
+          "page": 1,
+          "said": "Weekdays 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0529cec",
+          "page": 3,
+          "said": "November 16-20 8:30am Monday-Friday"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the intentions list an 8:30 AM Mass Monday to Friday and none on Saturday morning, so Weekdays means Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-feasterville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0529cec",
+          "page": 1,
+          "said": "CONFESSIONS Sundays 7:30 am and 10:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b7684063",
+          "page": 1,
+          "said": "CONFESSIONS Sundays 7:30 am and 10:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the Confessions box of both bulletins; no end time given, so none recorded (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-feasterville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0529cec",
+          "page": 1,
+          "said": "CONFESSIONS Sundays 7:30 am and 10:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b7684063",
+          "page": 1,
+          "said": "CONFESSIONS Sundays 7:30 am and 10:30 am"
+        }
+      ],
+      "rationale": "R1: printed in the Confessions box of both bulletins; no end time given, so none recorded (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-feasterville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0529cec",
+          "page": 1,
+          "said": "CONFESSIONS Saturdays 3:30 pm ~ 4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b7684063",
+          "page": 1,
+          "said": "CONFESSIONS Saturdays 3:30 pm ~ 4:30 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Confessions box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0529cec",
+          "page": 1,
+          "said": "CONFESSIONS Other Days By appointment"
+        }
+      ],
+      "rationale": "R26: by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-feasterville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "19:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Evening Prayer & Benediction at 6:45 PM"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0529cec",
+          "page": 1,
+          "said": "Tuesdays Adoration of the Most Blessed Sacrament In the Church from 9:00 am to 6:45 pm with Evening Prayer & Benediction at 6:45 pm -7:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b7684063",
+          "page": 1,
+          "said": "Tuesdays Adoration of the Most Blessed Sacrament In the Church from 9:00 am to 6:45 pm with Evening Prayer & Benediction at 6:45 pm -7:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a0529cec",
+          "page": 2,
+          "said": "Eucharistic Adoration Tue. 9:00 am Church; Evening Prayer & Benediction Tue. 6:45 pm Church"
+        }
+      ],
+      "rationale": "R1, POLICY What to extract: Adoration runs into Evening Prayer and Benediction without a break, so it is one Adoration event 9:00 AM-7:15 PM with the note Benediction, not two.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0529cec",
+          "page": 1,
+          "said": "Mondays, Wednesdays, Thursdays, and Fridays Visits to the Most Blessed Sacrament In the Church before 8:30 am until Closing"
+        }
+      ],
+      "rationale": "R24, R38: the church being open for visits to the reserved Sacrament is not an Adoration schedule; no exposition is claimed and there is no definite time (before 8:30 am until closing), so R26: no entry.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-feasterville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "20:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Night of Reparation"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0529cec",
+          "page": 1,
+          "said": "First Fridays Night of Reparation In the Church celebrated monthly with Confessions from 7:00 pm and Mass at 8:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b7684063",
+          "page": 1,
+          "said": "First Fridays Night of Reparation In the Church celebrated monthly with Confessions from 7:00 pm and Mass at 8:30 pm"
+        }
+      ],
+      "rationale": "R1: the standing Call to Holiness box of both bulletins names it First Fridays monthly; R11/R12: neither bulletin's week holds a first Friday, but the newest issue prints the standing line itself.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-feasterville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Night of Reparation, before the 8:30 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0529cec",
+          "page": 1,
+          "said": "First Fridays Night of Reparation ... with Confessions from 7:00 pm and Mass at 8:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b7684063",
+          "page": 1,
+          "said": "First Fridays Night of Reparation ... with Confessions from 7:00 pm and Mass at 8:30 pm"
+        }
+      ],
+      "rationale": "R1, POLICY Times: a clock start that runs until a Mass has no end time; note names the Mass. Named first-Friday service printed in the standing box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-bvm-feasterville",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-29",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour and Rosary, after the 11:00 AM Mass"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0529cec",
+          "page": 4,
+          "said": "Holy Hour and Rosary on Sunday, November 29, immediately following the 11am Mass. Come spend time in prayer before the Blessed Sacrament ... all are welcome!"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b7684063",
+          "page": 5,
+          "said": "Holy Hour and Rosary on Sunday, November 29, immediately following the 11am Mass"
+        }
+      ],
+      "rationale": "R1, R10, R16: a dated Holy Hour open to all, after a weekend Mass so 1 hour after its start (12:00 PM); on or after as_of. No end printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0529cec",
+          "page": 3,
+          "said": "Flame of Love Rosary ... on Tuesday evenings after Benediction at 7:15pm in the Mary Chapel"
+        }
+      ],
+      "rationale": "R24: a Rosary is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0529cec",
+          "page": 2,
+          "said": "Eucharistic Prayer Meeting Thu. 7:30pm Church"
+        }
+      ],
+      "rationale": "R24, R25: a prayer meeting; the bulletin does not call it Adoration or say the Sacrament is exposed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0529cec",
+          "page": 1,
+          "said": "Holy Days of Obligation 10:00 am and 7:00 pm"
+        }
+      ],
+      "rationale": "POLICY Dates, R16: no holy day falls in the newest bulletin's week and neither bulletin dates one; the dates must not be projected from the calendar. Update mode will read the bulletins that announce them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a0529cec",
+          "page": 1,
+          "said": "Holidays 9:00 am (Memorial Day, Independence Day, Labor Day, and Thanksgiving)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b7684063",
+          "page": 1,
+          "said": "Holidays 9:00 am (Memorial Day, Independence Day, Labor Day, and Thanksgiving)"
+        }
+      ],
+      "rationale": "R30: the standing schedule names Thanksgiving (Nov 26, after as_of) with a 9:00 AM Mass, but gives no date; POLICY forbids projecting dates from a pattern, though a named holiday pins one day. Leaning include per R17's holiday example; the weekly 8:30 slot is left alone (no cancellation stated). Other holidays are in 2027, out of reach.",
+      "question": "Add a 9:00 AM Mass on Thanksgiving, November 26, 2026?",
+      "options": [
+        {
+          "label": "Thanksgiving 9 AM Mass",
+          "entry": {
+            "church_slug": "assumption-bvm-feasterville",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-26",
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Thanksgiving"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    }
+  ]
+}
