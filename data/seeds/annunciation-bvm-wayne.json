@@ -1,0 +1,765 @@
+{
+  "schema_version": 1,
+  "parish_slug": "annunciation-bvm-wayne",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:08:46Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T12:25:27Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Saturday 8:30 AM and 5:30 PM, Sunday 8/10/11:45, weekday 12:05, Wednesday Adoration 9-11 with confession and Saturday confession 4-5 agree in both bulletins and the website. Thanksgiving week Masses are dated. Open: a Wednesday 8:30 AM Mass seen only in intentions, and Advent Monday confessions timed only by the website.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "43581f4ddb4d9a21a17a57e1f3874ca33952026e58743876feea4af5eee909be",
+      "fetched_at": "2026-11-15T16:08:46Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "3e90e7ca54a7a5a5cd67fa6080224d9dacd438ac829b186b7a683c9979075467",
+      "fetched_at": "2026-11-08T15:34:51Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "43581f4d",
+          "page": 2,
+          "said": "Mass Times: Saturday 8:30am 5:30pm Sunday Vigil Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e90e7ca",
+          "page": 2,
+          "said": "Mass Times: Saturday 8:30am 5:30pm Sunday Vigil Mass"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read; the website's Mass Times page agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "43581f4d",
+          "page": 2,
+          "said": "Mass Times: Saturday 8:30am 5:30pm Sunday Vigil Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e90e7ca",
+          "page": 2,
+          "said": "Mass Times: Saturday 8:30am 5:30pm Sunday Vigil Mass"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read; the website's Mass Times page agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "43581f4d",
+          "page": 2,
+          "said": "Mass Times: Sunday 8:00am 10:00am 11:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e90e7ca",
+          "page": 2,
+          "said": "Mass Times: Sunday 8:00am 10:00am 11:45am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "43581f4d",
+          "page": 2,
+          "said": "Mass Times: Sunday 8:00am 10:00am 11:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e90e7ca",
+          "page": 2,
+          "said": "Mass Times: Sunday 8:00am 10:00am 11:45am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "43581f4d",
+          "page": 2,
+          "said": "Mass Times: Sunday 8:00am 10:00am 11:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e90e7ca",
+          "page": 2,
+          "said": "Mass Times: Sunday 8:00am 10:00am 11:45am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "43581f4d",
+          "page": 2,
+          "said": "Mass Times: Weekdays 12:05pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e90e7ca",
+          "page": 2,
+          "said": "Mass Times: Weekdays 12:05pm"
+        },
+        {
+          "source": "website",
+          "url": "https://abvm-wayne.org/mass-times",
+          "said": "Daily Mass Schedule Mon Fri 12:05 PM"
+        }
+      ],
+      "rationale": "R1: the Mass Times box of both bulletins gives Weekdays 12:05pm, which the website gives as Mon-Fri; Saturday has its own times. The Nov 18 intentions list only 8:30am, but R39: a missing intention is not a cancellation.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "43581f4d",
+          "page": 2,
+          "said": "Mass Times: Weekdays 12:05pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e90e7ca",
+          "page": 2,
+          "said": "Mass Times: Weekdays 12:05pm"
+        },
+        {
+          "source": "website",
+          "url": "https://abvm-wayne.org/mass-times",
+          "said": "Daily Mass Schedule Mon Fri 12:05 PM"
+        }
+      ],
+      "rationale": "R1: the Mass Times box of both bulletins gives Weekdays 12:05pm, which the website gives as Mon-Fri; Saturday has its own times. The Nov 18 intentions list only 8:30am, but R39: a missing intention is not a cancellation.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "43581f4d",
+          "page": 2,
+          "said": "Mass Times: Weekdays 12:05pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e90e7ca",
+          "page": 2,
+          "said": "Mass Times: Weekdays 12:05pm"
+        },
+        {
+          "source": "website",
+          "url": "https://abvm-wayne.org/mass-times",
+          "said": "Daily Mass Schedule Mon Fri 12:05 PM"
+        }
+      ],
+      "rationale": "R1: the Mass Times box of both bulletins gives Weekdays 12:05pm, which the website gives as Mon-Fri; Saturday has its own times. The Nov 18 intentions list only 8:30am, but R39: a missing intention is not a cancellation.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "43581f4d",
+          "page": 2,
+          "said": "Mass Times: Weekdays 12:05pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e90e7ca",
+          "page": 2,
+          "said": "Mass Times: Weekdays 12:05pm"
+        },
+        {
+          "source": "website",
+          "url": "https://abvm-wayne.org/mass-times",
+          "said": "Daily Mass Schedule Mon Fri 12:05 PM"
+        }
+      ],
+      "rationale": "R1: the Mass Times box of both bulletins gives Weekdays 12:05pm, which the website gives as Mon-Fri; Saturday has its own times. The Nov 18 intentions list only 8:30am, but R39: a missing intention is not a cancellation.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-wayne",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "43581f4d",
+          "page": 2,
+          "said": "Mass Times: Weekdays 12:05pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e90e7ca",
+          "page": 2,
+          "said": "Mass Times: Weekdays 12:05pm"
+        },
+        {
+          "source": "website",
+          "url": "https://abvm-wayne.org/mass-times",
+          "said": "Daily Mass Schedule Mon Fri 12:05 PM"
+        }
+      ],
+      "rationale": "R1: the Mass Times box of both bulletins gives Weekdays 12:05pm, which the website gives as Mon-Fri; Saturday has its own times. The Nov 18 intentions list only 8:30am, but R39: a missing intention is not a cancellation.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-wayne",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "11:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "43581f4d",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament: Wednesdays 9:00am - 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e90e7ca",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament: Wednesdays 9:00am - 11:00am"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins. The website's Holy Hour page also lists Wednesday 9:00 AM to 2:00 PM 'During Adoration Time' beside 'Wednesday 9:00 AM to 11:00 AM Summer Hours'; both current bulletins give 9-11 in November, so the bulletin's hours are kept (R7/R40: the bulletin is the current, service-specific source).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-wayne",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "11:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "During Adoration"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "43581f4d",
+          "page": 2,
+          "said": "Wednesdays 9:00am - 11:00am ... Confession is also available"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e90e7ca",
+          "page": 2,
+          "said": "Wednesdays 9:00am - 11:00am ... Confession is also available"
+        }
+      ],
+      "rationale": "R10, POLICY Times: confession offered during Adoration takes the Adoration's hours.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-wayne",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "43581f4d",
+          "page": 2,
+          "said": "Sacrament of Confession: Saturdays 4:00pm - 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e90e7ca",
+          "page": 2,
+          "said": "Sacrament of Confession: Saturdays 4:00pm - 5:00pm"
+        }
+      ],
+      "rationale": "R1: printed in both bulletins; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-wayne",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "43581f4d",
+          "page": 2,
+          "said": "Mass on Thursday Nov 26th : 10am"
+        }
+      ],
+      "rationale": "R1, R16, R17: dated holiday Mass after as_of; no cancellation of the 12:05 is stated, so the weekly slot is left alone.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-wayne",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "43581f4d",
+          "page": 2,
+          "said": "THE PARISH OFFICE WILL BE CLOSED November 26th & 27th ... Mass on Friday Nov 27th : 8:30 am"
+        }
+      ],
+      "rationale": "R1, R16, R17: dated Mass after as_of; no cancellation of the 12:05 is stated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "43581f4d",
+          "page": 2,
+          "said": "Wednesday, November 18th 2026 8:30am - Jayda Garcia- Nina Bello"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e90e7ca",
+          "page": 2,
+          "said": "Wednesday, November 11th 2026 8:30am ... 12:05pm; THE PARISH OFFICE WILL BE CLOSED November 11th Mass will be at 8:30am"
+        }
+      ],
+      "rationale": "R30/C1: Wed 8:30 appears only in the intentions of two weeks. Nov 11 was a stated holiday arrangement, so it doesn't make R35 recurrence; Nov 18 gives no reason and the schedule box and website give only weekday 12:05. Leaning: a dated Mass (POLICY, Weekly or dated rule 3).",
+      "question": "Is there a Wednesday 8:30 AM Mass?",
+      "options": [
+        {
+          "label": "Only Wednesday Nov 18, 8:30 AM",
+          "entry": {
+            "church_slug": "annunciation-bvm-wayne",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-18",
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Every Wednesday 8:30 AM",
+          "entry": {
+            "church_slug": "annunciation-bvm-wayne",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "43581f4d",
+          "page": 4,
+          "said": "Advent Confessions Every Monday in December"
+        },
+        {
+          "source": "website",
+          "url": "https://abvm-wayne.org/hour-hour",
+          "said": "Monday 7:00 PM to 8:00 PM Advent Season - Parish Peace and Reconciliation Program"
+        }
+      ],
+      "rationale": "R5/R6: the bulletin gives the days but no time; the website's Holy Hour page gives 7-8 PM for the Advent program without a year. Leaning include, since the two fit, but the website time is undated.",
+      "question": "Add Advent Monday confessions 7-8 PM in December?",
+      "options": [
+        {
+          "label": "Mondays in December 7-8 PM",
+          "entry": {
+            "church_slug": "annunciation-bvm-wayne",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 12,
+              "start_day": 1,
+              "end_month": 12,
+              "end_day": 31
+            },
+            "note": "Advent Peace and Reconciliation Program"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://abvm-wayne.org/mass-times",
+          "said": "HOLYDAYS OF OBLIGATION: 7:30 AM, 12:05 PM and 7:30 PM"
+        }
+      ],
+      "rationale": "R45, POLICY Dates: a generic holy-day schedule pins no date; the bulletins announce no holy day yet.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://abvm-wayne.org/hour-hour",
+          "said": "Monday 7:00 PM to 8:30 PM Lenten Season - Welcome Home for Healing Program"
+        }
+      ],
+      "rationale": "R33: a Lent season can't be written as months and is not current.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
