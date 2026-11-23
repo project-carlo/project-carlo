@@ -1,0 +1,805 @@
+{
+  "schema_version": 1,
+  "parish_slug": "resurrection-randolph",
+  "status": "ready",
+  "as_of": "2026-11-15T16:51:40Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T13:47:22Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both bulletins read (Nov 8 and Nov 15 issues) print the same page-1 schedule: Sat 5 PM; Sun 8:45, 11:15 AM and 7 PM; Mon-Sat 9 AM; Saturday 4 PM Reconciliation; Adoration Mon/Wed/Fri 7:50-8:50 AM, Tue 10 AM-7 PM, and second Wednesdays 7:30-9 PM. Dated: Dec 8 holy-day 5 PM Mass and the Nov 15 5 PM Accessible Mass; feast Masses at regular times are not recorded separately. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "29e60c2ea17d415edae0dc2d2011064bed16a0d100db1b1f736aefadcdaf97dd",
+      "fetched_at": "2026-11-15T16:51:40Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "c410a7f9159cc931529fa44bff140e3a569acc8c7bec1cc93d7e6d61e13d2835",
+      "fetched_at": "2026-11-08T22:03:50Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-randolph",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "29e60c2e",
+          "page": 1,
+          "said": "Regular Mass & Liturgy Schedule Saturday: 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c410a7f9",
+          "page": 1,
+          "said": "Regular Mass & Liturgy Schedule Saturday: 5:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read, and in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-randolph",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "29e60c2e",
+          "page": 1,
+          "said": "Sunday: 8:45am, 11:15am & 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c410a7f9",
+          "page": 1,
+          "said": "Sunday: 8:45am, 11:15am & 7:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read, and in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-randolph",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "29e60c2e",
+          "page": 1,
+          "said": "Sunday: 8:45am, 11:15am & 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c410a7f9",
+          "page": 1,
+          "said": "Sunday: 8:45am, 11:15am & 7:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read, and in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-randolph",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "29e60c2e",
+          "page": 1,
+          "said": "Sunday: 8:45am, 11:15am & 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c410a7f9",
+          "page": 1,
+          "said": "Sunday: 8:45am, 11:15am & 7:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read, and in both weeks' Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-randolph",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "29e60c2e",
+          "page": 1,
+          "said": "Daily Mass Monday to Saturday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c410a7f9",
+          "page": 1,
+          "said": "Daily Mass Monday to Saturday 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; each weekday has a 9:00am intention in both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-randolph",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "29e60c2e",
+          "page": 1,
+          "said": "Daily Mass Monday to Saturday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c410a7f9",
+          "page": 1,
+          "said": "Daily Mass Monday to Saturday 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; each weekday has a 9:00am intention in both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-randolph",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "29e60c2e",
+          "page": 1,
+          "said": "Daily Mass Monday to Saturday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c410a7f9",
+          "page": 1,
+          "said": "Daily Mass Monday to Saturday 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; each weekday has a 9:00am intention in both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-randolph",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "29e60c2e",
+          "page": 1,
+          "said": "Daily Mass Monday to Saturday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c410a7f9",
+          "page": 1,
+          "said": "Daily Mass Monday to Saturday 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; each weekday has a 9:00am intention in both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-randolph",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "29e60c2e",
+          "page": 1,
+          "said": "Daily Mass Monday to Saturday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c410a7f9",
+          "page": 1,
+          "said": "Daily Mass Monday to Saturday 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; each weekday has a 9:00am intention in both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-randolph",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "29e60c2e",
+          "page": 1,
+          "said": "Daily Mass Monday to Saturday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c410a7f9",
+          "page": 1,
+          "said": "Daily Mass Monday to Saturday 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 schedule box of both bulletins read; each weekday has a 9:00am intention in both issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-randolph",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "29e60c2e",
+          "page": 1,
+          "said": "Reconciliation Saturday 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c410a7f9",
+          "page": 1,
+          "said": "Reconciliation Saturday 4:00pm"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; no end time is given, so none is recorded (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-randolph",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:50",
+        "end_time": "08:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "29e60c2e",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament Monday, Wednesday, and Friday 7:50am to 8:50am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c410a7f9",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament Monday, Wednesday, and Friday 7:50am to 8:50am"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-randolph",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:50",
+        "end_time": "08:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "29e60c2e",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament Monday, Wednesday, and Friday 7:50am to 8:50am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c410a7f9",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament Monday, Wednesday, and Friday 7:50am to 8:50am"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-randolph",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:50",
+        "end_time": "08:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "29e60c2e",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament Monday, Wednesday, and Friday 7:50am to 8:50am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c410a7f9",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament Monday, Wednesday, and Friday 7:50am to 8:50am"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-randolph",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "29e60c2e",
+          "page": 1,
+          "said": "Tuesday: 10:00am to 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c410a7f9",
+          "page": 1,
+          "said": "Tuesday: 10:00am to 7:00pm"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins read, under Adoration of the Blessed Sacrament.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-randolph",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "second"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "29e60c2e",
+          "page": 1,
+          "said": "Second Wednesday of every month: 7:30pm to 9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c410a7f9",
+          "page": 1,
+          "said": "Second Wednesday of every month: 7:30pm to 9:00pm"
+        }
+      ],
+      "rationale": "R1: the standing schedule box prints it in both bulletins; weeks_of_month per POLICY, Weekly qualifiers.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-randolph",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "29e60c2e",
+          "page": 3,
+          "said": "Immaculate Conception (Holy Day of Obligation): Tuesday, December 8, Masses at 9:00 AM and 5:00 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "29e60c2e",
+          "page": 10,
+          "said": "Join us for Mass on Tuesday, December 8, at either 9:00 AM or 5:00 PM"
+        }
+      ],
+      "rationale": "R1, R16: a holy-day Mass outside the weekly schedule is dated (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-randolph",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "29e60c2e",
+          "page": 3,
+          "said": "Tuesday, December 8, Masses at 9:00 AM and 5:00 PM."
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated, rule 7: the 9:00 AM holy-day Mass is the regular Tuesday 9:00 AM Mass, so it is not recorded separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-randolph",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "29e60c2e",
+          "page": 3,
+          "said": "Thanksgiving Mass: Thursday, November 26, at 9:00 AM."
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated, rule 7: Thanksgiving is celebrated at the regular Thursday 9:00 AM Mass; not recorded separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-randolph",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-12",
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Guadalupe"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "29e60c2e",
+          "page": 9,
+          "said": "Saturday, December 12, 2026 Feast of Our Lady of Guadalupe ... Holy Mass 5:00 PM"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated, rule 7: the Guadalupe Mass is the regular Saturday 5:00 PM Mass; the 4:45 PM Marian procession is not Mass, Confession or Adoration (R24).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-randolph",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-15",
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Accessible Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c410a7f9",
+          "page": 10,
+          "said": "Join us for our Accessible Mass on Sunday, November 15, at 5:00 PM. ... All are welcome!"
+        }
+      ],
+      "rationale": "R19, R16: the older bulletin announced this open Sunday 5:00 PM Mass on as_of's date; the newest issue neither repeats nor contradicts it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
