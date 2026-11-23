@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "corpus-christi-chatham-township",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:09:20Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-23T12:35:51Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:41:33Z",
   "summary": "One church, Corpus Christi. Weekend, weekday, Adoration and Confession times match in the page 1 schedule box of both bulletins read (Nov 8 and Nov 15, 2026), plus dated Thanksgiving and Immaculate Conception Masses. Open: the Dec 11 9 AM Mass at the Advent Celebration for Women.",
   "blocked_reason": null,
   "bulletins": [
@@ -704,9 +704,22 @@
     },
     {
       "id": "s21",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-chatham-township",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-11",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Celebration for Women"
+      },
       "page": 6,
       "sources": [
         {
@@ -742,7 +755,11 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:41:33Z"
+      }
     },
     {
       "id": "s18",

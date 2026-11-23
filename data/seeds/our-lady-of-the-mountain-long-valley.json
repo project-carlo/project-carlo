@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "our-lady-of-the-mountain-long-valley",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:11:59Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-23T13:37:12Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:42:17Z",
   "summary": "One church. The newest bulletin's schedule box (Sat 4:45 PM; Sun 8, 9:15, 10:45 AM, 12:15 PM; weekdays 9:30 AM; First Saturday devotion and Mass; Friday Adoration; Confession Mon Sept.-May, Sat, First Friday and First Saturday) agrees with the intentions of both bulletins read. Open: the season of the Monday Holy Hour, confession on request after daily Mass, and a one-off Sunday 5 PM 'Private Intention' Mass.",
   "blocked_reason": null,
   "bulletins": [
@@ -680,9 +680,27 @@
     },
     {
       "id": "s18",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mountain-long-valley",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 5,
+          "end_day": null
+        },
+        "note": null
+      },
       "page": 2,
       "sources": [
         {
@@ -752,13 +770,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:17Z"
+      }
     },
     {
       "id": "s19",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mountain-long-valley",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:30 AM Mass; ask the priest"
+      },
       "page": 1,
       "sources": [
         {
@@ -794,14 +829,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:17Z"
+      },
       "group": "after-daily-mass"
     },
     {
       "id": "s20",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mountain-long-valley",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:30 AM Mass; ask the priest"
+      },
       "page": 1,
       "sources": [
         {
@@ -837,14 +889,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:17Z"
+      },
       "group": "after-daily-mass"
     },
     {
       "id": "s21",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mountain-long-valley",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:30 AM Mass; ask the priest"
+      },
       "page": 1,
       "sources": [
         {
@@ -880,14 +949,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:17Z"
+      },
       "group": "after-daily-mass"
     },
     {
       "id": "s22",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mountain-long-valley",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:30 AM Mass; ask the priest"
+      },
       "page": 1,
       "sources": [
         {
@@ -923,14 +1009,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:17Z"
+      },
       "group": "after-daily-mass"
     },
     {
       "id": "s23",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mountain-long-valley",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:30 AM Mass; ask the priest"
+      },
       "page": 1,
       "sources": [
         {
@@ -966,14 +1069,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:17Z"
+      },
       "group": "after-daily-mass"
     },
     {
       "id": "s24",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-mountain-long-valley",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-15",
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 2,
       "sources": [
         {
@@ -1009,7 +1129,11 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:17Z"
+      }
     },
     {
       "id": "s25",

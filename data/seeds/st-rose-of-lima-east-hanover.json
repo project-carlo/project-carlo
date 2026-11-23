@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-rose-of-lima-east-hanover",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:52:16Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-23T21:52:36Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:44:07Z",
   "summary": "One church. The bulletins (Oct 25 and Nov 8, 2026 issues) have no schedule box: Mass times come from two weeks of intentions in each (Sun 7:30, 9:15, 10:30, 12:15, 7 PM; Sat 5:30 PM; Mon-Sat 9 AM), matching the website. Confession and Adoration are from the Parish Opportunities box on page 6. Open: whether Wednesday 1 PM Adoration ('See you in September') is running now.",
   "blocked_reason": null,
   "bulletins": [
@@ -702,9 +702,22 @@
     },
     {
       "id": "s17",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-east-hanover",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "14:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 6,
       "sources": [
         {
@@ -768,7 +781,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:44:07Z"
+      }
     },
     {
       "id": "s18",

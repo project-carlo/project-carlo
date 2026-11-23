@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "sacred-heart-holy-rosary-dover",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:14:26Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-23T13:52:02Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:42:30Z",
   "summary": "Two churches; almost every Mass is at Sacred Heart, with only the Sunday 8 AM Spanish Mass at Holy Rosary. The Nov 8 and Nov 15 bulletins print identical Mass and Saturday confession times; the parish website matches them and supplies each church plus a Friday Holy Hour and first-Friday Exposition. Open: the website-only Monday 7-8 PM confessions, and the registration-only perpetual Adoration at Holy Rosary.",
   "blocked_reason": null,
   "bulletins": [
@@ -1138,9 +1138,22 @@
     },
     {
       "id": "s24",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-dover",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -1187,13 +1200,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:30Z"
+      }
     },
     {
       "id": "s25",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-the-most-holy-rosary-dover",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Adoration; register with the office for the access code"
+      },
       "page": 1,
       "sources": [
         {
@@ -1240,14 +1270,31 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:30Z"
+      },
       "group": "s25"
     },
     {
       "id": "s26",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-the-most-holy-rosary-dover",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Adoration; register with the office for the access code"
+      },
       "page": 1,
       "sources": [
         {
@@ -1294,14 +1341,31 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:30Z"
+      },
       "group": "s25"
     },
     {
       "id": "s27",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-the-most-holy-rosary-dover",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Adoration; register with the office for the access code"
+      },
       "page": 1,
       "sources": [
         {
@@ -1348,14 +1412,31 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:30Z"
+      },
       "group": "s25"
     },
     {
       "id": "s28",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-the-most-holy-rosary-dover",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Adoration; register with the office for the access code"
+      },
       "page": 1,
       "sources": [
         {
@@ -1402,14 +1483,31 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:30Z"
+      },
       "group": "s25"
     },
     {
       "id": "s29",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-the-most-holy-rosary-dover",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Adoration; register with the office for the access code"
+      },
       "page": 1,
       "sources": [
         {
@@ -1456,14 +1554,31 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:30Z"
+      },
       "group": "s25"
     },
     {
       "id": "s30",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-the-most-holy-rosary-dover",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Adoration; register with the office for the access code"
+      },
       "page": 1,
       "sources": [
         {
@@ -1510,14 +1625,31 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:30Z"
+      },
       "group": "s25"
     },
     {
       "id": "s31",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-the-most-holy-rosary-dover",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Adoration; register with the office for the access code"
+      },
       "page": 1,
       "sources": [
         {
@@ -1564,7 +1696,11 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:30Z"
+      },
       "group": "s25"
     },
     {

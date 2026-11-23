@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-joseph-mendham",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:51:45Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-23T17:21:15Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:43:16Z",
   "summary": "One church (Mass in the church on weekends, in its chapel on weekdays). Both bulletins read (Nov 8 and Nov 15, 2026) print the same page-1 schedule: Sat 5 PM, Sun 7:30/9:30/11:30, Mon-Sat 9 AM, Saturday Confession 4-4:30, Friday Adoration after the 9 AM Mass (9:30, R10). Open: a youth ministry 'Mass & Bagels' on Nov 16, leaning leave out.",
   "blocked_reason": null,
   "bulletins": [
@@ -483,9 +483,22 @@
     },
     {
       "id": "s13",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-mendham",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-16",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Youth Ministry Mass & Bagels"
+      },
       "page": 5,
       "sources": [
         {
@@ -521,7 +534,11 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:43:16Z"
+      }
     },
     {
       "id": "s14",

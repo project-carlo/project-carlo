@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "our-lady-of-lourdes-paterson",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:10:53Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-23T13:13:46Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:42:00Z",
   "summary": "One church, Spanish and English. Weekend, weekday (Mon-Fri 7 PM, days from the website), Confession and Adoration times match in both bulletins read (Nov 8, Nov 15) and the website, plus a Thanksgiving 10:30 AM Mass. Open: Thursday Adoration ends 6:45 PM in the bulletins but 6:30 PM on the website.",
   "blocked_reason": null,
   "bulletins": [
@@ -480,9 +480,22 @@
     },
     {
       "id": "s12",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-paterson",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "18:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -546,7 +559,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:00Z"
+      }
     },
     {
       "id": "s13",

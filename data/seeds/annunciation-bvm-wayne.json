@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "annunciation-bvm-wayne",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:08:46Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-23T12:25:27Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:41:27Z",
   "summary": "One church. Saturday 8:30 AM and 5:30 PM, Sunday 8/10/11:45, weekday 12:05, Wednesday Adoration 9-11 with confession and Saturday confession 4-5 agree in both bulletins and the website. Thanksgiving week Masses are dated. Open: a Wednesday 8:30 AM Mass seen only in intentions, and Advent Monday confessions timed only by the website.",
   "blocked_reason": null,
   "bulletins": [
@@ -610,9 +610,22 @@
     },
     {
       "id": "s16",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-wayne",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-18",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 2,
       "sources": [
         {
@@ -671,13 +684,35 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:41:27Z"
+      }
     },
     {
       "id": "s17",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-wayne",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 12,
+          "start_day": 1,
+          "end_month": 12,
+          "end_day": 31
+        },
+        "note": "Advent Peace and Reconciliation Program"
+      },
       "page": 4,
       "sources": [
         {
@@ -723,7 +758,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:41:27Z"
+      }
     },
     {
       "id": "s18",

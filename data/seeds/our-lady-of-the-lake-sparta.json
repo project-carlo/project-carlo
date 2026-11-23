@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "our-lady-of-the-lake-sparta",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:51:35Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-23T13:30:45Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:42:13Z",
   "summary": "One church. Weekend (Sat 5:30 PM; Sun 8, 10, noon), Mon-Sat 8:30 AM Masses, Saturday 4-5 PM Confession and Thursday 9 AM-7 PM Adoration agree in both bulletins and on the website. Open: a dated Wed Nov 18 7 PM Mass seen only in the intentions, and daily 8 AM-8 PM Adoration in the St. Carlo Acutis chapel (parish office), printed only in the Nov 8 bulletin and on the website.",
   "blocked_reason": null,
   "bulletins": [
@@ -617,9 +617,22 @@
     },
     {
       "id": "s16",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-sparta",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-18",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 2,
       "sources": [
         {
@@ -655,13 +668,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:13Z"
+      }
     },
     {
       "id": "s17",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-sparta",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Carlo Acutis Adoration Chapel, 2nd floor of the parish office"
+      },
       "page": null,
       "sources": [
         {
@@ -702,14 +732,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:13Z"
+      },
       "group": "chapel"
     },
     {
       "id": "s18",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-sparta",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Carlo Acutis Adoration Chapel, 2nd floor of the parish office"
+      },
       "page": null,
       "sources": [
         {
@@ -750,14 +797,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:13Z"
+      },
       "group": "chapel"
     },
     {
       "id": "s19",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-sparta",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Carlo Acutis Adoration Chapel, 2nd floor of the parish office"
+      },
       "page": null,
       "sources": [
         {
@@ -798,14 +862,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:13Z"
+      },
       "group": "chapel"
     },
     {
       "id": "s20",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-sparta",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Carlo Acutis Adoration Chapel, 2nd floor of the parish office"
+      },
       "page": null,
       "sources": [
         {
@@ -846,14 +927,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:13Z"
+      },
       "group": "chapel"
     },
     {
       "id": "s21",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-sparta",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Carlo Acutis Adoration Chapel, 2nd floor of the parish office"
+      },
       "page": null,
       "sources": [
         {
@@ -894,14 +992,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:13Z"
+      },
       "group": "chapel"
     },
     {
       "id": "s22",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-sparta",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Carlo Acutis Adoration Chapel, 2nd floor of the parish office"
+      },
       "page": null,
       "sources": [
         {
@@ -942,14 +1057,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:13Z"
+      },
       "group": "chapel"
     },
     {
       "id": "s23",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-lake-sparta",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Carlo Acutis Adoration Chapel, 2nd floor of the parish office"
+      },
       "page": null,
       "sources": [
         {
@@ -990,7 +1122,11 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:13Z"
+      },
       "group": "chapel"
     }
   ]

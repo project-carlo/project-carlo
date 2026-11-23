@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "our-lady-of-the-holy-angels-little-falls",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:11:23Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-23T13:25:54Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:42:08Z",
   "summary": "One church, Our Lady of the Holy Angels, Little Falls. Weekend Masses (Sat 5 PM; Sun 7:30, 9:30, 11:30 AM, 5 PM), weekday Masses in the chapel (Mon-Fri 7:00 and 11:45 AM) and Saturday 3:45 PM Confession agree in both bulletins read and on the website. Open: a website-only Adoration line (12:00-3:00 PM, no day given) the bulletins never mention; leaning leave out.",
   "blocked_reason": null,
   "bulletins": [
@@ -635,9 +635,22 @@
     },
     {
       "id": "s17",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-holy-angels-little-falls",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Church"
+      },
       "page": null,
       "sources": [
         {
@@ -672,14 +685,31 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:08Z"
+      },
       "group": "web-adoration"
     },
     {
       "id": "s18",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-holy-angels-little-falls",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Church"
+      },
       "page": null,
       "sources": [
         {
@@ -714,14 +744,31 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:08Z"
+      },
       "group": "web-adoration"
     },
     {
       "id": "s19",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-holy-angels-little-falls",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Church"
+      },
       "page": null,
       "sources": [
         {
@@ -756,14 +803,31 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:08Z"
+      },
       "group": "web-adoration"
     },
     {
       "id": "s20",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-holy-angels-little-falls",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Church"
+      },
       "page": null,
       "sources": [
         {
@@ -798,14 +862,31 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:08Z"
+      },
       "group": "web-adoration"
     },
     {
       "id": "s21",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-holy-angels-little-falls",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Church"
+      },
       "page": null,
       "sources": [
         {
@@ -840,14 +921,31 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:08Z"
+      },
       "group": "web-adoration"
     },
     {
       "id": "s22",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-holy-angels-little-falls",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Church"
+      },
       "page": null,
       "sources": [
         {
@@ -882,14 +980,31 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:08Z"
+      },
       "group": "web-adoration"
     },
     {
       "id": "s23",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-holy-angels-little-falls",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Church"
+      },
       "page": null,
       "sources": [
         {
@@ -924,7 +1039,11 @@
           "leaning": true
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:08Z"
+      },
       "group": "web-adoration"
     }
   ]

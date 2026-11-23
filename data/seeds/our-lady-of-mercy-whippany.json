@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "our-lady-of-mercy-whippany",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:51:32Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-23T13:16:42Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:42:02Z",
   "summary": "One listed church plus a parish chapel at 85 Whippany Road that the church list lacks. Weekend Masses (Sat 5:30 PM; Sun 7:30, 9:30, 11 AM) and Saturday 5-5:30 PM confession at the Church agree in both bulletins and the website; weekday Masses, Monday confession and chapel Adoration are excluded under R23 and listed as a church-list issue. Open: Monday evening Adoration, which the weekly calendars place in the Church.",
   "blocked_reason": null,
   "bulletins": [
@@ -624,9 +624,22 @@
     },
     {
       "id": "s15",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-whippany",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -697,7 +710,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:02Z"
+      }
     },
     {
       "id": "s16",

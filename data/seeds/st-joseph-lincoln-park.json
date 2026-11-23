@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-joseph-lincoln-park",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:51:42Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-23T17:17:57Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:43:14Z",
   "summary": "One church. Weekend, weekday, Saturday confession and Tuesday all-day Adoration agree in both bulletins and the website; Wed-Fri 8:30-9:30 AM Adoration is in both bulletins' Adoration box, and Monday 7:30 PM Benediction comes from the current website (R6). Open: the day of the 'Spanish: 7:00 pm' Mass in the schedule box.",
   "blocked_reason": null,
   "bulletins": [
@@ -652,9 +652,22 @@
     },
     {
       "id": "s17",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lincoln-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
       "page": 2,
       "sources": [
         {
@@ -713,7 +726,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:43:14Z"
+      }
     },
     {
       "id": "s18",

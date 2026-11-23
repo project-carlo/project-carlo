@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-lawrence-the-martyr-chester",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:17:48Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-23T17:43:19Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:43:32Z",
   "summary": "One church (Mass box identical in the Nov 8 and Nov 15 bulletins; no history stored). Weekend, weekday, Spanish Monday and 3rd-Tuesday Healing Masses and Monday confession are settled from the bulletins; Thursday 5 PM - Friday 5 PM Adoration and the Thanksgiving 8 AM cancellation come from the parish homepage (R6), corroborated by the bulletin's adorer appeal. Open: Saturday confession end (bulletin 4:45 vs website 4:30) and whether Adoration is cancelled in Thanksgiving week.",
   "blocked_reason": null,
   "bulletins": [
@@ -829,9 +829,22 @@
     },
     {
       "id": "s22",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-the-martyr-chester",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -891,7 +904,11 @@
           }
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:43:32Z"
+      }
     },
     {
       "id": "s23",
@@ -1099,9 +1116,22 @@
     },
     {
       "id": "s29",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-the-martyr-chester",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "17:00",
+        "end_time": "23:59",
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving week"
+      },
       "page": null,
       "sources": [
         {
@@ -1141,14 +1171,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:43:32Z"
+      },
       "group": "thanksgiving-adoration"
     },
     {
       "id": "s30",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-the-martyr-chester",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "00:00",
+        "end_time": "10:00",
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving week"
+      },
       "page": null,
       "sources": [
         {
@@ -1183,14 +1230,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:43:32Z"
+      },
       "group": "thanksgiving-adoration"
     },
     {
       "id": "s31",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-the-martyr-chester",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "10:00",
+        "end_time": "17:00",
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving week"
+      },
       "page": null,
       "sources": [
         {
@@ -1225,7 +1289,11 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:43:32Z"
+      },
       "group": "thanksgiving-adoration"
     }
   ]

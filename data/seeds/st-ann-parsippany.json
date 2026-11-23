@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-ann-parsippany",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:20:51Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-23T14:00:57Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:42:37Z",
   "summary": "One church. The newest issue (Nov 15) is a Fall Festival issue with no schedule box: its Mass intentions confirm Sat 5 PM, Sun 8 and 10:30, and weekday 8:30 AM Masses, which the Nov 8 issue's schedule box and the website agree with. First Friday Mass and Holy Hour come from the Nov 8 box (R12); Thanksgiving moves to 9 AM. Open: the Friday 9 AM Holy Hour and Saturday 4 PM Confession, printed only in the Nov 8 box.",
   "blocked_reason": null,
   "bulletins": [
@@ -545,9 +545,22 @@
     },
     {
       "id": "s13",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-parsippany",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour, after the 8:30 AM Mass"
+      },
       "page": null,
       "sources": [
         {
@@ -583,13 +596,30 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:37Z"
+      }
     },
     {
       "id": "s14",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-parsippany",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": null,
       "sources": [
         {
@@ -625,7 +655,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:37Z"
+      }
     }
   ]
 }

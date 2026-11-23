@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-joseph-west-milford",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:51:48Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-23T17:30:51Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:43:23Z",
   "summary": "One church. The Mass and Confession boxes agree in both bulletins read (Nov 8, Nov 15); the newest bulletin's weekly devotions page (p7) and the parish's Weekly Devotions web page add Friday Adoration 12-6 PM and first-Saturday 8:30 AM Exposition. Open: whether Exposition listed after the Monday 6 PM and first-Thursday 9 AM Masses, with no clock time, is recorded at Mass + 30 min (R10).",
   "blocked_reason": null,
   "bulletins": [
@@ -638,9 +638,22 @@
     },
     {
       "id": "s15",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-west-milford",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction; after the 6:00 PM Mass, with Vespers"
+      },
       "page": 7,
       "sources": [
         {
@@ -681,14 +694,33 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:43:23Z"
+      },
       "group": "after-mass-exposition"
     },
     {
       "id": "s16",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-west-milford",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction; after the 9:00 AM Mass"
+      },
       "page": 7,
       "sources": [
         {
@@ -731,7 +763,11 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:43:23Z"
+      },
       "group": "after-mass-exposition"
     },
     {

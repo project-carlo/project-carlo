@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-virgil-morris-plains",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:52:21Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-23T22:14:24Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:44:23Z",
   "summary": "One church, St. Virgil. Weekend Masses, weekday 12:10 PM Masses and Saturday Reconciliation agree in both bulletins (Nov 8, Nov 15) and on the website; the website adds a first-Thursday Holy Hour and dated Thanksgiving, Healing and Immaculate Conception Masses. Open: whether Wednesday Mass is 12:10 PM (schedule box, website) or 9:00 AM (intentions both weeks).",
   "blocked_reason": null,
   "bulletins": [
@@ -331,9 +331,22 @@
     },
     {
       "id": "s9",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-virgil-morris-plains",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
       "page": 1,
       "sources": [
         {
@@ -409,7 +422,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:44:23Z"
+      }
     },
     {
       "id": "s10",

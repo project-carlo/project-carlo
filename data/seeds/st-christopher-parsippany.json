@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-christopher-parsippany",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:51:43Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-23T16:54:15Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:42:54Z",
   "summary": "One church. Both bulletins read (Nov 8 and Nov 15, 2026) print the same box: Sat 5:00 PM, Sun 7:30/9:30/11:30 AM and 1:30 PM Spanish, Mon-Fri 12:05 PM, all confirmed by the Mass intentions. Open: weekday Confession 'after the 12:05 pm Mass' on request, leaning 12:35 PM per C5. No Adoration is printed.",
   "blocked_reason": null,
   "bulletins": [
@@ -407,9 +407,22 @@
     },
     {
       "id": "s11",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-parsippany",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:35",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 12:05 PM Mass; tell the priest"
+      },
       "page": 2,
       "sources": [
         {
@@ -451,14 +464,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:54Z"
+      },
       "group": "weekday-confession"
     },
     {
       "id": "s12",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-parsippany",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:35",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 12:05 PM Mass; tell the priest"
+      },
       "page": 2,
       "sources": [
         {
@@ -500,14 +530,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:54Z"
+      },
       "group": "weekday-confession"
     },
     {
       "id": "s13",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-parsippany",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:35",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 12:05 PM Mass; tell the priest"
+      },
       "page": 2,
       "sources": [
         {
@@ -549,14 +596,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:54Z"
+      },
       "group": "weekday-confession"
     },
     {
       "id": "s14",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-parsippany",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:35",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 12:05 PM Mass; tell the priest"
+      },
       "page": 2,
       "sources": [
         {
@@ -598,14 +662,31 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:54Z"
+      },
       "group": "weekday-confession"
     },
     {
       "id": "s15",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-parsippany",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:35",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 12:05 PM Mass; tell the priest"
+      },
       "page": 2,
       "sources": [
         {
@@ -647,7 +728,11 @@
           "entry": null
         }
       ],
-      "answer": null,
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:54Z"
+      },
       "group": "weekday-confession"
     },
     {

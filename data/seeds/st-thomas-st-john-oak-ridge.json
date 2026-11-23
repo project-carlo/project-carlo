@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-thomas-st-john-oak-ridge",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:20:16Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-23T22:04:59Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:44:16Z",
   "summary": "Two churches, St. John Vianney (Stockholm) and St. Thomas the Apostle (Oak Ridge); the page-1 schedule box was identical in both bulletins read (Nov 8 and Nov 15, 2026), and the intentions agree. Thanksgiving changes recorded as dated entries; Thursday STA Communion Service excluded. Open: the undated-venue Nov 18 KofC Mass of Remembrance.",
   "blocked_reason": null,
   "bulletins": [
@@ -1022,9 +1022,22 @@
     },
     {
       "id": "s24",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-oak-ridge",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-18",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass of Remembrance, Knights of Columbus"
+      },
       "page": 3,
       "sources": [
         {
@@ -1077,7 +1090,11 @@
           "leaning": true
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 2,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:44:16Z"
+      }
     },
     {
       "id": "s23",

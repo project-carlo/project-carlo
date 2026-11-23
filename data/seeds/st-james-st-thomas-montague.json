@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "st-james-st-thomas-montague",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:16:40Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-23T17:14:51Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:43:12Z",
   "summary": "Two churches (St. James, Montague; St. Thomas, Sandyston). Mass and Saturday Confession times agree in both bulletins read (Nov 8, Nov 15) and on the website; Friday 10-noon Adoration at St. Thomas recurs in both calendars; the website adds a Nov 26 Thanksgiving Mass. Open: Saturday Adoration after the 8 AM Mass at St. James (no start time printed), and the Knights' second-Tuesday 6:30 PM Adoration.",
   "blocked_reason": null,
   "bulletins": [
@@ -469,9 +469,22 @@
     },
     {
       "id": "s13",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-the-greater-montague",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
       "page": 5,
       "sources": [
         {
@@ -513,13 +526,32 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:43:12Z"
+      }
     },
     {
       "id": "s14",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-sandyston",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction; before the 7 PM Knights of Columbus meeting"
+      },
       "page": 4,
       "sources": [
         {
@@ -569,7 +601,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 1,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:43:12Z"
+      }
     },
     {
       "id": "s15",

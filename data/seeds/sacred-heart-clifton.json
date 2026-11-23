@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "parish_slug": "sacred-heart-clifton",
-  "status": "needs_review",
+  "status": "approved",
   "as_of": "2026-11-15T16:13:34Z",
   "drafted_by": "claude-code/draft-parish-seed",
   "drafted_at": "2026-11-23T13:49:43Z",
-  "reviewer": null,
-  "approved_at": null,
+  "reviewer": "agent:seed-review@895beacced27",
+  "approved_at": "2026-11-23T22:42:28Z",
   "summary": "One church (Sacred Heart, Clifton). The Mass, Confession and Adoration boxes and the intentions agree in both bulletins read (Nov 8 and Nov 15, 2026): Sat 12, 5, 7 PM (Spanish); Sun 8 (EF Latin), 10, 12; weekdays 12 PM plus 7 PM Spanish Mon/Tue/Thu/Fri; Sat confession 4-4:45; Adoration Fri and Sat after the noon Mass and first Saturdays from 8 AM. Open: Confession at the Nov 28 Advent retreat.",
   "blocked_reason": null,
   "bulletins": [
@@ -814,9 +814,22 @@
     },
     {
       "id": "s23",
-      "decision": null,
-      "status": "needs_human",
-      "entry": null,
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-clifton",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-28",
+        "start_time": "10:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Advent Mini Retreat, Quiet Reflection & Confession"
+      },
       "page": 6,
       "sources": [
         {
@@ -858,7 +871,11 @@
           "entry": null
         }
       ],
-      "answer": null
+      "answer": {
+        "choice": 0,
+        "by": "agent:seed-review@895beacced27",
+        "at": "2026-11-23T22:42:28Z"
+      }
     }
   ]
 }
