@@ -1,0 +1,518 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-martyrs-oreland",
+  "status": "ready",
+  "as_of": "2026-11-15T16:40:36Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T23:42:23Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both November bulletins agree: Sunday 9 AM, a first- and third-Saturday 4:30 PM vigil with Confession 3:45-4:15, weekday Mass Mon-Fri 8:30 AM, and Tuesday Adoration 5:30 PM with the prayer group. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "d8cdeb99a21133f4b5f4f48e7b3ab74858ce5f46eb0d389958c7d4858e578cc4",
+      "fetched_at": "2026-11-15T16:40:36Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "f89c4f62129b5c994c64680cab3b98ebe716f7f89836fe444f8d9b351c712230",
+      "fetched_at": "2026-11-08T15:52:45Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-martyrs-church-oreland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first",
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8cdeb99",
+          "page": 1,
+          "said": "Saturday Vigil Mass First & Third Saturdays Confession 3:45-4:15 Mass 4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f89c4f62",
+          "page": 1,
+          "said": "Saturday Vigil Mass First & Third Saturdays Confession 3:45-4:15 Mass 4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d8cdeb99",
+          "page": 3,
+          "said": "November 21 - Confession 3:45pm – Mass - 4:30pm Father Wilde"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f89c4f62",
+          "page": 3,
+          "said": "November 21 - Confession 3:45pm – Mass - 4:30pm Father Wilde"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly qualifiers: the schedule box of both bulletins limits the vigil to first and third Saturdays; the dated list's November 21 (third Saturday) entry agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-martyrs-church-oreland",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:45",
+        "end_time": "16:15",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first",
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8cdeb99",
+          "page": 1,
+          "said": "Saturday Vigil Mass First & Third Saturdays Confession 3:45-4:15 Mass 4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f89c4f62",
+          "page": 1,
+          "said": "Saturday Vigil Mass First & Third Saturdays Confession 3:45-4:15 Mass 4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d8cdeb99",
+          "page": 3,
+          "said": "November 21 - Confession 3:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f89c4f62",
+          "page": 3,
+          "said": "November 21 - Confession 3:45pm"
+        }
+      ],
+      "rationale": "R1: printed under the first-and-third-Saturday vigil heading in the schedule box of both bulletins, with its end time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-martyrs-church-oreland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8cdeb99",
+          "page": 1,
+          "said": "Sunday 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f89c4f62",
+          "page": 1,
+          "said": "Sunday 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d8cdeb99",
+          "page": 3,
+          "said": "November 15 – Mass 9am ... November 22 – Mass 9am ... November 29 – Mass 9am"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins; the dated priest list gives 9am every Sunday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-martyrs-church-oreland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8cdeb99",
+          "page": 1,
+          "said": "WEEKDAY Monday-Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f89c4f62",
+          "page": 1,
+          "said": "WEEKDAY Monday-Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d8cdeb99",
+          "page": 2,
+          "said": "8:30am: [Mass intention] (each of Monday to Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f89c4f62",
+          "page": 2,
+          "said": "8:30am: [Mass intention] (each of Monday to Friday)"
+        }
+      ],
+      "rationale": "R1: under MASS SCHEDULE in the schedule box of both bulletins, and the intentions list an 8:30am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-martyrs-church-oreland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8cdeb99",
+          "page": 1,
+          "said": "WEEKDAY Monday-Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f89c4f62",
+          "page": 1,
+          "said": "WEEKDAY Monday-Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d8cdeb99",
+          "page": 2,
+          "said": "8:30am: [Mass intention] (each of Monday to Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f89c4f62",
+          "page": 2,
+          "said": "8:30am: [Mass intention] (each of Monday to Friday)"
+        }
+      ],
+      "rationale": "R1: under MASS SCHEDULE in the schedule box of both bulletins, and the intentions list an 8:30am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-martyrs-church-oreland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8cdeb99",
+          "page": 1,
+          "said": "WEEKDAY Monday-Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f89c4f62",
+          "page": 1,
+          "said": "WEEKDAY Monday-Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d8cdeb99",
+          "page": 2,
+          "said": "8:30am: [Mass intention] (each of Monday to Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f89c4f62",
+          "page": 2,
+          "said": "8:30am: [Mass intention] (each of Monday to Friday)"
+        }
+      ],
+      "rationale": "R1: under MASS SCHEDULE in the schedule box of both bulletins, and the intentions list an 8:30am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-martyrs-church-oreland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8cdeb99",
+          "page": 1,
+          "said": "WEEKDAY Monday-Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f89c4f62",
+          "page": 1,
+          "said": "WEEKDAY Monday-Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d8cdeb99",
+          "page": 2,
+          "said": "8:30am: [Mass intention] (each of Monday to Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f89c4f62",
+          "page": 2,
+          "said": "8:30am: [Mass intention] (each of Monday to Friday)"
+        }
+      ],
+      "rationale": "R1: under MASS SCHEDULE in the schedule box of both bulletins, and the intentions list an 8:30am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-martyrs-church-oreland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8cdeb99",
+          "page": 1,
+          "said": "WEEKDAY Monday-Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f89c4f62",
+          "page": 1,
+          "said": "WEEKDAY Monday-Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d8cdeb99",
+          "page": 2,
+          "said": "8:30am: [Mass intention] (each of Monday to Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f89c4f62",
+          "page": 2,
+          "said": "8:30am: [Mass intention] (each of Monday to Friday)"
+        }
+      ],
+      "rationale": "R1: under MASS SCHEDULE in the schedule box of both bulletins, and the intentions list an 8:30am Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-martyrs-church-oreland",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8cdeb99",
+          "page": 4,
+          "said": "PRAYER GROUP – Tuesdays Adoration 5:30 pm, Rosary 6 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f89c4f62",
+          "page": 4,
+          "said": "PRAYER GROUP – Tuesdays Adoration 5:30 pm, Rosary 6 pm"
+        }
+      ],
+      "rationale": "R1, R35: in Upcoming Events of both bulletins as a Tuesday standing item; no end time is given (the Rosary at 6 pm follows), so end_time is null per POLICY Times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d8cdeb99",
+          "page": 1,
+          "said": "ROSARY AND NOVENA TO ST. PHILOMENA Weekday 8:00 am; PRAYER GROUP Tuesday 6:00 pm; PATRIOTIC ROSARY Saturday 8:00 am; MIRACULOUS MEDAL NOVENA Mondays after Mass"
+        }
+      ],
+      "rationale": "R24: rosaries, novenas and the prayer group are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-martyrs-church-oreland",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-08",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f89c4f62",
+          "page": 3,
+          "said": "November 8 – Confession 8 am – Mass 9am"
+        }
+      ],
+      "rationale": "R16: a dated Sunday confession before as_of; not repeated for later Sundays in either bulletin's dated list.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
