@@ -1,0 +1,775 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-west-milford",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:51:48Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T17:30:51Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. The Mass and Confession boxes agree in both bulletins read (Nov 8, Nov 15); the newest bulletin's weekly devotions page (p7) and the parish's Weekly Devotions web page add Friday Adoration 12-6 PM and first-Saturday 8:30 AM Exposition. Open: whether Exposition listed after the Monday 6 PM and first-Thursday 9 AM Masses, with no clock time, is recorded at Mass + 30 min (R10).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "b0b15eda6fca530c6a2b729b521f9f6ece7f2870a45e4566606ff3d4e077c3c7",
+      "fetched_at": "2026-11-15T16:51:48Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "6aa8832f8b5631027648b9a9a2a878ceb509ef02a10fe104073aed4f2f1bb7eb",
+      "fetched_at": "2026-11-08T22:03:45Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-west-milford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0b15eda",
+          "page": 2,
+          "said": "MASS TIMES: Monday, Wednesday, & Friday 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6aa8832f",
+          "page": 2,
+          "said": "MASS TIMES: Monday, Wednesday, & Friday 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b0b15eda",
+          "page": 7,
+          "said": "MONDAYS, 6 PM / WEDNESDAYS, 6 PM / FRIDAYS ... Holy Mass 6 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read and in the newest's weekly devotions page.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-west-milford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0b15eda",
+          "page": 2,
+          "said": "MASS TIMES: Monday, Wednesday, & Friday 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6aa8832f",
+          "page": 2,
+          "said": "MASS TIMES: Monday, Wednesday, & Friday 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b0b15eda",
+          "page": 7,
+          "said": "MONDAYS, 6 PM / WEDNESDAYS, 6 PM / FRIDAYS ... Holy Mass 6 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read and in the newest's weekly devotions page.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-west-milford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0b15eda",
+          "page": 2,
+          "said": "MASS TIMES: Monday, Wednesday, & Friday 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6aa8832f",
+          "page": 2,
+          "said": "MASS TIMES: Monday, Wednesday, & Friday 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b0b15eda",
+          "page": 7,
+          "said": "MONDAYS, 6 PM / WEDNESDAYS, 6 PM / FRIDAYS ... Holy Mass 6 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read and in the newest's weekly devotions page.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-west-milford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0b15eda",
+          "page": 2,
+          "said": "Tuesday & Thursday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6aa8832f",
+          "page": 2,
+          "said": "Tuesday & Thursday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b0b15eda",
+          "page": 7,
+          "said": "TUESDAYS, 9 AM / THURSDAYS, 9 AM - Holy Mass"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-west-milford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0b15eda",
+          "page": 2,
+          "said": "Tuesday & Thursday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6aa8832f",
+          "page": 2,
+          "said": "Tuesday & Thursday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b0b15eda",
+          "page": 7,
+          "said": "TUESDAYS, 9 AM / THURSDAYS, 9 AM - Holy Mass"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-west-milford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0b15eda",
+          "page": 2,
+          "said": "Saturday 9:00am | 5:00pm (Vigil Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6aa8832f",
+          "page": 2,
+          "said": "Saturday 9:00am | 5:00pm (Vigil Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b0b15eda",
+          "page": 7,
+          "said": "SATURDAYS, 9 AM, 5 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-west-milford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0b15eda",
+          "page": 2,
+          "said": "Saturday 9:00am | 5:00pm (Vigil Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6aa8832f",
+          "page": 2,
+          "said": "Saturday 9:00am | 5:00pm (Vigil Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b0b15eda",
+          "page": 7,
+          "said": "SATURDAYS, 9 AM, 5 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-west-milford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0b15eda",
+          "page": 2,
+          "said": "Sunday 8:00am | 10:00am | 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6aa8832f",
+          "page": 2,
+          "said": "Sunday 8:00am | 10:00am | 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b0b15eda",
+          "page": 7,
+          "said": "SUNDAYS, 8 AM, 10 AM, 12 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-west-milford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0b15eda",
+          "page": 2,
+          "said": "Sunday 8:00am | 10:00am | 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6aa8832f",
+          "page": 2,
+          "said": "Sunday 8:00am | 10:00am | 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b0b15eda",
+          "page": 7,
+          "said": "SUNDAYS, 8 AM, 10 AM, 12 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-west-milford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0b15eda",
+          "page": 2,
+          "said": "Sunday 8:00am | 10:00am | 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6aa8832f",
+          "page": 2,
+          "said": "Sunday 8:00am | 10:00am | 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b0b15eda",
+          "page": 7,
+          "said": "SUNDAYS, 8 AM, 10 AM, 12 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-west-milford",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0b15eda",
+          "page": 2,
+          "said": "CONFESSION SCHEDULE: Saturday 4:00pm - 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6aa8832f",
+          "page": 2,
+          "said": "CONFESSION SCHEDULE: Saturday 4:00pm - 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b0b15eda",
+          "page": 7,
+          "said": "Confession 4-4:30 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Confession Schedule of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-west-milford",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "17:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0b15eda",
+          "page": 2,
+          "said": "First Friday of the Month 5:00pm - 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6aa8832f",
+          "page": 2,
+          "said": "First Friday of the Month 5:00pm - 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b0b15eda",
+          "page": 7,
+          "said": "First Fridays ONLY: Confession 5-5:30 PM"
+        }
+      ],
+      "rationale": "R1: printed as a first-Friday confession in both bulletins read; POLICY rule 2 makes it weekly with weeks_of_month.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-west-milford",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0b15eda",
+          "page": 7,
+          "said": "FRIDAYS, 12 PM - Adoration of the Blessed Sacrament with Afternoon Prayer 12-6 PM; Divine Mercy Chaplet, Benediction, Holy Mass 6 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://stjoseph-nj.org/weekly-devotions",
+          "said": "Friday 12PM: Adoration (12pm-6pm), Divine Mercy Chaplet/Benediction/Mass (ad orientem) (6pm-7:15pm)"
+        },
+        {
+          "source": "website",
+          "url": "https://stjoseph-nj.org/",
+          "said": "Friday 12:00 PM to 5:30 PM With Afternoon Prayer at 12"
+        }
+      ],
+      "rationale": "R1: the newest bulletin's weekly schedule prints Friday Adoration 12-6 PM, and the parish's Weekly Devotions page says the same (R6). The homepage's sidebar widget ends it at 5:30 PM; two specific statements (bulletin and devotions page) give 6 PM, so 6 PM is kept. The Nov 8 issue has no devotions page, only the Mass box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-west-milford",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction; before the 9:00 AM Mass"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0b15eda",
+          "page": 7,
+          "said": "First Saturdays ONLY: 8:30 AM Exposition of the Blessed Sacrament, Devotion to Our Lady of Fatima with Holy Rosary, Benediction, then Holy Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://stjoseph-nj.org/weekly-devotions",
+          "said": "First Saturday of the Month 8:30AM: Exposition, Devotion to Our Lady of Fatima and Holy Rosary, Benediction, then Mass"
+        }
+      ],
+      "rationale": "R1: clock-timed first-Saturday Exposition in the newest bulletin's weekly schedule, confirmed by the Weekly Devotions page. POLICY, Times: it runs until the 9 AM Mass with no end time of its own, so end_time is null with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0b15eda",
+          "page": 7,
+          "said": "MONDAYS, 6 PM - Holy Mass (ad orientem), Exposition of the Blessed Sacrament, Vespers (Evening Prayer), General Benediction; First Mondays ONLY: Individual Benediction"
+        },
+        {
+          "source": "website",
+          "url": "https://stjoseph-nj.org/weekly-devotions",
+          "said": "Monday 6PM: Mass (ad orientem), Vespers w/ Exposition of the Blessed Sacrament (Individual Benediction first Mondays of the month)"
+        }
+      ],
+      "rationale": "R30: a weekly Exposition with Benediction follows the Monday Mass in the listed order, but neither the bulletin nor the website gives it a clock time or says 'after'. Leaning per R10 (weekday Mass + 30 min); former C6 left out Adoration attached to a Mass line with no anchor, hence the question.",
+      "question": "Record the Exposition listed after the Monday 6 PM Mass and first-Thursday 9 AM Mass as Adoration starting 30 minutes after Mass?",
+      "options": [
+        {
+          "label": "Yes, 30 minutes after Mass (R10)",
+          "entry": {
+            "church_slug": "st-joseph-west-milford",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "18:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Benediction; after the 6:00 PM Mass, with Vespers"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "after-mass-exposition"
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0b15eda",
+          "page": 7,
+          "said": "First Thursdays ONLY: Holy Mass, Exposition of the Blessed Sacrament, Devotion to Jesus Christ, Priest and Victim, Benediction"
+        },
+        {
+          "source": "website",
+          "url": "https://stjoseph-nj.org/weekly-devotions",
+          "said": "First Thursday of the Month 9AM: Mass, Exposition, Devotion to Jesus Christ, Priest and Victim, Benediction"
+        }
+      ],
+      "rationale": "R30: first-Thursday Exposition with Benediction follows the 9 AM Mass in the listed order, with no clock time or 'after'. Leaning per R10 (weekday Mass + 30 min); same decision as the Monday slot.",
+      "question": "Record the Exposition listed after the Monday 6 PM Mass and first-Thursday 9 AM Mass as Adoration starting 30 minutes after Mass?",
+      "options": [
+        {
+          "label": "Yes, 30 minutes after Mass (R10)",
+          "entry": {
+            "church_slug": "st-joseph-west-milford",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Benediction; after the 9:00 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "after-mass-exposition"
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stjoseph-nj.org/weekly-devotions",
+          "said": "In May, after Every Mass: Litany of Loreto and Exposition of the Blessed Sacrament; In June, after Every Mass: Devotion to the Sacred Heart of Jesus and Exposition...; In October, after Every Mass: Holy Rosary and Exposition of the Blessed Sacrament"
+        }
+      ],
+      "rationale": "R33, R29: website-only seasonal Exposition after every Mass in May, June and October; no bulletin read prints it, no duration is given, and it would be some thirty seasonal slots inferred from one line. Out of season at as_of; left out for update mode or a reviewer to add when a bulletin prints it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b0b15eda",
+          "page": 2,
+          "said": "Questions About the Cemetery ... Funeral Masses and Interments: Arrangements ... coordinated through the cemetery administrator"
+        }
+      ],
+      "rationale": "R24: funeral Masses are for one person and have no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
