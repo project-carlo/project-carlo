@@ -1,0 +1,467 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-name-of-jesus-philadelphia",
+  "status": "ready",
+  "as_of": "2026-11-15T16:40:46Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T23:44:27Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (Holy Name of Jesus, Fishtown). Both bulletins read (Nov 8 and Nov 15, 2026) print the same schedule box: Sat 4:30 PM vigil, Sun 9:00 AM, Mon-Fri 9:00 AM Mass, Sat 3:30-4:15 PM Confession; no Adoration is listed. No open questions; no history stored, no model calls.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "753088dc0f50bb35ecd843149cbf2104fd553298523f9f39faf4b9a5ca92e88a",
+      "fetched_at": "2026-11-15T16:40:46Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "8f46d9865e09028c5c6a7618bf0acb1ee6dde40f743ae0b656c16eda6020c466",
+      "fetched_at": "2026-11-08T15:52:46Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-name-of-jesus-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "753088dc",
+          "page": 1,
+          "said": "Saturday Evening Vigil Mass: 4:30p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f46d986",
+          "page": 1,
+          "said": "Saturday Evening Vigil Mass: 4:30p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "753088dc",
+          "page": 2,
+          "said": "4:30 p.m. (Saturday Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f46d986",
+          "page": 2,
+          "said": "4:30 p.m. (Saturday Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 1 of both bulletins read, and in each week's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-name-of-jesus-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "753088dc",
+          "page": 1,
+          "said": "Sunday Masses: 9:00a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f46d986",
+          "page": 1,
+          "said": "Sunday Masses: 9:00a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "753088dc",
+          "page": 2,
+          "said": "Sunday ... 9:00 a.m. (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f46d986",
+          "page": 2,
+          "said": "Sunday ... 9:00 a.m. (Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 1 of both bulletins read, and in each week's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-name-of-jesus-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "753088dc",
+          "page": 1,
+          "said": "Daily Mass: Mon. – Fri. 9:00a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f46d986",
+          "page": 1,
+          "said": "Daily Mass: Mon. – Fri. 9:00a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "753088dc",
+          "page": 2,
+          "said": "9:00 a.m. (weekday Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f46d986",
+          "page": 2,
+          "said": "9:00 a.m. (weekday Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 1 of both bulletins read, and each weekday's 9:00 AM intention on page 2.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-name-of-jesus-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "753088dc",
+          "page": 1,
+          "said": "Daily Mass: Mon. – Fri. 9:00a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f46d986",
+          "page": 1,
+          "said": "Daily Mass: Mon. – Fri. 9:00a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "753088dc",
+          "page": 2,
+          "said": "9:00 a.m. (weekday Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f46d986",
+          "page": 2,
+          "said": "9:00 a.m. (weekday Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 1 of both bulletins read, and each weekday's 9:00 AM intention on page 2.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-name-of-jesus-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "753088dc",
+          "page": 1,
+          "said": "Daily Mass: Mon. – Fri. 9:00a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f46d986",
+          "page": 1,
+          "said": "Daily Mass: Mon. – Fri. 9:00a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "753088dc",
+          "page": 2,
+          "said": "9:00 a.m. (weekday Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f46d986",
+          "page": 2,
+          "said": "9:00 a.m. (weekday Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 1 of both bulletins read, and each weekday's 9:00 AM intention on page 2.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-name-of-jesus-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "753088dc",
+          "page": 1,
+          "said": "Daily Mass: Mon. – Fri. 9:00a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f46d986",
+          "page": 1,
+          "said": "Daily Mass: Mon. – Fri. 9:00a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "753088dc",
+          "page": 2,
+          "said": "9:00 a.m. (weekday Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f46d986",
+          "page": 2,
+          "said": "9:00 a.m. (weekday Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 1 of both bulletins read, and each weekday's 9:00 AM intention on page 2.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-name-of-jesus-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "753088dc",
+          "page": 1,
+          "said": "Daily Mass: Mon. – Fri. 9:00a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f46d986",
+          "page": 1,
+          "said": "Daily Mass: Mon. – Fri. 9:00a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "753088dc",
+          "page": 2,
+          "said": "9:00 a.m. (weekday Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f46d986",
+          "page": 2,
+          "said": "9:00 a.m. (weekday Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 1 of both bulletins read, and each weekday's 9:00 AM intention on page 2.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-name-of-jesus-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "753088dc",
+          "page": 1,
+          "said": "Confessions: Saturday: 3:30p.m. - 4:15p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f46d986",
+          "page": 1,
+          "said": "Confessions: Saturday: 3:30p.m. - 4:15p.m."
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 1 of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "753088dc",
+          "page": 1,
+          "said": "Holy Day Vigil Mass: 7:00p.m. Holy Day Mass: 9:00a.m. when school is in session and 9:00 a.m. during the summer."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f46d986",
+          "page": 1,
+          "said": "Holy Day Vigil Mass: 7:00p.m. Holy Day Mass: 9:00a.m. when school is in session and 9:00 a.m. during the summer."
+        }
+      ],
+      "rationale": "POLICY, Dates; R16: generic holy-day times with no holy day or date named in either bulletin; nothing to record until a bulletin dates one.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "753088dc",
+          "page": 1,
+          "said": "OLPH Novena: Each Wed. After Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f46d986",
+          "page": 1,
+          "said": "OLPH Novena: Each Wed. After Mass"
+        }
+      ],
+      "rationale": "R24: a novena is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
