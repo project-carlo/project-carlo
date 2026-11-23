@@ -40,6 +40,16 @@ any other; its last bulletin stays its last. Before this check, the October 25,
 after matched it by hash and reported them `unchanged`. Migration 13 deleted
 those rows.
 
+**A download gets 60 seconds in all** (`HTTP_DOWNLOAD_DEADLINE_SECONDS`). A
+worker holds the host while it downloads, so one slow host holds up every
+worker with a parish on it. On November 22, 2026 Bon Venture sent bulletins at
+a few dozen KB/s, one took 19 minutes, five of the six workers waited on it, and
+the run hit the job's timeout before the fetch finished. A download still
+arriving at the deadline is reported as `download_failed` (`DownloadTooSlow`
+in the detail) and not tried again from the source address; the parish keeps
+its last bulletin. The per-read timeout, also 60 seconds, catches a host that
+stops sending altogether.
+
 ## Compacted copies
 
 `fetch` stores a compacted copy of each bulletin: the first 10 pages, which is

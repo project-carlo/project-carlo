@@ -14,7 +14,7 @@ from contextlib import ExitStack, closing
 from dataclasses import dataclass, replace
 from datetime import date
 from http import HTTPStatus
-from http.client import HTTPException
+from http.client import HTTPException, IncompleteRead
 from typing import Any, NamedTuple
 from urllib.error import HTTPError
 from urllib.parse import parse_qs, quote, unquote, urljoin, urlparse, urlunparse
@@ -93,8 +93,18 @@ PARISHES_ONLINE_ISSUE_FILE = re.compile(r"/(\d{8})([A-Z])\.pdf$", re.IGNORECASE)
 PARISHES_ONLINE_BULLETIN_LAG_DAYS = 7
 DISCOVER_MASS_BULLETIN_URL_TEMPLATE = "https://discovermass.com/church/{provider_id}/"
 
-# Per-request timeout for direct PDF downloads over HTTP.
+# Per-request timeout for direct PDF downloads over HTTP. It bounds each wait
+# on the socket, not the download: a host sending a few bytes at a time never
+# trips it.
 HTTP_DOWNLOAD_TIMEOUT_SECONDS = 60
+# How long one download may take in all. A worker holds the host while it
+# downloads, and the others queue behind it: on 2026-11-22 Bon Venture took
+# minutes per bulletin (one took 19), five of the six workers waited on it, and
+# the weekly run timed out. A healthy host is well inside it: the week before,
+# no Parishes Online download took over 24 s.
+HTTP_DOWNLOAD_DEADLINE_SECONDS = 60
+# Read at most this much at a time, so the deadline is checked as bytes arrive.
+HTTP_DOWNLOAD_CHUNK_BYTES = 1 << 20
 # Only protects the runner's memory and disk, so it is far above what can be
 # stored: a 515 MB bulletin compacts to 5 MB.
 MAX_DOWNLOAD_BYTES = 1_000_000_000
@@ -551,6 +561,7 @@ def _http_get(
     extra_headers: dict[str, str] | None = None,
     timeout: int = HTTP_DOWNLOAD_TIMEOUT_SECONDS,
 ) -> _Response:
+    deadline = time.monotonic() + HTTP_DOWNLOAD_DEADLINE_SECONDS
     request_url = _normalize_url_for_request(url)
     headers = {
         # WordPress.com's CDN answers 403 to a Chrome much older than the
@@ -570,12 +581,16 @@ def _http_get(
     req = Request(request_url, headers=headers)
     LOGGER.info("Fetching URL: %s", request_url)
     with urlopen(req, timeout=timeout) as resp:
-        body = _read_body(resp, request_url)
+        body = _read_body(resp, request_url, deadline=deadline)
         return _Response(body, resp.headers.get("ETag"), resp.headers.get("Last-Modified"))
 
 
 class DownloadTooLarge(OSError):
     """A response over `MAX_DOWNLOAD_BYTES`."""
+
+
+class DownloadTooSlow(OSError):
+    """A response still arriving `HTTP_DOWNLOAD_DEADLINE_SECONDS` after it was asked for."""
 
 
 class NotABulletin(OSError):
@@ -608,20 +623,39 @@ def _describe_body(body: bytes) -> str:
     return f"{len(body)} bytes" + (f" starting {text!r}" if text else "")
 
 
-def _read_body(resp, url: str) -> bytes:
-    """A response's body, unless it is over `MAX_DOWNLOAD_BYTES`."""
+def _read_body(resp, url: str, *, deadline: float) -> bytes:
+    """A response's body, unless it is over `MAX_DOWNLOAD_BYTES` or still coming at `deadline`.
+
+    Read a chunk at a time, so a host sending slowly is given up on: each read
+    returns what has arrived, and the deadline is checked between them.
+    """
     too_large = f"Over {MAX_DOWNLOAD_BYTES / 1e6:.0f} MB: {url}"
     declared = resp.headers.get("Content-Length") or ""
     # A chunked body can be any length, whatever Content-Length says.
-    if declared.isdigit() and not resp.headers.get("Transfer-Encoding"):
-        if int(declared) > MAX_DOWNLOAD_BYTES:
-            raise DownloadTooLarge(too_large)
-        # Not a sized read: only this one notices a connection cut off early.
-        return resp.read()
-    body = resp.read(MAX_DOWNLOAD_BYTES + 1)
-    if len(body) > MAX_DOWNLOAD_BYTES:
+    expected = (
+        int(declared) if declared.isdigit() and not resp.headers.get("Transfer-Encoding")
+        else None
+    )
+    if expected is not None and expected > MAX_DOWNLOAD_BYTES:
         raise DownloadTooLarge(too_large)
-    return body
+    body = bytearray()
+    while True:
+        if time.monotonic() > deadline:
+            raise DownloadTooSlow(
+                f"Still downloading after {HTTP_DOWNLOAD_DEADLINE_SECONDS}s "
+                f"({len(body) / 1e6:.1f} MB so far): {url}"
+            )
+        chunk = resp.read1(HTTP_DOWNLOAD_CHUNK_BYTES)
+        if not chunk:
+            break
+        body += chunk
+        if len(body) > MAX_DOWNLOAD_BYTES:
+            raise DownloadTooLarge(too_large)
+    # http.client returns what it has when a connection closes early, short of
+    # what it promised; stored, that would be a truncated PDF.
+    if expected is not None and len(body) < expected:
+        raise IncompleteRead(bytes(body), expected - len(body))
+    return bytes(body)
 
 
 def _normalize_url_for_request(url: str) -> str:
@@ -671,7 +705,9 @@ def _download_bulletin(
             LOGGER.warning("429 from %s; retrying in %ss", fetch_url, HTTP_429_RETRY_SECONDS)
             time.sleep(HTTP_429_RETRY_SECONDS)
             response = get()
-    except DownloadTooLarge:
+    except (DownloadTooLarge, DownloadTooSlow):
+        # Not tried again from the source address: it is the same file, or a
+        # page on the same host, and the host is held while it downloads.
         raise
     except (OSError, HTTPException) as exc:
         # urllib raises a 304 like any other non-2xx answer.
@@ -694,7 +730,7 @@ def _download_bulletin(
         secure_url = "https://" + fetch_url.removeprefix("http://")
         try:
             secure = _http_get(secure_url, referer=source_url, extra_headers=conditional)
-        except DownloadTooLarge:
+        except (DownloadTooLarge, DownloadTooSlow):
             raise
         except (OSError, HTTPException) as exc:
             LOGGER.info("No better over https (%s): %s", exc, secure_url)

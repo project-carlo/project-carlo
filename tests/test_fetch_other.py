@@ -1237,12 +1237,17 @@ def test_a_page_whose_cards_render_late_is_read_again() -> None:
 
 
 class _SizedResponse:
-    """A response with `body`, declaring `content_length` if given."""
+    """A response with `body`, declaring `content_length` if given.
 
-    def __init__(self, body, content_length=None):
+    Like http.client, it hands out at most `size` bytes a read, and returns
+    short, without raising, when the body ends before Content-Length.
+    """
+
+    def __init__(self, body, content_length=None, *, on_read=None):
         self.body = body
         self.headers = {} if content_length is None else {"Content-Length": content_length}
-        self.sized_reads = []
+        self.reads = 0
+        self._on_read = on_read
 
     def __enter__(self):
         return self
@@ -1250,9 +1255,12 @@ class _SizedResponse:
     def __exit__(self, *exc):
         return False
 
-    def read(self, size=None):
-        self.sized_reads.append(size)
-        return self.body if size is None else self.body[:size]
+    def read1(self, size):
+        self.reads += 1
+        if self._on_read:
+            self._on_read()
+        chunk, self.body = self.body[:size], self.body[size:]
+        return chunk
 
 
 def test_http_get_refuses_a_declared_size_over_the_limit_without_reading_it(monkeypatch):
@@ -1264,7 +1272,7 @@ def test_http_get_refuses_a_declared_size_over_the_limit_without_reading_it(monk
     with pytest.raises(fetch.DownloadTooLarge):
         fetch._http_get("https://example.org/b.pdf")
 
-    assert response.sized_reads == []
+    assert response.reads == 0
 
 
 def test_http_get_stops_reading_a_body_of_unknown_size_at_the_limit(monkeypatch):
@@ -1286,17 +1294,78 @@ def test_http_get_keeps_a_body_at_the_limit(monkeypatch):
     assert fetch._http_get("https://example.org/b.pdf").body == b"%PDF"
 
 
-def test_http_get_reads_a_declared_body_unsized_so_a_cut_off_read_raises(monkeypatch):
-    # http.client only raises IncompleteRead from an unsized read: a sized one
-    # would quietly return, and store, a truncated PDF.
+def test_http_get_raises_for_a_declared_body_cut_off_early(monkeypatch):
+    # http.client's sized reads return short, without raising, when the
+    # connection closes early: kept, that would be a truncated PDF.
+    import http.client
+
     from pdf_extract import fetch
 
-    response = _SizedResponse(b"%PDF", content_length="4")
+    monkeypatch.setattr(
+        fetch, "urlopen", lambda req, timeout: _SizedResponse(b"%PDF", content_length="10"),
+    )
+
+    with pytest.raises(http.client.IncompleteRead):
+        fetch._http_get("https://example.org/b.pdf")
+
+
+def test_http_get_reads_a_body_in_chunks(monkeypatch):
+    from pdf_extract import fetch
+
+    monkeypatch.setattr(fetch, "HTTP_DOWNLOAD_CHUNK_BYTES", 3)
+    response = _SizedResponse(b"%PDF-1.4", content_length="8")
     monkeypatch.setattr(fetch, "urlopen", lambda req, timeout: response)
 
-    fetch._http_get("https://example.org/b.pdf")
+    assert fetch._http_get("https://example.org/b.pdf").body == b"%PDF-1.4"
+    assert response.reads == 4
 
-    assert response.sized_reads == [None]
+
+class _Clock:
+    """`time.monotonic` for the fetch module, moved on by hand."""
+
+    def __init__(self):
+        self.now = 1000.0
+
+    def __call__(self):
+        return self.now
+
+
+def test_http_get_gives_up_on_a_body_still_arriving_at_the_deadline(monkeypatch):
+    # A host sending a little at a time never trips the per-read timeout: on
+    # 2026-11-22 one Bon Venture bulletin took 19 minutes, and every worker
+    # with a Bon Venture parish waited on it.
+    from pdf_extract import fetch
+
+    clock = _Clock()
+    monkeypatch.setattr(fetch.time, "monotonic", clock)
+    monkeypatch.setattr(fetch, "HTTP_DOWNLOAD_CHUNK_BYTES", 2)
+
+    def slow():
+        clock.now += 25
+
+    response = _SizedResponse(b"%PDF-1.4", content_length="8", on_read=slow)
+    monkeypatch.setattr(fetch, "urlopen", lambda req, timeout: response)
+
+    with pytest.raises(fetch.DownloadTooSlow, match="after 60s"):
+        fetch._http_get("https://example.org/b.pdf")
+
+    assert response.reads == 3
+
+
+def test_http_get_keeps_a_body_finished_inside_the_deadline(monkeypatch):
+    from pdf_extract import fetch
+
+    clock = _Clock()
+    monkeypatch.setattr(fetch.time, "monotonic", clock)
+    monkeypatch.setattr(fetch, "HTTP_DOWNLOAD_CHUNK_BYTES", 4)
+
+    def slow():
+        clock.now += 29
+
+    response = _SizedResponse(b"%PDF-1.4", content_length="8", on_read=slow)
+    monkeypatch.setattr(fetch, "urlopen", lambda req, timeout: response)
+
+    assert fetch._http_get("https://example.org/b.pdf").body == b"%PDF-1.4"
 
 
 def test_http_get_caps_a_chunked_body_whatever_its_content_length_says(monkeypatch):
@@ -1329,18 +1398,22 @@ def test_an_oversized_download_over_https_is_not_swallowed(monkeypatch):
         )
 
 
-def test_an_oversized_download_is_not_retried_from_the_source_address(monkeypatch):
+@pytest.mark.parametrize("error", ["DownloadTooLarge", "DownloadTooSlow"])
+def test_an_oversized_or_slow_download_is_not_retried_from_the_source_address(
+    monkeypatch, error,
+):
     from pdf_extract import fetch
 
     calls = []
+    raised = getattr(fetch, error)
 
     def get(url, **_):
         calls.append(url)
-        raise fetch.DownloadTooLarge("Over 1000 MB")
+        raise raised("no")
 
     monkeypatch.setattr(fetch, "_http_get", get)
 
-    with pytest.raises(fetch.DownloadTooLarge):
+    with pytest.raises(raised):
         fetch._download_bulletin(
             fetch_url="https://example.org/b.pdf", source_url="https://example.org/page",
         )
@@ -1364,8 +1437,11 @@ def test_http_get_percent_encodes_a_non_ascii_referer(monkeypatch):
         def __exit__(self, *exc):
             return False
 
-        def read(self, _size=-1):
-            return b"%PDF"
+        def read1(self, _size):
+            body, self.body = self.body, b""
+            return body
+
+        body = b"%PDF"
 
     def fake_urlopen(req, timeout):
         seen["referer"] = req.get_header("Referer")

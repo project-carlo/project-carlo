@@ -18,6 +18,7 @@ from pdf_extract.fetch import (
     BulletinLink,
     Download,
     DownloadTooLarge,
+    DownloadTooSlow,
     FetchSource,
     _Response,
     _site_for_source,
@@ -433,6 +434,23 @@ def test_fetch_reports_a_download_over_the_limit_as_too_large(monkeypatch, db: P
     assert result["failed_parishes"] == 1
     assert _bulletins(db) == []
     assert _results(db, "run-1")["test-parish"]["status"] == "too_large"
+
+
+def test_fetch_reports_a_download_past_the_deadline_as_failed(monkeypatch, db: Path) -> None:
+    _link_to(monkeypatch, "https://example.org/bulletin.pdf")
+
+    def download(**_):
+        raise DownloadTooSlow("Still downloading after 60s: https://example.org/bulletin.pdf")
+
+    monkeypatch.setattr("pdf_extract.fetch._download_bulletin", download)
+    _fake_browser(monkeypatch)
+    _start_run(db, "run-1")
+
+    result = fetch_bulletins(parish_name="Test Parish", run_id="run-1")
+
+    assert result["failed_parishes"] == 1
+    assert _bulletins(db) == []
+    assert _results(db, "run-1")["test-parish"]["status"] == "download_failed"
 
 
 DISCOVER_MASS_CAP_PAGE = (
