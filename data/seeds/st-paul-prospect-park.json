@@ -1,0 +1,803 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-paul-prospect-park",
+  "status": "ready",
+  "as_of": "2026-11-15T16:52:02Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T21:40:39Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church, St. Paul, Prospect Park. Both bulletins read (Nov 8 and Nov 15, 2026, image-only) print the same schedule box: Sat 5 PM vigil; Sun 8, 10 and 12 (Spanish); Mon-Sat 8 AM; Wed 6:30 PM Spanish; Adoration Wed 8:30-9 and Thu 1-2; Confession Sat 4-4:30 and first Fridays 7 PM; plus a Thanksgiving Mass Nov 26 at 10 AM. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "ef39bfb87b5fa71201890934c407889b6038c3ebe5b002bac2d427c9cfb9d035",
+      "fetched_at": "2026-11-15T16:52:02Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "ddf61ae9cd02e9f7371a2543e09699746222de0d0b3525aa2b07861258a27a97",
+      "fetched_at": "2026-11-08T16:00:56Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-prospect-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ef39bfb8",
+          "page": 1,
+          "said": "Weekend Masses SATURDAY ...... 5:00 PM (also live streamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ddf61ae9",
+          "page": 1,
+          "said": "Weekend Masses SATURDAY ...... 5:00 PM (also live streamed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ef39bfb8",
+          "page": 2,
+          "said": "Vigil 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ddf61ae9",
+          "page": 2,
+          "said": "Vigil 5:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box and the Masses for the Week of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-prospect-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ef39bfb8",
+          "page": 1,
+          "said": "SUNDAY 8:00 AM 10:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ddf61ae9",
+          "page": 1,
+          "said": "SUNDAY 8:00 AM 10:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ef39bfb8",
+          "page": 2,
+          "said": "Sunday 8:00 am / 10:00am intentions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ddf61ae9",
+          "page": 2,
+          "said": "Sunday 8:00 am / 10:00am intentions"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box and the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-prospect-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ef39bfb8",
+          "page": 1,
+          "said": "SUNDAY 8:00 AM 10:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ddf61ae9",
+          "page": 1,
+          "said": "SUNDAY 8:00 AM 10:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ef39bfb8",
+          "page": 2,
+          "said": "Sunday 8:00 am / 10:00am intentions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ddf61ae9",
+          "page": 2,
+          "said": "Sunday 8:00 am / 10:00am intentions"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box and the intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-prospect-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ef39bfb8",
+          "page": 1,
+          "said": "12:00 Noon: (Spanish); Misas en Espanol DOMINGOS 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ddf61ae9",
+          "page": 1,
+          "said": "12:00 Noon: (Spanish); Misas en Espanol DOMINGOS 12:00pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read; noted as Spanish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-prospect-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ef39bfb8",
+          "page": 1,
+          "said": "DAILY MASS: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ddf61ae9",
+          "page": 1,
+          "said": "DAILY MASS: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ef39bfb8",
+          "page": 2,
+          "said": "8:00 am intentions Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ddf61ae9",
+          "page": 2,
+          "said": "8:00 am intentions Monday through Saturday"
+        }
+      ],
+      "rationale": "R1, R35: the box gives Daily Mass 8:00 AM, and the intentions of both bulletins list an 8:00 AM Mass each day Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-prospect-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ef39bfb8",
+          "page": 1,
+          "said": "DAILY MASS: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ddf61ae9",
+          "page": 1,
+          "said": "DAILY MASS: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ef39bfb8",
+          "page": 2,
+          "said": "8:00 am intentions Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ddf61ae9",
+          "page": 2,
+          "said": "8:00 am intentions Monday through Saturday"
+        }
+      ],
+      "rationale": "R1, R35: the box gives Daily Mass 8:00 AM, and the intentions of both bulletins list an 8:00 AM Mass each day Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-prospect-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ef39bfb8",
+          "page": 1,
+          "said": "DAILY MASS: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ddf61ae9",
+          "page": 1,
+          "said": "DAILY MASS: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ef39bfb8",
+          "page": 2,
+          "said": "8:00 am intentions Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ddf61ae9",
+          "page": 2,
+          "said": "8:00 am intentions Monday through Saturday"
+        }
+      ],
+      "rationale": "R1, R35: the box gives Daily Mass 8:00 AM, and the intentions of both bulletins list an 8:00 AM Mass each day Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-prospect-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ef39bfb8",
+          "page": 1,
+          "said": "DAILY MASS: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ddf61ae9",
+          "page": 1,
+          "said": "DAILY MASS: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ef39bfb8",
+          "page": 2,
+          "said": "8:00 am intentions Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ddf61ae9",
+          "page": 2,
+          "said": "8:00 am intentions Monday through Saturday"
+        }
+      ],
+      "rationale": "R1, R35: the box gives Daily Mass 8:00 AM, and the intentions of both bulletins list an 8:00 AM Mass each day Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-prospect-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ef39bfb8",
+          "page": 1,
+          "said": "DAILY MASS: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ddf61ae9",
+          "page": 1,
+          "said": "DAILY MASS: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ef39bfb8",
+          "page": 2,
+          "said": "8:00 am intentions Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ddf61ae9",
+          "page": 2,
+          "said": "8:00 am intentions Monday through Saturday"
+        }
+      ],
+      "rationale": "R1, R35: the box gives Daily Mass 8:00 AM, and the intentions of both bulletins list an 8:00 AM Mass each day Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-prospect-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ef39bfb8",
+          "page": 1,
+          "said": "DAILY MASS: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ddf61ae9",
+          "page": 1,
+          "said": "DAILY MASS: 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ef39bfb8",
+          "page": 2,
+          "said": "8:00 am intentions Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ddf61ae9",
+          "page": 2,
+          "said": "8:00 am intentions Monday through Saturday"
+        }
+      ],
+      "rationale": "R1, R35: the box gives Daily Mass 8:00 AM, and the intentions of both bulletins list an 8:00 AM Mass each day Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-prospect-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ef39bfb8",
+          "page": 1,
+          "said": "Misas en Espanol MIERCOLES: Santa Misa 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ddf61ae9",
+          "page": 1,
+          "said": "Misas en Espanol MIERCOLES: Santa Misa 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ef39bfb8",
+          "page": 2,
+          "said": "Wednesday 6:30 pm intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ddf61ae9",
+          "page": 2,
+          "said": "Wednesday 6:30 pm intention"
+        }
+      ],
+      "rationale": "R1: printed in the Misas en Espanol box and the Wednesday intentions of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-prospect-park",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ef39bfb8",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION Wednesday from 8:30am-9am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ddf61ae9",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION Wednesday from 8:30am-9am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-prospect-park",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "14:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ef39bfb8",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION Thursday from 1pm - 2pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ddf61ae9",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION Thursday from 1pm - 2pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ef39bfb8",
+          "page": 4,
+          "said": "Cenacle of Mary with Eucharistic Adoration. Join us every Thursday at 1:00 PM in church"
+        }
+      ],
+      "rationale": "R1, R37: printed in the schedule box of both bulletins; the Cenacle of Mary with Adoration on Thursdays at 1 PM is the same hour, so one slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-prospect-park",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ef39bfb8",
+          "page": 1,
+          "said": "Confessions SATURDAYS / SABADOS 4:00 PM - 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ddf61ae9",
+          "page": 1,
+          "said": "Confessions SATURDAYS / SABADOS 4:00 PM - 4:30 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Confessions box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-prospect-park",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ef39bfb8",
+          "page": 1,
+          "said": "& 1ST FRIDAY OF THE MONTH PRIMER VIERNES DEL MES 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ddf61ae9",
+          "page": 1,
+          "said": "& 1ST FRIDAY OF THE MONTH PRIMER VIERNES DEL MES 7:00pm"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 2: the standing Confessions box of both bulletins names first Fridays at 7:00 PM; no end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-prospect-park",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ef39bfb8",
+          "page": 3,
+          "said": "Thanksgiving Mass NOVEMBER 26 10:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ddf61ae9",
+          "page": 3,
+          "said": "Thanksgiving Mass NOVEMBER 26 10:00 AM"
+        }
+      ],
+      "rationale": "R1, R16: a dated Thanksgiving Day Mass after as_of. R17: no change to the weekday 8 AM Mass is stated, so the weekly slot is left alone.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ef39bfb8",
+          "page": 1,
+          "said": "DAILY ROSARY:8:30 AM; MIERCOLES: Rosario 6:00pm"
+        }
+      ],
+      "rationale": "R24: the Rosary is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ef39bfb8",
+          "page": 5,
+          "said": "Grupo de Oracion en Espanol, todos los miercoles a las 7:00PM en el templo"
+        }
+      ],
+      "rationale": "R24: a prayer group, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
