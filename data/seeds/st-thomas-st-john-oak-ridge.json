@@ -1,0 +1,1102 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-thomas-st-john-oak-ridge",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:20:16Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T22:04:59Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches, St. John Vianney (Stockholm) and St. Thomas the Apostle (Oak Ridge); the page-1 schedule box was identical in both bulletins read (Nov 8 and Nov 15, 2026), and the intentions agree. Thanksgiving changes recorded as dated entries; Thursday STA Communion Service excluded. Open: the undated-venue Nov 18 KofC Mass of Remembrance.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "c16007b248e85da570f5f26a583a39f05e67dd84be68d12cab58e02c97dfb6aa",
+      "fetched_at": "2026-11-15T16:20:16Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "09c37606e623b420500044f62d8276c804f3af5d4b07eca88b5bdfede158cc3d",
+      "fetched_at": "2026-11-08T15:44:27Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-vianney-stockholm",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c16007b2",
+          "page": 1,
+          "said": "Saint John Vianney ... Weekend Mass Saturday: 4:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "09c37606",
+          "page": 1,
+          "said": "Saint John Vianney ... Weekend Mass Saturday: 4:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c16007b2",
+          "page": 3,
+          "said": "SAINT JOHN VIANNEY Saturday ... 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "09c37606",
+          "page": 3,
+          "said": "SAINT JOHN VIANNEY Saturday ... 4:00 pm"
+        }
+      ],
+      "rationale": "R1, R35: SJV column of the schedule box and the intentions in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-vianney-stockholm",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c16007b2",
+          "page": 1,
+          "said": "Saint John Vianney ... Sunday: 8:00AM & 10:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "09c37606",
+          "page": 1,
+          "said": "Saint John Vianney ... Sunday: 8:00AM & 10:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c16007b2",
+          "page": 3,
+          "said": "SAINT JOHN VIANNEY Sunday ... 8:00 am ... 10:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "09c37606",
+          "page": 3,
+          "said": "SAINT JOHN VIANNEY Sunday ... 8:00 am ... 10:00 am"
+        }
+      ],
+      "rationale": "R1, R35: SJV column of the schedule box and the intentions in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-vianney-stockholm",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c16007b2",
+          "page": 1,
+          "said": "Saint John Vianney ... Sunday: 8:00AM & 10:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "09c37606",
+          "page": 1,
+          "said": "Saint John Vianney ... Sunday: 8:00AM & 10:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c16007b2",
+          "page": 3,
+          "said": "SAINT JOHN VIANNEY Sunday ... 8:00 am ... 10:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "09c37606",
+          "page": 3,
+          "said": "SAINT JOHN VIANNEY Sunday ... 8:00 am ... 10:00 am"
+        }
+      ],
+      "rationale": "R1, R35: SJV column of the schedule box and the intentions in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-vianney-stockholm",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first",
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c16007b2",
+          "page": 1,
+          "said": "Saint John Vianney ... Sunday: ... 6:00PM 1st & 3rd Sunday of the month"
+        },
+        {
+          "source": "agent",
+          "bulletin": "09c37606",
+          "page": 1,
+          "said": "Saint John Vianney ... Sunday: ... 6:00PM 1st & 3rd Sunday of the month"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c16007b2",
+          "page": 3,
+          "said": "SAINT JOHN VIANNEY Sunday, November 15th ... 6:00 pm"
+        }
+      ],
+      "rationale": "R1: SJV schedule box names the 1st and 3rd Sundays; POLICY sets weeks_of_month. The Nov 15 (third Sunday) intentions list it; the Nov 8 (second Sunday) intentions do not, which fits.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-vianney-stockholm",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c16007b2",
+          "page": 1,
+          "said": "Saint John Vianney ... Weekday Wednesday: 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "09c37606",
+          "page": 1,
+          "said": "Saint John Vianney ... Weekday Wednesday: 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c16007b2",
+          "page": 3,
+          "said": "12:00 pm (St. John Vianney)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "09c37606",
+          "page": 3,
+          "said": "12:00 pm (St. John Vianney)"
+        }
+      ],
+      "rationale": "R1, R35: schedule box and Wednesday intentions in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-vianney-stockholm",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c16007b2",
+          "page": 1,
+          "said": "Saint John Vianney ... First Friday: 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "09c37606",
+          "page": 1,
+          "said": "Saint John Vianney ... First Friday: 12:00PM"
+        }
+      ],
+      "rationale": "R1: the SJV schedule box names First Friday; POLICY, Weekly or dated rule 2. Neither bulletin's week holds a first Friday (R11), so the intentions can't show it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-vianney-stockholm",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 12:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c16007b2",
+          "page": 1,
+          "said": "Eucharistic Adoration First Friday: immediately Following 12:00PM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "09c37606",
+          "page": 1,
+          "said": "Eucharistic Adoration First Friday: immediately Following 12:00PM Mass"
+        }
+      ],
+      "rationale": "R1, R10: printed in the SJV schedule box; 'following' a weekday Mass starts 30 minutes after it (POLICY, Times). No end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-vianney-stockholm",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c16007b2",
+          "page": 1,
+          "said": "Reconciliation Saturday: 3:00PM - 3:45PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "09c37606",
+          "page": 1,
+          "said": "Reconciliation Saturday: 3:00PM - 3:45PM"
+        }
+      ],
+      "rationale": "R1, R35: SJV column of the schedule box in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-oak-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c16007b2",
+          "page": 1,
+          "said": "Saint Thomas The Apostle ... Weekend Mass Saturday: 5:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "09c37606",
+          "page": 1,
+          "said": "Saint Thomas The Apostle ... Weekend Mass Saturday: 5:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c16007b2",
+          "page": 3,
+          "said": "SAINT THOMAS THE APOSTLE Saturday ... 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "09c37606",
+          "page": 3,
+          "said": "SAINT THOMAS THE APOSTLE Saturday ... 5:00 pm"
+        }
+      ],
+      "rationale": "R1, R35: STA column of the schedule box and the intentions in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-oak-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c16007b2",
+          "page": 1,
+          "said": "Saint Thomas The Apostle ... Sunday: 9:00AM & 11:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "09c37606",
+          "page": 1,
+          "said": "Saint Thomas The Apostle ... Sunday: 9:00AM & 11:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c16007b2",
+          "page": 3,
+          "said": "SAINT THOMAS THE APOSTLE Sunday ... 9:00 am ... 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "09c37606",
+          "page": 3,
+          "said": "SAINT THOMAS THE APOSTLE Sunday ... 9:00 am ... 11:00 am"
+        }
+      ],
+      "rationale": "R1, R35: STA column of the schedule box and the intentions in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-oak-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c16007b2",
+          "page": 1,
+          "said": "Saint Thomas The Apostle ... Sunday: 9:00AM & 11:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "09c37606",
+          "page": 1,
+          "said": "Saint Thomas The Apostle ... Sunday: 9:00AM & 11:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c16007b2",
+          "page": 3,
+          "said": "SAINT THOMAS THE APOSTLE Sunday ... 9:00 am ... 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "09c37606",
+          "page": 3,
+          "said": "SAINT THOMAS THE APOSTLE Sunday ... 9:00 am ... 11:00 am"
+        }
+      ],
+      "rationale": "R1, R35: STA column of the schedule box and the intentions in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-oak-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c16007b2",
+          "page": 1,
+          "said": "Weekday Monday: 7:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "09c37606",
+          "page": 1,
+          "said": "Weekday Monday: 7:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c16007b2",
+          "page": 3,
+          "said": "7:30 pm (St. Thomas the Apostle)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "09c37606",
+          "page": 3,
+          "said": "7:30 pm (St. Thomas the Apostle)"
+        }
+      ],
+      "rationale": "R1, R35: STA schedule box and Monday intentions in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-oak-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c16007b2",
+          "page": 1,
+          "said": "Tues., Wed. & Fri.: 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "09c37606",
+          "page": 1,
+          "said": "Tues., Wed. & Fri.: 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c16007b2",
+          "page": 3,
+          "said": "8:00 am (St. Thomas the Apostle)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "09c37606",
+          "page": 3,
+          "said": "8:00 am (St. Thomas the Apostle)"
+        }
+      ],
+      "rationale": "R1, R35: STA schedule box and the Tuesday, Wednesday and Friday intentions in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-oak-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c16007b2",
+          "page": 1,
+          "said": "Tues., Wed. & Fri.: 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "09c37606",
+          "page": 1,
+          "said": "Tues., Wed. & Fri.: 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c16007b2",
+          "page": 3,
+          "said": "8:00 am (St. Thomas the Apostle)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "09c37606",
+          "page": 3,
+          "said": "8:00 am (St. Thomas the Apostle)"
+        }
+      ],
+      "rationale": "R1, R35: STA schedule box and the Tuesday, Wednesday and Friday intentions in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-oak-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c16007b2",
+          "page": 1,
+          "said": "Tues., Wed. & Fri.: 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "09c37606",
+          "page": 1,
+          "said": "Tues., Wed. & Fri.: 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c16007b2",
+          "page": 3,
+          "said": "8:00 am (St. Thomas the Apostle)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "09c37606",
+          "page": 3,
+          "said": "8:00 am (St. Thomas the Apostle)"
+        }
+      ],
+      "rationale": "R1, R35: STA schedule box and the Tuesday, Wednesday and Friday intentions in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-oak-ridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Communion Service"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c16007b2",
+          "page": 1,
+          "said": "Communion Service Thursday: 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "09c37606",
+          "page": 1,
+          "said": "Communion Service Thursday: 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c16007b2",
+          "page": 3,
+          "said": "8:00 am - Communion Service (St. Thomas the Apostle)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "09c37606",
+          "page": 3,
+          "said": "8:00 am - Communion Service (St. Thomas the Apostle)"
+        }
+      ],
+      "rationale": "POLICY, What to extract: a Communion Service is not a Mass (R25).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-oak-ridge",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 7:30 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c16007b2",
+          "page": 1,
+          "said": "Eucharistic Adoration Monday: 6:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "09c37606",
+          "page": 1,
+          "said": "Eucharistic Adoration Monday: 6:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c16007b2",
+          "page": 3,
+          "said": "6:30 pm - Eucharistic Adoration (St Thomas the Apostle)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "09c37606",
+          "page": 3,
+          "said": "6:30 pm - Eucharistic Adoration (St Thomas the Apostle)"
+        }
+      ],
+      "rationale": "R1, R35: STA schedule box and Monday intentions in both bulletins. No end time is printed, so none is recorded (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-oak-ridge",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c16007b2",
+          "page": 1,
+          "said": "Eucharistic Adoration ... First Friday immediately following 8:00AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "09c37606",
+          "page": 1,
+          "said": "Eucharistic Adoration ... First Friday immediately following 8:00AM Mass"
+        }
+      ],
+      "rationale": "R1, R10: printed in the STA schedule box; 'following' a weekday Mass starts 30 minutes after it. No end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-oak-ridge",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c16007b2",
+          "page": 1,
+          "said": "Reconciliation Saturday: 4:00PM - 4:45PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "09c37606",
+          "page": 1,
+          "said": "Reconciliation Saturday: 4:00PM - 4:45PM"
+        }
+      ],
+      "rationale": "R1, R35: STA column of the schedule box in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-vianney-stockholm",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-25",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Eve"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c16007b2",
+          "page": 4,
+          "said": "Please note: There will be no Noon Mass on November 25, and there will be no Mass on Thanksgiving Day."
+        }
+      ],
+      "rationale": "R1, R16: the SJV page cancels the weekly Wednesday noon Mass on Nov 25, after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-vianney-stockholm",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-25",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Vigil Mass"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c16007b2",
+          "page": 4,
+          "said": "we will celebrate a Vigil Mass for Thanksgiving on Wednesday, November 25 at 7:00 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c16007b2",
+          "page": 8,
+          "said": "Saint John Vianney Vigil Mass Wednsday, November 25 7:00PM"
+        }
+      ],
+      "rationale": "R1, R16: dated special Mass after as_of, printed on the SJV page and in the Thanksgiving schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-oak-ridge",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c16007b2",
+          "page": 8,
+          "said": "Saint Thomas the Apostle Thanksgiving Day 9:00AM"
+        }
+      ],
+      "rationale": "R1, R16: dated Thanksgiving Day Mass after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c16007b2",
+          "page": 3,
+          "said": "Wednesday, November 18th ... 7:00 pm MASS OF REMBRANCE KofC †In memory of the deceased members of the Knights of Columbus Council #5510"
+        }
+      ],
+      "rationale": "R32: the intentions give no church for this line (the other Wednesday lines name theirs), and it is a memorial Mass for one council's deceased members with no open invitation (POLICY, closed Masses). Its date is after as_of but has already passed. Leaning leave out: venue unclear, and a wrong place is worse than a missing one.",
+      "question": "Add the Nov 18, 7:00 PM Knights of Columbus Mass of Remembrance, and where?",
+      "options": [
+        {
+          "label": "St. Thomas the Apostle",
+          "entry": {
+            "church_slug": "st-thomas-the-apostle-oak-ridge",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-18",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Mass of Remembrance, Knights of Columbus"
+          }
+        },
+        {
+          "label": "St. John Vianney",
+          "entry": {
+            "church_slug": "st-john-vianney-stockholm",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-18",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Mass of Remembrance, Knights of Columbus"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c16007b2",
+          "page": 1,
+          "said": "Novena to Saint Peregrine Monday immediately following 7:30PM Mass; Novena to Our Lady of Perpetual Help Wednesday immediately following 12:00PM Mass"
+        }
+      ],
+      "rationale": "R24: novenas are not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
