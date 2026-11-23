@@ -1,0 +1,619 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-fatima-highland-lakes",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:10:42Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T13:02:48Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend (Sat 4 PM; Sun 8, 10, noon), weekday Mon-Thu 9 AM, first-Sunday Polish Mass 2 PM and Saturday 3:30-4 PM Confession agree in both bulletins read (Nov 15 and Oct 25 issues) and the website; a Dec 8 7 PM Immaculate Conception Mass comes from the parish's Mass Times page. Open: Adoration is Tuesday 7-8 PM on page 1 and the website but Thursday 7-8 PM in a page-3 box of the newest issue; and a website-only Monday 7-8 PM Confession.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "bcaa5d0238daa59105bc0599ff92c6c21422dfc046b5ecca2d56aeb268df0f01",
+      "fetched_at": "2026-11-15T16:10:42Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "27313264b95809b19683ae3218d7814f9f44c573777304fea1d5cc7ef6d61574",
+      "fetched_at": "2026-11-08T15:36:39Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-highland-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bcaa5d02",
+          "page": 1,
+          "said": "Saturday (Sunday's Vespers)....4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27313264",
+          "page": 1,
+          "said": "Saturday (Sunday's Vespers)....4:00 pm"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass Schedule box of both bulletins read; the website's Mass Times page agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-highland-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bcaa5d02",
+          "page": 1,
+          "said": "Sunday....8:00, 10:00 am, 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27313264",
+          "page": 1,
+          "said": "Sunday....8:00, 10:00 am, 12:00 noon"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass Schedule box of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-highland-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bcaa5d02",
+          "page": 1,
+          "said": "Sunday....8:00, 10:00 am, 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27313264",
+          "page": 1,
+          "said": "Sunday....8:00, 10:00 am, 12:00 noon"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass Schedule box of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-highland-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bcaa5d02",
+          "page": 1,
+          "said": "Sunday....8:00, 10:00 am, 12:00 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27313264",
+          "page": 1,
+          "said": "Sunday....8:00, 10:00 am, 12:00 noon"
+        }
+      ],
+      "rationale": "R1: printed in the page-1 Mass Schedule box of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-highland-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bcaa5d02",
+          "page": 1,
+          "said": "Weekday Mass Monday - Thursday....9:00 am; No morning Mass on Friday and Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27313264",
+          "page": 1,
+          "said": "Weekday Mass Monday - Thursday....9:00 am; No morning Mass on Friday and Saturday"
+        }
+      ],
+      "rationale": "R1: page-1 schedule box of both bulletins; the newest intentions list 9:00 am Mon-Thu. The older (Oct 25) issue's dated 10:30 Tue/Thu intentions are past dated exceptions before as_of (R16, R40).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-highland-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bcaa5d02",
+          "page": 1,
+          "said": "Weekday Mass Monday - Thursday....9:00 am; No morning Mass on Friday and Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27313264",
+          "page": 1,
+          "said": "Weekday Mass Monday - Thursday....9:00 am; No morning Mass on Friday and Saturday"
+        }
+      ],
+      "rationale": "R1: page-1 schedule box of both bulletins; the newest intentions list 9:00 am Mon-Thu. The older (Oct 25) issue's dated 10:30 Tue/Thu intentions are past dated exceptions before as_of (R16, R40).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-highland-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bcaa5d02",
+          "page": 1,
+          "said": "Weekday Mass Monday - Thursday....9:00 am; No morning Mass on Friday and Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27313264",
+          "page": 1,
+          "said": "Weekday Mass Monday - Thursday....9:00 am; No morning Mass on Friday and Saturday"
+        }
+      ],
+      "rationale": "R1: page-1 schedule box of both bulletins; the newest intentions list 9:00 am Mon-Thu. The older (Oct 25) issue's dated 10:30 Tue/Thu intentions are past dated exceptions before as_of (R16, R40).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-highland-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bcaa5d02",
+          "page": 1,
+          "said": "Weekday Mass Monday - Thursday....9:00 am; No morning Mass on Friday and Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27313264",
+          "page": 1,
+          "said": "Weekday Mass Monday - Thursday....9:00 am; No morning Mass on Friday and Saturday"
+        }
+      ],
+      "rationale": "R1: page-1 schedule box of both bulletins; the newest intentions list 9:00 am Mon-Thu. The older (Oct 25) issue's dated 10:30 Tue/Thu intentions are past dated exceptions before as_of (R16, R40).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-highland-lakes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "14:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bcaa5d02",
+          "page": 1,
+          "said": "Msza Po Polsku - 1st Niedziela Miesiaca at 2:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27313264",
+          "page": 1,
+          "said": "Msza Po Polsku - 1st Niedziela Miesiaca at 2:00 pm"
+        }
+      ],
+      "rationale": "R1: the standing schedule box of both bulletins names a Polish Mass on the first Sunday of the month at 2:00 pm (POLICY, Weekly or dated rule 2); the parish has one church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-highland-lakes",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bcaa5d02",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Saturdays....3:30 - 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27313264",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Saturdays....3:30 - 4:00 pm"
+        }
+      ],
+      "rationale": "R1: page-1 schedule box of both bulletins. The website lists Saturday 3:30-4:00 PM under an 'Easter Season' label; a website label alone does not override the bulletin's year-round line (R6: no real conflict on the time).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-highland-lakes",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://olfatimaparish.net/mass-times",
+          "said": "Upcoming Holy Days | Immaculate Conception | December 8 : | 9:00 AM | 7:00 PM",
+          "schedule_check": {
+            "checked_at": "2026-11-23T13:05:44Z",
+            "current_because": "Checked 2026-11-23: the eCatholic Mass Times page lists this under 'Upcoming Holy Days', and its weekend, weekday and Adoration times match the November 15, 2026 bulletin.",
+            "bulletin": "bcaa5d02",
+            "fits_because": "The newest bulletin (Nov 15) covers Nov 15-22 and cannot show December holy-day times; 9:00 AM is the usual Tuesday weekday Mass, so only the 7:00 PM Mass is an extra dated entry."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish's own current Mass Times page gives the Immaculate Conception Masses on December 8 (a Tuesday, after as_of); 9:00 AM is already the weekly Tuesday Mass (POLICY rule 6), so only 7:00 PM is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bcaa5d02",
+          "page": 1,
+          "said": "Adoration Every Tuesday evening from 7:00 pm to 8:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27313264",
+          "page": 1,
+          "said": "Adoration Every Tuesday evening from 7:00 pm to 8:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bcaa5d02",
+          "page": 3,
+          "said": "Adoration of the Blessed Sacrament - Every Thursday 7:00 - 8:00 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://olfatimaparish.net/mass-times",
+          "said": "Tuesday | 7:00 PM | to | 8:00 PM"
+        }
+      ],
+      "rationale": "R28: the newest bulletin's page-1 schedule box (and the Oct 25 issue's, and the website's Adoration tab) says Tuesday 7-8 pm, but a new box on page 3 of the same newest issue says Every Thursday 7:00-8:00 pm. Leaning keep Tuesday: three sources agree; the Thursday box appears once and may be an error, though it could announce a move.",
+      "question": "Keep weekly Tuesday 7-8 PM Adoration (page 3 of the newest issue says Thursday)?",
+      "options": [
+        {
+          "label": "Keep Tuesday 7-8 PM",
+          "entry": {
+            "church_slug": "our-lady-of-fatima-highland-lakes",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out (moved to Thursday)",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bcaa5d02",
+          "page": 3,
+          "said": "Adoration of the Blessed Sacrament - Every Thursday 7:00 - 8:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bcaa5d02",
+          "page": 1,
+          "said": "Adoration Every Tuesday evening from 7:00 pm to 8:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27313264",
+          "page": 1,
+          "said": "Adoration Every Tuesday evening from 7:00 pm to 8:00 pm"
+        }
+      ],
+      "rationale": "R28: the Thursday box is printed only on page 3 of the newest issue; page 1 of both issues and the website say Tuesday. Leaning leave out; if the reviewer finds Adoration moved to Thursday, answer the Tuesday slot to leave it out.",
+      "question": "Add weekly Thursday 7-8 PM Adoration (page 1 and the website say Tuesday)?",
+      "options": [
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Add Thursday 7-8 PM",
+          "entry": {
+            "church_slug": "our-lady-of-fatima-highland-lakes",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://olfatimaparish.net/mass-times",
+          "said": "Confession Times | Monday : | 7:00 PM | to | 8:00 PM"
+        }
+      ],
+      "rationale": "R5, R6, R29: neither bulletin prints a Monday Confession; on the website's Mass Times page it sits beside the Immaculate Conception holy-day entry, so it may be a one-time Advent confession on December 7 rather than a weekly slot. Leaning leave out: the bulletins' Reconciliation line gives only Saturdays.",
+      "question": "Add the website's Monday 7-8 PM Confession?",
+      "options": [
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Weekly Mondays 7-8 PM",
+          "entry": {
+            "church_slug": "our-lady-of-fatima-highland-lakes",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Monday, December 7 only",
+          "entry": {
+            "church_slug": "our-lady-of-fatima-highland-lakes",
+            "event_type": "confession",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-07",
+            "start_time": "19:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Eve of the Immaculate Conception"
+          }
+        }
+      ],
+      "answer": null
+    }
+  ]
+}
