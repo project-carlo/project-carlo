@@ -1,0 +1,1624 @@
+{
+  "schema_version": 1,
+  "parish_slug": "cathedral-basilica-of-ss-peter-paul-philadelphia",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:38:42Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T23:08:37Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (Cathedral Basilica, with Masses in its Chapel). Both bulletins (Nov 8 and 15) print the same Mass and Penance schedule box, which the website matches; the website adds the 5:00 PM end of Saturday confession. Open: the Sunday Spanish confession (website says by appointment), whether the Thanksgiving/Nov 27 9 AM Mass replaces the 7:15 and 12:05 Masses and 11:30 confession, and the Dec 12 retreat-day confession and Holy Hour.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "2f75833b409d7d7a73041bed2d98198792631b5b7ed7f63dc8307c3d3b7730ba",
+      "fetched_at": "2026-11-15T16:38:42Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "4d315ea303deec8a735936edb211e853f6dab7ddce04e8a2b2fb7c287823f36d",
+      "fetched_at": "2026-11-08T15:52:31Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-basilica-of-ss-peter-paul-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f75833b",
+          "page": 1,
+          "said": "Sunday: 5:15 PM - Anticipated Mass on Saturday in the Cathedral Basilica"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d315ea3",
+          "page": 1,
+          "said": "Sunday: 5:15 PM - Anticipated Mass on Saturday in the Cathedral Basilica"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins; the intentions list Saturday 5:15 each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-basilica-of-ss-peter-paul-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f75833b",
+          "page": 1,
+          "said": "8:00 AM, 9:30 AM, 11:00 AM - Mass in the Cathedral Basilica ... 6:30 PM - Mass in the Cathedral Basilica"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d315ea3",
+          "page": 1,
+          "said": "8:00 AM, 9:30 AM, 11:00 AM - Mass in the Cathedral Basilica ... 6:30 PM - Mass in the Cathedral Basilica"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-basilica-of-ss-peter-paul-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f75833b",
+          "page": 1,
+          "said": "8:00 AM, 9:30 AM, 11:00 AM - Mass in the Cathedral Basilica ... 6:30 PM - Mass in the Cathedral Basilica"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d315ea3",
+          "page": 1,
+          "said": "8:00 AM, 9:30 AM, 11:00 AM - Mass in the Cathedral Basilica ... 6:30 PM - Mass in the Cathedral Basilica"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-basilica-of-ss-peter-paul-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f75833b",
+          "page": 1,
+          "said": "8:00 AM, 9:30 AM, 11:00 AM - Mass in the Cathedral Basilica ... 6:30 PM - Mass in the Cathedral Basilica"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d315ea3",
+          "page": 1,
+          "said": "8:00 AM, 9:30 AM, 11:00 AM - Mass in the Cathedral Basilica ... 6:30 PM - Mass in the Cathedral Basilica"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-basilica-of-ss-peter-paul-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f75833b",
+          "page": 1,
+          "said": "8:00 AM, 9:30 AM, 11:00 AM - Mass in the Cathedral Basilica ... 6:30 PM - Mass in the Cathedral Basilica"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d315ea3",
+          "page": 1,
+          "said": "8:00 AM, 9:30 AM, 11:00 AM - Mass in the Cathedral Basilica ... 6:30 PM - Mass in the Cathedral Basilica"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-basilica-of-ss-peter-paul-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish; Cathedral Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f75833b",
+          "page": 1,
+          "said": "12:30 PM - Spanish Mass in the Cathedral Chapel (Misa en español, en la Capilla)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d315ea3",
+          "page": 1,
+          "said": "12:30 PM - Spanish Mass in the Cathedral Chapel (Misa en español, en la Capilla)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-basilica-of-ss-peter-paul-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Cathedral Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f75833b",
+          "page": 1,
+          "said": "Weekdays: 7:15 AM & 12:05 PM - Mass in the Cathedral Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d315ea3",
+          "page": 1,
+          "said": "Weekdays: 7:15 AM & 12:05 PM - Mass in the Cathedral Chapel"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; Saturday is listed separately, so weekdays are Monday to Friday, as the intentions on p2 confirm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-basilica-of-ss-peter-paul-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Cathedral Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f75833b",
+          "page": 1,
+          "said": "Weekdays: 7:15 AM & 12:05 PM - Mass in the Cathedral Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d315ea3",
+          "page": 1,
+          "said": "Weekdays: 7:15 AM & 12:05 PM - Mass in the Cathedral Chapel"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; Saturday is listed separately, so weekdays are Monday to Friday, as the intentions on p2 confirm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-basilica-of-ss-peter-paul-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Cathedral Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f75833b",
+          "page": 1,
+          "said": "Weekdays: 7:15 AM & 12:05 PM - Mass in the Cathedral Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d315ea3",
+          "page": 1,
+          "said": "Weekdays: 7:15 AM & 12:05 PM - Mass in the Cathedral Chapel"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; Saturday is listed separately, so weekdays are Monday to Friday, as the intentions on p2 confirm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-basilica-of-ss-peter-paul-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Cathedral Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f75833b",
+          "page": 1,
+          "said": "Weekdays: 7:15 AM & 12:05 PM - Mass in the Cathedral Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d315ea3",
+          "page": 1,
+          "said": "Weekdays: 7:15 AM & 12:05 PM - Mass in the Cathedral Chapel"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; Saturday is listed separately, so weekdays are Monday to Friday, as the intentions on p2 confirm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-basilica-of-ss-peter-paul-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Cathedral Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f75833b",
+          "page": 1,
+          "said": "Weekdays: 7:15 AM & 12:05 PM - Mass in the Cathedral Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d315ea3",
+          "page": 1,
+          "said": "Weekdays: 7:15 AM & 12:05 PM - Mass in the Cathedral Chapel"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; Saturday is listed separately, so weekdays are Monday to Friday, as the intentions on p2 confirm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-basilica-of-ss-peter-paul-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Cathedral Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f75833b",
+          "page": 1,
+          "said": "Weekdays: 7:15 AM & 12:05 PM - Mass in the Cathedral Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d315ea3",
+          "page": 1,
+          "said": "Weekdays: 7:15 AM & 12:05 PM - Mass in the Cathedral Chapel"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; Saturday is listed separately, so weekdays are Monday to Friday, as the intentions on p2 confirm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-basilica-of-ss-peter-paul-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Cathedral Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f75833b",
+          "page": 1,
+          "said": "Weekdays: 7:15 AM & 12:05 PM - Mass in the Cathedral Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d315ea3",
+          "page": 1,
+          "said": "Weekdays: 7:15 AM & 12:05 PM - Mass in the Cathedral Chapel"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; Saturday is listed separately, so weekdays are Monday to Friday, as the intentions on p2 confirm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-basilica-of-ss-peter-paul-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Cathedral Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f75833b",
+          "page": 1,
+          "said": "Weekdays: 7:15 AM & 12:05 PM - Mass in the Cathedral Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d315ea3",
+          "page": 1,
+          "said": "Weekdays: 7:15 AM & 12:05 PM - Mass in the Cathedral Chapel"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; Saturday is listed separately, so weekdays are Monday to Friday, as the intentions on p2 confirm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-basilica-of-ss-peter-paul-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Cathedral Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f75833b",
+          "page": 1,
+          "said": "Weekdays: 7:15 AM & 12:05 PM - Mass in the Cathedral Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d315ea3",
+          "page": 1,
+          "said": "Weekdays: 7:15 AM & 12:05 PM - Mass in the Cathedral Chapel"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; Saturday is listed separately, so weekdays are Monday to Friday, as the intentions on p2 confirm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-basilica-of-ss-peter-paul-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Cathedral Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f75833b",
+          "page": 1,
+          "said": "Weekdays: 7:15 AM & 12:05 PM - Mass in the Cathedral Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d315ea3",
+          "page": 1,
+          "said": "Weekdays: 7:15 AM & 12:05 PM - Mass in the Cathedral Chapel"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; Saturday is listed separately, so weekdays are Monday to Friday, as the intentions on p2 confirm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-basilica-of-ss-peter-paul-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Cathedral Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f75833b",
+          "page": 1,
+          "said": "Saturdays: 12:05 PM - Mass in the Cathedral Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d315ea3",
+          "page": 1,
+          "said": "Saturdays: 12:05 PM - Mass in the Cathedral Chapel"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-basilica-of-ss-peter-paul-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f75833b",
+          "page": 1,
+          "said": "SACRAMENT OF PENANCE SCHEDULE Sunday: 9:00 AM and 5:30 PM in the Basilica"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d315ea3",
+          "page": 1,
+          "said": "SACRAMENT OF PENANCE SCHEDULE Sunday: 9:00 AM and 5:30 PM in the Basilica"
+        },
+        {
+          "source": "website",
+          "url": "https://cathedralphila.org/",
+          "said": "Sunday: 9:00 AM and 5:30 PM in the Cathedral Basilica"
+        }
+      ],
+      "rationale": "R1: printed in the Penance schedule box of both bulletins; no end time is given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-basilica-of-ss-peter-paul-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f75833b",
+          "page": 1,
+          "said": "SACRAMENT OF PENANCE SCHEDULE Sunday: 9:00 AM and 5:30 PM in the Basilica"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d315ea3",
+          "page": 1,
+          "said": "SACRAMENT OF PENANCE SCHEDULE Sunday: 9:00 AM and 5:30 PM in the Basilica"
+        },
+        {
+          "source": "website",
+          "url": "https://cathedralphila.org/",
+          "said": "Sunday: 9:00 AM and 5:30 PM in the Cathedral Basilica"
+        }
+      ],
+      "rationale": "R1: printed in the Penance schedule box of both bulletins; no end time is given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-basilica-of-ss-peter-paul-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f75833b",
+          "page": 1,
+          "said": "Weekdays: 11:30 AM in the Basilica"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d315ea3",
+          "page": 1,
+          "said": "Weekdays: 11:30 AM in the Basilica"
+        },
+        {
+          "source": "website",
+          "url": "https://cathedralphila.org/",
+          "said": "Monday-Friday: 11:30 AM in the Cathedral Basilica"
+        }
+      ],
+      "rationale": "R1: printed in the Penance schedule box of both bulletins; the website says Monday-Friday. No end time is given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-basilica-of-ss-peter-paul-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f75833b",
+          "page": 1,
+          "said": "Weekdays: 11:30 AM in the Basilica"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d315ea3",
+          "page": 1,
+          "said": "Weekdays: 11:30 AM in the Basilica"
+        },
+        {
+          "source": "website",
+          "url": "https://cathedralphila.org/",
+          "said": "Monday-Friday: 11:30 AM in the Cathedral Basilica"
+        }
+      ],
+      "rationale": "R1: printed in the Penance schedule box of both bulletins; the website says Monday-Friday. No end time is given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-basilica-of-ss-peter-paul-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f75833b",
+          "page": 1,
+          "said": "Weekdays: 11:30 AM in the Basilica"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d315ea3",
+          "page": 1,
+          "said": "Weekdays: 11:30 AM in the Basilica"
+        },
+        {
+          "source": "website",
+          "url": "https://cathedralphila.org/",
+          "said": "Monday-Friday: 11:30 AM in the Cathedral Basilica"
+        }
+      ],
+      "rationale": "R1: printed in the Penance schedule box of both bulletins; the website says Monday-Friday. No end time is given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-basilica-of-ss-peter-paul-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f75833b",
+          "page": 1,
+          "said": "Weekdays: 11:30 AM in the Basilica"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d315ea3",
+          "page": 1,
+          "said": "Weekdays: 11:30 AM in the Basilica"
+        },
+        {
+          "source": "website",
+          "url": "https://cathedralphila.org/",
+          "said": "Monday-Friday: 11:30 AM in the Cathedral Basilica"
+        }
+      ],
+      "rationale": "R1: printed in the Penance schedule box of both bulletins; the website says Monday-Friday. No end time is given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-basilica-of-ss-peter-paul-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f75833b",
+          "page": 1,
+          "said": "Weekdays: 11:30 AM in the Basilica"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d315ea3",
+          "page": 1,
+          "said": "Weekdays: 11:30 AM in the Basilica"
+        },
+        {
+          "source": "website",
+          "url": "https://cathedralphila.org/",
+          "said": "Monday-Friday: 11:30 AM in the Cathedral Basilica"
+        }
+      ],
+      "rationale": "R1: printed in the Penance schedule box of both bulletins; the website says Monday-Friday. No end time is given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-basilica-of-ss-peter-paul-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f75833b",
+          "page": 1,
+          "said": "Saturday: 4:15 PM in the Basilica"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d315ea3",
+          "page": 1,
+          "said": "Saturday: 4:15 PM in the Basilica"
+        },
+        {
+          "source": "website",
+          "url": "https://cathedralphila.org/",
+          "said": "Saturday: 4:15-5:00 PM in the Cathedral Basilica"
+        }
+      ],
+      "rationale": "R1 for the 4:15 PM start, printed in both bulletins; R6 for the 5:00 PM end, from the parish website's current schedule, which matches the bulletin in every other line and ends before the 5:15 PM vigil.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f75833b",
+          "page": 1,
+          "said": "12:00 PM (español) en la Capilla"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d315ea3",
+          "page": 1,
+          "said": "12:00 PM (español) en la Capilla"
+        },
+        {
+          "source": "website",
+          "url": "https://cathedralphila.org/",
+          "said": "Sunday (Spanish): 12:00 PM in the Cathedral Chapel by appointment"
+        },
+        {
+          "source": "website",
+          "url": "https://cathedralphila.org/",
+          "said": "El Sacramento de la Reconciliación o Confesión se celebra en español de 11:45 AM a 12:15 PM pm los domingos en la Capilla."
+        }
+      ],
+      "rationale": "R28/R6: both bulletins print a plain 12:00 PM Spanish confession in the Chapel, but the website's English list says 'by appointment' (R26 would leave that out) and its Spanish paragraph gives 11:45-12:15. Leaning to the bulletins' standing schedule box, which is newer and printed weekly.",
+      "question": "Keep the Sunday 12:00 PM Spanish confession in the Chapel, which the website calls by appointment?",
+      "options": [
+        {
+          "label": "Sundays 12:00 PM, Spanish, Cathedral Chapel",
+          "entry": {
+            "church_slug": "cathedral-basilica-of-ss-peter-paul-philadelphia",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Spanish; Cathedral Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Sundays 11:45 AM-12:15 PM (Spanish website page)",
+          "entry": {
+            "church_slug": "cathedral-basilica-of-ss-peter-paul-philadelphia",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "11:45",
+            "end_time": "12:15",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Spanish; Cathedral Chapel"
+          }
+        },
+        {
+          "label": "Leave out (by appointment)",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-basilica-of-ss-peter-paul-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day; Cathedral Chapel"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f75833b",
+          "page": 5,
+          "said": "Mass on Thanksgiving Day, November 26, 2026, will be at 9:00 AM in the Cathedral Chapel."
+        }
+      ],
+      "rationale": "R1, R16: dated holiday Mass on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-basilica-of-ss-peter-paul-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-27",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Cathedral Chapel"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f75833b",
+          "page": 5,
+          "said": "Mass on Friday, November 27, 2026, also will be at 9:00 AM in the Cathedral Chapel."
+        }
+      ],
+      "rationale": "R1, R16: dated Mass on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f75833b",
+          "page": 5,
+          "said": "Mass on Thanksgiving Day, November 26, 2026, will be at 9:00 AM in the Cathedral Chapel. ... Only the Chapel will be open on Thursday and Friday for the 9 AM Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://cathedralphila.org/",
+          "said": "*Only the Cathedral Chapel is open for the 9:00 AM Mass on Federal Holidays."
+        }
+      ],
+      "rationale": "R17/R30: the bulletin does not say 'cancelled', but 'Mass ... will be at 9:00 AM' and 'Only the Chapel will be open ... for the 9 AM Mass' read as a move of the day's Masses (a move is a cancellation plus the new time), and the website's holiday note agrees. Leaning to cancel.",
+      "question": "Cancel the usual 7:15 AM and 12:05 PM Masses on Thanksgiving (Nov 26) and Friday Nov 27, when the bulletin says Mass 'will be at 9:00 AM' and only the Chapel is open?",
+      "options": [
+        {
+          "label": "Cancel them (Mass moved to 9 AM)",
+          "entry": {
+            "church_slug": "cathedral-basilica-of-ss-peter-paul-philadelphia",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-26",
+            "start_time": "07:15",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Thanksgiving; Mass at 9:00 AM"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Keep them",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "thanksgiving-mass"
+    },
+    {
+      "id": "s30",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f75833b",
+          "page": 5,
+          "said": "Mass on Thanksgiving Day, November 26, 2026, will be at 9:00 AM in the Cathedral Chapel. ... Only the Chapel will be open on Thursday and Friday for the 9 AM Mass"
+        }
+      ],
+      "rationale": "R17/R30: see the 7:15 AM slot of this group; one answer decides all four.",
+      "question": "Cancel the usual 7:15 AM and 12:05 PM Masses on Thanksgiving (Nov 26) and Friday Nov 27, when the bulletin says Mass 'will be at 9:00 AM' and only the Chapel is open?",
+      "options": [
+        {
+          "label": "Cancel them (Mass moved to 9 AM)",
+          "entry": {
+            "church_slug": "cathedral-basilica-of-ss-peter-paul-philadelphia",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-26",
+            "start_time": "12:05",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Thanksgiving; Mass at 9:00 AM"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Keep them",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "thanksgiving-mass"
+    },
+    {
+      "id": "s31",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f75833b",
+          "page": 5,
+          "said": "Mass on Friday, November 27, 2026, also will be at 9:00 AM in the Cathedral Chapel. Only the Chapel will be open on Thursday and Friday for the 9 AM Mass"
+        }
+      ],
+      "rationale": "R17/R30: see the Nov 26 7:15 AM slot of this group; one answer decides all four.",
+      "question": "Cancel the usual 7:15 AM and 12:05 PM Masses on Thanksgiving (Nov 26) and Friday Nov 27, when the bulletin says Mass 'will be at 9:00 AM' and only the Chapel is open?",
+      "options": [
+        {
+          "label": "Cancel them (Mass moved to 9 AM)",
+          "entry": {
+            "church_slug": "cathedral-basilica-of-ss-peter-paul-philadelphia",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-27",
+            "start_time": "07:15",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Mass at 9:00 AM"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Keep them",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "thanksgiving-mass"
+    },
+    {
+      "id": "s32",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f75833b",
+          "page": 5,
+          "said": "Mass on Friday, November 27, 2026, also will be at 9:00 AM in the Cathedral Chapel. Only the Chapel will be open on Thursday and Friday for the 9 AM Mass"
+        }
+      ],
+      "rationale": "R17/R30: see the Nov 26 7:15 AM slot of this group; one answer decides all four.",
+      "question": "Cancel the usual 7:15 AM and 12:05 PM Masses on Thanksgiving (Nov 26) and Friday Nov 27, when the bulletin says Mass 'will be at 9:00 AM' and only the Chapel is open?",
+      "options": [
+        {
+          "label": "Cancel them (Mass moved to 9 AM)",
+          "entry": {
+            "church_slug": "cathedral-basilica-of-ss-peter-paul-philadelphia",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-27",
+            "start_time": "12:05",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Mass at 9:00 AM"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Keep them",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "thanksgiving-mass"
+    },
+    {
+      "id": "s33",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f75833b",
+          "page": 5,
+          "said": "Only the Chapel will be open on Thursday and Friday for the 9 AM Mass"
+        }
+      ],
+      "rationale": "R17/R30: confession is heard in the Basilica, which the notice implies is closed both days, but the bulletin does not mention confession. Leaning to cancel, since the building is closed except the Chapel.",
+      "question": "Cancel the 11:30 AM weekday confession (in the Basilica) on Nov 26 and 27, when only the Chapel is open?",
+      "options": [
+        {
+          "label": "Cancel them",
+          "entry": {
+            "church_slug": "cathedral-basilica-of-ss-peter-paul-philadelphia",
+            "event_type": "confession",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-26",
+            "start_time": "11:30",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Thanksgiving; only the Chapel open"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Keep them",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "thanksgiving-confession"
+    },
+    {
+      "id": "s34",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f75833b",
+          "page": 5,
+          "said": "Only the Chapel will be open on Thursday and Friday for the 9 AM Mass"
+        }
+      ],
+      "rationale": "R17/R30: see the Nov 26 slot of this group.",
+      "question": "Cancel the 11:30 AM weekday confession (in the Basilica) on Nov 26 and 27, when only the Chapel is open?",
+      "options": [
+        {
+          "label": "Cancel them",
+          "entry": {
+            "church_slug": "cathedral-basilica-of-ss-peter-paul-philadelphia",
+            "event_type": "confession",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-27",
+            "start_time": "11:30",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Only the Chapel open"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Keep them",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "thanksgiving-confession"
+    },
+    {
+      "id": "s35",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f75833b",
+          "page": 5,
+          "said": "Saturday, December 12, 2026 ... You are welcome to all or part of the day ... 11:00 am Quiet time and the availability of the Sacrament of Penance and Reconciliation"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d315ea3",
+          "page": 5,
+          "said": "Saturday, December 12, 2026 ... You are welcome to all or part of the day ... 11:00 am Quiet time and the availability of the Sacrament of Penance and Reconciliation"
+        }
+      ],
+      "rationale": "R30: a retreat that asks people to register and suggests a $20 offering, held in the Cathedral; it says all are welcome to any part. POLICY's closed-event rule names Masses limited to a group, not this. Leaning to include; no end time is given (the 12:05 Mass follows).",
+      "question": "Include the Advent Retreat Day's 11:00 AM confession and 2:30-3:30 PM Holy Hour with Benediction on Saturday Dec 12 (registration requested, but 'welcome to all or part of the day')?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "cathedral-basilica-of-ss-peter-paul-philadelphia",
+            "event_type": "confession",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-12",
+            "start_time": "11:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Advent Retreat Day"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "retreat"
+    },
+    {
+      "id": "s36",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f75833b",
+          "page": 5,
+          "said": "2:30 pm Holy Hour with Benediction of the Most Blessed Sacrament 3:30 pm Conclusion of the Retreat Day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4d315ea3",
+          "page": 5,
+          "said": "2:30 pm Holy Hour with Benediction of the Most Blessed Sacrament 3:30 pm Conclusion of the Retreat Day"
+        }
+      ],
+      "rationale": "R30: see the confession slot of this group. The Holy Hour ends at the 3:30 PM conclusion.",
+      "question": "Include the Advent Retreat Day's 11:00 AM confession and 2:30-3:30 PM Holy Hour with Benediction on Saturday Dec 12 (registration requested, but 'welcome to all or part of the day')?",
+      "options": [
+        {
+          "label": "Include",
+          "entry": {
+            "church_slug": "cathedral-basilica-of-ss-peter-paul-philadelphia",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-12",
+            "start_time": "14:30",
+            "end_time": "15:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Benediction; Advent Retreat Day"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "retreat"
+    },
+    {
+      "id": "s37",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f75833b",
+          "page": 6,
+          "said": "Forty Hours ... Sunday, November 29, 2026 ... Adoration of the Most Blessed Sacrament is around the clock during the Forty Hours."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f75833b",
+          "page": 2,
+          "said": "begins on the First Sunday of Advent, November 29 and concludes on Tuesday, December 1, 2026"
+        },
+        {
+          "source": "website",
+          "url": "https://cathedralphila.org/",
+          "said": "Forty Hours Begins on Sunday, November 29, 2026"
+        }
+      ],
+      "rationale": "R26, POLICY (What to extract): Forty Hours Adoration Nov 29-Dec 1 has no stated start or end time in either bulletin or on the website, so no definite time can be recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s38",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f75833b",
+          "page": 2,
+          "said": "next Sunday, following the 11:00 AM Solemn Mass we will have a Eucharistic Procession"
+        }
+      ],
+      "rationale": "R24: a Eucharistic procession on Nov 22 is a devotion, not a period of Adoration, Mass or Confession.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s39",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f75833b",
+          "page": 5,
+          "said": "Sung Vespers 1st Sunday of every month 6:00 PM before the 6:30PM Mass"
+        }
+      ],
+      "rationale": "R24: Vespers is not Mass, Confession or Adoration; no exposition or Benediction is mentioned.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s40",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://cathedralphila.org/",
+          "said": "Saturday 12:05 pm in the Cathedral Chapel (Miraculous Medal Novena following)"
+        }
+      ],
+      "rationale": "R24: a novena is a devotion.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s41",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2f75833b",
+          "page": 1,
+          "said": "Holy Days: See website"
+        }
+      ],
+      "rationale": "R26/R45: the bulletins give no holy-day times, and the website's Christmas schedule insert could not be read (HTTP 403).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
