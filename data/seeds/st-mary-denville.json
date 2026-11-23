@@ -1,0 +1,1049 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-mary-denville",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:51:51Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T17:56:24Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. The newest bulletin (Nov 15) has a feast-day cover with no schedule box, so the Masses rest on its intentions and priest schedule plus the Nov 8 Liturgy Schedule box and the website, which all agree (Sunday 8:15 AM despite intentions saying 8:00; Confession Sat 4:00-4:45). Weekday 12:05 Mass is off Memorial Day-Labor Day, given a conservative Sept 8-May 24 season. Open: Monday Exposition after the 8 AM Mass, and the hours of First Friday Nocturnal Adoration, where three parish sources disagree.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "5b1044b58f20efb69c5648b59fa914f51463e7d59b7b532f7b22190d3894cb30",
+      "fetched_at": "2026-11-15T16:51:51Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "618aa6ab30b2786f41bd1c3229a74259a0851d2bd126b02919405dd7c434bbe2",
+      "fetched_at": "2026-11-08T22:03:58Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-denville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b1044b5",
+          "page": 2,
+          "said": "Priest Mass Schedule Sunday, Nov. 15th 7 am / 10 am / 12 noon; Sunday, Nov. 22nd 7 am / 10 am / 12 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "618aa6ab",
+          "page": 1,
+          "said": "Liturgy Schedule Sunday: 7:00, 8:15, 10:00 am & 12:00 pm"
+        }
+      ],
+      "rationale": "R1, R35: the newest bulletin's priest schedule prints these Sunday Masses for two weeks and its intentions list them; the Nov 8 bulletin's Liturgy Schedule box gives the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-denville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b1044b5",
+          "page": 2,
+          "said": "Priest Mass Schedule Sunday, Nov. 15th 7 am / 10 am / 12 noon; Sunday, Nov. 22nd 7 am / 10 am / 12 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "618aa6ab",
+          "page": 1,
+          "said": "Liturgy Schedule Sunday: 7:00, 8:15, 10:00 am & 12:00 pm"
+        }
+      ],
+      "rationale": "R1, R35: the newest bulletin's priest schedule prints these Sunday Masses for two weeks and its intentions list them; the Nov 8 bulletin's Liturgy Schedule box gives the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-denville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b1044b5",
+          "page": 2,
+          "said": "Priest Mass Schedule Sunday, Nov. 15th 7 am / 10 am / 12 noon; Sunday, Nov. 22nd 7 am / 10 am / 12 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "618aa6ab",
+          "page": 1,
+          "said": "Liturgy Schedule Sunday: 7:00, 8:15, 10:00 am & 12:00 pm"
+        }
+      ],
+      "rationale": "R1, R35: the newest bulletin's priest schedule prints these Sunday Masses for two weeks and its intentions list them; the Nov 8 bulletin's Liturgy Schedule box gives the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-denville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b1044b5",
+          "page": 2,
+          "said": "Priest Mass Schedule Sunday, Nov. 15th 8:15 am; Sunday, Nov. 22nd 8:15 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "618aa6ab",
+          "page": 1,
+          "said": "Liturgy Schedule Sunday: 7:00, 8:15, 10:00 am & 12:00 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://stmarys-denville.org/",
+          "said": "Sun : 7:00 AM 8:15 AM 10:00 AM 12:00 PM"
+        }
+      ],
+      "rationale": "R1: the priest schedule (newest p2, two weeks), the Nov 8 Liturgy Schedule box and the website all give 8:15 AM. The intentions list it as 8:00am in both issues, a reused template line (R39) that contradicts every schedule statement.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-denville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b1044b5",
+          "page": 2,
+          "said": "SATURDAY, NOVEMBER 14 8:00am ... 5:00pm; SATURDAY, NOVEMBER 21 8:00am ... 5:00pm; Saturday, Nov. 21st 5 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "618aa6ab",
+          "page": 1,
+          "said": "Saturdays: 8:00 am & 5:00 pm"
+        }
+      ],
+      "rationale": "R1, R35: intentions for two Saturdays in the newest bulletin; the Nov 8 Liturgy Schedule box gives Saturdays 8:00 am & 5:00 pm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-denville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b1044b5",
+          "page": 2,
+          "said": "SATURDAY, NOVEMBER 14 8:00am ... 5:00pm; SATURDAY, NOVEMBER 21 8:00am ... 5:00pm; Saturday, Nov. 21st 5 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "618aa6ab",
+          "page": 1,
+          "said": "Saturdays: 8:00 am & 5:00 pm"
+        }
+      ],
+      "rationale": "R1, R35: intentions for two Saturdays in the newest bulletin; the Nov 8 Liturgy Schedule box gives Saturdays 8:00 am & 5:00 pm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-denville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b1044b5",
+          "page": 2,
+          "said": "MONDAY-FRIDAY, NOVEMBER 16-20 intentions at 8:00am each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "618aa6ab",
+          "page": 1,
+          "said": "Weekdays: 8:00 am & 12:05 pm (Memorial Day - Labor Day, 8:00 am only)"
+        }
+      ],
+      "rationale": "R1, R35: the newest intentions list an 8:00am Mass every weekday, as did the Nov 8 issue; its Liturgy Schedule box gives Weekdays 8:00 am year-round.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-denville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b1044b5",
+          "page": 2,
+          "said": "MONDAY-FRIDAY, NOVEMBER 16-20 intentions at 8:00am each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "618aa6ab",
+          "page": 1,
+          "said": "Weekdays: 8:00 am & 12:05 pm (Memorial Day - Labor Day, 8:00 am only)"
+        }
+      ],
+      "rationale": "R1, R35: the newest intentions list an 8:00am Mass every weekday, as did the Nov 8 issue; its Liturgy Schedule box gives Weekdays 8:00 am year-round.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-denville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b1044b5",
+          "page": 2,
+          "said": "MONDAY-FRIDAY, NOVEMBER 16-20 intentions at 8:00am each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "618aa6ab",
+          "page": 1,
+          "said": "Weekdays: 8:00 am & 12:05 pm (Memorial Day - Labor Day, 8:00 am only)"
+        }
+      ],
+      "rationale": "R1, R35: the newest intentions list an 8:00am Mass every weekday, as did the Nov 8 issue; its Liturgy Schedule box gives Weekdays 8:00 am year-round.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-denville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b1044b5",
+          "page": 2,
+          "said": "MONDAY-FRIDAY, NOVEMBER 16-20 intentions at 8:00am each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "618aa6ab",
+          "page": 1,
+          "said": "Weekdays: 8:00 am & 12:05 pm (Memorial Day - Labor Day, 8:00 am only)"
+        }
+      ],
+      "rationale": "R1, R35: the newest intentions list an 8:00am Mass every weekday, as did the Nov 8 issue; its Liturgy Schedule box gives Weekdays 8:00 am year-round.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-denville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b1044b5",
+          "page": 2,
+          "said": "MONDAY-FRIDAY, NOVEMBER 16-20 intentions at 8:00am each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "618aa6ab",
+          "page": 1,
+          "said": "Weekdays: 8:00 am & 12:05 pm (Memorial Day - Labor Day, 8:00 am only)"
+        }
+      ],
+      "rationale": "R1, R35: the newest intentions list an 8:00am Mass every weekday, as did the Nov 8 issue; its Liturgy Schedule box gives Weekdays 8:00 am year-round.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-denville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": 8,
+          "end_month": 5,
+          "end_day": 24
+        },
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b1044b5",
+          "page": 2,
+          "said": "MONDAY-FRIDAY, NOVEMBER 16-20 intentions at 12:05pm each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "618aa6ab",
+          "page": 1,
+          "said": "Weekdays: 8:00 am & 12:05 pm (Memorial Day - Labor Day, 8:00 am only)"
+        }
+      ],
+      "rationale": "R1, R35, POLICY Weekly qualifiers (season): the newest intentions list a 12:05pm Mass every weekday; the Nov 8 box says only 8:00 am from Memorial Day to Labor Day. Those holidays move, so per R33 the season is the part of the year always outside that summer: Sept 8 (Labor Day is Sept 1-7) to May 24 (Memorial Day is May 25-31). A few days around the holidays are left out rather than shown wrongly.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-denville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": 8,
+          "end_month": 5,
+          "end_day": 24
+        },
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b1044b5",
+          "page": 2,
+          "said": "MONDAY-FRIDAY, NOVEMBER 16-20 intentions at 12:05pm each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "618aa6ab",
+          "page": 1,
+          "said": "Weekdays: 8:00 am & 12:05 pm (Memorial Day - Labor Day, 8:00 am only)"
+        }
+      ],
+      "rationale": "R1, R35, POLICY Weekly qualifiers (season): the newest intentions list a 12:05pm Mass every weekday; the Nov 8 box says only 8:00 am from Memorial Day to Labor Day. Those holidays move, so per R33 the season is the part of the year always outside that summer: Sept 8 (Labor Day is Sept 1-7) to May 24 (Memorial Day is May 25-31). A few days around the holidays are left out rather than shown wrongly.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-denville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": 8,
+          "end_month": 5,
+          "end_day": 24
+        },
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b1044b5",
+          "page": 2,
+          "said": "MONDAY-FRIDAY, NOVEMBER 16-20 intentions at 12:05pm each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "618aa6ab",
+          "page": 1,
+          "said": "Weekdays: 8:00 am & 12:05 pm (Memorial Day - Labor Day, 8:00 am only)"
+        }
+      ],
+      "rationale": "R1, R35, POLICY Weekly qualifiers (season): the newest intentions list a 12:05pm Mass every weekday; the Nov 8 box says only 8:00 am from Memorial Day to Labor Day. Those holidays move, so per R33 the season is the part of the year always outside that summer: Sept 8 (Labor Day is Sept 1-7) to May 24 (Memorial Day is May 25-31). A few days around the holidays are left out rather than shown wrongly.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-denville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": 8,
+          "end_month": 5,
+          "end_day": 24
+        },
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b1044b5",
+          "page": 2,
+          "said": "MONDAY-FRIDAY, NOVEMBER 16-20 intentions at 12:05pm each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "618aa6ab",
+          "page": 1,
+          "said": "Weekdays: 8:00 am & 12:05 pm (Memorial Day - Labor Day, 8:00 am only)"
+        }
+      ],
+      "rationale": "R1, R35, POLICY Weekly qualifiers (season): the newest intentions list a 12:05pm Mass every weekday; the Nov 8 box says only 8:00 am from Memorial Day to Labor Day. Those holidays move, so per R33 the season is the part of the year always outside that summer: Sept 8 (Labor Day is Sept 1-7) to May 24 (Memorial Day is May 25-31). A few days around the holidays are left out rather than shown wrongly.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-denville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": 8,
+          "end_month": 5,
+          "end_day": 24
+        },
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b1044b5",
+          "page": 2,
+          "said": "MONDAY-FRIDAY, NOVEMBER 16-20 intentions at 12:05pm each day"
+        },
+        {
+          "source": "agent",
+          "bulletin": "618aa6ab",
+          "page": 1,
+          "said": "Weekdays: 8:00 am & 12:05 pm (Memorial Day - Labor Day, 8:00 am only)"
+        }
+      ],
+      "rationale": "R1, R35, POLICY Weekly qualifiers (season): the newest intentions list a 12:05pm Mass every weekday; the Nov 8 box says only 8:00 am from Memorial Day to Labor Day. Those holidays move, so per R33 the season is the part of the year always outside that summer: Sept 8 (Labor Day is Sept 1-7) to May 24 (Memorial Day is May 25-31). A few days around the holidays are left out rather than shown wrongly.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-denville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b1044b5",
+          "page": 2,
+          "said": "Saturday, Nov. 14th 4 pm Confession; Saturday, Nov. 21st 4 pm Confession"
+        },
+        {
+          "source": "agent",
+          "bulletin": "618aa6ab",
+          "page": 2,
+          "said": "Saturday, Nov. 7th 4 pm Confession"
+        },
+        {
+          "source": "website",
+          "url": "https://stmarys-denville.org/",
+          "said": "Confessions Saturday 4pm- 4:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "618aa6ab",
+          "page": 1,
+          "said": "Confessions Saturdays, 4:15 - 4:45 pm"
+        }
+      ],
+      "rationale": "R1, R35, R40: the priest schedules print Saturday 4 pm Confession for three weeks across both bulletins, and the current website gives Saturday 4pm-4:45 pm. The Nov 8 masthead box alone says 4:15; the newer, service-specific sources agree on 4:00, so the start is 4:00 and the end 4:45 (box and website).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "618aa6ab",
+          "page": 1,
+          "said": "Exposition Mondays following the 8:00 am Mass"
+        }
+      ],
+      "rationale": "R29: only the Nov 8 bulletin's masthead prints it; the newest issue has a feast-day cover and no schedule box, so it neither confirms nor contradicts it. Only one older week read, so R36 can't apply. The website's Adoration section names only First Friday (a missing mention is not a conflict, R6). Leaning include at 8:30 AM per R10 (30 minutes after a weekday Mass), since the box is one week old.",
+      "question": "Add Monday Exposition after the 8:00 AM Mass (8:30 AM, no end time)?",
+      "options": [
+        {
+          "label": "Mondays 8:30 AM",
+          "entry": {
+            "church_slug": "st-mary-denville",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 8:00 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "618aa6ab",
+          "page": 1,
+          "said": "Nocturnal Adoration First Friday, 9:00 pm to Saturday 2:00 am"
+        },
+        {
+          "source": "website",
+          "url": "https://stmarys-denville.org/",
+          "said": "Adoration First Friday of the month 9pm - 3am"
+        },
+        {
+          "source": "website",
+          "url": "https://stmarys-denville.org/nocturnal-adoration",
+          "said": "continuous adoration of the Blessed Sacrament in church on the first Friday of each month, from 8:00 pm to 2:00 am"
+        }
+      ],
+      "rationale": "R12 would settle a first-Friday slot from an older bulletin (neither read week holds a first Friday), but the parish's own sources disagree on its hours (R28, C8). Leaning to the bulletin's 9 PM-2 AM: the bulletin and the homepage agree on 9 PM and the bulletin and ministry page on 2 AM. It runs past midnight into Saturday.",
+      "question": "First Friday Nocturnal Adoration: the sources give 9 PM-2 AM (bulletin), 9 PM-3 AM (website home) and 8 PM-2 AM (ministry page). Which?",
+      "options": [
+        {
+          "label": "First Fridays 9 PM-2 AM",
+          "entry": {
+            "church_slug": "st-mary-denville",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "21:00",
+            "end_time": "02:00",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Nocturnal Adoration, through to Saturday"
+          },
+          "leaning": true
+        },
+        {
+          "label": "First Fridays 9 PM, no end time",
+          "entry": {
+            "church_slug": "st-mary-denville",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "21:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Nocturnal Adoration"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-denville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stmarys-denville.org/",
+          "said": "Upcoming Holy Days Immaculate Conception December 8 : 8:00 AM 12:00 PM 7:00 PM",
+          "schedule_check": {
+            "checked_at": "2026-11-23T18:00:06Z",
+            "current_because": "The homepage lists Upcoming Holy Days with Immaculate Conception December 8 and carries the Nov 29, 2026 Precious Blood notice printed in the newest bulletin.",
+            "bulletin": "5b1044b5",
+            "fits_because": "The Nov 8, 2026 bulletin's box gives Holy Days 8:00 am, 12 noon & 7:00 pm, the same three times; the newest bulletin (Nov 15) has no schedule box and does not mention Dec 8."
+          }
+        },
+        {
+          "source": "agent",
+          "bulletin": "618aa6ab",
+          "page": 1,
+          "said": "Holy Days: 8:00 am, 12 noon & 7:00 pm"
+        }
+      ],
+      "rationale": "R6, R16: the parish's current website dates the holy-day Masses for December 8, after as_of, and they match the bulletin's standing holy-day times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-denville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stmarys-denville.org/",
+          "said": "Upcoming Holy Days Immaculate Conception December 8 : 8:00 AM 12:00 PM 7:00 PM",
+          "schedule_check": {
+            "checked_at": "2026-11-23T18:00:06Z",
+            "current_because": "The homepage lists Upcoming Holy Days with Immaculate Conception December 8 and carries the Nov 29, 2026 Precious Blood notice printed in the newest bulletin.",
+            "bulletin": "5b1044b5",
+            "fits_because": "The Nov 8, 2026 bulletin's box gives Holy Days 8:00 am, 12 noon & 7:00 pm, the same three times; the newest bulletin (Nov 15) has no schedule box and does not mention Dec 8."
+          }
+        },
+        {
+          "source": "agent",
+          "bulletin": "618aa6ab",
+          "page": 1,
+          "said": "Holy Days: 8:00 am, 12 noon & 7:00 pm"
+        }
+      ],
+      "rationale": "R6, R16: the parish's current website dates the holy-day Masses for December 8, after as_of, and they match the bulletin's standing holy-day times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-denville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stmarys-denville.org/",
+          "said": "Upcoming Holy Days Immaculate Conception December 8 : 8:00 AM 12:00 PM 7:00 PM",
+          "schedule_check": {
+            "checked_at": "2026-11-23T18:00:06Z",
+            "current_because": "The homepage lists Upcoming Holy Days with Immaculate Conception December 8 and carries the Nov 29, 2026 Precious Blood notice printed in the newest bulletin.",
+            "bulletin": "5b1044b5",
+            "fits_because": "The Nov 8, 2026 bulletin's box gives Holy Days 8:00 am, 12 noon & 7:00 pm, the same three times; the newest bulletin (Nov 15) has no schedule box and does not mention Dec 8."
+          }
+        },
+        {
+          "source": "agent",
+          "bulletin": "618aa6ab",
+          "page": 1,
+          "said": "Holy Days: 8:00 am, 12 noon & 7:00 pm"
+        }
+      ],
+      "rationale": "R6, R16: the parish's current website dates the holy-day Masses for December 8, after as_of, and they match the bulletin's standing holy-day times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "618aa6ab",
+          "page": 1,
+          "said": "Eve of Holy Days: 5:00 pm"
+        }
+      ],
+      "rationale": "POLICY Dates: no source pins the date of a holy-day eve Mass (the website lists only Dec 8 itself), and dates are not projected from the calendar. Update mode can pick it up from December bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-denville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Called to Community lecture, St. Paul Inside the Walls"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "618aa6ab",
+          "page": 3,
+          "said": "Called to Community ... Saturday, November 21, 2026 Mass: 9:00 a.m. Session: 9:30 a.m. - 12:30 p.m."
+        }
+      ],
+      "rationale": "R22: a diocesan (St. Paul Inside the Walls, Madison) event flyer that names no St. Mary's venue; the location is not one of the parish's churches.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "618aa6ab",
+          "page": 1,
+          "said": "Miraculous Medal Novena Monday during 8:00 am Mass"
+        }
+      ],
+      "rationale": "R24: a devotion within the Monday 8:00 AM Mass, already recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b1044b5",
+          "page": 2,
+          "said": "Interfaith Thanksgiving Service When: Sunday November 22 at 4pm Where: Denville Town Hall at St. Mary's Place"
+        }
+      ],
+      "rationale": "R24: an interfaith service at the town hall, not a Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
