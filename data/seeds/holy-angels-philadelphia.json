@@ -1,0 +1,675 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-angels-philadelphia",
+  "status": "ready",
+  "as_of": "2026-11-15T16:39:55Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T23:26:33Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One Korean-language church. The Mass and Confession schedule box (Tue/Thu/Sat 8 PM; Sun 7, 10, 11:30, 5 PM; Confession 20 minutes before Mass) is identical in both bulletins (Nov 8 and Nov 15). Dated: Thanksgiving 10 AM Mass with no 8 PM Mass on Nov 26. No Adoration is printed. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "ec66fdc59055bc004e139ea8f8f324fefa75e4e7276beb6e09fb52c021b8159a",
+      "fetched_at": "2026-11-15T16:39:55Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "b1b1eb3cfc1ac95eb3399905f9d309e2886b6e9dc01667c51bf52e9e5961b85b",
+      "fetched_at": "2026-11-08T15:52:45Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-angels-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "20:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Korean"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec66fdc5",
+          "page": 1,
+          "said": "Weekday PM 8:00 (Tuesday · Thursday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b1b1eb3c",
+          "page": 1,
+          "said": "Weekday PM 8:00 (Tuesday · Thursday)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box on page 1 of both bulletins read; the server rosters list Tue and Thu 8시 too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-angels-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "20:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Korean"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec66fdc5",
+          "page": 1,
+          "said": "Weekday PM 8:00 (Tuesday · Thursday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b1b1eb3c",
+          "page": 1,
+          "said": "Weekday PM 8:00 (Tuesday · Thursday)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box on page 1 of both bulletins read; the server rosters list Tue and Thu 8시 too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-angels-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "20:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Korean"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec66fdc5",
+          "page": 1,
+          "said": "Saturday PM 8:00"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b1b1eb3c",
+          "page": 1,
+          "said": "Saturday PM 8:00"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box on page 1 of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-angels-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Korean"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec66fdc5",
+          "page": 1,
+          "said": "Sunday AM 7:00, 10:00(교중)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b1b1eb3c",
+          "page": 1,
+          "said": "Sunday AM 7:00, 10:00(교중)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box on page 1 of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-angels-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Korean"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec66fdc5",
+          "page": 1,
+          "said": "Sunday AM 7:00, 10:00(교중)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b1b1eb3c",
+          "page": 1,
+          "said": "Sunday AM 7:00, 10:00(교중)"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box on page 1 of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-angels-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Korean; Sunday School Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec66fdc5",
+          "page": 1,
+          "said": "AM 11:30 (Sunday School Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b1b1eb3c",
+          "page": 1,
+          "said": "AM 11:30 (Sunday School Mass)"
+        }
+      ],
+      "rationale": "R1: in the schedule box of both bulletins. POLICY, What to extract: a Mass the regular schedule lists with a school is open unless limited; nothing limits it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-angels-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Korean; Youth Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec66fdc5",
+          "page": 1,
+          "said": "PM 5:00 (청년 미사)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b1b1eb3c",
+          "page": 1,
+          "said": "PM 5:00 (청년 미사)"
+        }
+      ],
+      "rationale": "R1: in the schedule box of both bulletins as the youth Mass (청년 미사); the regular schedule lists it with no limit, so it is open (POLICY, What to extract).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-angels-church-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:40",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 8:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec66fdc5",
+          "page": 1,
+          "said": "고 백 성 사 미사 시작 전 20분"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b1b1eb3c",
+          "page": 1,
+          "said": "고 백 성 사 미사 시작 전 20분"
+        }
+      ],
+      "rationale": "R10, POLICY Times: the schedule box of both bulletins gives Confession 'before the start of Mass, 20 minutes' (미사 시작 전 20분), one entry per regular weekly Mass, ending when the Mass starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-angels-church-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:40",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 8:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec66fdc5",
+          "page": 1,
+          "said": "고 백 성 사 미사 시작 전 20분"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b1b1eb3c",
+          "page": 1,
+          "said": "고 백 성 사 미사 시작 전 20분"
+        }
+      ],
+      "rationale": "R10, POLICY Times: the schedule box of both bulletins gives Confession 'before the start of Mass, 20 minutes' (미사 시작 전 20분), one entry per regular weekly Mass, ending when the Mass starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-angels-church-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:40",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 8:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec66fdc5",
+          "page": 1,
+          "said": "고 백 성 사 미사 시작 전 20분"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b1b1eb3c",
+          "page": 1,
+          "said": "고 백 성 사 미사 시작 전 20분"
+        }
+      ],
+      "rationale": "R10, POLICY Times: the schedule box of both bulletins gives Confession 'before the start of Mass, 20 minutes' (미사 시작 전 20분), one entry per regular weekly Mass, ending when the Mass starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-angels-church-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "06:40",
+        "end_time": "07:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 7:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec66fdc5",
+          "page": 1,
+          "said": "고 백 성 사 미사 시작 전 20분"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b1b1eb3c",
+          "page": 1,
+          "said": "고 백 성 사 미사 시작 전 20분"
+        }
+      ],
+      "rationale": "R10, POLICY Times: Confession 20 minutes before each regular Mass (미사 시작 전 20분), both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-angels-church-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:40",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 10:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec66fdc5",
+          "page": 1,
+          "said": "고 백 성 사 미사 시작 전 20분"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b1b1eb3c",
+          "page": 1,
+          "said": "고 백 성 사 미사 시작 전 20분"
+        }
+      ],
+      "rationale": "R10, POLICY Times: Confession 20 minutes before each regular Mass (미사 시작 전 20분), both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-angels-church-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:10",
+        "end_time": "11:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 11:30 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec66fdc5",
+          "page": 1,
+          "said": "고 백 성 사 미사 시작 전 20분"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b1b1eb3c",
+          "page": 1,
+          "said": "고 백 성 사 미사 시작 전 20분"
+        }
+      ],
+      "rationale": "R10, POLICY Times: Confession 20 minutes before each regular Mass (미사 시작 전 20분), both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-angels-church-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "16:40",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 5:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec66fdc5",
+          "page": 1,
+          "said": "고 백 성 사 미사 시작 전 20분"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b1b1eb3c",
+          "page": 1,
+          "said": "고 백 성 사 미사 시작 전 20분"
+        }
+      ],
+      "rationale": "R10, POLICY Times: Confession 20 minutes before each regular Mass (미사 시작 전 20분), both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-angels-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec66fdc5",
+          "page": 4,
+          "said": "Thanksgiving Day Mass : 11월 26일(목) 오전 10시"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b1b1eb3c",
+          "page": 4,
+          "said": "Thanksgiving Day Mass : 11월 26일(목) 오전 10시"
+        }
+      ],
+      "rationale": "R1, R16: dated holiday Mass outside the weekly schedule, on or after as_of; announced in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-angels-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "20:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec66fdc5",
+          "page": 4,
+          "said": "이날 저녁미사는 없습니다 (no evening Mass this day)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b1b1eb3c",
+          "page": 4,
+          "said": "이날 저녁미사는 없습니다"
+        }
+      ],
+      "rationale": "R1, R16, R18: the bulletin says there is no evening Mass on Thanksgiving (Thu Nov 26), cancelling that date of the weekly Thursday 8 PM Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec66fdc5",
+          "page": 4,
+          "said": "판공성사 안내 대림 2, 3주 토요특전과 주일 7시, 10시 미사 중에 성사 보시고"
+        }
+      ],
+      "rationale": "POLICY, Final source checks; R26: Advent confessions are heard during the Saturday vigil and Sunday 7 and 10 AM Masses of Advent weeks 2-3, with no start or end time of their own; the regular 20-minutes-before-Mass slots already cover those days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1b1eb3c",
+          "page": 4,
+          "said": "위령미사 일시 : 11월 12일(목) 저녁 8시 미사"
+        }
+      ],
+      "rationale": "R16, POLICY rule 7: the All Souls memorial Mass was at the regular Thursday 8 PM Mass on November 12, before as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
