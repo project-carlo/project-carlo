@@ -1,0 +1,975 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-margaret-of-scotland-morristown",
+  "status": "ready",
+  "as_of": "2026-11-15T16:18:07Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T17:50:56Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. The weekend, weekday and confession schedule is identical in the Nov 8 and Nov 15 bulletins and on the website. Dated: Thanksgiving's single 9:00 AM bilingual Mass (cancelling 8 AM and 6:30 PM), and Adoration after the Nov 25 youth Mass. The perpetual Adoration chapel at 12 Columba St. is left out as off the church list (R23). No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "086e2522394f2d42b019d1cf36c5f51dd3100be66cf68b453ad516c585909c49",
+      "fetched_at": "2026-11-15T16:18:07Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "23a82fd07c4431e742ff09048ba105a6198454b342c633b0623bf860eba4d272",
+      "fetched_at": "2026-11-08T15:43:15Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-of-scotland-morristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "086e2522",
+          "page": 2,
+          "said": "Saturday / sábado: 5 PM English · 7 PM Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23a82fd0",
+          "page": 2,
+          "said": "Saturday / sábado: 5 PM English · 7 PM Español"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box (p2) of both bulletins read; the website's Mass Times page agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-of-scotland-morristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "086e2522",
+          "page": 2,
+          "said": "Saturday / sábado: 5 PM English · 7 PM Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23a82fd0",
+          "page": 2,
+          "said": "Saturday / sábado: 5 PM English · 7 PM Español"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box (p2) of both bulletins read; the website's Mass Times page agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-of-scotland-morristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "086e2522",
+          "page": 2,
+          "said": "Sunday / domingo: 7:30 AM & 10:30 AM English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23a82fd0",
+          "page": 2,
+          "said": "Sunday / domingo: 7:30 AM & 10:30 AM English"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box (p2) of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-of-scotland-morristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "086e2522",
+          "page": 2,
+          "said": "Sunday / domingo: 7:30 AM & 10:30 AM English"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23a82fd0",
+          "page": 2,
+          "said": "Sunday / domingo: 7:30 AM & 10:30 AM English"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box (p2) of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-of-scotland-morristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "086e2522",
+          "page": 2,
+          "said": "Sunday / domingo: 8:45 AM & 12:15 PM Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23a82fd0",
+          "page": 2,
+          "said": "Sunday / domingo: 8:45 AM & 12:15 PM Español"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box (p2) of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-of-scotland-morristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "086e2522",
+          "page": 2,
+          "said": "Sunday / domingo: 8:45 AM & 12:15 PM Español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23a82fd0",
+          "page": 2,
+          "said": "Sunday / domingo: 8:45 AM & 12:15 PM Español"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box (p2) of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-of-scotland-morristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "086e2522",
+          "page": 2,
+          "said": "WEEKDAYS / ENTRESEMANA 8 AM English · Mon–Sat / lun–sáb"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23a82fd0",
+          "page": 2,
+          "said": "WEEKDAYS / ENTRESEMANA 8 AM English · Mon–Sat / lun–sáb"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins, and the dated intentions list 8:00 AM each day Mon-Sat; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-of-scotland-morristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "086e2522",
+          "page": 2,
+          "said": "WEEKDAYS / ENTRESEMANA 8 AM English · Mon–Sat / lun–sáb"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23a82fd0",
+          "page": 2,
+          "said": "WEEKDAYS / ENTRESEMANA 8 AM English · Mon–Sat / lun–sáb"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins, and the dated intentions list 8:00 AM each day Mon-Sat; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-of-scotland-morristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "086e2522",
+          "page": 2,
+          "said": "WEEKDAYS / ENTRESEMANA 8 AM English · Mon–Sat / lun–sáb"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23a82fd0",
+          "page": 2,
+          "said": "WEEKDAYS / ENTRESEMANA 8 AM English · Mon–Sat / lun–sáb"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins, and the dated intentions list 8:00 AM each day Mon-Sat; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-of-scotland-morristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "086e2522",
+          "page": 2,
+          "said": "WEEKDAYS / ENTRESEMANA 8 AM English · Mon–Sat / lun–sáb"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23a82fd0",
+          "page": 2,
+          "said": "WEEKDAYS / ENTRESEMANA 8 AM English · Mon–Sat / lun–sáb"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins, and the dated intentions list 8:00 AM each day Mon-Sat; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-of-scotland-morristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "086e2522",
+          "page": 2,
+          "said": "WEEKDAYS / ENTRESEMANA 8 AM English · Mon–Sat / lun–sáb"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23a82fd0",
+          "page": 2,
+          "said": "WEEKDAYS / ENTRESEMANA 8 AM English · Mon–Sat / lun–sáb"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins, and the dated intentions list 8:00 AM each day Mon-Sat; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-of-scotland-morristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "086e2522",
+          "page": 2,
+          "said": "WEEKDAYS / ENTRESEMANA 8 AM English · Mon–Sat / lun–sáb"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23a82fd0",
+          "page": 2,
+          "said": "WEEKDAYS / ENTRESEMANA 8 AM English · Mon–Sat / lun–sáb"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins, and the dated intentions list 8:00 AM each day Mon-Sat; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-of-scotland-morristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "086e2522",
+          "page": 2,
+          "said": "6:30 PM Español · Mon–Fri / lun–vie"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23a82fd0",
+          "page": 2,
+          "said": "6:30 PM Español · Mon–Fri / lun–vie"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins, and the intentions list a 6:30 PM Misa Comunitaria each weekday; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-of-scotland-morristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "086e2522",
+          "page": 2,
+          "said": "6:30 PM Español · Mon–Fri / lun–vie"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23a82fd0",
+          "page": 2,
+          "said": "6:30 PM Español · Mon–Fri / lun–vie"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins, and the intentions list a 6:30 PM Misa Comunitaria each weekday; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-of-scotland-morristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "086e2522",
+          "page": 2,
+          "said": "6:30 PM Español · Mon–Fri / lun–vie"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23a82fd0",
+          "page": 2,
+          "said": "6:30 PM Español · Mon–Fri / lun–vie"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins, and the intentions list a 6:30 PM Misa Comunitaria each weekday; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-of-scotland-morristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "086e2522",
+          "page": 2,
+          "said": "6:30 PM Español · Mon–Fri / lun–vie"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23a82fd0",
+          "page": 2,
+          "said": "6:30 PM Español · Mon–Fri / lun–vie"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins, and the intentions list a 6:30 PM Misa Comunitaria each weekday; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-of-scotland-morristown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "086e2522",
+          "page": 2,
+          "said": "6:30 PM Español · Mon–Fri / lun–vie"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23a82fd0",
+          "page": 2,
+          "said": "6:30 PM Español · Mon–Fri / lun–vie"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins, and the intentions list a 6:30 PM Misa Comunitaria each weekday; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-of-scotland-morristown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "18:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "086e2522",
+          "page": 2,
+          "said": "CONFESSIONS / CONFESIONES Tue / mar: 5:30–6:15 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23a82fd0",
+          "page": 2,
+          "said": "CONFESSIONS / CONFESIONES Tue / mar: 5:30–6:15 PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-of-scotland-morristown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:45",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "086e2522",
+          "page": 2,
+          "said": "Sat / sáb: 3:45–4:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23a82fd0",
+          "page": 2,
+          "said": "Sat / sáb: 3:45–4:45 PM"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-of-scotland-morristown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day, bilingual"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "086e2522",
+          "page": 5,
+          "said": "On Thanksgiving Day, Thursday, November 26, we will only have one 9:00 a.m. bilingual Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "23a82fd0",
+          "page": 1,
+          "said": "Thanksgiving Day Bilingual Mass · 9:00 AM"
+        }
+      ],
+      "rationale": "R1, R16: a dated holiday Mass outside the weekly schedule, after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-of-scotland-morristown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "086e2522",
+          "page": 5,
+          "said": "On Thanksgiving Day, Thursday, November 26, we will only have one 9:00 a.m. bilingual Mass."
+        },
+        {
+          "source": "website",
+          "url": "https://csmargaret.org/",
+          "said": "Thursday, November 26 · 9:00 a.m. One bilingual Mass only."
+        }
+      ],
+      "rationale": "R16, R40: the bulletin says the 9:00 AM Mass will be the only Mass that day, which explicitly rules out the weekly 8:00 AM and 6:30 PM Thursday Masses (not merely a missing listing, R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-of-scotland-morristown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "086e2522",
+          "page": 5,
+          "said": "On Thanksgiving Day, Thursday, November 26, we will only have one 9:00 a.m. bilingual Mass."
+        },
+        {
+          "source": "website",
+          "url": "https://csmargaret.org/",
+          "said": "Thursday, November 26 · 9:00 a.m. One bilingual Mass only."
+        }
+      ],
+      "rationale": "R16, R40: the bulletin says the 9:00 AM Mass will be the only Mass that day, which explicitly rules out the weekly 8:00 AM and 6:30 PM Thursday Masses (not merely a missing listing, R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-of-scotland-morristown",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-25",
+        "start_time": "19:00",
+        "end_time": "19:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 6:30 PM bilingual youth Mass (Lumen Encounter)"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "086e2522",
+          "page": 5,
+          "said": "Bilingual Youth Mass at 6:30 PM, followed by Adoration of the Blessed Sacrament."
+        },
+        {
+          "source": "agent",
+          "bulletin": "23a82fd0",
+          "page": 3,
+          "said": "Bilingual Youth Mass at 6:30 PM, followed by Adoration of the Blessed Sacrament and fellowship in the parish hall."
+        },
+        {
+          "source": "website",
+          "url": "https://csmargaret.org/",
+          "said": "6:30 p.m. in the church: bilingual youth Mass, then 30 minutes of adoration."
+        }
+      ],
+      "rationale": "R10, R16: dated Adoration after a weekday Mass starts 30 minutes after it (7:00 PM); the website gives its 30-minute length. The youth Mass itself is the regular Wednesday 6:30 PM Mass (POLICY, Weekly or dated rule 7), so it gets no slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "086e2522",
+          "page": 2,
+          "said": "HOLY DAYS / DÍAS DE PRECEPTO English: 8 AM & 6 PM Español: víspera 6:30 PM & día de la fiesta 7:30 PM"
+        }
+      ],
+      "rationale": "POLICY, Dates: a generic holy-day schedule names no dates, and dates may not be projected; update mode will read the dated holy days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://csmargaret.org/",
+          "said": "The perpetual adoration chapel is at 12 Columba Street, next to the parish office. Visit during office hours. For access outside office hours, stop by the office to register."
+        },
+        {
+          "source": "agent",
+          "bulletin": "086e2522",
+          "page": 2,
+          "said": "The candles in the Eucharistic Adoration Chapel are offered for the intentions of"
+        }
+      ],
+      "rationale": "R23: the Perpetual Eucharistic Adoration Chapel is at 12 Columba Street (the parish office), a different address from the church at 6 Sussex Ave., and is not on the church list; perpetual hours with registration also have no definite schedule to record.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://csmargaret.org/schedules",
+          "said": "You can also make an appointment to celebrate the sacrament of reconciliation."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "church_list_issues": [
+    {
+      "church": "Perpetual Eucharistic Adoration Chapel, 12 Columba Street, Morristown (next to the parish office)",
+      "said": "The candles in the Eucharistic Adoration Chapel are offered for the intentions of; website: perpetual adoration chapel at 12 Columba Street, visit during office hours",
+      "bulletin": "086e2522",
+      "page": 2
+    }
+  ]
+}
