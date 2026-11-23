@@ -1,0 +1,794 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-cross-springfield",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:40:22Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T23:33:06Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend (Sat 4:30 PM; Sun 8:30, 11:00 AM), Tue-Fri 8:30 AM Masses, Saturday 3:30-4 PM Confession and weekday 9 AM-7 PM Adoration Chapel agree in both bulletins (Nov 8 and Nov 15, both image-only) and on the website. Open: whether the Dec 3 Nocturnal Adoration Society hour is at Holy Cross.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "e657c82eaa1d8fea82d8b8d20418a424e72e0de0557b8b9a47c1b876e992e1a3",
+      "fetched_at": "2026-11-15T16:40:22Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "a37bd7216e971f3956aa53563f726d0471389a1bce79fe9d0d12a15a33dbac62",
+      "fetched_at": "2026-11-08T15:52:42Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-church-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e657c82e",
+          "page": 1,
+          "said": "SUNDAY MASSES Saturday: 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a37bd721",
+          "page": 1,
+          "said": "SUNDAY MASSES Saturday: 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e657c82e",
+          "page": 3,
+          "said": "SATURDAY ... 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a37bd721",
+          "page": 3,
+          "said": "SATURDAY ... 4:30 PM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box and the Masses for the Week of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-church-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e657c82e",
+          "page": 1,
+          "said": "Sunday: 8:30 AM & 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a37bd721",
+          "page": 1,
+          "said": "Sunday: 8:30 AM & 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e657c82e",
+          "page": 3,
+          "said": "SUNDAY ... 8:30 AM ... 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a37bd721",
+          "page": 3,
+          "said": "SUNDAY ... 8:30 AM ... 11:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box and the Masses for the Week of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-church-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e657c82e",
+          "page": 1,
+          "said": "Sunday: 8:30 AM & 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a37bd721",
+          "page": 1,
+          "said": "Sunday: 8:30 AM & 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e657c82e",
+          "page": 3,
+          "said": "SUNDAY ... 8:30 AM ... 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a37bd721",
+          "page": 3,
+          "said": "SUNDAY ... 8:30 AM ... 11:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box and the Masses for the Week of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-church-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e657c82e",
+          "page": 1,
+          "said": "DAILY MASS Tuesday - Friday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a37bd721",
+          "page": 1,
+          "said": "DAILY MASS Tuesday - Friday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e657c82e",
+          "page": 3,
+          "said": "8:30 AM Mass intentions Tuesday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a37bd721",
+          "page": 3,
+          "said": "8:30 AM Mass intentions Tuesday to Friday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box and the Masses for the Week of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-church-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e657c82e",
+          "page": 1,
+          "said": "DAILY MASS Tuesday - Friday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a37bd721",
+          "page": 1,
+          "said": "DAILY MASS Tuesday - Friday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e657c82e",
+          "page": 3,
+          "said": "8:30 AM Mass intentions Tuesday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a37bd721",
+          "page": 3,
+          "said": "8:30 AM Mass intentions Tuesday to Friday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box and the Masses for the Week of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-church-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e657c82e",
+          "page": 1,
+          "said": "DAILY MASS Tuesday - Friday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a37bd721",
+          "page": 1,
+          "said": "DAILY MASS Tuesday - Friday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e657c82e",
+          "page": 3,
+          "said": "8:30 AM Mass intentions Tuesday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a37bd721",
+          "page": 3,
+          "said": "8:30 AM Mass intentions Tuesday to Friday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box and the Masses for the Week of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-church-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e657c82e",
+          "page": 1,
+          "said": "DAILY MASS Tuesday - Friday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a37bd721",
+          "page": 1,
+          "said": "DAILY MASS Tuesday - Friday: 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e657c82e",
+          "page": 3,
+          "said": "8:30 AM Mass intentions Tuesday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a37bd721",
+          "page": 3,
+          "said": "8:30 AM Mass intentions Tuesday to Friday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Schedule box and the Masses for the Week of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-church-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e657c82e",
+          "page": 3,
+          "said": "MONDAY ... 8:30 AM - No Mass; SATURDAY ... 8:30 AM - No Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a37bd721",
+          "page": 3,
+          "said": "MONDAY ... 8:30 AM - No Mass; SATURDAY ... 8:30 AM - No Mass"
+        }
+      ],
+      "rationale": "R39, R17: the Masses for the Week repeats a template line 'No Mass' on Monday and Saturday mornings in both issues; the schedule box has daily Mass only Tuesday-Friday, so there is no weekly Mass to cancel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-church-springfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e657c82e",
+          "page": 3,
+          "said": "MONDAY ... 8:30 AM - No Mass; SATURDAY ... 8:30 AM - No Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a37bd721",
+          "page": 3,
+          "said": "MONDAY ... 8:30 AM - No Mass; SATURDAY ... 8:30 AM - No Mass"
+        }
+      ],
+      "rationale": "R39, R17: the Masses for the Week repeats a template line 'No Mass' on Monday and Saturday mornings in both issues; the schedule box has daily Mass only Tuesday-Friday, so there is no weekly Mass to cancel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-church-springfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e657c82e",
+          "page": 1,
+          "said": "Sacrament of Penance Saturday: 3:30 - 4:00 PM Or By Appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a37bd721",
+          "page": 1,
+          "said": "Sacrament of Penance Saturday: 3:30 - 4:00 PM Or By Appointment"
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of both bulletins; the website agrees ('Saturday, 3:30-4:00').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-church-springfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel, back of the rectory"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e657c82e",
+          "page": 1,
+          "said": "ADORATION CHAPEL Monday - Friday: 9:00 AM - 7:00 PM Chapel located in back of Rectory"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a37bd721",
+          "page": 1,
+          "said": "ADORATION CHAPEL Monday - Friday: 9:00 AM - 7:00 PM Chapel located in back of Rectory"
+        },
+        {
+          "source": "website",
+          "url": "https://holycrosscatholics.org/",
+          "said": "Adoration of the Most Blessed Sacrament: Weekdays in the Chapel 9:00 am to 7:00 pm except major holidays"
+        }
+      ],
+      "rationale": "R1, R38: the parish's own Adoration Chapel at the rectory behind Holy Cross (same grounds), printed in both bulletins; the website calls it Adoration of the Most Blessed Sacrament in the Chapel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-church-springfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel, back of the rectory"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e657c82e",
+          "page": 1,
+          "said": "ADORATION CHAPEL Monday - Friday: 9:00 AM - 7:00 PM Chapel located in back of Rectory"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a37bd721",
+          "page": 1,
+          "said": "ADORATION CHAPEL Monday - Friday: 9:00 AM - 7:00 PM Chapel located in back of Rectory"
+        },
+        {
+          "source": "website",
+          "url": "https://holycrosscatholics.org/",
+          "said": "Adoration of the Most Blessed Sacrament: Weekdays in the Chapel 9:00 am to 7:00 pm except major holidays"
+        }
+      ],
+      "rationale": "R1, R38: the parish's own Adoration Chapel at the rectory behind Holy Cross (same grounds), printed in both bulletins; the website calls it Adoration of the Most Blessed Sacrament in the Chapel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-church-springfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel, back of the rectory"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e657c82e",
+          "page": 1,
+          "said": "ADORATION CHAPEL Monday - Friday: 9:00 AM - 7:00 PM Chapel located in back of Rectory"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a37bd721",
+          "page": 1,
+          "said": "ADORATION CHAPEL Monday - Friday: 9:00 AM - 7:00 PM Chapel located in back of Rectory"
+        },
+        {
+          "source": "website",
+          "url": "https://holycrosscatholics.org/",
+          "said": "Adoration of the Most Blessed Sacrament: Weekdays in the Chapel 9:00 am to 7:00 pm except major holidays"
+        }
+      ],
+      "rationale": "R1, R38: the parish's own Adoration Chapel at the rectory behind Holy Cross (same grounds), printed in both bulletins; the website calls it Adoration of the Most Blessed Sacrament in the Chapel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-church-springfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel, back of the rectory"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e657c82e",
+          "page": 1,
+          "said": "ADORATION CHAPEL Monday - Friday: 9:00 AM - 7:00 PM Chapel located in back of Rectory"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a37bd721",
+          "page": 1,
+          "said": "ADORATION CHAPEL Monday - Friday: 9:00 AM - 7:00 PM Chapel located in back of Rectory"
+        },
+        {
+          "source": "website",
+          "url": "https://holycrosscatholics.org/",
+          "said": "Adoration of the Most Blessed Sacrament: Weekdays in the Chapel 9:00 am to 7:00 pm except major holidays"
+        }
+      ],
+      "rationale": "R1, R38: the parish's own Adoration Chapel at the rectory behind Holy Cross (same grounds), printed in both bulletins; the website calls it Adoration of the Most Blessed Sacrament in the Chapel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-church-springfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel, back of the rectory"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e657c82e",
+          "page": 1,
+          "said": "ADORATION CHAPEL Monday - Friday: 9:00 AM - 7:00 PM Chapel located in back of Rectory"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a37bd721",
+          "page": 1,
+          "said": "ADORATION CHAPEL Monday - Friday: 9:00 AM - 7:00 PM Chapel located in back of Rectory"
+        },
+        {
+          "source": "website",
+          "url": "https://holycrosscatholics.org/",
+          "said": "Adoration of the Most Blessed Sacrament: Weekdays in the Chapel 9:00 am to 7:00 pm except major holidays"
+        }
+      ],
+      "rationale": "R1, R38: the parish's own Adoration Chapel at the rectory behind Holy Cross (same grounds), printed in both bulletins; the website calls it Adoration of the Most Blessed Sacrament in the Chapel.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e657c82e",
+          "page": 1,
+          "said": "Or By Appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e657c82e",
+          "page": 1,
+          "said": "HOLY ROSARY Tuesday - Friday After Mass"
+        }
+      ],
+      "rationale": "R24: the Rosary is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e657c82e",
+          "page": 6,
+          "said": "The Saint Andrew Nocturnal Adoration Society of Drexel Hill will meet Thursday, December 3 from 7:30 PM to 8:30 PM in the church. All are welcome."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a37bd721",
+          "page": 6,
+          "said": "same notice"
+        }
+      ],
+      "rationale": "R32: 'in the church' does not say which church; the society is named for St. Andrew, Drexel Hill (st-andrew-drexel-hill, another parish), so it may meet there. Leaning leave out, as a wrong place is worse than a missing one.",
+      "question": "Add the St. Andrew Nocturnal Adoration Society's Holy Hour, Thursday December 3, 7:30-8:30 PM, at Holy Cross?",
+      "options": [
+        {
+          "label": "Dec 3 7:30-8:30 PM at Holy Cross",
+          "entry": {
+            "church_slug": "holy-cross-church-springfield",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-03",
+            "start_time": "19:30",
+            "end_time": "20:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Andrew Nocturnal Adoration Society"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    }
+  ]
+}
