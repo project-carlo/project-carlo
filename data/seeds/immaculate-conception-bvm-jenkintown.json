@@ -1,0 +1,1123 @@
+{
+  "schema_version": 1,
+  "parish_slug": "immaculate-conception-bvm-jenkintown",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:40:54Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T23:53:13Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Both bulletins (Nov 8 and Nov 15, 2026; image-only, read by render) print the same schedule, matching the parish website: Sat 4:30 PM vigil, Sun 7:30/9:30/11:30 AM and 4:30 PM, Mon-Sat 8:00 AM, Friday Adoration 8:30-noon, Saturday Confession 3-4 PM. Dated: Thanksgiving 9 AM Mass, Dec 21 Christmas Confessions, Christmas Eve/Day Masses. Open: the Christmas Eve children's Mass after the 3:30 procession, and the undated Dec 8 holy-day Masses.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "ba0b972347ec45985acf20c50a63adad5c5d036b0ca756156d7058bab6754847",
+      "fetched_at": "2026-11-15T16:40:54Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "58881d320a60bc72d3877a22c47339ac057235bc4e25d02fd06a8fd12ca562a7",
+      "fetched_at": "2026-11-08T15:52:50Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-bvm-jenkintown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba0b9723",
+          "page": 1,
+          "said": "Saturday Vigil Mass: 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "58881d32",
+          "page": 1,
+          "said": "Saturday Vigil Mass: 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba0b9723",
+          "page": 2,
+          "said": "Saturday ... 4:30 p.m. (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "58881d32",
+          "page": 2,
+          "said": "Saturday ... 4:30 p.m. (Mass intentions)"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box on p1 of both bulletins read and in both weeks' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-bvm-jenkintown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba0b9723",
+          "page": 1,
+          "said": "Sunday: 7:30 AM, 9:30 AM, 11:30 AM, 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "58881d32",
+          "page": 1,
+          "said": "Sunday: 7:30 AM, 9:30 AM, 11:30 AM, 4:30 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box on p1 of both bulletins and in the intentions on p2.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-bvm-jenkintown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba0b9723",
+          "page": 1,
+          "said": "Sunday: 7:30 AM, 9:30 AM, 11:30 AM, 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "58881d32",
+          "page": 1,
+          "said": "Sunday: 7:30 AM, 9:30 AM, 11:30 AM, 4:30 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box on p1 of both bulletins and in the intentions on p2.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-bvm-jenkintown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba0b9723",
+          "page": 1,
+          "said": "Sunday: 7:30 AM, 9:30 AM, 11:30 AM, 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "58881d32",
+          "page": 1,
+          "said": "Sunday: 7:30 AM, 9:30 AM, 11:30 AM, 4:30 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box on p1 of both bulletins and in the intentions on p2.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-bvm-jenkintown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba0b9723",
+          "page": 1,
+          "said": "Sunday: 7:30 AM, 9:30 AM, 11:30 AM, 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "58881d32",
+          "page": 1,
+          "said": "Sunday: 7:30 AM, 9:30 AM, 11:30 AM, 4:30 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Masses box on p1 of both bulletins and in the intentions on p2.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-bvm-jenkintown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba0b9723",
+          "page": 2,
+          "said": "Monday ... Saturday 8:00 a.m. (Mass intentions each day)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "58881d32",
+          "page": 2,
+          "said": "Monday ... Saturday 8:00 a.m. (Mass intentions each day)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba0b9723",
+          "page": 1,
+          "said": "Daily: 8:00"
+        },
+        {
+          "source": "agent",
+          "bulletin": "58881d32",
+          "page": 1,
+          "said": "Daily: 8:00"
+        },
+        {
+          "source": "website",
+          "url": "https://www.iccjenkintown.org/",
+          "said": "DAILY MASS SCHEDULE Monday - Saturday 8:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: the p1 box says only 'Daily: 8:00'; both weeks' intentions list an 8:00 a.m. Mass Monday through Saturday, and the parish homepage says Monday - Saturday 8:00 AM. No Sunday 8:00 Mass is listed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-bvm-jenkintown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba0b9723",
+          "page": 2,
+          "said": "Monday ... Saturday 8:00 a.m. (Mass intentions each day)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "58881d32",
+          "page": 2,
+          "said": "Monday ... Saturday 8:00 a.m. (Mass intentions each day)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba0b9723",
+          "page": 1,
+          "said": "Daily: 8:00"
+        },
+        {
+          "source": "agent",
+          "bulletin": "58881d32",
+          "page": 1,
+          "said": "Daily: 8:00"
+        },
+        {
+          "source": "website",
+          "url": "https://www.iccjenkintown.org/",
+          "said": "DAILY MASS SCHEDULE Monday - Saturday 8:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: the p1 box says only 'Daily: 8:00'; both weeks' intentions list an 8:00 a.m. Mass Monday through Saturday, and the parish homepage says Monday - Saturday 8:00 AM. No Sunday 8:00 Mass is listed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-bvm-jenkintown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba0b9723",
+          "page": 2,
+          "said": "Monday ... Saturday 8:00 a.m. (Mass intentions each day)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "58881d32",
+          "page": 2,
+          "said": "Monday ... Saturday 8:00 a.m. (Mass intentions each day)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba0b9723",
+          "page": 1,
+          "said": "Daily: 8:00"
+        },
+        {
+          "source": "agent",
+          "bulletin": "58881d32",
+          "page": 1,
+          "said": "Daily: 8:00"
+        },
+        {
+          "source": "website",
+          "url": "https://www.iccjenkintown.org/",
+          "said": "DAILY MASS SCHEDULE Monday - Saturday 8:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: the p1 box says only 'Daily: 8:00'; both weeks' intentions list an 8:00 a.m. Mass Monday through Saturday, and the parish homepage says Monday - Saturday 8:00 AM. No Sunday 8:00 Mass is listed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-bvm-jenkintown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba0b9723",
+          "page": 2,
+          "said": "Monday ... Saturday 8:00 a.m. (Mass intentions each day)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "58881d32",
+          "page": 2,
+          "said": "Monday ... Saturday 8:00 a.m. (Mass intentions each day)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba0b9723",
+          "page": 1,
+          "said": "Daily: 8:00"
+        },
+        {
+          "source": "agent",
+          "bulletin": "58881d32",
+          "page": 1,
+          "said": "Daily: 8:00"
+        },
+        {
+          "source": "website",
+          "url": "https://www.iccjenkintown.org/",
+          "said": "DAILY MASS SCHEDULE Monday - Saturday 8:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: the p1 box says only 'Daily: 8:00'; both weeks' intentions list an 8:00 a.m. Mass Monday through Saturday, and the parish homepage says Monday - Saturday 8:00 AM. No Sunday 8:00 Mass is listed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-bvm-jenkintown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba0b9723",
+          "page": 2,
+          "said": "Monday ... Saturday 8:00 a.m. (Mass intentions each day)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "58881d32",
+          "page": 2,
+          "said": "Monday ... Saturday 8:00 a.m. (Mass intentions each day)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba0b9723",
+          "page": 1,
+          "said": "Daily: 8:00"
+        },
+        {
+          "source": "agent",
+          "bulletin": "58881d32",
+          "page": 1,
+          "said": "Daily: 8:00"
+        },
+        {
+          "source": "website",
+          "url": "https://www.iccjenkintown.org/",
+          "said": "DAILY MASS SCHEDULE Monday - Saturday 8:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: the p1 box says only 'Daily: 8:00'; both weeks' intentions list an 8:00 a.m. Mass Monday through Saturday, and the parish homepage says Monday - Saturday 8:00 AM. No Sunday 8:00 Mass is listed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-bvm-jenkintown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba0b9723",
+          "page": 2,
+          "said": "Monday ... Saturday 8:00 a.m. (Mass intentions each day)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "58881d32",
+          "page": 2,
+          "said": "Monday ... Saturday 8:00 a.m. (Mass intentions each day)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba0b9723",
+          "page": 1,
+          "said": "Daily: 8:00"
+        },
+        {
+          "source": "agent",
+          "bulletin": "58881d32",
+          "page": 1,
+          "said": "Daily: 8:00"
+        },
+        {
+          "source": "website",
+          "url": "https://www.iccjenkintown.org/",
+          "said": "DAILY MASS SCHEDULE Monday - Saturday 8:00 AM"
+        }
+      ],
+      "rationale": "R1, R35: the p1 box says only 'Daily: 8:00'; both weeks' intentions list an 8:00 a.m. Mass Monday through Saturday, and the parish homepage says Monday - Saturday 8:00 AM. No Sunday 8:00 Mass is listed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-bvm-jenkintown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba0b9723",
+          "page": 1,
+          "said": "Eucharistic Adoration is on Friday mornings from 8:30 a.m. until 12 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "58881d32",
+          "page": 1,
+          "said": "Eucharistic Adoration is on Friday mornings from 8:30 a.m. until 12 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba0b9723",
+          "page": 3,
+          "said": "November 20 Eucharistic Adoration"
+        }
+      ],
+      "rationale": "R1: printed under Adoration on p1 of both bulletins; the p3 calendar lists it for Friday November 20.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-bvm-jenkintown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba0b9723",
+          "page": 1,
+          "said": "Sacrament of Confession Saturday 3:00 to 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "58881d32",
+          "page": 1,
+          "said": "Sacrament of Confession Saturday 3:00 to 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba0b9723",
+          "page": 3,
+          "said": "November 21 Confession"
+        }
+      ],
+      "rationale": "R1: printed on p1 of both bulletins; the website gives the same Saturdays 3:00-4:00 P.M.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-bvm-jenkintown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba0b9723",
+          "page": 10,
+          "said": "Please join us for a Mass of Thanksgiving Thursday November 26th 9:00 AM"
+        }
+      ],
+      "rationale": "R1, R16: a dated special Mass on or after as_of. R17: the bulletin does not say the 8:00 AM Thursday Mass is cancelled, so the weekly slot is left alone.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-bvm-jenkintown",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-21",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Confessions"
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba0b9723",
+          "page": 10,
+          "said": "Monday, December 21st Christmas Confessions 7:00 p.m. Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "58881d32",
+          "page": 9,
+          "said": "Monday, December 21st Christmas Confessions 7:00 p.m. Church"
+        }
+      ],
+      "rationale": "R1, R16: dated in the Advent and Christmas save-the-date box of both bulletins; no end time is given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-bvm-jenkintown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve, in Conahan Hall"
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba0b9723",
+          "page": 10,
+          "said": "Thursday, December 24th Christmas Eve ... 4:00 p.m. Mass in Conahan Hall"
+        }
+      ],
+      "rationale": "R1, R16; POLICY, Churches and chapels: Conahan Hall is the parish's own hall (its pancake breakfast, Knights meetings and Advent evening are held there), so the Mass belongs to the church with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-bvm-jenkintown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba0b9723",
+          "page": 10,
+          "said": "6:00 p.m. Mass in Church"
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Eve Mass in the save-the-date box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-bvm-jenkintown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Day"
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba0b9723",
+          "page": 10,
+          "said": "Friday December 25th Christmas Day 7:30 a.m. 9:30 a.m. 11:30 a.m. *There is no Mass at 4:30 p.m."
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Day Masses. R17: no cancellation of the Friday 8:00 AM Mass or Adoration is stated, so the weekly slots are left alone; the 'no Mass at 4:30' line matches no Friday slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-bvm-jenkintown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Day"
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba0b9723",
+          "page": 10,
+          "said": "Friday December 25th Christmas Day 7:30 a.m. 9:30 a.m. 11:30 a.m. *There is no Mass at 4:30 p.m."
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Day Masses. R17: no cancellation of the Friday 8:00 AM Mass or Adoration is stated, so the weekly slots are left alone; the 'no Mass at 4:30' line matches no Friday slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-bvm-jenkintown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Day"
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba0b9723",
+          "page": 10,
+          "said": "Friday December 25th Christmas Day 7:30 a.m. 9:30 a.m. 11:30 a.m. *There is no Mass at 4:30 p.m."
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Day Masses. R17: no cancellation of the Friday 8:00 AM Mass or Adoration is stated, so the weekly slots are left alone; the 'no Mass at 4:30' line matches no Friday slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba0b9723",
+          "page": 10,
+          "said": "3:30 p.m. Children's Procession to the Crib, immediately followed by Mass in Church with Children's Choir"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba0b9723",
+          "page": 5,
+          "said": "The choir will sing at the Childrens Christmas Eve Mass in Church on December 24th at 3:30 p.m."
+        }
+      ],
+      "rationale": "R30: the Mass has no clock time of its own ('immediately followed by Mass'), but p5 calls it the Children's Christmas Eve Mass at 3:30 p.m. Leaning include at 3:30, since attendees should arrive for the procession.",
+      "question": "Add the Christmas Eve children's Mass, which follows the 3:30 PM procession to the crib?",
+      "options": [
+        {
+          "label": "Dec 24 at 3:30 PM, with a note",
+          "entry": {
+            "church_slug": "immaculate-conception-bvm-jenkintown",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-24",
+            "start_time": "15:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Christmas Eve, begins with the Children's Procession to the Crib"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba0b9723",
+          "page": 1,
+          "said": "Holy Day Vigil Mass: 4:00 PM; Holy Day: 8:00 AM, 12:00 Noon and 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "58881d32",
+          "page": 1,
+          "said": "Holy Day Vigil Mass: 4:00 PM; Holy Day: 8:00 AM, 12:00 Noon and 7:00 PM"
+        }
+      ],
+      "rationale": "R30: POLICY, Dates forbids projecting dates, and the standing line names no holy day or date. Leaning leave out: bulletins before December 8 should date these Masses, and update mode will read them.",
+      "question": "Add the December 8 Immaculate Conception (holy day, patronal feast) Masses from the standing holy-day line?",
+      "options": [
+        {
+          "label": "Leave out until a bulletin dates them",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Include the holy-day times",
+          "entry": {
+            "church_slug": "immaculate-conception-bvm-jenkintown",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-07",
+            "start_time": "16:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Holy day vigil"
+          }
+        }
+      ],
+      "answer": null,
+      "group": "holyday"
+    },
+    {
+      "id": "s23",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba0b9723",
+          "page": 1,
+          "said": "Holy Day Vigil Mass: 4:00 PM; Holy Day: 8:00 AM, 12:00 Noon and 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "58881d32",
+          "page": 1,
+          "said": "Holy Day Vigil Mass: 4:00 PM; Holy Day: 8:00 AM, 12:00 Noon and 7:00 PM"
+        }
+      ],
+      "rationale": "R30: POLICY, Dates forbids projecting dates, and the standing line names no holy day or date. Leaning leave out: bulletins before December 8 should date these Masses, and update mode will read them.",
+      "question": "Add the December 8 Immaculate Conception (holy day, patronal feast) Masses from the standing holy-day line?",
+      "options": [
+        {
+          "label": "Leave out until a bulletin dates them",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Include the holy-day times",
+          "entry": {
+            "church_slug": "immaculate-conception-bvm-jenkintown",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception"
+          }
+        }
+      ],
+      "answer": null,
+      "group": "holyday"
+    },
+    {
+      "id": "s24",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba0b9723",
+          "page": 1,
+          "said": "Holy Day Vigil Mass: 4:00 PM; Holy Day: 8:00 AM, 12:00 Noon and 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "58881d32",
+          "page": 1,
+          "said": "Holy Day Vigil Mass: 4:00 PM; Holy Day: 8:00 AM, 12:00 Noon and 7:00 PM"
+        }
+      ],
+      "rationale": "R30: POLICY, Dates forbids projecting dates, and the standing line names no holy day or date. Leaning leave out: bulletins before December 8 should date these Masses, and update mode will read them.",
+      "question": "Add the December 8 Immaculate Conception (holy day, patronal feast) Masses from the standing holy-day line?",
+      "options": [
+        {
+          "label": "Leave out until a bulletin dates them",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Include the holy-day times",
+          "entry": {
+            "church_slug": "immaculate-conception-bvm-jenkintown",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception"
+          }
+        }
+      ],
+      "answer": null,
+      "group": "holyday"
+    },
+    {
+      "id": "s25",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba0b9723",
+          "page": 1,
+          "said": "Holy Day Vigil Mass: 4:00 PM; Holy Day: 8:00 AM, 12:00 Noon and 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "58881d32",
+          "page": 1,
+          "said": "Holy Day Vigil Mass: 4:00 PM; Holy Day: 8:00 AM, 12:00 Noon and 7:00 PM"
+        }
+      ],
+      "rationale": "R30: POLICY, Dates forbids projecting dates, and the standing line names no holy day or date. Leaning leave out: bulletins before December 8 should date these Masses, and update mode will read them.",
+      "question": "Add the December 8 Immaculate Conception (holy day, patronal feast) Masses from the standing holy-day line?",
+      "options": [
+        {
+          "label": "Leave out until a bulletin dates them",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Include the holy-day times",
+          "entry": {
+            "church_slug": "immaculate-conception-bvm-jenkintown",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-08",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Immaculate Conception"
+          }
+        }
+      ],
+      "answer": null,
+      "group": "holyday"
+    }
+  ]
+}
