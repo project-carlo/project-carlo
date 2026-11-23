@@ -1,0 +1,1175 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-good-counsel-pompton-plains",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:20:35Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T13:09:15Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend (Sat 5 PM; Sun 8, 10, 11:30 and 1 PM Spanish), Mon-Sat 8 AM Mass and Saturday 3:30-4:30 Confession agree in both bulletins (Nov 8, Nov 15) and on the website; Dec 8 holy-day Masses come from the website. Open: website-only Mon-Sat 8:30 Adoration, and whether the Wednesday 7 PM Spanish Mass with Exposition (Nov 8 only) continues.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "16a89f74a4e26efa9b8c30c8bbaacb34b62362228d65f65af661592488e4a694",
+      "fetched_at": "2026-11-15T16:20:35Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "03440903de0bc392e6e1973da64cff0d88557c65bcfc447d2a4b8fb42443429d",
+      "fetched_at": "2026-11-08T15:44:59Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-pompton-plains",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "16a89f74",
+          "page": 6,
+          "said": "Saturday 8:00AM, 5:00PM Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03440903",
+          "page": 6,
+          "said": "Saturday 8:00AM, 5:00PM Vigil"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read; the intentions list a 5:00PM Saturday Mass both weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-pompton-plains",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "16a89f74",
+          "page": 6,
+          "said": "Sunday 8:00AM, 10:00AM, 11:30AM, 1:00PM Misa En Espanol"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03440903",
+          "page": 6,
+          "said": "Sunday 8:00AM, 10:00AM, 11:30AM, 1:00PM Misa En Espanol"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in their intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-pompton-plains",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "16a89f74",
+          "page": 6,
+          "said": "Sunday 8:00AM, 10:00AM, 11:30AM, 1:00PM Misa En Espanol"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03440903",
+          "page": 6,
+          "said": "Sunday 8:00AM, 10:00AM, 11:30AM, 1:00PM Misa En Espanol"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in their intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-pompton-plains",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "16a89f74",
+          "page": 6,
+          "said": "Sunday 8:00AM, 10:00AM, 11:30AM, 1:00PM Misa En Espanol"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03440903",
+          "page": 6,
+          "said": "Sunday 8:00AM, 10:00AM, 11:30AM, 1:00PM Misa En Espanol"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of both bulletins read and in their intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-pompton-plains",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "16a89f74",
+          "page": 6,
+          "said": "Sunday ... 1:00PM Misa En Espanol"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03440903",
+          "page": 6,
+          "said": "Sunday ... 1:00PM Misa En Espanol"
+        },
+        {
+          "source": "agent",
+          "bulletin": "16a89f74",
+          "page": 9,
+          "said": "Misa dominical en español a la 13:00 h"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03440903",
+          "page": 9,
+          "said": "Misa dominical en español a la 13:00 h"
+        }
+      ],
+      "rationale": "R1: printed in the English and Spanish schedule boxes of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-pompton-plains",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "16a89f74",
+          "page": 6,
+          "said": "Daily Mass Weekdays 8:00AM; Saturday 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03440903",
+          "page": 6,
+          "said": "Daily Mass Weekdays 8:00AM; Saturday 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "16a89f74",
+          "page": 2,
+          "said": "Mass intentions list 8:00AM Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03440903",
+          "page": 2,
+          "said": "Mass intentions list 8:00AM Monday through Saturday"
+        }
+      ],
+      "rationale": "R1: the schedule box gives weekdays and Saturday at 8:00 AM in both bulletins; the intentions confirm each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-pompton-plains",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "16a89f74",
+          "page": 6,
+          "said": "Daily Mass Weekdays 8:00AM; Saturday 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03440903",
+          "page": 6,
+          "said": "Daily Mass Weekdays 8:00AM; Saturday 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "16a89f74",
+          "page": 2,
+          "said": "Mass intentions list 8:00AM Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03440903",
+          "page": 2,
+          "said": "Mass intentions list 8:00AM Monday through Saturday"
+        }
+      ],
+      "rationale": "R1: the schedule box gives weekdays and Saturday at 8:00 AM in both bulletins; the intentions confirm each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-pompton-plains",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "16a89f74",
+          "page": 6,
+          "said": "Daily Mass Weekdays 8:00AM; Saturday 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03440903",
+          "page": 6,
+          "said": "Daily Mass Weekdays 8:00AM; Saturday 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "16a89f74",
+          "page": 2,
+          "said": "Mass intentions list 8:00AM Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03440903",
+          "page": 2,
+          "said": "Mass intentions list 8:00AM Monday through Saturday"
+        }
+      ],
+      "rationale": "R1: the schedule box gives weekdays and Saturday at 8:00 AM in both bulletins; the intentions confirm each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-pompton-plains",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "16a89f74",
+          "page": 6,
+          "said": "Daily Mass Weekdays 8:00AM; Saturday 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03440903",
+          "page": 6,
+          "said": "Daily Mass Weekdays 8:00AM; Saturday 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "16a89f74",
+          "page": 2,
+          "said": "Mass intentions list 8:00AM Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03440903",
+          "page": 2,
+          "said": "Mass intentions list 8:00AM Monday through Saturday"
+        }
+      ],
+      "rationale": "R1: the schedule box gives weekdays and Saturday at 8:00 AM in both bulletins; the intentions confirm each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-pompton-plains",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "16a89f74",
+          "page": 6,
+          "said": "Daily Mass Weekdays 8:00AM; Saturday 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03440903",
+          "page": 6,
+          "said": "Daily Mass Weekdays 8:00AM; Saturday 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "16a89f74",
+          "page": 2,
+          "said": "Mass intentions list 8:00AM Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03440903",
+          "page": 2,
+          "said": "Mass intentions list 8:00AM Monday through Saturday"
+        }
+      ],
+      "rationale": "R1: the schedule box gives weekdays and Saturday at 8:00 AM in both bulletins; the intentions confirm each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-pompton-plains",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "16a89f74",
+          "page": 6,
+          "said": "Daily Mass Weekdays 8:00AM; Saturday 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03440903",
+          "page": 6,
+          "said": "Daily Mass Weekdays 8:00AM; Saturday 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "16a89f74",
+          "page": 2,
+          "said": "Mass intentions list 8:00AM Monday through Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03440903",
+          "page": 2,
+          "said": "Mass intentions list 8:00AM Monday through Saturday"
+        }
+      ],
+      "rationale": "R1: the schedule box gives weekdays and Saturday at 8:00 AM in both bulletins; the intentions confirm each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-pompton-plains",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "16a89f74",
+          "page": 6,
+          "said": "Confession Saturday 3:30-4:30PM or By Appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03440903",
+          "page": 6,
+          "said": "Confession Saturday 3:30-4:30PM or By Appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "16a89f74",
+          "page": 9,
+          "said": "Confesiones: sábados de 15:30 a 16:30 h"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03440903",
+          "page": 9,
+          "said": "Confesiones: sábados de 15:30 a 16:30 h"
+        }
+      ],
+      "rationale": "R1: printed in both schedule boxes of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "16a89f74",
+          "page": 6,
+          "said": "Confession ... or By Appointment"
+        }
+      ],
+      "rationale": "R26: by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-pompton-plains",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://goodcounsel.org/",
+          "said": "Upcoming Holy Days Immaculate Conception December 8 8:00 AM English 12:00 PM English 6:00 PM English 7:00 PM Spanish",
+          "schedule_check": {
+            "checked_at": "2026-11-23T13:12:51Z",
+            "current_because": "The homepage Mass Times widget lists the upcoming Immaculate Conception, December 8, and its weekend, daily and confession times match the November 2026 bulletins and the current pastor-era schedule.",
+            "bulletin": "16a89f74",
+            "fits_because": "The newest bulletin's schedule box prints Holy Days 8:00AM, 12:00PM, 6:00PM, 7:00PM Misa En Espanol without a date; the website dates them December 8."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the bulletin's undated holy-day times, dated by the parish website for the Immaculate Conception, on or after as_of. The 8:00 AM is the regular Tuesday Mass (POLICY, Weekly or dated, rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-pompton-plains",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://goodcounsel.org/",
+          "said": "Upcoming Holy Days Immaculate Conception December 8 8:00 AM English 12:00 PM English 6:00 PM English 7:00 PM Spanish",
+          "schedule_check": {
+            "checked_at": "2026-11-23T13:12:51Z",
+            "current_because": "The homepage Mass Times widget lists the upcoming Immaculate Conception, December 8, and its weekend, daily and confession times match the November 2026 bulletins and the current pastor-era schedule.",
+            "bulletin": "16a89f74",
+            "fits_because": "The newest bulletin's schedule box prints Holy Days 8:00AM, 12:00PM, 6:00PM, 7:00PM Misa En Espanol without a date; the website dates them December 8."
+          }
+        }
+      ],
+      "rationale": "R6, R16: as the 12:00 PM Immaculate Conception Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-pompton-plains",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception, Spanish"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://goodcounsel.org/",
+          "said": "Upcoming Holy Days Immaculate Conception December 8 ... 7:00 PM Spanish",
+          "schedule_check": {
+            "checked_at": "2026-11-23T13:12:51Z",
+            "current_because": "The homepage Mass Times widget lists the upcoming Immaculate Conception, December 8, and its weekend, daily and confession times match the November 2026 bulletins and the current pastor-era schedule.",
+            "bulletin": "16a89f74",
+            "fits_because": "The newest bulletin's schedule box prints Holy Days ... 7:00PM Misa En Espanol without a date; the website dates them December 8."
+          }
+        }
+      ],
+      "rationale": "R6, R16: as the 12:00 PM Immaculate Conception Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://goodcounsel.org/",
+          "said": "Adoration Times M S a 8:30 AM to 9:00 AM Join us in the Chapel immediately after the 8am Mass."
+        }
+      ],
+      "rationale": "R6/R29: neither bulletin mentions it. The homepage widget's days read as 'M S a' in the page text, which looks like Mon-Sat (the daily Mass reads 'Mon Sat'), but the days cannot be confirmed from text. The rest of the widget matches the bulletins and is current (it lists December 8), so lean include.",
+      "question": "Add Adoration in the chapel Monday to Saturday 8:30-9:00 AM, after the 8 AM Mass, given only by the website?",
+      "options": [
+        {
+          "label": "Mon-Sat 8:30-9:00 AM",
+          "entry": {
+            "church_slug": "our-lady-of-good-counsel-pompton-plains",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "09:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "website-adoration"
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://goodcounsel.org/",
+          "said": "Adoration Times M S a 8:30 AM to 9:00 AM Join us in the Chapel immediately after the 8am Mass."
+        }
+      ],
+      "rationale": "R6/R29: neither bulletin mentions it. The homepage widget's days read as 'M S a' in the page text, which looks like Mon-Sat (the daily Mass reads 'Mon Sat'), but the days cannot be confirmed from text. The rest of the widget matches the bulletins and is current (it lists December 8), so lean include.",
+      "question": "Add Adoration in the chapel Monday to Saturday 8:30-9:00 AM, after the 8 AM Mass, given only by the website?",
+      "options": [
+        {
+          "label": "Mon-Sat 8:30-9:00 AM",
+          "entry": {
+            "church_slug": "our-lady-of-good-counsel-pompton-plains",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "09:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "website-adoration"
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://goodcounsel.org/",
+          "said": "Adoration Times M S a 8:30 AM to 9:00 AM Join us in the Chapel immediately after the 8am Mass."
+        }
+      ],
+      "rationale": "R6/R29: neither bulletin mentions it. The homepage widget's days read as 'M S a' in the page text, which looks like Mon-Sat (the daily Mass reads 'Mon Sat'), but the days cannot be confirmed from text. The rest of the widget matches the bulletins and is current (it lists December 8), so lean include.",
+      "question": "Add Adoration in the chapel Monday to Saturday 8:30-9:00 AM, after the 8 AM Mass, given only by the website?",
+      "options": [
+        {
+          "label": "Mon-Sat 8:30-9:00 AM",
+          "entry": {
+            "church_slug": "our-lady-of-good-counsel-pompton-plains",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "09:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "website-adoration"
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://goodcounsel.org/",
+          "said": "Adoration Times M S a 8:30 AM to 9:00 AM Join us in the Chapel immediately after the 8am Mass."
+        }
+      ],
+      "rationale": "R6/R29: neither bulletin mentions it. The homepage widget's days read as 'M S a' in the page text, which looks like Mon-Sat (the daily Mass reads 'Mon Sat'), but the days cannot be confirmed from text. The rest of the widget matches the bulletins and is current (it lists December 8), so lean include.",
+      "question": "Add Adoration in the chapel Monday to Saturday 8:30-9:00 AM, after the 8 AM Mass, given only by the website?",
+      "options": [
+        {
+          "label": "Mon-Sat 8:30-9:00 AM",
+          "entry": {
+            "church_slug": "our-lady-of-good-counsel-pompton-plains",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "09:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "website-adoration"
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://goodcounsel.org/",
+          "said": "Adoration Times M S a 8:30 AM to 9:00 AM Join us in the Chapel immediately after the 8am Mass."
+        }
+      ],
+      "rationale": "R6/R29: neither bulletin mentions it. The homepage widget's days read as 'M S a' in the page text, which looks like Mon-Sat (the daily Mass reads 'Mon Sat'), but the days cannot be confirmed from text. The rest of the widget matches the bulletins and is current (it lists December 8), so lean include.",
+      "question": "Add Adoration in the chapel Monday to Saturday 8:30-9:00 AM, after the 8 AM Mass, given only by the website?",
+      "options": [
+        {
+          "label": "Mon-Sat 8:30-9:00 AM",
+          "entry": {
+            "church_slug": "our-lady-of-good-counsel-pompton-plains",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "09:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "website-adoration"
+    },
+    {
+      "id": "s22",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://goodcounsel.org/",
+          "said": "Adoration Times M S a 8:30 AM to 9:00 AM Join us in the Chapel immediately after the 8am Mass."
+        }
+      ],
+      "rationale": "R6/R29: neither bulletin mentions it. The homepage widget's days read as 'M S a' in the page text, which looks like Mon-Sat (the daily Mass reads 'Mon Sat'), but the days cannot be confirmed from text. The rest of the widget matches the bulletins and is current (it lists December 8), so lean include.",
+      "question": "Add Adoration in the chapel Monday to Saturday 8:30-9:00 AM, after the 8 AM Mass, given only by the website?",
+      "options": [
+        {
+          "label": "Mon-Sat 8:30-9:00 AM",
+          "entry": {
+            "church_slug": "our-lady-of-good-counsel-pompton-plains",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "09:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "website-adoration"
+    },
+    {
+      "id": "s23",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "03440903",
+          "page": 9,
+          "said": "Misa semanal los miércoles a las 19:00 h, seguida de la Exposición del Santísimo Sacramento."
+        },
+        {
+          "source": "agent",
+          "bulletin": "16a89f74",
+          "page": 9,
+          "said": "Hora Santa Segundo miércoles de mes. (the Wednesday Mass line no longer printed)"
+        }
+      ],
+      "rationale": "R28/R29: the Nov 8 Spanish box prints a weekly Wednesday 7 PM Mass; the Nov 15 box replaces that line with a second-Wednesday Hora Santa, and the website's Spanish Mass page lists only Sundays 1:00 PM. Looks like a change, so lean leave out.",
+      "question": "Does the weekly Wednesday 7 PM Spanish Mass, followed by Exposition, continue?",
+      "options": [
+        {
+          "label": "Keep weekly",
+          "entry": {
+            "church_slug": "our-lady-of-good-counsel-pompton-plains",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Spanish"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "wednesday-spanish"
+    },
+    {
+      "id": "s24",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "03440903",
+          "page": 9,
+          "said": "Misa semanal los miércoles a las 19:00 h, seguida de la Exposición del Santísimo Sacramento."
+        }
+      ],
+      "rationale": "R10: Exposition after a weekday Mass starts 30 minutes after it. Depends on the Wednesday Mass (see its slot); lean leave out.",
+      "question": "Does the weekly Wednesday 7 PM Spanish Mass, followed by Exposition, continue?",
+      "options": [
+        {
+          "label": "Keep weekly",
+          "entry": {
+            "church_slug": "our-lady-of-good-counsel-pompton-plains",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "19:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 7:00 PM Spanish Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "wednesday-spanish"
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "16a89f74",
+          "page": 9,
+          "said": "Hora Santa Segundo miércoles de mes."
+        }
+      ],
+      "rationale": "R26: the second-Wednesday Holy Hour gives no time; neither the older bulletin nor the website gives one.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-good-counsel-pompton-plains",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-12",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Guadalupe"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "16a89f74",
+          "page": 7,
+          "said": "Eucharistic Celebration in honor of Our Lady, the Virgin of Guadalupe, Saturday, December 12, 2026 8:00 a.m."
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated, rule 7: the feast is celebrated at the regular Saturday 8:00 AM Mass, already a weekly slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "16a89f74",
+          "page": 7,
+          "said": "Divine Mercy Friday, November 20 3PM in the church"
+        }
+      ],
+      "rationale": "R24: a Divine Mercy devotion, not called Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "16a89f74",
+          "page": 4,
+          "said": "Monday, 11/30 Reconciliation Practice in the Church from 6-7:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03440903",
+          "page": 4,
+          "said": "Monday, 11/30 Reconciliation Practice in the Church from 6-7:30PM"
+        }
+      ],
+      "rationale": "R24/R25: a rehearsal session for grade 2 First Reconciliation families, not open Confession.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "16a89f74",
+          "page": 6,
+          "said": "Holy Days 8:00AM, 12:00PM, 6:00PM, 7:00PM Misa En Espanol"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03440903",
+          "page": 6,
+          "said": "Holy Days 8:00AM, 12:00PM, 6:00PM, 7:00PM Misa En Espanol"
+        }
+      ],
+      "rationale": "POLICY, Dates: the bulletin gives no dates; the December 8 times are recorded from the website as dated slots.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
