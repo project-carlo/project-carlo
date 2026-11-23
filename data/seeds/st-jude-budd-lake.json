@@ -1,0 +1,632 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-jude-budd-lake",
+  "status": "ready",
+  "as_of": "2026-11-15T16:51:50Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T17:35:29Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend, weekday, Saturday confession and first-Friday Adoration times agree in the Nov 8 and Nov 15 bulletins (all image pages, read rendered). Left out: last-Tuesday Novena with Benediction (no Benediction start time), undated Holy Day times, and a teens-only lock-in. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "3087f56348f009a9dda2610bdbc2ac6dbf5b7a50e5ffc119b191162da8a1a105",
+      "fetched_at": "2026-11-15T16:51:50Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "98df0739d9673e451dfc05c5a84c1f7c54b9762da2631b215741670feaaa36b4",
+      "fetched_at": "2026-11-08T22:03:48Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-budd-lake",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3087f563",
+          "page": 1,
+          "said": "MASS TIMES Saturday: 5:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98df0739",
+          "page": 1,
+          "said": "MASS TIMES Saturday: 5:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3087f563",
+          "page": 2,
+          "said": "Saturday 5:30pm Delores Zamejtek, Chip Sturm"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box of both bulletins read, with intentions on p2.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-budd-lake",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3087f563",
+          "page": 1,
+          "said": "Sunday: 8:00 AM 10:00 AM 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98df0739",
+          "page": 1,
+          "said": "Sunday: 8:00 AM 10:00 AM 12:00 PM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box of both bulletins read; the intentions list each Sunday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-budd-lake",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3087f563",
+          "page": 1,
+          "said": "Sunday: 8:00 AM 10:00 AM 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98df0739",
+          "page": 1,
+          "said": "Sunday: 8:00 AM 10:00 AM 12:00 PM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box of both bulletins read; the intentions list each Sunday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-budd-lake",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3087f563",
+          "page": 1,
+          "said": "Sunday: 8:00 AM 10:00 AM 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98df0739",
+          "page": 1,
+          "said": "Sunday: 8:00 AM 10:00 AM 12:00 PM"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box of both bulletins read; the intentions list each Sunday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-budd-lake",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3087f563",
+          "page": 1,
+          "said": "Monday - Saturday: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98df0739",
+          "page": 1,
+          "said": "Monday - Saturday: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3087f563",
+          "page": 2,
+          "said": "Mass Intentions list 9:00am Monday through Saturday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box of both bulletins read; the intentions list a 9:00am Mass each weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-budd-lake",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3087f563",
+          "page": 1,
+          "said": "Monday - Saturday: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98df0739",
+          "page": 1,
+          "said": "Monday - Saturday: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3087f563",
+          "page": 2,
+          "said": "Mass Intentions list 9:00am Monday through Saturday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box of both bulletins read; the intentions list a 9:00am Mass each weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-budd-lake",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3087f563",
+          "page": 1,
+          "said": "Monday - Saturday: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98df0739",
+          "page": 1,
+          "said": "Monday - Saturday: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3087f563",
+          "page": 2,
+          "said": "Mass Intentions list 9:00am Monday through Saturday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box of both bulletins read; the intentions list a 9:00am Mass each weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-budd-lake",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3087f563",
+          "page": 1,
+          "said": "Monday - Saturday: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98df0739",
+          "page": 1,
+          "said": "Monday - Saturday: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3087f563",
+          "page": 2,
+          "said": "Mass Intentions list 9:00am Monday through Saturday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box of both bulletins read; the intentions list a 9:00am Mass each weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-budd-lake",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3087f563",
+          "page": 1,
+          "said": "Monday - Saturday: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98df0739",
+          "page": 1,
+          "said": "Monday - Saturday: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3087f563",
+          "page": 2,
+          "said": "Mass Intentions list 9:00am Monday through Saturday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box of both bulletins read; the intentions list a 9:00am Mass each weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-budd-lake",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3087f563",
+          "page": 1,
+          "said": "Monday - Saturday: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98df0739",
+          "page": 1,
+          "said": "Monday - Saturday: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3087f563",
+          "page": 2,
+          "said": "Mass Intentions list 9:00am Monday through Saturday"
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass Times box of both bulletins read; the intentions list a 9:00am Mass each weekday and Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-budd-lake",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": "17:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3087f563",
+          "page": 1,
+          "said": "Reconciliation: Sat. 4:30 - 5:15 PM or by appointment with the priest."
+        },
+        {
+          "source": "agent",
+          "bulletin": "98df0739",
+          "page": 1,
+          "said": "Reconciliation: Sat. 4:30 - 5:15 PM or by appointment with the priest."
+        }
+      ],
+      "rationale": "R1: printed under Spiritual Life in both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3087f563",
+          "page": 1,
+          "said": "Reconciliation: ... or by appointment with the priest."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-budd-lake",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Daily Mass Chapel; after the 9:00 AM Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "98df0739",
+          "page": 1,
+          "said": "Eucharistic Adoration: First Friday after the 9:00 AM mass until 4:00 PM in the Daily Mass Chapel."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3087f563",
+          "page": 1,
+          "said": "Eucharistic Adoration: First Friday after the 9:00 AM mass until 4:00 PM in the Daily Mass Chapel."
+        }
+      ],
+      "rationale": "R12, R10: a first-Friday slot; neither read issue's week (Nov 8-14, Nov 15-22) holds a first Friday, though both print the standing line. Start is 30 minutes after the weekday 9:00 AM Mass (POLICY, Times); the Daily Mass Chapel is in the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-budd-lake",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "last"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction after Novena to St. Jude"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3087f563",
+          "page": 2,
+          "said": "Deacon Tony will conduct Novena Prayers to St. Jude, followed by Benediction, on the last Tuesday of every month immediately following the 9:00 a.m. Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98df0739",
+          "page": 2,
+          "said": "Deacon Tony will conduct Novena Prayers to St. Jude, followed by Benediction, on the last Tuesday of every month immediately following the 9:00 a.m. Mass"
+        }
+      ],
+      "rationale": "POLICY, Final source checks; R24: the 9:30 anchor belongs to the Novena, which is a devotion; Benediction comes after the Novena with no time of its own, so its start can't be fixed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3087f563",
+          "page": 1,
+          "said": "Holy Days 9:00 AM 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98df0739",
+          "page": 1,
+          "said": "Holy Days 9:00 AM 7:00 PM"
+        }
+      ],
+      "rationale": "POLICY, Dates; R16: neither bulletin names a holy day date, so there is no dated Mass to record; update mode will read the issues that announce them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "98df0739",
+          "page": 4,
+          "said": "Church Lock-In, Friday, November 20, 6:00 PM-10:00 PM, St. Jude Church. Available for all 9th through 12th graders ... confession, and adoration"
+        }
+      ],
+      "rationale": "POLICY, What to extract and Final source checks; R24: limited to high-school students, and confession and adoration have no times of their own within the event.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
