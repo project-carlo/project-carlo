@@ -1064,7 +1064,12 @@
         "start_time": "19:30",
         "end_time": "21:00",
         "cancelled": false,
-        "weeks_of_month": [],
+        "weeks_of_month": [
+          "second",
+          "third",
+          "fourth",
+          "fifth"
+        ],
         "exclude_weeks": false,
         "season": null,
         "note": "After the 7:00 PM Mass"
@@ -1084,7 +1089,7 @@
           "said": "Adoration of the Blessed Sacrament every Monday, Wednesday, and Friday, following the 7:00PM Mass until 9:00PM."
         }
       ],
-      "rationale": "R1, R10: printed in both bulletins; start is 30 minutes after the weekday 7:00 PM Mass.",
+      "rationale": "R1, R10: printed in both bulletins; start is 30 minutes after the weekday 7:00 PM Mass. On first Fridays the same notice page extends it into all-night Adoration (s34), so this slot skips first Fridays to avoid two overlapping Adoration slots (POLICY: keep the longer period).",
       "question": null,
       "options": null,
       "answer": null
@@ -1265,7 +1270,7 @@
           "said": "Every First Friday of the month, we invite you to all night Adoration of the Blessed Sacrament. Adoration begins following the 7:00PM Mass on Friday and concludes with Holy Mass at 8:00AM on Saturday."
         }
       ],
-      "rationale": "R30, R33: printed in both bulletins and representable as first Friday, but it ends the next morning; an end time of 08:00 on a Friday slot would read as before its start. It overlaps the weekly Friday 7:30-9:00 PM Adoration (s28), which it extends on first Fridays. Leaning to record the start with no end and a note, since the extended hours are real and public.",
+      "rationale": "R30, R33: printed in both bulletins and representable as first Friday, but it ends the next morning; an end time of 08:00 on a Friday slot would read as before its start. The weekly Friday 7:30-9:00 PM Adoration (s28) skips first Fridays, so if this is left out, first Fridays have no evening Adoration slot. Leaning to record the start with no end and a note, since the extended hours are real and public.",
       "question": "First Friday all-night Adoration runs from after the 7 PM Mass to the 8 AM Saturday Mass. How should it be recorded?",
       "options": [
         {
