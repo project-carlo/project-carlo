@@ -1,0 +1,1317 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-innocents-philadelphia",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:40:38Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T23:37:33Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches: Holy Innocents and the St. Joan of Arc worship site (Sunday 9:00 and 11:30 only). Schedule box, intentions and website agree on weekend, weekday, Saturday confession and Mon-Fri exposition; a Saturday 8 AM Mass comes from two weeks of intentions (R35). Open: the First Friday Holy Hour time (box 7:30 PM vs flyer 7 PM) and the website's First Friday 8 PM Mass.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "1a798119c1e0881c8a21767808cfe7136a7f857a2e27b022f2aadb20aff81e69",
+      "fetched_at": "2026-11-15T16:40:38Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "ded94a3f53a0904d1c7583fe9cea61bfc1383517ab27c7be24730c6eb52c2e5c",
+      "fetched_at": "2026-11-08T15:52:47Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-innocents-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 1,
+          "said": "MASS SCHEDULE Saturday Evening: (Vigil): 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 3,
+          "said": "The 4:30 PM Saturday Evening Vigil Mass will be celebrated for the people of the parish."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ded94a3f",
+          "page": 3,
+          "said": "The 4:30 PM Saturday Evening Vigil Mass will be"
+        }
+      ],
+      "rationale": "R1: in the schedule box (p1) and the intentions (p3) of both bulletins read; the website gives the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-innocents-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 1,
+          "said": "Saturday Evening ... (Spanish): 6:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 3,
+          "said": "SATURDAY, November 21, 2026 ... 6:30 PM Maria Del Carmen Pilarte"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ded94a3f",
+          "page": 3,
+          "said": "SATURDAY, November 7, 2026 ... 6:30 PM Michelle Hernandez"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both bulletins; the website gives 6:30 PM (Spanish).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-innocents-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 1,
+          "said": "Sunday: 7:30 AM & 10:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 3,
+          "said": "SUNDAY, November 22, 2026 ... 7:30 AM Frances Appiot ... 10:00 AM Juan Catay Jr."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ded94a3f",
+          "page": 3,
+          "said": "SUNDAY, November 8, 2026 7:30 AM ... 10:00 AM Francisca Estevez"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both bulletins; the box places these at the parish church (only the 9:00 and 11:30 are under the St. Joan of Arc heading).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-innocents-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 1,
+          "said": "Sunday: 7:30 AM & 10:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 3,
+          "said": "SUNDAY, November 22, 2026 ... 7:30 AM Frances Appiot ... 10:00 AM Juan Catay Jr."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ded94a3f",
+          "page": 3,
+          "said": "SUNDAY, November 8, 2026 7:30 AM ... 10:00 AM Francisca Estevez"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both bulletins; the box places these at the parish church (only the 9:00 and 11:30 are under the St. Joan of Arc heading).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-innocents-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 1,
+          "said": "Sunday: 12:00 PM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 3,
+          "said": "12:00 PM(s) Jorge Luis Diaz & Natividad Sanchez"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ded94a3f",
+          "page": 3,
+          "said": "12:00 PM(s) Francisca Ramona Baez, Jose Obino & Osiris Tapia"
+        }
+      ],
+      "rationale": "R1: schedule box and intentions of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-innocents-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vietnamese"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 1,
+          "said": "Sunday: 5:00 PM (Vietnamese)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 3,
+          "said": "5:00 PM(v) No Intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ded94a3f",
+          "page": 3,
+          "said": "5:00 PM(v) No Intention"
+        }
+      ],
+      "rationale": "R1, R39: schedule box of the newest; the intentions list the 5:00 PM(v) every Sunday (a blank intention is not a cancellation).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joan-of-arc-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 1,
+          "said": "At St. Joan of Arc Worship Site: 9:00 AM (English)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 3,
+          "said": "9:00 AM Arminda de Concepcion Rodriguez-Quedes"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ded94a3f",
+          "page": 3,
+          "said": "9:00 AM No Intention"
+        }
+      ],
+      "rationale": "R1: under the box's 'At St. Joan of Arc Worship Site' heading; also in both bulletins' intentions and on the website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joan-of-arc-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 1,
+          "said": "At St. Joan of Arc Worship Site: 11:30 AM (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 3,
+          "said": "11:30 AM(s) Luis Martin Alicea Sr."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ded94a3f",
+          "page": 3,
+          "said": "11:30 AM(s) No Intention"
+        }
+      ],
+      "rationale": "R1: under the box's St. Joan of Arc heading; also in both bulletins' intentions and on the website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-innocents-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 1,
+          "said": "Weekdays: 6:30 AM & 8:00 AM (Summer 8:00 AM)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 3,
+          "said": "MONDAY, November 16, 2026 ... 6:30 AM No Intention ... FRIDAY, November 20, 2026 6:30 AM No Intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ded94a3f",
+          "page": 1,
+          "said": "Weekdays: 6:30 AM & 8:00 AM (Summer 8:00 AM)"
+        }
+      ],
+      "rationale": "R1, R15: box and intentions Mon-Fri in both bulletins (website: Monday to Friday: 6:30 AM & 8:00 AM). '(Summer 8:00 AM)' drops the 6:30 in summer but names no months, so no season is recorded; update mode will see the summer change.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-innocents-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 1,
+          "said": "Weekdays: 6:30 AM & 8:00 AM (Summer 8:00 AM)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 3,
+          "said": "MONDAY, November 16, 2026 ... 6:30 AM No Intention ... FRIDAY, November 20, 2026 6:30 AM No Intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ded94a3f",
+          "page": 1,
+          "said": "Weekdays: 6:30 AM & 8:00 AM (Summer 8:00 AM)"
+        }
+      ],
+      "rationale": "R1, R15: box and intentions Mon-Fri in both bulletins (website: Monday to Friday: 6:30 AM & 8:00 AM). '(Summer 8:00 AM)' drops the 6:30 in summer but names no months, so no season is recorded; update mode will see the summer change.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-innocents-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 1,
+          "said": "Weekdays: 6:30 AM & 8:00 AM (Summer 8:00 AM)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 3,
+          "said": "MONDAY, November 16, 2026 ... 6:30 AM No Intention ... FRIDAY, November 20, 2026 6:30 AM No Intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ded94a3f",
+          "page": 1,
+          "said": "Weekdays: 6:30 AM & 8:00 AM (Summer 8:00 AM)"
+        }
+      ],
+      "rationale": "R1, R15: box and intentions Mon-Fri in both bulletins (website: Monday to Friday: 6:30 AM & 8:00 AM). '(Summer 8:00 AM)' drops the 6:30 in summer but names no months, so no season is recorded; update mode will see the summer change.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-innocents-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 1,
+          "said": "Weekdays: 6:30 AM & 8:00 AM (Summer 8:00 AM)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 3,
+          "said": "MONDAY, November 16, 2026 ... 6:30 AM No Intention ... FRIDAY, November 20, 2026 6:30 AM No Intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ded94a3f",
+          "page": 1,
+          "said": "Weekdays: 6:30 AM & 8:00 AM (Summer 8:00 AM)"
+        }
+      ],
+      "rationale": "R1, R15: box and intentions Mon-Fri in both bulletins (website: Monday to Friday: 6:30 AM & 8:00 AM). '(Summer 8:00 AM)' drops the 6:30 in summer but names no months, so no season is recorded; update mode will see the summer change.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-innocents-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 1,
+          "said": "Weekdays: 6:30 AM & 8:00 AM (Summer 8:00 AM)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 3,
+          "said": "MONDAY, November 16, 2026 ... 6:30 AM No Intention ... FRIDAY, November 20, 2026 6:30 AM No Intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ded94a3f",
+          "page": 1,
+          "said": "Weekdays: 6:30 AM & 8:00 AM (Summer 8:00 AM)"
+        }
+      ],
+      "rationale": "R1, R15: box and intentions Mon-Fri in both bulletins (website: Monday to Friday: 6:30 AM & 8:00 AM). '(Summer 8:00 AM)' drops the 6:30 in summer but names no months, so no season is recorded; update mode will see the summer change.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-innocents-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 1,
+          "said": "Weekdays: 6:30 AM & 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 3,
+          "said": "MONDAY, November 16, 2026 ... 8:00 AM Richard A. Rivera"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ded94a3f",
+          "page": 1,
+          "said": "Weekdays: 6:30 AM & 8:00 AM"
+        }
+      ],
+      "rationale": "R1: box and intentions Mon-Fri in both bulletins; the website gives the same; kept in summer.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-innocents-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 1,
+          "said": "Weekdays: 6:30 AM & 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 3,
+          "said": "MONDAY, November 16, 2026 ... 8:00 AM Richard A. Rivera"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ded94a3f",
+          "page": 1,
+          "said": "Weekdays: 6:30 AM & 8:00 AM"
+        }
+      ],
+      "rationale": "R1: box and intentions Mon-Fri in both bulletins; the website gives the same; kept in summer.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-innocents-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 1,
+          "said": "Weekdays: 6:30 AM & 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 3,
+          "said": "MONDAY, November 16, 2026 ... 8:00 AM Richard A. Rivera"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ded94a3f",
+          "page": 1,
+          "said": "Weekdays: 6:30 AM & 8:00 AM"
+        }
+      ],
+      "rationale": "R1: box and intentions Mon-Fri in both bulletins; the website gives the same; kept in summer.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-innocents-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 1,
+          "said": "Weekdays: 6:30 AM & 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 3,
+          "said": "MONDAY, November 16, 2026 ... 8:00 AM Richard A. Rivera"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ded94a3f",
+          "page": 1,
+          "said": "Weekdays: 6:30 AM & 8:00 AM"
+        }
+      ],
+      "rationale": "R1: box and intentions Mon-Fri in both bulletins; the website gives the same; kept in summer.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-innocents-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 1,
+          "said": "Weekdays: 6:30 AM & 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 3,
+          "said": "MONDAY, November 16, 2026 ... 8:00 AM Richard A. Rivera"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ded94a3f",
+          "page": 1,
+          "said": "Weekdays: 6:30 AM & 8:00 AM"
+        }
+      ],
+      "rationale": "R1: box and intentions Mon-Fri in both bulletins; the website gives the same; kept in summer.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-innocents-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 3,
+          "said": "SATURDAY, November 21, 2026 ... 8:00 AM Israel Martinez & Julia Torres"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ded94a3f",
+          "page": 3,
+          "said": "SATURDAY, November 7, 2026 8:00 AM No Intention"
+        }
+      ],
+      "rationale": "R35: a Saturday 8:00 AM Mass is in the intentions of both bulletins (different weeks), not marked special. The box's 'Weekdays' line and the website's 'Monday to Friday' don't contradict it. Weekday Masses are at the parish church (no other site named).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-innocents-church-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 1,
+          "said": "CONFESSIONS Saturdays: 3:30 PM to 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ded94a3f",
+          "page": 1,
+          "said": "CONFESSIONS Saturdays: 3:30 PM to 4:30 PM"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins and the website; it ends at the 4:30 PM Vigil at the parish church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-innocents-church-philadelphia",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 1,
+          "said": "EXPOSITION OF THE BLESSED SACRAMENT Monday-Friday: 8:30 AM to 6:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ded94a3f",
+          "page": 1,
+          "said": "Monday-Friday: 8:30 AM to 6:30 PM"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins and the website; parish-wide box, not under the St. Joan of Arc heading, so at the parish church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-innocents-church-philadelphia",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 1,
+          "said": "EXPOSITION OF THE BLESSED SACRAMENT Monday-Friday: 8:30 AM to 6:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ded94a3f",
+          "page": 1,
+          "said": "Monday-Friday: 8:30 AM to 6:30 PM"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins and the website; parish-wide box, not under the St. Joan of Arc heading, so at the parish church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-innocents-church-philadelphia",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 1,
+          "said": "EXPOSITION OF THE BLESSED SACRAMENT Monday-Friday: 8:30 AM to 6:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ded94a3f",
+          "page": 1,
+          "said": "Monday-Friday: 8:30 AM to 6:30 PM"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins and the website; parish-wide box, not under the St. Joan of Arc heading, so at the parish church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-innocents-church-philadelphia",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 1,
+          "said": "EXPOSITION OF THE BLESSED SACRAMENT Monday-Friday: 8:30 AM to 6:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ded94a3f",
+          "page": 1,
+          "said": "Monday-Friday: 8:30 AM to 6:30 PM"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins and the website; parish-wide box, not under the St. Joan of Arc heading, so at the parish church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-innocents-church-philadelphia",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 1,
+          "said": "EXPOSITION OF THE BLESSED SACRAMENT Monday-Friday: 8:30 AM to 6:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ded94a3f",
+          "page": 1,
+          "said": "Monday-Friday: 8:30 AM to 6:30 PM"
+        }
+      ],
+      "rationale": "R1: schedule box of both bulletins and the website; parish-wide box, not under the St. Joan of Arc heading, so at the parish church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-innocents-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-15",
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Tri-lingual Mass celebrated by Bishop Deliman, 100th anniversary"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 3,
+          "said": "SUNDAY, November 15, 2026 7:30 AM Hector Bicente 11:00 AM Former Priests, Religious Sisters & Parishioners of Holy Innocents"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ded94a3f",
+          "page": 5,
+          "said": "November 15, 2026 7:30AM: English 11:00AM: Tri-Lingual Mass celebrated by Bishop Deliman"
+        }
+      ],
+      "rationale": "R1, R16: the anniversary weekend's dated Mass falls on as_of's date. No cancellation of the other Nov 15 Masses is stated, so none is recorded (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 1,
+          "said": "First Friday of every month: 7:30 PM – Holy Hour"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 6,
+          "said": "First Friday/ Primer Viernes HOLY HOUR/HORA SANTA 7PM in Church/en la iglesia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ded94a3f",
+          "page": 6,
+          "said": "First Friday/ Primer Viernes HOLY HOUR/HORA SANTA 7PM in Church/en la iglesia"
+        },
+        {
+          "source": "website",
+          "url": "https://www.holyinnocentsrc.org/massschedule",
+          "said": "First Friday of every month : 8:00 PM Mass - Eucharistic Procession"
+        }
+      ],
+      "rationale": "R28/C8: both bulletins' schedule box says 7:30 PM, but the Holy Hour flyer in both says 7PM in Church, and the website gives an 8:00 PM Mass with procession instead. Leaning 7:00 PM: the flyer is the specific, current announcement; the box looks like a standing template. End time is one hour (Holy Hour). Note: Dec 4 (a first Friday) also has a Christmas Praise & Worship Concert 7-9 PM (latest p7).",
+      "question": "First Friday Holy Hour at Holy Innocents: 7:00 PM or 7:30 PM?",
+      "options": [
+        {
+          "label": "First Fridays 7:00 PM",
+          "entry": {
+            "church_slug": "holy-innocents-church-philadelphia",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Holy Hour"
+          },
+          "leaning": true
+        },
+        {
+          "label": "First Fridays 7:30 PM",
+          "entry": {
+            "church_slug": "holy-innocents-church-philadelphia",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "19:30",
+            "end_time": "20:30",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Holy Hour"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.holyinnocentsrc.org/massschedule",
+          "said": "First Friday of every month : 8:00 PM Mass - Eucharistic Procession"
+        }
+      ],
+      "rationale": "R29, R6: neither bulletin prints a First Friday 8 PM Mass; both print a First Friday Holy Hour (7 or 7:30 PM) instead, so the website line conflicts and may be stale. Leaning leave out.",
+      "question": "Add the website's First Friday 8:00 PM Mass with Eucharistic Procession?",
+      "options": [
+        {
+          "label": "First Fridays 8:00 PM Mass",
+          "entry": {
+            "church_slug": "holy-innocents-church-philadelphia",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "20:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Eucharistic Procession"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 1,
+          "said": "Holy Days: Vigil: 7:00 PM 7:30 AM & 12 Noon 7:00 PM (Spanish) 9:00 PM (Vietnamese)"
+        }
+      ],
+      "rationale": "POLICY Weekly or dated rule 7, R16: holy-day Masses are dated, and the bulletin pins no holy-day date; update mode will read the issue that announces them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-innocents-church-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-24",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "School Mass"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1a798119",
+          "page": 7,
+          "said": "SCHOOL NEWS 11/24: School Mass – 10AM"
+        }
+      ],
+      "rationale": "R25, POLICY: a school Mass listed in school news, limited to students.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.holyinnocentsrc.org/massschedule",
+          "said": "The priests are also available to hear confessions by making an appointment."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
