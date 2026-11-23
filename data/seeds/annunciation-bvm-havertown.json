@@ -1,0 +1,897 @@
+{
+  "schema_version": 1,
+  "parish_slug": "annunciation-bvm-havertown",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:38:29Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T22:49:00Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend and weekday Masses and the Wednesday Adoration/7 PM Benediction agree in both November bulletins (all-image pages, read by render) and the website. Dated Thanksgiving, Immaculate Conception and Christmas Masses come from the website's 2026 events list. Open: the Saturday confession time (bulletin 3:00-4:00 vs website 3:15) and whether the Tuesday Flame of Love 'Holy Hour' counts as Adoration.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "95e9f61725ac1ebaa0a010a98ac6d7035d214a14ce44b98d58a5dacde5cff5f2",
+      "fetched_at": "2026-11-15T16:38:29Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "97d7002614e8e60442a861e2fd236a2e25af545fcad01ba7290b65bbed2e1f48",
+      "fetched_at": "2026-11-08T15:52:28Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-havertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95e9f617",
+          "page": 2,
+          "said": "Mass Schedule: Saturday Vigil 4:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97d70026",
+          "page": 2,
+          "said": "Mass Schedule: Saturday Vigil 4:30 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box and the intentions of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-havertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95e9f617",
+          "page": 2,
+          "said": "Mass Schedule: Sunday 7:30, 10:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97d70026",
+          "page": 2,
+          "said": "Mass Schedule: Sunday 7:30, 10:30AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box and the intentions of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-havertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95e9f617",
+          "page": 2,
+          "said": "Mass Schedule: Sunday 7:30, 10:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97d70026",
+          "page": 2,
+          "said": "Mass Schedule: Sunday 7:30, 10:30AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box and the intentions of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-havertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95e9f617",
+          "page": 2,
+          "said": "Monday, Wednesday, Friday 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97d70026",
+          "page": 2,
+          "said": "Monday, Wednesday, Friday 7:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box and the intentions of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-havertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95e9f617",
+          "page": 2,
+          "said": "Monday, Wednesday, Friday 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97d70026",
+          "page": 2,
+          "said": "Monday, Wednesday, Friday 7:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box and the intentions of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-havertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95e9f617",
+          "page": 2,
+          "said": "Monday, Wednesday, Friday 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97d70026",
+          "page": 2,
+          "said": "Monday, Wednesday, Friday 7:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box and the intentions of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-havertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95e9f617",
+          "page": 2,
+          "said": "Tuesday and Thursday 6:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97d70026",
+          "page": 2,
+          "said": "Tuesday and Thursday 6:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box and the intentions of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-havertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95e9f617",
+          "page": 2,
+          "said": "Tuesday and Thursday 6:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97d70026",
+          "page": 2,
+          "said": "Tuesday and Thursday 6:30 AM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box and the intentions of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95e9f617",
+          "page": 2,
+          "said": "Sacrament of Reconciliation Saturday afternoon 3:00 – 4pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97d70026",
+          "page": 2,
+          "said": "Sacrament of Reconciliation Saturday afternoon 3:00 – 4pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.abvmh.org/",
+          "said": "Confession Saturday 3:15-4:15PM or by appointment."
+        },
+        {
+          "source": "website",
+          "url": "https://www.abvmh.org/",
+          "said": "Confession Times Saturday at 3:15 to 4:00 PM or by appointment."
+        }
+      ],
+      "rationale": "R6/R28: the website conflicts with the bulletin. Leaning to the bulletin: it prints 3:00-4pm in both issues, while the website contradicts itself (4:15 vs 4:00) and its Adoration line names an 8:30AM Mass that no longer exists, so it looks less maintained.",
+      "question": "Saturday confession: the bulletins say 3:00-4:00 PM; the website says 3:15-4:15 PM and, in its footer, 3:15-4:00 PM. Which?",
+      "options": [
+        {
+          "label": "Saturdays 3:00-4:00 PM",
+          "entry": {
+            "church_slug": "annunciation-bvm-havertown",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:00",
+            "end_time": "16:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Saturdays 3:15-4:15 PM",
+          "entry": {
+            "church_slug": "annunciation-bvm-havertown",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:15",
+            "end_time": "16:15",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Saturdays 3:15-4:00 PM",
+          "entry": {
+            "church_slug": "annunciation-bvm-havertown",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:15",
+            "end_time": "16:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-havertown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "after the 7:30 AM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95e9f617",
+          "page": 3,
+          "said": "Exposition and Adoration in church every Wednesday immediately following the 7:30am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97d70026",
+          "page": 3,
+          "said": "Exposition and Adoration in church every Wednesday immediately following the 7:30am Mass"
+        }
+      ],
+      "rationale": "R1, R10: after a weekday Mass starts 30 minutes after it; no end time is printed. The website's 'following the 8:30AM Mass' is a stale slip: the Wednesday Mass is 7:30 in both bulletins and on the site's own Mass list.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-havertown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Evening Prayer and Benediction"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95e9f617",
+          "page": 3,
+          "said": "Evening Prayer and Benediction is celebrated on Wednesday at 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97d70026",
+          "page": 3,
+          "said": "Evening Prayer and Benediction is celebrated on Wednesday at 7:00pm"
+        }
+      ],
+      "rationale": "R1, POLICY (Benediction implies Adoration): weekly in both bulletins. The morning exposition prints no end, so the two are kept as printed rather than joined into one period.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.abvmh.org/",
+          "said": "Perpetual Adoration is held the first Wednesday of the month."
+        }
+      ],
+      "rationale": "R26: no times given (the site's 'November 4-5 Overnight Adoration' was before as_of).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-havertown",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-15",
+        "start_time": "14:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction; Eileen George Prayer Group Holy Hour"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95e9f617",
+          "page": 4,
+          "said": "EILEEN GEORGE PRAYER GROUP Join us on Sunday, November 15 from 2 – 3 PM for a grace-filled Holy Hour. We will have Adoration, Confessions, and Benediction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97d70026",
+          "page": 4,
+          "said": "same notice"
+        }
+      ],
+      "rationale": "R1, R16: a dated Holy Hour at the church on as_of's date (Nov 15), so within seed scope; printed in both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-havertown",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-15",
+        "start_time": "14:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "During Adoration"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95e9f617",
+          "page": 4,
+          "said": "We will have Adoration, Confessions, and Benediction ... Priests will be available for Confessions."
+        }
+      ],
+      "rationale": "R10, POLICY (Confession during Adoration takes the Adoration's hours); dated on as_of's date, R16.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95e9f617",
+          "page": 4,
+          "said": "Annunciation Parish hosts a weekly Flame of Love Cenacle on Tuesdays from 7:00 - 8:00pm on the first floor of our school building. ... All are invited to join us during this Holy Hour where we pray the rosary and other prayers."
+        },
+        {
+          "source": "agent",
+          "bulletin": "97d70026",
+          "page": 4,
+          "said": "Annunciation Parish hosts a weekly Flame of Love Cenacle on Tuesdays from 7:00 - 8:00pm on the first floor of our school building. ... All are invited to join us during this Holy Hour where we pray the rosary and other prayers."
+        }
+      ],
+      "rationale": "R30: POLICY counts a Holy Hour as Adoration unless told the Sacrament is not exposed, but this is a rosary prayer group in a school classroom with no mention of the Blessed Sacrament or exposition, and the school is not the church. Leaning to leave it out.",
+      "question": "Count the Tuesday 7-8 PM Flame of Love Cenacle 'Holy Hour' (rosary and prayers, school building) as Adoration?",
+      "options": [
+        {
+          "label": "Tuesdays 7:00-8:00 PM",
+          "entry": {
+            "church_slug": "annunciation-bvm-havertown",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Flame of Love Cenacle, school building first floor"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-havertown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.abvmh.org/",
+          "said": "November 26 Thanksgiving Mass 9am",
+          "schedule_check": {
+            "checked_at": "2026-11-23T22:52:04Z",
+            "current_because": "The homepage lists Upcoming Events for November and December 2026 and its news names the current pastor, Fr. Kevin J. Gallagher, as in the bulletin.",
+            "bulletin": "95e9f617",
+            "fits_because": "The 2026-11-15 bulletin gives the same weekly Masses and a Holy Day schedule of 7:30, 10:30AM; it prints no Thanksgiving or Christmas times, which the site adds."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the parish website's dated 2026 events list gives the Thanksgiving Mass; the bulletins do not mention it. The weekly Thursday 6:30 AM is left alone (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-havertown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.abvmh.org/",
+          "said": "December 8 Feast of the Immaculate Conception masses 7:30 & 10:30",
+          "schedule_check": {
+            "checked_at": "2026-11-23T22:52:04Z",
+            "current_because": "The homepage lists Upcoming Events for November and December 2026 and its news names the current pastor, Fr. Kevin J. Gallagher, as in the bulletin.",
+            "bulletin": "95e9f617",
+            "fits_because": "The 2026-11-15 bulletin gives the same weekly Masses and a Holy Day schedule of 7:30, 10:30AM; it prints no Thanksgiving or Christmas times, which the site adds."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the website's dated list matches the bulletin's Holy Day schedule (7:30, 10:30AM). The Tuesday 6:30 AM is left alone (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-havertown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.abvmh.org/",
+          "said": "December 8 Feast of the Immaculate Conception masses 7:30 & 10:30",
+          "schedule_check": {
+            "checked_at": "2026-11-23T22:52:04Z",
+            "current_because": "The homepage lists Upcoming Events for November and December 2026 and its news names the current pastor, Fr. Kevin J. Gallagher, as in the bulletin.",
+            "bulletin": "95e9f617",
+            "fits_because": "The 2026-11-15 bulletin gives the same weekly Masses and a Holy Day schedule of 7:30, 10:30AM; it prints no Thanksgiving or Christmas times, which the site adds."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the website's dated list matches the bulletin's Holy Day schedule (7:30, 10:30AM). The Tuesday 6:30 AM is left alone (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-havertown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.abvmh.org/",
+          "said": "December 24 Christmas Eve Masses 4:00 & 6:30",
+          "schedule_check": {
+            "checked_at": "2026-11-23T22:52:04Z",
+            "current_because": "The homepage lists Upcoming Events for November and December 2026 and its news names the current pastor, Fr. Kevin J. Gallagher, as in the bulletin.",
+            "bulletin": "95e9f617",
+            "fits_because": "The 2026-11-15 bulletin gives the same weekly Masses and a Holy Day schedule of 7:30, 10:30AM; it prints no Thanksgiving or Christmas times, which the site adds."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the website's dated 2026 list; Christmas Eve Masses at 4:00 and 6:30 are evening Masses (PM).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-havertown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.abvmh.org/",
+          "said": "December 24 Christmas Eve Masses 4:00 & 6:30",
+          "schedule_check": {
+            "checked_at": "2026-11-23T22:52:04Z",
+            "current_because": "The homepage lists Upcoming Events for November and December 2026 and its news names the current pastor, Fr. Kevin J. Gallagher, as in the bulletin.",
+            "bulletin": "95e9f617",
+            "fits_because": "The 2026-11-15 bulletin gives the same weekly Masses and a Holy Day schedule of 7:30, 10:30AM; it prints no Thanksgiving or Christmas times, which the site adds."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the website's dated 2026 list; Christmas Eve Masses at 4:00 and 6:30 are evening Masses (PM).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-bvm-havertown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.abvmh.org/",
+          "said": "December 25 Christmas Day Masses 7:30 &10:30",
+          "schedule_check": {
+            "checked_at": "2026-11-23T22:52:04Z",
+            "current_because": "The homepage lists Upcoming Events for November and December 2026 and its news names the current pastor, Fr. Kevin J. Gallagher, as in the bulletin.",
+            "bulletin": "95e9f617",
+            "fits_because": "The 2026-11-15 bulletin gives the same weekly Masses and a Holy Day schedule of 7:30, 10:30AM; it prints no Thanksgiving or Christmas times, which the site adds."
+          }
+        }
+      ],
+      "rationale": "R6, R16: the website's dated 2026 list. Its 7:30 is already the weekly Friday 7:30 AM Mass, so it is not duplicated (POLICY, Weekly or dated, rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95e9f617",
+          "page": 2,
+          "said": "Holy Day 7:30, 10:30AM"
+        }
+      ],
+      "rationale": "POLICY, Dates: the holy-day line gives no dates; the Dec 8 Masses are recorded from the website's dated list.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95e9f617",
+          "page": 2,
+          "said": "Rosary at 8:00am on Monday, Wednesday, Friday after The 7:30 Mass and Tuesday/Thursday at 7am after the 6:30 Mass"
+        }
+      ],
+      "rationale": "R24: the Rosary is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
