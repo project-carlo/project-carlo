@@ -1,0 +1,549 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-family-philadelphia",
+  "status": "ready",
+  "as_of": "2026-11-15T16:40:30Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T23:35:59Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend Masses (Sat 4 PM; Sun 9 and 11 AM), weekday Masses Mon-Fri 9 AM, Saturday 3-3:45 PM and Wednesday after-Mass Confession agree in both bulletins read (November 8 and 15, 2026). One dated entry: the Immaculate Conception vigil Mass Monday December 7 at 7 PM. No Adoration is listed. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "1b0da7e1b69c82207bd5759268edc1d19cb331bc5c43b833d62cee5d09edef3e",
+      "fetched_at": "2026-11-15T16:40:30Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "894be50b1e4c843c755abd2c903465fd4a659b6687b0eeedac9a65fd8d4672bc",
+      "fetched_at": "2026-11-08T15:52:42Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1b0da7e1",
+          "page": 1,
+          "said": "Sunday Masses: Saturday at 4:00pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "894be50b",
+          "page": 1,
+          "said": "Sunday Masses: Saturday at 4:00pm."
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box on page 1 of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1b0da7e1",
+          "page": 1,
+          "said": "Sunday at 9:00am & 11:00am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "894be50b",
+          "page": 1,
+          "said": "Sunday at 9:00am & 11:00am."
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box on page 1 of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1b0da7e1",
+          "page": 1,
+          "said": "Sunday at 9:00am & 11:00am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "894be50b",
+          "page": 1,
+          "said": "Sunday at 9:00am & 11:00am."
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box on page 1 of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1b0da7e1",
+          "page": 1,
+          "said": "Daily Mass: Monday through Friday at 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "894be50b",
+          "page": 1,
+          "said": "Daily Mass: Monday through Friday at 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box on page 1 of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1b0da7e1",
+          "page": 1,
+          "said": "Daily Mass: Monday through Friday at 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "894be50b",
+          "page": 1,
+          "said": "Daily Mass: Monday through Friday at 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box on page 1 of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1b0da7e1",
+          "page": 1,
+          "said": "Daily Mass: Monday through Friday at 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "894be50b",
+          "page": 1,
+          "said": "Daily Mass: Monday through Friday at 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box on page 1 of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1b0da7e1",
+          "page": 1,
+          "said": "Daily Mass: Monday through Friday at 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "894be50b",
+          "page": 1,
+          "said": "Daily Mass: Monday through Friday at 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box on page 1 of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-philadelphia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1b0da7e1",
+          "page": 1,
+          "said": "Daily Mass: Monday through Friday at 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "894be50b",
+          "page": 1,
+          "said": "Daily Mass: Monday through Friday at 9:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box on page 1 of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1b0da7e1",
+          "page": 1,
+          "said": "The Sacrament of Confession Saturday afternoons: 3:00pm – 3:45pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "894be50b",
+          "page": 1,
+          "said": "The Sacrament of Confession Saturday afternoons: 3:00pm – 3:45pm."
+        }
+      ],
+      "rationale": "R1: printed in the Confession box on page 1 of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-philadelphia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1b0da7e1",
+          "page": 1,
+          "said": "Wednesday morning, Immediately following the 9:00am Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "894be50b",
+          "page": 1,
+          "said": "Wednesday morning, Immediately following the 9:00am Mass."
+        }
+      ],
+      "rationale": "R1, R10: printed in both bulletins with no clock time; POLICY, Times puts confession after a weekday Mass 30 minutes after it starts, with no end time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1b0da7e1",
+          "page": 1,
+          "said": "By appointment at the rectory at any time."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1b0da7e1",
+          "page": 1,
+          "said": "Our next Holyday is The Immaculate Conception of The Blessed Virgin Mary December 8th Mass will be Celebrated on Monday evening at 7:00pm and Tuesday morning at 9:00am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "894be50b",
+          "page": 1,
+          "said": "Our next Holyday is The Immaculate Conception of The Blessed Virgin Mary December 8th Mass will be Celebrated on Monday evening at 7:00pm and Tuesday morning at 9:00am."
+        }
+      ],
+      "rationale": "R1, R16: holy day Mass at a time outside the weekly schedule is dated (POLICY rule 7); Monday evening before Tuesday December 8, 2026 is December 7, after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1b0da7e1",
+          "page": 1,
+          "said": "Mass will be Celebrated on Monday evening at 7:00pm and Tuesday morning at 9:00am."
+        }
+      ],
+      "rationale": "R25, POLICY Weekly or dated rules 6-7: the Tuesday 9:00 AM holy day Mass is the weekly Tuesday 9:00 AM Mass, so it is not duplicated as a dated entry.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-philadelphia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1b0da7e1",
+          "page": 3,
+          "said": "Thanksgiving Day Mass will be at 9:00am."
+        }
+      ],
+      "rationale": "R25, POLICY Weekly or dated rules 6-7: Thanksgiving (Thursday) 9:00 AM is the weekly Thursday 9:00 AM Mass, so no dated entry is needed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "1b0da7e1",
+          "page": 1,
+          "said": "All are welcome to join us in praying the Miraculous Medal novena immediately following the 9:00am each Friday morning."
+        }
+      ],
+      "rationale": "R24: a novena is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
