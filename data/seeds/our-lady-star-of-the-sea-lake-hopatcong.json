@@ -1,0 +1,479 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-star-of-the-sea-lake-hopatcong",
+  "status": "needs_review",
+  "as_of": "2026-11-15T16:13:05Z",
+  "drafted_by": "claude-code/draft-parish-seed",
+  "drafted_at": "2026-11-23T13:41:48Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. The bulletins print no schedule box, only a Masses-for-the-week list; it gives the same times in both issues read (Sun 8:30, 10:30, 12 Noon; Mon-Fri 8:00 AM; Sat 5:00 PM), matching the website. Open: Saturday confession, which only the website gives, at two different times (4:30-4:45 vs 4:00-4:45).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "3a66b36babf165a92047fea742f34cdea8749c0b108f32c85053847975430f22",
+      "fetched_at": "2026-11-15T16:13:05Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "aac775eab78fb4ac0435bf9a253fbdc230b06ade5093b94ac80dd7d3cb803f65",
+      "fetched_at": "2026-11-08T15:38:51Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-lake-hopatcong",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3a66b36b",
+          "page": 2,
+          "said": "MASSES FOR the WEEK ... SUNDAY, November 15th 8:30 A.M. ... 10:30 AM ... 12 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aac775ea",
+          "page": 2,
+          "said": "SUNDAY, November 8th 8:30 A.M. ... 10:30 AM ... 12 Noon"
+        },
+        {
+          "source": "website",
+          "url": "https://olsoslh.org/schedules",
+          "said": "Sunday : 8:30 AM ... 10:30 AM ... 12:00 PM"
+        }
+      ],
+      "rationale": "R35, R1: the same Sunday times are in the Masses-for-the-week list of both bulletins (two Sundays in the newest), with no special marking, and the parish website's Mass Schedule gives the same times. The bulletins print no separate schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-lake-hopatcong",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3a66b36b",
+          "page": 2,
+          "said": "MASSES FOR the WEEK ... SUNDAY, November 15th 8:30 A.M. ... 10:30 AM ... 12 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aac775ea",
+          "page": 2,
+          "said": "SUNDAY, November 8th 8:30 A.M. ... 10:30 AM ... 12 Noon"
+        },
+        {
+          "source": "website",
+          "url": "https://olsoslh.org/schedules",
+          "said": "Sunday : 8:30 AM ... 10:30 AM ... 12:00 PM"
+        }
+      ],
+      "rationale": "R35, R1: the same Sunday times are in the Masses-for-the-week list of both bulletins (two Sundays in the newest), with no special marking, and the parish website's Mass Schedule gives the same times. The bulletins print no separate schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-lake-hopatcong",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3a66b36b",
+          "page": 2,
+          "said": "MASSES FOR the WEEK ... SUNDAY, November 15th 8:30 A.M. ... 10:30 AM ... 12 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aac775ea",
+          "page": 2,
+          "said": "SUNDAY, November 8th 8:30 A.M. ... 10:30 AM ... 12 Noon"
+        },
+        {
+          "source": "website",
+          "url": "https://olsoslh.org/schedules",
+          "said": "Sunday : 8:30 AM ... 10:30 AM ... 12:00 PM"
+        }
+      ],
+      "rationale": "R35, R1: the same Sunday times are in the Masses-for-the-week list of both bulletins (two Sundays in the newest), with no special marking, and the parish website's Mass Schedule gives the same times. The bulletins print no separate schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-lake-hopatcong",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3a66b36b",
+          "page": 2,
+          "said": "MONDAY, November 16th 8:00 AM ... FRIDAY, November 20th 8:00 A.M"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aac775ea",
+          "page": 2,
+          "said": "MONDAY, November 9th 8:00 AM ... FRIDAY, November 13th 8:00 A.M"
+        },
+        {
+          "source": "website",
+          "url": "https://olsoslh.org/schedules",
+          "said": "Mon Fri 8:00 AM English English EN Daily Mass"
+        }
+      ],
+      "rationale": "R35, R1: 8:00 AM Mass every weekday in the Masses-for-the-week list of both bulletins, two different weeks; the website's Mass Schedule gives Mon-Fri 8:00 AM Daily Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-lake-hopatcong",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3a66b36b",
+          "page": 2,
+          "said": "MONDAY, November 16th 8:00 AM ... FRIDAY, November 20th 8:00 A.M"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aac775ea",
+          "page": 2,
+          "said": "MONDAY, November 9th 8:00 AM ... FRIDAY, November 13th 8:00 A.M"
+        },
+        {
+          "source": "website",
+          "url": "https://olsoslh.org/schedules",
+          "said": "Mon Fri 8:00 AM English English EN Daily Mass"
+        }
+      ],
+      "rationale": "R35, R1: 8:00 AM Mass every weekday in the Masses-for-the-week list of both bulletins, two different weeks; the website's Mass Schedule gives Mon-Fri 8:00 AM Daily Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-lake-hopatcong",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3a66b36b",
+          "page": 2,
+          "said": "MONDAY, November 16th 8:00 AM ... FRIDAY, November 20th 8:00 A.M"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aac775ea",
+          "page": 2,
+          "said": "MONDAY, November 9th 8:00 AM ... FRIDAY, November 13th 8:00 A.M"
+        },
+        {
+          "source": "website",
+          "url": "https://olsoslh.org/schedules",
+          "said": "Mon Fri 8:00 AM English English EN Daily Mass"
+        }
+      ],
+      "rationale": "R35, R1: 8:00 AM Mass every weekday in the Masses-for-the-week list of both bulletins, two different weeks; the website's Mass Schedule gives Mon-Fri 8:00 AM Daily Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-lake-hopatcong",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3a66b36b",
+          "page": 2,
+          "said": "MONDAY, November 16th 8:00 AM ... FRIDAY, November 20th 8:00 A.M"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aac775ea",
+          "page": 2,
+          "said": "MONDAY, November 9th 8:00 AM ... FRIDAY, November 13th 8:00 A.M"
+        },
+        {
+          "source": "website",
+          "url": "https://olsoslh.org/schedules",
+          "said": "Mon Fri 8:00 AM English English EN Daily Mass"
+        }
+      ],
+      "rationale": "R35, R1: 8:00 AM Mass every weekday in the Masses-for-the-week list of both bulletins, two different weeks; the website's Mass Schedule gives Mon-Fri 8:00 AM Daily Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-lake-hopatcong",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3a66b36b",
+          "page": 2,
+          "said": "MONDAY, November 16th 8:00 AM ... FRIDAY, November 20th 8:00 A.M"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aac775ea",
+          "page": 2,
+          "said": "MONDAY, November 9th 8:00 AM ... FRIDAY, November 13th 8:00 A.M"
+        },
+        {
+          "source": "website",
+          "url": "https://olsoslh.org/schedules",
+          "said": "Mon Fri 8:00 AM English English EN Daily Mass"
+        }
+      ],
+      "rationale": "R35, R1: 8:00 AM Mass every weekday in the Masses-for-the-week list of both bulletins, two different weeks; the website's Mass Schedule gives Mon-Fri 8:00 AM Daily Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-star-of-the-sea-lake-hopatcong",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3a66b36b",
+          "page": 2,
+          "said": "SATURDAY, November 21st 5:00P.M."
+        },
+        {
+          "source": "agent",
+          "bulletin": "aac775ea",
+          "page": 2,
+          "said": "SATURDAY, November 14th 5:00P.M."
+        },
+        {
+          "source": "website",
+          "url": "https://olsoslh.org/schedules",
+          "said": "Saturday : 5:00 PM"
+        }
+      ],
+      "rationale": "R35, R1: Saturday 5:00 PM Mass in both bulletins' weekly lists and on the website's Mass Schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://olsoslh.org/schedules",
+          "said": "Saturday 4:30 PM to 4:45 PM Or upon request"
+        },
+        {
+          "source": "website",
+          "url": "https://olsoslh.org/schedules",
+          "said": "Confession Saturday's prior to 5pm Mass-4:00-4:45pm"
+        }
+      ],
+      "rationale": "R6, C8: neither bulletin read (Nov 8, Nov 15) prints any confession time. The parish website's Mass Times widget (on every page) says Saturday 4:30-4:45 PM, while the body of its Schedules page says 4:00-4:45 PM; the same body text also carries an undated Ash Wednesday block, so neither is clearly newer. Both fit the bulletins' Saturday 5:00 PM Mass. Leaning to 4:30-4:45, the window both statements agree on, since a wrong time is worse than a short one.",
+      "question": "Saturday confession before the 5 PM Mass: which time? The website gives two.",
+      "options": [
+        {
+          "label": "Sat 4:30-4:45 PM",
+          "entry": {
+            "church_slug": "our-lady-star-of-the-sea-lake-hopatcong",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:30",
+            "end_time": "16:45",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Sat 4:00-4:45 PM",
+          "entry": {
+            "church_slug": "our-lady-star-of-the-sea-lake-hopatcong",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:00",
+            "end_time": "16:45",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    }
+  ]
+}
