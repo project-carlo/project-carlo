@@ -574,38 +574,6 @@
     },
     {
       "id": "s16",
-      "decision": "include",
-      "status": "settled",
-      "entry": {
-        "church_slug": "st-matthew-the-apostle-randolph",
-        "event_type": "adoration",
-        "event_kind": "specific_date",
-        "day_of_week": null,
-        "date": "2026-12-15",
-        "start_time": "14:00",
-        "end_time": "18:45",
-        "cancelled": false,
-        "weeks_of_month": [],
-        "exclude_weeks": false,
-        "season": null,
-        "note": null
-      },
-      "page": 6,
-      "sources": [
-        {
-          "source": "agent",
-          "bulletin": "735ca8bc",
-          "page": 6,
-          "said": "Eucharistic Adoration Tuesday, 12/15/26: 2:00 pm - 6:45 pm"
-        }
-      ],
-      "rationale": "R1, R40: a dated exception for the third-Tuesday Adoration (12/15 is the third Tuesday), shortened before the 7:00 pm Penance Service. Whether to cancel the usual 2-8 pm occurrence that day is asked separately.",
-      "question": null,
-      "options": null,
-      "answer": null
-    },
-    {
-      "id": "s17",
       "decision": null,
       "status": "needs_human",
       "entry": null,
@@ -624,11 +592,29 @@
           "said": "Third Tuesday of the Month: 2:00 pm - 8:00 pm"
         }
       ],
-      "rationale": "R40 treats a dated exception as changing that occurrence, which leans to cancelling the 2-8 pm one; R17 records a cancellation only when the bulletin states one, and it does not say the usual hours are cancelled. Without the cancellation the site would show both periods on Dec 15.",
-      "question": "On Dec 15 the Advent calendar gives Adoration 2:00-6:45 pm. Cancel that date's usual third-Tuesday 2:00-8:00 pm occurrence?",
+      "rationale": "R40: the Dec 15 calendar entry (2:00-6:45 pm, before the 7 pm Penance Service) changes that one occurrence. The answer to the earlier question (cancel 2-8 pm plus the new 2-6:45 pm) can't be approved: a dated entry is keyed by church, type, date and start time, so a cancellation at 14:00 and the new 14:00 entry are the same slot. Leaning towards the dated 2:00-6:45 pm entry because it records the real hours. The catch is that the frontend links only cancelled dated rows to weekly ones, so the site may also show the weekly 2-8 pm that day. Cancelling instead removes the wrong 8 pm end but shows no Adoration on Dec 15.",
+      "question": "Dec 15 (third Tuesday): the Advent calendar gives Adoration 2:00-6:45 pm instead of the usual 2-8 pm. The file can't hold both a cancelled 2 pm occurrence and a new 2 pm one that day. Which should it record?",
       "options": [
         {
-          "label": "Cancel the 2-8 pm occurrence",
+          "label": "Dated Adoration 2:00-6:45 pm",
+          "entry": {
+            "church_slug": "st-matthew-the-apostle-randolph",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-15",
+            "start_time": "14:00",
+            "end_time": "18:45",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Cancel that day's 2-8 pm occurrence",
           "entry": {
             "church_slug": "st-matthew-the-apostle-randolph",
             "event_type": "adoration",
@@ -642,8 +628,7 @@
             "exclude_weeks": false,
             "season": null,
             "note": null
-          },
-          "leaning": true
+          }
         },
         {
           "label": "Leave the weekly slot alone",
